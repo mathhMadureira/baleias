@@ -74,11 +74,16 @@ def main():
     m = s.add_parser("monitor")
     m.add_argument("--uma-vez", action="store_true")
     s.add_parser("relatorio")
+    pn = s.add_parser("painel")
+    pn.add_argument("--porta", type=int, default=8787)
     a = p.parse_args()
     if a.cmd == "backtest":
         cmd_backtest(a)
     elif a.cmd == "monitor":
         monitor.rodar(banco.abrir(), api.Cliente(), a.uma_vez)
+    elif a.cmd == "painel":
+        from . import painel
+        painel.servir(a.porta)
     else:
         cmd_relatorio(a)
 

@@ -170,3 +170,25 @@ class Selecao(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Painel(unittest.TestCase):
+    def test_estado_com_banco_vazio_e_com_resultado(self):
+        import json as J
+        from baleias import banco as Bn, painel
+        c = Bn.abrir(":memory:")
+        vazio = painel.estado(c)
+        self.assertEqual(vazio["resumo"]["sinais"], 0)
+        c.execute("INSERT INTO carteiras(carteira,conta,nota,ativa,marca_ms) VALUES('0xabc',1e6,1,1,0)")
+        c.execute("INSERT INTO sinais(fonte,carteira,moeda,lado,tipo,nocional,t_carteira_ms,t_sinal_ms,px_entrada,caracteristicas,previsto,desvio,aprovado,tid_chave) "
+                  "VALUES('ao_vivo','0xabc','ETH','long','abertura',5e4,0,1,100,?,0.1,1,0,'k')", (J.dumps(["vies"]),))
+        c.execute("INSERT INTO resultados(sinal_id,liquido,controle_liquido,classe) VALUES(1,0.002,-0.001,'acerto')")
+        e = painel.estado(c)
+        self.assertEqual(e["resumo"]["resolvidos"], 1)
+        self.assertEqual(e["sinais"][0]["liquido"], 0.2)
+        self.assertEqual(e["carteiras"][0]["resolvidos"], 1)
+        self.assertEqual(e["classes"], {"acerto": 1})
+        J.dumps(e)
+
+    def test_servidor_so_escuta_localmente(self):
+        self.assertIn('("127.0.0.1", porta)', (RAIZ / "painel.py").read_text())

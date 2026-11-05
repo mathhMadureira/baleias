@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Baleias</title>
+<style>
+:root{--bg:#0b0c0e;--p:#121418;--l:#23262d;--t:#e6e6e6;--m:#8b8f98;--v:#3ecf8e;--r:#ff5c5c;--a:#f5b544;--c:#5ab0ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:13px/1.45 ui-monospace,Menlo,Consolas,monospace}
+header{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-bottom:1px solid var(--l)}
+header b{color:var(--a)}#aviso{color:var(--m);font-size:12px}
+main{display:grid;gap:10px;padding:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+section{background:var(--p);border:1px solid var(--l);border-radius:4px;padding:10px;min-width:0}
+h2{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--m)}
+table{width:100%;border-collapse:collapse}td,th{padding:3px 6px;border-bottom:1px solid var(--l);text-align:right;white-space:nowrap}
+td:first-child,th:first-child{text-align:left}th{color:var(--m);font-weight:normal}
+.pos{color:var(--v)}.neg{color:var(--r)}.mut{color:var(--m)}.wrap{overflow-x:auto}
+.barra{height:8px;background:var(--l);border-radius:4px;overflow:hidden}.barra i{display:block;height:100%;background:var(--c)}
+.linha{display:grid;grid-template-columns:150px 1fr 70px;gap:8px;align-items:center;margin:6px 0}
+svg{width:100%;height:120px;display:block}
+.flash{animation:f 1.2s}@keyframes f{from{background:#2a2d12}to{background:transparent}}
+</style></head><body>
+<header><div><b>🐋 BALEIAS</b> <span class="mut">Hyperliquid · só leitura · horizonte 4 h</span></div><div id="aviso">carregando…</div></header>
+<main>
+<section><h2>Resultado depois dos custos (% por sinal, IC 95%)</h2><table id="resumo"></table></section>
+<section><h2>Protocolo</h2><div id="protocolo"></div><p class="mut">Os US$ 10 só entram com os 4 critérios do PROTOCOLO.md ao mesmo tempo.</p></section>
+<section><h2>Aprendizado: erro da previsão por sinal</h2><svg id="erro"></svg><p class="mut" id="erro_txt"></p></section>
+<section><h2>Por que acertou ou errou</h2><table id="classes"></table></section>
+<section><h2>Lições candidatas</h2><table id="licoes"></table></section>
+<section><h2>Carteiras</h2><div class="wrap"><table id="carteiras"></table></div></section>
+<section style="grid-column:1/-1"><h2>Sinais recentes</h2><div class="wrap"><table id="sinais"></table></div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id), f=(v,d=3)=>v==null?'—':(v>0?'+':'')+Number(v).toFixed(d), cls=v=>v==null?'mut':v>0?'pos':v<0?'neg':'mut';
+const ic=x=>x?`<td class="${cls(x.media)}">${f(x.media)}</td><td class="mut">[${f(x.baixo)}, ${f(x.alto)}]</td><td>${x.n}</td>`:'<td class=mut>—</td><td class=mut>sem dados</td><td>0</td>';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let vistos=new Set();
+function grafico(el,v){if(v.length<2){el.innerHTML='';return}const w=400,h=120,mx=Math.max(...v,1e-9),pts=v.map((y,i)=>`${i/(v.length-1)*w},${h-y/mx*(h-10)-5}`).join(' ');
+ const k=Math.max(5,Math.floor(v.length/10)),mm=v.map((_,i)=>{const s=v.slice(Math.max(0,i-k+1),i+1);return s.reduce((a,b)=>a+b,0)/s.length}).map((y,i)=>`${i/(v.length-1)*w},${h-y/mx*(h-10)-5}`).join(' ');
+ el.setAttribute('viewBox',`0 0 ${w} ${h}`);el.innerHTML=`<polyline fill=none stroke="#3a3f4a" points="${pts}"/><polyline fill=none stroke="#5ab0ff" stroke-width=2 points="${mm}"/>`}
+async function atualizar(){try{const d=await (await fetch('/api/estado')).json(),r=d.resumo;
+ $('aviso').textContent=`${r.sinais} sinais · ${r.resolvidos} resolvidos · modelo aprendeu com ${r.aprendidos} · ${new Date().toLocaleTimeString('pt-BR')}`;
+ $('resumo').innerHTML='<tr><th>Grupo</th><th>Média</th><th>IC</th><th>n</th></tr>'+[['Todos','todos'],['Controle (lado sorteado)','controle'],['Aprovados','aprovados'],['1ª metade','primeira_metade'],['2ª metade','segunda_metade']].map(([n,k])=>`<tr><td>${n}</td>${ic(r[k])}</tr>`).join('');
+ const p=d.protocolo;$('protocolo').innerHTML=[['Resolvidos p/ alertar',p.para_alertar],['Aprovados p/ testar',p.aprovados_para_testar],['Resolvidos p/ decidir',p.para_decidir]].map(([n,[a,b]])=>`<div class=linha><span>${n}</span><div class=barra><i style="width:${Math.min(100,a/b*100)}%"></i></div><span>${a}/${b}</span></div>`).join('');
+ grafico($('erro'),d.curva_erro);const e=d.curva_erro,m=Math.floor(e.length/2),av=a=>a.length?(a.reduce((x,y)=>x+y,0)/a.length).toFixed(3):'—';
+ $('erro_txt').textContent=e.length<4?'Ainda sem sinais resolvidos suficientes para medir se aprendeu.':`Erro médio: ${av(e.slice(0,m))}% na 1ª metade → ${av(e.slice(m))}% na 2ª. Menor = previsões melhores.`;
+ $('classes').innerHTML=Object.keys(d.classes).length?Object.entries(d.classes).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<tr><td>${esc(k.replaceAll('_',' '))}</td><td>${v}</td></tr>`).join(''):'<tr><td class=mut>nenhum sinal resolvido ainda</td></tr>';
+ $('licoes').innerHTML=d.licoes.length?'<tr><th>Característica</th><th>Efeito</th><th>Média</th><th>n</th></tr>'+d.licoes.map(l=>`<tr><td>${esc(l.caracteristica.slice(0,34))}</td><td class="${l.efeito=='ganha'?'pos':'neg'}">${l.efeito}</td><td>${f(l.media)}</td><td>${l.n}</td></tr>`).join(''):'<tr><td class=mut>Nenhuma lição com amostra e intervalo suficientes.</td></tr>';
+ $('carteiras').innerHTML='<tr><th>Carteira</th><th>Conta US$</th><th>Sinais</th><th>Resolv.</th><th>Média %</th><th>Peso aprendido</th></tr>'+d.carteiras.map(w=>`<tr class="${w.ativa?'':'mut'}"><td title="${esc(w.motivo_saida||'')}">${w.carteira.slice(0,10)}…${w.ativa?'':' (saiu)'}</td><td>${Math.round(w.conta).toLocaleString('pt-BR')}</td><td>${w.sinais}</td><td>${w.resolvidos}</td><td class="${cls(w.media)}">${f(w.media)}</td><td>${w.peso?f(w.peso[0])+' ±'+w.peso[1].toFixed(2):'—'}</td></tr>`).join('');
+ $('sinais').innerHTML='<tr><th>Hora</th><th>Moeda</th><th>Lado</th><th>Tipo</th><th>US$</th><th>Previsto %</th><th>Aprovado</th><th>Resultado %</th><th>Classe</th></tr>'+d.sinais.map(s=>`<tr class="${vistos.size&&!vistos.has(s.id)?'flash':''}"><td>${new Date(s.t_sinal_ms).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'})}</td><td>${esc(s.moeda)}</td><td class="${s.lado=='long'?'pos':'neg'}">${s.lado}</td><td>${s.tipo}</td><td>${Math.round(s.nocional).toLocaleString('pt-BR')}</td><td>${f(s.previsto)} ±${Number(s.desvio).toFixed(2)}</td><td>${s.aprovado?'<b class=pos>sim</b>':'<span class=mut>não</span>'}</td><td class="${cls(s.liquido)}">${s.liquido==null?'<span class=mut>aguardando 4 h</span>':f(s.liquido)}</td><td class=mut>${s.classe?esc(s.classe.replaceAll('_',' ')):''}</td></tr>`).join('');
+ vistos=new Set(d.sinais.map(s=>s.id))}catch(e){$('aviso').textContent='sem conexão com o painel'}}
+atualizar();setInterval(atualizar,5000);
+</script></body></html>
