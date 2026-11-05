@@ -26,7 +26,8 @@ def atualizar_carteiras(c, cliente, t):
     return len(novas)
 
 
-def registrar_sinais(c, cliente, modelo, t):
+def registrar_sinais(c, cliente, modelo, t, perdidos=None):
+    perdidos = [] if perdidos is None else perdidos
     precos, novos = None, []
     for w in c.execute("SELECT carteira, marca_ms FROM carteiras WHERE ativa=1").fetchall():
         lote = cliente.operacoes(w["carteira"], w["marca_ms"] - config.JANELA_AGRUPAR_MS * 2, t)
@@ -35,6 +36,9 @@ def registrar_sinais(c, cliente, modelo, t):
         # Só operações depois da entrada da carteira viram sinal: nada de história disfarçada de ao vivo.
         recentes = [f for f in lote if f["time"] >= w["marca_ms"]]
         for s in S.detectar(recentes, t):
+            if t - s["fim"] > config.ATRASO_MAXIMO_MS:
+                perdidos.append(s)
+                continue
             chave = f"{w['carteira']}:{s['tids'][0]}"
             if c.execute("SELECT 1 FROM sinais WHERE fonte=? AND tid_chave=?", (FONTE, chave)).fetchone():
                 continue
@@ -126,19 +130,26 @@ def aposentar(c, modelo, t):
 def ciclo(c, cliente, modelo):
     t = agora()
     atualizar_carteiras(c, cliente, t)
-    novos = registrar_sinais(c, cliente, modelo, t)
+    perdidos = []
+    novos = registrar_sinais(c, cliente, modelo, t, perdidos)
     feitos = resolver(c, cliente, modelo, t)
-    return {"novos": len(novos), "resolvidos": feitos}
+    return {"novos": len(novos), "resolvidos": feitos, "perdidos_por_atraso": len(perdidos)}
 
 
 def rodar(c, cliente, uma_vez=False):
     modelo = banco.carregar_modelo(c, FONTE)
+    ultimo, ciclos = None, 0
     while True:
         inicio = time.monotonic()
+        parede = time.time()
+        if ultimo is not None and parede - ultimo > 5 * 60:
+            print(time.strftime("%F %T"), f"pausa de {(parede - ultimo) / 60:.0f} min sem ciclo (máquina parada?)", flush=True)
+        ultimo = parede
         try:
             r = ciclo(c, cliente, modelo)
-            if r["novos"] or r["resolvidos"]:
-                print(time.strftime("%F %T"), r, flush=True)
+            ciclos += 1
+            if r["novos"] or r["resolvidos"] or r["perdidos_por_atraso"] or ciclos % 120 == 0:
+                print(time.strftime("%F %T"), r, f"ciclo {ciclos}", flush=True)
         except (RuntimeError, OSError, ValueError, KeyError) as e:
             print(time.strftime("%F %T"), "ciclo falhou:", type(e).__name__, str(e)[:200], flush=True)
         if uma_vez:

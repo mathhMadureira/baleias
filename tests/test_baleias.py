@@ -192,3 +192,27 @@ class Painel(unittest.TestCase):
 
     def test_servidor_so_escuta_localmente(self):
         self.assertIn('("127.0.0.1", porta)', (RAIZ / "painel.py").read_text())
+
+
+class Atraso(unittest.TestCase):
+    def test_grupo_velho_nao_vira_sinal_ao_vivo(self):
+        from baleias import banco as Bn, monitor
+        c = Bn.abrir(":memory:")
+        c.execute("INSERT INTO carteiras(carteira,conta,nota,ativa,marca_ms) VALUES('0xabc',1e6,1,1,0)")
+        agora = 50 * 3_600_000
+
+        class Falso:
+            def operacoes(self, *a):
+                return [fill(agora - 3 * 3_600_000, 1), fill(agora - 3 * 60_000, 2, coin="BTC", px=50_000, sz=1)]
+
+            def precos(self):
+                return {"ETH": 100.0, "BTC": 50_000.0}
+
+            def velas(self, *a):
+                return []
+
+        perdidos = []
+        novos = monitor.registrar_sinais(c, Falso(), A.Modelo(), agora, perdidos)
+        self.assertEqual(len(novos), 1)
+        self.assertEqual(len(perdidos), 1)
+        self.assertEqual(c.execute("SELECT moeda FROM sinais").fetchone()["moeda"], "BTC")

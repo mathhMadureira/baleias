@@ -27,6 +27,8 @@ NOCIONAL_MINIMO = 10_000.0
 JANELA_AGRUPAR_MS = 120_000
 AUMENTO_MINIMO = 0.5
 INTERVALO_S = 30
+# Sinal que chega mais tarde que isto não é o que um alerta ao vivo entregaria (ex.: máquina pausada): é descartado.
+ATRASO_MAXIMO_MS = 10 * 60_000
 ATRASO_BACKTEST_MS = 60_000
 
 SINAIS_PARA_ALERTAR = 30

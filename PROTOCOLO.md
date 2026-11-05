@@ -27,4 +27,4 @@ Depois de 300 sinais ao vivo resolvidos, se o intervalo de 95% dos aprovados toc
 Estes números são escolhas de desenho para evitar autoengano, não verdades de mercado.
 
 ## Mudanças de regra
-(nenhuma)
+- 2026-11-05, antes de qualquer sinal resolvido (contagem continua em zero): a máquina ficou parada ~18 h e, ao voltar, operações antigas viraram 3 sinais com 3 a 12 h de atraso. Regra nova: grupo detectado mais de 10 min depois da última operação da carteira é descartado e contado como perdido. Os 3 sinais foram marcados como `descartado_atraso` e não entram em nenhuma conta.
