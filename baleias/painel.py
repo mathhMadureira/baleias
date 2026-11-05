@@ -56,7 +56,13 @@ def estado(c, fonte=FONTE):
     rastros = [dict(r) for r in c.execute(
         "SELECT r.sinal_id, r.evento, r.t_ms, s.moeda, s.lado, s.carteira FROM rastros r JOIN sinais s ON s.id=r.sinal_id WHERE s.fonte=? "
         "ORDER BY r.t_ms DESC LIMIT 25", (fonte,))]
+    ins = [dict(x) for x in c.execute(
+        "SELECT s.acesso, s.data, s.ticker, s.cargo, s.valor, s.preco, s.previsto, s.desvio, s.aprovado, r.excesso, r.bruto, r.spy "
+        "FROM insider_sinais s LEFT JOIN insider_resultados r ON r.acesso=s.acesso ORDER BY s.t_ms DESC LIMIT 40")]
+    feitos = [x["excesso"] * 100 for x in c.execute("SELECT excesso FROM insider_resultados")]
     return {
+        "insider": {"compras": ins, "total": c.execute("SELECT COUNT(*) FROM insider_sinais").fetchone()[0],
+                    "resolvidas": len(feitos), "excesso": _ic(feitos)},
         "noticias": noticias,
         "rastros": rastros,
         "resumo": {"sinais": len(linhas), "resolvidos": len(resolvidos), "aprovados_resolvidos": len(aprovados),

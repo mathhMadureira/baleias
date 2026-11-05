@@ -23,6 +23,12 @@ CREATE TABLE IF NOT EXISTS noticias(
   id INTEGER PRIMARY KEY, sinal_id INTEGER, moeda TEXT, titulo TEXT, fonte TEXT, link TEXT, t_ms INTEGER, UNIQUE(sinal_id, link));
 CREATE TABLE IF NOT EXISTS rastros(
   id INTEGER PRIMARY KEY, sinal_id INTEGER NOT NULL, evento TEXT NOT NULL, t_ms INTEGER, tid INTEGER, UNIQUE(sinal_id, tid));
+CREATE TABLE IF NOT EXISTS sec_vistos(acesso TEXT PRIMARY KEY, t_ms INTEGER);
+CREATE TABLE IF NOT EXISTS insider_sinais(
+  acesso TEXT PRIMARY KEY, data TEXT, ticker TEXT, cargo TEXT, dono TEXT, valor REAL, preco REAL, caracteristicas TEXT,
+  previsto REAL, desvio REAL, aprovado INTEGER, alertado INTEGER DEFAULT 0, t_ms INTEGER);
+CREATE TABLE IF NOT EXISTS insider_resultados(
+  acesso TEXT PRIMARY KEY, d_entrada TEXT, d_saida TEXT, bruto REAL, spy REAL, excesso REAL, r_curto REAL, t_ms INTEGER);
 CREATE TABLE IF NOT EXISTS perdidos(tid_chave TEXT PRIMARY KEY, carteira TEXT, moeda TEXT, t_carteira_ms INTEGER, t_visto_ms INTEGER);
 CREATE INDEX IF NOT EXISTS ix_sinais_resolver ON sinais(fonte, t_sinal_ms);
 CREATE INDEX IF NOT EXISTS ix_ops ON operacoes(carteira, moeda, t_ms);

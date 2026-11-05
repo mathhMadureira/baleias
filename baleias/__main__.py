@@ -35,6 +35,29 @@ def cmd_backtest(a):
         json.dump({"t": t, "info": info, "resumo": res}, f, indent=1)
 
 
+def cmd_insider_backtest(a):
+    from datetime import date, timedelta
+    from . import insider, precos_acoes, sec
+    eventos = []
+    for z in a.arquivos:
+        eventos += sec.compras_do_dataset(z)
+    eventos.sort(key=lambda e: e["data"])
+    print(f"compras que passaram no filtro: {len(eventos)} | tickers {len({e['ticker'] for e in eventos})} | de {eventos[0]['data']} a {eventos[-1]['data']}", flush=True)
+    inicio = date.fromisoformat(eventos[0]["data"]) - timedelta(days=45)
+    linhas, modelo = insider.backtest(eventos, precos_acoes.Cliente(), inicio, date.today())
+    print(f"avaliadas (com preço e 21 dias úteis depois): {len(linhas)}")
+    pct = lambda ls, k: media_ic([x[k] * 100 for x in ls])
+    apr = [x for x in linhas if x["aprovado"]]
+    m = len(linhas) // 2
+    print("excesso sobre o S&P, depois do custo (%, por compra, ~1 mês):")
+    for nome, ls, k in (("todos", linhas, "liquido"), ("aprovados", apr, "liquido"), ("1ª metade", linhas[:m], "liquido"), ("2ª metade", linhas[m:], "liquido")):
+        print(f"  {nome:12s} {fmt(pct(ls, k))}")
+    print("retorno absoluto depois do custo:", fmt(pct(linhas, "liquido_cru")), "| S&P no mesmo período:", fmt(pct(linhas, "spy")))
+    print("lições candidatas:")
+    for l in licoes([(x["nomes"], x["liquido"] * 100) for x in linhas])[:10]:
+        print(f"  {l['efeito']:6s} {l['caracteristica']:22s} {l['media']:+.3f}% [{l['baixo']:+.3f}, {l['alto']:+.3f}] n={l['n']}")
+
+
 def cmd_relatorio(a):
     c = banco.abrir()
     fonte = monitor.FONTE
@@ -74,6 +97,8 @@ def main():
     m = s.add_parser("monitor")
     m.add_argument("--uma-vez", action="store_true")
     s.add_parser("relatorio")
+    ib = s.add_parser("insider-backtest")
+    ib.add_argument("arquivos", nargs="+")
     pn = s.add_parser("painel")
     pn.add_argument("--porta", type=int, default=8787)
     a = p.parse_args()
@@ -81,6 +106,8 @@ def main():
         cmd_backtest(a)
     elif a.cmd == "monitor":
         monitor.rodar(banco.abrir(), api.Cliente(), a.uma_vez)
+    elif a.cmd == "insider-backtest":
+        cmd_insider_backtest(a)
     elif a.cmd == "painel":
         from . import painel
         painel.servir(a.porta)

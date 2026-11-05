@@ -1,6 +1,19 @@
 import os
 from pathlib import Path
 
+
+def _carregar_env():
+    """Lê ~/baleias/.env para os comandos manuais também verem o contato da SEC (o serviço já recebe pelo systemd)."""
+    arq = Path(__file__).resolve().parent.parent / ".env"
+    if arq.exists():
+        for linha in arq.read_text().splitlines():
+            if "=" in linha and not linha.lstrip().startswith("#"):
+                k, v = linha.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip())
+
+
+_carregar_env()
+
 RAIZ = Path(os.environ.get("BALEIAS_DADOS", Path(__file__).resolve().parent.parent / "dados"))
 BANCO = RAIZ / "baleias.db"
 
@@ -53,3 +66,13 @@ def custo_ida_e_volta(moeda: str) -> float:
         return 2 * (TAXA_TAKER_ACOES_SUPOSTA + SLIPPAGE_MENOR)
     s = SLIPPAGE_MAIOR if moeda in MAIORES else SLIPPAGE_MENOR
     return 2 * (TAXA_TAKER + s)
+
+
+# --- Compras de diretores (SEC, formulário 4) ---
+SEC_CONTATO = os.environ.get("SEC_CONTATO", "")
+INSIDER_VALOR_MINIMO = 50_000.0
+INSIDER_PRECO_MINIMO = 1.0
+INSIDER_DIAS_UTEIS = 21          # saída ~1 mês depois da entrada
+INSIDER_DIAS_CURTO = 5
+# Corretagem e spread de ação americana: suposição minha, por lado. Não inclui câmbio nem IOF para quem compra do Brasil.
+INSIDER_CUSTO_LADO = 0.002

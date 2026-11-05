@@ -275,3 +275,77 @@ class Rastros(unittest.TestCase):
             AL.enviar = original
         self.assertIn("SAIU", avisos[0])
         self.assertEqual(c.execute("SELECT COUNT(*) FROM rastros").fetchone()[0], 2)
+
+
+class Insider(unittest.TestCase):
+    XML = b"""<ownershipDocument><aff10b5One>0</aff10b5One><issuer><issuerTradingSymbol>abc</issuerTradingSymbol></issuer>
+<reportingOwner><reportingOwnerId><rptOwnerCik>1</rptOwnerCik></reportingOwnerId><reportingOwnerRelationship><isDirector>0</isDirector><isOfficer>1</isOfficer>
+<officerTitle>Chief Executive Officer</officerTitle></reportingOwnerRelationship></reportingOwner><nonDerivativeTable>
+<nonDerivativeTransaction><transactionCoding><transactionCode>P</transactionCode></transactionCoding><transactionAmounts>
+<transactionShares><value>10000</value></transactionShares><transactionPricePerShare><value>12.5</value></transactionPricePerShare>
+<transactionAcquiredDisposedCode><value>A</value></transactionAcquiredDisposedCode></transactionAmounts></nonDerivativeTransaction>
+<nonDerivativeTransaction><transactionCoding><transactionCode>S</transactionCode></transactionCoding><transactionAmounts>
+<transactionShares><value>999999</value></transactionShares><transactionPricePerShare><value>12</value></transactionPricePerShare>
+<transactionAcquiredDisposedCode><value>D</value></transactionAcquiredDisposedCode></transactionAmounts></nonDerivativeTransaction>
+</nonDerivativeTable></ownershipDocument>"""
+
+    def test_le_compra_e_ignora_venda(self):
+        from baleias import sec
+        e = sec.compras_do_xml(self.XML, "2026-10-01", "x")
+        self.assertEqual((e["ticker"], e["cargo"], e["valor"]), ("ABC", "ceo", 125000.0))
+
+    def test_plano_automatico_e_valor_baixo_ficam_fora(self):
+        from baleias import sec
+        self.assertIsNone(sec.compras_do_xml(self.XML.replace(b"<aff10b5One>0", b"<aff10b5One>1"), "2026-10-01", "x"))
+        self.assertIsNone(sec.compras_do_xml(self.XML.replace(b"10000</value>", b"100</value>"), "2026-10-01", "x"))
+
+    def test_entra_no_dia_util_seguinte_e_mede_contra_spy(self):
+        from baleias import insider
+        dias = [f"2026-10-{d:02d}" for d in range(1, 31)]
+        serie = [(d, 10.0 + i, 10.5 + i) for i, d in enumerate(dias)]
+        spy = [(d, 100.0, 101.0) for d in dias]
+        a = insider.avaliar({"data": "2026-10-01"}, serie, spy, dias=5)
+        self.assertEqual(a["d_entrada"], "2026-10-02")
+        self.assertEqual(a["d_saida"], "2026-10-06")
+        self.assertAlmostEqual(a["excesso"], (15.5 / 11.0 - 1) - (101 / 100 - 1) - 2 * config.INSIDER_CUSTO_LADO)
+
+    def test_sem_dias_suficientes_nao_avalia(self):
+        from baleias import insider
+        self.assertIsNone(insider.avaliar({"data": "2026-10-01"}, [("2026-10-02", 1, 1)], [("2026-10-02", 1, 1)], dias=5))
+
+    def test_cluster_exige_outro_dono_e_janela(self):
+        from baleias import insider
+        e = {"ticker": "A", "dono": "1", "data": "2026-10-20"}
+        self.assertTrue(insider.cluster(e, [{"ticker": "A", "dono": "2", "data": "2026-10-01"}]))
+        self.assertFalse(insider.cluster(e, [{"ticker": "A", "dono": "1", "data": "2026-10-01"}]))
+        self.assertFalse(insider.cluster(e, [{"ticker": "A", "dono": "2", "data": "2026-08-01"}]))
+
+
+class InsiderVivo(unittest.TestCase):
+    def test_registra_uma_vez_e_resolve_depois(self):
+        from datetime import date
+        from baleias import banco as Bn, insider_vivo as IV
+        c = Bn.abrir(":memory:")
+        xml = Insider.XML
+
+        class Sec:
+            def recentes(self):
+                return {"acc-1": "http://x/acc-1-index.htm"}
+
+            def formulario(self, link):
+                return xml
+
+        dias = [f"2026-{m:02d}-{d:02d}" for m in (9, 10, 11) for d in range(1, 29)]
+
+        class Precos:
+            cache = {}
+
+            def diario(self, t, ini, fim):
+                return [(d, 10.0, 11.0) for d in dias if d <= fim.isoformat()]
+
+        m = A.Modelo()
+        self.assertEqual(IV.novos_formularios(c, Sec(), Precos(), m, date(2026, 10, 1)), 1)
+        self.assertEqual(IV.novos_formularios(c, Sec(), Precos(), m, date(2026, 10, 1)), 0)
+        self.assertEqual(IV.resolver(c, Precos(), m, date(2026, 10, 20)), 0)
+        self.assertEqual(IV.resolver(c, Precos(), m, date(2026, 11, 20)), 1)
+        self.assertEqual(m.n, 1)

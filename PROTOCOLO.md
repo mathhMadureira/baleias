@@ -29,3 +29,15 @@ Estes números são escolhas de desenho para evitar autoengano, não verdades de
 ## Mudanças de regra
 - 2026-11-05, antes de qualquer sinal resolvido (contagem continua em zero): a máquina ficou parada ~18 h e, ao voltar, operações antigas viraram 3 sinais com 3 a 12 h de atraso. Regra nova: grupo detectado mais de 10 min depois da última operação da carteira é descartado e contado como perdido. Os 3 sinais foram marcados como `descartado_atraso` e não entram em nenhuma conta.
 - 2026-11-05, ainda com zero sinais resolvidos (contagem segue do zero): o universo passa a incluir ações e índices americanos do mercado xyz da Hyperliquid. Custo dessas: taxa **suposta** no dobro da base (0,09% por lado, valor não conferido) mais 0,05% de slippage. Nova característica `noticia` (manchete do ativo nas 6 h anteriores, Google News); falha de rede vira `desconhecido`, nunca `nao`. Rastro: depois de um alerta, o sistema avisa quando a carteira aumenta ou sai; isso não muda a regra de saída do teste (4 h).
+
+# Teste 2: compras de diretores (SEC, formulário 4), escrito em 2026-11-05 antes de ver resultado
+
+Pergunta: comprar a ação na abertura do dia útil seguinte à publicação de uma compra de diretor ganha do S&P 500 em ~1 mês, depois do custo?
+
+- Entram só compras no mercado aberto (código P, aquisição), de CEO, CFO, presidente, executivo, conselheiro ou dono de 10%, com valor somado ≥ US$ 50 mil, preço ≥ US$ 1, sem plano automático 10b5-1.
+- Entrada: abertura do primeiro dia útil depois da data de publicação. Saída: fechamento do 21º dia útil. O de 5 dias é só registro.
+- Custo **suposto**: 0,2% por lado, sem câmbio nem IOF de quem compra do Brasil. Controle: SPY no mesmo período.
+- Preços: Yahoo Finance, fonte não oficial.
+- Alvo do aprendizado: excesso sobre o SPY depois do custo. Alerta só depois de 30 compras resolvidas ao vivo e limite inferior acima de zero.
+- O backtest usa os arquivos trimestrais da SEC e só é indicativo: estas regras foram definidas antes dele, mas preços não oficiais e ações deslistadas (sem preço) podem enviesar.
+- Mesmo critério de dinheiro e de desistência do teste 1, contado à parte. Cada resultado leva ~1 mês: é um teste lento.

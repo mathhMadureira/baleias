@@ -170,6 +170,8 @@ def ciclo(c, cliente, modelo):
 
 def rodar(c, cliente, uma_vez=False):
     modelo = banco.carregar_modelo(c, FONTE)
+    from .insider_vivo import Rotina
+    insiders = Rotina(c)
     ultimo, ciclos = None, 0
     while True:
         inicio = time.monotonic()
@@ -179,8 +181,12 @@ def rodar(c, cliente, uma_vez=False):
         ultimo = parede
         try:
             r = ciclo(c, cliente, modelo)
+            try:
+                r.update(insiders.rodar())
+            except Exception as e:  # a SEC ou o Yahoo fora do ar não podem derrubar o monitor das baleias
+                print(time.strftime("%F %T"), "insider falhou:", type(e).__name__, str(e)[:150], flush=True)
             ciclos += 1
-            if r["novos"] or r["resolvidos"] or r["perdidos_por_atraso"] or r["rastros"] or ciclos % 120 == 0:
+            if any(r.get(k) for k in ("novos", "resolvidos", "perdidos_por_atraso", "rastros", "insider_novos", "insider_resolvidos")) or ciclos % 120 == 0:
                 print(time.strftime("%F %T"), r, f"ciclo {ciclos}", flush=True)
         except (RuntimeError, OSError, ValueError, KeyError) as e:
             print(time.strftime("%F %T"), "ciclo falhou:", type(e).__name__, str(e)[:200], flush=True)
