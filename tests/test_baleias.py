@@ -216,3 +216,6 @@ class Atraso(unittest.TestCase):
         self.assertEqual(len(novos), 1)
         self.assertEqual(len(perdidos), 1)
         self.assertEqual(c.execute("SELECT moeda FROM sinais").fetchone()["moeda"], "BTC")
+        de_novo = []
+        monitor.registrar_sinais(c, Falso(), A.Modelo(), agora + 30_000, de_novo)
+        self.assertEqual(de_novo, [], "o mesmo perdido não pode ser contado de novo")

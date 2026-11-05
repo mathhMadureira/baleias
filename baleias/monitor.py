@@ -37,7 +37,10 @@ def registrar_sinais(c, cliente, modelo, t, perdidos=None):
         recentes = [f for f in lote if f["time"] >= w["marca_ms"]]
         for s in S.detectar(recentes, t):
             if t - s["fim"] > config.ATRASO_MAXIMO_MS:
-                perdidos.append(s)
+                cur = c.execute("INSERT OR IGNORE INTO perdidos VALUES(?,?,?,?,?)",
+                                (f"{w['carteira']}:{s['tids'][0]}", w["carteira"], s["moeda"], s["fim"], t))
+                if cur.rowcount:
+                    perdidos.append(s)
                 continue
             chave = f"{w['carteira']}:{s['tids'][0]}"
             if c.execute("SELECT 1 FROM sinais WHERE fonte=? AND tid_chave=?", (FONTE, chave)).fetchone():

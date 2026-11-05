@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS modelo(fonte TEXT PRIMARY KEY, estado TEXT, atualizad
 CREATE TABLE IF NOT EXISTS licoes(
   id INTEGER PRIMARY KEY, fonte TEXT, t_ms INTEGER, caracteristica TEXT, efeito TEXT, n INTEGER, media REAL, baixo REAL, alto REAL);
 CREATE TABLE IF NOT EXISTS operacoes(tid INTEGER PRIMARY KEY, carteira TEXT, moeda TEXT, dir TEXT, t_ms INTEGER, dados TEXT);
+CREATE TABLE IF NOT EXISTS perdidos(tid_chave TEXT PRIMARY KEY, carteira TEXT, moeda TEXT, t_carteira_ms INTEGER, t_visto_ms INTEGER);
 CREATE INDEX IF NOT EXISTS ix_sinais_resolver ON sinais(fonte, t_sinal_ms);
 CREATE INDEX IF NOT EXISTS ix_ops ON operacoes(carteira, moeda, t_ms);
 """
