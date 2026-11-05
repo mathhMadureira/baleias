@@ -11,6 +11,8 @@ from datetime import date, datetime
 from . import config
 
 ATOM = "{http://www.w3.org/2005/Atom}"
+# Empresas sem ação negociada escrevem isto no lugar do código.
+SEM_ACAO = {"NONE", "NA", "N", "TBD", "NULL"}
 CARGOS = ("ceo", "cfo", "presidente", "diretor", "executivo", "dono10")
 
 
@@ -95,7 +97,7 @@ def compras_do_xml(xml_bytes, data_publicacao, acesso):
 
 def _filtrar(e):
     ok = (e["cargo"] and e["valor"] >= config.INSIDER_VALOR_MINIMO and e["preco"] >= config.INSIDER_PRECO_MINIMO
-          and e["ticker"].isalpha() and 1 <= len(e["ticker"]) <= 5)
+          and e["ticker"].isalpha() and 1 <= len(e["ticker"]) <= 5 and e["ticker"] not in SEM_ACAO)
     return e if ok else None
 
 

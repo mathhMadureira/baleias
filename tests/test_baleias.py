@@ -298,6 +298,7 @@ class Insider(unittest.TestCase):
         from baleias import sec
         self.assertIsNone(sec.compras_do_xml(self.XML.replace(b"<aff10b5One>0", b"<aff10b5One>1"), "2026-10-01", "x"))
         self.assertIsNone(sec.compras_do_xml(self.XML.replace(b"10000</value>", b"100</value>"), "2026-10-01", "x"))
+        self.assertIsNone(sec.compras_do_xml(self.XML.replace(b">abc<", b">None<"), "2026-10-01", "x"))
 
     def test_entra_no_dia_util_seguinte_e_mede_contra_spy(self):
         from baleias import insider
