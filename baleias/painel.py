@@ -50,7 +50,15 @@ def estado(c, fonte=FONTE):
                           "resolvidos": len(feitos), "media": round(sum(feitos) / len(feitos), 4) if feitos else None,
                           "peso": p and [round(p[0], 4), round(p[1], 4)], "motivo_saida": w["motivo_saida"]})
     licoes = [dict(l) for l in c.execute("SELECT caracteristica, efeito, n, media, baixo, alto FROM licoes WHERE fonte=? ORDER BY ABS(media) DESC", (fonte,))]
+    noticias = [dict(n) for n in c.execute(
+        "SELECT n.moeda, n.titulo, n.fonte, n.link, n.t_ms, n.sinal_id FROM noticias n JOIN sinais s ON s.id=n.sinal_id WHERE s.fonte=? "
+        "ORDER BY n.t_ms DESC LIMIT 25", (fonte,))]
+    rastros = [dict(r) for r in c.execute(
+        "SELECT r.sinal_id, r.evento, r.t_ms, s.moeda, s.lado, s.carteira FROM rastros r JOIN sinais s ON s.id=r.sinal_id WHERE s.fonte=? "
+        "ORDER BY r.t_ms DESC LIMIT 25", (fonte,))]
     return {
+        "noticias": noticias,
+        "rastros": rastros,
         "resumo": {"sinais": len(linhas), "resolvidos": len(resolvidos), "aprovados_resolvidos": len(aprovados),
                    "aprendidos": modelo.n, "todos": _ic(pct(resolvidos, "liquido")), "controle": _ic(pct(resolvidos, "controle_liquido")),
                    "aprovados": _ic(pct(aprovados, "liquido")), "primeira_metade": _ic(pct(resolvidos[:metade], "liquido")),

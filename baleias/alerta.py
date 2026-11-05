@@ -9,6 +9,7 @@ from . import config
 
 
 def texto(sinal, media, desvio, n, histo=""):
+    """`histo`: linhas extras (manchetes)."""
     return (f"🐋 {sinal['lado'].upper()} {sinal['moeda']} ({sinal['tipo']})\n"
             f"Carteira {sinal['carteira'][:8]}…  posição US$ {sinal['nocional']:,.0f}\n"
             f"Preço no alerta: {sinal['px']}  |  atraso: {sinal['atraso_s']:.0f}s\n"

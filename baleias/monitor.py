@@ -2,7 +2,7 @@
 import json
 import time
 
-from . import alerta, banco, config, selecao, sinais as S
+from . import alerta, banco, config, noticias, selecao, sinais as S
 from .aprendizado import aprovado, licoes
 
 FONTE = "ao_vivo"
@@ -53,18 +53,24 @@ def registrar_sinais(c, cliente, modelo, t, perdidos=None):
             previo = S.retorno_bruto(s["lado"], float(velas[0]["o"]), px) if velas else None
             uma_h = c.execute("SELECT 1 FROM sinais WHERE fonte=? AND moeda=? AND lado=? AND carteira<>? AND t_sinal_ms>=? LIMIT 1",
                               (FONTE, s["moeda"], s["lado"], w["carteira"], t - 6 * 3_600_000)).fetchone()
-            nomes = S.caracteristicas(w["carteira"], s["moeda"], s["lado"], s["tipo"], s["nocional"], bool(uma_h), previo)
+            manchetes = noticias.buscar(s["moeda"], t - 6 * 3_600_000)
+            nomes = S.caracteristicas(w["carteira"], s["moeda"], s["lado"], s["tipo"], s["nocional"], bool(uma_h), previo,
+                                      None if manchetes is None else bool(manchetes))
             resolvidos = c.execute("SELECT COUNT(*) n FROM resultados r JOIN sinais x ON x.id=r.sinal_id WHERE x.fonte=?", (FONTE,)).fetchone()["n"]
             ok, media, desvio = aprovado(modelo, nomes, resolvidos)
             cur = c.execute("INSERT INTO sinais(fonte,carteira,moeda,lado,tipo,nocional,t_carteira_ms,t_sinal_ms,px_entrada,caracteristicas,previsto,desvio,aprovado,tid_chave) "
                             "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                             (FONTE, w["carteira"], s["moeda"], s["lado"], s["tipo"], s["nocional"], s["fim"], t, px, json.dumps(nomes), media, desvio, int(ok), chave))
+            for n in manchetes or []:
+                c.execute("INSERT OR IGNORE INTO noticias(sinal_id,moeda,titulo,fonte,link,t_ms) VALUES(?,?,?,?,?,?)",
+                          (cur.lastrowid, s["moeda"], n["titulo"], n["fonte"], n["link"], n["t_ms"]))
             c.commit()
             novos.append(cur.lastrowid)
             if ok:
                 dados = {"lado": s["lado"], "moeda": s["moeda"], "tipo": s["tipo"], "carteira": w["carteira"], "nocional": s["nocional"], "px": px,
                          "atraso_s": (t - s["fim"]) / 1000}
-                alerta.enviar(alerta.texto(dados, media, desvio, resolvidos))
+                linhas_noticia = "".join(f"📰 {n['titulo'][:110]}\n" for n in (manchetes or [])[:2])
+                alerta.enviar(alerta.texto(dados, media, desvio, resolvidos, linhas_noticia))
                 c.execute("UPDATE sinais SET alertado=1 WHERE id=?", (cur.lastrowid,))
                 c.commit()
         if lote:
@@ -72,6 +78,28 @@ def registrar_sinais(c, cliente, modelo, t, perdidos=None):
             c.execute("UPDATE carteiras SET marca_ms=MAX(marca_ms, ?) WHERE carteira=?", (max(f["time"] for f in lote) - config.JANELA_AGRUPAR_MS * 2, w["carteira"]))
             c.commit()
     return novos
+
+
+def seguir_rastros(c, t):
+    """Depois do alerta, acompanha a carteira na mesma moeda até o horizonte: aumento e saída viram aviso, uma vez cada operação."""
+    abertos = c.execute("SELECT s.* FROM sinais s LEFT JOIN resultados r ON r.sinal_id=s.id WHERE s.fonte=? AND s.alertado=1 AND r.sinal_id IS NULL",
+                        (FONTE,)).fetchall()
+    avisos = 0
+    for s in abertos:
+        fecha = "Close Long" if s["lado"] == "long" else "Close Short"
+        abre = "Open Long" if s["lado"] == "long" else "Open Short"
+        ops = c.execute("SELECT tid, dir, t_ms FROM operacoes WHERE carteira=? AND moeda=? AND dir IN (?,?) AND t_ms>? ORDER BY t_ms",
+                        (s["carteira"], s["moeda"], fecha, abre, s["t_carteira_ms"])).fetchall()
+        for o in ops:
+            evento = "saiu" if o["dir"] == fecha else "aumentou"
+            if c.execute("INSERT OR IGNORE INTO rastros(sinal_id,evento,t_ms,tid) VALUES(?,?,?,?)", (s["id"], evento, o["t_ms"], o["tid"])).rowcount:
+                anterior = c.execute("SELECT COUNT(*) n FROM rastros WHERE sinal_id=? AND evento=?", (s["id"], evento)).fetchone()["n"]
+                if anterior == 1:  # avisa a primeira de cada tipo; operações seguidas do mesmo tipo não geram spam
+                    alerta.enviar(f"👣 A carteira {s['carteira'][:8]}… {'SAIU (fechou parte ou toda a posição)' if evento == 'saiu' else 'AUMENTOU a posição'} "
+                                  f"em {s['moeda']} {s['lado']}. Sinal #{s['id']}. Não é ordem: só o rastro.")
+                    avisos += 1
+    c.commit()
+    return avisos
 
 
 def resolver(c, cliente, modelo, t):
@@ -135,8 +163,9 @@ def ciclo(c, cliente, modelo):
     atualizar_carteiras(c, cliente, t)
     perdidos = []
     novos = registrar_sinais(c, cliente, modelo, t, perdidos)
+    rastros = seguir_rastros(c, t)
     feitos = resolver(c, cliente, modelo, t)
-    return {"novos": len(novos), "resolvidos": feitos, "perdidos_por_atraso": len(perdidos)}
+    return {"novos": len(novos), "resolvidos": feitos, "perdidos_por_atraso": len(perdidos), "rastros": rastros}
 
 
 def rodar(c, cliente, uma_vez=False):
@@ -151,7 +180,7 @@ def rodar(c, cliente, uma_vez=False):
         try:
             r = ciclo(c, cliente, modelo)
             ciclos += 1
-            if r["novos"] or r["resolvidos"] or r["perdidos_por_atraso"] or ciclos % 120 == 0:
+            if r["novos"] or r["resolvidos"] or r["perdidos_por_atraso"] or r["rastros"] or ciclos % 120 == 0:
                 print(time.strftime("%F %T"), r, f"ciclo {ciclos}", flush=True)
         except (RuntimeError, OSError, ValueError, KeyError) as e:
             print(time.strftime("%F %T"), "ciclo falhou:", type(e).__name__, str(e)[:200], flush=True)

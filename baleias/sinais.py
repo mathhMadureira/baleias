@@ -3,7 +3,10 @@ from . import config
 
 
 def e_perpetuo_comum(moeda):
-    return not moeda.startswith("@") and ":" not in moeda and "/" not in moeda
+    """Perpétuo de cripto ou ação americana do mercado xyz. Spot e outros mercados HIP-3 ficam fora."""
+    if moeda.startswith("@") or "/" in moeda:
+        return False
+    return ":" not in moeda or config.e_acao(moeda)
 
 
 def detectar(operacoes, agora_ms=None, nocional_minimo=config.NOCIONAL_MINIMO):
@@ -42,7 +45,7 @@ def detectar(operacoes, agora_ms=None, nocional_minimo=config.NOCIONAL_MINIMO):
     return fechados
 
 
-def caracteristicas(carteira, moeda, lado, tipo, nocional, consenso, movimento_previo):
+def caracteristicas(carteira, moeda, lado, tipo, nocional, consenso, movimento_previo, noticia=None):
     """Só o que se conhece no instante do sinal. Movimento prévio positivo = o preço já andou a favor do lado."""
     if nocional < 50_000:
         tamanho = "<50k"
@@ -61,7 +64,8 @@ def caracteristicas(carteira, moeda, lado, tipo, nocional, consenso, movimento_p
     else:
         previo = "neutro"
     return ["vies", f"lado:{lado}", f"tipo:{tipo}", f"tamanho:{tamanho}",
-            f"ativo:{'maior' if moeda in config.MAIORES else 'menor'}",
+            f"ativo:{'acao_eua' if config.e_acao(moeda) else 'maior' if moeda in config.MAIORES else 'menor'}",
+            f"noticia:{'desconhecido' if noticia is None else 'sim' if noticia else 'nao'}",
             f"consenso:{'sim' if consenso else 'nao'}", f"previo:{previo}", f"carteira:{carteira}"]
 
 

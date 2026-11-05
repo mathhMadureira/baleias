@@ -44,7 +44,7 @@ class Deteccao(unittest.TestCase):
         self.assertEqual(S.detectar([fill(0, 1)], agora_ms=config.JANELA_AGRUPAR_MS), [])
 
     def test_ignora_fechamento_spot_e_hip3(self):
-        self.assertEqual(S.detectar([fill(0, 1, "Close Long"), fill(0, 2, "Buy", "@107"), fill(0, 3, "Open Long", "xyz:TSLA")], 9_999_999), [])
+        self.assertEqual(S.detectar([fill(0, 1, "Close Long"), fill(0, 2, "Buy", "@107"), fill(0, 3, "Open Long", "flx:TSLA")], 9_999_999), [])
 
     def test_aumento_pequeno_nao_conta(self):
         self.assertEqual(S.detectar([fill(0, 1, sz=200, inicio=1000)], 9_999_999), [])
@@ -219,3 +219,59 @@ class Atraso(unittest.TestCase):
         de_novo = []
         monitor.registrar_sinais(c, Falso(), A.Modelo(), agora + 30_000, de_novo)
         self.assertEqual(de_novo, [], "o mesmo perdido não pode ser contado de novo")
+
+
+class AcoesENoticias(unittest.TestCase):
+    def test_aceita_acao_xyz_e_recusa_outros_mercados(self):
+        self.assertTrue(S.e_perpetuo_comum("xyz:NVDA"))
+        self.assertFalse(S.e_perpetuo_comum("flx:TSLA"))
+        self.assertFalse(S.e_perpetuo_comum("@107"))
+        self.assertTrue(S.e_perpetuo_comum("BTC"))
+
+    def test_custo_de_acao_e_mais_alto(self):
+        self.assertGreater(config.custo_ida_e_volta("xyz:NVDA"), config.custo_ida_e_volta("DOGE"))
+        self.assertIn("ativo:acao_eua", S.caracteristicas("0x", "xyz:NVDA", "long", "abertura", 6e4, False, 0.0))
+
+    def test_falha_de_noticia_vira_desconhecido(self):
+        from baleias import noticias
+        def quebra(*a, **k):
+            raise OSError("sem rede")
+        self.assertIsNone(noticias.buscar("BTC", 0, abrir=quebra))
+        self.assertIn("noticia:desconhecido", S.caracteristicas("0x", "BTC", "long", "abertura", 6e4, False, 0.0, None))
+        self.assertIn("noticia:nao", S.caracteristicas("0x", "BTC", "long", "abertura", 6e4, False, 0.0, False))
+
+    def test_le_rss_e_filtra_por_tempo(self):
+        import io
+        from baleias import noticias
+        xml = (b'<rss><channel><item><title>BTC sobe</title><link>http://a</link><pubDate>Wed, 05 Nov 2026 12:00:00 GMT</pubDate>'
+               b'<source url="x">Fonte</source></item><item><title>velha</title><link>http://b</link>'
+               b'<pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate></item><item><title>sem data</title></item></channel></rss>')
+        class R(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+        itens = noticias.buscar("BTC", 1_790_000_000_000, abrir=lambda *a, **k: R(xml))
+        self.assertEqual([i["titulo"] for i in itens], ["BTC sobe"])
+        self.assertEqual(itens[0]["fonte"], "Fonte")
+        self.assertEqual(noticias.consulta("xyz:NVDA"), "NVDA stock")
+
+
+class Rastros(unittest.TestCase):
+    def test_avisa_saida_uma_vez(self):
+        import json as J
+        from baleias import banco as Bn, monitor
+        c = Bn.abrir(":memory:")
+        c.execute("INSERT INTO sinais(fonte,carteira,moeda,lado,tipo,nocional,t_carteira_ms,t_sinal_ms,px_entrada,caracteristicas,previsto,desvio,aprovado,alertado,tid_chave) "
+                  "VALUES('ao_vivo','0xabc','ETH','long','abertura',5e4,100,110,100,?,1,1,1,1,'k')", (J.dumps(["vies"]),))
+        for tid, t in ((1, 200), (2, 300)):
+            c.execute("INSERT INTO operacoes VALUES(?,?,?,?,?,?)", (tid, "0xabc", "ETH", "Close Long", t, "{}"))
+        avisos = []
+        import baleias.alerta as AL
+        original = AL.enviar
+        AL.enviar = avisos.append
+        try:
+            self.assertEqual(monitor.seguir_rastros(c, 400), 1)
+            self.assertEqual(monitor.seguir_rastros(c, 500), 0)
+        finally:
+            AL.enviar = original
+        self.assertIn("SAIU", avisos[0])
+        self.assertEqual(c.execute("SELECT COUNT(*) FROM rastros").fetchone()[0], 2)

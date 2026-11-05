@@ -38,6 +38,18 @@ VARIANCIA_PRIOR = 1.0  # em (%)^2 por característica
 RUIDO_INICIAL = 4.0    # em (%)^2
 
 
+# Ações e índices americanos negociados na Hyperliquid (HIP-3, mercado "xyz").
+DEX_ACOES = "xyz"
+# A taxa dos mercados HIP-3 é definida por quem os criou e não conferi o valor: uso o dobro da taxa base, por cautela.
+TAXA_TAKER_ACOES_SUPOSTA = 2 * TAXA_TAKER
+
+
+def e_acao(moeda: str) -> bool:
+    return moeda.startswith(DEX_ACOES + ":")
+
+
 def custo_ida_e_volta(moeda: str) -> float:
+    if e_acao(moeda):
+        return 2 * (TAXA_TAKER_ACOES_SUPOSTA + SLIPPAGE_MENOR)
     s = SLIPPAGE_MAIOR if moeda in MAIORES else SLIPPAGE_MENOR
     return 2 * (TAXA_TAKER + s)

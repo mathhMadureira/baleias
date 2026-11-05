@@ -82,4 +82,6 @@ class Cliente:
         return self.info("candleSnapshot", req={"coin": moeda, "interval": intervalo, "startTime": int(inicio_ms), "endTime": int(fim_ms)})
 
     def precos(self):
-        return {k: float(v) for k, v in self.info("allMids").items()}
+        p = {k: float(v) for k, v in self.info("allMids").items()}
+        p.update({k: float(v) for k, v in self.info("allMids", dex=config.DEX_ACOES).items()})
+        return p

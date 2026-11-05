@@ -18,7 +18,7 @@ svg{width:100%;height:120px;display:block}
 *{scrollbar-color:#3a3f4a transparent}td,th{font-size:12px}
 .flash{animation:f 1.2s}@keyframes f{from{background:#2a2d12}to{background:transparent}}
 </style></head><body>
-<header><div><b>🐋 BALEIAS</b> <span class="mut">Hyperliquid · só leitura · horizonte 4 h</span></div><div id="aviso">carregando…</div></header>
+<header><div><b>🐋 BALEIAS</b> <span class="mut">Hyperliquid · cripto e ações EUA · só leitura · horizonte 4 h</span></div><div id="aviso">carregando…</div></header>
 <main>
 <section><h2>Resultado depois dos custos (% por sinal, IC 95%)</h2><table id="resumo"></table></section>
 <section><h2>Protocolo</h2><div id="protocolo"></div><p class="mut">Os US$ 10 só entram com os 4 critérios do PROTOCOLO.md ao mesmo tempo.</p></section>
@@ -26,6 +26,8 @@ svg{width:100%;height:120px;display:block}
 <section><h2>Por que acertou ou errou</h2><table id="classes"></table></section>
 <section><h2>Lições candidatas</h2><table id="licoes"></table></section>
 <section><h2>Carteiras</h2><div class="wrap"><table id="carteiras"></table></div></section>
+<section><h2>Notícias dos ativos sinalizados</h2><div class="wrap"><table id="noticias"></table></div></section>
+<section><h2>Rastros: o que as carteiras fizeram depois do alerta</h2><table id="rastros"></table></section>
 <section style="grid-column:1/-1"><h2>Sinais recentes</h2><div class="wrap"><table id="sinais"></table></div></section>
 </main>
 <script>
@@ -45,7 +47,10 @@ async function atualizar(){try{const d=await (await fetch('/api/estado')).json()
  $('classes').innerHTML=Object.keys(d.classes).length?Object.entries(d.classes).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<tr><td>${esc(k.replaceAll('_',' '))}</td><td>${v}</td></tr>`).join(''):'<tr><td class=mut>nenhum sinal resolvido ainda</td></tr>';
  $('licoes').innerHTML=d.licoes.length?'<tr><th>Característica</th><th>Efeito</th><th>Média</th><th>n</th></tr>'+d.licoes.map(l=>`<tr><td>${esc(l.caracteristica.slice(0,34))}</td><td class="${l.efeito=='ganha'?'pos':'neg'}">${l.efeito}</td><td>${f(l.media)}</td><td>${l.n}</td></tr>`).join(''):'<tr><td class=mut>Nenhuma lição com amostra e intervalo suficientes.</td></tr>';
  $('carteiras').innerHTML='<tr><th>Carteira</th><th>Conta US$</th><th>Sinais</th><th>Resolv.</th><th>Média %</th><th>Peso aprendido</th></tr>'+d.carteiras.map(w=>`<tr class="${w.ativa?'':'mut'}"><td title="${esc(w.motivo_saida||'')}">${w.carteira.slice(0,10)}…${w.ativa?'':' (saiu)'}</td><td>${Math.round(w.conta).toLocaleString('pt-BR')}</td><td>${w.sinais}</td><td>${w.resolvidos}</td><td class="${cls(w.media)}">${f(w.media)}</td><td>${w.peso?f(w.peso[0])+' ±'+w.peso[1].toFixed(2):'—'}</td></tr>`).join('');
- $('sinais').innerHTML='<tr><th>Hora</th><th>Moeda</th><th>Lado</th><th>Tipo</th><th>US$</th><th>Previsto %</th><th>Aprovado</th><th>Resultado %</th><th>Classe</th></tr>'+d.sinais.map(s=>`<tr class="${vistos.size&&!vistos.has(s.id)?'flash':''}"><td>${new Date(s.t_sinal_ms).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'})}</td><td>${esc(s.moeda)}</td><td class="${s.lado=='long'?'pos':'neg'}">${s.lado}</td><td>${s.tipo}</td><td>${Math.round(s.nocional).toLocaleString('pt-BR')}</td><td>${f(s.previsto)} ±${Number(s.desvio).toFixed(2)}</td><td>${s.aprovado?'<b class=pos>sim</b>':'<span class=mut>não</span>'}</td><td class="${cls(s.liquido)}">${s.liquido==null?'<span class=mut>aguardando 4 h</span>':f(s.liquido)}</td><td class=mut>${s.classe?esc(s.classe.replaceAll('_',' ')):''}</td></tr>`).join('');
+ $('sinais').innerHTML='<tr><th>Hora</th><th>Moeda</th><th>Lado</th><th>Tipo</th><th>US$</th><th>Previsto %</th><th>Aprovado</th><th>Resultado %</th><th>Classe</th></tr>'+d.sinais.map(s=>`<tr class="${vistos.size&&!vistos.has(s.id)?'flash':''}"><td>${new Date(s.t_sinal_ms).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'})}</td><td>${esc(s.moeda.startsWith("xyz:")?s.moeda.slice(4)+" (ação EUA)":s.moeda)}</td><td class="${s.lado=='long'?'pos':'neg'}">${s.lado}</td><td>${s.tipo}</td><td>${Math.round(s.nocional).toLocaleString('pt-BR')}</td><td>${f(s.previsto)} ±${Number(s.desvio).toFixed(2)}</td><td>${s.aprovado?'<b class=pos>sim</b>':'<span class=mut>não</span>'}</td><td class="${cls(s.liquido)}">${s.liquido==null?'<span class=mut>aguardando 4 h</span>':f(s.liquido)}</td><td class=mut>${s.classe?esc(s.classe.replaceAll('_',' ')):''}</td></tr>`).join('');
+ const hora=t=>new Date(t).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}), nome=m=>esc(m.startsWith('xyz:')?m.slice(4)+' (ação EUA)':m);
+ $('noticias').innerHTML=d.noticias.length?d.noticias.map(n=>`<tr><td class=mut>${hora(n.t_ms)}</td><td>${nome(n.moeda)}</td><td style="text-align:left;white-space:normal"><a style="color:var(--c)" href="${esc(n.link)}" target=_blank rel=noopener>${esc(n.titulo)}</a> <span class=mut>${esc(n.fonte)}</span></td></tr>`).join(''):'<tr><td class=mut>As manchetes aparecem junto com cada sinal novo.</td></tr>';
+ $('rastros').innerHTML=d.rastros.length?d.rastros.map(r=>`<tr><td class=mut>${hora(r.t_ms)}</td><td>#${r.sinal_id} ${nome(r.moeda)} ${r.lado}</td><td class="${r.evento=='saiu'?'neg':'pos'}">${r.evento=='saiu'?'carteira saiu':'carteira aumentou'}</td></tr>`).join(''):'<tr><td class=mut>Rastros só são seguidos depois de um alerta aprovado.</td></tr>';
  vistos=new Set(d.sinais.map(s=>s.id))}catch(e){$('aviso').textContent='sem conexão com o painel'}}
 atualizar();setInterval(atualizar,5000);
 </script></body></html>
