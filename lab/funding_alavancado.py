@@ -9,6 +9,7 @@ from baleias import config
 from . import funding as F
 
 NIVEIS = (1, 2, 3, 5, 10)
+ESCOLHIDO = 2  # resultado da H3b em 2026-11-06: maior nível com zero liquidações e queda < 2%
 MANUTENCAO = 0.0125
 CUSTO_REEQUILIBRIO = 0.0007
 CACHE = config.RAIZ / "lab"
@@ -45,6 +46,45 @@ def velas_1h(moeda, inicio_ms):
     return saida
 
 
+BINANCE = {"BTC": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT",
+           "ETH": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT",
+           "SOL": "https://api.binance.com/api/v3/klines?symbol=SOLUSDT",
+           "HYPE": "https://fapi.binance.com/fapi/v1/klines?symbol=HYPEUSDT"}
+
+
+def velas_binance(moeda, inicio_ms):
+    """A Hyperliquid só devolve as últimas ~5000 velas; o histórico de máximas vem da Binance (preço de outra bolsa, suposição registrada)."""
+    saida, t = {}, inicio_ms
+    fim = int(time.time() * 1000)
+    while t < fim:
+        for tentativa in range(6):
+            try:
+                with urllib.request.urlopen(f"{BINANCE[moeda]}&interval=1h&startTime={t}&limit=1000", timeout=40) as r:
+                    lote = json.load(r)
+                break
+            except (urllib.error.URLError, TimeoutError, ConnectionError):
+                time.sleep(10 * (tentativa + 1))
+        else:
+            raise RuntimeError("Binance indisponível")
+        if not lote:
+            break
+        for v in lote:
+            saida[v[0]] = (float(v[1]), float(v[2]), float(v[4]))
+        t = lote[-1][0] + 3_600_000
+        time.sleep(0.3)
+    return saida
+
+
+def completar_velas(velas, inicio_ms=1_683_000_000_000):
+    arq = CACHE / "velas_binance_1h.json"
+    if arq.exists():
+        bn = {m: {int(k): tuple(v) for k, v in x.items()} for m, x in json.loads(arq.read_text()).items()}
+    else:
+        bn = {m: velas_binance(m, inicio_ms) for m in F.MOEDAS}
+        arq.write_text(json.dumps({m: {str(k): v for k, v in x.items()} for m, x in bn.items()}))
+    return {m: {**bn.get(m, {}), **velas.get(m, {})} for m in F.MOEDAS}
+
+
 def dados(inicio_ms=1_683_000_000_000):
     """Cache em disco: buscar tudo de novo estoura a cota de pedidos."""
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -67,7 +107,7 @@ def simular(funding, velas, L):
     dist_liq = 1 / L - MANUTENCAO          # alta do preço (relativa ao último reequilíbrio) que liquida o vendido
     gatilho = dist_liq / 2
     dia = lambda t: time.strftime("%Y-%m-%d", time.gmtime(t / 1000))
-    por_dia, eventos = {}, {"liquidacoes": 0, "reequilibrios": 0}
+    por_dia, eventos = {}, {"liquidacoes": 0, "reequilibrios": 0, "horas_dentro": 0, "horas_sem_vela": 0}
     for m, serie in funding.items():
         v = velas.get(m, {})
         dentro, taxas, ref = False, [], None
@@ -75,6 +115,9 @@ def simular(funding, velas, L):
             d = dia(t)
             por_dia.setdefault(d, 0.0)
             hora = v.get(t - t % 3_600_000)
+            if dentro:
+                eventos["horas_dentro"] += 1
+                eventos["horas_sem_vela"] += hora is None
             if dentro and hora:
                 o, h, c = hora
                 if ref is None:
@@ -101,11 +144,16 @@ def simular(funding, velas, L):
 
 if __name__ == "__main__":
     funding, velas = dados()
+    velas = completar_velas(velas)
     print("\nAlavancagem do perpétuo | ao ano | dias positivos | maior queda | liquidações | reequilíbrios | média/dia")
     for L in NIVEIS:
         pd, ev = simular(funding, velas, L)
         r = F.resumo(pd)
-        print(f"  {L:>2}x  {r['ao_ano']:+7.2%}  {r['dias_positivos']:5.0%}  {r['maior_queda']:+7.2%}  {ev['liquidacoes']:>4}  {ev['reequilibrios']:>5}  {r['media_dia'] * 100:+.4f}%")
+        print(f"  {L:>2}x  {r['ao_ano']:+7.2%}  {r['dias_positivos']:5.0%}  {r['maior_queda']:+7.2%}  {ev['liquidacoes']:>4}  {ev['reequilibrios']:>5}  {r['media_dia'] * 100:+.4f}%  (horas sem vela: {ev['horas_sem_vela']}/{ev['horas_dentro']})")
+        anos = {}
+        for d, x in pd.items():
+            anos[d[:4]] = anos.get(d[:4], 0.0) + x
+        print("      por ano: " + "  ".join(f"{a} {x:+.2%}" for a, x in sorted(anos.items())))
         vals = list(pd.values())
         if L == 1:
             m, v = st.fmean(vals), st.pvariance(vals)

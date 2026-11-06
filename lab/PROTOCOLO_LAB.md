@@ -107,3 +107,17 @@ Retorno anual sobre o capital, % de dias positivos, maior queda, número de liqu
 
 ## Uso
 Escolher para o teste ao vivo o MAIOR L com zero liquidações em todo o histórico E maior queda menor que 2%; o resultado é descritivo (sem cofre), porque o histórico já foi visto na hipótese 3.
+
+### Resultado da H3b (2026-11-06)
+
+Máximas horárias: Hyperliquid nas últimas ~5000 h, Binance antes disso (outra bolsa, suposição). 4152 de 87536 horas posicionadas ficaram sem vela (HYPE antes de 30/05/2025), e nelas a liquidação não foi checada.
+
+| L | ao ano | dias + | maior queda | liquidações | 2026 |
+|---|---|---|---|---|---|
+| 1x | +6,12% | 84% | −0,16% | 0 | +1,60% |
+| 2x | +8,23% | 84% | −0,21% | 0 | +2,13% |
+| 3x | +9,22% | 84% | −0,26% | 1 | +2,39% |
+| 5x | +10,09% | 84% | −0,47% | 3 | +2,65% |
+| 10x | +10,31% | 83% | −0,75% | 10 | +2,88% |
+
+Pela regra pré-registrada, o escolhido é **2x**, que entra no ao vivo simulado junto com a H3 (mesmo início, 2026-11-07). A primeira rodada mostrava zero liquidações em todos os níveis, mas só porque faltavam velas antes de 2025. Esse erro foi corrigido antes desta tabela.

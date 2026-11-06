@@ -128,4 +128,12 @@ def ao_vivo(post=None):
     r["hoje_parcial"] = por_dia.get(hoje)
     r["por_dia"] = fechados
     r["faltam_para_90"] = max(0, 90 - r["dias"])
+    try:  # H3b: 2x, único nível sem liquidação no histórico; velas recentes da própria Hyperliquid
+        from . import funding_alavancado as FA
+        velas = {m: FA.velas_1h(m, inicio) for m in MOEDAS}
+        pd2, ev = FA.simular(series, velas, FA.ESCOLHIDO)
+        f2 = {d: v for d, v in pd2.items() if INICIO_AO_VIVO <= d < hoje}
+        r["alavancado"] = {"nivel": FA.ESCOLHIDO, **(resumo(f2) or {"dias": 0}), "liquidacoes": ev["liquidacoes"], "reequilibrios": ev["reequilibrios"]}
+    except Exception as e:
+        r["alavancado"] = {"erro": type(e).__name__}
     return r
