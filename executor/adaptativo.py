@@ -8,9 +8,10 @@ import random
 import time
 import urllib.request
 
-LIMIARES = (0.0, 0.05, 0.10, 0.20)   # % de alta prevista necessária
+LIMIARES = (0.0, 0.05, 0.10, 0.20)   # % de movimento previsto necessário, na direção da operação
 SEGURAR_MIN = (5, 15, 30)
-BRACOS = [f"lim{l:.2f}_seg{s}" for l in LIMIARES for s in SEGURAR_MIN]
+LADOS = ("compra", "venda")          # venda = operar na queda (vendido)
+BRACOS = [f"{lado}_lim{l:.2f}_seg{s}" for lado in LADOS for l in LIMIARES for s in SEGURAR_MIN]
 INTERVALO_OPORTUNIDADE_S = 300       # no máximo uma oportunidade a cada 5 min (minutos vizinhos são quase a mesma informação)
 PRIOR_DP = 0.3                       # % por operação: incerteza inicial
 ESQUEMA = """
@@ -20,8 +21,16 @@ CREATE TABLE IF NOT EXISTS robo_oportunidades(id INTEGER PRIMARY KEY, t_ms INTEG
 
 
 def parametros(braco):
-    lim, seg = braco.split("_")
-    return float(lim[3:]), int(seg[3:])
+    """(lado, limiar, segurar). Nomes antigos, sem lado, são de compra."""
+    partes = braco.split("_")
+    lado = partes[0] if partes[0] in LADOS else "compra"
+    lim, seg = partes[-2], partes[-1]
+    return lado, float(lim[3:]), int(seg[3:])
+
+
+def dispara(braco, previsto):
+    lado, lim, _ = parametros(braco)
+    return previsto > lim if lado == "compra" else -previsto > lim
 
 
 def posterior(n, soma, soma2):
@@ -44,8 +53,7 @@ def escolher(c, previsto, rnd=random):
     est = estatisticas(c)
     melhor, valor = None, 0.0  # "não operar" vale zero
     for b in BRACOS:
-        lim, _ = parametros(b)
-        if previsto <= lim:
+        if not dispara(b, previsto):
             continue
         m, dp = posterior(*est[b])
         amostra = rnd.gauss(m, dp)
@@ -54,23 +62,23 @@ def escolher(c, previsto, rnd=random):
     return melhor
 
 
-def resultado_versao(px_entrada, velas, segurar_min, stop_pct, custo_pct):
-    """Velas de 1 min a partir da entrada: (t, o, h, l, c). Sai no stop (se a mínima tocar) ou no fechamento do tempo."""
+def resultado_versao(px_entrada, velas, segurar_min, stop_pct, custo_pct, lado="compra"):
+    """Velas de 1 min a partir da entrada: (t, o, h, l, c). Sai no stop (se o preço andar contra) ou no fechamento do tempo."""
     janela = velas[:segurar_min]
     if len(janela) < segurar_min:
         return None
-    alvo_stop = px_entrada * (1 - stop_pct / 100)
     for v in janela:
-        if v[3] <= alvo_stop:
+        if (lado == "compra" and v[3] <= px_entrada * (1 - stop_pct / 100)) or (lado == "venda" and v[2] >= px_entrada * (1 + stop_pct / 100)):
             return -stop_pct - custo_pct
-    return (janela[-1][4] / px_entrada - 1) * 100 - custo_pct
+    r = (janela[-1][4] / px_entrada - 1) * 100
+    return (r if lado == "compra" else -r) - custo_pct
 
 
 def registrar_oportunidade(c, t_ms, px, previsto):
     ultima = c.execute("SELECT MAX(t_ms) FROM robo_oportunidades").fetchone()[0]
     if ultima is not None and t_ms - ultima < INTERVALO_OPORTUNIDADE_S * 1000:
         return False
-    disparam = [b for b in BRACOS if previsto > parametros(b)[0]]
+    disparam = [b for b in BRACOS if dispara(b, previsto)]
     c.execute("INSERT INTO robo_oportunidades(t_ms,px,previsto,bracos) VALUES(?,?,?,?)", (t_ms, px, previsto, json.dumps(disparam)))
     c.commit()
     return True
@@ -90,7 +98,8 @@ def resolver(c, stop_pct, custo_pct, agora_ms=None, buscar=_velas_binance):
         velas = buscar(o["t_ms"] + 60_000 - o["t_ms"] % 60_000, max(SEGURAR_MIN))
         res = {}
         for b in json.loads(o["bracos"]):
-            r = resultado_versao(o["px"], velas, parametros(b)[1], stop_pct, custo_pct)
+            lado, _, seg = parametros(b)
+            r = resultado_versao(o["px"], velas, seg, stop_pct, custo_pct, lado)
             if r is None:
                 continue
             res[b] = r
@@ -106,6 +115,6 @@ def painel(c):
     saida = []
     for b, (n, s, s2) in estatisticas(c).items():
         m, dp = posterior(n, s, s2)
-        lim, seg = parametros(b)
-        saida.append({"braco": b, "limiar": lim, "segurar": seg, "n": n, "media_bruta": s / n if n else None, "media": m, "dp": dp})
+        lado, lim, seg = parametros(b)
+        saida.append({"braco": b, "lado": lado, "limiar": lim, "segurar": seg, "n": n, "media_bruta": s / n if n else None, "media": m, "dp": dp})
     return sorted(saida, key=lambda x: -x["media"])

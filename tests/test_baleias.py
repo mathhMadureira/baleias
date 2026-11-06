@@ -417,7 +417,7 @@ class Executor(unittest.TestCase):
         self.assertIn("PARAR", robo.decidir(boa, 0.2, 0, False, True))
         self.assertIn("aberta", robo.decidir(boa, 0.2, 0, True, False))
         self.assertIn("perda", robo.decidir(boa, 0.2, -2.5, False, False))
-        self.assertIn("queda", robo.decidir({**boa, "media": -0.01}, 0.2, 0, False, False))
+        self.assertIsNone(robo.decidir({**boa, "media": -0.01}, 0.2, 0, False, False), "previsão de queda também pode operar")
 
     def test_stop_vende_antes_do_tempo(self):
         import os, sqlite3
@@ -425,7 +425,7 @@ class Executor(unittest.TestCase):
         c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
         c.execute(robo.ESQUEMA)
         from executor import adaptativo; c.executescript(adaptativo.ESQUEMA)
-        adaptativo.escolher = lambda c, p, rnd=None: "lim0.00_seg15"
+        adaptativo.escolher = lambda c, p, rnd=None: "compra_lim0.00_seg15"
         precos = [100.0]
         class B:
             def livro(self, s): return (precos[0], precos[0])
@@ -443,7 +443,7 @@ class Executor(unittest.TestCase):
         c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
         c.execute(robo.ESQUEMA)
         from executor import adaptativo; c.executescript(adaptativo.ESQUEMA)
-        adaptativo.escolher = lambda c, p, rnd=None: "lim0.00_seg15"
+        adaptativo.escolher = lambda c, p, rnd=None: "compra_lim0.00_seg15"
         class B:
             def livro(self, s): return (100.0, 100.0)
         class S:
@@ -493,16 +493,17 @@ class Adaptativo(unittest.TestCase):
     def test_prefere_a_versao_que_ganha(self):
         rnd = random.Random(2)
         for b in self.A.BRACOS:
-            media = 0.3 if b == "lim0.10_seg30" else -0.2
+            media = 0.3 if b == "compra_lim0.10_seg30" else -0.2
             self.c.execute("INSERT INTO robo_bracos VALUES(?,?,?,?)", (b, 200, media * 200, (media * media + 0.05) * 200))
         escolhas = [self.A.escolher(self.c, 1.0, rnd) for _ in range(200)]
-        self.assertGreater(escolhas.count("lim0.10_seg30") / 200, 0.9)
+        self.assertGreater(escolhas.count("compra_lim0.10_seg30") / 200, 0.9)
 
     def test_so_disparam_versoes_abaixo_da_previsao(self):
         rnd = random.Random(3)
         for _ in range(100):
             b = self.A.escolher(self.c, 0.07, rnd)
-            self.assertTrue(b is None or self.A.parametros(b)[0] < 0.07)
+            lado, lim, _ = self.A.parametros(b) if b else (None, 0, 0)
+            self.assertTrue(b is None or (lado == "compra" and lim < 0.07))
 
     def test_resolve_e_aprende_todas_as_versoes(self):
         self.A.registrar_oportunidade(self.c, 0, 100.0, 0.08)
@@ -510,4 +511,42 @@ class Adaptativo(unittest.TestCase):
         velas = [(i, 100, 100.3, 99.95, 100.2) for i in range(30)]
         self.assertEqual(self.A.resolver(self.c, 0.5, 0.2, agora_ms=10 ** 9, buscar=lambda t, n: velas), 1)
         n = {r["braco"]: r["n"] for r in self.c.execute("SELECT * FROM robo_bracos")}
-        self.assertEqual(set(n), {b for b in self.A.BRACOS if self.A.parametros(b)[0] < 0.08})
+        self.assertEqual(set(n), {b for b in self.A.BRACOS if self.A.dispara(b, 0.08)})
+
+
+class Queda(unittest.TestCase):
+    def test_versao_vendida_ganha_na_queda_e_tem_stop_na_alta(self):
+        from executor import adaptativo as A
+        cai = [(i, 100, 100.05, 99.6, 99.7) for i in range(5)]
+        self.assertAlmostEqual(A.resultado_versao(100, cai, 5, 0.5, 0.2, "venda"), 0.3 - 0.2)
+        sobe = [(i, 100, 100.6, 99.9, 100.5) for i in range(5)]
+        self.assertAlmostEqual(A.resultado_versao(100, sobe, 5, 0.5, 0.2, "venda"), -0.5 - 0.2)
+        self.assertTrue(A.dispara("venda_lim0.05_seg15", -0.1))
+        self.assertFalse(A.dispara("venda_lim0.05_seg15", 0.1))
+        self.assertEqual(A.parametros("lim0.05_seg15"), ("compra", 0.05, 15))
+
+    def test_robo_simula_venda_e_bloqueia_no_real(self):
+        import os, sqlite3
+        from executor import robo, adaptativo
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        c.execute(robo.ESQUEMA); c.executescript(adaptativo.ESQUEMA)
+        original = adaptativo.escolher
+        adaptativo.escolher = lambda c, p, rnd=None: "venda_lim0.00_seg15"
+        precos = [100.0]
+        class B:
+            def livro(self, s): return (precos[0], precos[0])
+        class S:
+            def atualizar(self): return {"media": -0.2, "desvio": 0.1, "r2": 0.0, "t_ms": 1_000_000, "px": 100.0}
+        try:
+            os.environ.pop("BINANCE_REAL", None)
+            self.assertIn("queda", robo.passo(c, B(), S(), agora_s=1060))
+            precos[0] = 99.0
+            self.assertIn("zerou", robo.passo(c, B(), S(), agora_s=1060 + 15 * 60 + 1))
+            self.assertGreater(c.execute("SELECT resultado_usdt FROM robo_operacoes").fetchone()[0], 0)
+            os.environ["BINANCE_REAL"] = "1"
+            class S2:
+                def atualizar(self): return {"media": -0.2, "desvio": 0.1, "r2": 0.0, "t_ms": 5_000_000, "px": 100.0}
+            self.assertIn("só no simulado", robo.passo(c, B(), S2(), agora_s=5010))
+        finally:
+            os.environ.pop("BINANCE_REAL", None)
+            adaptativo.escolher = original

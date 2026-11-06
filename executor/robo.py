@@ -22,7 +22,7 @@ PARAR = Path(__file__).resolve().parent.parent / "PARAR"
 
 ESQUEMA = """CREATE TABLE IF NOT EXISTS robo_operacoes(
   id INTEGER PRIMARY KEY, modo TEXT, previsao_id INTEGER UNIQUE, prob REAL, t_compra INTEGER, px_compra REAL, qtd REAL, custo_compra REAL,
-  t_venda INTEGER, px_venda REAL, receita_venda REAL, resultado_usdt REAL, detalhe TEXT, braco TEXT, segurar_min INTEGER)"""
+  t_venda INTEGER, px_venda REAL, receita_venda REAL, resultado_usdt REAL, detalhe TEXT, braco TEXT, segurar_min INTEGER, lado TEXT)"""
 
 
 def real():
@@ -34,7 +34,7 @@ def abrir():
     c = sqlite3.connect(config.BANCO)
     c.row_factory = sqlite3.Row
     c.execute(ESQUEMA)
-    for col in ("braco TEXT", "segurar_min INTEGER"):
+    for col in ("braco TEXT", "segurar_min INTEGER", "lado TEXT"):
         try:
             c.execute(f"ALTER TABLE robo_operacoes ADD COLUMN {col}")
         except sqlite3.OperationalError:
@@ -59,8 +59,6 @@ def decidir(sinal, custo_pct, perda_hoje, aberta, parar):
     # Travas de evidência e de custo removidas a pedido do dono em 2026-11-06: compra sempre que o modelo prevê alta.
     if sinal is None:
         return "sem previsão recente"
-    if sinal["media"] <= 0:
-        return f"modelo prevê queda ou zero ({sinal['media']:+.3f}%)"
     return None
 
 
@@ -77,11 +75,21 @@ def passo(c, b, sinal_vivo, agora_s=None):
     aberta = c.execute("SELECT * FROM robo_operacoes WHERE modo=? AND t_venda IS NULL", (modo,)).fetchone()
     motivo_venda = None
     if aberta:
-        bid, _ = b.livro(SIMBOLO)
-        if bid <= aberta["px_compra"] * (1 - STOP_PCT / 100):
+        bid, ask = b.livro(SIMBOLO)
+        vendido = aberta["lado"] == "venda"
+        if vendido and ask >= aberta["px_compra"] * (1 + STOP_PCT / 100):
+            motivo_venda = f"stop de {STOP_PCT}%"
+        elif not vendido and bid <= aberta["px_compra"] * (1 - STOP_PCT / 100):
             motivo_venda = f"stop de {STOP_PCT}%"
         elif agora_s * 1000 - aberta["t_compra"] >= (aberta["segurar_min"] or SEGURAR_S // 60) * 60_000:
             motivo_venda = f"{aberta['segurar_min'] or SEGURAR_S // 60} min"
+    if motivo_venda and aberta["lado"] == "venda":
+        # Só existe no simulado: recompra no preço de venda do livro (ask), pagando a taxa nas duas pontas.
+        resultado = aberta["qtd"] * (aberta["px_compra"] * (1 - TAXA_SUPOSTA) - ask * (1 + TAXA_SUPOSTA))
+        c.execute("UPDATE robo_operacoes SET t_venda=?, px_venda=?, receita_venda=?, resultado_usdt=? WHERE id=?",
+                  (int(agora_s * 1000), ask, aberta["custo_compra"] + resultado, resultado, aberta["id"]))
+        c.commit()
+        return f"zerou a venda ({motivo_venda}): {resultado:+.4f} USDT"
     if motivo_venda:
         if modo == "real":
             o = b.vender_quantidade(SIMBOLO, aberta["qtd"])
@@ -102,11 +110,19 @@ def passo(c, b, sinal_vivo, agora_s=None):
     braco = adaptativo.escolher(c, s["media"])
     if braco is None:
         return f"aprendizado escolheu NÃO operar agora (previsto {s['media']:+.3f}%)"
-    segurar = adaptativo.parametros(braco)[1]
+    lado, _, segurar = adaptativo.parametros(braco)
+    if lado == "venda" and modo == "real":
+        return "venda na queda só no simulado (falta conta de margem/futuros liberada)"
     previsao = {"id": s["t_ms"], "prob_alta": s["media"]}
     if c.execute("SELECT 1 FROM robo_operacoes WHERE previsao_id=?", (previsao["id"],)).fetchone():
         return "previsão já usada"
-    _, ask = b.livro(SIMBOLO)
+    bid, ask = b.livro(SIMBOLO)
+    if lado == "venda":
+        qtd = math.floor(VALOR_USDT / bid * 1e5) / 1e5
+        c.execute("INSERT INTO robo_operacoes(modo,previsao_id,prob,t_compra,px_compra,qtd,custo_compra,braco,segurar_min,lado) VALUES(?,?,?,?,?,?,?,?,?,?)",
+                  (modo, s["t_ms"], s["media"], int(agora_s * 1000), bid, qtd, qtd * bid, braco, segurar, "venda"))
+        c.commit()
+        return f"vendeu na queda {qtd} BTC a {bid:.2f} (previsto {s['media']:+.3f}%, versão {braco})"
     if modo == "real":
         o = b.comprar_em_usdt(SIMBOLO, VALOR_USDT)
         bruto = float(o["executedQty"])
@@ -120,8 +136,8 @@ def passo(c, b, sinal_vivo, agora_s=None):
         qtd = math.floor(VALOR_USDT / ask * (1 - TAXA_SUPOSTA) * 1e5) / 1e5
         custo = VALOR_USDT
         detalhe = None
-    c.execute("INSERT INTO robo_operacoes(modo,previsao_id,prob,t_compra,px_compra,qtd,custo_compra,detalhe,braco,segurar_min) VALUES(?,?,?,?,?,?,?,?,?,?)",
-              (modo, previsao["id"], previsao["prob_alta"], int(agora_s * 1000), px, qtd, custo, detalhe, braco, segurar))
+    c.execute("INSERT INTO robo_operacoes(modo,previsao_id,prob,t_compra,px_compra,qtd,custo_compra,detalhe,braco,segurar_min,lado) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              (modo, previsao["id"], previsao["prob_alta"], int(agora_s * 1000), px, qtd, custo, detalhe, braco, segurar, "compra"))
     c.commit()
     return f"comprou {qtd} BTC a {px:.2f} (previsto {previsao['prob_alta']:+.3f}%, versão {braco})"
 

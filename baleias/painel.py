@@ -62,7 +62,7 @@ def estado(c, fonte=FONTE):
     feitos = [x["excesso"] * 100 for x in c.execute("SELECT excesso FROM insider_resultados")]
     from . import previsao_vivo
     try:
-        ops = [dict(x) for x in c.execute("SELECT modo, prob, t_compra, px_compra, t_venda, px_venda, resultado_usdt FROM robo_operacoes ORDER BY id DESC LIMIT 30")]
+        ops = [dict(x) for x in c.execute("SELECT modo, COALESCE(lado,'compra') lado, prob, t_compra, px_compra, t_venda, px_venda, resultado_usdt FROM robo_operacoes ORDER BY id DESC LIMIT 30")]
         tot = {m: c.execute("SELECT COUNT(*), COALESCE(SUM(resultado_usdt),0), SUM(resultado_usdt>0) FROM robo_operacoes WHERE modo=? AND t_venda IS NOT NULL", (m,)).fetchone()
                for m in ("simulado", "real")}
         est = c.execute("SELECT t_ms, msg FROM robo_estado WHERE id=1").fetchone() if c.execute("SELECT 1 FROM sqlite_master WHERE name='robo_estado'").fetchone() else None
