@@ -66,7 +66,12 @@ def estado(c, fonte=FONTE):
         tot = {m: c.execute("SELECT COUNT(*), COALESCE(SUM(resultado_usdt),0), SUM(resultado_usdt>0) FROM robo_operacoes WHERE modo=? AND t_venda IS NOT NULL", (m,)).fetchone()
                for m in ("simulado", "real")}
         est = c.execute("SELECT t_ms, msg FROM robo_estado WHERE id=1").fetchone() if c.execute("SELECT 1 FROM sqlite_master WHERE name='robo_estado'").fetchone() else None
-        robo = {"estado": dict(est) if est else None, "operacoes": ops, "totais": {m: {"n": t[0], "usdt": round(t[1], 4), "ganhos": t[2] or 0} for m, t in tot.items()}}
+        try:
+            from executor import adaptativo
+            versoes = adaptativo.painel(c)
+        except Exception:
+            versoes = []
+        robo = {"versoes": versoes, "estado": dict(est) if est else None, "operacoes": ops, "totais": {m: {"n": t[0], "usdt": round(t[1], 4), "ganhos": t[2] or 0} for m, t in tot.items()}}
     except sqlite3.OperationalError:
         robo = {"operacoes": [], "totais": {}}
     return {

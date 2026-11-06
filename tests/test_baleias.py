@@ -424,6 +424,8 @@ class Executor(unittest.TestCase):
         from executor import robo
         c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
         c.execute(robo.ESQUEMA)
+        from executor import adaptativo; c.executescript(adaptativo.ESQUEMA)
+        adaptativo.escolher = lambda c, p, rnd=None: "lim0.00_seg15"
         precos = [100.0]
         class B:
             def livro(self, s): return (precos[0], precos[0])
@@ -439,6 +441,8 @@ class Executor(unittest.TestCase):
         from executor import robo
         c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
         c.execute(robo.ESQUEMA)
+        from executor import adaptativo; c.executescript(adaptativo.ESQUEMA)
+        adaptativo.escolher = lambda c, p, rnd=None: "lim0.00_seg15"
         class B:
             def livro(self, s): return (100.0, 100.0)
         class S:
@@ -461,3 +465,48 @@ class Executor(unittest.TestCase):
         self.assertEqual(x1, P.caracteristicas(v2, 500), "características no minuto 500 não podem mudar com o futuro")
         ops, r2 = P.simular(v, 15, 1.0, 0.2)
         self.assertLessEqual(r2, 0.05)  # passeio aleatório: não pode "achar" previsibilidade
+
+
+class Adaptativo(unittest.TestCase):
+    def setUp(self):
+        import importlib, sqlite3
+        from executor import adaptativo
+        self.A = importlib.reload(adaptativo)
+        self.c = sqlite3.connect(":memory:"); self.c.row_factory = sqlite3.Row
+        self.c.executescript(self.A.ESQUEMA)
+
+    def test_resultado_com_stop_e_custo(self):
+        velas = [(i, 100, 100.2, 99.9, 100.1) for i in range(5)]
+        self.assertAlmostEqual(self.A.resultado_versao(100, velas, 5, 0.5, 0.2), 0.1 - 0.2)
+        velas[2] = (2, 100, 100, 99.4, 99.6)
+        self.assertAlmostEqual(self.A.resultado_versao(100, velas, 5, 0.5, 0.2), -0.5 - 0.2)
+        self.assertIsNone(self.A.resultado_versao(100, velas[:3], 5, 0.5, 0.2))
+
+    def test_aprende_a_nao_operar_quando_tudo_perde(self):
+        rnd = random.Random(1)
+        for b in self.A.BRACOS:
+            self.c.execute("INSERT INTO robo_bracos VALUES(?,?,?,?)", (b, 200, -0.2 * 200, (0.04 + 0.09) * 200))
+        escolhas = [self.A.escolher(self.c, 1.0, rnd) for _ in range(200)]
+        self.assertLess(sum(e is not None for e in escolhas) / 200, 0.05)
+
+    def test_prefere_a_versao_que_ganha(self):
+        rnd = random.Random(2)
+        for b in self.A.BRACOS:
+            media = 0.3 if b == "lim0.10_seg30" else -0.2
+            self.c.execute("INSERT INTO robo_bracos VALUES(?,?,?,?)", (b, 200, media * 200, (media * media + 0.05) * 200))
+        escolhas = [self.A.escolher(self.c, 1.0, rnd) for _ in range(200)]
+        self.assertGreater(escolhas.count("lim0.10_seg30") / 200, 0.9)
+
+    def test_so_disparam_versoes_abaixo_da_previsao(self):
+        rnd = random.Random(3)
+        for _ in range(100):
+            b = self.A.escolher(self.c, 0.07, rnd)
+            self.assertTrue(b is None or self.A.parametros(b)[0] < 0.07)
+
+    def test_resolve_e_aprende_todas_as_versoes(self):
+        self.A.registrar_oportunidade(self.c, 0, 100.0, 0.08)
+        self.assertFalse(self.A.registrar_oportunidade(self.c, 60_000, 100.0, 0.08), "uma oportunidade a cada 5 min")
+        velas = [(i, 100, 100.3, 99.95, 100.2) for i in range(30)]
+        self.assertEqual(self.A.resolver(self.c, 0.5, 0.2, agora_ms=10 ** 9, buscar=lambda t, n: velas), 1)
+        n = {r["braco"]: r["n"] for r in self.c.execute("SELECT * FROM robo_bracos")}
+        self.assertEqual(set(n), {b for b in self.A.BRACOS if self.A.parametros(b)[0] < 0.08})

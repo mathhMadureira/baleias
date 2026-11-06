@@ -21,6 +21,8 @@ svg{width:100%;height:120px;display:block}
 <header><div><b>🐋 BALEIAS</b> <span class="mut">Hyperliquid · cripto e ações EUA · só leitura · horizonte 4 h</span></div><div id="aviso">carregando…</div></header>
 <main>
 <section style="grid-column:1/-1"><h2>Robô Binance (BTC, US$ 10, segura 15 min ou stop de 0,5%)</h2><p id="robo_estado"></p><p class=mut id="robo_txt"></p><div class="wrap"><table id="robo"></table></div></section>
+<section style="grid-column:1/-1"><h2>Aprendizado do robô: o que cada versão teria ganhado (% por operação, depois do custo)</h2>
+<p class=mut>"Não operar" vale 0%. O robô escolhe mais as versões acima de zero; se todas ficarem abaixo, aprende a ficar de fora.</p><div class="wrap"><table id="versoes"></table></div></section>
 <section style="grid-column:1/-1"><h2>Previsão do BTC: sobe ou cai? (taxa de acerto, IC 95%)</h2><div class="wrap"><table id="previsao"></table></div>
 <p class=mut id="empates"></p></section>
 <section><h2>Resultado depois dos custos (% por sinal, IC 95%)</h2><table id="resumo"></table></section>
@@ -59,6 +61,7 @@ async function atualizar(){try{const d=await (await fetch('/api/estado')).json()
  $('robo_estado').innerHTML=R.estado?`Agora: <b>${esc(R.estado.msg)}</b> <span class=mut>(${new Date(R.estado.t_ms).toLocaleTimeString('pt-BR')})</span>`:'';
  $('robo_txt').textContent=[tt('simulado'),tt('real')].filter(Boolean).join(' · ')||'Ainda sem operações: compra quando o modelo prevê alta.';
  $('robo').innerHTML=R.operacoes.length?'<tr><th>Modo</th><th>Compra</th><th>Prob.</th><th>Preço compra</th><th>Preço venda</th><th>Resultado USDT</th></tr>'+R.operacoes.map(o=>`<tr><td>${o.modo}</td><td>${new Date(o.t_compra).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'})}</td><td>${(o.prob*100).toFixed(0)}%</td><td>${Number(o.px_compra).toFixed(2)}</td><td>${o.px_venda?Number(o.px_venda).toFixed(2):'<span class=mut>segurando</span>'}</td><td class="${cls(o.resultado_usdt)}">${o.resultado_usdt==null?'':f(o.resultado_usdt,4)}</td></tr>`).join(''):'';
+ $('versoes').innerHTML='<tr><th>Versão</th><th>Previsão mínima</th><th>Segura</th><th>Oportunidades</th><th>Média observada</th><th>Estimativa (±)</th></tr>'+(R.versoes||[]).map(x=>`<tr><td>${x.braco}</td><td>${x.limiar.toFixed(2)}%</td><td>${x.segurar} min</td><td>${x.n}</td><td class="${cls(x.media_bruta)}">${x.media_bruta==null?'—':f(x.media_bruta)}</td><td class="${cls(x.media)}">${f(x.media)} ±${x.dp.toFixed(3)}</td></tr>`).join('');
  const P=d.previsao,pc=x=>x?`${(x.taxa*100).toFixed(1)}% <span class=mut>[${(x.baixo*100).toFixed(1)}–${(x.alto*100).toFixed(1)}] n=${x.n}</span>`:'<span class=mut>aguardando</span>';
  $('previsao').innerHTML='<tr><th>Horizonte</th><th>Acerto geral</th><th>Últimas 200</th><th>Quanto subiu (base)</th><th>Pendentes</th></tr>'+[1,5,15].map(h=>`<tr><td>${h} min</td><td>${pc(P[h].geral)}</td><td>${pc(P[h].ultimas_200)}</td><td>${pc(P[h].sempre_alta)}</td><td>${P[h].pendentes}</td></tr>`).join('');
  $('empates').textContent='Para empatar numa binária: '+Object.entries(P.empates).map(([k,v])=>`pagando ${k} → acertar ${(v*100).toFixed(1)}%`).join(' · ')+'. Só há vantagem se o limite inferior do intervalo passar do empate.';

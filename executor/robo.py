@@ -22,7 +22,7 @@ PARAR = Path(__file__).resolve().parent.parent / "PARAR"
 
 ESQUEMA = """CREATE TABLE IF NOT EXISTS robo_operacoes(
   id INTEGER PRIMARY KEY, modo TEXT, previsao_id INTEGER UNIQUE, prob REAL, t_compra INTEGER, px_compra REAL, qtd REAL, custo_compra REAL,
-  t_venda INTEGER, px_venda REAL, receita_venda REAL, resultado_usdt REAL, detalhe TEXT)"""
+  t_venda INTEGER, px_venda REAL, receita_venda REAL, resultado_usdt REAL, detalhe TEXT, braco TEXT, segurar_min INTEGER)"""
 
 
 def real():
@@ -30,9 +30,16 @@ def real():
 
 
 def abrir():
+    from . import adaptativo
     c = sqlite3.connect(config.BANCO)
     c.row_factory = sqlite3.Row
     c.execute(ESQUEMA)
+    for col in ("braco TEXT", "segurar_min INTEGER"):
+        try:
+            c.execute(f"ALTER TABLE robo_operacoes ADD COLUMN {col}")
+        except sqlite3.OperationalError:
+            pass
+    c.executescript(adaptativo.ESQUEMA)
     return c
 
 
@@ -66,8 +73,8 @@ def passo(c, b, sinal_vivo, agora_s=None):
         bid, _ = b.livro(SIMBOLO)
         if bid <= aberta["px_compra"] * (1 - STOP_PCT / 100):
             motivo_venda = f"stop de {STOP_PCT}%"
-        elif agora_s * 1000 - aberta["t_compra"] >= SEGURAR_S * 1000:
-            motivo_venda = "15 min"
+        elif agora_s * 1000 - aberta["t_compra"] >= (aberta["segurar_min"] or SEGURAR_S // 60) * 60_000:
+            motivo_venda = f"{aberta['segurar_min'] or SEGURAR_S // 60} min"
     if motivo_venda:
         if modo == "real":
             o = b.vender_quantidade(SIMBOLO, aberta["qtd"])
@@ -88,6 +95,13 @@ def passo(c, b, sinal_vivo, agora_s=None):
     motivo = decidir(s, 2 * TAXA_SUPOSTA * 100, resultado_hoje(c, modo), aberta is not None, PARAR.exists())
     if motivo:
         return motivo
+    from . import adaptativo
+    custo = 2 * TAXA_SUPOSTA * 100
+    adaptativo.registrar_oportunidade(c, s["t_ms"], s["px"], s["media"])
+    braco = adaptativo.escolher(c, s["media"])
+    if braco is None:
+        return f"aprendizado escolheu NÃO operar agora (previsto {s['media']:+.3f}%)"
+    segurar = adaptativo.parametros(braco)[1]
     previsao = {"id": s["t_ms"], "prob_alta": s["media"]}
     if c.execute("SELECT 1 FROM robo_operacoes WHERE previsao_id=?", (previsao["id"],)).fetchone():
         return "previsão já usada"
@@ -105,10 +119,10 @@ def passo(c, b, sinal_vivo, agora_s=None):
         qtd = math.floor(VALOR_USDT / ask * (1 - TAXA_SUPOSTA) * 1e5) / 1e5
         custo = VALOR_USDT
         detalhe = None
-    c.execute("INSERT INTO robo_operacoes(modo,previsao_id,prob,t_compra,px_compra,qtd,custo_compra,detalhe) VALUES(?,?,?,?,?,?,?,?)",
-              (modo, previsao["id"], previsao["prob_alta"], int(agora_s * 1000), px, qtd, custo, detalhe))
+    c.execute("INSERT INTO robo_operacoes(modo,previsao_id,prob,t_compra,px_compra,qtd,custo_compra,detalhe,braco,segurar_min) VALUES(?,?,?,?,?,?,?,?,?,?)",
+              (modo, previsao["id"], previsao["prob_alta"], int(agora_s * 1000), px, qtd, custo, detalhe, braco, segurar))
     c.commit()
-    return f"comprou {qtd} BTC a {px:.2f} (retorno previsto {previsao['prob_alta']:+.3f}%)"
+    return f"comprou {qtd} BTC a {px:.2f} (previsto {previsao['prob_alta']:+.3f}%, versão {braco})"
 
 
 def rodar():
@@ -130,6 +144,11 @@ def rodar():
     sinal_vivo = SinalVivo()
     ultimo = None
     while True:
+        try:
+            from . import adaptativo
+            adaptativo.resolver(c, STOP_PCT, 2 * TAXA_SUPOSTA * 100)
+        except Exception as e:
+            print("aprendizado falhou:", type(e).__name__, str(e)[:150], flush=True)
         try:
             msg = passo(c, b, sinal_vivo)
         except Exception as e:
