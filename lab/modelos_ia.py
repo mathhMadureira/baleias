@@ -33,7 +33,8 @@ def avaliar(precos, prever):
     pred = [(p / precos[i - 1] - 1) * 100 for p, i in zip(previstos, pontos)]
     real = [(precos[i - 1 + H] / precos[i - 1] - 1) * 100 for i in pontos]
     r2 = 1 - sum((y - p) ** 2 for y, p in zip(real, pred)) / sum(y * y for y in real)
-    acerto = st.fmean((p > 0) == (y > 0) for p, y in zip(pred, real) if p != 0 and y != 0)
+    pares = [(p > 0) == (y > 0) for p, y in zip(pred, real) if p != 0 and y != 0]
+    acerto = st.fmean(pares) if pares else None
     ops = [(y if p > 0 else -y) - CUSTO for p, y in zip(pred, real) if abs(p) > CUSTO]
     return {"previsoes": len(pred), "r2": r2, "acerto_direcao": acerto, "operacoes": len(ops),
             "resultado_medio_op": st.fmean(ops) if ops else None, "soma_ops": sum(ops)}

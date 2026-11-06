@@ -624,10 +624,6 @@ class ModelosIA(unittest.TestCase):
     def test_avaliacao_sem_futuro_e_previsor_perfeito(self):
         from lab import modelos_ia as M
         precos = [100 + math.sin(i / 7) for i in range(M.CONTEXTO + 200)]
-        vistos = []
-        def perfeito(ctxs):
-            vistos.extend(len(c) for c in ctxs)
-            return [precos[len(c) - 1 + M.H] if False else None for c in ctxs]
         idx = list(range(M.CONTEXTO, len(precos) - M.H, M.PASSO))
         mapa = iter(idx)
         def oraculo(ctxs):
