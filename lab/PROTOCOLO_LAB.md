@@ -69,3 +69,13 @@ Motivo: a hipótese 1 foi reprovada no cofre (falhou nos fundos), mas em cripto 
 - Medida principal: R² fora da amostra do retorno de 15 min contra prever zero (o mesmo critério que reprovou o modelo atual, que teve −0,036 nesse horizonte).
 - Secundárias: acerto de direção; resultado de operar só quando |previsão| > 0,2% (custo), comprado ou vendido, segurando 15 min.
 - Passa se o R² for positivo **e** o resultado das operações for positivo depois do custo. Uma única rodada por modelo, sem ajuste.
+
+---
+
+# Hipótese 5: IA generativa (Gemini) lendo notícias e preço prevê o BTC em 4 h? (registrada em 2026-11-06, antes de rodar; autorizada pelo dono a usar a chave do Gemini do Gauss)
+- Só daqui para frente: o modelo pode ter lido sobre o passado no treino, então backtest não vale.
+- Às 00, 04, 08, 12, 16 e 20 h UTC, o modelo `gemini-3.8-flash` (temperatura 0) recebe: preço atual do BTC, retornos de 1 h, 4 h, 24 h e 7 dias, volume relativo, funding da Hyperliquid e até 12 manchetes das últimas 12 h (Google News). Responde em JSON: direção (alta/queda), confiança (0,5 a 1) e retorno esperado em %.
+- Resolução: fechamento de 1 min da Binance 4 h depois. A previsão é gravada antes, com o preço da hora.
+- Medidas: acerto de direção (intervalo de Wilson) contra 50% e contra "sempre alta"; resultado de operar só quando |retorno esperado| > 0,2% (custo), na direção prevista, por 4 h.
+- Avaliação com 300 previsões (~50 dias): passa se o limite inferior do acerto for > 50% **e** a soma das operações depois do custo for positiva. Sem troca de prompt nem de modelo no meio; mudança zera a contagem.
+- As manchetes são texto de terceiros: o modelo só devolve JSON, sem ferramentas; nada do que ele escreve é executado.
