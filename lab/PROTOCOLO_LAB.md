@@ -28,3 +28,21 @@ Nos dois universos, ao mesmo tempo:
 2. Sharpe maior que o de comprar e segurar a mesma carteira;
 3. maior queda (drawdown) menor que a de comprar e segurar.
 Aprovada → vai para o simulado ao vivo. Reprovada → descartada; nada de reajustar e testar de novo no mesmo cofre.
+
+---
+
+# Hipótese 2: tendência de 20 dias só em cripto, testada AO VIVO (registrada em 2026-11-06, antes de qualquer dado novo)
+
+Motivo: a hipótese 1 foi reprovada no cofre (falhou nos fundos), mas em cripto passou. O cofre de cripto já foi visto, então não prova nada; a prova tem de vir de dados que ainda não existem.
+
+## Regra (fixa, sem ajuste durante o teste)
+- Ativos: BTC, ETH, BNB, XRP, ADA, DOGE, LTC, LINK, TRX, SOL (pares USDT da Binance, fechamento diário UTC).
+- No fechamento de cada dia d: se fechamento(d) / fechamento(d − 20) − 1 > 0, o ativo fica comprado no dia seguinte; senão, fica fora (caixa).
+- Peso fixo de 1/10 por ativo (o que está fora vira caixa, rendendo zero).
+- Custo de 0,10% sobre o peso que muda de posição.
+- Comparação: comprar e segurar os mesmos 10 ativos com peso igual.
+
+## Período e critérios
+- O primeiro dia contado é **2026-11-07** (fechamento de 06/11 define a primeira posição). Antes de 180 dias, nenhuma conclusão.
+- Aprovada aos 180 dias se, ao mesmo tempo: retorno acumulado > 0; Sharpe maior que o de comprar e segurar; maior queda menor que a de comprar e segurar.
+- Se não passar aos 180 dias, segue até 365 dias; se falhar de novo, é descartada. Aprovada não significa dinheiro automático: o dono decide.
