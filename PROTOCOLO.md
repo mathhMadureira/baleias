@@ -48,3 +48,6 @@ Pergunta: comprar a ação na abertura do dia útil seguinte à publicação de 
 - Comparação: binária que paga X% precisa de acerto acima de 1/(1+X) para empatar (85% → 54,05%).
 - Só há vantagem se o **limite inferior** do intervalo de 95% do acerto ficar acima do empate do payout real da plataforma, com pelo menos 1.000 previsões resolvidas no horizonte. Previsões de minutos vizinhos se sobrepõem: o intervalo real é mais largo que o calculado.
 - Sem dinheiro real até lá. Se depois de 3.000 previsões o limite inferior não passar do empate, a hipótese cai.
+
+# Robô da Binance: revisão de 2026-11-06
+Pesquisa (executor/pesquisa.py), 30 dias de velas de 1 min, prequencial: R² fora da amostra negativo em 5, 15 e 60 min (−0,017; −0,036; −0,101). Com a regra pessimista, nenhuma operação; sem ela, perdas (60 min: −0,32%/op, IC abaixo de zero). Regra nova do robô: só compra se o R² fora da amostra das últimas 2000 previsões for positivo **e** a previsão pessimista de 15 min passar do custo. Com o resultado da pesquisa, a expectativa é que ele quase não opere.

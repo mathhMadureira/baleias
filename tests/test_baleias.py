@@ -412,28 +412,39 @@ class Executor(unittest.TestCase):
 
     def test_travas(self):
         from executor import robo
-        boa = {"prob_alta": 0.7}
-        self.assertIsNone(robo.decidir(boa, 500, 0, False, False))
-        self.assertIn("PARAR", robo.decidir(boa, 500, 0, False, True))
-        self.assertIn("aberta", robo.decidir(boa, 500, 0, True, False))
-        self.assertIn("perda", robo.decidir(boa, 500, -2.5, False, False))
-        self.assertIn("aprendeu", robo.decidir(boa, 10, 0, False, False))
-        self.assertIn("abaixo", robo.decidir({"prob_alta": 0.55}, 500, 0, False, False))
+        boa = {"media": 0.5, "desvio": 0.1, "r2": 0.02}
+        self.assertIsNone(robo.decidir(boa, 0.2, 0, False, False))
+        self.assertIn("PARAR", robo.decidir(boa, 0.2, 0, False, True))
+        self.assertIn("aberta", robo.decidir(boa, 0.2, 0, True, False))
+        self.assertIn("perda", robo.decidir(boa, 0.2, -2.5, False, False))
+        self.assertIn("acaso", robo.decidir({**boa, "r2": -0.01}, 0.2, 0, False, False))
+        self.assertIn("medindo", robo.decidir({**boa, "r2": None}, 0.2, 0, False, False))
+        self.assertIn("custo", robo.decidir({**boa, "media": 0.25}, 0.2, 0, False, False))
 
     def test_simulado_compra_e_vende(self):
-        import os, sqlite3, tempfile, json as J
+        import os, sqlite3
         from executor import robo
         c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
         c.execute(robo.ESQUEMA)
-        c.execute("CREATE TABLE previsoes(id INTEGER PRIMARY KEY, horizonte INT, t_base_ms INT, prob_alta REAL)")
-        c.execute("CREATE TABLE modelo(fonte TEXT, estado TEXT)")
-        c.execute("INSERT INTO modelo VALUES('previsao_btc', ?)", (J.dumps({"5": J.dumps({"w": {}, "n": 999})}),))
-        c.execute("INSERT INTO previsoes VALUES(1,5,1000000,0.8)")
         class B:
             def livro(self, s): return (100.0, 100.0)
+        class S:
+            def atualizar(self): return {"media": 0.5, "desvio": 0.1, "r2": 0.05, "t_ms": 1_000_000, "px": 100.0}
         os.environ.pop("BINANCE_REAL", None)
-        self.assertIn("comprou", robo.passo(c, B(), agora_s=1060))
-        self.assertIn("aberta", robo.passo(c, B(), agora_s=1100))
-        self.assertIn("vendeu", robo.passo(c, B(), agora_s=1060 + 301))
-        r = c.execute("SELECT resultado_usdt FROM robo_operacoes").fetchone()[0]
-        self.assertLess(r, 0)  # preço parado: as duas taxas viram prejuízo
+        self.assertIn("comprou", robo.passo(c, B(), S(), agora_s=1060))
+        self.assertIn("aberta", robo.passo(c, B(), S(), agora_s=1100))
+        self.assertIn("vendeu", robo.passo(c, B(), S(), agora_s=1060 + 15 * 60 + 1))
+        self.assertLess(c.execute("SELECT resultado_usdt FROM robo_operacoes").fetchone()[0], 0)
+
+    def test_pesquisa_sem_olhar_o_futuro(self):
+        from executor import pesquisa as P
+        random.seed(5)
+        px, v = 100.0, []
+        for i in range(900):
+            px *= 1 + random.gauss(0, 0.001)
+            v.append((i * 60_000, px, px * 1.0005, px * 0.9995, px, 10.0, 100, 5.0))
+        x1 = P.caracteristicas(v, 500)
+        v2 = v[:501] + [(t, p * 3, h * 3, l * 3, c * 3, vol, n, tb) for t, p, h, l, c, vol, n, tb in v[501:]]
+        self.assertEqual(x1, P.caracteristicas(v2, 500), "características no minuto 500 não podem mudar com o futuro")
+        ops, r2 = P.simular(v, 15, 1.0, 0.2)
+        self.assertLessEqual(r2, 0.05)  # passeio aleatório: não pode "achar" previsibilidade

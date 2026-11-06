@@ -1,5 +1,6 @@
-"""Estratégia: segue a previsão de 5 min do BTC. Spot não vende a descoberto, então só compra quando a previsão de alta é forte
-e vende 5 minutos depois. Travas: US$ 10 por operação, uma posição por vez, perda máxima no dia, arquivo PARAR."""
+"""Estratégia (revisada em 2026-11-06 depois da pesquisa em executor/pesquisa.py): prevê o RETORNO de 15 min e só compra quando
+o modelo prova, fora da amostra, que prevê melhor que o acaso (R² > 0) e a previsão pessimista passa do custo. Vende 15 min depois.
+Travas: US$ 10 por operação, uma posição por vez, perda máxima no dia, arquivo PARAR."""
 import json
 import math
 import os
@@ -13,10 +14,8 @@ from .binance import Binance, verificar_chave
 
 SIMBOLO = "BTCUSDT"
 VALOR_USDT = float(os.environ.get("ROBO_VALOR_USDT", "10"))
-PROB_MINIMA = float(os.environ.get("ROBO_PROB_MINIMA", "0.60"))
-APRENDIZADO_MINIMO = int(os.environ.get("ROBO_APRENDIZADO_MINIMO", "300"))
 PERDA_DIA_MAXIMA = float(os.environ.get("ROBO_PERDA_DIA", "2"))
-SEGURAR_S = 5 * 60
+SEGURAR_S = 15 * 60
 TAXA_SUPOSTA = 0.001  # taxa padrão da Binance spot; no modo real é lida da conta
 PARAR = Path(__file__).resolve().parent.parent / "PARAR"
 
@@ -41,12 +40,7 @@ def resultado_hoje(c, modo):
     return c.execute("SELECT COALESCE(SUM(resultado_usdt),0) FROM robo_operacoes WHERE modo=? AND t_venda>=?", (modo, inicio)).fetchone()[0]
 
 
-def modelo_n(c):
-    r = c.execute("SELECT estado FROM modelo WHERE fonte='previsao_btc'").fetchone()
-    return json.loads(json.loads(r["estado"])["5"])["n"] if r else 0
-
-
-def decidir(previsao, n_aprendido, perda_hoje, aberta, parar):
+def decidir(sinal, custo_pct, perda_hoje, aberta, parar):
     """Regra pura (testável): devolve o motivo de não comprar, ou None para comprar."""
     if parar:
         return "arquivo PARAR presente"
@@ -54,14 +48,16 @@ def decidir(previsao, n_aprendido, perda_hoje, aberta, parar):
         return "já existe posição aberta"
     if perda_hoje <= -PERDA_DIA_MAXIMA:
         return f"perda do dia atingiu US$ {PERDA_DIA_MAXIMA}"
-    if n_aprendido < APRENDIZADO_MINIMO:
-        return f"modelo de 5 min aprendeu com {n_aprendido} de {APRENDIZADO_MINIMO} previsões"
-    if previsao is None or previsao["prob_alta"] < PROB_MINIMA:
-        return "previsão de alta abaixo do limite"
+    if sinal is None or sinal["r2"] is None:
+        return "modelo ainda medindo a própria qualidade"
+    if sinal["r2"] <= 0:
+        return f"modelo não prevê melhor que o acaso (R² fora da amostra {sinal['r2']:+.4f})"
+    if sinal["media"] - sinal["desvio"] <= custo_pct:
+        return f"previsão pessimista {sinal['media'] - sinal['desvio']:+.3f}% não passa do custo {custo_pct:.2f}%"
     return None
 
 
-def passo(c, b, agora_s=None):
+def passo(c, b, sinal_vivo, agora_s=None):
     agora_s = agora_s or time.time()
     modo = "real" if real() else "simulado"
     aberta = c.execute("SELECT * FROM robo_operacoes WHERE modo=? AND t_venda IS NULL", (modo,)).fetchone()
@@ -80,12 +76,13 @@ def passo(c, b, agora_s=None):
                   (int(agora_s * 1000), px, receita, receita - aberta["custo_compra"], detalhe or "", aberta["id"]))
         c.commit()
         return f"vendeu: {receita - aberta['custo_compra']:+.4f} USDT"
-    previsao = c.execute("SELECT * FROM previsoes WHERE horizonte=5 ORDER BY t_base_ms DESC LIMIT 1").fetchone()
-    if previsao and agora_s * 1000 - previsao["t_base_ms"] > 150_000:
-        previsao = None  # previsão velha não vale
-    motivo = decidir(previsao, modelo_n(c), resultado_hoje(c, modo), aberta is not None, PARAR.exists())
+    s = sinal_vivo.atualizar() if sinal_vivo else None
+    if s and agora_s * 1000 - s["t_ms"] > 150_000:
+        s = None  # previsão velha não vale
+    motivo = decidir(s, 2 * TAXA_SUPOSTA * 100, resultado_hoje(c, modo), aberta is not None, PARAR.exists())
     if motivo:
         return motivo
+    previsao = {"id": s["t_ms"], "prob_alta": s["media"]}
     if c.execute("SELECT 1 FROM robo_operacoes WHERE previsao_id=?", (previsao["id"],)).fetchone():
         return "previsão já usada"
     _, ask = b.livro(SIMBOLO)
@@ -105,7 +102,7 @@ def passo(c, b, agora_s=None):
     c.execute("INSERT INTO robo_operacoes(modo,previsao_id,prob,t_compra,px_compra,qtd,custo_compra,detalhe) VALUES(?,?,?,?,?,?,?,?)",
               (modo, previsao["id"], previsao["prob_alta"], int(agora_s * 1000), px, qtd, custo, detalhe))
     c.commit()
-    return f"comprou {qtd} BTC a {px:.2f} (prob {previsao['prob_alta']:.2f})"
+    return f"comprou {qtd} BTC a {px:.2f} (retorno previsto {previsao['prob_alta']:+.3f}%)"
 
 
 def rodar():
@@ -122,12 +119,18 @@ def rodar():
     else:
         print("modo SIMULADO (preços reais da Binance, sem ordens)", flush=True)
     c = abrir()
+    from .sinal import SinalVivo
+    print("aquecendo o modelo com 3 dias de velas de 1 min…", flush=True)
+    sinal_vivo = SinalVivo()
     ultimo = None
     while True:
         try:
-            msg = passo(c, b)
+            msg = passo(c, b, sinal_vivo)
         except Exception as e:
             msg = f"erro: {type(e).__name__}: {str(e)[:200]}"
+        c.execute("CREATE TABLE IF NOT EXISTS robo_estado(id INTEGER PRIMARY KEY CHECK(id=1), t_ms INTEGER, msg TEXT)")
+        c.execute("INSERT INTO robo_estado VALUES(1, ?, ?) ON CONFLICT(id) DO UPDATE SET t_ms=excluded.t_ms, msg=excluded.msg", (int(time.time() * 1000), msg))
+        c.commit()
         if msg != ultimo:
             print(time.strftime("%F %T"), msg, flush=True)
             ultimo = msg

@@ -12,7 +12,7 @@ O aprendizado: cada sinal é gravado com a previsão antes de o resultado existi
 
 ## Robô da Binance
 - Começa **simulado**: preços reais da Binance, sem ordens. Resultado no painel e em `journalctl --user -u baleias-robo`.
-- Regra: compra US$ 10 de BTC quando a previsão de 5 min dá alta ≥ 60% e o modelo já aprendeu com 300 previsões; vende 5 min depois. Uma posição por vez. Para no dia se perder US$ 2.
+- Regra (revisada): prevê o retorno de 15 min; só compra US$ 10 se o modelo provar fora da amostra que prevê melhor que o acaso (R² > 0) e a previsão pessimista passar do custo; vende 15 min depois. Uma posição por vez. Para no dia se perder US$ 2.
 - Parar na hora: `touch ~/baleias/PARAR` (apagar o arquivo para voltar).
 - Dinheiro real (decisão do dono): criar uma chave de API na Binance **só com "Enable Spot & Margin Trading"**, **sem saque**, travada no IP desta máquina, e pôr no `~/baleias/.env`:
   `BINANCE_API_KEY=...`, `BINANCE_API_SECRET=...`, `BINANCE_REAL=1`; depois `systemctl --user restart baleias-robo`. O robô recusa chave que permita saque. Precisa de pelo menos 10 USDT livres na conta spot.
