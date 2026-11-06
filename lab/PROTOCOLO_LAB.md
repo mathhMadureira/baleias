@@ -90,3 +90,20 @@ Base: reports/Maiores traders e metodologias.md. A versão 1 (hipótese 5) segue
 
 # Robô: versões de prazo maior no aprendizado (2026-11-06)
 As versões passam a combinar lado (compra/venda) × previsão mínima {0, 0,10, 0,25%} × segurar {5, 15, 30, 60, 240 min} = 30 versões. 0,25% = custo de 0,2% mais margem; 60 e 240 min seguem o padrão dos vencedores (horizontes mais longos). Versões antigas (0,05%, 0,20%) deixam de ser escolhidas; o histórico delas fica guardado.
+
+---
+
+# Hipótese 3b: funding com alavancagem — quanto dá para alavancar sem ser liquidado? (registrada em 2026-11-06, antes de rodar)
+Motivo: o dono quer resolver a alavancagem. Ela só faz sentido sobre uma estratégia com vantagem medida; a única até agora é a 3 (funding).
+
+## Modelo
+- Mesma regra de entrada e saída da hipótese 3 (média de 72 h, recuperar o custo em 14 dias), mesmas 4 moedas, mesmos custos.
+- Alavancagem L do perpétuo vendido ∈ {1, 2, 3, 5, 10}. Capital por US$ 1 de exposição = 1 (à vista) + 1/L (margem). Margem de manutenção **suposta** de 1,25% (metade da inicial a 40x; não conferida na documentação).
+- A cada hora, com a MÁXIMA da vela de 1 h: se o preço subiu desde o último reequilíbrio a ponto de consumir metade da distância até a liquidação, reequilibra (vende à vista para repor a margem), pagando 0,07% sobre o valor movido e voltando ao L original. Se a máxima da hora atingir o preço de liquidação antes disso, conta como LIQUIDAÇÃO: perde a margem de manutenção, paga o custo de reentrada (0,23%) e reabre.
+- Não modela: base entre à vista e perpétuo, descolamento do token à vista, atraso de execução no reequilíbrio, risco de a corretora quebrar.
+
+## Medidas
+Retorno anual sobre o capital, % de dias positivos, maior queda, número de liquidações e de reequilíbrios, por nível de L. Também a fração de Kelly estimada (média/variância diária) como referência.
+
+## Uso
+Escolher para o teste ao vivo o MAIOR L com zero liquidações em todo o histórico E maior queda menor que 2%; o resultado é descritivo (sem cofre), porque o histórico já foi visto na hipótese 3.
