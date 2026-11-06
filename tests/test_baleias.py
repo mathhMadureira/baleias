@@ -1,4 +1,5 @@
 import ast
+import math
 import json
 import pathlib
 import random
@@ -617,3 +618,21 @@ class Funding(unittest.TestCase):
         horas_dentro = 24 * 10 - F.JANELA_H
         esperado = F.PESO * (horas_dentro * 0.0000125 - F.CUSTO_IDA_VOLTA / 2) / F.CAPITAL_POR_EXPOSICAO
         self.assertAlmostEqual(total, esperado)
+
+
+class ModelosIA(unittest.TestCase):
+    def test_avaliacao_sem_futuro_e_previsor_perfeito(self):
+        from lab import modelos_ia as M
+        precos = [100 + math.sin(i / 7) for i in range(M.CONTEXTO + 200)]
+        vistos = []
+        def perfeito(ctxs):
+            vistos.extend(len(c) for c in ctxs)
+            return [precos[len(c) - 1 + M.H] if False else None for c in ctxs]
+        idx = list(range(M.CONTEXTO, len(precos) - M.H, M.PASSO))
+        mapa = iter(idx)
+        def oraculo(ctxs):
+            return [precos[next(mapa) - 1 + M.H] for _ in ctxs]
+        r = M.avaliar(precos, oraculo)
+        self.assertAlmostEqual(r["r2"], 1.0)
+        zero = M.avaliar(precos, lambda ctxs: [c[-1] for c in ctxs])
+        self.assertAlmostEqual(zero["r2"], 0.0)
