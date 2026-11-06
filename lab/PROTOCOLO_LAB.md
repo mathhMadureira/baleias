@@ -140,3 +140,16 @@ Nenhuma previsão foi gravada: todas as chamadas ao `gemini-3.8-flash` falharam 
   2. no teste, o mesmo sinal, com |retorno médio| > 0,2% e |t| > 2;
   3. pelo menos 30 casos em cada período.
 - **Uso:** a tabela de cada padrão ativo vai para o contexto da versão 2 do Gemini, com os números de treino e de teste e a marca passou/não passou. O robô só usa padrões que passaram. Se nenhum passar, o resultado é esse, e ele fica registrado.
+
+### Resultado da H6 (2026-11-06)
+
+Passaram **0 de 57** combinações de padrão e prazo. A tabela completa está em `dados/padroes.txt`.
+
+- **Efeitos reais, mas pequenos:** alguns padrões repetem o mesmo efeito no treino e no teste, sempre de reversão curta:
+  - três corvos → alta em 15 min: +0,018% (t 4,5) no treino, +0,010% (t 3,6) no teste;
+  - martelo → queda em 15 min: −0,014% e −0,009%;
+  - três soldados → queda em 15 min: −0,009% e −0,007%;
+  - rompimento da mínima de 20 velas → alta em 4 h: +0,10% e +0,06%.
+- **Por que ninguém passou:** todos os efeitos ficam entre 4 e 20 vezes abaixo do custo de 0,2%. "Rompimento da máxima", que é o padrão clássico de compra, deu zero.
+- **Desdobramento:** a tabela vai para o contexto da versão 2 do Gemini a partir de 2026-11-06 ~20h (horário de Brasília), e a comparação pareada da v2 conta a partir daí. O robô não usa nenhum padrão, porque nenhum passou.
+- **Ideia para o futuro, não pré-registrada:** com custo de ordem limitada (maker, ~0,03% ida e volta na Hyperliquid), três corvos em 4 h (+0,044% no teste) ficaria acima do custo. Isso exigiria uma hipótese nova, com simulação de preenchimento de ordem limitada.
