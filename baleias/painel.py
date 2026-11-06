@@ -85,6 +85,7 @@ def estado(c, fonte=FONTE):
     return {
         "servicos": saude.estado(c),
         "generativa": generativa.resumo(c),
+        "generativa_v2": generativa.resumo(c, "llm_previsoes_v2"),
         "funding": funding,
         "tendencia": ao_vivo.resumo(c),
         "robo": robo,

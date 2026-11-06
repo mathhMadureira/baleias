@@ -22,6 +22,7 @@ svg{width:100%;height:120px;display:block}
 <main>
 <section style="grid-column:1/-1"><h2>Saúde dos serviços</h2><div id="servicos"></div></section>
 <section style="grid-column:1/-1"><h2>Laboratório · hipótese 5: Gemini lendo notícias prevê o BTC em 15 min, 1 h e 4 h</h2><p id="ger_txt"></p><p class=mut id="ger_ult"></p></section>
+<section style="grid-column:1/-1"><h2>Laboratório · hipótese 5b: Gemini com as lições dos grandes traders (pode se abster)</h2><p id="ger2_txt"></p></section>
 <section style="grid-column:1/-1"><h2>Laboratório · hipótese 3: receber funding (comprado à vista + vendido no perpétuo, BTC/ETH/HYPE/SOL)</h2>
 <p id="fund_txt"></p><p class=mut>Backtest desde 2023: +6,1% ao ano, 84% dos dias positivos, maior queda −0,16% (sem base, descolamento do token à vista nem liquidação). Avaliação ao vivo aos 90 dias.</p></section>
 <section style="grid-column:1/-1"><h2>Laboratório · hipótese 2: tendência de 20 dias em cripto (ao vivo, desde 07/11/2026)</h2><p id="tend_txt"></p><p class=mut id="tend_pos"></p></section>
@@ -66,6 +67,7 @@ async function atualizar(){try{const d=await (await fetch('/api/estado')).json()
  const G=d.generativa,pg=x=>x?`${(x.taxa*100).toFixed(1)}% [${(x.baixo*100).toFixed(1)}–${(x.alto*100).toFixed(1)}] n=${x.n}`:'—';
  $('ger_txt').innerHTML=G.total?`${G.total} consultas · demora média ${G.demora_media_s.toFixed(0)} s<br>`+Object.entries(G.horizontes).map(([h,x])=>`<b>${h}</b>: acerto ${pg(x.acerto)} · "sempre alta" ${pg(x.sempre_alta)} · operações acima do custo ${x.operacoes}, soma ${x.soma_ops==null?'—':f(x.soma_ops,2)+'%'}`).join('<br>'):'Primeira consulta no próximo múltiplo de 15 min (UTC).';
  $('ger_ult').textContent=G.ultima&&G.ultima['15min']?'Última: '+Object.entries(G.ultima).map(([h,x])=>`${h} ${x.direcao} (${(x.confianca*100).toFixed(0)}%, ${f(x.retorno_esperado,2)}%)`).join(' · ')+' — '+(G.ultima['15min'].motivo||''):'';
+ const G2=d.generativa_v2;$('ger2_txt').innerHTML=G2&&G2.total?Object.entries(G2.horizontes).map(([h,x])=>`<b>${h}</b>: acerto ${pg(x.acerto)} · abstenções ${x.abstencoes} · operações acima do custo ${x.operacoes}, soma ${x.soma_ops==null?'—':f(x.soma_ops,2)+'%'}`).join('<br>'):'Começa na próxima consulta, em paralelo com a versão 1.';
  const FU=d.funding;$('fund_txt').innerHTML=FU&&FU.dias?`${FU.dias} dias ao vivo · acumulado ${f(FU.acumulado*100,3)}% · dias positivos ${(FU.dias_positivos*100).toFixed(0)}% · média por dia ${f(FU.media_dia*100,4)}% do capital · hoje até agora ${FU.hoje_parcial==null?'—':f(FU.hoje_parcial*100,4)+'%'} · faltam ${FU.faltam_para_90} dias`:'Começa a contar em 07/11 (UTC). Atualiza a cada hora.';
  const T=d.tendencia,pp=v=>v==null?'—':f(v*100,2)+'%';
  $('tend_txt').innerHTML=T.dias?`${T.dias} dias · estratégia ${pp(T.acumulado)} · comprar e segurar ${pp(T.acumulado_base)} · faltam ${T.faltam_para_180} dias para a primeira avaliação`:'Começa a contar no fechamento de 07/11 (UTC). Primeira avaliação aos 180 dias.';

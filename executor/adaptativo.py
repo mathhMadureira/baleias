@@ -8,8 +8,8 @@ import random
 import time
 import urllib.request
 
-LIMIARES = (0.0, 0.05, 0.10, 0.20)   # % de movimento previsto necessário, na direção da operação
-SEGURAR_MIN = (5, 15, 30)
+LIMIARES = (0.0, 0.10, 0.25)         # % de movimento previsto necessário (0,25 = custo + margem)
+SEGURAR_MIN = (5, 15, 30, 60, 240)   # 60 e 240 min: horizontes mais longos, como os vencedores estudados
 LADOS = ("compra", "venda")          # venda = operar na queda (vendido)
 BRACOS = [f"{lado}_lim{l:.2f}_seg{s}" for lado in LADOS for l in LIMIARES for s in SEGURAR_MIN]
 INTERVALO_OPORTUNIDADE_S = 300       # no máximo uma oportunidade a cada 5 min (minutos vizinhos são quase a mesma informação)

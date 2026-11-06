@@ -495,10 +495,10 @@ class Adaptativo(unittest.TestCase):
     def test_prefere_a_versao_que_ganha(self):
         rnd = random.Random(2)
         for b in self.A.BRACOS:
-            media = 0.3 if b == "compra_lim0.10_seg30" else -0.2
+            media = 0.3 if b == "compra_lim0.25_seg30" else -0.2
             self.c.execute("INSERT INTO robo_bracos VALUES(?,?,?,?)", (b, 200, media * 200, (media * media + 0.05) * 200))
         escolhas = [self.A.escolher(self.c, 1.0, rnd) for _ in range(200)]
-        self.assertGreater(escolhas.count("compra_lim0.10_seg30") / 200, 0.9)
+        self.assertGreater(escolhas.count("compra_lim0.25_seg30") / 200, 0.9)
 
     def test_so_disparam_versoes_abaixo_da_previsao(self):
         rnd = random.Random(3)
@@ -510,7 +510,7 @@ class Adaptativo(unittest.TestCase):
     def test_resolve_e_aprende_todas_as_versoes(self):
         self.A.registrar_oportunidade(self.c, 0, 100.0, 0.08)
         self.assertFalse(self.A.registrar_oportunidade(self.c, 60_000, 100.0, 0.08), "uma oportunidade a cada 5 min")
-        velas = [(i, 100, 100.3, 99.95, 100.2) for i in range(30)]
+        velas = [(i, 100, 100.3, 99.95, 100.2) for i in range(240)]
         self.assertEqual(self.A.resolver(self.c, 0.5, 0.2, agora_ms=10 ** 9, buscar=lambda t, n: velas), 1)
         n = {r["braco"]: r["n"] for r in self.c.execute("SELECT * FROM robo_bracos")}
         self.assertEqual(set(n), {b for b in self.A.BRACOS if self.A.dispara(b, 0.08)})
@@ -652,12 +652,12 @@ class Generativa(unittest.TestCase):
         c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
         t0 = 1000 * G.SLOT_MS + 60_000
         relogio = [t0 / 1000]
-        args = dict(obter=lambda t: {"preco": 100.0}, pergunta=lambda ctx: (G.validar(self.BOA), 10),
+        args = dict(obter=lambda t: {"preco": 100.0}, pergunta=lambda ctx, instrucao=None: (G.validar(self.BOA), 10),
                     preco_em=lambda t: 101.0, preco_ja=lambda: 100.0, relogio=lambda: relogio[0])
         self.assertEqual(G.ciclo(c, t0, **args)["previu"], 1)
         self.assertEqual(c.execute("SELECT COUNT(*) FROM llm_previsoes").fetchone()[0], 3)
         self.assertEqual(G.ciclo(c, t0 + 60_000, **args)["previu"], 0)
-        self.assertEqual(G.ciclo(c, t0 + 18 * 60_000, **args)["resolveu"], 1)  # só o de 15 min
+        self.assertEqual(G.ciclo(c, t0 + 18 * 60_000, **args)["resolveu"], 2)  # só o de 15 min, na v1 e na v2
         G.ciclo(c, t0 + 5 * 3_600_000, **args)  # novos slots também previram no caminho; aqui só importa o primeiro
         acertos = dict(c.execute("SELECT horizonte, acertou FROM llm_previsoes WHERE slot_ms=?", (1000 * G.SLOT_MS,)).fetchall())
         self.assertEqual(acertos, {"15min": 1, "1h": 0, "4h": 1})
@@ -721,3 +721,34 @@ class Saude(unittest.TestCase):
         fonte = (RAIZ / "monitor.py").read_text()
         for lenta in ("generativa", "Rotina(", "insiders.rodar"):
             self.assertNotIn(lenta, fonte)
+
+
+class LicoesDosTraders(unittest.TestCase):
+    def test_v2_pode_se_abster_e_v1_nao(self):
+        from lab import generativa as G
+        x = json.loads(json.dumps(Generativa.BOA)); x["4h"]["direcao"] = "sem_posicao"
+        self.assertEqual(G.validar(x, permite_abster=True)["4h"]["direcao"], "sem_posicao")
+        with self.assertRaises(ValueError):
+            G.validar(x)
+
+    def test_v2_roda_no_mesmo_contexto_e_abstencao_nao_conta_como_acerto(self):
+        import sqlite3
+        from lab import generativa as G
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        abst = json.loads(json.dumps(Generativa.BOA)); abst["15min"]["direcao"] = "sem_posicao"
+        def perg(ctx, instrucao=None):
+            return (G.validar(abst, True) if instrucao is G.INSTRUCAO_V2 else G.validar(Generativa.BOA)), 5
+        t0 = 2000 * G.SLOT_MS + 60_000
+        r = [t0 / 1000]
+        args = dict(obter=lambda t: {"preco": 100.0}, pergunta=perg, preco_em=lambda t: 101.0, preco_ja=lambda: 100.0, relogio=lambda: r[0])
+        self.assertEqual(G.ciclo(c, t0, **args).get("previu_v2"), 1)
+        G.ciclo(c, t0 + 20 * 60_000, **args)
+        v2 = dict(c.execute("SELECT horizonte, acertou FROM llm_previsoes_v2 WHERE slot_ms=? AND px_final IS NOT NULL", (2000 * G.SLOT_MS,)).fetchall())
+        self.assertEqual(v2, {"15min": None})
+        res = G.resumo(c, "llm_previsoes_v2")["horizontes"]["15min"]
+        self.assertEqual((res["resolvidas"], res["abstencoes"]), (0, 1))
+
+    def test_robo_tem_versoes_de_prazo_maior(self):
+        from executor import adaptativo as A
+        self.assertEqual(len(A.BRACOS), 30)
+        self.assertIn("compra_lim0.25_seg240", A.BRACOS)
