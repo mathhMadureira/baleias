@@ -769,3 +769,23 @@ class FundingAlavancado(unittest.TestCase):
         _, e2 = FA.simular({"BTC": horas}, {"BTC": choque}, 2)
         self.assertEqual(e10["liquidacoes"], 1)
         self.assertEqual(e2["liquidacoes"], 0)
+
+
+class Padroes(unittest.TestCase):
+    def test_detecta_engolfo_e_mede_sem_sobreposicao(self):
+        from lab import padroes as P
+        v = [(i * 900_000, 100.0, 100.5, 99.5, 100.0 + (0.01 if i % 2 else -0.01), 10.0) for i in range(130)]
+        v[110] = (110 * 900_000, 99.8, 99.9, 99.0, 99.2, 10.0)      # vela de baixa
+        v[111] = (111 * 900_000, 99.1, 100.6, 99.0, 100.5, 10.0)    # engolfa a anterior
+        a = P.detectar(v)
+        self.assertIn("engolfo_alta", a[111])
+        self.assertNotIn("engolfo_alta", a[110])
+        m = P.medir(v, [["x"] if i in (100, 101, 102, 120) else [] for i in range(len(v))])
+        self.assertEqual(m[("x", "1h")]["casos"], 2)   # 101 e 102 caem dentro do horizonte de 100
+
+    def test_passou_exige_treino_teste_e_custo(self):
+        from lab import padroes as P
+        bom = {"casos": 100, "retorno_medio_pct": 0.3, "t": 4.0}
+        self.assertTrue(P.passou(bom, {"casos": 50, "retorno_medio_pct": 0.25, "t": 2.5}))
+        self.assertFalse(P.passou(bom, {"casos": 50, "retorno_medio_pct": -0.25, "t": -2.5}))
+        self.assertFalse(P.passou(bom, {"casos": 50, "retorno_medio_pct": 0.1, "t": 5}))
