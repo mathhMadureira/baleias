@@ -121,3 +121,7 @@ Máximas horárias: Hyperliquid nas últimas ~5000 h, Binance antes disso (outra
 | 10x | +10,31% | 83% | −0,75% | 10 | +2,88% |
 
 Pela regra pré-registrada, o escolhido é **2x**, que entra no ao vivo simulado junto com a H3 (mesmo início, 2026-11-07). A primeira rodada mostrava zero liquidações em todos os níveis, mas só porque faltavam velas antes de 2025. Esse erro foi corrigido antes desta tabela.
+
+### H5/H5b: troca de modelo (2026-11-06, antes da 1ª previsão)
+
+Nenhuma previsão foi gravada: todas as chamadas ao `gemini-3.8-flash` falharam (503 e depois 429, cota da chave esgotada). O modelo passa a ser `gemini-2.5-flash`, que respondeu no teste. Prompt, horizontes, regras e critérios continuam iguais. A contagem começa na primeira previsão gravada.

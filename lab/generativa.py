@@ -8,7 +8,7 @@ import urllib.request
 
 from baleias import noticias
 
-MODELO = "gemini-3.8-flash"
+MODELO = "gemini-2.5-flash"  # o 3.8 estourou a cota grátis da chave (429) antes da 1ª previsão
 SLOT_MS = 15 * 60_000
 HORIZONTES = {"15min": 15 * 60_000, "1h": 3_600_000, "4h": 4 * 3_600_000}
 CUSTO = 0.2
