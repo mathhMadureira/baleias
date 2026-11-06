@@ -41,3 +41,10 @@ Pergunta: comprar a ação na abertura do dia útil seguinte à publicação de 
 - Alvo do aprendizado: excesso sobre o SPY depois do custo. Alerta só depois de 30 compras resolvidas ao vivo e limite inferior acima de zero.
 - O backtest usa os arquivos trimestrais da SEC e só é indicativo: estas regras foram definidas antes dele, mas preços não oficiais e ações deslistadas (sem preço) podem enviesar.
 - Mesmo critério de dinheiro e de desistência do teste 1, contado à parte. Cada resultado leva ~1 mês: é um teste lento.
+
+# Teste 3: direção do BTC em 1, 5 e 15 minutos (escrito em 2026-11-06, antes de qualquer resultado)
+- A cada minuto fechado, uma previsão por horizonte: probabilidade de o fechamento futuro ficar acima do atual. Características só de velas já fechadas da Hyperliquid. Modelo: regressão logística online, aprende só com previsões já resolvidas.
+- Acerto = previsão de alta (prob > 50%) e o preço subiu, ou de baixa e caiu. Empate de preço fica fora.
+- Comparação: binária que paga X% precisa de acerto acima de 1/(1+X) para empatar (85% → 54,05%).
+- Só há vantagem se o **limite inferior** do intervalo de 95% do acerto ficar acima do empate do payout real da plataforma, com pelo menos 1.000 previsões resolvidas no horizonte. Previsões de minutos vizinhos se sobrepõem: o intervalo real é mais largo que o calculado.
+- Sem dinheiro real até lá. Se depois de 3.000 previsões o limite inferior não passar do empate, a hipótese cai.

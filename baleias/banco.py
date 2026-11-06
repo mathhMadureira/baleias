@@ -29,6 +29,9 @@ CREATE TABLE IF NOT EXISTS insider_sinais(
   previsto REAL, desvio REAL, aprovado INTEGER, alertado INTEGER DEFAULT 0, t_ms INTEGER);
 CREATE TABLE IF NOT EXISTS insider_resultados(
   acesso TEXT PRIMARY KEY, d_entrada TEXT, d_saida TEXT, bruto REAL, spy REAL, excesso REAL, r_curto REAL, t_ms INTEGER);
+CREATE TABLE IF NOT EXISTS previsoes(
+  id INTEGER PRIMARY KEY, horizonte INTEGER, t_base_ms INTEGER, px_base REAL, prob_alta REAL, caracteristicas TEXT,
+  px_final REAL, subiu INTEGER, acertou INTEGER, UNIQUE(horizonte, t_base_ms));
 CREATE TABLE IF NOT EXISTS perdidos(tid_chave TEXT PRIMARY KEY, carteira TEXT, moeda TEXT, t_carteira_ms INTEGER, t_visto_ms INTEGER);
 CREATE INDEX IF NOT EXISTS ix_sinais_resolver ON sinais(fonte, t_sinal_ms);
 CREATE INDEX IF NOT EXISTS ix_ops ON operacoes(carteira, moeda, t_ms);

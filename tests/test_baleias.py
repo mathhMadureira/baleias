@@ -350,3 +350,46 @@ class InsiderVivo(unittest.TestCase):
         self.assertEqual(IV.resolver(c, Precos(), m, date(2026, 10, 20)), 0)
         self.assertEqual(IV.resolver(c, Precos(), m, date(2026, 11, 20)), 1)
         self.assertEqual(m.n, 1)
+
+
+class Previsao(unittest.TestCase):
+    def test_empate_da_binaria(self):
+        from baleias import previsao as P
+        self.assertAlmostEqual(P.empate(0.85), 1 / 1.85)
+        self.assertAlmostEqual(P.empate(1.0), 0.5)
+
+    def test_placar_wilson(self):
+        from baleias import previsao as P
+        p = P.placar(55, 100)
+        self.assertLess(p["baixo"], 0.55)
+        self.assertGreater(p["alto"], 0.55)
+        self.assertIsNone(P.placar(0, 0))
+
+    def test_logistica_aprende_padrao_simples(self):
+        from baleias import previsao as P
+        random.seed(3)
+        m = P.Logistica(taxa=0.1)
+        for _ in range(3000):
+            x = random.gauss(0, 1)
+            m.aprender({"vies": 1.0, "r1": x}, x + random.gauss(0, .5) > 0)
+        self.assertGreater(m.prob({"vies": 1.0, "r1": 1.0}), 0.7)
+
+    def test_ciclo_preve_e_resolve_sem_olhar_o_futuro(self):
+        from baleias import banco as Bn, previsao_vivo as PV
+        c = Bn.abrir(":memory:")
+
+        class Cli:
+            def __init__(self, n):
+                self.n = n
+
+            def velas(self, *a):
+                return [{"t": i * 60_000, "T": i * 60_000 + 59_999, "c": str(100 + (i % 3)), "v": "1"} for i in range(self.n)]
+
+        r = PV.ciclo(c, Cli(70), 70 * 60_000)
+        self.assertEqual(r["previstas"], 3)
+        base = c.execute("SELECT t_base_ms FROM previsoes WHERE horizonte=1").fetchone()[0]
+        self.assertEqual(base, 69 * 60_000)
+        self.assertEqual(PV.ciclo(c, Cli(70), 70 * 60_000)["previstas"], 0)
+        r2 = PV.ciclo(c, Cli(72), 72 * 60_000)
+        self.assertGreaterEqual(r2["resolvidas"], 1)
+        self.assertIsNotNone(PV.resumo(c)[1])

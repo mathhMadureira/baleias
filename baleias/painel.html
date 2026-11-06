@@ -20,6 +20,8 @@ svg{width:100%;height:120px;display:block}
 </style></head><body>
 <header><div><b>🐋 BALEIAS</b> <span class="mut">Hyperliquid · cripto e ações EUA · só leitura · horizonte 4 h</span></div><div id="aviso">carregando…</div></header>
 <main>
+<section style="grid-column:1/-1"><h2>Previsão do BTC: sobe ou cai? (taxa de acerto, IC 95%)</h2><div class="wrap"><table id="previsao"></table></div>
+<p class=mut id="empates"></p></section>
 <section><h2>Resultado depois dos custos (% por sinal, IC 95%)</h2><table id="resumo"></table></section>
 <section><h2>Protocolo</h2><div id="protocolo"></div><p class="mut">Os US$ 10 só entram com os 4 critérios do PROTOCOLO.md ao mesmo tempo.</p></section>
 <section><h2>Aprendizado: erro da previsão por sinal</h2><svg id="erro"></svg><p class="mut" id="erro_txt"></p></section>
@@ -52,6 +54,9 @@ async function atualizar(){try{const d=await (await fetch('/api/estado')).json()
  const hora=t=>new Date(t).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}), nome=m=>esc(m.startsWith('xyz:')?m.slice(4)+' (ação EUA)':m);
  $('noticias').innerHTML=d.noticias.length?d.noticias.map(n=>`<tr><td class=mut>${hora(n.t_ms)}</td><td>${nome(n.moeda)}</td><td style="text-align:left;white-space:normal"><a style="color:var(--c)" href="${esc(n.link)}" target=_blank rel=noopener>${esc(n.titulo)}</a> <span class=mut>${esc(n.fonte)}</span></td></tr>`).join(''):'<tr><td class=mut>As manchetes aparecem junto com cada sinal novo.</td></tr>';
  $('rastros').innerHTML=d.rastros.length?d.rastros.map(r=>`<tr><td class=mut>${hora(r.t_ms)}</td><td>#${r.sinal_id} ${nome(r.moeda)} ${r.lado}</td><td class="${r.evento=='saiu'?'neg':'pos'}">${r.evento=='saiu'?'carteira saiu':'carteira aumentou'}</td></tr>`).join(''):'<tr><td class=mut>Rastros só são seguidos depois de um alerta aprovado.</td></tr>';
+ const P=d.previsao,pc=x=>x?`${(x.taxa*100).toFixed(1)}% <span class=mut>[${(x.baixo*100).toFixed(1)}–${(x.alto*100).toFixed(1)}] n=${x.n}</span>`:'<span class=mut>aguardando</span>';
+ $('previsao').innerHTML='<tr><th>Horizonte</th><th>Acerto geral</th><th>Últimas 200</th><th>Quanto subiu (base)</th><th>Pendentes</th></tr>'+[1,5,15].map(h=>`<tr><td>${h} min</td><td>${pc(P[h].geral)}</td><td>${pc(P[h].ultimas_200)}</td><td>${pc(P[h].sempre_alta)}</td><td>${P[h].pendentes}</td></tr>`).join('');
+ $('empates').textContent='Para empatar numa binária: '+Object.entries(P.empates).map(([k,v])=>`pagando ${k} → acertar ${(v*100).toFixed(1)}%`).join(' · ')+'. Só há vantagem se o limite inferior do intervalo passar do empate.';
  const I=d.insider;$('insider_txt').textContent=`${I.total} compras registradas · ${I.resolvidas} resolvidas · excesso médio sobre o S&P: ${I.excesso?f(I.excesso.media)+'% ['+f(I.excesso.baixo)+', '+f(I.excesso.alto)+']':'sem dados ainda (cada resultado leva ~1 mês)'}`;
  $('insider').innerHTML='<tr><th>Data</th><th>Ação</th><th>Cargo</th><th>Valor US$</th><th>Preço</th><th>Previsto %</th><th>Aprovado</th><th>Excesso %</th></tr>'+I.compras.map(x=>`<tr><td>${x.data}</td><td><b>${esc(x.ticker)}</b></td><td>${esc(x.cargo)}</td><td>${Math.round(x.valor).toLocaleString('pt-BR')}</td><td>${Number(x.preco).toFixed(2)}</td><td>${f(x.previsto)} ±${Number(x.desvio).toFixed(2)}</td><td>${x.aprovado?'<b class=pos>sim</b>':'<span class=mut>não</span>'}</td><td class="${cls(x.excesso)}">${x.excesso==null?'<span class=mut>aguardando ~1 mês</span>':f(x.excesso*100)}</td></tr>`).join('');
  vistos=new Set(d.sinais.map(s=>s.id))}catch(e){$('aviso').textContent='sem conexão com o painel'}}

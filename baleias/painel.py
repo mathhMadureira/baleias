@@ -60,7 +60,9 @@ def estado(c, fonte=FONTE):
         "SELECT s.acesso, s.data, s.ticker, s.cargo, s.valor, s.preco, s.previsto, s.desvio, s.aprovado, r.excesso, r.bruto, r.spy "
         "FROM insider_sinais s LEFT JOIN insider_resultados r ON r.acesso=s.acesso ORDER BY s.t_ms DESC LIMIT 40")]
     feitos = [x["excesso"] * 100 for x in c.execute("SELECT excesso FROM insider_resultados")]
+    from . import previsao_vivo
     return {
+        "previsao": previsao_vivo.resumo(c),
         "insider": {"compras": ins, "total": c.execute("SELECT COUNT(*) FROM insider_sinais").fetchone()[0],
                     "resolvidas": len(feitos), "excesso": _ic(feitos)},
         "noticias": noticias,

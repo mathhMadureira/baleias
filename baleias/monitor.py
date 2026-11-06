@@ -182,6 +182,11 @@ def rodar(c, cliente, uma_vez=False):
         try:
             r = ciclo(c, cliente, modelo)
             try:
+                from . import previsao_vivo
+                r.update({"btc_" + k: v for k, v in previsao_vivo.ciclo(c, cliente, agora()).items()})
+            except Exception as e:
+                print(time.strftime("%F %T"), "previsão falhou:", type(e).__name__, str(e)[:150], flush=True)
+            try:
                 r.update(insiders.rodar())
             except Exception as e:  # a SEC ou o Yahoo fora do ar não podem derrubar o monitor das baleias
                 print(time.strftime("%F %T"), "insider falhou:", type(e).__name__, str(e)[:150], flush=True)
