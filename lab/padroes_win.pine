@@ -1,0 +1,109 @@
+//@version=5
+// Hipótese 6-WIN (lab/PROTOCOLO_LAB.md): mesmos 19 padrões e regras da H6, no mini índice de 15 min.
+// Treino = primeira metade das velas disponíveis, teste = segunda metade. Casos sem sobreposição.
+indicator("H6 padroes WIN", overlay=true, max_bars_back=5000)
+custoPts = input.float(15, "custo ida e volta (pontos)")
+NP = 19
+nomes = array.from("engolfo_alta", "engolfo_baixa", "martelo", "estrela_cadente", "doji", "tres_soldados", "tres_corvos", "inside_bar", "marubozu_alta", "marubozu_baixa", "tendencia_alta", "tendencia_baixa", "rompe_maxima_20", "rompe_minima_20", "rsi_abaixo_30", "rsi_acima_70", "volume_3x", "alta_forte", "queda_forte")
+prazos = array.from("15min", "1h", "4h")
+
+corpo = math.abs(close - open)
+faixa = high - low
+sup = high - math.max(open, close)
+inf = math.min(open, close) - low
+alta = close > open
+baixa = close < open
+e20 = ta.ema(close, 20)
+e50 = ta.ema(close, 50)
+rsi = ta.rsi(close, 14)
+ret = close / close[1] - 1
+dp = ta.stdev(ret, 96)[1]
+volMedia = ta.sma(volume, 96)[1]
+
+b(c) => c ? 1 : 0
+ok = faixa > 0
+p = array.new_int(NP, 0)
+if ok
+    array.set(p, 0, b(alta and close[1] < open[1] and close >= open[1] and open <= close[1]))
+    array.set(p, 1, b(baixa and close[1] > open[1] and close <= open[1] and open >= close[1]))
+    array.set(p, 2, b(inf >= 2 * corpo and sup <= 0.3 * faixa and corpo > 0))
+    array.set(p, 3, b(sup >= 2 * corpo and inf <= 0.3 * faixa and corpo > 0))
+    array.set(p, 4, b(corpo <= 0.1 * faixa))
+    array.set(p, 5, b(alta and close[1] > open[1] and close[2] > open[2] and close > close[1] and close[1] > close[2]))
+    array.set(p, 6, b(baixa and close[1] < open[1] and close[2] < open[2] and close < close[1] and close[1] < close[2]))
+    array.set(p, 7, b(high < high[1] and low > low[1]))
+    array.set(p, 8, b(corpo >= 0.9 * faixa and alta))
+    array.set(p, 9, b(corpo >= 0.9 * faixa and not alta))
+    array.set(p, 10, b(e20 > e50 and close > e20))
+    array.set(p, 11, b(e20 < e50 and close < e20))
+    array.set(p, 12, b(close > ta.highest(high, 20)[1]))
+    array.set(p, 13, b(close < ta.lowest(low, 20)[1]))
+    array.set(p, 14, b(rsi < 30))
+    array.set(p, 15, b(rsi > 70))
+    array.set(p, 16, b(volume > 3 * volMedia))
+    array.set(p, 17, b(dp > 0 and ret > 3 * dp))
+    array.set(p, 18, b(dp > 0 and ret < -3 * dp))
+// Pine não tem operador de bits: os 19 padrões viram um número (soma de potências de 2) para poder olhar mask[h].
+mask = 0.0
+for k = 0 to NP - 1
+    mask += array.get(p, k) * math.pow(2, k)
+
+TAM = NP * 3 * 2
+var n = array.new_float(TAM, 0)
+var s = array.new_float(TAM, 0)
+var s2 = array.new_float(TAM, 0)
+var up = array.new_float(TAM, 0)
+var cs = array.new_float(TAM, 0)
+var livre = array.new_int(NP * 3, -1)
+corte = int(last_bar_index / 2)
+
+registrar(j, h, m, retPct, custoPct) =>
+    e = bar_index - h
+    if e >= 100
+        for k = 0 to NP - 1
+            if math.floor(m / math.pow(2, k)) % 2 == 1 and e >= array.get(livre, k * 3 + j)
+                array.set(livre, k * 3 + j, e + h)
+                idx = (k * 3 + j) * 2 + (e < corte ? 0 : 1)
+                array.set(n, idx, array.get(n, idx) + 1)
+                array.set(s, idx, array.get(s, idx) + retPct)
+                array.set(s2, idx, array.get(s2, idx) + retPct * retPct)
+                array.set(up, idx, array.get(up, idx) + (retPct > 0 ? 1 : 0))
+                array.set(cs, idx, array.get(cs, idx) + custoPct)
+
+if bar_index > 116
+    registrar(0, 1, mask[1], (close / close[1] - 1) * 100, custoPts / close[1] * 100)
+    registrar(1, 4, mask[4], (close / close[4] - 1) * 100, custoPts / close[4] * 100)
+    registrar(2, 16, mask[16], (close / close[16] - 1) * 100, custoPts / close[16] * 100)
+
+media(idx) => array.get(n, idx) > 0 ? array.get(s, idx) / array.get(n, idx) : 0.0
+tstat(idx) =>
+    c = array.get(n, idx)
+    m = media(idx)
+    v = c > 1 ? (array.get(s2, idx) - c * m * m) / (c - 1) : 0.0
+    v > 0 ? m / math.sqrt(v / c) : 0.0
+txt(idx) =>
+    c = array.get(n, idx)
+    str.tostring(c, "#") + " | " + str.tostring(c > 0 ? array.get(up, idx) / c * 100 : 0, "#.0") + "% | " + str.tostring(media(idx), "+0.0000;-0.0000") + "% | t " + str.tostring(tstat(idx), "+0.00;-0.00")
+
+if barstate.islast
+    tb = table.new(position.top_right, 4, NP * 3 + 1, bgcolor=color.white, border_width=1, frame_color=color.gray, border_color=color.silver)
+    table.cell(tb, 0, 0, "padrao|prazo", text_size=size.tiny)
+    table.cell(tb, 1, 0, "treino: casos | alta | media | t", text_size=size.tiny)
+    table.cell(tb, 2, 0, "teste: casos | alta | media | t", text_size=size.tiny)
+    table.cell(tb, 3, 0, "custo % | passou", text_size=size.tiny)
+    passaram = 0
+    for k = 0 to NP - 1
+        for j = 0 to 2
+            a = (k * 3 + j) * 2
+            z = a + 1
+            custo = array.get(n, a) + array.get(n, z) > 0 ? (array.get(cs, a) + array.get(cs, z)) / (array.get(n, a) + array.get(n, z)) : 0.0
+            ps = array.get(n, a) >= 30 and array.get(n, z) >= 30 and math.abs(media(a)) > custo and math.abs(tstat(a)) > 3.2 and media(a) * media(z) > 0 and math.abs(media(z)) > custo and math.abs(tstat(z)) > 2
+            passaram += ps ? 1 : 0
+            linha = k * 3 + j + 1
+            rotulo = array.get(nomes, k) + "|" + array.get(prazos, j)
+            table.cell(tb, 0, linha, rotulo, text_size=size.tiny)
+            table.cell(tb, 1, linha, txt(a), text_size=size.tiny)
+            table.cell(tb, 2, linha, txt(z), text_size=size.tiny)
+            table.cell(tb, 3, linha, str.tostring(custo, "0.0000") + " | " + (ps ? "PASSOU" : "-"), text_size=size.tiny, bgcolor=ps ? color.lime : color.white)
+            log.info(rotulo + " ;treino; " + txt(a) + " ;teste; " + txt(z) + " ;custo; " + str.tostring(custo, "0.0000") + " ;" + (ps ? "PASSOU" : "-"))
+    log.info("velas " + str.tostring(last_bar_index + 1) + " passaram " + str.tostring(passaram) + " de 57 | inicio " + str.format_time(time[last_bar_index], "yyyy-MM-dd HH:mm") + " corte " + str.format_time(time[last_bar_index - corte], "yyyy-MM-dd"))

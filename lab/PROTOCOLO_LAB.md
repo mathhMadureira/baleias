@@ -153,3 +153,10 @@ Passaram **0 de 57** combinações de padrão e prazo. A tabela completa está e
 - **Por que ninguém passou:** todos os efeitos ficam entre 4 e 20 vezes abaixo do custo de 0,2%. "Rompimento da máxima", que é o padrão clássico de compra, deu zero.
 - **Desdobramento:** a tabela vai para o contexto da versão 2 do Gemini a partir de 2026-11-06 ~20h (horário de Brasília), e a comparação pareada da v2 conta a partir daí. O robô não usa nenhum padrão, porque nenhum passou.
 - **Ideia para o futuro, não pré-registrada:** com custo de ordem limitada (maker, ~0,03% ida e volta na Hyperliquid), três corvos em 4 h (+0,044% no teste) ficaria acima do custo. Isso exigiria uma hipótese nova, com simulação de preenchimento de ordem limitada.
+
+## Hipótese 6-WIN: padrões no mini índice (pré-registrada em 2026-11-06, antes de rodar)
+
+- **Mesmos 19 padrões, horizontes e regras da H6**, aplicados ao WIN1! (contrato contínuo do mini índice, B3) em velas de 15 min, rodando no TradingView pelo script `lab/padroes_win.pine`.
+- **Dados:** treino na primeira metade das velas que o TradingView liberar e teste na segunda metade. O histórico é bem mais curto que o do BTC (limite de velas da conta), e isso será registrado.
+- **Custo assumido:** 15 pontos na ida e volta (1 tick de escorregamento de cada lado, ~10 pontos, mais corretagem e emolumentos). Esse valor ainda não foi conferido nas tabelas da B3 e da corretora, e precisa ser antes de qualquer uso real.
+- **Ressalvas:** a rolagem do contrato contínuo cria saltos de preço. Velas que atravessam a noite também entram na conta, e no horizonte de 4 h isso pode misturar dois pregões.
