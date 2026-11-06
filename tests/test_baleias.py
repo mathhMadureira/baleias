@@ -598,3 +598,22 @@ class TendenciaAoVivo(unittest.TestCase):
         segundo = c.execute("SELECT custo FROM lab_tendencia WHERE dia='2026-11-08'").fetchone()[0]
         self.assertGreater(primeiro, 0)
         self.assertEqual(segundo, 0)
+
+
+class Funding(unittest.TestCase):
+    def test_regra_entra_cobre_custo_e_sai_no_negativo(self):
+        from lab import funding as F
+        self.assertFalse(F.decidir([0.0000125] * 10, False), "janela curta")
+        self.assertTrue(F.decidir([0.0000125] * 72, False))
+        self.assertFalse(F.decidir([0.000001] * 72, False), "não paga o custo em 14 dias")
+        self.assertTrue(F.decidir([0.000001] * 72, True), "quem já está dentro só sai no negativo")
+        self.assertFalse(F.decidir([-0.00001] * 72, True))
+
+    def test_simulacao_recebe_funding_e_paga_custo(self):
+        from lab import funding as F
+        s = [(i * 3_600_000, 0.0000125) for i in range(24 * 10)]
+        r = F.simular({"BTC": s})
+        total = sum(r.values())
+        horas_dentro = 24 * 10 - F.JANELA_H
+        esperado = F.PESO * (horas_dentro * 0.0000125 - F.CUSTO_IDA_VOLTA / 2) / F.CAPITAL_POR_EXPOSICAO
+        self.assertAlmostEqual(total, esperado)
