@@ -80,3 +80,13 @@ Motivo: a hipótese 1 foi reprovada no cofre (falhou nos fundos), mas em cripto 
 - Avaliação com 300 previsões (~50 dias): passa se o limite inferior do acerto for > 50% **e** a soma das operações depois do custo for positiva. Sem troca de prompt nem de modelo no meio; mudança zera a contagem.
 - As manchetes são texto de terceiros: o modelo só devolve JSON, sem ferramentas; nada do que ele escreve é executado.
 - 2026-11-06, ajuste antes da primeira previsão (a pedido do dono, "períodos menores também"): a cada 15 min UTC, uma única consulta pede três previsões: 15 min, 1 h e 4 h. Cada prazo é avaliado à parte, com o mesmo critério (300 previsões resolvidas, limite inferior do acerto > 50% e soma das operações acima do custo > 0). O preço de referência é o do momento em que a resposta chega, não o de quando a pergunta saiu, para não dar ao modelo o tempo que ele levou para pensar. Também entram no contexto os retornos de 5 e 15 min.
+
+---
+
+# Hipótese 5b: Gemini com as lições dos grandes traders (registrada em 2026-11-06, antes de rodar)
+Base: reports/Maiores traders e metodologias.md. A versão 1 (hipótese 5) segue intocada; a 5b roda em paralelo, no MESMO contexto de cada consulta (comparação pareada).
+- Instrução nova: pode se abster ("sem_posicao") quando não houver vantagem clara; a operação só faz sentido se o movimento esperado superar o custo de 0,2%; prioriza teses de horas, não de minutos; diz o que invalidaria a tese.
+- Mesmos prazos (15 min, 1 h, 4 h), mesma resolução, mesmo critério (300 previsões resolvidas não abstidas por prazo; limite inferior do acerto > 50% e soma das operações acima do custo > 0). Também se compara com a v1 nas mesmas consultas.
+
+# Robô: versões de prazo maior no aprendizado (2026-11-06)
+As versões passam a combinar lado (compra/venda) × previsão mínima {0, 0,10, 0,25%} × segurar {5, 15, 30, 60, 240 min} = 30 versões. 0,25% = custo de 0,2% mais margem; 60 e 240 min seguem o padrão dos vencedores (horizontes mais longos). Versões antigas (0,05%, 0,20%) deixam de ser escolhidas; o histórico delas fica guardado.
