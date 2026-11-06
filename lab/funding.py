@@ -3,6 +3,7 @@ import json
 import statistics as st
 import sys
 import time
+import urllib.error
 import urllib.request
 
 API = "https://api.hyperliquid.xyz/info"
@@ -17,9 +18,17 @@ CAPITAL_POR_EXPOSICAO = 2.0
 def historico(moeda, inicio_ms, post=None):
     """[(t_ms, taxa por hora)] desde inicio_ms, em ordem."""
     def _post(corpo):
-        req = urllib.request.Request(API, data=json.dumps(corpo).encode(), headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=40) as r:
-            return json.load(r)
+        # Divide a cota de pedidos com o monitor: espaçado e com nova tentativa quando a Hyperliquid pede calma (429).
+        for tentativa in range(8):
+            req = urllib.request.Request(API, data=json.dumps(corpo).encode(), headers={"Content-Type": "application/json"})
+            try:
+                with urllib.request.urlopen(req, timeout=40) as r:
+                    return json.load(r)
+            except urllib.error.HTTPError as e:
+                if e.code != 429:
+                    raise
+                time.sleep(15 * (tentativa + 1))
+        raise RuntimeError("Hyperliquid recusou por excesso de pedidos várias vezes")
     post = post or _post
     saida, t = [], inicio_ms
     while True:
@@ -30,7 +39,7 @@ def historico(moeda, inicio_ms, post=None):
         if len(lote) < 500:
             break
         t = lote[-1]["time"] + 1
-        time.sleep(0.3)
+        time.sleep(4)
     return saida
 
 
