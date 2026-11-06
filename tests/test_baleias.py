@@ -18,7 +18,7 @@ class SoLeitura(unittest.TestCase):
             api.Cliente(abrir=lambda *a, **k: None).info("order")
 
     def test_nenhum_arquivo_assina_ou_envia_ordem(self):
-        for arq in RAIZ.glob("*.py"):
+        for arq in RAIZ.glob("*.py"):  # só o pacote do monitor; o executor fica em executor/
             fonte = arq.read_text()
             for proibido in ("/exchange", "eth_account", "sign_", "PRIVATE_KEY", "secret_key"):
                 self.assertNotIn(proibido, fonte, f"{proibido} em {arq.name}")
@@ -393,3 +393,47 @@ class Previsao(unittest.TestCase):
         r2 = PV.ciclo(c, Cli(72), 72 * 60_000)
         self.assertGreaterEqual(r2["resolvidas"], 1)
         self.assertIsNotNone(PV.resumo(c)[1])
+
+
+class Executor(unittest.TestCase):
+    def test_assinatura_igual_a_documentacao(self):
+        from executor.binance import assinar
+        self.assertEqual(assinar("NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j",
+                                 "symbol=LTCBTC&side=BUY&type=LIMIT&timeInForce=GTC&quantity=1&price=0.1&recvWindow=5000&timestamp=1499827319559"),
+                         "c8db56825ae71d6d79447849e617115f4a920fa2acdcab2b053c4b2838bd6b71")
+
+    def test_recusa_chave_com_saque(self):
+        from executor.binance import verificar_chave
+        class B:
+            def __init__(self, r): self.r = r
+            def restricoes(self): return self.r
+        self.assertTrue(any("SAQUE" in p for p in verificar_chave(B({"enableWithdrawals": True, "enableSpotAndMarginTrading": True, "ipRestrict": True}))))
+        self.assertEqual(verificar_chave(B({"enableWithdrawals": False, "enableSpotAndMarginTrading": True, "ipRestrict": True})), [])
+
+    def test_travas(self):
+        from executor import robo
+        boa = {"prob_alta": 0.7}
+        self.assertIsNone(robo.decidir(boa, 500, 0, False, False))
+        self.assertIn("PARAR", robo.decidir(boa, 500, 0, False, True))
+        self.assertIn("aberta", robo.decidir(boa, 500, 0, True, False))
+        self.assertIn("perda", robo.decidir(boa, 500, -2.5, False, False))
+        self.assertIn("aprendeu", robo.decidir(boa, 10, 0, False, False))
+        self.assertIn("abaixo", robo.decidir({"prob_alta": 0.55}, 500, 0, False, False))
+
+    def test_simulado_compra_e_vende(self):
+        import os, sqlite3, tempfile, json as J
+        from executor import robo
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        c.execute(robo.ESQUEMA)
+        c.execute("CREATE TABLE previsoes(id INTEGER PRIMARY KEY, horizonte INT, t_base_ms INT, prob_alta REAL)")
+        c.execute("CREATE TABLE modelo(fonte TEXT, estado TEXT)")
+        c.execute("INSERT INTO modelo VALUES('previsao_btc', ?)", (J.dumps({"5": J.dumps({"w": {}, "n": 999})}),))
+        c.execute("INSERT INTO previsoes VALUES(1,5,1000000,0.8)")
+        class B:
+            def livro(self, s): return (100.0, 100.0)
+        os.environ.pop("BINANCE_REAL", None)
+        self.assertIn("comprou", robo.passo(c, B(), agora_s=1060))
+        self.assertIn("aberta", robo.passo(c, B(), agora_s=1100))
+        self.assertIn("vendeu", robo.passo(c, B(), agora_s=1060 + 301))
+        r = c.execute("SELECT resultado_usdt FROM robo_operacoes").fetchone()[0]
+        self.assertLess(r, 0)  # preço parado: as duas taxas viram prejuízo

@@ -9,3 +9,10 @@ Monitor só de leitura de carteiras grandes da Hyperliquid. Não tem chave e nã
 - Alertas: `dados/alertas.log`. Telegram: criar `~/baleias/.env` com `TELEGRAM_BOT_TOKEN=` e `TELEGRAM_CHAT_ID=`, depois `systemctl --user restart baleias`.
 
 O aprendizado: cada sinal é gravado com a previsão antes de o resultado existir. Depois de 4 h, o resultado é calculado com custos, classificado (acerto, custo comeu o ganho, entrada tardia, devolveu o ganho, carteira saiu antes, contra desde o início), ajusta os pesos do modelo em `dados/baleias.db` e pode gerar lições candidatas ou aposentar uma carteira.
+
+## Robô da Binance
+- Começa **simulado**: preços reais da Binance, sem ordens. Resultado no painel e em `journalctl --user -u baleias-robo`.
+- Regra: compra US$ 10 de BTC quando a previsão de 5 min dá alta ≥ 60% e o modelo já aprendeu com 300 previsões; vende 5 min depois. Uma posição por vez. Para no dia se perder US$ 2.
+- Parar na hora: `touch ~/baleias/PARAR` (apagar o arquivo para voltar).
+- Dinheiro real (decisão do dono): criar uma chave de API na Binance **só com "Enable Spot & Margin Trading"**, **sem saque**, travada no IP desta máquina, e pôr no `~/baleias/.env`:
+  `BINANCE_API_KEY=...`, `BINANCE_API_SECRET=...`, `BINANCE_REAL=1`; depois `systemctl --user restart baleias-robo`. O robô recusa chave que permita saque. Precisa de pelo menos 10 USDT livres na conta spot.

@@ -61,7 +61,15 @@ def estado(c, fonte=FONTE):
         "FROM insider_sinais s LEFT JOIN insider_resultados r ON r.acesso=s.acesso ORDER BY s.t_ms DESC LIMIT 40")]
     feitos = [x["excesso"] * 100 for x in c.execute("SELECT excesso FROM insider_resultados")]
     from . import previsao_vivo
+    try:
+        ops = [dict(x) for x in c.execute("SELECT modo, prob, t_compra, px_compra, t_venda, px_venda, resultado_usdt FROM robo_operacoes ORDER BY id DESC LIMIT 30")]
+        tot = {m: c.execute("SELECT COUNT(*), COALESCE(SUM(resultado_usdt),0), SUM(resultado_usdt>0) FROM robo_operacoes WHERE modo=? AND t_venda IS NOT NULL", (m,)).fetchone()
+               for m in ("simulado", "real")}
+        robo = {"operacoes": ops, "totais": {m: {"n": t[0], "usdt": round(t[1], 4), "ganhos": t[2] or 0} for m, t in tot.items()}}
+    except sqlite3.OperationalError:
+        robo = {"operacoes": [], "totais": {}}
     return {
+        "robo": robo,
         "previsao": previsao_vivo.resumo(c),
         "insider": {"compras": ins, "total": c.execute("SELECT COUNT(*) FROM insider_sinais").fetchone()[0],
                     "resolvidas": len(feitos), "excesso": _ic(feitos)},
