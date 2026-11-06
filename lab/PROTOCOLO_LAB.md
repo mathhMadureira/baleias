@@ -125,3 +125,18 @@ Pela regra pré-registrada, o escolhido é **2x**, que entra no ao vivo simulado
 ### H5/H5b: troca de modelo (2026-11-06, antes da 1ª previsão)
 
 Nenhuma previsão foi gravada: todas as chamadas ao `gemini-3.8-flash` falharam (503 e depois 429, cota da chave esgotada). O modelo passa a ser `gemini-2.5-flash`, que respondeu no teste. Prompt, horizontes, regras e critérios continuam iguais. A contagem começa na primeira previsão gravada.
+
+## Hipótese 6: padrões de vela e de mercado (pré-registrada em 2026-11-06, antes de qualquer cálculo)
+
+**Pergunta:** depois de um padrão de vela ou de mercado no BTC, a chance de alta ou queda nos 15 min, 1 h e 4 h seguintes é diferente o bastante de uma moeda ao ar para pagar o custo?
+
+- **Dados:** BTCUSDT da Binance em velas de 15 min, de 2020-01-01 até hoje. **Treino:** 2020 a 2023. **Teste:** 2024-01-01 até hoje, aberto uma única vez depois do treino.
+- **Padrões (decididos no fechamento da vela, sem olhar à frente):**
+  - vela: engolfo de alta, engolfo de baixa, martelo, estrela cadente, doji, três soldados, três corvos, inside bar, marubozu de alta, marubozu de baixa;
+  - mercado: tendência de alta (EMA20 > EMA50 e preço acima), tendência de baixa, rompimento da máxima de 20 velas, rompimento da mínima de 20 velas, RSI14 < 30, RSI14 > 70, volume > 3× a média de 96 velas, vela de alta forte (> 3 desvios) e vela de queda forte.
+- **Medidas:** para cada padrão e horizonte (1, 4 e 16 velas): número de casos sem sobreposição (um caso novo só depois de passado o horizonte do anterior), chance de alta, retorno médio e estatística t.
+- **Passa** quem cumprir as três condições:
+  1. no treino, |retorno médio| > 0,2% (custo de ida e volta) e |t| > 3,2 (correção para cerca de 57 testes);
+  2. no teste, o mesmo sinal, com |retorno médio| > 0,2% e |t| > 2;
+  3. pelo menos 30 casos em cada período.
+- **Uso:** a tabela de cada padrão ativo vai para o contexto da versão 2 do Gemini, com os números de treino e de teste e a marca passou/não passou. O robô só usa padrões que passaram. Se nenhum passar, o resultado é esse, e ele fica registrado.
