@@ -550,3 +550,31 @@ class Queda(unittest.TestCase):
         finally:
             os.environ.pop("BINANCE_REAL", None)
             adaptativo.escolher = original
+
+
+class Laboratorio(unittest.TestCase):
+    def test_sinal_nao_olha_o_futuro(self):
+        from lab import tendencia as T
+        serie = {f"2020-01-{d:02d}": 100.0 + d for d in range(1, 31)}
+        a = T.retornos_estrategia(serie, 5, "comprado_fora", 0.0)
+        alterada = dict(serie)
+        alterada["2020-01-30"] = 1.0  # despenca no último dia
+        b = T.retornos_estrategia(alterada, 5, "comprado_fora", 0.0)
+        self.assertEqual({d: v for d, v in a.items() if d < "2020-01-30"}, {d: v for d, v in b.items() if d < "2020-01-30"})
+
+    def test_custo_so_quando_muda_de_posicao(self):
+        from lab import tendencia as T
+        serie = {f"2020-01-{d:02d}": 100.0 for d in range(1, 21)}
+        r = T.retornos_estrategia(serie, 5, "comprado_vendido", 0.01)
+        self.assertAlmostEqual(sum(r.values()), -0.01)  # entra vendido uma vez (preço parado → sinal ≤ 0)
+
+    def test_sharpe_deflacionado_penaliza_tentativas(self):
+        from lab import tendencia as T
+        poucas = T.sharpe_deflacionado(0.05, 1000, 0, 3, [0.05, 0.0])
+        muitas = T.sharpe_deflacionado(0.05, 1000, 0, 3, [0.05] + [random.gauss(0, 0.03) for _ in range(99)])
+        self.assertGreater(poucas, muitas)
+
+    def test_metricas_queda(self):
+        from lab import tendencia as T
+        m = T.metricas([0.1] * 20 + [-0.5] + [0.0] * 20, 365)
+        self.assertAlmostEqual(m["maior_queda"], -0.5)
