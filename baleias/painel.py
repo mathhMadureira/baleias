@@ -81,7 +81,9 @@ def estado(c, fonte=FONTE):
     except sqlite3.OperationalError:
         funding = None
     from lab import generativa
+    from . import saude
     return {
+        "servicos": saude.estado(c),
         "generativa": generativa.resumo(c),
         "funding": funding,
         "tendencia": ao_vivo.resumo(c),

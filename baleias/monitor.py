@@ -170,8 +170,7 @@ def ciclo(c, cliente, modelo):
 
 def rodar(c, cliente, uma_vez=False):
     modelo = banco.carregar_modelo(c, FONTE)
-    from .insider_vivo import Rotina
-    insiders = Rotina(c)
+    # Tarefas lentas (Gemini, SEC, funding, tendência) rodam no serviço baleias-pesquisa (lab/servico.py).
     ultimo, ciclos = None, 0
     while True:
         inicio = time.monotonic()
@@ -186,17 +185,8 @@ def rodar(c, cliente, uma_vez=False):
                 r.update({"btc_" + k: v for k, v in previsao_vivo.ciclo(c, cliente, agora()).items()})
             except Exception as e:
                 print(time.strftime("%F %T"), "previsão falhou:", type(e).__name__, str(e)[:150], flush=True)
-            try:
-                from lab import generativa
-                g = generativa.ciclo(c)
-                if g["previu"] or g["resolveu"]:
-                    r.update({"llm_" + k: v for k, v in g.items()})
-            except Exception as e:
-                print(time.strftime("%F %T"), "IA generativa falhou:", type(e).__name__, str(e)[:150], flush=True)
-            try:
-                r.update(insiders.rodar())
-            except Exception as e:  # a SEC ou o Yahoo fora do ar não podem derrubar o monitor das baleias
-                print(time.strftime("%F %T"), "insider falhou:", type(e).__name__, str(e)[:150], flush=True)
+            from . import saude
+            saude.bater(c, "monitor", r)
             ciclos += 1
             if any(r.get(k) for k in ("novos", "resolvidos", "perdidos_por_atraso", "rastros", "insider_novos", "insider_resolvidos")) or ciclos % 120 == 0:
                 print(time.strftime("%F %T"), r, f"ciclo {ciclos}", flush=True)

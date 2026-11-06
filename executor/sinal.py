@@ -52,7 +52,12 @@ class SinalVivo:
         for k in novas:
             self.v.append((k[0], float(k[1]), float(k[2]), float(k[3]), float(k[4]), float(k[5]), int(k[8]), float(k[9])))
         self._avancar()
-        self.v = self.v[-6000:]
+        corte = max(0, len(self.v) - 6000)
+        if corte:
+            # A fila guarda posições na lista; ao cortar o começo, todas andam para trás junto.
+            # (Antes não andavam: depois de ~1 dia o modelo aprendia com o resultado de outra vela.)
+            self.v = self.v[corte:]
+            self.fila = [(alvo - corte, x, y_pred, j - corte) for alvo, x, y_pred, j in self.fila]
         self.i = len(self.v)
         m, dp = self.modelo.prever(caracteristicas(self.v, len(self.v) - 1))
         return {"media": m, "desvio": dp, "r2": self.r2(), "t_ms": self.v[-1][0], "px": self.v[-1][4]}

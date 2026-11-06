@@ -132,9 +132,12 @@ def passo(c, b, sinal_vivo, agora_s=None):
         px = custo / bruto
         detalhe = json.dumps(o)[:2000]
     else:
+        # Igual à Binance: a ordem compra o múltiplo de 0,00001 BTC que cabe nos US$ e cobra só por ele;
+        # a taxa sai do BTC recebido. (Antes o custo era sempre US$ 10 cheios: cada operação "perdia" o arredondamento.)
         px = ask
-        qtd = math.floor(VALOR_USDT / ask * (1 - TAXA_SUPOSTA) * 1e5) / 1e5
-        custo = VALOR_USDT
+        bruto = math.floor(VALOR_USDT / ask * 1e5) / 1e5
+        qtd = bruto * (1 - TAXA_SUPOSTA)
+        custo = bruto * ask
         detalhe = None
     c.execute("INSERT INTO robo_operacoes(modo,previsao_id,prob,t_compra,px_compra,qtd,custo_compra,detalhe,braco,segurar_min,lado) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
               (modo, previsao["id"], previsao["prob_alta"], int(agora_s * 1000), px, qtd, custo, detalhe, braco, segurar, "compra"))
@@ -173,6 +176,8 @@ def rodar():
         c.execute("CREATE TABLE IF NOT EXISTS robo_estado(id INTEGER PRIMARY KEY CHECK(id=1), t_ms INTEGER, msg TEXT)")
         c.execute("INSERT INTO robo_estado VALUES(1, ?, ?) ON CONFLICT(id) DO UPDATE SET t_ms=excluded.t_ms, msg=excluded.msg", (int(time.time() * 1000), msg))
         c.commit()
+        from baleias import saude
+        saude.bater(c, "robo", msg)
         if msg != ultimo:
             print(time.strftime("%F %T"), msg, flush=True)
             ultimo = msg

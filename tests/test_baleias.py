@@ -661,3 +661,63 @@ class Generativa(unittest.TestCase):
         G.ciclo(c, t0 + 5 * 3_600_000, **args)  # novos slots também previram no caminho; aqui só importa o primeiro
         acertos = dict(c.execute("SELECT horizonte, acertou FROM llm_previsoes WHERE slot_ms=?", (1000 * G.SLOT_MS,)).fetchall())
         self.assertEqual(acertos, {"15min": 1, "1h": 0, "4h": 1})
+
+
+class ErrosCorrigidos(unittest.TestCase):
+    def test_simulado_cobra_so_o_que_comprou(self):
+        import os, sqlite3
+        from executor import robo, adaptativo
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        c.execute(robo.ESQUEMA); c.executescript(adaptativo.ESQUEMA)
+        original = adaptativo.escolher
+        adaptativo.escolher = lambda c, p, rnd=None: "compra_lim0.00_seg5"
+        class B:
+            def livro(self, s): return (75_800.0, 75_800.0)
+        class S:
+            def atualizar(self): return {"media": 0.1, "desvio": 0.1, "r2": 0.0, "t_ms": 1_000_000, "px": 75_800.0}
+        try:
+            os.environ.pop("BINANCE_REAL", None)
+            robo.passo(c, B(), S(), agora_s=1060)
+            robo.passo(c, B(), S(), agora_s=1060 + 5 * 60 + 1)
+        finally:
+            adaptativo.escolher = original
+        r = c.execute("SELECT resultado_usdt, custo_compra FROM robo_operacoes").fetchone()
+        self.assertLess(r["custo_compra"], 10)
+        self.assertAlmostEqual(r["resultado_usdt"] / r["custo_compra"], -(1 - (1 - robo.TAXA_SUPOSTA) ** 2), places=6,
+                               msg="preço parado: só as duas taxas, nada de arredondamento")
+
+    def test_fila_continua_alinhada_depois_do_corte(self):
+        from executor import sinal as SV
+        random.seed(7)
+        px, v = 100.0, []
+        for i in range(6100):
+            px *= 1 + random.gauss(0, 0.001)
+            v.append((i * 60_000, px, px, px, px, 10.0, 100, 5.0))
+        s = SV.SinalVivo(historico=v[:5990])
+        class R:
+            def __init__(self, d): self.d = d
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+            def read(self): return self.d
+        novas = [[t, o, h, l, c, vol, t + 59_999, 0, n, tb, 0, 0] for t, o, h, l, c, vol, n, tb in v[5990:]]
+        import io
+        s.atualizar(abrir=lambda url, timeout=0: io.BytesIO(json.dumps(novas).encode()))
+        for alvo, x, y_pred, j in s.fila:
+            self.assertEqual(s.v[j][0] + SV.H * 60_000, s.v[alvo][0] if alvo < len(s.v) else s.v[j][0] + SV.H * 60_000)
+            self.assertEqual(x, __import__("executor.pesquisa", fromlist=["x"]).caracteristicas(s.v, j))
+
+
+class Saude(unittest.TestCase):
+    def test_sinal_de_vida(self):
+        import sqlite3
+        from baleias import saude
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        saude.bater(c, "robo", "ok")
+        e = saude.estado(c)
+        self.assertEqual((e[0]["nome"], e[0]["msg"]), ("robo", "ok"))
+        self.assertLess(e[0]["segundos"], 5)
+
+    def test_monitor_nao_chama_tarefas_lentas(self):
+        fonte = (RAIZ / "monitor.py").read_text()
+        for lenta in ("generativa", "Rotina(", "insiders.rodar"):
+            self.assertNotIn(lenta, fonte)
