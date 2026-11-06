@@ -66,6 +66,13 @@ def decidir(sinal, custo_pct, perda_hoje, aberta, parar):
 
 def passo(c, b, sinal_vivo, agora_s=None):
     agora_s = agora_s or time.time()
+    from . import adaptativo
+    s = sinal_vivo.atualizar() if sinal_vivo else None
+    if s and agora_s * 1000 - s["t_ms"] > 150_000:
+        s = None  # previsão velha não vale
+    if s:
+        # O aprendizado registra a oportunidade mesmo com posição aberta: aprende com todas, não só com as que executou.
+        adaptativo.registrar_oportunidade(c, s["t_ms"], s["px"], s["media"])
     modo = "real" if real() else "simulado"
     aberta = c.execute("SELECT * FROM robo_operacoes WHERE modo=? AND t_venda IS NULL", (modo,)).fetchone()
     motivo_venda = None
@@ -89,15 +96,9 @@ def passo(c, b, sinal_vivo, agora_s=None):
                   (int(agora_s * 1000), px, receita, receita - aberta["custo_compra"], detalhe or "", aberta["id"]))
         c.commit()
         return f"vendeu ({motivo_venda}): {receita - aberta['custo_compra']:+.4f} USDT"
-    s = sinal_vivo.atualizar() if sinal_vivo else None
-    if s and agora_s * 1000 - s["t_ms"] > 150_000:
-        s = None  # previsão velha não vale
     motivo = decidir(s, 2 * TAXA_SUPOSTA * 100, resultado_hoje(c, modo), aberta is not None, PARAR.exists())
     if motivo:
         return motivo
-    from . import adaptativo
-    custo = 2 * TAXA_SUPOSTA * 100
-    adaptativo.registrar_oportunidade(c, s["t_ms"], s["px"], s["media"])
     braco = adaptativo.escolher(c, s["media"])
     if braco is None:
         return f"aprendizado escolheu NÃO operar agora (previsto {s['media']:+.3f}%)"

@@ -435,6 +435,7 @@ class Executor(unittest.TestCase):
         self.assertIn("comprou", robo.passo(c, B(), S(), agora_s=1060))
         precos[0] = 100.0 * (1 - robo.STOP_PCT / 100) - 0.01
         self.assertIn("stop", robo.passo(c, B(), S(), agora_s=1100))
+        self.assertEqual(c.execute("SELECT COUNT(*) FROM robo_oportunidades").fetchone()[0], 1, "registra oportunidade mesmo com posição aberta")
 
     def test_simulado_compra_e_vende(self):
         import os, sqlite3
