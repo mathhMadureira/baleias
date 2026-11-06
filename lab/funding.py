@@ -28,6 +28,8 @@ def historico(moeda, inicio_ms, post=None):
                 if e.code != 429:
                     raise
                 time.sleep(15 * (tentativa + 1))
+            except (urllib.error.URLError, TimeoutError, ConnectionError):
+                time.sleep(20 * (tentativa + 1))  # queda de rede: espera e tenta de novo
         raise RuntimeError("Hyperliquid recusou por excesso de pedidos várias vezes")
     post = post or _post
     saida, t = [], inicio_ms
