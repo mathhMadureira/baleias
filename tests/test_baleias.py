@@ -412,14 +412,27 @@ class Executor(unittest.TestCase):
 
     def test_travas(self):
         from executor import robo
-        boa = {"media": 0.5, "desvio": 0.1, "r2": 0.02}
-        self.assertIsNone(robo.decidir(boa, 0.2, 0, False, False))
+        boa = {"media": 0.01, "desvio": 0.5, "r2": -0.1}
+        self.assertIsNone(robo.decidir(boa, 0.2, 0, False, False), "sem travas de evidência e custo: compra se prevê alta")
         self.assertIn("PARAR", robo.decidir(boa, 0.2, 0, False, True))
         self.assertIn("aberta", robo.decidir(boa, 0.2, 0, True, False))
         self.assertIn("perda", robo.decidir(boa, 0.2, -2.5, False, False))
-        self.assertIn("acaso", robo.decidir({**boa, "r2": -0.01}, 0.2, 0, False, False))
-        self.assertIn("medindo", robo.decidir({**boa, "r2": None}, 0.2, 0, False, False))
-        self.assertIn("custo", robo.decidir({**boa, "media": 0.25}, 0.2, 0, False, False))
+        self.assertIn("queda", robo.decidir({**boa, "media": -0.01}, 0.2, 0, False, False))
+
+    def test_stop_vende_antes_do_tempo(self):
+        import os, sqlite3
+        from executor import robo
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        c.execute(robo.ESQUEMA)
+        precos = [100.0]
+        class B:
+            def livro(self, s): return (precos[0], precos[0])
+        class S:
+            def atualizar(self): return {"media": 0.1, "desvio": 0.1, "r2": 0.0, "t_ms": 1_000_000, "px": 100.0}
+        os.environ.pop("BINANCE_REAL", None)
+        self.assertIn("comprou", robo.passo(c, B(), S(), agora_s=1060))
+        precos[0] = 100.0 * (1 - robo.STOP_PCT / 100) - 0.01
+        self.assertIn("stop", robo.passo(c, B(), S(), agora_s=1100))
 
     def test_simulado_compra_e_vende(self):
         import os, sqlite3

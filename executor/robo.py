@@ -15,6 +15,7 @@ from .binance import Binance, verificar_chave
 SIMBOLO = "BTCUSDT"
 VALOR_USDT = float(os.environ.get("ROBO_VALOR_USDT", "10"))
 PERDA_DIA_MAXIMA = float(os.environ.get("ROBO_PERDA_DIA", "2"))
+STOP_PCT = float(os.environ.get("ROBO_STOP_PCT", "0.5"))  # vende se cair isto (%) desde a compra
 SEGURAR_S = 15 * 60
 TAXA_SUPOSTA = 0.001  # taxa padrão da Binance spot; no modo real é lida da conta
 PARAR = Path(__file__).resolve().parent.parent / "PARAR"
@@ -48,12 +49,11 @@ def decidir(sinal, custo_pct, perda_hoje, aberta, parar):
         return "já existe posição aberta"
     if perda_hoje <= -PERDA_DIA_MAXIMA:
         return f"perda do dia atingiu US$ {PERDA_DIA_MAXIMA}"
-    if sinal is None or sinal["r2"] is None:
-        return "modelo ainda medindo a própria qualidade"
-    if sinal["r2"] <= 0:
-        return f"modelo não prevê melhor que o acaso (R² fora da amostra {sinal['r2']:+.4f})"
-    if sinal["media"] - sinal["desvio"] <= custo_pct:
-        return f"previsão pessimista {sinal['media'] - sinal['desvio']:+.3f}% não passa do custo {custo_pct:.2f}%"
+    # Travas de evidência e de custo removidas a pedido do dono em 2026-11-06: compra sempre que o modelo prevê alta.
+    if sinal is None:
+        return "sem previsão recente"
+    if sinal["media"] <= 0:
+        return f"modelo prevê queda ou zero ({sinal['media']:+.3f}%)"
     return None
 
 
@@ -61,8 +61,14 @@ def passo(c, b, sinal_vivo, agora_s=None):
     agora_s = agora_s or time.time()
     modo = "real" if real() else "simulado"
     aberta = c.execute("SELECT * FROM robo_operacoes WHERE modo=? AND t_venda IS NULL", (modo,)).fetchone()
-    if aberta and agora_s * 1000 - aberta["t_compra"] >= SEGURAR_S * 1000:
+    motivo_venda = None
+    if aberta:
         bid, _ = b.livro(SIMBOLO)
+        if bid <= aberta["px_compra"] * (1 - STOP_PCT / 100):
+            motivo_venda = f"stop de {STOP_PCT}%"
+        elif agora_s * 1000 - aberta["t_compra"] >= SEGURAR_S * 1000:
+            motivo_venda = "15 min"
+    if motivo_venda:
         if modo == "real":
             o = b.vender_quantidade(SIMBOLO, aberta["qtd"])
             receita = float(o["cummulativeQuoteQty"]) - sum(float(f["commission"]) for f in o.get("fills", []) if f["commissionAsset"] == "USDT")
@@ -75,7 +81,7 @@ def passo(c, b, sinal_vivo, agora_s=None):
         c.execute("UPDATE robo_operacoes SET t_venda=?, px_venda=?, receita_venda=?, resultado_usdt=?, detalhe=COALESCE(detalhe,'')||? WHERE id=?",
                   (int(agora_s * 1000), px, receita, receita - aberta["custo_compra"], detalhe or "", aberta["id"]))
         c.commit()
-        return f"vendeu: {receita - aberta['custo_compra']:+.4f} USDT"
+        return f"vendeu ({motivo_venda}): {receita - aberta['custo_compra']:+.4f} USDT"
     s = sinal_vivo.atualizar() if sinal_vivo else None
     if s and agora_s * 1000 - s["t_ms"] > 150_000:
         s = None  # previsão velha não vale

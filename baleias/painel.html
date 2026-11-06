@@ -20,7 +20,7 @@ svg{width:100%;height:120px;display:block}
 </style></head><body>
 <header><div><b>🐋 BALEIAS</b> <span class="mut">Hyperliquid · cripto e ações EUA · só leitura · horizonte 4 h</span></div><div id="aviso">carregando…</div></header>
 <main>
-<section style="grid-column:1/-1"><h2>Robô Binance (BTC, US$ 10, segura 15 min, só opera com evidência)</h2><p id="robo_estado"></p><p class=mut id="robo_txt"></p><div class="wrap"><table id="robo"></table></div></section>
+<section style="grid-column:1/-1"><h2>Robô Binance (BTC, US$ 10, segura 15 min ou stop de 0,5%)</h2><p id="robo_estado"></p><p class=mut id="robo_txt"></p><div class="wrap"><table id="robo"></table></div></section>
 <section style="grid-column:1/-1"><h2>Previsão do BTC: sobe ou cai? (taxa de acerto, IC 95%)</h2><div class="wrap"><table id="previsao"></table></div>
 <p class=mut id="empates"></p></section>
 <section><h2>Resultado depois dos custos (% por sinal, IC 95%)</h2><table id="resumo"></table></section>
@@ -57,7 +57,7 @@ async function atualizar(){try{const d=await (await fetch('/api/estado')).json()
  $('rastros').innerHTML=d.rastros.length?d.rastros.map(r=>`<tr><td class=mut>${hora(r.t_ms)}</td><td>#${r.sinal_id} ${nome(r.moeda)} ${r.lado}</td><td class="${r.evento=='saiu'?'neg':'pos'}">${r.evento=='saiu'?'carteira saiu':'carteira aumentou'}</td></tr>`).join(''):'<tr><td class=mut>Rastros só são seguidos depois de um alerta aprovado.</td></tr>';
  const R=d.robo,tt=m=>R.totais[m]?`${m}: ${R.totais[m].n} operações, ${R.totais[m].ganhos} com ganho, resultado ${f(R.totais[m].usdt,4)} USDT`:'';
  $('robo_estado').innerHTML=R.estado?`Agora: <b>${esc(R.estado.msg)}</b> <span class=mut>(${new Date(R.estado.t_ms).toLocaleTimeString('pt-BR')})</span>`:'';
- $('robo_txt').textContent=[tt('simulado'),tt('real')].filter(Boolean).join(' · ')||'Ainda sem operações: ele só compra se o modelo provar que prevê melhor que o acaso e a previsão pessimista passar do custo.';
+ $('robo_txt').textContent=[tt('simulado'),tt('real')].filter(Boolean).join(' · ')||'Ainda sem operações: compra quando o modelo prevê alta.';
  $('robo').innerHTML=R.operacoes.length?'<tr><th>Modo</th><th>Compra</th><th>Prob.</th><th>Preço compra</th><th>Preço venda</th><th>Resultado USDT</th></tr>'+R.operacoes.map(o=>`<tr><td>${o.modo}</td><td>${new Date(o.t_compra).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'})}</td><td>${(o.prob*100).toFixed(0)}%</td><td>${Number(o.px_compra).toFixed(2)}</td><td>${o.px_venda?Number(o.px_venda).toFixed(2):'<span class=mut>segurando</span>'}</td><td class="${cls(o.resultado_usdt)}">${o.resultado_usdt==null?'':f(o.resultado_usdt,4)}</td></tr>`).join(''):'';
  const P=d.previsao,pc=x=>x?`${(x.taxa*100).toFixed(1)}% <span class=mut>[${(x.baixo*100).toFixed(1)}–${(x.alto*100).toFixed(1)}] n=${x.n}</span>`:'<span class=mut>aguardando</span>';
  $('previsao').innerHTML='<tr><th>Horizonte</th><th>Acerto geral</th><th>Últimas 200</th><th>Quanto subiu (base)</th><th>Pendentes</th></tr>'+[1,5,15].map(h=>`<tr><td>${h} min</td><td>${pc(P[h].geral)}</td><td>${pc(P[h].ultimas_200)}</td><td>${pc(P[h].sempre_alta)}</td><td>${P[h].pendentes}</td></tr>`).join('');
