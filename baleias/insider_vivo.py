@@ -80,6 +80,15 @@ class Rotina:
         if self.ciclo % 120 == 1:
             r["insider_resolvidos"] = resolver(self.c, self.precos, self.modelo)
             try:
+                from lab import funding
+                estado = funding.ao_vivo()
+                self.c.execute("CREATE TABLE IF NOT EXISTS lab_funding(id INTEGER PRIMARY KEY CHECK(id=1), estado TEXT, t_ms INTEGER)")
+                self.c.execute("INSERT INTO lab_funding VALUES(1, ?, strftime('%s','now')*1000) ON CONFLICT(id) DO UPDATE SET estado=excluded.estado, t_ms=excluded.t_ms",
+                               (json.dumps(estado),))
+                self.c.commit()
+            except Exception as e:
+                print("funding ao vivo falhou:", type(e).__name__, str(e)[:150], flush=True)
+            try:
                 from lab import ao_vivo
                 r["tendencia_dias"] = ao_vivo.atualizar(self.c)
             except Exception as e:

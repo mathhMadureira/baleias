@@ -111,3 +111,21 @@ if __name__ == "__main__":
         s = simular({m: series[m]})
         rr = resumo({d: v / PESO for d, v in s.items()})
         print(f"  só {m:4s}: ao ano {rr['ao_ano']:+.2%} | dias positivos {rr['dias_positivos']:.0%} | maior queda {rr['maior_queda']:+.2%}")
+
+
+INICIO_AO_VIVO = "2026-11-07"
+
+
+def ao_vivo(post=None):
+    """Mesma regra, sobre o funding realmente pago desde 72 h antes do início; conta só os dias desde INICIO_AO_VIVO."""
+    import calendar
+    inicio = calendar.timegm(time.strptime(INICIO_AO_VIVO, "%Y-%m-%d")) * 1000 - (JANELA_H + 1) * 3_600_000
+    series = {m: historico(m, inicio, post) for m in MOEDAS}
+    por_dia = {d: v for d, v in simular(series).items() if d >= INICIO_AO_VIVO}
+    hoje = time.strftime("%Y-%m-%d", time.gmtime())
+    fechados = {d: v for d, v in por_dia.items() if d < hoje}
+    r = resumo(fechados) or {"dias": 0}
+    r["hoje_parcial"] = por_dia.get(hoje)
+    r["por_dia"] = fechados
+    r["faltam_para_90"] = max(0, 90 - r["dias"])
+    return r

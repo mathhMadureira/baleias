@@ -75,7 +75,13 @@ def estado(c, fonte=FONTE):
     except sqlite3.OperationalError:
         robo = {"operacoes": [], "totais": {}}
     from lab import ao_vivo
+    try:
+        fr = c.execute("SELECT estado FROM lab_funding WHERE id=1").fetchone()
+        funding = json.loads(fr["estado"]) if fr else None
+    except sqlite3.OperationalError:
+        funding = None
     return {
+        "funding": funding,
         "tendencia": ao_vivo.resumo(c),
         "robo": robo,
         "previsao": previsao_vivo.resumo(c),
