@@ -632,3 +632,32 @@ class ModelosIA(unittest.TestCase):
         self.assertAlmostEqual(r["r2"], 1.0)
         zero = M.avaliar(precos, lambda ctxs: [c[-1] for c in ctxs])
         self.assertAlmostEqual(zero["r2"], 0.0)
+
+
+class Generativa(unittest.TestCase):
+    BOA = {"15min": {"direcao": "alta", "confianca": 0.6, "retorno_esperado_pct": 0.1},
+           "1h": {"direcao": "queda", "confianca": 0.55, "retorno_esperado_pct": -0.3},
+           "4h": {"direcao": "alta", "confianca": 0.7, "retorno_esperado_pct": 0.5}, "motivo": "x"}
+
+    def test_valida_formato(self):
+        from lab import generativa as G
+        self.assertEqual(G.validar(self.BOA)["1h"]["direcao"], "queda")
+        ruim = json.loads(json.dumps(self.BOA)); ruim["4h"]["direcao"] = "compre tudo"
+        with self.assertRaises(ValueError):
+            G.validar(ruim)
+
+    def test_preve_os_tres_prazos_e_resolve_cada_um_no_seu_tempo(self):
+        import sqlite3
+        from lab import generativa as G
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        t0 = 1000 * G.SLOT_MS + 60_000
+        relogio = [t0 / 1000]
+        args = dict(obter=lambda t: {"preco": 100.0}, pergunta=lambda ctx: (G.validar(self.BOA), 10),
+                    preco_em=lambda t: 101.0, preco_ja=lambda: 100.0, relogio=lambda: relogio[0])
+        self.assertEqual(G.ciclo(c, t0, **args)["previu"], 1)
+        self.assertEqual(c.execute("SELECT COUNT(*) FROM llm_previsoes").fetchone()[0], 3)
+        self.assertEqual(G.ciclo(c, t0 + 60_000, **args)["previu"], 0)
+        self.assertEqual(G.ciclo(c, t0 + 18 * 60_000, **args)["resolveu"], 1)  # só o de 15 min
+        G.ciclo(c, t0 + 5 * 3_600_000, **args)  # novos slots também previram no caminho; aqui só importa o primeiro
+        acertos = dict(c.execute("SELECT horizonte, acertou FROM llm_previsoes WHERE slot_ms=?", (1000 * G.SLOT_MS,)).fetchall())
+        self.assertEqual(acertos, {"15min": 1, "1h": 0, "4h": 1})

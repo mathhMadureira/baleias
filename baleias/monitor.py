@@ -187,6 +187,13 @@ def rodar(c, cliente, uma_vez=False):
             except Exception as e:
                 print(time.strftime("%F %T"), "previsão falhou:", type(e).__name__, str(e)[:150], flush=True)
             try:
+                from lab import generativa
+                g = generativa.ciclo(c)
+                if g["previu"] or g["resolveu"]:
+                    r.update({"llm_" + k: v for k, v in g.items()})
+            except Exception as e:
+                print(time.strftime("%F %T"), "IA generativa falhou:", type(e).__name__, str(e)[:150], flush=True)
+            try:
                 r.update(insiders.rodar())
             except Exception as e:  # a SEC ou o Yahoo fora do ar não podem derrubar o monitor das baleias
                 print(time.strftime("%F %T"), "insider falhou:", type(e).__name__, str(e)[:150], flush=True)

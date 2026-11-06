@@ -80,7 +80,9 @@ def estado(c, fonte=FONTE):
         funding = json.loads(fr["estado"]) if fr else None
     except sqlite3.OperationalError:
         funding = None
+    from lab import generativa
     return {
+        "generativa": generativa.resumo(c),
         "funding": funding,
         "tendencia": ao_vivo.resumo(c),
         "robo": robo,
