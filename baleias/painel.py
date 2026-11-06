@@ -74,7 +74,9 @@ def estado(c, fonte=FONTE):
         robo = {"versoes": versoes, "estado": dict(est) if est else None, "operacoes": ops, "totais": {m: {"n": t[0], "usdt": round(t[1], 4), "ganhos": t[2] or 0} for m, t in tot.items()}}
     except sqlite3.OperationalError:
         robo = {"operacoes": [], "totais": {}}
+    from lab import ao_vivo
     return {
+        "tendencia": ao_vivo.resumo(c),
         "robo": robo,
         "previsao": previsao_vivo.resumo(c),
         "insider": {"compras": ins, "total": c.execute("SELECT COUNT(*) FROM insider_sinais").fetchone()[0],

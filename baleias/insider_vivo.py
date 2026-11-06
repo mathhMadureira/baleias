@@ -79,4 +79,9 @@ class Rotina:
             r["insider_novos"] = novos_formularios(self.c, self.sec, self.precos, self.modelo)
         if self.ciclo % 120 == 1:
             r["insider_resolvidos"] = resolver(self.c, self.precos, self.modelo)
+            try:
+                from lab import ao_vivo
+                r["tendencia_dias"] = ao_vivo.atualizar(self.c)
+            except Exception as e:
+                print("tendência ao vivo falhou:", type(e).__name__, str(e)[:150], flush=True)
         return r

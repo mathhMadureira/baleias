@@ -20,6 +20,7 @@ svg{width:100%;height:120px;display:block}
 </style></head><body>
 <header><div><b>🐋 BALEIAS</b> <span class="mut">Hyperliquid · cripto e ações EUA · só leitura · horizonte 4 h</span></div><div id="aviso">carregando…</div></header>
 <main>
+<section style="grid-column:1/-1"><h2>Laboratório · hipótese 2: tendência de 20 dias em cripto (ao vivo, desde 07/11/2026)</h2><p id="tend_txt"></p><p class=mut id="tend_pos"></p></section>
 <section style="grid-column:1/-1"><h2>Robô Binance (BTC, US$ 10, opera na alta e na queda (queda só no simulado) · stop de 0,5%)</h2><p id="robo_estado"></p><p class=mut id="robo_txt"></p><div class="wrap"><table id="robo"></table></div></section>
 <section style="grid-column:1/-1"><h2>Aprendizado do robô: o que cada versão teria ganhado (% por operação, depois do custo)</h2>
 <p class=mut>"Não operar" vale 0%. O robô escolhe mais as versões acima de zero; se todas ficarem abaixo, aprende a ficar de fora.</p><div class="wrap"><table id="versoes"></table></div></section>
@@ -57,6 +58,9 @@ async function atualizar(){try{const d=await (await fetch('/api/estado')).json()
  const hora=t=>new Date(t).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}), nome=m=>esc(m.startsWith('xyz:')?m.slice(4)+' (ação EUA)':m);
  $('noticias').innerHTML=d.noticias.length?d.noticias.map(n=>`<tr><td class=mut>${hora(n.t_ms)}</td><td>${nome(n.moeda)}</td><td style="text-align:left;white-space:normal"><a style="color:var(--c)" href="${esc(n.link)}" target=_blank rel=noopener>${esc(n.titulo)}</a> <span class=mut>${esc(n.fonte)}</span></td></tr>`).join(''):'<tr><td class=mut>As manchetes aparecem junto com cada sinal novo.</td></tr>';
  $('rastros').innerHTML=d.rastros.length?d.rastros.map(r=>`<tr><td class=mut>${hora(r.t_ms)}</td><td>#${r.sinal_id} ${nome(r.moeda)} ${r.lado}</td><td class="${r.evento=='saiu'?'neg':'pos'}">${r.evento=='saiu'?'carteira saiu':'carteira aumentou'}</td></tr>`).join(''):'<tr><td class=mut>Rastros só são seguidos depois de um alerta aprovado.</td></tr>';
+ const T=d.tendencia,pp=v=>v==null?'—':f(v*100,2)+'%';
+ $('tend_txt').innerHTML=T.dias?`${T.dias} dias · estratégia ${pp(T.acumulado)} · comprar e segurar ${pp(T.acumulado_base)} · faltam ${T.faltam_para_180} dias para a primeira avaliação`:'Começa a contar no fechamento de 07/11 (UTC). Primeira avaliação aos 180 dias.';
+ $('tend_pos').textContent=T.posicao_atual?'Posição para hoje: '+Object.entries(T.posicao_atual).map(([a,p])=>`${a.replace('USDT','')} ${p?'comprado':'fora'}`).join(' · '):'';
  const R=d.robo,tt=m=>R.totais[m]?`${m}: ${R.totais[m].n} operações, ${R.totais[m].ganhos} com ganho, resultado ${f(R.totais[m].usdt,4)} USDT`:'';
  $('robo_estado').innerHTML=R.estado?`Agora: <b>${esc(R.estado.msg)}</b> <span class=mut>(${new Date(R.estado.t_ms).toLocaleTimeString('pt-BR')})</span>`:'';
  $('robo_txt').textContent=[tt('simulado'),tt('real')].filter(Boolean).join(' · ')||'Ainda sem operações: compra quando o modelo prevê alta.';

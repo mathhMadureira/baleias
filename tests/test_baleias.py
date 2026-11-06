@@ -1,4 +1,5 @@
 import ast
+import json
 import pathlib
 import random
 import unittest
@@ -578,3 +579,22 @@ class Laboratorio(unittest.TestCase):
         from lab import tendencia as T
         m = T.metricas([0.1] * 20 + [-0.5] + [0.0] * 20, 365)
         self.assertAlmostEqual(m["maior_queda"], -0.5)
+
+
+class TendenciaAoVivo(unittest.TestCase):
+    def test_registra_dia_a_dia_sem_futuro_e_idempotente(self):
+        import sqlite3
+        from datetime import date, timedelta
+        from lab import ao_vivo as AV
+        c = sqlite3.connect(":memory:"); c.row_factory = sqlite3.Row
+        dias = [(date(2026, 10, 1) + timedelta(days=i)).isoformat() for i in range(45)]
+        def buscar(a, desde):
+            return {d: 100.0 + i for i, d in enumerate(dias)}  # tudo subindo: comprado
+        self.assertEqual(AV.atualizar(c, buscar, hoje=date(2026, 11, 10)), 3)
+        self.assertEqual(AV.atualizar(c, buscar, hoje=date(2026, 11, 10)), 0)
+        p = json.loads(c.execute("SELECT posicoes FROM lab_tendencia WHERE dia='2026-11-08'").fetchone()[0])
+        self.assertTrue(all(v == 1 for v in p.values()))
+        primeiro = c.execute("SELECT custo FROM lab_tendencia WHERE dia='2026-11-07'").fetchone()[0]
+        segundo = c.execute("SELECT custo FROM lab_tendencia WHERE dia='2026-11-08'").fetchone()[0]
+        self.assertGreater(primeiro, 0)
+        self.assertEqual(segundo, 0)
