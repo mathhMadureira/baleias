@@ -752,3 +752,20 @@ class LicoesDosTraders(unittest.TestCase):
         from executor import adaptativo as A
         self.assertEqual(len(A.BRACOS), 30)
         self.assertIn("compra_lim0.25_seg240", A.BRACOS)
+
+
+class FundingAlavancado(unittest.TestCase):
+    def test_alavancagem_aumenta_retorno_sem_choque_e_liquida_com_choque(self):
+        from lab import funding_alavancado as FA
+        horas = [(i * 3_600_000, 0.0000125) for i in range(24 * 20)]
+        calmo = {t: (100.0, 100.1, 100.0) for t, _ in horas}
+        r1, e1 = FA.simular({"BTC": horas}, {"BTC": calmo}, 1)
+        r5, e5 = FA.simular({"BTC": horas}, {"BTC": calmo}, 5)
+        self.assertGreater(sum(r5.values()), sum(r1.values()))
+        self.assertEqual(e5["liquidacoes"], 0)
+        choque = dict(calmo)
+        choque[horas[200][0]] = (100.0, 130.0, 101.0)   # máxima +30% numa hora
+        _, e10 = FA.simular({"BTC": horas}, {"BTC": choque}, 10)
+        _, e2 = FA.simular({"BTC": horas}, {"BTC": choque}, 2)
+        self.assertEqual(e10["liquidacoes"], 1)
+        self.assertEqual(e2["liquidacoes"], 0)
