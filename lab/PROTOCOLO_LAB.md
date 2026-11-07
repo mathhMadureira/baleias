@@ -206,3 +206,14 @@ O tradutor do painel ao vivo grava a cada 5 min, para o BTC na Binance, o volume
 - **Dados:** o "Average Tone" do GDELT para a busca "bitcoin" (sentimento calculado pelo GDELT sobre notícias do mundo todo), a cada 15 min, nos últimos ~3 meses (a API só guarda isso). Baixado em janelas de 2 dias, com 6 s entre pedidos.
 - **Medidas:** o tom e a variação dele em 1 h (4 pontos) contra o retorno do BTC nos próximos 15 min, 1 h e 4 h. Correlação com estatística t, treino na primeira metade e teste na segunda.
 - **Passa** com o mesmo sinal nas duas metades, |t| > 3,2 no treino e > 2 no teste, **e** a regra (comprar se o tom subir, vender se cair) dando lucro depois de 0,2%.
+
+### Resultado da H8 (2026-11-07): LSTM não passou
+
+| Prazo | R² no teste [IC 95%] | Linear | Acerto de direção [IC] | Regra (\|prev.\| > 0,2%) |
+|---|---|---|---|---|
+| 15 min | −0,0010 [−0,0016, −0,0003] | −0,0017 | 50,4% [50,1%, 50,7%] | 0 operações |
+| 1 h | −0,0026 [−0,0046, −0,0003] | −0,0004 | 49,9% [49,6%, 50,3%] | 33 op., +0,54% (abaixo do mínimo de 100) |
+| 4 h | −0,0099 [−0,0152, −0,0040] | −0,0030 | 50,0% [49,7%, 50,3%] | 1136 op., −0,14% |
+
+- **Treino:** a validação só ficou abaixo de "prever zero" na época 2 (0,31156 contra 0,31240), por 0,3%, e o treino parou na época 5.
+- **Teste (2024–2026, ~100 mil velas):** a rede previu pior que zero nos três prazos, com o intervalo inteiro abaixo de 0. É o mesmo resultado do Chronos e da regressão de minutos: o histórico de preço e volume de 15 min do BTC não carrega informação que uma rede recorrente consiga extrair a ponto de pagar o custo.
