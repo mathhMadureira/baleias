@@ -158,7 +158,7 @@ function desenharCalor() {
   for (let k = 0; k <= 4; k++) { const p = lo + (hi - lo) * k / 4; ctx.fillText(Math.round(p).toLocaleString("pt-BR"), 4, y(p) - 2); }
 }
 
-const LIMITE_S = {binance: 30, liquidacoes: 600, hyperliquid: 60, livro: 40, robo: 30, b3: 180};
+const LIMITE_S = {binance: 30, liquidacoes: 900, hyperliquid: 60, livro: 40, robo: 30, b3: 180};
 function desenharFontes(f, agora) {
   document.getElementById("fontes").replaceChildren(...Object.entries(f).map(([k, v]) => {
     const s = document.createElement("span");

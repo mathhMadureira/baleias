@@ -199,6 +199,7 @@ class Motor:
 
     def _binance_spot(self):
         ws = WS.conectar(BINANCE_SPOT)
+        ws.s.settimeout(120)
         self.fonte("binance", True)
         try:
             while True:
@@ -241,6 +242,7 @@ class Motor:
 
     def _binance_futuros(self):
         ws = WS.conectar(BINANCE_FUT)
+        ws.s.settimeout(600)   # liquidações podem ficar minutos sem acontecer; a Binance manda ping a cada ~3 min
         self.fonte("liquidacoes", True)
         try:
             while True:
