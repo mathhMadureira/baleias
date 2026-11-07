@@ -438,31 +438,38 @@ class Motor:
             self.fonte("leitura", True)
 
     def _tartaruga(self):
-        """H10b ao vivo: decide no fechamento diário (00:00 UTC) e confere stops a cada minuto com o preço do mapa de mercado."""
-        from lab import tartaruga as T, tartaruga_vivo as V
-        e = V.carregar()
+        """Mostra o robô Tartaruga (que roda no serviço baleias-robo) e repassa cada decisão dele como evento notificado."""
+        estado = config.RAIZ / "robo_tartaruga.json"
+        eventos = config.RAIZ / "robo_eventos.jsonl"
+        posicao = eventos.stat().st_size if eventos.exists() else 0
         while True:
-            with self.trava:
-                precos = {f"{s}USDT": x["p"] for s, x in self.mercado.items()}
-            hoje = time.strftime("%Y-%m-%d", time.gmtime())
-            g = time.gmtime()
-            if precos and e.get("ultimo_dia") != hoje and (g.tm_hour > 0 or g.tm_min >= 2):   # uma vez por dia, mesmo se a máquina esteve parada
-                T.CACHE.unlink(missing_ok=True)       # baixa as velas diárias de novo, já com o dia que fechou
-                dados = T.baixar()
-                for ev in V.passo_diario(e, dados, precos):
-                    self.evento(ev)
-                V.salvar(e)
-            if precos:
-                evs = V.checar_stops(e, precos)
-                for ev in evs:
-                    self.evento(ev)
-                if evs:
-                    V.salvar(e)
-                with self.trava:
-                    self.tartaruga = V.resumo(e, precos) | {"posicoes": [{"moeda": m[:-4], "entrada": p["entrada"], "stop": p["stop"],
-                                                                         "agora": precos.get(m)} for m, p in e["abertas"].items()]}
+            if eventos.exists():
+                tamanho = eventos.stat().st_size
+                if tamanho < posicao:
+                    posicao = 0
+                with open(eventos) as f:
+                    f.seek(posicao)
+                    for linha in f:
+                        try:
+                            x = json.loads(linha)
+                        except ValueError:
+                            continue
+                        self.evento({"tipo": "tartaruga", "texto": x["texto"], "notificar": True})
+                    posicao = f.tell()
+            if estado.exists():
+                try:
+                    e = json.loads(estado.read_text())
+                except ValueError:
+                    e = None
+                if e:
+                    rs = [f["R"] for f in e["fechadas"]]
+                    with self.trava:
+                        self.tartaruga = {"patrimonio": e.get("patrimonio"), "inicio": e.get("inicio"), "real": bool(e.get("modo_real")),
+                                          "abertas": [{"moeda": m[:-4], "entrada": p["entrada"], "stop": p["stop"], "qtd": p["qtd"]} for m, p in e["abertas"].items()],
+                                          "fechadas": len(rs), "media_R": sum(rs) / len(rs) if rs else None, "radar": e.get("radar", []),
+                                          "atualizado": e.get("atualizado")}
             self.fonte("tartaruga", True)
-            time.sleep(60)
+            time.sleep(5)
 
     def _telegram(self):
         while True:

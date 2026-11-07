@@ -45,6 +45,14 @@ section h2 { font-size:12px; margin:0 0 6px; color:var(--apagado); font-weight:6
   <a href="/" style="color:var(--apagado)">painel</a>
 </header>
 <main>
+  <section id="robo" style="grid-column:1 / -1">
+    <h2>🤖 Robô — Tartarugas cripto (opera sozinho: só compra, spot, risco 1% por operação, stop guardado na corretora)</h2>
+    <div id="robo-topo" class="num">carregando…</div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:8px">
+      <div><b>Posições abertas</b><div id="robo-pos"></div></div>
+      <div><b>Radar: quanto falta para cada moeda romper a máxima de 55 dias (entrada)</b><div id="robo-radar"></div></div>
+    </div>
+  </section>
   <section>
     <h2>Mapa de calor do book BTC/USDT (Binance, ±1%, últimos 30 min)</h2>
     <canvas id="calor"></canvas>
@@ -53,10 +61,6 @@ section h2 { font-size:12px; margin:0 0 6px; color:var(--apagado); font-weight:6
   <section>
     <h2>Mapa de calor do mercado (24 h, maiores volumes em USDT)</h2>
     <div id="mercado"></div>
-  </section>
-  <section id="tartaruga" style="grid-column:1 / -1">
-    <h2>🐢 Tartarugas cripto (só compra, spot, simulado) — perder pouco, ganhar muito</h2>
-    <div id="tartaruga-corpo">carregando…</div>
   </section>
   <section id="feed">
     <h2>Eventos ao vivo</h2>
@@ -174,6 +178,24 @@ function desenharFontes(f, agora) {
   }));
 }
 
+function linha(texto, cor) { const x = document.createElement("div"); x.textContent = texto; if (cor) x.style.color = cor; return x; }
+function desenharRobo(t, agora) {
+  const ini = 700, ret = t.patrimonio ? (t.patrimonio / ini - 1) * 100 : 0;
+  document.getElementById("robo-topo").textContent =
+    `${t.real ? "MODO REAL" : "Simulado"} | patrimônio US$ ${t.patrimonio ? t.patrimonio.toFixed(2) : "?"}` +
+    (t.real ? "" : ` (${ret >= 0 ? "+" : ""}${ret.toFixed(2)}% desde ${t.inicio})`) +
+    ` | ${t.abertas.length} abertas | ${t.fechadas} fechadas` + (t.media_R == null ? "" : ` | média ${t.media_R.toFixed(2)}R por operação`) +
+    (t.atualizado ? ` | atualizado há ${Math.round(agora - t.atualizado)} s` : "");
+  const pos = document.getElementById("robo-pos");
+  pos.replaceChildren(...(t.abertas.length ? t.abertas.map(p => linha(`• ${p.moeda}: entrada ${p.entrada.toPrecision(6)}, stop ${p.stop.toPrecision(6)} (${((p.stop / p.entrada - 1) * 100).toFixed(1)}%)`))
+    : [linha("Nenhuma. O robô espera um rompimento — em mercado de queda ele fica de fora, de propósito.", "var(--apagado)")]));
+  document.getElementById("robo-radar").replaceChildren(...t.radar.map(r => {
+    const perto = r.falta_pct < 3;
+    return linha(`${r.moeda.padEnd(5)} ${r.preco.toPrecision(6).padStart(10)} → entra acima de ${r.rompimento.toPrecision(6)} (${r.falta_pct >= 0 ? "falta +" + r.falta_pct.toFixed(1) + "%" : "ROMPEU"})` +
+      (r.stop_pct ? ` | stop seria ${r.stop_pct.toFixed(1)}%` : ""), perto ? "var(--amarelo)" : null);
+  }));
+}
+
 async function ciclo() {
   try {
     const r = await fetch(`/api/ao-vivo?desde=${desde}&calor=${calorSeq}`, {cache: "no-store"});
@@ -193,20 +215,7 @@ async function ciclo() {
       document.getElementById("atraso").textContent = a == null ? "" : a > 3600 ? "fechado/atrasado " + Math.round(a / 3600) + " h" : "atraso " + Math.round(a / 60) + " min";
     }
     desenharFontes(d.fontes, d.agora);
-    if (d.tartaruga) {
-      const t = d.tartaruga, el = document.getElementById("tartaruga-corpo");
-      const cab = document.createElement("div");
-      const ret = (t.capital_total / t.inicial - 1) * 100;
-      cab.textContent = `Capital simulado US$ ${t.capital_total.toFixed(2)} (${ret >= 0 ? "+" : ""}${ret.toFixed(2)}% desde ${t.desde}) | ${t.abertas} posições abertas | ${t.fechadas} fechadas` +
-        (t.expectativa_R == null ? "" : ` | média ${t.expectativa_R.toFixed(2)}R por operação`);
-      const linhas = t.posicoes.map(p => {
-        const x = document.createElement("div");
-        const r = p.agora ? ((p.agora / p.entrada - 1) * 100).toFixed(2) : "?";
-        x.textContent = `• ${p.moeda}: entrada ${p.entrada}, agora ${p.agora} (${r}%), stop ${p.stop.toPrecision(6)}`;
-        return x;
-      });
-      el.replaceChildren(cab, ...linhas);
-    }
+    if (d.tartaruga) desenharRobo(d.tartaruga, d.agora);
     desenharMercado(d.mercado);
     if (d.eventos.length) desenharFeed();
     if (d.calor.length || primeira) desenharCalor();

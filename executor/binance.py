@@ -67,6 +67,64 @@ class Binance:
         return self._pedir("POST", "/api/v3/order", {"symbol": simbolo, "side": "SELL", "type": "MARKET", "quantity": f"{qtd:.5f}"}, assinado=True)
 
 
+    def precos(self, simbolos):
+        d = self._pedir("GET", "/api/v3/ticker/price", {"symbols": json.dumps(list(simbolos), separators=(",", ":"))})
+        return {x["symbol"]: float(x["price"]) for x in d}
+
+    def regras(self, simbolo):
+        """Filtros da corretora: passo de quantidade, passo de preço e nocional mínimo."""
+        cache = self.__dict__.setdefault("_regras", {})
+        if simbolo not in cache:
+            info = self._pedir("GET", "/api/v3/exchangeInfo", {"symbol": simbolo})["symbols"][0]
+            f = {x["filterType"]: x for x in info["filters"]}
+            cache[simbolo] = {"passo_qtd": float(f["LOT_SIZE"]["stepSize"]), "passo_preco": float(f["PRICE_FILTER"]["tickSize"]),
+                              "minimo": float((f.get("NOTIONAL") or f.get("MIN_NOTIONAL") or {}).get("minNotional", 5))}
+        return cache[simbolo]
+
+    def comprar_mercado(self, simbolo, usdt):
+        """Compra a mercado; devolve (quantidade líquida de taxa, preço médio, USDT gasto)."""
+        r = self.comprar_em_usdt(simbolo, usdt)
+        base = simbolo[:-4]
+        taxa_base = sum(float(f["commission"]) for f in r.get("fills", []) if f.get("commissionAsset") == base)
+        qtd = float(r["executedQty"]) - taxa_base
+        gasto = float(r["cummulativeQuoteQty"])
+        return arredondar(qtd, self.regras(simbolo)["passo_qtd"]), gasto / float(r["executedQty"]), gasto
+
+    def vender_mercado(self, simbolo, qtd):
+        qtd = arredondar(qtd, self.regras(simbolo)["passo_qtd"])
+        r = self._pedir("POST", "/api/v3/order", {"symbol": simbolo, "side": "SELL", "type": "MARKET", "quantity": formatar(qtd)}, assinado=True)
+        recebido = float(r["cummulativeQuoteQty"])
+        return recebido / float(r["executedQty"]), recebido
+
+    def colocar_stop(self, simbolo, qtd, stop, folga=0.005):
+        """Stop guardado na corretora (STOP_LOSS_LIMIT): dispara em `stop` e vende até `folga` abaixo. Funciona com a máquina desligada."""
+        rg = self.regras(simbolo)
+        qtd = arredondar(qtd, rg["passo_qtd"])
+        r = self._pedir("POST", "/api/v3/order", {"symbol": simbolo, "side": "SELL", "type": "STOP_LOSS_LIMIT", "timeInForce": "GTC",
+                                                  "quantity": formatar(qtd), "stopPrice": formatar(arredondar(stop, rg["passo_preco"])),
+                                                  "price": formatar(arredondar(stop * (1 - folga), rg["passo_preco"]))}, assinado=True)
+        return r["orderId"]
+
+    def cancelar(self, simbolo, ordem):
+        return self._pedir("DELETE", "/api/v3/order", {"symbol": simbolo, "orderId": ordem}, assinado=True)
+
+    def consultar(self, simbolo, ordem):
+        r = self._pedir("GET", "/api/v3/order", {"symbol": simbolo, "orderId": ordem}, assinado=True)
+        executado = float(r["executedQty"])
+        return r["status"], (float(r["cummulativeQuoteQty"]) / executado if executado else None)
+
+
+def arredondar(x, passo):
+    """Para baixo, no múltiplo do passo (a corretora recusa casas a mais)."""
+    from decimal import Decimal, ROUND_DOWN
+    p = Decimal(str(passo)).normalize()
+    return float((Decimal(str(x)) / p).to_integral_value(rounding=ROUND_DOWN) * p)
+
+
+def formatar(x):
+    return f"{x:.10f}".rstrip("0").rstrip(".")
+
+
 def verificar_chave(cliente):
     """Só aceita chave sem saque. Devolve a lista de problemas (vazia = ok)."""
     r = cliente.restricoes()

@@ -1,5 +1,6 @@
 """Hipótese 10: Tartarugas (Sistema 2) em cripto diário — perder pouco (stop 2N) e ganhar muito (saída só no canal de 20 dias)."""
 import json
+import math
 import statistics as st
 import time
 import urllib.request
@@ -68,12 +69,13 @@ def saida_canal(velas, i, lado):
     return c > max(v[2] for v in velas[i - SAIDA:i])
 
 
-def simular(dados, inicio, fim, lados=("compra", "venda")):
+def simular(dados, inicio, fim, lados=("compra", "venda"), alav_max=ALAV_MAX, alvo_vol=None):
     """Carteira diária. Devolve (curva por dia, lista de operações com resultado em R e em % do capital)."""
     dias = sorted({v[0] for vs in dados.values() for v in vs if inicio <= v[0] < fim})
     idx = {m: {v[0]: k for k, v in enumerate(vs)} for m, vs in dados.items()}
     atrs = {m: atr(vs) for m, vs in dados.items()}
     capital, abertas, ops, curva = 1.0, {}, [], {}
+    var_ewma, anterior = None, None      # H11: volatilidade da própria carteira (EWMA λ=0,94)
     pendentes = []                      # ordens decididas no fechamento, executadas na abertura seguinte
     for d in dias:
         # 1) executa ordens pendentes na abertura
@@ -90,9 +92,12 @@ def simular(dados, inicio, fim, lados=("compra", "venda")):
                 n = atrs[m][k - 1]
                 if not n:
                     continue
-                nocional = RISCO * capital / (STOP_N * n) * aberto
+                escala = 1.0
+                if alvo_vol and var_ewma:
+                    escala = min(1.0, alvo_vol / math.sqrt(var_ewma * 365))
+                nocional = RISCO * escala * capital / (STOP_N * n) * aberto
                 exposto = sum(p["nocional"] for p in abertas.values())
-                nocional = min(nocional, max(0.0, ALAV_MAX * capital - exposto))
+                nocional = min(nocional, max(0.0, alav_max * capital - exposto))
                 if nocional <= 0:
                     continue
                 stop = aberto - STOP_N * n if lado == "compra" else aberto + STOP_N * n
@@ -135,6 +140,10 @@ def simular(dados, inicio, fim, lados=("compra", "venda")):
                 c = dados[m][k][4]
                 aberto_mtm += p["nocional"] * ((c / p["entrada"] - 1) if p["lado"] == "compra" else (1 - c / p["entrada"]))
         curva[d] = capital + aberto_mtm
+        if anterior:
+            r = curva[d] / anterior - 1
+            var_ewma = r * r if var_ewma is None else 0.94 * var_ewma + 0.06 * r * r
+        anterior = curva[d]
     return curva, ops
 
 

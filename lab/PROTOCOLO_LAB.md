@@ -257,3 +257,19 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Só compra:** cumpre todos os critérios, mas foi escolhida depois de ver os números. Vale como **hipótese nova (H10b)**, a confirmar ao vivo.
 - **H10b ao vivo:** carteira simulada de US$ 700, spot, sem alavancagem, 1% de risco por operação, a partir de 2026-11-07 (`dados/tartaruga_vivo.json`, painel /ao-vivo). Avaliação com 30 operações fechadas ou 180 dias. Passa se a expectativa for > 0 e o PF > 1,3.
 - **Para lembrar:** a queda máxima histórica de 33–65% é o preço do "ganhar muito". Com 1% de risco por operação e 10 moedas, quedas longas são esperadas.
+
+### Leis medidas (lab/fisica.py, 2026-11-07)
+
+- **Memória por escala (razão de variância de Lo-MacKinlay):**
+  - BTC intradiário: VR 0,985 (30 min), 0,967 (1 h, z −2,2), 0,940 (4 h, z −2,2), 0,929 (1 dia, base 15 min). É reversão fraca.
+  - Diário, 20/60 dias: BTC 1,09/1,27, ETH 1,08/1,19, SOL 1,16/1,57 (60 d z +2,4). É tendência em semanas.
+- **Caudas:** curtose 120 em 15 min e 19 no diário; índice de cauda α 2,7 (15 min) e 4,2 (diário).
+- **Previsibilidade fora da amostra (teste 2024+):** volatilidade de amanhã (HAR-RV) R² 0,442; direção de amanhã (AR(1)) R² 0,002.
+- **Consequência:** o robô de minutos opera numa escala sem memória aproveitável, contra 0,2% de custo; as 8 operações perderam em média −0,41%. A vantagem possível está em semanas (tendência) e no tamanho da posição (volatilidade previsível).
+
+## Hipótese 11: Tartaruga só compra, spot 1×, com risco ajustado pela volatilidade prevista (pré-registrada em 2026-11-07, antes de rodar)
+
+- **Base:** as regras da H10, só compra, com alavancagem máxima de **1×** (spot, igual ao ao vivo).
+- **Variação:** o risco por operação passa a ser 1% × min(1, 20% ÷ σ̂), com σ̂ = volatilidade anualizada da própria carteira (EWMA, λ = 0,94, sobre os retornos diários). Em fase turbulenta arrisca menos; nunca arrisca mais que 1%.
+- **Comparação:** a mesma carteira sem o ajuste (H10b a 1×), nos mesmos períodos (treino 2018–2023, teste 2024–hoje).
+- **Passa** se, no treino **e** no teste, a maior queda for menor que a da base **e** o retorno/queda (Calmar) for maior que o da base, com a expectativa em R ainda > 0. Se passar, o robô ao vivo usa a versão com ajuste.

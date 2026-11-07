@@ -895,22 +895,51 @@ class Tartaruga(unittest.TestCase):
         self.assertGreater(ops2[0]["R"], -1.3)            # perde ~1R (mais custos), não mais
 
 
-class TartarugaVivo(unittest.TestCase):
-    def test_entra_no_rompimento_sai_no_stop_e_respeita_capital(self):
+class RoboTartaruga(unittest.TestCase):
+    def _velas(self, extra):
         import datetime as dt
-        from lab import tartaruga_vivo as V
         base = dt.date(2025, 1, 1)
         dia = lambda k: (base + dt.timedelta(days=k)).isoformat()
-        velas = [[dia(k), 100.0, 101.0, 99.0, 100.0] for k in range(60)] + [[dia(60), 100, 106, 100, 105]]
-        e = V.novo_estado()
-        evs = V.passo_diario(e, {"XUSDT": velas}, {"XUSDT": 105.0}, agora=0)
-        self.assertEqual(len(evs), 1)
-        self.assertIn("ENTRADA COMPRA X", evs[0]["texto"])
+        return [[dia(k), 100.0, 101.0, 99.0, 100.0] for k in range(60)] + [[dia(60 + i), *x] for i, x in enumerate(extra)]
+
+    def test_entra_no_rompimento_com_1R_e_sai_no_stop(self):
+        from executor import tartaruga_exec as X
+        X.EVENTOS = pathlib.Path(__import__("tempfile").mkdtemp()) / "ev.jsonl"
+        e = X.novo_estado(700)
+        corretora = X.Simulada(None, e)
+        velas = self._velas([[100, 106, 100, 105]])
+        X.passo_diario(e, corretora, {"XUSDT": velas}, {"XUSDT": 105.0})
         p = e["abertas"]["XUSDT"]
-        self.assertAlmostEqual(p["risco_usd"], 0.01 * V.CAPITAL_INICIAL, delta=0.5)
-        self.assertLess(p["qtd"] * p["entrada"], V.CAPITAL_INICIAL)
-        evs = V.checar_stops(e, {"XUSDT": p["stop"] - 0.01}, agora=1)
-        self.assertIn("stop 2N", evs[0]["texto"])
+        self.assertAlmostEqual(p["risco_usd"], 7.0, delta=0.3)          # 1% de 700
+        self.assertLess(p["gasto"], 700)
+        X.checar_stops(e, corretora, {"XUSDT": p["stop"] - 0.01})
+        self.assertEqual(e["abertas"], {})
         self.assertLess(e["fechadas"][0]["R"], -0.95)
-        self.assertGreater(e["fechadas"][0]["R"], -1.1)
-        self.assertEqual(V.passo_diario(e, {"XUSDT": velas[:-1]}, {"XUSDT": 100.0}, agora=2), [])
+        self.assertGreater(e["fechadas"][0]["R"], -1.15)
+        self.assertIn("SAIU", X.EVENTOS.read_text())
+
+    def test_real_guarda_stop_na_corretora_e_cancela_ao_sair(self):
+        from executor import tartaruga_exec as X
+        X.EVENTOS = pathlib.Path(__import__("tempfile").mkdtemp()) / "ev.jsonl"
+        chamadas = []
+
+        class Cliente:
+            def saldo(self, a): return 700.0
+            def comprar_mercado(self, s, usdt): chamadas.append(("compra", s, round(usdt, 2))); return (usdt / 105.0, 105.0, usdt)
+            def colocar_stop(self, s, q, stop): chamadas.append(("stop", s, round(stop, 2))); return 42
+            def cancelar(self, s, o): chamadas.append(("cancela", s, o))
+            def vender_mercado(self, s, q): chamadas.append(("venda", s)); return (90.0, q * 90.0)
+            def consultar(self, s, o): return ("NEW", None)
+        e = X.novo_estado(0)
+        r = X.Real(Cliente(), e)
+        velas = self._velas([[100, 106, 100, 105]])
+        X.passo_diario(e, r, {"XUSDT": velas}, {"XUSDT": 105.0})
+        self.assertEqual([c[0] for c in chamadas], ["compra", "stop"])
+        self.assertEqual(e["abertas"]["XUSDT"]["ordem_stop"], 42)
+        X.checar_stops(e, r, {"XUSDT": 1.0})                           # stop ainda não executou na corretora
+        self.assertIn("XUSDT", e["abertas"])
+        # fecha abaixo da mínima de 20 dias: cancela o stop e vende a mercado
+        velas2 = velas + [[velas[-1][0][:8] + "28", 105, 105, 80, 80]]
+        X.passo_diario(e, r, {"XUSDT": velas2}, {"XUSDT": 80.0})
+        self.assertEqual([c[0] for c in chamadas][-2:], ["cancela", "venda"])
+        self.assertEqual(e["abertas"], {})

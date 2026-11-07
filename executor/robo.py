@@ -159,6 +159,16 @@ def rodar():
     else:
         print("modo SIMULADO (preços reais da Binance, sem ordens)", flush=True)
     c = abrir()
+    if os.environ.get("ROBO_ESTRATEGIA", "tartaruga") == "tartaruga":
+        # A medida (lab/fisica.py) mostrou que em minutos não há memória aproveitável contra o custo; o robô opera em semanas.
+        from . import tartaruga_exec
+        from baleias import saude
+        for msg, _ in tartaruga_exec.rodar(b, real()):
+            c.execute("CREATE TABLE IF NOT EXISTS robo_estado(id INTEGER PRIMARY KEY CHECK(id=1), t_ms INTEGER, msg TEXT)")
+            c.execute("INSERT INTO robo_estado VALUES(1, ?, ?) ON CONFLICT(id) DO UPDATE SET t_ms=excluded.t_ms, msg=excluded.msg", (int(time.time() * 1000), msg))
+            c.commit()
+            saude.bater(c, "robo", msg)
+        return
     from .sinal import SinalVivo
     print("aquecendo o modelo com 3 dias de velas de 1 min…", flush=True)
     sinal_vivo = SinalVivo()
