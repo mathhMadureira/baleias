@@ -12,7 +12,8 @@ CUSTO_PONTOS = 15
 
 def carregar():
     dias = sorted(a for a in PASTA.glob("2026-*.json"))
-    return [(a.stem, json.loads(a.read_text())) for a in dias]
+    lidos = [(a.stem, json.loads(a.read_text())) for a in dias]
+    return [(d, x) for d, x in lidos if len(x["velas"]) >= 500]  # a B3 às vezes publica o dia incompleto
 
 
 def rodar():
