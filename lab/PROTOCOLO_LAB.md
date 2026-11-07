@@ -166,3 +166,12 @@ Passaram **0 de 57** combinações de padrão e prazo. A tabela completa está e
 - **TradingView:** o script compilou e entrou no gráfico WIN1! 15 min, mas não calculou nada. Tabela, logs e valores da legenda vieram vazios, até um `plot(bar_index)` de teste, e nenhum erro foi mostrado. A causa não foi identificada (talvez limite da conta grátis ou dos dados da B3 para scripts).
 - **Substituto (não é o pré-registrado):** Ibovespa à vista (^BVSP, Yahoo), velas de 15 min de 2026-08-12 a 2026-11-06 (1679 velas), metade para treino e metade para teste, custo de 15 pontos (~0,009%). Resultado: **0 de 54 passaram**. Os padrões que pareciam fortes no treino inverteram o sinal no teste (ex.: rompimento da mínima de 20 velas em 4 h: +0,85% no treino, −0,66% no teste). Com 5 a 50 casos por padrão, a amostra é pequena demais para concluir, e o horizonte de 4 h atravessa a noite.
 - **Para um teste de verdade:** é preciso um histórico intradiário longo do WIN (anos), de corretora/MetaTrader ou de um fornecedor de dados da B3.
+
+## Hipótese 6-WINb: padrões no índice com dados abertos (pré-registrada em 2026-11-07, antes de rodar)
+
+O TradingView não calculou, e o histórico intradiário do WIN não é gratuito. Para substituir, duas fontes abertas com as mesmas regras da H6 (padrões, |t| > 3,2 no treino e > 2 no teste, mesmo sinal, 30 casos ou mais, efeito acima do custo):
+
+1. **Ibovespa ^BVSP (Yahoo), velas de 1 h, 2023-12 a hoje.** Horizontes de 1, 4 e 7 velas (1 h, 4 h, ~1 pregão). Treino na primeira metade, teste na segunda. Custo de 15 pontos.
+2. **WIN real, negócio a negócio, do arquivo público da B3** (`arquivos.b3.com.br/rapinegocios/tickercsv/AAAA-MM-DD`, só os últimos ~20 pregões). Velas de 1 min do contrato mais negociado em cada dia, só no pregão regular. Horizontes de 1, 5 e 15 velas. Treino na primeira metade dos dias, teste na segunda. Custo de 15 pontos.
+
+A partir de agora, um coletor diário guarda as velas de 1 min do WIN, para o histórico crescer e permitir repetir o teste com mais dados.
