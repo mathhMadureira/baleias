@@ -250,8 +250,10 @@ function desenharVelas() {
   const u = v[v.length - 1];
   if (u.stop2n) { ctx.strokeStyle = "#f0b90b"; ctx.setLineDash([2, 4]); ctx.beginPath(); ctx.moveTo(X(v.length - 30), Y(u.stop2n)); ctx.lineTo(X(v.length - 1), Y(u.stop2n)); ctx.stroke(); ctx.setLineDash([]); }
   // preço atual e etiqueta
-  const etiqueta = (p, bg, txt) => { const y = Y(p); ctx.fillStyle = bg; ctx.fillRect(w - pad.r + 2, y - 9, pad.r - 4, 18); ctx.fillStyle = "#07090c"; ctx.font = "bold 11px ui-monospace, monospace"; ctx.fillText(txt, w - pad.r + 6, y + 4); };
-  etiqueta(u.entrada, "#16c784", px(u.entrada)); etiqueta(u.saida, "#ea3943", px(u.saida)); etiqueta(u.c, "#e6edf3", px(u.c));
+  // etiquetas no eixo, empurradas para não se sobreporem quando os preços estão perto
+  const etqs = [[u.entrada, "#16c784"], [u.c, "#e6edf3"], [u.saida, "#ea3943"]].map(([p, bg]) => ({y: Y(p), bg, txt: px(p)})).sort((a, b) => a.y - b.y);
+  for (let k = 1; k < etqs.length; k++) if (etqs[k].y - etqs[k - 1].y < 19) etqs[k].y = etqs[k - 1].y + 19;
+  for (const e of etqs) { ctx.fillStyle = e.bg; ctx.fillRect(w - pad.r + 2, e.y - 9, pad.r - 4, 18); ctx.fillStyle = "#07090c"; ctx.font = "bold 11px ui-monospace, monospace"; ctx.fillText(e.txt, w - pad.r + 6, e.y + 4); }
   // marcas das operações do robô
   const idx = {}; v.forEach((x, i) => idx[x.d] = i);
   for (const mk of velas.marcas || []) {
