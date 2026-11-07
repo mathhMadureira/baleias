@@ -160,3 +160,9 @@ Passaram **0 de 57** combinações de padrão e prazo. A tabela completa está e
 - **Dados:** treino na primeira metade das velas que o TradingView liberar e teste na segunda metade. O histórico é bem mais curto que o do BTC (limite de velas da conta), e isso será registrado.
 - **Custo assumido:** 15 pontos na ida e volta (1 tick de escorregamento de cada lado, ~10 pontos, mais corretagem e emolumentos). Esse valor ainda não foi conferido nas tabelas da B3 e da corretora, e precisa ser antes de qualquer uso real.
 - **Ressalvas:** a rolagem do contrato contínuo cria saltos de preço. Velas que atravessam a noite também entram na conta, e no horizonte de 4 h isso pode misturar dois pregões.
+
+### Resultado da H6-WIN (2026-11-06/07): inconclusivo
+
+- **TradingView:** o script compilou e entrou no gráfico WIN1! 15 min, mas não calculou nada. Tabela, logs e valores da legenda vieram vazios, até um `plot(bar_index)` de teste, e nenhum erro foi mostrado. A causa não foi identificada (talvez limite da conta grátis ou dos dados da B3 para scripts).
+- **Substituto (não é o pré-registrado):** Ibovespa à vista (^BVSP, Yahoo), velas de 15 min de 2026-08-12 a 2026-11-06 (1679 velas), metade para treino e metade para teste, custo de 15 pontos (~0,009%). Resultado: **0 de 54 passaram**. Os padrões que pareciam fortes no treino inverteram o sinal no teste (ex.: rompimento da mínima de 20 velas em 4 h: +0,85% no treino, −0,66% no teste). Com 5 a 50 casos por padrão, a amostra é pequena demais para concluir, e o horizonte de 4 h atravessa a noite.
+- **Para um teste de verdade:** é preciso um histórico intradiário longo do WIN (anos), de corretora/MetaTrader ou de um fornecedor de dados da B3.

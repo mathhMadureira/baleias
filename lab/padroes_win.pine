@@ -56,6 +56,10 @@ var up = array.new_float(TAM, 0)
 var cs = array.new_float(TAM, 0)
 var livre = array.new_int(NP * 3, -1)
 corte = int(last_bar_index / 2)
+var int tIni = time
+var int tCorte = 0
+if bar_index == corte
+    tCorte := time
 
 registrar(j, h, m, retPct, custoPct) =>
     e = bar_index - h
@@ -85,13 +89,11 @@ txt(idx) =>
     c = array.get(n, idx)
     str.tostring(c, "#") + " | " + str.tostring(c > 0 ? array.get(up, idx) / c * 100 : 0, "#.0") + "% | " + str.tostring(media(idx), "+0.0000;-0.0000") + "% | t " + str.tostring(tstat(idx), "+0.00;-0.00")
 
+// Saída pela legenda (texto): 2 valores gerais + 12 linhas de 5 valores (índice, média e t no treino e no teste), ordenadas pelo efeito no teste.
+var res = array.new_float(62, na)
 if barstate.islast
-    tb = table.new(position.top_right, 4, NP * 3 + 1, bgcolor=color.white, border_width=1, frame_color=color.gray, border_color=color.silver)
-    table.cell(tb, 0, 0, "padrao|prazo", text_size=size.tiny)
-    table.cell(tb, 1, 0, "treino: casos | alta | media | t", text_size=size.tiny)
-    table.cell(tb, 2, 0, "teste: casos | alta | media | t", text_size=size.tiny)
-    table.cell(tb, 3, 0, "custo % | passou", text_size=size.tiny)
     passaram = 0
+    score = array.new_float(NP * 3, 0)
     for k = 0 to NP - 1
         for j = 0 to 2
             a = (k * 3 + j) * 2
@@ -99,11 +101,77 @@ if barstate.islast
             custo = array.get(n, a) + array.get(n, z) > 0 ? (array.get(cs, a) + array.get(cs, z)) / (array.get(n, a) + array.get(n, z)) : 0.0
             ps = array.get(n, a) >= 30 and array.get(n, z) >= 30 and math.abs(media(a)) > custo and math.abs(tstat(a)) > 3.2 and media(a) * media(z) > 0 and math.abs(media(z)) > custo and math.abs(tstat(z)) > 2
             passaram += ps ? 1 : 0
-            linha = k * 3 + j + 1
-            rotulo = array.get(nomes, k) + "|" + array.get(prazos, j)
-            table.cell(tb, 0, linha, rotulo, text_size=size.tiny)
-            table.cell(tb, 1, linha, txt(a), text_size=size.tiny)
-            table.cell(tb, 2, linha, txt(z), text_size=size.tiny)
-            table.cell(tb, 3, linha, str.tostring(custo, "0.0000") + " | " + (ps ? "PASSOU" : "-"), text_size=size.tiny, bgcolor=ps ? color.lime : color.white)
-            log.info(rotulo + " ;treino; " + txt(a) + " ;teste; " + txt(z) + " ;custo; " + str.tostring(custo, "0.0000") + " ;" + (ps ? "PASSOU" : "-"))
-    log.info("velas " + str.tostring(last_bar_index + 1) + " passaram " + str.tostring(passaram) + " de 57 | inicio " + str.format_time(time[last_bar_index], "yyyy-MM-dd HH:mm") + " corte " + str.format_time(time[last_bar_index - corte], "yyyy-MM-dd"))
+            array.set(score, k * 3 + j, array.get(n, z) >= 30 ? math.abs(media(z)) : 0)
+    ordem = array.sort_indices(score, order.descending)
+    array.set(res, 0, passaram)
+    array.set(res, 1, (array.get(cs, 0) + array.get(cs, 1)) / math.max(array.get(n, 0) + array.get(n, 1), 1))
+    for r = 0 to 11
+        L = array.get(ordem, r)
+        a = L * 2
+        array.set(res, 2 + r * 5, L)
+        array.set(res, 3 + r * 5, media(a))
+        array.set(res, 4 + r * 5, tstat(a))
+        array.set(res, 5 + r * 5, media(a + 1))
+        array.set(res, 6 + r * 5, tstat(a + 1))
+plot(array.get(res, 0), "r0", display=display.status_line, precision=4)
+plot(array.get(res, 1), "r1", display=display.status_line, precision=4)
+plot(array.get(res, 2), "r2", display=display.status_line, precision=4)
+plot(array.get(res, 3), "r3", display=display.status_line, precision=4)
+plot(array.get(res, 4), "r4", display=display.status_line, precision=4)
+plot(array.get(res, 5), "r5", display=display.status_line, precision=4)
+plot(array.get(res, 6), "r6", display=display.status_line, precision=4)
+plot(array.get(res, 7), "r7", display=display.status_line, precision=4)
+plot(array.get(res, 8), "r8", display=display.status_line, precision=4)
+plot(array.get(res, 9), "r9", display=display.status_line, precision=4)
+plot(array.get(res, 10), "r10", display=display.status_line, precision=4)
+plot(array.get(res, 11), "r11", display=display.status_line, precision=4)
+plot(array.get(res, 12), "r12", display=display.status_line, precision=4)
+plot(array.get(res, 13), "r13", display=display.status_line, precision=4)
+plot(array.get(res, 14), "r14", display=display.status_line, precision=4)
+plot(array.get(res, 15), "r15", display=display.status_line, precision=4)
+plot(array.get(res, 16), "r16", display=display.status_line, precision=4)
+plot(array.get(res, 17), "r17", display=display.status_line, precision=4)
+plot(array.get(res, 18), "r18", display=display.status_line, precision=4)
+plot(array.get(res, 19), "r19", display=display.status_line, precision=4)
+plot(array.get(res, 20), "r20", display=display.status_line, precision=4)
+plot(array.get(res, 21), "r21", display=display.status_line, precision=4)
+plot(array.get(res, 22), "r22", display=display.status_line, precision=4)
+plot(array.get(res, 23), "r23", display=display.status_line, precision=4)
+plot(array.get(res, 24), "r24", display=display.status_line, precision=4)
+plot(array.get(res, 25), "r25", display=display.status_line, precision=4)
+plot(array.get(res, 26), "r26", display=display.status_line, precision=4)
+plot(array.get(res, 27), "r27", display=display.status_line, precision=4)
+plot(array.get(res, 28), "r28", display=display.status_line, precision=4)
+plot(array.get(res, 29), "r29", display=display.status_line, precision=4)
+plot(array.get(res, 30), "r30", display=display.status_line, precision=4)
+plot(array.get(res, 31), "r31", display=display.status_line, precision=4)
+plot(array.get(res, 32), "r32", display=display.status_line, precision=4)
+plot(array.get(res, 33), "r33", display=display.status_line, precision=4)
+plot(array.get(res, 34), "r34", display=display.status_line, precision=4)
+plot(array.get(res, 35), "r35", display=display.status_line, precision=4)
+plot(array.get(res, 36), "r36", display=display.status_line, precision=4)
+plot(array.get(res, 37), "r37", display=display.status_line, precision=4)
+plot(array.get(res, 38), "r38", display=display.status_line, precision=4)
+plot(array.get(res, 39), "r39", display=display.status_line, precision=4)
+plot(array.get(res, 40), "r40", display=display.status_line, precision=4)
+plot(array.get(res, 41), "r41", display=display.status_line, precision=4)
+plot(array.get(res, 42), "r42", display=display.status_line, precision=4)
+plot(array.get(res, 43), "r43", display=display.status_line, precision=4)
+plot(array.get(res, 44), "r44", display=display.status_line, precision=4)
+plot(array.get(res, 45), "r45", display=display.status_line, precision=4)
+plot(array.get(res, 46), "r46", display=display.status_line, precision=4)
+plot(array.get(res, 47), "r47", display=display.status_line, precision=4)
+plot(array.get(res, 48), "r48", display=display.status_line, precision=4)
+plot(array.get(res, 49), "r49", display=display.status_line, precision=4)
+plot(array.get(res, 50), "r50", display=display.status_line, precision=4)
+plot(array.get(res, 51), "r51", display=display.status_line, precision=4)
+plot(array.get(res, 52), "r52", display=display.status_line, precision=4)
+plot(array.get(res, 53), "r53", display=display.status_line, precision=4)
+plot(array.get(res, 54), "r54", display=display.status_line, precision=4)
+plot(array.get(res, 55), "r55", display=display.status_line, precision=4)
+plot(array.get(res, 56), "r56", display=display.status_line, precision=4)
+plot(array.get(res, 57), "r57", display=display.status_line, precision=4)
+plot(array.get(res, 58), "r58", display=display.status_line, precision=4)
+plot(array.get(res, 59), "r59", display=display.status_line, precision=4)
+plot(array.get(res, 60), "r60", display=display.status_line, precision=4)
+plot(array.get(res, 61), "r61", display=display.status_line, precision=4)
