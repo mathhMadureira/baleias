@@ -122,8 +122,9 @@ def _stats(xs):
             "t": round(m / (dp / math.sqrt(len(xs))), 2) if dp > 0 else 0.0}
 
 
-def medir(v, ativos, inicio_ms=None, fim_ms=None):
-    """Retornos sem sobreposição: um caso novo do mesmo padrão só depois de passado o horizonte do anterior."""
+def medir(v, ativos, inicio_ms=None, fim_ms=None, passo_ms=None):
+    """Retornos sem sobreposição: um caso novo do mesmo padrão só depois de passado o horizonte do anterior.
+    Com passo_ms, ignora casos cujo horizonte atravessa um buraco (ex.: a noite entre dois pregões)."""
     c = [x[4] for x in v]
     nomes = sorted({p for a in ativos for p in a})
     saida = {}
@@ -132,6 +133,8 @@ def medir(v, ativos, inicio_ms=None, fim_ms=None):
             xs, livre = [], -1
             for i, a in enumerate(ativos):
                 if i + n >= len(v) or nome not in a or i < livre:
+                    continue
+                if passo_ms and v[i + n][0] - v[i][0] != n * passo_ms:
                     continue
                 if (inicio_ms and v[i][0] < inicio_ms) or (fim_ms and v[i][0] >= fim_ms):
                     continue
