@@ -175,3 +175,12 @@ O TradingView não calculou, e o histórico intradiário do WIN não é gratuito
 2. **WIN real, negócio a negócio, do arquivo público da B3** (`arquivos.b3.com.br/rapinegocios/tickercsv/AAAA-MM-DD`, só os últimos ~20 pregões). Velas de 1 min do contrato mais negociado em cada dia, só no pregão regular. Horizontes de 1, 5 e 15 velas. Treino na primeira metade dos dias, teste na segunda. Custo de 15 pontos.
 
 A partir de agora, um coletor diário guarda as velas de 1 min do WIN, para o histórico crescer e permitir repetir o teste com mais dados.
+
+## Hipótese 7: a "linguagem" do fluxo antecipa o preço? (pré-registrada em 2026-11-07, antes de qualquer dado)
+
+O tradutor do painel ao vivo grava a cada 5 min, para o BTC na Binance, o volume agressor de compra e de venda, as liquidações de comprados e vendidos, o book a ±0,2% e as maiores paredes até ±0,5%, junto com o preço (`dados/leitura_mercado.jsonl`).
+
+- **Pergunta:** o saldo agressor (compra − venda), o desequilíbrio do book e as liquidações de uma janela antecipam o retorno dos 5, 15 e 60 min seguintes?
+- **Medida:** regressão fora da amostra (prequencial), como na pesquisa de minutos, com o R² comparado contra prever zero. Também uma regra simples: seguir o sinal do saldo, com custo de 0,2% na ida e volta.
+- **Avaliação:** com 2000 janelas (~7 dias contínuos). Passa se o R² fora da amostra for maior que 0 com intervalo que não inclua 0 **e** a regra simples der lucro depois do custo.
+- **Enquanto não passar:** as leituras são só descrição, não sinal de entrada.

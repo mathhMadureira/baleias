@@ -851,3 +851,19 @@ class TempoReal(unittest.TestCase):
         self.assertEqual(len(m.pendentes), 2)
         snap = m.instantaneo(desde=1)
         self.assertEqual([e["id"] for e in snap["eventos"]], [2])
+
+
+class Tradutor(unittest.TestCase):
+    def test_traduz_absorcao_liquidacoes_e_paredes(self):
+        from baleias import tempo_real as T
+        livro = T.paredes([["99990", "60"], ["99800", "1"]], [["100010", "10"], ["100400", "40"]], 100000)
+        self.assertGreater(livro["compra_perto"], livro["venda_perto"])
+        self.assertEqual(livro["parede_venda"][0], 100400.0)
+        texto = T.traduzir({"px0": 100000, "px1": 99800, "compra": 7e6, "venda": 3e6, "liq_long": 600_000, "liq_short": 0, "livro": livro}, media_volume=4e6)
+        self.assertIn("compradores agressivos dominaram", texto)
+        self.assertIn("absorção", texto)
+        self.assertIn("comprados (quem apostou na alta)", texto)
+        self.assertIn("Parede de compra", texto)
+        self.assertIn("Volume 2.5×", texto)
+        calmo = T.traduzir({"px0": 100000, "px1": 100001, "compra": 1e6, "venda": 1e6, "liq_long": 0, "liq_short": 0, "livro": None})
+        self.assertIn("sem direção clara", calmo)

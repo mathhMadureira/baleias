@@ -130,6 +130,74 @@ def texto_padroes(ativos, tabela, horizontes=("15min", "1h", "4h")):
     return "\n".join(linhas)
 
 
+def paredes(bids, asks, preco, perto=0.002, longe=0.005):
+    """Lado a lado do book: liquidez a ±0,2% do preço e a maior 'parede' (faixa de US$ 25) de cada lado até ±0,5%."""
+    def lado(ordens, sinal):
+        soma, faixas = 0.0, {}
+        for px, q in ordens:
+            px, q = float(px), float(q)
+            dist = (px / preco - 1) * sinal
+            if 0 <= dist <= perto:
+                soma += px * q
+            if 0 <= dist <= longe:
+                chave = round(px // PASSO_LIVRO * PASSO_LIVRO, 2)
+                faixas[chave] = faixas.get(chave, 0.0) + px * q
+        maior = max(faixas.items(), key=lambda x: x[1]) if faixas else (None, 0.0)
+        return soma, maior
+    compra, parede_c = lado(bids, -1)
+    venda, parede_v = lado(asks, 1)
+    return {"compra_perto": compra, "venda_perto": venda, "parede_compra": parede_c, "parede_venda": parede_v}
+
+
+def _us(x):
+    return f"US$ {x / 1e6:,.1f} mi" if abs(x) >= 1e6 else f"US$ {x / 1e3:,.0f} mil"
+
+
+def traduzir(j, media_volume=None):
+    """Traduz 5 min de fluxo em português. `j`: px0, px1, compra, venda (agressão, US$), liq_long, liq_short, livro (de paredes())."""
+    linhas = []
+    var = (j["px1"] / j["px0"] - 1) * 100 if j.get("px0") else 0.0
+    total = j["compra"] + j["venda"]
+    fatia = j["compra"] / total if total else 0.5
+    delta = j["compra"] - j["venda"]
+    if fatia > 0.55:
+        quem = f"compradores agressivos dominaram ({fatia:.0%} do volume, saldo {_us(delta)})"
+    elif fatia < 0.45:
+        quem = f"vendedores agressivos dominaram ({1 - fatia:.0%} do volume, saldo {_us(delta)})"
+    else:
+        quem = f"equilíbrio entre compradores e vendedores ({fatia:.0%} de compra)"
+    linhas.append(f"Preço {var:+.2f}% em 5 min; {quem}.")
+    if media_volume:
+        r = total / media_volume
+        if r >= 1.8 or r <= 0.5:
+            linhas.append(f"Volume {r:.1f}× o normal da última hora — {'mercado acordado' if r >= 1.8 else 'mercado parado'}.")
+    if var > 0.05 and delta > 0:
+        leitura = "alta com força: compradores pagando o preço de quem vende."
+    elif var > 0.05 and delta <= 0:
+        leitura = "alta sem agressão compradora: falta vendedor, não sobra comprador (alta frágil)."
+    elif var < -0.05 and delta < 0:
+        leitura = "queda com força: vendedores aceitando preços piores para sair."
+    elif var < -0.05 and delta >= 0:
+        leitura = "compradores agredindo e o preço caindo: alguém grande está vendendo passivamente (absorção)."
+    elif abs(delta) > 0.15 * total and total:
+        leitura = f"{'compra' if delta > 0 else 'venda'} agressiva sem mover o preço: está sendo absorvida por ordens paradas."
+    else:
+        leitura = "sem direção clara."
+    linhas.append("Leitura: " + leitura)
+    if j.get("liq_long", 0) + j.get("liq_short", 0) >= 250_000:
+        lado = "comprados (quem apostou na alta)" if j["liq_long"] >= j["liq_short"] else "vendidos (quem apostou na queda)"
+        linhas.append(f"Liquidações: {_us(j['liq_long'])} de comprados e {_us(j['liq_short'])} de vendidos — os {lado} foram forçados a sair.")
+    lv = j.get("livro")
+    if lv and lv["compra_perto"] and lv["venda_perto"]:
+        r = lv["compra_perto"] / lv["venda_perto"]
+        if r >= 1.5 or r <= 0.67:
+            linhas.append(f"Book a ±0,2%: {r:.1f}× mais dinheiro {'comprando' if r >= 1.5 else 'vendendo'} do que {'vendendo' if r >= 1.5 else 'comprando'} (ordens podem ser canceladas).")
+        for nome, (px, usd) in (("compra", lv["parede_compra"]), ("venda", lv["parede_venda"])):
+            if px and usd >= 2_000_000:
+                linhas.append(f"Parede de {nome}: {_us(usd)} em {px:,.0f} ({(px / j['px1'] - 1) * 100:+.2f}%).")
+    return "\n".join(linhas)
+
+
 # ---------- motor ----------
 
 class Motor:
@@ -151,6 +219,9 @@ class Motor:
         self.pendentes = []
         self.ultimo_robo = None
         self.arquivo = config.RAIZ / "ao_vivo.jsonl"
+        self.fluxo = {"compra": 0.0, "venda": 0.0, "liq_long": 0.0, "liq_short": 0.0}
+        self.livro_atual = None
+        self.volumes = collections.deque(maxlen=12)
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -207,6 +278,8 @@ class Motor:
                 stream, d = m.get("stream", ""), m.get("data")
                 if stream.endswith("@aggTrade"):
                     self.preco = float(d["p"])
+                    with self.trava:
+                        self.fluxo["venda" if d["m"] else "compra"] += float(d["p"]) * float(d["q"])
                     self.evento(de_aggtrade(d))
                 elif stream == "!miniTicker@arr":
                     with self.trava:
@@ -247,6 +320,10 @@ class Motor:
         try:
             while True:
                 m = json.loads(ws.receber())
+                o = m["data"]["o"]
+                if o["s"] == "BTCUSDT":
+                    with self.trava:
+                        self.fluxo["liq_long" if o["S"] == "SELL" else "liq_short"] += float(o.get("ap") or o["p"]) * float(o.get("z") or o["q"])
                 self.evento(de_liquidacao(m["data"]))
                 self.fonte("liquidacoes", True)
         finally:
@@ -294,6 +371,7 @@ class Motor:
                 d = json.load(r)
             preco = self.preco or (float(d["bids"][0][0]) + float(d["asks"][0][0])) / 2
             faixas = faixas_livro(d["bids"], d["asks"], preco)
+            self.livro_atual = paredes(d["bids"], d["asks"], preco)
             with self.trava:
                 self.calor.append({"t": self.agora(), "px": preco, "f": faixas})
                 self.calor_seq += 1
@@ -336,6 +414,27 @@ class Motor:
             self.fonte("b3", True)
             time.sleep(60)
 
+    def _leitura(self):
+        """A cada 5 min: traduz o fluxo do BTC e grava as medidas com o preço (H7 mede depois se antecipam algo)."""
+        px0 = None
+        while True:
+            time.sleep(300 - time.time() % 300)
+            with self.trava:
+                j, self.fluxo = dict(self.fluxo), {"compra": 0.0, "venda": 0.0, "liq_long": 0.0, "liq_short": 0.0}
+            px1 = self.preco
+            if px0 and px1:
+                j.update(px0=px0, px1=px1, livro=self.livro_atual)
+                media = sum(self.volumes) / len(self.volumes) if self.volumes else None
+                self.evento({"tipo": "leitura", "texto": "📖 " + traduzir(j, media), "notificar": False, "medidas": j})
+                self.volumes.append(j["compra"] + j["venda"])
+                try:
+                    with open(config.RAIZ / "leitura_mercado.jsonl", "a") as f:
+                        f.write(json.dumps({"t": int(time.time()), **j}) + "\n")
+                except OSError:
+                    pass
+            px0 = px1
+            self.fonte("leitura", True)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -347,7 +446,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self
