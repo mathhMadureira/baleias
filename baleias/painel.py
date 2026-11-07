@@ -3,7 +3,9 @@
 Escuta só em 127.0.0.1. O banco é aberto em modo somente leitura.
 """
 import json
+import os
 import sqlite3
+import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -12,6 +14,7 @@ from .aprendizado import Modelo, media_ic
 
 FONTE = "ao_vivo"
 HTML = Path(__file__).with_name("painel.html")
+HTML_AO_VIVO = Path(__file__).with_name("ao_vivo.html")
 
 
 def abrir_leitura(caminho=None):
@@ -111,6 +114,7 @@ def estado(c, fonte=FONTE):
 
 class Manipulador(BaseHTTPRequestHandler):
     conexao = None
+    motor = None
 
     def _enviar(self, codigo, corpo, tipo):
         self.send_response(codigo)
@@ -123,6 +127,13 @@ class Manipulador(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/api/estado":
             self._enviar(200, json.dumps(estado(self.conexao)).encode(), "application/json")
+        elif self.path.startswith("/api/ao-vivo"):
+            q = urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query)
+            num = lambda k: int(q.get(k, ["0"])[0] or 0)
+            corpo = self.motor.instantaneo(num("desde"), num("calor")) if self.motor else {"erro": "motor desligado"}
+            self._enviar(200, json.dumps(corpo).encode(), "application/json")
+        elif self.path == "/ao-vivo":
+            self._enviar(200, HTML_AO_VIVO.read_bytes(), "text/html; charset=utf-8")
         elif self.path in ("/", "/index.html"):
             self._enviar(200, HTML.read_bytes(), "text/html; charset=utf-8")
         else:
@@ -135,4 +146,7 @@ class Manipulador(BaseHTTPRequestHandler):
 def servir(porta=8787):
     banco.abrir().close()  # garante que o esquema existe antes de abrir só leitura
     Manipulador.conexao = abrir_leitura()
+    if os.environ.get("BALEIAS_SEM_TEMPO_REAL") != "1":
+        from .tempo_real import Motor
+        Manipulador.motor = Motor(abrir=abrir_leitura).iniciar()
     ThreadingHTTPServer(("127.0.0.1", porta), Manipulador).serve_forever()

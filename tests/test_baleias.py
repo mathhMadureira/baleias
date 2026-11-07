@@ -789,3 +789,65 @@ class Padroes(unittest.TestCase):
         self.assertTrue(P.passou(bom, {"casos": 50, "retorno_medio_pct": 0.25, "t": 2.5}))
         self.assertFalse(P.passou(bom, {"casos": 50, "retorno_medio_pct": -0.25, "t": -2.5}))
         self.assertFalse(P.passou(bom, {"casos": 50, "retorno_medio_pct": 0.1, "t": 5}))
+
+
+class TempoReal(unittest.TestCase):
+    def test_ws_le_quadros_fragmentados_e_responde_ping(self):
+        import struct
+        from baleias.ws import WS
+
+        class Sock:
+            def __init__(self, dados):
+                self.dados, self.enviado = dados, b""
+            def recv(self, n):
+                parte, self.dados = self.dados[:n], self.dados[n:]
+                return parte
+            def sendall(self, b):
+                self.enviado += b
+        grande = b"x" * 300
+        dados = (bytes([0x89, 3]) + b"abc"                       # ping
+                 + bytes([0x01, 2]) + b"ol"                      # texto, sem FIN
+                 + bytes([0x80, 1]) + b"a"                       # continuação com FIN
+                 + bytes([0x81, 126]) + struct.pack("!H", 300) + grande)
+        ws = WS(Sock(dados))
+        self.assertEqual(ws.receber(), "ola")
+        self.assertEqual(ws.s.enviado[0], 0x8A)                  # pong
+        self.assertEqual(ws.receber(), grande.decode())
+
+    def test_classifica_eventos(self):
+        from baleias import tempo_real as T
+        self.assertIsNone(T.de_aggtrade({"p": "70000", "q": "1", "m": False}))
+        ev = T.de_aggtrade({"p": "70000", "q": "40", "m": True})
+        self.assertEqual(ev["lado"], "venda")
+        self.assertTrue(ev["notificar"])
+        liq = T.de_liquidacao({"o": {"s": "ETHUSDT", "S": "SELL", "p": "3000", "ap": "3000", "q": "500", "z": "500"}})
+        self.assertIn("comprados", liq["texto"])
+        f = T.de_hl_fill("0xabcdef0123", {"coin": "BTC", "px": "70000", "sz": "1", "dir": "Open Short", "closedPnl": "0"})
+        self.assertIn("ABRIU VENDIDO", f["texto"])
+        self.assertIsNone(T.de_hl_fill("0xabc", {"coin": "BTC", "px": "70000", "sz": "0.0001", "dir": "Open Long"}))
+
+    def test_mercado_e_livro(self):
+        from baleias import tempo_real as T
+        m = T.mercado_de_tickers([{"s": "BTCUSDT", "o": "100", "c": "110", "q": "5"}, {"s": "USDCUSDT", "o": "1", "c": "1", "q": "9"},
+                                  {"s": "ETHBTC", "o": "1", "c": "1", "q": "9"}])
+        self.assertEqual([x["s"] for x in m], ["BTC"])
+        self.assertAlmostEqual(m[0]["pct"], 10)
+        f = T.faixas_livro([["99990", "1"], ["50000", "9"]], [["100010", "2"]], 100000)
+        self.assertEqual(set(f), {99975.0, 100000.0})            # 50000 fica fora do ±1%
+
+    def test_robo_avisa_entrada_e_saida_sem_repetir_passado(self):
+        from baleias import tempo_real as T
+        m = T.Motor(enviar=lambda x: None)
+        import tempfile
+        m.arquivo = pathlib.Path(tempfile.mkdtemp()) / "ao_vivo.jsonl"
+        m.novidades_robo([(1, "compra", 100.0, 101.0, 0.1, "b")])
+        self.assertEqual(len(m.eventos), 0)
+        m.novidades_robo([(2, "venda", 102.0, None, None, "b"), (1, "compra", 100.0, 101.0, 0.1, "b")])
+        m.novidades_robo([(2, "venda", 102.0, 101.0, 0.05, "b"), (1, "compra", 100.0, 101.0, 0.1, "b")])
+        textos = [e["texto"] for e in m.eventos]
+        self.assertEqual(len(textos), 2)
+        self.assertIn("ENTROU VENDA", textos[0])
+        self.assertIn("SAIU", textos[1])
+        self.assertEqual(len(m.pendentes), 2)
+        snap = m.instantaneo(desde=1)
+        self.assertEqual([e["id"] for e in snap["eventos"]], [2])
