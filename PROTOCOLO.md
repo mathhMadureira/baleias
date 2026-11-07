@@ -60,3 +60,10 @@ Pesquisa (executor/pesquisa.py), 30 dias de velas de 1 min, prequencial: R² for
 2. **Modelo do robô (executor/sinal.py):** ao cortar a lista de velas em 6.000, as posições guardadas na fila não acompanhavam o corte; depois de ~1 dia o modelo aprendia com o resultado de outra vela. Corrigido.
 3. **Arquitetura:** tarefas lentas (Gemini, SEC, Yahoo, funding, tendência) rodavam no mesmo laço do monitor das baleias e podiam atrasá-lo por minutos. Passaram para o serviço `baleias-pesquisa`. Cada serviço grava um sinal de vida, mostrado no painel.
 Nenhuma regra de decisão mudou; a contagem dos testes continua.
+
+### 2026-11-07: o robô passa a operar a Tartaruga (H10b)
+
+- **Por quê:** a razão de variância mostrou reversão fraca no intradiário (VR 0,94–0,98) e tendência em semanas (VR 1,1–1,6). Contra 0,2% de custo, a escala de minutos não tem vantagem aproveitável; as 8 operações do robô de minutos perderam em média −0,41%.
+- **O que mudou:** o serviço `baleias-robo` roda a Tartaruga só compra (spot, sem alavancagem, 1% de risco, stop 2N, saída na mínima de 20 dias). No modo real, o stop fica guardado na Binance (STOP_LOSS_LIMIT) e funciona com a máquina desligada.
+- **Estratégia antiga:** a de minutos continua disponível com `ROBO_ESTRATEGIA=minutos`.
+- **Onde fica:** estado em `dados/robo_tartaruga.json`, decisões em `dados/robo_eventos.jsonl`; o painel /ao-vivo mostra e notifica.
