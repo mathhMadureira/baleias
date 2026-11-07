@@ -9,6 +9,11 @@ from baleias import config
 
 MOEDAS = ["BTCUSDT", "ETHUSDT", "BNBUSDT", "XRPUSDT", "ADAUSDT", "DOGEUSDT", "LTCUSDT", "LINKUSDT", "TRXUSDT", "SOLUSDT"]
 CACHE = config.RAIZ / "lab" / "cripto_ohlc_diario.json"
+# H10c: as mesmas regras confirmadas em 23 moedas que nunca tinham sido testadas (2026-11-07); o robô opera as 33.
+MOEDAS_ROBO = MOEDAS + ["AAVEUSDT", "ARBUSDT", "AVAXUSDT", "BCHUSDT", "CELOUSDT", "CYBERUSDT", "ENAUSDT", "FETUSDT", "GTCUSDT",
+                        "HBARUSDT", "INJUSDT", "LSKUSDT", "NEARUSDT", "NFPUSDT", "ONEUSDT", "PEPEUSDT", "QNTUSDT", "SUIUSDT",
+                        "TAOUSDT", "UNIUSDT", "WLDUSDT", "XLMUSDT", "ZECUSDT"]
+CACHE_ROBO = config.RAIZ / "lab" / "cripto_ohlc_robo.json"
 ENTRADA, SAIDA, N_DIAS = 55, 20, 20
 STOP_N = 2.0
 RISCO = 0.01
@@ -18,11 +23,12 @@ CUSTO_DIA = 0.0002
 INICIO_TREINO, INICIO_TESTE = "2018-01-01", "2024-01-01"
 
 
-def baixar():
-    if CACHE.exists():
-        return json.loads(CACHE.read_text())
+def baixar(moedas=None, cache=None):
+    moedas, cache = moedas or MOEDAS, cache or CACHE
+    if cache.exists():
+        return json.loads(cache.read_text())
     saida = {}
-    for m in MOEDAS:
+    for m in moedas:
         velas, t = [], 1_500_000_000_000
         while True:
             with urllib.request.urlopen(f"https://api.binance.com/api/v3/klines?symbol={m}&interval=1d&startTime={t}&limit=1000", timeout=30) as r:
@@ -35,7 +41,7 @@ def baixar():
             t = lote[-1][0] + 86_400_000
             time.sleep(0.2)
         saida[m] = velas[:-1]          # o dia de hoje ainda está aberto
-    CACHE.write_text(json.dumps(saida))
+    cache.write_text(json.dumps(saida))
     return saida
 
 

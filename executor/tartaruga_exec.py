@@ -187,15 +187,15 @@ def rodar(cliente, real=False):
     dados, precos_ok = None, {}
     while True:
         try:
-            precos = corretora.precos(T.MOEDAS)
+            precos = corretora.precos(T.MOEDAS_ROBO)
             precos_ok = precos
             g = time.gmtime()
             if e.get("ultimo_dia") != time.strftime("%Y-%m-%d", g) and (g.tm_hour > 0 or g.tm_min >= 2):
-                T.CACHE.unlink(missing_ok=True)
-                dados = T.baixar()
+                T.CACHE_ROBO.unlink(missing_ok=True)
+                dados = T.baixar(T.MOEDAS_ROBO, T.CACHE_ROBO)
                 passo_diario(e, corretora, dados, precos)
             elif dados is None:
-                dados = T.baixar()
+                dados = T.baixar(T.MOEDAS_ROBO, T.CACHE_ROBO)
             checar_stops(e, corretora, precos)
             e["radar"] = radar(dados, precos)
             e["patrimonio"] = patrimonio(e, precos, corretora)

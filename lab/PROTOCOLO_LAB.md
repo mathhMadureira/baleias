@@ -279,3 +279,14 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **^BVSP 1 h (dez/2023–nov/2026):** 0 de 54. **BOVA11 1 h:** 0 de 57.
 - **WIN real, negócio a negócio da B3:** 15 pregões completos (08/10 a 06/11; os dias incompletos foram descartados), 8453 velas de 1 min. **0 de 57.** Nenhum padrão teve |t| > 1,1 no treino. No teste, os maiores t ficaram em ~2,0–2,3, com sinais opostos aos do treino.
 - **Conclusão:** nos dados disponíveis, padrões de vela não mostraram vantagem também no índice, mesmo com custo de ~0,008%. O coletor diário da B3 pode estender a amostra (espera autorização do usuário).
+
+### H10c: as mesmas regras em moedas novas (2026-11-07)
+
+- **Moedas:** as 40 de maior volume em USDT na Binance, fora as 10 originais e as estáveis, com dados desde antes de 2024-06. Sobraram 23 (AAVE, ARB, AVAX, BCH, CELO, CYBER, ENA, FET, GTC, HBAR, INJ, LSK, NEAR, NFP, ONE, PEPE, QNT, SUI, TAO, UNI, WLD, XLM, ZEC), que nunca tinham sido usadas.
+- **Regras:** H10b sem nenhuma alteração (só compra, 1×).
+- **Resultado no teste 2024–hoje:**
+  - 10 originais: 82 op., +12,6%/ano, queda −30,2%, expectativa +0,53R, PF 1,76;
+  - 23 novas: 152 op., +27,3%/ano, queda −40,3%, expectativa +0,57R, PF 1,77;
+  - todas as 33: 163 op., +25,8%/ano, queda −41,4%, expectativa +0,62R, PF 1,87.
+- **Leitura:** a vantagem por operação se repetiu em ativos independentes. Viés: a escolha pelo volume de hoje deixa de fora moedas que morreram (sobrevivência).
+- **Decisão:** o robô passa a operar as 33. A queda histórica esperada é de ~40%.
