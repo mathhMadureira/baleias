@@ -273,3 +273,9 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Variação:** o risco por operação passa a ser 1% × min(1, 20% ÷ σ̂), com σ̂ = volatilidade anualizada da própria carteira (EWMA, λ = 0,94, sobre os retornos diários). Em fase turbulenta arrisca menos; nunca arrisca mais que 1%.
 - **Comparação:** a mesma carteira sem o ajuste (H10b a 1×), nos mesmos períodos (treino 2018–2023, teste 2024–hoje).
 - **Passa** se, no treino **e** no teste, a maior queda for menor que a da base **e** o retorno/queda (Calmar) for maior que o da base, com a expectativa em R ainda > 0. Se passar, o robô ao vivo usa a versão com ajuste.
+
+### Resultado da H6-WINb (2026-11-07)
+
+- **^BVSP 1 h (dez/2023–nov/2026):** 0 de 54. **BOVA11 1 h:** 0 de 57.
+- **WIN real, negócio a negócio da B3:** 15 pregões completos (08/10 a 06/11; os dias incompletos foram descartados), 8453 velas de 1 min. **0 de 57.** Nenhum padrão teve |t| > 1,1 no treino. No teste, os maiores t ficaram em ~2,0–2,3, com sinais opostos aos do treino.
+- **Conclusão:** nos dados disponíveis, padrões de vela não mostraram vantagem também no índice, mesmo com custo de ~0,008%. O coletor diário da B3 pode estender a amostra (espera autorização do usuário).
