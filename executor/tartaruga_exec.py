@@ -200,6 +200,10 @@ def rodar(cliente, real=False):
             e["radar"] = radar(dados, precos)
             e["patrimonio"] = patrimonio(e, precos, corretora)
             e["atualizado"] = time.time()
+            curva = e.setdefault("curva", [])
+            if not curva or time.time() - curva[-1][0] >= 900:          # um ponto a cada 15 min
+                curva.append([int(time.time()), round(e["patrimonio"], 4)])
+                del curva[:-6000]
             salvar(e)
             msg = f"tartaruga: patrimônio US$ {e['patrimonio']:,.2f}, {len(e['abertas'])} abertas, mais perto: " + \
                   ", ".join(f"{r['moeda']} {r['falta_pct']:+.1f}%" for r in e["radar"][:3])

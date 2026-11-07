@@ -1,0 +1,18 @@
+[
+ {"id": "Baleias", "pergunta": "Copiar carteiras grandes da Hyperliquid dá lucro?", "resultado": "Não passou", "numero": "backtest −0,41% por sinal depois do custo", "status": "reprovada"},
+ {"id": "Insiders SEC", "pergunta": "Compras de diretores (Form 4) batem o S&P?", "resultado": "Não passou no histórico; ao vivo em andamento", "numero": "−1,43%/mês contra o S&P", "status": "reprovada"},
+ {"id": "Minutos (robô antigo)", "pergunta": "Prever o BTC em 5–60 min paga o custo?", "resultado": "Não passou", "numero": "R² negativo; 9 operações, todas no vermelho", "status": "reprovada"},
+ {"id": "H1 Tendência", "pergunta": "Tendência diária em cripto e fundos (cofre)", "resultado": "Cripto positivo, fundos não", "numero": "cripto +25%/ano no cofre", "status": "parcial"},
+ {"id": "H2 Tendência ao vivo", "pergunta": "Tendência 20 dias em cripto, ao vivo", "resultado": "Em andamento (180 dias)", "numero": "desde 07/11/2026", "status": "andamento"},
+ {"id": "H3 Funding", "pergunta": "Receber funding (carry) na Hyperliquid", "resultado": "Positivo, pequeno e caindo; ao vivo em andamento", "numero": "+6,1%/ano, 84% dos dias positivos", "status": "aprovada"},
+ {"id": "H3b Funding 2×", "pergunta": "Funding com alavancagem", "resultado": "2× sem liquidação; ao vivo em andamento", "numero": "+8,2%/ano", "status": "aprovada"},
+ {"id": "H4 Chronos", "pergunta": "Modelo de IA de séries (Chronos) prevê o BTC?", "resultado": "Não passou", "numero": "R² −0,026", "status": "reprovada"},
+ {"id": "H5 Gemini", "pergunta": "IA generativa prevê 15 min / 1 h / 4 h?", "resultado": "Em andamento (~300 previsões)", "numero": "começou 06/11/2026", "status": "andamento"},
+ {"id": "H6 Padrões BTC", "pergunta": "19 padrões de vela e de mercado, BTC 2020–2026", "resultado": "Não passou (0/57)", "numero": "efeitos reais de 0,01–0,1%, custo 0,2%", "status": "reprovada"},
+ {"id": "H6 Padrões WIN", "pergunta": "Os mesmos padrões no mini índice (B3)", "resultado": "Não passou (0/57 no WIN real; 0/54 no Ibovespa)", "numero": "15 pregões negócio a negócio", "status": "reprovada"},
+ {"id": "H7 Fluxo de ordens", "pergunta": "Agressão, book e liquidações antecipam o preço?", "resultado": "Coletando (avalia com 2000 janelas)", "numero": "desde 07/11/2026", "status": "andamento"},
+ {"id": "H8 LSTM", "pergunta": "Rede recorrente com memória longa prevê o BTC?", "resultado": "Não passou", "numero": "R² −0,001 a −0,010; acerto 50%", "status": "reprovada"},
+ {"id": "H9 Notícias", "pergunta": "Tom das notícias (PLN do GDELT) antecipa o BTC?", "resultado": "Em andamento", "numero": "3 meses de notícias", "status": "andamento"},
+ {"id": "H10 Tartarugas", "pergunta": "Perder pouco, ganhar muito: rompimento de 55 dias", "resultado": "Só compra: positivo no teste e em 23 moedas novas", "numero": "+0,53R a +0,62R por operação; PF 1,8", "status": "aprovada"},
+ {"id": "H11 Vol. alvo", "pergunta": "Ajustar risco pela volatilidade prevista", "resultado": "Não passou (piorou o Calmar no treino)", "numero": "melhorou só o teste", "status": "reprovada"}
+]

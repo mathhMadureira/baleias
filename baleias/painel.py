@@ -15,6 +15,7 @@ from .aprendizado import Modelo, media_ic
 FONTE = "ao_vivo"
 HTML = Path(__file__).with_name("painel.html")
 HTML_AO_VIVO = Path(__file__).with_name("ao_vivo.html")
+HTML_TERMINAL = Path(__file__).with_name("terminal.html")
 
 
 def abrir_leitura(caminho=None):
@@ -134,7 +135,26 @@ class Manipulador(BaseHTTPRequestHandler):
             self._enviar(200, json.dumps(corpo).encode(), "application/json")
         elif self.path == "/ao-vivo":
             self._enviar(200, HTML_AO_VIVO.read_bytes(), "text/html; charset=utf-8")
+        elif self.path.startswith("/api/robo"):
+            from . import terminal_api
+            vivos = {}
+            if self.motor:
+                with self.motor.trava:
+                    vivos = {k: v["p"] for k, v in self.motor.mercado.items()}
+            self._enviar(200, json.dumps(terminal_api.robo(vivos)).encode(), "application/json")
+        elif self.path.startswith("/api/velas"):
+            from . import terminal_api
+            q = urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query)
+            self._enviar(200, json.dumps(terminal_api.velas(q.get("m", ["BTC"])[0][:12])).encode(), "application/json")
+        elif self.path.startswith("/api/backtest"):
+            from . import terminal_api
+            self._enviar(200, json.dumps(terminal_api.backtest()).encode(), "application/json")
+        elif self.path.startswith("/api/lab"):
+            from . import terminal_api
+            self._enviar(200, json.dumps(terminal_api.lab()).encode(), "application/json")
         elif self.path in ("/", "/index.html"):
+            self._enviar(200, HTML_TERMINAL.read_bytes(), "text/html; charset=utf-8")
+        elif self.path == "/baleias":
             self._enviar(200, HTML.read_bytes(), "text/html; charset=utf-8")
         else:
             self._enviar(404, b"{}", "application/json")

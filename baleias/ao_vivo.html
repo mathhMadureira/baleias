@@ -42,17 +42,8 @@ section h2 { font-size:12px; margin:0 0 6px; color:var(--apagado); font-weight:6
   <span id="fontes"></span>
   <button id="notif">🔔 Ativar notificações</button>
   <button id="som">🔈 Som</button>
-  <a href="/" style="color:var(--apagado)">painel</a>
 </header>
 <main>
-  <section id="robo" style="grid-column:1 / -1">
-    <h2>🤖 Robô — Tartarugas cripto (opera sozinho: só compra, spot, risco 1% por operação, stop guardado na corretora)</h2>
-    <div id="robo-topo" class="num">carregando…</div>
-    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:8px">
-      <div><b>Posições abertas</b><div id="robo-pos"></div></div>
-      <div><b>Radar: quanto falta para cada moeda romper a máxima de 55 dias (entrada)</b><div id="robo-radar"></div></div>
-    </div>
-  </section>
   <section>
     <h2>Mapa de calor do book BTC/USDT (Binance, ±1%, últimos 30 min)</h2>
     <canvas id="calor"></canvas>
@@ -215,7 +206,6 @@ async function ciclo() {
       document.getElementById("atraso").textContent = a == null ? "" : a > 3600 ? "fechado/atrasado " + Math.round(a / 3600) + " h" : "atraso " + Math.round(a / 60) + " min";
     }
     desenharFontes(d.fontes, d.agora);
-    if (d.tartaruga) desenharRobo(d.tartaruga, d.agora);
     desenharMercado(d.mercado);
     if (d.eventos.length) desenharFeed();
     if (d.calor.length || primeira) desenharCalor();

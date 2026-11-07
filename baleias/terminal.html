@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baleias Terminal</title>
+<style>
+:root {
+  --bg:#07090c; --bg2:#0d1117; --card:#111821; --card2:#151e29; --line:#1f2a37; --line2:#2a3746;
+  --txt:#e6edf3; --mut:#8b98a8; --dim:#5b6878;
+  --up:#16c784; --up2:#0e8f60; --down:#ea3943; --down2:#a3262d; --gold:#f0b90b; --blue:#3b82f6; --violet:#a78bfa;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+* { box-sizing:border-box; }
+html, body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color:inherit; }
+.num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+.up { color:var(--up); } .down { color:var(--down); } .mut { color:var(--mut); } .gold { color:var(--gold); }
+
+header { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:18px; padding:10px 18px; background:rgba(13,17,23,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+.marca { font-weight:800; letter-spacing:.08em; font-size:13px; }
+.marca b { color:var(--gold); }
+nav { display:flex; gap:4px; }
+nav button { background:none; border:0; color:var(--mut); font:600 13px system-ui; padding:7px 12px; border-radius:7px; cursor:pointer; }
+nav button.ativo { color:var(--txt); background:var(--card2); }
+.espaco { flex:1; }
+.selo { font:700 11px var(--mono); padding:4px 8px; border-radius:6px; border:1px solid var(--line2); letter-spacing:.05em; }
+.selo.sim { color:var(--violet); border-color:#a78bfa55; background:#a78bfa14; }
+.selo.real { color:var(--down); border-color:#ea394366; background:#ea394318; }
+.relogio { font:12px var(--mono); color:var(--mut); }
+.pontos { display:flex; gap:6px; }
+.ponto { width:8px; height:8px; border-radius:50%; background:var(--dim); }
+.ponto.ok { background:var(--up); box-shadow:0 0 6px var(--up); }
+.ponto.mal { background:var(--down); }
+
+main { padding:16px 18px 40px; max-width:1680px; margin:0 auto; }
+.aba { display:none; } .aba.ativa { display:block; }
+.kpis { display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:12px; margin-bottom:14px; }
+.kpi { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; min-width:0; }
+.kpi .rot { font-size:11px; color:var(--mut); text-transform:uppercase; letter-spacing:.06em; }
+.kpi .val { font:700 24px var(--mono); margin-top:4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.kpi .sub { font:12px var(--mono); color:var(--mut); margin-top:2px; }
+
+.grade { display:grid; gap:14px; }
+.g-principal { grid-template-columns: minmax(0, 2.2fr) minmax(320px, 1fr); }
+.g-dupla { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; min-width:0; }
+.card h3 { margin:0 0 10px; font-size:12px; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; display:flex; align-items:center; gap:10px; }
+.card h3 .dir { margin-left:auto; text-transform:none; letter-spacing:0; font-weight:500; }
+canvas { display:block; width:100%; }
+#grafico { height:440px; }
+#curva-vivo, #curva-teste { height:220px; }
+.legenda { display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--mut); margin-top:8px; }
+.legenda i { display:inline-block; width:14px; height:0; border-top:2px dashed; vertical-align:middle; margin-right:5px; }
+
+.radar { display:flex; flex-direction:column; gap:3px; max-height:470px; overflow:auto; padding-right:4px; }
+.rl { display:grid; grid-template-columns:62px 1fr 64px; align-items:center; gap:8px; padding:6px 8px; border-radius:7px; cursor:pointer; }
+.rl:hover, .rl.sel { background:var(--card2); }
+.rl .m { font:700 12px var(--mono); }
+.barra { height:6px; background:var(--line); border-radius:4px; overflow:hidden; }
+.barra > div { height:100%; border-radius:4px; background:linear-gradient(90deg, var(--blue), var(--gold)); }
+.rl .f { font:12px var(--mono); text-align:right; color:var(--mut); }
+.rl.quente .f { color:var(--gold); }
+.rl.rompeu .f { color:var(--up); font-weight:700; }
+
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th { text-align:left; color:var(--mut); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.05em; padding:6px 8px; border-bottom:1px solid var(--line); }
+td { padding:8px; border-bottom:1px solid var(--line); font-family:var(--mono); }
+.vazio { color:var(--mut); padding:18px 6px; font-size:13px; }
+
+.stats { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:10px; margin-top:12px; }
+.st { background:var(--bg2); border:1px solid var(--line); border-radius:9px; padding:8px 10px; }
+.st .rot { font-size:10px; color:var(--mut); text-transform:uppercase; letter-spacing:.06em; }
+.st .val { font:700 16px var(--mono); }
+.regras { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:10px; }
+.regra { background:var(--bg2); border:1px solid var(--line); border-radius:9px; padding:10px 12px; font-size:13px; }
+.regra b { display:block; font-size:11px; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; margin-bottom:3px; }
+
+.placar { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:12px; }
+.hip { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--dim); border-radius:10px; padding:12px 14px; }
+.hip.aprovada { border-left-color:var(--up); } .hip.reprovada { border-left-color:var(--down); }
+.hip.andamento { border-left-color:var(--blue); } .hip.parcial { border-left-color:var(--gold); }
+.hip .id { font:700 12px var(--mono); }
+.hip .p { color:var(--mut); font-size:13px; margin:4px 0 6px; }
+.hip .r { font-size:13px; font-weight:600; }
+.hip .n { font:12px var(--mono); color:var(--mut); margin-top:2px; }
+iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; background:var(--bg); }
+.tooltip { position:fixed; pointer-events:none; background:#0b1017ee; border:1px solid var(--line2); border-radius:8px; padding:7px 9px; font:12px var(--mono); display:none; z-index:9; white-space:pre; }
+
+@media (max-width: 1200px) { .kpis { grid-template-columns:repeat(3, minmax(0,1fr)); } .g-principal, .g-dupla { grid-template-columns:1fr; } .regras, .stats { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width: 640px) { .kpis { grid-template-columns:repeat(2, minmax(0,1fr)); } header { flex-wrap:wrap; } #grafico { height:320px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="marca">BALEIAS <b>TERMINAL</b></div>
+  <nav>
+    <button data-aba="robo" class="ativo">Robô</button>
+    <button data-aba="mercado">Mercado ao vivo</button>
+    <button data-aba="lab">Laboratório</button>
+  </nav>
+  <span class="espaco"></span>
+  <span id="selo" class="selo sim">SIMULADO</span>
+  <span class="pontos" id="pontos" title="fontes de dados"></span>
+  <span class="relogio" id="relogio"></span>
+</header>
+
+<main>
+<section class="aba ativa" id="aba-robo">
+  <div class="kpis">
+    <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="k-pat">—</div><div class="sub" id="k-pat-s">—</div></div>
+    <div class="kpi"><div class="rot">Resultado</div><div class="val num" id="k-res">—</div><div class="sub" id="k-res-s">—</div></div>
+    <div class="kpi"><div class="rot">Queda desde o pico</div><div class="val num" id="k-dd">—</div><div class="sub">no teste chegou a <span id="k-dd-t">—</span></div></div>
+    <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="k-pos">—</div><div class="sub" id="k-pos-s">risco em jogo —</div></div>
+    <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="k-ops">—</div><div class="sub" id="k-ops-s">—</div></div>
+    <div class="kpi"><div class="rot">Próxima decisão</div><div class="val num" id="k-prox">—</div><div class="sub">todo dia 00:02 UTC (21:02 Brasília)</div></div>
+  </div>
+
+  <div class="grade g-principal">
+    <div class="card">
+      <h3><span id="g-titulo">BTC · diário</span><span class="dir mut num" id="g-info"></span></h3>
+      <canvas id="grafico"></canvas>
+      <div class="legenda">
+        <span><i style="border-color:var(--up)"></i>entrada: máxima de 55 dias</span>
+        <span><i style="border-color:var(--down)"></i>saída: mínima de 20 dias</span>
+        <span><i style="border-color:var(--gold)"></i>stop 2N se entrasse hoje</span>
+        <span>▲ entrada do robô · ▼ saída do robô</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Radar · distância até a entrada<span class="dir mut">clique para ver</span></h3>
+      <div class="radar" id="radar"></div>
+    </div>
+  </div>
+
+  <div class="grade g-dupla" style="margin-top:14px">
+    <div class="card">
+      <h3>Posições abertas</h3>
+      <div id="posicoes"></div>
+    </div>
+    <div class="card">
+      <h3>Patrimônio ao vivo<span class="dir mut num" id="cv-info"></span></h3>
+      <canvas id="curva-vivo"></canvas>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>O mesmo robô no teste de 2024 até hoje (33 moedas, US$ 700 iniciais)<span class="dir mut">é o caminho esperado — inclusive as quedas</span></h3>
+    <canvas id="curva-teste"></canvas>
+    <div class="stats" id="bt-stats"></div>
+  </div>
+
+  <div class="grade g-dupla" style="margin-top:14px">
+    <div class="card">
+      <h3>Últimas operações do robô</h3>
+      <div id="fechadas"></div>
+    </div>
+    <div class="card">
+      <h3>Regras (fixas — o robô não improvisa)</h3>
+      <div class="regras">
+        <div class="regra"><b>Entrada</b>Fechamento diário acima da máxima dos 55 dias anteriores.</div>
+        <div class="regra"><b>Stop</b>2N abaixo da entrada (N = ATR de 20 dias). Perda limitada a 1R.</div>
+        <div class="regra"><b>Saída</b>Fechamento abaixo da mínima de 20 dias: deixa o vencedor correr.</div>
+        <div class="regra"><b>Tamanho</b>1% do patrimônio em risco por operação. Spot, sem alavancagem.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="aba" id="aba-mercado">
+  <iframe id="frame-mercado" title="Mercado ao vivo"></iframe>
+</section>
+
+<section class="aba" id="aba-lab">
+  <div class="card" style="margin-bottom:14px">
+    <h3>Placar do laboratório · cada hipótese registrada antes de testar</h3>
+    <div class="mut" style="font-size:13px">Verde: passou · Vermelho: não passou · Azul: em andamento · Amarelo: parcial. O robô só opera o que passou.</div>
+  </div>
+  <div class="placar" id="placar"></div>
+</section>
+</main>
+<div class="tooltip" id="tip"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt = (x, d = 2) => x == null || isNaN(x) ? "—" : x.toLocaleString("pt-BR", {minimumFractionDigits: d, maximumFractionDigits: d});
+const px = (x) => x == null ? "—" : x >= 1000 ? fmt(x, 0) : x >= 1 ? fmt(x, 3) : x.toPrecision(4);
+const pct = (x, d = 1) => x == null ? "—" : (x >= 0 ? "+" : "") + fmt(x, d) + "%";
+const cor = (x) => x > 0 ? "up" : x < 0 ? "down" : "";
+let estado = null, moeda = "BTC", velas = null, teste = null;
+
+// abas
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("ativo", x === b));
+  document.querySelectorAll(".aba").forEach(x => x.classList.toggle("ativa", x.id === "aba-" + b.dataset.aba));
+  if (b.dataset.aba === "mercado" && !$("frame-mercado").src) $("frame-mercado").src = "/ao-vivo";
+  if (b.dataset.aba === "lab") carregarLab();
+  if (b.dataset.aba === "robo") desenharTudo();
+});
+
+// ---------- gráficos em canvas ----------
+function prep(cv) {
+  const r = devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight;
+  cv.width = w * r; cv.height = h * r;
+  const ctx = cv.getContext("2d"); ctx.setTransform(r, 0, 0, r, 0, 0);
+  ctx.clearRect(0, 0, w, h);
+  return {ctx, w, h};
+}
+function eixoY(ctx, w, h, lo, hi, pad, rotulo) {
+  ctx.font = "11px ui-monospace, Menlo, monospace"; ctx.textAlign = "left";
+  for (let k = 0; k <= 4; k++) {
+    const v = lo + (hi - lo) * k / 4, y = pad.t + (h - pad.t - pad.b) * (1 - k / 4);
+    ctx.strokeStyle = "#1a2430"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+    ctx.fillStyle = "#6b7888"; ctx.fillText(rotulo(v), w - pad.r + 6, y + 4);
+  }
+}
+
+function desenharVelas() {
+  const cv = $("grafico");
+  const {ctx, w, h} = prep(cv);
+  if (!velas || !velas.velas || !velas.velas.length) { ctx.fillStyle = "#8b98a8"; ctx.fillText("carregando…", 20, 30); return; }
+  const v = velas.velas, pad = {l: 8, r: 78, t: 12, b: 26};
+  let lo = Infinity, hi = -Infinity;
+  for (const x of v) { lo = Math.min(lo, x.l, x.saida); hi = Math.max(hi, x.h, x.entrada); }
+  const sl = v[v.length - 1].stop2n; if (sl) lo = Math.min(lo, sl);
+  const m = (hi - lo) * 0.04; lo -= m; hi += m;
+  const W = w - pad.l - pad.r, H = h - pad.t - pad.b, cw = W / v.length;
+  const X = (i) => pad.l + i * cw + cw / 2, Y = (p) => pad.t + (1 - (p - lo) / (hi - lo)) * H;
+  eixoY(ctx, w, h, lo, hi, pad, px);
+  // canais
+  const linha = (campo, corL, tracejado) => {
+    ctx.strokeStyle = corL; ctx.lineWidth = 1.4; ctx.setLineDash(tracejado); ctx.beginPath();
+    v.forEach((x, i) => i ? ctx.lineTo(X(i), Y(x[campo])) : ctx.moveTo(X(i), Y(x[campo]))); ctx.stroke(); ctx.setLineDash([]);
+  };
+  ctx.fillStyle = "rgba(59,130,246,0.05)"; ctx.beginPath();
+  v.forEach((x, i) => i ? ctx.lineTo(X(i), Y(x.entrada)) : ctx.moveTo(X(i), Y(x.entrada)));
+  for (let i = v.length - 1; i >= 0; i--) ctx.lineTo(X(i), Y(v[i].saida));
+  ctx.fill();
+  linha("entrada", "#16c784", [6, 4]); linha("saida", "#ea3943", [6, 4]);
+  // velas
+  const corpo = Math.max(1, cw * 0.62);
+  v.forEach((x, i) => {
+    const subiu = x.c >= x.o, c = subiu ? "#16c784" : "#ea3943";
+    ctx.strokeStyle = c; ctx.fillStyle = c; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(X(i), Y(x.h)); ctx.lineTo(X(i), Y(x.l)); ctx.stroke();
+    const y1 = Y(Math.max(x.o, x.c)), y2 = Y(Math.min(x.o, x.c));
+    ctx.fillRect(X(i) - corpo / 2, y1, corpo, Math.max(1, y2 - y1));
+  });
+  // stop hipotético de hoje
+  const u = v[v.length - 1];
+  if (u.stop2n) { ctx.strokeStyle = "#f0b90b"; ctx.setLineDash([2, 4]); ctx.beginPath(); ctx.moveTo(X(v.length - 30), Y(u.stop2n)); ctx.lineTo(X(v.length - 1), Y(u.stop2n)); ctx.stroke(); ctx.setLineDash([]); }
+  // preço atual e etiqueta
+  const etiqueta = (p, bg, txt) => { const y = Y(p); ctx.fillStyle = bg; ctx.fillRect(w - pad.r + 2, y - 9, pad.r - 4, 18); ctx.fillStyle = "#07090c"; ctx.font = "bold 11px ui-monospace, monospace"; ctx.fillText(txt, w - pad.r + 6, y + 4); };
+  etiqueta(u.entrada, "#16c784", px(u.entrada)); etiqueta(u.saida, "#ea3943", px(u.saida)); etiqueta(u.c, "#e6edf3", px(u.c));
+  // marcas das operações do robô
+  const idx = {}; v.forEach((x, i) => idx[x.d] = i);
+  for (const mk of velas.marcas || []) {
+    const d = new Date(mk.t * 1000).toISOString().slice(0, 10), i = idx[d];
+    if (i == null) continue;
+    ctx.fillStyle = mk.tipo === "entrada" ? "#16c784" : "#f0b90b"; ctx.beginPath();
+    const y = Y(mk.px), s = 7;
+    if (mk.tipo === "entrada") { ctx.moveTo(X(i), y + 4); ctx.lineTo(X(i) - s, y + 4 + s * 1.5); ctx.lineTo(X(i) + s, y + 4 + s * 1.5); }
+    else { ctx.moveTo(X(i), y - 4); ctx.lineTo(X(i) - s, y - 4 - s * 1.5); ctx.lineTo(X(i) + s, y - 4 - s * 1.5); }
+    ctx.fill();
+  }
+  // datas
+  ctx.fillStyle = "#6b7888"; ctx.font = "11px ui-monospace, monospace"; ctx.textAlign = "center";
+  for (let i = 0; i < v.length; i += Math.ceil(v.length / 7)) ctx.fillText(v[i].d.slice(5).split("-").reverse().join("/"), X(i), h - 8);
+  ctx.textAlign = "left";
+  cv.onmousemove = (ev) => {
+    const r = cv.getBoundingClientRect(), i = Math.floor((ev.clientX - r.left - pad.l) / cw);
+    if (i < 0 || i >= v.length) { $("tip").style.display = "none"; return; }
+    const x = v[i];
+    $("tip").textContent = `${x.d}\nab ${px(x.o)}  máx ${px(x.h)}\nmín ${px(x.l)}  fech ${px(x.c)}\nentrada > ${px(x.entrada)}\nsaída < ${px(x.saida)}`;
+    Object.assign($("tip").style, {display: "block", left: ev.clientX + 14 + "px", top: ev.clientY + 14 + "px"});
+  };
+  cv.onmouseleave = () => $("tip").style.display = "none";
+  const falta = (u.entrada / u.c - 1) * 100;
+  $("g-info").textContent = `fech ${px(u.c)} · ${falta > 0 ? "falta " + pct(falta) + " para entrar" : "acima do rompimento"} · stop seria ${pct((u.stop2n / u.c - 1) * 100)}`;
+}
+
+function desenharLinha(cv, pontos, {base = null, rotulo = (v) => "US$ " + fmt(v, 0), sombraQueda = false} = {}) {
+  const {ctx, w, h} = prep(cv);
+  if (!pontos || pontos.length < 2) { ctx.fillStyle = "#8b98a8"; ctx.font = "13px system-ui"; ctx.fillText(pontos && pontos.length ? "acumulando pontos (1 a cada 15 min)…" : "sem dados ainda", 14, 28); return; }
+  const pad = {l: 8, r: 78, t: 10, b: 22};
+  let lo = Math.min(...pontos.map(p => p[1])), hi = Math.max(...pontos.map(p => p[1]));
+  if (base != null) { lo = Math.min(lo, base); hi = Math.max(hi, base); }
+  if (hi - lo < 1e-9) { hi += 1; lo -= 1; }
+  const m = (hi - lo) * 0.06; lo -= m; hi += m;
+  const W = w - pad.l - pad.r, H = h - pad.t - pad.b;
+  const X = (i) => pad.l + i / (pontos.length - 1) * W, Y = (p) => pad.t + (1 - (p - lo) / (hi - lo)) * H;
+  eixoY(ctx, w, h, lo, hi, pad, rotulo);
+  if (sombraQueda) {
+    let pico = -Infinity;
+    pontos.forEach((p, i) => { pico = Math.max(pico, p[1]); if (p[1] < pico) { ctx.fillStyle = "rgba(234,57,67,0.10)"; ctx.fillRect(X(i), Y(pico), Math.max(1, W / pontos.length), Y(p[1]) - Y(pico)); } });
+  }
+  const ultimo = pontos[pontos.length - 1][1], ref = base != null ? base : pontos[0][1];
+  const c = ultimo >= ref ? "#16c784" : "#ea3943";
+  const g = ctx.createLinearGradient(0, pad.t, 0, h - pad.b); g.addColorStop(0, c + "55"); g.addColorStop(1, c + "00");
+  ctx.beginPath(); pontos.forEach((p, i) => i ? ctx.lineTo(X(i), Y(p[1])) : ctx.moveTo(X(i), Y(p[1])));
+  ctx.lineTo(X(pontos.length - 1), h - pad.b); ctx.lineTo(X(0), h - pad.b); ctx.closePath(); ctx.fillStyle = g; ctx.fill();
+  ctx.beginPath(); pontos.forEach((p, i) => i ? ctx.lineTo(X(i), Y(p[1])) : ctx.moveTo(X(i), Y(p[1])));
+  ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.stroke();
+  if (base != null) { ctx.strokeStyle = "#5b6878"; ctx.setLineDash([3, 4]); ctx.beginPath(); ctx.moveTo(pad.l, Y(base)); ctx.lineTo(w - pad.r, Y(base)); ctx.stroke(); ctx.setLineDash([]); }
+  ctx.fillStyle = "#6b7888"; ctx.font = "11px ui-monospace, monospace"; ctx.textAlign = "center";
+  const rot = (t) => typeof t === "number" ? new Date(t * 1000).toLocaleDateString("pt-BR", {day: "2-digit", month: "2-digit"}) : t.slice(2, 7).split("-").reverse().join("/");
+  for (let k = 0; k <= 5; k++) { const i = Math.round(k / 5 * (pontos.length - 1)); ctx.fillText(rot(pontos[i][0]), X(i), h - 6); }
+  ctx.textAlign = "left";
+}
+
+// ---------- dados ----------
+function desenharRobo() {
+  const e = estado; if (!e || !e.ligado) return;
+  $("selo").textContent = e.real ? "DINHEIRO REAL" : "SIMULADO"; $("selo").className = "selo " + (e.real ? "real" : "sim");
+  const res = e.patrimonio - e.inicial, resp = e.inicial ? res / e.inicial * 100 : null;
+  $("k-pat").textContent = "US$ " + fmt(e.patrimonio); $("k-pat-s").textContent = `caixa US$ ${fmt(e.caixa)} · desde ${e.inicio.split("-").reverse().join("/")}`;
+  $("k-res").textContent = (res >= 0 ? "+" : "") + "US$ " + fmt(res); $("k-res").className = "val num " + cor(res);
+  $("k-res-s").textContent = resp == null ? "" : pct(resp, 2) + " no total";
+  $("k-dd").textContent = pct(e.queda_atual * 100); $("k-dd").className = "val num " + (e.queda_atual < -0.001 ? "down" : "");
+  const risco = e.posicoes.reduce((s, p) => s + Math.max(0, p.qtd * (p.preco - p.stop)), 0);
+  $("k-pos").textContent = e.posicoes.length; $("k-pos-s").textContent = `risco em jogo US$ ${fmt(risco)}`;
+  $("k-ops").textContent = e.stats.operacoes;
+  $("k-ops-s").textContent = e.stats.operacoes ? `acerto ${fmt(e.stats.acerto * 100, 0)}% · média ${fmt(e.stats.media_R)}R` : "aguardando o 1º rompimento";
+  // radar
+  const rad = $("radar");
+  rad.replaceChildren(...e.radar.map(r => {
+    const d = document.createElement("div");
+    d.className = "rl" + (r.moeda === moeda ? " sel" : "") + (r.falta_pct <= 0 ? " rompeu" : r.falta_pct < 5 ? " quente" : "");
+    const perto = Math.max(0, Math.min(100, 100 - r.falta_pct * 2));
+    d.innerHTML = `<span class="m"></span><div class="barra"><div style="width:${perto}%"></div></div><span class="f"></span>`;
+    d.querySelector(".m").textContent = r.moeda;
+    d.querySelector(".f").textContent = r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%";
+    d.title = `preço ${px(r.preco)} · entra acima de ${px(r.rompimento)} · stop seria ${pct(r.stop_pct)}`;
+    d.onclick = () => { moeda = r.moeda; carregarVelas(); desenharRobo(); };
+    return d;
+  }));
+  // posições
+  const pos = $("posicoes");
+  if (!e.posicoes.length) pos.innerHTML = `<div class="vazio">Nenhuma posição. O robô espera um rompimento de 55 dias — em mercado de queda ele fica fora, de propósito.</div>`;
+  else {
+    pos.innerHTML = `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Resultado</th><th>R</th><th>Até o stop</th></tr></thead><tbody></tbody></table>`;
+    pos.querySelector("tbody").replaceChildren(...e.posicoes.map(p => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${p.moeda}</td><td>${px(p.entrada)}</td><td>${px(p.preco)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado)}</td><td class="${cor(p.R)}">${fmt(p.R, 2)}R</td><td>${pct(p.ate_stop_pct)}</td>`;
+      tr.style.cursor = "pointer"; tr.onclick = () => { moeda = p.moeda; carregarVelas(); };
+      return tr;
+    }));
+  }
+  // fechadas
+  const fe = $("fechadas");
+  if (!e.fechadas.length) fe.innerHTML = `<div class="vazio">Ainda nenhuma operação fechada nesta estratégia.</div>`;
+  else {
+    fe.innerHTML = `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Saída</th><th>Motivo</th><th>US$</th><th>R</th></tr></thead><tbody></tbody></table>`;
+    fe.querySelector("tbody").replaceChildren(...e.fechadas.slice().reverse().map(f => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${f.moeda.replace("USDT", "")}</td><td>${px(f.entrada)}</td><td>${px(f.saida)}</td><td class="mut"></td><td class="${cor(f.resultado_usd)}">${fmt(f.resultado_usd)}</td><td class="${cor(f.R)}">${fmt(f.R, 2)}R</td>`;
+      tr.children[3].textContent = f.motivo; return tr;
+    }));
+  }
+  desenharLinha($("curva-vivo"), e.curva, {base: e.inicial || null});
+  $("cv-info").textContent = e.curva.length ? `${e.curva.length} pontos` : "";
+}
+
+function desenharTeste() {
+  if (!teste || !teste.pronto) return;
+  desenharLinha($("curva-teste"), teste.curva, {base: 700, sombraQueda: true});
+  const s = teste.stats;
+  $("k-dd-t").textContent = pct(s.maior_queda * 100);
+  const itens = [["Operações", s.operacoes], ["Ao ano", pct(s.ao_ano * 100)], ["Maior queda", pct(s.maior_queda * 100)], ["Acerto", fmt(s.acerto * 100, 0) + "%"],
+                 ["Ganho médio", "+" + fmt(s.ganho_medio_R) + "R"], ["Perda média", fmt(s.perda_media_R) + "R"], ["Por operação", "+" + fmt(s.expectativa_R) + "R"], ["Profit factor", fmt(s.profit_factor)]];
+  $("bt-stats").replaceChildren(...itens.map(([r, v]) => { const d = document.createElement("div"); d.className = "st"; d.innerHTML = `<div class="rot"></div><div class="val"></div>`; d.children[0].textContent = r; d.children[1].textContent = v; return d; }));
+}
+
+function desenharTudo() { desenharVelas(); desenharRobo(); desenharTeste(); }
+
+async function j(url) { const r = await fetch(url, {cache: "no-store"}); return r.json(); }
+async function carregarVelas() { $("g-titulo").textContent = moeda + " · diário"; velas = await j("/api/velas?m=" + moeda); desenharVelas(); }
+async function carregarLab() {
+  const l = await j("/api/lab");
+  $("placar").replaceChildren(...l.map(h => {
+    const d = document.createElement("div"); d.className = "hip " + h.status;
+    d.innerHTML = `<div class="id"></div><div class="p"></div><div class="r"></div><div class="n"></div>`;
+    d.children[0].textContent = h.id; d.children[1].textContent = h.pergunta; d.children[2].textContent = h.resultado; d.children[3].textContent = h.numero;
+    return d;
+  }));
+}
+
+async function cicloRobo() {
+  try { estado = await j("/api/robo"); desenharRobo(); } catch (e) {}
+  setTimeout(cicloRobo, 5000);
+}
+async function cicloTeste() {
+  try { teste = await j("/api/backtest"); desenharTeste(); } catch (e) {}
+  setTimeout(cicloTeste, teste && teste.pronto ? 600000 : 5000);
+}
+async function cicloFontes() {
+  try {
+    const d = await j("/api/ao-vivo?desde=999999999&calor=999999999");
+    $("pontos").replaceChildren(...Object.entries(d.fontes || {}).map(([k, v]) => {
+      const s = document.createElement("span"); s.className = "ponto " + (v.ok && d.agora - v.t < 900 ? "ok" : "mal"); s.title = k + (v.erro ? ": " + v.erro : ""); return s;
+    }));
+  } catch (e) {}
+  setTimeout(cicloFontes, 15000);
+}
+function relogio() {
+  const a = new Date();
+  $("relogio").textContent = a.toLocaleTimeString("pt-BR") + " BRT · " + a.toISOString().slice(11, 19) + " UTC";
+  if (estado && estado.proxima_decisao) {
+    let s = Math.max(0, Math.round(estado.proxima_decisao - a.getTime() / 1000));
+    const h = Math.floor(s / 3600); s -= h * 3600; const m = Math.floor(s / 60); s -= m * 60;
+    $("k-prox").textContent = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  }
+}
+setInterval(relogio, 1000); relogio();
+window.addEventListener("resize", desenharTudo);
+carregarVelas(); cicloRobo(); cicloTeste(); cicloFontes();
+</script>
+</body>
+</html>
