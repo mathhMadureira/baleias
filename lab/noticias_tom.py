@@ -28,7 +28,7 @@ def _pedir(inicio, fim):
             if not corpo.strip():
                 raise ValueError("resposta vazia")
             return json.loads(corpo)["timeline"][0]["data"]
-        except (urllib.error.URLError, TimeoutError, ValueError, KeyError, IndexError):
+        except (OSError, ValueError, KeyError, IndexError):     # inclui conexão derrubada (ConnectionResetError)
             time.sleep(15 * (tentativa + 1))   # o GDELT pede ≥ 5 s entre pedidos e às vezes responde vazio
     return []
 
