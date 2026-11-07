@@ -867,3 +867,29 @@ class Tradutor(unittest.TestCase):
         self.assertIn("Volume 2.5×", texto)
         calmo = T.traduzir({"px0": 100000, "px1": 100001, "compra": 1e6, "venda": 1e6, "liq_long": 0, "liq_short": 0, "livro": None})
         self.assertIn("sem direção clara", calmo)
+
+
+class Tartaruga(unittest.TestCase):
+    def test_perde_1R_no_stop_e_deixa_o_vencedor_correr(self):
+        from lab import tartaruga as T
+        import datetime as dt
+        base = dt.date(2020, 1, 1)
+        dia = lambda k: (base + dt.timedelta(days=k)).isoformat()
+        # 60 dias laterais, rompe para cima e sobe 40 dias, depois despenca
+        velas = [[dia(k), 100.0, 101.0, 99.0, 100.0] for k in range(60)]
+        px = 100.0
+        for k in range(60, 100):
+            px *= 1.02
+            velas.append([dia(k), px / 1.02, px * 1.005, px / 1.02 * 0.995, px])
+        for k in range(100, 115):
+            px *= 0.95
+            velas.append([dia(k), px / 0.95, px / 0.95 * 1.001, px * 0.99, px])
+        curva, ops = T.simular({"XUSDT": velas}, dia(0), dia(115), ("compra",))
+        self.assertEqual(len(ops), 1)
+        self.assertGreater(ops[0]["R"], 3)                # ganho grande, várias vezes o risco
+        # stop: rompe e cai logo em seguida
+        velas2 = [[dia(k), 100.0, 101.0, 99.0, 100.0] for k in range(60)] + [[dia(60), 100, 103, 100, 102.5], [dia(61), 102.5, 102.6, 80, 81]]
+        _, ops2 = T.simular({"XUSDT": velas2}, dia(0), dia(62), ("compra",))
+        self.assertEqual(len(ops2), 1)
+        self.assertLess(ops2[0]["R"], -0.9)
+        self.assertGreater(ops2[0]["R"], -1.3)            # perde ~1R (mais custos), não mais
