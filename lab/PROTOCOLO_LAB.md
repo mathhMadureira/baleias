@@ -243,3 +243,17 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   3. pelo menos 30 operações;
   4. maior queda < 35%;
   5. o treino também com expectativa > 0.
+
+### Resultado da H10 (2026-11-07)
+
+| Variante | Período | Op. | Ao ano | Queda máx. | Acerto | Ganho/perda médios | Expectativa | PF |
+|---|---|---|---|---|---|---|---|---|
+| Compra e venda (pré-registrada) | treino | 284 | +42,5% | −67,6% | 27% | +9,17R / −0,95R | +1,83R | 3,64 |
+| Compra e venda (pré-registrada) | teste | 154 | +11,9% | **−36,8%** | 32% | +2,77R / −0,89R | +0,30R | 1,50 |
+| Só compra (**não** pré-registrada) | treino | 160 | +47,0% | −64,9% | 22% | +18,20R / −0,98R | +3,34R | 5,40 |
+| Só compra (**não** pré-registrada) | teste | 94 | +14,6% | −32,7% | 29% | +4,33R / −0,96R | +0,56R | 1,83 |
+
+- **Pré-registrada:** **não passou**, só pela queda máxima (−36,8% contra o limite de −35%). Expectativa e PF passaram.
+- **Só compra:** cumpre todos os critérios, mas foi escolhida depois de ver os números. Vale como **hipótese nova (H10b)**, a confirmar ao vivo.
+- **H10b ao vivo:** carteira simulada de US$ 700, spot, sem alavancagem, 1% de risco por operação, a partir de 2026-11-07 (`dados/tartaruga_vivo.json`, painel /ao-vivo). Avaliação com 30 operações fechadas ou 180 dias. Passa se a expectativa for > 0 e o PF > 1,3.
+- **Para lembrar:** a queda máxima histórica de 33–65% é o preço do "ganhar muito". Com 1% de risco por operação e 10 moedas, quedas longas são esperadas.

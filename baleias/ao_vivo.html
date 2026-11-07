@@ -54,6 +54,10 @@ section h2 { font-size:12px; margin:0 0 6px; color:var(--apagado); font-weight:6
     <h2>Mapa de calor do mercado (24 h, maiores volumes em USDT)</h2>
     <div id="mercado"></div>
   </section>
+  <section id="tartaruga" style="grid-column:1 / -1">
+    <h2>🐢 Tartarugas cripto (só compra, spot, simulado) — perder pouco, ganhar muito</h2>
+    <div id="tartaruga-corpo">carregando…</div>
+  </section>
   <section id="feed">
     <h2>Eventos ao vivo</h2>
     <div id="filtros"></div>
@@ -62,7 +66,7 @@ section h2 { font-size:12px; margin:0 0 6px; color:var(--apagado); font-weight:6
   </section>
 </main>
 <script>
-const TIPOS = {leitura:"📖 leitura do mercado", carteira:"🎯 carteiras", robo:"🤖 robô", padrao:"🕯 padrões", baleia_binance:"🐳 Binance", baleia_hl:"🐋 Hyperliquid", liquidacao:"💥 liquidações"};
+const TIPOS = {tartaruga:"🐢 Tartarugas", leitura:"📖 leitura do mercado", carteira:"🎯 carteiras", robo:"🤖 robô", padrao:"🕯 padrões", baleia_binance:"🐳 Binance", baleia_hl:"🐋 Hyperliquid", liquidacao:"💥 liquidações"};
 const ligados = new Set(Object.keys(TIPOS));
 let desde = 0, calorSeq = 0, primeira = true, som = false;
 const eventos = [], calor = [];
@@ -158,7 +162,7 @@ function desenharCalor() {
   for (let k = 0; k <= 4; k++) { const p = lo + (hi - lo) * k / 4; ctx.fillText(Math.round(p).toLocaleString("pt-BR"), 4, y(p) - 2); }
 }
 
-const LIMITE_S = {binance: 30, liquidacoes: 900, hyperliquid: 60, livro: 40, robo: 30, b3: 180, leitura: 420};
+const LIMITE_S = {binance: 30, liquidacoes: 900, hyperliquid: 60, livro: 40, robo: 30, b3: 180, leitura: 420, tartaruga: 180};
 function desenharFontes(f, agora) {
   document.getElementById("fontes").replaceChildren(...Object.entries(f).map(([k, v]) => {
     const s = document.createElement("span");
@@ -189,6 +193,20 @@ async function ciclo() {
       document.getElementById("atraso").textContent = a == null ? "" : a > 3600 ? "fechado/atrasado " + Math.round(a / 3600) + " h" : "atraso " + Math.round(a / 60) + " min";
     }
     desenharFontes(d.fontes, d.agora);
+    if (d.tartaruga) {
+      const t = d.tartaruga, el = document.getElementById("tartaruga-corpo");
+      const cab = document.createElement("div");
+      const ret = (t.capital_total / t.inicial - 1) * 100;
+      cab.textContent = `Capital simulado US$ ${t.capital_total.toFixed(2)} (${ret >= 0 ? "+" : ""}${ret.toFixed(2)}% desde ${t.desde}) | ${t.abertas} posições abertas | ${t.fechadas} fechadas` +
+        (t.expectativa_R == null ? "" : ` | média ${t.expectativa_R.toFixed(2)}R por operação`);
+      const linhas = t.posicoes.map(p => {
+        const x = document.createElement("div");
+        const r = p.agora ? ((p.agora / p.entrada - 1) * 100).toFixed(2) : "?";
+        x.textContent = `• ${p.moeda}: entrada ${p.entrada}, agora ${p.agora} (${r}%), stop ${p.stop.toPrecision(6)}`;
+        return x;
+      });
+      el.replaceChildren(cab, ...linhas);
+    }
     desenharMercado(d.mercado);
     if (d.eventos.length) desenharFeed();
     if (d.calor.length || primeira) desenharCalor();

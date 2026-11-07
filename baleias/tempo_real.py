@@ -222,6 +222,7 @@ class Motor:
         self.fluxo = {"compra": 0.0, "venda": 0.0, "liq_long": 0.0, "liq_short": 0.0}
         self.livro_atual = None
         self.volumes = collections.deque(maxlen=12)
+        self.tartaruga = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -255,6 +256,7 @@ class Motor:
                 "mercado": sorted(self.mercado.values(), key=lambda x: -x["vq"])[:48],
                 "preco": self.preco,
                 "b3": self.b3,
+                "tartaruga": self.tartaruga,
                 "calor_seq": self.calor_seq,
                 "calor": list(self.calor)[-max(0, min(len(self.calor), self.calor_seq - calor_desde)):] if self.calor_seq > calor_desde else [],
             }
@@ -435,6 +437,33 @@ class Motor:
             px0 = px1
             self.fonte("leitura", True)
 
+    def _tartaruga(self):
+        """H10b ao vivo: decide no fechamento diário (00:00 UTC) e confere stops a cada minuto com o preço do mapa de mercado."""
+        from lab import tartaruga as T, tartaruga_vivo as V
+        e = V.carregar()
+        while True:
+            with self.trava:
+                precos = {f"{s}USDT": x["p"] for s, x in self.mercado.items()}
+            hoje = time.strftime("%Y-%m-%d", time.gmtime())
+            g = time.gmtime()
+            if precos and e.get("ultimo_dia") != hoje and (g.tm_hour > 0 or g.tm_min >= 2):   # uma vez por dia, mesmo se a máquina esteve parada
+                T.CACHE.unlink(missing_ok=True)       # baixa as velas diárias de novo, já com o dia que fechou
+                dados = T.baixar()
+                for ev in V.passo_diario(e, dados, precos):
+                    self.evento(ev)
+                V.salvar(e)
+            if precos:
+                evs = V.checar_stops(e, precos)
+                for ev in evs:
+                    self.evento(ev)
+                if evs:
+                    V.salvar(e)
+                with self.trava:
+                    self.tartaruga = V.resumo(e, precos) | {"posicoes": [{"moeda": m[:-4], "entrada": p["entrada"], "stop": p["stop"],
+                                                                         "agora": precos.get(m)} for m, p in e["abertas"].items()]}
+            self.fonte("tartaruga", True)
+            time.sleep(60)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -446,7 +475,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self

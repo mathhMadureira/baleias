@@ -893,3 +893,24 @@ class Tartaruga(unittest.TestCase):
         self.assertEqual(len(ops2), 1)
         self.assertLess(ops2[0]["R"], -0.9)
         self.assertGreater(ops2[0]["R"], -1.3)            # perde ~1R (mais custos), não mais
+
+
+class TartarugaVivo(unittest.TestCase):
+    def test_entra_no_rompimento_sai_no_stop_e_respeita_capital(self):
+        import datetime as dt
+        from lab import tartaruga_vivo as V
+        base = dt.date(2025, 1, 1)
+        dia = lambda k: (base + dt.timedelta(days=k)).isoformat()
+        velas = [[dia(k), 100.0, 101.0, 99.0, 100.0] for k in range(60)] + [[dia(60), 100, 106, 100, 105]]
+        e = V.novo_estado()
+        evs = V.passo_diario(e, {"XUSDT": velas}, {"XUSDT": 105.0}, agora=0)
+        self.assertEqual(len(evs), 1)
+        self.assertIn("ENTRADA COMPRA X", evs[0]["texto"])
+        p = e["abertas"]["XUSDT"]
+        self.assertAlmostEqual(p["risco_usd"], 0.01 * V.CAPITAL_INICIAL, delta=0.5)
+        self.assertLess(p["qtd"] * p["entrada"], V.CAPITAL_INICIAL)
+        evs = V.checar_stops(e, {"XUSDT": p["stop"] - 0.01}, agora=1)
+        self.assertIn("stop 2N", evs[0]["texto"])
+        self.assertLess(e["fechadas"][0]["R"], -0.95)
+        self.assertGreater(e["fechadas"][0]["R"], -1.1)
+        self.assertEqual(V.passo_diario(e, {"XUSDT": velas[:-1]}, {"XUSDT": 100.0}, agora=2), [])
