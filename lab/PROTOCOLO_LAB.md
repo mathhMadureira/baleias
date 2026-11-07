@@ -217,3 +217,29 @@ O tradutor do painel ao vivo grava a cada 5 min, para o BTC na Binance, o volume
 
 - **Treino:** a validação só ficou abaixo de "prever zero" na época 2 (0,31156 contra 0,31240), por 0,3%, e o treino parou na época 5.
 - **Teste (2024–2026, ~100 mil velas):** a rede previu pior que zero nos três prazos, com o intervalo inteiro abaixo de 0. É o mesmo resultado do Chronos e da regressão de minutos: o histórico de preço e volume de 15 min do BTC não carrega informação que uma rede recorrente consiga extrair a ponto de pagar o custo.
+
+## Hipótese 10: Tartarugas em cripto, perder pouco e ganhar muito (pré-registrada em 2026-11-07, antes de rodar)
+
+Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diário:
+
+- **Universo:** BTC, ETH, BNB, XRP, ADA, DOGE, LTC, LINK, TRX e SOL, em velas diárias da Binance desde a listagem.
+- **Volatilidade:** N = ATR de 20 dias (média de Wilder do *true range*).
+- **Entrada comprada:** fechamento acima da máxima dos 55 dias anteriores. **Entrada vendida:** fechamento abaixo da mínima dos 55 dias anteriores. Executa na abertura do dia seguinte.
+- **Stop inicial:** 2N contra a posição. É a perda pequena, sempre igual a 1R.
+- **Saída:** comprado sai quando fecha abaixo da mínima de 20 dias; vendido, acima da máxima de 20 dias. Executa na abertura seguinte. É o que deixa o vencedor correr.
+- **Tamanho:** risco de 1% do capital por posição (nocional = 1% × capital ÷ 2N × preço), uma posição por moeda, alavancagem total limitada a 3×.
+- **Custos:**
+  - 0,10% por lado;
+  - 0,02% ao dia sobre o nocional, para os dois lados (financiamento/funding);
+  - se o stop é furado na abertura, sai pela abertura.
+- **Períodos:** treino de 2018 a 2023, teste de 2024-01-01 até hoje. (Atenção: parte do teste coincide com o cofre da H1, aberto em 2024-11-06, que já mostrou tendência positiva em cripto.)
+- **Métricas:**
+  - retorno anual, maior queda, % de acertos;
+  - ganho médio e perda média em R, expectativa em R, *profit factor*;
+  - % de meses positivos e o pior mês.
+- **Passa** se cumprir no teste:
+  1. expectativa > 0,2R;
+  2. *profit factor* > 1,3;
+  3. pelo menos 30 operações;
+  4. maior queda < 35%;
+  5. o treino também com expectativa > 0.
