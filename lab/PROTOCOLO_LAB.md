@@ -184,3 +184,25 @@ O tradutor do painel ao vivo grava a cada 5 min, para o BTC na Binance, o volume
 - **Medida:** regressão fora da amostra (prequencial), como na pesquisa de minutos, com o R² comparado contra prever zero. Também uma regra simples: seguir o sinal do saldo, com custo de 0,2% na ida e volta.
 - **Avaliação:** com 2000 janelas (~7 dias contínuos). Passa se o R² fora da amostra for maior que 0 com intervalo que não inclua 0 **e** a regra simples der lucro depois do custo.
 - **Enquanto não passar:** as leituras são só descrição, não sinal de entrada.
+
+## Hipótese 8: rede recorrente com memória de longo prazo (LSTM) no BTC (pré-registrada em 2026-11-07, antes de treinar)
+
+- **Dados:** BTCUSDT da Binance, velas de 15 min de 2020 até hoje (o mesmo cache da H6).
+- **Entrada:** sequência das últimas 64 velas (16 h). Por vela: retorno, faixa máxima−mínima, corpo, log do volume relativo à média de 96 velas, hora do dia (seno/cosseno) e os 19 padrões da H6 como 0/1.
+- **Alvo:** retorno das próximas 1, 4 e 16 velas (15 min, 1 h, 4 h), uma saída para cada.
+- **Rede:** LSTM de 2 camadas e 32 unidades, com dropout 0,2, treinada com Adam e erro quadrático, pouca memória porque a máquina tem 3 GB.
+- **Divisão no tempo, sem embaralhar:**
+  - treino: 2020 a 2022;
+  - validação: 2023, usada só para parar o treino cedo;
+  - teste: 2024 até hoje, aberto uma única vez.
+- **Comparações:** prever zero, e regressão linear com as mesmas entradas da última vela.
+- **Passa** se, no teste, cumprir as três condições:
+  1. R² fora da amostra > 0, com intervalo bootstrap por blocos de 95% acima de 0;
+  2. acerto de direção > 50%, com o intervalo de Wilson acima de 50%;
+  3. a regra "operar só quando |previsão| > 0,2%, no sentido previsto" dar lucro depois de 0,2% de custo, com pelo menos 100 operações.
+
+## Hipótese 9: tom das notícias (PLN do GDELT) antecipa o BTC? (pré-registrada em 2026-11-07, antes de baixar)
+
+- **Dados:** o "Average Tone" do GDELT para a busca "bitcoin" (sentimento calculado pelo GDELT sobre notícias do mundo todo), a cada 15 min, nos últimos ~3 meses (a API só guarda isso). Baixado em janelas de 2 dias, com 6 s entre pedidos.
+- **Medidas:** o tom e a variação dele em 1 h (4 pontos) contra o retorno do BTC nos próximos 15 min, 1 h e 4 h. Correlação com estatística t, treino na primeira metade e teste na segunda.
+- **Passa** com o mesmo sinal nas duas metades, |t| > 3,2 no treino e > 2 no teste, **e** a regra (comprar se o tom subir, vender se cair) dando lucro depois de 0,2%.
