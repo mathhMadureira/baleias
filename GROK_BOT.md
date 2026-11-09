@@ -10,7 +10,7 @@ O Grok Bot (xAI) tem um computador próprio na nuvem, com terminal e arquivos, e
 ## 1. Instalação (cole no chat do Grok Bot, uma vez)
 
 ```
-No seu computador na nuvem: clone o repositório privado <URL do repositório> em /workspace/baleias
+No seu computador na nuvem: clone o repositório privado https://github.com/mathhMadureira/baleias em /workspace/baleias
 (use a minha conexão do GitHub). Depois rode:
 cd /workspace/baleias && python3 --version && python3 -m unittest tests.test_baleias
 Me diga quantos testes passaram. Não instale nenhum pacote: o projeto só usa a biblioteca padrão do Python.
