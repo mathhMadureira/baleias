@@ -117,5 +117,12 @@
   "resultado": "Não passou (1 h positivo mas fraco em 2024; 4 h zerou em 2025+)",
   "numero": "1 h: +0,10R (2024) e +0,22R (2025+), quedas −55% a −65%",
   "status": "reprovada"
+ },
+ {
+  "id": "H13 Teto de posições",
+  "pergunta": "No máximo 6 posições abertas (moedas andam juntas)",
+  "resultado": "Não passou por 0,01 de Calmar no teste; queda caiu nos dois períodos",
+  "numero": "queda treino −65% → −35%; teste −42% → −39%",
+  "status": "parcial"
  }
 ]

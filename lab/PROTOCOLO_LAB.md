@@ -311,3 +311,21 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **1 h:** positivo por operação nos dois períodos, mas fraco em 2024, e as quedas no caminho são enormes.
 - **Nenhum combina** expectativa > 0,2R e PF > 1,3 nos dois períodos. O robô rápido continua como demonstração ao vivo (1 h, sem filtro). O real segue só no diário.
 - **15 min:** pendente (download em andamento).
+
+## Hipótese 13: teto de posições abertas (pré-registrada em 2026-11-09, antes de rodar)
+
+- **Motivo:** as moedas são muito correlacionadas, então N posições de 1R funcionam quase como uma posição de N R. As Tartarugas originais limitavam as unidades abertas em mercados correlacionados.
+- **Regra:** H10b (só compra, 1×, 33 moedas), com no máximo **6 posições abertas ao mesmo tempo**. Quando há mais sinais que vagas, entram as primeiras da ordem de varredura, sem escolha pelos dados.
+- **Períodos:** treino 2018–2023 e teste 2024–hoje, no robô diário.
+- **Passa** se, nos dois períodos, a maior queda for menor que a da base **e** o Calmar (retorno anual ÷ maior queda) for maior que o da base. Se passar, o robô diário e o rápido adotam o teto.
+
+### Resultado da H13 (2026-11-09): não passou, por 0,01 de Calmar no teste
+
+| | Treino 2018–23 | Teste 2024–hoje |
+|---|---|---|
+| Base | +56,3%/ano, queda −64,6%, Calmar 0,87, +2,62R, pior mês −23,7% | +26,3%/ano, queda −41,9%, Calmar 0,63, +0,56R, pior mês −20,4% |
+| Teto 6 | +51,0%/ano, queda **−34,6%**, Calmar **1,47**, +2,36R, pior mês −16,2% | +23,8%/ano, queda −38,5%, Calmar **0,62**, +0,74R, pior mês −14,0% |
+
+- **O que melhorou:** a queda caiu nos dois períodos (no treino, quase pela metade). Expectativa, PF e pior mês melhoraram no teste.
+- **Por que não passou:** o Calmar do teste ficou 0,01 abaixo da base, e o critério pedia Calmar maior nos dois períodos. Não passou, e o robô continua sem teto.
+- **Próximo passo:** a evidência a favor do teto vira candidata a validação **ao vivo**, em paralelo, sem mexer no robô oficial.

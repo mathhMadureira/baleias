@@ -6,7 +6,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 
 1. **[H12 — feito, não passou; falta 15 min]** Custo em R nas velas curtas. Em 1 h o stop 2N fica a ~0,3% do preço e o custo de ida e volta é 0,2% (≈0,67R por operação). Testar um filtro derivado da matemática, não dos dados: só entrar se custo ≤ 0,1R, ou seja, 2N/preço ≥ 2%. Medir em 4 h, 1 h e 15 min, em 2024 e em 2025–hoje.
 2. **Robô rápido ao vivo:** depois do H12, escolher o intervalo e o filtro pelo resultado, sem achismo.
-3. **[H13] Risco total máximo:** as 33 moedas andam juntas, então 10 posições valem quase uma aposta só. Testar um teto de risco aberto (ex.: 6R) para reduzir a queda máxima de −42%.
+3. **[H13 — feito: não passou por 0,01 de Calmar; candidato a teste ao vivo em paralelo]** Risco total máximo: as 33 moedas andam juntas, então 10 posições valem quase uma aposta só. Testar um teto de risco aberto (ex.: 6R) para reduzir a queda máxima de −42%.
 4. **Universo dinâmico:** trocar a lista fixa de 33 moedas (que tem viés de sobrevivência) por "as 40 de maior volume dos últimos 30 dias", recalculada todo mês, e medir de novo.
 5. **Dinheiro real:** o dono grava a chave (`python3 -m executor.configurar_chave` no Terminal do Ubuntu) e roda `python3 -m executor.verificar`. Depois:
    - sincronizar o estado com o saldo real da corretora ao ligar (se houver posição na corretora que o robô não conhece, avisar);
