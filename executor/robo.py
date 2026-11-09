@@ -159,8 +159,9 @@ def rodar():
     else:
         print("modo SIMULADO (preços reais da Binance, sem ordens)", flush=True)
     c = abrir()
-    if os.environ.get("ROBO_NUVEM") == "1":
-        # O robô de verdade roda no GitHub Actions (uma vez por dia); aqui só espelha o estado para o painel.
+    if os.environ.get("ROBO_NUVEM") == "1" and not real():
+        # Simulado: o robô roda no GitHub Actions (uma vez por dia); aqui só espelha o estado para o painel.
+        # Real: roda sempre aqui (IP do Brasil, aceito pela Binance), com o stop guardado na corretora.
         from . import espelho
         from baleias import saude
         for msg in espelho.rodar(b):

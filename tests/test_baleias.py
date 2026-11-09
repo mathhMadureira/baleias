@@ -958,3 +958,18 @@ class StopsPerdidos(unittest.TestCase):
         self.assertEqual(e["fechadas"][0]["saida"], 90.0)
         self.assertIn("máquina desligada", X.EVENTOS.read_text())
         self.assertAlmostEqual(e["caixa"], 700 + 0.5 * 90 * (1 - 0.001))
+
+
+class BotaoParada(unittest.TestCase):
+    def test_parar_bloqueia_entradas(self):
+        from executor import tartaruga_exec as X
+        d = pathlib.Path(__import__("tempfile").mkdtemp())
+        antes = X.PARAR
+        self.addCleanup(setattr, X, "PARAR", antes)
+        X.EVENTOS, X.PARAR = d / "ev.jsonl", d / "PARAR"
+        X.PARAR.touch()
+        e = X.novo_estado(700)
+        velas = RoboTartaruga._velas(None, [[100, 106, 100, 105]])
+        X.passo_diario(e, X.Simulada(None, e), {"XUSDT": velas}, {"XUSDT": 105.0})
+        self.assertEqual(e["abertas"], {})
+        self.assertIn("parada", X.EVENTOS.read_text())

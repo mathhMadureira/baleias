@@ -9,11 +9,13 @@ Estado em dados/robo_tartaruga.json; cada decisão vira uma linha em dados/robo_
 import json
 import os
 import time
+from pathlib import Path
 
 from baleias import config
 from lab import tartaruga as T
 
 ESTADO = config.RAIZ / "robo_tartaruga.json"
+PARAR = Path(__file__).resolve().parent.parent / "PARAR"   # botão de parada (o mesmo do robô antigo): com este arquivo, nenhuma entrada nova (stops e saídas continuam)
 EVENTOS = config.RAIZ / "robo_eventos.jsonl"
 CAPITAL_SIMULADO = float(os.environ.get("TARTARUGA_CAPITAL", "700"))
 RISCO = float(os.environ.get("TARTARUGA_RISCO", "0.01"))
@@ -161,6 +163,10 @@ def passo_diario(e, corretora, dados, precos):
         if vs and len(vs) > T.SAIDA and T.saida_canal(vs, len(vs) - 1, "compra"):
             eventos.append(_sair(e, corretora, m, "fechou abaixo da mínima de 20 dias", precos.get(m)))
     total = patrimonio(e, precos, corretora)
+    if PARAR.exists():
+        eventos.append(registrar("🛑 Botão de parada ligado (arquivo PARAR): nenhuma entrada nova hoje; stops e saídas seguem normais"))
+        e["ultimo_dia"] = time.strftime("%Y-%m-%d", time.gmtime())
+        return eventos
     for m, vs in dados.items():
         if m in e["abertas"] or m not in precos or len(vs) <= T.ENTRADA:
             continue
