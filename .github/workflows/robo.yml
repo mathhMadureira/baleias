@@ -46,6 +46,7 @@ jobs:
           BINANCE_BASE: https://data-api.binance.vision
           BINANCE_DADOS: https://data-api.binance.vision
         run: |
+          set -o pipefail
           python -m executor.diario | tee resumo.txt
           { echo '```'; cat resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 

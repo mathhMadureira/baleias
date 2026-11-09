@@ -47,6 +47,7 @@ def baixar(moedas=None, cache=None, dias=None):
             t = lote[-1][0] + 86_400_000
             time.sleep(0.2)
         saida[m] = velas[:-1]          # o dia de hoje ainda está aberto
+    cache.parent.mkdir(parents=True, exist_ok=True)
     cache.write_text(json.dumps(saida))
     return saida
 
