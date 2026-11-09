@@ -7,7 +7,7 @@ from baleias import config
 
 from . import tartaruga as T
 
-INTERVALOS = {"4h": 6, "1h": 24, "15m": 96}          # velas por dia
+INTERVALOS = {"4h": 6, "1h": 24, "15m": 96, "5m": 288}          # velas por dia
 
 
 def baixar(intervalo, inicio_ms=1_704_067_200_000):

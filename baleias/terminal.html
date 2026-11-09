@@ -115,8 +115,9 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="ra-pat">—</div><div class="sub" id="ra-ret">—</div></div>
       <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="ra-npos">—</div><div class="sub" id="ra-res">—</div></div>
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="ra-ops">—</div><div class="sub" id="ra-ops-s">—</div></div>
+      <div class="kpi"><div class="rot">Hoje (teto de perda)</div><div class="val num" id="ra-hoje">—</div><div class="sub" id="ra-hoje-s">—</div></div>
       <div class="kpi"><div class="rot">Próxima vela fecha em</div><div class="val num" id="ra-prox">—</div><div class="sub" id="ra-ult">—</div></div>
-      <div class="kpi" style="grid-column:span 2"><div class="rot">Mais perto de entrar</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
+      <div class="kpi"><div class="rot">Mais perto de entrar</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:10px;margin:4px 0 6px">
       <b id="ra-g-titulo" class="num">—</b><span class="mut num" id="ra-g-info" style="font-size:12px"></span>
@@ -129,7 +130,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
     </div>
-    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas de 1 h, para você ver operando no dia. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
+    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Para de abrir posições se perder US$ 100 no dia. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="k-pat">—</div><div class="sub" id="k-pat-s">—</div></div>
@@ -540,6 +541,8 @@ async function cicloRapido() {
       $("ra-ret").textContent = pct(ret, 2) + " desde " + ra.inicio.split("-").reverse().join("/");
       const aberto = ra.posicoes.reduce((s, p) => s + p.resultado, 0);
       $("ra-npos").textContent = ra.posicoes.length; $("ra-res").textContent = ra.posicoes.length ? `aberto ${aberto >= 0 ? "+" : ""}US$ ${fmt(aberto)}` : "esperando rompimento";
+      $("ra-hoje").textContent = (ra.resultado_hoje >= 0 ? "+" : "") + "US$ " + fmt(ra.resultado_hoje); $("ra-hoje").className = "val num " + cor(ra.resultado_hoje);
+      $("ra-hoje-s").textContent = ra.travado ? "🛑 teto atingido: sem novas entradas hoje" : `para em −US$ ${fmt(ra.limite_dia, 0)} no dia`;
       $("ra-ops").textContent = ra.operacoes; $("ra-ops-s").textContent = ra.operacoes ? `acerto ${fmt(ra.acerto * 100, 0)}% · ${fmt(ra.media_R)}R/op` : "nenhuma ainda";
       $("ra-ult").textContent = ra.ultima_vela ? "última decisão " + ra.ultima_vela.slice(11) + " UTC" : "";
       $("ra-radar").textContent = ra.radar.length ? ra.radar.map(r => `${r.moeda} ${r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%"}`).join(" · ") : "carregando velas…";
@@ -548,7 +551,7 @@ async function cicloRapido() {
         : `<div class="vazio">Nenhuma posição aberta agora.</div>`;
       $("ra-ev").replaceChildren(...(ra.eventos.length ? ra.eventos.map(x => { const d = document.createElement("div"); d.style.padding = "4px 0"; d.style.borderBottom = "1px solid var(--line)";
         d.className = x.texto.includes("ENTROU") ? "" : /: \+/.test(x.texto) ? "up" : x.texto.includes("SAIU") ? "down" : "mut";
-        d.textContent = new Date(x.t * 1000).toLocaleTimeString("pt-BR") + "  " + x.texto.replace("⚡ ", ""); return d; }) : [Object.assign(document.createElement("div"), {className: "vazio", textContent: "Sem operações ainda. A cada vela de 1 h fechada ele decide."})]));
+        d.textContent = new Date(x.t * 1000).toLocaleTimeString("pt-BR") + "  " + x.texto.replace("⚡ ", ""); return d; }) : [Object.assign(document.createElement("div"), {className: "vazio", textContent: "Sem operações ainda. A cada vela fechada ele decide."})]));
       const ids = new Set(ra.eventos.map(x => x.t + x.texto));
       if (raVistos) for (const x of ra.eventos) if (!raVistos.has(x.t + x.texto)) {
         bip(x.texto.includes("SAIU") && !/: \+/.test(x.texto) ? 330 : 880);
