@@ -1,6 +1,7 @@
 """Hipótese 10: Tartarugas (Sistema 2) em cripto diário — perder pouco (stop 2N) e ganhar muito (saída só no canal de 20 dias)."""
 import json
 import math
+import os
 import statistics as st
 import time
 import urllib.request
@@ -9,11 +10,15 @@ from baleias import config
 
 MOEDAS = ["BTCUSDT", "ETHUSDT", "BNBUSDT", "XRPUSDT", "ADAUSDT", "DOGEUSDT", "LTCUSDT", "LINKUSDT", "TRXUSDT", "SOLUSDT"]
 CACHE = config.RAIZ / "lab" / "cripto_ohlc_diario.json"
+# Dados públicos: em nuvem dos EUA a api.binance.com bloqueia; data-api.binance.vision serve os mesmos dados de mercado.
+DADOS = os.environ.get("BINANCE_DADOS", "https://api.binance.com")
 # H10c: as mesmas regras confirmadas em 23 moedas que nunca tinham sido testadas (2026-11-07); o robô opera as 33.
 MOEDAS_ROBO = MOEDAS + ["AAVEUSDT", "ARBUSDT", "AVAXUSDT", "BCHUSDT", "CELOUSDT", "CYBERUSDT", "ENAUSDT", "FETUSDT", "GTCUSDT",
                         "HBARUSDT", "INJUSDT", "LSKUSDT", "NEARUSDT", "NFPUSDT", "ONEUSDT", "PEPEUSDT", "QNTUSDT", "SUIUSDT",
                         "TAOUSDT", "UNIUSDT", "WLDUSDT", "XLMUSDT", "ZECUSDT"]
-CACHE_ROBO = config.RAIZ / "lab" / "cripto_ohlc_robo.json"
+CACHE_ROBO = config.RAIZ / "lab" / "cripto_ohlc_robo.json"      # histórico completo (curva do teste)
+CACHE_VIVO = config.RAIZ / "lab" / "cripto_ohlc_vivo.json"      # últimos 320 dias (decisão diária e gráfico)
+DIAS_VIVO = 320
 ENTRADA, SAIDA, N_DIAS = 55, 20, 20
 STOP_N = 2.0
 RISCO = 0.01
@@ -23,15 +28,16 @@ CUSTO_DIA = 0.0002
 INICIO_TREINO, INICIO_TESTE = "2018-01-01", "2024-01-01"
 
 
-def baixar(moedas=None, cache=None):
+def baixar(moedas=None, cache=None, dias=None):
+    """`dias`: só os últimos N dias (a decisão diária precisa de ~80; baixar desde 2017 leva ~24 s por moeda)."""
     moedas, cache = moedas or MOEDAS, cache or CACHE
     if cache.exists():
         return json.loads(cache.read_text())
     saida = {}
     for m in moedas:
-        velas, t = [], 1_500_000_000_000
+        velas, t = [], (int(time.time() * 1000) - dias * 86_400_000) if dias else 1_500_000_000_000
         while True:
-            with urllib.request.urlopen(f"https://api.binance.com/api/v3/klines?symbol={m}&interval=1d&startTime={t}&limit=1000", timeout=30) as r:
+            with urllib.request.urlopen(f"{DADOS}/api/v3/klines?symbol={m}&interval=1d&startTime={t}&limit=1000", timeout=30) as r:
                 lote = json.load(r)
             if not lote:
                 break

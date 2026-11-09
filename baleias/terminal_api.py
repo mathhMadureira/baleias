@@ -55,7 +55,7 @@ def velas(moeda, dias=200):
     """Velas diárias da moeda com os canais da estratégia (entrada: máxima de 55; saída: mínima de 20) e as operações do robô nela."""
     from lab import tartaruga as T
     try:
-        dados = json.loads(T.CACHE_ROBO.read_text())
+        dados = json.loads(T.CACHE_VIVO.read_text())
     except (OSError, ValueError):
         return {"erro": "sem dados ainda"}
     m = moeda.upper() + "USDT"
@@ -80,10 +80,9 @@ def velas(moeda, dias=200):
 
 def _calcular_backtest():
     from lab import tartaruga as T
-    try:
-        dados = json.loads(T.CACHE_ROBO.read_text())
-    except (OSError, ValueError):
-        return
+    if not T.CACHE_ROBO.exists() or time.time() - T.CACHE_ROBO.stat().st_mtime > 7 * 86400:
+        T.CACHE_ROBO.unlink(missing_ok=True)          # histórico completo: renova uma vez por semana
+    dados = T.baixar(T.MOEDAS_ROBO, T.CACHE_ROBO)
     curva, ops = T.simular(dados, "2024-01-01", time.strftime("%Y-%m-%d"), ("compra",), alav_max=1.0)
     m = T.metricas(curva, ops)
     dias = sorted(curva)

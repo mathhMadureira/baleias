@@ -135,8 +135,27 @@ def radar(dados, precos):
     return sorted(saida, key=lambda x: x["falta_pct"])
 
 
-def passo_diario(e, corretora, dados, precos):
+def stops_perdidos(e, corretora, dados):
+    """Simulado: se a máquina ficou desligada, confere nas velas diárias fechadas se a mínima tocou o stop (como no teste histórico).
+    Sai no stop, ou na abertura se o dia já abriu abaixo dele. No real o stop está na corretora e isto não é usado."""
     eventos = []
+    if corretora.real:
+        return eventos
+    for m in list(e["abertas"]):
+        p = e["abertas"][m]
+        visto = p.get("conferido_ate") or time.strftime("%Y-%m-%d", time.gmtime(p["entrada_t"]))
+        for d, o, h, l, c in dados.get(m, []):
+            if d <= visto:
+                continue
+            if l <= p["stop"]:
+                eventos.append(_sair(e, corretora, m, "stop 2N (atingido com a máquina desligada)", min(o, p["stop"]), ja_vendido=min(o, p["stop"])))
+                break
+            p["conferido_ate"] = d
+    return eventos
+
+
+def passo_diario(e, corretora, dados, precos):
+    eventos = stops_perdidos(e, corretora, dados)
     for m in list(e["abertas"]):
         vs = dados.get(m)
         if vs and len(vs) > T.SAIDA and T.saida_canal(vs, len(vs) - 1, "compra"):
@@ -191,11 +210,11 @@ def rodar(cliente, real=False):
             precos_ok = precos
             g = time.gmtime()
             if e.get("ultimo_dia") != time.strftime("%Y-%m-%d", g) and (g.tm_hour > 0 or g.tm_min >= 2):
-                T.CACHE_ROBO.unlink(missing_ok=True)
-                dados = T.baixar(T.MOEDAS_ROBO, T.CACHE_ROBO)
+                T.CACHE_VIVO.unlink(missing_ok=True)
+                dados = T.baixar(T.MOEDAS_ROBO, T.CACHE_VIVO, T.DIAS_VIVO)
                 passo_diario(e, corretora, dados, precos)
             elif dados is None:
-                dados = T.baixar(T.MOEDAS_ROBO, T.CACHE_ROBO)
+                dados = T.baixar(T.MOEDAS_ROBO, T.CACHE_VIVO, T.DIAS_VIVO)
             checar_stops(e, corretora, precos)
             e["radar"] = radar(dados, precos)
             e["patrimonio"] = patrimonio(e, precos, corretora)

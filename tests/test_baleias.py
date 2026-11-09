@@ -943,3 +943,18 @@ class RoboTartaruga(unittest.TestCase):
         X.passo_diario(e, r, {"XUSDT": velas2}, {"XUSDT": 80.0})
         self.assertEqual([c[0] for c in chamadas][-2:], ["cancela", "venda"])
         self.assertEqual(e["abertas"], {})
+
+
+class StopsPerdidos(unittest.TestCase):
+    def test_stop_atingido_com_a_maquina_desligada(self):
+        from executor import tartaruga_exec as X
+        X.EVENTOS = pathlib.Path(__import__("tempfile").mkdtemp()) / "ev.jsonl"
+        e = X.novo_estado(700)
+        e["abertas"]["XUSDT"] = {"moeda": "XUSDT", "entrada": 100.0, "qtd": 0.5, "stop": 90.0, "ordem_stop": None, "N": 5.0,
+                                 "entrada_t": 1735689600, "gasto": 50.0, "risco_usd": 5.0}       # 2025-01-01
+        dados = {"XUSDT": [["2025-01-02", 100, 104, 95, 99], ["2025-01-03", 92, 93, 85, 86], ["2025-01-04", 86, 88, 80, 81]]}
+        X.stops_perdidos(e, X.Simulada(None, e), dados)
+        self.assertEqual(e["abertas"], {})
+        self.assertEqual(e["fechadas"][0]["saida"], 90.0)
+        self.assertIn("máquina desligada", X.EVENTOS.read_text())
+        self.assertAlmostEqual(e["caixa"], 700 + 0.5 * 90 * (1 - 0.001))
