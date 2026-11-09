@@ -13,6 +13,7 @@ agrupados para não estourar o limite de mensagens. Padrões de vela vêm com a 
 """
 import collections
 import json
+import os
 import threading
 import time
 import urllib.request
@@ -223,6 +224,7 @@ class Motor:
         self.livro_atual = None
         self.volumes = collections.deque(maxlen=12)
         self.tartaruga = None
+        self.rapido = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -471,6 +473,70 @@ class Motor:
             self.fonte("tartaruga", True)
             time.sleep(5)
 
+    def _velas_rapidas(self, intervalo, moedas):
+        """Últimas 80 velas FECHADAS de cada moeda (a vela em andamento fica de fora)."""
+        from lab import tartaruga as T
+        saida, agora_ms = {}, time.time() * 1000
+        for m in moedas:
+            try:
+                with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=81", timeout=20) as r:
+                    k = json.load(r)
+            except OSError:
+                continue
+            saida[m] = [[time.strftime("%Y-%m-%d %H:%M", time.gmtime(x[0] / 1000)), float(x[1]), float(x[2]), float(x[3]), float(x[4])]
+                        for x in k if x[6] < agora_ms]
+            time.sleep(0.05)
+        return saida
+
+    def _robo_rapido(self):
+        """Teste ao vivo, simulado: as mesmas regras da Tartaruga em velas curtas (ROBO_RAPIDO=1h por padrão), para operar no dia.
+        Decide a cada vela fechada; stop conferido a cada 5 s com o preço ao vivo. Não usa dinheiro real."""
+        from lab import tartaruga as T
+        from executor import tartaruga_exec as X
+        intervalo = os.environ.get("ROBO_RAPIDO", "1h")
+        passo = {"15m": 900, "1h": 3600, "4h": 14400}[intervalo]
+        arq = config.RAIZ / f"robo_rapido_{intervalo}.json"
+        e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(700.0)
+        e.setdefault("eventos", [])
+        corretora = X.Simulada(None, e)
+
+        def ouvir(linha):
+            texto = "⚡ " + linha["texto"].replace("🐢 Robô ", "Robô rápido ").replace(" [simulado]", "")
+            e["eventos"] = ([{"t": linha["t"], "texto": texto}] + e["eventos"])[:100]
+            self.evento({"tipo": "rapido", "texto": texto, "notificar": True})
+        X.ouvinte = ouvir                       # neste processo o tartaruga_exec só é usado pelo robô rápido
+        dados = {}
+        while True:
+            with self.trava:
+                precos = {f"{s}USDT": x["p"] for s, x in self.mercado.items()}
+            agora = time.time()
+            ultima_fechada = time.strftime("%Y-%m-%d %H:%M", time.gmtime(agora - agora % passo - passo))
+            if precos and e.get("ultima_vela") != ultima_fechada and agora % passo > 15:
+                dados = self._velas_rapidas(intervalo, T.MOEDAS_ROBO)
+                X.passo_diario(e, corretora, dados, precos)
+                for p in e["abertas"].values():
+                    p.setdefault("conferido_ate", ultima_fechada)
+                e["ultima_vela"] = ultima_fechada
+            if precos:
+                X.checar_stops(e, corretora, precos)
+                e["patrimonio"] = X.patrimonio(e, precos, corretora)
+                if dados:
+                    e["radar"] = X.radar(dados, precos)
+                tmp = arq.with_suffix(".tmp")
+                tmp.write_text(json.dumps(e))
+                tmp.replace(arq)
+                rs = [f["R"] for f in e["fechadas"]]
+                with self.trava:
+                    self.rapido = {"intervalo": intervalo, "patrimonio": e["patrimonio"], "inicio": e["inicio"], "ultima_vela": e.get("ultima_vela"),
+                                   "proxima": agora - agora % passo + passo + 15,
+                                   "posicoes": [{"moeda": m[:-4], "entrada": p["entrada"], "stop": p["stop"], "preco": precos.get(m),
+                                                 "resultado": p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"]} for m, p in e["abertas"].items()],
+                                   "operacoes": len(rs), "acerto": sum(r > 0 for r in rs) / len(rs) if rs else None,
+                                   "media_R": sum(rs) / len(rs) if rs else None, "eventos": e["eventos"][:30],
+                                   "radar": e.get("radar", [])[:8]}
+            self.fonte("rapido", True)
+            time.sleep(5)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -482,7 +548,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self

@@ -108,6 +108,22 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 
 <main>
 <section class="aba ativa" id="aba-robo">
+  <div class="card" style="margin-bottom:14px;border-color:#f0b90b55">
+    <h3>⚡ Teste ao vivo — robô rápido (velas de <span id="ra-iv">1 h</span>, simulado, US$ 700)
+      <span class="dir"><button id="ra-notif" class="selo" style="cursor:pointer;background:var(--card2);color:var(--txt)">🔔 avisar no navegador</button></span></h3>
+    <div class="kpis" style="margin-bottom:10px">
+      <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="ra-pat">—</div><div class="sub" id="ra-ret">—</div></div>
+      <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="ra-npos">—</div><div class="sub" id="ra-res">—</div></div>
+      <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="ra-ops">—</div><div class="sub" id="ra-ops-s">—</div></div>
+      <div class="kpi"><div class="rot">Próxima vela fecha em</div><div class="val num" id="ra-prox">—</div><div class="sub" id="ra-ult">—</div></div>
+      <div class="kpi" style="grid-column:span 2"><div class="rot">Mais perto de entrar</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
+    </div>
+    <div class="grade g-dupla">
+      <div><div id="ra-pos"></div></div>
+      <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
+    </div>
+    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas de 1 h, para você ver operando no dia. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
+  </div>
   <div class="kpis">
     <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="k-pat">—</div><div class="sub" id="k-pat-s">—</div></div>
     <div class="kpi"><div class="rot">Resultado</div><div class="val num" id="k-res">—</div><div class="sub" id="k-res-s">—</div></div>
@@ -490,6 +506,41 @@ $("rp-vel").onchange = () => { if (rpTimer) { pararReplay(); $("rp-play").onclic
 $("rp-zero").onclick = () => zerarReplay();
 let som = false, audio;
 function bip(f) { try { audio = audio || new AudioContext(); const o = audio.createOscillator(), g = audio.createGain(); o.frequency.value = f; g.gain.value = 0.05; o.connect(g).connect(audio.destination); o.start(); o.stop(audio.currentTime + 0.08); } catch (e) {} }
+
+// ---------- robô rápido ----------
+let ra = null, raVistos = null;
+$("ra-notif").onclick = async () => { if ("Notification" in window) { const r = await Notification.requestPermission(); $("ra-notif").textContent = r === "granted" ? "🔔 avisos ligados" : "🔕 bloqueado"; } };
+async function cicloRapido() {
+  try {
+    ra = await j("/api/rapido");
+    if (!ra.carregando) {
+      $("ra-iv").textContent = ra.intervalo;
+      const ret = (ra.patrimonio / 700 - 1) * 100;
+      $("ra-pat").textContent = "US$ " + fmt(ra.patrimonio); $("ra-pat").className = "val num " + cor(ret);
+      $("ra-ret").textContent = pct(ret, 2) + " desde " + ra.inicio.split("-").reverse().join("/");
+      const aberto = ra.posicoes.reduce((s, p) => s + p.resultado, 0);
+      $("ra-npos").textContent = ra.posicoes.length; $("ra-res").textContent = ra.posicoes.length ? `aberto ${aberto >= 0 ? "+" : ""}US$ ${fmt(aberto)}` : "esperando rompimento";
+      $("ra-ops").textContent = ra.operacoes; $("ra-ops-s").textContent = ra.operacoes ? `acerto ${fmt(ra.acerto * 100, 0)}% · ${fmt(ra.media_R)}R/op` : "nenhuma ainda";
+      $("ra-ult").textContent = ra.ultima_vela ? "última decisão " + ra.ultima_vela.slice(11) + " UTC" : "";
+      $("ra-radar").textContent = ra.radar.length ? ra.radar.map(r => `${r.moeda} ${r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%"}`).join(" · ") : "carregando velas…";
+      $("ra-pos").innerHTML = ra.posicoes.length ? `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Stop</th><th>Resultado</th></tr></thead><tbody>${
+        ra.posicoes.map(p => `<tr><td>${p.moeda}</td><td>${px(p.entrada)}</td><td>${px(p.preco)}</td><td>${px(p.stop)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado)}</td></tr>`).join("")}</tbody></table>`
+        : `<div class="vazio">Nenhuma posição aberta agora.</div>`;
+      $("ra-ev").replaceChildren(...(ra.eventos.length ? ra.eventos.map(x => { const d = document.createElement("div"); d.style.padding = "4px 0"; d.style.borderBottom = "1px solid var(--line)";
+        d.className = x.texto.includes("ENTROU") ? "" : /: \+/.test(x.texto) ? "up" : x.texto.includes("SAIU") ? "down" : "mut";
+        d.textContent = new Date(x.t * 1000).toLocaleTimeString("pt-BR") + "  " + x.texto.replace("⚡ ", ""); return d; }) : [Object.assign(document.createElement("div"), {className: "vazio", textContent: "Sem operações ainda. A cada vela de 1 h fechada ele decide."})]));
+      const ids = new Set(ra.eventos.map(x => x.t + x.texto));
+      if (raVistos) for (const x of ra.eventos) if (!raVistos.has(x.t + x.texto)) {
+        bip(x.texto.includes("SAIU") && !/: \+/.test(x.texto) ? 330 : 880);
+        if ("Notification" in window && Notification.permission === "granted") new Notification("Robô rápido", {body: x.texto.replace("⚡ ", "")});
+      }
+      raVistos = ids;
+    }
+  } catch (e) {}
+  setTimeout(cicloRapido, 5000);
+}
+setInterval(() => { if (ra && ra.proxima) { let s = Math.max(0, Math.round(ra.proxima - Date.now() / 1000)); const m = Math.floor(s / 60); s -= m * 60; $("ra-prox").textContent = `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`; } }, 1000);
+cicloRapido();
 
 setInterval(relogio, 1000); relogio();
 window.addEventListener("resize", desenharTudo);
