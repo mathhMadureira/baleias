@@ -159,6 +159,13 @@ def rodar():
     else:
         print("modo SIMULADO (preços reais da Binance, sem ordens)", flush=True)
     c = abrir()
+    if os.environ.get("ROBO_NUVEM") == "1":
+        # O robô de verdade roda no GitHub Actions (uma vez por dia); aqui só espelha o estado para o painel.
+        from . import espelho
+        from baleias import saude
+        for msg in espelho.rodar(b):
+            saude.bater(c, "robo", msg)
+        return
     if os.environ.get("ROBO_ESTRATEGIA", "tartaruga") == "tartaruga":
         # A medida (lab/fisica.py) mostrou que em minutos não há memória aproveitável contra o custo; o robô opera em semanas.
         from . import tartaruga_exec

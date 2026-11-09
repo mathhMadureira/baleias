@@ -1,0 +1,72 @@
+# Robô Tartaruga na nuvem do GitHub, de graça, com a máquina do dono desligada.
+# Roda uma vez por dia logo depois do fechamento diário (00:00 UTC). Só modo SIMULADO: os servidores do GitHub ficam nos EUA,
+# onde a api.binance.com é bloqueada; os dados públicos vêm de data-api.binance.vision.
+# O estado fica no ramo `estado` (separado do código). Avisos: Telegram, se os segredos existirem; sempre no resumo do Actions.
+name: robo-diario
+
+on:
+  schedule:
+    - cron: "10 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: robo
+  cancel-in-progress: false
+
+jobs:
+  rodar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Testes
+        run: python -m unittest tests.test_baleias
+
+      - name: Buscar o estado (ramo estado)
+        run: |
+          git fetch origin estado || true
+          mkdir -p estado/dados
+          if git rev-parse --verify -q origin/estado >/dev/null; then
+            git --work-tree=estado checkout origin/estado -- dados || true
+            git reset -q
+          fi
+          ls -la estado/dados || true
+
+      - name: Rodada do dia
+        env:
+          BALEIAS_DADOS: ${{ github.workspace }}/estado/dados
+          BINANCE_BASE: https://data-api.binance.vision
+          BINANCE_DADOS: https://data-api.binance.vision
+        run: |
+          python -m executor.diario | tee resumo.txt
+          { echo '```'; cat resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guardar o estado
+        run: |
+          cd estado
+          git init -q
+          git checkout -q -b estado
+          git config user.name "robo-baleias"
+          git config user.email "robo-baleias@users.noreply.github.com"
+          git add dados/robo_tartaruga.json dados/robo_eventos.jsonl 2>/dev/null || git add dados/robo_tartaruga.json
+          git commit -q -m "estado $(date -u +%F)"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" estado:estado
+
+      - name: Avisar no Telegram
+        if: always()
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          [ -z "$TOKEN" ] || [ -z "$CHAT" ] && { echo "Telegram não configurado"; exit 0; }
+          [ -f resumo.txt ] || echo "⚠️ A rodada do robô falhou. Veja o GitHub Actions." > resumo.txt
+          curl -s -o /dev/null -w "telegram %{http_code}\n" "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT}" --data-urlencode "text@resumo.txt"
