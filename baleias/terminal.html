@@ -96,6 +96,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <div class="marca">BALEIAS <b>TERMINAL</b></div>
   <nav>
     <button data-aba="robo" class="ativo">Robô</button>
+    <button data-aba="replay">▶ Replay</button>
     <button data-aba="mercado">Mercado ao vivo</button>
     <button data-aba="lab">Laboratório</button>
   </nav>
@@ -167,6 +168,32 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   </div>
 </section>
 
+<section class="aba" id="aba-replay">
+  <div class="card" style="margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+    <b>Replay:</b><span class="mut">o mesmo código do robô operando o histórico real, dia após dia, desde 01/01/2024 com US$ 700</span>
+    <span class="espaco"></span>
+    <button id="rp-play" class="selo sim" style="cursor:pointer">▶ Play</button>
+    <select id="rp-vel" class="selo" style="background:var(--card2);color:var(--txt)">
+      <option value="1000">1 dia/s</option><option value="250" selected>4 dias/s</option><option value="80">12 dias/s</option><option value="20">50 dias/s</option>
+    </select>
+    <button id="rp-zero" class="selo" style="cursor:pointer;background:var(--card2);color:var(--txt)">⟲ Recomeçar</button>
+    <label class="mut" style="font-size:13px"><input type="checkbox" id="rp-som"> som nas operações</label>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><div class="rot">Data</div><div class="val num" id="rp-d">—</div><div class="sub" id="rp-prog">—</div></div>
+    <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="rp-pat">—</div><div class="sub" id="rp-ret">—</div></div>
+    <div class="kpi"><div class="rot">Queda desde o pico</div><div class="val num" id="rp-dd">—</div><div class="sub" id="rp-ddmax">—</div></div>
+    <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="rp-npos">—</div><div class="sub">máx. 33 moedas</div></div>
+    <div class="kpi"><div class="rot">Operações</div><div class="val num" id="rp-ops">0</div><div class="sub" id="rp-ops-s">—</div></div>
+    <div class="kpi"><div class="rot">Resultado final</div><div class="val num" id="rp-final">—</div><div class="sub" id="rp-final-s">—</div></div>
+  </div>
+  <div class="card"><h3>Patrimônio no replay</h3><canvas id="rp-curva" style="height:240px"></canvas></div>
+  <div class="grade g-dupla" style="margin-top:14px">
+    <div class="card"><h3>Posições abertas neste dia</h3><div id="rp-pos"></div></div>
+    <div class="card"><h3>O que o robô fez (mais recente em cima)</h3><div id="rp-ev" style="max-height:360px;overflow:auto;font-size:13px"></div></div>
+  </div>
+</section>
+
 <section class="aba" id="aba-mercado">
   <iframe id="frame-mercado" title="Mercado ao vivo"></iframe>
 </section>
@@ -195,6 +222,7 @@ document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
   document.querySelectorAll(".aba").forEach(x => x.classList.toggle("ativa", x.id === "aba-" + b.dataset.aba));
   if (b.dataset.aba === "mercado" && !$("frame-mercado").src) $("frame-mercado").src = "/ao-vivo";
   if (b.dataset.aba === "lab") carregarLab();
+  if (b.dataset.aba === "replay") carregarReplay();
   if (b.dataset.aba === "robo") desenharTudo();
 });
 
@@ -413,6 +441,56 @@ function relogio() {
     $("k-prox").textContent = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
   }
 }
+// ---------- replay ----------
+let rp = null, rpI = 0, rpTimer = null, rpLog = [], rpOps = 0, rpGanhos = 0;
+async function carregarReplay() {
+  if (rp) return;
+  $("rp-ev").textContent = "calculando o replay (alguns segundos)…";
+  rp = await j("/api/replay");
+  const r = rp.resumo;
+  $("rp-final").textContent = "US$ " + fmt(r.final); $("rp-final").className = "val num " + cor(r.final - r.capital);
+  $("rp-final-s").textContent = `${r.operacoes} operações · acerto ${fmt(r.acerto * 100, 0)}% · ${fmt(r.media_R)}R por operação`;
+  zerarReplay();
+}
+function zerarReplay() { rpI = 0; rpLog = []; rpOps = 0; rpGanhos = 0; pararReplay(); quadroReplay(); }
+function pararReplay() { clearInterval(rpTimer); rpTimer = null; $("rp-play").textContent = "▶ Play"; }
+function quadroReplay() {
+  const q = rp.quadros[rpI]; if (!q) return;
+  for (const t of q.ev) {
+    rpLog.unshift(q.d.split("-").reverse().join("/") + "  " + t.replace("🐢 Robô ", ""));
+    if (t.includes("SAIU")) { rpOps++; if (/: \+/.test(t)) rpGanhos++; }
+    if ($("rp-som").checked) { som = true; bip(t.includes("SAIU") && !/: \+/.test(t) ? 330 : 880); }
+  }
+  rpLog = rpLog.slice(0, 200);
+  const serie = rp.quadros.slice(0, rpI + 1).map(x => [x.d, x.pat]);
+  let pico = 0, ddmax = 0; for (const [, v] of serie) { pico = Math.max(pico, v); ddmax = Math.min(ddmax, v / pico - 1); }
+  $("rp-d").textContent = q.d.split("-").reverse().join("/");
+  $("rp-prog").textContent = `dia ${rpI + 1} de ${rp.quadros.length}`;
+  $("rp-pat").textContent = "US$ " + fmt(q.pat);
+  const ret = (q.pat / rp.resumo.capital - 1) * 100;
+  $("rp-ret").textContent = pct(ret, 1) + " desde o início"; $("rp-pat").className = "val num " + cor(ret);
+  $("rp-dd").textContent = pct((q.pat / pico - 1) * 100); $("rp-dd").className = "val num " + (q.pat < pico ? "down" : "");
+  $("rp-ddmax").textContent = "pior até aqui " + pct(ddmax * 100);
+  $("rp-npos").textContent = q.pos.length;
+  $("rp-ops").textContent = rpOps; $("rp-ops-s").textContent = rpOps ? `${rpGanhos} com lucro (${fmt(rpGanhos / rpOps * 100, 0)}%)` : "—";
+  desenharLinha($("rp-curva"), serie.length > 1 ? serie : [[q.d, q.pat], [q.d, q.pat]], {base: rp.resumo.capital, sombraQueda: true});
+  $("rp-pos").innerHTML = q.pos.length ? `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Stop</th><th>Resultado</th></tr></thead><tbody>${
+    q.pos.map(p => `<tr><td>${p.m}</td><td>${px(p.entrada)}</td><td>${px(p.px)}</td><td>${px(p.stop)}</td><td class="${cor(p.res)}">${p.res >= 0 ? "+" : ""}${fmt(p.res)}</td></tr>`).join("")}</tbody></table>`
+    : `<div class="vazio">Nenhuma posição — esperando rompimento.</div>`;
+  $("rp-ev").replaceChildren(...rpLog.map(t => { const d = document.createElement("div"); d.style.padding = "4px 0"; d.style.borderBottom = "1px solid var(--line)";
+    d.className = t.includes("ENTROU") ? "" : /: \+/.test(t) ? "up" : "down"; d.textContent = t; return d; }));
+}
+$("rp-play").onclick = () => {
+  if (!rp) return;
+  if (rpTimer) return pararReplay();
+  $("rp-play").textContent = "⏸ Pausar";
+  rpTimer = setInterval(() => { if (rpI >= rp.quadros.length - 1) return pararReplay(); rpI++; quadroReplay(); }, +$("rp-vel").value);
+};
+$("rp-vel").onchange = () => { if (rpTimer) { pararReplay(); $("rp-play").onclick(); } };
+$("rp-zero").onclick = () => zerarReplay();
+let som = false, audio;
+function bip(f) { try { audio = audio || new AudioContext(); const o = audio.createOscillator(), g = audio.createGain(); o.frequency.value = f; g.gain.value = 0.05; o.connect(g).connect(audio.destination); o.start(); o.stop(audio.currentTime + 0.08); } catch (e) {} }
+
 setInterval(relogio, 1000); relogio();
 window.addEventListener("resize", desenharTudo);
 carregarVelas(); cicloRobo(); cicloTeste(); cicloFontes();

@@ -19,6 +19,8 @@ PARAR = Path(__file__).resolve().parent.parent / "PARAR"   # botão de parada (o
 EVENTOS = config.RAIZ / "robo_eventos.jsonl"
 CAPITAL_SIMULADO = float(os.environ.get("TARTARUGA_CAPITAL", "700"))
 RISCO = float(os.environ.get("TARTARUGA_RISCO", "0.01"))
+relogio = time.time        # o replay troca por um relógio simulado
+ouvinte = None             # o replay recebe cada evento por aqui (e o terminal não é inundado)
 
 
 class Simulada:
@@ -94,7 +96,10 @@ def salvar(e):
 
 
 def registrar(texto, tipo="robo", t=None):
-    linha = {"t": t or time.time(), "tipo": tipo, "texto": texto}
+    linha = {"t": t or relogio(), "tipo": tipo, "texto": texto}
+    if ouvinte:
+        ouvinte(linha)
+        return linha
     with open(EVENTOS, "a") as f:
         f.write(json.dumps(linha, ensure_ascii=False) + "\n")
     print(time.strftime("%F %T"), texto, flush=True)
@@ -117,7 +122,7 @@ def _sair(e, corretora, m, motivo, px, ja_vendido=None):
             e["caixa"] += recebido
     resultado = recebido - p["gasto"]
     R = resultado / p["risco_usd"] if p["risco_usd"] else 0.0
-    e["fechadas"].append({**p, "saida": px, "saida_t": time.time(), "motivo": motivo, "resultado_usd": resultado, "R": R})
+    e["fechadas"].append({**p, "saida": px, "saida_t": relogio(), "motivo": motivo, "resultado_usd": resultado, "R": R})
     return registrar(f"🐢 Robô SAIU de {m[:-4]} ({motivo}) a {px:,.6g}: {resultado:+,.2f} USDT ({R:+.1f}R)"
                      f"{'' if corretora.real else ' [simulado]'}")
 
@@ -165,7 +170,7 @@ def passo_diario(e, corretora, dados, precos):
     total = patrimonio(e, precos, corretora)
     if PARAR.exists():
         eventos.append(registrar("🛑 Botão de parada ligado (arquivo PARAR): nenhuma entrada nova hoje; stops e saídas seguem normais"))
-        e["ultimo_dia"] = time.strftime("%Y-%m-%d", time.gmtime())
+        e["ultimo_dia"] = time.strftime("%Y-%m-%d", time.gmtime(relogio()))
         return eventos
     for m, vs in dados.items():
         if m in e["abertas"] or m not in precos or len(vs) <= T.ENTRADA:
@@ -185,11 +190,11 @@ def passo_diario(e, corretora, dados, precos):
         stop = preco_medio - T.STOP_N * n
         ordem = corretora.colocar_stop(m, qtd, stop)
         e["abertas"][m] = {"moeda": m, "entrada": preco_medio, "qtd": qtd, "stop": stop, "ordem_stop": ordem, "N": n,
-                           "entrada_t": time.time(), "gasto": gasto, "risco_usd": qtd * (preco_medio - stop)}
+                           "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * (preco_medio - stop)}
         eventos.append(registrar(f"🐢 Robô ENTROU COMPRADO em {m[:-4]} a {preco_medio:,.6g} (rompeu a máxima de 55 dias). "
                                  f"Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:.1f}%), posição US$ {gasto:,.2f}, "
                                  f"risco US$ {qtd * (preco_medio - stop):,.2f} = 1R{'' if corretora.real else ' [simulado]'}"))
-    e["ultimo_dia"] = time.strftime("%Y-%m-%d", time.gmtime())
+    e["ultimo_dia"] = time.strftime("%Y-%m-%d", time.gmtime(relogio()))
     return eventos
 
 

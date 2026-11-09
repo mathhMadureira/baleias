@@ -109,3 +109,11 @@ def lab():
         return json.loads(PLACAR.read_text())
     except (OSError, ValueError):
         return []
+
+
+def replay():
+    """Quadros do replay (o mesmo código do robô sobre o histórico). Gera na primeira vez e renova uma vez por dia."""
+    from executor import replay as R
+    if R.ARQUIVO.exists() and time.time() - R.ARQUIVO.stat().st_mtime < 86400:
+        return json.loads(R.ARQUIVO.read_text())
+    return R.rodar()
