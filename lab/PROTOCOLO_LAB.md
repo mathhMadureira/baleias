@@ -290,3 +290,10 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   - todas as 33: 163 op., +25,8%/ano, queda −41,4%, expectativa +0,62R, PF 1,87.
 - **Leitura:** a vantagem por operação se repetiu em ativos independentes. Viés: a escolha pelo volume de hoje deixa de fora moedas que morreram (sobrevivência).
 - **Decisão:** o robô passa a operar as 33. A queda histórica esperada é de ~40%.
+
+## Hipótese 12: custo em R decide o intervalo (pré-registrada em 2026-11-09, antes de rodar)
+
+- **Motivo, da matemática:** cada operação paga ~0,2% de ida e volta. Medido em unidades de risco (R = distância do stop = 2N), o custo é 0,2% ÷ (2N/preço). No diário, 2N/preço fica em 6–14%, então o custo é 0,02–0,03R. Em 1 h fica em ~0,3%, e o custo chega a ~0,67R.
+- **Regra testada:** as mesmas da H10b, mais um filtro: **só entra se 2N/preço ≥ 2%** (custo ≤ 0,1R). O limiar vem da conta acima e não foi ajustado nos dados.
+- **Onde:** 4 h, 1 h e 15 min, nas 33 moedas, separando 2024 e 2025–hoje.
+- **Passa** um intervalo se, **nos dois períodos**, a expectativa for > +0,2R e o PF > 1,3, com pelo menos 30 operações em cada. O robô rápido ao vivo passa a usar o intervalo aprovado com o filtro. Se nenhum passar, o robô rápido continua só como demonstração.
