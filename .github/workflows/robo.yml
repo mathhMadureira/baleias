@@ -50,6 +50,18 @@ jobs:
           python -m executor.diario | tee resumo.txt
           { echo '```'; cat resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Robô-sombra com teto de 6 posições (H13, validação ao vivo)
+        continue-on-error: true
+        env:
+          BALEIAS_DADOS: ${{ github.workspace }}/estado/dados/teto6
+          BINANCE_BASE: https://data-api.binance.vision
+          BINANCE_DADOS: https://data-api.binance.vision
+          TARTARUGA_MAX_POSICOES: "6"
+        run: |
+          mkdir -p "$BALEIAS_DADOS"
+          python -m executor.diario | tee resumo_teto6.txt
+          { echo '### Robô-sombra (teto 6)'; echo '```'; cat resumo_teto6.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Guardar o estado
         run: |
           cd estado
@@ -58,6 +70,7 @@ jobs:
           git config user.name "robo-baleias"
           git config user.email "robo-baleias@users.noreply.github.com"
           git add dados/robo_tartaruga.json dados/robo_eventos.jsonl 2>/dev/null || git add dados/robo_tartaruga.json
+          git add dados/teto6/robo_tartaruga.json dados/teto6/robo_eventos.jsonl 2>/dev/null || true
           git commit -q -m "estado $(date -u +%F)"
           git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" estado:estado
 

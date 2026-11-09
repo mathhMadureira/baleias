@@ -12,7 +12,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
    - sincronizar o estado com o saldo real da corretora ao ligar (se houver posição na corretora que o robô não conhece, avisar);
    - acompanhar de perto a primeira operação real.
 6. **Avisos no celular:** configurar os segredos do Telegram no GitHub (`gh secret set TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID`).
-7. **Gráfico diário ao vivo:** a vela do dia se mexer com o preço, como no gráfico de 1 h.
+7. **[feito 2026-11-09] Gráfico diário ao vivo:** a vela do dia se mexer com o preço, como no gráfico de 1 h.
 8. **Fidelidade do teste:** o custo diário de 0,02% (financiamento) não existe no spot; separar spot de perp e incluir escorregamento medido.
 9. **Testes ao vivo para avaliar:** H5 (Gemini, ~300 previsões), H7 (fluxo, 2000 janelas), H2/H3 (tendência e funding).
 10. **Alerta de falha da nuvem:** se o `robo-diario` falhar, avisar no Telegram (o GitHub também manda e-mail).

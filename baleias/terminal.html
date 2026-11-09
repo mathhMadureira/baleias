@@ -435,7 +435,12 @@ function desenharTeste() {
 function desenharTudo() { desenharVelas(); desenharRobo(); desenharTeste(); }
 
 async function j(url) { const r = await fetch(url, {cache: "no-store"}); return r.json(); }
-async function carregarVelas() { $("g-titulo").textContent = moeda + " · diário"; velas = await j("/api/velas?m=" + moeda); desenharVelas(); }
+async function carregarVelas() {
+  $("g-titulo").textContent = moeda + " · diário · ao vivo";
+  try { const v = await j(`/api/velas-rapidas?m=${moeda}&iv=1d`); velas = v.velas ? v : await j("/api/velas?m=" + moeda); } catch (e) { velas = await j("/api/velas?m=" + moeda); }
+  desenharVelas();
+}
+setInterval(() => { if (document.getElementById("aba-robo").classList.contains("ativa")) carregarVelas(); }, 30000);
 async function carregarLab() {
   const l = await j("/api/lab");
   $("placar").replaceChildren(...l.map(h => {

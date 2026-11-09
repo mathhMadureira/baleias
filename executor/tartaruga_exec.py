@@ -19,6 +19,7 @@ PARAR = Path(__file__).resolve().parent.parent / "PARAR"   # botão de parada (o
 EVENTOS = config.RAIZ / "robo_eventos.jsonl"
 CAPITAL_SIMULADO = float(os.environ.get("TARTARUGA_CAPITAL", "700"))
 RISCO = float(os.environ.get("TARTARUGA_RISCO", "0.01"))
+MAX_POSICOES = int(os.environ.get("TARTARUGA_MAX_POSICOES", "0")) or None   # H13: só no robô-sombra, até passar no teste
 relogio = time.time        # o replay troca por um relógio simulado
 ouvinte = None             # o replay recebe cada evento por aqui (e o terminal não é inundado)
 
@@ -177,6 +178,9 @@ def passo_diario(e, corretora, dados, precos):
             continue
         k = len(vs) - 1
         if not T.sinais(vs, k, "compra"):
+            continue
+        if MAX_POSICOES and len(e["abertas"]) >= MAX_POSICOES:
+            eventos.append(registrar(f"🐢 {m[:-4]} rompeu, mas já há {MAX_POSICOES} posições abertas (teto)"))
             continue
         n = T.atr(vs)[k]
         if not n:

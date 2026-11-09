@@ -560,7 +560,7 @@ class Motor:
                           "entrada": max(v[2] for v in vs[i - T.ENTRADA:i]), "saida": min(v[3] for v in vs[i - T.SAIDA:i]),
                           "stop2n": vs[i][4] - T.STOP_N * n_atr[i] if n_atr[i] else None})
         marcas = []
-        arq = config.RAIZ / f"robo_rapido_{intervalo}.json"
+        arq = config.RAIZ / ("robo_tartaruga.json" if intervalo == "1d" else f"robo_rapido_{intervalo}.json")
         if arq.exists():
             try:
                 e = json.loads(arq.read_text())
