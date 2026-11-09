@@ -118,6 +118,13 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Próxima vela fecha em</div><div class="val num" id="ra-prox">—</div><div class="sub" id="ra-ult">—</div></div>
       <div class="kpi" style="grid-column:span 2"><div class="rot">Mais perto de entrar</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
     </div>
+    <div style="display:flex;align-items:center;gap:10px;margin:4px 0 6px">
+      <b id="ra-g-titulo" class="num">—</b><span class="mut num" id="ra-g-info" style="font-size:12px"></span>
+      <span class="espaco" style="flex:1"></span>
+      <select id="ra-g-moeda" class="selo" style="background:var(--card2);color:var(--txt)"><option value="">seguir o robô</option></select>
+    </div>
+    <canvas id="ra-grafico" style="height:360px"></canvas>
+    <div class="legenda" style="margin-bottom:10px"><span>vela mais clara = vela de agora, ao vivo</span><span><i style="border-color:var(--up)"></i>entrada (máx. 55 velas)</span><span><i style="border-color:var(--down)"></i>saída (mín. 20 velas)</span><span><i style="border-color:#e6edf3"></i>preço de entrada da posição</span><span><i style="border-color:var(--gold);border-top-style:solid"></i>stop da posição</span></div>
     <div class="grade g-dupla">
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
@@ -259,14 +266,14 @@ function eixoY(ctx, w, h, lo, hi, pad, rotulo) {
   }
 }
 
-function desenharVelas() {
-  const cv = $("grafico");
+function desenharVelas(cv = $("grafico"), dados = velas, info = $("g-info"), pos = null) {
   const {ctx, w, h} = prep(cv);
-  if (!velas || !velas.velas || !velas.velas.length) { ctx.fillStyle = "#8b98a8"; ctx.fillText("carregando…", 20, 30); return; }
-  const v = velas.velas, pad = {l: 8, r: 78, t: 12, b: 26};
+  if (!dados || !dados.velas || !dados.velas.length) { ctx.fillStyle = "#8b98a8"; ctx.fillText("carregando…", 20, 30); return; }
+  const v = dados.velas, pad = {l: 8, r: 78, t: 12, b: 26};
   let lo = Infinity, hi = -Infinity;
   for (const x of v) { lo = Math.min(lo, x.l, x.saida); hi = Math.max(hi, x.h, x.entrada); }
   const sl = v[v.length - 1].stop2n; if (sl) lo = Math.min(lo, sl);
+  if (pos) { lo = Math.min(lo, pos.stop); hi = Math.max(hi, pos.entrada); }
   const m = (hi - lo) * 0.04; lo -= m; hi += m;
   const W = w - pad.l - pad.r, H = h - pad.t - pad.b, cw = W / v.length;
   const X = (i) => pad.l + i * cw + cw / 2, Y = (p) => pad.t + (1 - (p - lo) / (hi - lo)) * H;
@@ -285,23 +292,30 @@ function desenharVelas() {
   const corpo = Math.max(1, cw * 0.62);
   v.forEach((x, i) => {
     const subiu = x.c >= x.o, c = subiu ? "#16c784" : "#ea3943";
+    ctx.globalAlpha = x.vivo ? 0.55 : 1;
     ctx.strokeStyle = c; ctx.fillStyle = c; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(X(i), Y(x.h)); ctx.lineTo(X(i), Y(x.l)); ctx.stroke();
     const y1 = Y(Math.max(x.o, x.c)), y2 = Y(Math.min(x.o, x.c));
     ctx.fillRect(X(i) - corpo / 2, y1, corpo, Math.max(1, y2 - y1));
+    ctx.globalAlpha = 1;
   });
+  if (pos) {           // posição aberta: entrada (branco) e stop (amarelo)
+    for (const [p, c, tr] of [[pos.entrada, "#e6edf3", [5, 4]], [pos.stop, "#f0b90b", []]]) {
+      ctx.strokeStyle = c; ctx.lineWidth = 1.6; ctx.setLineDash(tr); ctx.beginPath(); ctx.moveTo(pad.l, Y(p)); ctx.lineTo(w - pad.r, Y(p)); ctx.stroke(); ctx.setLineDash([]);
+    }
+  }
   // stop hipotético de hoje
   const u = v[v.length - 1];
   if (u.stop2n) { ctx.strokeStyle = "#f0b90b"; ctx.setLineDash([2, 4]); ctx.beginPath(); ctx.moveTo(X(v.length - 30), Y(u.stop2n)); ctx.lineTo(X(v.length - 1), Y(u.stop2n)); ctx.stroke(); ctx.setLineDash([]); }
   // preço atual e etiqueta
   // etiquetas no eixo, empurradas para não se sobreporem quando os preços estão perto
-  const etqs = [[u.entrada, "#16c784"], [u.c, "#e6edf3"], [u.saida, "#ea3943"]].map(([p, bg]) => ({y: Y(p), bg, txt: px(p)})).sort((a, b) => a.y - b.y);
+  const etqs = [[u.entrada, "#16c784"], [u.c, "#e6edf3"], [u.saida, "#ea3943"]].concat(pos ? [[pos.stop, "#f0b90b"]] : []).map(([p, bg]) => ({y: Y(p), bg, txt: px(p)})).sort((a, b) => a.y - b.y);
   for (let k = 1; k < etqs.length; k++) if (etqs[k].y - etqs[k - 1].y < 19) etqs[k].y = etqs[k - 1].y + 19;
   for (const e of etqs) { ctx.fillStyle = e.bg; ctx.fillRect(w - pad.r + 2, e.y - 9, pad.r - 4, 18); ctx.fillStyle = "#07090c"; ctx.font = "bold 11px ui-monospace, monospace"; ctx.fillText(e.txt, w - pad.r + 6, e.y + 4); }
   // marcas das operações do robô
-  const idx = {}; v.forEach((x, i) => idx[x.d] = i);
-  for (const mk of velas.marcas || []) {
-    const d = new Date(mk.t * 1000).toISOString().slice(0, 10), i = idx[d];
+  const lenK = v[0].d.length > 10 ? 13 : 10, idx = {}; v.forEach((x, i) => idx[x.d.slice(0, lenK)] = i);
+  for (const mk of dados.marcas || []) {
+    const d = new Date(mk.t * 1000).toISOString().slice(0, lenK).replace("T", " "), i = idx[d];
     if (i == null) continue;
     ctx.fillStyle = mk.tipo === "entrada" ? "#16c784" : "#f0b90b"; ctx.beginPath();
     const y = Y(mk.px), s = 7;
@@ -311,7 +325,8 @@ function desenharVelas() {
   }
   // datas
   ctx.fillStyle = "#6b7888"; ctx.font = "11px ui-monospace, monospace"; ctx.textAlign = "center";
-  for (let i = 0; i < v.length; i += Math.ceil(v.length / 7)) ctx.fillText(v[i].d.slice(5).split("-").reverse().join("/"), X(i), h - 8);
+  const rotD = (d) => d.length > 10 ? `${d.slice(8, 10)}/${d.slice(5, 7)} ${d.slice(11, 13)}h` : d.slice(5).split("-").reverse().join("/");
+  for (let i = 0; i < v.length; i += Math.ceil(v.length / 7)) ctx.fillText(rotD(v[i].d), X(i), h - 8);
   ctx.textAlign = "left";
   cv.onmousemove = (ev) => {
     const r = cv.getBoundingClientRect(), i = Math.floor((ev.clientX - r.left - pad.l) / cw);
@@ -322,7 +337,7 @@ function desenharVelas() {
   };
   cv.onmouseleave = () => $("tip").style.display = "none";
   const falta = (u.entrada / u.c - 1) * 100;
-  $("g-info").textContent = `fech ${px(u.c)} · ${falta > 0 ? "falta " + pct(falta) + " para entrar" : "acima do rompimento"} · stop seria ${pct((u.stop2n / u.c - 1) * 100)}`;
+  if (info) info.textContent = `${u.vivo ? "agora" : "fech"} ${px(u.c)} · ${falta > 0 ? "falta " + pct(falta) + " para entrar" : "acima do rompimento"} · stop seria ${pct((u.stop2n / u.c - 1) * 100)}`;
 }
 
 function desenharLinha(cv, pontos, {base = null, rotulo = (v) => "US$ " + fmt(v, 0), sombraQueda = false} = {}) {
@@ -539,6 +554,23 @@ async function cicloRapido() {
   } catch (e) {}
   setTimeout(cicloRapido, 5000);
 }
+let raG = null;
+async function cicloGraficoRapido() {
+  try {
+    if (ra && !ra.carregando) {
+      const sel = $("ra-g-moeda");
+      if (sel.options.length < 2 && ra.todas) for (const m of ra.todas) sel.add(new Option(m, m));
+      const alvo = sel.value || (ra.posicoes[0] && ra.posicoes[0].moeda) || (ra.radar[0] && ra.radar[0].moeda) || "BTC";
+      raG = await j(`/api/velas-rapidas?m=${alvo}&iv=${ra.intervalo}`);
+      const pos = ra.posicoes.find(p => p.moeda === alvo);
+      $("ra-g-titulo").textContent = `${alvo} · ${ra.intervalo}` + (pos ? " · POSIÇÃO ABERTA" : sel.value ? "" : " · mais perto de entrar");
+      desenharVelas($("ra-grafico"), raG, $("ra-g-info"), pos || null);
+    }
+  } catch (e) {}
+  setTimeout(cicloGraficoRapido, 5000);
+}
+$("ra-g-moeda").onchange = () => cicloGraficoRapido();
+cicloGraficoRapido();
 setInterval(() => { if (ra && ra.proxima) { let s = Math.max(0, Math.round(ra.proxima - Date.now() / 1000)); const m = Math.floor(s / 60); s -= m * 60; $("ra-prox").textContent = `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`; } }, 1000);
 cicloRapido();
 

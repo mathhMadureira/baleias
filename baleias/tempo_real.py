@@ -533,9 +533,44 @@ class Motor:
                                                  "resultado": p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"]} for m, p in e["abertas"].items()],
                                    "operacoes": len(rs), "acerto": sum(r > 0 for r in rs) / len(rs) if rs else None,
                                    "media_R": sum(rs) / len(rs) if rs else None, "eventos": e["eventos"][:30],
-                                   "radar": e.get("radar", [])[:8]}
+                                   "radar": e.get("radar", [])[:8], "todas": sorted(m[:-4] for m in T.MOEDAS_ROBO)}
             self.fonte("rapido", True)
             time.sleep(5)
+
+    def velas_ao_vivo(self, moeda, intervalo="1h", n=100):
+        """Velas recentes com a vela em formação atualizada pelo preço ao vivo, canais da estratégia e marcas do robô rápido."""
+        from lab import tartaruga as T
+        m = moeda.upper()[:12] + "USDT"
+        chave = (m, intervalo)
+        cache = self.__dict__.setdefault("_cache_velas", {})
+        if chave not in cache or time.time() - cache[chave][0] > 20:
+            with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit={n + T.ENTRADA + 1}", timeout=20) as r:
+                cache[chave] = (time.time(), json.load(r))
+        k = cache[chave][1]
+        vs = [[time.strftime("%Y-%m-%d %H:%M", time.gmtime(x[0] / 1000)), float(x[1]), float(x[2]), float(x[3]), float(x[4])] for x in k]
+        with self.trava:
+            vivo = self.mercado.get(m[:-4], {}).get("p")
+        if vivo and vs:                     # a última vela é a de agora: fecha no preço ao vivo
+            vs[-1][4] = vivo
+            vs[-1][2], vs[-1][3] = max(vs[-1][2], vivo), min(vs[-1][3], vivo)
+        n_atr = T.atr(vs)
+        saida = []
+        for i in range(max(T.ENTRADA, len(vs) - n), len(vs)):
+            saida.append({"d": vs[i][0], "o": vs[i][1], "h": vs[i][2], "l": vs[i][3], "c": vs[i][4], "vivo": i == len(vs) - 1,
+                          "entrada": max(v[2] for v in vs[i - T.ENTRADA:i]), "saida": min(v[3] for v in vs[i - T.SAIDA:i]),
+                          "stop2n": vs[i][4] - T.STOP_N * n_atr[i] if n_atr[i] else None})
+        marcas = []
+        arq = config.RAIZ / f"robo_rapido_{intervalo}.json"
+        if arq.exists():
+            try:
+                e = json.loads(arq.read_text())
+            except ValueError:
+                e = {}
+            for o in [f for f in e.get("fechadas", []) if f["moeda"] == m] + [p for k2, p in e.get("abertas", {}).items() if k2 == m]:
+                marcas.append({"t": o["entrada_t"], "px": o["entrada"], "tipo": "entrada"})
+                if o.get("saida_t"):
+                    marcas.append({"t": o["saida_t"], "px": o["saida"], "tipo": "saida"})
+        return {"moeda": m[:-4], "velas": saida, "marcas": marcas}
 
     def _telegram(self):
         while True:
