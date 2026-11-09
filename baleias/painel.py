@@ -142,7 +142,7 @@ class Manipulador(BaseHTTPRequestHandler):
                 with self.motor.trava:
                     vivos = {k: v["p"] for k, v in self.motor.mercado.items()}
             self._enviar(200, json.dumps(terminal_api.robo(vivos)).encode(), "application/json")
-        elif self.path.startswith("/api/velas"):
+        elif self.path.startswith("/api/velas?"):
             from . import terminal_api
             q = urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query)
             self._enviar(200, json.dumps(terminal_api.velas(q.get("m", ["BTC"])[0][:12])).encode(), "application/json")
