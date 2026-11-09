@@ -297,3 +297,17 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Regra testada:** as mesmas da H10b, mais um filtro: **só entra se 2N/preço ≥ 2%** (custo ≤ 0,1R). O limiar vem da conta acima e não foi ajustado nos dados.
 - **Onde:** 4 h, 1 h e 15 min, nas 33 moedas, separando 2024 e 2025–hoje.
 - **Passa** um intervalo se, **nos dois períodos**, a expectativa for > +0,2R e o PF > 1,3, com pelo menos 30 operações em cada. O robô rápido ao vivo passa a usar o intervalo aprovado com o filtro. Se nenhum passar, o robô rápido continua só como demonstração.
+
+### Resultado da H12 (2026-11-09): não passou
+
+| Intervalo | Filtro 2N/preço ≥ 2% | 2024 | 2025–hoje |
+|---|---|---|---|
+| 4 h | não | 200 op, +287%, +1,14R, PF 2,85, queda −39% | 389 op, −24%, +0,00R, PF 1,00, queda −50% |
+| 4 h | sim | 198 op, +155%, +0,94R, PF 2,45, queda −36% | 383 op, −14%, +0,05R, PF 1,06, queda −49% |
+| 1 h | não | 612 op, −3,9%, +0,10R, PF 1,14, queda −55% | 978 op, +167%, +0,22R, PF 1,30, queda −58% |
+| 1 h | sim | 680 op, −22,7%, +0,08R, PF 1,11, queda −65% | 1010 op, +259%, +0,26R, PF 1,37, queda −58% |
+
+- **4 h:** muito bom em 2024 e nulo de 2025 para cá. O filtro não muda o quadro, porque em 4 h o stop já passa de 2% quase sempre.
+- **1 h:** positivo por operação nos dois períodos, mas fraco em 2024, e as quedas no caminho são enormes.
+- **Nenhum combina** expectativa > 0,2R e PF > 1,3 nos dois períodos. O robô rápido continua como demonstração ao vivo (1 h, sem filtro). O real segue só no diário.
+- **15 min:** pendente (download em andamento).

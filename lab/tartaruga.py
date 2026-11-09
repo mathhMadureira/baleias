@@ -82,7 +82,8 @@ def saida_canal(velas, i, lado):
     return c > max(v[2] for v in velas[i - SAIDA:i])
 
 
-def simular(dados, inicio, fim, lados=("compra", "venda"), alav_max=ALAV_MAX, alvo_vol=None):
+def simular(dados, inicio, fim, lados=("compra", "venda"), alav_max=ALAV_MAX, alvo_vol=None, stop_min=0.0):
+    """`stop_min` (H12): só entra se 2N/preço ≥ stop_min — o custo fixo de ida e volta vira uma fração pequena do risco."""
     """Carteira diária. Devolve (curva por dia, lista de operações com resultado em R e em % do capital)."""
     dias = sorted({v[0] for vs in dados.values() for v in vs if inicio <= v[0] < fim})
     idx = {m: {v[0]: k for k, v in enumerate(vs)} for m, vs in dados.items()}
@@ -103,7 +104,7 @@ def simular(dados, inicio, fim, lados=("compra", "venda"), alav_max=ALAV_MAX, al
                 capital += ops[-1]["resultado"]
             elif tipo == "entra" and m not in abertas:
                 n = atrs[m][k - 1]
-                if not n:
+                if not n or STOP_N * n / aberto < stop_min:
                     continue
                 escala = 1.0
                 if alvo_vol and var_ewma:

@@ -39,12 +39,12 @@ def baixar(intervalo, inicio_ms=1_704_067_200_000):
     return saida
 
 
-def medir(intervalo, inicio="2024-01-01", fim="2099"):
+def medir(intervalo, inicio="2024-01-01", fim="2099", stop_min=0.0):
     dados = baixar(intervalo)
     custo_dia = T.CUSTO_DIA
     T.CUSTO_DIA = custo_dia / INTERVALOS[intervalo]     # financiamento por vela, não por dia
     try:
-        curva, ops = T.simular(dados, inicio, fim, ("compra",), alav_max=1.0)
+        curva, ops = T.simular(dados, inicio, fim, ("compra",), alav_max=1.0, stop_min=stop_min)
     finally:
         T.CUSTO_DIA = custo_dia
     rs = [o["R"] for o in ops]
@@ -64,6 +64,6 @@ if __name__ == "__main__":
     import sys
     for iv in sys.argv[1:] or ("4h", "1h", "15m"):
         for nome, a, b in (("2024", "2024-01-01", "2025-01-01"), ("2025-hoje", "2025-01-01", "2099")):
-            m = medir(iv, a, b)
+            m = medir(iv, a, b, float(__import__("os").environ.get("STOP_MIN", "0")))
             print(f"{iv} {nome:9}: {m['operacoes']:4} op ({m['por_dia']:.1f}/dia) | total {m['total']:+.1%} | queda {m['maior_queda']:.1%} | acerto {m['acerto']:.0%} | "
                   f"ganho {m['ganho_R']:+.2f}R perda {m['perda_R']:+.2f}R | {m['expectativa_R']:+.2f}R/op | PF {m['pf']:.2f}", flush=True)
