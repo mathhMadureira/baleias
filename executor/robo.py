@@ -148,14 +148,17 @@ def passo(c, b, sinal_vivo, agora_s=None):
 def rodar():
     b = Binance()
     if real():
-        problemas = verificar_chave(b)
+        from .corretoras import escolher
+        b, conferir, nome_corretora = escolher()
+        problemas = conferir(b)
         if any("SAQUE" in p or "não permite" in p for p in problemas):
             raise SystemExit("recusado: " + "; ".join(problemas))
         for p in problemas:
             print("aviso:", p, flush=True)
         global TAXA_SUPOSTA
-        TAXA_SUPOSTA = b.taxa(SIMBOLO)
-        print(f"modo REAL, taxa da conta {TAXA_SUPOSTA:.4%}, US$ {VALOR_USDT} por operação", flush=True)
+        if nome_corretora == "Binance":
+            TAXA_SUPOSTA = b.taxa(SIMBOLO)
+        print(f"modo REAL na {nome_corretora}, taxa {TAXA_SUPOSTA:.4%}", flush=True)
     else:
         print("modo SIMULADO (preços reais da Binance, sem ordens)", flush=True)
     c = abrir()

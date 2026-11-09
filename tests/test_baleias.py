@@ -973,3 +973,27 @@ class BotaoParada(unittest.TestCase):
         X.passo_diario(e, X.Simulada(None, e), {"XUSDT": velas}, {"XUSDT": 105.0})
         self.assertEqual(e["abertas"], {})
         self.assertIn("parada", X.EVENTOS.read_text())
+
+
+class ClienteBybit(unittest.TestCase):
+    def test_assina_e_recusa_chave_com_saque(self):
+        import hashlib, hmac, io, json as J
+        from executor import bybit as Y
+        vistos = []
+
+        def abrir(pedido, timeout=15):
+            vistos.append(pedido)
+            if "query-api" in pedido.full_url:
+                corpo = {"retCode": 0, "result": {"permissions": {"Spot": ["SpotTrade"], "Wallet": ["AccountTransfer", "Withdraw"]}, "ips": ["*"], "readOnly": 0}}
+            else:
+                corpo = {"retCode": 0, "result": {"list": [{"coin": [{"coin": "USDT", "walletBalance": "300", "locked": "20"}]}]}}
+            return io.BytesIO(J.dumps(corpo).encode())
+        c = Y.Bybit("CHAVE", "SEGREDO", abrir=abrir)
+        self.assertEqual(c.saldo("USDT"), 280.0)
+        p = vistos[-1]
+        ts = p.get_header("X-bapi-timestamp")
+        query = p.full_url.split("?", 1)[1]
+        self.assertEqual(p.get_header("X-bapi-sign"), hmac.new(b"SEGREDO", f"{ts}CHAVE5000{query}".encode(), hashlib.sha256).hexdigest())
+        problemas = Y.verificar_chave(c)
+        self.assertTrue(any("SAQUE" in x for x in problemas))
+        self.assertTrue(any("IP" in x for x in problemas))
