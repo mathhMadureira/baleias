@@ -1159,3 +1159,25 @@ class OrcamentoFixo(unittest.TestCase):
         self.assertEqual(len(e["abertas"]), 2)                 # duas de US$ 5; a terceira não cabe
         self.assertAlmostEqual(e["caixa"], 0.0)
         self.assertIn("não há caixa", X.EVENTOS.read_text())
+
+
+class CerebroRapido(unittest.TestCase):
+    def test_aprende_com_varias_moedas_e_confere_em_1h(self):
+        from baleias import cerebro as C
+        cb = C.CerebroRapido()
+        def velas(n, sobe):
+            v, px = [], 100.0
+            for i in range(n):
+                px *= 1.001 if sobe else 0.999
+                v.append((i * 300_000, px, px * 1.002, px * 0.998, px, 10.0))
+            return v
+        a, b = velas(150, True), velas(150, False)
+        prob, ev, f = cb.observar("AUSDT", a[:130])
+        cb.observar("BUSDT", b[:130])
+        self.assertEqual(len(cb.previsoes), 2)
+        self.assertEqual(cb.resolver("AUSDT", a[:141]), 0)            # 11 velas depois: ainda não deu 1 h
+        self.assertEqual(cb.resolver("AUSDT", a[:143]), 1)            # 12 velas depois: confere
+        self.assertEqual([p["m"] for p in cb.previsoes], ["BUSDT"])
+        self.assertLess(ev, 0.01)
+        e = cb.exportar()
+        self.assertEqual(C.CerebroRapido(e).previsoes[0]["m"], "BUSDT")

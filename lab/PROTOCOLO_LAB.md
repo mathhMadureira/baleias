@@ -429,3 +429,11 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Mesmas condições:** mesmas velas (BTC 15 min), mesmo contrato binário simulado (0,51, 2% por aposta, limiar 52%), rodando lado a lado no GitHub a cada 15 min.
 - **Placar ao vivo de cada um** começa no fim do próprio aquecimento: v1 em 2026-11-10 03:30 UTC; v2 na primeira rodada na nuvem.
 - **Avaliação:** quando os dois tiverem ≥ 300 apostas ao vivo. O v2 **vence** se o resultado líquido acumulado for maior **e** o acerto também for maior. Se só um dos dois for maior, empate, e continua. Cada um também precisa vencer a referência "sempre sobe" nas próprias apostas.
+
+## Hipótese 22: o cérebro aplicado ao robô rápido (2026-11-10, pedido do dono)
+
+- **O que é:** o robô rápido deixa o rompimento puro e passa a entrar pelo `CerebroRapido`. São as mesmas sinapses do cérebro (rede neural, reversão, padrões, rompimento, rotas criadas), aprendendo com as 33 moedas em velas de 5 min, com previsão de "sobe na próxima 1 h" conferida 12 velas depois.
+- **Entrada:** compra se o valor esperado for (2p − 1) × 0,8 × desvio × √12 − 0,2% > 0, nas maiores primeiro, com US$ 5 por operação na conta de US$ 10.
+- **Saída:** stop 2N ou 1 h.
+- **Aquecimento:** ~880 velas × 33 moedas, que não conta.
+- **Avaliação:** pela mesa proprietária (regras da fase 1). Ressalva matemática: com custo de 0,2% e movimento típico de ~0,8%/h, o valor esperado só fica positivo com p ≳ 62%.

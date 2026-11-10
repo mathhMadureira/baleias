@@ -137,7 +137,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="ra-ops">—</div><div class="sub" id="ra-ops-s">—</div></div>
       <div class="kpi"><div class="rot">Meta: +US$ 100 a cada 2 dias</div><div class="val num" id="ra-hoje">—</div><div class="sub" id="ra-hoje-s">—</div></div>
       <div class="kpi"><div class="rot">Próxima vela fecha em</div><div class="val num" id="ra-prox">—</div><div class="sub" id="ra-ult">—</div></div>
-      <div class="kpi"><div class="rot">Mais perto de entrar</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
+      <div class="kpi"><div class="rot">O que o cérebro vê (chance de subir em 1 h · valor esperado)</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:10px;margin:4px 0 6px">
       <b id="ra-g-titulo" class="num">—</b><span class="mut num" id="ra-g-info" style="font-size:12px"></span>
@@ -751,6 +751,11 @@ async function cicloRapido() {
         : `${fmt(prog, 1)}% da meta · termina ${fim} · US$ ${fmt(ra.orcamento, 0)}/operação · perde no máx. US$ ${fmt(ra.limite_dia)}/dia`;
       $("ra-ops").textContent = ra.operacoes; $("ra-ops-s").textContent = ra.operacoes ? `acerto ${fmt(ra.acerto * 100, 0)}% · ${fmt(ra.media_R)}R/op` : "nenhuma ainda";
       $("ra-ult").textContent = ra.ultima_vela ? "última decisão " + ra.ultima_vela.slice(11) + " UTC" : "";
+      if (ra.cerebro && ra.cerebro.oportunidades.length) {
+        const cb = ra.cerebro;
+        $("ra-radar").textContent = "🧠 " + cb.oportunidades.slice(0, 5).map(o => `${o.moeda} ${fmt(o.prob * 100, 1)}% (VE ${o.ev >= 0 ? "+" : ""}${fmt(o.ev * 100, 2)}%)`).join(" · ") +
+          (cb.rede ? ` | rede neural ${fmt(cb.rede.acertos / Math.max(1, cb.rede.previsoes) * 100, 1)}% em ${cb.rede.previsoes}` : "");
+      } else
       $("ra-radar").textContent = ra.radar.length ? ra.radar.map(r => `${r.moeda} ${r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%"}`).join(" · ") : "carregando velas…";
       $("ra-pos").innerHTML = ra.posicoes.length ? `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Stop</th><th>Resultado</th></tr></thead><tbody>${
         ra.posicoes.map(p => `<tr><td>${p.moeda}</td><td>${px(p.entrada)}</td><td>${px(p.preco)}</td><td>${px(p.stop)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado)}</td></tr>`).join("")}</tbody></table>`

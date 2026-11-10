@@ -231,6 +231,21 @@ def reconciliar(e, corretora, precos):
     return eventos
 
 
+def entrar(e, corretora, m, px, n, motivo):
+    """Entrada com orçamento fixo (robô rápido): compra, guarda o stop 2N e registra o motivo."""
+    caixa = corretora.usdt_livre()
+    usdt = ORCAMENTO_FIXO if caixa >= ORCAMENTO_FIXO - 1e-9 else caixa
+    if usdt < 4.99:
+        return None
+    qtd, preco_medio, gasto = corretora.comprar(m, usdt, px)
+    stop = preco_medio - T.STOP_N * n
+    ordem = corretora.colocar_stop(m, qtd, stop)
+    e["abertas"][m] = {"moeda": m, "entrada": preco_medio, "qtd": qtd, "stop": stop, "ordem_stop": ordem, "N": n,
+                       "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * (preco_medio - stop)}
+    return registrar(f"🐢 Robô ENTROU COMPRADO em {m[:-4]} a {preco_medio:,.6g} ({motivo}). Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:.1f}%), "
+                     f"posição US$ {gasto:,.2f}{'' if corretora.real else ' [simulado]'}")
+
+
 def checar_stops(e, corretora, precos):
     eventos = []
     for m in list(e["abertas"]):

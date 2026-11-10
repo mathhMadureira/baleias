@@ -505,3 +505,71 @@ class CerebroV2(Cerebro):
                 s["peso"] = s["peso"] ** 0.8
         self._homeostase()
         self._anotar(t, f"😴 Sono: reencenei {len(episodios)} episódios guardados e renormalizei os pesos das sinapses.")
+
+
+# ---------------- Cérebro do robô rápido: 33 moedas, velas de 5 min, horizonte de 1 h ----------------
+HORIZONTE = 12                     # 12 velas de 5 min = 1 h
+CUSTO_SPOT = 0.002                 # ida e volta no spot (0,1% por lado)
+
+
+class CerebroRapido(Cerebro):
+    """O mesmo cérebro (sinapses + rede neural + Hedge + criação/poda), aprendendo com todas as moedas ao mesmo tempo.
+    Cada observação vira uma previsão de "sobe na próxima hora", conferida 12 velas depois."""
+
+    def __init__(self, estado=None, semente=31):
+        super().__init__(estado, semente)
+        e = estado or {}
+        self.previsoes = e.get("previsoes", [])          # pendentes: {m, t, px, x, opinioes, prob}
+        self.oportunidades = e.get("oportunidades", [])
+
+    def exportar(self):
+        return super().exportar() | {"previsoes": self.previsoes[-3000:], "oportunidades": self.oportunidades[:33], "versao": "rapido"}
+
+    def observar(self, m, v):
+        """v: velas fechadas (t, o, h, l, c, vol) da moeda m, a última é a nova. Devolve (prob de subir em 1 h, valor esperado)."""
+        f = caracteristicas(v)
+        opinioes, soma, total = {}, 0.0, 0.0
+        for s in self.sinapses:
+            if s["status"] == "podada":
+                continue
+            op = opiniao(s, f, self.rede)
+            opinioes[s["id"]] = op
+            if op and s["status"] == "ativa":
+                a = (s["acertos"] + 20) / (s["previsoes"] + 40)
+                soma += s["peso"] * (a if op > 0 else 1 - a)
+                total += s["peso"]
+        prob = soma / total if total else 0.5
+        movimento = 0.8 * f["dp"] * math.sqrt(HORIZONTE)          # movimento típico em 1 h
+        ev = (2 * prob - 1) * movimento - CUSTO_SPOT
+        self.previsoes.append({"m": m, "t": v[-1][0], "px": v[-1][4], "x": vetor(f), "opinioes": opinioes, "prob": prob})
+        return prob, ev, f
+
+    def resolver(self, m, v):
+        """Confere as previsões da moeda m cuja hora já passou: cada sinapse aprende com o erro; a rede se corrige."""
+        fech = {x[0]: x[4] for x in v}
+        restantes, feitas = [], 0
+        for p in self.previsoes:
+            alvo = p["t"] + HORIZONTE * 300_000
+            if p["m"] != m or alvo not in fech:
+                if p["m"] != m or alvo > v[-1][0]:
+                    restantes.append(p)
+                continue
+            subiu = 1 if fech[alvo] > p["px"] else 0
+            for s in self.sinapses:
+                op = p["opinioes"].get(s["id"], 0)
+                if not op:
+                    continue
+                acertou = (op > 0) == bool(subiu)
+                s["previsoes"] += 1
+                s["acertos"] += acertou
+                if s["status"] == "ativa":
+                    s["peso"] = max(1e-3, min(50.0, s["peso"] * math.exp(-ETA * (0 if acertou else 1) + ETA * 0.5)))
+            self.rede.aprender(p["x"], subiu, taxa=0.005)
+            if p["prob"] >= LIMIAR or p["prob"] <= 1 - LIMIAR:      # o que o cérebro "apostaria": vira o histórico dele
+                self.historico.append(1 if (p["prob"] > 0.5) == bool(subiu) else 0)
+            feitas += 1
+        self.previsoes = restantes
+        if feitas:
+            self.passos += 1
+            self._revisar(v[-1][0])
+        return feitas

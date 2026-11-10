@@ -489,6 +489,8 @@ class Motor:
                 continue
             saida[m] = [[time.strftime("%Y-%m-%d %H:%M", time.gmtime(x[0] / 1000)), float(x[1]), float(x[2]), float(x[3]), float(x[4])]
                         for x in k if x[6] < agora_ms]
+            self.__dict__.setdefault("_brutas", {})[m] = [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5]))
+                                                          for x in k if x[6] < agora_ms]
             time.sleep(0.05)
         return saida
 
@@ -514,6 +516,52 @@ class Motor:
                 filtrado.pop(m, None)
                 ouvir({"t": time.time(), "texto": f"🧠➜ {m[:-4]} rompeu, mas o Livro do cérebro votou contra ({', '.join(usados)}): entrada evitada."})
         return filtrado
+
+    def _aquecer_cerebro_rapido(self, cbr, intervalo):
+        """Vive as últimas ~1000 velas de 5 min das 33 moedas em sequência (prevê, espera 1 h, confere) antes de ir ao vivo."""
+        from lab import tartaruga as T
+        series = {}
+        for m in T.MOEDAS_ROBO:
+            try:
+                with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=1000", timeout=30) as r:
+                    series[m] = [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])) for x in json.load(r) if x[6] < time.time() * 1000]
+            except OSError:
+                continue
+            time.sleep(0.05)
+        tamanho = min(len(v) for v in series.values())
+        for i in range(120, tamanho):
+            for m, v in series.items():
+                janela = v[len(v) - tamanho + max(0, i - 140):len(v) - tamanho + i + 1]
+                cbr.resolver(m, janela)
+                cbr.observar(m, janela[-120:])
+        cbr._anotar(time.time() * 1000, f"🧠 Aquecimento do robô rápido: viveu {tamanho - 120} velas de 5 min em {len(series)} moedas "
+                                        f"({(tamanho - 120) * len(series)} previsões conferidas 1 h depois).")
+
+    def _cerebro_rapido_passo(self, cbr, dados, precos, e, corretora, ouvir):
+        """A cada vela de 5 min: confere as previsões de 1 h atrás, prevê todas as moedas e entra nas de maior valor esperado."""
+        from lab import tartaruga as T
+        from executor import tartaruga_exec as X
+        brutas = getattr(self, "_brutas", {})
+        X.stops_perdidos(e, corretora, dados)
+        oportunidades = []
+        for m, v in brutas.items():
+            if len(v) < 121:
+                continue
+            cbr.resolver(m, v[-141:])
+            prob, ev, f = cbr.observar(m, v[-120:])
+            oportunidades.append({"moeda": m[:-4], "prob": prob, "ev": ev, "par": m})
+        oportunidades.sort(key=lambda x: -x["ev"])
+        cbr.oportunidades = oportunidades[:33]
+        if X.PARAR.exists():
+            return
+        for o in oportunidades:
+            m = o["par"]
+            if o["ev"] <= 0 or m in e["abertas"] or m not in precos or corretora.usdt_livre() < 4.99:
+                continue
+            n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
+            if not n:
+                continue
+            X.entrar(e, corretora, m, precos[m], n, f"cérebro: {o['prob']:.1%} de subir em 1 h, valor esperado {o['ev'] * 100:+.2f}% depois do custo")
 
     def _robo_rapido(self):
         """Teste ao vivo, simulado: as mesmas regras da Tartaruga em velas curtas (ROBO_RAPIDO=1h por padrão), para operar no dia.
@@ -541,6 +589,14 @@ class Motor:
             self.evento({"tipo": "rapido", "texto": texto, "notificar": True})
         X.ouvinte = ouvir                       # neste processo o tartaruga_exec só é usado pelo robô rápido
         dados = {}
+        modo = os.environ.get("ROBO_RAPIDO_MODO", "cerebro")   # "cerebro" (padrão) ou "tartaruga" (rompimento puro)
+        cbr, arq_cbr = None, config.RAIZ / "cerebro_rapido.json"
+        if modo == "cerebro":
+            from . import cerebro as C
+            cbr = C.CerebroRapido(json.loads(arq_cbr.read_text()) if arq_cbr.exists() else None)
+            if not cbr.passos:
+                self._aquecer_cerebro_rapido(cbr, intervalo)
+                arq_cbr.write_text(json.dumps(cbr.exportar()))
         while True:
             with self.trava:
                 precos = {f"{s}USDT": x["p"] for s, x in self.mercado.items()}
@@ -576,8 +632,14 @@ class Motor:
                 e["fim_bloco"] = fim_bloco
             if precos and e.get("ultima_vela") != ultima_fechada and agora % passo > 15:
                 dados = self._velas_rapidas(intervalo, T.MOEDAS_ROBO)
-                precos = self._consultar_livro(dados, precos, e, ouvir)
-                X.passo_diario(e, corretora, dados, precos)
+                if modo == "cerebro":
+                    self._cerebro_rapido_passo(cbr, dados, precos, e, corretora, ouvir)
+                    tmp = arq_cbr.with_suffix(".tmp")
+                    tmp.write_text(json.dumps(cbr.exportar()))
+                    tmp.replace(arq_cbr)
+                else:
+                    precos = self._consultar_livro(dados, precos, e, ouvir)
+                    X.passo_diario(e, corretora, dados, precos)
                 for p in e["abertas"].values():
                     p.setdefault("conferido_ate", ultima_fechada)
                 e["ultima_vela"] = ultima_fechada
@@ -603,7 +665,13 @@ class Motor:
                                                  "resultado": p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"]} for m, p in e["abertas"].items()],
                                    "operacoes": len(rs), "acerto": sum(r > 0 for r in rs) / len(rs) if rs else None,
                                    "media_R": sum(rs) / len(rs) if rs else None, "eventos": e["eventos"][:30],
-                                   "radar": e.get("radar", [])[:8], "todas": sorted(m[:-4] for m in T.MOEDAS_ROBO)}
+                                   "radar": e.get("radar", [])[:8], "todas": sorted(m[:-4] for m in T.MOEDAS_ROBO), "modo": modo,
+                                   "cerebro": cbr and {"oportunidades": [{k: o[k] for k in ("moeda", "prob", "ev")} for o in cbr.oportunidades[:8]],
+                                                       "acerto": (sum(cbr.historico[-500:]) / len(cbr.historico[-500:])) if cbr.historico else None,
+                                                       "n": len(cbr.historico),
+                                                       "sinapses": sum(1 for x in cbr.sinapses if x["status"] == "ativa"),
+                                                       "rede": next(({"acertos": x["acertos"], "previsoes": x["previsoes"]} for x in cbr.sinapses if x["id"] == "rede_neural"), None),
+                                                       "diario": cbr.diario[-6:][::-1]}}
             self.fonte("rapido", True)
             time.sleep(5)
 
