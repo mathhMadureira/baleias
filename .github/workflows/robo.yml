@@ -5,8 +5,11 @@
 name: robo-diario
 
 on:
-  schedule:
+  schedule:                      # vários horários de reserva: o agendador do GitHub atrasa/pula; a 1ª que rodar faz o dia
     - cron: "10 0 * * *"
+    - cron: "40 1 * * *"
+    - cron: "10 3 * * *"
+    - cron: "10 6 * * *"
   workflow_dispatch: {}
 
 permissions:
