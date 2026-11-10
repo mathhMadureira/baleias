@@ -129,6 +129,27 @@ def _h19():
     return avaliar("Previsor H19", eventos, len(apostas), None, "aposta binária simulada, 2% por aposta a 0,51")
 
 
+def cerebros_por_moeda():
+    """Placar ao vivo de cada cérebro v1 e v2, moeda por moeda (BTC + as outras 32), para a aba Robô."""
+    subprocess.run(["git", "-C", str(REPO), "fetch", "-q", "origin", "estado"], capture_output=True, timeout=60)
+    linhas = []
+    for nome_arq, versao in (("dados/cerebro.json", "v1"), ("dados/cerebro_v2.json", "v2")):
+        e = _git_json(nome_arq) or {}
+        ini = e.get("inicio_ao_vivo")
+        ops = [[o["t"], o["liquido"], o["aposta"]] for o in e.get("operacoes", []) if ini and o["t"] >= ini]
+        linhas.append(("BTCUSDT", versao, ops))
+    for par, x in sorted((_git_json("dados/cerebros_moedas.json") or {}).items()):
+        for versao in ("v1", "v2"):
+            linhas.append((par, versao, x.get(versao, {}).get("ops", [])))
+    saida = {}
+    for par, versao, ops in linhas:
+        ultima = ops[-1] if ops else None
+        saida.setdefault(par, {"moeda": par[:-4]})[versao] = {
+            "apostas": len(ops), "acertos": sum(1 for o in ops if o[1] > 0), "resultado": sum(o[1] for o in ops),
+            "ultima": ultima and {"t": ultima[0], "lado": "sobe" if ultima[2] > 0 else "desce", "ganhou": ultima[1] > 0}}
+    return {"t": time.time(), "moedas": sorted(saida.values(), key=lambda m: -(m.get("v1", {}).get("apostas", 0) + m.get("v2", {}).get("apostas", 0)))}
+
+
 _cache = {"t": 0, "dados": None}
 
 

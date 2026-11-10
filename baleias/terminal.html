@@ -85,6 +85,15 @@ td { padding:8px; border-bottom:1px solid var(--line); font-family:var(--mono); 
 .hip .r { font-size:13px; font-weight:600; }
 .hip .n { font:12px var(--mono); color:var(--mut); margin-top:2px; }
 iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; background:var(--bg); }
+.placar-robos { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:10px; }
+.rb { background:var(--bg2); border:1px solid var(--line); border-left:4px solid var(--dim); border-radius:10px; padding:10px 12px; cursor:pointer; transition:background .15s; }
+.rb:hover { background:var(--card2); }
+.rb.ganha { border-left-color:var(--up); } .rb.perde { border-left-color:var(--down); }
+.rb .n { font-size:12px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.rb .c { font:700 20px var(--mono); margin:2px 0; }
+.rb .s { font:11px var(--mono); color:var(--mut); }
+.chip { display:inline-block; font:700 11px var(--mono); padding:2px 7px; border-radius:6px; background:var(--card2); border:1px solid var(--line2); }
+.chip.up { color:var(--up); border-color:#16c78455; } .chip.down { color:var(--down); border-color:#ea394355; }
 .tooltip { position:fixed; pointer-events:none; background:#0b1017ee; border:1px solid var(--line2); border-radius:8px; padding:7px 9px; font:12px var(--mono); display:none; z-index:9; white-space:pre; }
 
 @media (max-width: 1200px) { .kpis { grid-template-columns:repeat(3, minmax(0,1fr)); } .g-principal, .g-dupla { grid-template-columns:1fr; } .regras, .stats { grid-template-columns:repeat(2, minmax(0,1fr)); } }
@@ -110,19 +119,25 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 
 <main>
 <section class="aba ativa" id="aba-robo">
-  <div class="card" style="margin-bottom:14px;border-color:#16c78466">
+  <div class="card" style="margin-bottom:14px">
+    <h3>🏁 Todos os robôs agora · conta de US$ 10 cada<span class="dir mut num" id="pl-t"></span></h3>
+    <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
+  </div>
+  <div class="card" id="sec-varredura" style="margin-bottom:14px;border-color:#16c78466">
     <h3>🔎 Varredura ao vivo — o robô analisa as 33 moedas sem parar <span class="ponto ok" id="vr-pulso" style="display:inline-block"></span>
       <span class="dir mut num" id="vr-info"></span></h3>
     <div class="grade g-dupla">
-      <div style="max-height:340px;overflow:auto"><table id="vr-tab"><thead><tr><th>Moeda</th><th>Preço</th><th>Sobe em 1 h</th><th>Melhor lado · VE</th><th>Rompimento</th><th>Sinal</th><th>Há</th></tr></thead><tbody></tbody></table></div>
+      <div style="max-height:340px;overflow:auto"><table id="vr-tab"><thead><tr><th>Moeda</th><th>Preço</th><th>Chance de subir</th><th>Melhor lado · VE</th><th>Rompimento</th><th>Sinal</th><th>Há</th></tr></thead><tbody></tbody></table></div>
       <div id="vr-log" class="num" style="max-height:340px;overflow:hidden;font-size:12px;line-height:1.55"></div>
     </div>
-    <div class="mut" style="font-size:12px;margin-top:6px">Prévia contínua com o preço de agora e a vela ainda em formação. A entrada de verdade só acontece no fechamento da vela (a cada 5 min), quando o valor esperado depois do custo é positivo.</div>
+    <div class="mut" style="font-size:12px;margin-top:6px">Prévia contínua com o preço de agora e a vela ainda em formação, feita pelo cérebro próprio de cada moeda (um por moeda, isolado). A entrada de verdade só acontece no fechamento da vela (a cada <span class="ra-iv-txt">1 min</span>), quando o valor esperado depois do custo é positivo. VE = valor esperado em 12 velas, já descontado o custo.</div>
   </div>
-  <div class="card" style="margin-bottom:14px;border-color:#3b82f688">
-    <h3>🧠 Cérebro de day trade — BTC 15 min (simulado, US$ 700, teto de perda US$ 100/dia)</h3>
+  <div class="card" id="sec-cerebro" style="margin-bottom:14px;border-color:#3b82f688">
+    <h3>🧠 Cérebros v1 × v2 — contrato binário de 15 min, um cérebro isolado por moeda (33), rodando na nuvem</h3>
+    <div style="max-height:260px;overflow:auto;margin-bottom:12px"><table id="cm-tab"><thead><tr><th>Moeda</th><th>v1 apostas</th><th>v1 acerto</th><th>v1 resultado</th><th>v2 apostas</th><th>v2 acerto</th><th>v2 resultado</th><th>Última aposta</th></tr></thead><tbody><tr><td colspan="8" class="vazio">carregando…</td></tr></tbody></table></div>
+    <div class="mut" style="font-size:12px;margin:-4px 0 10px">Resultado em % da conta de cada cérebro (2% por aposta, paga 0,96 por acerto). Abaixo, o detalhe do cérebro do BTC.</div>
     <div class="kpis" style="margin-bottom:10px">
-      <div class="kpi"><div class="rot">Aposta agora</div><div class="val num" id="cb-ap">—</div><div class="sub" id="cb-ap-s">—</div></div>
+      <div class="kpi"><div class="rot">BTC · aposta agora</div><div class="val num" id="cb-ap">—</div><div class="sub" id="cb-ap-s">—</div></div>
       <div class="kpi"><div class="rot">Acerto do cérebro</div><div class="val num" id="cb-ac">—</div><div class="sub" id="cb-ic">—</div></div>
       <div class="kpi"><div class="rot">Capital simulado</div><div class="val num" id="cb-cap">—</div><div class="sub" id="cb-cap-s">—</div></div>
       <div class="kpi"><div class="rot">Sinapses</div><div class="val num" id="cb-ns">—</div><div class="sub" id="cb-ns-s">—</div></div>
@@ -137,8 +152,8 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
         <b style="font-size:12px;color:var(--mut)">DIÁRIO DO CÉREBRO (aprendeu · corrigiu · criou · podou)</b><div id="cb-diario" style="max-height:280px;overflow:auto;font-size:13px;margin-top:6px"></div></div>
     </div>
   </div>
-  <div class="card" style="margin-bottom:14px;border-color:#f0b90b55">
-    <h3>⚡ Teste ao vivo — robô rápido (velas de <span id="ra-iv">1 h</span>, simulado, conta de US$ 10)
+  <div class="card" id="sec-rapido" style="margin-bottom:14px;border-color:#f0b90b55">
+    <h3>⚡ Robô rápido — velas de <span id="ra-iv">1m</span>, um cérebro por moeda, compra e venda (simulado, conta de US$ 10)
       <span class="dir"><button id="ra-notif" class="selo" style="cursor:pointer;background:var(--card2);color:var(--txt)">🔔 avisar no navegador</button></span></h3>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="ra-pat">—</div><div class="sub" id="ra-ret">—</div></div>
@@ -146,7 +161,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="ra-ops">—</div><div class="sub" id="ra-ops-s">—</div></div>
       <div class="kpi"><div class="rot">Meta: +US$ 100 a cada 2 dias</div><div class="val num" id="ra-hoje">—</div><div class="sub" id="ra-hoje-s">—</div></div>
       <div class="kpi"><div class="rot">Próxima vela fecha em</div><div class="val num" id="ra-prox">—</div><div class="sub" id="ra-ult">—</div></div>
-      <div class="kpi"><div class="rot">O que o cérebro vê (chance de subir em 1 h · valor esperado)</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
+      <div class="kpi"><div class="rot">O que os cérebros veem (lado · valor esperado em 12 velas)</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:10px;margin:4px 0 6px">
       <b id="ra-g-titulo" class="num">—</b><span class="mut num" id="ra-g-info" style="font-size:12px"></span>
@@ -154,14 +169,28 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <select id="ra-g-moeda" class="selo" style="background:var(--card2);color:var(--txt)"><option value="">seguir o robô</option></select>
     </div>
     <canvas id="ra-grafico" style="height:360px"></canvas>
-    <div class="legenda" style="margin-bottom:10px"><span>vela mais clara = vela de agora, ao vivo</span><span><i style="border-color:var(--up)"></i>entrada (máx. 55 velas)</span><span><i style="border-color:var(--down)"></i>saída (mín. 20 velas)</span><span><i style="border-color:#e6edf3"></i>preço de entrada da posição</span><span><i style="border-color:var(--gold);border-top-style:solid"></i>stop da posição</span></div>
+    <div class="legenda" style="margin-bottom:10px"><span>vela mais clara = vela de agora, ao vivo</span><span><i style="border-color:var(--up)"></i>máxima de 55 velas (referência)</span><span><i style="border-color:var(--down)"></i>mínima de 20 velas (referência)</span><span><i style="border-color:#e6edf3"></i>preço de entrada da posição</span><span><i style="border-color:var(--gold);border-top-style:solid"></i>stop da posição</span></div>
     <div class="grade g-dupla">
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
     </div>
-    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Conta de US$ 10 em perpétuo simulado: compra ou VENDE a descoberto, US$ 5 por operação, no máximo 1 h em cada; estuda as próprias operações (calibração, lado, moedas); para no dia se perder US$ 1 (10%), para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
+    <div class="mut" style="font-size:12px;margin-top:8px">A cada vela fechada, o cérebro de cada moeda (rede neural + sinapses, isolado das outras moedas) prevê as próximas 12 velas; uma regra só ganha voto se acertar mais do que o próprio humor do mercado. Entra comprado OU vendido quando o valor esperado passa do custo (0,1% ida e volta). Perpétuo simulado 5×: US$ 5 por operação usando US$ 1 de margem; stop 2N; sai em no máximo 12 velas. Estuda as próprias operações (calibração, lado, moedas). Para no dia se perder US$ 1, para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Nenhum dinheiro real.</div>
   </div>
-  <div class="card" style="margin-bottom:14px;border-color:#a78bfa55">
+  <div class="card" id="sec-scalper" style="margin-bottom:14px;border-color:#ea394355">
+    <h3>✂ Scalper — mesmas entradas dos cérebros, alvo +1,0%, stop −0,5%, no máximo 30 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
+    <div class="kpis" style="margin-bottom:10px">
+      <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="sc-pat">—</div><div class="sub" id="sc-ret">—</div></div>
+      <div class="kpi"><div class="rot">Resultado hoje</div><div class="val num" id="sc-hoje">—</div><div class="sub">para com −US$ 1,00 no dia</div></div>
+      <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="sc-npos">—</div><div class="sub" id="sc-aberto">—</div></div>
+      <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="sc-ops">—</div><div class="sub" id="sc-ac">—</div></div>
+      <div class="kpi" style="grid-column:span 2"><div class="rot">Conta de empate</div><div class="sub" style="font-size:12px;color:var(--txt)">Ganha 1% e perde 0,5%: precisa bater o alvo em ~40% das vezes (com o custo) para empatar. Abaixo disso, perde.</div></div>
+    </div>
+    <div class="grade g-dupla">
+      <div id="sc-pos"></div>
+      <div id="sc-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
+    </div>
+  </div>
+  <div class="card" id="sec-vortice" style="margin-bottom:14px;border-color:#a78bfa55">
     <h3>🎯 Previsor ao vivo do BTC em 15 min — Vórtice invertido (H19, validação daqui para a frente)</h3>
     <div class="kpis" style="margin-bottom:0">
       <div class="kpi"><div class="rot">Acerto ao vivo</div><div class="val num" id="vo-ac">—</div><div class="sub" id="vo-ic">—</div></div>
@@ -171,7 +200,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi" style="grid-column:span 2"><div class="rot">Como funciona</div><div class="sub" style="font-size:12px;color:var(--txt)">No histórico 2020–2026, seguir o Vórtice com CHOP &lt; 38,2 acertou só ~47,7%. Apostar contra acertou ~52,3%. Como isso foi descoberto olhando os dados, só vale se repetir ao vivo. Só aposta quando o mercado está direcional (CHOP baixo).</div></div>
     </div>
   </div>
-  <div class="card" style="margin-bottom:14px;border-color:#16c78455">
+  <div class="card" id="sec-funding" style="margin-bottom:14px;border-color:#16c78455">
     <h3>💰 Robô de funding — opera o tempo todo, recebe a cada hora (simulado, US$ 700, desde 07/11)</h3>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">Recebido desde 07/11</div><div class="val num" id="fu-tot">—</div><div class="sub" id="fu-tot-s">—</div></div>
@@ -181,6 +210,9 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi" style="grid-column:span 2"><div class="rot">Posições agora (vendido no perp + comprado no spot)</div><div class="sub num" id="fu-pos-l" style="font-size:13px;color:var(--txt)">—</div></div>
     </div>
     <div class="mut" style="font-size:12px">Comprado no spot e vendido no perpétuo da mesma moeda: o preço se anula e sobra a taxa que os alavancados pagam a cada hora. Entra numa moeda só quando a média de 72 h paga o custo (probabilidade medida: 84% dos dias positivos). Pequeno, mas constante. Ganho real só com conta de futuros.</div>
+  </div>
+  <div class="card" id="sec-diario" style="margin-bottom:14px;border-color:#2a3746;padding-bottom:4px">
+    <h3>🐢 Robô diário (Tartaruga) — 33 moedas, decide uma vez por dia na nuvem (simulado, US$ 700)</h3>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="k-pat">—</div><div class="sub" id="k-pat-s">—</div></div>
@@ -773,7 +805,8 @@ async function cicloRapido() {
       $("ra-pat").textContent = "US$ " + fmt(ra.patrimonio); $("ra-pat").className = "val num " + cor(ret);
       $("ra-ret").textContent = pct(ret, 2) + " desde " + ra.inicio.split("-").reverse().join("/");
       const aberto = ra.posicoes.reduce((s, p) => s + p.resultado, 0);
-      $("ra-npos").textContent = ra.posicoes.length; $("ra-res").textContent = ra.posicoes.length ? `aberto ${aberto >= 0 ? "+" : ""}US$ ${fmt(aberto)}` : "esperando rompimento";
+      document.querySelectorAll(".ra-iv-txt").forEach(x => x.textContent = ra.intervalo.replace("m", " min"));
+      $("ra-npos").textContent = ra.posicoes.length; $("ra-res").textContent = ra.posicoes.length ? `aberto ${aberto >= 0 ? "+" : ""}US$ ${fmt(aberto)}` : "esperando um sinal que pague o custo";
       const rb = ra.resultado_bloco ?? ra.resultado_hoje;
       $("ra-hoje").textContent = (rb >= 0 ? "+" : "") + "US$ " + fmt(rb); $("ra-hoje").className = "val num " + cor(rb);
       const prog = Math.max(0, Math.min(100, rb / ra.meta_dia * 100));
@@ -824,6 +857,68 @@ $("ra-g-moeda").onchange = () => cicloGraficoRapido();
 cicloGraficoRapido();
 setInterval(() => { if (ra && ra.proxima) { let s = Math.max(0, Math.round(ra.proxima - Date.now() / 1000)); const m = Math.floor(s / 60); s -= m * 60; $("ra-prox").textContent = `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`; } }, 1000);
 cicloRapido();
+
+// ---------- placar de todos os robôs (topo da aba Robô) ----------
+const secaoDo = (nome) => nome.startsWith("Cérebro") ? "sec-cerebro" : nome.startsWith("Rápido") ? "sec-rapido" : nome.startsWith("Scalper") ? "sec-scalper"
+  : nome.startsWith("Previsor") ? "sec-vortice" : nome.startsWith("Funding") ? "sec-funding" : "sec-diario";
+async function cicloPlacar() {
+  try {
+    const m = await j("/api/mesa");
+    $("pl-t").textContent = "atualizado " + new Date(m.t * 1000).toLocaleTimeString("pt-BR");
+    $("pl-robos").replaceChildren(...m.fichas.map(f => {
+      const d = document.createElement("div"); d.className = "rb " + (f.resultado > 0.005 ? "ganha" : f.resultado < -0.005 ? "perde" : "");
+      d.innerHTML = `<div class="n"></div><div class="c ${cor(f.resultado)}">US$ ${fmt(f.conta)}</div>` +
+        `<div class="s">${f.resultado >= 0 ? "+" : ""}${fmt(f.resultado)} · ${f.operacoes} ops · pior dia ${fmt(f.pior_dia)}</div><div class="s" style="margin-top:3px"></div>`;
+      d.children[0].textContent = f.robo; d.children[3].textContent = f.status; d.title = f.nota;
+      d.onclick = () => { const s = $(secaoDo(f.robo)); if (s) s.scrollIntoView({behavior: "smooth", block: "start"}); };
+      return d;
+    }));
+  } catch (e) {}
+  setTimeout(cicloPlacar, 60000);
+}
+cicloPlacar();
+
+// ---------- cérebros por moeda (nuvem) ----------
+async function cicloCerebrosMoedas() {
+  try {
+    const d = await j("/api/moedas-cerebros");
+    const cel = (x) => x && x.apostas ? [x.apostas, `<span class="${x.acertos / x.apostas > 0.51 ? "up" : "down"}">${fmt(x.acertos / x.apostas * 100, 0)}%</span>`,
+      `<span class="${cor(x.resultado)}">${pct(x.resultado * 100, 1)}</span>`] : ["0", "—", "—"];
+    $("cm-tab").querySelector("tbody").replaceChildren(...d.moedas.map(m => {
+      const tr = document.createElement("tr"); const u = (m.v1 && m.v1.ultima) || (m.v2 && m.v2.ultima);
+      tr.innerHTML = `<td><b>${m.moeda}</b></td>` + [...cel(m.v1), ...cel(m.v2)].map(c => `<td>${c}</td>`).join("") +
+        `<td>${u ? `<span class="chip ${u.ganhou ? "up" : "down"}">${u.lado === "sobe" ? "▲" : "▼"} ${u.ganhou ? "ganhou" : "perdeu"}</span> <span class="mut">${new Date(u.t).toLocaleTimeString("pt-BR").slice(0, 5)}</span>` : '<span class="mut">ainda sem aposta</span>'}</td>`;
+      return tr;
+    }));
+  } catch (e) {}
+  setTimeout(cicloCerebrosMoedas, 120000);
+}
+cicloCerebrosMoedas();
+
+// ---------- scalper ----------
+async function cicloScalper() {
+  try {
+    const s = await j("/api/scalper");
+    if (!s.carregando) {
+      const ret = (s.patrimonio / 10 - 1) * 100;
+      $("sc-pat").textContent = "US$ " + fmt(s.patrimonio); $("sc-pat").className = "val num " + cor(ret); $("sc-ret").textContent = pct(ret, 2) + " desde o início";
+      const h = s.resultado_hoje ?? 0;
+      $("sc-hoje").textContent = (h >= 0 ? "+" : "") + "US$ " + fmt(h); $("sc-hoje").className = "val num " + cor(h);
+      const aberto = s.abertas.reduce((a, p) => a + p.resultado, 0);
+      $("sc-npos").textContent = s.abertas.length; $("sc-aberto").textContent = s.abertas.length ? `aberto ${aberto >= 0 ? "+" : ""}US$ ${fmt(aberto, 3)}` : "esperando sinal dos cérebros";
+      $("sc-ops").textContent = s.fechadas; $("sc-ac").textContent = s.fechadas ? `ganhou ${s.ganhos} · acerto ${fmt(s.ganhos / s.fechadas * 100, 0)}% (empate ~40%)` : "nenhuma ainda";
+      $("sc-trava").innerHTML = s.trava ? `<span class="chip down">🛑 ${s.trava}</span>` : `<span class="chip up">operando</span>`;
+      $("sc-pos").innerHTML = s.abertas.length ? `<table><thead><tr><th>Moeda</th><th>Lado</th><th>Entrada</th><th>Resultado</th></tr></thead><tbody>${
+        s.abertas.map(p => `<tr><td>${p.moeda}</td><td class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ vendido" : "▲ comprado"}</td><td>${px(p.entrada)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado, 3)}</td></tr>`).join("")}</tbody></table>`
+        : `<div class="vazio">Nenhuma posição aberta agora.</div>`;
+      $("sc-ev").replaceChildren(...(s.eventos.length ? s.eventos.map(x => { const d = document.createElement("div"); d.style.padding = "4px 0"; d.style.borderBottom = "1px solid var(--line)";
+        d.className = x.texto.includes("ENTROU") ? "" : /: \+/.test(x.texto) ? "up" : x.texto.includes("SAIU") ? "down" : "mut";
+        d.textContent = new Date(x.t * 1000).toLocaleTimeString("pt-BR") + "  " + x.texto.replace("✂ ", ""); return d; }) : [Object.assign(document.createElement("div"), {className: "vazio", textContent: "Sem operações ainda."})]));
+    }
+  } catch (e) {}
+  setTimeout(cicloScalper, 5000);
+}
+cicloScalper();
 
 setInterval(relogio, 1000); relogio();
 window.addEventListener("resize", desenharTudo);

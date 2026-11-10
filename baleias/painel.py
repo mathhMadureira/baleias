@@ -179,6 +179,9 @@ class Manipulador(BaseHTTPRequestHandler):
         elif self.path.startswith("/api/mesa"):
             from . import mesa
             self._enviar(200, json.dumps(mesa.mesa()).encode(), "application/json")
+        elif self.path.startswith("/api/moedas-cerebros"):
+            from . import mesa
+            self._enviar(200, json.dumps(mesa.cerebros_por_moeda()).encode(), "application/json")
         elif self.path.startswith("/api/cerebro"):
             corpo = self.motor.cerebro if self.motor and self.motor.cerebro else {"carregando": True}
             self._enviar(200, json.dumps(corpo).encode(), "application/json")
