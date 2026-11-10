@@ -124,5 +124,33 @@
   "resultado": "Não passou por 0,01 de Calmar no teste; queda caiu nos dois períodos",
   "numero": "queda treino −65% → −35%; teste −42% → −39%",
   "status": "parcial"
+ },
+ {
+  "id": "H14 Reversão intradiária",
+  "pergunta": "Comprar quedas anormais (z ≤ −2,5) em 5 min",
+  "resultado": "Não passou: perde depois do custo",
+  "numero": "−0,18% a −0,31% por operação, t −4,8",
+  "status": "reprovada"
+ },
+ {
+  "id": "H15 Força relativa",
+  "pergunta": "Girar para as 5 moedas mais fortes de 28 dias",
+  "resultado": "Não passou: queda pior que BTC no teste; perde nas pequenas",
+  "numero": "+47%/ano nas 33 (2024+); −17%/ano no grupo 3",
+  "status": "reprovada"
+ },
+ {
+  "id": "H16 Sazonalidade",
+  "pergunta": "Horas do dia / dias da semana",
+  "resultado": "Não passou (contagem correta: nenhum |t| ≥ 2)",
+  "numero": "melhor: quarta t +1,51",
+  "status": "reprovada"
+ },
+ {
+  "id": "H17 Funding contrário",
+  "pergunta": "Comprar após funding muito negativo",
+  "resultado": "Não passou",
+  "numero": "teste −0,35% por sinal",
+  "status": "reprovada"
  }
 ]

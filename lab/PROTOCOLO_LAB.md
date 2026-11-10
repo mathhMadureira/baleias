@@ -367,3 +367,13 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - Sinal: a média de funding das últimas 24 h entre as 10% mais negativas do treino (medo extremo) → compra por 3 dias.
 - Treino até 2024-12-31, teste 2025–hoje.
 - **Passa** se o retorno médio líquido de 0,2% for > 0 nos dois períodos, com t > 2 no teste e pelo menos 20 sinais em cada.
+
+### Resultados de H15, H16 e H17 (2026-11-10): nenhuma passou
+
+- **H15 (força relativa, top 5 de 28 dias, filtro BTC > MM100):**
+  - 33 moedas, treino: +141,6%/ano, queda −51,2% (BTC parado: +21,1%, −81,2%);
+  - 33 moedas, teste: +46,9%/ano, **queda −59,5%** (BTC: +20,3%, −53,0%);
+  - grupo 3: **−17,3%/ano**, queda −81,7%.
+  - Não passou: a queda no teste foi pior que a do BTC, e no grupo de moedas menores perdeu. Repete o padrão das Tartarugas: a vantagem existe nas moedas grandes e some nas pequenas.
+- **H16 (sazonalidade):** a primeira medida contou cada moeda em cada hora como observação independente. As moedas se movem juntas, então os t estavam inflados (o próprio critério pré-registrado herdou o erro). Refeito com **um retorno de carteira por dia**: nenhum dia da semana tem |t| ≥ 2 (o maior foi quarta no teste, t +1,51). A regra "comprado só qua/sex/sáb" ficou +0,34%/dia em 2024 (t 1,07) e +0,19%/dia em 2025+ (t 0,88), indistinguível do acaso. Não passou. As horas sofrem da mesma inflação e não serão usadas.
+- **H17 (funding extremo negativo → compra por 3 dias):** treino com 84 sinais, +0,87% (t 1,37); teste com 140 sinais, −0,35% (t −0,72). Não passou.
