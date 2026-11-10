@@ -166,5 +166,26 @@
   "resultado": "Validando ao vivo desde 10/11",
   "numero": "histórico ~52,3% (15 min); precisa de 300 apostas ao vivo",
   "status": "andamento"
+ },
+ {
+  "id": "H23 Oliver Velez",
+  "pergunta": "180, elefante, estado estreito, espaço duplo",
+  "resultado": "Só o espaço duplo passou (binário, 1 h); o resto sem vantagem",
+  "numero": "espaço duplo: 57–64% de acerto",
+  "status": "parcial"
+ },
+ {
+  "id": "H24 Scalper",
+  "pergunta": "Alvo e stop fixos curtos (0,3–1,0%)",
+  "resultado": "Não passou: stop curto mata o sinal",
+  "numero": "−0,13% a −0,24% por operação",
+  "status": "reprovada"
+ },
+ {
+  "id": "H25 Surfar o impulso",
+  "pergunta": "Vender rompimento de mínima / comprar rompimento de máxima em 5 min",
+  "resultado": "Não passou nos dois sentidos",
+  "numero": "−0,10R a −0,31R por operação",
+  "status": "reprovada"
  }
 ]

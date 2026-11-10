@@ -489,3 +489,27 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Aleatória:** de −0,09% a −0,11% em todos os pares (≈ o custo).
 - **Leitura:** stop curto mata o sinal de reversão. A moeda esticada ainda dá um último pulo, bate o stop e só depois volta. Com saídas de scalper, a entrada boa fica **pior que a aleatória**.
 - **Decisão do dono:** implementar o scalper mesmo assim. Fica como um **robô separado na mesa proprietária**, com conta de US$ 10, as mesmas entradas do cérebro do robô rápido, saídas 1,0%/0,5% (o par menos ruim) e no máximo 30 min. O robô rápido continua igual. A mesa compara os dois ao vivo.
+
+## Hipótese 25: surfar o impulso em 5 min, nos dois sentidos (pré-registrada em 2026-11-10, antes de rodar)
+
+- **Motivo:** o dono viu quedas e altas fortes (−6% a −21% em 1 h) que o robô não acompanhou; o cérebro tende a apostar contra o movimento.
+- **Regra:**
+  - vende a descoberto quando o fechamento rompe a **mínima** das 55 velas anteriores;
+  - compra quando rompe a **máxima**;
+  - stop de 2N; sai no canal de 20 velas contrário, ou em no máximo 12 velas.
+- **Custo:** perpétuo, 0,1% na ida e volta.
+- **Variante "só impulso forte":** exige também vela elefante (amplitude > 2× a média de 20) com volume > 2× a média de 96.
+- **Dados:** 33 moedas, 5 min, 60 dias, em duas metades.
+- **Passa** com média em R > 0 e t > 2 nas duas metades. Venda e compra são medidas separadas.
+
+### Resultado da H25 (2026-11-10): não passou, nos dois sentidos
+
+| | 1ª metade | 2ª metade |
+|---|---|---|
+| Rompimento de venda (todas) | 3021 op., −0,23R (t −9,5), acerto 35% | 3744 op., −0,10R (t −4,3) |
+| Rompimento de compra (todas) | 3584 op., −0,15R (t −6,2) | 3096 op., −0,27R (t −11,3) |
+| Venda só com impulso forte | 1072 op., −0,28R (t −7,1) | 1386 op., +0,03R (t +0,7) |
+| Compra só com impulso forte | 1366 op., −0,19R (t −4,4) | 1169 op., −0,31R (t −7,2) |
+
+- **Leitura:** em 5 min, seguir o movimento perde (H25), e apostar contra também perde (H14). As quedas e altas "lindas" só são lindas vistas depois. Na hora do rompimento, a maioria não continua: só ~35% chegam a dar lucro, e os que continuam não pagam os que voltam.
+- **Erro operacional meu:** 21 reinícios do painel em 4 h durante o pregão. A partir de agora, mudanças agrupadas, com no máximo um reinício por hora em horário de mercado, exceto correção urgente.
