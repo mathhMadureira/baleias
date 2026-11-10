@@ -983,12 +983,9 @@ class Motor:
                     antes = X.ouvinte
                     X.ouvinte = lambda l: ouvir("✂ " + l["texto"].replace("🐢 Robô ", "Scalper ").replace(" [simulado]", ""))
                     orc_antes, X.ORCAMENTO_FIXO = X.ORCAMENTO_FIXO, 5.0
-                    X.entrar(e, corretora, m, precos[m], 1.0, f"cérebro: VE {o['ev'] * 100:+.2f}%, alvo +1,0% / stop −0,5%", lado=o["lado"], custo_lado=0.0005)
+                    n_scalper = precos[m] * stop / 2                 # o stop do executor é 2N: assim fica exatamente a 0,5%
+                    X.entrar(e, corretora, m, precos[m], n_scalper, f"cérebro: VE {o['ev'] * 100:+.2f}%, alvo +1,0% / stop −0,5%", lado=o["lado"], custo_lado=0.0005)
                     X.ORCAMENTO_FIXO, X.ouvinte = orc_antes, antes
-                    if m in e["abertas"]:
-                        q = e["abertas"][m]
-                        q["stop"] = q["entrada"] * (1 + stop if o["lado"] == "venda" else 1 - stop)
-                        q["risco_usd"] = q["qtd"] * q["entrada"] * stop
             e["patrimonio"] = X.patrimonio(e, precos, corretora)
             tmp = arq.with_suffix(".tmp")
             tmp.write_text(json.dumps(e))

@@ -33,10 +33,11 @@ def main():
     except OSError as e:
         item("painel responde", False, type(e).__name__)
     for wf in ("robo-diario", "cerebro"):
-        r = sh("gh", "run", "list", "-R", "mathhMadureira/baleias", "--workflow", wf, "--limit", "1", "--json", "conclusion,createdAt")
+        r = sh("gh", "run", "list", "-R", "mathhMadureira/baleias", "--workflow", wf, "--limit", "1", "--json", "conclusion,createdAt,status")
         try:
             u = json.loads(r.stdout)[0]
-            item(f"nuvem: última rodada {wf}", u["conclusion"] == "success", f"{u['createdAt']} {u['conclusion']}")
+            ok = u["conclusion"] == "success" or u["status"] in ("in_progress", "queued")     # o cérebro fica horas rodando
+            item(f"nuvem: última rodada {wf}", ok, f"{u['createdAt']} {u['status']} {u['conclusion']}")
         except (ValueError, IndexError):
             item(f"nuvem: última rodada {wf}", False, "sem resposta do GitHub")
     sh("git", "fetch", "-q", "origin", "estado")
