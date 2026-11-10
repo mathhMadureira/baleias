@@ -348,3 +348,22 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 
 - **Bruto:** a reversão rende de +0,03% (1 h) a −0,1% (4 h) por operação, muito abaixo do custo de 0,2%.
 - **Conclusão:** a reversão intradiária medida pela física é real, mas é pequena demais para pagar o custo de ida e volta.
+
+## Hipóteses 15, 16 e 17: vantagens que não dependem de adivinhar a direção (pré-registradas em 2026-11-10, antes de rodar)
+
+**H15 — força relativa (momentum entre moedas), só compra, spot.**
+- A cada 7 dias, ordena as 33 moedas pelo retorno dos 28 dias anteriores, pulando o último dia, e fica com as **5 mais fortes**, em pesos iguais.
+- Filtro de regime: se o BTC fechar abaixo da média de 100 dias, fica 100% em dólar.
+- Custo de 0,1% por lado sobre o que gira.
+- Treino 2018–2023, teste 2024–hoje e réplica no grupo 3 (31 moedas menores).
+- **Passa** se, no treino e no teste, render mais que comprar e segurar BTC **e** tiver maior queda menor que a do BTC.
+
+**H16 — sazonalidade por hora e por dia da semana.**
+- Velas de 1 h das 33 moedas, 2024–hoje. Retorno médio por hora UTC e por dia da semana. Treino 2024, teste 2025–hoje.
+- **Passa** uma hora (ou dia) se a média tiver o mesmo sinal nos dois períodos, com |t| > 3 no treino e > 2 no teste, **e** a regra "estar comprado só nessas horas" pagar 0,2% por entrada e saída.
+
+**H17 — funding extremo como sinal contrário.**
+- BTC, ETH, SOL e HYPE, com funding de hora em hora da Hyperliquid desde 2023 e preço diário da Binance.
+- Sinal: a média de funding das últimas 24 h entre as 10% mais negativas do treino (medo extremo) → compra por 3 dias.
+- Treino até 2024-12-31, teste 2025–hoje.
+- **Passa** se o retorno médio líquido de 0,2% for > 0 nos dois períodos, com t > 2 no teste e pelo menos 20 sinais em cada.
