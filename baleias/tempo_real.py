@@ -483,7 +483,7 @@ class Motor:
         saida, agora_ms = {}, time.time() * 1000
         for m in moedas:
             try:
-                with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=81", timeout=20) as r:
+                with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=131", timeout=20) as r:
                     k = json.load(r)
             except OSError:
                 continue
@@ -491,6 +491,29 @@ class Motor:
                         for x in k if x[6] < agora_ms]
             time.sleep(0.05)
         return saida
+
+    def _consultar_livro(self, dados, precos, e, ouvir):
+        """Antes de entrar num rompimento, o robô rápido consulta os métodos COMPROVADOS do Livro do cérebro na mesma moeda.
+        Se votarem contra (desce), a entrada não acontece nesta vela — é assim que ele aprende com o cérebro."""
+        from lab import tartaruga as T
+        from . import cerebro as C
+        arq = config.RAIZ / "livro_metodos.json"
+        try:
+            livro = json.loads(arq.read_text())["metodos"]
+        except (OSError, ValueError, KeyError):
+            return precos
+        if not any(m["classe"] == "comprovado" for m in livro):
+            return precos
+        filtrado = dict(precos)
+        for m, vs in dados.items():
+            if m in e["abertas"] or len(vs) < 120 or not T.sinais(vs, len(vs) - 1, "compra"):
+                continue
+            velas = [(0, v[1], v[2], v[3], v[4], 1.0) for v in vs[-120:]]
+            voto, usados = C.votar_comprovados(livro, C.caracteristicas(velas))
+            if voto < 0:
+                filtrado.pop(m, None)
+                ouvir({"t": time.time(), "texto": f"🧠➜ {m[:-4]} rompeu, mas o Livro do cérebro votou contra ({', '.join(usados)}): entrada evitada."})
+        return filtrado
 
     def _robo_rapido(self):
         """Teste ao vivo, simulado: as mesmas regras da Tartaruga em velas curtas (ROBO_RAPIDO=1h por padrão), para operar no dia.
@@ -532,6 +555,7 @@ class Motor:
                 e["resultado_hoje"] = fechado_hoje + aberto
             if precos and e.get("ultima_vela") != ultima_fechada and agora % passo > 15:
                 dados = self._velas_rapidas(intervalo, T.MOEDAS_ROBO)
+                precos = self._consultar_livro(dados, precos, e, ouvir)
                 X.passo_diario(e, corretora, dados, precos)
                 for p in e["abertas"].values():
                     p.setdefault("conferido_ate", ultima_fechada)
@@ -748,8 +772,13 @@ class Motor:
                     tmp = arq.with_suffix(".tmp")
                     tmp.write_text(json.dumps(cb.exportar()))
                     tmp.replace(arq)
+                livro = cb.livro()                   # o que funciona fica gravado para os outros robôs aprenderem
+                tmp = (config.RAIZ / "livro_metodos.json").with_suffix(".tmp")
+                tmp.write_text(json.dumps({"t": time.time(), "metodos": livro}, ensure_ascii=False))
+                tmp.replace(config.RAIZ / "livro_metodos.json")
+                C.escrever_livro_md(livro, config.RAIZ / "LIVRO_DE_METODOS.md")
                 with self.trava:
-                    self.cerebro = cb.resumo()
+                    self.cerebro = cb.resumo() | {"livro": livro}
                 self.fonte("cerebro", True)
             except OSError as ex:
                 self.fonte("cerebro", False, f"{type(ex).__name__}")

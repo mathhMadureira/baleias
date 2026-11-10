@@ -121,7 +121,9 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <canvas id="cb-curva" style="height:170px"></canvas>
     <div class="grade g-dupla" style="margin-top:10px">
       <div style="max-height:300px;overflow:auto"><table id="cb-sin"><thead><tr><th>Sinapse</th><th>Status</th><th>Peso</th><th>Acerto</th><th>Previsões</th></tr></thead><tbody></tbody></table></div>
-      <div><b style="font-size:12px;color:var(--mut)">DIÁRIO DO CÉREBRO (aprendeu · corrigiu · criou · podou)</b><div id="cb-diario" style="max-height:280px;overflow:auto;font-size:13px;margin-top:6px"></div></div>
+      <div><b style="font-size:12px;color:var(--mut)">📚 LIVRO DE MÉTODOS (o que funciona fica gravado; os outros robôs usam só os comprovados)</b>
+        <div id="cb-livro" style="max-height:160px;overflow:auto;font-size:13px;margin:6px 0 12px"></div>
+        <b style="font-size:12px;color:var(--mut)">DIÁRIO DO CÉREBRO (aprendeu · corrigiu · criou · podou)</b><div id="cb-diario" style="max-height:280px;overflow:auto;font-size:13px;margin-top:6px"></div></div>
     </div>
   </div>
   <div class="card" style="margin-bottom:14px;border-color:#f0b90b55">
@@ -640,6 +642,11 @@ async function cicloCerebro() {
         tr.innerHTML = `<td></td><td style="font-family:system-ui">${nomeSt[s.status]}</td><td>${fmt(s.peso, 2)}</td><td class="${ac == null ? "" : ac > 50 ? "up" : "down"}">${ac == null ? "—" : fmt(ac, 1) + "%"}</td><td>${s.previsoes}</td>`;
         tr.children[0].textContent = s.id; tr.children[0].title = s.origem; return tr;
       }));
+      const cls = {comprovado: ["✅ comprovado", "up"], promissor: ["🌱 promissor", "gold"], reprovado: ["✗ reprovado", "down"]};
+      $("cb-livro").replaceChildren(...(c.livro || []).map(m => { const x = document.createElement("div"); x.style.padding = "3px 0";
+        x.innerHTML = `<span class="${cls[m.classe][1]}" style="font-weight:700">${cls[m.classe][0]}</span> · <b></b> · <span class="num"></span>`;
+        x.children[1].textContent = m.id; x.children[2].textContent = m.acerto == null ? "sem previsões" : `${fmt(m.acerto * 100, 1)}% em ${m.previsoes} (IC ${fmt(m.ic[0] * 100, 1)}–${fmt(m.ic[1] * 100, 1)}%)`;
+        x.title = m.origem; return x; }));
       $("cb-diario").replaceChildren(...c.diario.map(d => { const x = document.createElement("div"); x.style.padding = "4px 0"; x.style.borderBottom = "1px solid var(--line)";
         x.textContent = (d.t ? new Date(d.t).toLocaleString("pt-BR").slice(0, 17) + "  " : "") + d.texto; return x; }));
     }

@@ -261,6 +261,25 @@ class Cerebro:
         self.ultima_t = t
         return self.pendente
 
+    def livro(self):
+        """Livro de Métodos: cada sinapse com a definição exata, o placar e a classificação estatística.
+        comprovado = ≥150 previsões e limite inferior de Wilson > 50%; promissor = acerto > 50% sem prova; reprovado = o resto."""
+        saida = []
+        for s in self.sinapses:
+            a, n = s["acertos"], s["previsoes"]
+            lo, hi = wilson(a, n)
+            if n >= 150 and lo > 0.5 and s["status"] != "podada":
+                classe = "comprovado"
+            elif n and a / n > 0.5 and s["status"] != "podada":
+                classe = "promissor"
+            else:
+                classe = "reprovado"
+            definicao = {k: s[k] for k in ("tipo", "medida", "limiar", "sentido", "lado") if k in s}
+            saida.append({"id": s["id"], "classe": classe, "acertos": a, "previsoes": n, "acerto": a / n if n else None,
+                          "ic": [lo, hi] if n else None, "status": s["status"], "peso": s["peso"], "definicao": definicao, "origem": s["origem"]})
+        ordem = {"comprovado": 0, "promissor": 1, "reprovado": 2}
+        return sorted(saida, key=lambda x: (ordem[x["classe"]], -(x["acerto"] or 0)))
+
     def resumo(self):
         h = self.historico
         lo, hi = wilson(sum(h), len(h))
@@ -268,3 +287,31 @@ class Cerebro:
                 "sinapses": [{k: s.get(k) for k in ("id", "status", "peso", "acertos", "previsoes", "origem")} for s in self.sinapses],
                 "diario": self.diario[-40:][::-1], "pendente": self.pendente and {k: self.pendente[k] for k in ("t", "px", "prob", "aposta")},
                 "curva": [[o["t"], round(o["capital"], 2)] for o in self.operacoes[-1500:]], "passos": self.passos}
+
+
+def votar_comprovados(livro, f, rede=None):
+    """Para os outros robôs: voto (+ sobe, − desce, 0 neutro) dos métodos COMPROVADOS do livro sobre as medidas f de qualquer moeda.
+    A rede neural só vota no BTC 15 min (onde foi treinada); as regras são transferíveis."""
+    voto = 0.0
+    usados = []
+    for m in livro:
+        if m["classe"] != "comprovado":
+            continue
+        d = m["definicao"]
+        if d.get("tipo") == "rede":
+            continue
+        op = opiniao(d, f) if d.get("tipo") in ("regra", "vortice_invertido") else 0
+        if op:
+            voto += op * (m["acerto"] - 0.5)
+            usados.append(m["id"])
+    return voto, usados
+
+
+def escrever_livro_md(livro, caminho):
+    linhas = ["# Livro de Métodos do Cérebro", "", "Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite inferior de Wilson > 50%.", "",
+              "| Método | Classe | Acerto | Previsões | IC 95% | Definição |", "|---|---|---|---|---|---|"]
+    for m in livro:
+        ac = f"{m['acerto']:.1%}" if m["acerto"] is not None else "—"
+        ic = f"{m['ic'][0]:.1%}–{m['ic'][1]:.1%}" if m["ic"] else "—"
+        linhas.append(f"| {m['id']} | {m['classe']} | {ac} | {m['previsoes']} | {ic} | {m['origem']} |")
+    caminho.write_text("\n".join(linhas) + "\n")

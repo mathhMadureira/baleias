@@ -1072,3 +1072,25 @@ class Cerebro(unittest.TestCase):
         self.assertEqual(C.opiniao(s_baixo, {"r4": -3.0}), 1)
         self.assertEqual(C.opiniao(s_baixo, {"r4": -1.0}), 0)
         self.assertEqual(C.opiniao(s_alto, {"r4": 3.0}), -1)
+
+
+class LivroDeMetodos(unittest.TestCase):
+    def test_classifica_e_outros_robos_usam_so_comprovados(self):
+        from baleias import cerebro as C
+        c = C.Cerebro()
+        for s in c.sinapses:
+            s["previsoes"], s["acertos"] = 0, 0
+        rq = next(s for s in c.sinapses if s["id"] == "reversao_queda")
+        rq["previsoes"], rq["acertos"] = 400, 230          # 57,5%: comprovado
+        ra = next(s for s in c.sinapses if s["id"] == "reversao_alta")
+        ra["previsoes"], ra["acertos"] = 40, 23            # promissor
+        livro = c.livro()
+        classes = {m["id"]: m["classe"] for m in livro}
+        self.assertEqual(classes["reversao_queda"], "comprovado")
+        self.assertEqual(classes["reversao_alta"], "promissor")
+        self.assertEqual(livro[0]["id"], "reversao_queda")
+        voto, usados = C.votar_comprovados(livro, {"r4": -3.0})
+        self.assertGreater(voto, 0)
+        self.assertEqual(usados, ["reversao_queda"])
+        voto, usados = C.votar_comprovados(livro, {"r4": 3.0})   # promissor (reversao_alta) não influencia ninguém
+        self.assertEqual((voto, usados), (0.0, []))
