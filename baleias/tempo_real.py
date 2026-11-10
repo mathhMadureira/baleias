@@ -953,7 +953,7 @@ class Motor:
                 linha["sinal"] = sinal
                 with self.trava:
                     self.varredura["moedas"][m[:-4]] = linha
-                    self.varredura["log"].appendleft({"t": time.time(), "texto": f"🔎 {m[:-4]:6} {px:,.6g} | sobe em 1 h: {prob:.1%} | melhor lado: {lado} VE {ev * 100:+.2f}% | "
+                    self.varredura["log"].appendleft({"t": time.time(), "texto": f"🔎 {m[:-4]:6} {px:,.6g} | chance de subir em 12 velas: {prob:.1%} | melhor lado: {lado} VE {ev * 100:+.2f}% | "
                                                                              f"rompimento {'ROMPEU' if linha['falta'] <= 0 else f'+{linha['falta']:.2f}%'} | "
                                                                              f"{linha['votos']} sinapses opinaram | {sinal}"})
                     if i % len(moedas) == 0:
