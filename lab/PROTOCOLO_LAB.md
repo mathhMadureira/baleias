@@ -377,3 +377,13 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   - Não passou: a queda no teste foi pior que a do BTC, e no grupo de moedas menores perdeu. Repete o padrão das Tartarugas: a vantagem existe nas moedas grandes e some nas pequenas.
 - **H16 (sazonalidade):** a primeira medida contou cada moeda em cada hora como observação independente. As moedas se movem juntas, então os t estavam inflados (o próprio critério pré-registrado herdou o erro). Refeito com **um retorno de carteira por dia**: nenhum dia da semana tem |t| ≥ 2 (o maior foi quarta no teste, t +1,51). A regra "comprado só qua/sex/sáb" ficou +0,34%/dia em 2024 (t 1,07) e +0,19%/dia em 2025+ (t 0,88), indistinguível do acaso. Não passou. As horas sofrem da mesma inflação e não serão usadas.
 - **H17 (funding extremo negativo → compra por 3 dias):** treino com 84 sinais, +0,87% (t 1,37); teste com 140 sinais, −0,35% (t −0,72). Não passou.
+
+## Hipótese 18: Vórtice + CHOP preveem a próxima vela do BTC? (pré-registrada em 2026-11-10, antes de rodar)
+
+- **Origem:** um artigo que atribui +US$ 319 mil no Polymarket (mercados BTC Sobe/Desce) a esta combinação.
+- **Indicadores**, com n = 14:
+  - VI⁺ = Σ|Hₜ − Lₜ₋₁| / ΣTR e VI⁻ = Σ|Lₜ − Hₜ₋₁| / ΣTR;
+  - CHOP = 100 × log₁₀(ΣTR / (Hmax − Lmin)) / log₁₀(n).
+- **Sinal:** quando CHOP < 38,2 (limiar usual), aposta "sobe" se VI⁺ > VI⁻ e "desce" se VI⁻ > VI⁺, sempre para a **próxima vela**.
+- **Dados:** BTC 15 min, com treino 2020–2023 e teste 2024–hoje; BTC 5 min, nos últimos 60 dias, divididos em duas metades.
+- **Passa** se o acerto de direção for ≥ 53% com o limite inferior de Wilson (95%) > 51% **nos dois períodos**. Num mercado binário pago a ~US$ 0,50–0,52, abaixo disso o spread come o ganho. Com CHOP ≥ 38,2 não há aposta.
