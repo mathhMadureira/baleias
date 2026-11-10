@@ -1244,3 +1244,22 @@ class Autoconhecimento(unittest.TestCase):
         self.assertTrue(any("confiante demais" in c for c in rel["conclusoes"]))
         self.assertLess(C.prob_calibrada(0.61, rel), 0.61)             # na faixa 60–65% errou tudo: probabilidade corrigida para baixo
         self.assertAlmostEqual(C.prob_calibrada(0.52, rel), 0.52)       # faixa sem dados: não mexe
+
+
+class RobosNoMesmoProcesso(unittest.TestCase):
+    def test_configurado_devolve_ouvinte_e_orcamento_mesmo_com_erro(self):
+        from executor import tartaruga_exec as X
+        antes = X.ouvinte, X.ORCAMENTO_FIXO
+        with self.assertRaises(RuntimeError):
+            with X.configurado(print, 5.0):
+                self.assertEqual((X.ouvinte, X.ORCAMENTO_FIXO), (print, 5.0))
+                raise RuntimeError("falha no meio da operação")
+        self.assertEqual((X.ouvinte, X.ORCAMENTO_FIXO), antes)
+
+    def test_dormir_acorda_quando_o_relogio_pula(self):
+        from unittest import mock
+        from baleias import tempo_real as R
+        relogio = iter([1000.0, 1000.0, 5000.0])                      # a máquina dormiu entre duas olhadas no relógio
+        with mock.patch.object(R.time, "time", lambda: next(relogio)), mock.patch.object(R.time, "sleep") as dorme:
+            R.dormir(1800)
+        self.assertEqual(dorme.call_count, 1)                         # não continua esperando os 30 min inteiros

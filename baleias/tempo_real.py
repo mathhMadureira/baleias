@@ -18,6 +18,7 @@ import os
 import threading
 import time
 import urllib.request
+from pathlib import Path
 
 from . import alerta, config
 from .ws import WS
@@ -202,6 +203,13 @@ def traduzir(j, media_volume=None):
 
 # ---------- motor ----------
 
+def dormir(segundos):
+    """Como time.sleep, mas pelo relógio de parede: se a máquina dormiu, acorda logo na volta (o sleep comum continuaria contando)."""
+    fim = time.time() + segundos
+    while (falta := fim - time.time()) > 0:
+        time.sleep(min(falta, 15))
+
+
 class Motor:
     def __init__(self, abrir=None, enviar=alerta.enviar, agora=time.time):
         """`abrir`: função que devolve uma conexão só de leitura ao banco (uma por thread; sqlite não gosta de conexão compartilhada)."""
@@ -326,7 +334,8 @@ class Motor:
 
     def _binance_futuros(self):
         ws = WS.conectar(BINANCE_FUT)
-        ws.s.settimeout(600)   # liquidações podem ficar minutos sem acontecer; a Binance manda ping a cada ~3 min
+        ws.s.settimeout(300)   # liquidações podem ficar minutos sem acontecer; a Binance manda ping a cada ~3 min
+        ws.ao_ping = lambda: self.fonte("liquidacoes", True)   # conexão viva conta como fonte viva
         self.fonte("liquidacoes", True)
         try:
             while True:
@@ -429,7 +438,7 @@ class Motor:
         """A cada 5 min: traduz o fluxo do BTC e grava as medidas com o preço (H7 mede depois se antecipam algo)."""
         px0 = None
         while True:
-            time.sleep(300 - time.time() % 300)
+            dormir(300 - time.time() % 300)
             with self.trava:
                 j, self.fluxo = dict(self.fluxo), {"compra": 0.0, "venda": 0.0, "liq_long": 0.0, "liq_short": 0.0}
             px1 = self.preco
@@ -654,21 +663,24 @@ class Motor:
             if precos and e.get("ultima_vela") != ultima_fechada and agora % passo > 15:
                 dados = self._velas_rapidas(intervalo, T.MOEDAS_ROBO)
                 if modo == "cerebro":
-                    self._cerebro_rapido_passo(cbr, dados, precos, e, corretora, ouvir)
+                    with X.TRAVA:
+                        self._cerebro_rapido_passo(cbr, dados, precos, e, corretora, ouvir)
                     tmp = arq_cbr.with_suffix(".tmp")
                     tmp.write_text(json.dumps(cbr.exportar()))
                     tmp.replace(arq_cbr)
                 else:
                     precos = self._consultar_livro(dados, precos, e, ouvir)
-                    X.passo_diario(e, corretora, dados, precos)
+                    with X.TRAVA:
+                        X.passo_diario(e, corretora, dados, precos)
                 for p in e["abertas"].values():
                     p.setdefault("conferido_ate", ultima_fechada)
                 e["ultima_vela"] = ultima_fechada
             if precos:
-                X.checar_stops(e, corretora, precos)
-                for m in list(e["abertas"]):           # tempo máximo: não segurar a operação demais
-                    if agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
-                        X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)", precos[m])
+                with X.TRAVA:
+                    X.checar_stops(e, corretora, precos)
+                    for m in list(e["abertas"]):           # tempo máximo: não segurar a operação demais
+                        if agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
+                            X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)", precos[m])
                 e["patrimonio"] = X.patrimonio(e, precos, corretora)
                 if dados:
                     e["radar"] = X.radar(dados, precos)
@@ -774,7 +786,7 @@ class Motor:
                                             "romperam": sum(l["rompeu"] for l in linhas), "mediana_7d": d7[len(d7) // 2] if d7 else None,
                                             "subindo_24h": sum(l["d1"] > 0 for l in linhas) / max(1, len(linhas)) * 100}}
             self.fonte("mapa", True)
-            time.sleep(1800)
+            dormir(1800)
 
     def _vortice(self):
         """H19 ao vivo: a cada vela de 15 min do BTC fechada, prevê a próxima pelo Vórtice INVERTIDO (só quando CHOP < 38,2)
@@ -942,24 +954,67 @@ class Motor:
 
     def _scalper(self):
         """Robô scalper (H24, decisão do dono): conta própria de US$ 10, entra nas mesmas oportunidades do cérebro do robô rápido,
-        sai no alvo de +1,0%, no stop de −0,5% ou em 30 min. Perpétuo simulado (compra ou vende), US$ 5 por posição com margem 2×."""
+        sai no alvo de +1,0%, no stop de −0,5% ou em 30 min. Perpétuo simulado (compra ou vende), US$ 5 por posição com margem 2×.
+        Segue as regras da mesa: botão PARAR, perda máxima de US$ 1 no dia e piso de US$ 5."""
         from executor import tartaruga_exec as X
-        alvo, stop, max_s = 0.010, 0.005, 1800
+        alvo, stop, max_s, orcamento = 0.010, 0.005, 1800, 5.0
+        capital = 10.0
+        limite_dia, piso = capital * 0.10, capital * 0.50
+        parar = Path(X.__file__).resolve().parent.parent / "PARAR"   # o botão geral do dono (o robô rápido usa o PARAR_RAPIDO)
         arq = config.RAIZ / "robo_scalper.json"
-        e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(10.0)
+        e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(capital)
         e.setdefault("eventos", [])
         corretora = X.Simulada(None, e)
-        ultima = None
+        ultima = None                     # na partida só memoriza as oportunidades: sinal velho (de antes de reiniciar) não vale
+        visto = time.time()               # última vez que o laço conferiu as posições com o preço ao vivo
+        gravado = None
 
-        def ouvir(texto):
+        def ouvir(linha):
+            texto = "✂ " + linha["texto"].replace("🐢 Robô ", "Scalper ").replace(" [simulado]", "")
             e["eventos"] = ([{"t": time.time(), "texto": texto}] + e["eventos"])[:100]
             self.evento({"tipo": "scalper", "texto": texto, "notificar": False})
+
+        def sair(m, motivo, px):
+            with X.configurado(ouvir, orcamento):
+                X._sair(e, corretora, m, motivo, px)
+
+        def perdido(m, p, desde):
+            """Máquina dormiu: confere nas velas de 1 min se o alvo ou o stop foi tocado nesse tempo (os dois na mesma vela = stop)."""
+            url = f"https://api.binance.com/api/v3/klines?symbol={m}&interval=1m&startTime={int(desde * 1000)}&limit=1000"
+            with urllib.request.urlopen(url, timeout=20) as r:
+                velas = json.load(r)
+            venda = p.get("lado") == "venda"
+            alvo_px = p["entrada"] * (1 - alvo if venda else 1 + alvo)
+            stop_px = p["entrada"] * (1 + stop if venda else 1 - stop)
+            for k in velas:
+                t, o, h, l = k[0] / 1000, float(k[1]), float(k[2]), float(k[3])
+                if t - p["entrada_t"] >= max_s:
+                    return "30 min (máquina desligada)", o
+                if (h >= stop_px) if venda else (l <= stop_px):
+                    return "stop −0,5% (máquina desligada)", (max(o, stop_px) if venda else min(o, stop_px))
+                if (l <= alvo_px) if venda else (h >= alvo_px):
+                    return "alvo +1,0% (máquina desligada)", alvo_px
+            return None, None
+
+        def gelada(m):
+            """Geladeira do próprio scalper: 3 perdas seguidas na moeda nas últimas 12 h = fica de fora até passar."""
+            ult = [f for f in e["fechadas"] if f.get("moeda", f.get("m")) == m and time.time() - f["saida_t"] < 12 * 3600][-3:]
+            return len(ult) == 3 and all(f["resultado_usd"] < 0 for f in ult)
 
         while True:
             with self.trava:
                 precos = {f"{k}USDT": x["p"] for k, x in self.mercado.items()}
             cbr = self._cbr
             agora = time.time()
+            if agora - visto > 60:                             # a máquina parou: julgar o que aconteceu enquanto isso
+                for m in list(e["abertas"]):
+                    try:
+                        motivo, px = perdido(m, e["abertas"][m], visto)
+                    except (OSError, ValueError):
+                        continue
+                    if motivo:
+                        sair(m, motivo, px)
+            visto = agora
             for m in list(e["abertas"]):                      # saídas de scalper, conferidas a cada 3 s com o preço ao vivo
                 p, px = e["abertas"][m], precos.get(m)
                 if px is None:
@@ -968,32 +1023,44 @@ class Motor:
                 ganho = sinal * (px / p["entrada"] - 1)
                 motivo = "alvo +1,0%" if ganho >= alvo else ("stop −0,5%" if ganho <= -stop else ("30 min" if agora - p["entrada_t"] >= max_s else None))
                 if motivo:
-                    antes = X.ouvinte
-                    X.ouvinte = lambda l: ouvir("✂ " + l["texto"].replace("🐢 Robô ", "Scalper ").replace(" [simulado]", ""))
-                    X._sair(e, corretora, m, motivo, px)
-                    X.ouvinte = antes
+                    sair(m, motivo, px)
+            hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
+            aberto = sum(X._valor(p, precos.get(m, p["entrada"])) - p["gasto"] for m, p in e["abertas"].items())
+            resultado_hoje = sum(f["resultado_usd"] for f in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(f["saida_t"])) == hoje) + aberto
+            patrimonio = X.patrimonio(e, precos, corretora)
+            trava = ("botão PARAR ligado" if parar.exists() else
+                     f"perda do dia {resultado_hoje:+.2f} (limite −{limite_dia:.2f})" if resultado_hoje <= -limite_dia else
+                     f"conta abaixo de US$ {piso:.0f}" if patrimonio < piso else None)
+            if trava and e.get("trava") != f"{hoje} {trava}":
+                ouvir({"texto": f"🛑 Scalper sem novas entradas: {trava}. As saídas continuam."})
+            e["trava"] = f"{hoje} {trava}" if trava else None
             ops = getattr(cbr, "oportunidades", None) if cbr else None
             marca = ops and tuple((o["par"], round(o["ev"], 5)) for o in ops[:3])
-            if ops and marca != ultima:                       # nova vela avaliada pelo cérebro: entra nas melhores
+            if ops and ultima is None:
+                ultima = marca
+            elif ops and marca != ultima:                     # nova vela avaliada pelo cérebro: entra nas melhores
                 ultima = marca
                 for o in ops:
                     m = o["par"]
-                    if o["ev"] <= 0 or o.get("geladeira") or m in e["abertas"] or m not in precos or e["caixa"] < 2.5:
+                    if (trava or o["ev"] <= 0 or o.get("geladeira") or gelada(m) or m in e["abertas"] or m not in precos
+                            or e["caixa"] < orcamento / X.ALAV_PERP):
                         continue
-                    antes = X.ouvinte
-                    X.ouvinte = lambda l: ouvir("✂ " + l["texto"].replace("🐢 Robô ", "Scalper ").replace(" [simulado]", ""))
-                    orc_antes, X.ORCAMENTO_FIXO = X.ORCAMENTO_FIXO, 5.0
                     n_scalper = precos[m] * stop / 2                 # o stop do executor é 2N: assim fica exatamente a 0,5%
-                    X.entrar(e, corretora, m, precos[m], n_scalper, f"cérebro: VE {o['ev'] * 100:+.2f}%, alvo +1,0% / stop −0,5%", lado=o["lado"], custo_lado=0.0005)
-                    X.ORCAMENTO_FIXO, X.ouvinte = orc_antes, antes
-            e["patrimonio"] = X.patrimonio(e, precos, corretora)
-            tmp = arq.with_suffix(".tmp")
-            tmp.write_text(json.dumps(e))
-            tmp.replace(arq)
+                    with X.configurado(ouvir, orcamento):
+                        X.entrar(e, corretora, m, precos[m], n_scalper, f"cérebro: VE {o['ev'] * 100:+.2f}%, alvo +1,0% / stop −0,5%",
+                                 lado=o["lado"], custo_lado=0.0005)
+            e["patrimonio"] = patrimonio = X.patrimonio(e, precos, corretora)
+            mudou = (len(e["fechadas"]), tuple(e["abertas"]), e["trava"])
+            if mudou != gravado or int(agora) % 60 < 3:      # grava ao abrir/fechar posição e, fora isso, 1 vez por minuto
+                tmp = arq.with_suffix(".tmp")
+                tmp.write_text(json.dumps(e))
+                tmp.replace(arq)
+                gravado = mudou
             rs = e["fechadas"]
             with self.trava:
-                self.scalper = {"patrimonio": e["patrimonio"], "abertas": [{"moeda": m[:-4], "lado": p.get("lado"), "entrada": p["entrada"],
-                                "resultado": X._valor(p, precos.get(m, p["entrada"])) - p["gasto"]} for m, p in e["abertas"].items()],
+                self.scalper = {"patrimonio": patrimonio, "resultado_hoje": resultado_hoje, "trava": trava,
+                                "abertas": [{"moeda": m[:-4], "lado": p.get("lado"), "entrada": p["entrada"],
+                                             "resultado": X._valor(p, precos.get(m, p["entrada"])) - p["gasto"]} for m, p in e["abertas"].items()],
                                 "fechadas": len(rs), "ganhos": sum(1 for f in rs if f["resultado_usd"] > 0), "eventos": e["eventos"][:12]}
             self.fonte("scalper", True)
             time.sleep(3)

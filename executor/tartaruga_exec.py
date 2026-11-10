@@ -6,8 +6,10 @@
 - Real (BINANCE_REAL=1): ordem a mercado e stop STOP_LOSS_LIMIT guardado na Binance — o stop executa mesmo com esta máquina desligada.
 Estado em dados/robo_tartaruga.json; cada decisão vira uma linha em dados/robo_eventos.jsonl (o painel lê e notifica).
 """
+import contextlib
 import json
 import os
+import threading
 import time
 from pathlib import Path
 
@@ -84,6 +86,22 @@ class Real(Simulada):
     def stop_saiu(self, simbolo, posicao, px):
         status, medio = self.c.consultar(simbolo, posicao["ordem_stop"])
         return status == "FILLED", medio
+
+
+TRAVA = threading.RLock()   # o robô rápido e o scalper usam este módulo no mesmo processo: um de cada vez
+
+
+@contextlib.contextmanager
+def configurado(ouvinte_robo, orcamento):
+    """Usa o executor com o ouvinte e o orçamento de outro robô e devolve os originais mesmo se der erro."""
+    global ouvinte, ORCAMENTO_FIXO
+    with TRAVA:
+        antes = ouvinte, ORCAMENTO_FIXO
+        ouvinte, ORCAMENTO_FIXO = ouvinte_robo, orcamento
+        try:
+            yield
+        finally:
+            ouvinte, ORCAMENTO_FIXO = antes
 
 
 def novo_estado(caixa=CAPITAL_SIMULADO):

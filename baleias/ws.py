@@ -93,6 +93,8 @@ class WS:
                 dados = bytes(b ^ mascara[i % 4] for i, b in enumerate(dados))
             if opcode == 9:
                 self.enviar(dados, opcode=10)
+                if getattr(self, "ao_ping", None):
+                    self.ao_ping()
                 continue
             if opcode == 10:
                 continue

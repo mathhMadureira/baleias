@@ -80,7 +80,7 @@ def _rapido(nome_arq="robo_rapido_5m.json", nome="Rápido 5 min", nota="conta na
     if not arq.exists():
         return avaliar(nome, [], 0, nota="sem estado ainda")
     e = json.loads(arq.read_text())
-    eventos, conta = [], 10.0
+    eventos, conta = [], float(e.get("capital_inicial", CONTA))
     for f in sorted(e.get("fechadas", []), key=lambda x: x["saida_t"]):
         eventos.append((f["saida_t"], f["resultado_usd"] / conta))
         conta += f["resultado_usd"]
