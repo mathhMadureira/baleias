@@ -75,16 +75,16 @@ def _tartaruga(estado, nome):
     return avaliar(nome, _curva_para_eventos(curva), len(estado.get("fechadas", [])), estado.get("inicio"), "Tartaruga diária, 33 moedas")
 
 
-def _rapido():
-    arq = config.RAIZ / "robo_rapido_5m.json"
+def _rapido(nome_arq="robo_rapido_5m.json", nome="Rápido 5 min", nota="conta nativa de US$ 10, perpétuo simulado (compra/venda), 1 h no máximo"):
+    arq = config.RAIZ / nome_arq
     if not arq.exists():
-        return avaliar("Rápido 5 min", [], 0, nota="sem estado ainda")
+        return avaliar(nome, [], 0, nota="sem estado ainda")
     e = json.loads(arq.read_text())
     eventos, conta = [], 10.0
     for f in sorted(e.get("fechadas", []), key=lambda x: x["saida_t"]):
         eventos.append((f["saida_t"], f["resultado_usd"] / conta))
         conta += f["resultado_usd"]
-    return avaliar("Rápido 5 min", eventos, len(e.get("fechadas", [])), e.get("inicio"), "conta nativa de US$ 10, US$ 5 por operação, 1 h no máximo")
+    return avaliar(nome, eventos, len(e.get("fechadas", [])), e.get("inicio"), nota)
 
 
 def _funding():
@@ -121,6 +121,7 @@ def mesa():
         _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),
         _tartaruga(_git_json("dados/teto6/robo_tartaruga.json"), "Sombra (teto de 6)"),
         _rapido(),
+        _rapido("robo_scalper.json", "Scalper 5 min", "H24: mesmas entradas do cérebro; alvo +1,0%, stop −0,5%, 30 min"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2"),
         _funding(),

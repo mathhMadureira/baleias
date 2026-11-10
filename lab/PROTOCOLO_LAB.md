@@ -478,3 +478,14 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Saídas:** pares (alvo, stop) de (0,3%, 0,3%), (0,5%, 0,5%), (0,8%, 0,4%) e (1,0%, 0,5%), com no máximo 6 velas (30 min). Se alvo e stop cabem na mesma vela, conta o **stop** (conservador). Custo de 0,1% na ida e volta (perpétuo).
 - **Dados:** 33 moedas, velas de 5 min, 60 dias, divididos em duas metades.
 - **Passa** um par se o resultado líquido médio for > 0 com t > 2 **nas duas metades**. O robô rápido adota o par aprovado. Se nenhum passar, o resultado fica registrado, e as saídas de scalper são aplicadas só se o dono quiser, sabendo do número.
+
+### Resultado da H24 (2026-11-10): não passou, nenhum par
+
+- **Espaço duplo:**
+  - alvo/stop de 0,3/0,3%: −0,24% e −0,22% por operação (acerto 26–30%, empate exige 67%);
+  - 0,5/0,5%: −0,21%;
+  - 0,8/0,4%: −0,15%;
+  - 1,0/0,5%: −0,13%.
+- **Aleatória:** de −0,09% a −0,11% em todos os pares (≈ o custo).
+- **Leitura:** stop curto mata o sinal de reversão. A moeda esticada ainda dá um último pulo, bate o stop e só depois volta. Com saídas de scalper, a entrada boa fica **pior que a aleatória**.
+- **Decisão do dono:** implementar o scalper mesmo assim. Fica como um **robô separado na mesa proprietária**, com conta de US$ 10, as mesmas entradas do cérebro do robô rápido, saídas 1,0%/0,5% (o par menos ruim) e no máximo 30 min. O robô rápido continua igual. A mesa compara os dois ao vivo.

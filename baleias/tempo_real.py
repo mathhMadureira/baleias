@@ -231,6 +231,7 @@ class Motor:
         self.cerebro = None
         self.varredura = {"moedas": {}, "log": collections.deque(maxlen=80), "voltas": 0}
         self._cbr = None
+        self.scalper = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -939,6 +940,67 @@ class Motor:
             self.fonte("varredura", True)
             time.sleep(1.5)
 
+    def _scalper(self):
+        """Robô scalper (H24, decisão do dono): conta própria de US$ 10, entra nas mesmas oportunidades do cérebro do robô rápido,
+        sai no alvo de +1,0%, no stop de −0,5% ou em 30 min. Perpétuo simulado (compra ou vende), US$ 5 por posição com margem 2×."""
+        from executor import tartaruga_exec as X
+        alvo, stop, max_s = 0.010, 0.005, 1800
+        arq = config.RAIZ / "robo_scalper.json"
+        e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(10.0)
+        e.setdefault("eventos", [])
+        corretora = X.Simulada(None, e)
+        ultima = None
+
+        def ouvir(texto):
+            e["eventos"] = ([{"t": time.time(), "texto": texto}] + e["eventos"])[:100]
+            self.evento({"tipo": "scalper", "texto": texto, "notificar": False})
+
+        while True:
+            with self.trava:
+                precos = {f"{k}USDT": x["p"] for k, x in self.mercado.items()}
+            cbr = self._cbr
+            agora = time.time()
+            for m in list(e["abertas"]):                      # saídas de scalper, conferidas a cada 3 s com o preço ao vivo
+                p, px = e["abertas"][m], precos.get(m)
+                if px is None:
+                    continue
+                sinal = -1 if p.get("lado") == "venda" else 1
+                ganho = sinal * (px / p["entrada"] - 1)
+                motivo = "alvo +1,0%" if ganho >= alvo else ("stop −0,5%" if ganho <= -stop else ("30 min" if agora - p["entrada_t"] >= max_s else None))
+                if motivo:
+                    antes = X.ouvinte
+                    X.ouvinte = lambda l: ouvir("✂ " + l["texto"].replace("🐢 Robô ", "Scalper ").replace(" [simulado]", ""))
+                    X._sair(e, corretora, m, motivo, px)
+                    X.ouvinte = antes
+            ops = getattr(cbr, "oportunidades", None) if cbr else None
+            marca = ops and tuple((o["par"], round(o["ev"], 5)) for o in ops[:3])
+            if ops and marca != ultima:                       # nova vela avaliada pelo cérebro: entra nas melhores
+                ultima = marca
+                for o in ops:
+                    m = o["par"]
+                    if o["ev"] <= 0 or o.get("geladeira") or m in e["abertas"] or m not in precos or e["caixa"] < 2.5:
+                        continue
+                    antes = X.ouvinte
+                    X.ouvinte = lambda l: ouvir("✂ " + l["texto"].replace("🐢 Robô ", "Scalper ").replace(" [simulado]", ""))
+                    orc_antes, X.ORCAMENTO_FIXO = X.ORCAMENTO_FIXO, 5.0
+                    X.entrar(e, corretora, m, precos[m], 1.0, f"cérebro: VE {o['ev'] * 100:+.2f}%, alvo +1,0% / stop −0,5%", lado=o["lado"], custo_lado=0.0005)
+                    X.ORCAMENTO_FIXO, X.ouvinte = orc_antes, antes
+                    if m in e["abertas"]:
+                        q = e["abertas"][m]
+                        q["stop"] = q["entrada"] * (1 + stop if o["lado"] == "venda" else 1 - stop)
+                        q["risco_usd"] = q["qtd"] * q["entrada"] * stop
+            e["patrimonio"] = X.patrimonio(e, precos, corretora)
+            tmp = arq.with_suffix(".tmp")
+            tmp.write_text(json.dumps(e))
+            tmp.replace(arq)
+            rs = e["fechadas"]
+            with self.trava:
+                self.scalper = {"patrimonio": e["patrimonio"], "abertas": [{"moeda": m[:-4], "lado": p.get("lado"), "entrada": p["entrada"],
+                                "resultado": X._valor(p, precos.get(m, p["entrada"])) - p["gasto"]} for m, p in e["abertas"].items()],
+                                "fechadas": len(rs), "ganhos": sum(1 for f in rs if f["resultado_usd"] > 0), "eventos": e["eventos"][:12]}
+            self.fonte("scalper", True)
+            time.sleep(3)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -950,7 +1012,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("scalper", self._scalper, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self
