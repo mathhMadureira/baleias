@@ -55,8 +55,10 @@ class Simulada:
         pass
 
     def stop_saiu(self, simbolo, posicao, px):
-        """Simulado: o stop 'executa' quando o preço ao vivo toca nele."""
-        return (px is not None and px <= posicao["stop"]), px
+        """Simulado: o stop 'executa' quando o preço ao vivo toca nele (abaixo para comprado, acima para vendido)."""
+        if px is None:
+            return False, px
+        return (px >= posicao["stop"] if posicao.get("lado") == "venda" else px <= posicao["stop"]), px
 
 
 class Real(Simulada):
@@ -108,13 +110,29 @@ def registrar(texto, tipo="robo", t=None):
     return linha
 
 
+def _valor(p, px):
+    """Quanto a posição vale agora: comprado = quantidade × preço; vendido (perpétuo simulado) = margem + lucro da queda."""
+    if p.get("lado") == "venda":
+        return p["gasto"] + p["qtd"] * (p["entrada"] - px)
+    return p["qtd"] * px
+
+
 def patrimonio(e, precos, corretora):
     caixa = corretora.usdt_livre()
-    return caixa + sum(p["qtd"] * precos.get(m, p["entrada"]) for m, p in e["abertas"].items())
+    return caixa + sum(_valor(p, precos.get(m, p["entrada"])) for m, p in e["abertas"].items())
 
 
 def _sair(e, corretora, m, motivo, px, ja_vendido=None):
     p = e["abertas"].pop(m)
+    if p.get("custo_lado") is not None and not corretora.real:      # perpétuo simulado (robô rápido): comprado ou vendido
+        px = ja_vendido if ja_vendido is not None else px
+        bruto = p["qtd"] * ((px - p["entrada"]) if p.get("lado") != "venda" else (p["entrada"] - px))
+        resultado = bruto - p["qtd"] * px * p["custo_lado"] - (p["gasto"] * p["custo_lado"])
+        e["caixa"] += p["gasto"] + resultado
+        R = resultado / p["risco_usd"] if p["risco_usd"] else 0.0
+        e["fechadas"].append({**p, "saida": px, "saida_t": relogio(), "motivo": motivo, "resultado_usd": resultado, "R": R})
+        return registrar(f"🐢 Robô SAIU {'da VENDA' if p.get('lado') == 'venda' else 'da COMPRA'} em {m[:-4]} ({motivo}) a {px:,.6g}: "
+                         f"{resultado:+,.3f} USDT ({R:+.1f}R) [simulado]")
     if ja_vendido is None:
         corretora.cancelar(m, p.get("ordem_stop"))
         px, recebido = corretora.vender(m, p["qtd"], px)
@@ -156,8 +174,10 @@ def stops_perdidos(e, corretora, dados):
         for d, o, h, l, c in dados.get(m, []):
             if d <= visto:
                 continue
-            if l <= p["stop"]:
-                eventos.append(_sair(e, corretora, m, "stop 2N (atingido com a máquina desligada)", min(o, p["stop"]), ja_vendido=min(o, p["stop"])))
+            vendido = p.get("lado") == "venda"
+            if (h >= p["stop"]) if vendido else (l <= p["stop"]):
+                saida = max(o, p["stop"]) if vendido else min(o, p["stop"])
+                eventos.append(_sair(e, corretora, m, "stop 2N (atingido com a máquina desligada)", saida, ja_vendido=saida))
                 break
             p["conferido_ate"] = d
     return eventos
@@ -231,19 +251,29 @@ def reconciliar(e, corretora, precos):
     return eventos
 
 
-def entrar(e, corretora, m, px, n, motivo):
-    """Entrada com orçamento fixo (robô rápido): compra, guarda o stop 2N e registra o motivo."""
+def entrar(e, corretora, m, px, n, motivo, lado="compra", custo_lado=None):
+    """Entrada com orçamento fixo (robô rápido). Com `custo_lado` (perpétuo simulado) pode ser COMPRA ou VENDA a descoberto;
+    no real só compra (vender a descoberto exige conta de futuros, que o robô não usa)."""
+    if lado == "venda" and (corretora.real or custo_lado is None):
+        return registrar(f"🐢 {m[:-4]}: venda a descoberto só no simulado (perpétuo)")
     caixa = corretora.usdt_livre()
     usdt = ORCAMENTO_FIXO if caixa >= ORCAMENTO_FIXO - 1e-9 else caixa
     if usdt < 4.99:
         return None
-    qtd, preco_medio, gasto = corretora.comprar(m, usdt, px)
-    stop = preco_medio - T.STOP_N * n
-    ordem = corretora.colocar_stop(m, qtd, stop)
-    e["abertas"][m] = {"moeda": m, "entrada": preco_medio, "qtd": qtd, "stop": stop, "ordem_stop": ordem, "N": n,
-                       "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * (preco_medio - stop)}
-    return registrar(f"🐢 Robô ENTROU COMPRADO em {m[:-4]} a {preco_medio:,.6g} ({motivo}). Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:.1f}%), "
-                     f"posição US$ {gasto:,.2f}{'' if corretora.real else ' [simulado]'}")
+    if custo_lado is not None and not corretora.real:
+        qtd, preco_medio, gasto = usdt / px, px, usdt          # margem de 1×; a taxa sai no fechamento
+        e["caixa"] -= usdt
+        ordem = None
+    else:
+        qtd, preco_medio, gasto = corretora.comprar(m, usdt, px)
+        ordem = None
+    stop = preco_medio + T.STOP_N * n if lado == "venda" else preco_medio - T.STOP_N * n
+    if custo_lado is None or corretora.real:
+        ordem = corretora.colocar_stop(m, qtd, stop)
+    e["abertas"][m] = {"moeda": m, "entrada": preco_medio, "qtd": qtd, "stop": stop, "ordem_stop": ordem, "N": n, "lado": lado,
+                       "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * abs(preco_medio - stop), "custo_lado": custo_lado}
+    return registrar(f"🐢 Robô ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {m[:-4]} a {preco_medio:,.6g} ({motivo}). "
+                     f"Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:+.1f}%), posição US$ {gasto:,.2f}{'' if corretora.real else ' [simulado]'}")
 
 
 def checar_stops(e, corretora, precos):

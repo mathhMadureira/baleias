@@ -550,6 +550,7 @@ class CerebroV2(Cerebro):
 # ---------------- Cérebro do robô rápido: 33 moedas, velas de 5 min, horizonte de 1 h ----------------
 HORIZONTE = 12                     # 12 velas de 5 min = 1 h
 CUSTO_SPOT = 0.002                 # ida e volta no spot (0,1% por lado)
+CUSTO_PERP = 0.001                 # ida e volta no perpétuo simulado (0,05% por lado): permite comprar E vender a descoberto
 
 
 class CerebroRapido(Cerebro):
@@ -579,8 +580,11 @@ class CerebroRapido(Cerebro):
                 soma += s["peso"] * (a if op > 0 else 1 - a)
                 total += s["peso"]
         prob = soma / total if total else 0.5
-        ev = (2 * prob - 1) * 0.8 * f["dp"] * math.sqrt(HORIZONTE) - CUSTO_SPOT
-        return prob, ev, f, opinioes
+        mov = 0.8 * f["dp"] * math.sqrt(HORIZONTE)
+        ev_compra, ev_venda = (2 * prob - 1) * mov - CUSTO_PERP, (1 - 2 * prob) * mov - CUSTO_PERP
+        lado, ev = ("compra", ev_compra) if ev_compra >= ev_venda else ("venda", ev_venda)
+        f["_mov"] = mov
+        return prob, ev, f, opinioes, lado
 
     def observar(self, m, v):
         """v: velas fechadas (t, o, h, l, c, vol) da moeda m, a última é a nova. Devolve (prob de subir em 1 h, valor esperado)."""
@@ -597,9 +601,11 @@ class CerebroRapido(Cerebro):
                 total += s["peso"]
         prob = soma / total if total else 0.5
         movimento = 0.8 * f["dp"] * math.sqrt(HORIZONTE)          # movimento típico em 1 h
-        ev = (2 * prob - 1) * movimento - CUSTO_SPOT
+        ev_compra, ev_venda = (2 * prob - 1) * movimento - CUSTO_PERP, (1 - 2 * prob) * movimento - CUSTO_PERP
+        lado, ev = ("compra", ev_compra) if ev_compra >= ev_venda else ("venda", ev_venda)
+        f["_mov"] = movimento
         self.previsoes.append({"m": m, "t": v[-1][0], "px": v[-1][4], "x": vetor(f), "opinioes": opinioes, "prob": prob})
-        return prob, ev, f
+        return prob, ev, f, lado
 
     def resolver(self, m, v):
         """Confere as previsões da moeda m cuja hora já passou: cada sinapse aprende com o erro; a rede se corrige."""
@@ -630,3 +636,50 @@ class CerebroRapido(Cerebro):
             self.passos += 1
             self._revisar(v[-1][0])
         return feitas
+
+
+# ---------------- autoconhecimento: o robô estuda as próprias operações ----------------
+FAIXAS = [(0.5, 0.55), (0.55, 0.60), (0.60, 0.65), (0.65, 1.01)]
+
+
+def autoanalise(fechadas, agora=None):
+    """Lê as operações fechadas do próprio robô (com prob, lado e moeda guardados na entrada) e tira conclusões que mudam o
+    comportamento: calibração (quando digo X%, acerto quanto?), lado em que é pior, moedas em que perde sempre."""
+    agora = agora or __import__("time").time()
+    ops = [f for f in fechadas if f.get("prob_lado") is not None]
+    rel = {"operacoes": len(ops), "calibracao": [], "lados": {}, "moedas": {}, "geladeira": [], "margem_lado": {}, "conclusoes": []}
+    for lo, hi in FAIXAS:
+        xs = [f for f in ops if lo <= f["prob_lado"] < hi]
+        if xs:
+            g = sum(f["resultado_usd"] > 0 for f in xs)
+            rel["calibracao"].append({"faixa": f"{lo:.0%}–{min(hi, 1):.0%}", "n": len(xs), "acerto": g / len(xs), "previsto": sum(f["prob_lado"] for f in xs) / len(xs)})
+    for lado in ("compra", "venda"):
+        xs = [f for f in ops if f.get("lado", "compra") == lado]
+        if xs:
+            g = sum(f["resultado_usd"] > 0 for f in xs)
+            lo_, hi_ = wilson(g, len(xs))
+            rel["lados"][lado] = {"n": len(xs), "acerto": g / len(xs), "resultado": sum(f["resultado_usd"] for f in xs)}
+            if len(xs) >= 10 and hi_ < 0.5:
+                rel["margem_lado"][lado] = 0.001          # exige +0,1% a mais de valor esperado nesse lado
+                rel["conclusoes"].append(f"sou pior {'comprando' if lado == 'compra' else 'vendendo'}: {g}/{len(xs)} com lucro; passo a exigir mais certeza nesse lado")
+    for m in sorted({f["moeda"] for f in ops}):
+        xs = [f for f in ops if f["moeda"] == m]
+        g = sum(f["resultado_usd"] > 0 for f in xs)
+        rel["moedas"][m[:-4]] = {"n": len(xs), "acerto": g / len(xs), "resultado": sum(f["resultado_usd"] for f in xs)}
+        recentes = [f for f in xs if agora - f["saida_t"] < 86400]
+        if len(xs) >= 6 and g / len(xs) <= 0.2 and recentes:
+            rel["geladeira"].append(m)
+            rel["conclusoes"].append(f"perco quase sempre em {m[:-4]} ({g}/{len(xs)}): {m[:-4]} vai para a geladeira por 24 h")
+    for c in rel["calibracao"]:
+        if c["n"] >= 10 and c["acerto"] < c["previsto"] - 0.1:
+            rel["conclusoes"].append(f"estou confiante demais na faixa {c['faixa']}: previ {c['previsto']:.0%}, acertei {c['acerto']:.0%} ({c['n']} operações)")
+    return rel
+
+
+def prob_calibrada(p, rel):
+    """Corrige a probabilidade pelo que o robô realmente acertou nessa faixa (encolhendo para a previsão com peso 10)."""
+    for c in rel.get("calibracao", []):
+        lo, hi = (float(x.strip("%")) / 100 for x in c["faixa"].split("–"))
+        if lo <= p < (hi if hi < 1 else 1.01):
+            return (c["acerto"] * c["n"] + p * 10) / (c["n"] + 10)
+    return p

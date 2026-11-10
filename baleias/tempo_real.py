@@ -541,30 +541,46 @@ class Motor:
                                         f"({(tamanho - C.JANELA) * len(series)} previsões conferidas 1 h depois).")
 
     def _cerebro_rapido_passo(self, cbr, dados, precos, e, corretora, ouvir):
-        """A cada vela de 5 min: confere as previsões de 1 h atrás, prevê todas as moedas e entra nas de maior valor esperado."""
+        """A cada vela de 5 min: confere as previsões de 1 h atrás, prevê todas as moedas (comprar OU vender a descoberto),
+        corrige a própria confiança pelo que já acertou e entra nas de maior valor esperado."""
         from lab import tartaruga as T
         from executor import tartaruga_exec as X
+        from . import cerebro as C
         brutas = getattr(self, "_brutas", {})
         X.stops_perdidos(e, corretora, dados)
+        rel = C.autoanalise(e["fechadas"])                    # autoconhecimento: o que minhas operações dizem sobre mim
+        novas = [c for c in rel["conclusoes"] if c not in cbr.__dict__.get("conclusoes_vistas", [])]
+        for c in novas:
+            cbr._anotar(time.time() * 1000, "📊 Autoanálise: " + c)
+            ouvir({"t": time.time(), "texto": "📊 Autoanálise: " + c})
+        cbr.conclusoes_vistas = rel["conclusoes"]
+        cbr.autoanalise = rel
         oportunidades = []
         for m, v in brutas.items():
-            if len(v) < 221:
+            if len(v) < C.JANELA + 1:
                 continue
-            cbr.resolver(m, v[-241:])
-            prob, ev, f = cbr.observar(m, v[-220:])
-            oportunidades.append({"moeda": m[:-4], "prob": prob, "ev": ev, "par": m})
+            cbr.resolver(m, v[-(C.JANELA + 21):])
+            prob, ev, f, lado = cbr.observar(m, v[-C.JANELA:])
+            p_lado = prob if lado == "compra" else 1 - prob
+            p_cal = C.prob_calibrada(p_lado, rel)
+            ev_aj = (2 * p_cal - 1) * f["_mov"] - C.CUSTO_PERP - rel["margem_lado"].get(lado, 0.0)
+            oportunidades.append({"moeda": m[:-4], "prob": prob, "ev": ev_aj, "lado": lado, "p_lado": p_lado, "p_cal": p_cal, "par": m,
+                                  "geladeira": m in rel["geladeira"]})
         oportunidades.sort(key=lambda x: -x["ev"])
         cbr.oportunidades = oportunidades[:33]
         if X.PARAR.exists():
             return
         for o in oportunidades:
             m = o["par"]
-            if o["ev"] <= 0 or m in e["abertas"] or m not in precos or corretora.usdt_livre() < 4.99:
+            if o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m not in precos or corretora.usdt_livre() < 4.99:
                 continue
             n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
             if not n:
                 continue
-            X.entrar(e, corretora, m, precos[m], n, f"cérebro: {o['prob']:.1%} de subir em 1 h, valor esperado {o['ev'] * 100:+.2f}% depois do custo")
+            X.entrar(e, corretora, m, precos[m], n,
+                     f"cérebro: {o['p_cal']:.1%} de acerto calibrado, valor esperado {o['ev'] * 100:+.2f}%", lado=o["lado"], custo_lado=0.0005)
+            if m in e["abertas"]:
+                e["abertas"][m].update({"prob_lado": o["p_cal"], "ev": o["ev"], "hora": time.gmtime().tm_hour})
 
     def _robo_rapido(self):
         """Teste ao vivo, simulado: as mesmas regras da Tartaruga em velas curtas (ROBO_RAPIDO=1h por padrão), para operar no dia.
@@ -670,7 +686,8 @@ class Motor:
                                    "operacoes": len(rs), "acerto": sum(r > 0 for r in rs) / len(rs) if rs else None,
                                    "media_R": sum(rs) / len(rs) if rs else None, "eventos": e["eventos"][:30],
                                    "radar": e.get("radar", [])[:8], "todas": sorted(m[:-4] for m in T.MOEDAS_ROBO), "modo": modo,
-                                   "cerebro": cbr and {"oportunidades": [{k: o[k] for k in ("moeda", "prob", "ev")} for o in cbr.oportunidades[:8]],
+                                   "cerebro": cbr and {"oportunidades": [{k: o.get(k) for k in ("moeda", "prob", "ev", "lado")} for o in cbr.oportunidades[:8]],
+                                                       "autoanalise": getattr(cbr, "autoanalise", None),
                                                        "acerto": (sum(cbr.historico[-500:]) / len(cbr.historico[-500:])) if cbr.historico else None,
                                                        "n": len(cbr.historico),
                                                        "sinapses": sum(1 for x in cbr.sinapses if x["status"] == "ativa"),
@@ -904,17 +921,17 @@ class Motor:
                 formando = (ult[0] + 300_000, ult[4], max(ult[4], px), min(ult[4], px), px, 0.0)
                 janela = (v + [formando])[-C.JANELA:] if agora_ms >= ult[0] + 300_000 else v[-C.JANELA:]
                 try:
-                    prob, ev, f, ops = self._cbr.avaliar(m, janela)
+                    prob, ev, f, ops, lado = self._cbr.avaliar(m, janela)
                 except (ValueError, ZeroDivisionError, IndexError):
                     continue
                 maxima = max(x[2] for x in v[-T.ENTRADA:])
-                linha = {"moeda": m[:-4], "preco": px, "prob": prob, "ev": ev, "falta": (maxima / px - 1) * 100,
+                linha = {"moeda": m[:-4], "preco": px, "prob": prob, "ev": ev, "lado": lado, "falta": (maxima / px - 1) * 100,
                          "espaco": f.get("espaco", 0.0), "votos": sum(1 for x in ops.values() if x), "t": time.time()}
-                sinal = "🟢 OPORTUNIDADE" if ev > 0 else ("🔵 espaço duplo" if f.get("espaco") else ("🟡 perto do rompimento" if linha["falta"] < 0.3 else "sem sinal"))
+                sinal = (f"🟢 OPORTUNIDADE de {'COMPRA' if lado == 'compra' else 'VENDA'}") if ev > 0 else ("🔵 espaço duplo" if f.get("espaco") else ("🟡 perto do rompimento" if linha["falta"] < 0.3 else "sem sinal"))
                 linha["sinal"] = sinal
                 with self.trava:
                     self.varredura["moedas"][m[:-4]] = linha
-                    self.varredura["log"].appendleft({"t": time.time(), "texto": f"🔎 {m[:-4]:6} {px:,.6g} | sobe em 1 h: {prob:.1%} | VE {ev * 100:+.2f}% | "
+                    self.varredura["log"].appendleft({"t": time.time(), "texto": f"🔎 {m[:-4]:6} {px:,.6g} | sobe em 1 h: {prob:.1%} | melhor lado: {lado} VE {ev * 100:+.2f}% | "
                                                                              f"rompimento {'ROMPEU' if linha['falta'] <= 0 else f'+{linha['falta']:.2f}%'} | "
                                                                              f"{linha['votos']} sinapses opinaram | {sinal}"})
                     if i % len(moedas) == 0:

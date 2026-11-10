@@ -461,3 +461,12 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   - 33 moedas 5 min: 56,9% (757) e 57,2% (472).
 - **No spot, não passou:** a cauda é pesada. Nas moedas, a média no treino foi −0,41%, porque quando o esticamento continua, continua muito.
 - **Aplicado:** as 6 regras entraram como sinapses **em observação** nos três cérebros (v1, v2 e o do robô rápido). Elas só ganham voto se provarem ao vivo (≥ 150 previsões, limite inferior de Wilson > 50%). Os cérebros passam a enxergar 220 velas.
+
+### H22 revisada (2026-11-10, pedido do dono): robô rápido nos dois sentidos e com autoconhecimento
+
+- **Perpétuo simulado:** o robô compra ou **vende a descoberto**, o que tiver maior valor esperado, com custo de 0,1% na ida e volta (0,05% por lado). No modo real a venda a descoberto é recusada, porque exige conta de futuros.
+- **Autoconhecimento**, a partir das próprias operações fechadas:
+  - calibração por faixa de probabilidade, corrigindo a probabilidade com peso 10 para a previsão;
+  - lado com ≥ 10 operações e limite superior de Wilson < 50% passa a exigir +0,1% de valor esperado;
+  - moeda com ≥ 6 operações e ≤ 20% de acerto vai para a geladeira por 24 h.
+- **Avaliação:** pela mesa proprietária.

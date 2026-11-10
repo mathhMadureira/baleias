@@ -114,7 +114,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <h3>🔎 Varredura ao vivo — o robô analisa as 33 moedas sem parar <span class="ponto ok" id="vr-pulso" style="display:inline-block"></span>
       <span class="dir mut num" id="vr-info"></span></h3>
     <div class="grade g-dupla">
-      <div style="max-height:340px;overflow:auto"><table id="vr-tab"><thead><tr><th>Moeda</th><th>Preço</th><th>Sobe em 1 h</th><th>Valor esperado</th><th>Rompimento</th><th>Sinal</th><th>Há</th></tr></thead><tbody></tbody></table></div>
+      <div style="max-height:340px;overflow:auto"><table id="vr-tab"><thead><tr><th>Moeda</th><th>Preço</th><th>Sobe em 1 h</th><th>Melhor lado · VE</th><th>Rompimento</th><th>Sinal</th><th>Há</th></tr></thead><tbody></tbody></table></div>
       <div id="vr-log" class="num" style="max-height:340px;overflow:hidden;font-size:12px;line-height:1.55"></div>
     </div>
     <div class="mut" style="font-size:12px;margin-top:6px">Prévia contínua com o preço de agora e a vela ainda em formação. A entrada de verdade só acontece no fechamento da vela (a cada 5 min), quando o valor esperado depois do custo é positivo.</div>
@@ -159,7 +159,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
     </div>
-    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Conta de US$ 10: US$ 5 por operação (mínimo da Binance), no máximo 1 h em cada; para no dia se perder US$ 1 (10%), para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
+    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Conta de US$ 10 em perpétuo simulado: compra ou VENDE a descoberto, US$ 5 por operação, no máximo 1 h em cada; estuda as próprias operações (calibração, lado, moedas); para no dia se perder US$ 1 (10%), para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
   </div>
   <div class="card" style="margin-bottom:14px;border-color:#a78bfa55">
     <h3>🎯 Previsor ao vivo do BTC em 15 min — Vórtice invertido (H19, validação daqui para a frente)</h3>
@@ -673,7 +673,7 @@ async function cicloVarredura() {
     $("vr-tab").querySelector("tbody").replaceChildren(...ls.map(l => {
       const tr = document.createElement("tr"); const idade = Math.round(d.agora - l.t);
       tr.innerHTML = `<td><b>${l.moeda}</b></td><td>${px(l.preco)}</td><td class="${l.prob > 0.5 ? "up" : l.prob < 0.5 ? "down" : ""}">${fmt(l.prob * 100, 1)}%</td>` +
-        `<td class="${cor(l.ev)}">${l.ev >= 0 ? "+" : ""}${fmt(l.ev * 100, 2)}%</td><td>${l.falta <= 0 ? "ROMPEU" : "+" + fmt(l.falta, 2) + "%"}</td>` +
+        `<td class="${cor(l.ev)}">${l.lado === "venda" ? "▼ venda" : "▲ compra"} ${l.ev >= 0 ? "+" : ""}${fmt(l.ev * 100, 2)}%</td><td>${l.falta <= 0 ? "ROMPEU" : "+" + fmt(l.falta, 2) + "%"}</td>` +
         `<td style="font-family:system-ui;font-size:12px"></td><td class="mut">${idade}s</td>`;
       tr.children[5].textContent = l.sinal; if (idade < 2) tr.style.background = "#16c78418"; return tr;
     }));
@@ -784,8 +784,9 @@ async function cicloRapido() {
       $("ra-ult").textContent = ra.ultima_vela ? "última decisão " + ra.ultima_vela.slice(11) + " UTC" : "";
       if (ra.cerebro && ra.cerebro.oportunidades.length) {
         const cb = ra.cerebro;
-        $("ra-radar").textContent = "🧠 " + cb.oportunidades.slice(0, 5).map(o => `${o.moeda} ${fmt(o.prob * 100, 1)}% (VE ${o.ev >= 0 ? "+" : ""}${fmt(o.ev * 100, 2)}%)`).join(" · ") +
-          (cb.rede ? ` | rede neural ${fmt(cb.rede.acertos / Math.max(1, cb.rede.previsoes) * 100, 1)}% em ${cb.rede.previsoes}` : "");
+        $("ra-radar").textContent = "🧠 " + cb.oportunidades.slice(0, 5).map(o => `${o.moeda} ${o.lado === "venda" ? "▼venda" : "▲compra"} (VE ${o.ev >= 0 ? "+" : ""}${fmt(o.ev * 100, 2)}%)`).join(" · ") +
+          (cb.autoanalise && cb.autoanalise.operacoes ? ` | autoanálise: ${cb.autoanalise.operacoes} operações estudadas` + (cb.autoanalise.conclusoes.length ? " — " + cb.autoanalise.conclusoes.join("; ") : "") : "") +
+        (cb.rede ? ` | rede neural ${fmt(cb.rede.acertos / Math.max(1, cb.rede.previsoes) * 100, 1)}% em ${cb.rede.previsoes}` : "");
       } else
       $("ra-radar").textContent = ra.radar.length ? ra.radar.map(r => `${r.moeda} ${r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%"}`).join(" · ") : "carregando velas…";
       $("ra-pos").innerHTML = ra.posicoes.length ? `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Stop</th><th>Resultado</th></tr></thead><tbody>${

@@ -1172,7 +1172,7 @@ class CerebroRapido(unittest.TestCase):
                 v.append((i * 300_000, px, px * 1.002, px * 0.998, px, 10.0))
             return v
         a, b = velas(150, True), velas(150, False)
-        prob, ev, f = cb.observar("AUSDT", a[:130])
+        prob, ev, f, lado = cb.observar("AUSDT", a[:130])
         cb.observar("BUSDT", b[:130])
         self.assertEqual(len(cb.previsoes), 2)
         self.assertEqual(cb.resolver("AUSDT", a[:141]), 0)            # 11 velas depois: ainda não deu 1 h
@@ -1197,3 +1197,47 @@ class SinapsesVelez(unittest.TestCase):
         self.assertTrue(all(s["status"] == "observacao" and s["peso"] == 0.0 for s in velez))
         s = next(x for x in velez if x["id"] == "velez_espaco_duplo_alto")
         self.assertEqual(C.opiniao(s, {"espaco": 1.0}), -1)
+
+
+class VendaSimulada(unittest.TestCase):
+    def test_vendido_ganha_na_queda_e_stop_acima(self):
+        from executor import tartaruga_exec as X
+        X.EVENTOS = pathlib.Path(__import__("tempfile").mkdtemp()) / "ev.jsonl"
+        antes = X.ORCAMENTO_FIXO
+        self.addCleanup(setattr, X, "ORCAMENTO_FIXO", antes)
+        X.ORCAMENTO_FIXO = 5.0
+        e = X.novo_estado(10.0)
+        c = X.Simulada(None, e)
+        X.entrar(e, c, "AUSDT", 100.0, 1.0, "teste", lado="venda", custo_lado=0.0005)
+        p = e["abertas"]["AUSDT"]
+        self.assertEqual((p["lado"], p["stop"]), ("venda", 102.0))
+        self.assertAlmostEqual(X.patrimonio(e, {"AUSDT": 90.0}, c), 10.0 + 0.05 * 10)       # caiu 10%: ganhou 0,50
+        self.assertFalse(c.stop_saiu("AUSDT", p, 101.0)[0])
+        self.assertTrue(c.stop_saiu("AUSDT", p, 102.5)[0])
+        X._sair(e, c, "AUSDT", "teste", 90.0)
+        f = e["fechadas"][0]
+        self.assertGreater(f["resultado_usd"], 0.49)
+        self.assertLess(f["resultado_usd"], 0.50)                                               # taxas descontadas
+        self.assertAlmostEqual(e["caixa"], 10.0 + f["resultado_usd"])
+        # no real a venda a descoberto é recusada
+        r = X.Real(None, X.novo_estado(0))
+        self.assertIsNone(r.e["abertas"].get("BUSDT"))
+        X.entrar(r.e, r, "BUSDT", 100.0, 1.0, "teste", lado="venda", custo_lado=0.0005)
+        self.assertNotIn("BUSDT", r.e["abertas"])
+
+
+class Autoconhecimento(unittest.TestCase):
+    def test_conclusoes_sobre_si_mesmo(self):
+        import time as t
+        from baleias import cerebro as C
+        agora = t.time()
+        f = lambda m, lado, p, r: {"moeda": m, "lado": lado, "prob_lado": p, "resultado_usd": r, "saida_t": agora - 60}
+        ops = [f("XUSDT", "venda", 0.6, -0.05) for _ in range(8)] + [f("YUSDT", "compra", 0.56, 0.04) for _ in range(6)] + \
+              [f("YUSDT", "compra", 0.57, -0.03) for _ in range(6)] + [f("ZUSDT", "venda", 0.61, -0.02) for _ in range(4)]
+        rel = C.autoanalise(ops)
+        self.assertIn("XUSDT", rel["geladeira"])
+        self.assertIn("venda", rel["margem_lado"])                     # 0/12 vendas com lucro → exige mais certeza
+        self.assertTrue(any("vendendo" in c for c in rel["conclusoes"]))
+        self.assertTrue(any("confiante demais" in c for c in rel["conclusoes"]))
+        self.assertLess(C.prob_calibrada(0.61, rel), 0.61)             # na faixa 60–65% errou tudo: probabilidade corrigida para baixo
+        self.assertAlmostEqual(C.prob_calibrada(0.52, rel), 0.52)       # faixa sem dados: não mexe
