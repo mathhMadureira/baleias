@@ -8,7 +8,7 @@
   sinapses novas (indicador × prazo × limiar × sentido sorteados de uma gramática). Nascem em OBSERVAÇÃO (sem voto) e só ganham
   voto com ≥ 150 previsões e limite inferior de Wilson > 50%; com 150 e acerto < 48%, são podadas.
 - DECISÃO: contrato binário simulado (paga 0,51, recebe 1 se acertar). A probabilidade vem do acerto real de cada sinapse que
-  opinou (encolhido para 50% quando há poucos dados), ponderado pelo peso de voto. Aposta só com ≥ 53% para um lado.
+  opinou (encolhido para 50% quando há poucos dados), ponderado pelo peso de voto. Aposta só com ≥ 52% para um lado.
   Por que binário: num contrato linear, 15 min mexem ~0,16% e o custo é ~0,09% → precisaria acertar ~78%. No binário, ~51%.
 Só biblioteca padrão (roda no painel, sem numpy).
 """
@@ -18,7 +18,7 @@ import random
 
 PRECO = 0.51              # contrato binário Sobe/Desce de 15 min: paga 0,51 para receber 1 se acertar (1 centavo de spread)
 APOSTA = 0.02             # 2% do capital por aposta
-LIMIAR = 0.53             # só aposta com probabilidade calibrada ≥ 53% para um lado (equilíbrio ≈ 51%)
+LIMIAR = 0.52             # aposta com probabilidade calibrada ≥ 52% para um lado (equilíbrio ≈ 51%; 1 ponto de margem)
 ETA = 0.08                # taxa de aprendizado do Hedge
 MAX_SINAPSES = 24
 
