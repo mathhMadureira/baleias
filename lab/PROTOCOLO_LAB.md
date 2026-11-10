@@ -437,3 +437,18 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Saída:** stop 2N ou 1 h.
 - **Aquecimento:** ~880 velas × 33 moedas, que não conta.
 - **Avaliação:** pela mesa proprietária (regras da fase 1). Ressalva matemática: com custo de 0,2% e movimento típico de ~0,8%/h, o valor esperado só fica positivo com p ≳ 62%.
+
+## Hipótese 23: método de Oliver Velez (pré-registrada em 2026-11-10, antes de rodar)
+
+- **Fontes:** secundárias (scripts e resumos públicos). O livro "Tools and Tactics for the Master Day Trader" não foi lido.
+- **Regras**, com médias simples de 20 e 200 (SMA20, SMA200):
+  1. **180 de alta:** vela anterior de baixa, vela atual de alta engolindo o corpo da anterior, e preço > SMA20 > SMA200. **180 de baixa:** o espelho disso.
+  2. **Estado estreito com rompimento:** |SMA20 − SMA200| / preço < 1,2%, inclinação da SMA20 (últimas 10 velas) < 0,3%, e vela elefante (amplitude > 2× a média das 20 anteriores) fechando acima (alta) ou abaixo (baixa) das duas médias.
+  3. **Vela elefante a favor do quadro:** amplitude > 2× a média de 20, no sentido do quadro de força (alta: fecha acima e preço > SMA20 > SMA200).
+  4. **Espaço duplo (contrário):** preço > 3% acima das duas médias → aposta queda; > 3% abaixo → aposta alta.
+- **Medidas:** retorno nas 1, 4 e 12 velas seguintes, e acerto de direção.
+  - BTC em 15 min: treino 2020–23, teste 2024+.
+  - 33 moedas em 5 min: 60 dias, divididos em duas metades.
+- **Passa (operar no spot)** com |média| > 0,2% e t > 3,2 no treino, mais o mesmo sinal com > 0,2% e t > 2 no teste.
+- **Passa (contrato binário)** com acerto ≥ 53% e limite inferior de Wilson > 51% nos dois períodos.
+- **Nos cérebros:** as regras entram nos cérebros como sinapses **em observação**, qualquer que seja o resultado. Só ganham voto se provarem acerto ao vivo.
