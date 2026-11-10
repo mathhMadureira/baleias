@@ -134,7 +134,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="ra-pat">—</div><div class="sub" id="ra-ret">—</div></div>
       <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="ra-npos">—</div><div class="sub" id="ra-res">—</div></div>
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="ra-ops">—</div><div class="sub" id="ra-ops-s">—</div></div>
-      <div class="kpi"><div class="rot">Hoje (teto de perda)</div><div class="val num" id="ra-hoje">—</div><div class="sub" id="ra-hoje-s">—</div></div>
+      <div class="kpi"><div class="rot">Hoje (meta +US$ 100)</div><div class="val num" id="ra-hoje">—</div><div class="sub" id="ra-hoje-s">—</div></div>
       <div class="kpi"><div class="rot">Próxima vela fecha em</div><div class="val num" id="ra-prox">—</div><div class="sub" id="ra-ult">—</div></div>
       <div class="kpi"><div class="rot">Mais perto de entrar</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
     </div>
@@ -149,7 +149,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
     </div>
-    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Para de abrir posições se perder US$ 100 no dia. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
+    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. US$ 10 por operação, no máximo 1 h em cada, e para ao ganhar US$ 100 no dia (ou se perder US$ 100). Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
   </div>
   <div class="card" style="margin-bottom:14px;border-color:#a78bfa55">
     <h3>🎯 Previsor ao vivo do BTC em 15 min — Vórtice invertido (H19, validação daqui para a frente)</h3>
@@ -711,7 +711,9 @@ async function cicloRapido() {
       const aberto = ra.posicoes.reduce((s, p) => s + p.resultado, 0);
       $("ra-npos").textContent = ra.posicoes.length; $("ra-res").textContent = ra.posicoes.length ? `aberto ${aberto >= 0 ? "+" : ""}US$ ${fmt(aberto)}` : "esperando rompimento";
       $("ra-hoje").textContent = (ra.resultado_hoje >= 0 ? "+" : "") + "US$ " + fmt(ra.resultado_hoje); $("ra-hoje").className = "val num " + cor(ra.resultado_hoje);
-      $("ra-hoje-s").textContent = ra.travado ? "🛑 teto atingido: sem novas entradas hoje" : `para em −US$ ${fmt(ra.limite_dia, 0)} no dia`;
+      const prog = Math.max(0, Math.min(100, ra.resultado_hoje / ra.meta_dia * 100));
+      $("ra-hoje-s").textContent = ra.travado ? (ra.resultado_hoje > 0 ? "🎯 meta atingida: parou até 00:00 UTC" : "🛑 limite de perda: parou até 00:00 UTC")
+        : `${fmt(prog, 0)}% da meta · US$ ${fmt(ra.orcamento, 0)} por operação · máx. ${ra.max_velas} velas`;
       $("ra-ops").textContent = ra.operacoes; $("ra-ops-s").textContent = ra.operacoes ? `acerto ${fmt(ra.acerto * 100, 0)}% · ${fmt(ra.media_R)}R/op` : "nenhuma ainda";
       $("ra-ult").textContent = ra.ultima_vela ? "última decisão " + ra.ultima_vela.slice(11) + " UTC" : "";
       $("ra-radar").textContent = ra.radar.length ? ra.radar.map(r => `${r.moeda} ${r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%"}`).join(" · ") : "carregando velas…";

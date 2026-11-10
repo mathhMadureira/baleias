@@ -522,7 +522,10 @@ class Motor:
         from executor import tartaruga_exec as X
         intervalo = os.environ.get("ROBO_RAPIDO", "5m")
         passo = {"5m": 300, "15m": 900, "1h": 3600, "4h": 14400}[intervalo]
-        limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", "100"))      # teto de perda por dia (US$), pedido do dono
+        limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", "100"))      # proteção: para se perder isto no dia
+        meta_dia = float(os.environ.get("ROBO_RAPIDO_META_DIA", "100"))         # meta do dono: para ao ganhar isto no dia
+        X.ORCAMENTO_FIXO = float(os.environ.get("ROBO_RAPIDO_ORCAMENTO", "10"))  # US$ por operação
+        max_velas = int(os.environ.get("ROBO_RAPIDO_MAX_VELAS", "12"))          # não segurar demais: no máximo 12 velas (1 h em 5 min)
         X.PARAR = config.RAIZ / "PARAR_RAPIDO"                                # neste processo só o robô rápido usa o tartaruga_exec
         arq = config.RAIZ / f"robo_rapido_{intervalo}.json"
         e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(700.0)
@@ -544,10 +547,13 @@ class Motor:
                 hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
                 fechado_hoje = sum(f["resultado_usd"] for f in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(f["saida_t"])) == hoje)
                 aberto = sum(p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"] for m, p in e["abertas"].items())
-                travado = fechado_hoje + aberto <= -limite_dia
+                travado = fechado_hoje + aberto <= -limite_dia or fechado_hoje >= meta_dia
                 if travado and not X.PARAR.exists():
                     X.PARAR.touch()
-                    ouvir({"t": agora, "texto": f"🛑 Teto do dia atingido: {fechado_hoje + aberto:+.2f} USDT hoje. Sem novas entradas até 00:00 UTC (stops seguem)."})
+                    if fechado_hoje >= meta_dia:
+                        ouvir({"t": agora, "texto": f"🎯 META DO DIA ATINGIDA: +{fechado_hoje:.2f} USDT. Sem novas entradas até 00:00 UTC."})
+                    else:
+                        ouvir({"t": agora, "texto": f"🛑 Limite de perda do dia: {fechado_hoje + aberto:+.2f} USDT. Sem novas entradas até 00:00 UTC (stops seguem)."})
                 elif not travado and X.PARAR.exists() and e.get("dia_trava") != hoje:
                     X.PARAR.unlink()
                 if travado:
@@ -562,6 +568,9 @@ class Motor:
                 e["ultima_vela"] = ultima_fechada
             if precos:
                 X.checar_stops(e, corretora, precos)
+                for m in list(e["abertas"]):           # tempo máximo: não segurar a operação demais
+                    if agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
+                        X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)", precos[m])
                 e["patrimonio"] = X.patrimonio(e, precos, corretora)
                 if dados:
                     e["radar"] = X.radar(dados, precos)
@@ -571,7 +580,8 @@ class Motor:
                 rs = [f["R"] for f in e["fechadas"]]
                 with self.trava:
                     self.rapido = {"intervalo": intervalo, "patrimonio": e["patrimonio"], "resultado_hoje": e.get("resultado_hoje", 0.0),
-                                   "limite_dia": limite_dia, "travado": X.PARAR.exists(), "inicio": e["inicio"], "ultima_vela": e.get("ultima_vela"),
+                                   "limite_dia": limite_dia, "meta_dia": meta_dia, "orcamento": X.ORCAMENTO_FIXO, "max_velas": max_velas,
+                                   "travado": X.PARAR.exists(), "inicio": e["inicio"], "ultima_vela": e.get("ultima_vela"),
                                    "proxima": agora - agora % passo + passo + 15,
                                    "posicoes": [{"moeda": m[:-4], "entrada": p["entrada"], "stop": p["stop"], "preco": precos.get(m),
                                                  "resultado": p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"]} for m, p in e["abertas"].items()],

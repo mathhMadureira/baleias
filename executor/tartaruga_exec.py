@@ -19,7 +19,8 @@ PARAR = Path(__file__).resolve().parent.parent / "PARAR"   # botão de parada (o
 EVENTOS = config.RAIZ / "robo_eventos.jsonl"
 CAPITAL_SIMULADO = float(os.environ.get("TARTARUGA_CAPITAL", "700"))
 RISCO = float(os.environ.get("TARTARUGA_RISCO", "0.01"))
-MAX_POSICOES = int(os.environ.get("TARTARUGA_MAX_POSICOES", "0")) or None   # H13: só no robô-sombra, até passar no teste
+MAX_POSICOES = int(os.environ.get("TARTARUGA_MAX_POSICOES", "0")) or None
+ORCAMENTO_FIXO = None      # robô rápido: US$ fixos por operação em vez do tamanho por risco (pedido do dono: US$ 10)   # H13: só no robô-sombra, até passar no teste
 relogio = time.time        # o replay troca por um relógio simulado
 ouvinte = None             # o replay recebe cada evento por aqui (e o terminal não é inundado)
 
@@ -186,7 +187,7 @@ def passo_diario(e, corretora, dados, precos):
         if not n:
             continue
         px = precos[m]
-        usdt = min(RISCO * total / (T.STOP_N * n) * px, corretora.usdt_livre() * 0.98)
+        usdt = min(ORCAMENTO_FIXO if ORCAMENTO_FIXO else RISCO * total / (T.STOP_N * n) * px, corretora.usdt_livre() * 0.98)
         if usdt < 6:                       # mínimo da Binance com folga
             eventos.append(registrar(f"🐢 {m[:-4]} rompeu a máxima de 55 dias, mas não há caixa para a posição mínima"))
             continue
