@@ -202,6 +202,31 @@ def passo_diario(e, corretora, dados, precos):
     return eventos
 
 
+def reconciliar(e, corretora, precos):
+    """Real: confere com a corretora as posições que o robô acha que tem. Se o saldo da moeda sumiu (vendida pelo app, stop executado
+    com a máquina desligada), consulta o stop; se ele executou, registra a saída pelo preço dele; senão, fecha no preço atual e avisa."""
+    eventos = []
+    if not corretora.real:
+        return eventos
+    for m in list(e["abertas"]):
+        p = e["abertas"][m]
+        tem = corretora.c.saldo(m[:-4])
+        if tem >= p["qtd"] * 0.98:
+            continue
+        status, medio = ("DESCONHECIDO", None)
+        if p.get("ordem_stop"):
+            try:
+                status, medio = corretora.c.consultar(m, p["ordem_stop"])
+            except RuntimeError:
+                pass
+        if status == "FILLED" and medio:
+            eventos.append(_sair(e, corretora, m, "stop executado na corretora (conferido ao ligar)", medio, ja_vendido=medio))
+        else:
+            eventos.append(_sair(e, corretora, m, f"posição não encontrada na corretora (saldo {tem:g}); fechada no preço atual",
+                                 precos.get(m, p["entrada"]), ja_vendido=precos.get(m, p["entrada"])))
+    return eventos
+
+
 def checar_stops(e, corretora, precos):
     eventos = []
     for m in list(e["abertas"]):
@@ -218,6 +243,13 @@ def rodar(cliente, real=False):
         e["modo_real"] = True
     corretora = (Real if real else Simulada)(cliente, e)
     registrar(f"🐢 Robô Tartaruga ligado ({'REAL' if real else 'simulado'}), {len(e['abertas'])} posições abertas")
+    if real:
+        try:
+            for ev in reconciliar(e, corretora, corretora.precos(T.MOEDAS_ROBO)):
+                pass
+            salvar(e)
+        except Exception as ex:
+            registrar(f"⚠️ Não consegui conferir as posições com a corretora: {type(ex).__name__}: {str(ex)[:120]}")
     dados, precos_ok = None, {}
     while True:
         try:

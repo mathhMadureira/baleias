@@ -997,3 +997,29 @@ class ClienteBybit(unittest.TestCase):
         problemas = Y.verificar_chave(c)
         self.assertTrue(any("SAQUE" in x for x in problemas))
         self.assertTrue(any("IP" in x for x in problemas))
+
+
+class Reconciliar(unittest.TestCase):
+    def test_posicao_sumida_na_corretora(self):
+        from executor import tartaruga_exec as X
+        X.EVENTOS = pathlib.Path(__import__("tempfile").mkdtemp()) / "ev.jsonl"
+
+        class Cliente:
+            def __init__(self, saldos, status): self.saldos, self.status = saldos, status
+            def saldo(self, a): return self.saldos.get(a, 0.0)
+            def consultar(self, s, o): return self.status
+        base = {"moeda": "XUSDT", "entrada": 100.0, "qtd": 1.0, "stop": 90.0, "ordem_stop": 7, "N": 5.0, "entrada_t": 0, "gasto": 100.0, "risco_usd": 10.0}
+        # 1) stop executou com a máquina desligada
+        e = X.novo_estado(0); e["abertas"]["XUSDT"] = dict(base)
+        X.reconciliar(e, X.Real(Cliente({}, ("FILLED", 89.5)), e), {"XUSDT": 95.0})
+        self.assertEqual(e["fechadas"][0]["saida"], 89.5)
+        self.assertIn("stop executado na corretora", e["fechadas"][0]["motivo"])
+        # 2) ainda tem a moeda: nada muda
+        e = X.novo_estado(0); e["abertas"]["XUSDT"] = dict(base)
+        X.reconciliar(e, X.Real(Cliente({"X": 1.0}, ("NEW", None)), e), {"XUSDT": 95.0})
+        self.assertIn("XUSDT", e["abertas"])
+        # 3) vendida por fora (stop não executou): fecha no preço atual e avisa
+        e = X.novo_estado(0); e["abertas"]["XUSDT"] = dict(base)
+        X.reconciliar(e, X.Real(Cliente({}, ("CANCELED", None)), e), {"XUSDT": 95.0})
+        self.assertEqual(e["fechadas"][0]["saida"], 95.0)
+        self.assertIn("não encontrada", X.EVENTOS.read_text())
