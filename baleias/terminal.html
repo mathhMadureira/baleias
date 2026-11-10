@@ -630,7 +630,7 @@ async function cicloCerebro() {
       $("cb-ap").className = "val num " + (p && p.aposta ? (p.aposta > 0 ? "up" : "down") : "mut");
       $("cb-ap-s").textContent = p ? `prob. de alta ${fmt(p.prob * 100, 1)}% · BTC ${px(p.px)}` + (p.aposta ? "" : " · valor esperado não paga o custo") : "—";
       $("cb-ac").textContent = c.acerto == null ? "—" : fmt(c.acerto * 100, 1) + "%"; $("cb-ac").className = "val num " + (c.acerto > 0.5 ? "up" : c.acerto == null ? "" : "down");
-      $("cb-ic").textContent = c.ic ? `${c.apostas} apostas · IC ${fmt(c.ic[0] * 100, 1)}–${fmt(c.ic[1] * 100, 1)}%` : "sem apostas ainda";
+      $("cb-ic").textContent = c.ic ? `${c.apostas} apostas · IC ${fmt(c.ic[0] * 100, 1)}–${fmt(c.ic[1] * 100, 1)}%` + (c.referencia_sempre_sobe == null ? "" : ` · "sempre sobe" teria ${fmt(c.referencia_sempre_sobe * 100, 1)}%`) : "sem apostas ainda";
       const ret = (c.capital / 700 - 1) * 100;
       $("cb-cap").textContent = "US$ " + fmt(c.capital); $("cb-cap").className = "val num " + cor(ret); $("cb-cap-s").textContent = pct(ret, 2) + " (inclui o aquecimento)";
       const st = {ativa: 0, observacao: 0, podada: 0}; for (const s of c.sinapses) st[s.status]++;

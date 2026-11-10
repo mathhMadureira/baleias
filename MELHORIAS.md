@@ -1,5 +1,15 @@
 # Melhorias — lista viva (ler no início de cada sessão)
 
+**Ritual de início de cada sessão:** `python3 checar.py` (tudo tem que dar ✅), depois `git log --oneline -10` e esta lista.
+
+## Princípios (insights da Anthropic aplicados ao projeto, 2026-11-10)
+- **Quem propõe não julga:** sinapse nova só ganha voto pelo critério estatístico (código), nunca por opinião minha.
+- **Toda estratégia precisa vencer uma referência trivial:** o cérebro mostra "sempre sobe" nas mesmas apostas.
+- **Consistência acima de sorte:** exigir que o resultado se repita em vários períodos e moedas (como fizemos com grupos 2 e 3).
+- **Sem vazamento:** o aquecimento não conta; teste é sempre em dados que o modelo ainda não viu.
+- **Memória pequena e verificada:** o Livro de Métodos e o diário são reconferidos contra os resultados reais; lição velha pode estar errada.
+- **Credenciais fora do agente:** chaves só no `.env` digitadas pelo dono; nada de ordem real sem `BINANCE_REAL=1` posto por ele.
+
 Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-registrada em `lab/PROTOCOLO_LAB.md` **antes** de testar.
 
 ## Em andamento / próximos
@@ -18,6 +28,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 10. **Alerta de falha da nuvem:** se o `robo-diario` falhar, avisar no Telegram (o GitHub também manda e-mail).
 
 ## Feito (recente)
+
+- 2026-11-10: repositório público; cérebro roda no GitHub a cada 15 min (painel espelha); fluxos acrescentam no ramo `estado`; Livro de Métodos; referência "sempre sobe"; `checar.py`.
 
 - 2026-11-10: H14–H18 testadas e reprovadas (reversão intradiária, força relativa, sazonalidade com contagem corrigida, funding contrário, Vórtice+CHOP). Mapa do mercado inteiro (~170 moedas) e previsor H19 (Vórtice invertido) ao vivo. Robô rápido em 5 min com teto de perda de US$ 100/dia; robô de funding visível.
 

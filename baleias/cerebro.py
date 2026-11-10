@@ -283,7 +283,10 @@ class Cerebro:
     def resumo(self):
         h = self.historico
         lo, hi = wilson(sum(h), len(h))
+        ops = [o for o in self.operacoes if o.get("retorno")]
+        ref = sum(o["retorno"] > 0 for o in ops) / len(ops) if ops else None     # referência trivial: "sempre sobe" nas mesmas velas
         return {"apostas": len(h), "acerto": sum(h) / len(h) if h else None, "ic": [lo, hi] if h else None, "capital": self.capital,
+                "referencia_sempre_sobe": ref,
                 "sinapses": [{k: s.get(k) for k in ("id", "status", "peso", "acertos", "previsoes", "origem")} for s in self.sinapses],
                 "diario": self.diario[-40:][::-1], "pendente": self.pendente and {k: self.pendente[k] for k in ("t", "px", "prob", "aposta")},
                 "curva": [[o["t"], round(o["capital"], 2)] for o in self.operacoes[-1500:]], "passos": self.passos}
