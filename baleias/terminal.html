@@ -128,7 +128,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     </div>
   </div>
   <div class="card" style="margin-bottom:14px;border-color:#f0b90b55">
-    <h3>⚡ Teste ao vivo — robô rápido (velas de <span id="ra-iv">1 h</span>, simulado, US$ 700)
+    <h3>⚡ Teste ao vivo — robô rápido (velas de <span id="ra-iv">1 h</span>, simulado, conta de US$ 10)
       <span class="dir"><button id="ra-notif" class="selo" style="cursor:pointer;background:var(--card2);color:var(--txt)">🔔 avisar no navegador</button></span></h3>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="ra-pat">—</div><div class="sub" id="ra-ret">—</div></div>
@@ -149,7 +149,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
     </div>
-    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. US$ 10 por operação, no máximo 1 h em cada, e para ao ganhar US$ 100 em cada período de 2 dias (ou se perder US$ 100 num dia). Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
+    <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Conta de US$ 10: US$ 5 por operação (mínimo da Binance), no máximo 1 h em cada; para no dia se perder US$ 1 (10%), para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
   </div>
   <div class="card" style="margin-bottom:14px;border-color:#a78bfa55">
     <h3>🎯 Previsor ao vivo do BTC em 15 min — Vórtice invertido (H19, validação daqui para a frente)</h3>
@@ -705,7 +705,7 @@ async function cicloRapido() {
     ra = await j("/api/rapido");
     if (!ra.carregando) {
       $("ra-iv").textContent = ra.intervalo;
-      const ret = (ra.patrimonio / 700 - 1) * 100;
+      const ret = (ra.patrimonio / (ra.capital_inicial || 700) - 1) * 100;
       $("ra-pat").textContent = "US$ " + fmt(ra.patrimonio); $("ra-pat").className = "val num " + cor(ret);
       $("ra-ret").textContent = pct(ret, 2) + " desde " + ra.inicio.split("-").reverse().join("/");
       const aberto = ra.posicoes.reduce((s, p) => s + p.resultado, 0);
@@ -715,7 +715,7 @@ async function cicloRapido() {
       const prog = Math.max(0, Math.min(100, rb / ra.meta_dia * 100));
       const fim = ra.fim_bloco ? new Date(ra.fim_bloco * 1000).toLocaleString("pt-BR").slice(0, 17) : "—";
       $("ra-hoje-s").textContent = ra.travado ? (rb > 0 ? `🎯 meta atingida: parou até ${fim}` : "🛑 limite de perda do dia: parou até 00:00 UTC")
-        : `${fmt(prog, 0)}% da meta · período termina ${fim} · US$ ${fmt(ra.orcamento, 0)}/operação`;
+        : `${fmt(prog, 1)}% da meta · termina ${fim} · US$ ${fmt(ra.orcamento, 0)}/operação · perde no máx. US$ ${fmt(ra.limite_dia)}/dia`;
       $("ra-ops").textContent = ra.operacoes; $("ra-ops-s").textContent = ra.operacoes ? `acerto ${fmt(ra.acerto * 100, 0)}% · ${fmt(ra.media_R)}R/op` : "nenhuma ainda";
       $("ra-ult").textContent = ra.ultima_vela ? "última decisão " + ra.ultima_vela.slice(11) + " UTC" : "";
       $("ra-radar").textContent = ra.radar.length ? ra.radar.map(r => `${r.moeda} ${r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%"}`).join(" · ") : "carregando velas…";

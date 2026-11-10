@@ -188,7 +188,7 @@ def passo_diario(e, corretora, dados, precos):
             continue
         px = precos[m]
         usdt = min(ORCAMENTO_FIXO if ORCAMENTO_FIXO else RISCO * total / (T.STOP_N * n) * px, corretora.usdt_livre() * 0.98)
-        if usdt < 6:                       # mínimo da Binance com folga
+        if usdt < (4.99 if ORCAMENTO_FIXO else 6):     # mínimo da Binance (≈ US$ 5)
             eventos.append(registrar(f"🐢 {m[:-4]} rompeu a máxima de 55 dias, mas não há caixa para a posição mínima"))
             continue
         qtd, preco_medio, gasto = corretora.comprar(m, usdt, px)

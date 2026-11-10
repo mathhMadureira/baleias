@@ -522,14 +522,16 @@ class Motor:
         from executor import tartaruga_exec as X
         intervalo = os.environ.get("ROBO_RAPIDO", "5m")
         passo = {"5m": 300, "15m": 900, "1h": 3600, "4h": 14400}[intervalo]
-        limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", "100"))      # proteção: para se perder isto no dia
+        capital = float(os.environ.get("ROBO_RAPIDO_CAPITAL", "10"))            # conta do robô rápido: US$ 10 no total (pedido do dono)
+        limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", str(capital * 0.10)))   # perde no máximo 10% da conta por dia
+        piso = capital * 0.5                                                    # abaixo de metade da conta, para de vez
         meta_dia = float(os.environ.get("ROBO_RAPIDO_META_DIA", "100"))         # meta do dono: para ao ganhar isto no período
         meta_dias = int(os.environ.get("ROBO_RAPIDO_META_DIAS", "2"))           # período da meta: blocos de 2 dias UTC
-        X.ORCAMENTO_FIXO = float(os.environ.get("ROBO_RAPIDO_ORCAMENTO", "10"))  # US$ por operação
+        X.ORCAMENTO_FIXO = float(os.environ.get("ROBO_RAPIDO_ORCAMENTO", "5"))   # US$ por operação (mínimo da Binance ≈ US$ 5)
         max_velas = int(os.environ.get("ROBO_RAPIDO_MAX_VELAS", "12"))          # não segurar demais: no máximo 12 velas (1 h em 5 min)
         X.PARAR = config.RAIZ / "PARAR_RAPIDO"                                # neste processo só o robô rápido usa o tartaruga_exec
         arq = config.RAIZ / f"robo_rapido_{intervalo}.json"
-        e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(700.0)
+        e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(capital)
         e.setdefault("eventos", [])
         corretora = X.Simulada(None, e)
 
@@ -552,7 +554,11 @@ class Motor:
                 fim_bloco = (bloco + 1) * meta_dias * 86400
                 aberto = sum(p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"] for m, p in e["abertas"].items())
                 meta_batida = fechado_bloco >= meta_dia
-                travado = fechado_hoje + aberto <= -limite_dia or meta_batida
+                quebrou = X.patrimonio(e, precos, corretora) < piso
+                if quebrou and not e.get("quebrou"):
+                    e["quebrou"] = True
+                    ouvir({"t": agora, "texto": f"⛔ Conta abaixo de US$ {piso:.2f} (metade dos US$ {capital:.0f}). Robô rápido parado de vez até você decidir."})
+                travado = fechado_hoje + aberto <= -limite_dia or meta_batida or e.get("quebrou", False)
                 if travado and not X.PARAR.exists():
                     X.PARAR.touch()
                     if meta_batida:
@@ -589,7 +595,7 @@ class Motor:
                 rs = [f["R"] for f in e["fechadas"]]
                 with self.trava:
                     self.rapido = {"intervalo": intervalo, "patrimonio": e["patrimonio"], "resultado_hoje": e.get("resultado_hoje", 0.0),
-                                   "limite_dia": limite_dia, "meta_dia": meta_dia, "meta_dias": meta_dias, "resultado_bloco": e.get("resultado_bloco", 0.0),
+                                   "limite_dia": limite_dia, "capital_inicial": capital, "quebrou": e.get("quebrou", False), "meta_dia": meta_dia, "meta_dias": meta_dias, "resultado_bloco": e.get("resultado_bloco", 0.0),
                                    "fim_bloco": e.get("fim_bloco"), "orcamento": X.ORCAMENTO_FIXO, "max_velas": max_velas,
                                    "travado": X.PARAR.exists(), "inicio": e["inicio"], "ultima_vela": e.get("ultima_vela"),
                                    "proxima": agora - agora % passo + passo + 15,
