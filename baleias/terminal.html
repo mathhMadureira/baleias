@@ -133,6 +133,16 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     </div>
     <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Para de abrir posições se perder US$ 100 no dia. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
   </div>
+  <div class="card" style="margin-bottom:14px;border-color:#a78bfa55">
+    <h3>🎯 Previsor ao vivo do BTC em 15 min — Vórtice invertido (H19, validação daqui para a frente)</h3>
+    <div class="kpis" style="margin-bottom:0">
+      <div class="kpi"><div class="rot">Acerto ao vivo</div><div class="val num" id="vo-ac">—</div><div class="sub" id="vo-ic">—</div></div>
+      <div class="kpi"><div class="rot">Apostas conferidas</div><div class="val num" id="vo-n">—</div><div class="sub">passa com 300+ e IC acima de 51%</div></div>
+      <div class="kpi"><div class="rot">Aposta em aberto</div><div class="val num" id="vo-pend">—</div><div class="sub" id="vo-pend-s">—</div></div>
+      <div class="kpi"><div class="rot">Últimas 12</div><div class="val num" id="vo-ult" style="font-size:18px;letter-spacing:2px">—</div><div class="sub">✓ acertou · ✗ errou</div></div>
+      <div class="kpi" style="grid-column:span 2"><div class="rot">Como funciona</div><div class="sub" style="font-size:12px;color:var(--txt)">No histórico 2020–2026, seguir o Vórtice com CHOP &lt; 38,2 acertou só ~47,7%. Apostar contra acertou ~52,3%. Como isso foi descoberto olhando os dados, só vale se repetir ao vivo. Só aposta quando o mercado está direcional (CHOP baixo).</div></div>
+    </div>
+  </div>
   <div class="card" style="margin-bottom:14px;border-color:#16c78455">
     <h3>💰 Robô de funding — opera o tempo todo, recebe a cada hora (simulado, US$ 700, desde 07/11)</h3>
     <div class="kpis" style="margin-bottom:10px">
@@ -591,6 +601,25 @@ function desenharMapa() {
   }));
 }
 setInterval(() => { if (document.getElementById("aba-mapa").classList.contains("ativa")) carregarMapa(); }, 300000);
+
+// ---------- previsor H19 ----------
+async function cicloVortice() {
+  try {
+    const v = await j("/api/vortice");
+    if (!v.carregando) {
+      $("vo-ac").textContent = v.acerto == null ? "—" : fmt(v.acerto * 100, 1) + "%";
+      $("vo-ac").className = "val num " + (v.acerto == null ? "" : v.acerto > 0.5 ? "up" : "down");
+      $("vo-ic").textContent = v.ic[0] == null ? "aguardando a 1ª conferência" : `IC 95%: ${fmt(v.ic[0] * 100, 1)}–${fmt(v.ic[1] * 100, 1)}%`;
+      $("vo-n").textContent = v.apostas;
+      $("vo-pend").textContent = v.pendente ? (v.pendente.aposta === "sobe" ? "▲ SOBE" : "▼ DESCE") : "sem aposta";
+      $("vo-pend").className = "val num " + (v.pendente ? (v.pendente.aposta === "sobe" ? "up" : "down") : "mut");
+      $("vo-pend-s").textContent = v.pendente ? `a partir de ${px(v.pendente.px)} · confere ${new Date(v.pendente.alvo + 900000).toLocaleTimeString("pt-BR").slice(0, 5)}` : `mercado sem direção (CHOP ${v.ultima_chop ?? "—"})`;
+      $("vo-ult").textContent = v.ultimas.length ? v.ultimas.map(x => x.acertou ? "✓" : "✗").join("") : "—";
+    }
+  } catch (e) {}
+  setTimeout(cicloVortice, 15000);
+}
+cicloVortice();
 
 // ---------- robô de funding ----------
 async function cicloFunding() {

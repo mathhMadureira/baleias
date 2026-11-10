@@ -164,6 +164,9 @@ class Manipulador(BaseHTTPRequestHandler):
         elif self.path.startswith("/api/replay"):
             from . import terminal_api
             self._enviar(200, json.dumps(terminal_api.replay()).encode(), "application/json")
+        elif self.path.startswith("/api/vortice"):
+            corpo = self.motor.vortice if self.motor and self.motor.vortice else {"carregando": True}
+            self._enviar(200, json.dumps(corpo).encode(), "application/json")
         elif self.path.startswith("/api/mapa"):
             corpo = self.motor.mapa if self.motor and self.motor.mapa else {"carregando": True}
             self._enviar(200, json.dumps(corpo).encode(), "application/json")

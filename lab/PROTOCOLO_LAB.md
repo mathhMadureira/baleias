@@ -387,3 +387,21 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Sinal:** quando CHOP < 38,2 (limiar usual), aposta "sobe" se VI⁺ > VI⁻ e "desce" se VI⁻ > VI⁺, sempre para a **próxima vela**.
 - **Dados:** BTC 15 min, com treino 2020–2023 e teste 2024–hoje; BTC 5 min, nos últimos 60 dias, divididos em duas metades.
 - **Passa** se o acerto de direção for ≥ 53% com o limite inferior de Wilson (95%) > 51% **nos dois períodos**. Num mercado binário pago a ~US$ 0,50–0,52, abaixo disso o spread come o ganho. Com CHOP ≥ 38,2 não há aposta.
+
+### Resultado da H18 (2026-11-10): não passou — o sinal é **anti-preditivo**
+
+| | Apostas | Acerto | IC 95% |
+|---|---|---|---|
+| 15 min treino 2020–23 | 14.554 | 47,81% | 47,00–48,62% |
+| 15 min teste 2024+ | 13.175 | 47,66% | 46,81–48,51% |
+| 5 min 1ª metade (60 d) | 2.056 | 46,16% | 44,01–48,32% |
+| 5 min 2ª metade | 2.099 | 47,12% | 44,99–49,26% |
+
+- **Leitura:** seguir o Vórtice com CHOP < 38,2 erra mais do que acerta, de forma consistente. É o mesmo fenômeno da razão de variância < 1: reversão em minutos e horas.
+- **Sobre o artigo:** o resultado de +US$ 319 mil não vem deste sinal.
+
+## Hipótese 19: Vórtice **invertido** (descoberta depois de ver a H18 — só vale validação daqui para a frente)
+
+- **Regra:** igual à H18, apostando na direção **oposta**. No histórico, isso dá ~52,2–52,3% em 15 min e ~52,9–53,8% em 5 min, mas foi visto depois dos dados e por isso não conta como prova.
+- **Validação ao vivo**, desde 2026-11-10: a cada vela de 15 min do BTC fechada, registrar a previsão e conferir na próxima. Fica no painel.
+- **Passa** com ≥ 300 apostas ao vivo e acerto com limite inferior de Wilson > 51%.

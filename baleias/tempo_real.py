@@ -226,6 +226,7 @@ class Motor:
         self.tartaruga = None
         self.rapido = None
         self.mapa = None
+        self.vortice = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -633,6 +634,61 @@ class Motor:
             self.fonte("mapa", True)
             time.sleep(1800)
 
+    def _vortice(self):
+        """H19 ao vivo: a cada vela de 15 min do BTC fechada, prevê a próxima pelo Vórtice INVERTIDO (só quando CHOP < 38,2)
+        e confere na vela seguinte. Placar com intervalo de Wilson. Arquivo: dados/h19_vortice.jsonl."""
+        import math
+        from lab import tartaruga as T
+        arq = config.RAIZ / "h19_vortice.jsonl"
+        registros = [json.loads(x) for x in arq.read_text().splitlines()] if arq.exists() else []
+        n, lim = 14, 38.2
+        while True:
+            with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=40", timeout=20) as r:
+                k = [x for x in json.load(r) if x[6] < time.time() * 1000]
+            v = [(x[0], float(x[2]), float(x[3]), float(x[4])) for x in k]
+            fech = {x[0]: x[3] for x in v}
+            mudou = False
+            for rg in registros:                       # confere previsões pendentes
+                if rg.get("acertou") is None and rg["alvo"] in fech:
+                    sobe = fech[rg["alvo"]] > rg["px"]
+                    rg["acertou"] = (rg["aposta"] == "sobe") == sobe if fech[rg["alvo"]] != rg["px"] else None
+                    rg["resolvida"] = True
+                    mudou = True
+            ultima = v[-1][0]
+            if not any(rg["t"] == ultima for rg in registros):
+                h, l, c = [x[1] for x in v], [x[2] for x in v], [x[3] for x in v]
+                i = len(v) - 1
+                tr = [max(h[j] - l[j], abs(h[j] - c[j - 1]), abs(l[j] - c[j - 1])) for j in range(i - n + 1, i + 1)]
+                faixa = max(h[i - n + 1:i + 1]) - min(l[i - n + 1:i + 1])
+                chop = 100 * math.log10(sum(tr) / faixa) / math.log10(n) if faixa > 0 and sum(tr) > 0 else 100
+                vip = sum(abs(h[j] - l[j - 1]) for j in range(i - n + 1, i + 1))
+                vim = sum(abs(l[j] - h[j - 1]) for j in range(i - n + 1, i + 1))
+                rg = {"t": ultima, "px": c[i], "alvo": ultima + 900_000, "chop": round(chop, 1), "acertou": None}
+                if chop < lim and vip != vim:
+                    rg["aposta"] = "desce" if vip > vim else "sobe"        # invertido
+                registros.append(rg)
+                mudou = True
+            if mudou:
+                arq.write_text("\n".join(json.dumps(x) for x in registros[-5000:]) + "\n")
+            feitas = [x for x in registros if x.get("aposta") and x.get("resolvida") and x["acertou"] is not None]
+            a, t = sum(x["acertou"] for x in feitas), len(feitas)
+            if t:
+                f = a / t
+                z = 1.96
+                centro = (f + z * z / (2 * t)) / (1 + z * z / t)
+                meia = z * math.sqrt(f * (1 - f) / t + z * z / (4 * t * t)) / (1 + z * z / t)
+                ic = [centro - meia, centro + meia]
+            else:
+                ic = [None, None]
+            pend = next((x for x in reversed(registros) if x.get("aposta") and not x.get("resolvida")), None)
+            with self.trava:
+                self.vortice = {"apostas": t, "acertos": a, "acerto": a / t if t else None, "ic": ic, "desde": registros[0]["t"] if registros else None,
+                                "ultima_chop": registros[-1]["chop"] if registros else None,
+                                "pendente": pend and {"aposta": pend["aposta"], "px": pend["px"], "alvo": pend["alvo"]},
+                                "ultimas": [{"t": x["t"], "aposta": x["aposta"], "acertou": x["acertou"]} for x in feitas[-12:]]}
+            self.fonte("vortice", True)
+            time.sleep(30)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -644,7 +700,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self
