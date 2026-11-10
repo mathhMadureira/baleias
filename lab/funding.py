@@ -55,8 +55,9 @@ def decidir(janela, dentro):
     return media > 0 and media * RECUPERAR_H > CUSTO_IDA_VOLTA
 
 
-def simular(series):
-    """series: {moeda: [(t_ms, taxa)]}. Devolve {dia UTC: resultado sobre o capital} (funding recebido − custos)."""
+def simular(series, posicoes=None):
+    """series: {moeda: [(t_ms, taxa)]}. Devolve {dia UTC: resultado sobre o capital} (funding recebido − custos).
+    `posicoes` (dict opcional): recebe, por moeda, se terminou posicionada, a última taxa e a média de 72 h."""
     dia = lambda t: time.strftime("%Y-%m-%d", time.gmtime(t / 1000))
     por_dia = {}
     for moeda, s in series.items():
@@ -71,6 +72,8 @@ def simular(series):
             if novo != dentro:
                 por_dia[d] -= PESO * (CUSTO_IDA_VOLTA / 2) / CAPITAL_POR_EXPOSICAO
                 dentro = novo
+        if posicoes is not None and s:
+            posicoes[moeda] = {"dentro": dentro, "taxa_hora": s[-1][1], "media_72h": st.fmean(taxas[-JANELA_H:]) if taxas else None, "t": s[-1][0]}
     return dict(sorted(por_dia.items()))
 
 
@@ -121,13 +124,15 @@ def ao_vivo(post=None):
     import calendar
     inicio = calendar.timegm(time.strptime(INICIO_AO_VIVO, "%Y-%m-%d")) * 1000 - (JANELA_H + 1) * 3_600_000
     series = {m: historico(m, inicio, post) for m in MOEDAS}
-    por_dia = {d: v for d, v in simular(series).items() if d >= INICIO_AO_VIVO}
+    posicoes = {}
+    por_dia = {d: v for d, v in simular(series, posicoes).items() if d >= INICIO_AO_VIVO}
     hoje = time.strftime("%Y-%m-%d", time.gmtime())
     fechados = {d: v for d, v in por_dia.items() if d < hoje}
     r = resumo(fechados) or {"dias": 0}
     r["hoje_parcial"] = por_dia.get(hoje)
     r["por_dia"] = fechados
     r["faltam_para_90"] = max(0, 90 - r["dias"])
+    r["posicoes"] = posicoes
     try:  # H3b: 2x, único nível sem liquidação no histórico; velas recentes da própria Hyperliquid
         from . import funding_alavancado as FA
         velas = {m: FA.velas_1h(m, inicio) for m in MOEDAS}

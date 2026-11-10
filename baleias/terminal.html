@@ -132,6 +132,17 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     </div>
     <div class="mut" style="font-size:12px;margin-top:8px">Mesmas regras do robô diário (rompimento de 55 velas, stop 2N, saída na mínima de 20) em velas curtas, para você ver operando no dia. Para de abrir posições se perder US$ 100 no dia. Simulado: nenhum dinheiro real. No histórico, as versões curtas foram muito melhores em 2024 do que de 2025 para cá.</div>
   </div>
+  <div class="card" style="margin-bottom:14px;border-color:#16c78455">
+    <h3>💰 Robô de funding — opera o tempo todo, recebe a cada hora (simulado, US$ 700, desde 07/11)</h3>
+    <div class="kpis" style="margin-bottom:10px">
+      <div class="kpi"><div class="rot">Recebido desde 07/11</div><div class="val num" id="fu-tot">—</div><div class="sub" id="fu-tot-s">—</div></div>
+      <div class="kpi"><div class="rot">Hoje até agora</div><div class="val num" id="fu-hoje">—</div><div class="sub">atualiza a cada hora</div></div>
+      <div class="kpi"><div class="rot">Dias positivos</div><div class="val num" id="fu-pos">—</div><div class="sub">no histórico: 84%</div></div>
+      <div class="kpi"><div class="rot">Ritmo ao ano</div><div class="val num" id="fu-ano">—</div><div class="sub">histórico 2023–26: +6,1%/ano</div></div>
+      <div class="kpi" style="grid-column:span 2"><div class="rot">Posições agora (vendido no perp + comprado no spot)</div><div class="sub num" id="fu-pos-l" style="font-size:13px;color:var(--txt)">—</div></div>
+    </div>
+    <div class="mut" style="font-size:12px">Comprado no spot e vendido no perpétuo da mesma moeda: o preço se anula e sobra a taxa que os alavancados pagam a cada hora. Entra numa moeda só quando a média de 72 h paga o custo (probabilidade medida: 84% dos dias positivos). Pequeno, mas constante. Ganho real só com conta de futuros.</div>
+  </div>
   <div class="kpis">
     <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="k-pat">—</div><div class="sub" id="k-pat-s">—</div></div>
     <div class="kpi"><div class="rot">Resultado</div><div class="val num" id="k-res">—</div><div class="sub" id="k-res-s">—</div></div>
@@ -527,6 +538,26 @@ $("rp-vel").onchange = () => { if (rpTimer) { pararReplay(); $("rp-play").onclic
 $("rp-zero").onclick = () => zerarReplay();
 let som = false, audio;
 function bip(f) { try { audio = audio || new AudioContext(); const o = audio.createOscillator(), g = audio.createGain(); o.frequency.value = f; g.gain.value = 0.05; o.connect(g).connect(audio.destination); o.start(); o.stop(audio.currentTime + 0.08); } catch (e) {} }
+
+// ---------- robô de funding ----------
+async function cicloFunding() {
+  try {
+    const f = await j("/api/funding");
+    if (!f.erro) {
+      const tot = (f.acumulado || 0) * 700;
+      $("fu-tot").textContent = (tot >= 0 ? "+" : "") + "US$ " + fmt(tot, 2); $("fu-tot").className = "val num " + cor(tot);
+      $("fu-tot-s").textContent = `${f.dias} dias fechados · ${pct((f.acumulado || 0) * 100, 3)}`;
+      const h = (f.hoje_parcial || 0) * 700;
+      $("fu-hoje").textContent = (h >= 0 ? "+" : "") + "US$ " + fmt(h, 3); $("fu-hoje").className = "val num " + cor(h);
+      $("fu-pos").textContent = f.dias ? fmt((f.dias_positivos || 0) * 100, 0) + "%" : "—";
+      $("fu-ano").textContent = f.ao_ano == null ? "—" : pct(f.ao_ano * 100, 1);
+      const p = f.posicoes || {};
+      $("fu-pos-l").textContent = Object.keys(p).length ? Object.entries(p).map(([m, x]) => `${m}: ${x.dentro ? "DENTRO" : "fora"} (taxa/h ${(x.taxa_hora * 100).toFixed(4)}%, média 72 h ${(x.media_72h * 100).toFixed(4)}%)`).join(" · ") : "atualiza na próxima hora cheia";
+    }
+  } catch (e) {}
+  setTimeout(cicloFunding, 60000);
+}
+cicloFunding();
 
 // ---------- robô rápido ----------
 let ra = null, raVistos = null;

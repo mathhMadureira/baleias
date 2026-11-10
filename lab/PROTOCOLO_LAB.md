@@ -338,3 +338,13 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Dados:** os últimos 60 dias de velas de 5 min (`dados/lab/cripto_5m.json`). **Treino:** primeira metade. **Teste:** segunda metade.
 - **Passa** um horizonte se, nas duas metades, o retorno médio líquido for > 0 **e** o t do teste for > 2, com pelo menos 100 operações em cada metade.
 - **Se passar:** o robô rápido troca para esta regra, com a probabilidade de acerto atualizada ao vivo (Beta bayesiana) e entrada só quando o ganho esperado líquido for > 0. **Se não passar,** registrar o resultado e não usar.
+
+### Resultado da H14 (2026-11-10): não passou
+
+| Horizonte | Treino | Teste |
+|---|---|---|
+| 1 h | 652 op., −0,175% líquido, t −2,44, acerto 45% | 845 op., −0,237%, t −4,83, acerto 43% |
+| 4 h | 551 op., −0,203%, t −1,85, acerto 45% | 678 op., −0,308%, t −3,09, acerto 47% |
+
+- **Bruto:** a reversão rende de +0,03% (1 h) a −0,1% (4 h) por operação, muito abaixo do custo de 0,2%.
+- **Conclusão:** a reversão intradiária medida pela física é real, mas é pequena demais para pagar o custo de ida e volta.

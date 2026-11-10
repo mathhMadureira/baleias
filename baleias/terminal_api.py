@@ -117,3 +117,19 @@ def replay():
     if R.ARQUIVO.exists() and time.time() - R.ARQUIVO.stat().st_mtime < 86400:
         return json.loads(R.ARQUIVO.read_text())
     return R.rodar()
+
+
+def funding():
+    """Robô de funding (H3, ao vivo desde 07/11): lê o estado que o serviço de pesquisa grava a cada hora."""
+    import sqlite3
+    try:
+        c = sqlite3.connect(f"file:{config.BANCO}?mode=ro", uri=True, timeout=10)
+        linha = c.execute("SELECT estado, t_ms FROM lab_funding").fetchone()
+        c.close()
+    except sqlite3.Error:
+        return {"erro": "sem dados"}
+    if not linha:
+        return {"erro": "sem dados"}
+    e = json.loads(linha[0])
+    e["atualizado_ms"] = linha[1]
+    return e

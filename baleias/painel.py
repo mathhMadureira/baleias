@@ -164,6 +164,9 @@ class Manipulador(BaseHTTPRequestHandler):
         elif self.path.startswith("/api/replay"):
             from . import terminal_api
             self._enviar(200, json.dumps(terminal_api.replay()).encode(), "application/json")
+        elif self.path.startswith("/api/funding"):
+            from . import terminal_api
+            self._enviar(200, json.dumps(terminal_api.funding()).encode(), "application/json")
         elif self.path.startswith("/api/lab"):
             from . import terminal_api
             self._enviar(200, json.dumps(terminal_api.lab()).encode(), "application/json")
