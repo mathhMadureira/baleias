@@ -4,6 +4,7 @@ Escuta só em 127.0.0.1. O banco é aberto em modo somente leitura.
 """
 import json
 import os
+import time
 import sqlite3
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -164,6 +165,14 @@ class Manipulador(BaseHTTPRequestHandler):
         elif self.path.startswith("/api/replay"):
             from . import terminal_api
             self._enviar(200, json.dumps(terminal_api.replay()).encode(), "application/json")
+        elif self.path.startswith("/api/varredura"):
+            if self.motor:
+                with self.motor.trava:
+                    corpo = {"moedas": list(self.motor.varredura["moedas"].values()), "log": list(self.motor.varredura["log"])[:25],
+                             "voltas": self.motor.varredura["voltas"], "agora": time.time()}
+            else:
+                corpo = {"moedas": [], "log": []}
+            self._enviar(200, json.dumps(corpo).encode(), "application/json")
         elif self.path.startswith("/api/mesa"):
             from . import mesa
             self._enviar(200, json.dumps(mesa.mesa()).encode(), "application/json")

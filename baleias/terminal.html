@@ -110,6 +110,15 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 
 <main>
 <section class="aba ativa" id="aba-robo">
+  <div class="card" style="margin-bottom:14px;border-color:#16c78466">
+    <h3>🔎 Varredura ao vivo — o robô analisa as 33 moedas sem parar <span class="ponto ok" id="vr-pulso" style="display:inline-block"></span>
+      <span class="dir mut num" id="vr-info"></span></h3>
+    <div class="grade g-dupla">
+      <div style="max-height:340px;overflow:auto"><table id="vr-tab"><thead><tr><th>Moeda</th><th>Preço</th><th>Sobe em 1 h</th><th>Valor esperado</th><th>Rompimento</th><th>Sinal</th><th>Há</th></tr></thead><tbody></tbody></table></div>
+      <div id="vr-log" class="num" style="max-height:340px;overflow:hidden;font-size:12px;line-height:1.55"></div>
+    </div>
+    <div class="mut" style="font-size:12px;margin-top:6px">Prévia contínua com o preço de agora e a vela ainda em formação. A entrada de verdade só acontece no fechamento da vela (a cada 5 min), quando o valor esperado depois do custo é positivo.</div>
+  </div>
   <div class="card" style="margin-bottom:14px;border-color:#3b82f688">
     <h3>🧠 Cérebro de day trade — BTC 15 min (simulado, US$ 700, teto de perda US$ 100/dia)</h3>
     <div class="kpis" style="margin-bottom:10px">
@@ -652,6 +661,28 @@ function desenharMapa() {
   }));
 }
 setInterval(() => { if (document.getElementById("aba-mapa").classList.contains("ativa")) carregarMapa(); }, 300000);
+
+// ---------- varredura contínua ----------
+let vrPulso = false;
+async function cicloVarredura() {
+  try {
+    const d = await j("/api/varredura");
+    vrPulso = !vrPulso; $("vr-pulso").style.opacity = vrPulso ? 1 : 0.3;
+    $("vr-info").textContent = `${d.moedas.length} moedas · ${d.voltas} voltas completas`;
+    const ls = d.moedas.slice().sort((a, b) => b.ev - a.ev);
+    $("vr-tab").querySelector("tbody").replaceChildren(...ls.map(l => {
+      const tr = document.createElement("tr"); const idade = Math.round(d.agora - l.t);
+      tr.innerHTML = `<td><b>${l.moeda}</b></td><td>${px(l.preco)}</td><td class="${l.prob > 0.5 ? "up" : l.prob < 0.5 ? "down" : ""}">${fmt(l.prob * 100, 1)}%</td>` +
+        `<td class="${cor(l.ev)}">${l.ev >= 0 ? "+" : ""}${fmt(l.ev * 100, 2)}%</td><td>${l.falta <= 0 ? "ROMPEU" : "+" + fmt(l.falta, 2) + "%"}</td>` +
+        `<td style="font-family:system-ui;font-size:12px"></td><td class="mut">${idade}s</td>`;
+      tr.children[5].textContent = l.sinal; if (idade < 2) tr.style.background = "#16c78418"; return tr;
+    }));
+    $("vr-log").replaceChildren(...d.log.map(x => { const e = document.createElement("div"); e.textContent = new Date(x.t * 1000).toLocaleTimeString("pt-BR") + "  " + x.texto;
+      if (x.texto.includes("OPORTUNIDADE")) e.className = "up"; return e; }));
+  } catch (e) {}
+  setTimeout(cicloVarredura, 1500);
+}
+cicloVarredura();
 
 // ---------- cérebro ----------
 async function cicloCerebro() {

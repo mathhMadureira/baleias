@@ -229,6 +229,8 @@ class Motor:
         self.mapa = None
         self.vortice = None
         self.cerebro = None
+        self.varredura = {"moedas": {}, "log": collections.deque(maxlen=80), "voltas": 0}
+        self._cbr = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -595,6 +597,7 @@ class Motor:
         if modo == "cerebro":
             from . import cerebro as C
             cbr = C.CerebroRapido(json.loads(arq_cbr.read_text()) if arq_cbr.exists() else None)
+            self._cbr = cbr
             if not cbr.passos:
                 self._aquecer_cerebro_rapido(cbr, intervalo)
                 arq_cbr.write_text(json.dumps(cbr.exportar()))
@@ -877,6 +880,48 @@ class Motor:
                 self.fonte("cerebro", False, f"{type(ex).__name__}")
             time.sleep(20)
 
+    def _varredura(self):
+        """Varre as 33 moedas sem parar (uma a cada ~1,5 s): preço ao vivo + vela em formação → o cérebro do robô rápido avalia
+        (sem registrar), mais distância do rompimento e espaço duplo do Velez. É prévia: a decisão real é no fechamento da vela."""
+        from lab import tartaruga as T
+        from . import cerebro as C
+        i = 0
+        while True:
+            brutas = getattr(self, "_brutas", {})
+            moedas = [m for m in T.MOEDAS_ROBO if m in brutas and len(brutas[m]) >= C.JANELA]
+            if not moedas or not self._cbr:
+                self.fonte("varredura", True)
+                time.sleep(5)
+                continue
+            m = moedas[i % len(moedas)]
+            i += 1
+            with self.trava:
+                px = self.mercado.get(m[:-4], {}).get("p")
+            v = brutas[m]
+            if px:
+                ult = v[-1]
+                agora_ms = int(time.time() * 1000)
+                formando = (ult[0] + 300_000, ult[4], max(ult[4], px), min(ult[4], px), px, 0.0)
+                janela = (v + [formando])[-C.JANELA:] if agora_ms >= ult[0] + 300_000 else v[-C.JANELA:]
+                try:
+                    prob, ev, f, ops = self._cbr.avaliar(m, janela)
+                except (ValueError, ZeroDivisionError, IndexError):
+                    continue
+                maxima = max(x[2] for x in v[-T.ENTRADA:])
+                linha = {"moeda": m[:-4], "preco": px, "prob": prob, "ev": ev, "falta": (maxima / px - 1) * 100,
+                         "espaco": f.get("espaco", 0.0), "votos": sum(1 for x in ops.values() if x), "t": time.time()}
+                sinal = "🟢 OPORTUNIDADE" if ev > 0 else ("🔵 espaço duplo" if f.get("espaco") else ("🟡 perto do rompimento" if linha["falta"] < 0.3 else "sem sinal"))
+                linha["sinal"] = sinal
+                with self.trava:
+                    self.varredura["moedas"][m[:-4]] = linha
+                    self.varredura["log"].appendleft({"t": time.time(), "texto": f"🔎 {m[:-4]:6} {px:,.6g} | sobe em 1 h: {prob:.1%} | VE {ev * 100:+.2f}% | "
+                                                                             f"rompimento {'ROMPEU' if linha['falta'] <= 0 else f'+{linha['falta']:.2f}%'} | "
+                                                                             f"{linha['votos']} sinapses opinaram | {sinal}"})
+                    if i % len(moedas) == 0:
+                        self.varredura["voltas"] += 1
+            self.fonte("varredura", True)
+            time.sleep(1.5)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -888,7 +933,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self

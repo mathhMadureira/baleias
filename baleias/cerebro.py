@@ -565,6 +565,23 @@ class CerebroRapido(Cerebro):
     def exportar(self):
         return super().exportar() | {"previsoes": self.previsoes[-3000:], "oportunidades": self.oportunidades[:33], "versao": "rapido"}
 
+    def avaliar(self, m, v):
+        """Só pensa, não registra: (prob de subir em 1 h, valor esperado, medidas, opiniões). Usado na varredura contínua."""
+        f = caracteristicas(v)
+        opinioes, soma, total = {}, 0.0, 0.0
+        for s in self.sinapses:
+            if s["status"] == "podada":
+                continue
+            op = opiniao(s, f, self.rede)
+            opinioes[s["id"]] = op
+            if op and s["status"] == "ativa":
+                a = (s["acertos"] + 20) / (s["previsoes"] + 40)
+                soma += s["peso"] * (a if op > 0 else 1 - a)
+                total += s["peso"]
+        prob = soma / total if total else 0.5
+        ev = (2 * prob - 1) * 0.8 * f["dp"] * math.sqrt(HORIZONTE) - CUSTO_SPOT
+        return prob, ev, f, opinioes
+
     def observar(self, m, v):
         """v: velas fechadas (t, o, h, l, c, vol) da moeda m, a última é a nova. Devolve (prob de subir em 1 h, valor esperado)."""
         f = caracteristicas(v)
