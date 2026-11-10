@@ -523,7 +523,8 @@ class Motor:
         intervalo = os.environ.get("ROBO_RAPIDO", "5m")
         passo = {"5m": 300, "15m": 900, "1h": 3600, "4h": 14400}[intervalo]
         limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", "100"))      # proteção: para se perder isto no dia
-        meta_dia = float(os.environ.get("ROBO_RAPIDO_META_DIA", "100"))         # meta do dono: para ao ganhar isto no dia
+        meta_dia = float(os.environ.get("ROBO_RAPIDO_META_DIA", "100"))         # meta do dono: para ao ganhar isto no período
+        meta_dias = int(os.environ.get("ROBO_RAPIDO_META_DIAS", "2"))           # período da meta: blocos de 2 dias UTC
         X.ORCAMENTO_FIXO = float(os.environ.get("ROBO_RAPIDO_ORCAMENTO", "10"))  # US$ por operação
         max_velas = int(os.environ.get("ROBO_RAPIDO_MAX_VELAS", "12"))          # não segurar demais: no máximo 12 velas (1 h em 5 min)
         X.PARAR = config.RAIZ / "PARAR_RAPIDO"                                # neste processo só o robô rápido usa o tartaruga_exec
@@ -546,19 +547,27 @@ class Motor:
             if precos:
                 hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
                 fechado_hoje = sum(f["resultado_usd"] for f in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(f["saida_t"])) == hoje)
+                bloco = int(agora // 86400) // meta_dias                          # bloco de N dias em que estamos
+                fechado_bloco = sum(f["resultado_usd"] for f in e["fechadas"] if int(f["saida_t"] // 86400) // meta_dias == bloco)
+                fim_bloco = (bloco + 1) * meta_dias * 86400
                 aberto = sum(p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"] for m, p in e["abertas"].items())
-                travado = fechado_hoje + aberto <= -limite_dia or fechado_hoje >= meta_dia
+                meta_batida = fechado_bloco >= meta_dia
+                travado = fechado_hoje + aberto <= -limite_dia or meta_batida
                 if travado and not X.PARAR.exists():
                     X.PARAR.touch()
-                    if fechado_hoje >= meta_dia:
-                        ouvir({"t": agora, "texto": f"🎯 META DO DIA ATINGIDA: +{fechado_hoje:.2f} USDT. Sem novas entradas até 00:00 UTC."})
+                    if meta_batida:
+                        ouvir({"t": agora, "texto": f"🎯 META ATINGIDA: +{fechado_bloco:.2f} USDT no período de {meta_dias} dias. "
+                                                    f"Sem novas entradas até {time.strftime('%d/%m %H:%M', time.gmtime(fim_bloco))} UTC."})
                     else:
                         ouvir({"t": agora, "texto": f"🛑 Limite de perda do dia: {fechado_hoje + aberto:+.2f} USDT. Sem novas entradas até 00:00 UTC (stops seguem)."})
-                elif not travado and X.PARAR.exists() and e.get("dia_trava") != hoje:
+                elif not travado and X.PARAR.exists() and e.get("dia_trava") != (f"bloco{bloco}" if e.get("trava_meta") else hoje):
                     X.PARAR.unlink()
                 if travado:
-                    e["dia_trava"] = hoje
+                    e["trava_meta"] = meta_batida
+                    e["dia_trava"] = f"bloco{bloco}" if meta_batida else hoje
                 e["resultado_hoje"] = fechado_hoje + aberto
+                e["resultado_bloco"] = fechado_bloco + aberto
+                e["fim_bloco"] = fim_bloco
             if precos and e.get("ultima_vela") != ultima_fechada and agora % passo > 15:
                 dados = self._velas_rapidas(intervalo, T.MOEDAS_ROBO)
                 precos = self._consultar_livro(dados, precos, e, ouvir)
@@ -580,7 +589,8 @@ class Motor:
                 rs = [f["R"] for f in e["fechadas"]]
                 with self.trava:
                     self.rapido = {"intervalo": intervalo, "patrimonio": e["patrimonio"], "resultado_hoje": e.get("resultado_hoje", 0.0),
-                                   "limite_dia": limite_dia, "meta_dia": meta_dia, "orcamento": X.ORCAMENTO_FIXO, "max_velas": max_velas,
+                                   "limite_dia": limite_dia, "meta_dia": meta_dia, "meta_dias": meta_dias, "resultado_bloco": e.get("resultado_bloco", 0.0),
+                                   "fim_bloco": e.get("fim_bloco"), "orcamento": X.ORCAMENTO_FIXO, "max_velas": max_velas,
                                    "travado": X.PARAR.exists(), "inicio": e["inicio"], "ultima_vela": e.get("ultima_vela"),
                                    "proxima": agora - agora % passo + passo + 15,
                                    "posicoes": [{"moeda": m[:-4], "entrada": p["entrada"], "stop": p["stop"], "preco": precos.get(m),
