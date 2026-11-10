@@ -8,6 +8,7 @@ Regras da fase 1 (avaliação):
 Dinheiro real só por decisão do dono, para quem passar das duas fases.
 """
 import json
+import os
 import subprocess
 import time
 from pathlib import Path
@@ -89,7 +90,11 @@ def _tartaruga(estado, nome):
     return avaliar(nome, _curva_para_eventos(curva), len(estado.get("fechadas", [])), estado.get("inicio"), "Tartaruga diária, 33 moedas")
 
 
-def _rapido(nome_arq="robo_rapido_5m.json", nome="Rápido 5 min", nota="conta nativa de US$ 10, perpétuo simulado (compra/venda), 1 h no máximo"):
+INTERVALO_RAPIDO = os.environ.get("ROBO_RAPIDO", "1m")
+
+
+def _rapido(nome_arq=f"robo_rapido_{INTERVALO_RAPIDO}.json", nome=f"Rápido {INTERVALO_RAPIDO.replace('m', ' min')}",
+            nota="conta nativa de US$ 10, perpétuo simulado (compra/venda), no máximo 12 velas"):
     arq = config.RAIZ / nome_arq
     if not arq.exists():
         return avaliar(nome, [], 0, nota="sem estado ainda")
@@ -136,7 +141,7 @@ def mesa():
         _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),
         _tartaruga(_git_json("dados/teto6/robo_tartaruga.json"), "Sombra (teto de 6)"),
         _rapido(),
-        _rapido("robo_scalper.json", "Scalper 5 min", "H24: mesmas entradas do cérebro; alvo +1,0%, stop −0,5%, 30 min"),
+        _rapido("robo_scalper.json", "Scalper", "H24: mesmas entradas do cérebro; alvo +1,0%, stop −0,5%, 30 min"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
         _funding(),

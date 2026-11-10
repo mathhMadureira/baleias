@@ -153,7 +153,7 @@ class Manipulador(BaseHTTPRequestHandler):
         elif self.path.startswith("/api/velas-rapidas"):
             q = urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query)
             iv = q.get("iv", ["1h"])[0]
-            iv = iv if iv in ("5m", "15m", "1h", "4h", "1d") else "5m"
+            iv = iv if iv in ("1m", "5m", "15m", "1h", "4h", "1d") else "5m"
             try:
                 corpo = self.motor.velas_ao_vivo(q.get("m", ["BTC"])[0], iv) if self.motor else {"erro": "motor desligado"}
             except Exception as e:

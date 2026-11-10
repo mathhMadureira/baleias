@@ -530,7 +530,7 @@ class Motor:
         return filtrado
 
     def _aquecer_cerebro_rapido(self, cbr, intervalo):
-        """Vive as últimas ~1000 velas de 5 min das 33 moedas em sequência (prevê, espera 1 h, confere) antes de ir ao vivo."""
+        """Vive as últimas ~1000 velas (do tempo gráfico do robô) das 33 moedas em sequência (prevê, espera 1 h, confere) antes de ir ao vivo."""
         from lab import tartaruga as T
         from . import cerebro as C
         series = {}
@@ -597,8 +597,8 @@ class Motor:
         Decide a cada vela fechada; stop conferido a cada 5 s com o preço ao vivo. Não usa dinheiro real."""
         from lab import tartaruga as T
         from executor import tartaruga_exec as X
-        intervalo = os.environ.get("ROBO_RAPIDO", "5m")
-        passo = {"5m": 300, "15m": 900, "1h": 3600, "4h": 14400}[intervalo]
+        intervalo = os.environ.get("ROBO_RAPIDO", "1m")                        # pedido do dono: velas de 1 min
+        passo = {"1m": 60, "5m": 300, "15m": 900, "1h": 3600, "4h": 14400}[intervalo]
         capital = float(os.environ.get("ROBO_RAPIDO_CAPITAL", "10"))            # conta do robô rápido: US$ 10 no total (pedido do dono)
         limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", str(capital * 0.10)))   # perde no máximo 10% da conta por dia
         piso = capital * 0.5                                                    # abaixo de metade da conta, para de vez
@@ -619,7 +619,7 @@ class Motor:
         X.ouvinte = ouvir                       # neste processo o tartaruga_exec só é usado pelo robô rápido
         dados = {}
         modo = os.environ.get("ROBO_RAPIDO_MODO", "cerebro")   # "cerebro" (padrão) ou "tartaruga" (rompimento puro)
-        cbr, arq_cbr = None, config.RAIZ / "cerebro_rapido.json"
+        cbr, arq_cbr = None, config.RAIZ / ("cerebro_rapido.json" if intervalo == "5m" else f"cerebro_rapido_{intervalo}.json")   # um cérebro por tempo gráfico
         if modo == "cerebro":
             from . import cerebro as C
             cbr = C.CerebroRapido(json.loads(arq_cbr.read_text()) if arq_cbr.exists() else None)
@@ -954,7 +954,7 @@ class Motor:
 
     def _scalper(self):
         """Robô scalper (H24, decisão do dono): conta própria de US$ 10, entra nas mesmas oportunidades do cérebro do robô rápido,
-        sai no alvo de +1,0%, no stop de −0,5% ou em 30 min. Perpétuo simulado (compra ou vende), US$ 5 por posição com margem 2×.
+        sai no alvo de +1,0%, no stop de −0,5% ou em 30 min. Perpétuo simulado (compra ou vende), US$ 5 por posição com margem 5×.
         Segue as regras da mesa: botão PARAR, perda máxima de US$ 1 no dia e piso de US$ 5."""
         from executor import tartaruga_exec as X
         alvo, stop, max_s, orcamento = 0.010, 0.005, 1800, 5.0
@@ -1065,6 +1065,37 @@ class Motor:
             self.fonte("scalper", True)
             time.sleep(3)
 
+    def _gravador(self):
+        """A cada 5 min grava, das 33 moedas do robô, o topo do livro, o open interest e o funding do perpétuo (dados que a Binance
+        não guarda de graça para trás). Base para testar as medidas 4, 7, 8 e 11 do estudo de previsibilidade. Arquivo por dia."""
+        from lab import tartaruga as T
+        pasta = config.RAIZ / "gravacao"
+        pasta.mkdir(exist_ok=True)
+        base = "https://fapi.binance.com/fapi/v1"
+        while True:
+            with urllib.request.urlopen(f"{base}/ticker/bookTicker", timeout=20) as r:
+                livro = {x["symbol"]: x for x in json.load(r)}
+            with urllib.request.urlopen(f"{base}/premiumIndex", timeout=20) as r:
+                indice = {x["symbol"]: x for x in json.load(r)}
+            t = int(time.time())
+            linhas = []
+            for par in T.MOEDAS_ROBO:
+                b, i = livro.get(par), indice.get(par)
+                if not b:
+                    continue                                  # moeda sem perpétuo na Binance
+                try:
+                    with urllib.request.urlopen(f"{base}/openInterest?symbol={par}", timeout=20) as r:
+                        oi = float(json.load(r)["openInterest"])
+                except (OSError, ValueError, KeyError):
+                    oi = None
+                linhas.append({"t": t, "par": par, "bid": float(b["bidPrice"]), "ask": float(b["askPrice"]), "bq": float(b["bidQty"]),
+                               "aq": float(b["askQty"]), "oi": oi, "funding": i and float(i["lastFundingRate"]), "marca": i and float(i["markPrice"])})
+                time.sleep(0.1)
+            with open(pasta / time.strftime("%Y-%m-%d.jsonl", time.gmtime(t)), "a") as f:
+                f.writelines(json.dumps(x) + "\n" for x in linhas)
+            self.fonte("gravador", True)
+            dormir(300 - time.time() % 300)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -1076,7 +1107,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("scalper", self._scalper, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("scalper", self._scalper, True), ("gravador", self._gravador, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self
