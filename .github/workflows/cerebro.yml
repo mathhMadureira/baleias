@@ -1,23 +1,24 @@
-# Cérebro de day trade na nuvem do GitHub (repositório público = minutos ilimitados), a cada 15 min.
-# Vive as velas de 15 min do BTC que ainda não viu (revive atrasos), aprende com o erro, salva o estado no ramo `estado`.
+# Cérebro de day trade na nuvem do GitHub (repositório público = minutos ilimitados).
+# O agendador gratuito do GitHub atrasa/pula horários, então cada rodada fica viva por até ~5h50 pensando a cada 15 min;
+# o agendamento de hora em hora só acorda uma rodada nova quando a anterior acabou (fila própria, não bloqueia o robô diário).
 name: cerebro
 
 on:
   schedule:
-    - cron: "2,17,32,47 * * * *"
+    - cron: "7 * * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 concurrency:
-  group: estado
+  group: cerebro
   cancel-in-progress: false
 
 jobs:
   pensar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
 
@@ -25,36 +26,29 @@ jobs:
         with:
           python-version: "3.14"
 
-      - name: Buscar o estado
-        run: |
-          git fetch origin estado
-          git worktree add estado origin/estado
-          cd estado && git switch -q -c trabalho
-
-      - name: Pensar
+      - name: Pensar a cada 15 min por até ~5h40
         env:
-          BALEIAS_DADOS: ${{ github.workspace }}/estado/dados
           BINANCE_DADOS: https://data-api.binance.vision
+          TOKEN_TG: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_TG: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          set -o pipefail
-          python -m executor.cerebro_nuvem | tee resumo.txt
-          { echo '```'; cat resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Guardar o estado
-        run: |
-          cd estado
-          git config user.name "cerebro-baleias"
-          git config user.email "cerebro-baleias@users.noreply.github.com"
-          for f in dados/cerebro.json dados/cerebro_v2.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md; do [ -f "$f" ] && git add "$f"; done
-          git commit -q -m "cérebro $(date -u +%FT%H:%M)" || exit 0
-          for i in 1 2 3; do git push -q origin HEAD:estado && exit 0; git fetch -q origin estado && git rebase -q origin/estado; done
-          exit 1
-
-      - name: Avisar apostas no Telegram
-        if: always()
-        env:
-          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          [ -z "$TOKEN" ] || [ -z "$CHAT" ] || [ ! -f estado/avisos.txt ] && exit 0
-          curl -s -o /dev/null "https://api.telegram.org/bot${TOKEN}/sendMessage" --data-urlencode "chat_id=${CHAT}" --data-urlencode "text@estado/avisos.txt"
+          git config --global user.name "cerebro-baleias"
+          git config --global user.email "cerebro-baleias@users.noreply.github.com"
+          fim=$(( $(date +%s) + 340*60 ))
+          while [ "$(date +%s)" -lt "$fim" ]; do
+            rm -rf estado && git worktree prune
+            git fetch -q origin estado
+            git worktree add -q estado origin/estado && (cd estado && git switch -q -c trabalho)
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.cerebro_nuvem | tee -a resumo.txt || echo "rodada falhou"
+            (
+              cd estado
+              for f in dados/cerebro.json dados/cerebro_v2.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md; do [ -f "$f" ] && git add "$f"; done
+              git commit -q -m "cérebro $(date -u +%FT%H:%M)" && for i in 1 2 3 4; do git push -q origin HEAD:estado && break; git fetch -q origin estado && git rebase -q origin/estado; done
+            )
+            if [ -n "$TOKEN_TG" ] && [ -n "$CHAT_TG" ] && [ -f estado/avisos.txt ]; then
+              curl -s -o /dev/null "https://api.telegram.org/bot${TOKEN_TG}/sendMessage" --data-urlencode "chat_id=${CHAT_TG}" --data-urlencode "text@estado/avisos.txt"
+            fi
+            # dorme até 2 min depois do próximo fechamento de vela de 15 min
+            agora=$(date +%s); prox=$(( (agora / 900 + 1) * 900 + 120 )); sleep $(( prox - agora ))
+          done
+          { echo '```'; tail -40 resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
