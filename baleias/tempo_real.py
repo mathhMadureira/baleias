@@ -669,7 +669,7 @@ class Motor:
         registros = [json.loads(x) for x in arq.read_text().splitlines()] if arq.exists() else []
         n, lim = 14, 38.2
         while True:
-            with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=40", timeout=20) as r:
+            with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=1000", timeout=20) as r:
                 k = [x for x in json.load(r) if x[6] < time.time() * 1000]
             v = [(x[0], float(x[2]), float(x[3]), float(x[4])) for x in k]
             fech = {x[0]: x[3] for x in v}
@@ -681,6 +681,11 @@ class Motor:
                         rg["acertou"] = (rg["aposta"] == "sobe") == sobe if fech[rg["alvo"]] != rg["px"] else None
                     rg["resolvida"] = True
                     mudou = True
+            for rg in registros:                       # previsão cuja vela de conferência já saiu da janela: perdida
+                if not rg.get("resolvida") and rg["alvo"] < v[0][0]:
+                    rg["resolvida"], rg["perdida"] = True, True
+                    mudou = True
+            v = v[-40:]
             ultima = v[-1][0]
             if not any(rg["t"] == ultima for rg in registros):
                 h, l, c = [x[1] for x in v], [x[2] for x in v], [x[3] for x in v]
@@ -762,8 +767,17 @@ class Motor:
         visto = len(cb.diario)
         while True:
             try:
-                v = velas(130)
+                v = velas(1000)
                 if v and v[-1][0] != cb.ultima_t:
+                    tempos = [x[0] for x in v]
+                    if cb.ultima_t in tempos and tempos.index(cb.ultima_t) < len(v) - 2:
+                        # máquina esteve parada: revive em sequência as velas perdidas (sem avisar), depois segue ao vivo
+                        perdidas = range(tempos.index(cb.ultima_t) + 1, len(v) - 1)
+                        for j in perdidas:
+                            passo(v[max(0, j - 119):j + 1], False)
+                        cb._anotar(cb.ultima_t, f"⏸ Máquina esteve parada: revivi {len(perdidas)} velas perdidas em sequência.")
+                    elif cb.ultima_t not in tempos:
+                        cb.pendente = None            # pausa maior que a janela: a aposta pendente não tem como ser conferida
                     passo(v[-120:], True)
                     for d in cb.diario[visto:]:
                         if any(m in d["texto"] for m in ("NOVA SINAPSE", "PROMOVIDA", "PODADA", "Teto")):
