@@ -19,4 +19,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 
 ## Feito (recente)
 
+- 2026-11-10: monitor caía em ciclo com "database is locked" (o Gemini segurava a gravação durante chamadas de rede de até minutos). Commit antes de cada chamada de rede e conexões esperando 30 s. Também confirmado: depois de pausa da máquina, o motor ao vivo se recupera sozinho.
+- 2026-11-10: conciliação das posições com a corretora ao ligar (modo real).
+
 - 2026-11-09: robô rápido ao vivo (1 h) com gráfico ao vivo; replay; Bybit; nuvem grátis no GitHub; stops com a máquina desligada; memória do projeto.
