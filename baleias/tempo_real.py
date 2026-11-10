@@ -572,7 +572,7 @@ class Motor:
             return
         for o in oportunidades:
             m = o["par"]
-            if o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m not in precos or corretora.usdt_livre() < 4.99:
+            if o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m not in precos or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP:
                 continue
             n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
             if not n:

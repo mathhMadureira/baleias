@@ -1211,14 +1211,17 @@ class VendaSimulada(unittest.TestCase):
         X.entrar(e, c, "AUSDT", 100.0, 1.0, "teste", lado="venda", custo_lado=0.0005)
         p = e["abertas"]["AUSDT"]
         self.assertEqual((p["lado"], p["stop"]), ("venda", 102.0))
+        self.assertAlmostEqual(e["caixa"], 7.5)                                                 # posição de US$ 5 com margem de 2,50
         self.assertAlmostEqual(X.patrimonio(e, {"AUSDT": 90.0}, c), 10.0 + 0.05 * 10)       # caiu 10%: ganhou 0,50
         self.assertFalse(c.stop_saiu("AUSDT", p, 101.0)[0])
         self.assertTrue(c.stop_saiu("AUSDT", p, 102.5)[0])
+        X.entrar(e, c, "BUSDT", 50.0, 1.0, "teste", lado="compra", custo_lado=0.0005)
+        X.entrar(e, c, "CUSDT", 50.0, 1.0, "teste", lado="compra", custo_lado=0.0005)
+        self.assertEqual(len(e["abertas"]), 3)                                                  # conta de 10 mantém 3 posições
         X._sair(e, c, "AUSDT", "teste", 90.0)
         f = e["fechadas"][0]
-        self.assertGreater(f["resultado_usd"], 0.49)
-        self.assertLess(f["resultado_usd"], 0.50)                                               # taxas descontadas
-        self.assertAlmostEqual(e["caixa"], 10.0 + f["resultado_usd"])
+        self.assertAlmostEqual(f["resultado_usd"], 0.5 - 0.0005 * 0.05 * 190)                  # taxas sobre o tamanho
+        self.assertAlmostEqual(e["caixa"], 10.0 - 2.5 - 2.5 + f["resultado_usd"])
         # no real a venda a descoberto é recusada
         r = X.Real(None, X.novo_estado(0))
         self.assertIsNone(r.e["abertas"].get("BUSDT"))

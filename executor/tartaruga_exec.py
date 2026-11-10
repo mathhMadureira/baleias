@@ -20,7 +20,8 @@ EVENTOS = config.RAIZ / "robo_eventos.jsonl"
 CAPITAL_SIMULADO = float(os.environ.get("TARTARUGA_CAPITAL", "700"))
 RISCO = float(os.environ.get("TARTARUGA_RISCO", "0.01"))
 MAX_POSICOES = int(os.environ.get("TARTARUGA_MAX_POSICOES", "0")) or None
-ORCAMENTO_FIXO = None      # robô rápido: US$ fixos por operação em vez do tamanho por risco (pedido do dono: US$ 10)   # H13: só no robô-sombra, até passar no teste
+ORCAMENTO_FIXO = None      # robô rápido: US$ fixos por operação em vez do tamanho por risco (pedido do dono: US$ 10)
+ALAV_PERP = 2.0            # perpétuo simulado: margem = posição ÷ 2 (posição mínima de US$ 5 usa US$ 2,50 da conta)   # H13: só no robô-sombra, até passar no teste
 relogio = time.time        # o replay troca por um relógio simulado
 ouvinte = None             # o replay recebe cada evento por aqui (e o terminal não é inundado)
 
@@ -111,9 +112,10 @@ def registrar(texto, tipo="robo", t=None):
 
 
 def _valor(p, px):
-    """Quanto a posição vale agora: comprado = quantidade × preço; vendido (perpétuo simulado) = margem + lucro da queda."""
-    if p.get("lado") == "venda":
-        return p["gasto"] + p["qtd"] * (p["entrada"] - px)
+    """Quanto a posição vale agora. Perpétuo simulado (comprado ou vendido): margem + lucro. Spot: quantidade × preço."""
+    if p.get("custo_lado") is not None:
+        sinal = -1 if p.get("lado") == "venda" else 1
+        return p["gasto"] + sinal * p["qtd"] * (px - p["entrada"])
     return p["qtd"] * px
 
 
@@ -127,7 +129,7 @@ def _sair(e, corretora, m, motivo, px, ja_vendido=None):
     if p.get("custo_lado") is not None and not corretora.real:      # perpétuo simulado (robô rápido): comprado ou vendido
         px = ja_vendido if ja_vendido is not None else px
         bruto = p["qtd"] * ((px - p["entrada"]) if p.get("lado") != "venda" else (p["entrada"] - px))
-        resultado = bruto - p["qtd"] * px * p["custo_lado"] - (p["gasto"] * p["custo_lado"])
+        resultado = bruto - p["custo_lado"] * p["qtd"] * (px + p["entrada"])      # taxa sobre o tamanho, na entrada e na saída
         e["caixa"] += p["gasto"] + resultado
         R = resultado / p["risco_usd"] if p["risco_usd"] else 0.0
         e["fechadas"].append({**p, "saida": px, "saida_t": relogio(), "motivo": motivo, "resultado_usd": resultado, "R": R})
@@ -257,14 +259,19 @@ def entrar(e, corretora, m, px, n, motivo, lado="compra", custo_lado=None):
     if lado == "venda" and (corretora.real or custo_lado is None):
         return registrar(f"🐢 {m[:-4]}: venda a descoberto só no simulado (perpétuo)")
     caixa = corretora.usdt_livre()
-    usdt = ORCAMENTO_FIXO if caixa >= ORCAMENTO_FIXO - 1e-9 else caixa
-    if usdt < 4.99:
-        return None
     if custo_lado is not None and not corretora.real:
-        qtd, preco_medio, gasto = usdt / px, px, usdt          # margem de 1×; a taxa sai no fechamento
-        e["caixa"] -= usdt
+        margem = ORCAMENTO_FIXO / ALAV_PERP                     # posição de US$ 5 com margem de US$ 2,50
+        if caixa < margem - 1e-9:
+            return None
+        qtd, preco_medio, gasto = ORCAMENTO_FIXO / px, px, margem   # a taxa sai no fechamento
+        e["caixa"] -= margem
         ordem = None
+        usdt = ORCAMENTO_FIXO
     else:
+        usdt = ORCAMENTO_FIXO if caixa >= ORCAMENTO_FIXO - 1e-9 else caixa
+        if usdt < 4.99:
+            return None
+    if custo_lado is None or corretora.real:
         qtd, preco_medio, gasto = corretora.comprar(m, usdt, px)
         ordem = None
     stop = preco_medio + T.STOP_N * n if lado == "venda" else preco_medio - T.STOP_N * n
@@ -273,7 +280,8 @@ def entrar(e, corretora, m, px, n, motivo, lado="compra", custo_lado=None):
     e["abertas"][m] = {"moeda": m, "entrada": preco_medio, "qtd": qtd, "stop": stop, "ordem_stop": ordem, "N": n, "lado": lado,
                        "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * abs(preco_medio - stop), "custo_lado": custo_lado}
     return registrar(f"🐢 Robô ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {m[:-4]} a {preco_medio:,.6g} ({motivo}). "
-                     f"Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:+.1f}%), posição US$ {gasto:,.2f}{'' if corretora.real else ' [simulado]'}")
+                     f"Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:+.1f}%), posição US$ {qtd * preco_medio:,.2f} (margem US$ {gasto:,.2f})"
+                     f"{'' if corretora.real else ' [simulado]'}")
 
 
 def checar_stops(e, corretora, precos):
