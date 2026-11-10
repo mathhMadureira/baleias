@@ -651,9 +651,10 @@ class Motor:
             fech = {x[0]: x[3] for x in v}
             mudou = False
             for rg in registros:                       # confere previsões pendentes
-                if rg.get("acertou") is None and rg["alvo"] in fech:
-                    sobe = fech[rg["alvo"]] > rg["px"]
-                    rg["acertou"] = (rg["aposta"] == "sobe") == sobe if fech[rg["alvo"]] != rg["px"] else None
+                if not rg.get("resolvida") and rg["alvo"] in fech:
+                    if rg.get("aposta"):                 # vela sem aposta (mercado sem direção) só é marcada como vista
+                        sobe = fech[rg["alvo"]] > rg["px"]
+                        rg["acertou"] = (rg["aposta"] == "sobe") == sobe if fech[rg["alvo"]] != rg["px"] else None
                     rg["resolvida"] = True
                     mudou = True
             ultima = v[-1][0]
