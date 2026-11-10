@@ -38,7 +38,7 @@ jobs:
           while [ "$(date +%s)" -lt "$fim" ]; do
             rm -rf estado && git worktree prune
             git fetch -q origin estado
-            git worktree add -q estado origin/estado && (cd estado && git switch -q -c trabalho)
+            git worktree add -q -f estado origin/estado && (cd estado && git switch -q -C trabalho)
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.cerebro_nuvem | tee -a resumo.txt || echo "rodada falhou"
             (
               cd estado
