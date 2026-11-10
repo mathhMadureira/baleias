@@ -1263,3 +1263,11 @@ class RobosNoMesmoProcesso(unittest.TestCase):
         with mock.patch.object(R.time, "time", lambda: next(relogio)), mock.patch.object(R.time, "sleep") as dorme:
             R.dormir(1800)
         self.assertEqual(dorme.call_count, 1)                         # não continua esperando os 30 min inteiros
+
+    def test_mesa_do_cerebro_limita_exposicao_por_vela(self):
+        from baleias import mesa
+        est = {"inicio_ao_vivo": 1, "operacoes": [{"t": 1000, "liquido": -0.02, "aposta": 1}]}
+        outras = {f"M{i}USDT": {"v1": {"ops": [[1000, -0.02, 1]]}} for i in range(9)}   # 10 moedas perdem juntas na mesma vela
+        f = mesa._cerebro(est, "Cérebro v1", outras, "v1")
+        self.assertEqual(f["operacoes"], 10)
+        self.assertAlmostEqual(f["conta"], 10 * (1 - 0.06))            # perde no máximo 6% da conta, não 20%

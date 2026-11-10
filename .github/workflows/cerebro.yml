@@ -26,9 +26,17 @@ jobs:
         with:
           python-version: "3.14"
 
+      - name: Recuperar os cérebros das outras moedas (cache grátis do Actions)
+        uses: actions/cache/restore@v4
+        with:
+          path: cerebros_moedas
+          key: cerebros-${{ github.run_id }}
+          restore-keys: cerebros-
+
       - name: Pensar a cada 15 min por até ~5h40
         env:
           BINANCE_DADOS: https://data-api.binance.vision
+          CEREBROS_MOEDAS: ${{ github.workspace }}/cerebros_moedas
           TOKEN_TG: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_TG: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
@@ -42,7 +50,7 @@ jobs:
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.cerebro_nuvem | tee -a resumo.txt || echo "rodada falhou"
             (
               cd estado
-              for f in dados/cerebro.json dados/cerebro_v2.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md; do [ -f "$f" ] && git add "$f"; done
+              for f in dados/cerebro.json dados/cerebro_v2.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json; do [ -f "$f" ] && git add "$f"; done
               git commit -q -m "cérebro $(date -u +%FT%H:%M)" && for i in 1 2 3 4; do git push -q origin HEAD:estado && break; git fetch -q origin estado && git rebase -q origin/estado; done
             )
             if [ -n "$TOKEN_TG" ] && [ -n "$CHAT_TG" ] && [ -f estado/avisos.txt ]; then
@@ -52,3 +60,10 @@ jobs:
             agora=$(date +%s); prox=$(( (agora / 900 + 1) * 900 + 120 )); sleep $(( prox - agora ))
           done
           { echo '```'; tail -40 resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guardar os cérebros das outras moedas
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cerebros_moedas
+          key: cerebros-${{ github.run_id }}

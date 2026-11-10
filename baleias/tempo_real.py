@@ -576,7 +576,7 @@ class Motor:
             ev_aj = (2 * p_cal - 1) * f["_mov"] - C.CUSTO_PERP - rel["margem_lado"].get(lado, 0.0)
             oportunidades.append({"moeda": m[:-4], "prob": prob, "ev": ev_aj, "lado": lado, "p_lado": p_lado, "p_cal": p_cal, "par": m,
                                   "geladeira": m in rel["geladeira"]})
-        oportunidades.sort(key=lambda x: -x["ev"])
+        oportunidades.sort(key=lambda x: -x["p_cal"])   # pela confiança, não pelo tamanho do movimento (senão só as pequenas ganham a vez)
         cbr.oportunidades = oportunidades[:33]
         if X.PARAR.exists():
             return

@@ -59,13 +59,27 @@ def _curva_para_eventos(curva):
     return [(curva[i][0], curva[i][1] / curva[i - 1][1] - 1) for i in range(1, len(curva)) if curva[i - 1][1]]
 
 
-def _cerebro(estado, nome):
+EXPOSICAO_VELA = 0.06   # todas as moedas na mesma conta: no máximo 6% da conta apostados por vela (3 apostas cheias de 2%)
+
+
+def _cerebro(estado, nome, outras=None, versao="v1"):
     if not estado:
         return avaliar(nome, [], 0, nota="sem estado ainda")
     ini = estado.get("inicio_ao_vivo")
-    ops = [o for o in estado.get("operacoes", []) if ini and o["t"] >= ini]
-    return avaliar(nome, [(o["t"] / 1000, o["liquido"]) for o in ops], len(ops), ini and time.strftime("%Y-%m-%d", time.gmtime(ini / 1000)),
-                   "contrato binário de 15 min, 2% por aposta; só apostas ao vivo")
+    ops = [(o["t"], o["liquido"], o["aposta"]) for o in estado.get("operacoes", []) if ini and o["t"] >= ini]
+    for x in (outras or {}).values():
+        ops += [tuple(o) for o in x.get(versao, {}).get("ops", [])]
+    por_vela = {}
+    for t, liq, aposta in ops:
+        por_vela.setdefault(t, []).append((liq, aposta))
+    eventos = []
+    for t in sorted(por_vela):
+        total = len(por_vela[t]) * 0.02                                 # cada aposta é 2% da conta (aposta = ±1 é só o lado)
+        escala = min(1.0, EXPOSICAO_VELA / total) if total else 1.0      # moedas andam juntas: não apostar 33 vezes 2% na mesma vela
+        eventos.append((t / 1000, sum(liq for liq, _ in por_vela[t]) * escala))
+    moedas = 1 + len(outras or {})
+    return avaliar(nome, eventos, len(ops), ini and time.strftime("%Y-%m-%d", time.gmtime(ini / 1000)),
+                   f"contrato binário de 15 min em {moedas} moedas, 2% por aposta e no máximo 6% da conta por vela; só apostas ao vivo")
 
 
 def _tartaruga(estado, nome):
@@ -117,13 +131,14 @@ def mesa():
     if time.time() - _cache["t"] < 60 and _cache["dados"]:
         return _cache["dados"]
     subprocess.run(["git", "-C", str(REPO), "fetch", "-q", "origin", "estado"], capture_output=True, timeout=60)
+    outras = _git_json("dados/cerebros_moedas.json") or {}
     fichas = [
         _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),
         _tartaruga(_git_json("dados/teto6/robo_tartaruga.json"), "Sombra (teto de 6)"),
         _rapido(),
         _rapido("robo_scalper.json", "Scalper 5 min", "H24: mesmas entradas do cérebro; alvo +1,0%, stop −0,5%, 30 min"),
-        _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1"),
-        _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2"),
+        _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
+        _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
         _funding(),
         _h19(),
     ]
