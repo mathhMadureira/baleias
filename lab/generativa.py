@@ -137,6 +137,7 @@ def ciclo(c, agora_ms=None, obter=contexto, pergunta=perguntar, preco_em=None, p
             acertou = None if p["direcao"] == "sem_posicao" else int((real > 0) == (p["direcao"] == "alta"))
             c.execute(f"UPDATE {tabela} SET px_final=?, real_pct=?, acertou=? WHERE slot_ms=? AND horizonte=?",
                       (px, real, acertou, p["slot_ms"], p["horizonte"]))
+            c.commit()          # nunca segurar o banco travado durante a próxima consulta pela internet
             feito["resolveu"] += 1
     slot = agora_ms - agora_ms % SLOT_MS
     if agora_ms - slot < 5 * 60_000 and not c.execute("SELECT 1 FROM llm_previsoes WHERE slot_ms=?", (slot,)).fetchone():
@@ -151,6 +152,7 @@ def ciclo(c, agora_ms=None, obter=contexto, pergunta=perguntar, preco_em=None, p
                       (slot, h, px, prev[h]["direcao"], prev[h]["confianca"], prev[h]["retorno_esperado"], prev["motivo"], tokens, demora, t_resp))
         c.execute("INSERT OR REPLACE INTO llm_contextos VALUES(?,?)", (slot, json.dumps(ctx, ensure_ascii=False)))
         feito["previu"] = 1
+        c.commit()              # grava a v1 antes de chamar a IA de novo (a v2 pode levar minutos)
         try:
             inicio2 = relogio()
             ctx2 = dict(ctx)

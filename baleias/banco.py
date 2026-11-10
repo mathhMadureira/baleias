@@ -42,7 +42,7 @@ def abrir(caminho=None):
     caminho = caminho or config.BANCO
     if str(caminho) != ":memory:":
         config.RAIZ.mkdir(parents=True, exist_ok=True)
-    c = sqlite3.connect(caminho)
+    c = sqlite3.connect(caminho, timeout=30)   # espera o banco liberar em vez de cair com "database is locked"
     c.row_factory = sqlite3.Row
     c.execute("PRAGMA journal_mode=WAL")
     c.executescript(ESQUEMA)
