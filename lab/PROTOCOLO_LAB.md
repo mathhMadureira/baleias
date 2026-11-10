@@ -416,3 +416,16 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Ajuste antes de qualquer aposta ao vivo (2026-11-10):** no aquecimento, o cérebro não apostou nenhuma vez. Num contrato linear, 15 min mexem ~0,16% e o custo é ~0,09%, o que exigiria ~78% de acerto. O cérebro passa a operar **contratos binários simulados** de 15 min (paga 0,51, recebe 1 se acertar, 2% do capital por aposta), com probabilidade calibrada pelo acerto real de cada sinapse, encolhido em direção a 50% (Beta 20/20). Aposta só com ≥ 53% para um lado. Critério de passagem: ≥ 500 apostas ao vivo, limite inferior de Wilson do acerto > 51%. O acesso ao Polymarket a partir do Brasil não está resolvido (não contornar bloqueio), então fica só em simulação.
 - **Ajuste 2 (2026-11-10, ainda com 0 apostas ao vivo):** com o limiar de 53%, o cérebro nunca apostava. A probabilidade calibrada é dominada pela rede neural (52,9% em 1.510, encolhido para ~52,8%). O equilíbrio do contrato a 0,51 é 51%, então o limiar passa a **52%** (1 ponto de margem). A avaliação continua contando só apostas ao vivo a partir daqui.
 - **Pausa da máquina (00:00–10:42 BRT de 2026-11-10):** a vela pendente foi conferida com o preço depois da pausa, sem aposta. Corrigido: agora o cérebro revive as velas perdidas em sequência.
+
+## Hipótese 21: os mecanismos do cérebro humano melhoram o cérebro? (v2 contra v1, pré-registrada em 2026-11-10)
+
+- **Base:** `docs/CEREBRO_HUMANO.md`. O v2 acrescenta ao v1:
+  - dopamina: reforço pelo erro de previsão de recompensa, com o tamanho do movimento;
+  - hipocampo e sono diário: reencena 3000 episódios;
+  - homeostase: teto de 40% do voto e compressão no sono;
+  - esquecimento: placar com meia-vida de 300;
+  - surpresa que acelera o aprendizado;
+  - metacognição: abstém-se se o limite superior de Wilson das últimas 60 apostas < 50%.
+- **Mesmas condições:** mesmas velas (BTC 15 min), mesmo contrato binário simulado (0,51, 2% por aposta, limiar 52%), rodando lado a lado no GitHub a cada 15 min.
+- **Placar ao vivo de cada um** começa no fim do próprio aquecimento: v1 em 2026-11-10 03:30 UTC; v2 na primeira rodada na nuvem.
+- **Avaliação:** quando os dois tiverem ≥ 300 apostas ao vivo. O v2 **vence** se o resultado líquido acumulado for maior **e** o acerto também for maior. Se só um dos dois for maior, empate, e continua. Cada um também precisa vencer a referência "sempre sobe" nas próprias apostas.

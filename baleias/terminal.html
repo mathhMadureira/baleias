@@ -118,6 +118,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Sinapses</div><div class="val num" id="cb-ns">—</div><div class="sub" id="cb-ns-s">—</div></div>
       <div class="kpi" style="grid-column:span 2"><div class="rot">Como ele pensa</div><div class="sub" style="font-size:12px;color:var(--txt)">Cada sinapse é uma rota de previsão (inclui uma rede neural). Quem erra perde peso; a rede corrige os próprios pesos a cada vela. Se o cérebro errar mais que acertar, cria rotas novas — que só votam depois de provar acerto. Aposta só quando o valor esperado passa do custo.</div></div>
     </div>
+    <div id="cb-duelo" class="num" style="font-size:13px;margin:0 0 8px;padding:8px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:8px">v1 × v2: carregando…</div>
     <canvas id="cb-curva" style="height:170px"></canvas>
     <div class="grade g-dupla" style="margin-top:10px">
       <div style="max-height:300px;overflow:auto"><table id="cb-sin"><thead><tr><th>Sinapse</th><th>Status</th><th>Peso</th><th>Acerto</th><th>Previsões</th></tr></thead><tbody></tbody></table></div>
@@ -635,6 +636,8 @@ async function cicloCerebro() {
       $("cb-cap").textContent = "US$ " + fmt(c.capital); $("cb-cap").className = "val num " + cor(ret); $("cb-cap-s").textContent = pct(ret, 2) + " (inclui o aquecimento)";
       const st = {ativa: 0, observacao: 0, podada: 0}; for (const s of c.sinapses) st[s.status]++;
       $("cb-ns").textContent = st.ativa + st.observacao; $("cb-ns-s").textContent = `${st.ativa} votando · ${st.observacao} em observação · ${st.podada} podadas`;
+      const lin = (n, r) => { const a = r && r.ao_vivo; return a ? `${n}: ${a.apostas} apostas ao vivo, acerto ${a.acerto == null ? "—" : fmt(a.acerto * 100, 1) + "%"}, resultado ${pct(a.resultado * 100, 1)}` : `${n}: —`; };
+      $("cb-duelo").textContent = "🥊 " + lin("v1 (original)", c) + "   ×   " + lin("v2 (cérebro humano: dopamina, sono, homeostase, esquecimento)", c.v2) + "   · avalia com 300 apostas cada";
       desenharLinha($("cb-curva"), c.curva.length > 1 ? c.curva.map(([t, v]) => [Math.floor(t / 1000), v]) : null, {base: 700, sombraQueda: true});
       const nomeSt = {ativa: "✅ votando", observacao: "👁 observação", podada: "✂ podada"};
       $("cb-sin").querySelector("tbody").replaceChildren(...c.sinapses.slice().sort((a, b) => (b.status === "ativa") - (a.status === "ativa") || b.peso - a.peso).map(s => {

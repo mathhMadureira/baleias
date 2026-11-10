@@ -45,7 +45,7 @@ jobs:
           cd estado
           git config user.name "cerebro-baleias"
           git config user.email "cerebro-baleias@users.noreply.github.com"
-          for f in dados/cerebro.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md; do [ -f "$f" ] && git add "$f"; done
+          for f in dados/cerebro.json dados/cerebro_v2.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md; do [ -f "$f" ] && git add "$f"; done
           git commit -q -m "cérebro $(date -u +%FT%H:%M)" || exit 0
           for i in 1 2 3; do git push -q origin HEAD:estado && exit 0; git fetch -q origin estado && git rebase -q origin/estado; done
           exit 1

@@ -172,10 +172,12 @@ class Cerebro:
         self.pendente = e.get("pendente")
         self.passos = e.get("passos", 0)
         self.ultima_t = e.get("ultima_t")
+        self.inicio_ao_vivo = e.get("inicio_ao_vivo")     # apostas antes disto são aquecimento e não contam na avaliação
 
     def exportar(self):
         return {"sinapses": self.sinapses, "rede": self.rede.exportar(), "historico": self.historico[-2000:], "diario": self.diario[-300:],
-                "operacoes": self.operacoes[-2000:], "capital": self.capital, "pendente": self.pendente, "passos": self.passos, "ultima_t": self.ultima_t}
+                "operacoes": self.operacoes[-2000:], "capital": self.capital, "pendente": self.pendente, "passos": self.passos, "ultima_t": self.ultima_t,
+                "inicio_ao_vivo": self.inicio_ao_vivo}
 
     def _anotar(self, t, texto):
         self.diario.append({"t": t, "texto": texto})
@@ -283,10 +285,15 @@ class Cerebro:
     def resumo(self):
         h = self.historico
         lo, hi = wilson(sum(h), len(h))
+        vivo = [o for o in self.operacoes if self.inicio_ao_vivo and o["t"] >= self.inicio_ao_vivo]
+        av = sum(1 for o in vivo if o["liquido"] > 0)
+        lo_v, hi_v = wilson(av, len(vivo))
         ops = [o for o in self.operacoes if o.get("retorno")]
         ref = sum(o["retorno"] > 0 for o in ops) / len(ops) if ops else None     # referência trivial: "sempre sobe" nas mesmas velas
         return {"apostas": len(h), "acerto": sum(h) / len(h) if h else None, "ic": [lo, hi] if h else None, "capital": self.capital,
-                "referencia_sempre_sobe": ref,
+                "referencia_sempre_sobe": ref, "ao_vivo": {"apostas": len(vivo), "acerto": av / len(vivo) if vivo else None,
+                                                            "ic": [lo_v, hi_v] if vivo else None,
+                                                            "resultado": sum(o["liquido"] for o in vivo), "desde": self.inicio_ao_vivo},
                 "sinapses": [{k: s.get(k) for k in ("id", "status", "peso", "acertos", "previsoes", "origem")} for s in self.sinapses],
                 "diario": self.diario[-40:][::-1], "pendente": self.pendente and {k: self.pendente[k] for k in ("t", "px", "prob", "aposta")},
                 "curva": [[o["t"], round(o["capital"], 2)] for o in self.operacoes[-1500:]], "passos": self.passos}
@@ -354,7 +361,9 @@ def avancar(cb, todas):
     """todas: velas fechadas em ordem (≥ 120). Processa em sequência todas as que vêm depois de cb.ultima_t (revive pausas).
     Devolve [(texto, notificar)]."""
     tempos = [x[0] for x in todas]
-    if cb.ultima_t in tempos:
+    if cb.ultima_t is None:
+        inicio = 119                         # cérebro novo: aquece vivendo todas as velas disponíveis
+    elif cb.ultima_t in tempos:
         inicio = tempos.index(cb.ultima_t) + 1
     else:
         cb.pendente = None                  # pausa maior que a janela: a aposta pendente não tem como ser conferida
@@ -366,3 +375,133 @@ def avancar(cb, todas):
     if perdidas > 1:
         cb._anotar(cb.ultima_t, f"⏸ Revivi {perdidas} velas em sequência desde a última vez (pausa ou intervalo da nuvem).")
     return eventos
+
+
+# ---------------- Cérebro v2: mecanismos do cérebro humano (docs/CEREBRO_HUMANO.md) ----------------
+MEIA_VIDA = 300                      # esquecimento: o placar usado para decidir tem meia-vida de ~300 previsões
+LAMBDA = 0.5 ** (1 / MEIA_VIDA)
+TETO_VOTO = 0.40                     # homeostase: nenhuma sinapse passa de 40% do voto
+ETA_DOPAMINA = 0.05
+HIPOCAMPO = 3000                     # episódios guardados para o sono
+SONO_A_CADA = 96                     # dorme uma vez por dia (96 velas de 15 min)
+
+
+class CerebroV2(Cerebro):
+    def __init__(self, estado=None, semente=23):
+        super().__init__(estado, semente)
+        e = estado or {}
+        self.hipocampo = e.get("hipocampo", [])
+        self.surpresa = e.get("surpresa", 0.0)
+        for s in self.sinapses:
+            s.setdefault("ew_a", 0.0)
+            s.setdefault("ew_n", 0.0)
+            s.setdefault("ew_r", 0.0)
+
+    def exportar(self):
+        return super().exportar() | {"hipocampo": self.hipocampo[-HIPOCAMPO:], "surpresa": self.surpresa, "versao": 2}
+
+    def _acerto_recente(self, s):
+        return (s["ew_a"] + 20) / (s["ew_n"] + 40)
+
+    def decidir(self, t, f, px):
+        """Igual ao v1, mas a probabilidade usa o placar COM esquecimento, e a metacognição se abstém depois de sequência ruim."""
+        self.passos += 1
+        opinioes, soma, total = {}, 0.0, 0.0
+        for s in self.sinapses:
+            if s["status"] == "podada":
+                continue
+            op = opiniao(s, f, self.rede)
+            opinioes[s["id"]] = op
+            if op and s["status"] == "ativa":
+                a = self._acerto_recente(s)
+                soma += s["peso"] * (a if op > 0 else 1 - a)
+                total += s["peso"]
+        prob = soma / total if total else 0.5
+        aposta = 1 if prob >= LIMIAR else (-1 if prob <= 1 - LIMIAR else None)
+        recentes = self.historico[-60:]
+        if aposta and len(recentes) >= 30 and wilson(sum(recentes), len(recentes))[1] < 0.5:
+            aposta = None                       # metacognição: "estou errando demais agora", não decide
+        self.pendente = {"t": t, "px": px, "opinioes": opinioes, "prob": prob, "aposta": aposta}
+        self.ultima_t = t
+        return self.pendente
+
+    def conferir(self, t, retorno, f_anterior):
+        p = self.pendente
+        if not p:
+            return None
+        subiu = 1 if retorno > 0 else 0
+        movimento = retorno / (f_anterior.get("dp") or 1e-3)        # tamanho do movimento em desvios
+        # surpresa (noradrenalina): o acerto recente das sinapses ativas se afastou do de longo prazo?
+        eta = ETA_DOPAMINA * (1 + self.surpresa)
+        erros = []
+        for s in self.sinapses:
+            op = p["opinioes"].get(s["id"], 0)
+            if op == 0:
+                continue
+            acertou = (op > 0) == bool(subiu)
+            s["previsoes"] += 1
+            s["acertos"] += acertou
+            s["ew_a"] = LAMBDA * s["ew_a"] + acertou            # esquecimento
+            s["ew_n"] = LAMBDA * s["ew_n"] + 1
+            recompensa = max(-3.0, min(3.0, op * movimento))      # dopamina: recompensa com o tamanho do movimento
+            erro_previsao = recompensa - s["ew_r"]                # erro de previsão de recompensa
+            s["ew_r"] = 0.98 * s["ew_r"] + 0.02 * recompensa
+            if s["status"] == "ativa":
+                s["peso"] = max(1e-3, min(50.0, s["peso"] * math.exp(eta * erro_previsao)))
+                if not acertou:
+                    erros.append(s["id"])
+        self._homeostase()
+        x = vetor(f_anterior)
+        self.rede.aprender(x, subiu, taxa=0.01 * (1 + self.surpresa))
+        self.hipocampo.append([x, subiu])
+        self.hipocampo = self.hipocampo[-HIPOCAMPO:]
+        resultado = None
+        if p.get("aposta") and retorno != 0:
+            acertou = (p["aposta"] > 0) == bool(subiu)
+            self.historico.append(1 if acertou else 0)
+            ganho = APOSTA * ((1 / PRECO - 1) if acertou else -1.0)
+            self.capital *= 1 + ganho
+            self.operacoes.append({"t": p["t"], "aposta": p["aposta"], "prob": p["prob"], "retorno": retorno, "liquido": ganho, "capital": self.capital})
+            resultado = {"acertou": acertou, "ganho": ganho}
+            if not acertou and erros:
+                self._anotar(t, f"❌ Errou. Dopamina negativa em: {', '.join(erros[:5])}. Rede corrigida (taxa ×{1 + self.surpresa:.1f}).")
+        self._medir_surpresa(t)
+        self._revisar(t)
+        if self.passos % SONO_A_CADA == 0:
+            self._dormir(t)
+        self.pendente = None
+        return resultado
+
+    def _homeostase(self):
+        ativas = [s for s in self.sinapses if s["status"] == "ativa"]
+        for _ in range(3):
+            total = sum(s["peso"] for s in ativas)
+            for s in ativas:
+                if total and s["peso"] / total > TETO_VOTO:
+                    s["peso"] = TETO_VOTO / (1 - TETO_VOTO) * (total - s["peso"])
+
+    def _medir_surpresa(self, t):
+        h = self.historico
+        if len(h) < 120:
+            return
+        curto, longo = h[-40:], h[-400:]
+        pl = sum(longo) / len(longo)
+        z = abs(sum(curto) / len(curto) - pl) / math.sqrt(max(pl * (1 - pl), 1e-3) / len(curto))
+        antes = self.surpresa
+        self.surpresa = min(3.0, max(0.0, z - 1.0))
+        if self.surpresa >= 1.0 > antes:
+            self._anotar(t, f"⚡ Surpresa alta (z {z:.1f}): o mercado mudou de comportamento. Aprendendo {1 + self.surpresa:.1f}× mais rápido.")
+
+    def _dormir(self, t):
+        """Sono: reencena os episódios do hipocampo (embaralhados, taxa pequena) e renormaliza os pesos (homeostase do sono)."""
+        if len(self.hipocampo) < 200:
+            return
+        episodios = list(self.hipocampo)
+        self.rnd.shuffle(episodios)
+        for x, y in episodios:
+            self.rede.aprender(x, y, taxa=0.002)
+        for s in self.sinapses:
+            if s["status"] == "ativa":
+                s["peso"] = s["peso"] ** 0.8
+        self._homeostase()
+        self._anotar(t, f"😴 Sono: reencenei {len(episodios)} episódios guardados e renormalizei os pesos das sinapses.")

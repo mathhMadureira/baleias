@@ -1094,3 +1094,37 @@ class LivroDeMetodos(unittest.TestCase):
         self.assertEqual(usados, ["reversao_queda"])
         voto, usados = C.votar_comprovados(livro, {"r4": 3.0})   # promissor (reversao_alta) não influencia ninguém
         self.assertEqual((voto, usados), (0.0, []))
+
+
+class CerebroV2(unittest.TestCase):
+    def test_homeostase_esquecimento_e_sono(self):
+        from baleias import cerebro as C
+        c = C.CerebroV2()
+        rede = next(s for s in c.sinapses if s["id"] == "rede_neural")
+        rede["peso"] = 30.0
+        c._homeostase()
+        total = sum(s["peso"] for s in c.sinapses if s["status"] == "ativa")
+        self.assertLessEqual(rede["peso"] / total, C.TETO_VOTO + 1e-9)
+        f = {k: 0.0 for k in C.ENTRADAS_REDE} | {"chop": 30.0, "rsi": 50.0, "vi": 0.5, "dp": 0.002}
+        for i in range(400):                        # o mercado sobe sempre: Vórtice invertido (diz desce) erra sempre
+            c.decidir(i, f, 100.0)
+            c.conferir(i, +0.002, f)
+        vi = next(s for s in c.sinapses if s["id"] == "vortice_invertido")
+        self.assertLess(vi["ew_a"] / vi["ew_n"], 0.05)
+        self.assertLess(vi["ew_n"], 400)            # esqueceu parte do passado
+        self.assertTrue(any("Sono" in d["texto"] for d in c.diario))
+        self.assertLessEqual(len(c.hipocampo), C.HIPOCAMPO)
+        e = c.exportar()
+        self.assertEqual(e["versao"], 2)
+        c2 = C.CerebroV2(e)
+        self.assertEqual(len(c2.hipocampo), len(c.hipocampo))
+
+    def test_dopamina_pesa_movimento_grande(self):
+        from baleias import cerebro as C
+        f = {k: 0.0 for k in C.ENTRADAS_REDE} | {"chop": 30.0, "rsi": 50.0, "vi": -0.5, "dp": 0.002}   # Vórtice invertido diz SOBE
+        pequeno, grande = C.CerebroV2(), C.CerebroV2()
+        for cb, r in ((pequeno, 0.0004), (grande, 0.006)):
+            cb.decidir(0, f, 100.0)
+            cb.conferir(1, r, f)
+        pv = lambda cb: next(s for s in cb.sinapses if s["id"] == "vortice_invertido")["peso"]
+        self.assertGreater(pv(grande), pv(pequeno))

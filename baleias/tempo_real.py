@@ -759,6 +759,11 @@ class Motor:
                                     self.evento({"tipo": "cerebro", "notificar": True, "texto": d["texto"]})
                         visto = len(cb.diario)
                         publicar(cb)
+                        r2 = subprocess.run(["git", "-C", repo, "show", "origin/estado:dados/cerebro_v2.json"], timeout=60, capture_output=True, text=True)
+                        if r2.returncode == 0 and r2.stdout:
+                            v2 = C.CerebroV2(json.loads(r2.stdout))
+                            with self.trava:
+                                self.cerebro["v2"] = v2.resumo()
                     self.fonte("cerebro", True)
                     time.sleep(120)
                     continue
