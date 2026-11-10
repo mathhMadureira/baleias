@@ -405,3 +405,11 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Regra:** igual à H18, apostando na direção **oposta**. No histórico, isso dá ~52,2–52,3% em 15 min e ~52,9–53,8% em 5 min, mas foi visto depois dos dados e por isso não conta como prova.
 - **Validação ao vivo**, desde 2026-11-10: a cada vela de 15 min do BTC fechada, registrar a previsão e conferir na próxima. Fica no painel.
 - **Passa** com ≥ 300 apostas ao vivo e acerto com limite inferior de Wilson > 51%.
+
+## Hipótese 20: o cérebro (sinapses + rede neural + criação/poda de rotas) ganha no BTC 15 min? (pré-registrada em 2026-11-10)
+
+- **O que é:** `baleias/cerebro.py`. Sete sinapses iniciais vindas do laboratório (inclui uma MLP 16→12→1 com retropropagação a cada vela) e votação por pesos multiplicativos (Hedge).
+- **Rotas novas:** quando o acerto das últimas 200 apostas tem limite superior de Wilson < 52%, nascem novas sinapses em observação. Promoção com ≥ 150 previsões e limite inferior de Wilson > 50%; poda com acerto < 48%.
+- **Aposta:** só quando o valor esperado passa do custo de 0,09%. Opera comprado ou vendido, 1×, teto de perda de US$ 100/dia.
+- **Aquecimento:** as ~2000 velas anteriores ao início são vividas em sequência (prevendo antes de ver), mas **não contam** para a avaliação.
+- **Avaliação ao vivo**, desde 2026-11-10: passa com ≥ 500 apostas ao vivo, retorno líquido médio > 0 com t > 2 **e** acerto com limite inferior de Wilson > 50%.

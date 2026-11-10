@@ -13,6 +13,7 @@ agrupados para não estourar o limite de mensagens. Padrões de vela vêm com a 
 """
 import collections
 import json
+import math
 import os
 import threading
 import time
@@ -227,6 +228,7 @@ class Motor:
         self.rapido = None
         self.mapa = None
         self.vortice = None
+        self.cerebro = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -689,6 +691,67 @@ class Motor:
             self.fonte("vortice", True)
             time.sleep(30)
 
+    def _cerebro(self):
+        """Cérebro de day trade (baleias/cerebro.py) ao vivo no BTC 15 min. Aquece vivendo as últimas ~2000 velas em sequência
+        (prevê antes de ver cada resultado), depois segue ao vivo. Teto de perda de US$ 100 por dia."""
+        from lab import tartaruga as T
+        from . import cerebro as C
+        arq = config.RAIZ / "cerebro.json"
+        estado = json.loads(arq.read_text()) if arq.exists() else None
+        cb = C.Cerebro(estado)
+
+        def velas(limite=None, fim=None):
+            url = f"{T.DADOS}/api/v3/klines?symbol=BTCUSDT&interval=15m&limit={limite or 1000}" + (f"&endTime={fim}" if fim else "")
+            with urllib.request.urlopen(url, timeout=30) as r:
+                return [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])) for x in json.load(r) if x[6] < time.time() * 1000]
+
+        def passo(v, ao_vivo):
+            f = C.caracteristicas(v)
+            t, px = v[-1][0], v[-1][4]
+            if cb.pendente and cb.pendente["t"] < t:
+                r = math.log(px / cb.pendente["px"])
+                res = cb.conferir(t, r, cb.pendente["f"])
+                if ao_vivo and res:
+                    self.evento({"tipo": "cerebro", "notificar": False,
+                                 "texto": f"🧠 Cérebro {'acertou ✓' if res['acertou'] else 'errou ✗'}: {res['ganho'] * 100:+.3f}% | capital US$ {cb.capital:,.2f}"})
+            hoje = time.strftime("%Y-%m-%d", time.gmtime(t / 1000))
+            perda_hoje = sum((o["capital"] - o["capital"] / (1 + o["liquido"])) for o in cb.operacoes
+                             if time.strftime("%Y-%m-%d", time.gmtime(o["t"] / 1000)) == hoje)
+            p = cb.decidir(t, f, px)
+            p["f"] = f
+            if perda_hoje <= -100 and p.get("aposta"):
+                p["aposta"] = None
+                cb._anotar(t, f"🛑 Teto de perda do dia (US$ {perda_hoje:,.2f}): sem apostas até 00:00 UTC.")
+            if ao_vivo and p.get("aposta"):
+                self.evento({"tipo": "cerebro", "notificar": True,
+                             "texto": f"🧠 Cérebro aposta {'▲ SOBE' if p['aposta'] > 0 else '▼ DESCE'} no BTC (prob. {p['prob']:.1%}) a {px:,.1f}, por 15 min"})
+
+        if not cb.passos:                                   # aquecimento: vive as últimas ~2000 velas em sequência
+            hist = velas(1000, int(time.time() * 1000) - 1000 * 900_000) + velas(1000)
+            hist = sorted({x[0]: x for x in hist}.values())
+            for i in range(120, len(hist)):
+                passo(hist[i - 119:i + 1], False)
+            cb._anotar(cb.ultima_t, f"🧠 Aquecimento: viveu {len(hist) - 120} velas de 15 min (≈{(len(hist) - 120) / 96:.0f} dias), prevendo cada uma antes de ver.")
+        visto = len(cb.diario)
+        while True:
+            try:
+                v = velas(130)
+                if v and v[-1][0] != cb.ultima_t:
+                    passo(v[-120:], True)
+                    for d in cb.diario[visto:]:
+                        if any(m in d["texto"] for m in ("NOVA SINAPSE", "PROMOVIDA", "PODADA", "Teto")):
+                            self.evento({"tipo": "cerebro", "notificar": True, "texto": d["texto"]})
+                    visto = len(cb.diario)
+                    tmp = arq.with_suffix(".tmp")
+                    tmp.write_text(json.dumps(cb.exportar()))
+                    tmp.replace(arq)
+                with self.trava:
+                    self.cerebro = cb.resumo()
+                self.fonte("cerebro", True)
+            except OSError as ex:
+                self.fonte("cerebro", False, f"{type(ex).__name__}")
+            time.sleep(20)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -700,7 +763,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self

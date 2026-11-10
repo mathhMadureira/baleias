@@ -1023,3 +1023,52 @@ class Reconciliar(unittest.TestCase):
         X.reconciliar(e, X.Real(Cliente({}, ("CANCELED", None)), e), {"XUSDT": 95.0})
         self.assertEqual(e["fechadas"][0]["saida"], 95.0)
         self.assertIn("não encontrada", X.EVENTOS.read_text())
+
+
+class Cerebro(unittest.TestCase):
+    def test_rede_neural_aprende_um_padrao(self):
+        from baleias.cerebro import Rede
+        import random as R
+        r, rnd = Rede(3, ocultos=6, semente=1), R.Random(2)
+        dados = [([a, b, 0.0], 1 if a + b > 0 else 0) for a, b in ((rnd.uniform(-1, 1), rnd.uniform(-1, 1)) for _ in range(400))]
+        antes = sum((r.prever(x) > 0.5) == bool(y) for x, y in dados) / len(dados)
+        for _ in range(30):
+            for x, y in dados:
+                r.aprender(x, y, taxa=0.05)
+        depois = sum((r.prever(x) > 0.5) == bool(y) for x, y in dados) / len(dados)
+        self.assertGreater(depois, 0.9)
+        self.assertGreater(depois, antes)
+
+    def test_erro_reduz_peso_e_cerebro_cria_e_poda_sinapses(self):
+        from baleias import cerebro as C
+        c = C.Cerebro()
+        f = {k: 0.0 for k in C.ENTRADAS_REDE} | {"chop": 30.0, "rsi": 50.0, "vi": 0.5, "dp": 0.003}
+        # Vórtice invertido diz "desce" (vi > 0); o mercado sobe 20 vezes seguidas: peso dele tem que cair
+        for i in range(20):
+            c.decidir(i, f, 100.0)
+            c.conferir(i, +0.002, f)
+        vi = next(s for s in c.sinapses if s["id"] == "vortice_invertido")
+        self.assertLess(vi["peso"], 1.0)
+        self.assertEqual(vi["previsoes"], 20)
+        # força o gatilho de rota nova: cérebro errando muito
+        c.historico = [0] * 150
+        c.passos = 48 * 10
+        c._revisar(999)
+        novas = [s for s in c.sinapses if s["id"].startswith("nova_")]
+        self.assertEqual(len(novas), 2)
+        self.assertTrue(all(s["status"] == "observacao" and s["peso"] == 0.0 for s in novas))
+        # uma nova que erra muito é podada; uma que acerta é promovida
+        novas[0]["previsoes"], novas[0]["acertos"] = 150, 60
+        novas[1]["previsoes"], novas[1]["acertos"] = 150, 95
+        c._revisar(1000)
+        self.assertEqual(novas[0]["status"], "podada")
+        self.assertEqual(novas[1]["status"], "ativa")
+        self.assertTrue(any("NOVA SINAPSE" in d["texto"] for d in c.diario))
+
+    def test_regra_dispara_nos_dois_lados(self):
+        from baleias import cerebro as C
+        s_baixo = {"tipo": "regra", "medida": "r4", "limiar": -2.5, "sentido": 1, "lado": "baixo"}
+        s_alto = {"tipo": "regra", "medida": "r4", "limiar": 2.5, "sentido": -1, "lado": "alto"}
+        self.assertEqual(C.opiniao(s_baixo, {"r4": -3.0}), 1)
+        self.assertEqual(C.opiniao(s_baixo, {"r4": -1.0}), 0)
+        self.assertEqual(C.opiniao(s_alto, {"r4": 3.0}), -1)
