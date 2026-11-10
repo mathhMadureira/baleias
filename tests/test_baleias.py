@@ -1144,3 +1144,18 @@ class Mesa(unittest.TestCase):
         self.assertAlmostEqual(bom["conta"], 10 * 1.005 ** 30)
         novo = M.avaliar("w", [], 0)
         self.assertEqual((novo["conta"], novo["falta"]["operacoes"]), (10.0, 30))
+
+
+class OrcamentoFixo(unittest.TestCase):
+    def test_conta_de_10_abre_duas_de_5(self):
+        from executor import tartaruga_exec as X
+        X.EVENTOS = pathlib.Path(__import__("tempfile").mkdtemp()) / "ev.jsonl"
+        antes = X.ORCAMENTO_FIXO
+        self.addCleanup(setattr, X, "ORCAMENTO_FIXO", antes)
+        X.ORCAMENTO_FIXO = 5.0
+        e = X.novo_estado(10.0)
+        velas = RoboTartaruga._velas(None, [[100, 106, 100, 105]])
+        X.passo_diario(e, X.Simulada(None, e), {"AUSDT": velas, "BUSDT": velas, "CUSDT": velas}, {"AUSDT": 105.0, "BUSDT": 105.0, "CUSDT": 105.0})
+        self.assertEqual(len(e["abertas"]), 2)                 # duas de US$ 5; a terceira não cabe
+        self.assertAlmostEqual(e["caixa"], 0.0)
+        self.assertIn("não há caixa", X.EVENTOS.read_text())

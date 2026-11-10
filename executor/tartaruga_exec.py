@@ -187,16 +187,19 @@ def passo_diario(e, corretora, dados, precos):
         if not n:
             continue
         px = precos[m]
-        usdt = min(ORCAMENTO_FIXO if ORCAMENTO_FIXO else RISCO * total / (T.STOP_N * n) * px, corretora.usdt_livre() * 0.98)
+        if ORCAMENTO_FIXO:                 # orçamento fixo (robô rápido): usa o valor inteiro se houver caixa para ele
+            usdt = ORCAMENTO_FIXO if corretora.usdt_livre() >= ORCAMENTO_FIXO - 1e-9 else corretora.usdt_livre()
+        else:
+            usdt = min(RISCO * total / (T.STOP_N * n) * px, corretora.usdt_livre() * 0.98)
         if usdt < (4.99 if ORCAMENTO_FIXO else 6):     # mínimo da Binance (≈ US$ 5)
-            eventos.append(registrar(f"🐢 {m[:-4]} rompeu a máxima de 55 dias, mas não há caixa para a posição mínima"))
+            eventos.append(registrar(f"🐢 {m[:-4]} rompeu a máxima de 55 velas, mas não há caixa para a posição mínima"))
             continue
         qtd, preco_medio, gasto = corretora.comprar(m, usdt, px)
         stop = preco_medio - T.STOP_N * n
         ordem = corretora.colocar_stop(m, qtd, stop)
         e["abertas"][m] = {"moeda": m, "entrada": preco_medio, "qtd": qtd, "stop": stop, "ordem_stop": ordem, "N": n,
                            "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * (preco_medio - stop)}
-        eventos.append(registrar(f"🐢 Robô ENTROU COMPRADO em {m[:-4]} a {preco_medio:,.6g} (rompeu a máxima de 55 dias). "
+        eventos.append(registrar(f"🐢 Robô ENTROU COMPRADO em {m[:-4]} a {preco_medio:,.6g} (rompeu a máxima de 55 velas). "
                                  f"Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:.1f}%), posição US$ {gasto:,.2f}, "
                                  f"risco US$ {qtd * (preco_medio - stop):,.2f} = 1R{'' if corretora.real else ' [simulado]'}"))
     e["ultimo_dia"] = time.strftime("%Y-%m-%d", time.gmtime(relogio()))
