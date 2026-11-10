@@ -628,7 +628,7 @@ class Motor:
                 bloco = int(agora // 86400) // meta_dias                          # bloco de N dias em que estamos
                 fechado_bloco = sum(f["resultado_usd"] for f in e["fechadas"] if int(f["saida_t"] // 86400) // meta_dias == bloco)
                 fim_bloco = (bloco + 1) * meta_dias * 86400
-                aberto = sum(p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"] for m, p in e["abertas"].items())
+                aberto = sum(X._valor(p, precos.get(m, p["entrada"])) - p["gasto"] for m, p in e["abertas"].items())
                 meta_batida = fechado_bloco >= meta_dia
                 quebrou = X.patrimonio(e, precos, corretora) < piso
                 if quebrou and not e.get("quebrou"):
@@ -682,7 +682,7 @@ class Motor:
                                    "travado": X.PARAR.exists(), "inicio": e["inicio"], "ultima_vela": e.get("ultima_vela"),
                                    "proxima": agora - agora % passo + passo + 15,
                                    "posicoes": [{"moeda": m[:-4], "entrada": p["entrada"], "stop": p["stop"], "preco": precos.get(m),
-                                                 "resultado": p["qtd"] * precos.get(m, p["entrada"]) - p["gasto"]} for m, p in e["abertas"].items()],
+                                                 "resultado": X._valor(p, precos.get(m, p["entrada"])) - p["gasto"]} for m, p in e["abertas"].items()],
                                    "operacoes": len(rs), "acerto": sum(r > 0 for r in rs) / len(rs) if rs else None,
                                    "media_R": sum(rs) / len(rs) if rs else None, "eventos": e["eventos"][:30],
                                    "radar": e.get("radar", [])[:8], "todas": sorted(m[:-4] for m in T.MOEDAS_ROBO), "modo": modo,
