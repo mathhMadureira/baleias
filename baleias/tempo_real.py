@@ -721,7 +721,9 @@ class Motor:
             p["f"] = f
             if perda_hoje <= -100 and p.get("aposta"):
                 p["aposta"] = None
-                cb._anotar(t, f"🛑 Teto de perda do dia (US$ {perda_hoje:,.2f}): sem apostas até 00:00 UTC.")
+                if getattr(cb, "dia_teto", None) != hoje:          # avisa uma vez por dia
+                    cb.dia_teto = hoje
+                    cb._anotar(t, f"🛑 Teto de perda do dia (US$ {perda_hoje:,.2f}): sem apostas até 00:00 UTC.")
             if ao_vivo and p.get("aposta"):
                 self.evento({"tipo": "cerebro", "notificar": True,
                              "texto": f"🧠 Cérebro aposta {'▲ SOBE' if p['aposta'] > 0 else '▼ DESCE'} no BTC (prob. {p['prob']:.1%}) a {px:,.1f}, por 15 min"})
