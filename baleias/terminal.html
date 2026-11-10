@@ -96,6 +96,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <div class="marca">BALEIAS <b>TERMINAL</b></div>
   <nav>
     <button data-aba="robo" class="ativo">Robô</button>
+    <button data-aba="mapa">🗺 Mapa do mercado</button>
     <button data-aba="replay">▶ Replay</button>
     <button data-aba="mercado">Mercado ao vivo</button>
     <button data-aba="lab">Laboratório</button>
@@ -203,6 +204,25 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   </div>
 </section>
 
+<section class="aba" id="aba-mapa">
+  <div class="kpis">
+    <div class="kpi"><div class="rot">Moedas analisadas</div><div class="val num" id="mp-n">—</div><div class="sub" id="mp-t">—</div></div>
+    <div class="kpi"><div class="rot">Acima da média de 50 dias</div><div class="val num" id="mp-mm">—</div><div class="sub">&gt; 50% = mercado em alta</div></div>
+    <div class="kpi"><div class="rot">Romperam a máxima de 55 dias</div><div class="val num" id="mp-rp">—</div><div class="sub">sinal de entrada da Tartaruga</div></div>
+    <div class="kpi"><div class="rot">Mediana da semana</div><div class="val num" id="mp-7">—</div><div class="sub">retorno típico em 7 dias</div></div>
+    <div class="kpi"><div class="rot">Subindo nas últimas 24 h</div><div class="val num" id="mp-24">—</div><div class="sub">amplitude do dia</div></div>
+    <div class="kpi"><div class="rot">Leitura</div><div class="sub" id="mp-leitura" style="font-size:13px;color:var(--txt)">—</div></div>
+  </div>
+  <div class="card">
+    <h3>Força relativa de todo o mercado (percentil do retorno de 28 dias)
+      <span class="dir"><label class="mut" style="font-size:12px"><input type="checkbox" id="mp-liq"> só líquidas (top 40 em volume — onde o robô opera)</label></span></h3>
+    <div style="overflow:auto;max-height:70vh"><table id="mp-tab"><thead><tr>
+      <th data-k="moeda">Moeda</th><th data-k="forca">Força</th><th data-k="d1">24 h</th><th data-k="d7">7 dias</th><th data-k="d28">28 dias</th>
+      <th data-k="falta">Falta p/ entrada</th><th data-k="vol">Stop 2N</th><th data-k="volume">Volume 24 h</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+    <div class="mut" style="font-size:12px;margin-top:8px">O robô enxerga o mercado inteiro, mas opera só as líquidas: nos testes, as mesmas regras ganharam nas 33 moedas grandes e perderam nas menores (Tartaruga −0,30R/op; força relativa −17%/ano).</div>
+  </div>
+</section>
+
 <section class="aba" id="aba-replay">
   <div class="card" style="margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:12px">
     <b>Replay:</b><span class="mut">o mesmo código do robô operando o histórico real, dia após dia, desde 01/01/2024 com US$ 700</span>
@@ -258,6 +278,7 @@ document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
   if (b.dataset.aba === "mercado" && !$("frame-mercado").src) $("frame-mercado").src = "/ao-vivo";
   if (b.dataset.aba === "lab") carregarLab();
   if (b.dataset.aba === "replay") carregarReplay();
+  if (b.dataset.aba === "mapa") carregarMapa();
   if (b.dataset.aba === "robo") desenharTudo();
 });
 
@@ -538,6 +559,38 @@ $("rp-vel").onchange = () => { if (rpTimer) { pararReplay(); $("rp-play").onclic
 $("rp-zero").onclick = () => zerarReplay();
 let som = false, audio;
 function bip(f) { try { audio = audio || new AudioContext(); const o = audio.createOscillator(), g = audio.createGain(); o.frequency.value = f; g.gain.value = 0.05; o.connect(g).connect(audio.destination); o.start(); o.stop(audio.currentTime + 0.08); } catch (e) {} }
+
+// ---------- mapa do mercado ----------
+let mapa = null, mpOrdem = "forca", mpDesc = true;
+document.querySelectorAll("#mp-tab th[data-k]").forEach(th => th.onclick = () => { const k = th.dataset.k; mpDesc = mpOrdem === k ? !mpDesc : true; mpOrdem = k; desenharMapa(); });
+$("mp-liq").onchange = () => desenharMapa();
+async function carregarMapa() {
+  try { mapa = await j("/api/mapa"); } catch (e) {}
+  desenharMapa();
+  if (!mapa || mapa.carregando) setTimeout(carregarMapa, 10000);
+}
+function desenharMapa() {
+  if (!mapa || mapa.carregando) { $("mp-n").textContent = "…"; $("mp-t").textContent = "mapeando o mercado (leva ~1 min)"; return; }
+  const t = mapa.termometro;
+  $("mp-n").textContent = t.analisadas; $("mp-t").textContent = "atualizado " + new Date(mapa.t * 1000).toLocaleTimeString("pt-BR");
+  $("mp-mm").textContent = fmt(t.acima_mm50, 0) + "%"; $("mp-mm").className = "val num " + (t.acima_mm50 >= 50 ? "up" : "down");
+  $("mp-rp").textContent = t.romperam; $("mp-7").textContent = pct(t.mediana_7d); $("mp-7").className = "val num " + cor(t.mediana_7d);
+  $("mp-24").textContent = fmt(t.subindo_24h, 0) + "%";
+  $("mp-leitura").textContent = t.acima_mm50 >= 60 ? "Mercado em alta ampla: rompimentos tendem a aparecer." : t.acima_mm50 >= 40 ? "Mercado dividido: força concentrada em poucas moedas." : "Mercado em baixa ampla: a maioria abaixo da média; o robô diário fica de fora.";
+  let ls = mapa.moedas.filter(l => !$("mp-liq").checked || l.liquida);
+  ls.sort((a, b) => { const x = a[mpOrdem], y = b[mpOrdem]; if (x == null) return 1; if (y == null) return -1; return (typeof x === "string" ? x.localeCompare(y) : x - y) * (mpDesc ? -1 : 1); });
+  const vol = (v) => v >= 1e9 ? fmt(v / 1e9, 1) + " bi" : fmt(v / 1e6, 0) + " mi";
+  $("mp-tab").querySelector("tbody").replaceChildren(...ls.map(l => {
+    const tr = document.createElement("tr");
+    const f = l.forca == null ? "" : `<div class="barra" style="width:80px;display:inline-block;vertical-align:middle"><div style="width:${l.forca}%"></div></div> ${fmt(l.forca, 0)}`;
+    const st = (l.rompeu ? "🟢 rompeu " : "") + (l.robo ? "🐢 no robô " : "") + (l.liquida ? "" : "· pequena");
+    tr.innerHTML = `<td><b>${l.moeda}</b></td><td>${f}</td><td class="${cor(l.d1)}">${pct(l.d1)}</td><td class="${cor(l.d7)}">${pct(l.d7)}</td><td class="${cor(l.d28)}">${pct(l.d28)}</td>` +
+      `<td>${l.falta <= 0 ? "ROMPEU" : "+" + fmt(l.falta, 1) + "%"}</td><td>${l.vol == null ? "—" : fmt(l.vol, 1) + "%"}</td><td>${vol(l.volume)}</td><td class="mut" style="font-family:system-ui;font-size:12px"></td>`;
+    tr.lastChild.textContent = st;
+    return tr;
+  }));
+}
+setInterval(() => { if (document.getElementById("aba-mapa").classList.contains("ativa")) carregarMapa(); }, 300000);
 
 // ---------- robô de funding ----------
 async function cicloFunding() {

@@ -225,6 +225,7 @@ class Motor:
         self.volumes = collections.deque(maxlen=12)
         self.tartaruga = None
         self.rapido = None
+        self.mapa = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -588,6 +589,50 @@ class Motor:
                     marcas.append({"t": o["saida_t"], "px": o["saida"], "tipo": "saida"})
         return {"moeda": m[:-4], "velas": saida, "marcas": marcas}
 
+    def _mapa(self):
+        """Mapa do mercado inteiro (pares USDT da Binance com volume ≥ US$ 1 mi/dia), a cada 30 min: força relativa,
+        distância até o rompimento de 55 dias, volatilidade, liquidez e o termômetro geral (amplitude)."""
+        from lab import tartaruga as T
+        while True:
+            with urllib.request.urlopen(f"{T.DADOS}/api/v3/ticker/24hr", timeout=30) as r:
+                todos = json.load(r)
+            pares = [x for x in todos if x["symbol"].isascii() and x["symbol"].endswith("USDT") and x["symbol"][:-4] not in ESTAVEIS
+                     and not x["symbol"][:-4].endswith(("UP", "DOWN", "BULL", "BEAR")) and float(x["quoteVolume"]) >= 1e6]
+            pares.sort(key=lambda x: -float(x["quoteVolume"]))
+            linhas = []
+            for posicao, x in enumerate(pares):
+                m = x["symbol"]
+                try:
+                    with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval=1d&limit=61", timeout=20) as r:
+                        k = json.load(r)[:-1]          # só dias fechados
+                except OSError:
+                    continue
+                if len(k) < 30:
+                    continue
+                c = [float(v[4]) for v in k]
+                vs = [[v[0], float(v[1]), float(v[2]), float(v[3]), float(v[4])] for v in k]
+                n = T.atr(vs)[-1]
+                px = float(x["lastPrice"])
+                janela = vs[-T.ENTRADA:] if len(vs) >= T.ENTRADA else vs
+                maxima = max(v[2] for v in janela)
+                linhas.append({"moeda": m[:-4], "preco": px, "d1": float(x["priceChangePercent"]), "d7": (c[-1] / c[-8] - 1) * 100,
+                               "d28": (c[-2] / c[-30] - 1) * 100 if len(c) >= 30 else None,
+                               "falta": (maxima / px - 1) * 100, "vol": T.STOP_N * n / px * 100 if n else None,
+                               "volume": float(x["quoteVolume"]), "liquida": posicao < 40, "robo": m in T.MOEDAS_ROBO,
+                               "acima_mm50": len(c) >= 50 and c[-1] > sum(c[-50:]) / 50, "rompeu": c[-1] > max(v[2] for v in vs[-T.ENTRADA - 1:-1])})
+                time.sleep(0.08)
+            com28 = sorted((l["d28"] for l in linhas if l["d28"] is not None))
+            for l in linhas:
+                l["forca"] = (sum(v <= l["d28"] for v in com28) / len(com28) * 100) if l["d28"] is not None and com28 else None
+            d7 = sorted(l["d7"] for l in linhas)
+            with self.trava:
+                self.mapa = {"t": time.time(), "moedas": linhas,
+                             "termometro": {"analisadas": len(linhas), "acima_mm50": sum(l["acima_mm50"] for l in linhas) / max(1, len(linhas)) * 100,
+                                            "romperam": sum(l["rompeu"] for l in linhas), "mediana_7d": d7[len(d7) // 2] if d7 else None,
+                                            "subindo_24h": sum(l["d1"] > 0 for l in linhas) / max(1, len(linhas)) * 100}}
+            self.fonte("mapa", True)
+            time.sleep(1800)
+
     def _telegram(self):
         while True:
             time.sleep(20)
@@ -599,7 +644,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self
