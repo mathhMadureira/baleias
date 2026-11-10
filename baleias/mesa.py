@@ -80,7 +80,6 @@ def _rapido():
     if not arq.exists():
         return avaliar("Rápido 5 min", [], 0, nota="sem estado ainda")
     e = json.loads(arq.read_text())
-    ini = e.get("caixa", CONTA) if not e.get("fechadas") else None
     eventos, conta = [], 10.0
     for f in sorted(e.get("fechadas", []), key=lambda x: x["saida_t"]):
         eventos.append((f["saida_t"], f["resultado_usd"] / conta))

@@ -29,6 +29,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 
 ## Feito (recente)
 
+- 2026-11-10: **mesa proprietária** (aba 🏦): cada robô em teste tem conta de US$ 10; violação se perder > US$ 1 num dia; eliminado abaixo de US$ 5; aprovado para fase 2 (US$ 50) com ≥ 30 operações, ≥ US$ 11, sem violações, queda < 30%. Robô rápido virou conta nativa de US$ 10 (US$ 5 por operação, máx. 1 h, para no dia com −US$ 1). Cérebro v2 (biologia) competindo com v1.
+
 - 2026-11-10: repositório público; cérebro roda no GitHub a cada 15 min (painel espelha); fluxos acrescentam no ramo `estado`; Livro de Métodos; referência "sempre sobe"; `checar.py`.
 
 - 2026-11-10: H14–H18 testadas e reprovadas (reversão intradiária, força relativa, sazonalidade com contagem corrigida, funding contrário, Vórtice+CHOP). Mapa do mercado inteiro (~170 moedas) e previsor H19 (Vórtice invertido) ao vivo. Robô rápido em 5 min com teto de perda de US$ 100/dia; robô de funding visível.
