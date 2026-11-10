@@ -483,7 +483,7 @@ class Motor:
         saida, agora_ms = {}, time.time() * 1000
         for m in moedas:
             try:
-                with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=131", timeout=20) as r:
+                with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=241", timeout=20) as r:
                     k = json.load(r)
             except OSError:
                 continue
@@ -520,6 +520,7 @@ class Motor:
     def _aquecer_cerebro_rapido(self, cbr, intervalo):
         """Vive as últimas ~1000 velas de 5 min das 33 moedas em sequência (prevê, espera 1 h, confere) antes de ir ao vivo."""
         from lab import tartaruga as T
+        from . import cerebro as C
         series = {}
         for m in T.MOEDAS_ROBO:
             try:
@@ -529,13 +530,13 @@ class Motor:
                 continue
             time.sleep(0.05)
         tamanho = min(len(v) for v in series.values())
-        for i in range(120, tamanho):
+        for i in range(C.JANELA, tamanho):
             for m, v in series.items():
-                janela = v[len(v) - tamanho + max(0, i - 140):len(v) - tamanho + i + 1]
+                janela = v[len(v) - tamanho + max(0, i - C.JANELA - 20):len(v) - tamanho + i + 1]
                 cbr.resolver(m, janela)
-                cbr.observar(m, janela[-120:])
-        cbr._anotar(time.time() * 1000, f"🧠 Aquecimento do robô rápido: viveu {tamanho - 120} velas de 5 min em {len(series)} moedas "
-                                        f"({(tamanho - 120) * len(series)} previsões conferidas 1 h depois).")
+                cbr.observar(m, janela[-C.JANELA:])
+        cbr._anotar(time.time() * 1000, f"🧠 Aquecimento do robô rápido: viveu {tamanho - C.JANELA} velas de 5 min em {len(series)} moedas "
+                                        f"({(tamanho - C.JANELA) * len(series)} previsões conferidas 1 h depois).")
 
     def _cerebro_rapido_passo(self, cbr, dados, precos, e, corretora, ouvir):
         """A cada vela de 5 min: confere as previsões de 1 h atrás, prevê todas as moedas e entra nas de maior valor esperado."""
@@ -545,10 +546,10 @@ class Motor:
         X.stops_perdidos(e, corretora, dados)
         oportunidades = []
         for m, v in brutas.items():
-            if len(v) < 121:
+            if len(v) < 221:
                 continue
-            cbr.resolver(m, v[-141:])
-            prob, ev, f = cbr.observar(m, v[-120:])
+            cbr.resolver(m, v[-241:])
+            prob, ev, f = cbr.observar(m, v[-220:])
             oportunidades.append({"moeda": m[:-4], "prob": prob, "ev": ev, "par": m})
         oportunidades.sort(key=lambda x: -x["ev"])
         cbr.oportunidades = oportunidades[:33]

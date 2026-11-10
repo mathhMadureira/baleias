@@ -1181,3 +1181,19 @@ class CerebroRapido(unittest.TestCase):
         self.assertLess(ev, 0.01)
         e = cb.exportar()
         self.assertEqual(C.CerebroRapido(e).previsoes[0]["m"], "BUSDT")
+
+
+class SinapsesVelez(unittest.TestCase):
+    def test_espaco_duplo_e_injecao_em_cerebro_existente(self):
+        from baleias import cerebro as C
+        c = [100.0] * 215 + [104.0]
+        m = C.medidas_velez(c, [x * 1.001 for x in c], [x * 0.999 for x in c], c, len(c) - 1)
+        self.assertEqual(m["espaco"], 1.0)
+        estado = C.Cerebro().exportar()
+        estado["sinapses"] = [s for s in estado["sinapses"] if not s["id"].startswith("velez")]
+        cb = C.Cerebro(estado)
+        velez = [s for s in cb.sinapses if s["id"].startswith("velez")]
+        self.assertEqual(len(velez), len(C.SINAPSES_VELEZ))
+        self.assertTrue(all(s["status"] == "observacao" and s["peso"] == 0.0 for s in velez))
+        s = next(x for x in velez if x["id"] == "velez_espaco_duplo_alto")
+        self.assertEqual(C.opiniao(s, {"espaco": 1.0}), -1)

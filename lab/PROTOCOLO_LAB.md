@@ -452,3 +452,12 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Passa (operar no spot)** com |média| > 0,2% e t > 3,2 no treino, mais o mesmo sinal com > 0,2% e t > 2 no teste.
 - **Passa (contrato binário)** com acerto ≥ 53% e limite inferior de Wilson > 51% nos dois períodos.
 - **Nos cérebros:** as regras entram nos cérebros como sinapses **em observação**, qualquer que seja o resultado. Só ganham voto se provarem acerto ao vivo.
+
+### Resultado da H23 (2026-11-10)
+
+- **180, vela elefante a favor e estado estreito:** sem vantagem nas duas bases. A média fica ~0%, e o acerto fica abaixo de 50% (em parte porque velas sem movimento contam como erro).
+- **Espaço duplo, a 1 h** (contrário: preço > 3% longe das duas médias → volta): **passou no critério binário nas duas bases**.
+  - BTC 15 min: 58,0% (562 casos, treino) e 64,5% (110, teste).
+  - 33 moedas 5 min: 56,9% (757) e 57,2% (472).
+- **No spot, não passou:** a cauda é pesada. Nas moedas, a média no treino foi −0,41%, porque quando o esticamento continua, continua muito.
+- **Aplicado:** as 6 regras entraram como sinapses **em observação** nos três cérebros (v1, v2 e o do robô rápido). Elas só ganham voto se provarem ao vivo (≥ 150 previsões, limite inferior de Wilson > 50%). Os cérebros passam a enxergar 220 velas.

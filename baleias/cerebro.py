@@ -55,9 +55,45 @@ def caracteristicas(v):
     f.update({"vi": (vip - vim) / (sum(tr) or 1e-9), "chop": chop, "rsi": rsi, "vol": math.log((vol[i] + 1) / (media_vol + 1)),
               "corpo": (c[i] - o[i]) / ((h[i] - l[i]) or 1e-9), "rompe": 1.0 if c[i] > max(h[i - 55:i]) else (-1.0 if c[i] < min(l[i - 55:i]) else 0.0),
               "hs": math.sin(hora), "hc": math.cos(hora), "dp": dp})
+    f.update(medidas_velez(o, h, l, c, i))
     f["corvos"] = 1.0 if all(c[j] < o[j] for j in (i - 2, i - 1, i)) and c[i] < c[i - 1] < c[i - 2] else 0.0
     f["soldados"] = 1.0 if all(c[j] > o[j] for j in (i - 2, i - 1, i)) and c[i] > c[i - 1] > c[i - 2] else 0.0
     return f
+
+
+JANELA = 220                       # velas que cada cérebro enxerga (a média de 200 do Velez precisa disso)
+
+
+def medidas_velez(o, h, l, c, i):
+    """H23 (Oliver Velez): quadro de força (preço/SMA20/SMA200), 180, vela elefante, estado estreito e espaço duplo. 0 sem dados."""
+    if i < 210:
+        return {"espaco": 0.0, "v180": 0.0, "eleq": 0.0, "estr": 0.0}
+    s20, s200 = sum(c[i - 19:i + 1]) / 20, sum(c[i - 199:i + 1]) / 200
+    s20_10 = sum(c[i - 29:i - 9]) / 20
+    p = c[i]
+    alta, baixa = p > s20 > s200, p < s20 < s200
+    faixa_m = sum(h[j] - l[j] for j in range(i - 20, i)) / 20
+    elefante = faixa_m > 0 and (h[i] - l[i]) > 2 * faixa_m
+    v180 = 1.0 if (c[i - 1] < o[i - 1] and c[i] > o[i] and c[i] >= o[i - 1] and o[i] <= c[i - 1] and alta) else \
+        (-1.0 if (c[i - 1] > o[i - 1] and c[i] < o[i] and c[i] <= o[i - 1] and o[i] >= c[i - 1] and baixa) else 0.0)
+    eleq = 1.0 if (elefante and alta and c[i] > o[i]) else (-1.0 if (elefante and baixa and c[i] < o[i]) else 0.0)
+    estreito = abs(s20 - s200) / p < 0.012 and abs(s20 / s20_10 - 1) < 0.003
+    estr = 1.0 if (elefante and estreito and c[i] > max(s20, s200) and c[i] > o[i]) else \
+        (-1.0 if (elefante and estreito and c[i] < min(s20, s200) and c[i] < o[i]) else 0.0)
+    espaco = 1.0 if (p > s20 * 1.03 and p > s200 * 1.03) else (-1.0 if (p < s20 * 0.97 and p < s200 * 0.97) else 0.0)
+    return {"espaco": espaco, "v180": v180, "eleq": eleq, "estr": estr}
+
+
+SINAPSES_VELEZ = [
+    {"id": "velez_espaco_duplo_alto", "tipo": "regra", "medida": "espaco", "limiar": 1.0, "sentido": -1, "lado": "alto",
+     "origem": "Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%)"},
+    {"id": "velez_espaco_duplo_baixo", "tipo": "regra", "medida": "espaco", "limiar": -1.0, "sentido": 1, "lado": "baixo",
+     "origem": "Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário"},
+    {"id": "velez_180_alta", "tipo": "regra", "medida": "v180", "limiar": 1.0, "sentido": 1, "lado": "alto", "origem": "Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico)"},
+    {"id": "velez_180_baixa", "tipo": "regra", "medida": "v180", "limiar": -1.0, "sentido": -1, "lado": "baixo", "origem": "Velez: 180 de baixa a favor das médias (H23: sem vantagem)"},
+    {"id": "velez_elefante", "tipo": "regra", "medida": "eleq", "limiar": 1.0, "sentido": 1, "lado": "alto", "origem": "Velez: vela elefante de alta no quadro de força (H23: sem vantagem)"},
+    {"id": "velez_estreito_rompe", "tipo": "regra", "medida": "estr", "limiar": 1.0, "sentido": 1, "lado": "alto", "origem": "Velez: rompimento do estado estreito (H23: sem vantagem)"},
+]
 
 
 ENTRADAS_REDE = ["r1", "r2", "r4", "r8", "r16", "r32", "vi", "chop", "rsi", "vol", "corpo", "rompe", "hs", "hc", "corvos", "soldados"]
@@ -121,7 +157,7 @@ def opiniao(sinapse, f, rede=None):
     if tipo == "vortice_invertido":
         return 0 if f["chop"] >= 38.2 or f["vi"] == 0 else (-1 if f["vi"] > 0 else 1)
     if tipo == "regra":
-        x, lim = f[sinapse["medida"]], sinapse["limiar"]
+        x, lim = f.get(sinapse["medida"], 0.0), sinapse["limiar"]
         dispara = x >= lim if sinapse["lado"] == "alto" else x <= lim
         return sinapse["sentido"] if dispara else 0
     return 0
@@ -164,6 +200,10 @@ class Cerebro:
         self.rnd = random.Random(semente + len(e.get("diario", [])))
         self.sinapses = e.get("sinapses") or [dict(s, peso=1.0, status="ativa" if s["tipo"] != "regra" or not s["id"].startswith("nova") else "observacao",
                                                    acertos=0, previsoes=0, nascida=None) for s in sinapses_iniciais()]
+        ids = {x["id"] for x in self.sinapses}
+        for nova in SINAPSES_VELEZ:                   # métodos estudados entram em observação: só votam se provarem ao vivo
+            if nova["id"] not in ids:
+                self.sinapses.append(dict(nova, peso=0.0, status="observacao", acertos=0, previsoes=0, nascida=e.get("ultima_t")))
         self.rede = Rede(len(ENTRADAS_REDE), pesos=e.get("rede"))
         self.historico = e.get("historico", [])          # apostas do cérebro: 1 acertou, 0 errou
         self.diario = e.get("diario", [])                # o que ele aprendeu/corrigiu/criou/podou
@@ -362,16 +402,16 @@ def avancar(cb, todas):
     Devolve [(texto, notificar)]."""
     tempos = [x[0] for x in todas]
     if cb.ultima_t is None:
-        inicio = 119                         # cérebro novo: aquece vivendo todas as velas disponíveis
+        inicio = JANELA - 1                  # cérebro novo: aquece vivendo todas as velas disponíveis
     elif cb.ultima_t in tempos:
         inicio = tempos.index(cb.ultima_t) + 1
     else:
         cb.pendente = None                  # pausa maior que a janela: a aposta pendente não tem como ser conferida
         inicio = len(todas) - 1
     eventos = []
-    for j in range(max(inicio, 119), len(todas)):
-        eventos += passo(cb, todas[j - 119:j + 1])
-    perdidas = len(todas) - max(inicio, 119)
+    for j in range(max(inicio, JANELA - 1), len(todas)):
+        eventos += passo(cb, todas[j - JANELA + 1:j + 1])
+    perdidas = len(todas) - max(inicio, JANELA - 1)
     if perdidas > 1:
         cb._anotar(cb.ultima_t, f"⏸ Revivi {perdidas} velas em sequência desde a última vez (pausa ou intervalo da nuvem).")
     return eventos
