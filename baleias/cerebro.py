@@ -481,6 +481,8 @@ class CerebroV2(Cerebro):
             acertou = (op > 0) == bool(subiu)
             s["previsoes"] += 1
             s["acertos"] += acertou
+            for k in ("ew_a", "ew_n", "ew_r"):                  # sinapse que nasceu nesta rodada ainda não tem o placar com esquecimento
+                s.setdefault(k, 0.0)
             s["ew_a"] = LAMBDA * s["ew_a"] + acertou            # esquecimento
             s["ew_n"] = LAMBDA * s["ew_n"] + 1
             recompensa = max(-3.0, min(3.0, op * movimento))      # dopamina: recompensa com o tamanho do movimento
@@ -679,6 +681,53 @@ class CerebroRapido(Cerebro):
             self.passos += 1
             self._revisar(v[-1][0])
         return feitas
+
+
+class CerebroV3(Cerebro):
+    """v1 + a correção do humor do mercado (pedido do dono, 2026-11-10): uma sinapse só ganha mérito pelo que acerta ACIMA do
+    que seguir o humor recente do mercado daria. Nos cérebros da nuvem, todos aquecidos nos mesmos dias de queda, as regras
+    "desce" pareciam sábias só porque tudo caía junto. Roda ao lado do v1 e do v2 (que seguem intactos no teste H20/H21)."""
+
+    _revisar = CerebroRapido._revisar
+    vantagem = staticmethod(CerebroRapido.vantagem)
+
+    def __init__(self, estado=None, semente=37):
+        super().__init__(estado, semente)
+        self.base_sobe = (estado or {}).get("base_sobe", 0.5)
+
+    def exportar(self):
+        return super().exportar() | {"base_sobe": self.base_sobe, "versao": "v3"}
+
+    def decidir(self, t, f, px):
+        self.passos += 1
+        opinioes, soma, total = {}, 0.0, 0.0
+        for s in self.sinapses:
+            if s["status"] == "podada":
+                continue
+            op = opiniao(s, f, self.rede)
+            opinioes[s["id"]] = op
+            if op and s["status"] == "ativa":
+                a = self.vantagem(s)
+                soma += s["peso"] * (0.5 + a if op > 0 else 0.5 - a)
+                total += s["peso"]
+        prob = soma / total if total else 0.5
+        aposta = 1 if prob >= LIMIAR else (-1 if prob <= 1 - LIMIAR else None)
+        self.pendente = {"t": t, "px": px, "opinioes": opinioes, "prob": prob, "aposta": aposta}
+        self.ultima_t = t
+        return self.pendente
+
+    def conferir(self, t, retorno, f_anterior):
+        p, base = self.pendente, self.base_sobe
+        if p:
+            for s in self.sinapses:
+                op = p["opinioes"].get(s["id"], 0)
+                if op:
+                    s.setdefault("esperado", 0.5 * s["previsoes"])
+                    s["esperado"] += base if op > 0 else 1 - base     # quanto acertaria só seguindo o humor do mercado
+        r = super().conferir(t, retorno, f_anterior)
+        if p:
+            self.base_sobe += ((1 if retorno > 0 else 0) - base) / 500   # humor: média móvel de ~500 velas de 15 min (~5 dias)
+        return r
 
 
 class CerebrosPorMoeda:

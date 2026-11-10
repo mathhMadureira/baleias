@@ -52,7 +52,7 @@ def outras_moedas():
         except (OSError, ValueError) as ex:
             print(f"   {par}: sem velas ({type(ex).__name__})")
             continue
-        for nome, classe in (("v1", C.Cerebro), ("v2", C.CerebroV2)):
+        for nome, classe in (("v1", C.Cerebro), ("v2", C.CerebroV2), ("v3", C.CerebroV3)):
             cb, _ = rodar(classe, f"{par}_{nome}.json", v, pasta=pasta)
             r = resumo.setdefault(par, {}).setdefault(nome, {"ops": []})
             ultimo = r["ops"][-1][0] if r["ops"] else 0
@@ -61,7 +61,7 @@ def outras_moedas():
             r["ops"] = r["ops"][-3000:]
             r["passos"], r["ultima_t"] = cb.passos, cb.ultima_t
     arq.write_text(json.dumps(resumo))
-    for nome in ("v1", "v2"):
+    for nome in ("v1", "v2", "v3"):
         ops = [o for x in resumo.values() for o in x.get(nome, {}).get("ops", [])]
         print(f"🧠 Cérebros {nome} nas outras {len(resumo)} moedas: {len(ops)} apostas ao vivo, "
               f"acerto {sum(o[1] > 0 for o in ops) / len(ops) * 100 if ops else 0:.1f}%")
@@ -72,10 +72,11 @@ def main():
     v = velas("BTCUSDT")
     cb, eventos = rodar(C.Cerebro, "cerebro.json", v, inicio_padrao=1794281400000)   # v1: aquecimento local terminou 2026-11-10 03:30 UTC
     cb2, eventos2 = rodar(C.CerebroV2, "cerebro_v2.json", v)
+    cb3, eventos3 = rodar(C.CerebroV3, "cerebro_v3.json", v)
     livro = cb.livro()
     (config.RAIZ / "livro_metodos.json").write_text(json.dumps({"t": time.time(), "metodos": livro}, ensure_ascii=False))
     C.escrever_livro_md(livro, config.RAIZ / "LIVRO_DE_METODOS.md")
-    for nome, c, evs in (("v1", cb, eventos), ("v2", cb2, eventos2)):
+    for nome, c, evs in (("v1", cb, eventos), ("v2", cb2, eventos2), ("v3", cb3, eventos3)):
         r = c.resumo()
         av = r["ao_vivo"]
         print(f"🧠 Cérebro {nome}: ao vivo {av['apostas']} apostas, acerto {av['acerto'] and round(av['acerto'] * 100, 1)}%, "

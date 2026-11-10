@@ -1300,3 +1300,14 @@ class CerebroRapidoHumor(unittest.TestCase):
         self.assertNotEqual(cb.cerebros["AUSDT"].sinapses[0]["acertos"], cb.cerebros["BUSDT"].sinapses[0]["acertos"])
         de_novo = C.CerebrosPorMoeda(json.loads(json.dumps(cb.exportar())))
         self.assertEqual(set(de_novo.cerebros), {"AUSDT", "BUSDT"})
+
+    def test_cerebro_v3_mede_merito_contra_o_humor_do_mercado(self):
+        from baleias import cerebro as C
+        cb = C.CerebroV3(None)
+        cb.base_sobe = 0.3                                              # mercado caindo: 70% das velas descem
+        cb.pendente = {"t": 0, "px": 100.0, "opinioes": {cb.sinapses[0]["id"]: -1}, "prob": 0.5, "aposta": None}
+        antes = cb.sinapses[0].get("esperado", 0.5 * cb.sinapses[0]["previsoes"])
+        cb.conferir(1, -0.01, {k: 0.0 for k in C.caracteristicas([(i, 1.0, 1.0, 1.0, 1.0, 1.0) for i in range(C.JANELA)])})
+        self.assertAlmostEqual(cb.sinapses[0]["esperado"] - antes, 0.7)  # acertar "desce" num dia de queda vale só o que passa de 70%
+        self.assertLess(cb.base_sobe, 0.3)
+        self.assertEqual(json.loads(json.dumps(cb.exportar()))["versao"], "v3")

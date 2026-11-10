@@ -133,9 +133,9 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <div class="mut" style="font-size:12px;margin-top:6px">Prévia contínua com o preço de agora e a vela ainda em formação, feita pelo cérebro próprio de cada moeda (um por moeda, isolado). A entrada de verdade só acontece no fechamento da vela (a cada <span class="ra-iv-txt">1 min</span>), quando o valor esperado depois do custo é positivo. VE = valor esperado em 12 velas, já descontado o custo.</div>
   </div>
   <div class="card" id="sec-cerebro" style="margin-bottom:14px;border-color:#3b82f688">
-    <h3>🧠 Cérebros v1 × v2 — contrato binário de 15 min, um cérebro isolado por moeda (33), rodando na nuvem</h3>
-    <div style="max-height:260px;overflow:auto;margin-bottom:12px"><table id="cm-tab"><thead><tr><th>Moeda</th><th>v1 apostas</th><th>v1 acerto</th><th>v1 resultado</th><th>v2 apostas</th><th>v2 acerto</th><th>v2 resultado</th><th>Última aposta</th></tr></thead><tbody><tr><td colspan="8" class="vazio">carregando…</td></tr></tbody></table></div>
-    <div class="mut" style="font-size:12px;margin:-4px 0 10px">Resultado em % da conta de cada cérebro (2% por aposta, paga 0,96 por acerto). Abaixo, o detalhe do cérebro do BTC.</div>
+    <h3>🧠 Cérebros v1 × v2 × v3 — contrato binário de 15 min, um cérebro isolado por moeda (33), rodando na nuvem</h3>
+    <div style="max-height:260px;overflow:auto;margin-bottom:12px"><table id="cm-tab"><thead><tr><th>Moeda</th><th>v1 apostas</th><th>v1 acerto</th><th>v1 resultado</th><th>v2 apostas</th><th>v2 acerto</th><th>v2 resultado</th><th>v3 apostas</th><th>v3 acerto</th><th>v3 resultado</th><th>Última aposta</th></tr></thead><tbody><tr><td colspan="11" class="vazio">carregando…</td></tr></tbody></table></div>
+    <div class="mut" style="font-size:12px;margin:-4px 0 10px">Resultado em % da conta de cada cérebro (2% por aposta, paga 0,96 por acerto). v3 = v1 + "só ganha mérito quem acerta mais que o humor do mercado" (nasceu em 10/11). Abaixo, o detalhe do cérebro do BTC.</div>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">BTC · aposta agora</div><div class="val num" id="cb-ap">—</div><div class="sub" id="cb-ap-s">—</div></div>
       <div class="kpi"><div class="rot">Acerto do cérebro</div><div class="val num" id="cb-ac">—</div><div class="sub" id="cb-ic">—</div></div>
@@ -886,7 +886,7 @@ async function cicloCerebrosMoedas() {
       `<span class="${cor(x.resultado)}">${pct(x.resultado * 100, 1)}</span>`] : ["0", "—", "—"];
     $("cm-tab").querySelector("tbody").replaceChildren(...d.moedas.map(m => {
       const tr = document.createElement("tr"); const u = (m.v1 && m.v1.ultima) || (m.v2 && m.v2.ultima);
-      tr.innerHTML = `<td><b>${m.moeda}</b></td>` + [...cel(m.v1), ...cel(m.v2)].map(c => `<td>${c}</td>`).join("") +
+      tr.innerHTML = `<td><b>${m.moeda}</b></td>` + [...cel(m.v1), ...cel(m.v2), ...cel(m.v3)].map(c => `<td>${c}</td>`).join("") +
         `<td>${u ? `<span class="chip ${u.ganhou ? "up" : "down"}">${u.lado === "sobe" ? "▲" : "▼"} ${u.ganhou ? "ganhou" : "perdeu"}</span> <span class="mut">${new Date(u.t).toLocaleTimeString("pt-BR").slice(0, 5)}</span>` : '<span class="mut">ainda sem aposta</span>'}</td>`;
       return tr;
     }));
