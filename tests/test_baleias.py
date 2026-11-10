@@ -1128,3 +1128,19 @@ class CerebroV2(unittest.TestCase):
             cb.conferir(1, r, f)
         pv = lambda cb: next(s for s in cb.sinapses if s["id"] == "vortice_invertido")["peso"]
         self.assertGreater(pv(grande), pv(pequeno))
+
+
+class Mesa(unittest.TestCase):
+    def test_regras_da_mesa(self):
+        from baleias import mesa as M
+        dia = 86400 * 20000
+        ruim = M.avaliar("x", [(dia, -0.06), (dia + 60, -0.06)], 2)            # −11,6% num dia: violação
+        self.assertTrue(ruim["violacoes"])
+        self.assertIn("violação", ruim["status"])
+        quebrado = M.avaliar("y", [(dia + k * 86400, -0.09) for k in range(10)], 10)
+        self.assertIn("eliminado", quebrado["status"])
+        bom = M.avaliar("z", [(dia + k * 3600, 0.005) for k in range(30)], 30)
+        self.assertIn("aprovado", bom["status"])
+        self.assertAlmostEqual(bom["conta"], 10 * 1.005 ** 30)
+        novo = M.avaliar("w", [], 0)
+        self.assertEqual((novo["conta"], novo["falta"]["operacoes"]), (10.0, 30))

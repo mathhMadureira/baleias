@@ -96,6 +96,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <div class="marca">BALEIAS <b>TERMINAL</b></div>
   <nav>
     <button data-aba="robo" class="ativo">Robô</button>
+    <button data-aba="mesa">🏦 Mesa proprietária</button>
     <button data-aba="mapa">🗺 Mapa do mercado</button>
     <button data-aba="replay">▶ Replay</button>
     <button data-aba="mercado">Mercado ao vivo</button>
@@ -232,6 +233,18 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   </div>
 </section>
 
+<section class="aba" id="aba-mesa">
+  <div class="card" style="margin-bottom:14px">
+    <h3>🏦 Mesa proprietária — cada robô em teste recebe US$ 10</h3>
+    <div class="regras" id="ms-regras"></div>
+  </div>
+  <div class="card">
+    <h3>Contas dos robôs<span class="dir mut" id="ms-t"></span></h3>
+    <div style="overflow:auto"><table id="ms-tab"><thead><tr><th>Robô</th><th>Conta</th><th>Resultado</th><th>Pior dia</th><th>Queda máx.</th><th>Operações</th><th>Falta p/ aprovar</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+    <div class="mut" style="font-size:12px;margin-top:8px">Robôs que operam em % do próprio capital têm a curva convertida para a escala de US$ 10. Tudo simulado. Dinheiro real só por decisão do dono, para quem passar das duas fases.</div>
+  </div>
+</section>
+
 <section class="aba" id="aba-mapa">
   <div class="kpis">
     <div class="kpi"><div class="rot">Moedas analisadas</div><div class="val num" id="mp-n">—</div><div class="sub" id="mp-t">—</div></div>
@@ -307,6 +320,7 @@ document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
   if (b.dataset.aba === "lab") carregarLab();
   if (b.dataset.aba === "replay") carregarReplay();
   if (b.dataset.aba === "mapa") carregarMapa();
+  if (b.dataset.aba === "mesa") carregarMesa();
   if (b.dataset.aba === "robo") desenharTudo();
 });
 
@@ -587,6 +601,25 @@ $("rp-vel").onchange = () => { if (rpTimer) { pararReplay(); $("rp-play").onclic
 $("rp-zero").onclick = () => zerarReplay();
 let som = false, audio;
 function bip(f) { try { audio = audio || new AudioContext(); const o = audio.createOscillator(), g = audio.createGain(); o.frequency.value = f; g.gain.value = 0.05; o.connect(g).connect(audio.destination); o.start(); o.stop(audio.currentTime + 0.08); } catch (e) {} }
+
+// ---------- mesa proprietária ----------
+async function carregarMesa() {
+  try {
+    const m = await j("/api/mesa"), r = m.regras;
+    $("ms-regras").innerHTML = `<div class="regra"><b>Capital</b>US$ ${fmt(r.conta)} por robô na fase 1.</div><div class="regra"><b>Perda no dia</b>Máx. US$ ${fmt(r.perda_dia)} (10%). Passou disso = violação.</div>` +
+      `<div class="regra"><b>Eliminação</b>Conta abaixo de US$ ${fmt(r.piso)} (−50%).</div><div class="regra"><b>Aprovação</b>≥ ${r.aprova_ops} operações, conta ≥ US$ ${fmt(r.aprova_conta)}, sem violações, queda &lt; ${r.aprova_queda * 100}% → fase 2 (US$ 50).</div>`;
+    $("ms-t").textContent = "atualizado " + new Date(m.t * 1000).toLocaleTimeString("pt-BR");
+    $("ms-tab").querySelector("tbody").replaceChildren(...m.fichas.map(f => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td><b></b><div class="mut" style="font-family:system-ui;font-size:11px"></div></td><td>US$ ${fmt(f.conta)}</td><td class="${cor(f.resultado)}">${f.resultado >= 0 ? "+" : ""}${fmt(f.resultado)}</td>` +
+        `<td class="${cor(f.pior_dia)}">${fmt(f.pior_dia)}</td><td>${pct(f.queda_max * 100)}</td><td>${f.operacoes}</td>` +
+        `<td style="font-family:system-ui;font-size:12px">${f.falta.operacoes ? f.falta.operacoes + " operações" : ""}${f.falta.operacoes && f.falta.ganho_us ? " · " : ""}${f.falta.ganho_us ? "+US$ " + fmt(f.falta.ganho_us) : ""}${!f.falta.operacoes && !f.falta.ganho_us ? "—" : ""}</td><td style="font-family:system-ui"></td>`;
+      tr.querySelector("b").textContent = f.robo; tr.querySelector("div").textContent = f.nota; tr.lastChild.textContent = f.status;
+      return tr;
+    }));
+  } catch (e) {}
+}
+setInterval(() => { if (document.getElementById("aba-mesa").classList.contains("ativa")) carregarMesa(); }, 60000);
 
 // ---------- mapa do mercado ----------
 let mapa = null, mpOrdem = "forca", mpDesc = true;
