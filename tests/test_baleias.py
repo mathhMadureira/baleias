@@ -1272,3 +1272,19 @@ class RobosNoMesmoProcesso(unittest.TestCase):
         f = mesa._cerebro(est, "Cérebro v1", outras, "v1")
         self.assertEqual(f["operacoes"], 10)
         self.assertAlmostEqual(f["conta"], 10 * (1 - 0.06))            # perde no máximo 6% da conta, não 20%
+
+
+class CerebroRapidoHumor(unittest.TestCase):
+    def test_regra_desce_em_dia_de_queda_nao_vira_sabedoria(self):
+        from baleias import cerebro as C
+        s = {"acertos": 70, "previsoes": 100, "esperado": 68.0}
+        self.assertLess(C.CerebroRapido.vantagem(s), 0.02)             # 70% contra 68% do mercado: quase nada
+        self.assertGreater(C.CerebroRapido.vantagem({"acertos": 70, "previsoes": 100, "esperado": 50.0}), 0.1)
+
+    def test_horizonte_em_velas_do_tempo_grafico(self):
+        from baleias import cerebro as C
+        cb = C.CerebroRapido(None)
+        v = [(i * 60_000, 100.0, 101, 99, 100.0 + (i >= 30), 1.0) for i in range(60)]   # velas de 1 min; sobe na vela 30
+        cb.previsoes = [{"m": "X", "t": 20 * 60_000, "px": 100.0, "x": [0.0] * 16, "opinioes": {}, "prob": 0.5}]
+        self.assertEqual(cb.resolver("X", v), 1)                       # conferida 12 velas (12 min) depois, não 1 h depois
+        self.assertEqual(cb.passo_ms, 60_000)

@@ -548,7 +548,7 @@ class CerebroV2(Cerebro):
 
 
 # ---------------- Cérebro do robô rápido: 33 moedas, velas de 5 min, horizonte de 1 h ----------------
-HORIZONTE = 12                     # 12 velas de 5 min = 1 h
+HORIZONTE = 12                     # 12 velas do tempo gráfico (5 min → 1 h; 1 min → 12 min)
 CUSTO_SPOT = 0.002                 # ida e volta no spot (0,1% por lado)
 CUSTO_PERP = 0.001                 # ida e volta no perpétuo simulado (0,05% por lado): permite comprar E vender a descoberto
 
@@ -563,8 +563,46 @@ class CerebroRapido(Cerebro):
         self.previsoes = e.get("previsoes", [])          # pendentes: {m, t, px, x, opinioes, prob}
         self.oportunidades = e.get("oportunidades", [])
 
+        self.base_sobe = e.get("base_sobe", 0.5)          # humor do mercado: fração recente de previsões que terminaram em alta
+        self.passo_ms = e.get("passo_ms")
+
     def exportar(self):
-        return super().exportar() | {"previsoes": self.previsoes[-3000:], "oportunidades": self.oportunidades[:33], "versao": "rapido"}
+        return super().exportar() | {"previsoes": self.previsoes[-3000:], "oportunidades": self.oportunidades[:33], "versao": "rapido",
+                                     "base_sobe": self.base_sobe, "passo_ms": self.passo_ms}
+
+    @staticmethod
+    def vantagem(s):
+        """Acerto ACIMA do que o humor do mercado daria sozinho (encolhido com poucos dados). Num dia em que 68% das velas caem,
+        uma regra "desce" com 70% de acerto vale +2%, não +20%: assim o cérebro não confunde tendência do dia com sabedoria."""
+        n = s["previsoes"]
+        esperado = s.get("esperado", 0.5 * n)
+        return (s["acertos"] - esperado) / (n + 40)
+
+    def _revisar(self, t):
+        """Como no cérebro base, mas promove/poda pelo acerto acima do esperado (o humor do mercado), não acima de 50%."""
+        for s in self.sinapses:
+            a, n = s["acertos"], s["previsoes"]
+            base = s.get("esperado", 0.5 * n) / n if n else 0.5
+            lo, hi = wilson(a, n)
+            if s["status"] == "observacao" and n >= 150:
+                if lo > base:
+                    s["status"], s["peso"] = "ativa", 1.0
+                    self._anotar(t, f"✅ Sinapse {s['id']} PROMOVIDA: {a}/{n} ({a / n:.1%}, IC {lo:.1%}–{hi:.1%}) contra {base:.1%} do mercado.")
+                elif a / n < base - 0.02:
+                    s["status"] = "podada"
+                    self._anotar(t, f"✂ Sinapse {s['id']} PODADA: {a}/{n} ({a / n:.1%}) contra {base:.1%} do mercado.")
+            if s["status"] == "ativa" and s["tipo"] == "regra" and n >= 300 and hi < base:
+                s["status"] = "podada"
+                self._anotar(t, f"✂ Sinapse {s['id']} PODADA depois de {n} previsões: {a / n:.1%} contra {base:.1%} do mercado.")
+        recente = self.historico[-200:]
+        if len(recente) >= 100 and wilson(sum(recente), len(recente))[1] < 0.52 and self.passos % 48 == 0:
+            vivas = [s for s in self.sinapses if s["status"] != "podada"]
+            if len(vivas) < MAX_SINAPSES:
+                for _ in range(2):
+                    nova = nova_sinapse(self.rnd, self.sinapses)
+                    if nova:
+                        self.sinapses.append(dict(nova, peso=0.0, status="observacao", acertos=0, previsoes=0, esperado=0.0, nascida=t))
+                        self._anotar(t, f"🌱 NOVA SINAPSE (rota de teste): {nova['origem']}. Começa em observação.")
 
     def avaliar(self, m, v):
         """Só pensa, não registra: (prob de subir em 1 h, valor esperado, medidas, opiniões). Usado na varredura contínua."""
@@ -576,8 +614,8 @@ class CerebroRapido(Cerebro):
             op = opiniao(s, f, self.rede)
             opinioes[s["id"]] = op
             if op and s["status"] == "ativa":
-                a = (s["acertos"] + 20) / (s["previsoes"] + 40)
-                soma += s["peso"] * (a if op > 0 else 1 - a)
+                a = self.vantagem(s)
+                soma += s["peso"] * (0.5 + a if op > 0 else 0.5 - a)
                 total += s["peso"]
         prob = soma / total if total else 0.5
         mov = 0.8 * f["dp"] * math.sqrt(HORIZONTE)
@@ -596,8 +634,8 @@ class CerebroRapido(Cerebro):
             op = opiniao(s, f, self.rede)
             opinioes[s["id"]] = op
             if op and s["status"] == "ativa":
-                a = (s["acertos"] + 20) / (s["previsoes"] + 40)
-                soma += s["peso"] * (a if op > 0 else 1 - a)
+                a = self.vantagem(s)
+                soma += s["peso"] * (0.5 + a if op > 0 else 0.5 - a)
                 total += s["peso"]
         prob = soma / total if total else 0.5
         movimento = 0.8 * f["dp"] * math.sqrt(HORIZONTE)          # movimento típico em 1 h
@@ -610,9 +648,11 @@ class CerebroRapido(Cerebro):
     def resolver(self, m, v):
         """Confere as previsões da moeda m cuja hora já passou: cada sinapse aprende com o erro; a rede se corrige."""
         fech = {x[0]: x[4] for x in v}
+        if len(v) > 1:
+            self.passo_ms = v[-1][0] - v[-2][0]                # duração da vela (1 min, 5 min...): o horizonte é sempre 12 velas
         restantes, feitas = [], 0
         for p in self.previsoes:
-            alvo = p["t"] + HORIZONTE * 300_000
+            alvo = p["t"] + HORIZONTE * (self.passo_ms or 300_000)
             if p["m"] != m or alvo not in fech:
                 if p["m"] != m or alvo > v[-1][0]:
                     restantes.append(p)
@@ -623,10 +663,13 @@ class CerebroRapido(Cerebro):
                 if not op:
                     continue
                 acertou = (op > 0) == bool(subiu)
+                s.setdefault("esperado", 0.5 * s["previsoes"])
+                s["esperado"] += self.base_sobe if op > 0 else 1 - self.base_sobe   # quanto acertaria só seguindo o humor do mercado
                 s["previsoes"] += 1
                 s["acertos"] += acertou
                 if s["status"] == "ativa":
                     s["peso"] = max(1e-3, min(50.0, s["peso"] * math.exp(-ETA * (0 if acertou else 1) + ETA * 0.5)))
+            self.base_sobe += (subiu - self.base_sobe) / 2000      # média móvel de ~2000 previsões
             self.rede.aprender(p["x"], subiu, taxa=0.005)
             if p["prob"] >= LIMIAR or p["prob"] <= 1 - LIMIAR:      # o que o cérebro "apostaria": vira o histórico dele
                 self.historico.append(1 if (p["prob"] > 0.5) == bool(subiu) else 0)

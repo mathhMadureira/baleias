@@ -534,21 +534,29 @@ class Motor:
         from lab import tartaruga as T
         from . import cerebro as C
         series = {}
-        for m in T.MOEDAS_ROBO:
+        for m in T.MOEDAS_ROBO:                        # 3 páginas de 1000 velas: vários humores de mercado, não só o das últimas horas
+            vs, fim = [], None
             try:
-                with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=1000", timeout=30) as r:
-                    series[m] = [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])) for x in json.load(r) if x[6] < time.time() * 1000]
+                for _ in range(3):
+                    url = f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=1000" + (f"&endTime={fim}" if fim else "")
+                    with urllib.request.urlopen(url, timeout=30) as r:
+                        k = json.load(r)
+                    if not k:
+                        break
+                    vs = [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])) for x in k if x[6] < time.time() * 1000] + vs
+                    fim = k[0][0] - 1
+                    time.sleep(0.05)
             except OSError:
                 continue
-            time.sleep(0.05)
+            series[m] = vs
         tamanho = min(len(v) for v in series.values())
         for i in range(C.JANELA, tamanho):
             for m, v in series.items():
                 janela = v[len(v) - tamanho + max(0, i - C.JANELA - 20):len(v) - tamanho + i + 1]
                 cbr.resolver(m, janela)
                 cbr.observar(m, janela[-C.JANELA:])
-        cbr._anotar(time.time() * 1000, f"🧠 Aquecimento do robô rápido: viveu {tamanho - C.JANELA} velas de 5 min em {len(series)} moedas "
-                                        f"({(tamanho - C.JANELA) * len(series)} previsões conferidas 1 h depois).")
+        cbr._anotar(time.time() * 1000, f"🧠 Aquecimento do robô rápido: viveu {tamanho - C.JANELA} velas de {intervalo} em {len(series)} moedas "
+                                        f"({(tamanho - C.JANELA) * len(series)} previsões conferidas {C.HORIZONTE} velas depois).")
 
     def _cerebro_rapido_passo(self, cbr, dados, precos, e, corretora, ouvir):
         """A cada vela de 5 min: confere as previsões de 1 h atrás, prevê todas as moedas (comprar OU vender a descoberto),
