@@ -329,3 +329,12 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **O que melhorou:** a queda caiu nos dois períodos (no treino, quase pela metade). Expectativa, PF e pior mês melhoraram no teste.
 - **Por que não passou:** o Calmar do teste ficou 0,01 abaixo da base, e o critério pedia Calmar maior nos dois períodos. Não passou, e o robô continua sem teto.
 - **Próximo passo:** a evidência a favor do teto vira candidata a validação **ao vivo**, em paralelo, sem mexer no robô oficial.
+
+## Hipótese 14: reversão probabilística intradiária (pré-registrada em 2026-11-10, antes de rodar)
+
+- **Motivo, da medição física:** a razão de variância é < 1 de 30 min a 1 dia (reversão; z ≈ −2,2 em 1 h e 4 h). Depois de uma queda anormal, parte dela tende a voltar.
+- **Sinal:** em velas de 5 min, para cada uma das 33 moedas, z = retorno da última hora ÷ (desvio dos retornos de 5 min nas últimas 24 h × √12). Compra quando **z ≤ −2,5**.
+- **Saída:** fechamento depois de **12 velas (1 h)** ou **48 velas (4 h)**, medindo as duas. Custo de 0,2% na ida e volta. Uma operação por moeda de cada vez, sem sobreposição.
+- **Dados:** os últimos 60 dias de velas de 5 min (`dados/lab/cripto_5m.json`). **Treino:** primeira metade. **Teste:** segunda metade.
+- **Passa** um horizonte se, nas duas metades, o retorno médio líquido for > 0 **e** o t do teste for > 2, com pelo menos 100 operações em cada metade.
+- **Se passar:** o robô rápido troca para esta regra, com a probabilidade de acerto atualizada ao vivo (Beta bayesiana) e entrada só quando o ganho esperado líquido for > 0. **Se não passar,** registrar o resultado e não usar.
