@@ -152,5 +152,19 @@
   "resultado": "Não passou",
   "numero": "teste −0,35% por sinal",
   "status": "reprovada"
+ },
+ {
+  "id": "H18 Vórtice + CHOP",
+  "pergunta": "Indicadores do artigo do Polymarket (+US$ 319 mil) preveem a próxima vela?",
+  "resultado": "Não: é anti-preditivo",
+  "numero": "acerto 47,7% em 27 mil apostas (2020–2026)",
+  "status": "reprovada"
+ },
+ {
+  "id": "H19 Vórtice invertido",
+  "pergunta": "Apostar contra o Vórtice (descoberto depois dos dados)",
+  "resultado": "Validando ao vivo desde 10/11",
+  "numero": "histórico ~52,3% (15 min); precisa de 300 apostas ao vivo",
+  "status": "andamento"
  }
 ]

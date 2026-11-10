@@ -14,10 +14,12 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 6. **Avisos no celular:** configurar os segredos do Telegram no GitHub (`gh secret set TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID`).
 7. **[feito 2026-11-09] Gráfico diário ao vivo:** a vela do dia se mexer com o preço, como no gráfico de 1 h.
 8. **Fidelidade do teste:** o custo diário de 0,02% (financiamento) não existe no spot; separar spot de perp e incluir escorregamento medido.
-9. **Testes ao vivo para avaliar:** H5 (Gemini, ~300 previsões), H7 (fluxo, 2000 janelas), H2/H3 (tendência e funding).
+9. **Testes ao vivo para avaliar:** H5 (Gemini, ~300 previsões), H7 (fluxo, 2000 janelas), H2/H3 (tendência e funding), **H19 (Vórtice invertido, 300 apostas)**, robô-sombra H13 (teto 6).
 10. **Alerta de falha da nuvem:** se o `robo-diario` falhar, avisar no Telegram (o GitHub também manda e-mail).
 
 ## Feito (recente)
+
+- 2026-11-10: H14–H18 testadas e reprovadas (reversão intradiária, força relativa, sazonalidade com contagem corrigida, funding contrário, Vórtice+CHOP). Mapa do mercado inteiro (~170 moedas) e previsor H19 (Vórtice invertido) ao vivo. Robô rápido em 5 min com teto de perda de US$ 100/dia; robô de funding visível.
 
 - 2026-11-10: monitor caía em ciclo com "database is locked" (o Gemini segurava a gravação durante chamadas de rede de até minutos). Commit antes de cada chamada de rede e conexões esperando 30 s. Também confirmado: depois de pausa da máquina, o motor ao vivo se recupera sozinho.
 - 2026-11-10: conciliação das posições com a corretora ao ligar (modo real).
