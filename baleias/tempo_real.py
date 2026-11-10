@@ -722,79 +722,58 @@ class Motor:
             time.sleep(30)
 
     def _cerebro(self):
-        """Cérebro de day trade (baleias/cerebro.py) ao vivo no BTC 15 min. Aquece vivendo as últimas ~2000 velas em sequência
-        (prevê antes de ver cada resultado), depois segue ao vivo. Teto de perda de US$ 100 por dia."""
+        """Cérebro de day trade. Com CEREBRO_NUVEM=1 (padrão), quem pensa é o GitHub Actions a cada 15 min e aqui só se espelha o
+        estado (ramo `estado`). Sem isso, roda aqui mesmo (baleias/cerebro.py), com aquecimento e revivendo pausas."""
+        import subprocess
         from lab import tartaruga as T
         from . import cerebro as C
         arq = config.RAIZ / "cerebro.json"
-        estado = json.loads(arq.read_text()) if arq.exists() else None
-        cb = C.Cerebro(estado)
+        nuvem = os.environ.get("CEREBRO_NUVEM", "1") == "1"
+        repo = str(config.RAIZ.parent)
 
-        def velas(limite=None, fim=None):
-            url = f"{T.DADOS}/api/v3/klines?symbol=BTCUSDT&interval=15m&limit={limite or 1000}" + (f"&endTime={fim}" if fim else "")
+        def velas(limite=1000, fim=None):
+            url = f"{T.DADOS}/api/v3/klines?symbol=BTCUSDT&interval=15m&limit={limite}" + (f"&endTime={fim}" if fim else "")
             with urllib.request.urlopen(url, timeout=30) as r:
                 return [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])) for x in json.load(r) if x[6] < time.time() * 1000]
 
-        def passo(v, ao_vivo):
-            f = C.caracteristicas(v)
-            t, px = v[-1][0], v[-1][4]
-            if cb.pendente and cb.pendente["t"] < t:
-                r = math.log(px / cb.pendente["px"])
-                res = cb.conferir(t, r, cb.pendente["f"])
-                if ao_vivo and res:
-                    self.evento({"tipo": "cerebro", "notificar": False,
-                                 "texto": f"🧠 Cérebro {'acertou ✓' if res['acertou'] else 'errou ✗'}: {res['ganho'] * 100:+.3f}% | capital US$ {cb.capital:,.2f}"})
-            hoje = time.strftime("%Y-%m-%d", time.gmtime(t / 1000))
-            perda_hoje = sum((o["capital"] - o["capital"] / (1 + o["liquido"])) for o in cb.operacoes
-                             if time.strftime("%Y-%m-%d", time.gmtime(o["t"] / 1000)) == hoje)
-            p = cb.decidir(t, f, px)
-            p["f"] = f
-            if perda_hoje <= -100 and p.get("aposta"):
-                p["aposta"] = None
-                if getattr(cb, "dia_teto", None) != hoje:          # avisa uma vez por dia
-                    cb.dia_teto = hoje
-                    cb._anotar(t, f"🛑 Teto de perda do dia (US$ {perda_hoje:,.2f}): sem apostas até 00:00 UTC.")
-            if ao_vivo and p.get("aposta"):
-                self.evento({"tipo": "cerebro", "notificar": True,
-                             "texto": f"🧠 Cérebro aposta {'▲ SOBE' if p['aposta'] > 0 else '▼ DESCE'} no BTC (prob. {p['prob']:.1%}) a {px:,.1f}, por 15 min"})
+        def publicar(cb):
+            livro = cb.livro()
+            tmp = (config.RAIZ / "livro_metodos.json").with_suffix(".tmp")
+            tmp.write_text(json.dumps({"t": time.time(), "metodos": livro}, ensure_ascii=False))
+            tmp.replace(config.RAIZ / "livro_metodos.json")
+            C.escrever_livro_md(livro, config.RAIZ / "LIVRO_DE_METODOS.md")
+            with self.trava:
+                self.cerebro = cb.resumo() | {"livro": livro, "onde": "nuvem (GitHub Actions, a cada 15 min)" if nuvem else "esta máquina"}
 
-        if not cb.passos:                                   # aquecimento: vive as últimas ~2000 velas em sequência
-            hist = velas(1000, int(time.time() * 1000) - 1000 * 900_000) + velas(1000)
-            hist = sorted({x[0]: x for x in hist}.values())
-            for i in range(120, len(hist)):
-                passo(hist[i - 119:i + 1], False)
-            cb._anotar(cb.ultima_t, f"🧠 Aquecimento: viveu {len(hist) - 120} velas de 15 min (≈{(len(hist) - 120) / 96:.0f} dias), prevendo cada uma antes de ver.")
-        visto = len(cb.diario)
+        visto = None
         while True:
             try:
-                v = velas(1000)
-                if v and v[-1][0] != cb.ultima_t:
-                    tempos = [x[0] for x in v]
-                    if cb.ultima_t in tempos and tempos.index(cb.ultima_t) < len(v) - 2:
-                        # máquina esteve parada: revive em sequência as velas perdidas (sem avisar), depois segue ao vivo
-                        perdidas = range(tempos.index(cb.ultima_t) + 1, len(v) - 1)
-                        for j in perdidas:
-                            passo(v[max(0, j - 119):j + 1], False)
-                        cb._anotar(cb.ultima_t, f"⏸ Máquina esteve parada: revivi {len(perdidas)} velas perdidas em sequência.")
-                    elif cb.ultima_t not in tempos:
-                        cb.pendente = None            # pausa maior que a janela: a aposta pendente não tem como ser conferida
-                    passo(v[-120:], True)
-                    for d in cb.diario[visto:]:
-                        if any(m in d["texto"] for m in ("NOVA SINAPSE", "PROMOVIDA", "PODADA", "Teto")):
-                            self.evento({"tipo": "cerebro", "notificar": True, "texto": d["texto"]})
-                    visto = len(cb.diario)
-                    tmp = arq.with_suffix(".tmp")
-                    tmp.write_text(json.dumps(cb.exportar()))
-                    tmp.replace(arq)
-                livro = cb.livro()                   # o que funciona fica gravado para os outros robôs aprenderem
-                tmp = (config.RAIZ / "livro_metodos.json").with_suffix(".tmp")
-                tmp.write_text(json.dumps({"t": time.time(), "metodos": livro}, ensure_ascii=False))
-                tmp.replace(config.RAIZ / "livro_metodos.json")
-                C.escrever_livro_md(livro, config.RAIZ / "LIVRO_DE_METODOS.md")
-                with self.trava:
-                    self.cerebro = cb.resumo() | {"livro": livro}
+                if nuvem:
+                    subprocess.run(["git", "-C", repo, "fetch", "-q", "origin", "estado"], timeout=60, capture_output=True)
+                    r = subprocess.run(["git", "-C", repo, "show", "origin/estado:dados/cerebro.json"], timeout=60, capture_output=True, text=True)
+                    if r.returncode == 0 and r.stdout:
+                        cb = C.Cerebro(json.loads(r.stdout))
+                        if visto is not None:
+                            for d in cb.diario[visto:]:
+                                if any(m in d["texto"] for m in ("NOVA SINAPSE", "PROMOVIDA", "PODADA", "Teto")):
+                                    self.evento({"tipo": "cerebro", "notificar": True, "texto": d["texto"]})
+                        visto = len(cb.diario)
+                        publicar(cb)
+                    self.fonte("cerebro", True)
+                    time.sleep(120)
+                    continue
+                cb = C.Cerebro(json.loads(arq.read_text()) if arq.exists() else None)
+                if not cb.passos:
+                    hist = sorted({x[0]: x for x in velas(1000, int(time.time() * 1000) - 1000 * 900_000) + velas(1000)}.values())
+                    C.avancar(cb, hist)
+                for texto, notificar in C.avancar(cb, velas(1000)):
+                    self.evento({"tipo": "cerebro", "notificar": notificar, "texto": texto})
+                tmp = arq.with_suffix(".tmp")
+                tmp.write_text(json.dumps(cb.exportar()))
+                tmp.replace(arq)
+                publicar(cb)
                 self.fonte("cerebro", True)
-            except OSError as ex:
+            except (OSError, ValueError, subprocess.SubprocessError) as ex:
                 self.fonte("cerebro", False, f"{type(ex).__name__}")
             time.sleep(20)
 

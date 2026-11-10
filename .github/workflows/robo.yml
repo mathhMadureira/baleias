@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: robo
+  group: estado          # um fluxo de cada vez grava no ramo estado
   cancel-in-progress: false
 
 jobs:
@@ -30,15 +30,11 @@ jobs:
       - name: Testes
         run: python -m unittest tests.test_baleias
 
-      - name: Buscar o estado (ramo estado)
+      - name: Buscar o estado (ramo estado, sem apagar o que os outros fluxos gravaram)
         run: |
-          git fetch origin estado || true
-          mkdir -p estado/dados
-          if git rev-parse --verify -q origin/estado >/dev/null; then
-            git --work-tree=estado checkout origin/estado -- dados || true
-            git reset -q
-          fi
-          ls -la estado/dados || true
+          git fetch origin estado
+          git worktree add estado origin/estado
+          cd estado && git switch -q -c trabalho
 
       - name: Rodada do dia
         env:
@@ -65,15 +61,14 @@ jobs:
       - name: Guardar o estado
         run: |
           cd estado
-          git init -q
-          git checkout -q -b estado
           git config user.name "robo-baleias"
           git config user.email "robo-baleias@users.noreply.github.com"
           for f in dados/robo_tartaruga.json dados/robo_eventos.jsonl dados/teto6/robo_tartaruga.json dados/teto6/robo_eventos.jsonl; do
             [ -f "$f" ] && git add "$f"
           done
-          git commit -q -m "estado $(date -u +%F)"
-          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" estado:estado
+          git commit -q -m "robô diário $(date -u +%F)" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:estado && exit 0; git fetch -q origin estado && git rebase -q origin/estado; done
+          exit 1
 
       - name: Avisar no Telegram
         if: always()

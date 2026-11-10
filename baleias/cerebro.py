@@ -315,3 +315,51 @@ def escrever_livro_md(livro, caminho):
         ic = f"{m['ic'][0]:.1%}–{m['ic'][1]:.1%}" if m["ic"] else "—"
         linhas.append(f"| {m['id']} | {m['classe']} | {ac} | {m['previsoes']} | {ic} | {m['origem']} |")
     caminho.write_text("\n".join(linhas) + "\n")
+
+
+# ---------------- passo a passo (o mesmo na nuvem e no painel) ----------------
+def perda_do_dia(cb, t_ms):
+    hoje = __import__("time").strftime("%Y-%m-%d", __import__("time").gmtime(t_ms / 1000))
+    return sum(o["capital"] - o["capital"] / (1 + o["liquido"]) for o in cb.operacoes
+               if __import__("time").strftime("%Y-%m-%d", __import__("time").gmtime(o["t"] / 1000)) == hoje), hoje
+
+
+def passo(cb, v, teto=100.0):
+    """v: velas fechadas (t, o, h, l, c, vol), a última é a nova. Confere a aposta pendente e decide a próxima.
+    Devolve [(texto, notificar)] dos eventos."""
+    eventos = []
+    f = caracteristicas(v)
+    t, px = v[-1][0], v[-1][4]
+    if cb.pendente and cb.pendente["t"] < t:
+        res = cb.conferir(t, math.log(px / cb.pendente["px"]), cb.pendente["f"])
+        if res:
+            eventos.append((f"🧠 Cérebro {'acertou ✓' if res['acertou'] else 'errou ✗'}: {res['ganho'] * 100:+.2f}% do capital | US$ {cb.capital:,.2f}", False))
+    perda, hoje = perda_do_dia(cb, t)
+    p = cb.decidir(t, f, px)
+    p["f"] = f
+    if perda <= -teto and p.get("aposta"):
+        p["aposta"] = None
+        if getattr(cb, "dia_teto", None) != hoje:
+            cb.dia_teto = hoje
+            cb._anotar(t, f"🛑 Teto de perda do dia (US$ {perda:,.2f}): sem apostas até 00:00 UTC.")
+    if p.get("aposta"):
+        eventos.append((f"🧠 Cérebro aposta {'▲ SOBE' if p['aposta'] > 0 else '▼ DESCE'} no BTC (prob. {p['prob']:.1%}) a {px:,.1f}, por 15 min", True))
+    return eventos
+
+
+def avancar(cb, todas):
+    """todas: velas fechadas em ordem (≥ 120). Processa em sequência todas as que vêm depois de cb.ultima_t (revive pausas).
+    Devolve [(texto, notificar)]."""
+    tempos = [x[0] for x in todas]
+    if cb.ultima_t in tempos:
+        inicio = tempos.index(cb.ultima_t) + 1
+    else:
+        cb.pendente = None                  # pausa maior que a janela: a aposta pendente não tem como ser conferida
+        inicio = len(todas) - 1
+    eventos = []
+    for j in range(max(inicio, 119), len(todas)):
+        eventos += passo(cb, todas[j - 119:j + 1])
+    perdidas = len(todas) - max(inicio, 119)
+    if perdidas > 1:
+        cb._anotar(cb.ultima_t, f"⏸ Revivi {perdidas} velas em sequência desde a última vez (pausa ou intervalo da nuvem).")
+    return eventos

@@ -1,0 +1,60 @@
+# Cérebro de day trade na nuvem do GitHub (repositório público = minutos ilimitados), a cada 15 min.
+# Vive as velas de 15 min do BTC que ainda não viu (revive atrasos), aprende com o erro, salva o estado no ramo `estado`.
+name: cerebro
+
+on:
+  schedule:
+    - cron: "2,17,32,47 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: estado
+  cancel-in-progress: false
+
+jobs:
+  pensar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Buscar o estado
+        run: |
+          git fetch origin estado
+          git worktree add estado origin/estado
+          cd estado && git switch -q -c trabalho
+
+      - name: Pensar
+        env:
+          BALEIAS_DADOS: ${{ github.workspace }}/estado/dados
+          BINANCE_DADOS: https://data-api.binance.vision
+        run: |
+          set -o pipefail
+          python -m executor.cerebro_nuvem | tee resumo.txt
+          { echo '```'; cat resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guardar o estado
+        run: |
+          cd estado
+          git config user.name "cerebro-baleias"
+          git config user.email "cerebro-baleias@users.noreply.github.com"
+          for f in dados/cerebro.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md; do [ -f "$f" ] && git add "$f"; done
+          git commit -q -m "cérebro $(date -u +%FT%H:%M)" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:estado && exit 0; git fetch -q origin estado && git rebase -q origin/estado; done
+          exit 1
+
+      - name: Avisar apostas no Telegram
+        if: always()
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          [ -z "$TOKEN" ] || [ -z "$CHAT" ] || [ ! -f estado/avisos.txt ] && exit 0
+          curl -s -o /dev/null "https://api.telegram.org/bot${TOKEN}/sendMessage" --data-urlencode "chat_id=${CHAT}" --data-urlencode "text@estado/avisos.txt"
