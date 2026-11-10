@@ -7,14 +7,18 @@
 - NOVA ROTA: se o acerto do cérebro nas últimas 200 apostas ficar abaixo de 50% (limite superior de Wilson < 52%), ele cria
   sinapses novas (indicador × prazo × limiar × sentido sorteados de uma gramática). Nascem em OBSERVAÇÃO (sem voto) e só ganham
   voto com ≥ 150 previsões e limite inferior de Wilson > 50%; com 150 e acerto < 48%, são podadas.
-- DECISÃO: opera só se a probabilidade ponderada der valor esperado positivo depois do custo.
+- DECISÃO: contrato binário simulado (paga 0,51, recebe 1 se acertar). A probabilidade vem do acerto real de cada sinapse que
+  opinou (encolhido para 50% quando há poucos dados), ponderado pelo peso de voto. Aposta só com ≥ 53% para um lado.
+  Por que binário: num contrato linear, 15 min mexem ~0,16% e o custo é ~0,09% → precisaria acertar ~78%. No binário, ~51%.
 Só biblioteca padrão (roda no painel, sem numpy).
 """
 import json
 import math
 import random
 
-CUSTO = 0.0009            # ida e volta no perpétuo (0,045% por lado na Hyperliquid)
+PRECO = 0.51              # contrato binário Sobe/Desce de 15 min: paga 0,51 para receber 1 se acertar (1 centavo de spread)
+APOSTA = 0.02             # 2% do capital por aposta
+LIMIAR = 0.53             # só aposta com probabilidade calibrada ≥ 53% para um lado (equilíbrio ≈ 51%)
 ETA = 0.08                # taxa de aprendizado do Hedge
 MAX_SINAPSES = 24
 
@@ -198,10 +202,10 @@ class Cerebro:
         # a rede neural corrige os próprios pesos com o resultado real
         self.rede.aprender(vetor(f_anterior), subiu)
         resultado = None
-        if p.get("aposta"):
+        if p.get("aposta") and retorno != 0:
             acertou = (p["aposta"] > 0) == bool(subiu)
             self.historico.append(1 if acertou else 0)
-            ganho = p["aposta"] * retorno - CUSTO
+            ganho = APOSTA * ((1 / PRECO - 1) if acertou else -1.0)      # fração do capital
             self.capital *= 1 + ganho
             self.operacoes.append({"t": p["t"], "aposta": p["aposta"], "prob": p["prob"], "retorno": retorno, "liquido": ganho, "capital": self.capital})
             resultado = {"acertou": acertou, "ganho": ganho}
@@ -238,7 +242,7 @@ class Cerebro:
                         self._anotar(t, f"🌱 NOVA SINAPSE (rota de teste): {nova['origem']}. Começa em observação.")
 
     def decidir(self, t, f, px):
-        """Vela fechou: cada sinapse opina; o cérebro aposta só se o valor esperado passar do custo."""
+        """Vela fechou: cada sinapse opina; a probabilidade é o acerto real de cada uma (encolhido), ponderado pelo peso."""
         self.passos += 1
         opinioes, soma, total = {}, 0.0, 0.0
         for s in self.sinapses:
@@ -247,23 +251,15 @@ class Cerebro:
             op = opiniao(s, f, self.rede)
             opinioes[s["id"]] = op
             if op and s["status"] == "ativa":
-                soma += s["peso"] * op
+                acerto = (s["acertos"] + 20) / (s["previsoes"] + 40)        # encolhe para 50% com poucos dados
+                p_sobe = acerto if op > 0 else 1 - acerto
+                soma += s["peso"] * p_sobe
                 total += s["peso"]
-        prob = 0.5 + 0.5 * (soma / total) * self._confianca() if total else 0.5
-        movimento = f["dp"]            # tamanho típico de uma vela (desvio dos retornos)
-        ev = abs(2 * prob - 1) * movimento * 0.8 - CUSTO
-        aposta = (1 if prob > 0.5 else -1) if ev > 0 else 0
-        self.pendente = {"t": t, "px": px, "opinioes": opinioes, "prob": prob, "aposta": aposta or None}
+        prob = soma / total if total else 0.5
+        aposta = 1 if prob >= LIMIAR else (-1 if prob <= 1 - LIMIAR else None)
+        self.pendente = {"t": t, "px": px, "opinioes": opinioes, "prob": prob, "aposta": aposta}
         self.ultima_t = t
         return self.pendente
-
-    def _confianca(self):
-        """Encolhe a probabilidade pelo que o próprio cérebro já provou: sem histórico, quase não aposta."""
-        h = self.historico[-300:]
-        if len(h) < 30:
-            return 0.25
-        lo, _ = wilson(sum(h), len(h))
-        return max(0.1, min(1.0, 0.5 + (lo - 0.5) * 10))
 
     def resumo(self):
         h = self.historico
