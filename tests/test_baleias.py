@@ -1288,3 +1288,15 @@ class CerebroRapidoHumor(unittest.TestCase):
         cb.previsoes = [{"m": "X", "t": 20 * 60_000, "px": 100.0, "x": [0.0] * 16, "opinioes": {}, "prob": 0.5}]
         self.assertEqual(cb.resolver("X", v), 1)                       # conferida 12 velas (12 min) depois, não 1 h depois
         self.assertEqual(cb.passo_ms, 60_000)
+
+    def test_cada_moeda_tem_cerebro_isolado(self):
+        from baleias import cerebro as C
+        cb = C.CerebrosPorMoeda(None)
+        v = [(i * 60_000, 100.0, 101, 99, 100.0 + (i >= 30), 1.0) for i in range(60)]
+        cb.resolver("AUSDT", v)
+        cb.resolver("BUSDT", v)
+        self.assertIsNot(cb.cerebros["AUSDT"], cb.cerebros["BUSDT"])
+        cb.cerebros["AUSDT"].sinapses[0]["acertos"] += 99
+        self.assertNotEqual(cb.cerebros["AUSDT"].sinapses[0]["acertos"], cb.cerebros["BUSDT"].sinapses[0]["acertos"])
+        de_novo = C.CerebrosPorMoeda(json.loads(json.dumps(cb.exportar())))
+        self.assertEqual(set(de_novo.cerebros), {"AUSDT", "BUSDT"})

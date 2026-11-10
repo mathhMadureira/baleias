@@ -627,10 +627,10 @@ class Motor:
         X.ouvinte = ouvir                       # neste processo o tartaruga_exec só é usado pelo robô rápido
         dados = {}
         modo = os.environ.get("ROBO_RAPIDO_MODO", "cerebro")   # "cerebro" (padrão) ou "tartaruga" (rompimento puro)
-        cbr, arq_cbr = None, config.RAIZ / ("cerebro_rapido.json" if intervalo == "5m" else f"cerebro_rapido_{intervalo}.json")   # um cérebro por tempo gráfico
+        cbr, arq_cbr = None, config.RAIZ / f"cerebro_rapido_{intervalo}_moedas.json"   # um cérebro isolado por moeda e por tempo gráfico
         if modo == "cerebro":
             from . import cerebro as C
-            cbr = C.CerebroRapido(json.loads(arq_cbr.read_text()) if arq_cbr.exists() else None)
+            cbr = C.CerebrosPorMoeda(json.loads(arq_cbr.read_text()) if arq_cbr.exists() else None)
             self._cbr = cbr
             if not cbr.passos:
                 self._aquecer_cerebro_rapido(cbr, intervalo)
@@ -712,7 +712,8 @@ class Motor:
                                                        "acerto": (sum(cbr.historico[-500:]) / len(cbr.historico[-500:])) if cbr.historico else None,
                                                        "n": len(cbr.historico),
                                                        "sinapses": sum(1 for x in cbr.sinapses if x["status"] == "ativa"),
-                                                       "rede": next(({"acertos": x["acertos"], "previsoes": x["previsoes"]} for x in cbr.sinapses if x["id"] == "rede_neural"), None),
+                                                       "rede": {"acertos": sum(x["acertos"] for x in cbr.sinapses if x["id"] == "rede_neural"),
+                                                                "previsoes": sum(x["previsoes"] for x in cbr.sinapses if x["id"] == "rede_neural")},
                                                        "diario": cbr.diario[-6:][::-1]}}
             self.fonte("rapido", True)
             time.sleep(5)

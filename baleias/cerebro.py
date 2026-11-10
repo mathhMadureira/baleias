@@ -681,6 +681,56 @@ class CerebroRapido(Cerebro):
         return feitas
 
 
+class CerebrosPorMoeda:
+    """Pedido do dono: análise personalizada e isolada para cada moeda. Um CerebroRapido inteiro (sinapses, rede neural, humor do
+    mercado, criação e poda) por moeda; nenhuma moeda aprende com o que aconteceu nas outras. Mesma interface do CerebroRapido."""
+
+    def __init__(self, estado=None):
+        e = estado or {}
+        self.cerebros = {m: CerebroRapido(x, semente=31 + i) for i, (m, x) in enumerate(sorted(e.get("moedas", {}).items()))}
+        self.oportunidades = e.get("oportunidades", [])
+        self._diario = e.get("diario", [])
+
+    def _de(self, m):
+        if m not in self.cerebros:
+            self.cerebros[m] = CerebroRapido(None, semente=31 + len(self.cerebros))
+        return self.cerebros[m]
+
+    def resolver(self, m, v):
+        return self._de(m).resolver(m, v)
+
+    def observar(self, m, v):
+        return self._de(m).observar(m, v)
+
+    def avaliar(self, m, v):
+        return self._de(m).avaliar(m, v)
+
+    def _anotar(self, t, texto):
+        self._diario.append({"t": t, "texto": texto})
+
+    @property
+    def passos(self):
+        return sum(c.passos for c in self.cerebros.values())
+
+    @property
+    def historico(self):
+        return [h for c in self.cerebros.values() for h in c.historico[-200:]]
+
+    @property
+    def sinapses(self):
+        return [s for c in self.cerebros.values() for s in c.sinapses]
+
+    @property
+    def diario(self):
+        """Diário comum + o de cada moeda (com o nome dela na frente), em ordem de tempo."""
+        todos = list(self._diario) + [{"t": d["t"], "texto": f"[{m[:-4]}] {d['texto']}"} for m, c in self.cerebros.items() for d in c.diario[-20:]]
+        return sorted(todos, key=lambda d: d["t"])[-200:]
+
+    def exportar(self):
+        return {"moedas": {m: c.exportar() for m, c in self.cerebros.items()}, "oportunidades": self.oportunidades[:33],
+                "diario": self._diario[-200:], "versao": "por_moeda"}
+
+
 # ---------------- autoconhecimento: o robô estuda as próprias operações ----------------
 FAIXAS = [(0.5, 0.55), (0.55, 0.60), (0.60, 0.65), (0.65, 1.01)]
 
