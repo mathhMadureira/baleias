@@ -1408,3 +1408,20 @@ class MineradorNuvem(unittest.TestCase):
         self.assertEqual(f["motivo"], "fim da vela seguinte")
         self.assertAlmostEqual(f["resultado_usd"], 5 * (99.5 / float(k[-1][4]) - 1) - 0.005)
         self.assertAlmostEqual(e["caixa"], 10.0 + f["resultado_usd"])
+
+
+class UmaReguaSo(unittest.TestCase):
+    def test_mesa_e_lucros_realizados_contam_as_mesmas_apostas_do_v3(self):
+        from unittest import mock
+        from baleias import mesa
+        ini = mesa.DESAFIO_INICIO
+        vela_antes, vela_depois = (ini - 1200) * 1000, (ini + 600) * 1000     # sinal antes do início (aposta feita antes) e depois
+        btc = {"inicio_ao_vivo": 1, "operacoes": [{"t": vela_antes, "liquido": 0.02, "aposta": 1}, {"t": vela_depois, "liquido": -0.02, "aposta": 1}]}
+        mesa._v3_ops.update(t=0)
+        with mock.patch.object(mesa, "_git_json", lambda c: btc if c.endswith("cerebro_v3.json") else {}), \
+             mock.patch.object(mesa, "_buscar_estado"), mock.patch.object(mesa, "config") as cfg:
+            cfg.RAIZ = pathlib.Path(__import__("tempfile").mkdtemp())
+            r = mesa.realizados()
+            f = mesa._cerebro(btc, "Cérebro v3", {}, "v3")
+        self.assertAlmostEqual(r["totais"]["🧠 Cérebro v3"]["lucro"], -0.2)          # só a aposta feita depois do início
+        self.assertAlmostEqual(f["desafio"]["carteira"] - 10, -0.2)

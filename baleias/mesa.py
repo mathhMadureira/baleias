@@ -106,7 +106,7 @@ def _cerebro(estado, nome, outras=None, versao="v1"):
     for t in sorted(por_vela):
         total = len(por_vela[t]) * 0.02                                 # cada aposta é 2% da conta (aposta = ±1 é só o lado)
         escala = min(1.0, EXPOSICAO_VELA / total) if total else 1.0      # moedas andam juntas: não apostar 33 vezes 2% na mesma vela
-        eventos.append((t / 1000, sum(liq for liq, _ in por_vela[t]) * escala))
+        eventos.append((t / 1000 + 900, sum(liq for liq, _ in por_vela[t]) * escala))   # hora em que a aposta é feita (fim da vela do sinal)
     moedas = 1 + len(outras or {})
     return avaliar(nome, eventos, len(ops), ini and time.strftime("%Y-%m-%d", time.gmtime(ini / 1000)),
                    f"contrato binário de 15 min em {moedas} moedas, 2% por aposta e no máximo 6% da conta por vela; só apostas ao vivo")
@@ -244,9 +244,9 @@ def realizados():
         por_vela[o[1]] = por_vela.get(o[1], 0) + 1
     for moeda, t, liquido, aposta in _v3_ops["ops"]:
         escala = min(1.0, EXPOSICAO_VELA / (por_vela[t] * 0.02))           # o mesmo limite da mesa: no máximo 6% da conta por vela
-        saida.append({"robo": "🧠 Cérebro v3", "t": t / 1000 + 1800, "moeda": moeda, "lado": "compra" if aposta > 0 else "venda",
+        saida.append({"robo": "🧠 Cérebro v3", "t": t / 1000 + 1800, "t_entrada": t / 1000 + 900, "moeda": moeda, "lado": "compra" if aposta > 0 else "venda",
                       "resultado": liquido * CONTA * escala, "motivo": "aposta de 15 min " + ("ganha" if liquido > 0 else "perdida")})
-    saida = [x for x in saida if x["t"] >= DESAFIO_INICIO]       # uma régua só: o que cada carteira fez desde o início do desafio
+    saida = [x for x in saida if x.get("t_entrada", x["t"]) >= DESAFIO_INICIO]   # a mesma régua da mesa: o que cada carteira fez desde o início do desafio
     saida.sort(key=lambda x: -x["t"])
     hoje = time.strftime("%Y-%m-%d", time.gmtime())
     totais = {}
