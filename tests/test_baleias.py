@@ -1319,3 +1319,15 @@ class FreioDeCorrelacao(unittest.TestCase):
         abertas = {"AUSDT": {"lado": "venda"}, "BUSDT": {"lado": "venda"}, "CUSDT": {"lado": "compra"}}
         self.assertTrue(R.lado_cheio(abertas, "venda"))
         self.assertFalse(R.lado_cheio(abertas, "compra"))
+
+    def test_scalper_le_as_apostas_do_v3(self):
+        from unittest import mock
+        from baleias import mesa
+        btc = {"pendente": {"t": 1000, "px": 100.0, "prob": 0.55, "aposta": 1}}
+        outras = {"ETHUSDT": {"v3": {"pendente": {"t": 1000, "px": 10.0, "prob": 0.45, "aposta": -1}}},
+                  "SOLUSDT": {"v3": {"pendente": {"t": 1000, "px": 5.0, "prob": 0.5, "aposta": None}}}}
+        mesa._sinais.update(t=0)
+        with mock.patch.object(mesa, "_git_json", lambda c: btc if c.endswith("cerebro_v3.json") else outras), \
+             mock.patch.object(mesa.subprocess, "run"):
+            s = {x["par"]: x["lado"] for x in mesa.sinais_v3()}
+        self.assertEqual(s, {"BTCUSDT": "compra", "ETHUSDT": "venda"})   # SOL não apostou

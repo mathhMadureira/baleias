@@ -135,6 +135,8 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <div class="card" id="sec-cerebro" style="margin-bottom:14px;border-color:#3b82f688">
     <h3>🧠 Cérebros v1 × v2 × v3 — contrato binário de 15 min, um cérebro isolado por moeda (33), rodando na nuvem</h3>
     <div style="max-height:260px;overflow:auto;margin-bottom:12px"><table id="cm-tab"><thead><tr><th>Moeda</th><th>v1 apostas</th><th>v1 acerto</th><th>v1 resultado</th><th>v2 apostas</th><th>v2 acerto</th><th>v2 resultado</th><th>v3 apostas</th><th>v3 acerto</th><th>v3 resultado</th><th>Última aposta</th></tr></thead><tbody><tr><td colspan="11" class="vazio">carregando…</td></tr></tbody></table></div>
+    <b style="font-size:12px;color:var(--mut)">💵 LUCROS E PERDAS REALIZADOS — últimas apostas fechadas do Cérebro v3 (conta de US$ 10, aposta de US$ 0,20)</b>
+    <div id="cm-v3" style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px"></div>
     <div class="mut" style="font-size:12px;margin:-4px 0 10px">Resultado em % da conta de cada cérebro (2% por aposta, paga 0,96 por acerto). v3 = v1 + "só ganha mérito quem acerta mais que o humor do mercado" (nasceu em 10/11). Abaixo, o detalhe do cérebro do BTC.</div>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">BTC · aposta agora</div><div class="val num" id="cb-ap">—</div><div class="sub" id="cb-ap-s">—</div></div>
@@ -177,13 +179,13 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <div class="mut" style="font-size:12px;margin-top:8px">A cada vela fechada, o cérebro de cada moeda (rede neural + sinapses, isolado das outras moedas) prevê as próximas 12 velas; uma regra só ganha voto se acertar mais do que o próprio humor do mercado. Entra comprado OU vendido quando o valor esperado passa do custo (0,1% ida e volta). Perpétuo simulado 5×: US$ 5 por operação usando US$ 1 de margem; no máximo 2 posições no mesmo lado (as moedas andam juntas); stop 2N; sai em no máximo 12 velas. Estuda as próprias operações (calibração, lado, moedas). Para no dia se perder US$ 1, para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Nenhum dinheiro real.</div>
   </div>
   <div class="card" id="sec-scalper" style="margin-bottom:14px;border-color:#ea394355">
-    <h3>✂ Scalper — mesmas entradas dos cérebros, alvo +1,0%, stop −0,5%, no máximo 30 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
+    <h3>✂ Scalper — segue as apostas do Cérebro v3: realiza o lucro em +0,5%, corta em −0,5%, sai no fim da vela de 15 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="sc-pat">—</div><div class="sub" id="sc-ret">—</div></div>
       <div class="kpi"><div class="rot">Resultado hoje</div><div class="val num" id="sc-hoje">—</div><div class="sub">para com −US$ 1,00 no dia</div></div>
       <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="sc-npos">—</div><div class="sub" id="sc-aberto">—</div></div>
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="sc-ops">—</div><div class="sub" id="sc-ac">—</div></div>
-      <div class="kpi" style="grid-column:span 2"><div class="rot">Conta de empate</div><div class="sub" style="font-size:12px;color:var(--txt)">Ganha 1% e perde 0,5%: precisa bater o alvo em ~40% das vezes (com o custo) para empatar. Abaixo disso, perde.</div></div>
+      <div class="kpi" style="grid-column:span 2"><div class="rot">Conta de empate</div><div class="sub" style="font-size:12px;color:var(--txt)">Ganha 0,5% e perde 0,5% (mais 0,1% de custo): precisa acertar ~60% das saídas por alvo/stop para empatar; as saídas no fim da vela pesam pelo tamanho do movimento.</div></div>
     </div>
     <div class="grade g-dupla">
       <div id="sc-pos"></div>
@@ -884,6 +886,10 @@ async function cicloCerebrosMoedas() {
     const d = await j("/api/moedas-cerebros");
     const cel = (x) => x && x.apostas ? [x.apostas, `<span class="${x.acertos / x.apostas > 0.51 ? "up" : "down"}">${fmt(x.acertos / x.apostas * 100, 0)}%</span>`,
       `<span class="${cor(x.resultado)}">${pct(x.resultado * 100, 1)}</span>`] : ["0", "—", "—"];
+    $("cm-v3").replaceChildren(...(d.ultimas_v3 || []).map(o => { const x = document.createElement("span");
+      x.className = "chip " + (o.liquido > 0 ? "up" : "down");
+      x.textContent = `${new Date(o.t + 1800000).toLocaleTimeString("pt-BR").slice(0, 5)} ${o.moeda} ${o.lado === "sobe" ? "▲" : "▼"} ${o.liquido > 0 ? "+" : "−"}US$ ${fmt(Math.abs(o.liquido) * 10, 2)}`;
+      x.title = o.liquido > 0 ? "lucro realizado" : "perda"; return x; }));
     $("cm-tab").querySelector("tbody").replaceChildren(...d.moedas.map(m => {
       const tr = document.createElement("tr"); const u = (m.v1 && m.v1.ultima) || (m.v2 && m.v2.ultima);
       tr.innerHTML = `<td><b>${m.moeda}</b></td>` + [...cel(m.v1), ...cel(m.v2), ...cel(m.v3)].map(c => `<td>${c}</td>`).join("") +
@@ -891,7 +897,7 @@ async function cicloCerebrosMoedas() {
       return tr;
     }));
   } catch (e) {}
-  setTimeout(cicloCerebrosMoedas, 120000);
+  setTimeout(cicloCerebrosMoedas, 60000);
 }
 cicloCerebrosMoedas();
 

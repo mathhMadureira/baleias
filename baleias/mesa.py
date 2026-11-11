@@ -141,13 +141,35 @@ def cerebros_por_moeda():
     for par, x in sorted((_git_json("dados/cerebros_moedas.json") or {}).items()):
         for versao in ("v1", "v2", "v3"):
             linhas.append((par, versao, x.get(versao, {}).get("ops", [])))
-    saida = {}
+    saida, ultimas_v3 = {}, []
     for par, versao, ops in linhas:
+        if versao == "v3":
+            ultimas_v3.extend({"moeda": par[:-4], "t": o[0], "lado": "sobe" if o[2] > 0 else "desce", "liquido": o[1]} for o in ops[-30:])
         ultima = ops[-1] if ops else None
         saida.setdefault(par, {"moeda": par[:-4]})[versao] = {
             "apostas": len(ops), "acertos": sum(1 for o in ops if o[1] > 0), "resultado": sum(o[1] for o in ops),
             "ultima": ultima and {"t": ultima[0], "lado": "sobe" if ultima[2] > 0 else "desce", "ganhou": ultima[1] > 0}}
-    return {"t": time.time(), "moedas": sorted(saida.values(), key=lambda m: -sum(m.get(v, {}).get("apostas", 0) for v in ("v1", "v2", "v3")))}
+    ultimas_v3.sort(key=lambda x: -x["t"])
+    return {"t": time.time(), "ultimas_v3": ultimas_v3[:40], "moedas": sorted(saida.values(), key=lambda m: -sum(m.get(v, {}).get("apostas", 0) for v in ("v1", "v2", "v3")))}
+
+
+_sinais = {"t": 0, "dados": []}
+
+
+def sinais_v3():
+    """Apostas em aberto do Cérebro v3 em cada moeda (vela de 15 min que acabou de fechar), para o scalper seguir.
+    [{par, t (abertura da vela fechada, ms), px, prob, lado}] — só as que apostam (prob ≥ 52% para um lado)."""
+    if time.time() - _sinais["t"] < 60:
+        return _sinais["dados"]
+    subprocess.run(["git", "-C", str(REPO), "fetch", "-q", "origin", "estado"], capture_output=True, timeout=60)
+    saida = []
+    btc = _git_json("dados/cerebro_v3.json") or {}
+    fontes = [("BTCUSDT", btc.get("pendente"))] + [(par, x.get("v3", {}).get("pendente")) for par, x in (_git_json("dados/cerebros_moedas.json") or {}).items()]
+    for par, p in fontes:
+        if p and p.get("aposta"):
+            saida.append({"par": par, "t": p["t"], "px": p["px"], "prob": p["prob"], "lado": "compra" if p["aposta"] > 0 else "venda"})
+    _sinais.update(t=time.time(), dados=saida)
+    return saida
 
 
 _cache = {"t": 0, "dados": None}
@@ -162,7 +184,7 @@ def mesa():
         _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),
         _tartaruga(_git_json("dados/teto6/robo_tartaruga.json"), "Sombra (teto de 6)"),
         _rapido(),
-        _rapido("robo_scalper.json", "Scalper", "H24: mesmas entradas do cérebro; alvo +1,0%, stop −0,5%, 30 min"),
+        _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v3 (15 min); alvo +0,5%, stop −0,5%, sai no fim da vela apostada"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
         _cerebro(_git_json("dados/cerebro_v3.json"), "Cérebro v3 (humor do mercado)", outras, "v3"),

@@ -60,6 +60,8 @@ def outras_moedas():
                          if cb.inicio_ao_vivo and o["t"] >= cb.inicio_ao_vivo and o["t"] > ultimo]
             r["ops"] = r["ops"][-3000:]
             r["passos"], r["ultima_t"] = cb.passos, cb.ultima_t
+            p = cb.pendente
+            r["pendente"] = p and {"t": p["t"], "px": p["px"], "prob": p["prob"], "aposta": p["aposta"]}   # o scalper segue esta aposta ao vivo
     arq.write_text(json.dumps(resumo))
     for nome in ("v1", "v2", "v3"):
         ops = [o for x in resumo.values() for o in x.get(nome, {}).get("ops", [])]

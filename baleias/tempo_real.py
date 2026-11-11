@@ -15,6 +15,7 @@ import collections
 import json
 import math
 import os
+import subprocess
 import threading
 import time
 import urllib.request
@@ -970,11 +971,13 @@ class Motor:
             time.sleep(1.5)
 
     def _scalper(self):
-        """Robô scalper (H24, decisão do dono): conta própria de US$ 10, entra nas mesmas oportunidades do cérebro do robô rápido,
-        sai no alvo de +1,0%, no stop de −0,5% ou em 30 min. Perpétuo simulado (compra ou vende), US$ 5 por posição com margem 5×.
+        """Robô scalper (decisão do dono, 2026-11-11): conta própria de US$ 10, segue as apostas do Cérebro v3 (o aprovado na mesa)
+        em cada moeda: entra na direção da aposta da vela de 15 min, realiza o lucro em +0,5%, corta em −0,5% e sai no fim da
+        vela apostada. Perpétuo simulado (compra ou vende), US$ 5 por posição com margem 5×.
         Segue as regras da mesa: botão PARAR, perda máxima de US$ 1 no dia e piso de US$ 5."""
         from executor import tartaruga_exec as X
-        alvo, stop, max_s, orcamento = 0.010, 0.005, 1800, 5.0
+        from . import mesa
+        alvo, stop, max_s, orcamento = 0.005, 0.005, 1800, 5.0
         capital = 10.0
         limite_dia, piso = capital * 0.10, capital * 0.50
         parar = Path(X.__file__).resolve().parent.parent / "PARAR"   # o botão geral do dono (o robô rápido usa o PARAR_RAPIDO)
@@ -982,7 +985,7 @@ class Motor:
         e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(capital)
         e.setdefault("eventos", [])
         corretora = X.Simulada(None, e)
-        ultima = None                     # na partida só memoriza as oportunidades: sinal velho (de antes de reiniciar) não vale
+        e.setdefault("sinais_feitos", [])  # cada aposta do v3 só é seguida uma vez
         visto = time.time()               # última vez que o laço conferiu as posições com o preço ao vivo
         gravado = None
 
@@ -1005,12 +1008,12 @@ class Motor:
             stop_px = p["entrada"] * (1 + stop if venda else 1 - stop)
             for k in velas:
                 t, o, h, l = k[0] / 1000, float(k[1]), float(k[2]), float(k[3])
-                if t - p["entrada_t"] >= max_s:
-                    return "30 min (máquina desligada)", o
+                if t >= p.get("fim_t", p["entrada_t"] + max_s):
+                    return "fim da vela do v3 (máquina desligada)", o
                 if (h >= stop_px) if venda else (l <= stop_px):
                     return "stop −0,5% (máquina desligada)", (max(o, stop_px) if venda else min(o, stop_px))
                 if (l <= alvo_px) if venda else (h >= alvo_px):
-                    return "alvo +1,0% (máquina desligada)", alvo_px
+                    return "lucro realizado +0,5% (máquina desligada)", alvo_px
             return None, None
 
         def gelada(m):
@@ -1021,7 +1024,6 @@ class Motor:
         while True:
             with self.trava:
                 precos = {f"{k}USDT": x["p"] for k, x in self.mercado.items()}
-            cbr = self._cbr
             agora = time.time()
             if agora - visto > 60:                             # a máquina parou: julgar o que aconteceu enquanto isso
                 for m in list(e["abertas"]):
@@ -1038,7 +1040,8 @@ class Motor:
                     continue
                 sinal = -1 if p.get("lado") == "venda" else 1
                 ganho = sinal * (px / p["entrada"] - 1)
-                motivo = "alvo +1,0%" if ganho >= alvo else ("stop −0,5%" if ganho <= -stop else ("30 min" if agora - p["entrada_t"] >= max_s else None))
+                motivo = ("lucro realizado +0,5%" if ganho >= alvo else "stop −0,5%" if ganho <= -stop
+                          else "fim da vela do v3" if agora >= p.get("fim_t", p["entrada_t"] + max_s) else None)
                 if motivo:
                     sair(m, motivo, px)
             hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
@@ -1051,21 +1054,29 @@ class Motor:
             if trava and e.get("trava") != f"{hoje} {trava}":
                 ouvir({"texto": f"🛑 Scalper sem novas entradas: {trava}. As saídas continuam."})
             e["trava"] = f"{hoje} {trava}" if trava else None
-            ops = getattr(cbr, "oportunidades", None) if cbr else None
-            marca = ops and tuple((o["par"], round(o["ev"], 5)) for o in ops[:3])
-            if ops and ultima is None:
-                ultima = marca
-            elif ops and marca != ultima:                     # nova vela avaliada pelo cérebro: entra nas melhores
-                ultima = marca
-                for o in ops:
-                    m = o["par"]
-                    if (trava or o["ev"] <= 0 or o.get("geladeira") or gelada(m) or m in e["abertas"] or m not in precos or lado_cheio(e["abertas"], o["lado"])
-                            or e["caixa"] < orcamento / X.ALAV_PERP):
-                        continue
-                    n_scalper = precos[m] * stop / 2                 # o stop do executor é 2N: assim fica exatamente a 0,5%
-                    with X.configurado(ouvir, orcamento):
-                        X.entrar(e, corretora, m, precos[m], n_scalper, f"cérebro: VE {o['ev'] * 100:+.2f}%, alvo +1,0% / stop −0,5%",
-                                 lado=o["lado"], custo_lado=0.0005)
+            try:
+                sinais = mesa.sinais_v3()
+            except (OSError, ValueError, subprocess.SubprocessError):
+                sinais = []
+            for s in sorted(sinais, key=lambda s: -abs(s["prob"] - 0.5)):   # as apostas mais confiantes primeiro
+                m, chave = s["par"], f"{s['par']}@{s['t']}"
+                inicio, fim = s["t"] / 1000 + 900, s["t"] / 1000 + 1800       # a vela apostada: do fechamento da vela t até o da seguinte
+                if chave in e["sinais_feitos"] or not (inicio <= agora <= fim - 120):
+                    continue
+                if (trava or gelada(m) or m in e["abertas"] or m not in precos or lado_cheio(e["abertas"], s["lado"])
+                        or e["caixa"] < orcamento / X.ALAV_PERP):
+                    continue
+                e["sinais_feitos"] = (e["sinais_feitos"] + [chave])[-500:]
+                andou = (precos[m] / s["px"] - 1) * (1 if s["lado"] == "compra" else -1)
+                if andou >= alvo / 2:                                        # o movimento já aconteceu: não entra atrasado
+                    continue
+                n_scalper = precos[m] * stop / 2                             # o stop do executor é 2N: assim fica exatamente a 0,5%
+                with X.configurado(ouvir, orcamento):
+                    X.entrar(e, corretora, m, precos[m], n_scalper,
+                             f"Cérebro v3 aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}); lucro em +0,5% / stop −0,5%",
+                             lado=s["lado"], custo_lado=0.0005)
+                if m in e["abertas"]:
+                    e["abertas"][m]["fim_t"] = fim
             e["patrimonio"] = patrimonio = X.patrimonio(e, precos, corretora)
             mudou = (len(e["fechadas"]), tuple(e["abertas"]), e["trava"])
             if mudou != gravado or int(agora) % 60 < 3:      # grava ao abrir/fechar posição e, fora isso, 1 vez por minuto
