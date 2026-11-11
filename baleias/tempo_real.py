@@ -661,7 +661,8 @@ class Motor:
         piso = capital * 0.5                                                    # abaixo de metade da conta, para de vez
         meta_dia = float(os.environ.get("ROBO_RAPIDO_META_DIA", "100"))         # meta do dono: para ao ganhar isto no período
         meta_dias = int(os.environ.get("ROBO_RAPIDO_META_DIAS", "2"))           # período da meta: blocos de 2 dias UTC
-        X.ORCAMENTO_FIXO = float(os.environ.get("ROBO_RAPIDO_ORCAMENTO", "5"))   # US$ por operação (mínimo da Binance ≈ US$ 5)
+        X.ORCAMENTO_FIXO = float(os.environ.get("ROBO_RAPIDO_ORCAMENTO", "25"))  # US$ por operação (decisão do dono: US$ 25 a 10×)
+        realizar = float(os.environ.get("ROBO_RAPIDO_REALIZAR", "0.50"))          # realiza o lucro a cada +US$ 0,50 (por posição ou na carteira)
         max_velas = int(os.environ.get("ROBO_RAPIDO_MAX_VELAS", "12"))          # não segurar demais: no máximo 12 velas (1 h em 5 min)
         X.PARAR = config.RAIZ / "PARAR_RAPIDO"                                # neste processo só o robô rápido usa o tartaruga_exec
         arq = config.RAIZ / f"robo_rapido_{intervalo}.json"
@@ -751,13 +752,19 @@ class Motor:
                     X.checar_stops(e, corretora, precos)
                     for m in list(e["abertas"]):           # tempo máximo: não segurar a operação demais
                         p_ab = e["abertas"][m]
-                        ganho = ((-1 if p_ab.get("lado") == "venda" else 1) * (precos[m] / p_ab["entrada"] - 1)) if m in precos else 0
-                        if p_ab.get("fim_t") and ganho >= 0.005:                  # decisão do dono: realiza o lucro em +0,5%, não segura a vela
-                            X._sair(e, corretora, m, "lucro realizado +0,5%", precos[m])
+                        lucro = (X._valor(p_ab, precos[m]) - p_ab["gasto"]) if m in precos else 0.0
+                        if lucro >= realizar:                                      # decisão do dono: realiza a cada +US$ 0,50, não segura a vela
+                            X._sair(e, corretora, m, f"lucro realizado +US$ {realizar:.2f}", precos[m])
                         elif p_ab.get("fim_t") and agora >= p_ab["fim_t"] and m in precos:
                             X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)" if p_ab.get("origem") == "varredura" else "fim da vela do v3", precos[m])
                         elif not e["abertas"][m].get("fim_t") and agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
                             X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)", precos[m])
+                aberto_total = sum(X._valor(p, precos.get(m, p["entrada"])) - p["gasto"] for m, p in e["abertas"].items())
+                if len(e["abertas"]) > 1 and aberto_total >= realizar:          # a carteira inteira chegou a +US$ 0,50: embolsa tudo
+                    with X.TRAVA:
+                        for m in list(e["abertas"]):
+                            if m in precos:
+                                X._sair(e, corretora, m, f"realização da carteira +US$ {realizar:.2f}", precos[m])
                 e["patrimonio"] = X.patrimonio(e, precos, corretora)
                 if dados:
                     e["radar"] = X.radar(dados, precos)

@@ -23,7 +23,7 @@ CAPITAL_SIMULADO = float(os.environ.get("TARTARUGA_CAPITAL", "700"))
 RISCO = float(os.environ.get("TARTARUGA_RISCO", "0.01"))
 MAX_POSICOES = int(os.environ.get("TARTARUGA_MAX_POSICOES", "0")) or None
 ORCAMENTO_FIXO = None      # robô rápido: US$ fixos por operação em vez do tamanho por risco (pedido do dono: US$ 10)
-ALAV_PERP = float(os.environ.get("TARTARUGA_ALAV_PERP", "5"))   # perpétuo simulado: margem = posição ÷ 5 (US$ 5 usa US$ 1 da conta; mais posições ao mesmo tempo, mesmo risco por operação)   # H13: só no robô-sombra, até passar no teste
+ALAV_PERP = float(os.environ.get("TARTARUGA_ALAV_PERP", "10"))  # perpétuo simulado 10× (decisão do dono, 2026-11-11): posição de US$ 25 usa US$ 2,50 da conta   # H13: só no robô-sombra, até passar no teste
 relogio = time.time        # o replay troca por um relógio simulado
 ouvinte = None             # o replay recebe cada evento por aqui (e o terminal não é inundado)
 
