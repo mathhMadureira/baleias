@@ -1370,8 +1370,8 @@ class SemTravaPorMoeda(unittest.TestCase):
     def test_cerebro_sem_teto_continua_apostando_depois_de_perder(self):
         from baleias import cerebro as C
         cb = C.CerebroV3(None)
-        cb.operacoes = [{"t": 1794400000000, "liquido": -0.02, "capital": 500.0}] * 20      # perdeu bem mais que US$ 100 hoje
         v = [(1794400000000 + i * 900_000, 1.0, 1.01, 0.99, 1.0 + (i % 7) * 0.001, 1.0) for i in range(C.JANELA)]
+        cb.operacoes = [{"t": v[-1][0], "liquido": -0.02, "capital": 500.0}] * 20          # perdeu bem mais que US$ 100 no dia da vela
         def decidir(t, f, px):
             cb.pendente = {"t": t, "px": px, "opinioes": {}, "prob": 0.6, "aposta": 1}
             return cb.pendente
