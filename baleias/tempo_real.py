@@ -204,7 +204,7 @@ def traduzir(j, media_volume=None):
 
 # ---------- motor ----------
 
-MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "2"))   # freio de correlação: as moedas andam juntas, então 5 vendidas
+MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "6"))   # decisão do dono (2026-11-11): arriscar mais, até 6 no mesmo lado   # freio de correlação: as moedas andam juntas, então 5 vendidas
                                                                    # ao mesmo tempo são uma aposta só no mercado inteiro
 
 
@@ -736,7 +736,11 @@ class Motor:
                 with X.TRAVA:
                     X.checar_stops(e, corretora, precos)
                     for m in list(e["abertas"]):           # tempo máximo: não segurar a operação demais
-                        if e["abertas"][m].get("fim_t") and agora >= e["abertas"][m]["fim_t"] and m in precos:
+                        p_ab = e["abertas"][m]
+                        ganho = ((-1 if p_ab.get("lado") == "venda" else 1) * (precos[m] / p_ab["entrada"] - 1)) if m in precos else 0
+                        if p_ab.get("fim_t") and ganho >= 0.005:                  # decisão do dono: realiza o lucro em +0,5%, não segura a vela
+                            X._sair(e, corretora, m, "lucro realizado +0,5%", precos[m])
+                        elif p_ab.get("fim_t") and agora >= p_ab["fim_t"] and m in precos:
                             X._sair(e, corretora, m, "fim da vela do v3", precos[m])
                         elif not e["abertas"][m].get("fim_t") and agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
                             X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)", precos[m])

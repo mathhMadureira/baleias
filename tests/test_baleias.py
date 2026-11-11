@@ -1314,10 +1314,10 @@ class CerebroRapidoHumor(unittest.TestCase):
 
 
 class FreioDeCorrelacao(unittest.TestCase):
-    def test_no_maximo_duas_posicoes_no_mesmo_lado(self):
+    def test_limite_de_posicoes_no_mesmo_lado(self):
         from baleias import tempo_real as R
         abertas = {"AUSDT": {"lado": "venda"}, "BUSDT": {"lado": "venda"}, "CUSDT": {"lado": "compra"}}
-        self.assertTrue(R.lado_cheio(abertas, "venda"))
+        self.assertFalse(R.lado_cheio(abertas, "venda")); self.assertTrue(R.lado_cheio({f"{i}USDT": {"lado": "venda"} for i in range(R.MAX_MESMO_LADO)}, "venda"))
         self.assertFalse(R.lado_cheio(abertas, "compra"))
 
     def test_scalper_le_as_apostas_do_v3(self):
