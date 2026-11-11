@@ -122,7 +122,7 @@ class Manipulador(BaseHTTPRequestHandler):
         self.send_response(codigo)
         self.send_header("Content-Type", tipo)
         self.send_header("Cache-Control", "no-store")
-        self.send_header("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'")
+        self.send_header("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://unpkg.com/lightweight-charts@4.2.3/")
         self.end_headers()
         self.wfile.write(corpo)
 

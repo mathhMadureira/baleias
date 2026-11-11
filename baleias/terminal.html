@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Baleias Terminal</title>
+<script src="https://unpkg.com/lightweight-charts@4.2.3/dist/lightweight-charts.standalone.production.js"></script>
 <style>
 :root {
-  --bg:#07090c; --bg2:#0d1117; --card:#111821; --card2:#151e29; --line:#1f2a37; --line2:#2a3746;
-  --txt:#e6edf3; --mut:#8b98a8; --dim:#5b6878;
-  --up:#16c784; --up2:#0e8f60; --down:#ea3943; --down2:#a3262d; --gold:#f0b90b; --blue:#3b82f6; --violet:#a78bfa;
+  --bg:#081014; --bg2:#0b161b; --card:#0f1a20; --card2:#14232b; --line:#1b2b33; --line2:#26404a;
+  --txt:#e6f1f2; --mut:#8aa0a8; --dim:#4e646d;
+  --up:#1fc7a0; --up2:#0e8f74; --down:#ed4b62; --down2:#a3262d; --gold:#f0b90b; --blue:#4c9bff; --violet:#a78bfa; --acento:#50e3c2;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 * { box-sizing:border-box; }
@@ -20,9 +21,19 @@ a { color:inherit; }
 header { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:18px; padding:10px 18px; background:rgba(13,17,23,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
 .marca { font-weight:800; letter-spacing:.08em; font-size:13px; }
 .marca b { color:var(--gold); }
-nav { display:flex; gap:4px; }
-nav button { background:none; border:0; color:var(--mut); font:600 13px system-ui; padding:7px 12px; border-radius:7px; cursor:pointer; }
-nav button.ativo { color:var(--txt); background:var(--card2); }
+nav { display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; }
+nav button { white-space:nowrap; background:none; border:0; border-bottom:2px solid transparent; color:var(--mut); font:600 13px system-ui; padding:9px 12px; cursor:pointer; }
+nav button:hover { color:var(--txt); }
+nav button.ativo { color:var(--acento); border-bottom-color:var(--acento); }
+.fita { display:flex; gap:22px; overflow-x:auto; padding:7px 18px; background:var(--bg2); border-bottom:1px solid var(--line); font:12px var(--mono); white-space:nowrap; scrollbar-width:none; }
+.fita b { color:var(--txt); margin-right:6px; } .fita span { color:var(--mut); }
+.online { white-space:nowrap; font:600 11px system-ui; color:var(--acento); border:1px solid #50e3c255; background:#50e3c214; border-radius:6px; padding:3px 8px; }
+.subnav { position:sticky; top:52px; z-index:4; display:flex; gap:6px; flex-wrap:wrap; padding:8px 0 10px; background:var(--bg); }
+.subnav a { text-decoration:none; font:600 12px system-ui; color:var(--mut); border:1px solid var(--line2); border-radius:999px; padding:4px 11px; }
+.subnav a:hover { color:var(--acento); border-color:var(--acento); }
+.tv { width:100%; border-radius:8px; overflow:hidden; }
+.card { box-shadow:0 1px 0 #ffffff05 inset; }
+[id^="sec-"] { scroll-margin-top:110px; }
 .espaco { flex:1; }
 .selo { font:700 11px var(--mono); padding:4px 8px; border-radius:6px; border:1px solid var(--line2); letter-spacing:.05em; }
 .selo.sim { color:var(--violet); border-color:#a78bfa55; background:#a78bfa14; }
@@ -44,7 +55,7 @@ main { padding:16px 18px 40px; max-width:1680px; margin:0 auto; }
 .grade { display:grid; gap:14px; }
 .g-principal { grid-template-columns: minmax(0, 2.2fr) minmax(320px, 1fr); }
 .g-dupla { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
-.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; min-width:0; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; min-width:0; }
 .card h3 { margin:0 0 10px; font-size:12px; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; display:flex; align-items:center; gap:10px; }
 .card h3 .dir { margin-left:auto; text-transform:none; letter-spacing:0; font-weight:500; }
 canvas { display:block; width:100%; }
@@ -112,14 +123,20 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <button data-aba="lab">Laboratório</button>
   </nav>
   <span class="espaco"></span>
+  <span class="online" id="online">● Online</span>
   <span id="selo" class="selo sim">SIMULADO</span>
   <span class="pontos" id="pontos" title="fontes de dados"></span>
   <span class="relogio" id="relogio"></span>
 </header>
+<div class="fita" id="fita"><span>carregando preços…</span></div>
 
 <main>
 <section class="aba ativa" id="aba-robo">
-  <div class="card" style="margin-bottom:14px">
+  <div class="subnav">
+    <a href="#sec-placar">🏁 Placar</a><a href="#sec-varredura">🔎 Varredura</a><a href="#sec-cerebro">🧠 Cérebros</a><a href="#sec-rapido">⚡ Rápido</a>
+    <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
+  </div>
+  <div class="card" id="sec-placar" style="margin-bottom:14px">
     <h3>🏁 Todos os robôs agora · conta de US$ 10 cada<span class="dir mut num" id="pl-t"></span></h3>
     <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
   </div>
@@ -170,8 +187,8 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <span class="espaco" style="flex:1"></span>
       <select id="ra-g-moeda" class="selo" style="background:var(--card2);color:var(--txt)"><option value="">seguir o robô</option></select>
     </div>
-    <canvas id="ra-grafico" style="height:360px"></canvas>
-    <div class="legenda" style="margin-bottom:10px"><span>vela mais clara = vela de agora, ao vivo</span><span><i style="border-color:var(--up)"></i>máxima de 55 velas (referência)</span><span><i style="border-color:var(--down)"></i>mínima de 20 velas (referência)</span><span><i style="border-color:#e6edf3"></i>preço de entrada da posição</span><span><i style="border-color:var(--gold);border-top-style:solid"></i>stop da posição</span></div>
+    <div id="ra-grafico" class="tv" style="height:430px"></div>
+    <div class="legenda" style="margin-bottom:10px"><span>🖱 arraste para mover · roda do mouse para zoom · duplo clique no eixo para reajustar</span><span><i style="border-color:var(--up)"></i>máxima de 55 velas (referência)</span><span><i style="border-color:var(--down)"></i>mínima de 20 velas (referência)</span><span><i style="border-color:#e6edf3"></i>preço de entrada da posição</span><span><i style="border-color:var(--gold);border-top-style:solid"></i>stop da posição</span></div>
     <div class="grade g-dupla">
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
@@ -228,7 +245,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <div class="grade g-principal">
     <div class="card">
       <h3><span id="g-titulo">BTC · diário</span><span class="dir mut num" id="g-info"></span></h3>
-      <canvas id="grafico"></canvas>
+      <div id="grafico" class="tv" style="height:460px"></div>
       <div class="legenda">
         <span><i style="border-color:var(--up)"></i>entrada: máxima de 55 dias</span>
         <span><i style="border-color:var(--down)"></i>saída: mínima de 20 dias</span>
@@ -550,13 +567,52 @@ function desenharTeste() {
   $("bt-stats").replaceChildren(...itens.map(([r, v]) => { const d = document.createElement("div"); d.className = "st"; d.innerHTML = `<div class="rot"></div><div class="val"></div>`; d.children[0].textContent = r; d.children[1].textContent = v; return d; }));
 }
 
-function desenharTudo() { desenharVelas(); desenharRobo(); desenharTeste(); }
+function desenharTudo() { desenharRobo(); desenharTeste(); }
+
+// ---------- gráficos de velas interativos (TradingView lightweight-charts) ----------
+const graficos = {};
+function precisao(p) { if (!p) return 2; if (p >= 1000) return 1; if (p >= 10) return 3; if (p >= 1) return 4; return Math.min(12, Math.ceil(-Math.log10(p)) + 3); }
+function tempoVela(d) { const [a, b] = d.split(" "); const [y, m, dd] = a.split("-").map(Number); const [h, mi] = b ? b.split(":").map(Number) : [0, 0]; return Date.UTC(y, m - 1, dd, h, mi) / 1000 - FUSO; }
+const FUSO = new Date().getTimezoneOffset() * 60;   // o gráfico desenha em UTC: desloca para a hora de Brasília
+function tv(id, dados, info, pos) {
+  if (!dados || !dados.velas || !dados.velas.length || !window.LightweightCharts) return;
+  let g = graficos[id];
+  if (!g) {
+    const chart = LightweightCharts.createChart($(id), {autoSize: true,
+      layout: {background: {type: "solid", color: "transparent"}, textColor: "#8aa0a8", fontFamily: "ui-monospace, Menlo, Consolas, monospace", fontSize: 11},
+      grid: {vertLines: {color: "#1b2b3366"}, horzLines: {color: "#1b2b3366"}}, crosshair: {mode: 0},
+      rightPriceScale: {borderColor: "#1b2b33"}, timeScale: {borderColor: "#1b2b33", timeVisible: true, secondsVisible: false, rightOffset: 6},
+      localization: {locale: "pt-BR", timeFormatter: (s) => new Date(s * 1000).toLocaleString("pt-BR", {timeZone: "UTC", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit"})}});
+    const velasS = chart.addCandlestickSeries({upColor: "#1fc7a0", downColor: "#ed4b62", borderVisible: false, wickUpColor: "#1fc7a0", wickDownColor: "#ed4b62"});
+    const linha = (cor) => chart.addLineSeries({color: cor, lineWidth: 1, lineStyle: 2, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false});
+    g = graficos[id] = {chart, velas: velasS, ent: linha("#1fc7a088"), sai: linha("#ed4b6288"), stop: linha("#f0b90b88"), precos: [], chave: null, ultimo: 0};
+  }
+  const vs = []; for (const v of dados.velas) { const tt = tempoVela(v.d); if (!vs.length || tt > vs[vs.length - 1].time) vs.push({time: tt, open: v.o, high: v.h, low: v.l, close: v.c}); }
+  const ultimo = vs[vs.length - 1], dec = precisao(ultimo.close), formato = {type: "price", precision: dec, minMove: Math.pow(10, -dec)};
+  for (const s of [g.velas, g.ent, g.sai, g.stop]) s.applyOptions({priceFormat: formato});
+  const chave = dados.moeda + "|" + vs[0].time;
+  if (g.chave !== chave || vs.length < 2) {
+    g.velas.setData(vs); g.chave = chave;
+    g.chart.timeScale().setVisibleLogicalRange({from: Math.max(0, vs.length - 140), to: vs.length + 6});
+  } else for (const v of vs) if (v.time >= g.ultimo) g.velas.update(v);
+  g.ultimo = ultimo.time;
+  const serie = (k) => dados.velas.filter(v => v[k] != null).map(v => ({time: tempoVela(v.d), value: v[k]})).filter((x, i, a) => !i || x.time > a[i - 1].time);
+  g.ent.setData(serie("entrada")); g.sai.setData(serie("saida")); g.stop.setData(pos ? [] : serie("stop2n"));
+  const marcas = (dados.marcas || []).map(m => { const alvo = vs.filter(v => v.time <= m.t - FUSO).pop(); return alvo && {time: alvo.time, position: m.tipo === "entrada" ? "belowBar" : "aboveBar",
+    color: m.tipo === "entrada" ? "#50e3c2" : "#f0b90b", shape: m.tipo === "entrada" ? "arrowUp" : "arrowDown", text: m.tipo}; }).filter(Boolean).sort((a, b) => a.time - b.time);
+  g.velas.setMarkers(marcas);
+  for (const l of g.precos) g.velas.removePriceLine(l);
+  g.precos = pos ? [g.velas.createPriceLine({price: pos.entrada, color: "#e6f1f2", lineStyle: 2, lineWidth: 1, title: "entrada"}),
+                    g.velas.createPriceLine({price: pos.stop, color: "#f0b90b", lineStyle: 0, lineWidth: 1, title: "stop"})] : [];
+  const variacao = (ultimo.close / vs[Math.max(0, vs.length - 2)].close - 1) * 100;
+  if (info) info.textContent = `agora ${px(ultimo.close)} · ${pct(variacao, 2)} na última vela` + (pos ? ` · posição ${pos.resultado >= 0 ? "+" : ""}US$ ${fmt(pos.resultado, 3)}` : "");
+}
 
 async function j(url) { const r = await fetch(url, {cache: "no-store"}); return r.json(); }
 async function carregarVelas() {
   $("g-titulo").textContent = moeda + " · diário · ao vivo";
   try { const v = await j(`/api/velas-rapidas?m=${moeda}&iv=1d`); velas = v.velas ? v : await j("/api/velas?m=" + moeda); } catch (e) { velas = await j("/api/velas?m=" + moeda); }
-  desenharVelas();
+  tv("grafico", velas, $("g-info"), null);
 }
 setInterval(() => { if (document.getElementById("aba-robo").classList.contains("ativa")) carregarVelas(); }, 30000);
 async function carregarLab() {
@@ -580,11 +636,17 @@ async function cicloTeste() {
 async function cicloFontes() {
   try {
     const d = await j("/api/ao-vivo?desde=999999999&calor=999999999");
+    const destaque = ["BTC", "ETH", "SOL", "XRP", "BNB", "DOGE", "PEPE", "NEAR", "ZEC", "SUI", "ENA", "LINK", "AVAX", "TAO"];
+    const mapaM = Object.fromEntries((d.mercado || []).map(x => [x.s, x]));
+    $("fita").replaceChildren(...destaque.filter(s => mapaM[s]).map(s => { const x = mapaM[s], e = document.createElement("span");
+      e.innerHTML = `<b>${s}</b>${px(x.p)} <i class="${cor(x.pct)}" style="font-style:normal">${pct(x.pct, 2)}</i>`; return e; }));
+    const vivas = Object.values(d.fontes || {}).filter(v => v.ok && d.agora - v.t < 900).length, total = Object.keys(d.fontes || {}).length;
+    $("online").textContent = vivas === total ? "● Online" : `● ${vivas}/${total} fontes`; $("online").style.color = vivas === total ? "" : "var(--gold)";
     $("pontos").replaceChildren(...Object.entries(d.fontes || {}).map(([k, v]) => {
       const s = document.createElement("span"); s.className = "ponto " + (v.ok && d.agora - v.t < 900 ? "ok" : "mal"); s.title = k + (v.erro ? ": " + v.erro : ""); return s;
     }));
   } catch (e) {}
-  setTimeout(cicloFontes, 15000);
+  setTimeout(cicloFontes, 5000);
 }
 function relogio() {
   const a = new Date();
@@ -850,7 +912,7 @@ async function cicloGraficoRapido() {
       raG = await j(`/api/velas-rapidas?m=${alvo}&iv=${ra.intervalo}`);
       const pos = ra.posicoes.find(p => p.moeda === alvo);
       $("ra-g-titulo").textContent = `${alvo} · ${ra.intervalo}` + (pos ? " · POSIÇÃO ABERTA" : sel.value ? "" : " · mais perto de entrar");
-      desenharVelas($("ra-grafico"), raG, $("ra-g-info"), pos || null);
+      tv("ra-grafico", raG, $("ra-g-info"), pos || null);
     }
   } catch (e) {}
   setTimeout(cicloGraficoRapido, 5000);
