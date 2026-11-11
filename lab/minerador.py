@@ -171,19 +171,22 @@ def candidatas(X, hora, treino):
     def cond(k, q):
         nome = NOMES[k]
         return (X[:, :, k] <= lim[nome][q]) if q < 50 else (X[:, :, k] >= lim[nome][q])
-    saida = []
     for k, nome in enumerate(NOMES):
         for q in QUANTIS:
-            saida.append((f"{nome} {'≤' if q < 50 else '≥'} q{q}", cond(k, q), {"tipo": "regra", "medida": nome, "quantil": q, "limiar": lim[nome][q]}))
+            yield (f"{nome} {'≤' if q < 50 else '≥'} q{q}", cond(k, q), {"tipo": "regra", "medida": nome, "quantil": q, "limiar": lim[nome][q]})
     for a, b in combinations(range(len(NOMES)), 2):
         for qa in (10, 90):
             for qb in (10, 90):
-                saida.append((f"{NOMES[a]} {'≤' if qa < 50 else '≥'} q{qa} E {NOMES[b]} {'≤' if qb < 50 else '≥'} q{qb}", cond(a, qa) & cond(b, qb),
-                              {"tipo": "par", "medidas": [[NOMES[a], qa, lim[NOMES[a]][qa]], [NOMES[b], qb, lim[NOMES[b]][qb]]]}))
+                yield (f"{NOMES[a]} {'≤' if qa < 50 else '≥'} q{qa} E {NOMES[b]} {'≤' if qb < 50 else '≥'} q{qb}", cond(a, qa) & cond(b, qb),
+                       {"tipo": "par", "medidas": [[NOMES[a], qa, lim[NOMES[a]][qa]], [NOMES[b], qb, lim[NOMES[b]][qb]]]})
     nm = X.shape[0]
     for hh in range(24):
-        saida.append((f"hora {hh:02d} UTC", np.broadcast_to(hora == hh, (nm, len(hora))).copy(), {"tipo": "hora", "hora": hh}))
-    return saida
+        yield (f"hora {hh:02d} UTC", np.broadcast_to(hora == hh, (nm, len(hora))).copy(), {"tipo": "hora", "hora": hh})
+
+
+def n_candidatas():
+    from math import comb
+    return len(NOMES) * len(QUANTIS) + comb(len(NOMES), 2) * 4 + 24
 
 
 def main():
@@ -193,12 +196,11 @@ def main():
     X, hora, y, ret = medidas(t, moedas, ohlcv)
     nt = len(t)
     treino, valid, reserva = slice(0, nt // 2), slice(nt // 2, nt * 3 // 4), slice(nt * 3 // 4, nt)
-    cands = candidatas(X, hora, treino)
-    tentativas = 2 * len(cands)                                  # cada condição vale nos dois sentidos
+    tentativas = 2 * n_candidatas()                              # cada condição vale nos dois sentidos
     z_alvo = NormalDist().inv_cdf(1 - 0.05 / tentativas)
-    print(f"{len(cands)} condições × 2 sentidos = {tentativas} tentativas; alvo de dificuldade t ≥ {z_alvo:.2f}", flush=True)
+    print(f"{n_candidatas()} condições × 2 sentidos = {tentativas} tentativas; alvo de dificuldade t ≥ {z_alvo:.2f}", flush=True)
     passaram_treino, aprovadas, todas = [], [], []
-    for nome, mascara, definicao in cands:
+    for nome, mascara, definicao in candidatas(X, hora, treino):
         for sobe in (True, False):
             tr = avaliar(mascara, y, ret, sobe, treino)
             if not tr or tr["acerto"] is None:
