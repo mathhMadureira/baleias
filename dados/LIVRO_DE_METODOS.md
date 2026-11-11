@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 53.0% | 1551 | 50.5%–55.5% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 1552 | 50.5%–55.4% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_baixa | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | reversao_alta | promissor | 65.2% | 23 | 44.9%–81.2% | física: alta anormal de 1 h → devolve |
 | tres_soldados | promissor | 55.5% | 182 | 48.2%–62.5% | H6: três soldados → desce (efeito pequeno) |
