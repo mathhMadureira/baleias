@@ -593,3 +593,21 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Minerador (H28):** fica exatamente como registrado (0,05%/lado), para não mudar um teste em andamento.
 - **Avaliação:** a mesa compara o resultado médio por operação **antes e depois** desta mudança (a data fica gravada). Volta atrás se, após 100 operações, a média piorar.
 - **Pendência para o real:** mínimos da Binance Futures (US$ 50 no BTC, US$ 20 em ETH, LTC e LINK). Posições de US$ 5 nessas moedas só valem no simulado.
+
+## Hipótese 30: LightGBM como os "olhos" do robô, com juiz duro (pré-registrada em 2026-11-11, antes de rodar)
+
+- **Origem:** post enviado pelo dono (mesa de ETH com LightGBM + juiz em pytest). A ideia do juiz: as chamadas precisam vencer a referência depois dos custos, no total e em pelo menos 2 de 3 blocos.
+- **Dados:** os mesmos da H26 (33 moedas, 15 min, maio/2025 a nov/2026) e as mesmas 15 medidas + hora do dia.
+- **Alvo:** direção da próxima vela.
+- **Modelo:** LightGBM binário com parâmetros fixos antes de ver o teste: 63 folhas, taxa 0,03, até 600 árvores com parada antecipada na validação, mínimo de 2000 amostras por folha, 80% de amostragem.
+- **Cortes:** treino 50%, validação 25% (só para a parada antecipada), teste 25% dividido em 3 blocos cronológicos iguais.
+- **Regras de aposta no teste:**
+  - **binário:** aposta quando p ≥ 0,53 ou p ≤ 0,47;
+  - **perpétuo:** opera quando |p − 0,5| ≥ 0,04, com custo de 0,12% na ida e volta.
+- **Juiz:**
+  - **binário passa** com acerto > 51% e t ≥ 2 (agrupado por instante) no teste inteiro **e** em ≥ 2 dos 3 blocos;
+  - **perpétuo passa** com média líquida > 0 e t ≥ 2 no teste inteiro **e** média > 0 em ≥ 2 dos 3 blocos.
+- **Decisão:**
+  - se passar no binário, vira o **Cérebro v4** na nuvem, ao lado do v3;
+  - se passar no perpétuo, vira um **robô LightGBM** na mesa;
+  - se reprovar, fica registrado.
