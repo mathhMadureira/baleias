@@ -733,7 +733,9 @@ class Motor:
         m = moeda.upper()[:12] + "USDT"
         chave = (m, intervalo)
         cache = self.__dict__.setdefault("_cache_velas", {})
-        if chave not in cache or time.time() - cache[chave][0] > 20:
+        velha = chave in cache and len(cache[chave][1]) > 1 and \
+            time.time() * 1000 >= cache[chave][1][-1][0] + (cache[chave][1][-1][0] - cache[chave][1][-2][0])   # a vela guardada já fechou
+        if chave not in cache or velha or time.time() - cache[chave][0] > 20:      # senão o preço ao vivo entortaria a vela anterior
             with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit={n + T.ENTRADA + 1}", timeout=20) as r:
                 cache[chave] = (time.time(), json.load(r))
         k = cache[chave][1]

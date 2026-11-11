@@ -41,7 +41,7 @@ def rodar(inicio="2024-01-01", capital=700.0, dados=None):
             quadros.append({"d": hoje, "pat": round(patrimonio, 2),
                             "pos": [{"m": m[:-4], "entrada": p["entrada"], "stop": p["stop"], "px": fecho.get(m), "qtd": p["qtd"],
                                      "res": round(p["qtd"] * fecho.get(m, p["entrada"]) - p["gasto"], 2)} for m, p in e["abertas"].items()],
-                            "ev": [x["texto"].replace(" [simulado]", "").replace(" (atingido com a máquina desligada)", "") for x in novos]})
+                            "ev": [x["texto"].replace(" [simulado]", "").replace(" (tocado dentro da vela, entre as conferências)", "") for x in novos]})
             novos.clear()
     finally:
         X.relogio, X.ouvinte = relogio_antes, ouvinte_antes

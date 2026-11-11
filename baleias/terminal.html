@@ -585,6 +585,14 @@ function desenharTeste() {
 
 function desenharTudo() { desenharRobo(); desenharTeste(); }
 
+// ---------- a aba aberta se atualiza sozinha quando o painel muda (nunca fica rodando código velho) ----------
+let versaoPagina = null;
+async function cicloVersao() {
+  try { const v = (await j("/api/versao")).versao; if (versaoPagina && v !== versaoPagina) location.reload(); versaoPagina = v; } catch (e) {}
+  setTimeout(cicloVersao, 20000);
+}
+cicloVersao();
+
 // ---------- clicar em qualquer moeda abre o gráfico dela ----------
 function abrirMoeda(m) {
   m = String(m).replace("USDT", "");
@@ -622,7 +630,7 @@ function tv(id, dados, info, pos) {
     g.velas.setData(vs); g.chave = chave;
     g.chart.timeScale().setVisibleLogicalRange({from: Math.max(0, vs.length - 140), to: vs.length + 6});
   } else for (const v of vs) if (v.time >= g.ultimo) g.velas.update(v);
-  g.ultimo = ultimo.time; g.vela = {...ultimo}; g.moeda = dados.moeda;
+  g.ultimo = ultimo.time; g.vela = {...ultimo}; g.moeda = dados.moeda; g.passo = vs.length > 1 ? vs[1].time - vs[0].time : 60;
   const serie = (k) => dados.velas.filter(v => v[k] != null).map(v => ({time: tempoVela(v.d), value: v[k]})).filter((x, i, a) => !i || x.time > a[i - 1].time);
   const canais = id === "grafico";                  // canais de 55/20 só fazem sentido no robô diário (Tartaruga)
   g.ent.setData(canais ? serie("entrada") : []); g.sai.setData(canais ? serie("saida") : []); g.stop.setData(canais && !pos ? serie("stop2n").slice(-30) : []);
@@ -642,7 +650,7 @@ const precoVivo = {};
 setInterval(() => {
   for (const g of Object.values(graficos)) {
     const p = g.vela && precoVivo[g.moeda];
-    if (!p) continue;
+    if (!p || Date.now() / 1000 - FUSO >= g.vela.time + g.passo) continue;   // a vela já fechou: espera a recarga trazer a nova, não entorta a velha
     g.vela = {...g.vela, close: p, high: Math.max(g.vela.high, p), low: Math.min(g.vela.low, p)};
     try { g.velas.update(g.vela); } catch (e) {}
   }

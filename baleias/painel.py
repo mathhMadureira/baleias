@@ -124,7 +124,10 @@ class Manipulador(BaseHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.send_header("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://unpkg.com/lightweight-charts@4.2.3/")
         self.end_headers()
-        self.wfile.write(corpo)
+        try:
+            self.wfile.write(corpo)
+        except (BrokenPipeError, ConnectionResetError):   # o navegador fechou a aba ou desistiu do pedido: nada a fazer
+            pass
 
     def do_GET(self):
         if self.path == "/api/estado":
@@ -183,6 +186,11 @@ class Manipulador(BaseHTTPRequestHandler):
             except Exception as e:                         # rede/git fora do ar: responde o erro em vez de derrubar a conexão
                 corpo = {"erro": type(e).__name__}
             self._enviar(200, json.dumps(corpo).encode(), "application/json")
+        elif self.path.startswith("/api/versao"):
+            import hashlib
+            self._enviar(200, json.dumps({"versao": hashlib.sha1(HTML_TERMINAL.read_bytes()).hexdigest()[:12]}).encode(), "application/json")
+        elif self.path == "/favicon.ico":
+            self._enviar(204, b"", "image/x-icon")
         elif self.path.startswith("/api/realizados"):
             from . import mesa
             try:

@@ -197,7 +197,7 @@ def stops_perdidos(e, corretora, dados):
             vendido = p.get("lado") == "venda"
             if (h >= p["stop"]) if vendido else (l <= p["stop"]):
                 saida = max(o, p["stop"]) if vendido else min(o, p["stop"])
-                eventos.append(_sair(e, corretora, m, "stop 2N (atingido com a máquina desligada)", saida, ja_vendido=saida))
+                eventos.append(_sair(e, corretora, m, "stop 2N (tocado dentro da vela, entre as conferências)", saida, ja_vendido=saida))
                 break
             p["conferido_ate"] = d
     return eventos

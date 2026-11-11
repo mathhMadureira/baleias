@@ -1347,3 +1347,20 @@ class Minerador(unittest.TestCase):
         self.assertEqual(um["instantes"], dois["instantes"])            # a moeda repetida não dobra a amostra
         self.assertAlmostEqual(um["t"], dois["t"])
         self.assertAlmostEqual(dois["acerto"], 0.75)
+
+
+class VelasAoVivo(unittest.TestCase):
+    def test_vela_fechada_nao_recebe_o_preco_ao_vivo(self):
+        from unittest import mock
+        from baleias import tempo_real as R
+        m = R.Motor()
+        agora_ms = int(R.time.time() * 1000) // 60_000 * 60_000
+        antigas = [[agora_ms - 60_000 * (60 - i), "1", "1", "1", "1", "1", 0] for i in range(60)]   # termina no minuto ANTERIOR
+        m._cache_velas = {("XUSDT", "1m"): (R.time.time(), antigas)}
+        m.mercado = {"X": {"p": 2.0}}
+        novas = antigas[1:] + [[agora_ms, "1", "1", "1", "1", "1", 0]]
+        resp = mock.MagicMock(); resp.__enter__.return_value = resp
+        with mock.patch.object(R.urllib.request, "urlopen", return_value=resp), mock.patch.object(R.json, "load", return_value=novas):
+            v = m.velas_ao_vivo("X", "1m", n=10)
+        self.assertEqual(v["velas"][-2]["c"], 1.0)        # a vela que fechou fica como fechou
+        self.assertEqual(v["velas"][-1]["c"], 2.0)        # o preço ao vivo vai para a vela de agora
