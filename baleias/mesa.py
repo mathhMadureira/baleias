@@ -239,6 +239,15 @@ def realizados():
         for par, x in (_git_json("dados/cerebros_moedas.json") or {}).items():
             ops += [(par.replace("USDT", ""), o[0], o[1], o[2]) for o in x.get("v3", {}).get("ops", [])[-40:]]
         _v3_ops.update(t=time.time(), ops=ops)
+        _v3_ops["v4"] = [(par.replace("USDT", ""), o[0], o[1], o[2]) for par, x in ((_git_json("dados/cerebro_v4.json") or {}).get("ops") or {}).items() for o in x[-40:]]
+    for nome_v, lista in (("🌲 Cérebro v4", _v3_ops.get("v4", [])),):
+        pv = {}
+        for o in lista:
+            pv[o[1]] = pv.get(o[1], 0) + 1
+        for moeda, t, liquido, aposta in lista:
+            escala = min(1.0, EXPOSICAO_VELA / (pv[t] * 0.02))
+            saida.append({"robo": nome_v, "t": t / 1000 + 1800, "t_entrada": t / 1000 + 900, "moeda": moeda, "lado": "compra" if aposta > 0 else "venda",
+                          "resultado": liquido * CONTA * escala, "motivo": "aposta de 15 min " + ("ganha" if liquido > 0 else "perdida")})
     por_vela = {}
     for o in _v3_ops["ops"]:
         por_vela[o[1]] = por_vela.get(o[1], 0) + 1
@@ -267,16 +276,15 @@ def mesa():
     _buscar_estado()
     outras = _git_json("dados/cerebros_moedas.json") or {}
     fichas = [
-        _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),
-        _tartaruga(_git_json("dados/teto6/robo_tartaruga.json"), "Sombra (teto de 6)"),
         _rapido(),
         _rapido("robo_minerador.json", "Minerador (H28)", "☁ na nuvem 24 h: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda", nuvem=True),
         _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v3 (15 min); alvo +0,5%, stop −0,5%, sai no fim da vela apostada"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
         _cerebro(_git_json("dados/cerebro_v3.json"), "Cérebro v3 (humor do mercado)", outras, "v3"),
+        _cerebro({"inicio_ao_vivo": 1, "operacoes": []}, "Cérebro v4 (LightGBM)",
+                 {p: {"v4": {"ops": o}} for p, o in ((_git_json("dados/cerebro_v4.json") or {}).get("ops") or {}).items()}, "v4"),
         _funding(),
-        _h19(),
     ]
     ordem = {"🏆": 0, "🧪": 1, "⚠️": 2, "❌": 3}
     fichas.sort(key=lambda f: (ordem.get(f["status"][:2].strip(), ordem.get(f["status"][0], 9)), -f["conta"]))

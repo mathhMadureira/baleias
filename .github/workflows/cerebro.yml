@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: "3.14"
 
+      - name: Bibliotecas do Cérebro v4 (LightGBM)
+        run: pip install -q numpy lightgbm
+
       - name: Recuperar os cérebros das outras moedas (cache grátis do Actions)
         uses: actions/cache/restore@v4
         with:
@@ -49,9 +52,10 @@ jobs:
             git worktree add -q -f estado origin/estado && (cd estado && git switch -q -C trabalho)
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.cerebro_nuvem | tee -a resumo.txt || echo "rodada falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.minerador_nuvem | tee -a resumo.txt || echo "minerador falhou"
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.cerebro_v4_nuvem | tee -a resumo.txt || echo "v4 falhou"
             (
               cd estado
-              for f in dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json; do [ -f "$f" ] && git add "$f"; done
+              for f in dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json; do [ -f "$f" ] && git add "$f"; done
               git commit -q -m "cérebro $(date -u +%FT%H:%M)" && for i in 1 2 3 4; do git push -q origin HEAD:estado && break; git fetch -q origin estado && git rebase -q origin/estado; done
             )
             if [ -n "$TOKEN_TG" ] && [ -n "$CHAT_TG" ] && [ -f estado/avisos.txt ]; then
