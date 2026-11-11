@@ -212,13 +212,13 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <details class="ajuda"><summary>Como funciona</summary><div class="mut" style="font-size:12px;margin-top:6px">A cada vela fechada, o cérebro de cada moeda (rede neural + sinapses, isolado das outras moedas) prevê as próximas 12 velas; uma regra só ganha voto se acertar mais do que o próprio humor do mercado. Entra comprado OU vendido quando o valor esperado passa do custo (0,1% ida e volta). Perpétuo simulado 5×: US$ 5 por operação usando US$ 1 de margem; no máximo 2 posições no mesmo lado (as moedas andam juntas); stop 2N; sai em no máximo 12 velas. Estuda as próprias operações (calibração, lado, moedas). Para no dia se perder US$ 1, para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Nenhum dinheiro real.</div></details>
   </div>
   <div class="card" id="sec-scalper" style="margin-bottom:14px;border-color:#ea394355">
-    <h3>✂ Scalper — segue as apostas do Cérebro v3: realiza o lucro em +0,5%, corta em −0,5%, sai no fim da vela de 15 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
+    <h3>✂ Scalper — segue as apostas do Cérebro v3: realiza o lucro em +0,5%, corta em −1,5%, sai no fim da vela de 15 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="sc-pat">—</div><div class="sub" id="sc-ret">—</div></div>
       <div class="kpi"><div class="rot">Resultado hoje</div><div class="val num" id="sc-hoje">—</div><div class="sub">para com −US$ 1,00 no dia</div></div>
       <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="sc-npos">—</div><div class="sub" id="sc-aberto">—</div></div>
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="sc-ops">—</div><div class="sub" id="sc-ac">—</div></div>
-      <div class="kpi" style="grid-column:span 2"><div class="rot">Conta de empate</div><div class="sub" style="font-size:12px;color:var(--txt)">Ganha 0,5% e perde 0,5% (mais 0,1% de custo): precisa acertar ~60% das saídas por alvo/stop para empatar; as saídas no fim da vela pesam pelo tamanho do movimento.</div></div>
+      <div class="kpi" style="grid-column:span 2"><div class="rot">Conta de empate</div><div class="sub" style="font-size:12px;color:var(--txt)">Lucro em +0,5%, stop de segurança em −1,5% (stop apertado corta a reversão antes dela acontecer), saída no fim da vela de 15 min. Custo de ~0,12% na ida e volta.</div></div>
     </div>
     <div class="grade g-dupla">
       <div id="sc-pos"></div>

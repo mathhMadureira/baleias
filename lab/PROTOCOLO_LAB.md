@@ -579,3 +579,17 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Saída:** no fechamento da vela seguinte (15 min, o mesmo alvo medido), com stop de segurança de 2%.
 - **Execução:** perpétuo simulado, US$ 5 por posição, margem 5×, 0,05% por lado. Conta de US$ 10 na mesa, no máximo 2 posições no mesmo lado, perda máxima de US$ 1/dia, piso de US$ 5.
 - **Passa** com ≥ 200 operações, resultado líquido médio > 0 e t > 2. Reprova se a média for ≤ 0 após 200 operações.
+
+## Mudança 29: saídas largas, custo realista e pausa depois de stop (pré-registrada em 2026-11-11 13:30 BRT, antes de aplicar)
+
+- **Fonte:** `research_notes/Ensinamentos práticos para robôs/`, com dois achados:
+  - stop apertado tem prêmio negativo quando o preço reverte (Kaminski & Lo 2014; Lo & Remorov 2017), e em cripto os retornos de curto prazo revertem (autocorrelação negativa, Hurst < 0,5);
+  - o custo real no perpétuo é a taxa taker de 0,05%/lado mais o spread e o atraso: ~0,11–0,17% na ida e volta.
+- **Robô rápido (1 min):**
+  - stop passa de 2N para **4N** (seguro contra catástrofe), saindo como antes no horizonte treinado (12 velas);
+  - depois de um stop, a moeda fica **5 velas de fora** (pausa no estilo Freqtrade);
+  - custo do cérebro e da simulação: **0,06%/lado** (era 0,05%).
+- **Scalper:** stop de −0,5% passa para **−1,5%**. O lucro em +0,5% e a saída no fim da vela do v3 continuam. Custo: 0,06%/lado.
+- **Minerador (H28):** fica exatamente como registrado (0,05%/lado), para não mudar um teste em andamento.
+- **Avaliação:** a mesa compara o resultado médio por operação **antes e depois** desta mudança (a data fica gravada). Volta atrás se, após 100 operações, a média piorar.
+- **Pendência para o real:** mínimos da Binance Futures (US$ 50 no BTC, US$ 20 em ETH, LTC e LINK). Posições de US$ 5 nessas moedas só valem no simulado.

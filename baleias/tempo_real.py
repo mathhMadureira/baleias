@@ -597,16 +597,19 @@ class Motor:
         cbr.oportunidades = oportunidades[:33]
         if X.PARAR.exists():
             return
+        pausa = 5 * getattr(self, "_passo_rapido", 60)                 # mudança 29: moeda que bateu stop fica 5 velas de fora
+        em_pausa = {f["moeda"] for f in e["fechadas"][-40:] if "stop" in f.get("motivo", "") and time.time() - f["saida_t"] < pausa}
         for o in oportunidades:
             m = o["par"]
-            if (o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m not in precos or lado_cheio(e["abertas"], o["lado"])
+            if (o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m in em_pausa or m not in precos or lado_cheio(e["abertas"], o["lado"])
                     or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP):
                 continue
             n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
+            n = n and 2 * n                                               # mudança 29: stop de 4N (o executor põe o stop a 2 "n"), seguro largo
             if not n:
                 continue
             X.entrar(e, corretora, m, precos[m], n,
-                     f"cérebro: {o['p_cal']:.1%} de acerto calibrado, valor esperado {o['ev'] * 100:+.2f}%", lado=o["lado"], custo_lado=0.0005)
+                     f"cérebro: {o['p_cal']:.1%} de acerto calibrado, valor esperado {o['ev'] * 100:+.2f}%", lado=o["lado"], custo_lado=0.0006)
             if m in e["abertas"]:
                 e["abertas"][m].update({"prob_lado": o["p_cal"], "ev": o["ev"], "hora": time.gmtime().tm_hour})
 
@@ -617,6 +620,7 @@ class Motor:
         from executor import tartaruga_exec as X
         intervalo = os.environ.get("ROBO_RAPIDO", "1m")                        # pedido do dono: velas de 1 min
         passo = {"1m": 60, "5m": 300, "15m": 900, "1h": 3600, "4h": 14400}[intervalo]
+        self._passo_rapido = passo
         capital = float(os.environ.get("ROBO_RAPIDO_CAPITAL", "10"))            # conta do robô rápido: US$ 10 no total (pedido do dono)
         limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", str(capital * 0.10)))   # perde no máximo 10% da conta por dia
         piso = capital * 0.5                                                    # abaixo de metade da conta, para de vez
@@ -980,7 +984,7 @@ class Motor:
         Segue as regras da mesa: botão PARAR, perda máxima de US$ 1 no dia e piso de US$ 5."""
         from executor import tartaruga_exec as X
         from . import mesa
-        alvo, stop, max_s, orcamento = 0.005, 0.005, 1800, 5.0
+        alvo, stop, max_s, orcamento = 0.005, 0.015, 1800, 5.0      # mudança 29: stop largo (−1,5%); stop apertado tem prêmio negativo
         capital = 10.0
         limite_dia, piso = capital * 0.10, capital * 0.50
         parar = Path(X.__file__).resolve().parent.parent / "PARAR"   # o botão geral do dono (o robô rápido usa o PARAR_RAPIDO)
@@ -1014,7 +1018,7 @@ class Motor:
                 if t >= p.get("fim_t", p["entrada_t"] + max_s):
                     return "fim da vela do v3 (máquina desligada)", o
                 if (h >= stop_px) if venda else (l <= stop_px):
-                    return "stop −0,5% (máquina desligada)", (max(o, stop_px) if venda else min(o, stop_px))
+                    return "stop −1,5% (máquina desligada)", (max(o, stop_px) if venda else min(o, stop_px))
                 if (l <= alvo_px) if venda else (h >= alvo_px):
                     return "lucro realizado +0,5% (máquina desligada)", alvo_px
             return None, None
@@ -1043,7 +1047,7 @@ class Motor:
                     continue
                 sinal = -1 if p.get("lado") == "venda" else 1
                 ganho = sinal * (px / p["entrada"] - 1)
-                motivo = ("lucro realizado +0,5%" if ganho >= alvo else "stop −0,5%" if ganho <= -stop
+                motivo = ("lucro realizado +0,5%" if ganho >= alvo else "stop −1,5%" if ganho <= -stop
                           else "fim da vela do v3" if agora >= p.get("fim_t", p["entrada_t"] + max_s) else None)
                 if motivo:
                     sair(m, motivo, px)
@@ -1073,11 +1077,11 @@ class Motor:
                 andou = (precos[m] / s["px"] - 1) * (1 if s["lado"] == "compra" else -1)
                 if andou >= alvo / 2:                                        # o movimento já aconteceu: não entra atrasado
                     continue
-                n_scalper = precos[m] * stop / 2                             # o stop do executor é 2N: assim fica exatamente a 0,5%
+                n_scalper = precos[m] * stop / 2                             # o stop do executor é 2N: assim fica exatamente a 1,5%
                 with X.configurado(ouvir, orcamento):
                     X.entrar(e, corretora, m, precos[m], n_scalper,
-                             f"Cérebro v3 aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}); lucro em +0,5% / stop −0,5%",
-                             lado=s["lado"], custo_lado=0.0005)
+                             f"Cérebro v3 aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}); lucro em +0,5% / stop −1,5%",
+                             lado=s["lado"], custo_lado=0.0006)
                 if m in e["abertas"]:
                     e["abertas"][m]["fim_t"] = fim
             e["patrimonio"] = patrimonio = X.patrimonio(e, precos, corretora)

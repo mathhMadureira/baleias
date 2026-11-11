@@ -553,7 +553,7 @@ class CerebroV2(Cerebro):
 # ---------------- Cérebro do robô rápido: 33 moedas, velas de 5 min, horizonte de 1 h ----------------
 HORIZONTE = 12                     # 12 velas do tempo gráfico (5 min → 1 h; 1 min → 12 min)
 CUSTO_SPOT = 0.002                 # ida e volta no spot (0,1% por lado)
-CUSTO_PERP = 0.001                 # ida e volta no perpétuo simulado (0,05% por lado): permite comprar E vender a descoberto
+CUSTO_PERP = 0.0012                # ida e volta no perpétuo simulado (0,05% de taxa + spread por lado; mudança 29): compra E vende a descoberto
 
 
 class CerebroRapido(Cerebro):
