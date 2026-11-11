@@ -599,6 +599,9 @@ class Motor:
             return
         pausa = 5 * getattr(self, "_passo_rapido", 60)                 # mudança 29: moeda que bateu stop fica 5 velas de fora
         em_pausa = {f["moeda"] for f in e["fechadas"][-40:] if "stop" in f.get("motivo", "") and time.time() - f["saida_t"] < pausa}
+        if os.environ.get("ROBO_RAPIDO_SINAL", "v3") == "v3":           # decisão do dono (2026-11-11): o robô rápido segue o Cérebro v3
+            self._entrar_pelo_v3(e, corretora, dados, precos, em_pausa)
+            return
         for o in oportunidades:
             m = o["par"]
             if (o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m in em_pausa or m not in precos or lado_cheio(e["abertas"], o["lado"])
@@ -612,6 +615,38 @@ class Motor:
                      f"cérebro: {o['p_cal']:.1%} de acerto calibrado, valor esperado {o['ev'] * 100:+.2f}%", lado=o["lado"], custo_lado=0.0006)
             if m in e["abertas"]:
                 e["abertas"][m].update({"prob_lado": o["p_cal"], "ev": o["ev"], "hora": time.gmtime().tm_hour})
+
+    def _entrar_pelo_v3(self, e, corretora, dados, precos, em_pausa):
+        """Entra nas apostas do Cérebro v3 (vela de 15 min, cada moeda com o seu cérebro) e segura até o fim da vela apostada.
+        Stop de segurança de 4N (N = ATR de 20 velas de 1 min). Cada aposta do v3 é seguida uma vez só."""
+        from lab import tartaruga as T
+        from executor import tartaruga_exec as X
+        from . import mesa
+        try:
+            sinais = mesa.sinais_v3()
+        except (OSError, ValueError, subprocess.SubprocessError):
+            return
+        if X.PARAR.exists():
+            return
+        agora = time.time()
+        e.setdefault("sinais_feitos", [])
+        for s in sorted(sinais, key=lambda s: -abs(s["prob"] - 0.5)):
+            m, chave = s["par"], f"{s['par']}@{s['t']}"
+            inicio, fim = s["t"] / 1000 + 900, s["t"] / 1000 + 1800
+            if chave in e["sinais_feitos"] or not (inicio <= agora <= fim - 120):
+                continue
+            if (m in e["abertas"] or m in em_pausa or m not in precos or lado_cheio(e["abertas"], s["lado"])
+                    or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP):
+                continue
+            n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
+            if not n:
+                continue
+            e["sinais_feitos"] = (e["sinais_feitos"] + [chave])[-500:]
+            X.entrar(e, corretora, m, precos[m], 2 * n,
+                     f"Cérebro v3 aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}) até o fim da vela de 15 min",
+                     lado=s["lado"], custo_lado=0.0006)
+            if m in e["abertas"]:
+                e["abertas"][m].update({"fim_t": fim, "prob_lado": max(s["prob"], 1 - s["prob"]), "hora": time.gmtime().tm_hour})
 
     def _robo_rapido(self):
         """Teste ao vivo, simulado: as mesmas regras da Tartaruga em velas curtas (ROBO_RAPIDO=1h por padrão), para operar no dia.
@@ -701,7 +736,9 @@ class Motor:
                 with X.TRAVA:
                     X.checar_stops(e, corretora, precos)
                     for m in list(e["abertas"]):           # tempo máximo: não segurar a operação demais
-                        if agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
+                        if e["abertas"][m].get("fim_t") and agora >= e["abertas"][m]["fim_t"] and m in precos:
+                            X._sair(e, corretora, m, "fim da vela do v3", precos[m])
+                        elif not e["abertas"][m].get("fim_t") and agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
                             X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)", precos[m])
                 e["patrimonio"] = X.patrimonio(e, precos, corretora)
                 if dados:
