@@ -94,12 +94,22 @@ def _calcular_backtest():
                          calculado=time.time())
 
 
+def _calcular_backtest_uma_vez():
+    try:
+        _calcular_backtest()
+    finally:
+        with _trava:
+            _backtest["calculando"] = False
+
+
 def backtest():
     with _trava:
         pronto = _backtest.get("pronto")
         idade = time.time() - _backtest.get("calculado", 0)
-    if not pronto or idade > 6 * 3600:
-        threading.Thread(target=_calcular_backtest, daemon=True).start()
+    with _trava:
+        if (not pronto or idade > 6 * 3600) and not _backtest.get("calculando"):    # um cálculo por vez, não um por pedido
+            _backtest["calculando"] = True
+            threading.Thread(target=_calcular_backtest_uma_vez, daemon=True).start()
     with _trava:
         return dict(_backtest)
 

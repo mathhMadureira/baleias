@@ -178,10 +178,25 @@ class Manipulador(BaseHTTPRequestHandler):
             self._enviar(200, json.dumps(corpo).encode(), "application/json")
         elif self.path.startswith("/api/mesa"):
             from . import mesa
-            self._enviar(200, json.dumps(mesa.mesa()).encode(), "application/json")
+            try:
+                corpo = mesa.mesa()
+            except Exception as e:                         # rede/git fora do ar: responde o erro em vez de derrubar a conexão
+                corpo = {"erro": type(e).__name__}
+            self._enviar(200, json.dumps(corpo).encode(), "application/json")
+        elif self.path.startswith("/api/realizados"):
+            from . import mesa
+            try:
+                corpo = mesa.realizados()
+            except Exception as e:                         # rede/git fora do ar: responde o erro em vez de derrubar a conexão
+                corpo = {"erro": type(e).__name__}
+            self._enviar(200, json.dumps(corpo).encode(), "application/json")
         elif self.path.startswith("/api/moedas-cerebros"):
             from . import mesa
-            self._enviar(200, json.dumps(mesa.cerebros_por_moeda()).encode(), "application/json")
+            try:
+                corpo = mesa.cerebros_por_moeda()
+            except Exception as e:                         # rede/git fora do ar: responde o erro em vez de derrubar a conexão
+                corpo = {"erro": type(e).__name__}
+            self._enviar(200, json.dumps(corpo).encode(), "application/json")
         elif self.path.startswith("/api/cerebro"):
             corpo = self.motor.cerebro if self.motor and self.motor.cerebro else {"carregando": True}
             self._enviar(200, json.dumps(corpo).encode(), "application/json")

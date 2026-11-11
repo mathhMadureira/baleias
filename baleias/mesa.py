@@ -26,10 +26,11 @@ REPO = Path(__file__).resolve().parent.parent
 
 def avaliar(nome, eventos, operacoes_n, inicio=None, nota=""):
     """eventos: [(t_seg, variação relativa do patrimônio)] em ordem. Devolve a ficha do robô na mesa."""
-    conta, pico, queda, dias, violacoes = CONTA, CONTA, 0.0, {}, []
+    conta, pico, queda, dias, violacoes, minimo = CONTA, CONTA, 0.0, {}, [], CONTA
     for t, r in eventos:
         antes = conta
         conta *= 1 + r
+        minimo = min(minimo, conta)
         pico = max(pico, conta)
         queda = min(queda, conta / pico - 1)
         d = time.strftime("%Y-%m-%d", time.gmtime(t))
@@ -38,7 +39,7 @@ def avaliar(nome, eventos, operacoes_n, inicio=None, nota=""):
         if v <= -CONTA * PERDA_DIA:
             violacoes.append(d)
     pior_dia = min(dias.values()) if dias else 0.0
-    if conta < CONTA * PISO:
+    if minimo < CONTA * PISO:                     # passou abaixo do piso em algum momento: eliminado, mesmo que tenha voltado
         status = "❌ eliminado (conta abaixo de US$ 5)"
     elif operacoes_n >= APROVA_OPS and conta >= CONTA * (1 + APROVA_GANHO) and not violacoes and queda > -APROVA_QUEDA:
         status = "🏆 aprovado para a fase 2 (conta de US$ 50)"
@@ -49,6 +50,23 @@ def avaliar(nome, eventos, operacoes_n, inicio=None, nota=""):
     return {"robo": nome, "conta": conta, "resultado": conta - CONTA, "queda_max": queda, "pior_dia": pior_dia, "operacoes": operacoes_n,
             "violacoes": violacoes, "status": status, "inicio": inicio, "nota": nota,
             "falta": {"operacoes": max(0, APROVA_OPS - operacoes_n), "ganho_us": max(0.0, CONTA * (1 + APROVA_GANHO) - conta)}}
+
+
+import threading
+
+_git = {"trava": threading.Lock(), "t": 0.0}
+
+
+def _buscar_estado():
+    """git fetch do ramo `estado` no máximo a cada 30 s e nunca dois ao mesmo tempo (vários pedidos disputavam a trava do git)."""
+    with _git["trava"]:
+        if time.time() - _git["t"] < 30:
+            return
+        try:
+            subprocess.run(["git", "-C", str(REPO), "fetch", "-q", "origin", "estado"], capture_output=True, timeout=60)
+        except subprocess.SubprocessError:
+            pass
+        _git["t"] = time.time()
 
 
 def _git_json(caminho):
@@ -129,9 +147,19 @@ def _h19():
     return avaliar("Previsor H19", eventos, len(apostas), None, "aposta binária simulada, 2% por aposta a 0,51")
 
 
+_cm = {"t": 0, "dados": None}
+
+
 def cerebros_por_moeda():
-    """Placar ao vivo de cada cérebro v1 e v2, moeda por moeda (BTC + as outras 32), para a aba Robô."""
-    subprocess.run(["git", "-C", str(REPO), "fetch", "-q", "origin", "estado"], capture_output=True, timeout=60)
+    """Placar ao vivo de cada cérebro v1, v2 e v3, moeda por moeda (BTC + as outras 32), para a aba Robô (guardado por 60 s)."""
+    if time.time() - _cm["t"] < 60 and _cm["dados"]:
+        return _cm["dados"]
+    _cm.update(t=time.time(), dados=_cerebros_por_moeda())
+    return _cm["dados"]
+
+
+def _cerebros_por_moeda():
+    _buscar_estado()
     linhas = []
     for nome_arq, versao in (("dados/cerebro.json", "v1"), ("dados/cerebro_v2.json", "v2"), ("dados/cerebro_v3.json", "v3")):
         e = _git_json(nome_arq) or {}
@@ -161,7 +189,7 @@ def sinais_v3():
     [{par, t (abertura da vela fechada, ms), px, prob, lado}] — só as que apostam (prob ≥ 52% para um lado)."""
     if time.time() - _sinais["t"] < 60:
         return _sinais["dados"]
-    subprocess.run(["git", "-C", str(REPO), "fetch", "-q", "origin", "estado"], capture_output=True, timeout=60)
+    _buscar_estado()
     saida = []
     btc = _git_json("dados/cerebro_v3.json") or {}
     fontes = [("BTCUSDT", btc.get("pendente"))] + [(par, x.get("v3", {}).get("pendente")) for par, x in (_git_json("dados/cerebros_moedas.json") or {}).items()]
@@ -172,13 +200,52 @@ def sinais_v3():
     return saida
 
 
+_v3_ops = {"t": 0, "ops": []}
+
+
+def realizados():
+    """Todas as operações FECHADAS dos robôs que operam no dia (Rápido, Scalper e as apostas do Cérebro v3), numa lista só,
+    com o total realizado hoje (dia UTC) de cada um — o que o dono quer ver: lucro realizado, não só o saldo."""
+    saida = []
+    for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper")):
+        try:
+            e = json.loads((config.RAIZ / arq).read_text())
+        except (OSError, ValueError):
+            continue
+        for f in e.get("fechadas", [])[-80:]:
+            saida.append({"robo": robo, "t": f["saida_t"], "moeda": f["moeda"].replace("USDT", ""), "lado": f.get("lado", "compra"),
+                          "resultado": f["resultado_usd"], "motivo": f.get("motivo", "")})
+    if time.time() - _v3_ops["t"] > 60:
+        _buscar_estado()
+        ops = [("BTC", o["t"], o["liquido"], o["aposta"]) for o in (_git_json("dados/cerebro_v3.json") or {}).get("operacoes", [])[-40:]]
+        for par, x in (_git_json("dados/cerebros_moedas.json") or {}).items():
+            ops += [(par.replace("USDT", ""), o[0], o[1], o[2]) for o in x.get("v3", {}).get("ops", [])[-40:]]
+        _v3_ops.update(t=time.time(), ops=ops)
+    por_vela = {}
+    for o in _v3_ops["ops"]:
+        por_vela[o[1]] = por_vela.get(o[1], 0) + 1
+    for moeda, t, liquido, aposta in _v3_ops["ops"]:
+        escala = min(1.0, EXPOSICAO_VELA / (por_vela[t] * 0.02))           # o mesmo limite da mesa: no máximo 6% da conta por vela
+        saida.append({"robo": "🧠 Cérebro v3", "t": t / 1000 + 1800, "moeda": moeda, "lado": "compra" if aposta > 0 else "venda",
+                      "resultado": liquido * CONTA * escala, "motivo": "aposta de 15 min " + ("ganha" if liquido > 0 else "perdida")})
+    saida.sort(key=lambda x: -x["t"])
+    hoje = time.strftime("%Y-%m-%d", time.gmtime())
+    totais = {}
+    for x in saida:
+        if time.strftime("%Y-%m-%d", time.gmtime(x["t"])) == hoje:
+            tt = totais.setdefault(x["robo"], {"lucro": 0.0, "ganhos": 0, "perdas": 0})
+            tt["lucro"] += x["resultado"]
+            tt["ganhos" if x["resultado"] > 0 else "perdas"] += 1
+    return {"t": time.time(), "hoje": hoje, "totais": totais, "operacoes": saida[:120]}
+
+
 _cache = {"t": 0, "dados": None}
 
 
 def mesa():
     if time.time() - _cache["t"] < 60 and _cache["dados"]:
         return _cache["dados"]
-    subprocess.run(["git", "-C", str(REPO), "fetch", "-q", "origin", "estado"], capture_output=True, timeout=60)
+    _buscar_estado()
     outras = _git_json("dados/cerebros_moedas.json") or {}
     fichas = [
         _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),

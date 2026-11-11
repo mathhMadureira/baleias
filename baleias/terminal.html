@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Baleias Terminal</title>
-<script src="https://unpkg.com/lightweight-charts@4.2.3/dist/lightweight-charts.standalone.production.js"></script>
+<script defer src="https://unpkg.com/lightweight-charts@4.2.3/dist/lightweight-charts.standalone.production.js"></script>
 <style>
 :root {
   --bg:#081014; --bg2:#0b161b; --card:#0f1a20; --card2:#14232b; --line:#1b2b33; --line2:#26404a;
@@ -31,7 +31,16 @@ nav button.ativo { color:var(--acento); border-bottom-color:var(--acento); }
 .subnav { position:sticky; top:52px; z-index:4; display:flex; gap:6px; flex-wrap:wrap; padding:8px 0 10px; background:var(--bg); }
 .subnav a { text-decoration:none; font:600 12px system-ui; color:var(--mut); border:1px solid var(--line2); border-radius:999px; padding:4px 11px; }
 .subnav a:hover { color:var(--acento); border-color:var(--acento); }
-.tv { width:100%; border-radius:8px; overflow:hidden; }
+.tv { width:100%; border-radius:8px; overflow:hidden; position:relative; }
+.tv:empty::after { content:"carregando gráfico…"; position:absolute; inset:0; display:grid; place-items:center; color:var(--mut); font-size:13px; }
+.lr { display:grid; grid-template-columns:52px 112px 60px 74px 1fr 96px; gap:8px; align-items:center; padding:6px 8px; border-bottom:1px solid var(--line); font:12px var(--mono); }
+.lr .v { text-align:right; font-weight:700; }
+.lr.novo { animation:pisca 2.5s ease-out; }
+@keyframes pisca { from { background:#50e3c233; } to { background:transparent; } }
+.tot { display:flex; justify-content:space-between; align-items:baseline; padding:9px 12px; margin-bottom:8px; background:var(--bg2); border:1px solid var(--line); border-radius:9px; }
+.tot .v { font:700 20px var(--mono); }
+details.ajuda summary { cursor:pointer; color:var(--mut); font-size:12px; margin-top:6px; }
+[data-moeda] { cursor:pointer; } tr[data-moeda]:hover td, .fita [data-moeda]:hover b { color:var(--acento); }
 .card { box-shadow:0 1px 0 #ffffff05 inset; }
 [id^="sec-"] { scroll-margin-top:110px; }
 .espaco { flex:1; }
@@ -133,16 +142,23 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 <main>
 <section class="aba ativa" id="aba-robo">
   <div class="subnav">
-    <a href="#sec-placar">🏁 Placar</a><a href="#sec-varredura">🔎 Varredura</a><a href="#sec-cerebro">🧠 Cérebros</a><a href="#sec-rapido">⚡ Rápido</a>
+    <a href="#sec-placar">🏁 Placar</a><a href="#sec-lucros">💵 Lucros</a><a href="#sec-varredura">🔎 Varredura</a><a href="#sec-cerebro">🧠 Cérebros</a><a href="#sec-rapido">⚡ Rápido</a>
     <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
   </div>
   <div class="card" id="sec-placar" style="margin-bottom:14px">
     <h3>🏁 Todos os robôs agora · conta de US$ 10 cada<span class="dir mut num" id="pl-t"></span></h3>
     <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
   </div>
+  <div class="card" id="sec-lucros" style="margin-bottom:14px;border-color:#50e3c255">
+    <h3>💵 Lucros realizados — todas as operações fechadas, de todos os robôs, ao vivo<span class="dir mut num" id="lr-t"></span></h3>
+    <div class="grade" style="grid-template-columns:minmax(260px,1fr) minmax(0,2.4fr)">
+      <div id="lr-totais"></div>
+      <div id="lr-lista" style="max-height:300px;overflow:auto"></div>
+    </div>
+  </div>
   <div class="card" id="sec-varredura" style="margin-bottom:14px;border-color:#16c78466">
     <h3>🔎 Varredura ao vivo — o robô analisa as 33 moedas sem parar <span class="ponto ok" id="vr-pulso" style="display:inline-block"></span>
-      <span class="dir mut num" id="vr-info"></span></h3>
+      <span class="dir mut num" id="vr-info"></span><span class="mut" style="text-transform:none;letter-spacing:0;font-weight:500">· clique numa moeda para ver o gráfico</span></h3>
     <div class="grade g-dupla">
       <div style="max-height:340px;overflow:auto"><table id="vr-tab"><thead><tr><th>Moeda</th><th>Preço</th><th>Chance de subir</th><th>Melhor lado · VE</th><th>Rompimento</th><th>Sinal</th><th>Há</th></tr></thead><tbody></tbody></table></div>
       <div id="vr-log" class="num" style="max-height:340px;overflow:hidden;font-size:12px;line-height:1.55"></div>
@@ -180,7 +196,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="ra-ops">—</div><div class="sub" id="ra-ops-s">—</div></div>
       <div class="kpi"><div class="rot">Meta: +US$ 100 a cada 2 dias</div><div class="val num" id="ra-hoje">—</div><div class="sub" id="ra-hoje-s">—</div></div>
       <div class="kpi"><div class="rot">Próxima vela fecha em</div><div class="val num" id="ra-prox">—</div><div class="sub" id="ra-ult">—</div></div>
-      <div class="kpi"><div class="rot">O que os cérebros veem (lado · valor esperado em 12 velas)</div><div class="sub num" id="ra-radar" style="font-size:13px;color:var(--txt)">—</div></div>
+      <div class="kpi"><div class="rot">O que os cérebros veem (lado · valor esperado em 12 velas)</div><div class="sub num" id="ra-radar" style="font-size:12px;color:var(--txt);max-height:62px;overflow:auto"></div></div>
     </div>
     <div style="display:flex;align-items:center;gap:10px;margin:4px 0 6px">
       <b id="ra-g-titulo" class="num">—</b><span class="mut num" id="ra-g-info" style="font-size:12px"></span>
@@ -188,12 +204,12 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <select id="ra-g-moeda" class="selo" style="background:var(--card2);color:var(--txt)"><option value="">seguir o robô</option></select>
     </div>
     <div id="ra-grafico" class="tv" style="height:430px"></div>
-    <div class="legenda" style="margin-bottom:10px"><span>🖱 arraste para mover · roda do mouse para zoom · duplo clique no eixo para reajustar</span><span><i style="border-color:var(--up)"></i>máxima de 55 velas (referência)</span><span><i style="border-color:var(--down)"></i>mínima de 20 velas (referência)</span><span><i style="border-color:#e6edf3"></i>preço de entrada da posição</span><span><i style="border-color:var(--gold);border-top-style:solid"></i>stop da posição</span></div>
+    <div class="legenda" style="margin-bottom:10px"><span>🖱 arraste para mover · roda do mouse para zoom · duplo clique no eixo para reajustar</span><span><i style="border-color:#e6edf3"></i>preço de entrada da posição</span><span><i style="border-color:var(--gold);border-top-style:solid"></i>stop da posição</span></div>
     <div class="grade g-dupla">
       <div><div id="ra-pos"></div></div>
       <div id="ra-ev" style="max-height:260px;overflow:auto;font-size:13px"></div>
     </div>
-    <div class="mut" style="font-size:12px;margin-top:8px">A cada vela fechada, o cérebro de cada moeda (rede neural + sinapses, isolado das outras moedas) prevê as próximas 12 velas; uma regra só ganha voto se acertar mais do que o próprio humor do mercado. Entra comprado OU vendido quando o valor esperado passa do custo (0,1% ida e volta). Perpétuo simulado 5×: US$ 5 por operação usando US$ 1 de margem; no máximo 2 posições no mesmo lado (as moedas andam juntas); stop 2N; sai em no máximo 12 velas. Estuda as próprias operações (calibração, lado, moedas). Para no dia se perder US$ 1, para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Nenhum dinheiro real.</div>
+    <details class="ajuda"><summary>Como funciona</summary><div class="mut" style="font-size:12px;margin-top:6px">A cada vela fechada, o cérebro de cada moeda (rede neural + sinapses, isolado das outras moedas) prevê as próximas 12 velas; uma regra só ganha voto se acertar mais do que o próprio humor do mercado. Entra comprado OU vendido quando o valor esperado passa do custo (0,1% ida e volta). Perpétuo simulado 5×: US$ 5 por operação usando US$ 1 de margem; no máximo 2 posições no mesmo lado (as moedas andam juntas); stop 2N; sai em no máximo 12 velas. Estuda as próprias operações (calibração, lado, moedas). Para no dia se perder US$ 1, para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Nenhum dinheiro real.</div></details>
   </div>
   <div class="card" id="sec-scalper" style="margin-bottom:14px;border-color:#ea394355">
     <h3>✂ Scalper — segue as apostas do Cérebro v3: realiza o lucro em +0,5%, corta em −0,5%, sai no fim da vela de 15 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
@@ -228,7 +244,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <div class="kpi"><div class="rot">Ritmo ao ano</div><div class="val num" id="fu-ano">—</div><div class="sub">histórico 2023–26: +6,1%/ano</div></div>
       <div class="kpi" style="grid-column:span 2"><div class="rot">Posições agora (vendido no perp + comprado no spot)</div><div class="sub num" id="fu-pos-l" style="font-size:13px;color:var(--txt)">—</div></div>
     </div>
-    <div class="mut" style="font-size:12px">Comprado no spot e vendido no perpétuo da mesma moeda: o preço se anula e sobra a taxa que os alavancados pagam a cada hora. Entra numa moeda só quando a média de 72 h paga o custo (probabilidade medida: 84% dos dias positivos). Pequeno, mas constante. Ganho real só com conta de futuros.</div>
+    <details class="ajuda"><summary>Como funciona</summary><div class="mut" style="font-size:12px;margin-top:6px">Comprado no spot e vendido no perpétuo da mesma moeda: o preço se anula e sobra a taxa que os alavancados pagam a cada hora. Entra numa moeda só quando a média de 72 h paga o custo (probabilidade medida: 84% dos dias positivos). Pequeno, mas constante. Ganho real só com conta de futuros.</div></details>
   </div>
   <div class="card" id="sec-diario" style="margin-bottom:14px;border-color:#2a3746;padding-bottom:4px">
     <h3>🐢 Robô diário (Tartaruga) — 33 moedas, decide uma vez por dia na nuvem (simulado, US$ 700)</h3>
@@ -569,10 +585,21 @@ function desenharTeste() {
 
 function desenharTudo() { desenharRobo(); desenharTeste(); }
 
+// ---------- clicar em qualquer moeda abre o gráfico dela ----------
+function abrirMoeda(m) {
+  m = String(m).replace("USDT", "");
+  const sel = $("ra-g-moeda");
+  if (![...sel.options].some(o => o.value === m)) sel.add(new Option(m, m));
+  sel.value = m;
+  cicloGraficoRapido();
+  $("ra-g-titulo").scrollIntoView({behavior: "smooth", block: "center"});
+}
+document.addEventListener("click", (ev) => { const alvo = ev.target.closest("[data-moeda]"); if (alvo) abrirMoeda(alvo.dataset.moeda); });
+
 // ---------- gráficos de velas interativos (TradingView lightweight-charts) ----------
 const graficos = {};
-function precisao(p) { if (!p) return 2; if (p >= 1000) return 1; if (p >= 10) return 3; if (p >= 1) return 4; return Math.min(12, Math.ceil(-Math.log10(p)) + 3); }
-function tempoVela(d) { const [a, b] = d.split(" "); const [y, m, dd] = a.split("-").map(Number); const [h, mi] = b ? b.split(":").map(Number) : [0, 0]; return Date.UTC(y, m - 1, dd, h, mi) / 1000 - FUSO; }
+function precisao(p) { if (!p) return 2; if (p >= 10000) return 0; if (p >= 1000) return 1; if (p >= 10) return 3; if (p >= 1) return 4; return Math.min(12, Math.ceil(-Math.log10(p)) + 3); }
+function tempoVela(d) { const [a, b] = d.split(" "); const [y, m, dd] = a.split("-").map(Number); const [h, mi] = b ? b.split(":").map(Number) : [0, 0]; return Date.UTC(y, m - 1, dd, h, mi) / 1000 - (b ? FUSO : 0); }
 const FUSO = new Date().getTimezoneOffset() * 60;   // o gráfico desenha em UTC: desloca para a hora de Brasília
 function tv(id, dados, info, pos) {
   if (!dados || !dados.velas || !dados.velas.length || !window.LightweightCharts) return;
@@ -590,14 +617,15 @@ function tv(id, dados, info, pos) {
   const vs = []; for (const v of dados.velas) { const tt = tempoVela(v.d); if (!vs.length || tt > vs[vs.length - 1].time) vs.push({time: tt, open: v.o, high: v.h, low: v.l, close: v.c}); }
   const ultimo = vs[vs.length - 1], dec = precisao(ultimo.close), formato = {type: "price", precision: dec, minMove: Math.pow(10, -dec)};
   for (const s of [g.velas, g.ent, g.sai, g.stop]) s.applyOptions({priceFormat: formato});
-  const chave = dados.moeda + "|" + vs[0].time;
-  if (g.chave !== chave || vs.length < 2) {
+  const chave = dados.moeda + "|" + (vs.length > 1 ? vs[1].time - vs[0].time : 0);   // moeda + tempo gráfico: a janela deslizante não reinicia o zoom
+  if (g.chave !== chave) {
     g.velas.setData(vs); g.chave = chave;
     g.chart.timeScale().setVisibleLogicalRange({from: Math.max(0, vs.length - 140), to: vs.length + 6});
   } else for (const v of vs) if (v.time >= g.ultimo) g.velas.update(v);
-  g.ultimo = ultimo.time;
+  g.ultimo = ultimo.time; g.vela = {...ultimo}; g.moeda = dados.moeda;
   const serie = (k) => dados.velas.filter(v => v[k] != null).map(v => ({time: tempoVela(v.d), value: v[k]})).filter((x, i, a) => !i || x.time > a[i - 1].time);
-  g.ent.setData(serie("entrada")); g.sai.setData(serie("saida")); g.stop.setData(pos ? [] : serie("stop2n"));
+  const canais = id === "grafico";                  // canais de 55/20 só fazem sentido no robô diário (Tartaruga)
+  g.ent.setData(canais ? serie("entrada") : []); g.sai.setData(canais ? serie("saida") : []); g.stop.setData(canais && !pos ? serie("stop2n").slice(-30) : []);
   const marcas = (dados.marcas || []).map(m => { const alvo = vs.filter(v => v.time <= m.t - FUSO).pop(); return alvo && {time: alvo.time, position: m.tipo === "entrada" ? "belowBar" : "aboveBar",
     color: m.tipo === "entrada" ? "#50e3c2" : "#f0b90b", shape: m.tipo === "entrada" ? "arrowUp" : "arrowDown", text: m.tipo}; }).filter(Boolean).sort((a, b) => a.time - b.time);
   g.velas.setMarkers(marcas);
@@ -605,8 +633,20 @@ function tv(id, dados, info, pos) {
   g.precos = pos ? [g.velas.createPriceLine({price: pos.entrada, color: "#e6f1f2", lineStyle: 2, lineWidth: 1, title: "entrada"}),
                     g.velas.createPriceLine({price: pos.stop, color: "#f0b90b", lineStyle: 0, lineWidth: 1, title: "stop"})] : [];
   const variacao = (ultimo.close / vs[Math.max(0, vs.length - 2)].close - 1) * 100;
-  if (info) info.textContent = `agora ${px(ultimo.close)} · ${pct(variacao, 2)} na última vela` + (pos ? ` · posição ${pos.resultado >= 0 ? "+" : ""}US$ ${fmt(pos.resultado, 3)}` : "");
+  const uv = dados.velas[dados.velas.length - 1];
+  const canal = canais && uv.entrada ? ` · ${uv.c >= uv.entrada ? "ACIMA do rompimento" : "falta " + pct((uv.entrada / uv.c - 1) * 100, 1) + " para entrar"}` + (uv.stop2n ? ` · stop seria ${pct((uv.stop2n / uv.c - 1) * 100, 1)}` : "") : "";
+  if (info) info.textContent = `agora ${px(ultimo.close)} · ${pct(variacao, 2)} na última vela` + canal + (pos ? ` · posição ${pos.resultado >= 0 ? "+" : ""}US$ ${fmt(pos.resultado, 3)}` : "");
 }
+// tempo real: a vela atual acompanha o preço ao vivo a cada segundo (entre as recargas completas do gráfico)
+const precoVivo = {};
+setInterval(() => {
+  for (const g of Object.values(graficos)) {
+    const p = g.vela && precoVivo[g.moeda];
+    if (!p) continue;
+    g.vela = {...g.vela, close: p, high: Math.max(g.vela.high, p), low: Math.min(g.vela.low, p)};
+    try { g.velas.update(g.vela); } catch (e) {}
+  }
+}, 1000);
 
 async function j(url) { const r = await fetch(url, {cache: "no-store"}); return r.json(); }
 async function carregarVelas() {
@@ -638,15 +678,17 @@ async function cicloFontes() {
     const d = await j("/api/ao-vivo?desde=999999999&calor=999999999");
     const destaque = ["BTC", "ETH", "SOL", "XRP", "BNB", "DOGE", "PEPE", "NEAR", "ZEC", "SUI", "ENA", "LINK", "AVAX", "TAO"];
     const mapaM = Object.fromEntries((d.mercado || []).map(x => [x.s, x]));
-    $("fita").replaceChildren(...destaque.filter(s => mapaM[s]).map(s => { const x = mapaM[s], e = document.createElement("span");
+    for (const x of d.mercado || []) precoVivo[x.s] = x.p;
+    $("fita").replaceChildren(...destaque.filter(s => mapaM[s]).map(s => { const x = mapaM[s], e = document.createElement("span"); e.dataset.moeda = s;
       e.innerHTML = `<b>${s}</b>${px(x.p)} <i class="${cor(x.pct)}" style="font-style:normal">${pct(x.pct, 2)}</i>`; return e; }));
     const vivas = Object.values(d.fontes || {}).filter(v => v.ok && d.agora - v.t < 900).length, total = Object.keys(d.fontes || {}).length;
-    $("online").textContent = vivas === total ? "● Online" : `● ${vivas}/${total} fontes`; $("online").style.color = vivas === total ? "" : "var(--gold)";
+    const ok = total > 0 && vivas === total;
+    $("online").textContent = total === 0 ? "● motor desligado" : ok ? "● Online" : `● ${vivas}/${total} fontes`; $("online").style.color = ok ? "" : "var(--gold)";
     $("pontos").replaceChildren(...Object.entries(d.fontes || {}).map(([k, v]) => {
       const s = document.createElement("span"); s.className = "ponto " + (v.ok && d.agora - v.t < 900 ? "ok" : "mal"); s.title = k + (v.erro ? ": " + v.erro : ""); return s;
     }));
-  } catch (e) {}
-  setTimeout(cicloFontes, 5000);
+  } catch (e) { $("online").textContent = "● sem conexão com o painel"; $("online").style.color = "var(--down)"; }
+  setTimeout(cicloFontes, 2000);
 }
 function relogio() {
   const a = new Date();
@@ -767,7 +809,7 @@ async function cicloVarredura() {
     $("vr-info").textContent = `${d.moedas.length} moedas · ${d.voltas} voltas completas`;
     const ls = d.moedas.slice().sort((a, b) => b.ev - a.ev);
     $("vr-tab").querySelector("tbody").replaceChildren(...ls.map(l => {
-      const tr = document.createElement("tr"); const idade = Math.round(d.agora - l.t);
+      const tr = document.createElement("tr"); const idade = Math.round(d.agora - l.t); tr.dataset.moeda = l.moeda;
       tr.innerHTML = `<td><b>${l.moeda}</b></td><td>${px(l.preco)}</td><td class="${l.prob > 0.5 ? "up" : l.prob < 0.5 ? "down" : ""}">${fmt(l.prob * 100, 1)}%</td>` +
         `<td class="${cor(l.ev)}">${l.lado === "venda" ? "▼ venda" : "▲ compra"} ${l.ev >= 0 ? "+" : ""}${fmt(l.ev * 100, 2)}%</td><td>${l.falta <= 0 ? "ROMPEU" : "+" + fmt(l.falta, 2) + "%"}</td>` +
         `<td style="font-family:system-ui;font-size:12px"></td><td class="mut">${idade}s</td>`;
@@ -887,7 +929,7 @@ async function cicloRapido() {
       } else
       $("ra-radar").textContent = ra.radar.length ? ra.radar.map(r => `${r.moeda} ${r.falta_pct <= 0 ? "ROMPEU" : "+" + fmt(r.falta_pct, 1) + "%"}`).join(" · ") : "carregando velas…";
       $("ra-pos").innerHTML = ra.posicoes.length ? `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Stop</th><th>Resultado</th></tr></thead><tbody>${
-        ra.posicoes.map(p => `<tr><td>${p.moeda}</td><td>${px(p.entrada)}</td><td>${px(p.preco)}</td><td>${px(p.stop)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado)}</td></tr>`).join("")}</tbody></table>`
+        ra.posicoes.map(p => `<tr data-moeda="${p.moeda}"><td>${p.moeda}</td><td>${px(p.entrada)}</td><td>${px(p.preco)}</td><td>${px(p.stop)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado)}</td></tr>`).join("")}</tbody></table>`
         : `<div class="vazio">Nenhuma posição aberta agora.</div>`;
       $("ra-ev").replaceChildren(...(ra.eventos.length ? ra.eventos.map(x => { const d = document.createElement("div"); d.style.padding = "4px 0"; d.style.borderBottom = "1px solid var(--line)";
         d.className = x.texto.includes("ENTROU") ? "" : /: \+/.test(x.texto) ? "up" : x.texto.includes("SAIU") ? "down" : "mut";
@@ -902,8 +944,9 @@ async function cicloRapido() {
   } catch (e) {}
   setTimeout(cicloRapido, 5000);
 }
-let raG = null;
+let raG = null, raGTimer = null;
 async function cicloGraficoRapido() {
+  clearTimeout(raGTimer);
   try {
     if (ra && !ra.carregando) {
       const sel = $("ra-g-moeda");
@@ -915,7 +958,7 @@ async function cicloGraficoRapido() {
       tv("ra-grafico", raG, $("ra-g-info"), pos || null);
     }
   } catch (e) {}
-  setTimeout(cicloGraficoRapido, 5000);
+  raGTimer = setTimeout(cicloGraficoRapido, 5000);
 }
 $("ra-g-moeda").onchange = () => cicloGraficoRapido();
 cicloGraficoRapido();
@@ -951,6 +994,29 @@ function desenharPlacar() {                       // redesenha a cada 2 s: Rápi
 }
 cicloPlacar(); setInterval(desenharPlacar, 2000);
 
+// ---------- lucros realizados (todos os robôs) ----------
+let lrVistos = null;
+async function cicloRealizados() {
+  try {
+    const d = await j("/api/realizados");
+    if (!d.erro) {
+      $("lr-t").textContent = "hoje (dia UTC " + d.hoje.split("-").reverse().join("/") + ")";
+      const tot = Object.entries(d.totais), soma = tot.reduce((a, [, x]) => a + x.lucro, 0);
+      $("lr-totais").innerHTML = `<div class="tot" style="border-color:${soma >= 0 ? "#1fc7a066" : "#ed4b6266"}"><span>Total realizado hoje</span><span class="v ${cor(soma)}">${soma >= 0 ? "+" : ""}US$ ${fmt(soma, 2)}</span></div>` +
+        tot.map(([r, x]) => `<div class="tot"><span>${r}<br><small class="mut">${x.ganhos} ganhos · ${x.perdas} perdas</small></span><span class="v ${cor(x.lucro)}" style="font-size:16px">${x.lucro >= 0 ? "+" : ""}US$ ${fmt(x.lucro, 3)}</span></div>`).join("");
+      const chave = (o) => o.robo + o.t + o.moeda;
+      $("lr-lista").replaceChildren(...d.operacoes.map(o => { const e = document.createElement("div"); e.className = "lr" + (lrVistos && !lrVistos.has(chave(o)) ? " novo" : "");
+        e.dataset.moeda = o.moeda;
+        e.innerHTML = `<span class="mut">${new Date(o.t * 1000).toLocaleTimeString("pt-BR").slice(0, 5)}</span><span></span><b>${o.moeda}</b><span class="${o.lado === "venda" ? "down" : "up"}">${o.lado === "venda" ? "▼ venda" : "▲ compra"}</span><span class="mut" style="font-family:system-ui;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"></span><span class="v ${cor(o.resultado)}">${o.resultado >= 0 ? "+" : ""}US$ ${fmt(o.resultado, 3)}</span>`;
+        e.children[1].textContent = o.robo; e.children[4].textContent = o.motivo; return e; }));
+      if (lrVistos && d.operacoes.some(o => !lrVistos.has(chave(o)) && o.resultado > 0)) bip(988);
+      lrVistos = new Set(d.operacoes.map(chave));
+    }
+  } catch (e) {}
+  setTimeout(cicloRealizados, 5000);
+}
+cicloRealizados();
+
 // ---------- cérebros por moeda (nuvem) ----------
 async function cicloCerebrosMoedas() {
   try {
@@ -963,7 +1029,7 @@ async function cicloCerebrosMoedas() {
       x.textContent = `${new Date(o.t + 1800000).toLocaleTimeString("pt-BR").slice(0, 5)} ${o.moeda} ${o.lado === "sobe" ? "▲" : "▼"} ${o.liquido > 0 ? "+" : "−"}US$ ${fmt(Math.abs(o.liquido) * 10, 2)}`;
       x.title = o.liquido > 0 ? "lucro realizado" : "perda"; return x; }));
     $("cm-tab").querySelector("tbody").replaceChildren(...d.moedas.map(m => {
-      const tr = document.createElement("tr"); const u = (m.v1 && m.v1.ultima) || (m.v2 && m.v2.ultima);
+      const tr = document.createElement("tr"); const u = (m.v1 && m.v1.ultima) || (m.v2 && m.v2.ultima); tr.dataset.moeda = m.moeda;
       tr.innerHTML = `<td><b>${m.moeda}</b></td>` + [...cel(m.v1), ...cel(m.v2), ...cel(m.v3)].map(c => `<td>${c}</td>`).join("") +
         `<td>${u ? `<span class="chip ${u.ganhou ? "up" : "down"}">${u.lado === "sobe" ? "▲" : "▼"} ${u.ganhou ? "ganhou" : "perdeu"}</span> <span class="mut">${new Date(u.t).toLocaleTimeString("pt-BR").slice(0, 5)}</span>` : '<span class="mut">ainda sem aposta</span>'}</td>`;
       return tr;
@@ -988,7 +1054,7 @@ async function cicloScalper() {
       $("sc-ops").textContent = s.fechadas; $("sc-ac").textContent = s.fechadas ? `ganhou ${s.ganhos} · acerto ${fmt(s.ganhos / s.fechadas * 100, 0)}% (empate ~40%)` : "nenhuma ainda";
       $("sc-trava").innerHTML = s.trava ? `<span class="chip down">🛑 ${s.trava}</span>` : `<span class="chip up">operando</span>`;
       $("sc-pos").innerHTML = s.abertas.length ? `<table><thead><tr><th>Moeda</th><th>Lado</th><th>Entrada</th><th>Resultado</th></tr></thead><tbody>${
-        s.abertas.map(p => `<tr><td>${p.moeda}</td><td class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ vendido" : "▲ comprado"}</td><td>${px(p.entrada)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado, 3)}</td></tr>`).join("")}</tbody></table>`
+        s.abertas.map(p => `<tr data-moeda="${p.moeda}"><td>${p.moeda}</td><td class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ vendido" : "▲ comprado"}</td><td>${px(p.entrada)}</td><td class="${cor(p.resultado)}">${p.resultado >= 0 ? "+" : ""}${fmt(p.resultado, 3)}</td></tr>`).join("")}</tbody></table>`
         : `<div class="vazio">Nenhuma posição aberta agora.</div>`;
       $("sc-ev").replaceChildren(...(s.eventos.length ? s.eventos.map(x => { const d = document.createElement("div"); d.style.padding = "4px 0"; d.style.borderBottom = "1px solid var(--line)";
         d.className = x.texto.includes("ENTROU") ? "" : /: \+/.test(x.texto) ? "up" : x.texto.includes("SAIU") ? "down" : "mut";

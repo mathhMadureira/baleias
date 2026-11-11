@@ -213,11 +213,12 @@ class Cerebro:
         self.passos = e.get("passos", 0)
         self.ultima_t = e.get("ultima_t")
         self.inicio_ao_vivo = e.get("inicio_ao_vivo")     # apostas antes disto são aquecimento e não contam na avaliação
+        self.dia_teto = e.get("dia_teto")                 # dia em que o teto de perda já foi anotado (a nuvem recria o cérebro a cada rodada)
 
     def exportar(self):
         return {"sinapses": self.sinapses, "rede": self.rede.exportar(), "historico": self.historico[-2000:], "diario": self.diario[-300:],
                 "operacoes": self.operacoes[-2000:], "capital": self.capital, "pendente": self.pendente, "passos": self.passos, "ultima_t": self.ultima_t,
-                "inicio_ao_vivo": self.inicio_ao_vivo}
+                "inicio_ao_vivo": self.inicio_ao_vivo, "dia_teto": self.dia_teto}
 
     def _anotar(self, t, texto):
         self.diario.append({"t": t, "texto": texto})
