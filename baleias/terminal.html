@@ -974,7 +974,7 @@ setInterval(() => { if (ra && ra.proxima) { let s = Math.max(0, Math.round(ra.pr
 cicloRapido();
 
 // ---------- placar de todos os robôs (topo da aba Robô) ----------
-const secaoDo = (nome) => nome.startsWith("Cérebro") ? "sec-cerebro" : nome.startsWith("Rápido") ? "sec-rapido" : nome.startsWith("Scalper") ? "sec-scalper"
+const secaoDo = (nome) => nome.startsWith("Cérebro") ? "sec-cerebro" : nome.startsWith("Rápido") ? "sec-rapido" : nome.startsWith("Scalper") ? "sec-scalper" : nome.startsWith("Minerador") ? "sec-lucros"
   : nome.startsWith("Previsor") ? "sec-vortice" : nome.startsWith("Funding") ? "sec-funding" : "sec-diario";
 let plMesa = null, sc = null, nuvemUltima = null;
 async function cicloPlacar() {

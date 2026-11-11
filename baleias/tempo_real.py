@@ -248,6 +248,7 @@ class Motor:
         self.varredura = {"moedas": {}, "log": collections.deque(maxlen=80), "voltas": 0}
         self._cbr = None
         self.scalper = None
+        self.minerador = None
 
     # estado
     def fonte(self, nome, ok, erro=None):
@@ -1095,6 +1096,97 @@ class Motor:
             self.fonte("scalper", True)
             time.sleep(3)
 
+    def _minerador(self):
+        """H28 — robô Minerador (regra aprovada pelo minerador de oportunidades, H26): em cada vela de 15 min fechada das 33 moedas,
+        movimento forte (r1 na cauda de 10%) com volume muito baixo (vol96 nos 10% menores) tende a reverter → entra contra o
+        movimento (compra depois de queda, vende depois de alta) e sai no fechamento da vela seguinte. Stop de segurança de 2%."""
+        from executor import tartaruga_exec as X
+        from lab import tartaruga as T
+        import statistics
+        res = json.loads((config.RAIZ / "lab" / "minerador_resultado.json").read_text())
+        lim = {}
+        for a in res["aprovadas"]:
+            if a["regra"] in ("r1 ≤ q10 E vol96 ≤ q10", "r1 ≥ q90 E vol96 ≤ q10"):
+                for nome, q, v in a["definicao"]["medidas"]:
+                    lim[(nome, q)] = v
+        r1_baixo, r1_alto, vol_baixo = lim[("r1", 10)], lim[("r1", 90)], lim[("vol96", 10)]
+        orcamento, capital, stop_seg = 5.0, 10.0, 0.02
+        arq = config.RAIZ / "robo_minerador.json"
+        e = json.loads(arq.read_text()) if arq.exists() else X.novo_estado(capital)
+        e.setdefault("eventos", [])
+        corretora = X.Simulada(None, e)
+        parar = Path(X.__file__).resolve().parent.parent / "PARAR"
+
+        def ouvir(linha):
+            texto = "⛏ " + linha["texto"].replace("🐢 Robô ", "Minerador ").replace(" [simulado]", "")
+            e["eventos"] = ([{"t": time.time(), "texto": texto}] + e["eventos"])[:100]
+            self.evento({"tipo": "minerador", "texto": texto, "notificar": False})
+
+        def gravar():
+            tmp = arq.with_suffix(".tmp")
+            tmp.write_text(json.dumps(e))
+            tmp.replace(arq)
+
+        while True:
+            with self.trava:
+                precos = {f"{k}USDT": x["p"] for k, x in self.mercado.items()}
+            agora = time.time()
+            for m in list(e["abertas"]):                       # saída: fim da vela seguinte, ou stop de segurança
+                p, px = e["abertas"][m], precos.get(m)
+                if px is None:
+                    continue
+                ganho = (-1 if p.get("lado") == "venda" else 1) * (px / p["entrada"] - 1)
+                motivo = "fim da vela seguinte" if agora >= p.get("fim_t", p["entrada_t"] + 900) else "stop de segurança −2%" if ganho <= -stop_seg else None
+                if motivo:
+                    with X.configurado(ouvir, orcamento):
+                        X._sair(e, corretora, m, motivo, px)
+                    gravar()
+            vela = int(agora // 900) * 900                         # abertura da vela em andamento; a anterior acabou de fechar
+            if e.get("ultima_vela") != vela and agora - vela >= 20 and precos:
+                e["ultima_vela"] = vela
+                hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
+                dia = sum(f["resultado_usd"] for f in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(f["saida_t"])) == hoje)
+                trava = parar.exists() or dia <= -1.0 or X.patrimonio(e, precos, corretora) < capital / 2
+                sinais = []
+                for m in T.MOEDAS_ROBO:
+                    try:
+                        with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval=15m&limit=100", timeout=20) as r:
+                            k = [x for x in json.load(r) if x[6] < agora * 1000]
+                    except (OSError, ValueError):
+                        continue
+                    if len(k) < 98:
+                        continue
+                    c = [float(x[4]) for x in k]
+                    v = [float(x[5]) for x in k]
+                    lr = [math.log(c[i] / c[i - 1]) for i in range(len(c) - 96, len(c))]
+                    sig = statistics.pstdev(lr)
+                    media_v = sum(v[-96:]) / 96
+                    if sig <= 0 or media_v <= 0:
+                        continue
+                    r1, vol96 = lr[-1] / sig, v[-1] / media_v
+                    if vol96 <= vol_baixo and (r1 <= r1_baixo or r1 >= r1_alto):
+                        sinais.append((abs(r1), m, "compra" if r1 <= r1_baixo else "venda", r1, vol96))
+                    time.sleep(0.05)
+                for _, m, lado, r1, vol96 in sorted(sinais, reverse=True):
+                    if trava or m in e["abertas"] or m not in precos or lado_cheio(e["abertas"], lado) or e["caixa"] < orcamento / X.ALAV_PERP:
+                        continue
+                    with X.configurado(ouvir, orcamento):
+                        X.entrar(e, corretora, m, precos[m], precos[m] * stop_seg / 2,
+                                 f"movimento de {r1:+.1f}σ com volume de só {vol96:.0%} da média: aposta na reversão (H28)", lado=lado, custo_lado=0.0005)
+                    if m in e["abertas"]:
+                        e["abertas"][m]["fim_t"] = vela + 900
+                e["ultimos_sinais"] = [{"moeda": m[:-4], "lado": lado, "r1": round(r1, 2), "vol": round(vol96, 2)} for _, m, lado, r1, vol96 in sinais]
+                gravar()
+            e["patrimonio"] = X.patrimonio(e, precos, corretora)
+            rs = e["fechadas"]
+            with self.trava:
+                self.minerador = {"patrimonio": e["patrimonio"], "abertas": [{"moeda": m[:-4], "lado": p.get("lado"), "entrada": p["entrada"],
+                                  "resultado": X._valor(p, precos.get(m, p["entrada"])) - p["gasto"]} for m, p in e["abertas"].items()],
+                                  "fechadas": len(rs), "ganhos": sum(1 for f in rs if f["resultado_usd"] > 0), "eventos": e["eventos"][:12],
+                                  "sinais": e.get("ultimos_sinais", [])}
+            self.fonte("minerador", True)
+            time.sleep(3)
+
     def _gravador(self):
         """A cada 5 min grava, das 33 moedas do robô, o topo do livro, o open interest e o funding do perpétuo (dados que a Binance
         não guarda de graça para trás). Base para testar as medidas 4, 7, 8 e 11 do estudo de previsibilidade. Arquivo por dia."""
@@ -1152,7 +1244,7 @@ class Motor:
     def iniciar(self):
         for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("scalper", self._scalper, True), ("gravador", self._gravador, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("scalper", self._scalper, True), ("gravador", self._gravador, True), ("minerador", self._minerador, True), ("telegram", self._telegram, False)):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self

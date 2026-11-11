@@ -207,7 +207,7 @@ def realizados():
     """Todas as operações FECHADAS dos robôs que operam no dia (Rápido, Scalper e as apostas do Cérebro v3), numa lista só,
     com o total realizado hoje (dia UTC) de cada um — o que o dono quer ver: lucro realizado, não só o saldo."""
     saida = []
-    for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper")):
+    for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper"), ("robo_minerador.json", "⛏ Minerador")):
         try:
             e = json.loads((config.RAIZ / arq).read_text())
         except (OSError, ValueError):
@@ -251,6 +251,7 @@ def mesa():
         _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),
         _tartaruga(_git_json("dados/teto6/robo_tartaruga.json"), "Sombra (teto de 6)"),
         _rapido(),
+        _rapido("robo_minerador.json", "Minerador (H28)", "regra do minerador: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda"),
         _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v3 (15 min); alvo +0,5%, stop −0,5%, sai no fim da vela apostada"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
