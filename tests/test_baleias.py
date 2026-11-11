@@ -1331,3 +1331,19 @@ class FreioDeCorrelacao(unittest.TestCase):
              mock.patch.object(mesa.subprocess, "run"):
             s = {x["par"]: x["lado"] for x in mesa.sinais_v3()}
         self.assertEqual(s, {"BTCUSDT": "compra", "ETHUSDT": "venda"})   # SOL não apostou
+
+
+class Minerador(unittest.TestCase):
+    def test_estatistica_agrupa_por_instante(self):
+        try:
+            import numpy as np
+            from lab import minerador as M
+        except ImportError:
+            self.skipTest("numpy só no .venv-ml")
+        y = np.array([[1.0, 0.0, 1.0, 1.0] * 50, [1.0, 0.0, 1.0, 1.0] * 50])     # duas moedas idênticas (andam juntas)
+        ret = np.where(y > 0, 0.01, -0.01)
+        um = M.avaliar(np.ones((1, 200), bool), y[:1], ret[:1], True, slice(0, 200))
+        dois = M.avaliar(np.ones((2, 200), bool), y, ret, True, slice(0, 200))
+        self.assertEqual(um["instantes"], dois["instantes"])            # a moeda repetida não dobra a amostra
+        self.assertAlmostEqual(um["t"], dois["t"])
+        self.assertAlmostEqual(dois["acerto"], 0.75)

@@ -1121,6 +1121,21 @@ class Motor:
                 time.sleep(0.1)
             with open(pasta / time.strftime("%Y-%m-%d.jsonl", time.gmtime(t)), "a") as f:
                 f.writelines(json.dumps(x) + "\n" for x in linhas)
+            if t // 3600 != getattr(self, "_mineracao_h", None):          # 1 vez por hora: dados dos mineradores (filtro lento, H26/estudo)
+                self._mineracao_h = t // 3600
+                try:
+                    with urllib.request.urlopen("https://mempool.space/api/v1/difficulty-adjustment", timeout=20) as r:
+                        dif = json.load(r)
+                    with urllib.request.urlopen("https://mempool.space/api/v1/mining/hashrate/1w", timeout=20) as r:
+                        hr = json.load(r)
+                    with urllib.request.urlopen("https://mempool.space/api/v1/fees/recommended", timeout=20) as r:
+                        taxas = json.load(r)
+                    with open(pasta / "mineracao.jsonl", "a") as f:
+                        f.write(json.dumps({"t": t, "hashrate_ehs": hr["currentHashrate"] / 1e18, "dificuldade": hr["currentDifficulty"],
+                                            "ajuste_previsto_pct": dif["difficultyChange"], "progresso_pct": dif["progressPercent"],
+                                            "taxa_rapida_sat_vb": taxas["fastestFee"]}) + "\n")
+                except (OSError, ValueError, KeyError):
+                    pass
             self.fonte("gravador", True)
             dormir(300 - time.time() % 300)
 
