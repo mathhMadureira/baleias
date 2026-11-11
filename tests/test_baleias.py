@@ -1380,3 +1380,31 @@ class SemTravaPorMoeda(unittest.TestCase):
         self.assertEqual(cb.pendente["aposta"], 1)
         C.passo(cb, v, teto=100.0)
         self.assertIsNone(cb.pendente["aposta"])                                           # a trava antiga ainda existe para quem pedir
+
+
+class MineradorNuvem(unittest.TestCase):
+    def _velas(self, ultima_ret, ultimo_vol):
+        k, px = [], 100.0
+        for i in range(99):
+            r = 0.001 if i % 2 else -0.001
+            if i == 98:
+                r = ultima_ret
+            novo = px * (1 + r)
+            k.append([i * 900_000, str(px), str(max(px, novo) * 1.001), str(min(px, novo) * 0.999), str(novo), str(ultimo_vol if i == 98 else 100.0), i * 900_000 + 899_999])
+            px = novo
+        return k
+
+    def test_queda_forte_sem_volume_compra_e_sai_na_vela_seguinte(self):
+        from executor import minerador_nuvem as MN
+        k = self._velas(-0.01, 5.0)                                   # queda de 10σ com 5% do volume normal
+        self.assertEqual(MN.sinal(k)[0], "compra")
+        self.assertIsNone(MN.sinal(self._velas(-0.01, 100.0)))        # com volume normal, não é sinal
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "ultimo_sinal": {}}
+        MN.passo(e, {"XUSDT": k}, k[-1][6])
+        self.assertIn("XUSDT", e["abertas"])
+        seguinte = k + [[k[-1][0] + 900_000, k[-1][4], "100", "98.5", "99.5", "100", k[-1][6] + 900_000]]
+        MN.passo(e, {"XUSDT": seguinte}, seguinte[-1][6])
+        f = e["fechadas"][0]
+        self.assertEqual(f["motivo"], "fim da vela seguinte")
+        self.assertAlmostEqual(f["resultado_usd"], 5 * (99.5 / float(k[-1][4]) - 1) - 0.005)
+        self.assertAlmostEqual(e["caixa"], 10.0 + f["resultado_usd"])

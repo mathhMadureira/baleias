@@ -112,11 +112,16 @@ INTERVALO_RAPIDO = os.environ.get("ROBO_RAPIDO", "1m")
 
 
 def _rapido(nome_arq=f"robo_rapido_{INTERVALO_RAPIDO}.json", nome=f"Rápido {INTERVALO_RAPIDO.replace('m', ' min')}",
-            nota="conta nativa de US$ 10, perpétuo simulado (compra/venda), no máximo 12 velas"):
-    arq = config.RAIZ / nome_arq
-    if not arq.exists():
-        return avaliar(nome, [], 0, nota="sem estado ainda")
-    e = json.loads(arq.read_text())
+            nota="conta nativa de US$ 10, perpétuo simulado (compra/venda), no máximo 12 velas", nuvem=False):
+    if nuvem:                                       # robô que roda na nuvem do GitHub: estado no ramo `estado`
+        e = _git_json(f"dados/{nome_arq}")
+        if not e:
+            return avaliar(nome, [], 0, nota="esperando a 1ª rodada na nuvem")
+    else:
+        arq = config.RAIZ / nome_arq
+        if not arq.exists():
+            return avaliar(nome, [], 0, nota="sem estado ainda")
+        e = json.loads(arq.read_text())
     eventos, conta = [], float(e.get("capital_inicial", CONTA))
     for f in sorted(e.get("fechadas", []), key=lambda x: x["saida_t"]):
         eventos.append((f["saida_t"], f["resultado_usd"] / conta))
@@ -209,8 +214,10 @@ def realizados():
     saida = []
     for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper"), ("robo_minerador.json", "⛏ Minerador")):
         try:
-            e = json.loads((config.RAIZ / arq).read_text())
+            e = _git_json(f"dados/{arq}") if arq == "robo_minerador.json" else json.loads((config.RAIZ / arq).read_text())
         except (OSError, ValueError):
+            continue
+        if not e:
             continue
         for f in e.get("fechadas", [])[-80:]:
             saida.append({"robo": robo, "t": f["saida_t"], "moeda": f["moeda"].replace("USDT", ""), "lado": f.get("lado", "compra"),
@@ -251,7 +258,7 @@ def mesa():
         _tartaruga(_git_json("dados/robo_tartaruga.json"), "Diário (Tartaruga)"),
         _tartaruga(_git_json("dados/teto6/robo_tartaruga.json"), "Sombra (teto de 6)"),
         _rapido(),
-        _rapido("robo_minerador.json", "Minerador (H28)", "regra do minerador: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda"),
+        _rapido("robo_minerador.json", "Minerador (H28)", "☁ na nuvem 24 h: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda", nuvem=True),
         _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v3 (15 min); alvo +0,5%, stop −0,5%, sai no fim da vela apostada"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
