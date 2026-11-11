@@ -732,6 +732,20 @@ class Motor:
                 for p in e["abertas"].values():
                     p.setdefault("conferido_ate", ultima_fechada)
                 e["ultima_vela"] = ultima_fechada
+            if precos and dados and not X.PARAR.exists():      # entrada a qualquer momento: oportunidades achadas pela varredura contínua
+                with self.trava:
+                    vivas, self._vivas = list(getattr(self, "_vivas", [])), collections.deque(maxlen=60)
+                for o in sorted(vivas, key=lambda o: -o["ev"]):
+                    m = o["par"]
+                    if (time.time() - o["t"] > 20 or m in e["abertas"] or m not in precos or m not in dados or len(dados[m]) < 22
+                            or lado_cheio(e["abertas"], o["lado"]) or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP):
+                        continue
+                    with X.TRAVA:
+                        X.entrar(e, corretora, m, precos[m], 2 * T.atr(dados[m])[-1],
+                                 f"varredura ao vivo: cérebro da moeda vê {'alta' if o['lado'] == 'compra' else 'queda'} ({max(o['prob'], 1 - o['prob']):.1%}), "
+                                 f"valor esperado {o['ev'] * 100:+.2f}% depois do custo", lado=o["lado"], custo_lado=0.0006)
+                    if m in e["abertas"]:
+                        e["abertas"][m].update({"fim_t": agora + max_velas * passo, "origem": "varredura"})
             if precos:
                 with X.TRAVA:
                     X.checar_stops(e, corretora, precos)
@@ -741,7 +755,7 @@ class Motor:
                         if p_ab.get("fim_t") and ganho >= 0.005:                  # decisão do dono: realiza o lucro em +0,5%, não segura a vela
                             X._sair(e, corretora, m, "lucro realizado +0,5%", precos[m])
                         elif p_ab.get("fim_t") and agora >= p_ab["fim_t"] and m in precos:
-                            X._sair(e, corretora, m, "fim da vela do v3", precos[m])
+                            X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)" if p_ab.get("origem") == "varredura" else "fim da vela do v3", precos[m])
                         elif not e["abertas"][m].get("fim_t") and agora - e["abertas"][m]["entrada_t"] >= max_velas * passo and m in precos:
                             X._sair(e, corretora, m, f"tempo máximo ({max_velas} velas)", precos[m])
                 e["patrimonio"] = X.patrimonio(e, precos, corretora)
@@ -1010,6 +1024,9 @@ class Motor:
                 linha["sinal"] = sinal
                 with self.trava:
                     self.varredura["moedas"][m[:-4]] = linha
+                    if ev > 0:                                   # decisão do dono: o robô rápido entra na hora, sem esperar a vela fechar
+                        self.__dict__.setdefault("_vivas", collections.deque(maxlen=60)).append(
+                            {"par": m, "lado": lado, "prob": prob, "ev": ev, "t": time.time()})
                     self.varredura["log"].appendleft({"t": time.time(), "texto": f"🔎 {m[:-4]:6} {px:,.6g} | chance de subir em 12 velas: {prob:.1%} | melhor lado: {lado} VE {ev * 100:+.2f}% | "
                                                                              f"rompimento {'ROMPEU' if linha['falta'] <= 0 else f'+{linha['falta']:.2f}%'} | "
                                                                              f"{linha['votos']} sinapses opinaram | {sinal}"})
