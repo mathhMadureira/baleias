@@ -956,7 +956,7 @@ class StopsPerdidos(unittest.TestCase):
         X.stops_perdidos(e, X.Simulada(None, e), dados)
         self.assertEqual(e["abertas"], {})
         self.assertEqual(e["fechadas"][0]["saida"], 90.0)
-        self.assertIn("máquina desligada", X.EVENTOS.read_text())
+        self.assertIn("tocado dentro da vela", X.EVENTOS.read_text())
         self.assertAlmostEqual(e["caixa"], 700 + 0.5 * 90 * (1 - 0.001))
 
 
