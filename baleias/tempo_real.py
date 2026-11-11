@@ -203,6 +203,13 @@ def traduzir(j, media_volume=None):
 
 # ---------- motor ----------
 
+MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "2"))   # freio de correlação: as moedas andam juntas, então 5 vendidas
+                                                                   # ao mesmo tempo são uma aposta só no mercado inteiro
+
+
+def lado_cheio(abertas, lado):
+    return sum(1 for p in abertas.values() if p.get("lado", "compra") == lado) >= MAX_MESMO_LADO
+
 def dormir(segundos):
     """Como time.sleep, mas pelo relógio de parede: se a máquina dormiu, acorda logo na volta (o sleep comum continuaria contando)."""
     fim = time.time() + segundos
@@ -590,7 +597,8 @@ class Motor:
             return
         for o in oportunidades:
             m = o["par"]
-            if o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m not in precos or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP:
+            if (o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m not in precos or lado_cheio(e["abertas"], o["lado"])
+                    or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP):
                 continue
             n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
             if not n:
@@ -1051,7 +1059,7 @@ class Motor:
                 ultima = marca
                 for o in ops:
                     m = o["par"]
-                    if (trava or o["ev"] <= 0 or o.get("geladeira") or gelada(m) or m in e["abertas"] or m not in precos
+                    if (trava or o["ev"] <= 0 or o.get("geladeira") or gelada(m) or m in e["abertas"] or m not in precos or lado_cheio(e["abertas"], o["lado"])
                             or e["caixa"] < orcamento / X.ALAV_PERP):
                         continue
                     n_scalper = precos[m] * stop / 2                 # o stop do executor é 2N: assim fica exatamente a 0,5%

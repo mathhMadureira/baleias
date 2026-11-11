@@ -1311,3 +1311,11 @@ class CerebroRapidoHumor(unittest.TestCase):
         self.assertAlmostEqual(cb.sinapses[0]["esperado"] - antes, 0.7)  # acertar "desce" num dia de queda vale só o que passa de 70%
         self.assertLess(cb.base_sobe, 0.3)
         self.assertEqual(json.loads(json.dumps(cb.exportar()))["versao"], "v3")
+
+
+class FreioDeCorrelacao(unittest.TestCase):
+    def test_no_maximo_duas_posicoes_no_mesmo_lado(self):
+        from baleias import tempo_real as R
+        abertas = {"AUSDT": {"lado": "venda"}, "BUSDT": {"lado": "venda"}, "CUSDT": {"lado": "compra"}}
+        self.assertTrue(R.lado_cheio(abertas, "venda"))
+        self.assertFalse(R.lado_cheio(abertas, "compra"))
