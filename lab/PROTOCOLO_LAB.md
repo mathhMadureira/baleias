@@ -513,3 +513,39 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 
 - **Leitura:** em 5 min, seguir o movimento perde (H25), e apostar contra também perde (H14). As quedas e altas "lindas" só são lindas vistas depois. Na hora do rompimento, a maioria não continua: só ~35% chegam a dar lucro, e os que continuam não pagam os que voltam.
 - **Erro operacional meu:** 21 reinícios do painel em 4 h durante o pregão. A partir de agora, mudanças agrupadas, com no máximo um reinício por hora em horário de mercado, exceto correção urgente.
+
+## Hipótese 26: minerador de oportunidades (pré-registrada em 2026-11-11, antes de rodar)
+
+- **Motivo:** pedido do dono. Estudo em `research_notes/Mineração de BTC e oportunidades/mineracao.md`. Como na mineração do Bitcoin, o minerador gera muitas regras candidatas e só aceita as que passam num "alvo de dificuldade" que sobe com o número de tentativas (multiple testing).
+- **Alvo do teste:** direção da **próxima vela de 15 min** (o mesmo do Cérebro v3). Aposta binária a 0,51, então o empate é 51%.
+- **Dados:** 33 moedas do robô, velas de 15 min com volume, de 2025-05-01 até 2026-11-10. Cortes por tempo:
+  - treino: 50% iniciais;
+  - validação: 25% seguintes;
+  - reserva: 25% finais, olhada uma única vez.
+- **Medidas** (16, calculadas só com o passado, em unidades de volatilidade):
+  - retornos de 1, 4, 16 e 96 velas;
+  - distância das médias de 20 e 200 velas;
+  - amplitude da vela ÷ ATR de 20;
+  - corpo ÷ amplitude;
+  - volume ÷ média de 96 velas;
+  - volume ÷ média do mesmo horário nos 20 dias anteriores;
+  - RSI de 14;
+  - distância da máxima e da mínima de 96 velas;
+  - retorno de 4 velas do BTC;
+  - força contra o BTC (r4 da moeda − r4 do BTC);
+  - hora do dia.
+- **Regras candidatas, sempre nos dois sentidos (sobe e desce):**
+  - uma medida acima ou abaixo de um quantil (5, 10, 20, 80, 90 ou 95%) do treino;
+  - pares de medidas nas caudas de 10% e 90%;
+  - cada hora do dia.
+
+  Toda tentativa é contada, inclusive as que falham.
+- **Estatística:** em cada instante em que a regra dispara em ≥ 1 moeda, faz-se a média de (acertou − 0,5) entre as moedas. O t é calculado sobre essa série de instantes. Agrupar por instante corrige o fato de as moedas andarem juntas.
+- **Alvo de dificuldade (treino):**
+  - t ≥ z de Bonferroni para α = 5% unilateral sobre o número total de tentativas;
+  - acerto ≥ 52%;
+  - ≥ 300 instantes.
+- **Validação:** mesmo sentido, com acerto ≥ 51,5% e t ≥ 2.
+- **Reserva:** acerto > 51% e t ≥ 1,65. Só as regras que passam nas três etapas são **aprovadas**.
+- **Decisão:** as aprovadas entram no Cérebro v3 como sinapses **em observação**. Só votam se provarem acerto ao vivo, pelas regras do próprio cérebro. O resultado médio no perpétuo, com 0,1% de custo, é informado à parte.
+- Se nenhuma passar, isso fica registrado e o v3 segue como está.
