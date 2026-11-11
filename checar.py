@@ -26,7 +26,7 @@ def main():
         item(f"serviço {s}", r.stdout.strip() == "active", r.stdout.strip())
     try:
         d = json.load(urllib.request.urlopen("http://127.0.0.1:8787/api/ao-vivo?desde=999999999&calor=999999999", timeout=10))
-        limites = {"liquidacoes": 900, "leitura": 420, "mapa": 2400, "cerebro": 300, "tartaruga": 120, "b3": 300}
+        limites = {"liquidacoes": 900, "leitura": 420, "mapa": 2400, "cerebro": 300, "tartaruga": 120, "b3": 300, "gravador": 420}
         for k, v in d["fontes"].items():
             idade = d["agora"] - v["t"]
             item(f"fonte ao vivo {k}", v["ok"] and idade < limites.get(k, 120), f"{idade:.0f}s" + (f" erro {v['erro']}" if v.get("erro") else ""))
