@@ -565,3 +565,17 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 
   Positivo nos dois sentidos e em treino e reserva. Ressalva: em momentos de volume baixo o spread pode ser maior que o custo suposto.
 - **Decisão (pré-registrada):** as aprovadas entram no Cérebro v3 em observação. A família "movimento sem volume" vira candidata a robô próprio no perpétuo simulado (H28, a registrar antes de ligar).
+
+## Hipótese 28: robô Minerador — "movimento forte sem volume reverte", ao vivo (pré-registrada em 2026-11-11, antes de ligar)
+
+- **Origem:** H26. É a única família que pagou o custo no perpétuo, nos dois sentidos, no treino (+0,06%/op) e na reserva (+0,19%/op).
+- **Regra, em cada vela de 15 min fechada, nas 33 moedas:**
+  - r1 = retorno da vela ÷ desvio de 96 velas;
+  - vol96 = volume ÷ média de 96 velas;
+  - **compra** se r1 ≤ limiar q10 do treino E vol96 ≤ limiar q10;
+  - **vende a descoberto** se r1 ≥ limiar q90 E vol96 ≤ limiar q10.
+
+  Os limiares são os números fixos do treino da H26, gravados em `dados/lab/minerador_resultado.json`.
+- **Saída:** no fechamento da vela seguinte (15 min, o mesmo alvo medido), com stop de segurança de 2%.
+- **Execução:** perpétuo simulado, US$ 5 por posição, margem 5×, 0,05% por lado. Conta de US$ 10 na mesa, no máximo 2 posições no mesmo lado, perda máxima de US$ 1/dia, piso de US$ 5.
+- **Passa** com ≥ 200 operações, resultado líquido médio > 0 e t > 2. Reprova se a média for ≤ 0 após 200 operações.
