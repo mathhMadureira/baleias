@@ -146,7 +146,8 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
   </div>
   <div class="card" id="sec-placar" style="margin-bottom:14px">
-    <h3>🏁 Todos os robôs agora · conta de US$ 10 cada<span class="dir mut num" id="pl-t"></span></h3>
+    <h3>🏁 Desafio de 24 h · cada robô com carteira própria de US$ 10 precisa dobrar para US$ 20<span class="dir mut num" id="pl-t"></span></h3>
+    <div id="pl-relogio" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
     <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
   </div>
   <div class="card" id="sec-lucros" style="margin-bottom:14px;border-color:#50e3c255">
@@ -985,17 +986,23 @@ function desenharPlacar() {                       // redesenha a cada 2 s: Rápi
   if (!plMesa) return;
   $("pl-t").innerHTML = `<span class="ponto ok" style="display:inline-block;opacity:${Date.now() % 2000 < 1000 ? 1 : .35}"></span> ao vivo ` +
     new Date().toLocaleTimeString("pt-BR") + (nuvemUltima ? ` · nuvem conferiu ${new Date(nuvemUltima).toLocaleTimeString("pt-BR").slice(0, 5)} (a cada 15 min)` : "");
-  $("pl-robos").replaceChildren(...plMesa.fichas.map(f => {
-    let conta = f.conta, sub = `${f.operacoes} ops · pior dia ${fmt(f.pior_dia)}`, ao_vivo = false;
+  const dz0 = plMesa.fichas[0] && plMesa.fichas[0].desafio;
+  if (dz0) { const s = Math.max(0, Math.round(dz0.fim - Date.now() / 1000)); const h = Math.floor(s / 3600), mi = Math.floor(s % 3600 / 60);
+    $("pl-relogio").innerHTML = s ? `⏱ faltam <b>${h} h ${String(mi).padStart(2, "0")} min</b> · termina ${new Date(dz0.fim * 1000).toLocaleString("pt-BR").slice(0, 17)}` : "⏱ desafio encerrado"; }
+  $("pl-robos").replaceChildren(...[...plMesa.fichas].sort((a, b) => (b.desafio ? b.desafio.carteira : 0) - (a.desafio ? a.desafio.carteira : 0)).map(f => {
+    const dz = f.desafio || {carteira: 10, progresso: 0};
+    let conta = dz.carteira, sub = `${f.operacoes} ops · pior dia ${fmt(f.pior_dia)}`, ao_vivo = false;
     const vivo = f.robo.startsWith("Rápido") ? ra && !ra.carregando && {pat: ra.patrimonio, ab: ra.posicoes.reduce((a, p) => a + p.resultado, 0), n: ra.posicoes.length}
       : f.robo.startsWith("Scalper") ? sc && !sc.carregando && {pat: sc.patrimonio, ab: sc.abertas.reduce((a, p) => a + p.resultado, 0), n: sc.abertas.length} : null;
-    if (vivo) { conta = vivo.pat; ao_vivo = true; sub = `${vivo.n} aberta(s) ${vivo.ab >= 0 ? "+" : ""}${fmt(vivo.ab, 3)} · ${f.operacoes} fechadas`; }
+    if (vivo) { conta = dz.carteira + (vivo.pat - f.conta); ao_vivo = true; sub = `${vivo.n} aberta(s) ${vivo.ab >= 0 ? "+" : ""}${fmt(vivo.ab, 3)} · ${f.operacoes} fechadas`; }
     else if (f.robo.startsWith("Cérebro")) sub = `☁ ${f.operacoes} apostas · pior dia ${fmt(f.pior_dia)}`;
     const res = conta - 10;
     const d = document.createElement("div"); d.className = "rb " + (res > 0.005 ? "ganha" : res < -0.005 ? "perde" : "");
-    d.innerHTML = `<div class="n"></div><div class="c ${cor(res)}">US$ ${fmt(conta, ao_vivo ? 3 : 2)}</div>` +
+    const prog = Math.max(0, Math.min(100, res / 10 * 100));
+    d.innerHTML = `<div class="n"></div><div class="c ${cor(res)}">US$ ${fmt(conta, ao_vivo ? 3 : 2)} <small class="mut" style="font-size:12px">/ 20</small></div>` +
+      `<div class="barra" style="margin:4px 0 6px"><div style="width:${prog}%"></div></div>` +
       `<div class="s">${res >= 0 ? "+" : ""}${fmt(res, ao_vivo ? 3 : 2)} · ${sub}</div><div class="s" style="margin-top:3px"></div>`;
-    d.children[0].textContent = (ao_vivo ? "⚡ " : "") + f.robo; d.children[3].textContent = f.status; d.title = f.nota;
+    d.children[0].textContent = (ao_vivo ? "⚡ " : "") + f.robo; d.children[4].textContent = (f.desafio ? f.desafio.situacao + " · " : "") + f.status; d.title = f.nota;
     d.onclick = () => { const s = $(secaoDo(f.robo)); if (s) s.scrollIntoView({behavior: "smooth", block: "start"}); };
     return d;
   }));

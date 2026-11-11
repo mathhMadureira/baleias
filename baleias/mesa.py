@@ -22,6 +22,8 @@ APROVA_OPS = 30
 APROVA_GANHO = 0.10
 APROVA_QUEDA = 0.30
 REPO = Path(__file__).resolve().parent.parent
+DESAFIO_INICIO = 1794414944      # regra do dono (2026-11-11): cada robô, carteira própria de US$ 10, tem 24 h para dobrar (US$ 20)
+DESAFIO_HORAS = 24
 
 
 def avaliar(nome, eventos, operacoes_n, inicio=None, nota=""):
@@ -47,7 +49,16 @@ def avaliar(nome, eventos, operacoes_n, inicio=None, nota=""):
         status = f"⚠️ em teste, com {len(violacoes)} violação(ões) de perda diária"
     else:
         status = "🧪 fase 1 em teste"
-    return {"robo": nome, "conta": conta, "resultado": conta - CONTA, "queda_max": queda, "pior_dia": pior_dia, "operacoes": operacoes_n,
+    no_inicio, ate_agora = CONTA, CONTA
+    for t, r in eventos:                          # desafio de 24 h: a carteira de US$ 10 começa no início do desafio
+        if t < DESAFIO_INICIO:
+            no_inicio *= 1 + r
+        elif t < DESAFIO_INICIO + DESAFIO_HORAS * 3600:
+            ate_agora *= 1 + r
+    fim = DESAFIO_INICIO + DESAFIO_HORAS * 3600
+    desafio = {"carteira": ate_agora, "meta": 2 * CONTA, "progresso": (ate_agora - CONTA) / CONTA, "fim": fim,
+               "situacao": "🎯 DOBROU" if ate_agora >= 2 * CONTA else ("⏱ em andamento" if time.time() < fim else "✗ não dobrou")}
+    return {"robo": nome, "conta": conta, "resultado": conta - CONTA, "desafio": desafio, "queda_max": queda, "pior_dia": pior_dia, "operacoes": operacoes_n,
             "violacoes": violacoes, "status": status, "inicio": inicio, "nota": nota,
             "falta": {"operacoes": max(0, APROVA_OPS - operacoes_n), "ganho_us": max(0.0, CONTA * (1 + APROVA_GANHO) - conta)}}
 
