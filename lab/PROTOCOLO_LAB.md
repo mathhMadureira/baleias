@@ -619,3 +619,14 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Limiares testados, fixos antes de rodar:** |p − 0,5| ≥ 0,06, 0,08 e 0,10. Custo de 0,12% na ida e volta. Três tentativas, contadas.
 - **Passa** o limiar com média líquida > 0 e t ≥ 2 no teste inteiro **e** média > 0 em ≥ 2 dos 3 blocos, com ≥ 1000 operações no teste.
 - **Decisão:** se algum passar, o Rápido passa a entrar nas apostas do v4 acima desse limiar (em vez das do v3). Se nenhum passar, o v4 continua só no binário (pesquisa).
+
+### Resultado da H31 (2026-11-11): reprovada nos três limiares
+
+| Limiar | Teste inteiro | Bloco 1 | Bloco 2 | Bloco 3 |
+|---|---|---|---|---|
+| 0,06 | 52.624 op., −0,075%/op | −0,019% | −0,099% | −0,112% |
+| 0,08 | 23.996 op., −0,044%/op | +0,037% | −0,080% | −0,111% |
+| 0,10 | 10.708 op., −0,005%/op | +0,085% | −0,048% | −0,101% |
+
+- **Leitura:** quanto mais confiante, melhor, mas a vantagem só existiu no 1º bloco e desapareceu nos dois seguintes. Vantagem direcional no perpétuo é fina e não é estável no tempo. O v4 continua só no binário (pesquisa).
+- **Nota de contexto:** a Polymarket, modelo do contrato binário, está em "close-only" para o Brasil (geoblock oficial), e cobra 0,07 × p × (1 − p) por ação do tomador (3,5% do valor a 0,50). Os cérebros v1–v4 passam a ser tratados como pesquisa, não como carteira operável.
