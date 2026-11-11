@@ -863,27 +863,37 @@ cicloRapido();
 // ---------- placar de todos os robôs (topo da aba Robô) ----------
 const secaoDo = (nome) => nome.startsWith("Cérebro") ? "sec-cerebro" : nome.startsWith("Rápido") ? "sec-rapido" : nome.startsWith("Scalper") ? "sec-scalper"
   : nome.startsWith("Previsor") ? "sec-vortice" : nome.startsWith("Funding") ? "sec-funding" : "sec-diario";
+let plMesa = null, sc = null, nuvemUltima = null;
 async function cicloPlacar() {
-  try {
-    const m = await j("/api/mesa");
-    $("pl-t").textContent = "atualizado " + new Date(m.t * 1000).toLocaleTimeString("pt-BR");
-    $("pl-robos").replaceChildren(...m.fichas.map(f => {
-      const d = document.createElement("div"); d.className = "rb " + (f.resultado > 0.005 ? "ganha" : f.resultado < -0.005 ? "perde" : "");
-      d.innerHTML = `<div class="n"></div><div class="c ${cor(f.resultado)}">US$ ${fmt(f.conta)}</div>` +
-        `<div class="s">${f.resultado >= 0 ? "+" : ""}${fmt(f.resultado)} · ${f.operacoes} ops · pior dia ${fmt(f.pior_dia)}</div><div class="s" style="margin-top:3px"></div>`;
-      d.children[0].textContent = f.robo; d.children[3].textContent = f.status; d.title = f.nota;
-      d.onclick = () => { const s = $(secaoDo(f.robo)); if (s) s.scrollIntoView({behavior: "smooth", block: "start"}); };
-      return d;
-    }));
-  } catch (e) {}
-  setTimeout(cicloPlacar, 60000);
+  try { plMesa = await j("/api/mesa"); } catch (e) {}
+  setTimeout(cicloPlacar, 30000);
 }
-cicloPlacar();
+function desenharPlacar() {                       // redesenha a cada 2 s: Rápido e Scalper com o patrimônio ao vivo (inclui posições abertas)
+  if (!plMesa) return;
+  $("pl-t").innerHTML = `<span class="ponto ok" style="display:inline-block;opacity:${Date.now() % 2000 < 1000 ? 1 : .35}"></span> ao vivo ` +
+    new Date().toLocaleTimeString("pt-BR") + (nuvemUltima ? ` · nuvem conferiu ${new Date(nuvemUltima).toLocaleTimeString("pt-BR").slice(0, 5)} (a cada 15 min)` : "");
+  $("pl-robos").replaceChildren(...plMesa.fichas.map(f => {
+    let conta = f.conta, sub = `${f.operacoes} ops · pior dia ${fmt(f.pior_dia)}`, ao_vivo = false;
+    const vivo = f.robo.startsWith("Rápido") ? ra && !ra.carregando && {pat: ra.patrimonio, ab: ra.posicoes.reduce((a, p) => a + p.resultado, 0), n: ra.posicoes.length}
+      : f.robo.startsWith("Scalper") ? sc && !sc.carregando && {pat: sc.patrimonio, ab: sc.abertas.reduce((a, p) => a + p.resultado, 0), n: sc.abertas.length} : null;
+    if (vivo) { conta = vivo.pat; ao_vivo = true; sub = `${vivo.n} aberta(s) ${vivo.ab >= 0 ? "+" : ""}${fmt(vivo.ab, 3)} · ${f.operacoes} fechadas`; }
+    else if (f.robo.startsWith("Cérebro")) sub = `☁ ${f.operacoes} apostas · pior dia ${fmt(f.pior_dia)}`;
+    const res = conta - 10;
+    const d = document.createElement("div"); d.className = "rb " + (res > 0.005 ? "ganha" : res < -0.005 ? "perde" : "");
+    d.innerHTML = `<div class="n"></div><div class="c ${cor(res)}">US$ ${fmt(conta, ao_vivo ? 3 : 2)}</div>` +
+      `<div class="s">${res >= 0 ? "+" : ""}${fmt(res, ao_vivo ? 3 : 2)} · ${sub}</div><div class="s" style="margin-top:3px"></div>`;
+    d.children[0].textContent = (ao_vivo ? "⚡ " : "") + f.robo; d.children[3].textContent = f.status; d.title = f.nota;
+    d.onclick = () => { const s = $(secaoDo(f.robo)); if (s) s.scrollIntoView({behavior: "smooth", block: "start"}); };
+    return d;
+  }));
+}
+cicloPlacar(); setInterval(desenharPlacar, 2000);
 
 // ---------- cérebros por moeda (nuvem) ----------
 async function cicloCerebrosMoedas() {
   try {
     const d = await j("/api/moedas-cerebros");
+    if (d.ultimas_v3 && d.ultimas_v3.length) nuvemUltima = d.ultimas_v3[0].t + 1800000;
     const cel = (x) => x && x.apostas ? [x.apostas, `<span class="${x.acertos / x.apostas > 0.51 ? "up" : "down"}">${fmt(x.acertos / x.apostas * 100, 0)}%</span>`,
       `<span class="${cor(x.resultado)}">${pct(x.resultado * 100, 1)}</span>`] : ["0", "—", "—"];
     $("cm-v3").replaceChildren(...(d.ultimas_v3 || []).map(o => { const x = document.createElement("span");
@@ -905,6 +915,7 @@ cicloCerebrosMoedas();
 async function cicloScalper() {
   try {
     const s = await j("/api/scalper");
+    sc = s;
     if (!s.carregando) {
       const ret = (s.patrimonio / 10 - 1) * 100;
       $("sc-pat").textContent = "US$ " + fmt(s.patrimonio); $("sc-pat").className = "val num " + cor(ret); $("sc-ret").textContent = pct(ret, 2) + " desde o início";
