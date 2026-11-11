@@ -246,15 +246,16 @@ def realizados():
         escala = min(1.0, EXPOSICAO_VELA / (por_vela[t] * 0.02))           # o mesmo limite da mesa: no máximo 6% da conta por vela
         saida.append({"robo": "🧠 Cérebro v3", "t": t / 1000 + 1800, "moeda": moeda, "lado": "compra" if aposta > 0 else "venda",
                       "resultado": liquido * CONTA * escala, "motivo": "aposta de 15 min " + ("ganha" if liquido > 0 else "perdida")})
+    saida = [x for x in saida if x["t"] >= DESAFIO_INICIO]       # uma régua só: o que cada carteira fez desde o início do desafio
     saida.sort(key=lambda x: -x["t"])
     hoje = time.strftime("%Y-%m-%d", time.gmtime())
     totais = {}
     for x in saida:
-        if time.strftime("%Y-%m-%d", time.gmtime(x["t"])) == hoje:
+        if True:
             tt = totais.setdefault(x["robo"], {"lucro": 0.0, "ganhos": 0, "perdas": 0})
             tt["lucro"] += x["resultado"]
             tt["ganhos" if x["resultado"] > 0 else "perdas"] += 1
-    return {"t": time.time(), "hoje": hoje, "totais": totais, "operacoes": saida[:120]}
+    return {"t": time.time(), "hoje": hoje, "desde": DESAFIO_INICIO, "totais": totais, "operacoes": saida[:120]}
 
 
 _cache = {"t": 0, "dados": None}

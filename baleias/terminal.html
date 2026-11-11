@@ -151,7 +151,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
   </div>
   <div class="card" id="sec-lucros" style="margin-bottom:14px;border-color:#50e3c255">
-    <h3>💵 Lucros realizados — todas as operações fechadas, de todos os robôs, ao vivo<span class="dir mut num" id="lr-t"></span></h3>
+    <h3>💵 Lucros e perdas realizados — operações fechadas de cada carteira desde o início do desafio (cada robô é uma conta separada; não se somam)<span class="dir mut num" id="lr-t"></span></h3>
     <div class="grade" style="grid-template-columns:minmax(260px,1fr) minmax(0,2.4fr)">
       <div id="lr-totais"></div>
       <div id="lr-lista" style="max-height:300px;overflow:auto"></div>
@@ -175,12 +175,12 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">BTC · aposta agora</div><div class="val num" id="cb-ap">—</div><div class="sub" id="cb-ap-s">—</div></div>
       <div class="kpi"><div class="rot">Acerto do cérebro</div><div class="val num" id="cb-ac">—</div><div class="sub" id="cb-ic">—</div></div>
-      <div class="kpi"><div class="rot">Capital simulado</div><div class="val num" id="cb-cap">—</div><div class="sub" id="cb-cap-s">—</div></div>
+      <div class="kpi" style="display:none"><div class="val num" id="cb-cap"></div><div class="sub" id="cb-cap-s"></div></div>
       <div class="kpi"><div class="rot">Sinapses</div><div class="val num" id="cb-ns">—</div><div class="sub" id="cb-ns-s">—</div></div>
       <div class="kpi" style="grid-column:span 2"><div class="rot">Como ele pensa</div><div class="sub" style="font-size:12px;color:var(--txt)">Cada sinapse é uma rota de previsão (inclui uma rede neural). Quem erra perde peso; a rede corrige os próprios pesos a cada vela. Se o cérebro errar mais que acertar, cria rotas novas — que só votam depois de provar acerto. Aposta só quando o valor esperado passa do custo.</div></div>
     </div>
     <div id="cb-duelo" class="num" style="font-size:13px;margin:0 0 8px;padding:8px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:8px">v1 × v2: carregando…</div>
-    <canvas id="cb-curva" style="height:170px"></canvas>
+    <canvas id="cb-curva" style="display:none"></canvas>
     <div class="grade g-dupla" style="margin-top:10px">
       <div style="max-height:300px;overflow:auto"><table id="cb-sin"><thead><tr><th>Sinapse</th><th>Status</th><th>Peso</th><th>Acerto</th><th>Previsões</th></tr></thead><tbody></tbody></table></div>
       <div><b style="font-size:12px;color:var(--mut)">📚 LIVRO DE MÉTODOS (o que funciona fica gravado; os outros robôs usam só os comprovados)</b>
@@ -192,7 +192,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <h3>⚡ Robô rápido — segue as apostas do Cérebro v3, realiza o lucro em +0,5% (stop 4N, sai no fim da vela de 15 min se não chegar lá) · gráfico de <span id="ra-iv">1m</span> (simulado, conta de US$ 10)
       <span class="dir"><button id="ra-notif" class="selo" style="cursor:pointer;background:var(--card2);color:var(--txt)">🔔 avisar no navegador</button></span></h3>
     <div class="kpis" style="margin-bottom:10px">
-      <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="ra-pat">—</div><div class="sub" id="ra-ret">—</div></div>
+      <div class="kpi"><div class="rot">Carteira do desafio</div><div class="val num" id="ra-pat">—</div><div class="sub" id="ra-ret">—</div></div>
       <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="ra-npos">—</div><div class="sub" id="ra-res">—</div></div>
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="ra-ops">—</div><div class="sub" id="ra-ops-s">—</div></div>
       <div class="kpi"><div class="rot">Meta: +US$ 100 a cada 2 dias</div><div class="val num" id="ra-hoje">—</div><div class="sub" id="ra-hoje-s">—</div></div>
@@ -215,7 +215,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <div class="card" id="sec-scalper" style="margin-bottom:14px;border-color:#ea394355">
     <h3>✂ Scalper — segue as apostas do Cérebro v3: realiza o lucro em +0,5%, corta em −1,5%, sai no fim da vela de 15 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
     <div class="kpis" style="margin-bottom:10px">
-      <div class="kpi"><div class="rot">Patrimônio</div><div class="val num" id="sc-pat">—</div><div class="sub" id="sc-ret">—</div></div>
+      <div class="kpi"><div class="rot">Carteira do desafio</div><div class="val num" id="sc-pat">—</div><div class="sub" id="sc-ret">—</div></div>
       <div class="kpi"><div class="rot">Resultado hoje</div><div class="val num" id="sc-hoje">—</div><div class="sub">para com −US$ 1,00 no dia</div></div>
       <div class="kpi"><div class="rot">Posições abertas</div><div class="val num" id="sc-npos">—</div><div class="sub" id="sc-aberto">—</div></div>
       <div class="kpi"><div class="rot">Operações fechadas</div><div class="val num" id="sc-ops">—</div><div class="sub" id="sc-ac">—</div></div>
@@ -916,9 +916,10 @@ async function cicloRapido() {
     ra = await j("/api/rapido");
     if (!ra.carregando) {
       $("ra-iv").textContent = ra.intervalo;
-      const ret = (ra.patrimonio / (ra.capital_inicial || 700) - 1) * 100;
-      $("ra-pat").textContent = "US$ " + fmt(ra.patrimonio); $("ra-pat").className = "val num " + cor(ret);
-      $("ra-ret").textContent = pct(ret, 2) + " desde " + ra.inicio.split("-").reverse().join("/");
+      const fr = plMesa && plMesa.fichas.find(f => f.robo.startsWith("Rápido"));
+      const cartR = (fr ? fr.desafio.carteira : 10) + ra.posicoes.reduce((s, p) => s + p.resultado, 0), ret = (cartR / 10 - 1) * 100;
+      $("ra-pat").textContent = "US$ " + fmt(cartR, 3); $("ra-pat").className = "val num " + cor(ret);
+      $("ra-ret").textContent = pct(ret, 2) + " no desafio (meta US$ 20)";
       const aberto = ra.posicoes.reduce((s, p) => s + p.resultado, 0);
       document.querySelectorAll(".ra-iv-txt").forEach(x => x.textContent = ra.intervalo.replace("m", " min"));
       $("ra-npos").textContent = ra.posicoes.length; $("ra-res").textContent = ra.posicoes.length ? `aberto ${aberto >= 0 ? "+" : ""}US$ ${fmt(aberto)}` : "esperando um sinal que pague o custo";
@@ -994,7 +995,7 @@ function desenharPlacar() {                       // redesenha a cada 2 s: Rápi
     let conta = dz.carteira, sub = `${f.operacoes} ops · pior dia ${fmt(f.pior_dia)}`, ao_vivo = false;
     const vivo = f.robo.startsWith("Rápido") ? ra && !ra.carregando && {pat: ra.patrimonio, ab: ra.posicoes.reduce((a, p) => a + p.resultado, 0), n: ra.posicoes.length}
       : f.robo.startsWith("Scalper") ? sc && !sc.carregando && {pat: sc.patrimonio, ab: sc.abertas.reduce((a, p) => a + p.resultado, 0), n: sc.abertas.length} : null;
-    if (vivo) { conta = dz.carteira + (vivo.pat - f.conta); ao_vivo = true; sub = `${vivo.n} aberta(s) ${vivo.ab >= 0 ? "+" : ""}${fmt(vivo.ab, 3)} · ${f.operacoes} fechadas`; }
+    if (vivo) { conta = dz.carteira + vivo.ab; ao_vivo = true; sub = `${vivo.n} aberta(s) ${vivo.ab >= 0 ? "+" : ""}${fmt(vivo.ab, 3)} · ${f.operacoes} fechadas`; }
     else if (f.robo.startsWith("Cérebro")) sub = `☁ ${f.operacoes} apostas · pior dia ${fmt(f.pior_dia)}`;
     const res = conta - 10;
     const d = document.createElement("div"); d.className = "rb " + (res > 0.005 ? "ganha" : res < -0.005 ? "perde" : "");
@@ -1015,9 +1016,9 @@ async function cicloRealizados() {
   try {
     const d = await j("/api/realizados");
     if (!d.erro) {
-      $("lr-t").textContent = "hoje (dia UTC " + d.hoje.split("-").reverse().join("/") + ")";
-      const tot = Object.entries(d.totais), soma = tot.reduce((a, [, x]) => a + x.lucro, 0);
-      $("lr-totais").innerHTML = `<div class="tot" style="border-color:${soma >= 0 ? "#1fc7a066" : "#ed4b6266"}"><span>Total realizado hoje</span><span class="v ${cor(soma)}">${soma >= 0 ? "+" : ""}US$ ${fmt(soma, 2)}</span></div>` +
+      $("lr-t").textContent = "desde " + new Date(d.desde * 1000).toLocaleString("pt-BR").slice(0, 17);
+      const tot = Object.entries(d.totais);
+      $("lr-totais").innerHTML = (tot.length ? "" : `<div class="vazio">Nenhuma operação fechada desde o início do desafio.</div>`) +
         tot.map(([r, x]) => `<div class="tot"><span>${r}<br><small class="mut">${x.ganhos} ganhos · ${x.perdas} perdas</small></span><span class="v ${cor(x.lucro)}" style="font-size:16px">${x.lucro >= 0 ? "+" : ""}US$ ${fmt(x.lucro, 3)}</span></div>`).join("");
       const chave = (o) => o.robo + o.t + o.moeda;
       $("lr-lista").replaceChildren(...d.operacoes.map(o => { const e = document.createElement("div"); e.className = "lr" + (lrVistos && !lrVistos.has(chave(o)) ? " novo" : "");
@@ -1060,8 +1061,9 @@ async function cicloScalper() {
     const s = await j("/api/scalper");
     sc = s;
     if (!s.carregando) {
-      const ret = (s.patrimonio / 10 - 1) * 100;
-      $("sc-pat").textContent = "US$ " + fmt(s.patrimonio); $("sc-pat").className = "val num " + cor(ret); $("sc-ret").textContent = pct(ret, 2) + " desde o início";
+      const fs = plMesa && plMesa.fichas.find(f => f.robo.startsWith("Scalper"));
+      const cartS = (fs ? fs.desafio.carteira : 10) + s.abertas.reduce((a, p) => a + p.resultado, 0), ret = (cartS / 10 - 1) * 100;
+      $("sc-pat").textContent = "US$ " + fmt(cartS, 3); $("sc-pat").className = "val num " + cor(ret); $("sc-ret").textContent = pct(ret, 2) + " no desafio (meta US$ 20)";
       const h = s.resultado_hoje ?? 0;
       $("sc-hoje").textContent = (h >= 0 ? "+" : "") + "US$ " + fmt(h); $("sc-hoje").className = "val num " + cor(h);
       const aberto = s.abertas.reduce((a, p) => a + p.resultado, 0);
