@@ -611,3 +611,11 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   - se passar no binário, vira o **Cérebro v4** na nuvem, ao lado do v3;
   - se passar no perpétuo, vira um **robô LightGBM** na mesa;
   - se reprovar, fica registrado.
+
+## Hipótese 31: v4 no perpétuo só com confiança alta (pré-registrada em 2026-11-11, antes de rodar)
+
+- **Motivo:** na H30 o v4 passou no binário e reprovou no perpétuo operando a partir de |p − 0,5| ≥ 0,04 (−0,098%/op). A pergunta: as apostas mais confiantes pagam o custo?
+- **Modelo:** o mesmo arquivo `lab/modelos/lgbm_v4.txt`, sem retreinar. Mesmo período de teste (25% finais) e mesmos 3 blocos.
+- **Limiares testados, fixos antes de rodar:** |p − 0,5| ≥ 0,06, 0,08 e 0,10. Custo de 0,12% na ida e volta. Três tentativas, contadas.
+- **Passa** o limiar com média líquida > 0 e t ≥ 2 no teste inteiro **e** média > 0 em ≥ 2 dos 3 blocos, com ≥ 1000 operações no teste.
+- **Decisão:** se algum passar, o Rápido passa a entrar nas apostas do v4 acima desse limiar (em vez das do v3). Se nenhum passar, o v4 continua só no binário (pesquisa).
