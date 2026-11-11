@@ -7,6 +7,7 @@ Alvo: direção da próxima vela de 15 min (o mesmo do Cérebro v3; aposta biná
 Uso: .venv-ml/bin/python -m lab.minerador
 """
 import json
+import os
 import time
 import urllib.request
 from itertools import combinations
@@ -18,13 +19,17 @@ from baleias import config
 
 from . import tartaruga as T
 
-INICIO_MS = 1_746_057_600_000        # 2025-05-01 00:00 UTC
+INTERVALO = os.environ.get("MINERADOR_INTERVALO", "15m")          # H26: 15m · H32: 1m
+PASSO_MS = {"1m": 60_000, "5m": 300_000, "15m": 900_000}[INTERVALO]
+DIA = 86_400_000 // PASSO_MS                                      # velas por dia (para o "mesmo horário")
+HORIZONTE = int(os.environ.get("MINERADOR_HORIZONTE", "1"))       # velas à frente do alvo (H26: 1 · H32: 12)
 FIM_MS = 1_794_355_200_000           # 2026-11-11 00:00 UTC (fixo: o teste é reproduzível)
-PASSO_MS = 900_000
-ARQ_DADOS = config.RAIZ / "lab" / "minerador_15m.npz"
-ARQ_RESULTADO = config.RAIZ / "lab" / "minerador_resultado.json"
+INICIO_MS = FIM_MS - int(os.environ["MINERADOR_DIAS"]) * 86_400_000 if os.environ.get("MINERADOR_DIAS") else 1_746_057_600_000   # 2025-05-01
+_sufixo = "" if INTERVALO == "15m" else f"_{INTERVALO}"
+ARQ_DADOS = config.RAIZ / "lab" / f"minerador_{INTERVALO}.npz"
+ARQ_RESULTADO = config.RAIZ / "lab" / f"minerador_resultado{_sufixo}.json"
 QUANTIS = (5, 10, 20, 80, 90, 95)
-CUSTO_PERP = 0.001
+CUSTO_PERP = float(os.environ.get("MINERADOR_CUSTO", "0.001"))
 
 
 # ---------------- dados ----------------
@@ -33,14 +38,17 @@ def baixar():
     if ARQ_DADOS.exists():
         z = np.load(ARQ_DADOS)
         return z["t"], list(z["moedas"]), z["ohlcv"]
+    from concurrent.futures import ThreadPoolExecutor
     grade = np.arange(INICIO_MS, FIM_MS, PASSO_MS)
     ohlcv = np.full((len(T.MOEDAS_ROBO), len(grade), 5), np.nan)
-    for i, m in enumerate(T.MOEDAS_ROBO):
+
+    def moeda(i_m):
+        i, m = i_m
         t = INICIO_MS
         while t < FIM_MS:
             for tentativa in range(6):
                 try:
-                    url = f"{T.DADOS}/api/v3/klines?symbol={m}&interval=15m&startTime={t}&endTime={FIM_MS - 1}&limit=1000"
+                    url = f"{T.DADOS}/api/v3/klines?symbol={m}&interval={INTERVALO}&startTime={t}&endTime={FIM_MS - 1}&limit=1000"
                     with urllib.request.urlopen(url, timeout=30) as r:
                         lote = json.load(r)
                     break
@@ -55,8 +63,9 @@ def baixar():
                 if 0 <= j < len(grade):
                     ohlcv[i, j] = [float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])]
             t = lote[-1][0] + PASSO_MS
-            time.sleep(0.05)
         print(f"  {m}: {int(np.isfinite(ohlcv[i, :, 3]).sum())} velas", flush=True)
+    with ThreadPoolExecutor(6) as fios:
+        list(fios.map(moeda, enumerate(T.MOEDAS_ROBO)))
     np.savez_compressed(ARQ_DADOS, t=grade, moedas=np.array(T.MOEDAS_ROBO), ohlcv=ohlcv)
     return grade, list(T.MOEDAS_ROBO), ohlcv
 
@@ -109,7 +118,7 @@ def medidas(t, moedas, ohlcv):
         amp = h - l
         f["corpo"] = np.where(amp > 0, (c - o) / np.where(amp > 0, amp, 1), 0.0)
         f["vol96"] = v / _media(v, 96)
-        mesmo_horario = np.nanmean(np.stack([_desloca(v, 96 * k) for k in range(1, 21)]), axis=0)
+        mesmo_horario = np.nanmean(np.stack([_desloca(v, DIA * k) for k in range(1, 21)]), axis=0)
         f["vol_hora"] = v / mesmo_horario
         ganho, perda = np.clip(lr, 0, None), np.clip(-lr, 0, None)
         mg, mp = _media(ganho, 14), _media(perda, 14)
@@ -119,7 +128,8 @@ def medidas(t, moedas, ohlcv):
         r4s[moedas[i]] = f["r4"]
         for k, nome in enumerate(NOMES[:13]):
             X[i, :, k] = f[nome]
-        prox = np.concatenate((lc[1:] - lc[:-1], [np.nan]))       # retorno da PRÓXIMA vela
+        prox = np.full_like(lc, np.nan)                            # retorno HORIZONTE velas à frente
+        prox[:-HORIZONTE] = lc[HORIZONTE:] - lc[:-HORIZONTE]
         ret[i] = prox
         y[i] = np.where(prox > 0, 1.0, np.where(prox < 0, 0.0, np.nan))
     btc = r4s["BTCUSDT"]

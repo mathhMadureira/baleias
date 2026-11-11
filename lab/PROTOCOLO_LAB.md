@@ -630,3 +630,11 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 
 - **Leitura:** quanto mais confiante, melhor, mas a vantagem só existiu no 1º bloco e desapareceu nos dois seguintes. Vantagem direcional no perpétuo é fina e não é estável no tempo. O v4 continua só no binário (pesquisa).
 - **Nota de contexto:** a Polymarket, modelo do contrato binário, está em "close-only" para o Brasil (geoblock oficial), e cobra 0,07 × p × (1 − p) por ação do tomador (3,5% do valor a 0,50). Os cérebros v1–v4 passam a ser tratados como pesquisa, não como carteira operável.
+
+## Hipótese 32: minerador de oportunidades em velas de 1 min, para o robô rápido (pré-registrada em 2026-11-11, antes de rodar)
+
+- **Motivo:** o dono delegou aos robôs "encontrar um caminho para lucrar sozinhos". O Rápido opera velas de 1 min com horizonte de 12 velas; nenhuma regra foi minerada nesse tempo gráfico ainda.
+- **Dados:** 33 moedas, velas de 1 min, últimos 60 dias até 2026-11-11 00:00 UTC. Mesmas 15 medidas da H26 (janelas em velas), com o "mesmo horário" deslocado em dias de 1440 velas.
+- **Alvo:** retorno de 12 velas à frente (o horizonte do Rápido).
+- **Candidatas, alvo de dificuldade, cortes e critérios:** idênticos à H26 (Bonferroni sobre todas as tentativas; treino 50% / validação 25% / reserva 25% olhada uma vez). Custo no perpétuo: 0,12% ida e volta.
+- **Decisão:** regras aprovadas nas 3 etapas entram nos 33 cérebros do Rápido como sinapses em observação; se alguma pagar o custo no perpétuo, vira entrada direta do Rápido. Se nenhuma passar, fica registrado e o Rápido migra para a regra do Minerador em 15 min.
