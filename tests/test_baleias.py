@@ -1364,3 +1364,19 @@ class VelasAoVivo(unittest.TestCase):
             v = m.velas_ao_vivo("X", "1m", n=10)
         self.assertEqual(v["velas"][-2]["c"], 1.0)        # a vela que fechou fica como fechou
         self.assertEqual(v["velas"][-1]["c"], 2.0)        # o preço ao vivo vai para a vela de agora
+
+
+class SemTravaPorMoeda(unittest.TestCase):
+    def test_cerebro_sem_teto_continua_apostando_depois_de_perder(self):
+        from baleias import cerebro as C
+        cb = C.CerebroV3(None)
+        cb.operacoes = [{"t": 1794400000000, "liquido": -0.02, "capital": 500.0}] * 20      # perdeu bem mais que US$ 100 hoje
+        v = [(1794400000000 + i * 900_000, 1.0, 1.01, 0.99, 1.0 + (i % 7) * 0.001, 1.0) for i in range(C.JANELA)]
+        def decidir(t, f, px):
+            cb.pendente = {"t": t, "px": px, "opinioes": {}, "prob": 0.6, "aposta": 1}
+            return cb.pendente
+        cb.decidir = decidir
+        C.passo(cb, v, teto=float("inf"))
+        self.assertEqual(cb.pendente["aposta"], 1)
+        C.passo(cb, v, teto=100.0)
+        self.assertIsNone(cb.pendente["aposta"])                                           # a trava antiga ainda existe para quem pedir

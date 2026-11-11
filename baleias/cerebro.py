@@ -398,7 +398,7 @@ def passo(cb, v, teto=100.0):
     return eventos
 
 
-def avancar(cb, todas):
+def avancar(cb, todas, teto=100.0):
     """todas: velas fechadas em ordem (≥ 120). Processa em sequência todas as que vêm depois de cb.ultima_t (revive pausas).
     Devolve [(texto, notificar)]."""
     tempos = [x[0] for x in todas]
@@ -411,7 +411,7 @@ def avancar(cb, todas):
         inicio = len(todas) - 1
     eventos = []
     for j in range(max(inicio, JANELA - 1), len(todas)):
-        eventos += passo(cb, todas[j - JANELA + 1:j + 1])
+        eventos += passo(cb, todas[j - JANELA + 1:j + 1], teto)
     perdidas = len(todas) - max(inicio, JANELA - 1)
     if perdidas > 1:
         cb._anotar(cb.ultima_t, f"⏸ Revivi {perdidas} velas em sequência desde a última vez (pausa ou intervalo da nuvem).")

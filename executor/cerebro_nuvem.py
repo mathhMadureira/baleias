@@ -16,12 +16,16 @@ from baleias import cerebro as C, config
 from lab import tartaruga as T
 
 
-def rodar(classe, nome, v, inicio_padrao=None, pasta=None):
+SEM_TETO = float("inf")   # a mesa já limita o risco (6% por vela e US$ 1/dia por robô); a trava antiga de US$ 100/dia por cérebro
+                          # travava moedas inteiras (DOGE, HBAR...) o resto do dia. Só v1/v2 do BTC mantêm a trava (teste H20/H21).
+
+
+def rodar(classe, nome, v, inicio_padrao=None, pasta=None, teto=100.0):
     arq = (pasta or config.RAIZ) / nome
     estado = json.loads(arq.read_text()) if arq.exists() else None
     cb = classe(estado)
     novo = not cb.passos
-    eventos = C.avancar(cb, v)
+    eventos = C.avancar(cb, v, teto)
     if novo:
         eventos = []                         # aquecimento: não vira aviso
     if cb.inicio_ao_vivo is None:
@@ -53,7 +57,7 @@ def outras_moedas():
             print(f"   {par}: sem velas ({type(ex).__name__})")
             continue
         for nome, classe in (("v1", C.Cerebro), ("v2", C.CerebroV2), ("v3", C.CerebroV3)):
-            cb, _ = rodar(classe, f"{par}_{nome}.json", v, pasta=pasta)
+            cb, _ = rodar(classe, f"{par}_{nome}.json", v, pasta=pasta, teto=SEM_TETO)
             r = resumo.setdefault(par, {}).setdefault(nome, {"ops": []})
             ultimo = r["ops"][-1][0] if r["ops"] else 0
             r["ops"] += [[o["t"], round(o["liquido"], 6), o["aposta"]] for o in cb.operacoes
@@ -74,7 +78,7 @@ def main():
     v = velas("BTCUSDT")
     cb, eventos = rodar(C.Cerebro, "cerebro.json", v, inicio_padrao=1794281400000)   # v1: aquecimento local terminou 2026-11-10 03:30 UTC
     cb2, eventos2 = rodar(C.CerebroV2, "cerebro_v2.json", v)
-    cb3, eventos3 = rodar(C.CerebroV3, "cerebro_v3.json", v)
+    cb3, eventos3 = rodar(C.CerebroV3, "cerebro_v3.json", v, teto=SEM_TETO)
     livro = cb.livro()
     (config.RAIZ / "livro_metodos.json").write_text(json.dumps({"t": time.time(), "metodos": livro}, ensure_ascii=False))
     C.escrever_livro_md(livro, config.RAIZ / "LIVRO_DE_METODOS.md")
