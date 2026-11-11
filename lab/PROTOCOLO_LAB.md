@@ -549,3 +549,19 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Reserva:** acerto > 51% e t ≥ 1,65. Só as regras que passam nas três etapas são **aprovadas**.
 - **Decisão:** as aprovadas entram no Cérebro v3 como sinapses **em observação**. Só votam se provarem acerto ao vivo, pelas regras do próprio cérebro. O resultado médio no perpétuo, com 0,1% de custo, é informado à parte.
 - Se nenhuma passar, isso fica registrado e o v3 segue como está.
+
+### Resultado da H26 (2026-11-11): 194 de 1068 tentativas passaram nas três etapas, quase todas a mesma família
+
+- **Alvo de dificuldade:** t ≥ 3,91, por Bonferroni sobre 1068 tentativas. 218 regras passaram no treino; 194 passaram também na validação e na reserva (velas de 15 min, 33 moedas, maio/2025 a nov/2026, 50 min de busca).
+- **O que é:** quase todas são **reversão da vela de 15 min**. Vela que fecha muito forte (corpo ou r1 no topo) tende a devolver na próxima, e vice-versa. As melhores acertaram 54–57% na reserva, com t de 13 a 18 e dezenas de milhares de sinais.
+- **No binário** (empate em 51%): passam.
+- **No perpétuo com 0,1% de custo:** 187 das 194 **perdem** (de −0,03% a −0,12% por operação). Bate com a literatura: o efeito é real, mas pequeno demais para pagar o custo.
+- **Exceção que paga o custo (7 regras):** **movimento forte com volume muito baixo reverte**. Quando r1 está na cauda de 10% E o volume está nos 10% mais baixos (da média de 96 velas ou do mesmo horário):
+
+  | | Reserva | t | Perp líquido | Perp no treino | Sinais |
+  |---|---|---|---|---|---|
+  | Compra | 68% | 12 | +0,19%/op | +0,06% | 999 |
+  | Venda | 65% | 11 | +0,19%/op | +0,07% | 1140 |
+
+  Positivo nos dois sentidos e em treino e reserva. Ressalva: em momentos de volume baixo o spread pode ser maior que o custo suposto.
+- **Decisão (pré-registrada):** as aprovadas entram no Cérebro v3 em observação. A família "movimento sem volume" vira candidata a robô próprio no perpétuo simulado (H28, a registrar antes de ligar).
