@@ -500,19 +500,24 @@ class Motor:
 
     def _velas_rapidas(self, intervalo, moedas):
         """Últimas 80 velas FECHADAS de cada moeda (a vela em andamento fica de fora)."""
+        from concurrent.futures import ThreadPoolExecutor
         from lab import tartaruga as T
         saida, agora_ms = {}, time.time() * 1000
-        for m in moedas:
+
+        def busca(m):                                   # 33 moedas em paralelo: 30 s → ~4 s por decisão (medido em 2026-11-11)
             try:
                 with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={m}&interval={intervalo}&limit=241", timeout=20) as r:
-                    k = json.load(r)
-            except OSError:
-                continue
-            saida[m] = [[time.strftime("%Y-%m-%d %H:%M", time.gmtime(x[0] / 1000)), float(x[1]), float(x[2]), float(x[3]), float(x[4])]
-                        for x in k if x[6] < agora_ms]
-            self.__dict__.setdefault("_brutas", {})[m] = [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5]))
-                                                          for x in k if x[6] < agora_ms]
-            time.sleep(0.05)
+                    return m, json.load(r)
+            except (OSError, ValueError):
+                return m, None
+        with ThreadPoolExecutor(8) as fios:
+            for m, k in fios.map(busca, moedas):
+                if not k:
+                    continue
+                saida[m] = [[time.strftime("%Y-%m-%d %H:%M", time.gmtime(x[0] / 1000)), float(x[1]), float(x[2]), float(x[3]), float(x[4])]
+                            for x in k if x[6] < agora_ms]
+                self.__dict__.setdefault("_brutas", {})[m] = [(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5]))
+                                                              for x in k if x[6] < agora_ms]
         return saida
 
     def _consultar_livro(self, dados, precos, e, ouvir):
