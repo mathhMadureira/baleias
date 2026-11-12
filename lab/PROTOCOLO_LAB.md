@@ -648,5 +648,5 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 
 ### H28b (2026-11-12, decisão do dono): Minerador vira o robô principal do perpétuo
 - Tamanho do dono: US$ 25 por posição a 10× (margem US$ 2,50), até 6 no mesmo lado; perda máxima US$ 1/dia e piso US$ 5 mantidos.
-- Entra a 2ª família aprovada na H26 (movimento forte com volume ≤ 32% do mesmo horário dos 20 dias anteriores; +0,05–0,06%/op), para operar mais vezes. Custo 0,06%/lado.
+- Entra a 2ª família aprovada na H26 (movimento forte com volume ≤ 20% do mesmo horário dos 20 dias anteriores; +0,05–0,06%/op), para operar mais vezes. Custo 0,06%/lado.
 - O placar da H28 recomeça daqui (as 11 operações a US$ 5 ficam registradas, não contam para o teste novo).

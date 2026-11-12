@@ -17,7 +17,7 @@ from lab import tartaruga as T
 
 # limiares fixos do treino da H26 (dados/lab/minerador_resultado.json): não mudam depois de ver o resultado ao vivo
 R1_BAIXO, R1_ALTO, VOL_BAIXO = -1.1734489877988534, 1.1757000900702275, 0.25682599216387464
-VOL_HORA_BAIXO = 0.3155046054464102      # 2ª família aprovada na H26: volume ≤ 32% do mesmo horário nos 20 dias anteriores (+0,05–0,06%/op)
+VOL_HORA_BAIXO = 0.20471780701561856     # 2ª família aprovada na H26: volume ≤ 20% do mesmo horário nos 20 dias anteriores (+0,05–0,06%/op)
 ORCAMENTO, ALAV, CUSTO_LADO, STOP_SEG = 25.0, 10.0, 0.0006, 0.02     # tamanho do dono (2026-11-12): US$ 25 a 10×, margem US$ 2,50
 CAPITAL, PERDA_DIA, MAX_MESMO_LADO = 10.0, 1.0, 6
 DIA = 96
