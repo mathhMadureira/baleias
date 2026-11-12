@@ -650,3 +650,14 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - Tamanho do dono: US$ 25 por posição a 10× (margem US$ 2,50), até 6 no mesmo lado; perda máxima US$ 1/dia e piso US$ 5 mantidos.
 - Entra a 2ª família aprovada na H26 (movimento forte com volume ≤ 20% do mesmo horário dos 20 dias anteriores; +0,05–0,06%/op), para operar mais vezes. Custo 0,06%/lado.
 - O placar da H28 recomeça daqui (as 11 operações a US$ 5 ficam registradas, não contam para o teste novo).
+
+## Hipótese 34: primeira meia hora do dia prevê a última (pré-registrada em 2026-11-12, antes de rodar)
+
+- **Fonte:** Shen, Urquhart & Wang (2022), previsibilidade intradiária em cripto: o retorno da primeira meia hora (00:00–00:30 UTC) prevê o da última (23:30–24:00 UTC).
+- **Dados:** 33 moedas, 15 min, maio/2025–nov/2026 (os mesmos da H26/H30). Teste no período inteiro, dividido em 3 blocos.
+- **Regra A:** às 23:30 UTC, compra se r(00:00–00:30) > 0, vende a descoberto se < 0; sai às 24:00. **Regra B:** idem, mas só quando |r(00:00–00:30)| > 0,5%. Duas tentativas, contadas.
+- **Custo:** 0,12% ida e volta. **Passa** com média líquida > 0, t ≥ 2 (agrupado por dia) e média > 0 em 2 dos 3 blocos.
+
+### Resultado da H34 (2026-11-12): reprovada
+- A (sempre): 558 dias, −0,129%/dia, t = −7,4, negativa nos 3 blocos. B (|r| > 0,5%): 554 dias, −0,150%/dia, t = −6,2, negativa nos 3 blocos.
+- Leitura: o efeito da primeira meia hora não aparece nas 33 moedas em 2025–26; o resultado é ≈ o custo, ou seja, previsão nula.
