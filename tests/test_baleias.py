@@ -1406,7 +1406,7 @@ class MineradorNuvem(unittest.TestCase):
         MN.passo(e, {"XUSDT": seguinte}, seguinte[-1][6])
         f = e["fechadas"][0]
         self.assertEqual(f["motivo"], "fim da vela seguinte")
-        self.assertAlmostEqual(f["resultado_usd"], 5 * (99.5 / float(k[-1][4]) - 1) - 0.005)
+        self.assertAlmostEqual(f["resultado_usd"], MN.ORCAMENTO * (99.5 / float(k[-1][4]) - 1) - 2 * MN.CUSTO_LADO * MN.ORCAMENTO)
         self.assertAlmostEqual(e["caixa"], 10.0 + f["resultado_usd"])
 
 

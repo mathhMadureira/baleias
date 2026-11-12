@@ -17,8 +17,10 @@ from lab import tartaruga as T
 
 # limiares fixos do treino da H26 (dados/lab/minerador_resultado.json): não mudam depois de ver o resultado ao vivo
 R1_BAIXO, R1_ALTO, VOL_BAIXO = -1.1734489877988534, 1.1757000900702275, 0.25682599216387464
-ORCAMENTO, ALAV, CUSTO_LADO, STOP_SEG = 5.0, 5.0, 0.0005, 0.02
-CAPITAL, PERDA_DIA, MAX_MESMO_LADO = 10.0, 1.0, 2
+VOL_HORA_BAIXO = 0.3155046054464102      # 2ª família aprovada na H26: volume ≤ 32% do mesmo horário nos 20 dias anteriores (+0,05–0,06%/op)
+ORCAMENTO, ALAV, CUSTO_LADO, STOP_SEG = 25.0, 10.0, 0.0006, 0.02     # tamanho do dono (2026-11-12): US$ 25 a 10×, margem US$ 2,50
+CAPITAL, PERDA_DIA, MAX_MESMO_LADO = 10.0, 1.0, 6
+DIA = 96
 VELA_MS = 900_000
 ARQ = "robo_minerador.json"
 
@@ -29,7 +31,8 @@ def velas(par, limite=100):
 
 
 def sinal(k):
-    """(lado, r1, vol96) se a última vela fechada dispara a regra, senão None. Mesmas medidas da H26."""
+    """(lado, r1, vol) se a última vela fechada dispara uma das duas regras aprovadas na H26, senão None.
+    Regra 1: volume ≤ 26% da média de 96 velas. Regra 2 (precisa de 20 dias de velas): volume ≤ 32% do mesmo horário dos 20 dias anteriores."""
     if len(k) < 98:
         return None
     c = [float(x[4]) for x in k]
@@ -39,10 +42,14 @@ def sinal(k):
     if sig <= 0 or media_v <= 0:
         return None
     r1, vol96 = lr[-1] / sig, v[-1] / media_v
-    if vol96 <= VOL_BAIXO and r1 <= R1_BAIXO:
-        return "compra", r1, vol96
-    if vol96 <= VOL_BAIXO and r1 >= R1_ALTO:
-        return "venda", r1, vol96
+    forte = "compra" if r1 <= R1_BAIXO else "venda" if r1 >= R1_ALTO else None
+    if not forte:
+        return None
+    if vol96 <= VOL_BAIXO:
+        return forte, r1, vol96
+    mesmo = [v[-1 - DIA * j] for j in range(1, 21) if len(v) > DIA * j]
+    if len(mesmo) == 20 and sum(mesmo) > 0 and v[-1] / (sum(mesmo) / 20) <= VOL_HORA_BAIXO:
+        return forte, r1, v[-1] / (sum(mesmo) / 20)
     return None
 
 
@@ -69,7 +76,7 @@ def passo(e, todas, agora_ms):
             continue
         saida, motivo = r
         sinal_lado = -1 if p["lado"] == "venda" else 1
-        resultado = ORCAMENTO * sinal_lado * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
+        resultado = ORCAMENTO * sinal_lado * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO   # lucro líquido da posição de US$ 25
         e["caixa"] += ORCAMENTO / ALAV + resultado
         e["fechadas"].append({**p, "saida": saida, "saida_t": (p["vela_saida"] + VELA_MS) / 1000, "motivo": motivo,
                               "resultado_usd": resultado, "R": resultado / (ORCAMENTO * STOP_SEG)})
@@ -102,12 +109,18 @@ def main():
     arq = config.RAIZ / ARQ
     e = json.loads(arq.read_text()) if arq.exists() else {"caixa": CAPITAL, "abertas": {}, "fechadas": [], "ultimo_sinal": {},
                                                            "inicio": time.strftime("%Y-%m-%d"), "eventos": []}
+    import os
+    from pathlib import Path
+    cache_v4 = Path(os.environ.get("CEREBROS_MOEDAS", config.RAIZ / "cerebros_moedas")) / "velas_v4.json"   # 2200 velas por moeda, do cérebro v4
+    historico = json.loads(cache_v4.read_text()) if cache_v4.exists() else {}
     todas = {}
     for par in T.MOEDAS_ROBO:
         try:
-            todas[par] = velas(par)
+            novas = velas(par)
         except (OSError, ValueError):
-            todas[par] = []
+            novas = []
+        junto = {x[0]: x for x in historico.get(par, []) + novas}
+        todas[par] = [junto[t] for t in sorted(junto)][-2200:]
         time.sleep(0.05)
     textos = passo(e, todas, time.time() * 1000)
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]

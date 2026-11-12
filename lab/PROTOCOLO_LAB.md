@@ -645,3 +645,8 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Nenhuma** das 213 teve resultado líquido positivo no perpétuo com 0,12% de custo, nem no treino nem na reserva. Em 1 min o movimento típico é menor que o custo.
 - **Desafio de 24 h do Rápido (13:35 de 11/11 a 13:35 de 12/11), posições de US$ 25 a 10×:** 106 operações, −US$ 2,94; 90 saídas no fim da vela (≈ 0), 14 stops (≈ toda a perda), 2 realizações. A regra de +US$ 0,50 por posição nunca foi atingida.
 - **Decisão pré-registrada:** o Rápido de 1 min não tem regra com vantagem líquida; migra para a regra do Minerador (15 min) ou é desligado, a critério do dono.
+
+### H28b (2026-11-12, decisão do dono): Minerador vira o robô principal do perpétuo
+- Tamanho do dono: US$ 25 por posição a 10× (margem US$ 2,50), até 6 no mesmo lado; perda máxima US$ 1/dia e piso US$ 5 mantidos.
+- Entra a 2ª família aprovada na H26 (movimento forte com volume ≤ 32% do mesmo horário dos 20 dias anteriores; +0,05–0,06%/op), para operar mais vezes. Custo 0,06%/lado.
+- O placar da H28 recomeça daqui (as 11 operações a US$ 5 ficam registradas, não contam para o teste novo).
