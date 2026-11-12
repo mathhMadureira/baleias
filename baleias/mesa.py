@@ -278,6 +278,7 @@ def mesa():
     fichas = [
         _rapido(),
         _rapido("robo_minerador.json", "Minerador (H28)", "☁ na nuvem 24 h: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda", nuvem=True),
+        _rapido("robo_v4_testnet.json", "v4 Testnet (Binance, ordens maker)", "TESTNET de futuros da Binance: apostas do v4 com confiança ≥10%, entrada e saída com ordem limitada só-maker; conta de teste, resultado em US$ reais de preenchimento"),
         _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v3 (15 min); alvo +0,5%, stop −0,5%, sai no fim da vela apostada"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
