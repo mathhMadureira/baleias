@@ -13,6 +13,7 @@ from executor.binance_futuros import ErroFuturos, Futuros
 LIMIAR = float(os.environ.get("V4_LIMIAR", "0.10"))         # |p − 0,5| mínimo (H31: só as apostas mais confiantes chegam perto de pagar)
 NOCIONAL = float(os.environ.get("V4_NOCIONAL", "25"))       # US$ por posição (sobe ao mínimo da moeda: BTC 50, ETH 20)
 MAX_POS = 6
+CAPITAL, ALAV, PERDA_DIA, PISO = float(os.environ.get("V4_CAPITAL", "10")), 10, 1.0, 5.0   # carteira de US$ 10 a 10× (regra do dono), como no real
 ESPERA_ENTRADA, ESPERA_SAIDA, VELA = 90, 45, 900
 TAXA_MAKER, TAXA_TAKER = 0.0002, 0.0005
 ARQ = config.RAIZ / "robo_v4_testnet.json"
@@ -52,7 +53,7 @@ def main():
     f = Futuros.do_env()
     e = carregar()
     livre, total = f.saldo_usdt()
-    anotar(e, f"ligado no testnet: saldo de teste {total:.0f} USDT · confiança ≥ {LIMIAR:.0%} · US$ {NOCIONAL:.0f} por posição (ou o mínimo da moeda)")
+    anotar(e, f"ligado no testnet (saldo de teste {total:.0f}), operando como carteira de US$ {CAPITAL:.0f} a {ALAV}× · confiança ≥ {LIMIAR:.0%} · US$ {NOCIONAL:.0f} por posição (ou o mínimo da moeda)")
     while True:
         agora = time.time()
         try:
@@ -60,10 +61,19 @@ def main():
             v4 = mesa._git_json("dados/cerebro_v4.json") or {}
         except Exception:
             v4 = {}
+        carteira = CAPITAL + sum(x["resultado_usd"] for x in e["fechadas"])
+        hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
+        dia = sum(x["resultado_usd"] for x in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(x["saida_t"])) == hoje)
+        margem_usada = (sum(p["qtd"] * p["entrada"] for p in e["abertas"].values()) + sum(o["qtd"] * o["px"] for o in e["ordens"].values())) / ALAV
+        trava = "conta abaixo de US$ 5" if carteira < PISO else f"perda do dia {dia:+.2f} (limite −{PERDA_DIA:.2f})" if dia <= -PERDA_DIA else None
+        if trava and e.get("trava") != f"{hoje} {trava}":
+            anotar(e, f"🛑 sem novas entradas: {trava}; as saídas continuam")
+        e["trava"] = f"{hoje} {trava}" if trava else None
+        e["carteira"] = carteira
         for par, p in v4.get("pendentes", {}).items():
             inicio, fim = p["t"] / 1000 + VELA, p["t"] / 1000 + 2 * VELA
             chave = f"{par}@{p['t']}"
-            if abs(p["prob"] - 0.5) < LIMIAR or chave in e["tentadas"] or not (inicio <= agora <= fim - 180):
+            if trava or abs(p["prob"] - 0.5) < LIMIAR or chave in e["tentadas"] or not (inicio <= agora <= fim - 180):
                 continue
             if par in e["abertas"] or par in e["ordens"] or len(e["abertas"]) + len(e["ordens"]) >= MAX_POS:
                 continue
@@ -73,7 +83,14 @@ def main():
                 bid, ask = f.livro(par)
                 px = f.preco_redondo(par, bid if lado == "BUY" else ask, lado)
                 qtd = f.quantidade(par, NOCIONAL, px)
+                if margem_usada + qtd * px / ALAV > carteira:              # não cabe na carteira de US$ 10 a 10×
+                    anotar(e, f"· {par}: não cabe (margem usada {margem_usada:.2f} + {qtd * px / ALAV:.2f} > carteira {carteira:.2f})")
+                    continue
+                if par not in e.setdefault("alav_ok", []):
+                    f.alavancagem(par, ALAV)
+                    e["alav_ok"].append(par)
                 o = f.ordem_limit(par, lado, qtd, px, so_maker=True)
+                margem_usada += qtd * px / ALAV
             except ErroFuturos as ex:
                 e["nao_executadas"] += 1
                 anotar(e, f"✗ {par} ordem maker recusada ({str(ex)[:80]})")
