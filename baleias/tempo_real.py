@@ -206,7 +206,7 @@ def traduzir(j, media_volume=None):
 
 MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "6"))   # decisão do dono (2026-11-11): arriscar mais, até 6 no mesmo lado
 MODO_SINAL = os.environ.get("ROBO_RAPIDO_SINAL", "livre")           # decisão do dono (2026-11-12): "livre" = sem trava de custo, geladeira ou pausa
-CONFIANCA_LIVRE = float(os.environ.get("ROBO_RAPIDO_CONFIANCA", "0.51"))   # decisão do dono (2026-11-12): qualquer inclinação do cérebro entra   # freio de correlação: as moedas andam juntas, então 5 vendidas
+CONFIANCA_LIVRE = float(os.environ.get("ROBO_RAPIDO_CONFIANCA", "0.50"))   # decisão do dono (2026-11-12): sem barra de confiança, qualquer lado entra   # freio de correlação: as moedas andam juntas, então 5 vendidas
                                                                    # ao mesmo tempo são uma aposta só no mercado inteiro
 
 
