@@ -638,3 +638,10 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Alvo:** retorno de 12 velas à frente (o horizonte do Rápido).
 - **Candidatas, alvo de dificuldade, cortes e critérios:** idênticos à H26 (Bonferroni sobre todas as tentativas; treino 50% / validação 25% / reserva 25% olhada uma vez). Custo no perpétuo: 0,12% ida e volta.
 - **Decisão:** regras aprovadas nas 3 etapas entram nos 33 cérebros do Rápido como sinapses em observação; se alguma pagar o custo no perpétuo, vira entrada direta do Rápido. Se nenhuma passar, fica registrado e o Rápido migra para a regra do Minerador em 15 min.
+
+### Resultado da H32 (2026-11-12): 213 regras aprovadas na direção, ZERO pagam o custo no perpétuo
+
+- 1068 tentativas em velas de 1 min (30 dias, 33 moedas, alvo 12 velas à frente), alvo de dificuldade t ≥ 3,91. 315 passaram no treino, 213 nas três etapas: quase todas reversão (vela forte de 1 min tende a devolver nos 12 min seguintes).
+- **Nenhuma** das 213 teve resultado líquido positivo no perpétuo com 0,12% de custo, nem no treino nem na reserva. Em 1 min o movimento típico é menor que o custo.
+- **Desafio de 24 h do Rápido (13:35 de 11/11 a 13:35 de 12/11), posições de US$ 25 a 10×:** 106 operações, −US$ 2,94; 90 saídas no fim da vela (≈ 0), 14 stops (≈ toda a perda), 2 realizações. A regra de +US$ 0,50 por posição nunca foi atingida.
+- **Decisão pré-registrada:** o Rápido de 1 min não tem regra com vantagem líquida; migra para a regra do Minerador (15 min) ou é desligado, a critério do dono.
