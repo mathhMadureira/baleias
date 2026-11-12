@@ -197,7 +197,7 @@ def stops_perdidos(e, corretora, dados):
             vendido = p.get("lado") == "venda"
             if (h >= p["stop"]) if vendido else (l <= p["stop"]):
                 saida = max(o, p["stop"]) if vendido else min(o, p["stop"])
-                eventos.append(_sair(e, corretora, m, "stop 2N (tocado dentro da vela, entre as conferências)", saida, ja_vendido=saida))
+                eventos.append(_sair(e, corretora, m, f"{p.get('stop_nome') or 'stop 2N'} (tocado dentro da vela, entre as conferências)", saida, ja_vendido=saida))
                 break
             p["conferido_ate"] = d
     return eventos
@@ -271,9 +271,10 @@ def reconciliar(e, corretora, precos):
     return eventos
 
 
-def entrar(e, corretora, m, px, n, motivo, lado="compra", custo_lado=None):
+def entrar(e, corretora, m, px, n, motivo, lado="compra", custo_lado=None, stop_nome=None):
     """Entrada com orçamento fixo (robô rápido). Com `custo_lado` (perpétuo simulado) pode ser COMPRA ou VENDA a descoberto;
-    no real só compra (vender a descoberto exige conta de futuros, que o robô não usa)."""
+    no real só compra (vender a descoberto exige conta de futuros, que o robô não usa). `stop_nome`: como chamar o stop nas saídas
+    (padrão "stop 2N"; o robô rápido usa um stop de segurança em % e passa o nome certo)."""
     if lado == "venda" and (corretora.real or custo_lado is None):
         return registrar(f"🐢 {m[:-4]}: venda a descoberto só no simulado (perpétuo)")
     caixa = corretora.usdt_livre()
@@ -296,7 +297,8 @@ def entrar(e, corretora, m, px, n, motivo, lado="compra", custo_lado=None):
     if custo_lado is None or corretora.real:
         ordem = corretora.colocar_stop(m, qtd, stop)
     e["abertas"][m] = {"moeda": m, "entrada": preco_medio, "qtd": qtd, "stop": stop, "ordem_stop": ordem, "N": n, "lado": lado,
-                       "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * abs(preco_medio - stop), "custo_lado": custo_lado}
+                       "entrada_t": relogio(), "gasto": gasto, "risco_usd": qtd * abs(preco_medio - stop), "custo_lado": custo_lado,
+                       "stop_nome": stop_nome or "stop 2N"}
     return registrar(f"🐢 Robô ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {m[:-4]} a {preco_medio:,.6g} ({motivo}). "
                      f"Stop {stop:,.6g} ({(stop / preco_medio - 1) * 100:+.1f}%), posição US$ {qtd * preco_medio:,.2f} (margem US$ {gasto:,.2f})"
                      f"{'' if corretora.real else ' [simulado]'}")
@@ -307,7 +309,7 @@ def checar_stops(e, corretora, precos):
     for m in list(e["abertas"]):
         saiu, px = corretora.stop_saiu(m, e["abertas"][m], precos.get(m))
         if saiu:
-            eventos.append(_sair(e, corretora, m, "stop 2N", px, ja_vendido=px))
+            eventos.append(_sair(e, corretora, m, e["abertas"][m].get("stop_nome") or "stop 2N", px, ja_vendido=px))
     return eventos
 
 

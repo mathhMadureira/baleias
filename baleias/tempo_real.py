@@ -207,6 +207,8 @@ def traduzir(j, media_volume=None):
 MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "6"))   # decisão do dono (2026-11-11): arriscar mais, até 6 no mesmo lado
 MODO_SINAL = os.environ.get("ROBO_RAPIDO_SINAL", "livre")           # decisão do dono (2026-11-12): "livre" = sem trava de custo, geladeira ou pausa
 CONFIANCA_LIVRE = float(os.environ.get("ROBO_RAPIDO_CONFIANCA", "0.50"))   # decisão do dono (2026-11-12): sem barra de confiança, qualquer lado entra   # freio de correlação: as moedas andam juntas, então 5 vendidas
+STOP_SEG_RAPIDO = float(os.environ.get("ROBO_RAPIDO_STOP", "0.01"))   # stop de segurança de 1% em vez de 4N de 1 min (medido 12/11 nos 147 trades: os 34 stops de 4N
+STOP_NOME_RAPIDO = f"stop de segurança −{STOP_SEG_RAPIDO:.0%}"          # deram −4,46; sem stop −1,94; com stop de 1% −2,09; só 2 de 113 trades bons passaram de −1%)
                                                                    # ao mesmo tempo são uma aposta só no mercado inteiro
 
 
@@ -618,18 +620,16 @@ class Motor:
                 continue
             if not livre and (o["ev"] <= 0 or o["geladeira"] or m in em_pausa):
                 continue
-            n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
-            n = n and 2 * n                                               # mudança 29: stop de 4N (o executor põe o stop a 2 "n"), seguro largo
-            if not n:
-                continue
+            n = precos[m] * STOP_SEG_RAPIDO / T.STOP_N                   # stop de segurança de 1% (o executor põe o stop a 2 "n")
             X.entrar(e, corretora, m, precos[m], n,
-                     f"cérebro: {o['p_cal']:.1%} de acerto calibrado, valor esperado {o['ev'] * 100:+.2f}%", lado=o["lado"], custo_lado=0.0006)
+                     f"cérebro: {o['p_cal']:.1%} de acerto calibrado, valor esperado {o['ev'] * 100:+.2f}%", lado=o["lado"], custo_lado=0.0006,
+                     stop_nome=STOP_NOME_RAPIDO)
             if m in e["abertas"]:
                 e["abertas"][m].update({"prob_lado": o["p_cal"], "ev": o["ev"], "hora": time.gmtime().tm_hour})
 
     def _entrar_pelo_v3(self, e, corretora, dados, precos, em_pausa):
         """Entra nas apostas do Cérebro v3 (vela de 15 min, cada moeda com o seu cérebro) e segura até o fim da vela apostada.
-        Stop de segurança de 4N (N = ATR de 20 velas de 1 min). Cada aposta do v3 é seguida uma vez só."""
+        Stop de segurança de 1% (STOP_SEG_RAPIDO; o 4N de 1 min saía no ruído). Cada aposta do v3 é seguida uma vez só."""
         from lab import tartaruga as T
         from executor import tartaruga_exec as X
         from . import mesa
@@ -649,13 +649,10 @@ class Motor:
             if (m in e["abertas"] or m in em_pausa or m not in precos or lado_cheio(e["abertas"], s["lado"])
                     or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP):
                 continue
-            n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
-            if not n:
-                continue
             e["sinais_feitos"] = (e["sinais_feitos"] + [chave])[-500:]
-            X.entrar(e, corretora, m, precos[m], 2 * n,
+            X.entrar(e, corretora, m, precos[m], precos[m] * STOP_SEG_RAPIDO / T.STOP_N,
                      f"Cérebro v3 aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}) até o fim da vela de 15 min",
-                     lado=s["lado"], custo_lado=0.0006)
+                     lado=s["lado"], custo_lado=0.0006, stop_nome=STOP_NOME_RAPIDO)
             if m in e["abertas"]:
                 e["abertas"][m].update({"fim_t": fim, "prob_lado": max(s["prob"], 1 - s["prob"]), "hora": time.gmtime().tm_hour})
 
@@ -668,8 +665,8 @@ class Motor:
         passo = {"1m": 60, "5m": 300, "15m": 900, "1h": 3600, "4h": 14400}[intervalo]
         self._passo_rapido = passo
         capital = float(os.environ.get("ROBO_RAPIDO_CAPITAL", "10"))            # conta do robô rápido: US$ 10 no total (pedido do dono)
-        limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", str(capital * 0.10)))   # perde no máximo 10% da conta por dia
-        piso = capital * 0.5                                                    # abaixo de metade da conta, para de vez
+        limite_dia = float(os.environ.get("ROBO_RAPIDO_PERDA_DIA", "0"))        # 0 = sem trava de perda do dia (decisão do dono, 12/11: "tirar")
+        piso = capital * 0.5                                                    # abaixo de metade da conta, para de vez (eliminado do desafio)
         meta_dia = float(os.environ.get("ROBO_RAPIDO_META_DIA", "100"))         # meta do dono: para ao ganhar isto no período
         meta_dias = int(os.environ.get("ROBO_RAPIDO_META_DIAS", "2"))           # período da meta: blocos de 2 dias UTC
         X.ORCAMENTO_FIXO = float(os.environ.get("ROBO_RAPIDO_ORCAMENTO", "25"))  # US$ por operação (decisão do dono: US$ 25 a 10×)
@@ -713,7 +710,10 @@ class Motor:
                 if quebrou and not e.get("quebrou"):
                     e["quebrou"] = True
                     ouvir({"t": agora, "texto": f"⛔ Conta abaixo de US$ {piso:.2f} (metade dos US$ {capital:.0f}). Robô rápido parado de vez até você decidir."})
-                travado = fechado_hoje + aberto <= -limite_dia or meta_batida or e.get("quebrou", False)
+                travado = (limite_dia > 0 and fechado_hoje + aberto <= -limite_dia) or meta_batida or e.get("quebrou", False)
+                if not travado and limite_dia <= 0 and X.PARAR.exists() and e.get("dia_trava") == hoje and not e.get("trava_meta"):
+                    X.PARAR.unlink()                                        # a trava do dia foi desligada: solta o robô agora
+                    ouvir({"t": agora, "texto": "🔓 Trava de perda do dia desligada (decisão do dono): o robô volta a entrar; só o piso de US$ 5 elimina."})
                 if travado and not X.PARAR.exists():
                     X.PARAR.touch()
                     if meta_batida:
@@ -753,9 +753,9 @@ class Motor:
                             or lado_cheio(e["abertas"], o["lado"]) or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP):
                         continue
                     with X.TRAVA:
-                        X.entrar(e, corretora, m, precos[m], 2 * T.atr(dados[m])[-1],
+                        X.entrar(e, corretora, m, precos[m], precos[m] * STOP_SEG_RAPIDO / T.STOP_N,
                                  f"varredura ao vivo: cérebro da moeda vê {'alta' if o['lado'] == 'compra' else 'queda'} ({max(o['prob'], 1 - o['prob']):.1%}), "
-                                 f"valor esperado {o['ev'] * 100:+.2f}% depois do custo", lado=o["lado"], custo_lado=0.0006)
+                                 f"valor esperado {o['ev'] * 100:+.2f}% depois do custo", lado=o["lado"], custo_lado=0.0006, stop_nome=STOP_NOME_RAPIDO)
                     if m in e["abertas"]:
                         e["abertas"][m].update({"fim_t": agora + max_velas * passo, "origem": "varredura"})
             if precos:
