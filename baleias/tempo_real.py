@@ -204,7 +204,9 @@ def traduzir(j, media_volume=None):
 
 # ---------- motor ----------
 
-MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "6"))   # decisão do dono (2026-11-11): arriscar mais, até 6 no mesmo lado   # freio de correlação: as moedas andam juntas, então 5 vendidas
+MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "6"))   # decisão do dono (2026-11-11): arriscar mais, até 6 no mesmo lado
+MODO_SINAL = os.environ.get("ROBO_RAPIDO_SINAL", "livre")           # decisão do dono (2026-11-12): "livre" = sem trava de custo, geladeira ou pausa
+CONFIANCA_LIVRE = float(os.environ.get("ROBO_RAPIDO_CONFIANCA", "0.53"))   # freio de correlação: as moedas andam juntas, então 5 vendidas
                                                                    # ao mesmo tempo são uma aposta só no mercado inteiro
 
 
@@ -604,13 +606,17 @@ class Motor:
             return
         pausa = 5 * getattr(self, "_passo_rapido", 60)                 # mudança 29: moeda que bateu stop fica 5 velas de fora
         em_pausa = {f["moeda"] for f in e["fechadas"][-40:] if "stop" in f.get("motivo", "") and time.time() - f["saida_t"] < pausa}
-        if os.environ.get("ROBO_RAPIDO_SINAL", "v3") == "v3":           # decisão do dono (2026-11-11): o robô rápido segue o Cérebro v3
-            self._entrar_pelo_v3(e, corretora, dados, precos, em_pausa)
+        livre = MODO_SINAL == "livre"
+        self._entrar_pelo_v3(e, corretora, dados, precos, set() if livre else em_pausa)   # segue o v3 e, no modo livre, também os cérebros
+        if MODO_SINAL == "v3":
             return
         for o in oportunidades:
             m = o["par"]
-            if (o["ev"] <= 0 or o["geladeira"] or m in e["abertas"] or m in em_pausa or m not in precos or lado_cheio(e["abertas"], o["lado"])
-                    or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP):
+            if m in e["abertas"] or m not in precos or lado_cheio(e["abertas"], o["lado"]) or corretora.usdt_livre() < X.ORCAMENTO_FIXO / X.ALAV_PERP:
+                continue
+            if livre and o["p_cal"] < CONFIANCA_LIVRE:                  # modo livre: só a confiança do cérebro da moeda decide
+                continue
+            if not livre and (o["ev"] <= 0 or o["geladeira"] or m in em_pausa):
                 continue
             n = T.atr(dados[m])[-1] if m in dados and len(dados[m]) > 21 else None
             n = n and 2 * n                                               # mudança 29: stop de 4N (o executor põe o stop a 2 "n"), seguro largo
@@ -1036,7 +1042,7 @@ class Motor:
                 linha["sinal"] = sinal
                 with self.trava:
                     self.varredura["moedas"][m[:-4]] = linha
-                    if ev > 0:                                   # decisão do dono: o robô rápido entra na hora, sem esperar a vela fechar
+                    if ev > 0 or (MODO_SINAL == "livre" and max(prob, 1 - prob) >= CONFIANCA_LIVRE):   # entra na hora, sem esperar a vela fechar
                         self.__dict__.setdefault("_vivas", collections.deque(maxlen=60)).append(
                             {"par": m, "lado": lado, "prob": prob, "ev": ev, "t": time.time()})
                     self.varredura["log"].appendleft({"t": time.time(), "texto": f"🔎 {m[:-4]:6} {px:,.6g} | chance de subir em 12 velas: {prob:.1%} | melhor lado: {lado} VE {ev * 100:+.2f}% | "
