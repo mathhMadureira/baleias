@@ -4,14 +4,14 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 53.0% | 1756 | 50.7%–55.3% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 1757 | 50.7%–55.3% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
-| williams_volb_baixa | promissor | 100.0% | 2 | 34.2%–100.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
+| williams_volb_baixa | promissor | 66.7% | 3 | 20.8%–93.9% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 62.5% | 24 | 42.7%–78.8% | física: alta anormal de 1 h → devolve |
 | tres_soldados | promissor | 55.4% | 204 | 48.5%–62.1% | H6: três soldados → desce (efeito pequeno) |
 | reversao_queda | promissor | 51.9% | 54 | 38.9%–64.6% | H14: queda anormal de 1 h → sobe |
-| tres_corvos | promissor | 50.7% | 296 | 45.0%–56.3% | H6: três corvos → sobe (efeito pequeno) |
-| vortice_invertido | reprovado | 48.1% | 345 | 42.9%–53.4% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| tres_corvos | promissor | 50.8% | 297 | 45.2%–56.5% | H6: três corvos → sobe (efeito pequeno) |
+| vortice_invertido | reprovado | 48.3% | 346 | 43.0%–53.5% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 38.5% | 13 | 17.7%–64.5% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | rompimento | reprovado | 37.5% | 32 | 22.9%–54.7% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | velez_espaco_duplo_alto | reprovado | — | 0 | — | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
