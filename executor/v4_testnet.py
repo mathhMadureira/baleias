@@ -12,7 +12,7 @@ import os
 import time
 
 from baleias import config, mesa
-from executor.binance_futuros import ErroFuturos, Futuros
+from executor.binance_futuros import ALIAS, ErroFuturos, Futuros
 
 LIMIAR = float(os.environ.get("V4_LIMIAR", "0.03"))         # |p − 0,5| mínimo: TODAS as apostas do v4 (dono 12/11: "mais agressividade"; antes 0,10 e quase nada entrava)
 ESPERA_MAKER = 60        # a entrada fica maker por 60 s; se não executar, vai a mercado (o dono quer operar; o custo a mais fica registrado)
@@ -117,6 +117,203 @@ def resumo(e):
                       + sum(o.get("repegs", 0) for o in e["ordens"].values())}
 
 
+
+def conciliar(f, e):
+    """Confere a conta de verdade contra o que o robô acha que tem: ordens desconhecidas são canceladas e posições desconhecidas fechadas
+    a mercado (um robô que caiu depois de mandar uma ordem e antes de salvar deixa órfãos; dois robôs na mesma conta também).
+    13/11: a conta tinha 8 posições e 32 ordens que ninguém acompanhava por causa disso."""
+    try:
+        conhecidas = {str(o["id"]) for o in e["ordens"].values()} | {str(p.get("saida_id")) for p in e["abertas"].values() if p.get("saida_id")}
+        for o in f._pedir("GET", "/fapi/v1/openOrders", assinado=True):
+            if str(o["orderId"]) not in conhecidas:
+                f.cancelar(o["symbol"], o["orderId"])
+                anotar(e, f"🧹 ordem órfã cancelada: {o['symbol']} {o['side']} {o['origQty']}")
+        pos = f.posicoes()
+        minhas = {ALIAS.get(par, par) for par in e["abertas"]}
+        for s, q in pos.items():
+            if s not in minhas:
+                f.ordem_mercado(s, "SELL" if q > 0 else "BUY", abs(q), reduce_only=True)
+                anotar(e, f"🧹 posição órfã fechada a mercado: {s} {q:+g}")
+        for par in list(e["abertas"]):
+            if ALIAS.get(par, par) not in pos and not e["abertas"][par].get("saida_id"):
+                anotar(e, f"🧹 {par}: a conta não tem mais esta posição; removida do estado")
+                del e["abertas"][par]
+        e["conciliado_t"] = time.time()
+        salvar(e)
+    except ErroFuturos as ex:
+        anotar(e, f"⚠️ conciliação falhou ({str(ex)[:80]})")
+
+
+def rodada(f, e):
+    """Uma passada do robô (tudo que acontece a cada 10 s). Qualquer erro é anotado pelo chamador e a passada seguinte continua."""
+
+    agora = time.time()
+    if e.get("conciliado_t", 0) < agora - 300:                       # a cada 5 min confere a conta de verdade contra o estado
+        conciliar(f, e)
+    try:
+        mesa._buscar_estado()
+        v4 = mesa._git_json("dados/cerebro_v4.json") or {}
+    except Exception:
+        v4 = {}
+    carteira = CAPITAL + sum(x["resultado_usd"] for x in e["fechadas"])
+    hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
+    dia = sum(x["resultado_usd"] for x in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(x["saida_t"])) == hoje)
+    margem_usada = (sum(p["qtd"] * p["entrada"] for p in e["abertas"].values()) + sum(o["qtd"] * o["px"] for o in e["ordens"].values())) / ALAV
+    trava = ("conta abaixo de US$ 5" if carteira < PISO else
+             f"perda do dia {dia:+.2f} (limite −{PERDA_DIA:.2f})" if PERDA_DIA and dia <= -PERDA_DIA else None)
+    if trava and e.get("trava") != f"{hoje} {trava}":
+        anotar(e, f"🛑 sem novas entradas: {trava}; as saídas continuam")
+    e["trava"] = f"{hoje} {trava}" if trava else None
+    e["carteira"] = carteira
+    # ---- novas apostas do v4: ordem maker no melhor preço ----
+    for par, p in v4.get("pendentes", {}).items():
+        inicio, fim = p["t"] / 1000 + VELA, p["t"] / 1000 + 2 * VELA
+        chave = f"{par}@{p['t']}"
+        if trava or abs(p["prob"] - 0.5) < LIMIAR or chave in e["tentadas"] or not (inicio <= agora <= fim - MARGEM_ENTRADA):
+            continue
+        if par in e["abertas"] or par in e["ordens"] or par in e.get("sem_futuro", []) or len(e["abertas"]) + len(e["ordens"]) >= MAX_POS:
+            continue
+        lado = "BUY" if p["aposta"] > 0 else "SELL"
+        e["tentadas"] = (e["tentadas"] + [chave])[-500:]
+        salvar(e)                                                       # salva na hora: ordem mandada e não salva vira ordem órfã
+        try:
+            bid, ask = f.livro(par)
+            px = f.preco_redondo(par, bid if lado == "BUY" else ask, lado)
+            qtd = f.quantidade(par, NOCIONAL, px)
+            if margem_usada + qtd * px / ALAV > carteira:              # não cabe na carteira de US$ 10 a 10×
+                anotar(e, f"· {par}: não cabe (margem usada {margem_usada:.2f} + {qtd * px / ALAV:.2f} > carteira {carteira:.2f})")
+                continue
+            if par not in e.setdefault("alav_ok", []):
+                f.alavancagem(par, ALAV)
+                e["alav_ok"].append(par)
+            o = f.ordem_limit(par, lado, qtd, px, so_maker=True)
+            margem_usada += qtd * px / ALAV
+        except ErroFuturos as ex:
+            if "-1121" in str(ex):                                       # moeda sem contrato de futuros: não tenta de novo
+                e.setdefault("sem_futuro", []).append(par)
+                anotar(e, f"· {par} não existe nos futuros da Binance; fora da lista")
+                continue
+            e["nao_executadas"] += 1
+            anotar(e, f"✗ {par} ordem maker recusada ({str(ex)[:80]})")
+            continue
+        e["ordens"][par] = {"id": o["orderId"], "lado": lado, "qtd": qtd, "px": px, "t0": agora, "t": agora, "fim": fim, "prob": p["prob"], "repegs": 0}
+        salvar(e)                                                       # salva na hora: ordem mandada e não salva vira ordem órfã
+        anotar(e, f"📝 {par} ordem maker {lado} {qtd} a {px} (v4 {max(p['prob'], 1 - p['prob']):.0%}, nocional {qtd * px:.0f})")
+    # ---- ordens de entrada no livro: executou? acabou o tempo? o livro se afastou (reposicionar)? ----
+    for par, o in list(e["ordens"].items()):
+        try:
+            st = f.consultar(par, o["id"])
+        except ErroFuturos:
+            continue
+        if st["status"] == "FILLED":
+            abrir(e, par, o["lado"], st["executada"], st["preco_medio"], o, agora)
+            del e["ordens"][par]
+            continue
+        acabou = st["status"] in ("CANCELED", "EXPIRED", "REJECTED") or agora > o["fim"] - MARGEM_ENTRADA
+        try:
+            if not acabou and st["status"] == "NEW" and agora - o.get("t0", o["t"]) >= ESPERA_MAKER:   # maker não executou: vai a mercado
+                qx, pxx = cancelar_conferindo(f, par, o["id"])
+                if qx > 0:
+                    abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
+                else:
+                    n = f.ordem_mercado(par, o["lado"], o["qtd"])
+                    st2 = f.consultar(par, n["orderId"])
+                    if st2["executada"] > 0:
+                        abrir(e, par, o["lado"], st2["executada"], st2["preco_medio"], o, agora, maker=False)
+                    else:
+                        e["nao_executadas"] += 1
+                        anotar(e, f"✗ {par} nem a mercado executou ({st2['status']})")
+                del e["ordens"][par]
+            elif acabou:
+                qx, pxx = (st["executada"], st["preco_medio"]) if st["status"] not in ("NEW", "PARTIALLY_FILLED") else cancelar_conferindo(f, par, o["id"])
+                if qx > 0:
+                    abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
+                else:
+                    e["nao_executadas"] += 1
+                    anotar(e, f"⌛ {par} não executou em {agora - o.get('t0', o['t']):.0f} s ({o.get('repegs', 0)} reposições, {st['status']}): cancelada")
+                del e["ordens"][par]
+            elif agora - o["t"] >= REPEG and st["status"] == "NEW":
+                bid, ask = f.livro(par)
+                novo = f.preco_redondo(par, bid if o["lado"] == "BUY" else ask, o["lado"])
+                if (novo > o["px"]) if o["lado"] == "BUY" else (novo < o["px"]):   # o melhor preço se afastou: ficamos fundo no livro
+                    qx, pxx = cancelar_conferindo(f, par, o["id"])
+                    if qx > 0:                                                     # executou no meio do caminho
+                        abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
+                        del e["ordens"][par]
+                        continue
+                    qtd = f.quantidade(par, NOCIONAL, novo)
+                    n = f.ordem_limit(par, o["lado"], qtd, novo, so_maker=True)
+                    o.update(id=n["orderId"], px=novo, qtd=qtd, t=agora, repegs=o.get("repegs", 0) + 1)
+                else:
+                    o["t"] = agora
+        except ErroFuturos as ex:
+            anotar(e, f"✗ {par} entrada: {str(ex)[:80]}")
+            o["t"] = agora
+    # ---- posições abertas: stop de segurança, saída maker perto do fim da vela, a mercado se não executar ----
+    for par, p in list(e["abertas"].items()):
+        p.setdefault("ex_maker", [0.0, 0.0])
+        p.setdefault("ex_taker", [0.0, 0.0])
+        lado_saida = "SELL" if p["lado"] == "BUY" else "BUY"
+        restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
+        try:
+            bid, ask = f.livro(par)
+            meio = (bid + ask) / 2
+            ganho = (meio / p["entrada"] - 1) * (1 if p["lado"] == "BUY" else -1)
+            stop = ganho <= -STOP_SEG
+            if not stop and agora < p["fim"] - ANTECIPAR_SAIDA and not p.get("saida_id"):
+                continue
+            if p.get("saida_mercado"):                                   # já mandou a mercado: só confere
+                st = f.consultar(par, p["saida_id"])
+                if st["status"] == "FILLED":
+                    registrar_saida(e, par, p, st["executada"], st["preco_medio"], maker=False)
+                continue
+            if stop and p.get("motivo") is None:
+                p["motivo"] = f"stop de segurança −{STOP_SEG:.0%}"
+                if p.get("saida_id"):
+                    qx, pxx = cancelar_conferindo(f, par, p["saida_id"])
+                    if registrar_saida(e, par, p, qx, pxx, maker=True):
+                        continue
+                    restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
+                o = f.ordem_mercado(par, lado_saida, arredondar_qtd(f, par, restante), reduce_only=True)
+                p.update(saida_id=o["orderId"], saida_t=agora, saida_mercado=True)
+                anotar(e, f"🛑 {par} {ganho:+.2%}: stop de segurança a mercado")
+                continue
+            if not p.get("saida_id"):
+                px = f.preco_redondo(par, ask if lado_saida == "SELL" else bid, lado_saida)
+                try:
+                    o = f.ordem_limit(par, lado_saida, arredondar_qtd(f, par, restante), px, so_maker=True, reduce_only=True)
+                    p.update(saida_id=o["orderId"], saida_px=px, saida_t=agora, saida_t0=agora, saida_mercado=False, repegs_saida=0)
+                except ErroFuturos:
+                    o = f.ordem_mercado(par, lado_saida, arredondar_qtd(f, par, restante), reduce_only=True)
+                    p.update(saida_id=o["orderId"], saida_t=agora, saida_mercado=True)
+                continue
+            st = f.consultar(par, p["saida_id"])
+            if st["status"] == "FILLED":
+                registrar_saida(e, par, p, st["executada"], st["preco_medio"], maker=True)
+            elif agora > p["fim"] + ESPERA_SAIDA or st["status"] in ("CANCELED", "EXPIRED", "REJECTED"):
+                qx, pxx = (st["executada"], st["preco_medio"]) if st["status"] not in ("NEW", "PARTIALLY_FILLED") else cancelar_conferindo(f, par, p["saida_id"])
+                if registrar_saida(e, par, p, qx, pxx, maker=True):
+                    continue
+                restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
+                o = f.ordem_mercado(par, lado_saida, arredondar_qtd(f, par, restante), reduce_only=True)
+                p.update(saida_id=o["orderId"], saida_t=agora, saida_mercado=True)
+            elif agora - p["saida_t"] >= REPEG and st["status"] == "NEW":
+                novo = f.preco_redondo(par, ask if lado_saida == "SELL" else bid, lado_saida)
+                if (novo < p["saida_px"]) if lado_saida == "SELL" else (novo > p["saida_px"]):   # o melhor preço se afastou
+                    qx, pxx = cancelar_conferindo(f, par, p["saida_id"])
+                    if registrar_saida(e, par, p, qx, pxx, maker=True):
+                        continue
+                    restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
+                    o = f.ordem_limit(par, lado_saida, arredondar_qtd(f, par, restante), novo, so_maker=True, reduce_only=True)
+                    p.update(saida_id=o["orderId"], saida_px=novo, saida_t=agora, repegs_saida=p.get("repegs_saida", 0) + 1)
+                else:
+                    p["saida_t"] = agora
+        except ErroFuturos as ex:
+            anotar(e, f"✗ {par} saída falhou ({str(ex)[:80]})")
+    e["resumo"] = resumo(e)
+    salvar(e)
+
+
 def main():
     f = Futuros.do_env()
     e = carregar()
@@ -126,168 +323,13 @@ def main():
               f"ordens maker acompanhando o livro a cada {REPEG} s · stop de segurança {STOP_SEG:.0%}"
               + (f" · perda do dia −{PERDA_DIA:.2f}" if PERDA_DIA else " · sem trava do dia (só o piso de US$ 5)"))
     inicio_exec = time.time()
+    conciliar(f, e)
     while DURACAO <= 0 or time.time() < inicio_exec + DURACAO:
-        agora = time.time()
         try:
-            mesa._buscar_estado()
-            v4 = mesa._git_json("dados/cerebro_v4.json") or {}
-        except Exception:
-            v4 = {}
-        carteira = CAPITAL + sum(x["resultado_usd"] for x in e["fechadas"])
-        hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
-        dia = sum(x["resultado_usd"] for x in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(x["saida_t"])) == hoje)
-        margem_usada = (sum(p["qtd"] * p["entrada"] for p in e["abertas"].values()) + sum(o["qtd"] * o["px"] for o in e["ordens"].values())) / ALAV
-        trava = ("conta abaixo de US$ 5" if carteira < PISO else
-                 f"perda do dia {dia:+.2f} (limite −{PERDA_DIA:.2f})" if PERDA_DIA and dia <= -PERDA_DIA else None)
-        if trava and e.get("trava") != f"{hoje} {trava}":
-            anotar(e, f"🛑 sem novas entradas: {trava}; as saídas continuam")
-        e["trava"] = f"{hoje} {trava}" if trava else None
-        e["carteira"] = carteira
-        # ---- novas apostas do v4: ordem maker no melhor preço ----
-        for par, p in v4.get("pendentes", {}).items():
-            inicio, fim = p["t"] / 1000 + VELA, p["t"] / 1000 + 2 * VELA
-            chave = f"{par}@{p['t']}"
-            if trava or abs(p["prob"] - 0.5) < LIMIAR or chave in e["tentadas"] or not (inicio <= agora <= fim - MARGEM_ENTRADA):
-                continue
-            if par in e["abertas"] or par in e["ordens"] or par in e.get("sem_futuro", []) or len(e["abertas"]) + len(e["ordens"]) >= MAX_POS:
-                continue
-            lado = "BUY" if p["aposta"] > 0 else "SELL"
-            e["tentadas"] = (e["tentadas"] + [chave])[-500:]
-            try:
-                bid, ask = f.livro(par)
-                px = f.preco_redondo(par, bid if lado == "BUY" else ask, lado)
-                qtd = f.quantidade(par, NOCIONAL, px)
-                if margem_usada + qtd * px / ALAV > carteira:              # não cabe na carteira de US$ 10 a 10×
-                    anotar(e, f"· {par}: não cabe (margem usada {margem_usada:.2f} + {qtd * px / ALAV:.2f} > carteira {carteira:.2f})")
-                    continue
-                if par not in e.setdefault("alav_ok", []):
-                    f.alavancagem(par, ALAV)
-                    e["alav_ok"].append(par)
-                o = f.ordem_limit(par, lado, qtd, px, so_maker=True)
-                margem_usada += qtd * px / ALAV
-            except ErroFuturos as ex:
-                if "-1121" in str(ex):                                       # moeda sem contrato de futuros: não tenta de novo
-                    e.setdefault("sem_futuro", []).append(par)
-                    anotar(e, f"· {par} não existe nos futuros da Binance; fora da lista")
-                    continue
-                e["nao_executadas"] += 1
-                anotar(e, f"✗ {par} ordem maker recusada ({str(ex)[:80]})")
-                continue
-            e["ordens"][par] = {"id": o["orderId"], "lado": lado, "qtd": qtd, "px": px, "t0": agora, "t": agora, "fim": fim, "prob": p["prob"], "repegs": 0}
-            anotar(e, f"📝 {par} ordem maker {lado} {qtd} a {px} (v4 {max(p['prob'], 1 - p['prob']):.0%}, nocional {qtd * px:.0f})")
-        # ---- ordens de entrada no livro: executou? acabou o tempo? o livro se afastou (reposicionar)? ----
-        for par, o in list(e["ordens"].items()):
-            try:
-                st = f.consultar(par, o["id"])
-            except ErroFuturos:
-                continue
-            if st["status"] == "FILLED":
-                abrir(e, par, o["lado"], st["executada"], st["preco_medio"], o, agora)
-                del e["ordens"][par]
-                continue
-            acabou = st["status"] in ("CANCELED", "EXPIRED", "REJECTED") or agora > o["fim"] - MARGEM_ENTRADA
-            try:
-                if not acabou and st["status"] == "NEW" and agora - o.get("t0", o["t"]) >= ESPERA_MAKER:   # maker não executou: vai a mercado
-                    qx, pxx = cancelar_conferindo(f, par, o["id"])
-                    if qx > 0:
-                        abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
-                    else:
-                        n = f.ordem_mercado(par, o["lado"], o["qtd"])
-                        st2 = f.consultar(par, n["orderId"])
-                        if st2["executada"] > 0:
-                            abrir(e, par, o["lado"], st2["executada"], st2["preco_medio"], o, agora, maker=False)
-                        else:
-                            e["nao_executadas"] += 1
-                            anotar(e, f"✗ {par} nem a mercado executou ({st2['status']})")
-                    del e["ordens"][par]
-                elif acabou:
-                    qx, pxx = (st["executada"], st["preco_medio"]) if st["status"] not in ("NEW", "PARTIALLY_FILLED") else cancelar_conferindo(f, par, o["id"])
-                    if qx > 0:
-                        abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
-                    else:
-                        e["nao_executadas"] += 1
-                        anotar(e, f"⌛ {par} não executou em {agora - o.get('t0', o['t']):.0f} s ({o.get('repegs', 0)} reposições, {st['status']}): cancelada")
-                    del e["ordens"][par]
-                elif agora - o["t"] >= REPEG and st["status"] == "NEW":
-                    bid, ask = f.livro(par)
-                    novo = f.preco_redondo(par, bid if o["lado"] == "BUY" else ask, o["lado"])
-                    if (novo > o["px"]) if o["lado"] == "BUY" else (novo < o["px"]):   # o melhor preço se afastou: ficamos fundo no livro
-                        qx, pxx = cancelar_conferindo(f, par, o["id"])
-                        if qx > 0:                                                     # executou no meio do caminho
-                            abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
-                            del e["ordens"][par]
-                            continue
-                        qtd = f.quantidade(par, NOCIONAL, novo)
-                        n = f.ordem_limit(par, o["lado"], qtd, novo, so_maker=True)
-                        o.update(id=n["orderId"], px=novo, qtd=qtd, t=agora, repegs=o.get("repegs", 0) + 1)
-                    else:
-                        o["t"] = agora
-            except ErroFuturos as ex:
-                anotar(e, f"✗ {par} entrada: {str(ex)[:80]}")
-                o["t"] = agora
-        # ---- posições abertas: stop de segurança, saída maker perto do fim da vela, a mercado se não executar ----
-        for par, p in list(e["abertas"].items()):
-            p.setdefault("ex_maker", [0.0, 0.0])
-            p.setdefault("ex_taker", [0.0, 0.0])
-            lado_saida = "SELL" if p["lado"] == "BUY" else "BUY"
-            restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
-            try:
-                bid, ask = f.livro(par)
-                meio = (bid + ask) / 2
-                ganho = (meio / p["entrada"] - 1) * (1 if p["lado"] == "BUY" else -1)
-                stop = ganho <= -STOP_SEG
-                if not stop and agora < p["fim"] - ANTECIPAR_SAIDA and not p.get("saida_id"):
-                    continue
-                if p.get("saida_mercado"):                                   # já mandou a mercado: só confere
-                    st = f.consultar(par, p["saida_id"])
-                    if st["status"] == "FILLED":
-                        registrar_saida(e, par, p, st["executada"], st["preco_medio"], maker=False)
-                    continue
-                if stop and p.get("motivo") is None:
-                    p["motivo"] = f"stop de segurança −{STOP_SEG:.0%}"
-                    if p.get("saida_id"):
-                        qx, pxx = cancelar_conferindo(f, par, p["saida_id"])
-                        if registrar_saida(e, par, p, qx, pxx, maker=True):
-                            continue
-                        restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
-                    o = f.ordem_mercado(par, lado_saida, arredondar_qtd(f, par, restante), reduce_only=True)
-                    p.update(saida_id=o["orderId"], saida_t=agora, saida_mercado=True)
-                    anotar(e, f"🛑 {par} {ganho:+.2%}: stop de segurança a mercado")
-                    continue
-                if not p.get("saida_id"):
-                    px = f.preco_redondo(par, ask if lado_saida == "SELL" else bid, lado_saida)
-                    try:
-                        o = f.ordem_limit(par, lado_saida, arredondar_qtd(f, par, restante), px, so_maker=True, reduce_only=True)
-                        p.update(saida_id=o["orderId"], saida_px=px, saida_t=agora, saida_t0=agora, saida_mercado=False, repegs_saida=0)
-                    except ErroFuturos:
-                        o = f.ordem_mercado(par, lado_saida, arredondar_qtd(f, par, restante), reduce_only=True)
-                        p.update(saida_id=o["orderId"], saida_t=agora, saida_mercado=True)
-                    continue
-                st = f.consultar(par, p["saida_id"])
-                if st["status"] == "FILLED":
-                    registrar_saida(e, par, p, st["executada"], st["preco_medio"], maker=True)
-                elif agora > p["fim"] + ESPERA_SAIDA or st["status"] in ("CANCELED", "EXPIRED", "REJECTED"):
-                    qx, pxx = (st["executada"], st["preco_medio"]) if st["status"] not in ("NEW", "PARTIALLY_FILLED") else cancelar_conferindo(f, par, p["saida_id"])
-                    if registrar_saida(e, par, p, qx, pxx, maker=True):
-                        continue
-                    restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
-                    o = f.ordem_mercado(par, lado_saida, arredondar_qtd(f, par, restante), reduce_only=True)
-                    p.update(saida_id=o["orderId"], saida_t=agora, saida_mercado=True)
-                elif agora - p["saida_t"] >= REPEG and st["status"] == "NEW":
-                    novo = f.preco_redondo(par, ask if lado_saida == "SELL" else bid, lado_saida)
-                    if (novo < p["saida_px"]) if lado_saida == "SELL" else (novo > p["saida_px"]):   # o melhor preço se afastou
-                        qx, pxx = cancelar_conferindo(f, par, p["saida_id"])
-                        if registrar_saida(e, par, p, qx, pxx, maker=True):
-                            continue
-                        restante = p["qtd"] - p["ex_maker"][0] - p["ex_taker"][0]
-                        o = f.ordem_limit(par, lado_saida, arredondar_qtd(f, par, restante), novo, so_maker=True, reduce_only=True)
-                        p.update(saida_id=o["orderId"], saida_px=novo, saida_t=agora, repegs_saida=p.get("repegs_saida", 0) + 1)
-                    else:
-                        p["saida_t"] = agora
-            except ErroFuturos as ex:
-                anotar(e, f"✗ {par} saída falhou ({str(ex)[:80]})")
-        e["resumo"] = resumo(e)
-        salvar(e)
+            rodada(f, e)
+        except Exception as ex:                                    # nunca morrer no meio de uma rodada
+            anotar(e, f"⚠️ erro na rodada: {str(ex)[:120]}")
+            salvar(e)
         time.sleep(10)
 
 

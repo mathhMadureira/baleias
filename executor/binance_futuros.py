@@ -65,6 +65,8 @@ class Futuros:
                 limpos = {k: v for k, v in params.items() if k not in ("signature", "timestamp", "recvWindow")}
                 return self._pedir(metodo, caminho, limpos, assinado, _tentativa=1)
             raise ErroFuturos(f"{e.code} {corpo}") from None
+        except (urllib.error.URLError, OSError, ValueError) as e:      # rede caiu, tempo esgotado, resposta truncada: erro tratável, nunca derruba o robô
+            raise ErroFuturos(f"rede: {str(e)[:120]}") from None
 
     def sincronizar(self):
         with urllib.request.urlopen(f"{self.base}/fapi/v1/time", timeout=15) as r:
