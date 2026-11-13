@@ -689,3 +689,18 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   ficar comprado nas mesmas moedas (+0,204%/dia). Ou seja: o que parece lucro das regras é a alta das moedas que sobreviveram
   até hoje (viés de sobrevivência), não a regra. Primeira rodada do teste tinha um erro (fechamento na abertura contava o trade
   inteiro de novo: +577%/ano); corrigido antes de qualquer decisão. Arquivo: dados/lab/swing_resultado.json. Nada entra na mesa.
+
+## Hipótese 33: as fórmulas dos grandes traders como sinapses dos cérebros (pré-registrada em 2026-11-12 22:58 BRT, antes de ligar)
+
+- **Pedido do dono:** "coloca esses cérebros para aprender as metodologias dos maiores traders" (12/11) e "aperfeiçoe todos os cérebros, vá atrás
+  de mais conhecimento para eles" (12/11, noite).
+- **Fonte:** relatório "Ensinamentos práticos para robôs" (research_notes/.../formulas_dos_grandes_traders.md, seção 16, lista ranqueada).
+  Entram só as regras que fazem sentido em velas de minutos (as diárias foram testadas na H35 e reprovadas): Holy Grail (Raschke), Turtle Soup
+  (Raschke/Connors), TD Setup 9 (DeMark), Williams %R(10) com espera de 5 velas, barra 80-20 (Connors/Raschke) e rompimento de volatilidade
+  (Williams). Cada uma nos dois sentidos = 12 sinapses (`baleias/cerebro.py`, `SINAPSES_TRADERS`, `medidas_traders`).
+- **Como são julgadas:** entram em OBSERVAÇÃO (peso 0, não votam) em todos os cérebros (v1, v2, v3 da nuvem, cérebros por moeda do Rápido).
+  A regra de promoção já existente decide: com ≥150 previsões, promove se o limite inferior do intervalo de Wilson (95%) ficar acima da base
+  (50% no v1/v2; o humor do mercado `base_sobe` no v3/Rápido); poda se o acerto ficar abaixo da base − 2 pontos. Nada é promovido à mão.
+- **Passa (por sinapse):** promovida ao vivo por essa regra. **Reprovada:** podada. O resultado de cada uma fica no diário do cérebro
+  (`dados/cerebro*.json`, "diario") e será copiado aqui quando houver ≥150 previsões.
+- **Observação honesta:** a evidência pública dessas seis é anedótica ou fraca (o relatório marca [NV]/[S]); o teste ao vivo é o juiz.

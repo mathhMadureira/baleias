@@ -20,7 +20,7 @@ PRECO = 0.51              # contrato binário Sobe/Desce de 15 min: paga 0,51 pa
 APOSTA = 0.02             # 2% do capital por aposta
 LIMIAR = 0.52             # aposta com probabilidade calibrada ≥ 52% para um lado (equilíbrio ≈ 51%; 1 ponto de margem)
 ETA = 0.08                # taxa de aprendizado do Hedge
-MAX_SINAPSES = 24
+MAX_SINAPSES = 24 + 18             # 24 próprias + as 18 regras estudadas que entram em observação (6 de Velez/H23, 12 dos grandes traders/H33)
 
 
 def wilson(a, n, z=1.96):
@@ -56,6 +56,7 @@ def caracteristicas(v):
               "corpo": (c[i] - o[i]) / ((h[i] - l[i]) or 1e-9), "rompe": 1.0 if c[i] > max(h[i - 55:i]) else (-1.0 if c[i] < min(l[i - 55:i]) else 0.0),
               "hs": math.sin(hora), "hc": math.cos(hora), "dp": dp})
     f.update(medidas_velez(o, h, l, c, i))
+    f.update(medidas_traders(o, h, l, c, i))
     f["corvos"] = 1.0 if all(c[j] < o[j] for j in (i - 2, i - 1, i)) and c[i] < c[i - 1] < c[i - 2] else 0.0
     f["soldados"] = 1.0 if all(c[j] > o[j] for j in (i - 2, i - 1, i)) and c[i] > c[i - 1] > c[i - 2] else 0.0
     return f
@@ -82,6 +83,81 @@ def medidas_velez(o, h, l, c, i):
         (-1.0 if (elefante and estreito and c[i] < min(s20, s200) and c[i] < o[i]) else 0.0)
     espaco = 1.0 if (p > s20 * 1.03 and p > s200 * 1.03) else (-1.0 if (p < s20 * 0.97 and p < s200 * 0.97) else 0.0)
     return {"espaco": espaco, "v180": v180, "eleq": eleq, "estr": estr}
+
+
+def medidas_traders(o, h, l, c, i):
+    """H33: fórmulas dos grandes traders (relatório "Ensinamentos práticos para robôs", seção 16), em velas do próprio gráfico.
+    Cada medida é +1 (voto de alta), −1 (voto de baixa) ou 0. Sem dados suficientes, tudo 0."""
+    z = {"graal": 0.0, "sopa": 0.0, "td9": 0.0, "wr": 0.0, "b8020": 0.0, "volb": 0.0}
+    if i < 60:
+        return z
+    # Holy Grail (Raschke): ADX(14) > 30 e o preço recua até a EMA20 (toque) → retomada da tendência
+    a = 1 / 14
+    dip = dim = trs = 0.0
+    adx = None
+    for j in range(i - 41, i + 1):
+        up, dn = h[j] - h[j - 1], l[j - 1] - l[j]
+        dmp, dmm = (up if up > dn and up > 0 else 0.0), (dn if dn > up and dn > 0 else 0.0)
+        tr = max(h[j] - l[j], abs(h[j] - c[j - 1]), abs(l[j] - c[j - 1]))
+        dip, dim, trs = dip + a * (dmp - dip), dim + a * (dmm - dim), trs + a * (tr - trs)
+        di_p, di_m = (100 * dip / trs, 100 * dim / trs) if trs > 0 else (0.0, 0.0)
+        dx = 100 * abs(di_p - di_m) / (di_p + di_m) if di_p + di_m > 0 else 0.0
+        adx = dx if adx is None else adx + a * (dx - adx)
+    ema = c[i - 39]
+    for j in range(i - 38, i + 1):
+        ema += (2 / 21) * (c[j] - ema)
+    if adx > 30 and l[i] <= ema <= h[i]:
+        z["graal"] = 1.0 if di_p > di_m else -1.0
+    # Turtle Soup (Raschke/Connors): rompe a mínima de 20 velas (a anterior há ≥4 velas) e volta para dentro → reversão
+    ll20, hh20 = min(l[i - 20:i]), max(h[i - 20:i])
+    j_ll, j_hh = l.index(ll20, i - 20, i), h.index(hh20, i - 20, i)
+    if l[i] < ll20 and j_ll <= i - 4 and c[i] > ll20:
+        z["sopa"] = 1.0
+    elif h[i] > hh20 and j_hh <= i - 4 and c[i] < hh20:
+        z["sopa"] = -1.0
+    # TD Setup 9 (DeMark): 9 fechamentos seguidos abaixo do fechamento de 4 velas antes → exaustão de baixa (e espelho)
+    if all(c[i - k] < c[i - k - 4] for k in range(9)):
+        z["td9"] = 1.0
+    elif all(c[i - k] > c[i - k - 4] for k in range(9)):
+        z["td9"] = -1.0
+    # Williams %R(10) com espera de 5 velas: tocou −100 há ≥5 velas e já voltou acima de −85 → compra (espelho: tocou 0, < −15)
+    def wr(j):
+        hh, ll = max(h[j - 9:j + 1]), min(l[j - 9:j + 1])
+        return -100 * (hh - c[j]) / (hh - ll) if hh > ll else -50.0
+    antigos = [wr(j) for j in range(i - 10, i - 4)]
+    agora = wr(i)
+    if min(antigos) <= -99 and agora > -85:
+        z["wr"] = 1.0
+    elif max(antigos) >= -1 and agora < -15:
+        z["wr"] = -1.0
+    # 80-20 (Connors/Raschke): vela anterior abriu no topo e fechou no fundo; a atual furou a mínima dela e voltou → compra (espelho)
+    rng = h[i - 1] - l[i - 1]
+    if rng > 0:
+        ab, fe = (o[i - 1] - l[i - 1]) / rng, (c[i - 1] - l[i - 1]) / rng
+        if ab >= 0.8 and fe <= 0.2 and l[i] < l[i - 1] * 0.999 and c[i] >= l[i - 1]:
+            z["b8020"] = 1.0
+        elif ab <= 0.2 and fe >= 0.8 and h[i] > h[i - 1] * 1.001 and c[i] <= h[i - 1]:
+            z["b8020"] = -1.0
+    # Rompimento de volatilidade (Williams): fechou além de abertura ± 0,5 × amplitude da vela anterior → continuação
+    if rng > 0:
+        if c[i] >= o[i] + 0.5 * rng:
+            z["volb"] = 1.0
+        elif c[i] <= o[i] - 0.5 * rng:
+            z["volb"] = -1.0
+    return z
+
+
+def _par(id_, medida, origem):
+    return [{"id": f"{id_}_alta", "tipo": "regra", "medida": medida, "limiar": 1.0, "sentido": 1, "lado": "alto", "origem": origem + " (lado da alta)"},
+            {"id": f"{id_}_baixa", "tipo": "regra", "medida": medida, "limiar": -1.0, "sentido": -1, "lado": "baixo", "origem": origem + " (lado da baixa)"}]
+
+
+SINAPSES_TRADERS = (_par("raschke_graal", "graal", "Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação")
+                    + _par("raschke_sopa", "sopa", "Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação")
+                    + _par("demark_td9", "td9", "DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação")
+                    + _par("williams_wr", "wr", "Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação")
+                    + _par("connors_8020", "b8020", "Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação")
+                    + _par("williams_volb", "volb", "Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação"))
 
 
 SINAPSES_VELEZ = [
@@ -201,7 +277,7 @@ class Cerebro:
         self.sinapses = e.get("sinapses") or [dict(s, peso=1.0, status="ativa" if s["tipo"] != "regra" or not s["id"].startswith("nova") else "observacao",
                                                    acertos=0, previsoes=0, nascida=None) for s in sinapses_iniciais()]
         ids = {x["id"] for x in self.sinapses}
-        for nova in SINAPSES_VELEZ:                   # métodos estudados entram em observação: só votam se provarem ao vivo
+        for nova in SINAPSES_VELEZ + SINAPSES_TRADERS:   # métodos estudados entram em observação: só votam se provarem ao vivo
             if nova["id"] not in ids:
                 self.sinapses.append(dict(nova, peso=0.0, status="observacao", acertos=0, previsoes=0, nascida=e.get("ultima_t")))
         self.rede = Rede(len(ENTRADAS_REDE), pesos=e.get("rede"))

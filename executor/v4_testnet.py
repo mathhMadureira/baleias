@@ -14,14 +14,15 @@ import time
 from baleias import config, mesa
 from executor.binance_futuros import ErroFuturos, Futuros
 
-LIMIAR = float(os.environ.get("V4_LIMIAR", "0.10"))         # |p − 0,5| mínimo (H31: só as apostas mais confiantes chegam perto de pagar)
+LIMIAR = float(os.environ.get("V4_LIMIAR", "0.03"))         # |p − 0,5| mínimo: TODAS as apostas do v4 (dono 12/11: "mais agressividade"; antes 0,10 e quase nada entrava)
+ESPERA_MAKER = 60        # a entrada fica maker por 60 s; se não executar, vai a mercado (o dono quer operar; o custo a mais fica registrado)
 NOCIONAL = float(os.environ.get("V4_NOCIONAL", "25"))       # US$ por posição (sobe ao mínimo da moeda: BTC 50, ETH 20)
 MAX_POS = 6
 CAPITAL, ALAV, PISO = float(os.environ.get("V4_CAPITAL", "10")), 10, 5.0   # carteira de US$ 10 a 10× (regra do dono), como no real
 PERDA_DIA = float(os.environ.get("V4_PERDA_DIA", "0"))      # 0 = sem trava de perda do dia (decisão do dono 12/11: "tirar"); só o piso elimina
 STOP_SEG = float(os.environ.get("V4_STOP", "0.01"))         # stop de segurança de 1% (a mercado): o 4N de 1 min do Rápido saía no ruído
 VELA = 900
-MARGEM_ENTRADA = 120     # a ordem de entrada fica no livro até 2 min antes do fim da vela apostada
+MARGEM_ENTRADA = 60      # entra até 1 min antes do fim da vela apostada
 ANTECIPAR_SAIDA = 60     # começa a sair (maker) 60 s antes do fim da vela
 ESPERA_SAIDA = 45        # depois do fim da vela, mais 45 s maker; aí vai a mercado
 REPEG = 20               # a cada 20 s, se o melhor preço se afastou, reposiciona a ordem (continua maker)
@@ -63,11 +64,11 @@ def arredondar_qtd(f, par, qtd):
     return round(math.floor(qtd / r["step"] + 1e-9) * r["step"], casas)
 
 
-def abrir(e, par, lado, qtd, px, o, agora, parcial=False):
+def abrir(e, par, lado, qtd, px, o, agora, parcial=False, maker=True):
     t0, repegs = o.get("t0", o["t"]), o.get("repegs", 0)
-    e["abertas"][par] = {"lado": lado, "qtd": qtd, "entrada": px, "t": agora, "fim": o["fim"], "prob": o["prob"],
+    e["abertas"][par] = {"lado": lado, "qtd": qtd, "entrada": px, "t": agora, "fim": o["fim"], "prob": o["prob"], "entrada_maker": maker,
                          "espera_s": round(agora - t0, 1), "repegs": repegs, "ex_maker": [0.0, 0.0], "ex_taker": [0.0, 0.0]}
-    anotar(e, f"{'◐' if parcial else '✅'} {par} EXECUTOU {lado} {qtd} a {px} (maker, {agora - t0:.0f} s, {repegs} reposições)"
+    anotar(e, f"{'◐' if parcial else '✅'} {par} EXECUTOU {lado} {qtd} a {px} ({'maker' if maker else 'A MERCADO, taxa de tomador'}, {agora - t0:.0f} s, {repegs} reposições)"
               + (" — o resto foi cancelado" if parcial else ""))
 
 
@@ -89,12 +90,13 @@ def fechar(e, par, p):
     px_saida = (vm + vt) / (qm + qt)
     sinal = 1 if p["lado"] == "BUY" else -1
     bruto = sinal * (px_saida - p["entrada"]) * p["qtd"]
-    taxas = p["qtd"] * p["entrada"] * TAXA_MAKER + vm * TAXA_MAKER + vt * TAXA_TAKER
+    taxas = p["qtd"] * p["entrada"] * (TAXA_MAKER if p.get("entrada_maker", True) else TAXA_TAKER) + vm * TAXA_MAKER + vt * TAXA_TAKER
     res = bruto - taxas
     maker = qt <= 1e-12
     motivo = p.get("motivo") or "fim da vela do v4"
     e["fechadas"].append({"moeda": par, "lado": "venda" if p["lado"] == "SELL" else "compra", "entrada": p["entrada"], "saida": px_saida,
                           "entrada_t": p["t"], "saida_t": time.time(), "qtd": p["qtd"], "resultado_usd": res, "saida_maker": maker, "prob": p["prob"],
+                          "entrada_maker": p.get("entrada_maker", True), "taxas": taxas,
                           "espera_s": p.get("espera_s"), "repegs": p.get("repegs", 0), "repegs_saida": p.get("repegs_saida", 0),
                           "motivo": motivo + ("" if maker else " (saída a mercado)")})
     del e["abertas"][par]
@@ -106,6 +108,8 @@ def resumo(e):
     esperas = [x["espera_s"] for x in f if x.get("espera_s") is not None] + [p["espera_s"] for p in e["abertas"].values()]
     return {"fechadas": len(f), "ganhos": sum(1 for x in f if x["resultado_usd"] > 0), "resultado": sum(x["resultado_usd"] for x in f),
             "nao_executadas": e["nao_executadas"], "executadas": len(f) + len(e["abertas"]),
+            "entradas_maker": sum(1 for x in f if x.get("entrada_maker", True)) + sum(1 for p in e["abertas"].values() if p.get("entrada_maker", True)),
+            "taxas": sum(x.get("taxas", 0) for x in f),
             "saidas_maker": sum(1 for x in f if x["saida_maker"]), "stops": sum(1 for x in f if "stop" in x["motivo"]),
             "espera_media_s": round(sum(esperas) / len(esperas), 1) if esperas else None,
             "repegs": sum(x.get("repegs", 0) for x in f) + sum(p.get("repegs", 0) for p in e["abertas"].values())
@@ -177,7 +181,20 @@ def main():
                 continue
             acabou = st["status"] in ("CANCELED", "EXPIRED", "REJECTED") or agora > o["fim"] - MARGEM_ENTRADA
             try:
-                if acabou:
+                if not acabou and st["status"] == "NEW" and agora - o.get("t0", o["t"]) >= ESPERA_MAKER:   # maker não executou: vai a mercado
+                    qx, pxx = cancelar_conferindo(f, par, o["id"])
+                    if qx > 0:
+                        abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
+                    else:
+                        n = f.ordem_mercado(par, o["lado"], o["qtd"])
+                        st2 = f.consultar(par, n["orderId"])
+                        if st2["executada"] > 0:
+                            abrir(e, par, o["lado"], st2["executada"], st2["preco_medio"], o, agora, maker=False)
+                        else:
+                            e["nao_executadas"] += 1
+                            anotar(e, f"✗ {par} nem a mercado executou ({st2['status']})")
+                    del e["ordens"][par]
+                elif acabou:
                     qx, pxx = (st["executada"], st["preco_medio"]) if st["status"] not in ("NEW", "PARTIALLY_FILLED") else cancelar_conferindo(f, par, o["id"])
                     if qx > 0:
                         abrir(e, par, o["lado"], qx, pxx, o, agora, parcial=qx < o["qtd"] - 1e-9)
