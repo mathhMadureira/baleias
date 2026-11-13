@@ -775,3 +775,11 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Dados:** 33 moedas, 15 min, maio/2025–nov/2026 (dados/lab/minerador_15m.npz), 3 blocos iguais.
 - **Passa** se: média líquida por operação > 0, t ≥ 2 agrupado por dia de entrada, média > 0 em 2 dos 3 blocos, ≥ 300 operações.
 - **Se passar:** vira robô "Tendência" na nuvem (15 min, 33 moedas, carteira de US$ 10, US$ 25 a 10×) com a regra aprovada.
+
+### Resultado da H39 (2026-11-13 17:15 BRT): reprovada nos três braços
+- A (k = 2, 12 h, compra e venda): 14.307 op. em 530 dias, acerto 32,1%, −0,115%/op (t −6,8), blocos −0,081 / −0,154 / −0,106; 85% das saídas no stop móvel, segura 9 velas em média.
+- B (k = 3, 24 h, compra e venda): 11.142 op., acerto 31,6%, −0,060%/op (t −4,0), blocos +0,126 / −0,175 / −0,094.
+- C (k = 2, 12 h, só compra): 7.415 op., acerto 32,7%, +0,006%/op (t −3,5), blocos +0,031 / −0,083 / +0,057 (média ≈ zero, t negativo por dia).
+- Leitura: entrar depois de um movimento forte de 4 h com volume e segurar com stop móvel PERDE na média nas 33 moedas em 2025–26.
+  As subidas de horas que o dono vê (BMT, QNT) existem, mas são raras; as entradas iguais a elas que não continuam pagam stop atrás de
+  stop (85% das saídas). Nada entra na mesa. Arquivo: dados/lab/tendencia_horas_resultado.json.
