@@ -10,7 +10,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | tres_soldados | promissor | 55.0% | 200 | 48.1%–61.7% | H6: três soldados → desce (efeito pequeno) |
 | tres_corvos | promissor | 52.1% | 286 | 46.3%–57.8% | H6: três corvos → sobe (efeito pequeno) |
 | reversao_queda | promissor | 50.9% | 53 | 37.9%–63.9% | H14: queda anormal de 1 h → sobe |
-| vortice_invertido | reprovado | 47.8% | 343 | 42.6%–53.1% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| vortice_invertido | reprovado | 48.0% | 344 | 42.7%–53.2% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 38.5% | 13 | 17.7%–64.5% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | rompimento | reprovado | 37.5% | 32 | 22.9%–54.7% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | velez_espaco_duplo_alto | reprovado | — | 0 | — | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
