@@ -4,10 +4,10 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.9% | 1742 | 50.6%–55.3% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 1743 | 50.6%–55.3% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | reversao_alta | promissor | 62.5% | 24 | 42.7%–78.8% | física: alta anormal de 1 h → devolve |
-| tres_soldados | promissor | 55.0% | 202 | 48.1%–61.7% | H6: três soldados → desce (efeito pequeno) |
+| tres_soldados | promissor | 55.2% | 203 | 48.3%–61.9% | H6: três soldados → desce (efeito pequeno) |
 | reversao_queda | promissor | 51.9% | 54 | 38.9%–64.6% | H14: queda anormal de 1 h → sobe |
 | tres_corvos | promissor | 51.4% | 292 | 45.7%–57.0% | H6: três corvos → sobe (efeito pequeno) |
 | vortice_invertido | reprovado | 48.1% | 345 | 42.9%–53.4% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
