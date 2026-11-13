@@ -661,3 +661,31 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 ### Resultado da H34 (2026-11-12): reprovada
 - A (sempre): 558 dias, −0,129%/dia, t = −7,4, negativa nos 3 blocos. B (|r| > 0,5%): 554 dias, −0,150%/dia, t = −6,2, negativa nos 3 blocos.
 - Leitura: o efeito da primeira meia hora não aparece nas 33 moedas em 2025–26; o resultado é ≈ o custo, ou seja, previsão nula.
+
+## Hipótese 35: swing trade com as regras diárias de melhor evidência (pré-registrada em 2026-11-12 19:45 BRT, antes de rodar)
+
+- **Por quê:** o dono definiu a meta como "robô acertivo em swing trade e day trade" (12/11). A pesquisa (relatórios "Previsibilidade em cripto"
+  e "Ensinamentos práticos para robôs", seção 11) só encontrou evidência revisada por pares em cripto para regras de 1 dia ou mais:
+  momentum semanal (Liu & Tsyvinski 2021, RFS), média móvel variável de 20 dias (Grobys, Ahmed & Sapkota 2020, FRL) e seguir tendência
+  como classe (Hurst et al.; Tartaruga). Nada em minutos pagou custo até agora (H24, H25, H31, H32, H34).
+- **Dados:** velas diárias das 33 moedas do robô, últimos 2200 dias (o que existir por moeda), avaliadas de 2020-01-01 até ontem. Três blocos
+  de tempo iguais.
+- **Regras (como estão escritas, sem ajuste):** A) R7 = C[t]/C[t−7] − 1: > 0 compra, < 0 vende, na abertura seguinte, segura 7 dias.
+  B) MM20 com banda de 1%: C > MM20×1,01 comprado, C < MM20×0,99 vendido, entre as bandas fora; muda na abertura seguinte.
+  C) Tartaruga 20/10: compra no rompimento da máxima de 20 dias, sai na mínima de 10; vendido simétrico.
+  Todas com stop de 2×ATR20 (conferido na mínima/máxima do dia; sai no stop ou na abertura se abriu além).
+- **Custo:** 0,06% por lado (tomador), 0,12% ida e volta. Uma unidade por moeda; a carteira do dia é a média das moedas vivas.
+- **Passa** se: média do retorno líquido por dia > 0, t ≥ 2 (agrupado por dia) e média > 0 em 2 dos 3 blocos. Três tentativas contadas
+  (A, B, C, compra e venda). As versões "só compra" são leitura e não contam para aprovar.
+- **Se passar:** vira robô "Swing" na nuvem (uma decisão por dia, no fechamento UTC), com carteira de US$ 10 na mesa, tamanho do dono
+  (US$ 25 a 10×) e as mesmas regras do teste. Se nenhuma passar, fica registrado e nada entra na mesa.
+
+### Resultado da H35 (2026-11-12 19:55 BRT): reprovada (nenhuma das três passa)
+- Referência "mercado sempre comprado" nas mesmas 33 moedas (sobreviventes): +0,204%/dia, t 2,3, blocos [+0,40, +0,16, +0,05] ≈ +53%/ano.
+- A (momentum 7d, compra e venda): 6723 op., 38% certas, +0,089%/dia, t 1,5, blocos [+0,20, +0,01, +0,06] → não passa (t < 2).
+- B (MM20 ±1%, compra e venda): 7115 op., 26% certas, +0,107%/dia, t 1,6, blocos [+0,17, +0,07, +0,08] → não passa.
+- C (Tartaruga 20/10, compra e venda): 1792 op., 34% certas, +0,083%/dia, t 1,5, blocos [+0,18, +0,02, +0,05] → não passa.
+- Leitura (não conta): as versões "só compra" dão +0,115 a +0,133%/dia com t 2,4–3,2, mas TODAS ficam abaixo de simplesmente
+  ficar comprado nas mesmas moedas (+0,204%/dia). Ou seja: o que parece lucro das regras é a alta das moedas que sobreviveram
+  até hoje (viés de sobrevivência), não a regra. Primeira rodada do teste tinha um erro (fechamento na abertura contava o trade
+  inteiro de novo: +577%/ano); corrigido antes de qualquer decisão. Arquivo: dados/lab/swing_resultado.json. Nada entra na mesa.
