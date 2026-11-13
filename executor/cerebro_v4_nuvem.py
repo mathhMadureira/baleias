@@ -18,6 +18,7 @@ import numpy as np
 from baleias import config
 from lab import minerador as M
 from lab import tartaruga as T
+from lab import universo as U
 
 MODELO = Path(__file__).resolve().parent.parent / "lab" / "modelos" / "lgbm_v4.txt"
 LIMIAR, PRECO, APOSTA = 0.03, 0.51, 0.02
@@ -31,7 +32,7 @@ def baixar(par, cache=None):
         with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={par}&interval=15m&startTime={cache[-1][0]}&limit=1000", timeout=30) as r:
             novas = json.load(r)
         junto = {x[0]: x for x in cache + novas}
-        return [junto[t] for t in sorted(junto) if junto[t][6] < time.time() * 1000][-VELAS:]
+        return [junto[t][:7] for t in sorted(junto) if junto[t][6] < time.time() * 1000][-VELAS:]     # 7 campos bastam (t,o,h,l,c,v,fim): cache menor
     fim, saida = None, []
     while len(saida) < VELAS:
         url = f"{T.DADOS}/api/v3/klines?symbol={par}&interval=15m&limit=1000" + (f"&endTime={fim}" if fim else "")
@@ -42,12 +43,16 @@ def baixar(par, cache=None):
         saida = k + saida
         fim = k[0][0] - 1
         time.sleep(0.05)
-    return [x for x in saida if x[6] < time.time() * 1000][-VELAS:]
+    return [x[:7] for x in saida if x[6] < time.time() * 1000][-VELAS:]
 
 
-def prever(todas):
-    """{par: velas} → {par: (t_ultima_vela, fechamento, prob_de_subir)} usando as mesmas medidas do treino (lab.minerador)."""
-    pares = [p for p in T.MOEDAS_ROBO if todas.get(p)]
+def prever(todas, moedas=None):
+    """{par: velas} → {par: (t_ultima_vela, fechamento, prob_de_subir)} usando as mesmas medidas do treino (lab.minerador).
+    `moedas`: o universo (todas as moedas da Binance, decisão do dono 13/11); o modelo foi treinado nas 33, e prevê as outras com as
+    mesmas medidas normalizadas (fora da amostra de treino: o placar ao vivo julga)."""
+    pares = [p for p in (moedas or T.MOEDAS_ROBO) if todas.get(p)]
+    if "BTCUSDT" not in pares and todas.get("BTCUSDT"):
+        pares.append("BTCUSDT")
     fim = max(k[-1][0] for k in todas.values() if k)
     grade = np.arange(fim - (VELAS - 1) * PASSO, fim + 1, PASSO)
     ohlcv = np.full((len(pares), len(grade), 5), np.nan)
@@ -91,14 +96,15 @@ def main():
     arq_cache = Path(os.environ.get("CEREBROS_MOEDAS", config.RAIZ / "cerebros_moedas")) / "velas_v4.json"
     cache = json.loads(arq_cache.read_text()) if arq_cache.exists() else {}
     todas = {}
-    for par in T.MOEDAS_ROBO:
+    moedas = U.moedas()                                   # todas as moedas da Binance com volume (decisão do dono, 13/11)
+    for par in moedas:
         try:
             todas[par] = baixar(par, cache.get(par))
         except (OSError, ValueError):
             todas[par] = cache.get(par, [])
     arq_cache.parent.mkdir(parents=True, exist_ok=True)
     arq_cache.write_text(json.dumps(todas))
-    previsoes = prever(todas)
+    previsoes = prever(todas, moedas)
     passo(e, previsoes)
     arq.write_text(json.dumps(e))
     ops = [o for x in e["ops"].values() for o in x]

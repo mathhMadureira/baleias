@@ -149,7 +149,7 @@ def main():
             chave = f"{par}@{p['t']}"
             if trava or abs(p["prob"] - 0.5) < LIMIAR or chave in e["tentadas"] or not (inicio <= agora <= fim - MARGEM_ENTRADA):
                 continue
-            if par in e["abertas"] or par in e["ordens"] or len(e["abertas"]) + len(e["ordens"]) >= MAX_POS:
+            if par in e["abertas"] or par in e["ordens"] or par in e.get("sem_futuro", []) or len(e["abertas"]) + len(e["ordens"]) >= MAX_POS:
                 continue
             lado = "BUY" if p["aposta"] > 0 else "SELL"
             e["tentadas"] = (e["tentadas"] + [chave])[-500:]
@@ -166,6 +166,10 @@ def main():
                 o = f.ordem_limit(par, lado, qtd, px, so_maker=True)
                 margem_usada += qtd * px / ALAV
             except ErroFuturos as ex:
+                if "-1121" in str(ex):                                       # moeda sem contrato de futuros: não tenta de novo
+                    e.setdefault("sem_futuro", []).append(par)
+                    anotar(e, f"· {par} não existe nos futuros da Binance; fora da lista")
+                    continue
                 e["nao_executadas"] += 1
                 anotar(e, f"✗ {par} ordem maker recusada ({str(ex)[:80]})")
                 continue

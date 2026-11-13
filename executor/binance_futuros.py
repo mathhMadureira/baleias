@@ -93,6 +93,8 @@ class Futuros:
                 f = {x["filterType"]: x for x in s["filters"]}
                 self._regras[s["symbol"]] = {"step": float(f["LOT_SIZE"]["stepSize"]), "min_qtd": float(f["LOT_SIZE"]["minQty"]),
                                              "tick": float(f["PRICE_FILTER"]["tickSize"]), "min_nocional": float(f.get("MIN_NOTIONAL", {}).get("notional", 5))}
+        if symbol not in self._regras:
+            raise ErroFuturos(f"-1121 {symbol} não existe nos futuros")
         return self._regras[symbol]
 
     def quantidade(self, symbol, nocional_usd, preco):

@@ -14,6 +14,7 @@ import urllib.request
 
 from baleias import config
 from lab import tartaruga as T
+from lab import universo as U
 
 # limiares fixos do treino da H26 (dados/lab/minerador_resultado.json): não mudam depois de ver o resultado ao vivo
 R1_BAIXO, R1_ALTO, VOL_BAIXO = -1.1734489877988534, 1.1757000900702275, 0.25682599216387464
@@ -114,7 +115,7 @@ def main():
     cache_v4 = Path(os.environ.get("CEREBROS_MOEDAS", config.RAIZ / "cerebros_moedas")) / "velas_v4.json"   # 2200 velas por moeda, do cérebro v4
     historico = json.loads(cache_v4.read_text()) if cache_v4.exists() else {}
     todas = {}
-    for par in T.MOEDAS_ROBO:
+    for par in U.moedas():                                # todas as moedas da Binance com volume (decisão do dono, 13/11)
         try:
             novas = velas(par)
         except (OSError, ValueError):
