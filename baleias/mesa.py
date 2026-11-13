@@ -49,15 +49,21 @@ def avaliar(nome, eventos, operacoes_n, inicio=None, nota=""):
         status = f"⚠️ em teste, com {len(violacoes)} violação(ões) de perda diária"
     else:
         status = "🧪 fase 1 em teste"
-    no_inicio, ate_agora = CONTA, CONTA
-    for t, r in eventos:                          # desafio de 24 h: a carteira de US$ 10 começa no início do desafio
-        if t < DESAFIO_INICIO:
-            no_inicio *= 1 + r
-        elif t < DESAFIO_INICIO + DESAFIO_HORAS * 3600:
-            ate_agora *= 1 + r
     fim = DESAFIO_INICIO + DESAFIO_HORAS * 3600
-    desafio = {"carteira": ate_agora, "meta": 2 * CONTA, "progresso": (ate_agora - CONTA) / CONTA, "fim": fim,
-               "situacao": "🎯 DOBROU" if ate_agora >= 2 * CONTA else ("⏱ em andamento" if time.time() < fim else "✗ não dobrou")}
+    no_inicio, ate_agora, nas_24h = CONTA, CONTA, CONTA
+    for t, r in eventos:                          # a carteira de US$ 10 de cada robô começa no início do desafio e SEGUE depois das 24 h
+        if t < DESAFIO_INICIO:                    # (uma régua só: o placar e os lucros realizados mostram o mesmo número)
+            no_inicio *= 1 + r
+        else:
+            ate_agora *= 1 + r
+            if t < fim:
+                nas_24h *= 1 + r
+    if time.time() < fim:
+        situacao = "🎯 DOBROU" if ate_agora >= 2 * CONTA else "⏱ em andamento"
+    else:
+        situacao = (f"🎯 dobrou nas 24 h (US$ {nas_24h:.2f})" if nas_24h >= 2 * CONTA else f"✗ não dobrou nas 24 h (fechou em US$ {nas_24h:.2f})") + \
+                   (" · dobrou depois" if ate_agora >= 2 * CONTA and nas_24h < 2 * CONTA else " · a carteira segue")
+    desafio = {"carteira": ate_agora, "nas_24h": nas_24h, "meta": 2 * CONTA, "progresso": (ate_agora - CONTA) / CONTA, "fim": fim, "situacao": situacao}
     return {"robo": nome, "conta": conta, "resultado": conta - CONTA, "desafio": desafio, "queda_max": queda, "pior_dia": pior_dia, "operacoes": operacoes_n,
             "violacoes": violacoes, "status": status, "inicio": inicio, "nota": nota,
             "falta": {"operacoes": max(0, APROVA_OPS - operacoes_n), "ganho_us": max(0.0, CONTA * (1 + APROVA_GANHO) - conta)}}
@@ -260,10 +266,16 @@ def realizados():
     hoje = time.strftime("%Y-%m-%d", time.gmtime())
     totais = {}
     for x in saida:
-        if True:
-            tt = totais.setdefault(x["robo"], {"lucro": 0.0, "ganhos": 0, "perdas": 0})
-            tt["lucro"] += x["resultado"]
-            tt["ganhos" if x["resultado"] > 0 else "perdas"] += 1
+        tt = totais.setdefault(x["robo"], {"lucro": 0.0, "ganhos": 0, "perdas": 0, "soma_lista": 0.0})
+        tt["soma_lista"] += x["resultado"]
+        tt["ganhos" if x["resultado"] > 0 else "perdas"] += 1
+    try:                                                                  # UMA régua só: o lucro de cada robô é a carteira do placar − US$ 10
+        regua = {f["robo"]: f["desafio"]["carteira"] - CONTA for f in mesa()["fichas"] if f.get("desafio")}
+    except Exception:
+        regua = {}
+    for robo, tt in totais.items():
+        nome = robo.split(" ", 1)[-1]                                      # "🌲 Cérebro v4" → "Cérebro v4"
+        tt["lucro"] = next((v for k, v in regua.items() if k.startswith(nome)), tt["soma_lista"])
     return {"t": time.time(), "hoje": hoje, "desde": DESAFIO_INICIO, "totais": totais, "operacoes": saida[:120]}
 
 

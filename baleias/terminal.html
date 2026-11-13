@@ -146,7 +146,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
   </div>
   <div class="card" id="sec-placar" style="margin-bottom:14px">
-    <h3>🏁 Desafio de 24 h · carteira própria de US$ 10 por robô · 🧠 = pesquisa (produto bloqueado no Brasil) · ⚡✂⛏ = perpétuo, operável de verdade<span class="dir mut num" id="pl-t"></span></h3>
+    <h3>🏁 Carteiras do desafio · US$ 10 por robô desde 11/11 13:35 (as 24 h acabaram; a mesma régua continua) · 🧠🌲 = pesquisa, contrato binário (bloqueado no Brasil) · ⚡✂⛏🧪 = perpétuo, operável de verdade<span class="dir mut num" id="pl-t"></span></h3>
     <div id="pl-relogio" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
     <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
   </div>
@@ -989,7 +989,8 @@ function desenharPlacar() {                       // redesenha a cada 2 s: Rápi
     new Date().toLocaleTimeString("pt-BR") + (nuvemUltima ? ` · nuvem conferiu ${new Date(nuvemUltima).toLocaleTimeString("pt-BR").slice(0, 5)} (a cada 15 min)` : "");
   const dz0 = plMesa.fichas[0] && plMesa.fichas[0].desafio;
   if (dz0) { const s = Math.max(0, Math.round(dz0.fim - Date.now() / 1000)); const h = Math.floor(s / 3600), mi = Math.floor(s % 3600 / 60);
-    $("pl-relogio").innerHTML = s ? `⏱ faltam <b>${h} h ${String(mi).padStart(2, "0")} min</b> · termina ${new Date(dz0.fim * 1000).toLocaleString("pt-BR").slice(0, 17)}` : "⏱ desafio encerrado"; }
+    $("pl-relogio").innerHTML = s ? `⏱ faltam <b>${h} h ${String(mi).padStart(2, "0")} min</b> · termina ${new Date(dz0.fim * 1000).toLocaleString("pt-BR").slice(0, 17)}`
+      : `⏱ as 24 h terminaram em ${new Date(dz0.fim * 1000).toLocaleString("pt-BR").slice(0, 17)} · ninguém dobrou · as carteiras seguem na mesma régua (o valor "nas 24 h" fica guardado em cada cartão)`; }
   $("pl-robos").replaceChildren(...[...plMesa.fichas].sort((a, b) => (b.desafio ? b.desafio.carteira : 0) - (a.desafio ? a.desafio.carteira : 0)).map(f => {
     const dz = f.desafio || {carteira: 10, progresso: 0};
     let conta = dz.carteira, sub = `${f.operacoes} ops · pior dia ${fmt(f.pior_dia)}`, ao_vivo = false;
@@ -997,6 +998,7 @@ function desenharPlacar() {                       // redesenha a cada 2 s: Rápi
       : f.robo.startsWith("Scalper") ? sc && !sc.carregando && {pat: sc.patrimonio, ab: sc.abertas.reduce((a, p) => a + p.resultado, 0), n: sc.abertas.length} : null;
     if (vivo) { conta = dz.carteira + vivo.ab; ao_vivo = true; sub = `${vivo.n} aberta(s) ${vivo.ab >= 0 ? "+" : ""}${fmt(vivo.ab, 3)} · ${f.operacoes} fechadas`; }
     else if (f.robo.startsWith("Cérebro")) sub = `☁ ${f.operacoes} apostas · pior dia ${fmt(f.pior_dia)}`;
+    if (dz.nas_24h !== undefined && Date.now() / 1000 >= dz.fim) sub += ` · nas 24 h: US$ ${fmt(dz.nas_24h, 2)}`;
     const res = conta - 10;
     const d = document.createElement("div"); d.className = "rb " + (res > 0.005 ? "ganha" : res < -0.005 ? "perde" : "");
     const prog = Math.max(0, Math.min(100, res / 10 * 100));
