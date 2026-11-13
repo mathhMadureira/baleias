@@ -14,7 +14,7 @@ from lab import tartaruga as T
 
 MINIMO = float(os.environ.get("UNIVERSO_VOLUME_MIN", "1000000"))      # US$ 1 milhão em 24 h: tira só os mercados mortos
 ESTAVEIS = {"USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDP", "USD1", "USDE", "USDS", "RLUSD", "XUSD", "BFUSD", "AEUR", "EURI", "EUR", "TRY", "BRL",
-            "GBP", "AUD", "JPY", "ARS", "UAH", "ZAR", "PAXG", "WBTC", "WBETH", "BNSOL", "WBNB"}
+            "GBP", "AUD", "JPY", "ARS", "UAH", "ZAR", "PAXG", "XAUT", "RWUSD", "WBTC", "WBETH", "BNSOL", "WBNB"}
 _cache = {"t": 0.0, "moedas": None}
 
 
@@ -34,7 +34,9 @@ def moedas(minimo=MINIMO):
         if s["quoteAsset"] != "USDT" or s["status"] != "TRADING":
             continue
         b = s["baseAsset"]
-        if b in ESTAVEIS:
+        if b in ESTAVEIS or not b.isascii():
+            continue
+        if (len(b) >= 4 and b.endswith("B") and b not in {"SHIB"}) or b in {"MUB"}:      # ações tokenizadas (NVDAB, TSLAB, MUB...): horário de bolsa, não é cripto
             continue
         alavancado = any(b.endswith(suf) and f"{b[:-len(suf)]}USDT" in simbolos for suf in ("UP", "DOWN", "BULL", "BEAR"))
         if alavancado or volume.get(s["symbol"], 0.0) < minimo:
