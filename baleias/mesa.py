@@ -247,7 +247,7 @@ def realizados():
     com o total realizado hoje (dia UTC) de cada um — o que o dono quer ver: lucro realizado, não só o saldo."""
     saida = []
     for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper"), ("robo_minerador.json", "⛏ Minerador"),
-                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_perp_seletivo.json", "🎯 Rápido nuvem seletivo"), ("robo_v4_testnet.json", "🧪 v4 Testnet")):
+                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_testnet.json", "🧪 v4 Testnet")):
         try:
             e = _git_json(f"dados/{arq}") if arq.startswith(("robo_minerador", "robo_v4_")) else json.loads((config.RAIZ / arq).read_text())
         except (OSError, ValueError):
@@ -288,7 +288,7 @@ def mesa():
         _rapido(),
         _rapido("robo_minerador.json", "Minerador (H28)", "☁ na nuvem 24 h: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda", nuvem=True),
         _rapido("robo_v4_perp.json", "Rápido nuvem (cérebro v4)", "☁ na nuvem 24 h: TODAS as apostas do Cérebro v4 no perpétuo simulado; US$ 25 a 10×, stop 1%, lucro realizado +US$ 0,50, sai no fim da vela (H37, agressivo)", nuvem=True),
-        _rapido("robo_v4_perp_seletivo.json", "Rápido nuvem seletivo (v4 ≥ 0,12)", "☁ na nuvem 24 h: só as apostas mais confiantes do v4 (|p − 0,5| ≥ 0,12, 65% de acerto no laboratório); mesmas regras do Rápido nuvem (H37, seletivo)", nuvem=True),
+        _rapido("robo_v4_cacador.json", "Caçador (v4: 2 compras e 2 vendas por vela)", "☁ na nuvem 24 h: a cada vela caça entre todas as moedas as 2 com maior chance de subir (compra) e as 2 com maior chance de cair (venda), pelo cérebro v4; sempre posicionado; mesmas regras do Rápido nuvem (H37)", nuvem=True),
         _rapido("robo_v4_testnet.json", "v4 Testnet (Binance)", "☁ na nuvem 24 h: TESTNET de futuros da Binance, todas as apostas do v4, ordens reais na conta de teste (US$ 10 a 10×, stop 1%); resultado em US$ de preenchimento real", nuvem=True),
         _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v4 (15 min, desde 13/11; antes v3); alvo +0,5%, stop −1,5%, sai no fim da vela apostada"),
         _funding(),

@@ -783,3 +783,11 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - Leitura: entrar depois de um movimento forte de 4 h com volume e segurar com stop móvel PERDE na média nas 33 moedas em 2025–26.
   As subidas de horas que o dono vê (BMT, QNT) existem, mas são raras; as entradas iguais a elas que não continuam pagam stop atrás de
   stop (85% das saídas). Nada entra na mesa. Arquivo: dados/lab/tendencia_horas_resultado.json.
+
+### H37, emenda (2026-11-13 17:30 BRT, antes de qualquer operação do braço trocado)
+- Pedido do dono: "não quero ver nenhum robô esperando aparecer oportunidade; quero eles caçando a própria entrada, na venda ou na compra".
+- O braço "Rápido nuvem seletivo" (|p − 0,5| ≥ 0,12; 0 operações até aqui) é substituído pelo **Caçador** (`V4P_MODO=ranking`, K = 2):
+  a cada vela, entre todas as moedas do universo, as 2 com maior probabilidade de subir (compra) e as 2 com maior de cair (venda), pelo v4;
+  sempre posicionado. Mesmas regras de tamanho, stop, alvo e saída. Juiz igual ao da H37. Estado: dados/robo_v4_cacador.json.
+- Previsão registrada: pelo laboratório (H36), o Caçador opera nas faixas de confiança mais altas disponíveis em cada vela (com 135 moedas,
+  em geral ≥ 0,08), onde o perpétuo ficou entre −0,065% e +0,07%/op: esperado perto de zero, melhor que o agressivo.

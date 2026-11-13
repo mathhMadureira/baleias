@@ -54,10 +54,10 @@ jobs:
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.minerador_nuvem | tee -a resumo.txt || echo "minerador falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.cerebro_v4_nuvem | tee -a resumo.txt || echo "v4 falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "rápido nuvem falhou"
-            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_LIMIAR=0.12 V4P_ARQ=robo_v4_perp_seletivo.json V4P_NOME="Rápido nuvem seletivo" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "rápido nuvem seletivo falhou"
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_MODO=ranking V4P_K=2 V4P_ARQ=robo_v4_cacador.json V4P_NOME="Caçador" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "caçador falhou"
             (
               cd estado
-              for f in dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_perp_seletivo.json; do [ -f "$f" ] && git add "$f"; done
+              for f in dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_cacador.json; do [ -f "$f" ] && git add "$f"; done
               git commit -q -m "cérebro $(date -u +%FT%H:%M)" && for i in 1 2 3 4; do git push -q origin HEAD:estado && break; git fetch -q origin estado && git rebase -q origin/estado; done
             )
             if [ -n "$TOKEN_TG" ] && [ -n "$CHAT_TG" ] && [ -f estado/avisos.txt ]; then

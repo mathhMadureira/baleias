@@ -19,6 +19,8 @@ from baleias import config
 ORCAMENTO, ALAV, CUSTO_LADO, STOP_SEG, REALIZAR = 25.0, 10.0, 0.0006, 0.01, 0.50
 CAPITAL, PISO, MAX_MESMO_LADO = 10.0, 5.0, 6
 LIMIAR = float(os.environ.get("V4P_LIMIAR", "0.03"))            # 0,03 = todas as apostas (agressivo, pedido do dono); 0,12 = só as mais confiantes (H37)
+MODO = os.environ.get("V4P_MODO", "limiar")                     # "limiar": entra nas apostas acima de LIMIAR; "ranking" (Caçador): a cada vela as K moedas
+K = int(os.environ.get("V4P_K", "2"))                           #   com maior chance de subir (compra) e as K com maior chance de cair (venda) — sempre posicionado
 VELA_MS = 900_000
 ARQ = os.environ.get("V4P_ARQ", "robo_v4_perp.json")
 NOME = os.environ.get("V4P_NOME", "Rápido nuvem")
@@ -62,10 +64,15 @@ def passo(e, pendentes, velas, agora_ms):
             e["eliminado"] = True
             textos.append(f"⛔ {NOME} abaixo de US$ {PISO:.0f}: eliminado, sem novas entradas até o dono decidir")
         return textos
-    for par, p in sorted(pendentes.items(), key=lambda kv: -abs(kv[1]["prob"] - 0.5)):
-        if abs(p["prob"] - 0.5) < LIMIAR or par in e["abertas"] or p["t"] == e["ultimo_sinal"].get(par):
+    if MODO == "ranking":                                   # Caçador: caça a própria entrada a cada vela, nos dois lados (pedido do dono, 13/11)
+        ordem = sorted(pendentes.items(), key=lambda kv: -kv[1]["prob"])
+        candidatos = [(par, p) for par, p in ordem if p["prob"] > 0.51][:K] + [(par, p) for par, p in ordem[::-1] if p["prob"] < 0.49][:K]
+    else:
+        candidatos = [(par, p) for par, p in sorted(pendentes.items(), key=lambda kv: -abs(kv[1]["prob"] - 0.5)) if abs(p["prob"] - 0.5) >= LIMIAR]
+    for par, p in candidatos:
+        if par in e["abertas"] or p["t"] == e["ultimo_sinal"].get(par):
             continue
-        lado = "compra" if p["aposta"] > 0 else "venda"
+        lado = "compra" if p["prob"] > 0.5 else "venda"
         if sum(1 for q in e["abertas"].values() if q["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
             continue
         e["caixa"] -= ORCAMENTO / ALAV
