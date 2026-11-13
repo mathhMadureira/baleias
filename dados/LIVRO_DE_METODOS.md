@@ -4,8 +4,9 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 53.0% | 1759 | 50.6%–55.3% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 1760 | 50.6%–55.3% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
+| demark_td9_alta | promissor | 100.0% | 1 | 20.7%–100.0% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | reversao_alta | promissor | 62.5% | 24 | 42.7%–78.8% | física: alta anormal de 1 h → devolve |
 | tres_soldados | promissor | 55.4% | 204 | 48.5%–62.1% | H6: três soldados → desce (efeito pequeno) |
 | reversao_queda | promissor | 51.9% | 54 | 38.9%–64.6% | H14: queda anormal de 1 h → sobe |
@@ -22,7 +23,6 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | raschke_graal_baixa | reprovado | — | 0 | — | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | raschke_sopa_alta | reprovado | 0.0% | 1 | 0.0%–79.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
 | raschke_sopa_baixa | reprovado | — | 0 | — | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
-| demark_td9_alta | reprovado | — | 0 | — | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | demark_td9_baixa | reprovado | — | 0 | — | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | williams_wr_alta | reprovado | — | 0 | — | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | williams_wr_baixa | reprovado | — | 0 | — | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
