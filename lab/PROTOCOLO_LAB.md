@@ -743,3 +743,13 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   **Rápido nuvem seletivo** (só |p − 0,5| ≥ 0,12, o achado da H36).
 - **Passa** o que, com ≥ 200 operações, tiver resultado líquido > 0 e acerto com limite inferior de Wilson acima de 50%. Previsão
   registrada antes: pelo laboratório, o agressivo deve perder ≈ 0,10%/op (≈ US$ 0,025 por operação) e o seletivo ficar perto de zero.
+
+## Hipótese 38: LightGBM com alvo de LUCRO no perpétuo (pré-registrada em 2026-11-13 17:05 BRT, antes de rodar)
+
+- **Pedido do dono (13/11):** "quero lucros, quero operações com lucro". O v4 acerta direção (53,9%) mas o movimento de 15 min não paga o custo.
+- **Mudança:** dois modelos LightGBM (mesmos dados, 16 medidas, cortes e parâmetros da H30) aprendem "próxima vela fecha ≥ +0,15%" e
+  "≤ −0,15%" — movimentos que pagam 0,12% de custo e sobram. Operação: compra se P(alta) − P(baixa) ≥ d, vende se P(baixa) − P(alta) ≥ d,
+  d ∈ {0,05, 0,10, 0,15} (três tentativas, contadas). `lab/lgbm_alvo.py`.
+- **Passa** (por d): média líquida > 0, t ≥ 2 agrupado por instante, média > 0 em 2 dos 3 blocos, ≥ 1.000 operações no teste.
+- **Se passar:** vira o cérebro dos robôs do perpétuo (Rápido nuvem, testnet) no lugar do v4, no d aprovado. Se nenhum passar, fica registrado:
+  o laboratório não encontrou operação de 15 min que pague o custo no perpétuo com estes dados.

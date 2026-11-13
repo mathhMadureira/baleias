@@ -247,9 +247,9 @@ def realizados():
     com o total realizado hoje (dia UTC) de cada um — o que o dono quer ver: lucro realizado, não só o saldo."""
     saida = []
     for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper"), ("robo_minerador.json", "⛏ Minerador"),
-                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_perp_seletivo.json", "🎯 Rápido nuvem seletivo")):
+                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_perp_seletivo.json", "🎯 Rápido nuvem seletivo"), ("robo_v4_testnet.json", "🧪 v4 Testnet")):
         try:
-            e = _git_json(f"dados/{arq}") if arq.startswith(("robo_minerador", "robo_v4_perp")) else json.loads((config.RAIZ / arq).read_text())
+            e = _git_json(f"dados/{arq}") if arq.startswith(("robo_minerador", "robo_v4_")) else json.loads((config.RAIZ / arq).read_text())
         except (OSError, ValueError):
             continue
         if not e:
@@ -257,28 +257,7 @@ def realizados():
         for f in e.get("fechadas", [])[-80:]:
             saida.append({"robo": robo, "t": f["saida_t"], "moeda": f["moeda"].replace("USDT", ""), "lado": f.get("lado", "compra"),
                           "resultado": f["resultado_usd"], "motivo": f.get("motivo", "")})
-    if time.time() - _v3_ops["t"] > 60:
-        _buscar_estado()
-        ops = [("BTC", o["t"], o["liquido"], o["aposta"]) for o in (_git_json("dados/cerebro_v3.json") or {}).get("operacoes", [])[-40:]]
-        for par, x in (_git_json("dados/cerebros_moedas.json") or {}).items():
-            ops += [(par.replace("USDT", ""), o[0], o[1], o[2]) for o in x.get("v3", {}).get("ops", [])[-40:]]
-        _v3_ops.update(t=time.time(), ops=ops)
-        _v3_ops["v4"] = [(par.replace("USDT", ""), o[0], o[1], o[2]) for par, x in ((_git_json("dados/cerebro_v4.json") or {}).get("ops") or {}).items() for o in x[-40:]]
-    for nome_v, lista in (("🌲 Cérebro v4", _v3_ops.get("v4", [])),):
-        pv = {}
-        for o in lista:
-            pv[o[1]] = pv.get(o[1], 0) + 1
-        for moeda, t, liquido, aposta in lista:
-            escala = min(1.0, EXPOSICAO_VELA / (pv[t] * 0.02))
-            saida.append({"robo": nome_v, "t": t / 1000 + 1800, "t_entrada": t / 1000 + 900, "moeda": moeda, "lado": "compra" if aposta > 0 else "venda",
-                          "resultado": liquido * CONTA * escala, "motivo": "aposta de 15 min " + ("ganha" if liquido > 0 else "perdida")})
-    por_vela = {}
-    for o in _v3_ops["ops"]:
-        por_vela[o[1]] = por_vela.get(o[1], 0) + 1
-    for moeda, t, liquido, aposta in _v3_ops["ops"]:
-        escala = min(1.0, EXPOSICAO_VELA / (por_vela[t] * 0.02))           # o mesmo limite da mesa: no máximo 6% da conta por vela
-        saida.append({"robo": "🧠 Cérebro v3", "t": t / 1000 + 1800, "t_entrada": t / 1000 + 900, "moeda": moeda, "lado": "compra" if aposta > 0 else "venda",
-                      "resultado": liquido * CONTA * escala, "motivo": "aposta de 15 min " + ("ganha" if liquido > 0 else "perdida")})
+    # (2026-11-13) as apostas de contrato binário dos cérebros v3/v4 saíram desta lista, junto com as contas deles no placar (decisão do dono)
     saida = [x for x in saida if x.get("t_entrada", x["t"]) >= DESAFIO_INICIO]   # a mesma régua da mesa: o que cada carteira fez desde o início do desafio
     saida.sort(key=lambda x: -x["t"])
     hoje = time.strftime("%Y-%m-%d", time.gmtime())
@@ -310,15 +289,12 @@ def mesa():
         _rapido("robo_minerador.json", "Minerador (H28)", "☁ na nuvem 24 h: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda", nuvem=True),
         _rapido("robo_v4_perp.json", "Rápido nuvem (cérebro v4)", "☁ na nuvem 24 h: TODAS as apostas do Cérebro v4 no perpétuo simulado; US$ 25 a 10×, stop 1%, lucro realizado +US$ 0,50, sai no fim da vela (H37, agressivo)", nuvem=True),
         _rapido("robo_v4_perp_seletivo.json", "Rápido nuvem seletivo (v4 ≥ 0,12)", "☁ na nuvem 24 h: só as apostas mais confiantes do v4 (|p − 0,5| ≥ 0,12, 65% de acerto no laboratório); mesmas regras do Rápido nuvem (H37, seletivo)", nuvem=True),
-        _rapido("robo_v4_testnet.json", "v4 Testnet (Binance, ordens maker)", "TESTNET de futuros da Binance: apostas do v4 com confiança ≥10%, entrada e saída com ordem limitada só-maker; conta de teste, resultado em US$ reais de preenchimento"),
+        _rapido("robo_v4_testnet.json", "v4 Testnet (Binance)", "☁ na nuvem 24 h: TESTNET de futuros da Binance, todas as apostas do v4, ordens reais na conta de teste (US$ 10 a 10×, stop 1%); resultado em US$ de preenchimento real", nuvem=True),
         _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v4 (15 min, desde 13/11; antes v3); alvo +0,5%, stop −1,5%, sai no fim da vela apostada"),
-        _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
-        _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
-        _cerebro(_git_json("dados/cerebro_v3.json"), "Cérebro v3 (humor do mercado)", outras, "v3"),
-        _cerebro({"inicio_ao_vivo": 1, "operacoes": []}, "Cérebro v4 (LightGBM)",
-                 {p: {"v4": {"ops": o}} for p, o in ((_git_json("dados/cerebro_v4.json") or {}).get("ops") or {}).items()}, "v4"),
         _funding(),
     ]
+    # Decisão do dono (2026-11-13): as contas de contrato binário (cérebros v1–v4) saem do placar — o produto é bloqueado no Brasil.
+    # Os cérebros continuam rodando na nuvem como fonte de sinal (o v4 é o cérebro de todos os robôs); a tabela de acerto fica na aba de pesquisa.
     ordem = {"🏆": 0, "🧪": 1, "⚠️": 2, "❌": 3}
     fichas.sort(key=lambda f: (ordem.get(f["status"][:2].strip(), ordem.get(f["status"][0], 9)), -f["conta"]))
     dados = {"t": time.time(), "fichas": fichas,

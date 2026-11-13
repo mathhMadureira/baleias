@@ -27,6 +27,7 @@ ANTECIPAR_SAIDA = 60     # começa a sair (maker) 60 s antes do fim da vela
 ESPERA_SAIDA = 45        # depois do fim da vela, mais 45 s maker; aí vai a mercado
 REPEG = 20               # a cada 20 s, se o melhor preço se afastou, reposiciona a ordem (continua maker)
 TAXA_MAKER, TAXA_TAKER = 0.0002, 0.0005
+DURACAO = float(os.environ.get("TESTNET_DURACAO", "0"))      # > 0: roda por estes segundos e sai (na nuvem o fluxo do GitHub salva o estado e chama de novo)
 ARQ = config.RAIZ / "robo_v4_testnet.json"
 
 
@@ -124,7 +125,8 @@ def main():
     anotar(e, f"ligado no testnet (saldo de teste {total:.0f}), carteira de US$ {CAPITAL:.0f} a {ALAV}× · confiança ≥ {LIMIAR:.0%} · US$ {NOCIONAL:.0f} por posição · "
               f"ordens maker acompanhando o livro a cada {REPEG} s · stop de segurança {STOP_SEG:.0%}"
               + (f" · perda do dia −{PERDA_DIA:.2f}" if PERDA_DIA else " · sem trava do dia (só o piso de US$ 5)"))
-    while True:
+    inicio_exec = time.time()
+    while DURACAO <= 0 or time.time() < inicio_exec + DURACAO:
         agora = time.time()
         try:
             mesa._buscar_estado()

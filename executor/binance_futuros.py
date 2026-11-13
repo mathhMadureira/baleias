@@ -34,6 +34,7 @@ class Futuros:
     @classmethod
     def do_env(cls, real=False):
         env = dict(l.split("=", 1) for l in ENV.read_text().splitlines() if "=" in l) if ENV.exists() else {}
+        env.update({k: v for k, v in os.environ.items() if k.startswith("BINANCE_") and v})   # na nuvem as chaves vêm dos segredos do GitHub
         if real:
             if os.environ.get("BINANCE_REAL") != "1":
                 raise ErroFuturos("conta real só com BINANCE_REAL=1")

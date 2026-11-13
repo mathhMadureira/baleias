@@ -1,0 +1,51 @@
+# Robô v4 no TESTNET de futuros da Binance, rodando na nuvem do GitHub (decisão do dono, 2026-11-13: todos os robôs na nuvem,
+# a máquina local dorme). Dinheiro de teste. As chaves do testnet ficam nos segredos do repositório, nunca no código.
+# Cada rodada fica viva ~5h40: roda o robô por 5 min, salva o estado no ramo `estado`, repete. O agendamento de hora em hora
+# só acorda uma rodada nova quando a anterior acabou (concurrency).
+name: testnet
+
+on:
+  schedule:
+    - cron: "13 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: testnet
+  cancel-in-progress: false
+
+jobs:
+  operar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Operar no testnet por até ~5h40, salvando o estado a cada 5 min
+        env:
+          BINANCE_TESTNET_API_KEY: ${{ secrets.BINANCE_TESTNET_API_KEY }}
+          BINANCE_TESTNET_API_SECRET: ${{ secrets.BINANCE_TESTNET_API_SECRET }}
+          TESTNET_DURACAO: "300"
+        run: |
+          if [ -z "$BINANCE_TESTNET_API_KEY" ]; then echo "sem chave do testnet nos segredos"; exit 0; fi
+          git config --global user.name "cerebro-baleias"
+          git config --global user.email "cerebro-baleias@users.noreply.github.com"
+          fim=$(( $(date +%s) + 340*60 ))
+          while [ "$(date +%s)" -lt "$fim" ]; do
+            rm -rf estado && git worktree prune
+            git fetch -q origin estado
+            git worktree add -q -f estado origin/estado && (cd estado && git switch -q -C trabalho)
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.v4_testnet | tee -a resumo.txt || echo "testnet falhou"
+            (
+              cd estado
+              [ -f dados/robo_v4_testnet.json ] && git add dados/robo_v4_testnet.json
+              git commit -q -m "testnet $(date -u +%FT%H:%M)" && for i in 1 2 3 4; do git push -q origin HEAD:estado && break; git fetch -q origin estado && git rebase -q origin/estado; done
+            ) || true
+          done
+          { echo '```'; tail -40 resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

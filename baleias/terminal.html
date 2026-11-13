@@ -146,7 +146,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
   </div>
   <div class="card" id="sec-placar" style="margin-bottom:14px">
-    <h3>🏁 Carteiras do desafio · US$ 10 por robô desde 11/11 13:35 (as 24 h acabaram; a mesma régua continua) · 🧠🌲 = pesquisa, contrato binário (bloqueado no Brasil) · ⚡✂⛏🧪 = perpétuo, operável de verdade<span class="dir mut num" id="pl-t"></span></h3>
+    <h3>🏁 Carteiras · US$ 10 por robô desde 11/11 13:35 · todos no perpétuo, com o cérebro v4 · ☁ = roda na nuvem 24 h<span class="dir mut num" id="pl-t"></span></h3>
     <div id="pl-relogio" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
     <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
   </div>
@@ -264,14 +264,11 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       <h3><span id="g-titulo">BTC · diário</span><span class="dir mut num" id="g-info"></span></h3>
       <div id="grafico" class="tv" style="height:460px"></div>
       <div class="legenda">
-        <span><i style="border-color:var(--up)"></i>entrada: máxima de 55 dias</span>
-        <span><i style="border-color:var(--down)"></i>saída: mínima de 20 dias</span>
-        <span><i style="border-color:var(--gold)"></i>stop 2N se entrasse hoje</span>
         <span>▲ entrada do robô · ▼ saída do robô</span>
       </div>
     </div>
-    <div class="card">
-      <h3>Radar · distância até a entrada<span class="dir mut">clique para ver</span></h3>
+    <div class="card" style="display:none">   <!-- decisão do dono (13/11): o radar de rompimento de 55 dias sai do painel -->
+      <h3>Radar<span class="dir mut"></span></h3>
       <div class="radar" id="radar"></div>
     </div>
   </div>
@@ -431,7 +428,8 @@ function desenharVelas(cv = $("grafico"), dados = velas, info = $("g-info"), pos
   const X = (i) => pad.l + i * cw + cw / 2, Y = (p) => pad.t + (1 - (p - lo) / (hi - lo)) * H;
   eixoY(ctx, w, h, lo, hi, pad, px);
   // canais
-  const linha = (campo, corL, tracejado) => {
+  const linha = () => {};                           // decisão do dono (13/11): sem linhas de rompimento
+  const _linha_antiga = (campo, corL, tracejado) => {
     ctx.strokeStyle = corL; ctx.lineWidth = 1.4; ctx.setLineDash(tracejado); ctx.beginPath();
     v.forEach((x, i) => i ? ctx.lineTo(X(i), Y(x[campo])) : ctx.moveTo(X(i), Y(x[campo]))); ctx.stroke(); ctx.setLineDash([]);
   };
@@ -458,7 +456,7 @@ function desenharVelas(cv = $("grafico"), dados = velas, info = $("g-info"), pos
   }
   // stop hipotético de hoje
   const u = v[v.length - 1];
-  if (u.stop2n) { ctx.strokeStyle = "#f0b90b"; ctx.setLineDash([2, 4]); ctx.beginPath(); ctx.moveTo(X(v.length - 30), Y(u.stop2n)); ctx.lineTo(X(v.length - 1), Y(u.stop2n)); ctx.stroke(); ctx.setLineDash([]); }
+  if (false && u.stop2n) { ctx.strokeStyle = "#f0b90b"; ctx.setLineDash([2, 4]); ctx.beginPath(); ctx.moveTo(X(v.length - 30), Y(u.stop2n)); ctx.lineTo(X(v.length - 1), Y(u.stop2n)); ctx.stroke(); ctx.setLineDash([]); }
   // preço atual e etiqueta
   // etiquetas no eixo, empurradas para não se sobreporem quando os preços estão perto
   const etqs = [[u.entrada, "#16c784"], [u.c, "#e6edf3"], [u.saida, "#ea3943"]].concat(pos ? [[pos.stop, "#f0b90b"]] : []).map(([p, bg]) => ({y: Y(p), bg, txt: px(p)})).sort((a, b) => a.y - b.y);
@@ -488,8 +486,7 @@ function desenharVelas(cv = $("grafico"), dados = velas, info = $("g-info"), pos
     Object.assign($("tip").style, {display: "block", left: ev.clientX + 14 + "px", top: ev.clientY + 14 + "px"});
   };
   cv.onmouseleave = () => $("tip").style.display = "none";
-  const falta = (u.entrada / u.c - 1) * 100;
-  if (info) info.textContent = `${u.vivo ? "agora" : "fech"} ${px(u.c)} · ${falta > 0 ? "falta " + pct(falta) + " para entrar" : "acima do rompimento"} · stop seria ${pct((u.stop2n / u.c - 1) * 100)}`;
+  if (info) info.textContent = `${u.vivo ? "agora" : "fech"} ${px(u.c)}`;
 }
 
 function desenharLinha(cv, pontos, {base = null, rotulo = (v) => "US$ " + fmt(v, 0), sombraQueda = false} = {}) {
@@ -549,7 +546,7 @@ function desenharRobo() {
   }));
   // posições
   const pos = $("posicoes");
-  if (!e.posicoes.length) pos.innerHTML = `<div class="vazio">Nenhuma posição. O robô espera um rompimento de 55 dias — em mercado de queda ele fica fora, de propósito.</div>`;
+  if (!e.posicoes.length) pos.innerHTML = `<div class="vazio">Nenhuma posição.</div>`;
   else {
     pos.innerHTML = `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Resultado</th><th>R</th><th>Até o stop</th></tr></thead><tbody></tbody></table>`;
     pos.querySelector("tbody").replaceChildren(...e.posicoes.map(p => {
@@ -633,7 +630,7 @@ function tv(id, dados, info, pos) {
   } else for (const v of vs) if (v.time >= g.ultimo) g.velas.update(v);
   g.ultimo = ultimo.time; g.vela = {...ultimo}; g.moeda = dados.moeda; g.passo = vs.length > 1 ? vs[1].time - vs[0].time : 60;
   const serie = (k) => dados.velas.filter(v => v[k] != null).map(v => ({time: tempoVela(v.d), value: v[k]})).filter((x, i, a) => !i || x.time > a[i - 1].time);
-  const canais = id === "grafico";                  // canais de 55/20 só fazem sentido no robô diário (Tartaruga)
+  const canais = false;                             // decisão do dono (13/11): nenhuma linha de rompimento (55/20, stop 2N) nos gráficos
   g.ent.setData(canais ? serie("entrada") : []); g.sai.setData(canais ? serie("saida") : []); g.stop.setData(canais && !pos ? serie("stop2n").slice(-30) : []);
   const marcas = (dados.marcas || []).map(m => { const alvo = vs.filter(v => v.time <= m.t - FUSO).pop(); return alvo && {time: alvo.time, position: m.tipo === "entrada" ? "belowBar" : "aboveBar",
     color: m.tipo === "entrada" ? "#50e3c2" : "#f0b90b", shape: m.tipo === "entrada" ? "arrowUp" : "arrowDown", text: m.tipo}; }).filter(Boolean).sort((a, b) => a.time - b.time);
@@ -743,7 +740,7 @@ function quadroReplay() {
   desenharLinha($("rp-curva"), serie.length > 1 ? serie : [[q.d, q.pat], [q.d, q.pat]], {base: rp.resumo.capital, sombraQueda: true});
   $("rp-pos").innerHTML = q.pos.length ? `<table><thead><tr><th>Moeda</th><th>Entrada</th><th>Agora</th><th>Stop</th><th>Resultado</th></tr></thead><tbody>${
     q.pos.map(p => `<tr><td>${p.m}</td><td>${px(p.entrada)}</td><td>${px(p.px)}</td><td>${px(p.stop)}</td><td class="${cor(p.res)}">${p.res >= 0 ? "+" : ""}${fmt(p.res)}</td></tr>`).join("")}</tbody></table>`
-    : `<div class="vazio">Nenhuma posição — esperando rompimento.</div>`;
+    : `<div class="vazio">Nenhuma posição.</div>`;
   $("rp-ev").replaceChildren(...rpLog.map(t => { const d = document.createElement("div"); d.style.padding = "4px 0"; d.style.borderBottom = "1px solid var(--line)";
     d.className = t.includes("ENTROU") ? "" : /: \+/.test(t) ? "up" : "down"; d.textContent = t; return d; }));
 }
@@ -793,7 +790,7 @@ function desenharMapa() {
   $("mp-mm").textContent = fmt(t.acima_mm50, 0) + "%"; $("mp-mm").className = "val num " + (t.acima_mm50 >= 50 ? "up" : "down");
   $("mp-rp").textContent = t.romperam; $("mp-7").textContent = pct(t.mediana_7d); $("mp-7").className = "val num " + cor(t.mediana_7d);
   $("mp-24").textContent = fmt(t.subindo_24h, 0) + "%";
-  $("mp-leitura").textContent = t.acima_mm50 >= 60 ? "Mercado em alta ampla: rompimentos tendem a aparecer." : t.acima_mm50 >= 40 ? "Mercado dividido: força concentrada em poucas moedas." : "Mercado em baixa ampla: a maioria abaixo da média; o robô diário fica de fora.";
+  $("mp-leitura").textContent = t.acima_mm50 >= 60 ? "Mercado em alta ampla." : t.acima_mm50 >= 40 ? "Mercado dividido: força concentrada em poucas moedas." : "Mercado em baixa ampla: a maioria abaixo da média; o robô diário fica de fora.";
   let ls = mapa.moedas.filter(l => !$("mp-liq").checked || l.liquida);
   ls.sort((a, b) => { const x = a[mpOrdem], y = b[mpOrdem]; if (x == null) return 1; if (y == null) return -1; return (typeof x === "string" ? x.localeCompare(y) : x - y) * (mpDesc ? -1 : 1); });
   const vol = (v) => v >= 1e9 ? fmt(v / 1e9, 1) + " bi" : fmt(v / 1e6, 0) + " mi";
