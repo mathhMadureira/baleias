@@ -753,3 +753,25 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Passa** (por d): média líquida > 0, t ≥ 2 agrupado por instante, média > 0 em 2 dos 3 blocos, ≥ 1.000 operações no teste.
 - **Se passar:** vira o cérebro dos robôs do perpétuo (Rápido nuvem, testnet) no lugar do v4, no d aprovado. Se nenhum passar, fica registrado:
   o laboratório não encontrou operação de 15 min que pague o custo no perpétuo com estes dados.
+
+### Resultado da H38 (2026-11-13 16:50 BRT): reprovada nos três d
+- Modelos: alta 214 árvores (33,7% das velas sobem ≥ 0,15%), baixa 220 árvores (34,5%). Medidas mais usadas: btc_r4, hora, corpo, vol_hora, r1.
+- d = 0,05: 198.385 op., −0,103%/op, acerto 53,4%, blocos −0,072 / −0,120 / −0,117. d = 0,10: 83.094 op., −0,085%/op, acerto 55,1%,
+  blocos −0,031 / −0,105 / −0,120. d = 0,15: 34.170 op., −0,050%/op, acerto 57,8%, blocos **+0,028** / −0,082 / −0,117 (t −1,9).
+- Leitura: mudar o alvo para "movimento que paga o custo" não resolve: a vantagem continua só no 1º bloco (maio–jul/2025) e some
+  depois, como na H30/H31/H36. Com estes dados e estas 16 medidas, **nenhuma operação de 15 min no perpétuo paga 0,12% de custo**
+  de forma estável. Modelos salvos em lab/modelos/lgbm_alvo_{alta,baixa}.txt; resultado em dados/lab/lgbm_alvo_resultado.json.
+
+## Hipótese 39: pegar a tendência de horas e segurar (pré-registrada em 2026-11-13 17:00 BRT, antes de rodar)
+
+- **Pedido do dono (13/11):** "BMT teve uma alta de 01:00 até 13:00, por que nenhum robô entrou e ficou comprado segurando a subida?";
+  idem QNT. Nenhum robô atual segura além de uma vela de 15 min.
+- **Regra (como escrita, sem ajuste):** a cada vela de 15 min fechada, r4h = C[t]/C[t−16] − 1 normalizado pelo desvio-padrão dos
+  retornos de 4 h dos últimos 20 dias (z); volume das últimas 4 h ÷ média do volume de 4 h dos últimos 20 dias (vol). Entra COMPRADO
+  se z ≥ 2 e vol ≥ 1,5 (VENDIDO se z ≤ −2 e vol ≥ 1,5), ao fechamento da vela. Sai no stop móvel (extremo desde a entrada ∓ k × ATR20
+  de 15 min, conferido na mínima/máxima da vela seguinte usando o extremo até a vela anterior), no stop fixo de 2% ou no tempo máximo.
+- **Três tentativas, contadas:** A) k = 2, máximo 48 velas (12 h), compra e venda; B) k = 3, máximo 96 velas (24 h), compra e venda;
+  C) = A só compra. Custo 0,12% ida e volta. Uma posição por moeda.
+- **Dados:** 33 moedas, 15 min, maio/2025–nov/2026 (dados/lab/minerador_15m.npz), 3 blocos iguais.
+- **Passa** se: média líquida por operação > 0, t ≥ 2 agrupado por dia de entrada, média > 0 em 2 dos 3 blocos, ≥ 300 operações.
+- **Se passar:** vira robô "Tendência" na nuvem (15 min, 33 moedas, carteira de US$ 10, US$ 25 a 10×) com a regra aprovada.

@@ -1423,5 +1423,5 @@ class UmaReguaSo(unittest.TestCase):
             cfg.RAIZ = pathlib.Path(__import__("tempfile").mkdtemp())
             r = mesa.realizados()
             f = mesa._cerebro(btc, "Cérebro v3", {}, "v3")
-        self.assertAlmostEqual(r["totais"]["🧠 Cérebro v3"]["lucro"], -0.2)          # só a aposta feita depois do início
-        self.assertAlmostEqual(f["desafio"]["carteira"] - 10, -0.2)
+        self.assertNotIn("🧠 Cérebro v3", r["totais"])        # decisão do dono (13/11): as apostas de contrato binário saíram dos realizados e do placar
+        self.assertAlmostEqual(f["desafio"]["carteira"] - 10, -0.2)   # a régua do cérebro (só a aposta feita depois do início) segue correta na aba de pesquisa
