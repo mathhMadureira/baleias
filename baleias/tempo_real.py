@@ -205,7 +205,8 @@ def traduzir(j, media_volume=None):
 # ---------- motor ----------
 
 MAX_MESMO_LADO = int(os.environ.get("ROBO_MAX_MESMO_LADO", "6"))   # decisão do dono (2026-11-11): arriscar mais, até 6 no mesmo lado
-MODO_SINAL = os.environ.get("ROBO_RAPIDO_SINAL", "livre")           # decisão do dono (2026-11-12): "livre" = sem trava de custo, geladeira ou pausa
+MODO_SINAL = os.environ.get("ROBO_RAPIDO_SINAL", "v4")              # decisão do dono (2026-11-13): "v4" = só as apostas do cérebro de mais lucro; "livre" = também os cérebros por moeda
+FONTE_SINAL = os.environ.get("ROBO_RAPIDO_FONTE", "v4")             # de onde vêm as apostas seguidas pelo Rápido e pelo Scalper: "v4" (LightGBM) ou "v3"
 CONFIANCA_LIVRE = float(os.environ.get("ROBO_RAPIDO_CONFIANCA", "0.50"))   # decisão do dono (2026-11-12): sem barra de confiança, qualquer lado entra   # freio de correlação: as moedas andam juntas, então 5 vendidas
 STOP_SEG_RAPIDO = float(os.environ.get("ROBO_RAPIDO_STOP", "0.01"))   # stop de segurança de 1% em vez de 4N de 1 min (medido 12/11 nos 147 trades: os 34 stops de 4N
 STOP_NOME_RAPIDO = f"stop de segurança −{STOP_SEG_RAPIDO:.0%}"          # deram −4,46; sem stop −1,94; com stop de 1% −2,09; só 2 de 113 trades bons passaram de −1%)
@@ -609,8 +610,8 @@ class Motor:
         pausa = 5 * getattr(self, "_passo_rapido", 60)                 # mudança 29: moeda que bateu stop fica 5 velas de fora
         em_pausa = {f["moeda"] for f in e["fechadas"][-40:] if "stop" in f.get("motivo", "") and time.time() - f["saida_t"] < pausa}
         livre = MODO_SINAL == "livre"
-        self._entrar_pelo_v3(e, corretora, dados, precos, set() if livre else em_pausa)   # segue o v3 e, no modo livre, também os cérebros
-        if MODO_SINAL == "v3":
+        self._entrar_pelo_v3(e, corretora, dados, precos, em_pausa if MODO_SINAL == "v3" else set())   # segue o cérebro da nuvem (v4/v3); no modo livre, também os cérebros por moeda
+        if MODO_SINAL in ("v3", "v4"):
             return
         for o in oportunidades:
             m = o["par"]
@@ -634,7 +635,7 @@ class Motor:
         from executor import tartaruga_exec as X
         from . import mesa
         try:
-            sinais = mesa.sinais_v3()
+            sinais = mesa.sinais_v4() if FONTE_SINAL == "v4" else mesa.sinais_v3()
         except (OSError, ValueError, subprocess.SubprocessError):
             return
         if X.PARAR.exists():
@@ -651,7 +652,7 @@ class Motor:
                 continue
             e["sinais_feitos"] = (e["sinais_feitos"] + [chave])[-500:]
             X.entrar(e, corretora, m, precos[m], precos[m] * STOP_SEG_RAPIDO / T.STOP_N,
-                     f"Cérebro v3 aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}) até o fim da vela de 15 min",
+                     f"Cérebro {FONTE_SINAL} aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}) até o fim da vela de 15 min",
                      lado=s["lado"], custo_lado=0.0006, stop_nome=STOP_NOME_RAPIDO)
             if m in e["abertas"]:
                 e["abertas"][m].update({"fim_t": fim, "prob_lado": max(s["prob"], 1 - s["prob"]), "hora": time.gmtime().tm_hour})
@@ -1138,7 +1139,7 @@ class Motor:
                 ouvir({"texto": f"🛑 Scalper sem novas entradas: {trava}. As saídas continuam."})
             e["trava"] = f"{hoje} {trava}" if trava else None
             try:
-                sinais = mesa.sinais_v3()
+                sinais = mesa.sinais_v4() if FONTE_SINAL == "v4" else mesa.sinais_v3()
             except (OSError, ValueError, subprocess.SubprocessError):
                 sinais = []
             for s in sorted(sinais, key=lambda s: -abs(s["prob"] - 0.5)):   # as apostas mais confiantes primeiro
@@ -1156,7 +1157,7 @@ class Motor:
                 n_scalper = precos[m] * stop / 2                             # o stop do executor é 2N: assim fica exatamente a 1,5%
                 with X.configurado(ouvir, orcamento):
                     X.entrar(e, corretora, m, precos[m], n_scalper,
-                             f"Cérebro v3 aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}); lucro em +0,5% / stop −1,5%",
+                             f"Cérebro {FONTE_SINAL} aposta {'▲ sobe' if s['lado'] == 'compra' else '▼ desce'} ({max(s['prob'], 1 - s['prob']):.1%}); lucro em +0,5% / stop −1,5%",
                              lado=s["lado"], custo_lado=0.0006)
                 if m in e["abertas"]:
                     e["abertas"][m]["fim_t"] = fim

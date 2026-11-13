@@ -222,6 +222,23 @@ def sinais_v3():
     return saida
 
 
+_sinais_v4 = {"t": 0, "dados": []}
+
+
+def sinais_v4(limiar=0.03):
+    """Apostas em aberto do Cérebro v4 (LightGBM, nuvem) na vela de 15 min que acabou de fechar: [{par, t, px, prob, lado}].
+    Decisão do dono (2026-11-13): todos os robôs seguem o cérebro de mais lucro. `limiar` = |p − 0,5| mínimo (0,03 = todas as apostas do v4)."""
+    if time.time() - _sinais_v4["t"] < 60:
+        return _sinais_v4["dados"]
+    _buscar_estado()
+    saida = []
+    for par, p in ((_git_json("dados/cerebro_v4.json") or {}).get("pendentes") or {}).items():
+        if abs(p["prob"] - 0.5) >= limiar:
+            saida.append({"par": par, "t": p["t"], "px": p["px"], "prob": p["prob"], "lado": "compra" if p["aposta"] > 0 else "venda"})
+    _sinais_v4.update(t=time.time(), dados=saida)
+    return saida
+
+
 _v3_ops = {"t": 0, "ops": []}
 
 
@@ -229,9 +246,10 @@ def realizados():
     """Todas as operações FECHADAS dos robôs que operam no dia (Rápido, Scalper e as apostas do Cérebro v3), numa lista só,
     com o total realizado hoje (dia UTC) de cada um — o que o dono quer ver: lucro realizado, não só o saldo."""
     saida = []
-    for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper"), ("robo_minerador.json", "⛏ Minerador")):
+    for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper"), ("robo_minerador.json", "⛏ Minerador"),
+                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_perp_seletivo.json", "🎯 Rápido nuvem seletivo")):
         try:
-            e = _git_json(f"dados/{arq}") if arq == "robo_minerador.json" else json.loads((config.RAIZ / arq).read_text())
+            e = _git_json(f"dados/{arq}") if arq.startswith(("robo_minerador", "robo_v4_perp")) else json.loads((config.RAIZ / arq).read_text())
         except (OSError, ValueError):
             continue
         if not e:
@@ -290,8 +308,10 @@ def mesa():
     fichas = [
         _rapido(),
         _rapido("robo_minerador.json", "Minerador (H28)", "☁ na nuvem 24 h: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda", nuvem=True),
+        _rapido("robo_v4_perp.json", "Rápido nuvem (cérebro v4)", "☁ na nuvem 24 h: TODAS as apostas do Cérebro v4 no perpétuo simulado; US$ 25 a 10×, stop 1%, lucro realizado +US$ 0,50, sai no fim da vela (H37, agressivo)", nuvem=True),
+        _rapido("robo_v4_perp_seletivo.json", "Rápido nuvem seletivo (v4 ≥ 0,12)", "☁ na nuvem 24 h: só as apostas mais confiantes do v4 (|p − 0,5| ≥ 0,12, 65% de acerto no laboratório); mesmas regras do Rápido nuvem (H37, seletivo)", nuvem=True),
         _rapido("robo_v4_testnet.json", "v4 Testnet (Binance, ordens maker)", "TESTNET de futuros da Binance: apostas do v4 com confiança ≥10%, entrada e saída com ordem limitada só-maker; conta de teste, resultado em US$ reais de preenchimento"),
-        _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v3 (15 min); alvo +0,5%, stop −0,5%, sai no fim da vela apostada"),
+        _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v4 (15 min, desde 13/11; antes v3); alvo +0,5%, stop −1,5%, sai no fim da vela apostada"),
         _cerebro(_git_json("dados/cerebro.json"), "Cérebro v1", outras, "v1"),
         _cerebro(_git_json("dados/cerebro_v2.json"), "Cérebro v2", outras, "v2"),
         _cerebro(_git_json("dados/cerebro_v3.json"), "Cérebro v3 (humor do mercado)", outras, "v3"),

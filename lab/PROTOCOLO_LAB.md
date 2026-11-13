@@ -704,3 +704,42 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Passa (por sinapse):** promovida ao vivo por essa regra. **Reprovada:** podada. O resultado de cada uma fica no diário do cérebro
   (`dados/cerebro*.json`, "diario") e será copiado aqui quando houver ≥150 previsões.
 - **Observação honesta:** a evidência pública dessas seis é anedótica ou fraca (o relatório marca [NV]/[S]); o teste ao vivo é o juiz.
+
+## Hipótese 36: estudar e aperfeiçoar o Cérebro v4, o robô de mais lucro (pré-registrada em 2026-11-13 16:40 BRT, antes de rodar)
+
+- **Pedido do dono (13/11):** trocar o cérebro de todos os robôs pelo do robô com mais lucro (o v4, LightGBM), deixá-los na nuvem,
+  fazer backup, estudar o método dele e começar a aperfeiçoá-lo.
+- **Backup feito:** `backups/cerebro_v4_2026-11-13.tar.gz` (modelo `lab/modelos/lgbm_v4.txt`, código de treino `lab/lgbm.py`, medidas
+  `lab/minerador.py`, executor `executor/cerebro_v4_nuvem.py`, resultados H30/H31, estado da nuvem) e etiqueta git `cerebro-v4-2026-11-13`.
+- **Troca de cérebro:** Rápido 1 min e Scalper passam a seguir as apostas do v4 (`mesa.sinais_v4`, |p − 0,5| ≥ 0,03); novo robô
+  "Rápido nuvem (v4)" (`executor/v4_perp_nuvem.py`) opera o v4 no perpétuo simulado na nuvem, 24 h, com as regras do Rápido
+  (US$ 25 a 10×, stop 1%, lucro realizado +US$ 0,50, fim da vela). O Minerador não tem cérebro (é a regra H26) e continua.
+- **Parte 1 (descritiva, `lab/v4_estudo.py`):** no teste fora da amostra da H30 (25% finais), com o modelo salvo e sem retreinar,
+  medir acerto no binário e líquido no perpétuo por: faixa de hora UTC (0–5, 6–11, 12–17, 18–23), dia da semana, faixa de confiança
+  (0,03–0,05, 0,05–0,08, 0,08–0,12, ≥0,12), lado e moeda, no teste inteiro e nos 3 blocos. **Conta como achado** um corte com
+  ≥ 5.000 apostas no teste, acerto ≥ 2 pontos acima (ou abaixo) do total E na mesma direção em ≥ 2 dos 3 blocos. Um achado vira
+  filtro só depois de passar como hipótese própria (H37) ao vivo ou em dados novos; nada é aplicado só por este estudo.
+- **Parte 2 (planejada, ainda não rodada):** retreino mensal com a mesma receita (walk-forward: treina até o mês M, testa no mês
+  M+1), para medir se o acerto no mês seguinte melhora em relação ao modelo fixo de 11/11. Passa se melhorar em ≥ 2 de 3 meses.
+- **Parte 3 (planejada):** medidas novas que o gravador já grava (funding, juros em aberto, desequilíbrio do livro) como colunas
+  extras, com o mesmo juiz da H30. Passa só se vencer o v4 atual no teste inteiro E em 2 dos 3 blocos.
+
+### Resultado da H36, parte 1 (2026-11-13 16:50 BRT): um achado, a confiança
+- Teste fora da amostra (170.519 apostas): acerto 53,9% [blocos 56,0 / 52,6 / 53,1]; perpétuo −0,103%/op.
+- **Confiança |p − 0,5| (achado, nos 3 blocos):** 0,03–0,05: 52,6% (92.456); 0,05–0,08: 54,1% (54.273); 0,08–0,12: 57,5% (19.887;
+  blocos 60,8 / 55,9 / 54,9); ≥0,12: 65,5% (3.903; blocos 70,9 / 60,4 / 60,3). No perpétuo a 0,12% ida e volta: 0,08–0,12 dá −0,065%/op
+  (+0,002 / −0,099 / −0,115) e ≥0,12 dá +0,070%/op (+0,176 / −0,001 / −0,076): positivo só no 1º bloco, como na H31.
+- Hora UTC: 18–23 é a pior (53,0% contra 54,2–54,3% nas outras), diferença de 1,2 ponto: abaixo do corte de 2 pontos, não é achado.
+  Dia da semana: sábado 55,4% (+1,5 ponto): não é achado. Lado: compra 53,9%, venda 53,9%. Moedas: PEPE/ONE/CYBER 60–62% no teste,
+  mas ao vivo PEPE e CYBER estão entre as piores → ranking de moeda não se repete; não é achado.
+- Leitura: o v4 acerta a DIREÇÃO de forma robusta e tanto mais quanto mais confiante, mas o tamanho do movimento em 15 min é pequeno
+  demais para pagar 0,12% no perpétuo. Com taxa de maker (0,04% ida e volta) a faixa 0,08–0,12 ficaria ≈ +0,015%/op e a ≥0,12
+  ≈ +0,15%/op — por isso o robô do testnet tenta entrar como maker. Arquivo: dados/lab/v4_estudo.json.
+
+## Hipótese 37: v4 no perpétuo, agressivo contra seletivo, ao vivo na nuvem (pré-registrada em 2026-11-13 16:52 BRT, antes de ligar)
+
+- Dois robôs iguais (`executor/v4_perp_nuvem.py`, US$ 25 a 10×, 0,06% por lado, stop 1%, lucro realizado +US$ 0,50, fim da vela,
+  carteira de US$ 10 cada): **Rápido nuvem** (todas as apostas do v4, |p − 0,5| ≥ 0,03, pedido do dono: agressividade) e
+  **Rápido nuvem seletivo** (só |p − 0,5| ≥ 0,12, o achado da H36).
+- **Passa** o que, com ≥ 200 operações, tiver resultado líquido > 0 e acerto com limite inferior de Wilson acima de 50%. Previsão
+  registrada antes: pelo laboratório, o agressivo deve perder ≈ 0,10%/op (≈ US$ 0,025 por operação) e o seletivo ficar perto de zero.
