@@ -17,6 +17,7 @@ from pathlib import Path
 
 ENV = Path(__file__).resolve().parent.parent / ".env"
 TESTNET = "https://testnet.binancefuture.com"
+ALIAS = {f"{m}USDT": f"1000{m}USDT" for m in ("PEPE", "SHIB", "BONK", "FLOKI", "LUNC", "XEC", "SATS", "RATS", "CAT", "WHY", "CHEEMS", "X")}   # nos futuros, moedas de preço minúsculo são cotadas em lotes de 1000
 
 
 class ErroFuturos(Exception):
@@ -42,6 +43,8 @@ class Futuros:
     # ---------- transporte ----------
     def _pedir(self, metodo, caminho, params=None, assinado=False, _tentativa=0):
         params = dict(params or {})
+        if "symbol" in params:
+            params["symbol"] = ALIAS.get(params["symbol"], params["symbol"])
         if assinado:
             params["timestamp"] = int(time.time() * 1000) + self.desvio_ms
             params["recvWindow"] = 10000
@@ -83,6 +86,7 @@ class Futuros:
 
     def regras(self, symbol):
         """Limites da moeda: passo de quantidade, passo de preço, nocional mínimo."""
+        symbol = ALIAS.get(symbol, symbol)
         if not self._regras:
             for s in self._pedir("GET", "/fapi/v1/exchangeInfo")["symbols"]:
                 f = {x["filterType"]: x for x in s["filters"]}
