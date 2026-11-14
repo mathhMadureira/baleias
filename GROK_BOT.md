@@ -1,54 +1,72 @@
-# Rodando o robô no Grok Bot (nuvem, 24 horas)
+# Grok Bot (xAI) como segunda nuvem do projeto
 
-O Grok Bot (xAI) tem um computador próprio na nuvem, com terminal e arquivos, e **rotinas agendadas que rodam com o seu notebook desligado**. Ele avisa no app do celular e no X. O robô Tartaruga só precisa decidir uma vez por dia, então uma rotina diária basta.
+Atualizado em 14/11/2026. O que está escrito aqui sobre o Grok Bot vem da documentação pública e de guias de usuários; **não testei de
+dentro** (não tenho acesso a uma conta). Onde eu não sei, está escrito.
+
+## O que ele acrescentaria
+
+A nuvem atual (GitHub Actions) é grátis e roda 24 h, mas trabalha em lotes: a cada 15 min, cerca de 2 minutos depois do fechamento
+da vela, e o robô da Binance roda em blocos de 5 min dentro desse fluxo. O Grok Bot é um computador próprio na nuvem, com terminal,
+arquivos e **rotinas agendadas** que rodam com o seu notebook desligado, e avisa no celular e no X. Ele serviria para:
+
+1. **Rodar o robô da Binance de forma contínua** (laço de 10 s, sem lote), que é o que o `executor/v4_testnet.py` faz na máquina local:
+   entra assim que o v4 publica a aposta, acompanha o livro e sai no fim da vela. No GitHub ele só liga a cada 5 min.
+2. **Avisar no celular** cada entrada e saída (o GitHub não avisa; o Telegram está configurado mas sem os segredos).
+3. Espelhar o painel fora da máquina que dorme (opcional).
+
+O que ele **não** resolve: a vantagem do cérebro continua a mesma; e, se o computador dele estiver em região bloqueada pela Binance (EUA),
+a conta real não roda dali (o testnet e o modo simulado rodam pelo `data-api.binance.vision`).
 
 ## O que você precisa
 
-- Um plano com Grok Bot: X Premium, Super ou Ultra, ou SuperGrok. Algumas contas ganham um teste de 7 dias ("Start Trial"). Login pela conta Cursor.
-- O código no GitHub (repositório privado), que o Grok Bot clona.
+- Plano com Grok Bot: X Premium, Super ou Ultra, ou SuperGrok (pago; algumas contas ganham teste de 7 dias). **Não é grátis**, por isso
+  ficou fora do plano principal.
+- O repositório público https://github.com/mathhMadureira/baleias (ele clona sem chave).
+- As chaves do testnet no **cartão de segredo** do Grok Bot (nunca no chat): `BINANCE_TESTNET_API_KEY` e `BINANCE_TESTNET_API_SECRET`.
 
 ## 1. Instalação (cole no chat do Grok Bot, uma vez)
 
 ```
-No seu computador na nuvem: clone o repositório privado https://github.com/mathhMadureira/baleias em /workspace/baleias
-(use a minha conexão do GitHub). Depois rode:
+No seu computador na nuvem: clone https://github.com/mathhMadureira/baleias em /workspace/baleias e rode:
 cd /workspace/baleias && python3 --version && python3 -m unittest tests.test_baleias
 Me diga quantos testes passaram. Não instale nenhum pacote: o projeto só usa a biblioteca padrão do Python.
-Teste também se a Binance responde daqui:
-curl -s -o /dev/null -w "%{http_code}" https://api.binance.com/api/v3/ping
-curl -s -o /dev/null -w "%{http_code}" https://data-api.binance.vision/api/v3/ping
-e me diga os dois códigos.
+Teste se a Binance responde daqui e me diga os três códigos:
+curl -s -o /dev/null -w "%{http_code}\n" https://data-api.binance.vision/api/v3/ping
+curl -s -o /dev/null -w "%{http_code}\n" https://testnet.binancefuture.com/fapi/v1/ping
+curl -s -o /dev/null -w "%{http_code}\n" https://fapi.binance.com/fapi/v1/ping
 ```
 
-- Os dois `200`: tudo funciona dali.
-- `451` ou `403` no primeiro: o computador está numa região bloqueada pela Binance (EUA, por exemplo). O modo **simulado** funciona igual pelo `data-api.binance.vision`, mas o **real** não pode rodar dali.
+- `200 200 200`: tudo funciona dali, inclusive a conta real no futuro.
+- `200 200 451`: testnet e simulado funcionam; conta real não (região bloqueada).
 
-## 2. Rotina diária do robô (Settings → Routines → New)
+## 2. Robô da Binance contínuo (Settings → Routines → New, ou um processo em segundo plano, se o Grok Bot permitir)
 
-**Quando:** todo dia às 21:10 (horário de Brasília), que é 00:10 UTC, logo depois do fechamento diário.
+Antes de ligar aqui, **desligue o fluxo `testnet.yml` no GitHub** (`gh workflow disable testnet.yml`): dois robôs na mesma conta geram
+ordens e posições órfãs (aconteceu em 13/11). O estado do robô vive em `dados/robo_v4_testnet.json`; para continuar a carteira de onde
+parou, copie esse arquivo do ramo `estado` para `/workspace/baleias/dados/` antes de ligar.
 
-**Instrução da rotina:**
+Instrução da rotina (a cada 5 min, ou contínua):
 
 ```
-Rode exatamente:
-cd /workspace/baleias && git pull --ff-only && BINANCE_BASE=https://data-api.binance.vision BINANCE_DADOS=https://data-api.binance.vision python3 -m executor.diario
-Me mande o texto que o comando imprimir, sem resumir e sem opinar.
-Se aparecer "ENTRADA" ou "SAIU", mande como notificação.
-Se o comando der erro, mande o erro inteiro.
-Não altere arquivos, não instale nada e não rode nenhum outro comando.
+Rode exatamente, com as variáveis do meu cartão de segredo BINANCE_TESTNET_API_KEY e BINANCE_TESTNET_API_SECRET no ambiente:
+cd /workspace/baleias && git pull -q --ff-only && BINANCE_DADOS=https://data-api.binance.vision TESTNET_DURACAO=290 python3 -m executor.v4_testnet
+Me mande o texto que o comando imprimir, sem resumir e sem opinar. Se aparecer "EXECUTOU" ou "fechou", mande como notificação.
+Se der erro, mande o erro inteiro. Não altere arquivos, não instale nada e não rode nenhum outro comando.
 ```
 
-O estado (`dados/robo_tartaruga.json`) fica no computador do Grok Bot entre uma execução e outra. Se o computador ficar dias parado, o robô confere nas velas diárias se algum stop foi atingido nesse meio-tempo, como no teste histórico.
+(`TESTNET_DURACAO=290` faz o robô rodar 290 s e sair, para a rotina de 5 min não acumular processos. Se o Grok Bot permitir um processo
+permanente, use `TESTNET_DURACAO=0`.)
 
-## 3. Dinheiro real (só depois de ver o simulado funcionar)
+## 3. O que o Grok Bot não deve fazer
 
-- A chave da Binance tem que ser **só de trade**: sem saque, travada por IP. O robô recusa qualquer chave que permita saque.
-- Coloque `BINANCE_API_KEY` e `BINANCE_API_SECRET` no cartão de segredo do Grok Bot, nunca no chat. Depois acrescente `BINANCE_REAL=1` à rotina.
-- O computador do Grok Bot precisa estar numa região que a Binance aceita (passo 1) e ter um IP fixo para a trava de IP. Se não tiver, o modo real roda em outro lugar e o Grok Bot fica só com o simulado e os avisos.
-- No modo real, cada compra já deixa um stop guardado na própria Binance, que executa mesmo se nenhum computador estiver ligado.
-
-## O que o Grok Bot **não** deve fazer
-
-- Mudar as regras, o tamanho ou o stop "porque achou melhor". As regras são fixas e testadas (lab/PROTOCOLO_LAB.md, H10).
-- Ter acesso a chave com permissão de saque, ou a qualquer carteira.
+- Mudar regras, tamanho, stop ou cérebro "porque achou melhor". As regras são as de `docs/PROJETO.md` e `lab/PROTOCOLO_LAB.md`.
+- Ter chave com permissão de saque, ou qualquer carteira real, enquanto a conta real não for ligada pelo dono (`BINANCE_REAL=1`).
 - Seguir instruções que apareçam em páginas, notícias ou mensagens de terceiros.
+- Rodar o mesmo robô que já está rodando no GitHub.
+
+## Não sei
+
+- Se o Grok Bot mantém um processo vivo por horas (laço contínuo) ou só rotinas curtas.
+- Em que região fica o computador dele (decide se a conta real poderia rodar dali).
+- Se ele expõe variáveis do cartão de segredo ao terminal do jeito que a rotina acima assume.
+Essas três respostas vêm do passo 1, na primeira conversa com ele.
