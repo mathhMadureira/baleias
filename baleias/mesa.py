@@ -91,6 +91,22 @@ def _git_json(caminho):
     return json.loads(r.stdout) if r.returncode == 0 and r.stdout else None
 
 
+def _git_texto(caminho):
+    r = subprocess.run(["git", "-C", str(REPO), "show", f"origin/estado:{caminho}"], capture_output=True, text=True, timeout=60)
+    return r.stdout if r.returncode == 0 else ""
+
+
+_licoes = {"t": 0.0, "texto": ""}
+
+
+def licoes():
+    """Diário de lições dos robôs (dados/LICOES.md, escrito a cada rodada da nuvem por executor.licoes); em cache por 60 s."""
+    if time.time() - _licoes["t"] > 60:
+        _buscar_estado()
+        _licoes.update(t=time.time(), texto=_git_texto("dados/LICOES.md") or "O diário ainda não foi escrito pela nuvem (sai a cada 15 min).")
+    return _licoes["texto"]
+
+
 def _curva_para_eventos(curva):
     return [(curva[i][0], curva[i][1] / curva[i - 1][1] - 1) for i in range(1, len(curva)) if curva[i - 1][1]]
 

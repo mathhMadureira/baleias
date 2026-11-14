@@ -847,3 +847,10 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   Referência: todas as apostas (−0,103%/op no perpétuo; 53,9% de acerto).
 - **Passa** o braço com líquido no perpétuo (0,12%) > 0, t ≥ 2 agrupado por instante, > 0 em 2 dos 3 blocos e ≥ 20.000 apostas; o acerto
   binário é relatado como leitura. **Se passar:** o Rápido nuvem, o Caçador e o testnet só entram alinhados com o humor aprovado.
+
+### Resultado da H42 (2026-11-14 16:00 BRT): reprovada nos três braços
+- Referência (todas as apostas): 170.519, acerto 53,92%, perpétuo −0,103%/op. A (alinhado com o humor r4): 51.810, 53,67%, −0,084%/op
+  (blocos −0,047 / −0,107 / −0,101). B (humor r16): 62.232, 53,30%, −0,095%/op. C (A e |humor| ≥ 0,3): 26.124, 52,46%, −0,087%/op.
+- Leitura: apostar CONTRA o humor acerta mais (54,03%) e perde mais no perpétuo (−0,111%/op): quando o mercado cai, as apostas de venda
+  acertam mas o movimento é pequeno; as de compra erram mais. Seguir o humor reduz a perda em 0,02 ponto e não a vira em lucro.
+  "O BTC caiu, deveria ter vendido" é verdade para o dia; em velas de 15 min o filtro não paga. Arquivo: dados/lab/v4_humor.json.

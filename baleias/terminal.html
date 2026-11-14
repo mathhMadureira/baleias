@@ -247,6 +247,10 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     </div>
     <details class="ajuda"><summary>Como funciona</summary><div class="mut" style="font-size:12px;margin-top:6px">Comprado no spot e vendido no perpétuo da mesma moeda: o preço se anula e sobra a taxa que os alavancados pagam a cada hora. Entra numa moeda só quando a média de 72 h paga o custo (probabilidade medida: 84% dos dias positivos). Pequeno, mas constante. Ganho real só com conta de futuros.</div></details>
   </div>
+  <div class="card" id="sec-licoes" style="margin-bottom:14px;border-color:#f0b90b55">
+    <h3>📓 Diário de lições dos robôs · escrito pela nuvem a cada 15 min a partir do estado real<span class="dir mut num" id="lc-t"></span></h3>
+    <pre id="licoes" style="white-space:pre-wrap;font-family:system-ui;font-size:13px;line-height:1.45;max-height:520px;overflow:auto;margin:0;color:var(--text)">carregando…</pre>
+  </div>
   <div class="card" id="sec-diario" style="margin-bottom:14px;border-color:#2a3746;padding-bottom:4px">
     <h3>🐢 Robô diário (Tartaruga) — 33 moedas, decide uma vez por dia na nuvem (simulado, US$ 700)</h3>
   </div>
@@ -1031,6 +1035,15 @@ async function cicloRealizados() {
   setTimeout(cicloRealizados, 5000);
 }
 cicloRealizados();
+async function cicloLicoes() {
+  try {
+    const r = await fetch("/api/licoes", {cache: "no-store"}); const txt = await r.text();
+    $("licoes").textContent = txt.replace(/^#+\s*/gm, "").replace(/\*\*/g, "");
+    $("lc-t").textContent = "lido " + new Date().toLocaleTimeString("pt-BR").slice(0, 5);
+  } catch (e) {}
+  setTimeout(cicloLicoes, 300000);
+}
+cicloLicoes();
 
 // ---------- cérebros por moeda (nuvem) ----------
 async function cicloCerebrosMoedas() {

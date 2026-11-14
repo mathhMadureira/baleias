@@ -191,6 +191,13 @@ class Manipulador(BaseHTTPRequestHandler):
             self._enviar(200, json.dumps({"versao": hashlib.sha1(HTML_TERMINAL.read_bytes()).hexdigest()[:12]}).encode(), "application/json")
         elif self.path == "/favicon.ico":
             self._enviar(204, b"", "image/x-icon")
+        elif self.path.startswith("/api/licoes"):
+            from . import mesa
+            try:
+                texto = mesa.licoes()
+            except Exception as ex:
+                texto = f"Erro ao ler o diário: {ex}"
+            self._enviar(200, texto.encode("utf-8"), "text/markdown; charset=utf-8")
         elif self.path.startswith("/api/realizados"):
             from . import mesa
             try:
