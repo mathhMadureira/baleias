@@ -813,3 +813,19 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   alvos +0,023 / +0,026 / +0,028%/op — ganho de 0,006 ponto, dentro do ruído.
 - Leitura: o alvo fixo de US$ 0,50 não era o gargalo (quase nunca é tocado, e trocá-lo por um múltiplo do ATR não muda a média). O que
   decide é a direção e o tamanho do movimento em 15 min, não a regra de saída. Arquivo: dados/lab/v4_alvo_atr.json.
+
+## Hipótese 41: ensinar o v4 com os dados novos — retreino com juiz (pré-registrada em 2026-11-14 11:50 BRT, antes de rodar)
+
+- **Pedido do dono (14/11):** os robôs têm cérebro? Precisam de ajuda para aprender. O v4 é fixo (treinado em 11/11 com dados até o fim do
+  teste); a forma honesta de "ensiná-lo" é retreinar com a mesma receita incluindo os dados mais novos e JULGAR se ficou melhor, em vez de
+  supor.
+- **Dados:** 33 moedas, 15 min, 2025-05-01 até hoje (download novo). **Holdout** = últimos 30 dias (nenhum modelo treina neles), dividido
+  em 3 blocos de 10 dias.
+- **Modelo novo (v4.1):** mesma receita da H30 (16 medidas, parâmetros, parada antecipada), treino = 2/3 e validação = 1/3 do período
+  anterior ao holdout. **Modelo velho:** `lab/modelos/lgbm_v4.txt` como está (o holdout fica dentro do antigo período de teste dele; ele
+  nunca treinou nesses dias).
+- **Medidas no holdout, para os dois:** acerto binário nas apostas |p − 0,5| ≥ 0,03 e ≥ 0,12; resultado líquido no perpétuo (0,12%)
+  nas mesmas faixas; tudo no total e por bloco.
+- **Passa (v4.1 substitui o v4):** acerto binário (≥ 0,03) maior que o do v4 velho no holdout inteiro E em ≥ 2 dos 3 blocos, com ≥ 20.000
+  apostas no holdout. Se não passar, o v4 fica e o retreino é repetido daqui a 30 dias com a mesma regra.
+- **Não conta como aprovação:** melhora só no perpétuo ou só na faixa ≥ 0,12 (são relatadas como leitura).

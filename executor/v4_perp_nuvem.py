@@ -95,6 +95,21 @@ def main():
     velas = json.loads(cache.read_text()) if cache.exists() else {}
     agora_ms = time.time() * 1000
     velas = {par: [x for x in k if x[6] < agora_ms] for par, k in velas.items()}       # só velas fechadas
+    for par, p in list(e["abertas"].items()):                 # posição numa moeda que saiu do universo (sem velas no cache): busca as velas dela
+        if velas.get(par):                                    # (13–14/11: SOXSB e RWUSD presas por isso travaram a margem dos dois robôs por 12 h)
+            continue
+        try:
+            import urllib.request
+            from lab import tartaruga as T
+            with urllib.request.urlopen(f"{T.DADOS}/api/v3/klines?symbol={par}&interval=15m&startTime={p['vela_saida']}&limit=50", timeout=30) as r:
+                velas[par] = [x[:7] for x in json.load(r) if x[6] < agora_ms]
+        except (OSError, ValueError):
+            velas[par] = []
+        if not velas[par]:                                    # sem dados nenhum: fecha no preço de entrada e anota (não dá para inventar o preço)
+            e["caixa"] += p["gasto"] - 2 * CUSTO_LADO * ORCAMENTO
+            e["fechadas"].append({**p, "saida": p["entrada"], "saida_t": time.time(), "motivo": "moeda saiu do universo (fechada no preço de entrada)",
+                                  "resultado_usd": -2 * CUSTO_LADO * ORCAMENTO, "R": 0.0})
+            del e["abertas"][par]
     textos = passo(e, pendentes, velas, agora_ms)
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
     e["patrimonio"] = e["caixa"] + sum(p["gasto"] for p in e["abertas"].values())

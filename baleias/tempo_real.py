@@ -745,7 +745,7 @@ class Motor:
                 for p in e["abertas"].values():
                     p.setdefault("conferido_ate", ultima_fechada)
                 e["ultima_vela"] = ultima_fechada
-            if precos and dados and not X.PARAR.exists():      # entrada a qualquer momento: oportunidades achadas pela varredura contínua
+            if precos and dados and not X.PARAR.exists() and MODO_SINAL == "livre":      # varredura dos cérebros de 1 min: só no modo livre (no modo v4, só o v4 decide; dono 13/11)
                 with self.trava:
                     vivas, self._vivas = list(getattr(self, "_vivas", [])), collections.deque(maxlen=60)
                 for o in sorted(vivas, key=lambda o: -o["ev"]):
