@@ -1,0 +1,56 @@
+# O cérebro v4 aprende sozinho, com juiz (H41): toda semana retreina com os dados mais novos e só substitui o modelo em uso se acertar
+# mais nos últimos 30 dias, no total e em 2 de 3 blocos (campeão × desafiante). O veredito é registrado no protocolo. Pedido do dono
+# (14/11/2026): "dar vida e autonomia aos robôs, com instruções de aprendizagem".
+name: retreino
+
+on:
+  schedule:
+    - cron: "17 3 * * 0"      # domingo 03:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: retreino
+  cancel-in-progress: false
+
+jobs:
+  aprender:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Bibliotecas
+        run: pip install -q numpy lightgbm
+
+      - name: Retreinar o v4 e julgar no holdout dos últimos 30 dias
+        env:
+          BINANCE_DADOS: https://data-api.binance.vision
+        run: |
+          python -m lab.retreino 2>/dev/null | tee retreino.txt
+          python - <<'EOF'
+          import json, shutil, time
+          r = json.load(open("dados/lab/retreino_resultado.json"))
+          v, n = r["faixas"]["0.03"]["velho"], r["faixas"]["0.03"]["novo"]
+          linha = (f"\n### Retreino automático {r['quando']} UTC (H41): {'PASSOU — o v4.1 vira o v4' if r['passa'] else 'não passou — o v4 fica'}\n"
+                   f"- holdout {r['holdout'][0]} → {r['holdout'][1]}: acerto velho {v['acerto'] * 100:.2f}% / novo {n['acerto'] * 100:.2f}% em {n['n']} apostas; "
+                   f"blocos velho {[round(b * 100, 1) for b in v['blocos_acerto']]} novo {[round(b * 100, 1) for b in n['blocos_acerto']]}; "
+                   f"perpétuo velho {v['perp_pct']:+.3f}% / novo {n['perp_pct']:+.3f}%/op; árvores do novo {r['arvores_novo']}.\n")
+          open("lab/PROTOCOLO_LAB.md", "a", encoding="utf-8").write(linha)
+          if r["passa"]:
+              shutil.copy("lab/modelos/lgbm_v4.txt", "lab/modelos/lgbm_v4_anterior.txt")
+              shutil.copy("lab/modelos/lgbm_v4_1.txt", "lab/modelos/lgbm_v4.txt")
+          print(linha)
+          EOF
+          git config user.name "cerebro-baleias"
+          git config user.email "cerebro-baleias@users.noreply.github.com"
+          git add lab/PROTOCOLO_LAB.md lab/modelos/lgbm_v4.txt lab/modelos/lgbm_v4_1.txt dados/lab/retreino_resultado.json
+          [ -f lab/modelos/lgbm_v4_anterior.txt ] && git add lab/modelos/lgbm_v4_anterior.txt
+          git commit -q -m "retreino automático do v4 em $(date -u +%F) (H41)" && git push -q origin HEAD:master || echo "nada a salvar"
+          { echo '```'; cat retreino.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

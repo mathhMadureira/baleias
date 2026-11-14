@@ -829,3 +829,21 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Passa (v4.1 substitui o v4):** acerto binário (≥ 0,03) maior que o do v4 velho no holdout inteiro E em ≥ 2 dos 3 blocos, com ≥ 20.000
   apostas no holdout. Se não passar, o v4 fica e o retreino é repetido daqui a 30 dias com a mesma regra.
 - **Não conta como aprovação:** melhora só no perpétuo ou só na faixa ≥ 0,12 (são relatadas como leitura).
+
+### Resultado da H41 (2026-11-14 15:40 BRT): PASSOU — v4.1 substitui o v4
+- Dados até 14/11 14:30 UTC (54.011 velas × 33 moedas). Holdout 2026-10-15 → 2026-11-14 (3 blocos de 10 dias); o novo treinou de 2025-05-03 a 2026-10-15 (78 árvores).
+- |p − 0,5| ≥ 0,03: velho 52.97% / **novo 53.46%** em 34600 apostas; blocos velho [53.0, 51.3, 54.7] novo [54.1, 51.4, 54.9]; perpétuo velho -0.120% / novo -0.119%/op.
+- |p − 0,5| ≥ 0,12 (leitura): velho 62.0% (669) / novo 58.4% (639); perpétuo velho -0.053% / novo -0.076%/op.
+- O v4.1 vira `lab/modelos/lgbm_v4.txt` (o anterior fica em `lgbm_v4_anterior.txt`). A partir daqui o retreino é automático e semanal (`.github/workflows/retreino.yml`), sempre com este juiz.
+
+## Hipótese 42: o humor do mercado como filtro de lado para o v4 (pré-registrada em 2026-11-14 15:45 BRT, antes de rodar)
+
+- **Pedido do dono (14/11):** "o BTC caiu muito e um robô deveria ter operado em short; hoje subiu e deveriam ter operado em long". Ao vivo,
+  comprar perdeu mais que vender em todos os robôs enquanto o mercado caía. O v4 aposta nos dois lados sem olhar o humor do mercado todo.
+- **Humor:** a cada vela, a média entre as 33 moedas do retorno normalizado de 4 velas (r4) e de 16 velas (r16) — o mesmo cálculo das
+  medidas do v4, sem dado novo. Positivo = mercado subindo; negativo = caindo.
+- **Braços (três tentativas, contadas), no teste fora da amostra da H30 com o modelo salvo:** A) só apostas do v4 alinhadas com o sinal do
+  humor r4 (compra se humor > 0, venda se < 0); B) idem com o humor r16; C) = A, só quando |humor r4| ≥ 0,3 (mercado decidido).
+  Referência: todas as apostas (−0,103%/op no perpétuo; 53,9% de acerto).
+- **Passa** o braço com líquido no perpétuo (0,12%) > 0, t ≥ 2 agrupado por instante, > 0 em 2 dos 3 blocos e ≥ 20.000 apostas; o acerto
+  binário é relatado como leitura. **Se passar:** o Rápido nuvem, o Caçador e o testnet só entram alinhados com o humor aprovado.
