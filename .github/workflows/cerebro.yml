@@ -5,7 +5,7 @@ name: cerebro
 
 on:
   schedule:
-    - cron: "7 * * * *"
+    - cron: "7,27,47 * * * *"     # a cada 20 min: se uma rodada já está viva a nova fica na fila; assim o intervalo entre rodadas fica curto
   workflow_dispatch: {}
 
 permissions:
@@ -56,9 +56,19 @@ jobs:
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "rápido nuvem falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_MODO=ranking V4P_K=2 V4P_ARQ=robo_v4_cacador.json V4P_NOME="Caçador" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "caçador falhou"
             (
+              # Salva SÓ os arquivos deste fluxo por cima do estado mais novo do ramo (outro fluxo, o testnet, também escreve no ramo a cada
+              # 5 min; o rebase antigo falhava e 15 rodadas seguidas perderam o estado em 13–14/11). Nunca toca nos arquivos dos outros.
               cd estado
-              for f in dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_cacador.json; do [ -f "$f" ] && git add "$f"; done
-              git commit -q -m "cérebro $(date -u +%FT%H:%M)" && for i in 1 2 3 4; do git push -q origin HEAD:estado && break; git fetch -q origin estado && git rebase -q origin/estado; done
+              MEUS="dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_cacador.json"
+              rm -rf ../salvo && mkdir -p ../salvo && for f in $MEUS; do [ -f "$f" ] && cp --parents "$f" ../salvo/; done
+              for i in 1 2 3 4 5; do
+                git fetch -q origin estado && git reset -q --hard origin/estado && cp -r ../salvo/. .
+                for f in $MEUS; do [ -f "$f" ] && git add "$f"; done
+                if git diff --cached --quiet; then echo "estado: nada novo"; break; fi
+                git commit -q -m "cérebro $(date -u +%FT%H:%M)"
+                if git push -q origin HEAD:estado; then echo "estado salvo ($(git rev-parse --short HEAD))"; break; fi
+                echo "push rejeitado, tentativa $i"; sleep $((i * 5))
+              done
             )
             if [ -n "$TOKEN_TG" ] && [ -n "$CHAT_TG" ] && [ -f estado/avisos.txt ]; then
               curl -s -o /dev/null "https://api.telegram.org/bot${TOKEN_TG}/sendMessage" --data-urlencode "chat_id=${CHAT_TG}" --data-urlencode "text@estado/avisos.txt"

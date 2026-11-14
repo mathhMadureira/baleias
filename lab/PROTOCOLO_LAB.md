@@ -791,3 +791,25 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   sempre posicionado. Mesmas regras de tamanho, stop, alvo e saída. Juiz igual ao da H37. Estado: dados/robo_v4_cacador.json.
 - Previsão registrada: pelo laboratório (H36), o Caçador opera nas faixas de confiança mais altas disponíveis em cada vela (com 135 moedas,
   em geral ≥ 0,08), onde o perpétuo ficou entre −0,065% e +0,07%/op: esperado perto de zero, melhor que o agressivo.
+
+## Hipótese 40: alvo dinâmico por ATR nas apostas do v4 (pré-registrada em 2026-11-14 00:20 BRT, antes de rodar)
+
+- **Origem:** análise externa trazida pelo dono (14/11): o lucro realizado fixo de US$ 0,50 (= +2% em US$ 25) quase nunca é atingido numa
+  vela de 15 min; um alvo proporcional à volatilidade da moeda (múltiplo do ATR) capturaria o extremo da vela em vez de sair no fechamento.
+- **Dados e modelo:** teste fora da amostra da H30 (25% finais), modelo salvo `lab/modelos/lgbm_v4.txt`, apostas com |p − 0,5| ≥ 0,03,
+  entrada no fechamento da vela do sinal (como nas simulações da nuvem), saída dentro da vela seguinte. ATR14 = média do true range das
+  14 velas de 15 min anteriores ao sinal. Custo 0,06% por lado. Stop fixo de 1% conferido na mínima/máxima; se stop e alvo caberiam na
+  mesma vela, conta o stop (conservador).
+- **Braços (três tentativas, contadas):** alvo = entrada ± 1,0 × ATR14; ± 1,5 × ATR14; ± 2,0 × ATR14. Se a vela não toca o alvo nem o
+  stop, sai no fechamento. **Referências (não contam):** R1 = sair sempre no fechamento (o que o v4 faz hoje); R2 = R1 com stop de 1%
+  (o Rápido nuvem de hoje).
+- **Passa** o braço com média líquida > 0, t ≥ 2 agrupado por instante, média > 0 em 2 dos 3 blocos E média acima da referência R2.
+  Também é relatado o mesmo corte só nas apostas de confiança ≥ 0,12.
+- **Se passar:** o alvo do Rápido nuvem, do Caçador e do testnet passa a ser o múltiplo aprovado do ATR14 em vez de US$ 0,50 fixos.
+
+### Resultado da H40 (2026-11-14 10:55 BRT): reprovada nos três braços
+- Referências: R1 (sair no fechamento) −0,1048%/op; R2 (fechamento + stop 1%) −0,1038%/op. Braços: alvo 1,0×ATR14 −0,1042%; 1,5×ATR14
+  −0,1032%; 2,0×ATR14 −0,1030%/op (187.115 apostas; blocos todos negativos, t ≈ −42). Só nas apostas de confiança ≥ 0,12: R2 +0,022%,
+  alvos +0,023 / +0,026 / +0,028%/op — ganho de 0,006 ponto, dentro do ruído.
+- Leitura: o alvo fixo de US$ 0,50 não era o gargalo (quase nunca é tocado, e trocá-lo por um múltiplo do ATR não muda a média). O que
+  decide é a direção e o tamanho do movimento em 15 min, não a regra de saída. Arquivo: dados/lab/v4_alvo_atr.json.

@@ -6,7 +6,7 @@ name: testnet
 
 on:
   schedule:
-    - cron: "13 * * * *"
+    - cron: "13,33,53 * * * *"    # a cada 20 min: se uma rodada já está viva a nova fica na fila; intervalo curto entre rodadas
   workflow_dispatch: {}
 
 permissions:
@@ -43,9 +43,17 @@ jobs:
             git worktree add -q -f estado origin/estado && (cd estado && git switch -q -C trabalho)
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.v4_testnet | tee -a resumo.txt || echo "testnet falhou"
             (
+              # salva SÓ o arquivo deste fluxo por cima do estado mais novo do ramo (o fluxo cerebro também escreve no ramo); nunca toca nos outros
               cd estado
-              [ -f dados/robo_v4_testnet.json ] && git add dados/robo_v4_testnet.json
-              git commit -q -m "testnet $(date -u +%FT%H:%M)" && for i in 1 2 3 4; do git push -q origin HEAD:estado && break; git fetch -q origin estado && git rebase -q origin/estado; done
+              [ -f dados/robo_v4_testnet.json ] && cp dados/robo_v4_testnet.json ../testnet_salvo.json
+              for i in 1 2 3 4 5; do
+                git fetch -q origin estado && git reset -q --hard origin/estado
+                [ -f ../testnet_salvo.json ] && cp ../testnet_salvo.json dados/robo_v4_testnet.json && git add dados/robo_v4_testnet.json
+                if git diff --cached --quiet; then echo "estado: nada novo"; break; fi
+                git commit -q -m "testnet $(date -u +%FT%H:%M)"
+                if git push -q origin HEAD:estado; then echo "estado salvo ($(git rev-parse --short HEAD))"; break; fi
+                echo "push rejeitado, tentativa $i"; sleep $((i * 5))
+              done
             ) || true
           done
           { echo '```'; tail -40 resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
