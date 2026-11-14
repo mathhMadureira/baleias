@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.7% | 1813 | 50.4%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 1814 | 50.5%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_sopa_baixa | promissor | 100.0% | 1 | 20.7%–100.0% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | williams_volb_baixa | promissor | 63.6% | 22 | 43.0%–80.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
@@ -14,10 +14,10 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | tres_soldados | promissor | 55.2% | 210 | 48.5%–61.8% | H6: três soldados → desce (efeito pequeno) |
 | reversao_queda | promissor | 52.7% | 55 | 39.8%–65.3% | H14: queda anormal de 1 h → sobe |
 | tres_corvos | promissor | 50.3% | 310 | 44.8%–55.9% | H6: três corvos → sobe (efeito pequeno) |
-| vortice_invertido | reprovado | 48.2% | 359 | 43.1%–53.4% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| vortice_invertido | reprovado | 48.1% | 360 | 42.9%–53.2% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 45.0% | 20 | 25.8%–65.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
-| demark_td9_alta | reprovado | 40.0% | 10 | 16.8%–68.7% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | rompimento | reprovado | 37.5% | 32 | 22.9%–54.7% | Tartaruga em 15 min: rompeu a máxima de 55 |
+| demark_td9_alta | reprovado | 36.4% | 11 | 15.2%–64.6% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | velez_espaco_duplo_alto | reprovado | — | 0 | — | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | velez_espaco_duplo_baixo | reprovado | — | 0 | — | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | velez_elefante | reprovado | — | 0 | — | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
