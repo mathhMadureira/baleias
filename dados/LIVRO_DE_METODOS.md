@@ -4,16 +4,16 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.7% | 1822 | 50.4%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 1823 | 50.4%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_sopa_baixa | promissor | 100.0% | 1 | 20.7%–100.0% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
+| raschke_graal_baixa | promissor | 63.3% | 30 | 45.5%–78.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 62.5% | 24 | 42.7%–78.8% | física: alta anormal de 1 h → devolve |
 | williams_volb_baixa | promissor | 62.5% | 24 | 42.7%–78.8% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
-| raschke_graal_baixa | promissor | 62.1% | 29 | 44.0%–77.3% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | tres_soldados | promissor | 55.2% | 210 | 48.5%–61.8% | H6: três soldados → desce (efeito pequeno) |
-| williams_volb_alta | promissor | 54.5% | 11 | 28.0%–78.7% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 52.7% | 55 | 39.8%–65.3% | H14: queda anormal de 1 h → sobe |
 | tres_corvos | promissor | 50.5% | 311 | 45.0%–56.0% | H6: três corvos → sobe (efeito pequeno) |
+| williams_volb_alta | reprovado | 50.0% | 12 | 25.4%–74.6% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | vortice_invertido | reprovado | 48.1% | 360 | 42.9%–53.2% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 45.0% | 20 | 25.8%–65.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | demark_td9_alta | reprovado | 41.7% | 12 | 19.3%–68.0% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
