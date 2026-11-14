@@ -1,33 +1,33 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 14/11/2026 23:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 14/11/2026 23:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 5.96** · 131 operações fechadas · 2 abertas
+Carteira **US$ 5.79** · 133 operações fechadas · 2 abertas
 
-- **Total:** 44/131 com lucro (34%), resultado -4.04, média -0.031 por operação.
-- **Últimas 24 h:** 35/102 com lucro, -3.20.
-- **Por horário:** 18–23 UTC: 84 op, 30% certas, -3.56 · 00–05 UTC: 12 op, 33% certas, -0.27 · 06–11 UTC: 2 op, 50% certas, -0.21 · 12–17 UTC: 33 op, 42% certas, +0.00
-- **Por lado:** compra: 84 op, 27% certas, -6.04 · venda: 47 op, 45% certas, +2.00
-- **Por confiança do v4:** muito alta (≥0,12): 48 op, 21% certas, -2.58 · alta (0,08–0,12): 49 op, 41% certas, -1.73 · confiança baixa (<0,05): 5 op, 40% certas, -0.11 · média (0,05–0,08): 29 op, 41% certas, +0.37
-- **Por motivo de saída:** stop de segurança −1%: 20 op, 0% certas, -5.60 · fim da vela do v4: 106 op, 37% certas, -0.79 · lucro realizado +US$ 0.50: 5 op, 100% certas, +2.35
-- **Moedas que mais perderam (≥ 3 op):** KAVA -1.12 (4 op) · PEOPLE -0.54 (3 op) · U -0.52 (18 op) · HAEDAL -0.36 (4 op) · RUNE -0.30 (4 op)
+- **Total:** 44/133 com lucro (33%), resultado -4.21, média -0.032 por operação.
+- **Últimas 24 h:** 35/103 com lucro, -3.30.
+- **Por horário:** 18–23 UTC: 86 op, 29% certas, -3.73 · 00–05 UTC: 12 op, 33% certas, -0.27 · 06–11 UTC: 2 op, 50% certas, -0.21 · 12–17 UTC: 33 op, 42% certas, +0.00
+- **Por lado:** compra: 84 op, 27% certas, -6.04 · venda: 49 op, 43% certas, +1.84
+- **Por confiança do v4:** muito alta (≥0,12): 48 op, 21% certas, -2.58 · alta (0,08–0,12): 51 op, 39% certas, -1.89 · confiança baixa (<0,05): 5 op, 40% certas, -0.11 · média (0,05–0,08): 29 op, 41% certas, +0.37
+- **Por motivo de saída:** stop de segurança −1%: 20 op, 0% certas, -5.60 · fim da vela do v4: 108 op, 36% certas, -0.96 · lucro realizado +US$ 0.50: 5 op, 100% certas, +2.35
+- **Moedas que mais perderam (≥ 3 op):** KAVA -1.12 (4 op) · U -0.55 (19 op) · PEOPLE -0.54 (3 op) · HAEDAL -0.36 (4 op) · RUNE -0.30 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** CYBER +1.07 (7 op) · AMP +0.37 (4 op) · BONK +0.37 (3 op) · GRAM +0.30 (3 op) · WLFI +0.12 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.69** · 57 operações fechadas · 2 abertas
+Carteira **US$ 6.73** · 59 operações fechadas · 0 abertas
 
-- **Total:** 15/57 com lucro (26%), resultado -3.31, média -0.058 por operação.
-- **Últimas 24 h:** 12/47 com lucro, -3.16.
-- **Por horário:** 18–23 UTC: 42 op, 19% certas, -2.94 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 1 op, 100% certas, +0.02
-- **Por lado:** compra: 45 op, 24% certas, -3.20 · venda: 12 op, 33% certas, -0.11
-- **Por confiança do v4:** muito alta (≥0,12): 30 op, 20% certas, -1.67 · alta (0,08–0,12): 19 op, 37% certas, -0.95 · média (0,05–0,08): 8 op, 25% certas, -0.68
-- **Por motivo de saída:** stop de segurança −1%: 12 op, 0% certas, -3.36 · fim da vela do v4: 44 op, 32% certas, -0.42 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
-- **Moedas que mais perderam (≥ 3 op):** U -0.26 (9 op) · BEB -0.24 (4 op) · AMP +0.25 (3 op) · CYBER +0.60 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** CYBER +0.60 (3 op) · AMP +0.25 (3 op) · BEB -0.24 (4 op) · U -0.26 (9 op)
+- **Total:** 16/59 com lucro (27%), resultado -3.27, média -0.055 por operação.
+- **Últimas 24 h:** 13/49 com lucro, -3.12.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 1 op, 100% certas, +0.02
+- **Por lado:** compra: 46 op, 26% certas, -3.13 · venda: 13 op, 31% certas, -0.14
+- **Por confiança do v4:** muito alta (≥0,12): 30 op, 20% certas, -1.67 · alta (0,08–0,12): 21 op, 38% certas, -0.91 · média (0,05–0,08): 8 op, 25% certas, -0.68
+- **Por motivo de saída:** stop de segurança −1%: 12 op, 0% certas, -3.36 · fim da vela do v4: 46 op, 33% certas, -0.38 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
+- **Moedas que mais perderam (≥ 3 op):** U -0.28 (10 op) · BEB -0.24 (4 op) · AMP +0.25 (3 op) · CYBER +0.60 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** CYBER +0.60 (3 op) · AMP +0.25 (3 op) · BEB -0.24 (4 op) · U -0.28 (10 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⛏ Minerador (reversão sem volume)
@@ -45,14 +45,14 @@ Carteira **US$ 8.82** · 97 operações fechadas · 0 abertas
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 8.71** · 79 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.94 com 58 op.)
+Carteira **US$ 8.56** · 82 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.94 com 58 op.)
 
-- **Total:** 32/79 com lucro (41%), resultado -1.29, média -0.016 por operação.
-- **Últimas 24 h:** 32/79 com lucro, -1.29.
-- **Por horário:** 18–23 UTC: 47 op, 43% certas, -1.72 · 12–17 UTC: 32 op, 38% certas, +0.43
-- **Por lado:** venda: 20 op, 15% certas, -0.69 · compra: 59 op, 49% certas, -0.60
-- **Por confiança do v4:** média (0,05–0,08): 20 op, 45% certas, -0.75 · alta (0,08–0,12): 7 op, 29% certas, -0.45 · confiança baixa (<0,05): 52 op, 40% certas, -0.09
-- **Por motivo de saída:** stop de segurança −1% (saída a: 5 op, 0% certas, -1.72 · fim da vela do v4 (saída a mer: 16 op, 31% certas, -0.15 · fim da vela do v4: 58 op, 47% certas, +0.58
+- **Total:** 33/82 com lucro (40%), resultado -1.44, média -0.018 por operação.
+- **Últimas 24 h:** 33/82 com lucro, -1.44.
+- **Por horário:** 18–23 UTC: 50 op, 42% certas, -1.87 · 12–17 UTC: 32 op, 38% certas, +0.43
+- **Por lado:** venda: 22 op, 18% certas, -0.72 · compra: 60 op, 48% certas, -0.72
+- **Por confiança do v4:** média (0,05–0,08): 20 op, 45% certas, -0.75 · alta (0,08–0,12): 8 op, 25% certas, -0.53 · confiança baixa (<0,05): 54 op, 41% certas, -0.16
+- **Por motivo de saída:** stop de segurança −1% (saída a: 5 op, 0% certas, -1.72 · fim da vela do v4 (saída a mer: 17 op, 29% certas, -0.23 · fim da vela do v4: 60 op, 47% certas, +0.51
 - **Moedas que mais perderam (≥ 3 op):** ETH -0.45 (18 op) · UNI -0.06 (3 op) · ZEC -0.04 (6 op) · BTC -0.01 (19 op) · SOL +0.07 (8 op)
 - **Moedas que mais ganharam (≥ 3 op):** SOL +0.07 (8 op) · BTC -0.01 (19 op) · ZEC -0.04 (6 op) · UNI -0.06 (3 op) · ETH -0.45 (18 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -84,7 +84,7 @@ Carteira **US$ 8.71** · 79 operações fechadas · 3 abertas · carteiras anter
 - 🛑 Teto de perda do dia (US$ -101.77): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 8301 apostas conferidas ao vivo, acerto 49.6%; prevê 164 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 8316 apostas conferidas ao vivo, acerto 49.6%; prevê 164 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
