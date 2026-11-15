@@ -1,27 +1,27 @@
 {
- "t": 1794770288,
- "hora_utc": "2026-11-15 19:18 UTC",
+ "t": 1794771235,
+ "hora_utc": "2026-11-15 19:33 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 140,
-  "subindo_pct": 86.4,
-  "mediana_pct": 0.88
+  "subindo_pct": 82.9,
+  "mediana_pct": 0.82
  },
  "mercado_4h": {
   "moedas": 140,
-  "subindo_pct": 80.7,
-  "mediana_pct": 0.68
+  "subindo_pct": 54.3,
+  "mediana_pct": 0.19
  },
  "mercado_24h": {
   "moedas": 140,
-  "subindo_pct": 45.7,
-  "mediana_pct": -0.11
+  "subindo_pct": 42.9,
+  "mediana_pct": -0.42
  },
  "btc": {
-  "1h": 0.79,
-  "4h": 0.59,
-  "24h": -0.75,
-  "preco": 65065.23,
+  "1h": 0.68,
+  "4h": 0.53,
+  "24h": -0.91,
+  "preco": 64975.13,
   "vol_4h_vs_media": 0.52
  },
  "maiores_quedas_4h": [
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "GLMR",
-   "4h": -11.33,
-   "24h": 26.41,
-   "vol": 2.46
-  },
-  {
-   "moeda": "SOPH",
-   "4h": -8.97,
-   "24h": -40.81,
-   "vol": 1.19
-  },
-  {
-   "moeda": "ONE",
-   "4h": -7.46,
-   "24h": 2.57,
-   "vol": 1.04
+   "4h": -15.45,
+   "24h": 19.34,
+   "vol": 2.25
   },
   {
    "moeda": "INIT",
-   "4h": -6.87,
-   "24h": 4.64,
-   "vol": 0.89
+   "4h": -11.54,
+   "24h": 1.73,
+   "vol": 0.93
   },
   {
-   "moeda": "ZIL",
-   "4h": -5.39,
-   "24h": -13.09,
-   "vol": 1.71
+   "moeda": "SOPH",
+   "4h": -9.93,
+   "24h": -44.54,
+   "vol": 1.17
+  },
+  {
+   "moeda": "ONE",
+   "4h": -6.21,
+   "24h": 2.02,
+   "vol": 0.92
   },
   {
    "moeda": "KAVA",
-   "4h": -2.56,
-   "24h": 9.11,
-   "vol": 0.53
-  },
-  {
-   "moeda": "ALLO",
-   "4h": -1.84,
-   "24h": -2.35,
-   "vol": 0.28
-  },
-  {
-   "moeda": "BERA",
-   "4h": -1.74,
-   "24h": -4.44,
-   "vol": 0.44
+   "4h": -4.95,
+   "24h": 3.01,
+   "vol": 0.55
   },
   {
    "moeda": "STO",
-   "4h": -1.74,
-   "24h": -8.87,
-   "vol": 0.65
+   "4h": -3.9,
+   "24h": -10.48,
+   "vol": 0.74
+  },
+  {
+   "moeda": "ZIL",
+   "4h": -3.84,
+   "24h": -12.81,
+   "vol": 1.59
+  },
+  {
+   "moeda": "DODO",
+   "4h": -3.72,
+   "24h": -2.53,
+   "vol": 0.64
+  },
+  {
+   "moeda": "BERA",
+   "4h": -2.93,
+   "24h": -6.09,
+   "vol": 0.48
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "RARE",
-   "4h": 35.86,
-   "24h": 36.82,
-   "vol": 4.75
+   "4h": 58.06,
+   "24h": 58.25,
+   "vol": 5.51
+  },
+  {
+   "moeda": "RAD",
+   "4h": 10.28,
+   "24h": 15.12,
+   "vol": 3.32
   },
   {
    "moeda": "SHELL",
-   "4h": 17.36,
-   "24h": 9.61,
-   "vol": 2.46
+   "4h": 9.04,
+   "24h": 2.43,
+   "vol": 2.62
   },
   {
    "moeda": "WIN",
-   "4h": 5.83,
-   "24h": 2.72,
-   "vol": 1.48
-  },
-  {
-   "moeda": "PROM",
-   "4h": 4.49,
-   "24h": 5.58,
-   "vol": 2.33
-  },
-  {
-   "moeda": "KITE",
-   "4h": 3.16,
-   "24h": 9.18,
-   "vol": 0.98
+   "4h": 6.15,
+   "24h": 3.6,
+   "vol": 1.37
   },
   {
    "moeda": "BANANAS31",
-   "4h": 3.03,
-   "24h": 12.25,
-   "vol": 0.83
+   "4h": 4.68,
+   "24h": 12.78,
+   "vol": 0.85
   },
   {
-   "moeda": "BEAMX",
-   "4h": 2.88,
-   "24h": 0.0,
-   "vol": 0.6
+   "moeda": "PROM",
+   "4h": 4.66,
+   "24h": 4.89,
+   "vol": 2.31
+  },
+  {
+   "moeda": "KITE",
+   "4h": 3.91,
+   "24h": 9.74,
+   "vol": 0.96
+  },
+  {
+   "moeda": "SYRUP",
+   "4h": 3.63,
+   "24h": 4.35,
+   "vol": 0.86
   },
   {
    "moeda": "ASTER",
-   "4h": 2.68,
-   "24h": -10.3,
-   "vol": 0.3
-  },
-  {
-   "moeda": "PENGU",
-   "4h": 2.22,
-   "24h": -0.96,
-   "vol": 0.32
-  },
-  {
-   "moeda": "AT",
-   "4h": 2.11,
-   "24h": -5.25,
+   "4h": 3.27,
+   "24h": -10.26,
    "vol": 0.29
+  },
+  {
+   "moeda": "WLFI",
+   "4h": 1.71,
+   "24h": 2.15,
+   "vol": 0.77
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,105 +172,86 @@
   -0.07,
   -0.23,
   0.27,
-  0.3
+  0.38
  ],
  "v4": {
-  "vela": "19:15 UTC",
-  "apostas": 150,
-  "compras": 20,
-  "vendas": 130,
+  "vela": "17:30 UTC",
+  "apostas": 80,
+  "compras": 32,
+  "vendas": 48,
   "mais_confiantes_venda": [
    {
-    "moeda": "STX",
-    "prob_subir": 0.287
+    "moeda": "BEB",
+    "prob_subir": 0.365
    },
    {
-    "moeda": "AERO",
-    "prob_subir": 0.295
+    "moeda": "FORM",
+    "prob_subir": 0.382
    },
    {
-    "moeda": "GPS",
-    "prob_subir": 0.348
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    },
    {
-    "moeda": "GALA",
-    "prob_subir": 0.35
+    "moeda": "BABAB",
+    "prob_subir": 0.386
    },
    {
-    "moeda": "CELO",
-    "prob_subir": 0.355
+    "moeda": "BB",
+    "prob_subir": 0.394
    },
    {
-    "moeda": "DOT",
-    "prob_subir": 0.361
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
    },
    {
-    "moeda": "IO",
-    "prob_subir": 0.362
+    "moeda": "AMP",
+    "prob_subir": 0.434
    },
    {
-    "moeda": "ZK",
-    "prob_subir": 0.363
+    "moeda": "TRX",
+    "prob_subir": 0.439
    }
   ],
   "mais_confiantes_compra": [
    {
+    "moeda": "BONK",
+    "prob_subir": 0.684
+   },
+   {
+    "moeda": "STO",
+    "prob_subir": 0.649
+   },
+   {
+    "moeda": "CYBER",
+    "prob_subir": 0.647
+   },
+   {
     "moeda": "HEMI",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "PARTI",
+    "prob_subir": 0.626
    },
    {
     "moeda": "KAIA",
     "prob_subir": 0.616
    },
    {
+    "moeda": "GPS",
+    "prob_subir": 0.612
+   },
+   {
     "moeda": "RWUSD",
     "prob_subir": 0.61
-   },
-   {
-    "moeda": "COTI",
-    "prob_subir": 0.569
-   },
-   {
-    "moeda": "FF",
-    "prob_subir": 0.563
-   },
-   {
-    "moeda": "RUNE",
-    "prob_subir": 0.561
-   },
-   {
-    "moeda": "PHA",
-    "prob_subir": 0.557
-   },
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.551
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 6.82,
-  "abertas": [
-   {
-    "moeda": "BTC",
-    "lado": "venda",
-    "entrada": 64685.33,
-    "agora": 65065.23,
-    "resultado_pct": -0.59,
-    "horas_aberta": 3.9,
-    "motivo_de_entrada": "24 h e 4 h em baixa; vela de 1 h −1,03% fechou abaixo da mínima das 4 anteriores, topo descendente após 65216"
-   },
-   {
-    "moeda": "ZRO",
-    "lado": "venda",
-    "entrada": 1.387,
-    "agora": 1.398,
-    "resultado_pct": -0.79,
-    "horas_aberta": 3.9,
-    "motivo_de_entrada": "queda de 4 h −7,56% alinhada com 24 h −9,68%"
-   }
-  ],
+  "carteira": 6.81,
+  "abertas": [],
   "ultimas_fechadas": [
    {
     "moeda": "ENA",
@@ -320,13 +301,23 @@
     "resultado_usd": -0.405,
     "motivo_saida": "stop de segurança −1.5%",
     "motivo_de_entrada": "4 h −4,71% alinhado com 24 h −14,61%, sem estar esticado (abaixo de 15% em 4 h)"
+   },
+   {
+    "moeda": "BTC",
+    "lado": "venda",
+    "resultado_usd": -0.142,
+    "motivo_saida": "o Claude mandou fechar: ",
+    "motivo_de_entrada": "24 h e 4 h em baixa; vela de 1 h −1,03% fechou abaixo da mínima das 4 anteriores, topo descendente após 65216"
+   },
+   {
+    "moeda": "ZRO",
+    "lado": "venda",
+    "resultado_usd": -0.21,
+    "motivo_saida": "o Claude mandou fechar: ",
+    "motivo_de_entrada": "queda de 4 h −7,56% alinhada com 24 h −9,68%"
    }
   ],
   "licoes_anteriores": [
-   {
-    "t": 1794744629,
-    "texto": "As 5 vendas (4 de 00:50 e o BTC de 06:30 UTC a 64252) saíram todas no stop: a venda do repique entrou sem topo descendente confirmado e o BTC subiu até 65216; hoje 88% das moedas sobem em 4 h. Só volto a vender com 4 h de novo abaixo de 40% subindo e uma vela de 1 h do BTC fechando abaixo da mínima da última correção."
-   },
    {
     "t": 1794748208,
     "texto": "As 5 vendas saíram no stop (−0,405 cada, carteira 7,98) porque vendi contra um repique de 4 h; agora o 4 h segue 86,5% subindo e o 24 h 10,3%: discordância, fora. Só volto a vender quando o 4 h cair abaixo de 40% subindo; só compro se o 24 h passar de 60% subindo com o BTC fechando 1 h acima de 65216 (máxima do último stop) com volume acima de 1,2×."
@@ -354,6 +345,10 @@
    {
     "t": 1794769758,
     "texto": "ERA e KAVA, decididas às 18:09 UTC, não aparecem em abertas nem em fechadas: não entraram. Com 4 h em 43,2% subindo e volume 0,51× não abro novas; só volto a usar as 4 vagas se o 4 h cair abaixo de 40% subindo com o BTC fechando 1 h abaixo de 64500 e volume acima de 1,2×; se o BTC fechar 1 h acima de 65216, fecho BTC e ZRO."
+   },
+   {
+    "t": 1794770153,
+    "texto": "BTC e ZRO vendidos às 15:21 UTC seguraram 3,7 h sem stop (BTC −0,07%, ZRO +0,58%), enquanto as 7 vendas em moedas com 24 h perto de −14% pararam no stop; ERA e KAVA da rodada passada não aparecem como abertas nem fechadas: conferir na próxima se o executor as recusou. Fecho agora porque o 24 h subiu de baixa para 34,5% subindo (indeciso); só volto a vender com 24 h em 30% ou menos."
    }
   ]
  }
