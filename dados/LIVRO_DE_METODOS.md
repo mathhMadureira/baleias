@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.8% | 1856 | 50.5%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 1857 | 50.6%–55.1% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_graal_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_wr_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
@@ -15,7 +15,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | tres_soldados | promissor | 54.7% | 214 | 48.0%–61.2% | H6: três soldados → desce (efeito pequeno) |
 | reversao_queda | promissor | 53.4% | 58 | 40.8%–65.7% | H14: queda anormal de 1 h → sobe |
 | velez_180_baixa | promissor | 52.0% | 25 | 33.5%–70.0% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
-| tres_corvos | promissor | 50.6% | 314 | 45.1%–56.1% | H6: três corvos → sobe (efeito pequeno) |
+| tres_corvos | promissor | 50.5% | 315 | 45.0%–56.0% | H6: três corvos → sobe (efeito pequeno) |
 | raschke_sopa_baixa | reprovado | 50.0% | 2 | 9.5%–90.5% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | connors_8020_alta | reprovado | 50.0% | 2 | 9.5%–90.5% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | vortice_invertido | reprovado | 48.6% | 370 | 43.6%–53.7% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
