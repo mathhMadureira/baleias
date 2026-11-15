@@ -1,25 +1,25 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 20:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 21:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 10.36** · 21 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 10.45** · 22 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
-- **Total:** 13/21 com lucro (62%), resultado +0.36, média +0.017 por operação.
-- **Últimas 24 h:** 13/21 com lucro, +0.36.
-- **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.28 · 18–23 UTC: 20 op, 65% certas, +0.64
-- **Por lado:** compra: 9 op, 56% certas, -0.08 · venda: 12 op, 67% certas, +0.44
-- **Por confiança do v4:** alta (0,08–0,12): 2 op, 50% certas, +0.06 · muito alta (≥0,12): 19 op, 63% certas, +0.30
-- **Por motivo de saída:** stop de segurança −1.0%: 2 op, 0% certas, -0.56 · fim da vela (contra a tendênci: 4 op, 50% certas, -0.00 · fim da vela do v4: 15 op, 73% certas, +0.92
+- **Total:** 14/22 com lucro (64%), resultado +0.45, média +0.021 por operação.
+- **Últimas 24 h:** 14/22 com lucro, +0.45.
+- **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.28 · 06–11 UTC: 1 op, 100% certas, +0.09 · 18–23 UTC: 20 op, 65% certas, +0.64
+- **Por lado:** compra: 10 op, 60% certas, +0.02 · venda: 12 op, 67% certas, +0.44
+- **Por confiança do v4:** alta (0,08–0,12): 2 op, 50% certas, +0.06 · média (0,05–0,08): 1 op, 100% certas, +0.09 · muito alta (≥0,12): 19 op, 63% certas, +0.30
+- **Por motivo de saída:** stop de segurança −1.0%: 2 op, 0% certas, -0.56 · fim da vela (contra a tendênci: 4 op, 50% certas, -0.00 · fim da vela do v4: 16 op, 75% certas, +1.01
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.65** · 181 operações fechadas · 1 abertas
+Carteira **US$ 6.65** · 181 operações fechadas · 2 abertas
 
 - **Total:** 71/181 com lucro (39%), resultado -3.35, média -0.019 por operação.
-- **Últimas 24 h:** 58/138 com lucro, -1.16.
+- **Últimas 24 h:** 58/136 com lucro, -0.60.
 - **Por horário:** 18–23 UTC: 61 op, 30% certas, -2.78 · 12–17 UTC: 51 op, 41% certas, -0.35 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11
 - **Por lado:** compra: 132 op, 37% certas, -3.13 · venda: 49 op, 45% certas, -0.22
 - **Por confiança do v4:** alta (0,08–0,12): 57 op, 33% certas, -1.36 · muito alta (≥0,12): 110 op, 42% certas, -1.23 · média (0,05–0,08): 14 op, 43% certas, -0.76
@@ -30,7 +30,7 @@ Carteira **US$ 6.65** · 181 operações fechadas · 1 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 7.86** · 175 operações fechadas · 1 abertas
+Carteira **US$ 7.86** · 175 operações fechadas · 2 abertas
 
 - **Total:** 77/175 com lucro (44%), resultado -2.14, média -0.012 por operação.
 - **Últimas 24 h:** 30/78 com lucro, -0.96.
@@ -68,11 +68,11 @@ Carteira **US$ 6.81** · 9 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 76.6% das moedas subindo em 24 h, 64.2% em 4 h · BTC 24 h -0.61%, 4 h 0.45%.
+- **Amplitude:** 86.9% das moedas subindo em 24 h, 70.1% em 4 h · BTC 24 h 0.56%, 4 h 0.66%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.5%/ano · {'BTC': 11.0, 'ETH': 2.1, 'SOL': 2.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.5%/ano · {'BTC': 11.0, 'ETH': -5.6, 'SOL': 3.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 80225, MM200 73031); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** JUV triângulo ascendente (alta, CONFIRMOU) · RARE fundo duplo (alta, CONFIRMOU) · AUDIO fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · OPG fundo duplo (alta, formado) · PARTI fundo duplo (alta, formado) · PENGU topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** FF estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ORDI fundo duplo (alta, CONFIRMOU) · SAGA fundo duplo (alta, CONFIRMOU) · ZIL bandeira de baixa (baixa, CONFIRMOU) · AUDIO fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · JUV triângulo ascendente (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · OPG fundo duplo (alta, formado)
 - 📰 15/11 19:30 UTC · CoinDesk: Did prediction markets call the U.S. midterm election?: State of Crypto
 - 📰 15/11 16:01 UTC · Decrypt: How Wall Street Is Racing to Claim the Onchain Dollar
 - 📰 15/11 14:30 UTC · Cointelegraph: Enterprise blockchain is going to come back from the dead
@@ -107,12 +107,12 @@ Carteira **US$ 6.81** · 9 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 12838 apostas conferidas ao vivo, acerto 52.6%; prevê 136 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 12892 apostas conferidas ao vivo, acerto 52.7%; prevê 136 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
