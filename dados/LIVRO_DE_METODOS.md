@@ -8,10 +8,10 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_graal_alta | promissor | 100.0% | 2 | 34.2%–100.0% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_wr_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
-| raschke_graal_baixa | promissor | 62.2% | 37 | 46.1%–75.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
+| raschke_graal_baixa | promissor | 63.2% | 38 | 47.3%–76.6% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 57.1% | 28 | 39.1%–73.5% | física: alta anormal de 1 h → devolve |
+| williams_volb_baixa | promissor | 54.5% | 44 | 40.1%–68.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | tres_soldados | promissor | 54.1% | 220 | 47.5%–60.5% | H6: três soldados → desce (efeito pequeno) |
-| williams_volb_baixa | promissor | 53.5% | 43 | 38.9%–67.5% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | reversao_queda | promissor | 53.4% | 58 | 40.8%–65.7% | H14: queda anormal de 1 h → sobe |
 | tres_corvos | promissor | 50.3% | 324 | 44.9%–55.7% | H6: três corvos → sobe (efeito pequeno) |
 | velez_180_baixa | reprovado | 50.0% | 26 | 32.1%–67.9% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
