@@ -33,11 +33,23 @@ def ler(nome):
         return {}
 
 
+def stop_da_moeda(k):
+    """Stop pela volatilidade da moeda: 2 × a amplitude média de 1 h (blocos de 4 velas de 15 min, últimas 24 h), entre 1,5% e 4%.
+    (15/11: as 7 primeiras operações pararam todas no stop fixo de 1,5%, a maioria em 15 min, em moedas que caíam 14% no dia.)"""
+    if len(k) < 96:
+        return STOP_SEG
+    blocos = [k[i:i + 4] for i in range(len(k) - 96, len(k), 4)]
+    amp = [(max(float(x[2]) for x in b) - min(float(x[3]) for x in b)) / float(b[-1][4]) for b in blocos if len(b) == 4]
+    return min(0.04, max(STOP_SEG, 2 * sum(amp) / len(amp))) if amp else STOP_SEG
+
+
 def fechar(e, par, p, saida, motivo, agora):
     sinal = -1 if p["lado"] == "venda" else 1
-    resultado = ORCAMENTO * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
+    noc = p.get("nocional", ORCAMENTO)
+    resultado = noc * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * noc
     e["caixa"] += p["gasto"] + resultado
-    e["fechadas"].append({**p, "saida": saida, "saida_t": agora, "motivo_saida": motivo, "resultado_usd": resultado, "R": resultado / (ORCAMENTO * STOP_SEG)})
+    e["fechadas"].append({**p, "saida": saida, "saida_t": agora, "motivo_saida": motivo, "resultado_usd": resultado,
+                          "R": resultado / (noc * p.get("stop_pct", STOP_SEG))})
     e["fechadas"] = e["fechadas"][-3000:]
     del e["abertas"][par]
     return f"🤖 Robô Claude SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
@@ -53,7 +65,8 @@ def passo(e, decisao, velas, agora):
         p = e["abertas"][par]
         k = [x for x in velas.get(par, []) if x[0] >= p.get("conferido_ate", p["entrada_t"] * 1000)]
         venda = p["lado"] == "venda"
-        stop = p["entrada"] * (1 + STOP_SEG if venda else 1 - STOP_SEG)
+        sp = p.get("stop_pct", STOP_SEG)
+        stop = p["entrada"] * (1 + sp if venda else 1 - sp)
         saiu = None
         for x in k:
             o, h, l = float(x[1]), float(x[2]), float(x[3])
@@ -62,7 +75,7 @@ def passo(e, decisao, velas, agora):
                 break
             p["conferido_ate"] = x[0] + VELA_MS
         if saiu is not None:
-            textos.append(fechar(e, par, p, saiu, f"stop de segurança −{STOP_SEG:.1%}", agora))
+            textos.append(fechar(e, par, p, saiu, f"stop de segurança −{sp:.1%}", agora))
         elif agora - p["entrada_t"] > MAX_HORAS * 3600 and par in preco:
             textos.append(fechar(e, par, p, preco[par], f"tempo máximo ({MAX_HORAS} h) sem nova decisão", agora))
     # 2) decisão do Claude (se recente)
@@ -85,15 +98,18 @@ def passo(e, decisao, velas, agora):
                     textos.append(fechar(e, par, e["abertas"][par], preco[par], "o Claude inverteu o lado", agora))
                 else:
                     continue
-            if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < ORCAMENTO / ALAV:
-                continue
-            if e["caixa"] + sum(q["gasto"] for q in e["abertas"].values()) < PISO:
+            patrimonio = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
+            if patrimonio < PISO:
                 break
-            e["caixa"] -= ORCAMENTO / ALAV
-            e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": ORCAMENTO / ALAV,
+            noc = min(ORCAMENTO, patrimonio * ALAV / MAX_POS)          # as 4 posições sempre cabem na carteira (15/11: ERA e KAVA não couberam)
+            if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < noc / ALAV - 1e-9:
+                continue
+            sp = stop_da_moeda(velas.get(par, []))
+            e["caixa"] -= noc / ALAV
+            e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc, "stop_pct": sp,
                                  "motivo": str(pos.get("motivo", ""))[:300], "decisao_t": decisao["t"], "conferido_ate": ultimo[par][0] + VELA_MS}
-            textos.append(f"🤖 Robô Claude ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g}: {str(pos.get('motivo', ''))[:140]}")
-    e["patrimonio"] = e["caixa"] + sum(q["gasto"] + (1 if q["lado"] == "compra" else -1) * ORCAMENTO * (preco.get(q["moeda"], q["entrada"]) / q["entrada"] - 1)
+            textos.append(f"🤖 Robô Claude ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.1%}): {str(pos.get('motivo', ''))[:120]}")
+    e["patrimonio"] = e["caixa"] + sum(q["gasto"] + (1 if q["lado"] == "compra" else -1) * q.get("nocional", ORCAMENTO) * (preco.get(q["moeda"], q["entrada"]) / q["entrada"] - 1)
                                        for q in e["abertas"].values())
     if e["patrimonio"] < PISO and not e.get("eliminado"):
         e["eliminado"] = True

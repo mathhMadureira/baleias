@@ -16,7 +16,9 @@ from pathlib import Path
 
 from baleias import config
 
-ORCAMENTO, ALAV, CUSTO_LADO, STOP_SEG, REALIZAR = 25.0, 10.0, 0.0006, 0.01, 0.50
+ORCAMENTO, ALAV, CUSTO_LADO = 25.0, 10.0, 0.0006
+STOP_SEG = float(os.environ.get("V4P_STOP", "0.01"))
+REALIZAR = float(os.environ.get("V4P_REALIZAR", "0.50"))      # US$ por posição de 25 (0,50 = +2%; o Scalper usa 0,125 = +0,5%)
 CAPITAL, PISO, MAX_MESMO_LADO = 10.0, 5.0, 6
 LIMIAR = float(os.environ.get("V4P_LIMIAR", "0.03"))            # 0,03 = todas as apostas (agressivo, pedido do dono); 0,12 = só as mais confiantes (H37)
 MODO = os.environ.get("V4P_MODO", "limiar")                     # "limiar": entra nas apostas acima de LIMIAR; "ranking" (Caçador): a cada vela as K moedas
@@ -33,7 +35,7 @@ def resolver(p, vela):
     stop = p["entrada"] * (1 + STOP_SEG if venda else 1 - STOP_SEG)
     alvo = p["entrada"] * (1 - REALIZAR / ORCAMENTO if venda else 1 + REALIZAR / ORCAMENTO)
     if (h >= stop) if venda else (l <= stop):
-        return (max(o, stop) if venda else min(o, stop)), f"stop de segurança −{STOP_SEG:.0%}"
+        return (max(o, stop) if venda else min(o, stop)), f"stop de segurança −{STOP_SEG:.1%}"
     if (l <= alvo) if venda else (h >= alvo):
         return alvo, f"lucro realizado +US$ {REALIZAR:.2f}"
     return c, "fim da vela do v4"

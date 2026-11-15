@@ -145,6 +145,16 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <a href="#sec-placar">🏁 Placar</a><a href="#sec-lucros">💵 Lucros</a><a href="#sec-varredura">🔎 Varredura</a><a href="#sec-cerebro">🧠 Cérebros</a><a href="#sec-rapido">⚡ Rápido</a>
     <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
   </div>
+  <div class="card" id="sec-nuvem" style="margin-bottom:14px;border-color:#50e3c2aa">
+    <h3>☁ Robôs operando agora (nuvem, 24 h) · posições abertas com o preço ao vivo · clique numa moeda para ver o gráfico<span class="dir mut num" id="nv-t"></span></h3>
+    <div id="nv-mercado" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
+    <div id="nv-robos" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px"><div class="vazio">carregando…</div></div>
+    <div style="display:flex;align-items:center;gap:10px;margin:14px 0 6px;flex-wrap:wrap">
+      <b id="nv-g-titulo" class="num">—</b><span class="mut num" id="nv-g-info" style="font-size:12px"></span>
+      <select id="nv-g-iv" class="selo" style="background:var(--card2);color:var(--txt)"><option value="15m">15 min</option><option value="1h">1 h</option><option value="5m">5 min</option><option value="4h">4 h</option></select>
+    </div>
+    <div id="nv-grafico" class="tv" style="height:380px"></div>
+  </div>
   <div class="card" id="sec-placar" style="margin-bottom:14px">
     <h3>🏁 Carteiras · US$ 10 por robô desde 11/11 13:35 · todos no perpétuo, com o cérebro v4 · ☁ = roda na nuvem 24 h<span class="dir mut num" id="pl-t"></span></h3>
     <div id="pl-relogio" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
@@ -188,7 +198,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
         <b style="font-size:12px;color:var(--mut)">DIÁRIO DO CÉREBRO (aprendeu · corrigiu · criou · podou)</b><div id="cb-diario" style="max-height:280px;overflow:auto;font-size:13px;margin-top:6px"></div></div>
     </div>
   </div>
-  <div class="card" id="sec-rapido" style="margin-bottom:14px;border-color:#f0b90b55">
+  <div class="card" id="sec-rapido" style="display:none;margin-bottom:14px;border-color:#f0b90b55">
     <h3>⚡ Robô rápido — LIVRE: entra em qualquer sinal dos cérebros (sem barra de confiança) ou do v3, sem trava de custo, geladeira ou pausa · US$ 25 a 10× · realiza a +US$ 0,50 · stop 4N · para o dia a −US$ 1 · gráfico de <span id="ra-iv">1m</span> (simulado, conta de US$ 10)
       <span class="dir"><button id="ra-notif" class="selo" style="cursor:pointer;background:var(--card2);color:var(--txt)">🔔 avisar no navegador</button></span></h3>
     <div class="kpis" style="margin-bottom:10px">
@@ -212,7 +222,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     </div>
     <details class="ajuda"><summary>Como funciona</summary><div class="mut" style="font-size:12px;margin-top:6px">A cada vela fechada, o cérebro de cada moeda (rede neural + sinapses, isolado das outras moedas) prevê as próximas 12 velas; uma regra só ganha voto se acertar mais do que o próprio humor do mercado. Entra comprado OU vendido quando o valor esperado passa do custo (0,1% ida e volta). Perpétuo simulado 10×: US$ 25 por operação usando US$ 2,50 de margem (cabem 3); realiza a cada +US$ 0,50 por posição ou na soma das abertas; stop 4N; sai no fim da vela do v3 ou em 12 velas se não realizar antes. Estuda as próprias operações (calibração, lado, moedas). Para no dia se perder US$ 1, para de vez abaixo de US$ 5, e para no período ao ganhar US$ 100 em 2 dias. Nenhum dinheiro real.</div></details>
   </div>
-  <div class="card" id="sec-scalper" style="margin-bottom:14px;border-color:#ea394355">
+  <div class="card" id="sec-scalper" style="display:none;margin-bottom:14px;border-color:#ea394355">
     <h3>✂ Scalper — segue as apostas do Cérebro v3: realiza o lucro em +0,5%, corta em −1,5%, sai no fim da vela de 15 min (simulado, conta de US$ 10)<span class="dir num" id="sc-trava"></span></h3>
     <div class="kpis" style="margin-bottom:10px">
       <div class="kpi"><div class="rot">Carteira do desafio</div><div class="val num" id="sc-pat">—</div><div class="sub" id="sc-ret">—</div></div>
@@ -598,6 +608,7 @@ cicloVersao();
 // ---------- clicar em qualquer moeda abre o gráfico dela ----------
 function abrirMoeda(m) {
   m = String(m).replace("USDT", "");
+  nvMoeda = m; cicloGraficoNuvem(); $("nv-g-titulo").scrollIntoView({behavior: "smooth", block: "center"}); return;
   const sel = $("ra-g-moeda");
   if (![...sel.options].some(o => o.value === m)) sel.add(new Option(m, m));
   sel.value = m;
@@ -1035,6 +1046,50 @@ async function cicloRealizados() {
   setTimeout(cicloRealizados, 5000);
 }
 cicloRealizados();
+
+// ---------- robôs da nuvem (15/11): posições ao vivo e gráfico próprio ----------
+let nv = null, nvMoeda = null, nvTimer = null, nvGTimer = null;
+const brl = (x, d = 2) => (x == null ? "—" : (x >= 0 ? "+" : "") + fmt(x, d));
+async function cicloNuvem() {
+  clearTimeout(nvTimer);
+  try {
+    nv = await j("/api/nuvem");
+    if (!nv.erro) {
+      $("nv-t").textContent = "atualizado " + new Date().toLocaleTimeString("pt-BR");
+      const r = nv.retrato || {}, m24 = r.mercado_24h || {}, m4 = r.mercado_4h || {}, b = r.btc || {};
+      const reg = m24.subindo_pct == null ? "?" : m24.subindo_pct <= 30 ? "📉 BAIXA → robôs só vendem" : m24.subindo_pct >= 70 ? "📈 ALTA → robôs só compram" : "↔ sem tendência clara → os dois lados";
+      $("nv-mercado").innerHTML = `Mercado: <b>${reg}</b> · ${fmt(m24.subindo_pct, 1)}% das moedas subindo em 24 h, ${fmt(m4.subindo_pct, 1)}% em 4 h · BTC 24 h ${brl(b["24h"])}% · 4 h ${brl(b["4h"])}% <span class="mut">(retrato ${r.hora_utc || "?"})</span>`;
+      $("nv-robos").replaceChildren(...nv.robos.map(rb => {
+        const d = document.createElement("div"); d.className = "card"; d.style.cssText = "margin:0;padding:10px;background:var(--card2)";
+        const ab = rb.abertas.reduce((a, p) => a + (p.resultado_usd || 0), 0), cart = rb.carteira == null ? null : rb.carteira;
+        d.innerHTML = `<div style="display:flex;justify-content:space-between;gap:8px"><b></b><span class="num ${cor((cart || 10) - 10)}">US$ ${fmt(cart, 2)}</span></div>` +
+          `<div class="mut num" style="font-size:12px;margin:2px 0 6px">${rb.abertas.length} aberta(s) ${brl(ab, 3)} ao vivo · ${rb.n_fechadas} fechadas</div>` +
+          (rb.abertas.length ? `<table style="width:100%;font-size:12.5px"><tbody>${rb.abertas.map(p => `<tr data-moeda="${p.moeda}" style="cursor:pointer"><td><b>${p.moeda}</b></td>` +
+            `<td class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ vendido" : "▲ comprado"}</td><td class="num">${px(p.entrada)} → ${px(p.agora)}</td>` +
+            `<td class="num ${cor(p.resultado_usd || 0)}" style="text-align:right">${brl(p.resultado_usd, 3)}</td></tr>`).join("")}</tbody></table>`
+            : `<div class="vazio" style="padding:6px">sem posição agora</div>`) +
+          (rb.fechadas.length ? `<div class="mut" style="font-size:11.5px;margin-top:6px">últimas: ${rb.fechadas.map(f => `<span data-moeda="${f.moeda}" style="cursor:pointer" class="${cor(f.resultado_usd || 0)}">${f.moeda} ${f.lado === "venda" ? "▼" : "▲"} ${brl(f.resultado_usd, 2)}</span>`).join(" · ")}</div>` : "");
+        d.querySelector("b").textContent = rb.nome;
+        return d;
+      }));
+      if (!nvMoeda) { const p = nv.robos.flatMap(r => r.abertas)[0]; nvMoeda = p ? p.moeda : "BTC"; cicloGraficoNuvem(); }
+    }
+  } catch (e) {}
+  nvTimer = setTimeout(cicloNuvem, 15000);
+}
+async function cicloGraficoNuvem() {
+  clearTimeout(nvGTimer);
+  try {
+    const iv = $("nv-g-iv").value, m = nvMoeda || "BTC";
+    const dados = await j(`/api/velas-rapidas?m=${m}&iv=${iv}`);
+    const pos = nv && nv.robos.flatMap(r => r.abertas.map(p => ({...p, robo: r.nome}))).find(p => p.moeda === m);
+    $("nv-g-titulo").textContent = `${m} · ${iv}` + (pos ? ` · ${pos.robo}: ${pos.lado === "venda" ? "VENDIDO" : "COMPRADO"} a ${px(pos.entrada)} (${brl(pos.resultado_usd, 3)})` : "");
+    tv("nv-grafico", dados, $("nv-g-info"), pos ? {entrada: pos.entrada, stop: pos.stop, resultado: pos.resultado_usd || 0} : null);
+  } catch (e) {}
+  nvGTimer = setTimeout(cicloGraficoNuvem, 5000);
+}
+$("nv-g-iv").onchange = () => cicloGraficoNuvem();
+cicloNuvem();
 async function cicloLicoes() {
   try {
     const r = await fetch("/api/licoes", {cache: "no-store"}); const txt = await r.text();

@@ -262,11 +262,11 @@ def realizados():
     """Todas as operações FECHADAS dos robôs que operam no dia (Rápido, Scalper e as apostas do Cérebro v3), numa lista só,
     com o total realizado hoje (dia UTC) de cada um — o que o dono quer ver: lucro realizado, não só o saldo."""
     saida = []
-    for arq, robo in ((f"robo_rapido_{INTERVALO_RAPIDO}.json", "⚡ Rápido"), ("robo_scalper.json", "✂ Scalper"), ("robo_minerador.json", "⛏ Minerador"),
-                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_testnet.json", "🧪 v4 Testnet"),
+    for arq, robo in (("robo_minerador.json", "⛏ Minerador"),
+                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_testnet.json", "🧪 v4 Testnet"), ("robo_scalper_nuvem.json", "✂ Scalper nuvem"),
                       ("robo_claude.json", "🤖 Robô Claude")):
         try:
-            e = _git_json(f"dados/{arq}") if arq.startswith(("robo_minerador", "robo_v4_", "robo_claude")) else json.loads((config.RAIZ / arq).read_text())
+            e = _git_json(f"dados/{arq}") if arq.startswith(("robo_minerador", "robo_v4_", "robo_claude", "robo_scalper_nuvem")) else json.loads((config.RAIZ / arq).read_text())
         except (OSError, ValueError):
             continue
         if not e:
@@ -302,13 +302,12 @@ def mesa():
     _buscar_estado()
     outras = _git_json("dados/cerebros_moedas.json") or {}
     fichas = [
-        _rapido(),
         _rapido("robo_minerador.json", "Minerador (H28)", "☁ na nuvem 24 h: movimento forte com volume baixo reverte; 15 min, 33 moedas, compra e venda", nuvem=True),
         _rapido("robo_v4_perp.json", "Rápido nuvem (cérebro v4)", "☁ na nuvem 24 h: TODAS as apostas do Cérebro v4 no perpétuo simulado; US$ 25 a 10×, stop 1%, lucro realizado +US$ 0,50, sai no fim da vela (H37, agressivo)", nuvem=True),
         _rapido("robo_claude.json", "Robô Claude (decide de hora em hora)", "☁ o Claude lê o retrato do mercado (tendência de 24 h e 4 h, amplitude, líderes, v4) e a cartilha, decide compras e vendas de horas e escreve uma lição por decisão; executor com stop 1,5%, até 4 posições, US$ 25 a 10× (H43)", nuvem=True),
         _rapido("robo_v4_cacador.json", "Caçador (v4: 2 compras e 2 vendas por vela)", "☁ na nuvem 24 h: a cada vela caça entre todas as moedas as 2 com maior chance de subir (compra) e as 2 com maior chance de cair (venda), pelo cérebro v4; sempre posicionado; mesmas regras do Rápido nuvem (H37)", nuvem=True),
         _rapido("robo_v4_testnet.json", "v4 Testnet (Binance)", "☁ na nuvem 24 h: TESTNET de futuros da Binance, todas as apostas do v4, ordens reais na conta de teste (US$ 10 a 10×, stop 1%); resultado em US$ de preenchimento real", nuvem=True),
-        _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v4 (15 min, desde 13/11; antes v3); alvo +0,5%, stop −1,5%, sai no fim da vela apostada"),
+        _rapido("robo_scalper_nuvem.json", "Scalper nuvem (alvo +0,5%)", "☁ na nuvem 24 h: apostas do v4 com a regra de tendência do dono; lucro realizado em +0,5%, stop −1,5%, segura enquanto a tendência e o v4 concordam (15/11: saiu da máquina local)", nuvem=True),
     ]
     # (15/11) Funding (carry) saiu do placar: fica parado em US$ 10 sem operar (dono: "tire os robôs que não operam")
     # Decisão do dono (2026-11-13): as contas de contrato binário (cérebros v1–v4) saem do placar — o produto é bloqueado no Brasil.
@@ -319,4 +318,57 @@ def mesa():
              "regras": {"conta": CONTA, "perda_dia": CONTA * PERDA_DIA, "piso": CONTA * PISO, "aprova_ops": APROVA_OPS,
                         "aprova_conta": CONTA * (1 + APROVA_GANHO), "aprova_queda": APROVA_QUEDA}}
     _cache.update(t=time.time(), dados=dados)
+    return dados
+
+
+_nuvem = {"t": 0.0, "dados": None}
+_precos = {"t": 0.0, "px": {}}
+ROBOS_NUVEM = (("robo_claude.json", "🤖 Robô Claude (decide de hora em hora)"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_perp.json", "🌲 Rápido nuvem"),
+               ("robo_scalper_nuvem.json", "✂ Scalper nuvem"), ("robo_minerador.json", "⛏ Minerador"), ("robo_v4_testnet.json", "🧪 v4 Testnet (Binance)"))
+
+
+def _precos_agora():
+    if time.time() - _precos["t"] > 10:
+        try:
+            import urllib.request
+            with urllib.request.urlopen("https://data-api.binance.vision/api/v3/ticker/price", timeout=20) as r:
+                _precos.update(t=time.time(), px={x["symbol"]: float(x["price"]) for x in json.load(r)})
+        except (OSError, ValueError):
+            pass
+    return _precos["px"]
+
+
+def nuvem():
+    """Robôs da nuvem para o painel: posições abertas com o preço de agora, últimas operações e eventos, e o retrato do mercado."""
+    if time.time() - _nuvem["t"] < 10 and _nuvem["dados"]:
+        return _nuvem["dados"]
+    _buscar_estado()
+    px = _precos_agora()
+    robos = []
+    for arq, nome in ROBOS_NUVEM:
+        e = _git_json(f"dados/{arq}")
+        if not e:
+            continue
+        abertas = []
+        for par, p in (e.get("abertas") or {}).items():
+            lado = "venda" if p.get("lado") in ("venda", "SELL") else "compra"
+            ent = float(p.get("entrada") or 0)
+            agora = px.get(par if par.endswith("USDT") else par + "USDT")
+            noc = p.get("nocional") or (p.get("qtd", 0) * ent if p.get("qtd") else 25.0)
+            res = (1 if lado == "compra" else -1) * noc * (agora / ent - 1) if agora and ent else None
+            t0 = p.get("entrada_t") or p.get("t")
+            abertas.append({"moeda": par.replace("USDT", ""), "lado": lado, "entrada": ent, "agora": agora, "resultado_usd": res,
+                            "resultado_pct": (res / noc * 100) if res is not None and noc else None, "desde": t0,
+                            "stop": ent * (1 + (p.get("stop_pct") or 0.01)) if lado == "venda" else ent * (1 - (p.get("stop_pct") or 0.01)) if ent else None,
+                            "motivo": (p.get("motivo") or "")[:140]})
+        fech = sorted(e.get("fechadas", []), key=lambda f: f.get("saida_t", 0))[-6:][::-1]
+        carteira = e.get("patrimonio", e.get("carteira"))
+        robos.append({"nome": nome, "carteira": carteira, "regime": (e.get("regime") or {}).get("lado") if isinstance(e.get("regime"), dict) else e.get("regime"),
+                      "abertas": abertas, "n_fechadas": len(e.get("fechadas", [])),
+                      "fechadas": [{"moeda": f["moeda"].replace("USDT", ""), "lado": f.get("lado"), "resultado_usd": f.get("resultado_usd"), "t": f.get("saida_t"),
+                                    "motivo": (f.get("motivo_saida") or f.get("motivo") or "")[:60]} for f in fech],
+                      "eventos": [x for x in (e.get("eventos") or [])[:4]]})
+    retrato = _git_json("dados/mercado_agora.json") or {}
+    dados = {"t": time.time(), "robos": robos, "retrato": {k: retrato.get(k) for k in ("hora_utc", "mercado_24h", "mercado_4h", "btc", "contexto")}}
+    _nuvem.update(t=time.time(), dados=dados)
     return dados

@@ -191,6 +191,13 @@ class Manipulador(BaseHTTPRequestHandler):
             self._enviar(200, json.dumps({"versao": hashlib.sha1(HTML_TERMINAL.read_bytes()).hexdigest()[:12]}).encode(), "application/json")
         elif self.path == "/favicon.ico":
             self._enviar(204, b"", "image/x-icon")
+        elif self.path.startswith("/api/nuvem"):
+            from . import mesa
+            try:
+                corpo = mesa.nuvem()
+            except Exception as ex:
+                corpo = {"erro": f"{type(ex).__name__}: {ex}"}
+            self._enviar(200, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")
         elif self.path.startswith("/api/licoes"):
             from . import mesa
             try:

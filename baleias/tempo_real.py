@@ -1323,9 +1323,10 @@ class Motor:
                 self.enviar("\n\n".join(lote) + "\n\nTeste, não recomendação.")
 
     def iniciar(self):
-        for nome, f, laco in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
+        locais = os.environ.get("BALEIAS_ROBOS_LOCAIS") == "1"     # 15/11: Rápido e Scalper rodam na nuvem; aqui só se pedido
+        for nome, f, laco in tuple(x for x in (("binance", self._binance_spot, True), ("liquidacoes", self._binance_futuros, True),
                               ("hyperliquid", self._hyperliquid, True), ("livro", self._livro, True),
-                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("scalper", self._scalper, True), ("gravador", self._gravador, True), ("telegram", self._telegram, False)):
+                              ("robo", self._robo, True), ("b3", self._b3, True), ("leitura", self._leitura, True), ("tartaruga", self._tartaruga, True), ("rapido", self._robo_rapido, True), ("mapa", self._mapa, True), ("vortice", self._vortice, True), ("cerebro", self._cerebro, True), ("varredura", self._varredura, True), ("scalper", self._scalper, True), ("gravador", self._gravador, True), ("telegram", self._telegram, False)) if locais or x[0] not in ("rapido", "scalper")):
             alvo = (lambda n=nome, fn=f: self._laco(n, fn)) if laco else f
             threading.Thread(target=alvo, name=f"tr-{nome}", daemon=True).start()
         return self
