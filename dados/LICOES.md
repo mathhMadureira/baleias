@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 12:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 13:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,28 +18,28 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 7.04** · 135 operações fechadas · 2 abertas
+Carteira **US$ 6.98** · 137 operações fechadas · 2 abertas
 
-- **Total:** 51/135 com lucro (38%), resultado -2.96, média -0.022 por operação.
-- **Últimas 24 h:** 47/124 com lucro, -2.83.
-- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11 · 12–17 UTC: 22 op, 45% certas, +0.16
-- **Por lado:** compra: 104 op, 38% certas, -2.32 · venda: 31 op, 35% certas, -0.64
-- **Por confiança do v4:** muito alta (≥0,12): 76 op, 34% certas, -1.36 · alta (0,08–0,12): 45 op, 42% certas, -0.84 · média (0,05–0,08): 14 op, 43% certas, -0.76
-- **Por motivo de saída:** stop de segurança −1%: 16 op, 0% certas, -4.48 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47 · fim da vela do v4: 118 op, 42% certas, +1.05
-- **Moedas que mais perderam (≥ 3 op):** U -0.57 (20 op) · AUDIO -0.25 (3 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op) · PARTI -0.02 (5 op)
+- **Total:** 51/137 com lucro (37%), resultado -3.02, média -0.022 por operação.
+- **Últimas 24 h:** 47/126 com lucro, -2.89.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 06–11 UTC: 41 op, 41% certas, -0.33 · 12–17 UTC: 24 op, 42% certas, +0.10 · 00–05 UTC: 28 op, 54% certas, +0.11
+- **Por lado:** compra: 106 op, 38% certas, -2.37 · venda: 31 op, 35% certas, -0.64
+- **Por confiança do v4:** muito alta (≥0,12): 77 op, 34% certas, -1.38 · alta (0,08–0,12): 46 op, 41% certas, -0.87 · média (0,05–0,08): 14 op, 43% certas, -0.76
+- **Por motivo de saída:** stop de segurança −1%: 16 op, 0% certas, -4.48 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47 · fim da vela do v4: 120 op, 42% certas, +0.99
+- **Moedas que mais perderam (≥ 3 op):** U -0.60 (21 op) · AUDIO -0.25 (3 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op) · PARTI -0.02 (5 op)
 - **Moedas que mais ganharam (≥ 3 op):** AI +0.69 (8 op) · CYBER +0.62 (6 op) · KAT +0.33 (3 op) · PEOPLE +0.06 (5 op) · BANK +0.04 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 8.66** · 152 operações fechadas · 1 abertas
+Carteira **US$ 8.64** · 153 operações fechadas · 0 abertas
 
-- **Total:** 70/152 com lucro (46%), resultado -1.34, média -0.009 por operação.
-- **Últimas 24 h:** 23/55 com lucro, -0.16.
-- **Por horário:** 00–05 UTC: 42 op, 43% certas, -0.86 · 06–11 UTC: 40 op, 40% certas, -0.75 · 18–23 UTC: 50 op, 52% certas, +0.04 · 12–17 UTC: 20 op, 50% certas, +0.23
-- **Por lado:** compra: 89 op, 49% certas, -1.48 · venda: 63 op, 41% certas, +0.15
-- **Por motivo de saída:** stop de segurança −2%: 3 op, 0% certas, -1.59 · fim da vela seguinte: 149 op, 47% certas, +0.25
-- **Moedas que mais perderam (≥ 3 op):** CELO -0.93 (25 op) · U -0.48 (17 op) · RUNE -0.26 (4 op) · GENIUS -0.19 (6 op) · TRX -0.09 (4 op)
+- **Total:** 70/153 com lucro (46%), resultado -1.36, média -0.009 por operação.
+- **Últimas 24 h:** 23/56 com lucro, -0.18.
+- **Por horário:** 00–05 UTC: 42 op, 43% certas, -0.86 · 06–11 UTC: 40 op, 40% certas, -0.75 · 18–23 UTC: 50 op, 52% certas, +0.04 · 12–17 UTC: 21 op, 48% certas, +0.21
+- **Por lado:** compra: 90 op, 49% certas, -1.51 · venda: 63 op, 41% certas, +0.15
+- **Por motivo de saída:** stop de segurança −2%: 3 op, 0% certas, -1.59 · fim da vela seguinte: 150 op, 47% certas, +0.23
+- **Moedas que mais perderam (≥ 3 op):** CELO -0.93 (25 op) · U -0.51 (18 op) · RUNE -0.26 (4 op) · GENIUS -0.19 (6 op) · TRX -0.09 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** LSK +0.47 (8 op) · CYBER +0.16 (7 op) · ARB +0.05 (3 op) · GTC +0.01 (4 op) · BEAMX +0.00 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
@@ -87,15 +87,15 @@ Carteira **US$ 7.98** · 5 operações fechadas · 0 abertas
 - 😴 Sono: reencenei 1344 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (sobe). Peso reduzido de: rede_neural, rompimento. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 11551 apostas conferidas ao vivo, acerto 51.7%; prevê 158 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 11572 apostas conferidas ao vivo, acerto 51.7%; prevê 155 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
