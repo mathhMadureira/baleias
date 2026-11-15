@@ -14,7 +14,8 @@ from baleias import config
 
 PROTOCOLO = Path(__file__).resolve().parent.parent / "lab" / "PROTOCOLO_LAB.md"
 ROBOS = (("robo_v4_perp.json", "🌲 Rápido nuvem (v4, todas as apostas)"), ("robo_v4_cacador.json", "🎯 Caçador (2 compras + 2 vendas por vela)"),
-         ("robo_minerador.json", "⛏ Minerador (reversão sem volume)"), ("robo_v4_testnet.json", "🧪 v4 Testnet (ordens reais na conta de teste)"))
+         ("robo_minerador.json", "⛏ Minerador (reversão sem volume)"), ("robo_v4_testnet.json", "🧪 v4 Testnet (ordens reais na conta de teste)"),
+         ("robo_claude.json", "🤖 Robô Claude (decide de hora em hora lendo o mercado)"))
 
 
 def ler(nome):

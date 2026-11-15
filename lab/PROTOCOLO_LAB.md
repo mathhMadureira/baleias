@@ -854,3 +854,18 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - Leitura: apostar CONTRA o humor acerta mais (54,03%) e perde mais no perpétuo (−0,111%/op): quando o mercado cai, as apostas de venda
   acertam mas o movimento é pequeno; as de compra erram mais. Seguir o humor reduz a perda em 0,02 ponto e não a vira em lucro.
   "O BTC caiu, deveria ter vendido" é verdade para o dia; em velas de 15 min o filtro não paga. Arquivo: dados/lab/v4_humor.json.
+
+## Hipótese 43: Robô Claude — o Claude decide as posições lendo o mercado, de hora em hora (pré-registrada em 2026-11-14 21:50 BRT, antes de ligar)
+
+- **Pedido do dono (14/11):** "quero usar o Claude dentro do baleia para operar para mim; se o mercado está em tendência de baixa entra vendido,
+  em alta entra comprado; segura a tendência". Hoje o BTC caiu 6,2% com 94% das moedas caindo e os robôs de 15 min perderam (−7,5 em 6 h).
+- **Como funciona:** a cada rodada da nuvem, `executor/mercado_agora.py` escreve o retrato do mercado (BTC 1 h/4 h/24 h, amplitude, líderes
+  de 4 h, apostas mais confiantes do v4, estado do próprio robô e suas lições). De hora em hora uma rotina do Claude Code na nuvem da Anthropic
+  (assinatura do dono) lê o retrato e a cartilha `docs/CARTILHA_ROBO_CLAUDE.md` e grava `dados/decisao_claude.json` (posições desejadas,
+  fechamentos, uma lição). `executor/robo_claude_nuvem.py` executa no perpétuo simulado: US$ 25 a 10×, até 4 posições, stop 1,5% nas
+  mínimas/máximas, tempo máximo 24 h, custo 0,06% por lado, carteira de US$ 10. Só dados públicos da Binance.
+- **O que é diferente dos outros robôs:** horizonte de horas em vez de 15 min, lado decidido pela tendência do dia, e um "operador" que
+  lê as próprias operações e escreve lições. **O que não muda:** o juiz. A rotina pode mudar o próprio raciocínio, nunca as regras de risco.
+- **Passa** pelo critério da mesa: ≥ 30 operações, carteira ≥ US$ 11, sem passar de US$ 5. Comparação declarada: contra o Caçador e o Rápido
+  nuvem no mesmo período. Previsão registrada antes: não sei. Não há teste histórico possível de uma decisão discricionária; o placar ao vivo é o juiz.
+- **Custo:** usa a cota da assinatura do dono (24 decisões por dia). Se a cota acabar, o robô fica sem decisão nova e as posições fecham por stop ou tempo.
