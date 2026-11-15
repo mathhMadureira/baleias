@@ -995,3 +995,25 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Juiz:** média líquida por aposta > 0, z ≥ 2,50 (Bonferroni para 8 tentativas, 5% unilateral) com erro-padrão por vela de entrada, e média > 0
   nos 3 blocos de tempo. Só a rota aprovada substitui o fim da vela nos robôs do v4; se nenhuma passar, a melhor fica registrada e nada muda.
 - **Limite honesto:** são 4 dias de mercado (quase todo em queda e depois repique). Uma rota aprovada aqui ainda precisa repetir ao vivo.
+
+### Resultado da H52 (2026-11-15 20:40 BRT): R6 aprovada no juiz pré-registrado; robustez fraca
+
+13.179 apostas do v4 (217 moedas, 11/11 18:45–15/11), velas de 15 min, custo 0,12%:
+
+| rota | média/aposta | z (por vela) | blocos | acerto | G | L | empate p* |
+|---|---|---|---|---|---|---|---|
+| R0 atual: fim da vela, stop 1% | −0,145% | −6,55 | −0,131 −0,125 −0,158 | 42,7% | 0,58% | 0,47% | 56,5% |
+| R1 1 h, stop 1% | −0,098% | −3,59 | −0,242 −0,192 −0,019 | 39,4% | 1,14% | 0,71% | 44,7% |
+| R2 4 h, stop 2% | −0,100% | −1,38 | −0,100 −0,192 −0,051 | 41,2% | 2,21% | 1,52% | 43,9% |
+| R3 móvel + stop 1%, 4 h | −0,106% | −4,03 | −0,180 −0,107 −0,092 | 56,5% | 0,75% | 0,95% | 62,8% |
+| R4 móvel + stop 2%, 24 h | −0,090% | −3,33 | −0,269 −0,173 −0,011 | 71,7% | 0,78% | 1,87% | 75,1% |
+| R5 alvo 2% / stop 1%, 24 h | −0,067% | −1,52 | −0,046 −0,131 −0,037 | 35,5% | 1,90% | 0,97% | 37,8% |
+| **R6 = R4 a favor do regime de 24 h** | **+0,225%** | **+2,71** | **+0,296 +0,276 +0,193** | 83,5% | 0,78% | 1,85% | 74,9% |
+| R7 = R4 confiança ≥ 0,08 | +0,203% | +0,77 | só 37 apostas | 70,3% | 0,55% | 0,20% | 43,2% |
+
+- **Juiz pré-registrado: R6 APROVADA** (média > 0, z ≥ 2,50, 3 blocos positivos). R0, a rota em uso, é a pior das 8.
+- **Robustez (feita depois, informativa):** as posições da R6 duram horas e se sobrepõem; agrupando por blocos de 6 h o z cai para +0,30
+  (13 de 17 blocos positivos), e por 12 h +1,02 (7 de 9). 4.333 das 4.492 apostas da R6 são vendas na queda de 11–15/11: um único episódio.
+  Contra o regime: −0,307% (2 de 9 blocos de 12 h positivos); regime neutro: −0,119%.
+- **Decisão (pelo protocolo):** R6 substitui o fim da vela no Rápido nuvem e no Caçador (`V4P_ROTA=r6`, stop 2%). Os Scalpers ficam como estão
+  (torneio). **Juiz ao vivo até 29/11:** Rápido e Caçador com R6 precisam de média por operação > 0 em 30+ operações; senão voltam ao fim da vela.

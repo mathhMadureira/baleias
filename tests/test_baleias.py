@@ -1656,3 +1656,34 @@ class RevisaoDe15de11(unittest.TestCase):
             self.assertEqual([x["texto"] for x in equipe.pendentes_do_dono()], ["quero todos vendidos"])
         finally:
             cfg.RAIZ = antes
+
+
+class RotaR6(unittest.TestCase):
+    """H52: com a rota R6 a posição não sai no fim da vela; sai por stop, tendência contra ou 24 h."""
+
+    def _rodar(self, minutos, regime, agora_ms):
+        from executor import v4_perp_nuvem as V, stop_movel as SM
+        antes = (V.ROTA, V.STOP_SEG)
+        V.ROTA, V.STOP_SEG = "r6", 0.02
+        p = {"moeda": "AUSDT", "lado": "venda", "entrada": 100.0, "entrada_t": 0.0, "vela_saida": 900_000, "prob": 0.4, "gasto": 2.5}
+        e = {"caixa": 7.5, "abertas": {"AUSDT": p}, "fechadas": [], "ultimo_sinal": {}}
+        SM.MINUTOS.clear(); SM.MINUTOS["AUSDT"] = minutos
+        velas = {"AUSDT": [[0, 100, 100, 99, 99.5], [900_000, 99.5, 99.8, 99.0, 99.2]]}
+        try:
+            V.passo(e, {}, velas, agora_ms, regime=regime)
+        finally:
+            V.ROTA, V.STOP_SEG = antes
+            SM.MINUTOS.clear()
+        return e
+
+    def test_segura_depois_do_fim_da_vela(self):
+        e = self._rodar([(0, 100.1, 99.7), (60_000, 99.9, 99.6)], "baixa", 1_800_000)
+        self.assertIn("AUSDT", e["abertas"])
+
+    def test_sai_quando_a_tendencia_vira(self):
+        e = self._rodar([(0, 100.1, 99.7)], "alta", 1_800_000)
+        self.assertIn("virou", e["fechadas"][0]["motivo"])
+
+    def test_stop_de_2_pct(self):
+        e = self._rodar([(0, 100.5, 99.9), (60_000, 102.1, 100.4)], "baixa", 1_800_000)
+        self.assertAlmostEqual(e["fechadas"][0]["saida"], 102.0)

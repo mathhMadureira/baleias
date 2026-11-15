@@ -24,6 +24,8 @@ LIMIAR = float(os.environ.get("V4P_LIMIAR", "0.03"))            # 0,03 = todas a
 MODO = os.environ.get("V4P_MODO", "limiar")                     # "limiar": entra nas apostas acima de LIMIAR; "ranking" (Caçador): a cada vela as K moedas
 K = int(os.environ.get("V4P_K", "2"))                           #   com maior chance de subir (compra) e as K com maior chance de cair (venda) — sempre posicionado
 VELA_MS = 900_000
+ROTA = os.environ.get("V4P_ROTA", "vela")                       # "vela": sai no fim da vela de 15 min (antigo); "r6": H52 — segura até stop móvel,
+MAX_HORAS_ROTA = 24                                             #   stop de segurança, tendência de 24 h virar contra ou 24 h (aprovada no juiz da H52)
 FOCO = os.environ.get("V4P_FOCO", "")                           # Scalper D (H51): arquivo com os segmentos a evitar, escrito pelo torneio
 ARQ = os.environ.get("V4P_ARQ", "robo_v4_perp.json")
 NOME = os.environ.get("V4P_NOME", "Rápido nuvem")
@@ -61,6 +63,50 @@ def evitar(lado, prob, t):
     return bool(segmento(lado, prob, t) & excluir)
 
 
+def _fechar(e, par, saida, motivo, saida_t):
+    p = e["abertas"].pop(par)
+    sinal = -1 if p["lado"] == "venda" else 1
+    resultado = ORCAMENTO * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
+    e["caixa"] += ORCAMENTO / ALAV + resultado
+    e["fechadas"].append({**p, "saida": saida, "saida_t": saida_t, "motivo": motivo, "resultado_usd": resultado, "R": resultado / (ORCAMENTO * STOP_SEG)})
+    return f"🌲 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
+
+
+def _rota_r6(e, velas, agora_ms, permitido, regime):
+    """H52 (rota R6): a posição não sai no fim da vela. Sai pelo stop móvel ou de segurança (minuto a minuto; sem os minutos, nas velas de
+    15 min), quando a tendência de 24 h vira contra o lado dela, ou depois de MAX_HORAS_ROTA."""
+    from executor import stop_movel as SM
+    textos = []
+    for par in list(e["abertas"]):
+        p = e["abertas"][par]
+        entrada_ms = int(p["entrada_t"] * 1000)
+        r = SM.conferir(p, SM.MINUTOS.get(par), STOP_SEG, agora_ms, entrada_ms)
+        if r:
+            textos.append(_fechar(e, par, r[0], r[1], r[2] / 1000))
+            continue
+        if not SM.MINUTOS.get(par):                          # sem minutos (rede): confere o stop de segurança nas velas de 15 min
+            venda = p["lado"] == "venda"
+            stop = p["entrada"] * (1 + STOP_SEG if venda else 1 - STOP_SEG)
+            for x in velas.get(par, []):
+                if x[0] < p.get("conferido_15m", entrada_ms):
+                    continue
+                if (float(x[2]) >= stop) if venda else (float(x[3]) <= stop):
+                    textos.append(_fechar(e, par, stop, f"stop de segurança −{STOP_SEG:.1%}", (x[0] + VELA_MS) / 1000))
+                    break
+                p["conferido_15m"] = x[0] + VELA_MS
+            if par not in e["abertas"]:
+                continue
+        k = velas.get(par, [])
+        if not k:
+            continue
+        ultimo = float(k[-1][4])
+        if permitido and permitido != p["lado"]:
+            textos.append(_fechar(e, par, ultimo, f"tendência de 24 h virou para {regime}", (k[-1][0] + VELA_MS) / 1000))
+        elif agora_ms / 1000 - p["entrada_t"] > MAX_HORAS_ROTA * 3600:
+            textos.append(_fechar(e, par, ultimo, f"tempo máximo ({MAX_HORAS_ROTA} h)", (k[-1][0] + VELA_MS) / 1000))
+    return textos
+
+
 def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=None):
     """e: estado; pendentes: apostas do v4 {par: {t, px, prob, aposta}}; velas: {par: velas fechadas}. Devolve os textos.
     regime ("baixa"/"alta"/None, executor.regime): regra do dono — na baixa só vende, na alta só compra, e SEGURA a posição de uma vela
@@ -68,7 +114,9 @@ def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=
     from executor.regime import lado_permitido
     permitido = lado_ordem or lado_permitido(regime)       # ordem do chefe da mesa (baleias.equipe) manda sobre a regra da tendência
     textos = []
-    for par in list(e["abertas"]):
+    if ROTA == "r6":
+        textos += _rota_r6(e, velas, agora_ms, permitido, regime)
+    for par in (list(e["abertas"]) if ROTA != "r6" else []):
         p = e["abertas"][par]
         k = velas.get(par, [])
         vela = next((x for x in k if x[0] == p["vela_saida"]), None)
