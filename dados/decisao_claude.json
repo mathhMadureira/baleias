@@ -1,13 +1,13 @@
 {
-  "t": 1794755362,
-  "leitura": "Baixa nos dois prazos: 24 h com 12,3% subindo (mediana −3,6%), 4 h com 9,7% e 1 h com 4,5%; BTC −1,74% em 24 h, −1,27% em 4 h, últimas velas −1,03 e −0,33 rompendo a mínima da correção de 4 h; volume baixo (0,49×), por isso evito moedas esticadas.",
+  "t": 1794758960,
+  "leitura": "Baixa clara: 24 h com 12,2% das moedas subindo (mediana −3,29%) e 4 h com 10,8% (mediana −1,05%); BTC −1,51% em 24 h e −0,92% em 4 h, última hora parada (−0,03%) com volume 0,52×, bem abaixo de 65216: tendência intacta, sem repique para comprar.",
   "posicoes": [
-    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "24 h e 4 h em baixa; vela de 1 h −1,03% fechou abaixo da mínima das 4 anteriores, topo descendente após 65216"},
-    {"moeda": "ZILUSDT", "lado": "venda", "motivo": "lidera as quedas de 4 h (−8,56%) com volume 2,85× e 24 h −13,85%, abaixo de 15% em 4 h"},
-    {"moeda": "ZROUSDT", "lado": "venda", "motivo": "queda de 4 h −7,56% alinhada com 24 h −9,68%"},
-    {"moeda": "BARDUSDT", "lado": "venda", "motivo": "queda de 4 h −6,35% alinhada com 24 h −16,78%"}
+    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "mantida: 24 h e 4 h em baixa, topo descendente abaixo de 65216 segue valendo"},
+    {"moeda": "ZROUSDT", "lado": "venda", "motivo": "mantida: 4 h −6,96% e 24 h −10,55%, dentro do ruído (−0,22%)"},
+    {"moeda": "BARDUSDT", "lado": "venda", "motivo": "4 h −4,71% alinhado com 24 h −14,61%, sem estar esticado (abaixo de 15% em 4 h)"},
+    {"moeda": "HUMAUSDT", "lado": "venda", "motivo": "4 h −3,10% alinhado com 24 h −7,59%, queda gradual sem esticar"}
   ],
   "fechar": [],
   "motivos_fechar": {},
-  "licao": "As 5 vendas anteriores pararam no stop porque entraram com o 4 h em repique (86,5% subindo); agora o 4 h caiu para 9,7% subindo e concorda com o 24 h. Se o BTC fechar 1 h acima de 65216 com estas vendas abertas, a leitura de baixa falhou de novo e fecho tudo."
+  "licao": "ZIL vendido com 4 h já −8,56% bateu o stop em 15 min (entrada 0,001242, saída 0,00126063): o líder esticado repicou. Nesta rodada escolhi moedas com 4 h entre −3% e −5% e 24 h forte; conferir na próxima se BARD e HUMA aguentam mais que 15 min."
 }
