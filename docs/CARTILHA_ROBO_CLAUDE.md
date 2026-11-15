@@ -128,7 +128,8 @@ Faça uma segunda leitura da sua própria decisão, como um revisor que não a e
    Se ele mostra um segmento fraco (ex.: um horário com acerto < 50%), seja mais exigente nas entradas desse segmento e diga isso na sala.
 5. Mandou ordem para algum robô? A ordem tem motivo com número do retrato e prazo? Sem número, não mande.
 
-## 8. Trava de lucro (executor, H48)
+## 8. Stop móvel (executor, H49)
 
-Quando uma posição sua chega a +1% a favor, o executor sobe a saída para +0,5%: se o preço voltar, ela fecha guardando esse lucro.
-Você não precisa fechar posições para "proteger o lucro"; feche só quando a razão da entrada acabou (seção 2).
+Quando uma posição sua chega a +0,5% a favor, o executor passa a segurar 70% do maior lucro que ela já teve, e essa saída sobe junto com o
+preço (minuto a minuto). Você não precisa fechar posições para "proteger o lucro": deixe a tendência correr. Feche só quando a razão da
+entrada acabou (seção 2).

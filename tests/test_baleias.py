@@ -1545,24 +1545,37 @@ class RoboLivre(unittest.TestCase):
         self.assertEqual(e["caixa"], 0.0)
 
 
-class TravaDeLucro(unittest.TestCase):
-    """H48: Robô Claude guarda +0,5% depois de chegar a +1% (antes devolvia o lucro em 8 de 9 operações)."""
 
-    def test_arma_a_1pct_e_sai_guardando_meio_pct(self):
-        from executor import robo_claude_nuvem as RC
-        V = RC.VELA_MS
+class StopMovel(unittest.TestCase):
+    """H49: o stop sobe junto com o lucro (arma a +0,5%, guarda 70% do pico), conferido minuto a minuto."""
+
+    def test_sobe_com_o_pico_e_realiza(self):
+        from executor import stop_movel as SM
+        p = {"lado": "compra", "entrada": 100.0}
+        m = [(0, 100.3, 99.9), (60_000, 101.0, 100.4), (120_000, 102.0, 101.0), (180_000, 101.5, 101.3)]   # pico +2%; volta a +1,3%
+        r = SM.conferir(p, m, 0.01, 10**9, 0)
+        self.assertAlmostEqual(r[0], 101.4)                   # 70% de +2% = +1,4%
+        self.assertEqual(r[2], 180_000)
+        self.assertIn("stop móvel", r[1])
+
+    def test_venda_e_stop_de_seguranca_na_ordem_dos_minutos(self):
+        from executor import stop_movel as SM
+        p = {"lado": "venda", "entrada": 100.0}
+        r = SM.conferir(p, [(0, 100.2, 99.8), (60_000, 101.2, 100.0)], 0.01, 10**9, 0)
+        self.assertEqual(r[0], 101.0)
+        self.assertIn("segurança", r[1])
+        p = {"lado": "venda", "entrada": 100.0}
+        self.assertIsNone(SM.conferir(p, [(0, 100.1, 99.6)], 0.01, 10**9, 0))     # pico 0,4%: ainda não armou
+        self.assertAlmostEqual(p["pico"], 0.004)
+        self.assertEqual(p["movel_ate"], 60_000)                                  # continua de onde parou na próxima rodada
+
+    def test_robo_claude_usa_os_minutos(self):
+        from executor import robo_claude_nuvem as RC, stop_movel as SM
         p = {"moeda": "AUSDT", "lado": "compra", "entrada": 100.0, "entrada_t": 0, "gasto": 2.5, "nocional": 25.0, "stop_pct": 0.03, "conferido_ate": 0}
         e = {"caixa": 7.5, "abertas": {"AUSDT": p}, "fechadas": [], "licoes": []}
-        velas = {"AUSDT": [[0, 100, 101.2, 99.9, 101], [V, 101, 101.1, 100.2, 100.3]]}   # sobe a +1,2%, depois volta a +0,2%
-        RC.passo(e, {}, velas, 10.0)
-        f = e["fechadas"][0]
-        self.assertAlmostEqual(f["saida"], 100.5)
-        self.assertIn("trava de lucro", f["motivo_saida"])
-
-    def test_sem_chegar_a_1pct_nao_trava(self):
-        from executor import robo_claude_nuvem as RC
-        V = RC.VELA_MS
-        p = {"moeda": "AUSDT", "lado": "venda", "entrada": 100.0, "entrada_t": 0, "gasto": 2.5, "nocional": 25.0, "stop_pct": 0.03, "conferido_ate": 0}
-        e = {"caixa": 7.5, "abertas": {"AUSDT": p}, "fechadas": [], "licoes": []}
-        RC.passo(e, {}, {"AUSDT": [[0, 100, 100.1, 99.3, 99.5], [V, 99.5, 100.4, 99.4, 100.2]]}, 10.0)
-        self.assertIn("AUSDT", e["abertas"])
+        SM.MINUTOS.clear(); SM.MINUTOS["AUSDT"] = [(0, 101.0, 100.0), (60_000, 101.2, 100.6)]
+        try:
+            RC.passo(e, {}, {"AUSDT": [[0, 100, 101.2, 100, 100.8]]}, 1000.0)
+        finally:
+            SM.MINUTOS.clear()
+        self.assertAlmostEqual(e["fechadas"][0]["saida"], 100.7)

@@ -59,6 +59,10 @@ def resolver(p, k):
     vela = next((x for x in k if x[0] == p["vela_saida"]), None)
     if vela is None:
         return None
+    from executor import stop_movel as SM                  # H49: stop móvel minuto a minuto
+    r = SM.conferir(p, SM.MINUTOS.get(p["moeda"]), STOP_SEG, p["vela_saida"] + VELA_MS, int(p["entrada_t"] * 1000))
+    if r:
+        return r[0], r[1]
     h, l, c = float(vela[2]), float(vela[3]), float(vela[4])
     venda = p["lado"] == "venda"
     stop = p["entrada"] * (1 + STOP_SEG if venda else 1 - STOP_SEG)
@@ -125,6 +129,8 @@ def main():
         junto = {x[0]: x for x in historico.get(par, []) + novas}
         todas[par] = [junto[t] for t in sorted(junto)][-2200:]
         time.sleep(0.05)
+    from executor import stop_movel as SM
+    SM.preparar(e["abertas"], lambda q: int(q["entrada_t"] * 1000), time.time() * 1000)
     from baleias import equipe
     pausado, lado_ord = equipe.lado_da_ordem("minerador", None)
     e["ordem"] = equipe.ordem_vigente("minerador")

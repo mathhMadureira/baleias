@@ -30,6 +30,10 @@ NOME = os.environ.get("V4P_NOME", "Rápido nuvem")
 
 def resolver(p, vela):
     """(preço de saída, motivo) da posição na vela seguinte à do sinal. vela = [t, o, h, l, c, ...] (strings da Binance)."""
+    from executor import stop_movel as SM                  # H49: stop móvel e stop de segurança minuto a minuto, na ordem real dos preços
+    r = SM.conferir(p, SM.MINUTOS.get(p["moeda"]), STOP_SEG, int(vela[0]) + VELA_MS, int(p["entrada_t"] * 1000))
+    if r:
+        return r[0], r[1]
     o, h, l, c = (float(vela[k]) for k in (1, 2, 3, 4))
     venda = p["lado"] == "venda"
     stop = p["entrada"] * (1 + STOP_SEG if venda else 1 - STOP_SEG)
@@ -141,6 +145,8 @@ def main():
     from executor import regime as RG
     reg, s24, s4 = RG.de_velas(velas)
     e["regime"] = {"lado": reg, "subindo_24h": s24, "subindo_4h": s4, "t": int(time.time())}
+    from executor import stop_movel as SM
+    SM.preparar(e["abertas"], lambda q: int(q["entrada_t"] * 1000), agora_ms)
     from baleias import equipe
     agente = equipe.POR_ARQUIVO.get(ARQ, {}).get("id", ARQ)
     pausado, lado_ord = equipe.lado_da_ordem(agente, None)

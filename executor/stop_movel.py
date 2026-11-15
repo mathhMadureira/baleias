@@ -1,0 +1,68 @@
+"""Stop móvel (H49, pedido do dono em 15/11: "realizar lucro e ir subindo o stop, acompanhando o movimento").
+
+Quando o lucro aberto chega a ARMA (+0,5%), a saída passa a ficar em GUARDA (70%) do maior lucro já alcançado e sobe junto com ele;
+nunca desce. Conferido minuto a minuto nas velas de 1 min da Binance, como na simulação que o aprovou (403 operações dos robôs da nuvem:
+−8,25 → −0,51 no total; melhor nas duas metades do período e em todos os robôs).
+
+Custo de máquina: uma chamada à Binance por posição aberta por rodada (velas de 1 min desde a última conferência).
+O stop de segurança de cada robô também é conferido no mesmo caminho de minutos, na ordem em que os preços aconteceram.
+Uso nos robôs: MINUTOS[par] = buscar(par, desde_ms, ate_ms) antes do passo; depois conferir(p, ...).
+"""
+import json
+import urllib.request
+
+ARMA, GUARDA = 0.005, 0.70
+DADOS = "https://data-api.binance.vision"
+MINUTOS = {}          # {par: [(t_ms, máxima, mínima), ...]} preenchido pelo main de cada robô
+
+
+def buscar(par, desde_ms, ate_ms):
+    """Velas de 1 min FECHADAS de [desde_ms, ate_ms). Em erro de rede devolve [] (o robô cai na regra antiga da vela de 15 min)."""
+    saida, t = [], int(desde_ms)
+    try:
+        while t < ate_ms and len(saida) < 5000:
+            with urllib.request.urlopen(f"{DADOS}/api/v3/klines?symbol={par}&interval=1m&startTime={t}&endTime={int(ate_ms) - 1}&limit=1000", timeout=20) as r:
+                k = json.load(r)
+            if not k:
+                break
+            saida += [(int(x[0]), float(x[2]), float(x[3])) for x in k if int(x[6]) < ate_ms]
+            t = int(k[-1][0]) + 60_000
+            if len(k) < 1000:
+                break
+    except (OSError, ValueError):
+        return []
+    return saida
+
+
+def conferir(p, minutos, stop_pct, ate_ms, desde_ms):
+    """Percorre os minutos de [max(desde_ms, p['movel_ate']), ate_ms). Devolve (preço, motivo, t_ms) se o stop de segurança ou o stop
+    móvel foi tocado, ou None. Guarda em p o pico de lucro ('pico') e até onde já conferiu ('movel_ate')."""
+    if not minutos:
+        return None
+    e = p["entrada"]
+    venda = p["lado"] in ("venda", "SELL")
+    pico = p.get("pico", 0.0)
+    inicio = max(int(desde_ms), int(p.get("movel_ate", 0)))
+    for t, h, l in minutos:
+        if t < inicio or t >= ate_ms:
+            continue
+        favoravel = (1 - l / e) if venda else (h / e - 1)
+        adverso = (1 - h / e) if venda else (l / e - 1)
+        if pico >= ARMA and adverso <= GUARDA * pico:          # devolveu até 70% do pico: realiza
+            g = GUARDA * pico
+            p["pico"], p["movel_ate"] = pico, t + 60_000
+            return e * (1 - g if venda else 1 + g), f"stop móvel (pico +{pico:.2%}, guardou +{g:.2%})", t
+        if adverso <= -stop_pct:
+            p["pico"], p["movel_ate"] = pico, t + 60_000
+            return e * (1 + stop_pct if venda else 1 - stop_pct), f"stop de segurança −{stop_pct:.1%}", t
+        pico = max(pico, favoravel)                            # o pico do minuto só arma a partir do minuto seguinte (não sabemos a ordem)
+        p["movel_ate"] = t + 60_000
+    p["pico"] = pico
+    return None
+
+
+def preparar(abertas, entrada_ms, agora_ms):
+    """Busca os minutos de cada posição aberta (desde a última conferência). entrada_ms(p) → início da posição em ms."""
+    MINUTOS.clear()
+    for par, p in abertas.items():
+        MINUTOS[par] = buscar(par, max(entrada_ms(p), int(p.get("movel_ate", 0))), agora_ms)

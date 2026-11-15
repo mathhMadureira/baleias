@@ -943,3 +943,17 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Regra ligada:** chegou a +1% a favor (máxima/mínima de vela de 15 min fechada) → a saída sobe para +0,5%.
 - **Juiz ao vivo (até 30 operações do Robô Claude ou 29/11):** as saídas pela trava somam mais do que essas mesmas operações somariam com a
   saída sem trava (recalculado com as velas). Se não, a trava sai.
+
+## Hipótese 49: stop móvel em todos os robôs da nuvem (registrada em 2026-11-15 19:40 BRT, antes de ligar; substitui a H48)
+
+- **Pedido do dono (15/11):** "eles devem realizar lucro e ir subindo o stop, acompanhando o movimento".
+- **Simulação** nas mesmas 403 operações da H48 (velas de 1 min de cada uma; custo de 0,12% mantido; 5 tentativas, que somam 8 com as 3 da
+  H48): arma quando o lucro aberto chega a A; a saída fica em G × o maior lucro já visto, subindo junto, nunca descendo. Resultado em US$:
+  A 0,3%/G 50% −8,25 → −1,53 · A 0,5%/G 50% → −2,32 · A 1%/G 50% → −4,61 · **A 0,5%/G 70% → −0,51** · A 1%/G 70% → −3,67.
+  Escolhida A 0,5%/G 70%: melhora nas duas metades (−5,40 → +0,20; −2,85 → −0,71) e em todos os robôs (Caçador −3,35 → −0,40, Robô Claude
+  −3,19 → +0,95, Minerador −2,14 → −1,61, Rápido nuvem +0,45 → +0,56, Scalper −0,02 → −0,00). É resultado dentro da amostra: o juiz é ao vivo.
+- **Ligado em:** Robô Claude, Caçador, Rápido nuvem, Scalper nuvem, Minerador (`executor/stop_movel.py`, minuto a minuto, junto com o stop
+  de segurança na ordem real dos preços). Fora: testnet (ordens na corretora de teste, outro fluxo) e Robô Livre (sem regras, a pedido do dono:
+  serve de comparação).
+- **Juiz ao vivo (até 22/11):** a soma das saídas pelo stop móvel é maior que a soma dessas mesmas operações com a saída antiga (recalculada
+  com as velas). Se não for, o stop móvel sai.
