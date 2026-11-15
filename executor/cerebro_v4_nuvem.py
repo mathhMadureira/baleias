@@ -80,7 +80,7 @@ def passo(e, previsoes):
         if nova[1] != pend["px"]:
             ganhou = subiu == (pend["aposta"] > 0)
             liquido = APOSTA * ((1 / PRECO - 1) if ganhou else -1)
-            e["ops"].setdefault(par, []).append([pend["t"], round(liquido, 6), pend["aposta"]])
+            e["ops"].setdefault(par, []).append([pend["t"], round(liquido, 6), pend["aposta"], round(pend.get("prob", 0.5), 4)])   # prob: para o vigia medir o acerto por faixa de confiança
             e["ops"][par] = e["ops"][par][-3000:]
         del e["pendentes"][par]
     for par, (t, px, p) in previsoes.items():

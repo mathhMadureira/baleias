@@ -91,6 +91,8 @@ def main():
     from baleias import equipe                                     # a mesa inteira (fusão com o OpenBot): o chefe vê a equipe e o que o dono pediu
     equipe.sincronizar_caixa()
     saida["equipe"] = equipe.retrato()
+    vg = ler("vigia_v4.json")                                       # monitoramento do v4 (executor/vigia_v4.py): acerto ao vivo × laboratório × modelo simples
+    saida["vigia_v4"] = {k: vg.get(k) for k in ("resumo", "acerto_ao_vivo", "acerto_lab", "veredito", "z_contra_lab", "referencias", "referencia_ganha", "segmentos")} if vg else None
     saida["caixa_dono"] = equipe.pendentes_do_dono()
     saida["sala_recente"] = [{"hora_utc": time.strftime("%d/%m %H:%M", time.gmtime(x["t"])), "de": x["de"], "para": x["para"], "texto": x["texto"][:300]}
                              for x in equipe.sala() if x.get("tipo") != "evento"][-12:]

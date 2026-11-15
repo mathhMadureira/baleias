@@ -907,3 +907,16 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - Leitura: em cripto de 1 h, seguir o rompimento das figuras clássicas perde para o acaso. Triângulo e virada de estrutura erram de forma
   consistente (os 3 blocos negativos): operar CONTRA eles pode ser uma ideia, mas é achado depois de ver o dado e precisa de hipótese nova.
   No retrato do Robô Claude os padrões ficam só como informação (a cartilha só dá peso a família aprovada). Arquivo: lab/resultados/padroes_graficos.json.
+
+## Hipótese 46: o v4 piora das 18 às 24 h UTC — deriva ao vivo ou acaso? (pré-registrada em 2026-11-15 17:55 BRT, antes de olhar os dados novos)
+
+- **Origem:** vigia do v4 (`executor/vigia_v4.py`, monitoramento do livro "Machine Learning for High-Risk Applications", cap. 3). Nas apostas
+  ao vivo de 11/11 18:45 a 15/11 19:00 UTC (12.673 apostas, 359 velas): 18–24 h UTC acertou 44,2% (3.762 apostas); 00–06 h 58,6%, 06–12 h
+  56,9%, 12–18 h 52,2%. No laboratório (H36) a faixa 18–23 h acertava 53,0% contra 54,2% das outras: a diferença ao vivo é muito maior.
+  Como o achado saiu destes dados, eles **não servem para testá-lo** (seria p-hacking): o teste é só com apostas posteriores.
+- **Teste (prospectivo):** apostas conferidas de 16/11 00:00 a 22/11 24:00 UTC. Erro-padrão por vela (moedas da mesma vela andam juntas).
+- **Juiz:** a faixa 18–24 h UTC acerta < 50% com z ≤ −2 contra 50%, e as outras faixas juntas acertam ≥ 52%. Uma tentativa só.
+- **Se passar:** os robôs do v4 deixam de abrir posições novas das 18 às 24 h UTC (vira regra fixa, como a do stop). **Se não passar:** nada
+  muda e o achado de 11–15/11 fica registrado como acaso ou deriva passageira.
+- **Cuidado anotado (confusão):** compras 48,1% × vendas 57,8% no mesmo período não é achado: o mercado caiu nesses dias, e lado e queda do
+  mercado estão misturados ("Analytical Skills for AI and Data Science", cap. 2, confundidores). Não vira hipótese sem separar o regime.

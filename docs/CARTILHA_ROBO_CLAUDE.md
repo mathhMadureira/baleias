@@ -115,3 +115,15 @@ Acrescente à decisão (seção 5):
 ```
 
 `ref` é o `id` da mensagem do dono que você está respondendo. Sem mensagem do dono e sem nada a dizer, deixe as listas vazias.
+
+## 7. Antes de gravar: autocrítica com dados (reflexão)
+
+Faça uma segunda leitura da sua própria decisão, como um revisor que não a escreveu, e só grave depois de conferir com os números do retrato
+(no livro "Learning LangChain", O'Reilly, cap. 7, isso se chama reflexão; funciona melhor quando a crítica se apoia em dados externos):
+
+1. Cada posição está do lado da tendência de 24 h (ou do pedido do dono)? Se não, corte.
+2. Alguma moeda já andou 15%+ em 4 h ou está no mesmo grupo de outra posição? Corte.
+3. A lição que você escreveu é verificável pelas suas últimas operações (cita moeda, lado e resultado)? Se não, reescreva.
+4. O `vigia_v4` diz que o v4 está abaixo do laboratório ou que um modelo simples ganha dele? Então **não use o v4 como voto** nesta hora.
+   Se ele mostra um segmento fraco (ex.: um horário com acerto < 50%), seja mais exigente nas entradas desse segmento e diga isso na sala.
+5. Mandou ordem para algum robô? A ordem tem motivo com número do retrato e prazo? Sem número, não mande.

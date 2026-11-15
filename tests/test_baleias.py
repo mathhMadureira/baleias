@@ -1489,3 +1489,31 @@ class Equipe(unittest.TestCase):
         self.assertEqual(equipe.pendentes_do_dono(), [])
         self.assertEqual(sum(1 for x in equipe.sala() if x["tipo"] == "resposta"), 1)
         self.assertEqual(equipe.lado_da_ordem("minerador", None), (False, "venda"))
+
+
+class VigiaV4(unittest.TestCase):
+    """Monitoramento do v4 (livro ML for High-Risk Applications): acerto ao vivo × laboratório, por vela, e referência simples."""
+
+    def test_erro_padrao_por_vela_e_alarme(self):
+        from executor import vigia_v4 as V
+        agora = 2_000_000_000.0
+        t0 = int((agora - 86400) * 1000)
+        ops = {f"M{i}USDT": [[t0 + v * V.VELA_MS, (0.019 if (v % 10 < 3) else -0.02), 1] for v in range(60)] for i in range(5)}
+        r = V.avaliar(ops, agora=agora)
+        self.assertEqual(r["n_velas"], 60)                    # 300 apostas, mas só 60 velas independentes
+        self.assertAlmostEqual(r["acerto_ao_vivo"], 0.3)
+        self.assertTrue(r["veredito"].startswith("ALARME"))
+        self.assertEqual(V.avaliar({}, agora=agora)["veredito"][:7], "não sei")
+
+    def test_referencia_simples_que_ganha_e_apontada(self):
+        from executor import vigia_v4 as V
+        agora = 2_000_000_000.0
+        base = int((agora - 2 * 86400) * 1000) // V.VELA_MS * V.VELA_MS
+        velas, ops = {}, {}
+        for i in range(25):                                   # todas sobem sempre: "segue as 24 h" acerta tudo; o v4 aposta na queda e erra
+            par = f"M{i}USDT"
+            velas[par] = [[base + k * V.VELA_MS, 0, 0, 0, 100 * 1.001 ** k] for k in range(200)]
+            ops[par] = [[base + k * V.VELA_MS, -0.02, -1] for k in range(100, 200)]
+        r = V.avaliar(ops, velas, agora=agora)
+        self.assertEqual(r["referencias"]["segue_24h_da_moeda"]["acerto"], 1.0)
+        self.assertIn("segue_maioria_24h", r["referencia_ganha"])
