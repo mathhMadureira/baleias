@@ -82,6 +82,10 @@ def passo(e, decisao, velas, agora):
     fresca = decisao and agora - decisao.get("t", 0) <= VALIDADE_S
     if fresca and decisao.get("t") != e.get("ultima_decisao_t"):
         e["ultima_decisao_t"] = decisao["t"]
+        e["historico_decisoes"] = (e.get("historico_decisoes", []) + [{                # histórico de execuções da rotina (como o routine-results do OpenBot)
+            "t": decisao["t"], "leitura": str(decisao.get("leitura", ""))[:300],
+            "posicoes": [[str(x.get("moeda", "")), str(x.get("lado", ""))] for x in decisao.get("posicoes", []) or []],
+            "fechar": list(decisao.get("fechar", []) or []), "licao": str(decisao.get("licao", ""))[:300]}])[-300:]
         if decisao.get("licao"):
             e["licoes"] = (e.get("licoes", []) + [{"t": decisao["t"], "texto": str(decisao["licao"])[:400]}])[-50:]
             textos.append(f"🤖 Robô Claude anotou uma lição: {str(decisao['licao'])[:160]}")
@@ -125,7 +129,17 @@ def main():
     velas = json.loads(cache.read_text()) if cache.exists() else {}
     agora = time.time()
     velas = {par: [x for x in k if x[6] < agora * 1000] for par, k in velas.items()}
-    textos = passo(e, ler("decisao_claude.json"), velas, agora)
+    decisao = ler("decisao_claude.json")
+    textos = passo(e, decisao, velas, agora)
+    idade_h = (agora - decisao.get("t", 0)) / 3600 if decisao else 99.0      # saúde da rotina: sem decisão nova há mais de 2 h = alarme
+    if idade_h > 2:                                                           # (15/11: a rotina ficou morta das 03:10 às 09:08 por limite de modelo)
+        if not e.get("alerta_rotina"):
+            textos.append(f"⚠️ Robô Claude: a rotina do Claude não decide há {idade_h:.1f} h (limite de uso, erro ou rotina parada). As posições seguem só com stop e tempo máximo.")
+        e["alerta_rotina"] = f"sem decisão há {idade_h:.1f} h"
+    else:
+        if e.get("alerta_rotina"):
+            textos.append("✅ Robô Claude: a rotina voltou a decidir.")
+        e["alerta_rotina"] = None
     e["eventos"] = ([{"t": agora, "texto": x} for x in textos] + e["eventos"])[:100]
     arq.write_text(json.dumps(e, ensure_ascii=False))
     print(f"🤖 Robô Claude: patrimônio US$ {e['patrimonio']:.2f} · {len(e['fechadas'])} fechadas · {len(e['abertas'])} abertas · {len(e.get('licoes', []))} lições")

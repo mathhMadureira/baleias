@@ -88,6 +88,43 @@ def secao_robo(titulo, e):
     return s
 
 
+def secao_contexto():
+    m = ler("mercado_agora.json")
+    ctx = m.get("contexto") or {}
+    if not m:
+        return ""
+    s = "## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)\n\n"
+    m24, m4, b = m.get("mercado_24h", {}), m.get("mercado_4h", {}), m.get("btc", {})
+    s += f"- **Amplitude:** {m24.get('subindo_pct', '?')}% das moedas subindo em 24 h, {m4.get('subindo_pct', '?')}% em 4 h · BTC 24 h {b.get('24h', '?')}%, 4 h {b.get('4h', '?')}%.\n"
+    fg, fu, td = ctx.get("medo_ganancia"), ctx.get("funding"), ctx.get("tendencia_diaria") or {}
+    if fg:
+        s += f"- **Medo e ganância:** {fg['valor']} ({fg['classe']}; ontem {fg['ontem']}).\n"
+    if fu:
+        s += f"- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores {fu['media_top20_anual_pct']}%/ano · {fu['principais_anual_pct']} · {fu['leitura']}.\n"
+    if td.get("btc"):
+        s += f"- **Tendência diária do BTC:** {td['btc']['leitura']} (MM50 {td['btc']['mm50']}, MM200 {td['btc']['mm200']}); {td.get('amplitude_acima_mm50_pct', '?')}% das moedas acima da MM50.\n"
+    pads = ctx.get("padroes_1h") or []
+    if pads:
+        s += "- **Padrões gráficos em 1 h:** " + " · ".join(f"{p['moeda']} {p['padrao']} ({p['sentido']}{', CONFIRMOU' if p['confirmado'] else ', formado'})" for p in pads[:10]) + "\n"
+    for n in (ctx.get("noticias") or [])[:6]:
+        s += f"- 📰 {n['hora_utc']} UTC · {n['fonte']}: {n['titulo']}\n"
+    return s + "\n"
+
+
+def secao_rotina():
+    rc = ler("robo_claude.json")
+    hist = rc.get("historico_decisoes", [])
+    if not rc:
+        return ""
+    s = "## 🤖 Decisões do Robô Claude (as últimas 6)\n\n"
+    if rc.get("alerta_rotina"):
+        s += f"- ⚠️ **Rotina parada:** {rc['alerta_rotina']}.\n"
+    for d in hist[-6:][::-1]:
+        pos = ", ".join(f"{m.replace('USDT', '')} {l}" for m, l in d["posicoes"]) or "fora do mercado"
+        s += f"- {time.strftime('%d/%m %H:%M', time.gmtime(d['t']))} UTC · **{pos}** · {d['leitura'][:160]}\n"
+    return s + "\n"
+
+
 def secao_cerebros():
     s = "## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)\n\n"
     achou = False
@@ -135,7 +172,7 @@ def main():
         e = ler(arq)
         if e:
             texto += secao_robo(titulo, e)
-    texto += secao_cerebros() + secao_laboratorio()
+    texto += secao_contexto() + secao_rotina() + secao_cerebros() + secao_laboratorio()
     (config.RAIZ / "LICOES.md").write_text(texto, encoding="utf-8")
     print(f"📓 Lições: {len(texto)} caracteres em {config.RAIZ / 'LICOES.md'}")
 

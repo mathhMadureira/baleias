@@ -1064,6 +1064,7 @@ async function cicloNuvem() {
         const ab = rb.abertas.reduce((a, p) => a + (p.resultado_usd || 0), 0), cart = rb.carteira == null ? null : rb.carteira;
         d.innerHTML = `<div style="display:flex;justify-content:space-between;gap:8px"><b></b><span class="num ${cor((cart || 10) - 10)}">US$ ${fmt(cart, 2)}</span></div>` +
           `<div class="mut num" style="font-size:12px;margin:2px 0 6px">${rb.abertas.length} aberta(s) ${brl(ab, 3)} ao vivo · ${rb.n_fechadas} fechadas</div>` +
+          (rb.alerta ? `<div class="down" style="font-size:12px;margin:-2px 0 6px">⚠️ rotina do Claude ${rb.alerta}</div>` : "") +
           (rb.abertas.length ? `<table style="width:100%;font-size:12.5px"><tbody>${rb.abertas.map(p => `<tr data-moeda="${p.moeda}" style="cursor:pointer"><td><b>${p.moeda}</b></td>` +
             `<td class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ vendido" : "▲ comprado"}</td><td class="num">${px(p.entrada)} → ${px(p.agora)}</td>` +
             `<td class="num ${cor(p.resultado_usd || 0)}" style="text-align:right">${brl(p.resultado_usd, 3)}</td></tr>`).join("")}</tbody></table>`

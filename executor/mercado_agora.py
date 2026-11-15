@@ -53,6 +53,16 @@ def main():
         saida["btc_1h_ultimas_24"] = [round((float(x[4]) / float(x[1]) - 1) * 100, 2) for x in k1]
     except (OSError, ValueError):
         pass
+    try:                                                                   # notícias, medo/ganância, funding, tendência diária, padrões gráficos
+        from executor import contexto_mercado as CM
+        por_volume = sorted(retornos, key=lambda p: -retornos[p]["vol_4h_vs_media"]) if retornos else []
+        saida["contexto"] = CM.montar({p: [x for x in k if x[6] < agora * 1000] for p, k in velas.items()},
+                                      ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT"] + [p for p in por_volume if p not in ("BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT")])
+        arq_evid = Path(__file__).resolve().parent.parent / "lab" / "resultados" / "padroes_graficos.json"   # H45 (vai no master, não no estado)
+        if arq_evid.exists():
+            saida["contexto"]["evidencia_padroes_h45"] = json.loads(arq_evid.read_text()).get("resumo")
+    except Exception as ex:
+        saida["contexto"] = {"falhas": [f"contexto: {type(ex).__name__}: {ex}"]}
     v4 = ler("cerebro_v4.json")
     pend = v4.get("pendentes", {})
     if pend:

@@ -885,3 +885,16 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Emenda (15/11 09:40, antes de qualquer operação com a regra):** o regime passa a ser só pela amplitude de 24 h (baixa ≤ 30%, alta ≥ 70%);
   o filtro de 4 h saiu porque deixava os robôs fora durante repiques fracos dentro da baixa (às 09:10, 88% das moedas subindo em 4 h com o
   volume do BTC a 0,76× a média). A cartilha do Robô Claude foi alinhada: repique de 4 h sem volume numa baixa de 24 h é ponto de venda.
+
+## Hipótese 45: padrões gráficos clássicos (figuras geométricas) em 1 h (pré-registrada em 2026-11-15 17:00 BRT, antes de rodar)
+
+- **Pedido do dono (15/11):** "manda ele ler o livro de day trade, para aprender os padrões de mercado, as figuras geométricas". Não há acesso
+  aos livros pagos; as definições usadas são as clássicas, escritas como regras objetivas em `lab/padroes_graficos.py` (topo/fundo duplo,
+  ombro-cabeça-ombro e invertido, triângulos simétrico/ascendente/descendente, bandeiras, virada de estrutura de topos e fundos).
+- **Dados:** 33 moedas, velas de 15 min de 2025-05 a 2026-11 (`dados/lab/minerador_15m.npz`) agregadas em 1 h. Evento = padrão CONFIRMADO
+  (rompimento) no fechamento de uma vela de 1 h; entrada no fechamento; resultado no sentido do padrão em 4 h e em 12 h, menos 0,12% de custo.
+- **Juiz, por família de padrão e horizonte (7 famílias × 2 horizontes = 14 tentativas, contadas):** média líquida > 0, t ≥ 2 agrupado por
+  dia, média > 0 em 2 dos 3 blocos de tempo, ≥ 200 eventos. Com 14 tentativas, um t perto de 2 sozinho pode ser sorte: o resultado
+  publica o t de cada uma para o leitor descontar.
+- **Uso:** o detector já entra no retrato do Robô Claude como informação (o que está formado e o que confirmou na última hora); a cartilha
+  manda dar peso só às famílias aprovadas aqui, e o resultado de cada família vai junto no retrato (`lab/resultados/padroes_graficos.json`).

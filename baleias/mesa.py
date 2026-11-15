@@ -363,7 +363,7 @@ def nuvem():
                             "motivo": (p.get("motivo") or "")[:140]})
         fech = sorted(e.get("fechadas", []), key=lambda f: f.get("saida_t", 0))[-6:][::-1]
         carteira = e.get("patrimonio", e.get("carteira"))
-        robos.append({"nome": nome, "carteira": carteira, "regime": (e.get("regime") or {}).get("lado") if isinstance(e.get("regime"), dict) else e.get("regime"),
+        robos.append({"alerta": e.get("alerta_rotina"), "nome": nome, "carteira": carteira, "regime": (e.get("regime") or {}).get("lado") if isinstance(e.get("regime"), dict) else e.get("regime"),
                       "abertas": abertas, "n_fechadas": len(e.get("fechadas", [])),
                       "fechadas": [{"moeda": f["moeda"].replace("USDT", ""), "lado": f.get("lado"), "resultado_usd": f.get("resultado_usd"), "t": f.get("saida_t"),
                                     "motivo": (f.get("motivo_saida") or f.get("motivo") or "")[:60]} for f in fech],
