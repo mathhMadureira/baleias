@@ -898,3 +898,12 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   publica o t de cada uma para o leitor descontar.
 - **Uso:** o detector já entra no retrato do Robô Claude como informação (o que está formado e o que confirmou na última hora); a cartilha
   manda dar peso só às famílias aprovadas aqui, e o resultado de cada família vai junto no retrato (`lab/resultados/padroes_graficos.json`).
+
+### Resultado da H45 (2026-11-15 17:10 BRT): reprovada nas 14 tentativas
+- 33 moedas, 1 h, mai/2025–nov/2026; evento = rompimento confirmado; custo 0,12%. Nenhuma família passou. Direção certa abaixo de 50% em quase
+  todas: topo duplo 47,5% (4 h, −0,168%/op, t −4,5), fundo duplo 45,4%, OCO invertido 44,4%, bandeira 45,2%, triângulo 48,0% (−0,171%/op,
+  negativo nos 3 blocos), virada de estrutura 47,7% (6.861 eventos, −0,108%/op, t −4,3, negativa nos 3 blocos). A melhor foi ombro-cabeça-ombro
+  em 12 h (+0,148%/op, 52,9%, t +1,0, 711 eventos): longe do critério.
+- Leitura: em cripto de 1 h, seguir o rompimento das figuras clássicas perde para o acaso. Triângulo e virada de estrutura erram de forma
+  consistente (os 3 blocos negativos): operar CONTRA eles pode ser uma ideia, mas é achado depois de ver o dado e precisa de hipótese nova.
+  No retrato do Robô Claude os padrões ficam só como informação (a cartilha só dá peso a família aprovada). Arquivo: lab/resultados/padroes_graficos.json.
