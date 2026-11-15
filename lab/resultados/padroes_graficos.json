@@ -1,0 +1,190 @@
+{
+ "quando": "2026-11-15 16:36",
+ "custo": 0.0012,
+ "familias": {
+  "OCO invertido · 4 h": {
+   "eventos": 480,
+   "media_liquida_pct": -0.0135,
+   "t": -1.73,
+   "acerto_direcao": 0.444,
+   "blocos_pct": [
+    -0.087,
+    0.6976,
+    -0.5241
+   ],
+   "passa": false
+  },
+  "OCO invertido · 12 h": {
+   "eventos": 480,
+   "media_liquida_pct": -0.0477,
+   "t": -1.53,
+   "acerto_direcao": 0.433,
+   "blocos_pct": [
+    -0.1433,
+    0.4685,
+    -0.374
+   ],
+   "passa": false
+  },
+  "bandeira · 4 h": {
+   "eventos": 4193,
+   "media_liquida_pct": -0.0089,
+   "t": -1.81,
+   "acerto_direcao": 0.452,
+   "blocos_pct": [
+    0.0594,
+    -0.1189,
+    0.0272
+   ],
+   "passa": false
+  },
+  "bandeira · 12 h": {
+   "eventos": 4193,
+   "media_liquida_pct": 0.0275,
+   "t": -2.73,
+   "acerto_direcao": 0.477,
+   "blocos_pct": [
+    0.5125,
+    -0.2664,
+    -0.2367
+   ],
+   "passa": false
+  },
+  "fundo duplo · 4 h": {
+   "eventos": 1692,
+   "media_liquida_pct": -0.0307,
+   "t": -2.72,
+   "acerto_direcao": 0.454,
+   "blocos_pct": [
+    -0.0379,
+    -0.109,
+    0.0516
+   ],
+   "passa": false
+  },
+  "fundo duplo · 12 h": {
+   "eventos": 1692,
+   "media_liquida_pct": -0.0536,
+   "t": -3.09,
+   "acerto_direcao": 0.464,
+   "blocos_pct": [
+    -0.0923,
+    -0.3649,
+    0.2854
+   ],
+   "passa": false
+  },
+  "ombro-cabeça-ombro · 4 h": {
+   "eventos": 711,
+   "media_liquida_pct": 0.0528,
+   "t": 0.29,
+   "acerto_direcao": 0.498,
+   "blocos_pct": [
+    -0.0571,
+    0.1287,
+    0.1389
+   ],
+   "passa": false
+  },
+  "ombro-cabeça-ombro · 12 h": {
+   "eventos": 711,
+   "media_liquida_pct": 0.1477,
+   "t": 1.0,
+   "acerto_direcao": 0.529,
+   "blocos_pct": [
+    0.0823,
+    -0.0599,
+    0.5363
+   ],
+   "passa": false
+  },
+  "topo duplo · 4 h": {
+   "eventos": 1855,
+   "media_liquida_pct": -0.1675,
+   "t": -4.52,
+   "acerto_direcao": 0.475,
+   "blocos_pct": [
+    -0.011,
+    -0.3805,
+    -0.164
+   ],
+   "passa": false
+  },
+  "topo duplo · 12 h": {
+   "eventos": 1855,
+   "media_liquida_pct": 0.0422,
+   "t": -3.11,
+   "acerto_direcao": 0.491,
+   "blocos_pct": [
+    0.2182,
+    -0.3671,
+    0.2196
+   ],
+   "passa": false
+  },
+  "triângulo · 4 h": {
+   "eventos": 1452,
+   "media_liquida_pct": -0.1707,
+   "t": -2.4,
+   "acerto_direcao": 0.48,
+   "blocos_pct": [
+    -0.238,
+    -0.1053,
+    -0.1726
+   ],
+   "passa": false
+  },
+  "triângulo · 12 h": {
+   "eventos": 1452,
+   "media_liquida_pct": -0.2986,
+   "t": -2.36,
+   "acerto_direcao": 0.47,
+   "blocos_pct": [
+    -0.3198,
+    -0.2416,
+    -0.338
+   ],
+   "passa": false
+  },
+  "virada de estrutura · 4 h": {
+   "eventos": 6861,
+   "media_liquida_pct": -0.1076,
+   "t": -4.27,
+   "acerto_direcao": 0.477,
+   "blocos_pct": [
+    -0.1327,
+    -0.1148,
+    -0.0736
+   ],
+   "passa": false
+  },
+  "virada de estrutura · 12 h": {
+   "eventos": 6861,
+   "media_liquida_pct": -0.165,
+   "t": -2.32,
+   "acerto_direcao": 0.477,
+   "blocos_pct": [
+    -0.2886,
+    -0.0809,
+    -0.1189
+   ],
+   "passa": false
+  }
+ },
+ "resumo": {
+  "OCO invertido · 4 h": "reprovado: 480 eventos, direção certa 44%, -0.013%/op depois do custo (t -1.7)",
+  "OCO invertido · 12 h": "reprovado: 480 eventos, direção certa 43%, -0.048%/op depois do custo (t -1.5)",
+  "bandeira · 4 h": "reprovado: 4193 eventos, direção certa 45%, -0.009%/op depois do custo (t -1.8)",
+  "bandeira · 12 h": "reprovado: 4193 eventos, direção certa 48%, +0.027%/op depois do custo (t -2.7)",
+  "fundo duplo · 4 h": "reprovado: 1692 eventos, direção certa 45%, -0.031%/op depois do custo (t -2.7)",
+  "fundo duplo · 12 h": "reprovado: 1692 eventos, direção certa 46%, -0.054%/op depois do custo (t -3.1)",
+  "ombro-cabeça-ombro · 4 h": "reprovado: 711 eventos, direção certa 50%, +0.053%/op depois do custo (t +0.3)",
+  "ombro-cabeça-ombro · 12 h": "reprovado: 711 eventos, direção certa 53%, +0.148%/op depois do custo (t +1.0)",
+  "topo duplo · 4 h": "reprovado: 1855 eventos, direção certa 47%, -0.168%/op depois do custo (t -4.5)",
+  "topo duplo · 12 h": "reprovado: 1855 eventos, direção certa 49%, +0.042%/op depois do custo (t -3.1)",
+  "triângulo · 4 h": "reprovado: 1452 eventos, direção certa 48%, -0.171%/op depois do custo (t -2.4)",
+  "triângulo · 12 h": "reprovado: 1452 eventos, direção certa 47%, -0.299%/op depois do custo (t -2.4)",
+  "virada de estrutura · 4 h": "reprovado: 6861 eventos, direção certa 48%, -0.108%/op depois do custo (t -4.3)",
+  "virada de estrutura · 12 h": "reprovado: 6861 eventos, direção certa 48%, -0.165%/op depois do custo (t -2.3)"
+ }
+}

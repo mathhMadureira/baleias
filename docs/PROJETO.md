@@ -1,5 +1,12 @@
 # Baleias — documentação do projeto como ele está agora
 
+> **Atualização de 15/11/2026:** todos os robôs que operam rodam na nuvem (Robô Claude, Caçador, Rápido nuvem, Scalper nuvem, Minerador,
+> testnet da Binance), nas 140 moedas do universo; os robôs locais estão desligados. O **Robô Claude** decide de hora em hora lendo o retrato
+> do mercado (amplitude, tendência de 24 h/4 h, notícias do dia, medo e ganância, funding, tendência diária do BTC, padrões gráficos de 1 h)
+> e a cartilha (`docs/CARTILHA_ROBO_CLAUDE.md`). Regra do dono em todos: tendência de 24 h decide o lado e a posição é segurada. Uma pesquisa
+> diária do Claude busca métodos novos na internet e registra hipóteses em `dados/IDEIAS_PESQUISA.md` (ramo `estado`). O painel mostra no
+> topo as posições ao vivo dos robôs da nuvem. Detalhes em `MELHORIAS.md` (15/11) e no protocolo (H43–H45).
+
 Escrita em 13/11/2026 às 18:00 (horário de Brasília), a pedido do dono, para ser lida de ponta a ponta. Tudo aqui vem dos arquivos do
 projeto e do que está rodando neste momento. Onde há número, há arquivo de origem. Onde não há evidência, está escrito "não sei".
 
