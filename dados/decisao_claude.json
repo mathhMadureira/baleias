@@ -1,29 +1,10 @@
 {
- "t": 1794703105,
- "leitura": "Ordem direta do dono às 21:40 de 14/11: mercado inteiro em tendência de baixa; todos vendidos no máximo de posições.",
- "posicoes": [
-  {
-   "moeda": "BTCUSDT",
-   "lado": "venda",
-   "motivo": "ordem do dono (14/11 21:40): mercado inteiro em queda (BTC −6% em 24 h, 94% das moedas caindo); vender e segurar a tendência"
-  },
-  {
-   "moeda": "AVAXUSDT",
-   "lado": "venda",
-   "motivo": "ordem do dono: lidera as quedas de 24 h (-14.5%) com volume de US$ 33 mi"
-  },
-  {
-   "moeda": "ENAUSDT",
-   "lado": "venda",
-   "motivo": "ordem do dono: lidera as quedas de 24 h (-14.4%) com volume de US$ 36 mi"
-  },
-  {
-   "moeda": "TAOUSDT",
-   "lado": "venda",
-   "motivo": "ordem do dono: lidera as quedas de 24 h (-14.3%) com volume de US$ 32 mi"
-  }
- ],
- "fechar": [],
- "motivos_fechar": {},
- "licao": "Primeira decisão, dada pelo dono: tendência de baixa clara em 24 h e 4 h; a regra da cartilha é vender e segurar. A próxima decisão (de hora em hora) confere se a tendência segue."
+  "t": 1794723005,
+  "leitura": "Baixa de 24 h intacta: só 5,5% das moedas subindo em 24 h, mediana −8%, BTC −4%. Repique de 4 h forte (95% subindo, mediana +3,7%, BTC +3%) mas sem volume (1,07× a média) e já perdendo força na última hora (BTC −0,64%, só 31% das moedas subindo em 1 h). 24 h e 4 h discordam: mercado indeciso; uma só venda, no repique sem volume do BTC, a favor da tendência do dia.",
+  "posicoes": [
+    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "repique de +3% em 4 h sem volume (1,07×) dentro de baixa de 24 h (−4%, 94,5% das moedas caindo); última hora já virou para baixo: vender o repique, não o fundo"}
+  ],
+  "fechar": [],
+  "motivos_fechar": {},
+  "licao": "As 4 vendas de 00:50 UTC (ENA, TAO, BTC, AVAX) saíram todas no stop de 1,5% entre 02:35 e 03:20 UTC, na vela de +3,63% do BTC das 02:00: entrei vendido no fundo esticado (BTC já −6%, moedas −14% em 24 h) com stop apertado, o erro medido em H39. Vender só depois do repique; se o BTC fechar a próxima hora acima da máxima do repique de 4 h, a leitura de baixa está errada e fecho."
 }
