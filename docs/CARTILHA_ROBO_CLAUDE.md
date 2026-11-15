@@ -8,7 +8,8 @@ segura enquanto a tendência durar, e sabe se proteger."** Nada de trocar de lad
 ## 1. Primeiro a tendência, depois a moeda
 
 1. **Direção do dia (24 h) e da sessão (4 h):** olhe `btc.24h`, `btc.4h`, `mercado_24h.subindo_pct`, `mercado_4h.subindo_pct` e a sequência
-   `btc_1h_ultimas_24`. Mercado com 80%+ das moedas caindo em 24 h e 4 h é **tendência de baixa**: só vendas. 80%+ subindo nos dois: só compras.
+   `btc_1h_ultimas_24`. **30% ou menos das moedas subindo em 24 h = tendência de baixa: só vendas. 70% ou mais = tendência de alta: só
+   compras.** (É a mesma régua dos robôs automáticos, H44; a 4 h não muda o lado.)
    **A tendência de 24 h manda no lado; as 4 h só dizem o momento.** Baixa de 24 h com repique de 4 h sem volume (`vol_4h_vs_media` < 1,2) é
    ponto de VENDA, não motivo para ficar fora. Só um repique de 4 h com volume forte (≥ 1,5× a média) e BTC recuperando mais da metade da queda
    de 24 h pede espera. **Indeciso** é só quando 24 h está entre 30% e 70% das moedas subindo: aí pouca ou nenhuma posição.
@@ -81,7 +82,9 @@ Não escreva lição genérica. Se não houver operações novas, escreva o que 
 }
 ```
 
-- `t` = agora em segundos (epoch UTC). `posicoes` = o que deve estar aberto (as já abertas no mesmo lado são mantidas; lado invertido fecha e reabre).
+- `t` = agora em segundos (epoch UTC). `posicoes` = **a lista COMPLETA do que deve estar aberto depois desta decisão**, inclusive as posições
+  que já estão abertas e você quer manter (elas seguem com a mesma entrada e o mesmo stop móvel; lado invertido fecha e reabre). **Toda posição
+  aberta que não estiver na lista é fechada pelo executor.** Ficar fora = `"posicoes": []` (fecha tudo).
 - `fechar` = moedas a fechar agora. Mantenha a lista `posicoes` curta: 0 a 4 moedas. Ficar fora é escrever `"posicoes": []`.
 
 ## 6. Chefe da mesa (Sala de operações)
@@ -101,6 +104,12 @@ Ordens que você pode dar (valem de 1 a 24 h e vencem sozinhas):
 | `so_compras` | só abre compras e fecha no fim da vela as vendas abertas |
 | `pausar` | não abre nada novo; as abertas seguem até a saída normal |
 | `liberar` | volta à regra da tendência de 24 h |
+
+**Quando NÃO dar ordem (revisão de 15/11):** nunca pause um robô para "guardar lucro" ou "realizar lucro": quem guarda o lucro é o stop
+móvel (seção 8), e um robô pausado no lucro só deixa de ganhar (15/11 21:21 UTC: o Rápido foi pausado com +0,45 e voltou ao prejuízo com as
+posições que já estavam abertas). Pausar só quando houver **perda medida**: o `vigia_v4` em alarme, o `torneio` mostrando o robô com fator de lucro
+< 0,7 em 30+ operações, ou pedido explícito do dono em `caixa_dono`. **A cada hora, revise as ordens em vigor** (`equipe[].ordem`) e dê `liberar`
+às que perderam o motivo.
 
 Agentes que obedecem ordens: `cacador`, `rapido`, `scalper`, `minerador` (o `testnet` ainda não). Dê ordem quando a leitura do mercado for clara
 (ex.: baixa de 24 h forte → `so_vendas` para todos por 6 h) ou quando um robô estiver perdendo contra a tendência. Não dê ordem só para

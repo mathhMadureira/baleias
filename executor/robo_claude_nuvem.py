@@ -99,6 +99,11 @@ def passo(e, decisao, velas, agora):
             par = par if par.endswith("USDT") else par + "USDT"
             if par in e["abertas"] and par in preco:
                 textos.append(fechar(e, par, e["abertas"][par], preco[par], "o Claude mandou fechar: " + str(decisao.get("motivos_fechar", {}).get(par[:-4], ""))[:80], agora))
+        if isinstance(decisao.get("posicoes"), list):              # revisão 15/11: "posicoes" é o que deve ficar aberto; o resto fecha
+            querer = {(str(x.get("moeda", "")).upper() if str(x.get("moeda", "")).upper().endswith("USDT") else str(x.get("moeda", "")).upper() + "USDT")
+                      for x in decisao["posicoes"] if isinstance(x, dict)}
+            for par in [q for q in e["abertas"] if q not in querer and q in preco]:
+                textos.append(fechar(e, par, e["abertas"][par], preco[par], "fora da lista de posições do Claude", agora))
         for pos in decisao.get("posicoes", []) or []:
             par = str(pos.get("moeda", "")).upper()
             par = par if par.endswith("USDT") else par + "USDT"

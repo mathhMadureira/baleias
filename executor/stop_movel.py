@@ -34,7 +34,7 @@ def buscar(par, desde_ms, ate_ms):
     return saida
 
 
-def conferir(p, minutos, stop_pct, ate_ms, desde_ms):
+def conferir(p, minutos, stop_pct, ate_ms, desde_ms, alvo_pct=None):
     """Percorre os minutos de [max(desde_ms, p['movel_ate']), ate_ms). Devolve (preço, motivo, t_ms) se o stop de segurança ou o stop
     móvel foi tocado, ou None. Guarda em p o pico de lucro ('pico') e até onde já conferiu ('movel_ate')."""
     if not minutos:
@@ -55,6 +55,9 @@ def conferir(p, minutos, stop_pct, ate_ms, desde_ms):
         if adverso <= -stop_pct:
             p["pico"], p["movel_ate"] = pico, t + 60_000
             return e * (1 + stop_pct if venda else 1 - stop_pct), f"stop de segurança −{stop_pct:.1%}", t
+        if alvo_pct and favoravel >= alvo_pct:                 # revisão 15/11: o alvo do robô (Scalper +0,5%) vale antes de o stop móvel devolver
+            p["pico"], p["movel_ate"] = max(pico, favoravel), t + 60_000
+            return e * (1 - alvo_pct if venda else 1 + alvo_pct), f"lucro realizado +{alvo_pct:.1%}", t
         pico = max(pico, favoravel)                            # o pico do minuto só arma a partir do minuto seguinte (não sabemos a ordem)
         p["movel_ate"] = t + 60_000
     p["pico"] = pico

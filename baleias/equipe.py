@@ -71,6 +71,14 @@ def _gravar(nome, obj):
     os.replace(tmp, arq)
 
 
+def _aparar(s):
+    """Revisão 15/11: os eventos dos robôs (entradas/saídas) não podem empurrar para fora as conversas. Guarda as últimas 300 conversas
+    e os últimos MAX_SALA eventos, em ordem de tempo."""
+    conversas = [x for x in s if x.get("tipo") != "evento"][-300:]
+    eventos = [x for x in s if x.get("tipo") == "evento"][-MAX_SALA:]
+    return sorted(conversas + eventos, key=lambda x: x["t"])
+
+
 def _id(t, de):
     return f"{int(t * 1000)}-{de}"
 
@@ -91,7 +99,7 @@ def postar(de, texto, para="sala", tipo="msg", t=None, ref=None):
     if any(x["id"] == m["id"] for x in s):
         return None
     s.append(m)
-    _gravar(SALA, s[-MAX_SALA:])
+    _gravar(SALA, _aparar(s))
     return m
 
 
@@ -102,7 +110,7 @@ def postar_eventos(de, textos, t=None):
     for i, x in enumerate(textos):
         s.append({"id": _id(t + i / 1000, de), "t": t, "de": de, "para": "sala", "tipo": "evento", "texto": str(x)[:600]})
     if textos:
-        _gravar(SALA, s[-MAX_SALA:])
+        _gravar(SALA, _aparar(s))
 
 
 # ---------------- caixa de entrada do dono ----------------
@@ -136,7 +144,7 @@ def sincronizar_caixa():
         novas.append(m)
     if novas:
         s.sort(key=lambda x: x["t"])
-        _gravar(SALA, s[-MAX_SALA:])
+        _gravar(SALA, _aparar(s))
     return novas
 
 

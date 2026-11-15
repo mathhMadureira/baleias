@@ -1622,3 +1622,37 @@ class FocoScalper(unittest.TestCase):
             self.assertFalse(V.evitar("compra", 0.6, t_venda))
         finally:
             cfg.RAIZ, V.FOCO = antes, antes_foco
+
+
+class RevisaoDe15de11(unittest.TestCase):
+    """Defeitos achados na revisão de 15/11 (cada teste falhava antes da correção)."""
+
+    def test_alvo_vale_antes_do_stop_movel(self):
+        from executor import stop_movel as SM
+        p = {"lado": "compra", "entrada": 100.0}
+        r = SM.conferir(p, [(0, 100.3, 99.9), (60_000, 100.6, 100.2)], 0.015, 10**9, 0, alvo_pct=0.005)
+        self.assertAlmostEqual(r[0], 100.5)
+        self.assertIn("lucro realizado", r[1])
+
+    def test_claude_fecha_o_que_ficou_fora_da_lista(self):
+        import time
+        from executor import robo_claude_nuvem as RC
+        agora = time.time()
+        p = {"moeda": "AUSDT", "lado": "venda", "entrada": 100.0, "entrada_t": agora - 3600, "gasto": 2.5, "nocional": 25.0, "stop_pct": 0.03,
+             "conferido_ate": int(agora * 1000)}
+        e = {"caixa": 7.5, "abertas": {"AUSDT": p}, "fechadas": [], "licoes": []}
+        RC.passo(e, {"t": agora, "posicoes": [], "fechar": []}, {"AUSDT": [[int(agora * 1000) - 900_000, 100, 100, 99, 99.5]]}, agora)
+        self.assertEqual(e["abertas"], {})
+        self.assertIn("fora da lista", e["fechadas"][0]["motivo_saida"])
+
+    def test_eventos_nao_apagam_mensagem_do_dono(self):
+        import pathlib, tempfile
+        from baleias import config as cfg, equipe
+        antes = cfg.RAIZ
+        cfg.RAIZ = pathlib.Path(tempfile.mkdtemp())
+        try:
+            equipe.postar("dono", "quero todos vendidos", para="claude", t=1.0)
+            equipe.postar_eventos("rapido", [f"entrada {i}" for i in range(equipe.MAX_SALA + 50)], t=2.0)
+            self.assertEqual([x["texto"] for x in equipe.pendentes_do_dono()], ["quero todos vendidos"])
+        finally:
+            cfg.RAIZ = antes

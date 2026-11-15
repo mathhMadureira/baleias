@@ -20,7 +20,7 @@ from lab import universo as U
 R1_BAIXO, R1_ALTO, VOL_BAIXO = -1.1734489877988534, 1.1757000900702275, 0.25682599216387464
 VOL_HORA_BAIXO = 0.20471780701561856     # 2ª família aprovada na H26: volume ≤ 20% do mesmo horário nos 20 dias anteriores (+0,05–0,06%/op)
 ORCAMENTO, ALAV, CUSTO_LADO, STOP_SEG = 25.0, 10.0, 0.0006, 0.02     # tamanho do dono (2026-11-12): US$ 25 a 10×, margem US$ 2,50
-CAPITAL, PERDA_DIA, MAX_MESMO_LADO = 10.0, 1.0, 6
+CAPITAL, MAX_MESMO_LADO = 10.0, 6      # sem trava de perda diária (regra 5 do dono; revisão 15/11)
 DIA = 96
 VELA_MS = 900_000
 ARQ = "robo_minerador.json"
@@ -89,8 +89,8 @@ def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
         textos.append(f"⛏ Minerador SAIU da {'VENDA' if sinal_lado < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT")
     hoje = time.strftime("%Y-%m-%d", time.gmtime(agora_ms / 1000))
     dia = sum(f["resultado_usd"] for f in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(f["saida_t"])) == hoje)
-    if dia <= -PERDA_DIA or e["caixa"] < CAPITAL / 2:
-        return textos + [f"⛏ Minerador sem novas entradas hoje (resultado do dia {dia:+.2f}, caixa {e['caixa']:.2f})"]
+    if e["caixa"] + sum(p["gasto"] for p in e["abertas"].values()) < CAPITAL / 2:      # só o piso de US$ 5 (regra 5 do dono: sem trava de perda diária)
+        return textos + [f"⛏ Minerador abaixo do piso de US$ 5 (caixa {e['caixa']:.2f}, resultado do dia {dia:+.2f})"]
     if pausado:                                           # ordem do chefe da mesa: sem entradas novas
         return textos
     candidatos = []

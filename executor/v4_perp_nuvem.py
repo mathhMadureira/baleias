@@ -32,7 +32,7 @@ NOME = os.environ.get("V4P_NOME", "Rápido nuvem")
 def resolver(p, vela):
     """(preço de saída, motivo) da posição na vela seguinte à do sinal. vela = [t, o, h, l, c, ...] (strings da Binance)."""
     from executor import stop_movel as SM                  # H49: stop móvel e stop de segurança minuto a minuto, na ordem real dos preços
-    r = SM.conferir(p, SM.MINUTOS.get(p["moeda"]), STOP_SEG, int(vela[0]) + VELA_MS, int(p["entrada_t"] * 1000))
+    r = SM.conferir(p, SM.MINUTOS.get(p["moeda"]), STOP_SEG, int(vela[0]) + VELA_MS, int(p["entrada_t"] * 1000), alvo_pct=REALIZAR / ORCAMENTO)
     if r:
         return r[0], r[1]
     o, h, l, c = (float(vela[k]) for k in (1, 2, 3, 4))
@@ -176,7 +176,9 @@ def main():
     if reg:
         textos.insert(0, f"🧭 {NOME}: mercado em tendência de {reg} ({s24}% das moedas subindo em 24 h, {s4}% em 4 h) → só {'vendas' if reg == 'baixa' else 'compras'}")
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
-    e["patrimonio"] = e["caixa"] + sum(p["gasto"] for p in e["abertas"].values())
+    ultimo = {par: float(k[-1][4]) for par, k in velas.items() if k}        # revisão 15/11: a carteira inclui o resultado das posições abertas
+    e["patrimonio"] = e["caixa"] + sum(p["gasto"] + ORCAMENTO * (1 if p["lado"] == "compra" else -1) * (ultimo.get(par, p["entrada"]) / p["entrada"] - 1)
+                                       for par, p in e["abertas"].items())
     arq.write_text(json.dumps(e))
     equipe.postar_eventos(agente, [x for x in textos if not x.startswith(("🧭", "📣"))])
     print(f"🌲 {NOME} (v4): patrimônio US$ {e['patrimonio']:.2f} · {len(e['fechadas'])} fechadas · {len(e['abertas'])} abertas")
