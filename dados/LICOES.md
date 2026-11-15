@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 08:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 09:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,21 +18,21 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.67** · 106 operações fechadas · 1 abertas
+Carteira **US$ 6.87** · 107 operações fechadas · 2 abertas
 
-- **Total:** 38/106 com lucro (36%), resultado -3.33, média -0.031 por operação.
-- **Últimas 24 h:** 34/95 com lucro, -3.20.
-- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 06–11 UTC: 20 op, 40% certas, -0.16 · 00–05 UTC: 28 op, 54% certas, +0.11
-- **Por lado:** compra: 83 op, 35% certas, -3.30 · venda: 23 op, 39% certas, -0.03
-- **Por confiança do v4:** muito alta (≥0,12): 58 op, 33% certas, -1.31 · alta (0,08–0,12): 36 op, 42% certas, -1.04 · média (0,05–0,08): 12 op, 33% certas, -0.98
-- **Por motivo de saída:** stop de segurança −1%: 15 op, 0% certas, -4.20 · fim da vela do v4: 90 op, 41% certas, +0.40 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
+- **Total:** 39/107 com lucro (36%), resultado -3.13, média -0.029 por operação.
+- **Últimas 24 h:** 35/96 com lucro, -3.00.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 06–11 UTC: 21 op, 43% certas, +0.04 · 00–05 UTC: 28 op, 54% certas, +0.11
+- **Por lado:** compra: 84 op, 36% certas, -3.10 · venda: 23 op, 39% certas, -0.03
+- **Por confiança do v4:** muito alta (≥0,12): 58 op, 33% certas, -1.31 · média (0,05–0,08): 12 op, 33% certas, -0.98 · alta (0,08–0,12): 37 op, 43% certas, -0.84
+- **Por motivo de saída:** stop de segurança −1%: 15 op, 0% certas, -4.20 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47 · fim da vela do v4: 91 op, 42% certas, +0.60
 - **Moedas que mais perderam (≥ 3 op):** U -0.43 (15 op) · AUDIO -0.25 (3 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op) · AI -0.00 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** CYBER +0.87 (5 op) · KAT +0.33 (3 op) · PEOPLE +0.06 (5 op) · AMP +0.04 (5 op) · PARTI +0.01 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 9.46** · 132 operações fechadas · 0 abertas
+Carteira **US$ 9.46** · 132 operações fechadas · 3 abertas
 
 - **Total:** 65/132 com lucro (49%), resultado -0.54, média -0.004 por operação.
 - **Últimas 24 h:** 18/35 com lucro, +0.64.
@@ -59,13 +59,13 @@ Carteira **US$ 4.94** · 126 operações fechadas · 0 abertas · carteiras ante
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 8.19** · 4 operações fechadas · 1 abertas
+Carteira **US$ 7.98** · 5 operações fechadas · 0 abertas
 
-- **Total:** 0/4 com lucro (0%), resultado -1.62, média -0.405 por operação.
-- **Últimas 24 h:** 0/4 com lucro, -1.62.
-- **Por horário:** 00–05 UTC: 4 op, 0% certas, -1.62
-- **Por lado:** venda: 4 op, 0% certas, -1.62
-- **Por motivo de saída:** ordem do dono: lidera as queda: 3 op, 0% certas, -1.21 · ordem do dono (14/11 21:40): m: 1 op, 0% certas, -0.40
+- **Total:** 0/5 com lucro (0%), resultado -2.02, média -0.405 por operação.
+- **Últimas 24 h:** 0/5 com lucro, -2.02.
+- **Por horário:** 00–05 UTC: 4 op, 0% certas, -1.62 · 06–11 UTC: 1 op, 0% certas, -0.40
+- **Por lado:** venda: 5 op, 0% certas, -2.02
+- **Por motivo de saída:** ordem do dono: lidera as queda: 3 op, 0% certas, -1.21 · ordem do dono (14/11 21:40): m: 1 op, 0% certas, -0.40 · repique de +3% em 4 h sem volu: 1 op, 0% certas, -0.40
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
@@ -73,9 +73,9 @@ Carteira **US$ 8.19** · 4 operações fechadas · 1 abertas
 **v3:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v3: 7 sinapses votando, 18 em observação, 0 podadas)
 **v2:**
@@ -89,13 +89,13 @@ Carteira **US$ 8.19** · 4 operações fechadas · 1 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 10483 apostas conferidas ao vivo, acerto 51.4%; prevê 159 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 10532 apostas conferidas ao vivo, acerto 51.3%; prevê 157 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
