@@ -1,6 +1,6 @@
 {
- "t": 1794783888,
- "hora_utc": "2026-11-15 23:04 UTC",
+ "t": 1794784304,
+ "hora_utc": "2026-11-15 23:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 131,
@@ -172,10 +172,10 @@
   0.29,
   -0.18,
   0.32,
-  0.36
+  -0.07
  ],
  "contexto": {
-  "t": 1794783889,
+  "t": 1794784305,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -250,11 +250,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 6.5,
+   "media_top20_anual_pct": 3.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 11.0,
-    "SOL": 11.0
+    "ETH": 9.1,
+    "SOL": 9.4
    },
    "leitura": "neutro"
   },
@@ -521,7 +521,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 6.04,
+  "carteira": 6.05,
   "abertas": [
    {
     "moeda": "TLM",
@@ -529,17 +529,8 @@
     "entrada": 0.000954,
     "agora": 0.000924,
     "resultado_pct": -3.14,
-    "horas_aberta": 1.7,
+    "horas_aberta": 1.8,
     "motivo_de_entrada": "lidera as altas de 4 h (+8,26%) com volume 5,61× e 24 h +11,07%, abaixo de 15% em 4 h"
-   },
-   {
-    "moeda": "BTC",
-    "lado": "compra",
-    "entrada": 65007.31,
-    "agora": 65224.87,
-    "resultado_pct": 0.33,
-    "horas_aberta": 1.7,
-    "motivo_de_entrada": "86,9% do mercado subindo em 24 h; BTC +0,66% em 4 h; posição menos volátil da carteira"
    },
    {
     "moeda": "KITE",
@@ -547,7 +538,7 @@
     "entrada": 0.1437,
     "agora": 0.1421,
     "resultado_pct": -1.11,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.9,
     "motivo_de_entrada": "4 h +2,75% com volume 1,46× e 24 h +11,62%, abaixo de 15% em 4 h"
    }
   ],
@@ -628,6 +619,13 @@
     "resultado_usd": -0.18,
     "motivo_saida": "o Claude mandou fechar: ",
     "motivo_de_entrada": "4 h +9,45% com volume 2,94×, 24 h +1,21% (ainda não esticado no dia)"
+   },
+   {
+    "moeda": "BTC",
+    "lado": "compra",
+    "resultado_usd": 0.072,
+    "motivo_saida": "stop móvel (pico +0.77%, guardou +0.54%)",
+    "motivo_de_entrada": "86,9% do mercado subindo em 24 h; BTC +0,66% em 4 h; posição menos volátil da carteira"
    }
   ],
   "licoes_anteriores": [
@@ -672,15 +670,11 @@
    "avatar": "🤖",
    "motor": "Claude (rotina de hora em hora)",
    "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs.",
-   "carteira": 6.04,
-   "n_abertas": 3,
+   "carteira": 6.05,
+   "n_abertas": 2,
    "abertas": [
     [
      "TLM",
-     "compra"
-    ],
-    [
-     "BTC",
      "compra"
     ],
     [
@@ -688,7 +682,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 11,
+   "n_fechadas": 12,
    "ordem": null
   },
   {
@@ -697,7 +691,7 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 6.27,
+   "carteira": 6.38,
    "n_abertas": 2,
    "abertas": [
     [
@@ -705,11 +699,11 @@
      "compra"
     ],
     [
-     "W",
+     "SYRUP",
      "compra"
     ]
    ],
-   "n_fechadas": 187,
+   "n_fechadas": 188,
    "ordem": null
   },
   {
@@ -884,15 +878,19 @@
    "avatar": "🧪",
    "motor": "Cérebro v4",
    "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram.",
-   "carteira": 8.39,
-   "n_abertas": 1,
+   "carteira": 8.43,
+   "n_abertas": 2,
    "abertas": [
     [
-     "PARTI",
+     "PENGU",
+     "BUY"
+    ],
+    [
+     "TIA",
      "BUY"
     ]
    ],
-   "n_fechadas": 32,
+   "n_fechadas": 33,
    "ordem": null
   }
  ],
@@ -900,22 +898,22 @@
   "campeao": "scalper",
   "placar": {
    "claude": {
-    "ops": 11,
-    "acerto": 0.091,
-    "soma": -3.296,
+    "ops": 12,
+    "acerto": 0.167,
+    "soma": -3.224,
     "ganho_medio": 0.072,
     "perda_media": -0.337,
-    "fator_lucro": 0.02,
-    "carteira": 6.04
+    "fator_lucro": 0.04,
+    "carteira": 6.05
    },
    "cacador": {
-    "ops": 187,
-    "acerto": 0.39,
-    "soma": -3.734,
+    "ops": 188,
+    "acerto": 0.394,
+    "soma": -3.622,
     "ganho_medio": 0.112,
     "perda_media": -0.104,
-    "fator_lucro": 0.69,
-    "carteira": 6.27
+    "fator_lucro": 0.7,
+    "carteira": 6.38
    },
    "rapido": {
     "ops": 27,
@@ -981,13 +979,13 @@
     "carteira": 6.66
    },
    "testnet": {
-    "ops": 32,
-    "acerto": 0.312,
-    "soma": -1.607,
-    "ganho_medio": 0.048,
+    "ops": 33,
+    "acerto": 0.333,
+    "soma": -1.567,
+    "ganho_medio": 0.047,
     "perda_media": -0.095,
-    "fator_lucro": 0.23,
-    "carteira": 8.39
+    "fator_lucro": 0.25,
+    "carteira": 8.43
    }
   },
   "vereditos": [
