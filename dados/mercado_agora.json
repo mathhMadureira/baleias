@@ -1,6 +1,6 @@
 {
- "t": 1794780293,
- "hora_utc": "2026-11-15 22:04 UTC",
+ "t": 1794780534,
+ "hora_utc": "2026-11-15 22:08 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 137,
@@ -172,10 +172,10 @@
   0.34,
   0.29,
   -0.18,
-  0.07
+  0.18
  ],
  "contexto": {
-  "t": 1794780294,
+  "t": 1794780535,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -244,11 +244,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 2.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.0,
-    "SOL": 9.6
+    "ETH": 6.3,
+    "SOL": 10.3
    },
    "leitura": "neutro"
   },
@@ -523,7 +523,7 @@
     "entrada": 0.000954,
     "agora": 0.000938,
     "resultado_pct": -1.68,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "lidera as altas de 4 h (+8,26%) com volume 5,61× e 24 h +11,07%, abaixo de 15% em 4 h"
    },
    {
@@ -532,7 +532,7 @@
     "entrada": 0.02774,
     "agora": 0.02733,
     "resultado_pct": -1.48,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "4 h +9,45% com volume 2,94×, 24 h +1,21% (ainda não esticado no dia)"
    },
    {
@@ -541,7 +541,7 @@
     "entrada": 65007.31,
     "agora": 65016.0,
     "resultado_pct": 0.01,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "86,9% do mercado subindo em 24 h; BTC +0,66% em 4 h; posição menos volátil da carteira"
    }
   ],
@@ -726,7 +726,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Entradas do v4 com lucro realizado rápido e stop de 1,5%.",
-   "carteira": 10.49,
+   "carteira": 10.58,
    "n_abertas": 4,
    "abertas": [
     [
@@ -742,11 +742,65 @@
      "compra"
     ],
     [
-     "BOME",
+     "CFX",
      "compra"
     ]
    ],
-   "n_fechadas": 28,
+   "n_fechadas": 29,
+   "ordem": null
+  },
+  {
+   "id": "scalper_b",
+   "nome": "Scalper B (sem alvo)",
+   "avatar": "✂",
+   "motor": "Cérebro v4",
+   "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
+   "carteira": 10.0,
+   "n_abertas": 4,
+   "abertas": [
+    [
+     "HEMI",
+     "compra"
+    ],
+    [
+     "KAIA",
+     "compra"
+    ],
+    [
+     "RWUSD",
+     "compra"
+    ],
+    [
+     "EIGEN",
+     "compra"
+    ]
+   ],
+   "n_fechadas": 0,
+   "ordem": null
+  },
+  {
+   "id": "scalper_c",
+   "nome": "Scalper C (só confiantes)",
+   "avatar": "✂",
+   "motor": "Cérebro v4",
+   "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
+   "carteira": 10.0,
+   "n_abertas": 3,
+   "abertas": [
+    [
+     "HEMI",
+     "compra"
+    ],
+    [
+     "KAIA",
+     "compra"
+    ],
+    [
+     "RWUSD",
+     "compra"
+    ]
+   ],
+   "n_fechadas": 0,
    "ordem": null
   },
   {
@@ -793,18 +847,109 @@
    "avatar": "🧪",
    "motor": "Cérebro v4",
    "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram.",
-   "carteira": 8.56,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "INIT",
-     "BUY"
-    ]
-   ],
-   "n_fechadas": 22,
+   "carteira": 8.51,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 23,
    "ordem": null
   }
  ],
+ "torneio": {
+  "campeao": "minerador",
+  "placar": {
+   "claude": {
+    "ops": 10,
+    "acerto": 0.1,
+    "soma": -3.116,
+    "ganho_medio": 0.072,
+    "perda_media": -0.354,
+    "fator_lucro": 0.02,
+    "carteira": 6.35
+   },
+   "cacador": {
+    "ops": 183,
+    "acerto": 0.388,
+    "soma": -3.659,
+    "ganho_medio": 0.114,
+    "perda_media": -0.105,
+    "fator_lucro": 0.69,
+    "carteira": 6.34
+   },
+   "rapido": {
+    "ops": 26,
+    "acerto": 0.577,
+    "soma": 0.006,
+    "ganho_medio": 0.093,
+    "perda_media": -0.126,
+    "fator_lucro": 1.0,
+    "carteira": 10.01
+   },
+   "scalper": {
+    "ops": 29,
+    "acerto": 0.655,
+    "soma": 0.58,
+    "ganho_medio": 0.078,
+    "perda_media": -0.09,
+    "fator_lucro": 1.65,
+    "carteira": 10.58
+   },
+   "scalper_b": {
+    "ops": 0,
+    "acerto": null,
+    "soma": 0,
+    "ganho_medio": null,
+    "perda_media": null,
+    "fator_lucro": null,
+    "carteira": 10.0
+   },
+   "scalper_c": {
+    "ops": 0,
+    "acerto": null,
+    "soma": 0,
+    "ganho_medio": null,
+    "perda_media": null,
+    "fator_lucro": null,
+    "carteira": 10.0
+   },
+   "minerador": {
+    "ops": 178,
+    "acerto": 0.433,
+    "soma": -2.24,
+    "ganho_medio": 0.087,
+    "perda_media": -0.088,
+    "fator_lucro": 0.75,
+    "carteira": 7.76
+   },
+   "livre": {
+    "ops": 2,
+    "acerto": 0.0,
+    "soma": -5.0,
+    "ganho_medio": null,
+    "perda_media": -2.5,
+    "fator_lucro": 0.0,
+    "carteira": 5.01
+   },
+   "testnet": {
+    "ops": 23,
+    "acerto": 0.304,
+    "soma": -1.487,
+    "ganho_medio": 0.048,
+    "perda_media": -0.114,
+    "fator_lucro": 0.18,
+    "carteira": 8.51
+   }
+  },
+  "vereditos": [
+   {
+    "desafiante": "scalper_b",
+    "veredito": "não sei ainda (0 de 30 operações)"
+   },
+   {
+    "desafiante": "scalper_c",
+    "veredito": "não sei ainda (0 de 30 operações)"
+   }
+  ]
+ },
  "vigia_v4": {
   "resumo": "🔬 Vigia do v4: acerto ao vivo 52.9% em 13044 apostas (367 velas, 11/11 18:45–15/11 21:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório. Modelo simples ganhou do v4: segue_24h_da_moeda, segue_maioria_24h",
   "acerto_ao_vivo": 0.529,
