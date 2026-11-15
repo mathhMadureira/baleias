@@ -153,8 +153,15 @@ def rodada(f, e):
     try:
         mesa._buscar_estado()
         v4 = mesa._git_json("dados/cerebro_v4.json") or {}
+        retrato = mesa._git_json("dados/mercado_agora.json") or {}
     except Exception:
-        v4 = {}
+        v4, retrato = {}, {}
+    from executor import regime as RG                                # regra do dono: na baixa só vende, na alta só compra
+    reg = RG.de_amplitude(retrato.get("mercado_24h", {}).get("subindo_pct"), retrato.get("mercado_4h", {}).get("subindo_pct"))
+    if reg != e.get("regime"):
+        anotar(e, f"🧭 regime do mercado: {reg or 'neutro'} → {'só vendas' if reg == 'baixa' else 'só compras' if reg == 'alta' else 'os dois lados'}")
+    e["regime"] = reg
+    permitido = RG.lado_permitido(reg)
     carteira = CAPITAL + sum(x["resultado_usd"] for x in e["fechadas"])
     hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
     dia = sum(x["resultado_usd"] for x in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(x["saida_t"])) == hoje)
@@ -174,6 +181,8 @@ def rodada(f, e):
         if par in e["abertas"] or par in e["ordens"] or par in e.get("sem_futuro", []) or len(e["abertas"]) + len(e["ordens"]) >= MAX_POS:
             continue
         lado = "BUY" if p["aposta"] > 0 else "SELL"
+        if permitido and (lado == "BUY") != (permitido == "compra"):
+            continue
         e["tentadas"] = (e["tentadas"] + [chave])[-500:]
         salvar(e)                                                       # salva na hora: ordem mandada e não salva vira ordem órfã
         try:

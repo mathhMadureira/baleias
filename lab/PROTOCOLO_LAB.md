@@ -869,3 +869,16 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Passa** pelo critério da mesa: ≥ 30 operações, carteira ≥ US$ 11, sem passar de US$ 5. Comparação declarada: contra o Caçador e o Rápido
   nuvem no mesmo período. Previsão registrada antes: não sei. Não há teste histórico possível de uma decisão discricionária; o placar ao vivo é o juiz.
 - **Custo:** usa a cota da assinatura do dono (24 decisões por dia). Se a cota acabar, o robô fica sem decisão nova e as posições fecham por stop ou tempo.
+
+## Hipótese 44: regra do dono — regime de tendência nos robôs automáticos (registrada em 2026-11-15 09:30 BRT, antes de ligar)
+
+- **Decisão do dono (14–15/11, repetida várias vezes):** "se o mercado está em tendência de baixa, entra vendido; se está em alta, entra
+  comprado; segura a tendência". O laboratório já mediu algo próximo (H42: alinhar as apostas de 15 min com o humor reduziu a perda de
+  −0,103% para −0,084%/op, sem virar lucro), mas a regra aqui é outra — regime pela amplitude de 24 h e 4 h e posição segurada — e a decisão
+  é do dono; o placar ao vivo julga.
+- **Regime** (`executor/regime.py`): baixa = ≤ 30% das moedas do universo subindo em 24 h e ≤ 60% em 4 h; alta = ≥ 70% e ≥ 40%; senão neutro.
+- **Nos robôs:** Rápido nuvem e testnet só entram no lado do regime; o Caçador, na baixa, abre as 4 vendas mais confiantes do v4 (na alta,
+  as 4 compras); no neutro, como antes. **Segurar:** no fim da vela, se o regime continua e o v4 aposta no mesmo lado da posição, ela não é
+  fechada (passa para a vela seguinte, sem pagar saída e entrada). Stop de 1% e lucro realizado de +US$ 0,50 continuam valendo.
+- **Juiz:** critério da mesa (≥ 30 operações, carteira ≥ US$ 11, sem passar de US$ 5), comparando com os resultados antes da regra.
+  Carteiras do Rápido nuvem, do testnet e do Rápido 1 min zeradas em US$ 10 no mesmo momento (históricos guardados).

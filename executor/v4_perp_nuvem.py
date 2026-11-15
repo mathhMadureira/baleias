@@ -39,8 +39,12 @@ def resolver(p, vela):
     return c, "fim da vela do v4"
 
 
-def passo(e, pendentes, velas, agora_ms):
-    """e: estado; pendentes: apostas do v4 {par: {t, px, prob, aposta}}; velas: {par: velas fechadas}. Devolve os textos."""
+def passo(e, pendentes, velas, agora_ms, regime=None):
+    """e: estado; pendentes: apostas do v4 {par: {t, px, prob, aposta}}; velas: {par: velas fechadas}. Devolve os textos.
+    regime ("baixa"/"alta"/None, executor.regime): regra do dono — na baixa só vende, na alta só compra, e SEGURA a posição de uma vela
+    para a seguinte enquanto o regime continuar e o v4 apostar no mesmo lado (sem pagar saída e entrada de novo)."""
+    from executor.regime import lado_permitido
+    permitido = lado_permitido(regime)
     textos = []
     for par in list(e["abertas"]):
         p = e["abertas"][par]
@@ -51,6 +55,17 @@ def passo(e, pendentes, velas, agora_ms):
             if vela is None:
                 continue
         saida, motivo = resolver(p, vela)
+        nova = pendentes.get(par)
+        mesmo_lado = nova and ((nova["prob"] > 0.5) == (p["lado"] == "compra")) and nova["t"] == vela[0]
+        if motivo == "fim da vela do v4" and permitido == p["lado"] and mesmo_lado:
+            p["vela_saida"] = vela[0] + VELA_MS                         # segura: a tendência continua e o v4 concorda
+            p["rolagens"] = p.get("rolagens", 0) + 1
+            e["ultimo_sinal"][par] = nova["t"]
+            res_aberto = ORCAMENTO * (1 if p["lado"] == "compra" else -1) * (float(vela[4]) / p["entrada"] - 1)
+            textos.append(f"🌲 {NOME} SEGUROU a {'VENDA' if p['lado'] == 'venda' else 'COMPRA'} em {par[:-4]} ({p['rolagens']}ª vela; tendência de {regime}; "
+                          f"{res_aberto:+.3f} até agora)")
+            continue
+        saida, motivo = (saida, motivo) if not (permitido and permitido != p["lado"] and motivo == "fim da vela do v4") else (saida, f"fim da vela (contra a tendência de {regime})")
         sinal = -1 if p["lado"] == "venda" else 1
         resultado = ORCAMENTO * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
         e["caixa"] += ORCAMENTO / ALAV + resultado
@@ -66,9 +81,18 @@ def passo(e, pendentes, velas, agora_ms):
         return textos
     if MODO == "ranking":                                   # Caçador: caça a própria entrada a cada vela, nos dois lados (pedido do dono, 13/11)
         ordem = sorted(pendentes.items(), key=lambda kv: -kv[1]["prob"])
-        candidatos = [(par, p) for par, p in ordem if p["prob"] > 0.51][:K] + [(par, p) for par, p in ordem[::-1] if p["prob"] < 0.49][:K]
+        compras = [(par, p) for par, p in ordem if p["prob"] > 0.51]
+        vendas = [(par, p) for par, p in ordem[::-1] if p["prob"] < 0.49]
+        if permitido == "venda":                            # na baixa: as 2K vendas mais confiantes, nenhuma compra
+            candidatos = vendas[:2 * K]
+        elif permitido == "compra":
+            candidatos = compras[:2 * K]
+        else:
+            candidatos = compras[:K] + vendas[:K]
     else:
         candidatos = [(par, p) for par, p in sorted(pendentes.items(), key=lambda kv: -abs(kv[1]["prob"] - 0.5)) if abs(p["prob"] - 0.5) >= LIMIAR]
+        if permitido:
+            candidatos = [(par, p) for par, p in candidatos if (p["prob"] > 0.5) == (permitido == "compra")]
     for par, p in candidatos:
         if par in e["abertas"] or p["t"] == e["ultimo_sinal"].get(par):
             continue
@@ -110,7 +134,12 @@ def main():
             e["fechadas"].append({**p, "saida": p["entrada"], "saida_t": time.time(), "motivo": "moeda saiu do universo (fechada no preço de entrada)",
                                   "resultado_usd": -2 * CUSTO_LADO * ORCAMENTO, "R": 0.0})
             del e["abertas"][par]
-    textos = passo(e, pendentes, velas, agora_ms)
+    from executor import regime as RG
+    reg, s24, s4 = RG.de_velas(velas)
+    e["regime"] = {"lado": reg, "subindo_24h": s24, "subindo_4h": s4, "t": int(time.time())}
+    textos = passo(e, pendentes, velas, agora_ms, regime=reg)
+    if reg:
+        textos.insert(0, f"🧭 {NOME}: mercado em tendência de {reg} ({s24}% das moedas subindo em 24 h, {s4}% em 4 h) → só {'vendas' if reg == 'baixa' else 'compras'}")
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
     e["patrimonio"] = e["caixa"] + sum(p["gasto"] for p in e["abertas"].values())
     arq.write_text(json.dumps(e))

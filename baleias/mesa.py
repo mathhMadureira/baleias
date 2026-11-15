@@ -309,8 +309,8 @@ def mesa():
         _rapido("robo_v4_cacador.json", "Caçador (v4: 2 compras e 2 vendas por vela)", "☁ na nuvem 24 h: a cada vela caça entre todas as moedas as 2 com maior chance de subir (compra) e as 2 com maior chance de cair (venda), pelo cérebro v4; sempre posicionado; mesmas regras do Rápido nuvem (H37)", nuvem=True),
         _rapido("robo_v4_testnet.json", "v4 Testnet (Binance)", "☁ na nuvem 24 h: TESTNET de futuros da Binance, todas as apostas do v4, ordens reais na conta de teste (US$ 10 a 10×, stop 1%); resultado em US$ de preenchimento real", nuvem=True),
         _rapido("robo_scalper.json", "Scalper", "segue as apostas do Cérebro v4 (15 min, desde 13/11; antes v3); alvo +0,5%, stop −1,5%, sai no fim da vela apostada"),
-        _funding(),
     ]
+    # (15/11) Funding (carry) saiu do placar: fica parado em US$ 10 sem operar (dono: "tire os robôs que não operam")
     # Decisão do dono (2026-11-13): as contas de contrato binário (cérebros v1–v4) saem do placar — o produto é bloqueado no Brasil.
     # Os cérebros continuam rodando na nuvem como fonte de sinal (o v4 é o cérebro de todos os robôs); a tabela de acerto fica na aba de pesquisa.
     ordem = {"🏆": 0, "🧪": 1, "⚠️": 2, "❌": 3}
