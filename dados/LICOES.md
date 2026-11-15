@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 04:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 04:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,7 +18,7 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.99** · 81 operações fechadas · 0 abertas
+Carteira **US$ 6.99** · 81 operações fechadas · 1 abertas
 
 - **Total:** 27/81 com lucro (33%), resultado -3.01, média -0.037 por operação.
 - **Últimas 24 h:** 24/71 com lucro, -2.86.
@@ -32,7 +32,7 @@ Carteira **US$ 6.99** · 81 operações fechadas · 0 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 9.30** · 114 operações fechadas · 0 abertas
+Carteira **US$ 9.30** · 114 operações fechadas · 1 abertas
 
 - **Total:** 55/114 com lucro (48%), resultado -0.70, média -0.006 por operação.
 - **Últimas 24 h:** 8/17 com lucro, +0.48.
@@ -45,15 +45,15 @@ Carteira **US$ 9.30** · 114 operações fechadas · 0 abertas
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 6.25** · 114 operações fechadas · 2 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.94 com 58 op.)
+Carteira **US$ 5.98** · 117 operações fechadas · 1 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.94 com 58 op.)
 
-- **Total:** 48/114 com lucro (42%), resultado -3.75, média -0.033 por operação.
-- **Últimas 24 h:** 48/114 com lucro, -3.75.
-- **Por horário:** 18–23 UTC: 54 op, 39% certas, -2.50 · 00–05 UTC: 28 op, 54% certas, -1.68 · 12–17 UTC: 32 op, 38% certas, +0.43
-- **Por lado:** venda: 42 op, 26% certas, -2.62 · compra: 72 op, 51% certas, -1.12
-- **Por confiança do v4:** alta (0,08–0,12): 16 op, 31% certas, -1.66 · confiança baixa (<0,05): 73 op, 41% certas, -1.25 · média (0,05–0,08): 25 op, 52% certas, -0.83
-- **Por motivo de saída:** stop de segurança −1% (saída a: 8 op, 0% certas, -2.84 · fim da vela do v4 (saída a mer: 24 op, 21% certas, -1.23 · fim da vela do v4: 82 op, 52% certas, +0.33
-- **Moedas que mais perderam (≥ 3 op):** BTC -0.65 (28 op) · WLFI -0.39 (3 op) · ETH -0.38 (21 op) · XRP -0.27 (5 op) · UNI -0.06 (3 op)
+- **Total:** 49/117 com lucro (42%), resultado -4.02, média -0.034 por operação.
+- **Últimas 24 h:** 49/117 com lucro, -4.02.
+- **Por horário:** 18–23 UTC: 54 op, 39% certas, -2.50 · 00–05 UTC: 31 op, 52% certas, -1.95 · 12–17 UTC: 32 op, 38% certas, +0.43
+- **Por lado:** venda: 45 op, 27% certas, -2.90 · compra: 72 op, 51% certas, -1.12
+- **Por confiança do v4:** alta (0,08–0,12): 16 op, 31% certas, -1.66 · confiança baixa (<0,05): 76 op, 41% certas, -1.53 · média (0,05–0,08): 25 op, 52% certas, -0.83
+- **Por motivo de saída:** stop de segurança −1% (saída a: 8 op, 0% certas, -2.84 · fim da vela do v4 (saída a mer: 24 op, 21% certas, -1.23 · fim da vela do v4: 85 op, 52% certas, +0.06
+- **Moedas que mais perderam (≥ 3 op):** BTC -0.65 (28 op) · WLFI -0.39 (3 op) · ETH -0.38 (21 op) · XRP -0.27 (5 op) · UNI -0.05 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** SOL +0.12 (11 op) · HYPE +0.10 (3 op) · ZEC +0.07 (8 op) · NEAR +0.07 (3 op) · ENA +0.02 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
@@ -95,7 +95,7 @@ Carteira **US$ 8.38** · 4 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 9890 apostas conferidas ao vivo, acerto 50.7%; prevê 164 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 9922 apostas conferidas ao vivo, acerto 50.8%; prevê 164 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
