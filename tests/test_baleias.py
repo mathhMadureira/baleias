@@ -1687,3 +1687,34 @@ class RotaR6(unittest.TestCase):
     def test_stop_de_2_pct(self):
         e = self._rodar([(0, 100.5, 99.9), (60_000, 102.1, 100.4)], "baixa", 1_800_000)
         self.assertAlmostEqual(e["fechadas"][0]["saida"], 102.0)
+
+
+class LBankSoLeitura(unittest.TestCase):
+    """Conector da LBank: assinatura conferida com o exemplo oficial; recusa chave com saque; nenhuma função de ordem."""
+
+    def test_assinatura_igual_ao_exemplo_oficial(self):
+        from executor.lbank import assinar
+        p = {"api_key": "fb4e39e5-6a06-4291-9f80-d10176a0badd", "asset": "USDT", "echostr": "echostr123456789012345678901234567890",
+             "productGroup": "SwapU", "signature_method": "HmacSHA256", "timestamp": "1665990154559"}
+        self.assertEqual(assinar(p, "093F44F700FC48F17DDB67390C895CE5"), "809133cb69a17beba0be076b99b4d90de872476e36da87978ab2889970ccd06d")
+
+    def test_recusa_saque_e_nao_tem_ordem(self):
+        from executor import lbank as L
+        self.assertTrue(L.problemas_da_chave({"enableWithdrawals": True, "ipRestrict": True})[0].startswith("GRAVE"))
+        self.assertEqual(L.problemas_da_chave({"enableWithdrawals": False, "ipRestrict": True, "enableReading": True}), [])
+        nomes = [n for n in dir(L.LBankLeitura) if not n.startswith("__")]
+        self.assertFalse([n for n in nomes if any(x in n.lower() for x in ("ordem", "order", "comprar", "vender", "sacar", "withdraw", "cancel"))])
+
+    def test_le_saldos_com_resposta_falsa(self):
+        import io, json
+        from executor.lbank import LBankLeitura
+        resp = {"result": "true", "error_code": 0, "data": [{"coin": "usdt", "assetAmt": "12.5", "usableAmt": "10", "freezeAmt": "2.5"},
+                                                             {"coin": "btc", "assetAmt": "0", "usableAmt": "0", "freezeAmt": "0"}]}
+        pedidos = []
+        def abrir(req, timeout=0):
+            pedidos.append(req)
+            return io.BytesIO(json.dumps(resp).encode())
+        s = LBankLeitura("k" * 20, "s" * 32, abrir=abrir).saldos()
+        self.assertEqual(s, {"USDT": {"total": 12.5, "livre": 10.0, "preso": 2.5}})
+        self.assertIn(b"sign=", pedidos[0].data)
+        self.assertNotIn(b"s" * 32, pedidos[0].data)                # o segredo nunca vai no pedido
