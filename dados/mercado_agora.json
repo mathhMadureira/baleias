@@ -1,21 +1,21 @@
 {
- "t": 1794774054,
- "hora_utc": "2026-11-15 20:20 UTC",
+ "t": 1794774399,
+ "hora_utc": "2026-11-15 20:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 142,
-  "subindo_pct": 14.1,
-  "mediana_pct": -0.59
+  "moedas": 139,
+  "subindo_pct": 14.4,
+  "mediana_pct": -0.6
  },
  "mercado_4h": {
-  "moedas": 142,
-  "subindo_pct": 45.8,
-  "mediana_pct": -0.02
+  "moedas": 139,
+  "subindo_pct": 46.8,
+  "mediana_pct": 0.0
  },
  "mercado_24h": {
-  "moedas": 142,
-  "subindo_pct": 57.7,
-  "mediana_pct": 0.28
+  "moedas": 139,
+  "subindo_pct": 57.6,
+  "mediana_pct": 0.3
  },
  "btc": {
   "1h": -0.56,
@@ -172,10 +172,10 @@
   -0.23,
   0.27,
   0.34,
-  -0.19
+  -0.01
  ],
  "contexto": {
-  "t": 1794774055,
+  "t": 1794774400,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -244,11 +244,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 0.5,
+   "media_top20_anual_pct": 1.7,
    "principais_anual_pct": {
-    "BTC": 9.7,
-    "ETH": 1.9,
-    "SOL": -8.3
+    "BTC": 11.0,
+    "ETH": 3.1,
+    "SOL": -5.1
    },
    "leitura": "neutro"
   },
@@ -574,5 +574,147 @@
     "texto": "Às 19:15 UTC fechei BTC e ZRO quando o 24 h subiu para 34,5% subindo; agora o 24 h está em 50,4% e o BTC andou de −2% para −1,19% em 24 h sem volume (0,53×): sair no indeciso evitou ficar vendido contra um mercado que deixou de cair. Volto a vender só com 24 h em 30% ou menos; compro só com 24 h em 70% ou mais."
    }
   ]
- }
+ },
+ "equipe": [
+  {
+   "id": "claude",
+   "nome": "Robô Claude",
+   "avatar": "🤖",
+   "motor": "Claude (rotina de hora em hora)",
+   "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs.",
+   "carteira": 6.81,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 9,
+   "ordem": null
+  },
+  {
+   "id": "cacador",
+   "nome": "Caçador",
+   "avatar": "🎯",
+   "motor": "Cérebro v4",
+   "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
+   "carteira": 6.67,
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "ETC",
+     "compra"
+    ],
+    [
+     "U",
+     "venda"
+    ]
+   ],
+   "n_fechadas": 178,
+   "ordem": null
+  },
+  {
+   "id": "rapido",
+   "nome": "Rápido nuvem",
+   "avatar": "🌲",
+   "motor": "Cérebro v4",
+   "missao": "Todas as apostas do v4 nas 140 moedas, as mais confiantes primeiro, segurando enquanto a tendência dura.",
+   "carteira": 10.03,
+   "n_abertas": 4,
+   "abertas": [
+    [
+     "U",
+     "venda"
+    ],
+    [
+     "ETC",
+     "compra"
+    ],
+    [
+     "AERO",
+     "compra"
+    ],
+    [
+     "ARB",
+     "compra"
+    ]
+   ],
+   "n_fechadas": 12,
+   "ordem": null
+  },
+  {
+   "id": "scalper",
+   "nome": "Scalper nuvem",
+   "avatar": "✂",
+   "motor": "Cérebro v4",
+   "missao": "Entradas do v4 com lucro realizado rápido e stop de 1,5%.",
+   "carteira": 9.75,
+   "n_abertas": 3,
+   "abertas": [
+    [
+     "U",
+     "venda"
+    ],
+    [
+     "ETC",
+     "compra"
+    ],
+    [
+     "AERO",
+     "compra"
+    ]
+   ],
+   "n_fechadas": 7,
+   "ordem": null
+  },
+  {
+   "id": "minerador",
+   "nome": "Minerador",
+   "avatar": "⛏",
+   "motor": "regra H28",
+   "missao": "Vende alta forte sem volume e compra queda forte sem volume (a regra de minutos que pagou custo no laboratório).",
+   "carteira": 7.95,
+   "n_abertas": 3,
+   "abertas": [
+    [
+     "HEMI",
+     "compra"
+    ],
+    [
+     "PYTH",
+     "compra"
+    ],
+    [
+     "U",
+     "venda"
+    ]
+   ],
+   "n_fechadas": 171,
+   "ordem": null
+  },
+  {
+   "id": "testnet",
+   "nome": "v4 Testnet",
+   "avatar": "🧪",
+   "motor": "Cérebro v4",
+   "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram.",
+   "carteira": 10.03,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 6,
+   "ordem": null
+  }
+ ],
+ "caixa_dono": [
+  {
+   "id": "1794773885771-dono",
+   "hora_utc": "15/11 20:18",
+   "para": "claude",
+   "texto": "Teste da Sala de operações: confirme que está lendo a sala e diga em uma frase como está a mesa."
+  }
+ ],
+ "sala_recente": [
+  {
+   "hora_utc": "15/11 20:18",
+   "de": "dono",
+   "para": "claude",
+   "texto": "Teste da Sala de operações: confirme que está lendo a sala e diga em uma frase como está a mesa."
+  }
+ ]
 }

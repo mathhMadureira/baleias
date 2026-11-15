@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 20:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 20:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -43,7 +43,7 @@ Carteira **US$ 7.95** · 171 operações fechadas · 3 abertas
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 10.03** · 6 operações fechadas · 1 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
+Carteira **US$ 10.03** · 6 operações fechadas · 0 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
 - **Total:** 1/6 com lucro (17%), resultado +0.03, média +0.005 por operação.
 - **Últimas 24 h:** 1/6 com lucro, +0.03.
@@ -68,9 +68,9 @@ Carteira **US$ 6.81** · 9 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 57.7% das moedas subindo em 24 h, 45.8% em 4 h · BTC 24 h -1.3%, 4 h 0.14%.
+- **Amplitude:** 57.6% das moedas subindo em 24 h, 46.8% em 4 h · BTC 24 h -1.3%, 4 h 0.14%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 9.7, 'ETH': 1.9, 'SOL': -8.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.7%/ano · {'BTC': 11.0, 'ETH': 3.1, 'SOL': -5.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 80225, MM200 73031); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JUV triângulo ascendente (alta, CONFIRMOU) · RARE fundo duplo (alta, CONFIRMOU) · AUDIO fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · OPG fundo duplo (alta, formado) · PARTI fundo duplo (alta, formado) · PENGU topo duplo (baixa, formado) · PENGU fundo duplo (alta, formado)
 - 📰 15/11 19:30 UTC · CoinDesk: Did prediction markets call the U.S. midterm election?: State of Crypto
@@ -111,7 +111,7 @@ Carteira **US$ 6.81** · 9 operações fechadas · 0 abertas
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 12711 apostas conferidas ao vivo, acerto 52.6%; prevê 141 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 12711 apostas conferidas ao vivo, acerto 52.6%; prevê 138 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
