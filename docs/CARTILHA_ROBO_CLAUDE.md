@@ -9,7 +9,9 @@ segura enquanto a tendência durar, e sabe se proteger."** Nada de trocar de lad
 
 1. **Direção do dia (24 h) e da sessão (4 h):** olhe `btc.24h`, `btc.4h`, `mercado_24h.subindo_pct`, `mercado_4h.subindo_pct` e a sequência
    `btc_1h_ultimas_24`. Mercado com 80%+ das moedas caindo em 24 h e 4 h é **tendência de baixa**: só vendas. 80%+ subindo nos dois: só compras.
-   Entre 40% e 60%, ou 24 h e 4 h discordando: **mercado indeciso** — pouca ou nenhuma posição (ficar fora é uma decisão legítima).
+   **A tendência de 24 h manda no lado; as 4 h só dizem o momento.** Baixa de 24 h com repique de 4 h sem volume (`vol_4h_vs_media` < 1,2) é
+   ponto de VENDA, não motivo para ficar fora. Só um repique de 4 h com volume forte (≥ 1,5× a média) e BTC recuperando mais da metade da queda
+   de 24 h pede espera. **Indeciso** é só quando 24 h está entre 30% e 70% das moedas subindo: aí pouca ou nenhuma posição.
 2. **Estrutura em 1 h (figuras geométricas simples):** na série de 1 h do BTC, topos e fundos descendentes = baixa; ascendentes = alta.
    Uma sequência de 3 a 6 velas na mesma direção com volume acima da média (`vol_4h_vs_media` > 1,2) é impulso; 2 a 4 velas pequenas contra o
    impulso são **bandeira/correção**, e a retomada no sentido do impulso é o melhor ponto de entrada (compre a correção na alta, venda o repique

@@ -882,3 +882,6 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   fechada (passa para a vela seguinte, sem pagar saída e entrada). Stop de 1% e lucro realizado de +US$ 0,50 continuam valendo.
 - **Juiz:** critério da mesa (≥ 30 operações, carteira ≥ US$ 11, sem passar de US$ 5), comparando com os resultados antes da regra.
   Carteiras do Rápido nuvem, do testnet e do Rápido 1 min zeradas em US$ 10 no mesmo momento (históricos guardados).
+- **Emenda (15/11 09:40, antes de qualquer operação com a regra):** o regime passa a ser só pela amplitude de 24 h (baixa ≤ 30%, alta ≥ 70%);
+  o filtro de 4 h saiu porque deixava os robôs fora durante repiques fracos dentro da baixa (às 09:10, 88% das moedas subindo em 4 h com o
+  volume do BTC a 0,76× a média). A cartilha do Robô Claude foi alinhada: repique de 4 h sem volume numa baixa de 24 h é ponto de venda.

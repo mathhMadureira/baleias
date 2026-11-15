@@ -1,14 +1,15 @@
 """Regra do dono (14–15/11): "se o mercado está em tendência de baixa, entra vendido; se está em tendência de alta, entra comprado; segura".
 O regime é a amplitude do mercado: a fração das moedas do universo que sobem em 24 h e em 4 h (velas fechadas de 15 min).
-  baixa: ≤ 30% das moedas subindo em 24 h e ≤ 60% em 4 h (a baixa do dia não está sendo desfeita por um repique forte)
-  alta:  ≥ 70% subindo em 24 h e ≥ 40% em 4 h
+  baixa: ≤ 30% das moedas subindo em 24 h (a tendência do dia manda; repique de 4 h é ponto de venda, não motivo para sair)
+  alta:  ≥ 70% subindo em 24 h
+  (emenda de 15/11 09:40, antes de qualquer operação com a regra: o filtro de 4 h deixava os robôs fora durante repiques fracos)
   senão: neutro (os robôs operam os dois lados, como antes)
 Limiares fixados antes de ligar (H44, lab/PROTOCOLO_LAB.md); mudam só por variável de ambiente.
 """
 import os
 
-BAIXA_24, BAIXA_4 = float(os.environ.get("REGIME_BAIXA_24", "30")), float(os.environ.get("REGIME_BAIXA_4", "60"))
-ALTA_24, ALTA_4 = float(os.environ.get("REGIME_ALTA_24", "70")), float(os.environ.get("REGIME_ALTA_4", "40"))
+BAIXA_24, BAIXA_4 = float(os.environ.get("REGIME_BAIXA_24", "30")), float(os.environ.get("REGIME_BAIXA_4", "100"))
+ALTA_24, ALTA_4 = float(os.environ.get("REGIME_ALTA_24", "70")), float(os.environ.get("REGIME_ALTA_4", "0"))
 
 
 def de_amplitude(subindo_24, subindo_4):
