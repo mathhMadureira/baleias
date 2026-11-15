@@ -979,3 +979,19 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Regra:** o Scalper D é igual ao Scalper e evita, a cada rodada, os segmentos de entrada (lado, faixa de 6 h UTC, confiança ≥/< 0,08) em
   que o Scalper original perde com ≥ 50 operações e z ≤ −2 (`executor/torneio.py` escreve `dados/foco_scalper.json`). Nunca exclui os dois lados.
 - **Juiz:** o do torneio (H50): depois de 30 operações, fator de lucro e soma maiores que o Scalper no mesmo período.
+
+## Hipótese 52: novas rotas de saída para as apostas do v4 — sair do "fim da vela de 15 min" (pré-registrada em 2026-11-15 20:05 BRT, antes de rodar)
+
+- **Pedido do dono (15/11):** "esse negócio de 15 minutos, de esperar vela de 15, de fechar antes, não tem sido bom. Reveja as fórmulas e rotas,
+  com novos cálculos probabilísticos". Medido antes: no Scalper, as saídas no fim da vela somam −0,47 em 18 operações.
+- **Dados:** TODAS as apostas do v4 conferidas ao vivo (`dados/cerebro_v4.json`, 11/11–15/11, ~12.800 apostas em ~140 moedas), com as velas de
+  15 min da Binance de cada moeda. Entrada no fechamento da vela do sinal (como os robôs). Custo 0,12% ida e volta. Dentro de uma vela, se o
+  stop e a saída de lucro couberem, conta o stop (conservador); o pico do stop móvel só vale a partir da vela seguinte.
+- **Rotas (8 tentativas, contadas):** R0 atual (fim da vela seguinte, stop 1%) · R1 horizonte 1 h, stop 1% · R2 horizonte 4 h, stop 2% ·
+  R3 stop móvel (arma +0,5%, guarda 70%) + stop 1%, máx. 4 h · R4 stop móvel + stop 2%, máx. 24 h · R5 alvo +2% e stop 1% (2 para 1), máx. 24 h ·
+  R6 = R4 só nas apostas a favor do regime de 24 h (≤ 30% / ≥ 70% das moedas subindo) · R7 = R4 só com confiança |p − 0,5| ≥ 0,08.
+- **Cálculo probabilístico publicado para cada rota:** acerto p, ganho médio G, perda média L, expectativa E = p·G − (1 − p)·L − custo, e o
+  acerto de empate p* = (L + custo) ÷ (G + L).
+- **Juiz:** média líquida por aposta > 0, z ≥ 2,50 (Bonferroni para 8 tentativas, 5% unilateral) com erro-padrão por vela de entrada, e média > 0
+  nos 3 blocos de tempo. Só a rota aprovada substitui o fim da vela nos robôs do v4; se nenhuma passar, a melhor fica registrada e nada muda.
+- **Limite honesto:** são 4 dias de mercado (quase todo em queda e depois repique). Uma rota aprovada aqui ainda precisa repetir ao vivo.
