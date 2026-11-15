@@ -1,22 +1,41 @@
 {
-  "t": 1794777000,
-  "leitura": "ALTA de 24 h: 86,9% das moedas sobem (mediana +3,87%), 4 h 70,1% subindo; BTC +0,56% em 24 h e +0,66% em 4 h com volume 0,56×. Pano de fundo: BTC abaixo das médias de 50 e 200 dias e medo extremo (10), então compro os líderes de 4 h com volume e evito os esticados (RARE +69,7% e ASTER +17,8% em 4 h).",
-  "posicoes": [
-    {"moeda": "TLMUSDT", "lado": "compra", "motivo": "lidera as altas de 4 h (+8,26%) com volume 5,61× e 24 h +11,07%, abaixo de 15% em 4 h"},
-    {"moeda": "SHELLUSDT", "lado": "compra", "motivo": "4 h +9,45% com volume 2,94×, 24 h +1,21% (ainda não esticado no dia)"},
-    {"moeda": "KITEUSDT", "lado": "compra", "motivo": "4 h +4,47% com volume 1,22× e 24 h +12,72%, a favor da alta de 24 h"},
-    {"moeda": "BTCUSDT", "lado": "compra", "motivo": "86,9% do mercado subindo em 24 h; BTC +0,66% em 4 h; posição menos volátil da carteira"}
-  ],
-  "fechar": [],
-  "motivos_fechar": {},
-  "licao": "As 9 vendas fechadas perderam (7 no stop −0,405; BTC −0,142 e ZRO −0,21 fechadas por mim); as do stop eram moedas com 24 h perto de −14%, as que aguentaram horas eram BTC e ZRO. Agora compro TLM e KITE (24 h +11% a +13%) e BTC: conferir na próxima se TLM/KITE batem o stop antes de 1 h e o BTC não; se sim, só comprar moedas com 24 h abaixo de +10%.",
-  "respostas": [
-    {"ref": "1794775634698-dono", "texto": "Entendi. O Rápido nuvem está com US$ 10,45 (+US$ 0,45). Não existe ordem de fechar na hora; mandei PAUSAR o Rápido por 6 h: não abre nada novo e as 4 compras abertas (CYBER, SOPH, BARD, U) saem pela saída normal dele, que realiza o lucro. Robô Claude abriu 4 compras (TLM, SHELL, KITE, BTC)."}
-  ],
-  "mensagens": [
-    {"para": "sala", "texto": "Alta de 24 h com 86,9% das moedas subindo: mesa comprada. Rápido pausado 6 h a pedido do dono para guardar o lucro (US$ 10,45). v4 fora como voto nesta hora: compras dele acertam 48,6% e o horário 18–24 h UTC 45,3%."}
-  ],
-  "ordens": [
-    {"agente": "rapido", "acao": "pausar", "horas": 6, "motivo": "pedido do dono de realizar lucro: carteira US$ 10,45 (+0,45); não abre nada novo, as 4 abertas saem pela saída normal"}
-  ]
+ "t": 1794780593,
+ "leitura": "Alta de 24 h: 84,7% das moedas subindo (mediana +3,71%), BTC +0,87% em 24 h e +0,71% em 4 h; na última hora só 27% sobem e o BTC −0,18% com volume 0,54× (recuo sem volume dentro da alta = ponto de compra). Pano de fundo: BTC abaixo das médias de 50 e 200 dias e medo extremo (10): comprar recuos, evitar esticadas.",
+ "posicoes": [
+  {
+   "moeda": "BTCUSDT",
+   "lado": "compra",
+   "motivo": "84,7% do mercado sobe em 24 h; BTC +0,71% em 4 h, recuo de 1 h −0,18% sem volume (0,54×)"
+  },
+  {
+   "moeda": "TLMUSDT",
+   "lado": "compra",
+   "motivo": "segue entre as maiores altas de 4 h (+3,3%) com volume 5,72× e 24 h +5,63%"
+  },
+  {
+   "moeda": "KITEUSDT",
+   "lado": "compra",
+   "motivo": "4 h +2,75% com volume 1,46× e 24 h +11,62%, abaixo de 15% em 4 h"
+  },
+  {
+   "moeda": "XPLUSDT",
+   "lado": "compra",
+   "motivo": "4 h +3,21% com volume 1,17× e 24 h +5,37%, a favor da alta de 24 h"
+  }
+ ],
+ "fechar": [
+  "SHELLUSDT"
+ ],
+ "motivos_fechar": {
+  "SHELLUSDT": "virou contra: 4 h −12,71% com volume 2,45× e 24 h −1,94%, lidera as quedas dentro de mercado em alta"
+ },
+ "licao": "SHELL comprado com 4 h +9,45% mas 24 h só +1,21% devolveu tudo: agora 4 h −12,71% (posição −1,48%). Pico de 4 h sem alta de 24 h por trás não sustenta; comprar só moedas com 24 h acima de +5% (como KITE +11,6%).",
+ "respostas": [],
+ "mensagens": [
+  {
+   "para": "sala",
+   "texto": "Alta de 24 h com 84,7% das moedas subindo: mesa comprada (BTC, TLM, KITE, XPL); fechei SHELL, que caiu 12,7% em 4 h. v4 fora como voto: compras dele acertam 48,9% e o horário 18–24 h UTC 46,2%."
+  }
+ ],
+ "ordens": []
 }
