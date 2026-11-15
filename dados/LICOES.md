@@ -1,17 +1,17 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 19:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 19:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 10.18** · 4 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 9.90** · 5 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
-- **Total:** 3/4 com lucro (75%), resultado +0.18, média +0.045 por operação.
-- **Últimas 24 h:** 3/4 com lucro, +0.18.
-- **Por horário:** 18–23 UTC: 4 op, 75% certas, +0.18
-- **Por lado:** venda: 4 op, 75% certas, +0.18
-- **Por confiança do v4:** muito alta (≥0,12): 4 op, 75% certas, +0.18
-- **Por motivo de saída:** fim da vela do v4: 4 op, 75% certas, +0.18
+- **Total:** 3/5 com lucro (60%), resultado -0.10, média -0.020 por operação.
+- **Últimas 24 h:** 3/5 com lucro, -0.10.
+- **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.28 · 18–23 UTC: 4 op, 75% certas, +0.18
+- **Por lado:** compra: 1 op, 0% certas, -0.28 · venda: 4 op, 75% certas, +0.18
+- **Por confiança do v4:** muito alta (≥0,12): 5 op, 60% certas, -0.10
+- **Por motivo de saída:** stop de segurança −1.0%: 1 op, 0% certas, -0.28 · fim da vela do v4: 4 op, 75% certas, +0.18
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
@@ -65,6 +65,23 @@ Carteira **US$ 6.81** · 9 operações fechadas · 0 abertas
 - **Moedas que mais perderam (≥ 3 op):** BTC -0.95 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** BTC -0.95 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
+
+## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
+
+- **Amplitude:** 43.6% das moedas subindo em 24 h, 54.3% em 4 h · BTC 24 h -0.91%, 4 h 0.53%.
+- **Medo e ganância:** 10 (Extreme Fear; ontem 13).
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': 11.0, 'ETH': 7.3, 'SOL': 2.7} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 80225, MM200 73031); 10.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** RAD estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AUDIO fundo duplo (alta, formado) · BTC OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · OPG fundo duplo (alta, formado) · PARTI fundo duplo (alta, formado) · RARE fundo duplo (alta, formado) · SAGA topo duplo (baixa, formado)
+- 📰 15/11 19:30 UTC · CoinDesk: Did prediction markets call the U.S. midterm election?: State of Crypto
+- 📰 15/11 16:01 UTC · Decrypt: How Wall Street Is Racing to Claim the Onchain Dollar
+- 📰 15/11 14:30 UTC · Cointelegraph: Enterprise blockchain is going to come back from the dead
+- 📰 15/11 14:01 UTC · Decrypt: Bitcoin ETFs Lose $2.1 Billion in November as Outflow Streak Hits Seven Days
+- 📰 15/11 14:00 UTC · CoinDesk: Crypto insiders aren't counting on silver linings in Congress' 'lame duck' session
+- 📰 15/11 11:18 UTC · Cointelegraph: Here’s what happened in crypto today
+
+## 🤖 Decisões do Robô Claude (as últimas 6)
+
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
