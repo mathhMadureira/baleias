@@ -1113,6 +1113,7 @@ function slNome(id) {
   if (id === "dono") return "👤 Você";
   if (id === "sala") return "sala";
   if (id === "vigia") return "🔬 Vigia do v4";
+  if (id === "torneio") return "🏆 Torneio";
   const a = (sl && sl.equipe || []).find(x => x.id === id);
   return a ? `${a.avatar} ${a.nome}` : id;
 }

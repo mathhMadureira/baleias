@@ -91,6 +91,8 @@ def main():
     from baleias import equipe                                     # a mesa inteira (fusão com o OpenBot): o chefe vê a equipe e o que o dono pediu
     equipe.sincronizar_caixa()
     saida["equipe"] = equipe.retrato()
+    tn = ler("torneio.json")                                        # placar campeão × desafiantes (executor/torneio.py)
+    saida["torneio"] = {"campeao": tn.get("campeao"), "placar": tn.get("placar"), "vereditos": [{k: v[k] for k in ("desafiante", "veredito")} for v in tn.get("vereditos", [])]} if tn else None
     vg = ler("vigia_v4.json")                                       # monitoramento do v4 (executor/vigia_v4.py): acerto ao vivo × laboratório × modelo simples
     saida["vigia_v4"] = {k: vg.get(k) for k in ("resumo", "acerto_ao_vivo", "acerto_lab", "veredito", "z_contra_lab", "referencias", "referencia_ganha", "segmentos")} if vg else None
     saida["caixa_dono"] = equipe.pendentes_do_dono()

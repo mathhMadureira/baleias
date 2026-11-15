@@ -1579,3 +1579,21 @@ class StopMovel(unittest.TestCase):
         finally:
             SM.MINUTOS.clear()
         self.assertAlmostEqual(e["fechadas"][0]["saida"], 100.7)
+
+
+class Torneio(unittest.TestCase):
+    """H50: campeão = maior fator de lucro com ≥ 30 operações; desafiante julgado no mesmo período."""
+
+    def _e(self, res, t0=0, cart=10.0):
+        return {"fechadas": [{"entrada_t": t0 + i, "resultado_usd": r} for i, r in enumerate(res)], "patrimonio": cart}
+
+    def test_campeao_exige_30_operacoes_e_desafiante_no_mesmo_periodo(self):
+        from executor import torneio as T
+        est = {"caçador": self._e([0.1, -0.2] * 20), "rapido": self._e([1.0] * 10),                    # rápido: ótimo, mas só 10 ops
+               "scalper": self._e([0.2, -0.1] * 30, t0=0), "scalper_b": self._e([0.5, -0.1] * 20, t0=20)}
+        r = T.avaliar(est)
+        self.assertEqual(r["campeao"], "scalper")
+        v = next(x for x in r["vereditos"] if x["desafiante"] == "scalper_b")
+        self.assertEqual(v["campeao_mede"]["ops"], 40)          # só as operações do campeão desde que o desafiante começou
+        self.assertTrue(v["veredito"].startswith("GANHOU"))
+        self.assertIsNone(T.avaliar({"x": self._e([1.0] * 5)})["campeao"])

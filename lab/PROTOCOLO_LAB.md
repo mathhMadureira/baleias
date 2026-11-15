@@ -957,3 +957,14 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   serve de comparação).
 - **Juiz ao vivo (até 22/11):** a soma das saídas pelo stop móvel é maior que a soma dessas mesmas operações com a saída antiga (recalculada
   com as velas). Se não for, o stop móvel sai.
+
+## Hipótese 50: torneio — campeão × desafiantes do Scalper (registrada em 2026-11-15 19:05 BRT, antes de ligar)
+
+- **Missão do dono (15/11):** "ver qual robô performa melhor e aperfeiçoá-lo, inclusive suas habilidades".
+- **Placar em 15/11 22:00 UTC** (operações fechadas de cada robô): Scalper nuvem fator de lucro 1,24 (25 ops, carteira 10,21) · Rápido nuvem
+  0,90 (25) · Minerador 0,75 (178) · Caçador 0,69 (183) · Testnet 0,19 (22) · Robô Claude 0 (9) · Robô Livre: 2 liquidações em 41 min
+  (carteira 3,80). Nenhum robô tem fator de lucro > 1 com 30 operações ou mais: o melhor é o Scalper, com amostra pequena.
+- **Desafiantes (uma mudança cada, 2 tentativas):** Scalper B = sem o alvo fixo de +0,5% (o stop móvel da H49 leva o lucro);
+  Scalper C = só apostas do v4 com |p − 0,5| ≥ 0,08 (a confiança foi o único achado robusto da H36).
+- **Juiz (`executor/torneio.py`, a cada rodada):** depois de 30 operações do desafiante, fator de lucro maior que o do Scalper E soma maior,
+  ambos medidos no mesmo período. O vencedor é anunciado na sala e vira a nova versão do Scalper.
