@@ -1,30 +1,32 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 21:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 21:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 10.14** · 24 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 9.86** · 25 operações fechadas · 2 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
-- **Total:** 14/24 com lucro (58%), resultado +0.14, média +0.006 por operação.
-- **Últimas 24 h:** 14/24 com lucro, +0.14.
-- **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.28 · 06–11 UTC: 1 op, 100% certas, +0.09 · 18–23 UTC: 22 op, 59% certas, +0.33
-- **Por lado:** compra: 12 op, 50% certas, -0.29 · venda: 12 op, 67% certas, +0.44
-- **Por confiança do v4:** média (0,05–0,08): 2 op, 50% certas, -0.19 · alta (0,08–0,12): 2 op, 50% certas, +0.06 · muito alta (≥0,12): 20 op, 60% certas, +0.27
-- **Por motivo de saída:** stop de segurança −1.0%: 3 op, 0% certas, -0.84 · fim da vela (contra a tendênci: 4 op, 50% certas, -0.00 · fim da vela do v4: 17 op, 71% certas, +0.98
+- **Total:** 14/25 com lucro (56%), resultado -0.14, média -0.006 por operação.
+- **Últimas 24 h:** 14/25 com lucro, -0.14.
+- **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.28 · 18–23 UTC: 23 op, 57% certas, +0.05 · 06–11 UTC: 1 op, 100% certas, +0.09
+- **Por lado:** compra: 13 op, 46% certas, -0.57 · venda: 12 op, 67% certas, +0.44
+- **Por confiança do v4:** alta (0,08–0,12): 3 op, 33% certas, -0.22 · média (0,05–0,08): 2 op, 50% certas, -0.19 · muito alta (≥0,12): 20 op, 60% certas, +0.27
+- **Por motivo de saída:** stop de segurança −1.0%: 4 op, 0% certas, -1.12 · fim da vela (contra a tendênci: 4 op, 50% certas, -0.00 · fim da vela do v4: 17 op, 71% certas, +0.98
+- **Moedas que mais perderam (≥ 3 op):** ALT -0.34 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** ALT -0.34 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.62** · 182 operações fechadas · 2 abertas
+Carteira **US$ 6.34** · 183 operações fechadas · 1 abertas
 
-- **Total:** 71/182 com lucro (39%), resultado -3.38, média -0.019 por operação.
-- **Últimas 24 h:** 57/133 com lucro, -0.32.
-- **Por horário:** 18–23 UTC: 62 op, 29% certas, -2.81 · 12–17 UTC: 51 op, 41% certas, -0.35 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11
-- **Por lado:** compra: 133 op, 37% certas, -3.16 · venda: 49 op, 45% certas, -0.22
-- **Por confiança do v4:** alta (0,08–0,12): 57 op, 33% certas, -1.36 · muito alta (≥0,12): 111 op, 41% certas, -1.26 · média (0,05–0,08): 14 op, 43% certas, -0.76
-- **Por motivo de saída:** stop de segurança −1%: 18 op, 0% certas, -5.04 · stop de segurança −1.0%: 1 op, 0% certas, -0.28 · fim da vela (contra a tendênci: 1 op, 0% certas, -0.08 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47 · fim da vela do v4: 161 op, 43% certas, +1.55
-- **Moedas que mais perderam (≥ 3 op):** U -0.72 (25 op) · STO -0.48 (3 op) · TST -0.30 (3 op) · ALT -0.29 (3 op) · BONK -0.26 (4 op)
+- **Total:** 71/183 com lucro (39%), resultado -3.66, média -0.020 por operação.
+- **Últimas 24 h:** 56/133 com lucro, -1.07.
+- **Por horário:** 18–23 UTC: 63 op, 29% certas, -3.09 · 12–17 UTC: 51 op, 41% certas, -0.35 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11
+- **Por lado:** compra: 134 op, 37% certas, -3.44 · venda: 49 op, 45% certas, -0.22
+- **Por confiança do v4:** alta (0,08–0,12): 58 op, 33% certas, -1.64 · muito alta (≥0,12): 111 op, 41% certas, -1.26 · média (0,05–0,08): 14 op, 43% certas, -0.76
+- **Por motivo de saída:** stop de segurança −1%: 18 op, 0% certas, -5.04 · stop de segurança −1.0%: 2 op, 0% certas, -0.56 · fim da vela (contra a tendênci: 1 op, 0% certas, -0.08 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47 · fim da vela do v4: 161 op, 43% certas, +1.55
+- **Moedas que mais perderam (≥ 3 op):** U -0.72 (25 op) · ALT -0.57 (4 op) · STO -0.48 (3 op) · TST -0.30 (3 op) · BONK -0.26 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** AI +1.00 (9 op) · CYBER +0.71 (7 op) · KAT +0.33 (3 op) · HOME +0.30 (4 op) · WLFI +0.12 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
@@ -43,19 +45,19 @@ Carteira **US$ 7.76** · 178 operações fechadas · 1 abertas
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 9.24** · 16 operações fechadas · 3 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
+Carteira **US$ 8.56** · 20 operações fechadas · 2 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
-- **Total:** 5/16 com lucro (31%), resultado -0.76, média -0.048 por operação.
-- **Últimas 24 h:** 5/16 com lucro, -0.76.
-- **Por horário:** 18–23 UTC: 16 op, 31% certas, -0.76
-- **Por lado:** compra: 7 op, 29% certas, -0.74 · venda: 9 op, 33% certas, -0.02
-- **Por confiança do v4:** confiança baixa (<0,05): 8 op, 12% certas, -0.86 · média (0,05–0,08): 4 op, 50% certas, -0.03 · muito alta (≥0,12): 1 op, 0% certas, -0.02 · alta (0,08–0,12): 3 op, 67% certas, +0.15
-- **Por motivo de saída:** fim da vela do v4 (saída a mer: 7 op, 0% certas, -0.57 · stop de segurança −1% (saída a: 1 op, 0% certas, -0.37 · fim da vela do v4: 8 op, 62% certas, +0.19
+- **Total:** 6/20 com lucro (30%), resultado -1.44, média -0.072 por operação.
+- **Últimas 24 h:** 6/20 com lucro, -1.44.
+- **Por horário:** 18–23 UTC: 20 op, 30% certas, -1.44
+- **Por lado:** compra: 11 op, 27% certas, -1.42 · venda: 9 op, 33% certas, -0.02
+- **Por confiança do v4:** confiança baixa (<0,05): 11 op, 18% certas, -1.43 · média (0,05–0,08): 5 op, 40% certas, -0.14 · muito alta (≥0,12): 1 op, 0% certas, -0.02 · alta (0,08–0,12): 3 op, 67% certas, +0.15
+- **Por motivo de saída:** stop de segurança −1% (saída a: 2 op, 0% certas, -0.79 · fim da vela do v4 (saída a mer: 8 op, 0% certas, -0.73 · fim da vela do v4: 10 op, 60% certas, +0.07
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 6.14** · 9 operações fechadas · 4 abertas
+Carteira **US$ 6.37** · 9 operações fechadas · 4 abertas
 
 - **Total:** 0/9 com lucro (0%), resultado -3.19, média -0.354 por operação.
 - **Últimas 24 h:** 0/9 com lucro, -3.19.
@@ -68,9 +70,9 @@ Carteira **US$ 6.14** · 9 operações fechadas · 4 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 84.8% das moedas subindo em 24 h, 55.8% em 4 h · BTC 24 h 0.61%, 4 h 0.24%.
+- **Amplitude:** 84.8% das moedas subindo em 24 h, 67.4% em 4 h · BTC 24 h 0.27%, 4 h 0.67%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.1%/ano · {'BTC': 11.0, 'ETH': 1.9, 'SOL': 1.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.0%/ano · {'BTC': 11.0, 'ETH': 4.0, 'SOL': 4.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 80225, MM200 73031); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FF estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ORDI fundo duplo (alta, CONFIRMOU) · SAGA fundo duplo (alta, CONFIRMOU) · ZIL bandeira de baixa (baixa, CONFIRMOU) · AUDIO fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · JUV triângulo ascendente (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · OPG fundo duplo (alta, formado)
 - 📰 15/11 19:30 UTC · CoinDesk: Did prediction markets call the U.S. midterm election?: State of Crypto
@@ -113,7 +115,7 @@ Carteira **US$ 6.14** · 9 operações fechadas · 4 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 12951 apostas conferidas ao vivo, acerto 52.7%; prevê 137 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 13011 apostas conferidas ao vivo, acerto 52.9%; prevê 137 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
