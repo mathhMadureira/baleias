@@ -372,3 +372,55 @@ def nuvem():
     dados = {"t": time.time(), "robos": robos, "retrato": {k: retrato.get(k) for k in ("hora_utc", "mercado_24h", "mercado_4h", "btc", "contexto")}}
     _nuvem.update(t=time.time(), dados=dados)
     return dados
+
+
+# ---------------- Sala de operações (fusão com o OpenBot: baleias.equipe) ----------------
+
+_enviadas = []          # mensagens do dono já enviadas e ainda não vistas na sala da nuvem (mostra "enviada, aguardando a rodada")
+
+
+def sala_painel(forcar=False):
+    """Sala da mesa para o painel: equipe (carteira, posições, ordem vigente), linha do tempo das conversas e eventos."""
+    from . import equipe
+    if forcar:
+        _git["t"] = 0.0
+    _buscar_estado()
+    sala = _git_json("dados/sala.json") or []
+    ordens = _git_json("dados/ordens.json") or {}
+    estados = {a["arquivo"]: _git_json(f"dados/{a['arquivo']}") for a in equipe.EQUIPE}
+    agora = time.time()
+    time_ = []
+    for a in equipe.EQUIPE:
+        e = estados.get(a["arquivo"])
+        if not e:
+            continue
+        o = ordens.get(a["id"])
+        o = o if o and o.get("acao") != "liberar" and o.get("ate", 0) > agora else None
+        time_.append({"id": a["id"], "nome": a["nome"], "avatar": a["avatar"], "motor": a["motor"], "missao": a["missao"],
+                      "carteira": e.get("patrimonio", e.get("carteira")), "abertas": len(e.get("abertas") or {}),
+                      "fechadas": len(e.get("fechadas") or []), "alerta": e.get("alerta_rotina"),
+                      "ordem": {"acao": equipe.ACOES.get(o["acao"], o["acao"]), "motivo": o.get("motivo", ""), "ate": o.get("ate")} if o else None})
+    ids = {x["id"] for x in sala}
+    _enviadas[:] = [m for m in _enviadas if m["id"] not in ids and agora - m["t"] < 6 * 3600]
+    return {"t": agora, "equipe": time_, "sala": sala[-300:], "aguardando": list(_enviadas)}
+
+
+def enviar_ao_chefe(texto, para="claude"):
+    """O dono escreve no painel → um arquivo novo em dados/caixa/ no ramo estado, pela API do GitHub (um arquivo por mensagem: nunca
+    conflita com a gravação da nuvem). A rodada seguinte da nuvem põe a mensagem na sala; a rotina do Claude responde na hora seguinte."""
+    import base64
+    from . import equipe
+    texto = str(texto or "").strip()
+    if not texto:
+        return {"erro": "mensagem vazia"}
+    caminho, m = equipe.nova_mensagem_dono(texto, para=para)
+    url = subprocess.run(["git", "-C", str(REPO), "remote", "get-url", "origin"], capture_output=True, text=True).stdout.strip()
+    repo = url.removesuffix(".git").split("github.com/")[-1].replace(":", "/")
+    corpo = json.dumps({"message": "dono escreveu na sala", "branch": "estado",
+                        "content": base64.b64encode(json.dumps(m, ensure_ascii=False).encode()).decode()})
+    r = subprocess.run(["gh", "api", "-X", "PUT", f"repos/{repo}/contents/{caminho}", "--input", "-"], input=corpo,
+                       capture_output=True, text=True, timeout=60)
+    if r.returncode != 0:
+        return {"erro": (r.stderr or r.stdout or "falha no gh")[:300]}
+    _enviadas.append(m)
+    return {"ok": True, "mensagem": m}

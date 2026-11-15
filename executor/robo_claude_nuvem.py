@@ -121,6 +121,23 @@ def passo(e, decisao, velas, agora):
     return textos
 
 
+def falar_e_ordenar(decisao, agora):
+    """Parte 'chefe da mesa' da decisão (fusão com o OpenBot, baleias.equipe): respostas ao dono, recados na sala e ordens aos robôs.
+    Formato (cartilha, seção 6): "respostas": [{"ref": id, "texto"}], "mensagens": [{"para", "texto"}], "ordens": [{"agente", "acao", "horas", "motivo"}]."""
+    from baleias import equipe
+    ids_dono = {x["id"] for x in equipe.sala() if x["de"] == "dono"}
+    for i, r in enumerate(decisao.get("respostas", []) or []):
+        if isinstance(r, dict) and r.get("ref") in ids_dono and str(r.get("texto", "")).strip():
+            equipe.postar("claude", r["texto"], para="dono", tipo="resposta", t=agora + i / 1000, ref=r["ref"])
+    for i, m in enumerate(decisao.get("mensagens", []) or []):
+        if isinstance(m, dict) and str(m.get("texto", "")).strip():
+            para = str(m.get("para", "sala")).lower()
+            equipe.postar("claude", m["texto"], para=para if para in equipe.POR_ID or para == "dono" else "sala", t=agora + 0.1 + i / 1000)
+    if decisao.get("leitura"):
+        equipe.postar("claude", "🧭 Leitura: " + str(decisao["leitura"])[:400], tipo="evento", t=agora + 0.2)
+    return equipe.aplicar_ordens(decisao.get("ordens"), agora=agora)
+
+
 def main():
     config.RAIZ.mkdir(parents=True, exist_ok=True)
     arq = config.RAIZ / ARQ
@@ -130,7 +147,12 @@ def main():
     agora = time.time()
     velas = {par: [x for x in k if x[6] < agora * 1000] for par, k in velas.items()}
     decisao = ler("decisao_claude.json")
+    from baleias import equipe
+    equipe.sincronizar_caixa()                                               # mensagens novas do dono (painel → dados/caixa/) entram na sala
+    antes = e.get("ultima_decisao_t")
     textos = passo(e, decisao, velas, agora)
+    if decisao and e.get("ultima_decisao_t") != antes:                       # decisão nova: o chefe da mesa fala e dá ordens
+        textos += falar_e_ordenar(decisao, agora)
     idade_h = (agora - decisao.get("t", 0)) / 3600 if decisao else 99.0      # saúde da rotina: sem decisão nova há mais de 2 h = alarme
     if idade_h > 2:                                                           # (15/11: a rotina ficou morta das 03:10 às 09:08 por limite de modelo)
         if not e.get("alerta_rotina"):
@@ -142,6 +164,7 @@ def main():
         e["alerta_rotina"] = None
     e["eventos"] = ([{"t": agora, "texto": x} for x in textos] + e["eventos"])[:100]
     arq.write_text(json.dumps(e, ensure_ascii=False))
+    equipe.postar_eventos("claude", [x for x in textos if not x.startswith("📣")])
     print(f"🤖 Robô Claude: patrimônio US$ {e['patrimonio']:.2f} · {len(e['fechadas'])} fechadas · {len(e['abertas'])} abertas · {len(e.get('licoes', []))} lições")
     for x in textos:
         print("  ", x)

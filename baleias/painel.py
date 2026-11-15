@@ -198,6 +198,13 @@ class Manipulador(BaseHTTPRequestHandler):
             except Exception as ex:
                 corpo = {"erro": f"{type(ex).__name__}: {ex}"}
             self._enviar(200, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")
+        elif self.path.startswith("/api/sala"):
+            from . import mesa
+            try:
+                corpo = mesa.sala_painel(forcar="forcar" in self.path)
+            except Exception as ex:
+                corpo = {"erro": f"{type(ex).__name__}: {ex}"}
+            self._enviar(200, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")
         elif self.path.startswith("/api/licoes"):
             from . import mesa
             try:
@@ -240,6 +247,21 @@ class Manipulador(BaseHTTPRequestHandler):
             self._enviar(200, HTML.read_bytes(), "text/html; charset=utf-8")
         else:
             self._enviar(404, b"{}", "application/json")
+
+    def do_POST(self):
+        """Única escrita do painel: o dono manda mensagem para a sala da mesa (/api/sala). Só aceita pedido da própria página."""
+        origem = self.headers.get("Origin", "")
+        if self.path != "/api/sala" or origem not in ("http://127.0.0.1:8787", "http://localhost:8787"):
+            self._enviar(403, b'{"erro": "proibido"}', "application/json")
+            return
+        try:
+            n = min(int(self.headers.get("Content-Length", 0)), 8000)
+            pedido = json.loads(self.rfile.read(n) or b"{}")
+            from . import mesa
+            corpo = mesa.enviar_ao_chefe(pedido.get("texto", ""), para=str(pedido.get("para", "claude")))
+        except Exception as ex:
+            corpo = {"erro": f"{type(ex).__name__}: {ex}"}
+        self._enviar(200 if corpo.get("ok") else 400, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")
 
     def log_message(self, *a):
         pass

@@ -1,5 +1,12 @@
 # Baleias — documentação do projeto como ele está agora
 
+> **Atualização de 15/11/2026 (noite) — fusão com o OpenBot.** O Baleias passa a ter um propósito só: **uma mesa de operadores de IA que
+> opera cripto sozinha, 24 h, na nuvem, e conversa com o dono.** Do OpenBot vieram as ideias (reescritas em Python puro em
+> `baleias/equipe.py`, sem copiar código): cada robô é um agente com nome, avatar, missão e carteira; uma **Sala de operações**
+> (`dados/sala.json`) junta conversas e entradas/saídas de todos; o dono escreve no painel (vai para `dados/caixa/`); o **Robô Claude é o
+> chefe da mesa** (dono da tarefa): responde o dono e dá ordens aos robôs (`dados/ordens.json`: só vendas, só compras, pausar, liberar; até
+> 24 h). Caçador, Rápido nuvem, Scalper nuvem e Minerador obedecem; o testnet ainda não. Cartilha seção 6.
+
 > **Atualização de 15/11/2026:** todos os robôs que operam rodam na nuvem (Robô Claude, Caçador, Rápido nuvem, Scalper nuvem, Minerador,
 > testnet da Binance), nas 140 moedas do universo; os robôs locais estão desligados. O **Robô Claude** decide de hora em hora lendo o retrato
 > do mercado (amplitude, tendência de 24 h/4 h, notícias do dia, medo e ganância, funding, tendência diária do BTC, padrões gráficos de 1 h)

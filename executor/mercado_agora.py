@@ -88,6 +88,12 @@ def main():
                                 "licoes_anteriores": rc.get("licoes", [])[-8:]}
     else:
         saida["robo_claude"] = {"carteira": 10.0, "abertas": [], "ultimas_fechadas": [], "licoes_anteriores": []}
+    from baleias import equipe                                     # a mesa inteira (fusão com o OpenBot): o chefe vê a equipe e o que o dono pediu
+    equipe.sincronizar_caixa()
+    saida["equipe"] = equipe.retrato()
+    saida["caixa_dono"] = equipe.pendentes_do_dono()
+    saida["sala_recente"] = [{"hora_utc": time.strftime("%d/%m %H:%M", time.gmtime(x["t"])), "de": x["de"], "para": x["para"], "texto": x["texto"][:300]}
+                             for x in equipe.sala() if x.get("tipo") != "evento"][-12:]
     (config.RAIZ / "mercado_agora.json").write_text(json.dumps(saida, ensure_ascii=False, indent=1))
     print(f"📷 Retrato do mercado: {saida.get('mercado_24h', {}).get('subindo_pct', '?')}% subindo em 24 h · BTC 24 h {saida.get('btc', {}).get('24h', '?')}% · v4 {saida.get('v4', {}).get('vendas', '?')} vendas / {saida.get('v4', {}).get('compras', '?')} compras")
 

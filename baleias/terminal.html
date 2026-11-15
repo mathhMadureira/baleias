@@ -142,8 +142,22 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 <main>
 <section class="aba ativa" id="aba-robo">
   <div class="subnav">
-    <a href="#sec-placar">🏁 Placar</a><a href="#sec-lucros">💵 Lucros</a><a href="#sec-varredura">🔎 Varredura</a><a href="#sec-cerebro">🧠 Cérebros</a><a href="#sec-rapido">⚡ Rápido</a>
+    <a href="#sec-sala">🐋 Sala</a><a href="#sec-placar">🏁 Placar</a><a href="#sec-lucros">💵 Lucros</a><a href="#sec-varredura">🔎 Varredura</a><a href="#sec-cerebro">🧠 Cérebros</a><a href="#sec-rapido">⚡ Rápido</a>
     <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
+  </div>
+  <div class="card" id="sec-sala" style="margin-bottom:14px;border-color:#f5a623aa">
+    <h3>🐋 Sala de operações · a mesa inteira numa conversa só: o 🤖 Robô Claude é o chefe, responde você e dá ordens aos robôs<span class="dir mut num" id="sl-t"></span></h3>
+    <div id="sl-equipe" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin-bottom:10px"><div class="vazio">carregando…</div></div>
+    <div style="display:flex;gap:6px;margin-bottom:8px;font-size:12px" class="mut">
+      <label><input type="checkbox" id="sl-eventos"> mostrar entradas e saídas dos robôs</label>
+    </div>
+    <div id="sl-chat" style="max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding:6px;background:var(--card2);border-radius:8px"></div>
+    <form id="sl-form" style="display:flex;gap:6px;margin-top:8px">
+      <select id="sl-para" class="selo" style="background:var(--card2);color:var(--txt)"><option value="claude">para 🤖 Robô Claude (chefe)</option><option value="sala">para a sala toda</option></select>
+      <input id="sl-texto" maxlength="1200" placeholder="Escreva para a mesa (ex.: o mercado está caindo, quero todos vendidos)" style="flex:1;min-width:0;background:var(--card2);color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:8px">
+      <button type="submit" class="selo" style="cursor:pointer">Enviar</button>
+    </form>
+    <div id="sl-aviso" class="mut" style="font-size:12px;margin-top:4px">O chefe lê a sala de hora em hora (minuto 8) e responde aqui. Ordens dele valem até 24 h.</div>
   </div>
   <div class="card" id="sec-nuvem" style="margin-bottom:14px;border-color:#50e3c2aa">
     <h3>☁ Robôs operando agora (nuvem, 24 h) · posições abertas com o preço ao vivo · clique numa moeda para ver o gráfico<span class="dir mut num" id="nv-t"></span></h3>
@@ -1091,6 +1105,62 @@ async function cicloGraficoNuvem() {
 }
 $("nv-g-iv").onchange = () => cicloGraficoNuvem();
 cicloNuvem();
+
+// ---------- Sala de operações (16/11: fusão OpenBot + Baleias, baleias/equipe.py) ----------
+let sl = null, slTimer = null;
+const slEsc = x => String(x ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+function slNome(id) {
+  if (id === "dono") return "👤 Você";
+  if (id === "sala") return "sala";
+  const a = (sl && sl.equipe || []).find(x => x.id === id);
+  return a ? `${a.avatar} ${a.nome}` : id;
+}
+function desenharSala() {
+  if (!sl || sl.erro) { $("sl-equipe").innerHTML = `<div class="vazio">${slEsc(sl && sl.erro || "sem dados")}</div>`; return; }
+  $("sl-equipe").innerHTML = sl.equipe.map(a => {
+    const c = a.carteira == null ? "—" : "US$ " + (+a.carteira).toFixed(2);
+    const cor = a.carteira == null ? "" : a.carteira >= 10 ? "color:var(--verde,#3fb950)" : "color:var(--verm,#f85149)";
+    const ordem = a.ordem ? `<div style="font-size:11px;color:#f5a623">📣 ${slEsc(a.ordem.acao)} até ${new Date(a.ordem.ate * 1000).toLocaleTimeString("pt-BR").slice(0, 5)}</div>` : "";
+    const alerta = a.alerta ? `<div style="font-size:11px;color:#f85149">⚠ ${slEsc(a.alerta)}</div>` : "";
+    return `<div title="${slEsc(a.missao)}" style="border:1px solid var(--line);border-radius:8px;padding:8px">
+      <b>${a.avatar} ${slEsc(a.nome)}</b> <span class="num" style="float:right;${cor}">${c}</span>
+      <div class="mut" style="font-size:11px">${slEsc(a.motor)} · ${a.abertas} abertas · ${a.fechadas} fechadas</div>${ordem}${alerta}</div>`;
+  }).join("");
+  const comEventos = $("sl-eventos").checked;
+  const msgs = sl.sala.filter(m => comEventos || m.tipo !== "evento").slice(-150);
+  const fila = (sl.aguardando || []).map(m => ({...m, tipo: "aguardando"}));
+  const caixa = $("sl-chat"), noFim = caixa.scrollHeight - caixa.scrollTop - caixa.clientHeight < 40;
+  caixa.innerHTML = msgs.concat(fila).map(m => {
+    const meu = m.de === "dono", ev = m.tipo === "evento";
+    const fundo = meu ? "#1f6feb33" : m.tipo === "ordem" ? "#f5a62322" : m.tipo === "resposta" ? "#50e3c222" : ev ? "transparent" : "var(--card)";
+    const para = m.para && m.para !== "sala" ? ` → ${slEsc(slNome(m.para))}` : "";
+    const hora = new Date(m.t * 1000).toLocaleString("pt-BR", {day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit"});
+    const extra = m.tipo === "aguardando" ? ' <i class="mut">(enviada; entra na sala na próxima rodada da nuvem)</i>' : "";
+    return `<div style="align-self:${meu ? "flex-end" : "flex-start"};max-width:85%;background:${fundo};border-radius:8px;padding:${ev ? "2px 8px" : "6px 10px"};font-size:${ev ? 12 : 13}px">
+      <span class="mut" style="font-size:11px">${slEsc(slNome(m.de))}${para} · ${hora}</span><br>${slEsc(m.texto)}${extra}</div>`;
+  }).join("") || '<div class="vazio">A sala ainda está vazia. Escreva a primeira mensagem para o chefe da mesa.</div>';
+  if (noFim) caixa.scrollTop = caixa.scrollHeight;
+}
+async function cicloSala(forcar) {
+  clearTimeout(slTimer);
+  try { sl = await j("/api/sala" + (forcar ? "?forcar" : "")); $("sl-t").textContent = "atualizado " + new Date().toLocaleTimeString("pt-BR"); desenharSala(); }
+  catch (e) { $("sl-t").textContent = "erro ao ler a sala"; }
+  slTimer = setTimeout(cicloSala, 60000);
+}
+$("sl-eventos").addEventListener("change", desenharSala);
+$("sl-form").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const texto = $("sl-texto").value.trim();
+  if (!texto) return;
+  $("sl-aviso").textContent = "enviando…";
+  try {
+    const r = await fetch("/api/sala", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({texto, para: $("sl-para").value})});
+    const d = await r.json();
+    if (d.ok) { $("sl-texto").value = ""; $("sl-aviso").textContent = "✅ enviada para a nuvem. O chefe responde na próxima hora (minuto 8)."; cicloSala(true); }
+    else $("sl-aviso").textContent = "❌ não enviou: " + (d.erro || "erro");
+  } catch (e) { $("sl-aviso").textContent = "❌ não enviou: " + e; }
+});
+cicloSala();
 async function cicloLicoes() {
   try {
     const r = await fetch("/api/licoes", {cache: "no-store"}); const txt = await r.text();

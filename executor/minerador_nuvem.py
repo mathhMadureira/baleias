@@ -67,7 +67,7 @@ def resolver(p, k):
     return c, "fim da vela seguinte"
 
 
-def passo(e, todas, agora_ms):
+def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
     """e: estado do robô; todas: {par: velas fechadas}. Resolve as posições vencidas e abre as novas. Devolve os textos."""
     textos = []
     for par in list(e["abertas"]):
@@ -87,13 +87,15 @@ def passo(e, todas, agora_ms):
     dia = sum(f["resultado_usd"] for f in e["fechadas"] if time.strftime("%Y-%m-%d", time.gmtime(f["saida_t"])) == hoje)
     if dia <= -PERDA_DIA or e["caixa"] < CAPITAL / 2:
         return textos + [f"⛏ Minerador sem novas entradas hoje (resultado do dia {dia:+.2f}, caixa {e['caixa']:.2f})"]
+    if pausado:                                           # ordem do chefe da mesa: sem entradas novas
+        return textos
     candidatos = []
     for par, k in todas.items():
         s = sinal(k) if k else None
         if s and par not in e["abertas"] and k[-1][0] != e["ultimo_sinal"].get(par):
             candidatos.append((abs(s[1]), par, k[-1], s))
     for _, par, vela, (lado, r1, vol96) in sorted(candidatos, reverse=True):
-        if sum(1 for p in e["abertas"].values() if p["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
+        if (lado_ordem and lado != lado_ordem) or sum(1 for p in e["abertas"].values() if p["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
             continue
         entrada = float(vela[4])
         e["caixa"] -= ORCAMENTO / ALAV
@@ -123,7 +125,11 @@ def main():
         junto = {x[0]: x for x in historico.get(par, []) + novas}
         todas[par] = [junto[t] for t in sorted(junto)][-2200:]
         time.sleep(0.05)
-    textos = passo(e, todas, time.time() * 1000)
+    from baleias import equipe
+    pausado, lado_ord = equipe.lado_da_ordem("minerador", None)
+    e["ordem"] = equipe.ordem_vigente("minerador")
+    textos = passo(e, todas, time.time() * 1000, pausado=pausado, lado_ordem=lado_ord)
+    equipe.postar_eventos("minerador", [x for x in textos if "sem novas entradas hoje" not in x])
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
     e["patrimonio"] = e["caixa"] + sum(p["gasto"] for p in e["abertas"].values())
     arq.write_text(json.dumps(e))

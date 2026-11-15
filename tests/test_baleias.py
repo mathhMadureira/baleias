@@ -1425,3 +1425,67 @@ class UmaReguaSo(unittest.TestCase):
             f = mesa._cerebro(btc, "Cérebro v3", {}, "v3")
         self.assertNotIn("🧠 Cérebro v3", r["totais"])        # decisão do dono (13/11): as apostas de contrato binário saíram dos realizados e do placar
         self.assertAlmostEqual(f["desafio"]["carteira"] - 10, -0.2)   # a régua do cérebro (só a aposta feita depois do início) segue correta na aba de pesquisa
+
+
+class Equipe(unittest.TestCase):
+    """Fusão OpenBot + Baleias (16/11): sala, caixa do dono, ordens do chefe aos robôs."""
+
+    def setUp(self):
+        import pathlib, tempfile
+        from baleias import config as cfg
+        self.cfg, self.antes = cfg, cfg.RAIZ
+        cfg.RAIZ = pathlib.Path(tempfile.mkdtemp())
+
+    def tearDown(self):
+        self.cfg.RAIZ = self.antes
+
+    def test_caixa_do_dono_entra_na_sala_e_fica_pendente_ate_resposta(self):
+        import json
+        from baleias import equipe
+        caminho, m = equipe.nova_mensagem_dono("quero todos vendidos", t=1000.0)
+        arq = self.cfg.RAIZ.parent / caminho.replace("dados/", self.cfg.RAIZ.name + "/", 1)
+        arq.parent.mkdir(parents=True, exist_ok=True)
+        arq.write_text(json.dumps(m))
+        self.assertEqual(len(equipe.sincronizar_caixa()), 1)
+        self.assertEqual(equipe.sincronizar_caixa(), [])                # não duplica
+        self.assertEqual([x["texto"] for x in equipe.pendentes_do_dono()], ["quero todos vendidos"])
+        equipe.postar("claude", "feito", para="dono", tipo="resposta", ref=m["id"])
+        self.assertEqual(equipe.pendentes_do_dono(), [])
+
+    def test_ordens_validas_expiram_e_o_chefe_nao_se_ordena(self):
+        from baleias import equipe
+        t = 1_000_000.0
+        textos = equipe.aplicar_ordens([{"agente": "cacador", "acao": "so_vendas", "horas": 99, "motivo": "baixa"},
+                                        {"agente": "claude", "acao": "pausar"}, {"agente": "x", "acao": "pausar"},
+                                        {"agente": "rapido", "acao": "explodir"}], agora=t)
+        self.assertEqual(len(textos), 1)
+        o = equipe.ordens()["cacador"]
+        self.assertEqual(o["ate"], t + 24 * 3600)                       # prazo limitado a 24 h
+        self.assertEqual(equipe.lado_da_ordem("rapido", "compra"), (False, "compra"))
+        import time
+        if o["ate"] < time.time():                                      # data no passado: a ordem já venceu
+            self.assertIsNone(equipe.ordem_vigente("cacador"))
+        self.assertIsNotNone(equipe.ordem_vigente("cacador", agora=t + 3600))
+
+    def test_robo_v4_pausado_nao_entra_e_ordem_de_venda_bloqueia_compra(self):
+        from executor import v4_perp_nuvem as V
+        def estado():
+            return {"caixa": 10.0, "abertas": {}, "fechadas": [], "ultimo_sinal": {}}
+        pend = {"AAAUSDT": {"t": 0, "px": 1.0, "prob": 0.9}, "BBBUSDT": {"t": 0, "px": 1.0, "prob": 0.1}}
+        e = estado(); V.passo(e, pend, {}, 0, pausado=True)
+        self.assertEqual(e["abertas"], {})
+        e = estado(); V.passo(e, pend, {}, 0, lado_ordem="venda")
+        self.assertEqual({p["lado"] for p in e["abertas"].values()}, {"venda"})
+
+    def test_chefe_responde_e_ordena_pela_decisao(self):
+        from baleias import equipe
+        from executor import robo_claude_nuvem as RC
+        equipe.postar("dono", "vende tudo", para="claude", t=500.0)
+        ref = equipe.sala()[0]["id"]
+        import time
+        agora = time.time()
+        RC.falar_e_ordenar({"leitura": "baixa", "respostas": [{"ref": ref, "texto": "ok, mesa vendida"}, {"ref": "falso", "texto": "x"}],
+                            "ordens": [{"agente": "minerador", "acao": "so_vendas", "horas": 2}]}, agora)
+        self.assertEqual(equipe.pendentes_do_dono(), [])
+        self.assertEqual(sum(1 for x in equipe.sala() if x["tipo"] == "resposta"), 1)
+        self.assertEqual(equipe.lado_da_ordem("minerador", None), (False, "venda"))

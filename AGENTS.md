@@ -5,6 +5,8 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 
 ## Produto e pilha
 
+- Propósito único: uma mesa de operadores de IA que opera cripto sozinha, 24 h, na nuvem, e conversa com o dono (fusão com o OpenBot, 15/11:
+  `baleias/equipe.py`, Sala de operações no painel; o Robô Claude é o chefe e dá ordens aos robôs).
 - Robôs de day trade em cripto (perpétuos da Binance) decididos pelo Cérebro v4 (LightGBM), com carteiras de teste de US$ 10 na mesa.
 - Python 3 só com a biblioteca padrão em produção. numpy e lightgbm só no laboratório (`.venv-ml`) e na nuvem (`pip install numpy lightgbm`).
 - Nuvem: GitHub Actions (`.github/workflows/cerebro.yml`, `testnet.yml`, `robo.yml`); estado dos robôs no ramo `estado`, pasta `dados/`.
@@ -13,7 +15,7 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 
 ## Comandos
 
-- Testes: `python3 -m unittest tests.test_baleias` (112 testes; têm de passar antes de qualquer commit).
+- Testes: `python3 -m unittest tests.test_baleias` (116 testes; têm de passar antes de qualquer commit).
 - Checagem de saúde: `python3 checar.py`.
 - Nuvem: `gh workflow run cerebro.yml`, `gh run list --workflow cerebro.yml`; para aplicar código novo na hora, cancelar a rodada viva e disparar outra.
 - Painel: `systemctl --user restart baleias-painel` — no máximo **uma vez por hora**.

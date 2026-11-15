@@ -63,7 +63,7 @@ jobs:
               # Salva SÓ os arquivos deste fluxo por cima do estado mais novo do ramo (outro fluxo, o testnet, também escreve no ramo a cada
               # 5 min; o rebase antigo falhava e 15 rodadas seguidas perderam o estado em 13–14/11). Nunca toca nos arquivos dos outros.
               cd estado
-              MEUS="dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_cacador.json dados/LICOES.md dados/mercado_agora.json dados/robo_claude.json dados/robo_scalper_nuvem.json"
+              MEUS="dados/sala.json dados/ordens.json dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_cacador.json dados/LICOES.md dados/mercado_agora.json dados/robo_claude.json dados/robo_scalper_nuvem.json"
               rm -rf ../salvo && mkdir -p ../salvo && for f in $MEUS; do [ -f "$f" ] && cp --parents "$f" ../salvo/; done
               for i in 1 2 3 4 5; do
                 git fetch -q origin estado && git reset -q --hard origin/estado && cp -r ../salvo/. .

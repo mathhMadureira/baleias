@@ -41,12 +41,12 @@ def resolver(p, vela):
     return c, "fim da vela do v4"
 
 
-def passo(e, pendentes, velas, agora_ms, regime=None):
+def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=None):
     """e: estado; pendentes: apostas do v4 {par: {t, px, prob, aposta}}; velas: {par: velas fechadas}. Devolve os textos.
     regime ("baixa"/"alta"/None, executor.regime): regra do dono — na baixa só vende, na alta só compra, e SEGURA a posição de uma vela
     para a seguinte enquanto o regime continuar e o v4 apostar no mesmo lado (sem pagar saída e entrada de novo)."""
     from executor.regime import lado_permitido
-    permitido = lado_permitido(regime)
+    permitido = lado_ordem or lado_permitido(regime)       # ordem do chefe da mesa (baleias.equipe) manda sobre a regra da tendência
     textos = []
     for par in list(e["abertas"]):
         p = e["abertas"][par]
@@ -80,6 +80,8 @@ def passo(e, pendentes, velas, agora_ms, regime=None):
         if not e.get("eliminado"):
             e["eliminado"] = True
             textos.append(f"⛔ {NOME} abaixo de US$ {PISO:.0f}: eliminado, sem novas entradas até o dono decidir")
+        return textos
+    if pausado:                                             # o chefe da mesa mandou pausar: segue cuidando das abertas, sem entradas novas
         return textos
     if MODO == "ranking":                                   # Caçador: caça a própria entrada a cada vela, nos dois lados (pedido do dono, 13/11)
         ordem = sorted(pendentes.items(), key=lambda kv: -kv[1]["prob"])
@@ -139,12 +141,20 @@ def main():
     from executor import regime as RG
     reg, s24, s4 = RG.de_velas(velas)
     e["regime"] = {"lado": reg, "subindo_24h": s24, "subindo_4h": s4, "t": int(time.time())}
-    textos = passo(e, pendentes, velas, agora_ms, regime=reg)
+    from baleias import equipe
+    agente = equipe.POR_ARQUIVO.get(ARQ, {}).get("id", ARQ)
+    pausado, lado_ord = equipe.lado_da_ordem(agente, None)
+    o = equipe.ordem_vigente(agente)
+    e["ordem"] = o
+    textos = passo(e, pendentes, velas, agora_ms, regime=reg, pausado=pausado, lado_ordem=lado_ord)
+    if o:
+        textos.insert(0, f"📣 {NOME} cumprindo ordem do chefe: {equipe.ACOES[o['acao']]} ({o.get('motivo', '')[:80]})")
     if reg:
         textos.insert(0, f"🧭 {NOME}: mercado em tendência de {reg} ({s24}% das moedas subindo em 24 h, {s4}% em 4 h) → só {'vendas' if reg == 'baixa' else 'compras'}")
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
     e["patrimonio"] = e["caixa"] + sum(p["gasto"] for p in e["abertas"].values())
     arq.write_text(json.dumps(e))
+    equipe.postar_eventos(agente, [x for x in textos if not x.startswith(("🧭", "📣"))])
     print(f"🌲 {NOME} (v4): patrimônio US$ {e['patrimonio']:.2f} · {len(e['fechadas'])} fechadas · {len(e['abertas'])} abertas")
     for x in textos:
         print("  ", x)
