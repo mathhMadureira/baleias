@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 02:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 02:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,14 +18,14 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.91** · 70 operações fechadas · 1 abertas
+Carteira **US$ 6.63** · 71 operações fechadas · 2 abertas
 
-- **Total:** 21/70 com lucro (30%), resultado -3.09, média -0.044 por operação.
-- **Últimas 24 h:** 18/60 com lucro, -2.95.
-- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 12 op, 50% certas, +0.19
-- **Por lado:** compra: 54 op, 28% certas, -3.16 · venda: 16 op, 38% certas, +0.07
-- **Por confiança do v4:** muito alta (≥0,12): 37 op, 24% certas, -1.39 · alta (0,08–0,12): 25 op, 40% certas, -1.02 · média (0,05–0,08): 8 op, 25% certas, -0.68
-- **Por motivo de saída:** stop de segurança −1%: 12 op, 0% certas, -3.36 · fim da vela do v4: 57 op, 35% certas, -0.20 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
+- **Total:** 21/71 com lucro (30%), resultado -3.37, média -0.047 por operação.
+- **Últimas 24 h:** 18/61 com lucro, -3.23.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 13 op, 46% certas, -0.09
+- **Por lado:** compra: 55 op, 27% certas, -3.44 · venda: 16 op, 38% certas, +0.07
+- **Por confiança do v4:** muito alta (≥0,12): 37 op, 24% certas, -1.39 · alta (0,08–0,12): 25 op, 40% certas, -1.02 · média (0,05–0,08): 9 op, 22% certas, -0.96
+- **Por motivo de saída:** stop de segurança −1%: 13 op, 0% certas, -3.64 · fim da vela do v4: 57 op, 35% certas, -0.20 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
 - **Moedas que mais perderam (≥ 3 op):** U -0.34 (12 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op) · AMP +0.25 (3 op) · CYBER +0.60 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** CYBER +0.60 (3 op) · AMP +0.25 (3 op) · TRX -0.11 (3 op) · BEB -0.24 (4 op) · U -0.34 (12 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -35,7 +35,7 @@ Carteira **US$ 6.91** · 70 operações fechadas · 1 abertas
 Carteira **US$ 9.42** · 113 operações fechadas · 0 abertas
 
 - **Total:** 55/113 com lucro (49%), resultado -0.58, média -0.005 por operação.
-- **Últimas 24 h:** 8/17 com lucro, +0.07.
+- **Últimas 24 h:** 8/16 com lucro, +0.60.
 - **Por horário:** 00–05 UTC: 39 op, 44% certas, -0.74 · 06–11 UTC: 8 op, 25% certas, -0.34 · 18–23 UTC: 50 op, 52% certas, +0.04 · 12–17 UTC: 16 op, 62% certas, +0.45
 - **Por lado:** compra: 71 op, 44% certas, -2.09 · venda: 42 op, 57% certas, +1.51
 - **Por motivo de saída:** stop de segurança −2%: 2 op, 0% certas, -1.06 · fim da vela seguinte: 111 op, 50% certas, +0.48
@@ -59,13 +59,13 @@ Carteira **US$ 6.53** · 103 operações fechadas · 1 abertas · carteiras ante
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 8.77** · 2 operações fechadas · 2 abertas
+Carteira **US$ 8.61** · 3 operações fechadas · 1 abertas
 
-- **Total:** 0/2 com lucro (0%), resultado -0.81, média -0.405 por operação.
-- **Últimas 24 h:** 0/2 com lucro, -0.81.
-- **Por horário:** 00–05 UTC: 2 op, 0% certas, -0.81
-- **Por lado:** venda: 2 op, 0% certas, -0.81
-- **Por motivo de saída:** ordem do dono: lidera as queda: 2 op, 0% certas, -0.81
+- **Total:** 0/3 com lucro (0%), resultado -1.21, média -0.405 por operação.
+- **Últimas 24 h:** 0/3 com lucro, -1.21.
+- **Por horário:** 00–05 UTC: 3 op, 0% certas, -1.21
+- **Por lado:** venda: 3 op, 0% certas, -1.21
+- **Por motivo de saída:** ordem do dono: lidera as queda: 2 op, 0% certas, -0.81 · ordem do dono (14/11 21:40): m: 1 op, 0% certas, -0.40
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
@@ -76,7 +76,7 @@ Carteira **US$ 8.77** · 2 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
   (v3: 7 sinapses votando, 18 em observação, 0 podadas)
 **v2:**
 - ❌ Errou. Dopamina negativa em: rede_neural. Rede corrigida (taxa ×2.3).
@@ -87,15 +87,15 @@ Carteira **US$ 8.77** · 2 operações fechadas · 2 abertas
 - ❌ Errou. Dopamina negativa em: rede_neural. Rede corrigida (taxa ×2.9).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - 🛑 Teto de perda do dia (US$ -101.77): sem apostas até 00:00 UTC.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 9337 apostas conferidas ao vivo, acerto 49.3%; prevê 166 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 9397 apostas conferidas ao vivo, acerto 49.6%; prevê 165 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
