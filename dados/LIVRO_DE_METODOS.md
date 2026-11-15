@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.9% | 1869 | 50.6%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 1870 | 50.6%–55.1% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_graal_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_wr_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
@@ -17,7 +17,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_180_baixa | promissor | 52.0% | 25 | 33.5%–70.0% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | tres_corvos | promissor | 50.5% | 321 | 45.0%–55.9% | H6: três corvos → sobe (efeito pequeno) |
 | raschke_sopa_baixa | reprovado | 50.0% | 2 | 9.5%–90.5% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
-| vortice_invertido | reprovado | 48.9% | 376 | 43.9%–54.0% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| vortice_invertido | reprovado | 48.8% | 377 | 43.8%–53.8% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | demark_td9_alta | reprovado | 41.2% | 17 | 21.6%–64.0% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | rompimento | reprovado | 36.4% | 33 | 22.2%–53.4% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | connors_8020_alta | reprovado | 33.3% | 3 | 6.1%–79.2% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
