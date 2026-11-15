@@ -1,13 +1,11 @@
 {
-  "t": 1794766161,
-  "leitura": "BTC −2,04% em 24 h e −1,35% em 4 h; 74% das moedas caindo em 24 h e 89,5% em 4 h; 1 h do BTC sangrando em velas pequenas (−1,03, −0,03, −0,07, −0,23, +0,12) abaixo do topo de 65216: tendência de baixa, 24 h e 4 h concordam; v4 43 vendas × 16 compras.",
+  "t": 1794769758,
+  "leitura": "Baixa fraca: 24 h com 34,5% das moedas subindo (mediana −1,07%), 4 h indeciso com 43,2% subindo (mediana −0,12%); BTC 24 h −1,28%, 4 h −0,06%, volume 0,51×; 1 h segue abaixo de 65216 sem topo novo. Sem tendência clara para abrir mais; mantenho as vendas cuja razão segue de pé.",
   "posicoes": [
-    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "mantida: +0,2% há 2,7 h, topo descendente após 65216 intacto, preço 64557"},
-    {"moeda": "ZROUSDT", "lado": "venda", "motivo": "mantida: +0,72% há 2,7 h, 4 h −3,37% e 24 h −10,29% seguem em baixa"},
-    {"moeda": "ERAUSDT", "lado": "venda", "motivo": "4 h −3,89% e 24 h −4,82% alinhados, sem esticar; v4 confirma venda (prob_subir 0,424)"},
-    {"moeda": "KAVAUSDT", "lado": "venda", "motivo": "4 h −4,24% e 24 h −4,45% alinhados, 24 h acima de −10% (não esticada)"}
+    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "24 h em baixa e BTC não fechou 1 h acima de 65216 (topo descendente intacto); −0,07% está dentro do ruído"},
+    {"moeda": "ZROUSDT", "lado": "venda", "motivo": "venda de 3,7 h no lucro (+0,58%), 24 h do mercado ainda em baixa; segurar enquanto a tendência durar"}
   ],
   "fechar": [],
   "motivos_fechar": {},
-  "licao": "As 7 vendas fechadas saíram todas no stop (−0,405 cada); ZIL e BARD (24 h ≈ −14%) pararam em ~15 min, enquanto BTC (24 h −2%) e ZRO (24 h −10%) seguem no lucro há 2,7 h. Nesta rodada só vendi moedas com 24 h entre −4% e −5% (ERA, KAVA): conferir na próxima se passam de 1 h sem bater o stop."
+  "licao": "ERA e KAVA, decididas às 18:09 UTC, não aparecem em abertas nem em fechadas: não entraram. Com 4 h em 43,2% subindo e volume 0,51× não abro novas; só volto a usar as 4 vagas se o 4 h cair abaixo de 40% subindo com o BTC fechando 1 h abaixo de 64500 e volume acima de 1,2×; se o BTC fechar 1 h acima de 65216, fecho BTC e ZRO."
 }
