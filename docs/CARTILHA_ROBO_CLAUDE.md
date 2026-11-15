@@ -127,3 +127,8 @@ Faça uma segunda leitura da sua própria decisão, como um revisor que não a e
 4. O `vigia_v4` diz que o v4 está abaixo do laboratório ou que um modelo simples ganha dele? Então **não use o v4 como voto** nesta hora.
    Se ele mostra um segmento fraco (ex.: um horário com acerto < 50%), seja mais exigente nas entradas desse segmento e diga isso na sala.
 5. Mandou ordem para algum robô? A ordem tem motivo com número do retrato e prazo? Sem número, não mande.
+
+## 8. Trava de lucro (executor, H48)
+
+Quando uma posição sua chega a +1% a favor, o executor sobe a saída para +0,5%: se o preço voltar, ela fecha guardando esse lucro.
+Você não precisa fechar posições para "proteger o lucro"; feche só quando a razão da entrada acabou (seção 2).

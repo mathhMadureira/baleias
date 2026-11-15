@@ -20,6 +20,7 @@ ORCAMENTO, ALAV, CUSTO_LADO = 25.0, 10.0, 0.0006
 STOP_SEG = float(os.environ.get("RC_STOP", "0.015"))
 MAX_POS, CAPITAL, PISO = 4, 10.0, 5.0
 MAX_HORAS = 24
+TRAVA_ARMA, TRAVA_GUARDA = 0.01, 0.005     # H48: chegou a +1% → a saída sobe para +0,5% (8 de 9 operações devolviam o lucro; −3,19 → −0,38 na simulação)
 VALIDADE_S = 75 * 60
 VELA_MS = 900_000
 ARQ = "robo_claude.json"
@@ -68,14 +69,22 @@ def passo(e, decisao, velas, agora):
         sp = p.get("stop_pct", STOP_SEG)
         stop = p["entrada"] * (1 + sp if venda else 1 - sp)
         saiu = None
+        guarda = p["entrada"] * (1 - TRAVA_GUARDA if venda else 1 + TRAVA_GUARDA)
+        motivo_saida = f"stop de segurança −{sp:.1%}"
         for x in k:
             o, h, l = float(x[1]), float(x[2]), float(x[3])
             if (h >= stop) if venda else (l <= stop):
                 saiu = (max(o, stop) if venda else min(o, stop))
                 break
+            if p.get("trava") and ((h >= guarda) if venda else (l <= guarda)):      # travado: devolveu até +0,5% → sai com o lucro guardado
+                saiu, motivo_saida = (max(o, guarda) if venda else min(o, guarda)), f"trava de lucro (chegou a +{TRAVA_ARMA:.0%}, guardou +{TRAVA_GUARDA:.1%})"
+                break
+            favoravel = (p["entrada"] / l - 1) if venda else (h / p["entrada"] - 1)
+            if favoravel >= TRAVA_ARMA and not p.get("trava"):                     # arma só depois da vela (conservador: não sabe a ordem dentro dela)
+                p["trava"] = True
             p["conferido_ate"] = x[0] + VELA_MS
         if saiu is not None:
-            textos.append(fechar(e, par, p, saiu, f"stop de segurança −{sp:.1%}", agora))
+            textos.append(fechar(e, par, p, saiu, motivo_saida, agora))
         elif agora - p["entrada_t"] > MAX_HORAS * 3600 and par in preco:
             textos.append(fechar(e, par, p, preco[par], f"tempo máximo ({MAX_HORAS} h) sem nova decisão", agora))
     # 2) decisão do Claude (se recente)

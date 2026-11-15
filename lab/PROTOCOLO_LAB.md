@@ -930,3 +930,16 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   sem custo aparece ao lado. Não obedece ordens do chefe. Não passou por teste de laboratório (é o ponto do pedido).
 - **Medida:** carteira a cada rodada, desde US$ 10. Em 24 h (até 16/11 21:30 UTC) e em 7 dias: carteira com custo, carteira sem custo,
   número de liquidações. Nenhum número de expectativa é dado antes: não há teste que sustente um.
+
+## Hipótese 48: trava de lucro no Robô Claude (registrada em 2026-11-15 19:10 BRT, antes de ligar)
+
+- **Queixa do dono (15/11):** "quando estão positivos, entram em outras operações e começam a perder; não saem do lugar".
+- **Medido (403 operações fechadas dos robôs da nuvem, velas de 1 min de cada uma):** depois de um ganho a operação seguinte NÃO é pior
+  (Caçador −0,011 × −0,023 depois de perda; Minerador +0,006 × −0,027). O que existe é **devolver o lucro aberto**: no Robô Claude 8 de 9
+  operações chegaram a +0,5% e terminaram no zero ou no negativo (devolução média de 3,5% do pico); nos robôs do v4 (15 min) só 0–9%.
+- **Simulação (3 tentativas: armar a +0,3%, +0,5%, +1%; guardar metade):** Robô Claude melhora nas 3 (−3,19 → −0,76 / −0,58 / −0,38);
+  nos robôs do v4 o efeito troca de sinal entre versões e entre metades do período (ex.: Caçador −3,35 → −1,55 a 0,3%, → −4,02 a 1%):
+  **sem evidência, não muda**. Escolhida a de +1% para o Robô Claude (coerente com stop de 1,5–4%). Só 9 operações: amostra pequena.
+- **Regra ligada:** chegou a +1% a favor (máxima/mínima de vela de 15 min fechada) → a saída sobe para +0,5%.
+- **Juiz ao vivo (até 30 operações do Robô Claude ou 29/11):** as saídas pela trava somam mais do que essas mesmas operações somariam com a
+  saída sem trava (recalculado com as velas). Se não, a trava sai.
