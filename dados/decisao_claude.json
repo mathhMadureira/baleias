@@ -1,8 +1,8 @@
 {
-  "t": 1794744629,
-  "leitura": "24 h e 4 h discordam: 24 h em baixa (8,1% das moedas subindo, mediana −5,27%, BTC −2,86%), 4 h em alta (88,1% subindo, BTC +2,09%) mas sem volume (0,76×); última hora devolvendo (31,9% subindo). Mercado indeciso: fora.",
+  "t": 1794748208,
+  "leitura": "24 h e 4 h discordam: 24 h em baixa (10,3% das moedas subindo, mediana −4,03%, BTC −2,22%), 4 h em repique (86,5% subindo, BTC +0,45% com volume 0,61× a média). Repique sem volume dentro da baixa do dia: mercado indeciso, fico fora.",
   "posicoes": [],
   "fechar": [],
   "motivos_fechar": {},
-  "licao": "As 5 vendas (4 de 00:50 e o BTC de 06:30 UTC a 64252) saíram todas no stop: a venda do repique entrou sem topo descendente confirmado e o BTC subiu até 65216; hoje 88% das moedas sobem em 4 h. Só volto a vender com 4 h de novo abaixo de 40% subindo e uma vela de 1 h do BTC fechando abaixo da mínima da última correção."
+  "licao": "As 5 vendas saíram no stop (−0,405 cada, carteira 7,98) porque vendi contra um repique de 4 h; agora o 4 h segue 86,5% subindo e o 24 h 10,3%: discordância, fora. Só volto a vender quando o 4 h cair abaixo de 40% subindo; só compro se o 24 h passar de 60% subindo com o BTC fechando 1 h acima de 65216 (máxima do último stop) com volume acima de 1,2×."
 }
