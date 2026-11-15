@@ -1597,3 +1597,28 @@ class Torneio(unittest.TestCase):
         self.assertEqual(v["campeao_mede"]["ops"], 40)          # só as operações do campeão desde que o desafiante começou
         self.assertTrue(v["veredito"].startswith("GANHOU"))
         self.assertIsNone(T.avaliar({"x": self._e([1.0] * 5)})["campeao"])
+
+
+class FocoScalper(unittest.TestCase):
+    """H51: o Scalper D evita só o segmento que perde com prova (≥ 50 operações, z ≤ −2)."""
+
+    def test_foco_so_com_prova_e_o_robo_obedece(self):
+        import json, pathlib, tempfile, random
+        from baleias import config as cfg
+        from executor import torneio as T, v4_perp_nuvem as V
+        random.seed(1)
+        t_venda = 1_800_000_000 + 3 * 3600                     # 03 h UTC
+        f = [{"lado": "venda", "prob": 0.4, "entrada_t": t_venda, "resultado_usd": -0.1 + random.uniform(-0.02, 0.02)} for _ in range(60)]
+        f += [{"lado": "compra", "prob": 0.6, "entrada_t": t_venda + 6 * 3600, "resultado_usd": 0.05 + random.uniform(-0.2, 0.2)} for _ in range(60)]
+        ruins, seg = T.foco(f)
+        self.assertIn("lado:venda", ruins)
+        self.assertNotIn("lado:compra", ruins)
+        self.assertEqual(T.foco(f[:40])[0], [])                # só 40 operações: não sei, não exclui nada
+        antes, antes_foco = cfg.RAIZ, V.FOCO
+        cfg.RAIZ = pathlib.Path(tempfile.mkdtemp()); V.FOCO = "foco.json"
+        try:
+            (cfg.RAIZ / "foco.json").write_text(json.dumps({"excluir": ["lado:venda"]}))
+            self.assertTrue(V.evitar("venda", 0.4, t_venda))
+            self.assertFalse(V.evitar("compra", 0.6, t_venda))
+        finally:
+            cfg.RAIZ, V.FOCO = antes, antes_foco

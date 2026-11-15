@@ -24,6 +24,7 @@ LIMIAR = float(os.environ.get("V4P_LIMIAR", "0.03"))            # 0,03 = todas a
 MODO = os.environ.get("V4P_MODO", "limiar")                     # "limiar": entra nas apostas acima de LIMIAR; "ranking" (Caçador): a cada vela as K moedas
 K = int(os.environ.get("V4P_K", "2"))                           #   com maior chance de subir (compra) e as K com maior chance de cair (venda) — sempre posicionado
 VELA_MS = 900_000
+FOCO = os.environ.get("V4P_FOCO", "")                           # Scalper D (H51): arquivo com os segmentos a evitar, escrito pelo torneio
 ARQ = os.environ.get("V4P_ARQ", "robo_v4_perp.json")
 NOME = os.environ.get("V4P_NOME", "Rápido nuvem")
 
@@ -43,6 +44,21 @@ def resolver(p, vela):
     if (l <= alvo) if venda else (h >= alvo):
         return alvo, f"lucro realizado +US$ {REALIZAR:.2f}"
     return c, "fim da vela do v4"
+
+
+def segmento(lado, prob, t):
+    """Os segmentos de uma entrada que o torneio mede (mesmas chaves de executor.torneio.segmentos)."""
+    h = time.gmtime(t).tm_hour
+    c = abs(prob - 0.5)
+    return {f"lado:{lado}", f"horario_utc:{h // 6 * 6:02d}-{h // 6 * 6 + 6:02d}", "confianca:" + ("≥0,08" if c >= 0.08 else "<0,08")}
+
+
+def evitar(lado, prob, t):
+    try:
+        excluir = set(json.loads((config.RAIZ / FOCO).read_text()).get("excluir", []))
+    except (OSError, ValueError):
+        return False
+    return bool(segmento(lado, prob, t) & excluir)
 
 
 def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=None):
@@ -105,6 +121,8 @@ def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=
         if par in e["abertas"] or p["t"] == e["ultimo_sinal"].get(par):
             continue
         lado = "compra" if p["prob"] > 0.5 else "venda"
+        if FOCO and evitar(lado, p["prob"], (p["t"] + VELA_MS) / 1000):
+            continue
         if sum(1 for q in e["abertas"].values() if q["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
             continue
         e["caixa"] -= ORCAMENTO / ALAV

@@ -13,7 +13,8 @@ import time
 from baleias import config, equipe
 
 MIN_OPS = 30
-DESAFIANTES = {"scalper": ["scalper_b", "scalper_c"]}     # H50: clones do campeão atual
+DESAFIANTES = {"scalper": ["scalper_b", "scalper_c", "scalper_d"]}     # H50/H51: clones do Scalper
+FOCO_MIN_OPS, FOCO_Z = 50, -2.0                           # H51: segmento a evitar só com ≥ 50 operações e perda de 2 erros-padrão
 
 
 def medir(e, desde=0):
@@ -24,6 +25,33 @@ def medir(e, desde=0):
             "ganho_medio": round(sum(g) / len(g), 3) if g else None, "perda_media": round(sum(p) / len(p), 3) if p else None,
             "fator_lucro": round(sum(g) / -sum(p), 2) if p else (None if not g else 99.0),
             "carteira": round(float(e.get("patrimonio", e.get("carteira", 10.0)) or 0), 2)}
+
+
+def segmentos(fechadas):
+    """Soma, n e z (média ÷ erro-padrão) do resultado por segmento de ENTRADA (lado, faixa de horário UTC, confiança do v4)."""
+    import math
+    from executor.v4_perp_nuvem import segmento
+    seg = {}
+    for x in fechadas:
+        if x.get("prob") is None or not x.get("entrada_t"):
+            continue
+        for k in segmento(x["lado"], x["prob"], x["entrada_t"]):
+            seg.setdefault(k, []).append(float(x.get("resultado_usd") or 0))
+    out = {}
+    for k, v in seg.items():
+        n, m = len(v), sum(v) / len(v)
+        dp = math.sqrt(sum((a - m) ** 2 for a in v) / (n - 1)) if n > 1 else 0.0
+        out[k] = {"n": n, "soma": round(sum(v), 3), "z": round(m / (dp / math.sqrt(n)), 2) if dp else 0.0}
+    return out
+
+
+def foco(fechadas):
+    """Segmentos que o Scalper D deve evitar: os que perdem com ≥ FOCO_MIN_OPS operações e z ≤ FOCO_Z. Nunca exclui os dois lados."""
+    seg = segmentos(fechadas)
+    ruins = sorted((k for k, v in seg.items() if v["n"] >= FOCO_MIN_OPS and v["z"] <= FOCO_Z and v["soma"] < 0), key=lambda k: seg[k]["z"])
+    if {"lado:compra", "lado:venda"} <= set(ruins):
+        ruins.remove("lado:compra" if seg["lado:compra"]["z"] > seg["lado:venda"]["z"] else "lado:venda")
+    return ruins, seg
 
 
 def avaliar(estados):
@@ -58,6 +86,14 @@ def main():
         except ValueError:
             estados[a["id"]] = None
     r = avaliar(estados)
+    if estados.get("scalper"):                                 # H51: o foco do Scalper D vem dos segmentos do Scalper original
+        ruins, seg = foco(estados["scalper"].get("fechadas") or [])
+        r["segmentos_scalper"] = seg
+        arq_foco = config.RAIZ / "foco_scalper.json"
+        antes_foco = json.loads(arq_foco.read_text()).get("excluir", []) if arq_foco.exists() else []
+        arq_foco.write_text(json.dumps({"t": int(time.time()), "excluir": ruins, "segmentos": seg}, ensure_ascii=False))
+        if ruins != antes_foco:
+            equipe.postar("torneio", "🎯 Scalper D (foco) " + (f"passa a evitar: {', '.join(ruins)} (perdem com ≥ {FOCO_MIN_OPS} operações e z ≤ {FOCO_Z})" if ruins else "sem segmentos a evitar"), tipo="evento")
     arq = config.RAIZ / "torneio.json"
     antes = json.loads(arq.read_text()) if arq.exists() else {}
     arq.write_text(json.dumps(r, ensure_ascii=False))

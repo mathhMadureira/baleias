@@ -968,3 +968,14 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   Scalper C = só apostas do v4 com |p − 0,5| ≥ 0,08 (a confiança foi o único achado robusto da H36).
 - **Juiz (`executor/torneio.py`, a cada rodada):** depois de 30 operações do desafiante, fator de lucro maior que o do Scalper E soma maior,
   ambos medidos no mesmo período. O vencedor é anunciado na sala e vira a nova versão do Scalper.
+
+## Hipótese 51: Scalper D — focar onde o Scalper ganha, só com prova (registrada em 2026-11-15 19:30 BRT, antes de ligar)
+
+- **Pedido do dono (15/11):** "o Scalper na nuvem tem que focar onde ele está positivo".
+- **Medido (29 operações do Scalper, carteira 10,58):** ganha nas saídas por lucro realizado (9 ops, +0,855) e stop móvel (2 ops, +0,197);
+  perde nas saídas no fim da vela (15 ops, −0,381; contra a tendência 3 ops, −0,090). A saída não é escolhível na entrada. Segurar as 18 operações
+  do fim da vela até alvo/stop/4 h daria −0,518 (real −0,471): não melhora. Segmentos de entrada com 29 operações se contradizem (18–24 h UTC
+  +0,63 no Scalper e o pior horário do v4 inteiro no vigia): escolher agora seria ajustar ao acaso.
+- **Regra:** o Scalper D é igual ao Scalper e evita, a cada rodada, os segmentos de entrada (lado, faixa de 6 h UTC, confiança ≥/< 0,08) em
+  que o Scalper original perde com ≥ 50 operações e z ≤ −2 (`executor/torneio.py` escreve `dados/foco_scalper.json`). Nunca exclui os dois lados.
+- **Juiz:** o do torneio (H50): depois de 30 operações, fator de lucro e soma maiores que o Scalper no mesmo período.

@@ -40,6 +40,8 @@ EQUIPE = (
      "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro."},
     {"id": "scalper_c", "nome": "Scalper C (só confiantes)", "avatar": "✂", "arquivo": "robo_scalper_c.json", "motor": "Cérebro v4",
      "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36)."},
+    {"id": "scalper_d", "nome": "Scalper D (foco)", "avatar": "✂", "arquivo": "robo_scalper_d.json", "motor": "Cérebro v4",
+     "missao": "Desafiante do Scalper (H51): igual a ele, mas evita os segmentos (lado, horário, confiança) em que o Scalper perde com prova."},
     {"id": "minerador", "nome": "Minerador", "avatar": "⛏", "arquivo": "robo_minerador.json", "motor": "regra H28",
      "missao": "Vende alta forte sem volume e compra queda forte sem volume (a regra de minutos que pagou custo no laboratório)."},
     {"id": "livre", "nome": "Robô Livre", "avatar": "🦅", "arquivo": "robo_livre.json", "motor": "maioria do mercado 24 h, 20×",

@@ -59,6 +59,7 @@ jobs:
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_ARQ=robo_scalper_nuvem.json V4P_NOME="Scalper nuvem" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=99 V4P_ARQ=robo_scalper_b.json V4P_NOME="Scalper B" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper B falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_LIMIAR=0.08 V4P_ARQ=robo_scalper_c.json V4P_NOME="Scalper C" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper C falhou"
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_FOCO=foco_scalper.json V4P_ARQ=robo_scalper_d.json V4P_NOME="Scalper D" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper D falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.robo_livre_nuvem | tee -a resumo.txt || echo "robô livre falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.robo_claude_nuvem | tee -a resumo.txt || echo "robô claude falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.torneio | tee -a resumo.txt || echo "torneio falhou"
@@ -68,7 +69,7 @@ jobs:
               # Salva SÓ os arquivos deste fluxo por cima do estado mais novo do ramo (outro fluxo, o testnet, também escreve no ramo a cada
               # 5 min; o rebase antigo falhava e 15 rodadas seguidas perderam o estado em 13–14/11). Nunca toca nos arquivos dos outros.
               cd estado
-              MEUS="dados/torneio.json dados/robo_scalper_b.json dados/robo_scalper_c.json dados/robo_livre.json dados/vigia_v4.json dados/sala.json dados/ordens.json dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_cacador.json dados/LICOES.md dados/mercado_agora.json dados/robo_claude.json dados/robo_scalper_nuvem.json"
+              MEUS="dados/foco_scalper.json dados/robo_scalper_d.json dados/torneio.json dados/robo_scalper_b.json dados/robo_scalper_c.json dados/robo_livre.json dados/vigia_v4.json dados/sala.json dados/ordens.json dados/cerebro.json dados/cerebro_v2.json dados/cerebro_v3.json dados/livro_metodos.json dados/LIVRO_DE_METODOS.md dados/cerebros_moedas.json dados/robo_minerador.json dados/cerebro_v4.json dados/robo_v4_perp.json dados/robo_v4_cacador.json dados/LICOES.md dados/mercado_agora.json dados/robo_claude.json dados/robo_scalper_nuvem.json"
               rm -rf ../salvo && mkdir -p ../salvo && for f in $MEUS; do [ -f "$f" ] && cp --parents "$f" ../salvo/; done
               for i in 1 2 3 4 5; do
                 git fetch -q origin estado && git reset -q --hard origin/estado && cp -r ../salvo/. .
