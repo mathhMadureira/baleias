@@ -1,27 +1,27 @@
 {
- "t": 1794728205,
- "hora_utc": "2026-11-15 07:36 UTC",
+ "t": 1794729106,
+ "hora_utc": "2026-11-15 07:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 160,
-  "subindo_pct": 23.1,
-  "mediana_pct": -0.28
+  "subindo_pct": 6.2,
+  "mediana_pct": -1.1
  },
  "mercado_4h": {
   "moedas": 160,
-  "subindo_pct": 30.0,
-  "mediana_pct": -0.49
+  "subindo_pct": 10.6,
+  "mediana_pct": -1.58
  },
  "mercado_24h": {
   "moedas": 160,
-  "subindo_pct": 6.2,
-  "mediana_pct": -6.73
+  "subindo_pct": 6.9,
+  "mediana_pct": -7.1
  },
  "btc": {
-  "1h": -0.28,
-  "4h": -0.99,
-  "24h": -4.31,
-  "preco": 64358.08,
+  "1h": -0.97,
+  "4h": -1.93,
+  "24h": -4.68,
+  "preco": 63901.26,
   "vol_4h_vs_media": 0.48
  },
  "maiores_quedas_4h": [
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "SHELL",
-   "4h": -13.46,
-   "24h": -21.64,
-   "vol": 0.79
-  },
-  {
-   "moeda": "SOPH",
-   "4h": -8.65,
-   "24h": 17.28,
-   "vol": 0.65
-  },
-  {
-   "moeda": "HMSTR",
-   "4h": -4.98,
-   "24h": -4.98,
-   "vol": 0.51
-  },
-  {
-   "moeda": "MITO",
-   "4h": -4.39,
-   "24h": -12.22,
-   "vol": 0.62
+   "4h": -10.87,
+   "24h": -20.27,
+   "vol": 0.8
   },
   {
    "moeda": "0G",
-   "4h": -4.04,
-   "24h": -11.9,
-   "vol": 0.57
+   "4h": -5.38,
+   "24h": -12.96,
+   "vol": 0.59
   },
   {
-   "moeda": "DODO",
-   "4h": -3.49,
-   "24h": -2.11,
-   "vol": 0.27
+   "moeda": "SOPH",
+   "4h": -5.03,
+   "24h": 15.95,
+   "vol": 0.65
   },
   {
    "moeda": "KAVA",
-   "4h": -3.18,
-   "24h": -58.33,
-   "vol": 0.36
+   "4h": -4.96,
+   "24h": -58.04,
+   "vol": 0.3
+  },
+  {
+   "moeda": "HMSTR",
+   "4h": -4.19,
+   "24h": -5.26,
+   "vol": 0.51
   },
   {
    "moeda": "STO",
-   "4h": -2.85,
-   "24h": -8.43,
-   "vol": 0.58
+   "4h": -4.03,
+   "24h": -8.11,
+   "vol": 0.59
+  },
+  {
+   "moeda": "CVX",
+   "4h": -3.7,
+   "24h": -9.42,
+   "vol": 0.99
   },
   {
    "moeda": "MARSCOIN",
-   "4h": -2.82,
-   "24h": -12.24,
-   "vol": 0.49
+   "4h": -3.67,
+   "24h": -12.56,
+   "vol": 0.61
+  },
+  {
+   "moeda": "MITO",
+   "4h": -3.65,
+   "24h": -15.71,
+   "vol": 0.62
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "INIT",
-   "4h": 14.53,
-   "24h": 7.47,
-   "vol": 1.87
-  },
-  {
-   "moeda": "SKY",
-   "4h": 5.55,
-   "24h": -0.94,
-   "vol": 2.31
-  },
-  {
-   "moeda": "BANANAS31",
-   "4h": 4.62,
-   "24h": 0.56,
-   "vol": 0.55
+   "4h": 19.42,
+   "24h": 14.16,
+   "vol": 2.15
   },
   {
    "moeda": "MEGA",
-   "4h": 4.24,
-   "24h": 9.09,
-   "vol": 1.35
+   "4h": 4.29,
+   "24h": 8.92,
+   "vol": 1.36
   },
   {
-   "moeda": "NIGHT",
-   "4h": 3.96,
-   "24h": 7.86,
-   "vol": 0.84
+   "moeda": "SKY",
+   "4h": 4.22,
+   "24h": -1.44,
+   "vol": 2.3
+  },
+  {
+   "moeda": "BANANAS31",
+   "4h": 3.72,
+   "24h": 1.92,
+   "vol": 0.56
   },
   {
    "moeda": "KITE",
-   "4h": 2.61,
-   "24h": 4.7,
-   "vol": 0.98
+   "4h": 3.09,
+   "24h": 4.54,
+   "vol": 1.08
   },
   {
-   "moeda": "ETHFI",
-   "4h": 2.43,
-   "24h": -8.44,
-   "vol": 0.46
-  },
-  {
-   "moeda": "STRK",
-   "4h": 2.03,
-   "24h": -0.56,
-   "vol": 0.6
+   "moeda": "AI",
+   "4h": 1.33,
+   "24h": 4.83,
+   "vol": 0.88
   },
   {
    "moeda": "GPS",
-   "4h": 2.0,
-   "24h": 2.9,
-   "vol": 0.82
+   "4h": 1.24,
+   "24h": 2.76,
+   "vol": 0.83
   },
   {
-   "moeda": "INJ",
-   "4h": 1.94,
-   "24h": -12.4,
-   "vol": 0.57
+   "moeda": "ONE",
+   "4h": 1.03,
+   "24h": -7.12,
+   "vol": 0.51
+  },
+  {
+   "moeda": "NIGHT",
+   "4h": 1.01,
+   "24h": 6.95,
+   "vol": 0.87
+  },
+  {
+   "moeda": "ZRO",
+   "4h": 0.69,
+   "24h": -5.27,
+   "vol": 0.32
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,93 +172,93 @@
   0.17,
   -0.64,
   -0.08,
-  -0.41
+  -1.06
  ],
  "v4": {
-  "vela": "07:30 UTC",
-  "apostas": 45,
-  "compras": 11,
-  "vendas": 34,
+  "vela": "17:30 UTC",
+  "apostas": 113,
+  "compras": 104,
+  "vendas": 9,
   "mais_confiantes_venda": [
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.345
-   },
    {
     "moeda": "BEB",
     "prob_subir": 0.365
    },
    {
-    "moeda": "OPN",
-    "prob_subir": 0.366
-   },
-   {
-    "moeda": "DYDX",
-    "prob_subir": 0.375
+    "moeda": "U",
+    "prob_subir": 0.384
    },
    {
     "moeda": "BABAB",
     "prob_subir": 0.386
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.394
-   },
-   {
     "moeda": "BB",
     "prob_subir": 0.394
    },
    {
-    "moeda": "AUDIO",
-    "prob_subir": 0.394
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
+   },
+   {
+    "moeda": "HAEDAL",
+    "prob_subir": 0.444
+   },
+   {
+    "moeda": "KAT",
+    "prob_subir": 0.453
+   },
+   {
+    "moeda": "MANTRA",
+    "prob_subir": 0.453
    }
   ],
   "mais_confiantes_compra": [
    {
-    "moeda": "PARTI",
-    "prob_subir": 0.613
+    "moeda": "PLUME",
+    "prob_subir": 0.641
+   },
+   {
+    "moeda": "GENIUS",
+    "prob_subir": 0.623
+   },
+   {
+    "moeda": "AERO",
+    "prob_subir": 0.612
    },
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
    },
    {
-    "moeda": "MARSCOIN",
-    "prob_subir": 0.569
+    "moeda": "APT",
+    "prob_subir": 0.607
    },
    {
-    "moeda": "ENS",
-    "prob_subir": 0.566
+    "moeda": "AXS",
+    "prob_subir": 0.607
    },
    {
-    "moeda": "OPG",
-    "prob_subir": 0.566
+    "moeda": "CYBER",
+    "prob_subir": 0.605
    },
    {
-    "moeda": "RUNE",
-    "prob_subir": 0.561
-   },
-   {
-    "moeda": "SHIB",
-    "prob_subir": 0.555
-   },
-   {
-    "moeda": "CBRSB",
-    "prob_subir": 0.544
+    "moeda": "NEIRO",
+    "prob_subir": 0.601
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.34,
+  "carteira": 8.52,
   "abertas": [
    {
     "moeda": "BTC",
     "lado": "venda",
     "entrada": 64252.28,
-    "agora": 64358.08,
-    "resultado_pct": -0.16,
-    "horas_aberta": 1.2,
+    "agora": 63901.26,
+    "resultado_pct": 0.55,
+    "horas_aberta": 1.5,
     "motivo_de_entrada": "repique de +3% em 4 h sem volume (1,07×) dentro de baixa de 24 h (−4%, 94,5% das moedas caindo); última hora já virou para baixo: vender o repique, não o fundo"
    }
   ],
