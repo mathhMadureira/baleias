@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 15:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 15:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
 Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 - **Total:** 52/155 com lucro (34%), resultado -5.18, média -0.033 por operação.
-- **Últimas 24 h:** 35/104 com lucro, -3.20.
+- **Últimas 24 h:** 33/101 com lucro, -3.43.
 - **Por horário:** 18–23 UTC: 86 op, 29% certas, -3.73 · 00–05 UTC: 34 op, 35% certas, -1.24 · 06–11 UTC: 2 op, 50% certas, -0.21 · 12–17 UTC: 33 op, 42% certas, +0.00
 - **Por lado:** compra: 96 op, 29% certas, -6.25 · venda: 59 op, 41% certas, +1.07
 - **Por confiança do v4:** alta (0,08–0,12): 63 op, 38% certas, -2.69 · muito alta (≥0,12): 56 op, 23% certas, -2.48 · confiança baixa (<0,05): 5 op, 40% certas, -0.11 · média (0,05–0,08): 31 op, 42% certas, +0.11
@@ -18,21 +18,21 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 5.90** · 151 operações fechadas · 2 abertas
+Carteira **US$ 5.97** · 153 operações fechadas · 0 abertas
 
-- **Total:** 54/151 com lucro (36%), resultado -4.10, média -0.027 por operação.
-- **Últimas 24 h:** 47/136 com lucro, -4.04.
-- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 38 op, 34% certas, -0.98 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11
-- **Por lado:** compra: 116 op, 35% certas, -3.56 · venda: 35 op, 37% certas, -0.55
-- **Por confiança do v4:** muito alta (≥0,12): 84 op, 35% certas, -2.10 · alta (0,08–0,12): 53 op, 36% certas, -1.24 · média (0,05–0,08): 14 op, 43% certas, -0.76
-- **Por motivo de saída:** stop de segurança −1%: 18 op, 0% certas, -5.04 · fim da vela do v4: 132 op, 40% certas, +0.47 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
-- **Moedas que mais perderam (≥ 3 op):** U -0.60 (21 op) · TST -0.30 (3 op) · AUDIO -0.25 (3 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op)
+- **Total:** 55/153 com lucro (36%), resultado -4.03, média -0.026 por operação.
+- **Últimas 24 h:** 47/137 com lucro, -4.16.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 40 op, 35% certas, -0.91 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11
+- **Por lado:** compra: 117 op, 35% certas, -3.59 · venda: 36 op, 39% certas, -0.44
+- **Por confiança do v4:** muito alta (≥0,12): 86 op, 35% certas, -2.02 · alta (0,08–0,12): 53 op, 36% certas, -1.24 · média (0,05–0,08): 14 op, 43% certas, -0.76
+- **Por motivo de saída:** stop de segurança −1%: 18 op, 0% certas, -5.04 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47 · fim da vela do v4: 134 op, 40% certas, +0.54
+- **Moedas que mais perderam (≥ 3 op):** U -0.63 (22 op) · TST -0.30 (3 op) · AUDIO -0.25 (3 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** AI +0.69 (8 op) · CYBER +0.62 (6 op) · KAT +0.33 (3 op) · BANK +0.04 (3 op) · AMP +0.04 (5 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 8.18** · 162 operações fechadas · 1 abertas
+Carteira **US$ 8.18** · 162 operações fechadas · 3 abertas
 
 - **Total:** 72/162 com lucro (44%), resultado -1.82, média -0.011 por operação.
 - **Últimas 24 h:** 25/65 com lucro, -0.64.
@@ -48,7 +48,7 @@ Carteira **US$ 8.18** · 162 operações fechadas · 1 abertas
 Carteira **US$ 4.94** · 126 operações fechadas · 0 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.94 com 58 op.)
 
 - **Total:** 51/126 com lucro (40%), resultado -5.06, média -0.040 por operação.
-- **Últimas 24 h:** 51/119 com lucro, -4.33.
+- **Últimas 24 h:** 50/117 com lucro, -4.59.
 - **Por horário:** 00–05 UTC: 39 op, 44% certas, -3.06 · 18–23 UTC: 54 op, 39% certas, -2.50 · 06–11 UTC: 1 op, 100% certas, +0.08 · 12–17 UTC: 32 op, 38% certas, +0.43
 - **Por lado:** venda: 53 op, 26% certas, -3.77 · compra: 73 op, 51% certas, -1.28
 - **Por confiança do v4:** confiança baixa (<0,05): 85 op, 39% certas, -2.56 · alta (0,08–0,12): 16 op, 31% certas, -1.66 · média (0,05–0,08): 25 op, 52% certas, -0.83
@@ -59,7 +59,7 @@ Carteira **US$ 4.94** · 126 operações fechadas · 0 abertas · carteiras ante
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 7.34** · 6 operações fechadas · 2 abertas
+Carteira **US$ 7.55** · 6 operações fechadas · 2 abertas
 
 - **Total:** 0/6 com lucro (0%), resultado -2.43, média -0.405 por operação.
 - **Últimas 24 h:** 0/6 com lucro, -2.43.
@@ -71,12 +71,12 @@ Carteira **US$ 7.34** · 6 operações fechadas · 2 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v3: 7 sinapses votando, 18 em observação, 0 podadas)
 **v2:**
 - ❌ Errou. Dopamina negativa em: rede_neural. Rede corrigida (taxa ×2.6).
@@ -87,15 +87,15 @@ Carteira **US$ 7.34** · 6 operações fechadas · 2 abertas
 - 😴 Sono: reencenei 1344 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 12087 apostas conferidas ao vivo, acerto 52.0%; prevê 149 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 12107 apostas conferidas ao vivo, acerto 52.0%; prevê 148 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
