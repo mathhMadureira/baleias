@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 19:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 19:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -19,7 +19,7 @@ Carteira **US$ 9.90** · 5 operações fechadas · 3 abertas · carteiras anteri
 Carteira **US$ 6.61** · 174 operações fechadas · 2 abertas
 
 - **Total:** 67/174 com lucro (39%), resultado -3.39, média -0.019 por operação.
-- **Últimas 24 h:** 55/138 com lucro, -1.86.
+- **Últimas 24 h:** 55/137 com lucro, -1.83.
 - **Por horário:** 18–23 UTC: 54 op, 26% certas, -2.83 · 12–17 UTC: 51 op, 41% certas, -0.35 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11
 - **Por lado:** compra: 128 op, 36% certas, -3.10 · venda: 46 op, 46% certas, -0.29
 - **Por confiança do v4:** alta (0,08–0,12): 57 op, 33% certas, -1.36 · muito alta (≥0,12): 103 op, 41% certas, -1.27 · média (0,05–0,08): 14 op, 43% certas, -0.76
@@ -43,7 +43,7 @@ Carteira **US$ 7.95** · 171 operações fechadas · 1 abertas
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 9.94** · 1 operações fechadas · 0 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
+Carteira **US$ 9.94** · 1 operações fechadas · 3 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
 - **Total:** 0/1 com lucro (0%), resultado -0.06, média -0.061 por operação.
 - **Últimas 24 h:** 0/1 com lucro, -0.06.
@@ -70,7 +70,7 @@ Carteira **US$ 6.81** · 9 operações fechadas · 0 abertas
 
 - **Amplitude:** 43.6% das moedas subindo em 24 h, 54.3% em 4 h · BTC 24 h -0.91%, 4 h 0.53%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': 11.0, 'ETH': 7.3, 'SOL': 2.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.6%/ano · {'BTC': 11.0, 'ETH': 7.7, 'SOL': 2.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 80225, MM200 73031); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** RAD estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AUDIO fundo duplo (alta, formado) · BTC OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · OPG fundo duplo (alta, formado) · PARTI fundo duplo (alta, formado) · RARE fundo duplo (alta, formado) · SAGA topo duplo (baixa, formado)
 - 📰 15/11 19:30 UTC · CoinDesk: Did prediction markets call the U.S. midterm election?: State of Crypto
@@ -114,10 +114,10 @@ Carteira **US$ 6.81** · 9 operações fechadas · 0 abertas
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H36, parte 1 (2026-11-13 16:50 BRT): um achado, a confiança
 - Resultado da H38 (2026-11-13 16:50 BRT): reprovada nos três d
 - Resultado da H39 (2026-11-13 17:15 BRT): reprovada nos três braços
 - Resultado da H40 (2026-11-14 10:55 BRT): reprovada nos três braços
 - Resultado da H41 (2026-11-14 15:40 BRT): PASSOU — v4.1 substitui o v4
 - Resultado da H42 (2026-11-14 16:00 BRT): reprovada nos três braços
+- Resultado da H45 (2026-11-15 17:10 BRT): reprovada nas 14 tentativas
 
