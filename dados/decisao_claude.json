@@ -1,11 +1,8 @@
 {
-  "t": 1794770153,
-  "leitura": "24 h com 34,5% das moedas subindo (entre 30% e 70%): indeciso; BTC −1,28% em 24 h e −0,06% em 4 h, volume 4 h 0,51× a média, 4 h 43,2% subindo. Sem tendência para segurar: fora.",
+  "t": 1794773346,
+  "leitura": "24 h indeciso: 50,4% das moedas subindo, mediana +0,06%, BTC −1,19% em 24 h; 4 h 70,2% subindo mas BTC com volume 0,53×; diário do BTC abaixo das médias de 50 e 200 dias, medo 10. Pela regra do dono (24 h entre 30% e 70%), fora.",
   "posicoes": [],
-  "fechar": ["BTCUSDT", "ZROUSDT"],
-  "motivos_fechar": {
-    "BTCUSDT": "mercado virou indeciso (24 h 34,5% subindo, acima de 30%); a razão da venda deixou de existir",
-    "ZROUSDT": "mercado virou indeciso (24 h 34,5% subindo, acima de 30%); realizar +0,58% em vez de segurar sem tendência"
-  },
-  "licao": "BTC e ZRO vendidos às 15:21 UTC seguraram 3,7 h sem stop (BTC −0,07%, ZRO +0,58%), enquanto as 7 vendas em moedas com 24 h perto de −14% pararam no stop; ERA e KAVA da rodada passada não aparecem como abertas nem fechadas: conferir na próxima se o executor as recusou. Fecho agora porque o 24 h subiu de baixa para 34,5% subindo (indeciso); só volto a vender com 24 h em 30% ou menos."
+  "fechar": [],
+  "motivos_fechar": {},
+  "licao": "Às 19:15 UTC fechei BTC e ZRO quando o 24 h subiu para 34,5% subindo; agora o 24 h está em 50,4% e o BTC andou de −2% para −1,19% em 24 h sem volume (0,53×): sair no indeciso evitou ficar vendido contra um mercado que deixou de cair. Volto a vender só com 24 h em 30% ou menos; compro só com 24 h em 70% ou mais."
 }
