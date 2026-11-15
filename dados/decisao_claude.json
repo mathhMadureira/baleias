@@ -1,13 +1,13 @@
 {
-  "t": 1794758960,
-  "leitura": "Baixa clara: 24 h com 12,2% das moedas subindo (mediana −3,29%) e 4 h com 10,8% (mediana −1,05%); BTC −1,51% em 24 h e −0,92% em 4 h, última hora parada (−0,03%) com volume 0,52×, bem abaixo de 65216: tendência intacta, sem repique para comprar.",
+  "t": 1794762563,
+  "leitura": "Baixa em 24 h e 4 h no mesmo sentido: 92,3% das moedas caindo em 4 h (mediana −1,85%) e 70,6% em 24 h; BTC −1,23% em 4 h e −0,98% em 24 h, consolidando de lado (−0,03, −0,07, +0,06) abaixo da vela de −1,03%, sem repique e com volume fraco (0,53×). Tendência de baixa intacta.",
   "posicoes": [
-    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "mantida: 24 h e 4 h em baixa, topo descendente abaixo de 65216 segue valendo"},
-    {"moeda": "ZROUSDT", "lado": "venda", "motivo": "mantida: 4 h −6,96% e 24 h −10,55%, dentro do ruído (−0,22%)"},
-    {"moeda": "BARDUSDT", "lado": "venda", "motivo": "4 h −4,71% alinhado com 24 h −14,61%, sem estar esticado (abaixo de 15% em 4 h)"},
-    {"moeda": "HUMAUSDT", "lado": "venda", "motivo": "4 h −3,10% alinhado com 24 h −7,59%, queda gradual sem esticar"}
+    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "manter: topo descendente após 65216 segue de pé; 1 h lateral abaixo da vela de rompimento de −1,03%, sem repique"},
+    {"moeda": "ZROUSDT", "lado": "venda", "motivo": "manter: +0,72% a favor, 4 h −7,34% e 24 h −8,44% alinhados"},
+    {"moeda": "0GUSDT", "lado": "venda", "motivo": "4 h −4,01% com volume 1,32× e 24 h −14,88%, sem estar esticado (abaixo de 15% em 4 h)"},
+    {"moeda": "BERAUSDT", "lado": "venda", "motivo": "4 h −4,99% alinhado com 24 h −8,97%, sem estar esticado; grupo diferente de BTC e ZRO"}
   ],
   "fechar": [],
   "motivos_fechar": {},
-  "licao": "ZIL vendido com 4 h já −8,56% bateu o stop em 15 min (entrada 0,001242, saída 0,00126063): o líder esticado repicou. Nesta rodada escolhi moedas com 4 h entre −3% e −5% e 24 h forte; conferir na próxima se BARD e HUMA aguentam mais que 15 min."
+  "licao": "ZIL (24 h −13,85%) e BARD (24 h −14,61%) bateram o stop em cerca de 15 min, enquanto BTC (24 h −1%) e ZRO (24 h −9,68%) seguem abertas há 1,7 h: as moedas com 24 h perto de −15% repicam forte. Conferir na próxima se 0G (24 h −14,88%) repete o padrão; se repetir, só vender moedas com 24 h acima de −10%."
 }
