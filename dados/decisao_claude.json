@@ -1,8 +1,11 @@
 {
-  "t": 1794773346,
-  "leitura": "24 h indeciso: 50,4% das moedas subindo, mediana +0,06%, BTC −1,19% em 24 h; 4 h 70,2% subindo mas BTC com volume 0,53×; diário do BTC abaixo das médias de 50 e 200 dias, medo 10. Pela regra do dono (24 h entre 30% e 70%), fora.",
+  "t": 1794774487,
+  "leitura": "Indeciso: 57,6% das moedas sobem em 24 h (faixa 30–70%), 4 h 46,8%, BTC −1,3% em 24 h e +0,14% em 4 h com volume 0,55×; medo extremo (10) e BTC abaixo das médias de 50 e 200 dias. Mesa fora.",
   "posicoes": [],
   "fechar": [],
   "motivos_fechar": {},
-  "licao": "Às 19:15 UTC fechei BTC e ZRO quando o 24 h subiu para 34,5% subindo; agora o 24 h está em 50,4% e o BTC andou de −2% para −1,19% em 24 h sem volume (0,53×): sair no indeciso evitou ficar vendido contra um mercado que deixou de cair. Volto a vender só com 24 h em 30% ou menos; compro só com 24 h em 70% ou mais."
+  "licao": "As 7 vendas que bateram o stop (−0,405 cada) entraram com o 24 h em baixa forte, mas o mercado virou para 57,6% subindo em 24 h; as 2 fechadas por mim (BTC −0,14, ZRO −0,21) perderam menos. Só volto a vender se o 24 h cair para 30% ou menos subindo; só compro se passar de 70%.",
+  "respostas": [{"ref": "1794773885771-dono", "texto": "Estou lendo a sala. Mesa: mercado indeciso (57,6% das moedas subindo em 24 h), Robô Claude fora com US$ 6,81; Caçador 2 posições, Rápido 4, Scalper 3, Minerador 3, sem ordens minhas."}],
+  "mensagens": [{"para": "sala", "texto": "24 h em 57,6% subindo: indeciso. Robô Claude fora até o 24 h sair da faixa 30–70%."}],
+  "ordens": []
 }
