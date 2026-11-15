@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 03:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 03:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,16 +18,16 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.64** · 74 operações fechadas · 1 abertas
+Carteira **US$ 6.61** · 75 operações fechadas · 1 abertas
 
-- **Total:** 23/74 com lucro (31%), resultado -3.36, média -0.045 por operação.
-- **Últimas 24 h:** 20/64 com lucro, -3.21.
-- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 16 op, 50% certas, -0.07
-- **Por lado:** compra: 57 op, 30% certas, -3.15 · venda: 17 op, 35% certas, -0.21
-- **Por confiança do v4:** muito alta (≥0,12): 37 op, 24% certas, -1.39 · alta (0,08–0,12): 28 op, 43% certas, -1.01 · média (0,05–0,08): 9 op, 22% certas, -0.96
-- **Por motivo de saída:** stop de segurança −1%: 14 op, 0% certas, -3.92 · fim da vela do v4: 59 op, 37% certas, +0.09 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
-- **Moedas que mais perderam (≥ 3 op):** U -0.34 (12 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op) · AMP -0.03 (4 op) · CYBER +0.60 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** CYBER +0.60 (3 op) · AMP -0.03 (4 op) · TRX -0.11 (3 op) · BEB -0.24 (4 op) · U -0.34 (12 op)
+- **Total:** 23/75 com lucro (31%), resultado -3.39, média -0.045 por operação.
+- **Últimas 24 h:** 20/65 com lucro, -3.24.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 17 op, 47% certas, -0.10
+- **Por lado:** compra: 58 op, 29% certas, -3.18 · venda: 17 op, 35% certas, -0.21
+- **Por confiança do v4:** muito alta (≥0,12): 37 op, 24% certas, -1.39 · alta (0,08–0,12): 29 op, 41% certas, -1.04 · média (0,05–0,08): 9 op, 22% certas, -0.96
+- **Por motivo de saída:** stop de segurança −1%: 14 op, 0% certas, -3.92 · fim da vela do v4: 60 op, 37% certas, +0.06 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
+- **Moedas que mais perderam (≥ 3 op):** U -0.37 (13 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op) · AMP -0.03 (4 op) · CYBER +0.60 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** CYBER +0.60 (3 op) · AMP -0.03 (4 op) · TRX -0.11 (3 op) · BEB -0.24 (4 op) · U -0.37 (13 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⛏ Minerador (reversão sem volume)
@@ -45,15 +45,15 @@ Carteira **US$ 9.30** · 114 operações fechadas · 0 abertas
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 6.71** · 106 operações fechadas · 1 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.94 com 58 op.)
+Carteira **US$ 6.61** · 107 operações fechadas · 1 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.94 com 58 op.)
 
-- **Total:** 45/106 com lucro (42%), resultado -3.29, média -0.031 por operação.
-- **Últimas 24 h:** 45/106 com lucro, -3.29.
-- **Por horário:** 18–23 UTC: 54 op, 39% certas, -2.50 · 00–05 UTC: 20 op, 60% certas, -1.22 · 12–17 UTC: 32 op, 38% certas, +0.43
-- **Por lado:** venda: 35 op, 26% certas, -2.13 · compra: 71 op, 51% certas, -1.16
-- **Por confiança do v4:** alta (0,08–0,12): 16 op, 31% certas, -1.66 · média (0,05–0,08): 24 op, 50% certas, -0.84 · confiança baixa (<0,05): 66 op, 42% certas, -0.79
-- **Por motivo de saída:** stop de segurança −1% (saída a: 8 op, 0% certas, -2.84 · fim da vela do v4 (saída a mer: 21 op, 24% certas, -0.79 · fim da vela do v4: 77 op, 52% certas, +0.34
-- **Moedas que mais perderam (≥ 3 op):** BTC -0.61 (26 op) · WLFI -0.39 (3 op) · ETH -0.37 (20 op) · UNI -0.06 (3 op) · XRP +0.05 (3 op)
+- **Total:** 45/107 com lucro (42%), resultado -3.39, média -0.032 por operação.
+- **Últimas 24 h:** 45/107 com lucro, -3.39.
+- **Por horário:** 18–23 UTC: 54 op, 39% certas, -2.50 · 00–05 UTC: 21 op, 57% certas, -1.32 · 12–17 UTC: 32 op, 38% certas, +0.43
+- **Por lado:** venda: 36 op, 25% certas, -2.23 · compra: 71 op, 51% certas, -1.16
+- **Por confiança do v4:** alta (0,08–0,12): 16 op, 31% certas, -1.66 · confiança baixa (<0,05): 67 op, 42% certas, -0.89 · média (0,05–0,08): 24 op, 50% certas, -0.84
+- **Por motivo de saída:** stop de segurança −1% (saída a: 8 op, 0% certas, -2.84 · fim da vela do v4 (saída a mer: 21 op, 24% certas, -0.79 · fim da vela do v4: 78 op, 51% certas, +0.25
+- **Moedas que mais perderam (≥ 3 op):** BTC -0.70 (27 op) · WLFI -0.39 (3 op) · ETH -0.37 (20 op) · UNI -0.06 (3 op) · XRP +0.05 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** SOL +0.11 (10 op) · HYPE +0.10 (3 op) · ZEC +0.07 (8 op) · NEAR +0.07 (3 op) · XRP +0.05 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
@@ -89,13 +89,13 @@ Carteira **US$ 8.38** · 4 operações fechadas · 0 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, reversao_alta, tres_soldados. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 9564 apostas conferidas ao vivo, acerto 50.0%; prevê 165 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 9626 apostas conferidas ao vivo, acerto 50.1%; prevê 165 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
