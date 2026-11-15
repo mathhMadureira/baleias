@@ -1,28 +1,28 @@
 {
- "t": 1794767708,
- "hora_utc": "2026-11-15 18:35 UTC",
+ "t": 1794768604,
+ "hora_utc": "2026-11-15 18:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 140,
-  "subindo_pct": 18.6,
-  "mediana_pct": -0.38
+  "moedas": 139,
+  "subindo_pct": 46.8,
+  "mediana_pct": 0.0
  },
  "mercado_4h": {
-  "moedas": 140,
-  "subindo_pct": 17.9,
-  "mediana_pct": -0.59
+  "moedas": 139,
+  "subindo_pct": 53.2,
+  "mediana_pct": 0.14
  },
  "mercado_24h": {
-  "moedas": 140,
-  "subindo_pct": 26.4,
-  "mediana_pct": -1.85
+  "moedas": 139,
+  "subindo_pct": 33.1,
+  "mediana_pct": -1.42
  },
  "btc": {
-  "1h": -0.53,
-  "4h": -0.57,
-  "24h": -2.12,
-  "preco": 64533.78,
-  "vol_4h_vs_media": 0.58
+  "1h": 0.04,
+  "4h": -0.01,
+  "24h": -1.76,
+  "preco": 64626.77,
+  "vol_4h_vs_media": 0.53
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "RESOLV",
-   "4h": -9.62,
-   "24h": 1.16,
-   "vol": 1.98
+   "4h": -9.26,
+   "24h": 2.32,
+   "vol": 1.59
   },
   {
    "moeda": "SOPH",
-   "4h": -6.38,
-   "24h": -41.07,
-   "vol": 1.38
+   "4h": -8.97,
+   "24h": -41.33,
+   "vol": 1.31
   },
   {
    "moeda": "STO",
-   "4h": -3.46,
-   "24h": -11.16,
-   "vol": 0.68
-  },
-  {
-   "moeda": "ALLO",
-   "4h": -3.16,
-   "24h": -1.89,
-   "vol": 0.39
-  },
-  {
-   "moeda": "BERA",
-   "4h": -3.13,
-   "24h": -7.24,
-   "vol": 0.48
+   "4h": -2.61,
+   "24h": -11.46,
+   "vol": 0.66
   },
   {
    "moeda": "INIT",
-   "4h": -3.12,
-   "24h": 11.73,
-   "vol": 0.88
+   "4h": -2.38,
+   "24h": 9.19,
+   "vol": 0.9
+  },
+  {
+   "moeda": "ALLO",
+   "4h": -2.34,
+   "24h": -1.96,
+   "vol": 0.35
+  },
+  {
+   "moeda": "HOME",
+   "4h": -1.93,
+   "24h": -2.63,
+   "vol": 0.35
   },
   {
    "moeda": "ERA",
-   "4h": -3.11,
-   "24h": -5.39,
+   "4h": -1.85,
+   "24h": -4.03,
    "vol": 0.45
   },
   {
-   "moeda": "0G",
-   "4h": -2.8,
-   "24h": -14.62,
-   "vol": 1.21
+   "moeda": "BERA",
+   "4h": -1.74,
+   "24h": -6.04,
+   "vol": 0.45
   },
   {
-   "moeda": "PEPE",
-   "4h": -2.51,
-   "24h": -1.77,
-   "vol": 0.67
+   "moeda": "BMT",
+   "4h": -1.28,
+   "24h": -6.62,
+   "vol": 0.69
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "SHELL",
-   "4h": 34.88,
-   "24h": 25.51,
-   "vol": 1.98
+   "4h": 34.35,
+   "24h": 22.72,
+   "vol": 2.1
   },
   {
    "moeda": "WIN",
-   "4h": 12.14,
-   "24h": 3.2,
+   "4h": 12.5,
+   "24h": 3.33,
    "vol": 1.74
   },
   {
+   "moeda": "PROM",
+   "4h": 6.04,
+   "24h": 4.54,
+   "vol": 2.61
+  },
+  {
    "moeda": "FF",
-   "4h": 6.29,
-   "24h": 12.92,
+   "4h": 5.2,
+   "24h": 10.97,
    "vol": 3.78
   },
   {
-   "moeda": "GLMR",
-   "4h": 5.68,
-   "24h": 35.92,
-   "vol": 3.65
-  },
-  {
-   "moeda": "PROM",
-   "4h": 4.98,
-   "24h": 3.45,
-   "vol": 2.59
-  },
-  {
-   "moeda": "PARTI",
-   "4h": 2.29,
-   "24h": 2.29,
-   "vol": 0.31
+   "moeda": "KAVA",
+   "4h": 4.28,
+   "24h": 8.44,
+   "vol": 0.49
   },
   {
    "moeda": "BARD",
-   "4h": 1.84,
-   "24h": -16.21,
+   "4h": 3.24,
+   "24h": -13.06,
    "vol": 1.99
   },
   {
-   "moeda": "ASTER",
-   "4h": 1.84,
-   "24h": -12.61,
-   "vol": 0.37
+   "moeda": "SENT",
+   "4h": 3.07,
+   "24h": 6.94,
+   "vol": 1.0
   },
   {
-   "moeda": "SENT",
-   "4h": 1.69,
-   "24h": 5.0,
-   "vol": 0.97
+   "moeda": "KITE",
+   "4h": 2.8,
+   "24h": 8.74,
+   "vol": 0.82
+  },
+  {
+   "moeda": "BANANAS31",
+   "4h": 2.31,
+   "24h": 9.98,
+   "vol": 0.84
   },
   {
    "moeda": "BEAMX",
-   "4h": 1.63,
-   "24h": -2.02,
-   "vol": 0.53
+   "4h": 2.27,
+   "24h": -1.9,
+   "vol": 0.48
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,17 +172,29 @@
   -0.03,
   -0.07,
   -0.23,
-  0.09
+  0.1
  ],
  "v4": {
   "vela": "17:30 UTC",
-  "apostas": 44,
-  "compras": 22,
-  "vendas": 22,
+  "apostas": 42,
+  "compras": 13,
+  "vendas": 29,
   "mais_confiantes_venda": [
    {
     "moeda": "BEB",
     "prob_subir": 0.365
+   },
+   {
+    "moeda": "GPS",
+    "prob_subir": 0.365
+   },
+   {
+    "moeda": "ALGO",
+    "prob_subir": 0.38
+   },
+   {
+    "moeda": "DODO",
+    "prob_subir": 0.385
    },
    {
     "moeda": "PEOPLE",
@@ -197,20 +209,8 @@
     "prob_subir": 0.394
    },
    {
-    "moeda": "JST",
-    "prob_subir": 0.402
-   },
-   {
-    "moeda": "PARTI",
-    "prob_subir": 0.414
-   },
-   {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
-   },
-   {
-    "moeda": "AMP",
-    "prob_subir": 0.434
+    "moeda": "AXS",
+    "prob_subir": 0.398
    }
   ],
   "mais_confiantes_compra": [
@@ -219,55 +219,55 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.617
-   },
-   {
     "moeda": "KAIA",
     "prob_subir": 0.616
-   },
-   {
-    "moeda": "ETC",
-    "prob_subir": 0.615
-   },
-   {
-    "moeda": "WLFI",
-    "prob_subir": 0.612
    },
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
    },
    {
-    "moeda": "STO",
-    "prob_subir": 0.589
+    "moeda": "COTI",
+    "prob_subir": 0.569
    },
    {
-    "moeda": "ZK",
-    "prob_subir": 0.585
+    "moeda": "RUNE",
+    "prob_subir": 0.561
+   },
+   {
+    "moeda": "PHA",
+    "prob_subir": 0.557
+   },
+   {
+    "moeda": "U",
+    "prob_subir": 0.55
+   },
+   {
+    "moeda": "FF",
+    "prob_subir": 0.549
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 7.31,
+  "carteira": 7.46,
   "abertas": [
    {
     "moeda": "BTC",
     "lado": "venda",
     "entrada": 64685.33,
-    "agora": 64533.78,
-    "resultado_pct": 0.23,
-    "horas_aberta": 3.2,
+    "agora": 64626.77,
+    "resultado_pct": 0.09,
+    "horas_aberta": 3.5,
     "motivo_de_entrada": "24 h e 4 h em baixa; vela de 1 h −1,03% fechou abaixo da mínima das 4 anteriores, topo descendente após 65216"
    },
    {
     "moeda": "ZRO",
     "lado": "venda",
     "entrada": 1.387,
-    "agora": 1.382,
-    "resultado_pct": 0.36,
-    "horas_aberta": 3.2,
+    "agora": 1.372,
+    "resultado_pct": 1.08,
+    "horas_aberta": 3.5,
     "motivo_de_entrada": "queda de 4 h −7,56% alinhada com 24 h −9,68%"
    }
   ],
