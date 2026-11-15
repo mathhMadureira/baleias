@@ -920,3 +920,13 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   muda e o achado de 11–15/11 fica registrado como acaso ou deriva passageira.
 - **Cuidado anotado (confusão):** compras 48,1% × vendas 57,8% no mesmo período não é achado: o mercado caiu nesses dias, e lado e queda do
   mercado estão misturados ("Analytical Skills for AI and Data Science", cap. 2, confundidores). Não vira hipótese sem separar o regime.
+
+## Hipótese 47: Robô Livre — sem regras de decisão, só custo real e liquidação (registrada em 2026-11-15 18:20 BRT, antes de ligar)
+
+- **Pedido do dono (15/11):** "crie um robô livre dessas regras e vamos ver como ele se comporta, se ele avança mais rápido".
+- **Regra (`executor/robo_livre_nuvem.py`):** lado = maioria das 140 moedas em 24 h (a referência que ganhou do v4 ao vivo no vigia: 53,3% ×
+  52,7%); entra nas 4 moedas mais fortes desse lado, carteira inteira a 20×, lucro reinvestido; sai quando a maioria vira ou a moeda sai das
+  8 líderes; sem stop nem tempo máximo; liquidação a 4,5% contra (perde a margem da posição). Custo de 0,06% por lado na conta; o resultado
+  sem custo aparece ao lado. Não obedece ordens do chefe. Não passou por teste de laboratório (é o ponto do pedido).
+- **Medida:** carteira a cada rodada, desde US$ 10. Em 24 h (até 16/11 21:30 UTC) e em 7 dias: carteira com custo, carteira sem custo,
+  número de liquidações. Nenhum número de expectativa é dado antes: não há teste que sustente um.

@@ -38,6 +38,8 @@ EQUIPE = (
      "missao": "Entradas do v4 com lucro realizado rápido e stop de 1,5%."},
     {"id": "minerador", "nome": "Minerador", "avatar": "⛏", "arquivo": "robo_minerador.json", "motor": "regra H28",
      "missao": "Vende alta forte sem volume e compra queda forte sem volume (a regra de minutos que pagou custo no laboratório)."},
+    {"id": "livre", "nome": "Robô Livre", "avatar": "🦅", "arquivo": "robo_livre.json", "motor": "maioria do mercado 24 h, 20×",
+     "missao": "Livre de regras (pedido do dono, H47): segue a maioria do mercado nas 4 moedas líderes, carteira inteira a 20×, sem stop."},
     {"id": "testnet", "nome": "v4 Testnet", "avatar": "🧪", "arquivo": "robo_v4_testnet.json", "motor": "Cérebro v4",
      "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram."},
 )

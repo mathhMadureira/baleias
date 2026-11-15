@@ -1517,3 +1517,29 @@ class VigiaV4(unittest.TestCase):
         r = V.avaliar(ops, velas, agora=agora)
         self.assertEqual(r["referencias"]["segue_24h_da_moeda"]["acerto"], 1.0)
         self.assertIn("segue_maioria_24h", r["referencia_ganha"])
+
+
+class RoboLivre(unittest.TestCase):
+    """H47: robô sem regras de decisão; só custo real e liquidação."""
+
+    def _velas(self, n, passo_pct, moedas=25, t0=0):
+        return {f"M{i}USDT": [[t0 + k * 900_000, 0, 100 * (1 + passo_pct * (i + 1)) ** k * 1.0005, 100 * (1 + passo_pct * (i + 1)) ** k * 0.9995,
+                               100 * (1 + passo_pct * (i + 1)) ** k] for k in range(n)] for i in range(moedas)}
+
+    def test_entra_nas_lideres_do_lado_da_maioria_e_reinveste(self):
+        from executor import robo_livre_nuvem as L
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "sem_custo": 0.0, "custo_pago": 0.0}
+        L.passo(e, self._velas(120, 0.001), 0)
+        self.assertEqual(len(e["abertas"]), 4)
+        self.assertEqual({p["lado"] for p in e["abertas"].values()}, {"compra"})
+        self.assertEqual(set(e["abertas"]), {"M24USDT", "M23USDT", "M22USDT", "M21USDT"})   # as que mais subiram
+        self.assertAlmostEqual(sum(p["nocional"] for p in e["abertas"].values()), 200.0)     # carteira inteira a 20×
+
+    def test_liquidacao_leva_a_margem_inteira(self):
+        from executor import robo_livre_nuvem as L
+        e = {"caixa": 0.0, "abertas": {"M0USDT": {"moeda": "M0USDT", "lado": "compra", "entrada": 100.0, "margem": 2.5, "nocional": 50.0,
+                                                  "entrada_t": 0, "conferido_ate": 0}}, "fechadas": [], "sem_custo": 0.0, "custo_pago": 0.0}
+        velas = {"M0USDT": [[0, 100, 100, 95, 96]]}
+        L.passo(e, velas, 0)
+        self.assertEqual(e["fechadas"][0]["resultado_usd"], -2.5)
+        self.assertEqual(e["caixa"], 0.0)

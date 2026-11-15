@@ -323,7 +323,7 @@ def mesa():
 
 _nuvem = {"t": 0.0, "dados": None}
 _precos = {"t": 0.0, "px": {}}
-ROBOS_NUVEM = (("robo_claude.json", "🤖 Robô Claude (decide de hora em hora)"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_perp.json", "🌲 Rápido nuvem"),
+ROBOS_NUVEM = (("robo_claude.json", "🤖 Robô Claude (decide de hora em hora)"), ("robo_livre.json", "🦅 Robô Livre (sem regras, 20×)"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_perp.json", "🌲 Rápido nuvem"),
                ("robo_scalper_nuvem.json", "✂ Scalper nuvem"), ("robo_minerador.json", "⛏ Minerador"), ("robo_v4_testnet.json", "🧪 v4 Testnet (Binance)"))
 
 
@@ -355,6 +355,8 @@ def nuvem():
             ent = float(p.get("entrada") or 0)
             agora = px.get(par if par.endswith("USDT") else par + "USDT")
             noc = p.get("nocional") or (p.get("qtd", 0) * ent if p.get("qtd") else 25.0)
+            if p.get("stop_pct") is None and "margem" in p:            # Robô Livre: sem stop; a linha vermelha é a liquidação
+                p = {**p, "stop_pct": 0.045}
             res = (1 if lado == "compra" else -1) * noc * (agora / ent - 1) if agora and ent else None
             t0 = p.get("entrada_t") or p.get("t")
             abertas.append({"moeda": par.replace("USDT", ""), "lado": lado, "entrada": ent, "agora": agora, "resultado_usd": res,
@@ -363,7 +365,7 @@ def nuvem():
                             "motivo": (p.get("motivo") or "")[:140]})
         fech = sorted(e.get("fechadas", []), key=lambda f: f.get("saida_t", 0))[-6:][::-1]
         carteira = e.get("patrimonio", e.get("carteira"))
-        robos.append({"alerta": e.get("alerta_rotina"), "nome": nome, "carteira": carteira, "regime": (e.get("regime") or {}).get("lado") if isinstance(e.get("regime"), dict) else e.get("regime"),
+        robos.append({"alerta": e.get("alerta_rotina"), "nome": nome, "carteira": carteira, "sem_custo": e.get("patrimonio_sem_custo"), "regime": (e.get("regime") or {}).get("lado") if isinstance(e.get("regime"), dict) else e.get("regime"),
                       "abertas": abertas, "n_fechadas": len(e.get("fechadas", [])),
                       "fechadas": [{"moeda": f["moeda"].replace("USDT", ""), "lado": f.get("lado"), "resultado_usd": f.get("resultado_usd"), "t": f.get("saida_t"),
                                     "motivo": (f.get("motivo_saida") or f.get("motivo") or "")[:60]} for f in fech],
@@ -397,7 +399,7 @@ def sala_painel(forcar=False):
         o = ordens.get(a["id"])
         o = o if o and o.get("acao") != "liberar" and o.get("ate", 0) > agora else None
         time_.append({"id": a["id"], "nome": a["nome"], "avatar": a["avatar"], "motor": a["motor"], "missao": a["missao"],
-                      "carteira": e.get("patrimonio", e.get("carteira")), "abertas": len(e.get("abertas") or {}),
+                      "carteira": e.get("patrimonio", e.get("carteira")), "sem_custo": e.get("patrimonio_sem_custo"), "abertas": len(e.get("abertas") or {}),
                       "fechadas": len(e.get("fechadas") or []), "alerta": e.get("alerta_rotina"),
                       "ordem": {"acao": equipe.ACOES.get(o["acao"], o["acao"]), "motivo": o.get("motivo", ""), "ate": o.get("ate")} if o else None})
     ids = {x["id"] for x in sala}

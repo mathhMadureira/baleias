@@ -1125,7 +1125,7 @@ function desenharSala() {
     const alerta = a.alerta ? `<div style="font-size:11px;color:#f85149">⚠ ${slEsc(a.alerta)}</div>` : "";
     return `<div title="${slEsc(a.missao)}" style="border:1px solid var(--line);border-radius:8px;padding:8px">
       <b>${a.avatar} ${slEsc(a.nome)}</b> <span class="num" style="float:right;${cor}">${c}</span>
-      <div class="mut" style="font-size:11px">${slEsc(a.motor)} · ${a.abertas} abertas · ${a.fechadas} fechadas</div>${ordem}${alerta}</div>`;
+      <div class="mut" style="font-size:11px">${slEsc(a.motor)} · ${a.abertas} abertas · ${a.fechadas} fechadas</div>${a.sem_custo != null ? `<div class="mut num" style="font-size:11px">sem custo seria US$ ${(+a.sem_custo).toFixed(2)}</div>` : ""}${ordem}${alerta}</div>`;
   }).join("");
   const comEventos = $("sl-eventos").checked;
   const msgs = sl.sala.filter(m => comEventos || m.tipo !== "evento").slice(-150);
