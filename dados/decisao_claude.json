@@ -1,10 +1,8 @@
 {
-  "t": 1794723005,
-  "leitura": "Baixa de 24 h intacta: só 5,5% das moedas subindo em 24 h, mediana −8%, BTC −4%. Repique de 4 h forte (95% subindo, mediana +3,7%, BTC +3%) mas sem volume (1,07× a média) e já perdendo força na última hora (BTC −0,64%, só 31% das moedas subindo em 1 h). 24 h e 4 h discordam: mercado indeciso; uma só venda, no repique sem volume do BTC, a favor da tendência do dia.",
-  "posicoes": [
-    {"moeda": "BTCUSDT", "lado": "venda", "motivo": "repique de +3% em 4 h sem volume (1,07×) dentro de baixa de 24 h (−4%, 94,5% das moedas caindo); última hora já virou para baixo: vender o repique, não o fundo"}
-  ],
+  "t": 1794744629,
+  "leitura": "24 h e 4 h discordam: 24 h em baixa (8,1% das moedas subindo, mediana −5,27%, BTC −2,86%), 4 h em alta (88,1% subindo, BTC +2,09%) mas sem volume (0,76×); última hora devolvendo (31,9% subindo). Mercado indeciso: fora.",
+  "posicoes": [],
   "fechar": [],
   "motivos_fechar": {},
-  "licao": "As 4 vendas de 00:50 UTC (ENA, TAO, BTC, AVAX) saíram todas no stop de 1,5% entre 02:35 e 03:20 UTC, na vela de +3,63% do BTC das 02:00: entrei vendido no fundo esticado (BTC já −6%, moedas −14% em 24 h) com stop apertado, o erro medido em H39. Vender só depois do repique; se o BTC fechar a próxima hora acima da máxima do repique de 4 h, a leitura de baixa está errada e fecho."
+  "licao": "As 5 vendas (4 de 00:50 e o BTC de 06:30 UTC a 64252) saíram todas no stop: a venda do repique entrou sem topo descendente confirmado e o BTC subiu até 65216; hoje 88% das moedas sobem em 4 h. Só volto a vender com 4 h de novo abaixo de 40% subindo e uma vela de 1 h do BTC fechando abaixo da mínima da última correção."
 }
