@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 07:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 07:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,21 +18,21 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.39** · 93 operações fechadas · 2 abertas
+Carteira **US$ 6.11** · 95 operações fechadas · 2 abertas
 
-- **Total:** 31/93 com lucro (33%), resultado -3.61, média -0.039 por operação.
-- **Últimas 24 h:** 27/82 com lucro, -3.48.
-- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 06–11 UTC: 7 op, 14% certas, -0.44 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 28 op, 54% certas, +0.11
-- **Por lado:** compra: 73 op, 33% certas, -3.18 · venda: 20 op, 35% certas, -0.43
-- **Por confiança do v4:** muito alta (≥0,12): 47 op, 28% certas, -1.52 · média (0,05–0,08): 11 op, 27% certas, -1.07 · alta (0,08–0,12): 35 op, 43% certas, -1.01
-- **Por motivo de saída:** stop de segurança −1%: 15 op, 0% certas, -4.20 · fim da vela do v4: 77 op, 39% certas, +0.12 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
+- **Total:** 31/95 com lucro (33%), resultado -3.89, média -0.041 por operação.
+- **Últimas 24 h:** 27/84 com lucro, -3.76.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 06–11 UTC: 9 op, 11% certas, -0.72 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 28 op, 54% certas, +0.11
+- **Por lado:** compra: 75 op, 32% certas, -3.46 · venda: 20 op, 35% certas, -0.43
+- **Por confiança do v4:** muito alta (≥0,12): 49 op, 27% certas, -1.80 · média (0,05–0,08): 11 op, 27% certas, -1.07 · alta (0,08–0,12): 35 op, 43% certas, -1.01
+- **Por motivo de saída:** stop de segurança −1%: 15 op, 0% certas, -4.20 · fim da vela do v4: 79 op, 38% certas, -0.16 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
 - **Moedas que mais perderam (≥ 3 op):** U -0.43 (15 op) · BEB -0.24 (4 op) · PEOPLE -0.14 (3 op) · TRX -0.11 (3 op) · AI -0.00 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** CYBER +0.57 (4 op) · KAT +0.33 (3 op) · PARTI +0.04 (3 op) · AMP +0.04 (5 op) · AI -0.00 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 9.16** · 122 operações fechadas · 0 abertas
+Carteira **US$ 9.16** · 122 operações fechadas · 2 abertas
 
 - **Total:** 58/122 com lucro (48%), resultado -0.84, média -0.007 por operação.
 - **Últimas 24 h:** 11/25 com lucro, +0.34.
@@ -59,7 +59,7 @@ Carteira **US$ 4.94** · 126 operações fechadas · 0 abertas · carteiras ante
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 8.30** · 4 operações fechadas · 1 abertas
+Carteira **US$ 8.31** · 4 operações fechadas · 1 abertas
 
 - **Total:** 0/4 com lucro (0%), resultado -1.62, média -0.405 por operação.
 - **Últimas 24 h:** 0/4 com lucro, -1.62.
@@ -95,7 +95,7 @@ Carteira **US$ 8.30** · 4 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 10212 apostas conferidas ao vivo, acerto 51.0%; prevê 161 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 10256 apostas conferidas ao vivo, acerto 50.8%; prevê 161 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
