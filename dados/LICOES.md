@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 15/11/2026 08:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 15/11/2026 08:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,21 +18,21 @@ Carteira **US$ 4.82** · 155 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.43** · 101 operações fechadas · 1 abertas
+Carteira **US$ 6.61** · 102 operações fechadas · 2 abertas
 
-- **Total:** 34/101 com lucro (34%), resultado -3.57, média -0.035 por operação.
-- **Últimas 24 h:** 30/90 com lucro, -3.44.
-- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 06–11 UTC: 15 op, 27% certas, -0.39 · 12–17 UTC: 14 op, 43% certas, -0.38 · 00–05 UTC: 28 op, 54% certas, +0.11
-- **Por lado:** compra: 80 op, 32% certas, -3.44 · venda: 21 op, 38% certas, -0.12
-- **Por confiança do v4:** muito alta (≥0,12): 54 op, 30% certas, -1.45 · média (0,05–0,08): 11 op, 27% certas, -1.07 · alta (0,08–0,12): 36 op, 42% certas, -1.04
-- **Por motivo de saída:** stop de segurança −1%: 15 op, 0% certas, -4.20 · fim da vela do v4: 85 op, 39% certas, +0.16 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
-- **Moedas que mais perderam (≥ 3 op):** U -0.43 (15 op) · AUDIO -0.25 (3 op) · BEB -0.24 (4 op) · PEOPLE -0.14 (3 op) · TRX -0.11 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** CYBER +0.87 (5 op) · KAT +0.33 (3 op) · AMP +0.04 (5 op) · PARTI +0.01 (4 op) · AI -0.00 (3 op)
+- **Total:** 35/102 com lucro (34%), resultado -3.39, média -0.033 por operação.
+- **Últimas 24 h:** 31/91 com lucro, -3.27.
+- **Por horário:** 18–23 UTC: 44 op, 20% certas, -2.90 · 12–17 UTC: 14 op, 43% certas, -0.38 · 06–11 UTC: 16 op, 31% certas, -0.22 · 00–05 UTC: 28 op, 54% certas, +0.11
+- **Por lado:** compra: 80 op, 32% certas, -3.44 · venda: 22 op, 41% certas, +0.05
+- **Por confiança do v4:** muito alta (≥0,12): 55 op, 31% certas, -1.28 · média (0,05–0,08): 11 op, 27% certas, -1.07 · alta (0,08–0,12): 36 op, 42% certas, -1.04
+- **Por motivo de saída:** stop de segurança −1%: 15 op, 0% certas, -4.20 · fim da vela do v4: 86 op, 40% certas, +0.34 · lucro realizado +US$ 0.50: 1 op, 100% certas, +0.47
+- **Moedas que mais perderam (≥ 3 op):** U -0.43 (15 op) · AUDIO -0.25 (3 op) · BEB -0.24 (4 op) · TRX -0.11 (3 op) · AI -0.00 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** CYBER +0.87 (5 op) · KAT +0.33 (3 op) · AMP +0.04 (5 op) · PEOPLE +0.03 (4 op) · PARTI +0.01 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 9.28** · 128 operações fechadas · 0 abertas
+Carteira **US$ 9.28** · 128 operações fechadas · 3 abertas
 
 - **Total:** 62/128 com lucro (48%), resultado -0.72, média -0.006 por operação.
 - **Últimas 24 h:** 15/31 com lucro, +0.46.
@@ -59,7 +59,7 @@ Carteira **US$ 4.94** · 126 operações fechadas · 0 abertas · carteiras ante
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 8.47** · 4 operações fechadas · 1 abertas
+Carteira **US$ 8.52** · 4 operações fechadas · 1 abertas
 
 - **Total:** 0/4 com lucro (0%), resultado -1.62, média -0.405 por operação.
 - **Últimas 24 h:** 0/4 com lucro, -1.62.
@@ -95,7 +95,7 @@ Carteira **US$ 8.47** · 4 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 10388 apostas conferidas ao vivo, acerto 51.2%; prevê 160 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 10394 apostas conferidas ao vivo, acerto 51.2%; prevê 160 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
