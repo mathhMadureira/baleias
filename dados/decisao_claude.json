@@ -1,50 +1,48 @@
 {
- "t": 1794784181,
- "leitura": "Alta de 24 h: 89,3% das moedas subindo (mediana +5,02%), 4 h 77,9% e 1 h 78,6% subindo; BTC +2,64% em 24 h e +0,77% em 4 h com volume fraco (0,57×), subindo devagar em velas pequenas (últimas 1 h: +0,29, −0,18, +0,32, +0,36). Pano de fundo de baixa (BTC abaixo das médias de 50 e 200 dias, medo 10): repique grande, mas a regra de 24 h manda comprar.",
+ "t": 1794787787,
+ "leitura": "Alta de 24 h: 83,2% das moedas subindo (mediana +3,27%), BTC +1,87% em 24 h e +0,62% em 4 h com volume fraco (0,59×); 4 h com 68,7% subindo, sem quebra de fundo no 1 h. Mesa comprada; v4 fora como voto (modelo simples ganha dele).",
  "posicoes": [
   {
    "moeda": "BTCUSDT",
    "lado": "compra",
-   "motivo": "89,3% subindo em 24 h; BTC +0,33% na posição, 4 h +0,77%: tendência de alta intacta, manter"
-  },
-  {
-   "moeda": "KITEUSDT",
-   "lado": "compra",
-   "motivo": "alta de 24 h intacta (89,3%); posição −1,11% dentro do stop de 3,9%: ruído, manter"
-  },
-  {
-   "moeda": "TLMUSDT",
-   "lado": "compra",
-   "motivo": "alta de 24 h intacta (89,3%); posição −3,14% ainda dentro do stop de 4%: a razão de entrada (alta de 24 h) segue, manter sem aumentar"
+   "motivo": "83,2% subindo em 24 h; BTC +0,62% em 4 h; as 3 compras de BTC desta alta saíram todas no lucro pelo stop móvel"
   },
   {
    "moeda": "BLURUSDT",
    "lado": "compra",
-   "motivo": "4 h +3,02% com volume 5,3× a média e 24 h +6,03% (acima de +5%, longe de 15% em 4 h), a favor da alta de 24 h"
+   "motivo": "manter: +0,16% na posição, estrutura de alta confirmada no 1 h, a favor da alta de 24 h"
+  },
+  {
+   "moeda": "KITEUSDT",
+   "lado": "compra",
+   "motivo": "manter: −0,63% é ruído (stop 3,9%), 24 h da entrada +11,62%, tendência de 24 h intacta"
+  },
+  {
+   "moeda": "AMPUSDT",
+   "lado": "compra",
+   "motivo": "entre as líderes de 4 h (+2,59%) com volume 3,34× e 24 h +11,02%, longe de 15% em 4 h"
   }
  ],
- "fechar": [],
- "motivos_fechar": {},
- "licao": "Na alta de 24 h, TLM (comprada com 4 h +8,26%) está −3,14% e a recompra de KITE −1,11% após 0,7–1,7 h, enquanto BTC (4 h +0,66% na entrada) está +0,33%; a primeira KITE saiu no stop móvel com +0,072. Moedas compradas depois de já liderar 4 h não andaram mais; conferir na próxima se BLUR (4 h +3,02%) segura melhor que TLM.",
+ "fechar": [
+  "TLMUSDT"
+ ],
+ "motivos_fechar": {
+  "TLMUSDT": "razão da entrada acabou: comprada liderando 4 h (+8,26%), saiu das líderes e está −1,78% após 2,7 h"
+ },
+ "licao": "Nesta alta, as 3 compras de BTC (entrada com 4 h +0,3% a +0,8%) saíram no lucro pelo stop móvel (+0,072, +0,072, +0,042), enquanto TLM (comprada com 4 h +8,26%) está −1,78% após 2,7 h e a recompra de KITE −0,63%: comprar quem já liderou forte o 4 h não rendeu. Fecho TLM e volto ao BTC; conferir na próxima se AMP (4 h +2,59%, volume 3,34×) segura como BLUR.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Alta de 24 h com 89,3% das moedas subindo: mesa comprada (BTC, KITE, TLM, BLUR). Rápido liberado (pausa era para guardar lucro, hoje 0 posições). Caçador pausado 6 h: fator de lucro 0,69 em 187 operações. v4 fora como voto: modelo simples ganha dele, compras acertam 48,95% e o horário 18–24 h UTC 46,3%."
+   "texto": "Alta de 24 h com 83,2% das moedas subindo: mesa comprada (BTC, BLUR, KITE, AMP); fechei TLM (−1,78%). Caçador liberado: fator de lucro subiu para 0,71 em 189 operações. v4 fora como voto: segue_maioria_24h acerta 53,9% contra 52,5% dele."
   }
  ],
  "ordens": [
   {
-   "agente": "rapido",
+   "agente": "cacador",
    "acao": "liberar",
    "horas": 1,
-   "motivo": "a pausa era para guardar lucro (revisão de 15/11: não se pausa para isso); Rápido com 0 posições e carteira 9,86"
-  },
-  {
-   "agente": "cacador",
-   "acao": "pausar",
-   "horas": 6,
-   "motivo": "torneio: fator de lucro 0,69 em 187 operações (soma −3,73, carteira 6,27)"
+   "motivo": "torneio: fator de lucro agora 0,71 em 189 operações (acima de 0,7); a pausa perdeu o motivo"
   }
  ]
 }
