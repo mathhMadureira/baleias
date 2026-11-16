@@ -1,16 +1,23 @@
 {
- "t": 1794859785,
- "leitura": "Indeciso: 41,3% das moedas sobem em 24 h (mediana −0,29%) e 77,0% em 4 h; BTC +0,19% em 24 h, +0,93% em 4 h, volume 1,1×, em 65068 (entre 64500 e 65216). BTC abaixo das médias de 50 e 200 dias, medo 10, funding neutro (13,5%/ano). Sem lado no dia: fora.",
+ "t": 1794863379,
+ "leitura": "Indeciso, perto da baixa: 32,0% das moedas sobem em 24 h (era 41,3% há 1 h), 35,2% em 4 h e só 14,8% em 1 h; BTC −0,1% em 24 h, +0,22% em 4 h, volume 1,06×, abaixo das médias de 50 e 200 dias; medo 10. Ainda acima dos 30% da regra: fora.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Fora desde 15:20 UTC, sem operações novas (26 operações, soma −4,40). Em 1 h o 24 h foi de 57,0% para 41,3% subindo e o 4 h de 44,5% para 77,0%, com o BTC em 65068 (era 65052): quatro horas seguidas com o 24 h entre 39% e 58%, sem lado. Confirma baixa: 24 h em 30% ou menos com BTC abaixo de 64500; confirma alta: 24 h em 70% ou mais com BTC acima de 65216.",
+ "licao": "Fora desde 15:20 UTC, sem operações novas (26 operações, soma −4,40). Em 1 h o 24 h caiu de 41,3% para 32,0% subindo e o 4 h de 77,0% para 35,2%, com o BTC parado em 65068: o repique de 4 h morreu, mas o 24 h ainda não chegou a 30%. Confirma baixa (4 vendas em moedas com 24 h entre −1,6% e −6,4%, como as que saíram no lucro às 12:36): 24 h em 30% ou menos com BTC abaixo de 64500; nega: 24 h voltar acima de 40%.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 41,3% das moedas sobem em 24 h e 77,0% em 4 h; BTC +0,19% em 24 h, +0,93% em 4 h, volume 1,1×: Robô Claude fora. Pausas seguem (fator de lucro abaixo de 0,7 no torneio): Caçador 0,68 em 207, Rápido 0,60 em 85, Minerador 0,69 em 211, LBank 0,42 em 39. Scalper 0,76 em 248 segue livre. Vigia: v4 acerta só 47,7% entre 18 e 24 h UTC (4897 apostas); exigência maior nas entradas deste horário."
+   "texto": "Mercado indeciso, perto da baixa: 32,0% das moedas sobem em 24 h (eram 41,3%), 35,2% em 4 h e 14,8% em 1 h; BTC −0,1% em 24 h, volume 1,06×: Robô Claude fora; vendo com 24 h em 30% ou menos. LBank: pausa renovada 6 h (fator de lucro 0,42 em 39). Seguem pausados: Caçador 0,69 em 208, Rápido 0,60 em 85, Minerador 0,69 em 211. Scalper 0,76 em 256 segue livre. Vigia: v4 acerta só 47,7% das 18–24 h UTC (5158 apostas): cuidado com entradas do v4 neste horário."
   }
  ],
- "ordens": []
+ "ordens": [
+  {
+   "agente": "lbank",
+   "acao": "pausar",
+   "horas": 6,
+   "motivo": "torneio: fator de lucro 0,42 em 39 operações (soma −3,68, carteira 6,32), abaixo de 0,7"
+  }
+ ]
 }
