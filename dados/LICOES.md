@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 16:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 16:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 7.01** · 83 operações fechadas · 2 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 6.85** · 83 operações fechadas · 2 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 51/83 com lucro (61%), resultado -2.91, média -0.035 por operação.
 - **Últimas 24 h:** 46/76 com lucro, -2.85.
@@ -18,10 +18,10 @@ Carteira **US$ 7.01** · 83 operações fechadas · 2 abertas · carteiras anter
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 5.84** · 206 operações fechadas · 2 abertas
+Carteira **US$ 5.81** · 206 operações fechadas · 2 abertas
 
 - **Total:** 86/206 com lucro (42%), resultado -4.08, média -0.020 por operação.
-- **Últimas 24 h:** 31/53 com lucro, -0.06.
+- **Últimas 24 h:** 30/52 com lucro, -0.09.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 06–11 UTC: 45 op, 40% certas, -1.29 · 12–17 UTC: 58 op, 43% certas, -0.95 · 00–05 UTC: 33 op, 61% certas, +1.02
 - **Por lado:** compra: 148 op, 39% certas, -3.37 · venda: 58 op, 48% certas, -0.71
 - **Por confiança do v4:** muito alta (≥0,12): 127 op, 44% certas, -1.98 · alta (0,08–0,12): 64 op, 36% certas, -1.40 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -72,26 +72,26 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 39.4% das moedas subindo em 24 h, 46.5% em 4 h · BTC 24 h -0.43%, 4 h 0.03%.
+- **Amplitude:** 30.7% das moedas subindo em 24 h, 55.9% em 4 h · BTC 24 h -0.41%, 4 h 0.47%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': 11.0, 'ETH': 10.7, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': 10.0, 'ETH': 9.4, 'SOL': 7.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AERO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BNB triângulo ascendente (baixa, CONFIRMOU) · CAKE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · HYPE fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MMT fundo duplo (alta, formado) · NEAR fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · UNI fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** AERO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BNB triângulo ascendente (baixa, CONFIRMOU) · CAKE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · PHA fundo duplo (alta, CONFIRMOU) · HYPE fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MMT fundo duplo (alta, formado) · NEAR fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 16/11 16:14 UTC · Decrypt: Solana Drops 'Mainnet Beta' After Six Years: Here's What 1.0 Is All About
+- 📰 16/11 16:11 UTC · Decrypt: DTCC, Barclays Say Tokenization's Real Prize Is Unlocking Idle Collateral
 - 📰 16/11 15:54 UTC · CoinDesk: Brazil's central bank faces backlash over stablecoin money laundering remarks
 - 📰 16/11 15:44 UTC · CoinDesk: German parliament proposes crypto seizures without criminal charges
 - 📰 16/11 15:04 UTC · Decrypt: 'Nobody Knows Who's in Charge': Boris Johnson Stands by Bitcoin Skepticism at Breakpoint
 - 📰 16/11 14:55 UTC · Cointelegraph: Zelle picks Solana for ZelleUSD stablecoin and international payments
-- 📰 16/11 14:19 UTC · Cointelegraph: Lighter pauses withdrawals after reported $10M account theft
-- 📰 16/11 13:31 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 16/11 16:12 UTC · **fora do mercado** · Mercado indeciso: 39,4% das moedas sobem em 24 h e 46,5% em 4 h; BTC −0,43% em 24 h, +0,03% em 4 h, −1,07% na última hora, volume 1,4×. 24 h entre 30% e 70%: fo
 - 16/11 15:13 UTC · **fora do mercado** · Mercado indeciso: 24 h virou de 19,7% para 57,9% das moedas subindo em 1 h; BTC +0,62% em 24 h, +0,92% em 4 h e +1,53% na última hora com volume 1,37×, preço 65
 - 16/11 14:14 UTC · **BTC venda, XRP venda, JUP venda, BEAMX venda** · Baixa de 24 h: só 19,7% das moedas sobem (mediana −2,11%), BTC −1,92% em 24 h e −0,22% em 4 h; o repique de 1 h (79,5% subindo, BTC +0,03%) vem sem volume (BTC 
 - 16/11 13:15 UTC · **XRP venda, BTC venda, JUP venda, BEAMX venda** · Baixa de 24 h forte: só 11,7% das moedas sobem em 24 h (mediana −3,01%) e 18,3% em 4 h; BTC −2,04% em 24 h, −0,46% em 4 h, volume 1,1× (sem repique com volume);
 - 16/11 12:14 UTC · **BTC venda, XRP venda, SKY venda, APE venda** · Baixa de 24 h: só 21,8% das moedas sobem (mediana −1,32%), 4 h com 21,8% e 1 h com 25,2%; BTC −1,38% em 24 h, −0,84% em 4 h, volume 0,99× (sem repique com volum
 - 16/11 11:11 UTC · **BTC venda, XRP venda, SKY venda, APE venda** · Baixa de 24 h: só 26,9% das moedas sobem (mediana −1,32%), BTC −1,56% em 24 h e −0,21% em 4 h; o 1 h com 78,2% subindo (BTC +0,38%) é repique sem volume (0,89×)
-- 16/11 10:10 UTC · **BTC venda, XRP venda, SKY venda, APE venda** · Baixa de 24 h: só 22,0% das moedas sobem em 24 h (mediana −1,54%), 4 h com 22,9% e BTC −1,57% em 24 h, −0,23% em 4 h, volume 0,89× (sem repique forte); BTC abai
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 16798 apostas conferidas ao vivo, acerto 53.6%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 16822 apostas conferidas ao vivo, acerto 53.6%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
