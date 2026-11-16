@@ -4,14 +4,14 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.8% | 1937 | 50.6%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 1938 | 50.6%–55.1% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_graal_alta | promissor | 66.7% | 3 | 20.8%–93.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_wr_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | raschke_graal_baixa | promissor | 58.5% | 41 | 43.4%–72.2% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 57.1% | 28 | 39.1%–73.5% | física: alta anormal de 1 h → devolve |
-| williams_volb_alta | promissor | 55.6% | 36 | 39.6%–70.5% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
-| tres_soldados | promissor | 54.7% | 223 | 48.2%–61.1% | H6: três soldados → desce (efeito pequeno) |
+| tres_soldados | promissor | 54.9% | 224 | 48.4%–61.3% | H6: três soldados → desce (efeito pequeno) |
+| williams_volb_alta | promissor | 54.1% | 37 | 38.4%–69.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 53.4% | 58 | 40.8%–65.7% | H14: queda anormal de 1 h → sobe |
 | velez_180_baixa | promissor | 51.7% | 29 | 34.4%–68.6% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | williams_volb_baixa | promissor | 50.9% | 55 | 38.1%–63.6% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
