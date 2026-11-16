@@ -1,23 +1,23 @@
 {
- "t": 1794802168,
- "leitura": "Indeciso: 56,2% das moedas sobem em 24 h (entre 30% e 70%), 4 h com 15,7% subindo, BTC +0,44% em 24 h e −0,36% em 4 h com volume 1,06× a média; medo e ganância 10. Sem lado pela regra de 24 h: fora.",
+ "t": 1794805762,
+ "leitura": "Indeciso: 52,1% das moedas sobem em 24 h (56,2% há 1 h), 44,6% em 4 h; BTC −0,17% em 24 h, −0,16% em 4 h, volume 0,81×, triângulo simétrico em 1 h; medo extremo 10. Fora até o 24 h sair da faixa 30–70%.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Fora desde 03:19 UTC com 24 h em 64,5% subindo; agora 56,2% e o 4 h caiu para 15,7% subindo (BTC −0,36% em 4 h): sair no indeciso evitou segurar compras num recuo geral. As 18 operações somam −4,27 (fator de lucro 0,05), com as 3 compras de BTC no recuo como únicas vitórias repetidas (+0,072, +0,072, +0,042). Volto a vender só com 24 h em 30% ou menos subindo; a comprar só com 70% ou mais.",
+ "licao": "Fora desde 03:19 UTC com 24 h entre 64,5% e 52,1% subindo; o BTC ficou entre −0,36% e −0,16% em 4 h e nenhuma das 18 operações (soma −4,27) seria refeita nesse quadro. Confirma a leitura de baixa: 24 h cair para 30% ou menos subindo com o BTC fechando 1 h abaixo de 64500; nega: 24 h passar de 70%.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 56,2% das moedas sobem em 24 h e 15,7% em 4 h; BTC +0,44% em 24 h, −0,36% em 4 h, volume 1,06×: Robô Claude fora. Minerador pausado 6 h: fator de lucro 0,69 em 193 operações (soma −3,16). v4 fora como voto: segue_maioria_24h acerta 52,98% contra 52,91% dele; compras do v4 acertam 49,1%."
+   "texto": "Mercado indeciso: 52,1% das moedas sobem em 24 h e 44,6% em 4 h; BTC −0,17% em 24 h, volume 0,81×: Robô Claude fora. Minerador liberado: fator de lucro voltou a 0,70 em 194 operações (não está abaixo de 0,7). v4 só como informação: vigia dentro do esperado (53,3% contra 53,5%), mas compras dele acertam 49,4% e vendas 57,5%."
   }
  ],
  "ordens": [
   {
    "agente": "minerador",
-   "acao": "pausar",
-   "horas": 6,
-   "motivo": "torneio: fator de lucro 0,69 em 193 operações (soma −3,16, carteira 6,84)"
+   "acao": "liberar",
+   "horas": 1,
+   "motivo": "torneio: fator de lucro 0,70 em 194 operações, não está abaixo de 0,7; a pausa perdeu o motivo"
   }
  ]
 }
