@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 20:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 21:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
 Carteira **US$ 6.03** · 85 operações fechadas · 0 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 51/85 com lucro (60%), resultado -3.97, média -0.047 por operação.
-- **Últimas 24 h:** 30/55 com lucro, -4.93.
+- **Últimas 24 h:** 29/54 com lucro, -5.12.
 - **Por horário:** 12–17 UTC: 19 op, 47% certas, -2.54 · 06–11 UTC: 16 op, 50% certas, -1.55 · 00–05 UTC: 18 op, 78% certas, -0.37 · 18–23 UTC: 32 op, 62% certas, +0.49
 - **Por lado:** compra: 44 op, 55% certas, -2.32 · venda: 41 op, 66% certas, -1.66
 - **Por confiança do v4:** alta (0,08–0,12): 26 op, 42% certas, -3.81 · média (0,05–0,08): 11 op, 73% certas, -0.36 · muito alta (≥0,12): 42 op, 64% certas, -0.10 · confiança baixa (<0,05): 6 op, 83% certas, +0.31
@@ -48,7 +48,7 @@ Carteira **US$ 6.65** · 211 operações fechadas · 1 abertas
 Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
 - **Total:** 34/96 com lucro (35%), resultado -5.04, média -0.053 por operação.
-- **Últimas 24 h:** 30/85 com lucro, -4.98.
+- **Últimas 24 h:** 30/83 com lucro, -4.67.
 - **Por horário:** 00–05 UTC: 39 op, 38% certas, -2.04 · 18–23 UTC: 37 op, 32% certas, -2.02 · 06–11 UTC: 20 op, 35% certas, -0.98
 - **Por lado:** compra: 67 op, 34% certas, -3.42 · venda: 29 op, 38% certas, -1.63
 - **Por confiança do v4:** confiança baixa (<0,05): 59 op, 42% certas, -2.67 · média (0,05–0,08): 21 op, 29% certas, -1.46 · alta (0,08–0,12): 13 op, 23% certas, -0.63 · muito alta (≥0,12): 3 op, 0% certas, -0.29
@@ -72,12 +72,12 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 31.5% das moedas subindo em 24 h, 62.9% em 4 h · BTC 24 h -0.09%, 4 h 0.54%.
+- **Amplitude:** 32.0% das moedas subindo em 24 h, 35.2% em 4 h · BTC 24 h -0.1%, 4 h 0.22%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.2%/ano · {'BTC': 8.8, 'ETH': 7.4, 'SOL': -4.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.4%/ano · {'BTC': 8.4, 'ETH': 11.0, 'SOL': 1.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · GIGGLE topo duplo (baixa, formado) · HEI fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · JTO fundo duplo (alta, formado) · MORPHO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PHA fundo duplo (alta, formado)
-- 📰 16/11 20:45 UTC · Cointelegraph: Bitmine nears 5% of ETH supply as treasuries report buys amid market slump
+- **Padrões gráficos em 1 h:** PHA fundo duplo (alta, CONFIRMOU) · SENT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BCH topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · GIGGLE topo duplo (baixa, formado) · HEI fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · MORPHO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 16/11 20:45 UTC · Cointelegraph: Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump
 - 📰 16/11 20:36 UTC · Decrypt: Tom Lee Blames Nvidia and Anthropic IPO for Ethereum Plunge as Bitmine Buys the Dip
 - 📰 16/11 20:35 UTC · CoinDesk: Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off
 - 📰 16/11 20:18 UTC · Cointelegraph: Boris Johnson says UK must lead blockchain development despite crypto doubts
@@ -114,13 +114,13 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 17686 apostas conferidas ao vivo, acerto 54.3%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 17757 apostas conferidas ao vivo, acerto 54.2%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
