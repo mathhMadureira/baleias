@@ -1,36 +1,36 @@
 {
- "t": 1794827481,
- "leitura": "Baixa de 24 h: só 26,9% das moedas sobem (mediana −1,32%), BTC −1,56% em 24 h e −0,21% em 4 h; o 1 h com 78,2% subindo (BTC +0,38%) é repique sem volume (0,89×), BTC abaixo das médias de 50 e 200 dias, medo 10. Ponto de venda: mesa vendida.",
+ "t": 1794831245,
+ "leitura": "Baixa de 24 h: só 21,8% das moedas sobem (mediana −1,32%), 4 h com 21,8% e 1 h com 25,2%; BTC −1,38% em 24 h, −0,84% em 4 h, volume 0,99× (sem repique com volume), em 64448, abaixo de 65216. Medo 10, funding médio +2%/ano (neutro), BTC abaixo das médias de 50 e 200 dias: tendência de baixa intacta, segurar as vendas.",
  "posicoes": [
   {
    "moeda": "BTCUSDT",
    "lado": "venda",
-   "motivo": "baixa de 24 h (26,9% subindo), repique de 1 h +0,38% sem volume (0,89×); BTC 64575 segue abaixo de 65216, a baixa não falhou"
+   "motivo": "manter: baixa de 24 h (21,8% subindo), BTC −0,84% em 4 h sem volume (0,99×) e abaixo de 65216; posição −0,02% em 1,8 h"
   },
   {
    "moeda": "XRPUSDT",
    "lado": "venda",
-   "motivo": "moeda grande a favor da baixa de 24 h; −0,69% na posição, dentro do ruído e longe do stop de 2,3%"
+   "motivo": "manter: moeda grande a favor da baixa de 24 h; −0,88% contra stop de 2,3%, dentro do ruído"
   },
   {
    "moeda": "SKYUSDT",
    "lado": "venda",
-   "motivo": "segue entre as líderes de queda de 4 h (−4,18%) com volume 3,37×, 24 h −5,69%, não esticada"
+   "motivo": "manter: segue entre as maiores quedas de 4 h (−2,27%) com volume 2,59× e 24 h −4,3%, não esticada"
   },
   {
    "moeda": "APEUSDT",
    "lado": "venda",
-   "motivo": "entrou com 4 h −3,49% e volume 1,92× a favor da baixa; −1,03% na posição, longe do stop de 2,8%; a razão da entrada segue"
+   "motivo": "manter: a favor da baixa de 24 h; −0,9% contra stop de 2,8%, a razão da entrada continua"
   }
  ],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "As 4 vendas de 10:21 UTC (BTC, XRP, SKY, APE, moedas com 24 h entre −1,6% e −6,4%) estão abertas há 0,8 h sem bater o stop (−0,21% a −1,03%), enquanto ZIL e BARD (24 h ≈ −14%) pararam no stop em ~15 min: vender moeda não esticada no dia aguentou o repique de 1 h (78,2% subindo). Conferir na próxima se passam de 2 h; se o BTC fechar 1 h acima de 65216 ou o 24 h passar de 30% subindo, fecho.",
+ "licao": "As 4 vendas de 10:21 UTC (BTC, XRP, SKY, APE, 24 h entre −1,6% e −6,4% na entrada) passaram de 1,8 h sem bater o stop (BTC −0,02%, XRP −0,88%, SKY −1,0% contra stop 2,5%, APE −0,9% contra 2,8%), enquanto ZIL e BARD (24 h ≈ −14%) pararam no stop em ~15 min. Conferir na próxima se passam de 3 h; fecho se o BTC fechar 1 h acima de 65216 ou o 24 h passar de 30% subindo.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Baixa de 24 h com 26,9% das moedas subindo (BTC −1,56% em 24 h, 4 h −0,21%, volume 0,89×): repique de 1 h sem volume, mesa segue vendida (BTC, XRP, SKY, APE). Minerador segue pausado até 16:21: fator de lucro 0,69 em 211 operações. Sem ordens novas: Caçador 0,73, Scalper 0,85, Rápido 0,85, LBank 1,00, todos acima de 0,7. v4 só como voto: vigia dentro do esperado (54,0% contra 53,5%), vendas dele acertam 57,9% e 112 de 135 apostas são vendas, a favor da baixa."
+   "texto": "Baixa de 24 h com 21,8% das moedas subindo (BTC −1,38% em 24 h, −0,84% em 4 h, volume 0,99×): mesa segue vendida (BTC, XRP, SKY, APE). Minerador segue pausado até 16:21: fator de lucro 0,69 em 211 operações, ainda abaixo de 0,7. Sem ordens novas: Caçador 0,73, Scalper 0,85, Rápido 0,85, LBank 1,17. v4 só como voto: vigia dentro do esperado (54,1% contra 53,5%), mas 12–18 h UTC acerta só 52,2%: entradas mais exigentes nesse horário."
   }
  ],
  "ordens": []
