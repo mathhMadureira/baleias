@@ -4,15 +4,15 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.7% | 1910 | 50.4%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.6% | 1911 | 50.4%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_graal_alta | promissor | 66.7% | 3 | 20.8%–93.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_wr_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | raschke_graal_baixa | promissor | 58.5% | 41 | 43.4%–72.2% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 57.1% | 28 | 39.1%–73.5% | física: alta anormal de 1 h → devolve |
+| williams_volb_alta | promissor | 54.8% | 31 | 37.8%–70.8% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | tres_soldados | promissor | 54.5% | 222 | 47.9%–60.9% | H6: três soldados → desce (efeito pequeno) |
 | reversao_queda | promissor | 53.4% | 58 | 40.8%–65.7% | H14: queda anormal de 1 h → sobe |
-| williams_volb_alta | promissor | 53.3% | 30 | 36.1%–69.8% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | williams_volb_baixa | promissor | 51.1% | 47 | 37.2%–64.7% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | tres_corvos | promissor | 50.3% | 326 | 44.9%–55.7% | H6: três corvos → sobe (efeito pequeno) |
 | velez_180_baixa | reprovado | 50.0% | 26 | 32.1%–67.9% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
