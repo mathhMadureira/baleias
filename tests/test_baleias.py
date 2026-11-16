@@ -1714,7 +1714,9 @@ class LBankSoLeitura(unittest.TestCase):
         def abrir(req, timeout=0):
             pedidos.append(req)
             return io.BytesIO(json.dumps(resp).encode())
-        s = LBankLeitura("k" * 20, "s" * 32, abrir=abrir).saldos()
+        c = LBankLeitura("k" * 20, "s" * 32, abrir=abrir)
+        c._desvio_ms = 0.0                                          # sem o pedido da hora do servidor neste teste
+        s = c.saldos()
         self.assertEqual(s, {"USDT": {"total": 12.5, "livre": 10.0, "preso": 2.5}})
         self.assertIn(b"sign=", pedidos[0].data)
         self.assertNotIn(b"s" * 32, pedidos[0].data)                # o segredo nunca vai no pedido

@@ -50,6 +50,7 @@ class LBankLeitura:
         self.chave = chave if chave is not None else os.environ.get("LBANK_API_KEY", "")
         self.segredo = segredo if segredo is not None else os.environ.get("LBANK_API_SECRET", "")
         self.abrir = abrir
+        self._desvio_ms = None          # hora da LBank − hora da máquina (a VM atrasa depois de dormir: 183 s em 15/11)
 
     def _ler(self, req):
         try:
@@ -71,7 +72,12 @@ class LBankLeitura:
         if not self.chave or not self.segredo:
             raise RuntimeError("faltam LBANK_API_KEY e LBANK_API_SECRET no ~/baleias/.env (rode: python3 -m executor.configurar_chave)")
         p = dict(params or {})
-        p.update(api_key=self.chave, signature_method="HmacSHA256", timestamp=str(int(time.time() * 1000)), echostr=_echostr())
+        if self._desvio_ms is None:                                 # a documentação recomenda o timestamp do servidor (/v2/timestamp.do)
+            try:
+                self._desvio_ms = self.hora_servidor() - time.time() * 1000
+            except (RuntimeError, OSError, ValueError, TypeError):
+                self._desvio_ms = 0.0
+        p.update(api_key=self.chave, signature_method="HmacSHA256", timestamp=str(int(time.time() * 1000 + self._desvio_ms)), echostr=_echostr())
         p["sign"] = assinar({k: v for k, v in p.items() if k != "sign"}, self.segredo)
         cab = {**UA, "Content-Type": "application/x-www-form-urlencoded", "timestamp": p["timestamp"],
                "signature_method": p["signature_method"], "echostr": p["echostr"]}
