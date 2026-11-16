@@ -1,36 +1,36 @@
 {
- "t": 1794831245,
- "leitura": "Baixa de 24 h: só 21,8% das moedas sobem (mediana −1,32%), 4 h com 21,8% e 1 h com 25,2%; BTC −1,38% em 24 h, −0,84% em 4 h, volume 0,99× (sem repique com volume), em 64448, abaixo de 65216. Medo 10, funding médio +2%/ano (neutro), BTC abaixo das médias de 50 e 200 dias: tendência de baixa intacta, segurar as vendas.",
+ "t": 1794834949,
+ "leitura": "Baixa de 24 h forte: só 11,7% das moedas sobem em 24 h (mediana −3,01%) e 18,3% em 4 h; BTC −2,04% em 24 h, −0,46% em 4 h, volume 1,1× (sem repique com volume); medo 10, funding neutro (3,2%/ano), BTC abaixo das médias de 50 e 200 dias. Mesa vendida com as 4 vagas.",
  "posicoes": [
-  {
-   "moeda": "BTCUSDT",
-   "lado": "venda",
-   "motivo": "manter: baixa de 24 h (21,8% subindo), BTC −0,84% em 4 h sem volume (0,99×) e abaixo de 65216; posição −0,02% em 1,8 h"
-  },
   {
    "moeda": "XRPUSDT",
    "lado": "venda",
-   "motivo": "manter: moeda grande a favor da baixa de 24 h; −0,88% contra stop de 2,3%, dentro do ruído"
+   "motivo": "manter: a favor da baixa de 24 h (11,7% subindo); −0,21% em 2,7 h contra stop de 2,3%, a razão da entrada continua"
   },
   {
-   "moeda": "SKYUSDT",
+   "moeda": "BTCUSDT",
    "lado": "venda",
-   "motivo": "manter: segue entre as maiores quedas de 4 h (−2,27%) com volume 2,59× e 24 h −4,3%, não esticada"
+   "motivo": "baixa de 24 h (11,7% subindo), BTC −2,04% em 24 h e −0,43% na última hora sem repique com volume (1,1×); a venda de BTC das 10:21 saiu +0,066 no stop móvel"
   },
   {
-   "moeda": "APEUSDT",
+   "moeda": "JUPUSDT",
    "lado": "venda",
-   "motivo": "manter: a favor da baixa de 24 h; −0,9% contra stop de 2,8%, a razão da entrada continua"
+   "motivo": "entre as líderes das quedas de 4 h (−2,69%) com volume 1,35×, 24 h −5,16% (longe dos −14% que repicaram)"
+  },
+  {
+   "moeda": "BEAMXUSDT",
+   "lado": "venda",
+   "motivo": "2ª maior queda de 4 h (−4,76%) com volume 1,48×, 24 h só −1,61%: não esticada no dia"
   }
  ],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "As 4 vendas de 10:21 UTC (BTC, XRP, SKY, APE, 24 h entre −1,6% e −6,4% na entrada) passaram de 1,8 h sem bater o stop (BTC −0,02%, XRP −0,88%, SKY −1,0% contra stop 2,5%, APE −0,9% contra 2,8%), enquanto ZIL e BARD (24 h ≈ −14%) pararam no stop em ~15 min. Conferir na próxima se passam de 3 h; fecho se o BTC fechar 1 h acima de 65216 ou o 24 h passar de 30% subindo.",
+ "licao": "As vendas de 10:21 UTC em moedas com 24 h entre −1,6% e −6,4% saíram todas no lucro pelo stop móvel às 12:36 (BTC +0,066, SKY +0,081, APE +0,035, e a 1ª APE +0,034), e XRP segue aberta −0,21% após 2,7 h; as 7 vendas em moedas com 24 h perto de −14% tinham parado no stop (−0,405 cada). Repito o critério (JUP −5,16%, BEAMX −1,61% em 24 h): conferir na próxima se passam de 1 h sem stop; fecho se o 24 h passar de 30% subindo.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Baixa de 24 h com 21,8% das moedas subindo (BTC −1,38% em 24 h, −0,84% em 4 h, volume 0,99×): mesa segue vendida (BTC, XRP, SKY, APE). Minerador segue pausado até 16:21: fator de lucro 0,69 em 211 operações, ainda abaixo de 0,7. Sem ordens novas: Caçador 0,73, Scalper 0,85, Rápido 0,85, LBank 1,17. v4 só como voto: vigia dentro do esperado (54,1% contra 53,5%), mas 12–18 h UTC acerta só 52,2%: entradas mais exigentes nesse horário."
+   "texto": "Baixa de 24 h com só 11,7% das moedas subindo (BTC −2,04% em 24 h, −0,46% em 4 h, volume 1,1×): mesa vendida (XRP, BTC, JUP, BEAMX). Minerador segue pausado até 16:21: fator de lucro 0,69 em 211 operações, ainda abaixo de 0,7. Sem ordens novas: Caçador 0,75, Scalper 0,93, Rápido 0,96, LBank 1,08. v4 fora como voto: a última vela dele é de 05:30 UTC (7,5 h atrás)."
   }
  ],
  "ordens": []
