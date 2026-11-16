@@ -1074,3 +1074,18 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   melhores a favor no recorte por robô; não são excluídos).
 - **Juiz ao vivo (17/11 a 23/11):** média por operação da mesa contra −0,0175/op (média das 1455 operações antes). Passa se for maior nos
   3 terços da semana.
+
+## Hipótese 56: Radar de oportunidades a partir de 1 segundo, em todos os tempos gráficos (registrada em 16/11/2026 ~20:00 BRT, antes de rodar)
+
+- **Pedido do dono (16/11):** "o que importa é a visão de oportunidade; se encontrar, entra comprado ou vendido; não importa o tempo gráfico;
+  todos lendo o mercado a partir de 1 segundo e operando em todos os tempos gráficos".
+- **Dados:** velas de 1 s da Binance à vista (data.binance.vision, arquivos diários), 12 moedas líquidas (BTC, ETH, SOL, XRP, DOGE, BNB,
+  ADA, PEPE, SUI, LINK, AVAX, TRX), 3 dias = 3 blocos: 13/11, 14/11, 15/11/2026.
+- **Leitura:** em cada segundo, para cada janela w ∈ {5 s, 15 s, 1 min, 5 min, 15 min, 1 h, 4 h}: z_w = retorno da janela ÷ (desvio dos retornos
+  de 1 s na última hora × √w). Oportunidade = |z_w| ≥ 4 em alguma janela (a de maior |z| decide o lado). Volume da janela ÷ volume médio da
+  mesma janela na última hora = vol_w.
+- **3 regras (3 tentativas, todas contadas):** R1 reversão (entra contra o movimento); R2 continuação (entra a favor); R3 reversão só com
+  vol_w ≤ 1 (a regra H28 do Minerador, que passou, generalizada para todos os tempos).
+- **Execução simulada:** US$ 25 por posição, 0,06% por lado; uma posição por moeda; saída por stop móvel (arma +0,5%, guarda 70%), stop 1%,
+  alvo +2% (US$ 0,50), ou 1 h; 60 s de espera após sair.
+- **Aprovação:** média por operação > 0 depois do custo nos 3 dias, com ≥ 30 operações em cada dia. Sem ajuste depois de ver.
