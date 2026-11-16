@@ -1621,6 +1621,31 @@ class SemPerseguir(unittest.TestCase):
         self.assertFalse(persegue("compra", sobe[:10]))              # poucas velas: não bloqueia
 
 
+class Radar(unittest.TestCase):
+    """H56/R3: movimento ≥ 4σ sem volume → entra contra; stop de 1% e alvo de 2% conferidos segundo a segundo."""
+
+    def test_entra_contra_e_sai_no_stop(self):
+        try:
+            import numpy as np
+        except ImportError:
+            self.skipTest("sem numpy")
+        from executor import radar_nuvem as R
+        rng = random.Random(1)
+        n = 3700
+        c = [100.0]
+        for _ in range(n - 1):
+            c.append(c[-1] * (1 + rng.gauss(0, 0.0001)))
+        c[-1] = c[-2] * 1.01                                           # salto de 1% num segundo (≈ 100σ), volume baixo
+        s = np.array([[i * 1000.0, x * 1.00001, x * 0.99999, x, 1000.0 if i < n - 1 else 10.0] for i, x in enumerate(c)])
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "espera": {}}
+        R.passo(e, {"BTCUSDT": s}, {"BTCUSDT": s[-2, 0]})
+        self.assertEqual(e["abertas"]["BTCUSDT"]["lado"], "venda")
+        seg = [n * 1000.0, c[-1] * 1.011, c[-1], c[-1] * 1.011, 10.0]  # sobe mais 1,1%: stop de 1%
+        R.passo(e, {"BTCUSDT": np.vstack([s, seg])}, {"BTCUSDT": s[-1, 0]})
+        self.assertFalse(e["abertas"])
+        self.assertAlmostEqual(e["fechadas"][0]["resultado_usd"], -0.25 - 0.03, places=6)
+
+
 class GuardaDia(unittest.TestCase):
     """H54: dia que chegou a +0,25 e devolveu metade fecha tudo e trava até o dia UTC seguinte; dia negativo segue operando."""
 

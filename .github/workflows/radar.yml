@@ -1,0 +1,59 @@
+# 📡 Radar (H56): robô SIMULADO contínuo que lê o mercado a partir das velas de 1 s, em todos os tempos gráficos (pedido do dono, 16/11).
+# Cada rodada fica viva ~5h40: roda o robô por 5 min, salva SÓ dados/robo_radar.json no ramo `estado`, repete. As velas de 1 s ficam em
+# cache no próprio executor entre os ciclos. O agendamento a cada 20 min só acorda uma rodada nova quando a anterior acabou (concurrency).
+name: radar
+
+on:
+  schedule:
+    - cron: "7,27,47 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  operar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Instalar numpy
+        run: pip install -q numpy
+
+      - name: Operar o Radar por até ~5h40, salvando o estado a cada 5 min
+        env:
+          BINANCE_DADOS: https://data-api.binance.vision
+          RADAR_DURACAO: "300"
+          RADAR_CACHE: ${{ runner.temp }}/radar_cache.npz
+        run: |
+          git config --global user.name "cerebro-baleias"
+          git config --global user.email "cerebro-baleias@users.noreply.github.com"
+          fim=$(( $(date +%s) + 340*60 ))
+          while [ "$(date +%s)" -lt "$fim" ]; do
+            rm -rf estado && git worktree prune
+            git fetch -q origin estado
+            git worktree add -q -f estado origin/estado && (cd estado && git switch -q -C trabalho)
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.radar_nuvem | tee -a resumo.txt || echo "radar falhou"
+            (
+              cd estado
+              [ -f dados/robo_radar.json ] && cp dados/robo_radar.json ../radar_salvo.json
+              for i in 1 2 3 4 5; do
+                git fetch -q origin estado && git reset -q --hard origin/estado
+                [ -f ../radar_salvo.json ] && cp ../radar_salvo.json dados/robo_radar.json && git add dados/robo_radar.json
+                if git diff --cached --quiet; then echo "estado: nada novo"; break; fi
+                git commit -q -m "radar $(date -u +%FT%H:%M)"
+                if git push -q origin HEAD:estado; then echo "estado salvo ($(git rev-parse --short HEAD))"; break; fi
+                echo "push rejeitado, tentativa $i"; sleep $((i * 5))
+              done
+            ) || true
+          done
+          { echo '```'; tail -40 resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

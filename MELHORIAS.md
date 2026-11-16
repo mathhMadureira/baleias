@@ -71,3 +71,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   ordens na conta de teste). **H55 "não perseguir"** (`executor/sem_perseguir.py`) em todos os robôs: não compra acima da média de 20 velas
   de 15 min, não vende abaixo. Medido em 1455 operações: perseguir −0,070/op × contra −0,008 (3/3 blocos); exigir os 5 tempos gráficos a
   favor deu −0,054 (pior), por isso não virou regra.
+- 2026-11-16 (noite): **📡 Radar (H56)**, pedido do dono "ler o mercado a partir de 1 s, em todos os tempos gráficos, entrar onde houver
+  oportunidade": teste no laboratório com velas de 1 s (12 moedas, 3 dias) REPROVOU as 3 regras (melhor, R3: −0,017/op; +0,013 antes do
+  custo). Entra na mesa SIMULADO como comparação ao vivo (`executor/radar_nuvem.py`, fluxo contínuo `radar.yml`, lê a cada 2 s).

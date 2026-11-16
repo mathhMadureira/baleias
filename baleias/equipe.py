@@ -48,6 +48,8 @@ EQUIPE = (
      "missao": "Livre de regras (pedido do dono, H47): segue a maioria do mercado nas 4 moedas líderes, carteira inteira a 20×, sem stop."},
     {"id": "lbank", "nome": "Robô LBank", "avatar": "🟣", "arquivo": "robo_lbank.json", "motor": "tendência 24 h + stop móvel (LBank)",
      "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%."},
+    {"id": "radar", "nome": "Radar", "avatar": "📡", "arquivo": "robo_radar.json", "motor": "leitura de 1 s em todos os tempos (H56)",
+     "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo."},
     {"id": "testnet", "nome": "v4 Testnet", "avatar": "🧪", "arquivo": "robo_v4_testnet.json", "motor": "Cérebro v4",
      "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram."},
 )

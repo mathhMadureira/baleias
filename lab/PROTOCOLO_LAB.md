@@ -1089,3 +1089,8 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - **Execução simulada:** US$ 25 por posição, 0,06% por lado; uma posição por moeda; saída por stop móvel (arma +0,5%, guarda 70%), stop 1%,
   alvo +2% (US$ 0,50), ou 1 h; 60 s de espera após sair.
 - **Aprovação:** média por operação > 0 depois do custo nos 3 dias, com ≥ 30 operações em cada dia. Sem ajuste depois de ver.
+- **Resultado H56 (16/11, `lab/radar_1s.py`, 12 moedas × 13–15/11, velas de 1 s): REPROVADA nas 3 regras.** R1 reversão: 1036 ops,
+  −0,0289 US$/op (dias −0,034 / −0,039 / −0,014), acerto 58%. R2 continuação: 1015 ops, −0,0261 (−0,032 / −0,020 / −0,028), 56%.
+  R3 reversão sem volume: 456 ops, −0,0169 (−0,017 / −0,030 / −0,002), 61%. Custo por operação US$ 0,03: antes do custo R1 +0,001,
+  R2 +0,004, R3 +0,013 por operação — a leitura de 1 s quase empata e o custo leva tudo. Decisão do dono: o Radar (R3) entra na mesa
+  SIMULADO, como comparação ao vivo (como o Robô Livre na H47), marcado como reprovado no laboratório.
