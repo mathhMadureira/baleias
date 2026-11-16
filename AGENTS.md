@@ -36,6 +36,7 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 10. **Não existe campeão no prejuízo** (16/11): campeão só com carteira acima de US$ 10 e fator de lucro > 1 (`executor/torneio.py`).
 11. **Nenhum robô é pausado no prejuízo ou com operações abertas** (16/11): `baleias/equipe.pausa_proibida` recusa a ordem.
 12. **Nenhum robô deve terminar as 24 h no prejuízo** (16/11): `executor/guarda_dia.py` (H54) — dia que chegou a +0,25 e devolveu metade fecha tudo e trava até 00:00 UTC.
+13. **A decisão não é limitada por tempo** (16/11): nada de esperar vela de 15 min nem sair no fim da vela; a rodada da nuvem roda de novo 1 min depois da anterior.
 
 ## Segurança
 

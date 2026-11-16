@@ -74,3 +74,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-16 (noite): **📡 Radar (H56)**, pedido do dono "ler o mercado a partir de 1 s, em todos os tempos gráficos, entrar onde houver
   oportunidade": teste no laboratório com velas de 1 s (12 moedas, 3 dias) REPROVOU as 3 regras (melhor, R3: −0,017/op; +0,013 antes do
   custo). Entra na mesa SIMULADO como comparação ao vivo (`executor/radar_nuvem.py`, fluxo contínuo `radar.yml`, lê a cada 2 s).
+- 2026-11-16 (noite): **Fim dos limites de 15 min** (dono: "a decisão não deve ser limitada por tempo"): H55 revogada; rodada da nuvem
+  sem esperar a vela (1 min de intervalo); Scalpers A–D na rota R6 (sem saída no fim da vela, alvo deles mantido); Minerador sai por stop
+  móvel, stop 2% ou 24 h.

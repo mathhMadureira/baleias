@@ -15,7 +15,6 @@ import time
 from pathlib import Path
 
 from baleias import config
-from executor.sem_perseguir import persegue
 
 ORCAMENTO, ALAV, CUSTO_LADO = 25.0, 10.0, 0.0006
 STOP_SEG = float(os.environ.get("V4P_STOP", "0.01"))
@@ -81,7 +80,8 @@ def _rota_r6(e, velas, agora_ms, permitido, regime):
     for par in list(e["abertas"]):
         p = e["abertas"][par]
         entrada_ms = int(p["entrada_t"] * 1000)
-        r = SM.conferir(p, SM.MINUTOS.get(par), STOP_SEG, agora_ms, entrada_ms)
+        r = SM.conferir(p, SM.MINUTOS.get(par), STOP_SEG, agora_ms, entrada_ms,
+                        alvo_pct=REALIZAR / ORCAMENTO if "V4P_REALIZAR" in os.environ else None)   # Scalpers: o alvo deles vale sem fim de vela
         if r:
             textos.append(_fechar(e, par, r[0], r[1], r[2] / 1000))
             continue
@@ -171,8 +171,6 @@ def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=
             continue
         lado = "compra" if p["prob"] > 0.5 else "venda"
         if FOCO and evitar(lado, p["prob"], (p["t"] + VELA_MS) / 1000):
-            continue
-        if persegue(lado, velas.get(par), p["px"]):            # H55: não persegue o movimento de 15 min
             continue
         if sum(1 for q in e["abertas"].values() if q["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
             continue

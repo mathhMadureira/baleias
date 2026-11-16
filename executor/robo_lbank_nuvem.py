@@ -132,14 +132,9 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
         lado = lado_desejado(regime, var)
         if lado and (not lado_ordem or lado == lado_ordem) and par not in e["abertas"]:
             candidatos.append((abs(var), par, lado, preco, var))
-    from executor.sem_perseguir import persegue
-    olhadas = 0
     for _, par, lado, preco, var in sorted(candidatos, reverse=True):
-        if len(e["abertas"]) >= MAX_POS or e["caixa"] < ORCAMENTO / ALAV or olhadas >= 40:
+        if len(e["abertas"]) >= MAX_POS or e["caixa"] < ORCAMENTO / ALAV:
             break
-        olhadas += 1
-        if persegue(lado, velas15(par), preco):                # H55: não persegue o movimento de 15 min
-            continue
         e["caixa"] -= ORCAMENTO / ALAV
         e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco, "entrada_t": agora, "gasto": ORCAMENTO / ALAV}
         textos.append(f"🟣 {NOME} ENTROU {'COMPRADO' if lado == 'compra' else 'VENDIDO'} em {par[:-4]} a {preco:.6g} "

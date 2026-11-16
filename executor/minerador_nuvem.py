@@ -54,21 +54,30 @@ def sinal(k):
     return None
 
 
-def resolver(p, k):
-    """Fecha a posição na vela seguinte à do sinal: no stop de segurança se a vela tocou −2%, senão no fechamento dela."""
-    vela = next((x for x in k if x[0] == p["vela_saida"]), None)
-    if vela is None:
-        return None
+MAX_HORAS = 24
+
+
+def resolver(p, k, agora_ms=None):
+    """Pedido do dono (16/11): a saída não é limitada pela vela. Sai pelo stop móvel ou de segurança (−2%) minuto a minuto; sem os
+    minutos, pelo stop nas velas de 15 min; e em MAX_HORAS como proteção. Devolve (preço, motivo, t_saida_s) ou None."""
+    agora_ms = agora_ms or time.time() * 1000
+    entrada_ms = int(p["entrada_t"] * 1000)
     from executor import stop_movel as SM                  # H49: stop móvel minuto a minuto
-    r = SM.conferir(p, SM.MINUTOS.get(p["moeda"]), STOP_SEG, p["vela_saida"] + VELA_MS, int(p["entrada_t"] * 1000))
+    r = SM.conferir(p, SM.MINUTOS.get(p["moeda"]), STOP_SEG, agora_ms, entrada_ms)
     if r:
-        return r[0], r[1]
-    h, l, c = float(vela[2]), float(vela[3]), float(vela[4])
+        return r[0], r[1], r[2] / 1000
     venda = p["lado"] == "venda"
     stop = p["entrada"] * (1 + STOP_SEG if venda else 1 - STOP_SEG)
-    if (h >= stop) if venda else (l <= stop):
-        return stop, "stop de segurança −2%"
-    return c, "fim da vela seguinte"
+    if not SM.MINUTOS.get(p["moeda"]):
+        for x in k:
+            if x[0] < p.get("conferido_15m", entrada_ms):
+                continue
+            if (float(x[2]) >= stop) if venda else (float(x[3]) <= stop):
+                return stop, f"stop de segurança −{STOP_SEG:.0%}", (x[0] + VELA_MS) / 1000
+            p["conferido_15m"] = x[0] + VELA_MS
+    if k and agora_ms / 1000 - p["entrada_t"] > MAX_HORAS * 3600:
+        return float(k[-1][4]), f"tempo máximo ({MAX_HORAS} h)", agora_ms / 1000
+    return None
 
 
 def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
@@ -76,14 +85,14 @@ def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
     textos = []
     for par in list(e["abertas"]):
         p = e["abertas"][par]
-        r = resolver(p, todas.get(par, []))
+        r = resolver(p, todas.get(par, []), agora_ms)
         if r is None:
             continue
-        saida, motivo = r
+        saida, motivo, saida_t = r
         sinal_lado = -1 if p["lado"] == "venda" else 1
         resultado = ORCAMENTO * sinal_lado * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO   # lucro líquido da posição de US$ 25
         e["caixa"] += ORCAMENTO / ALAV + resultado
-        e["fechadas"].append({**p, "saida": saida, "saida_t": (p["vela_saida"] + VELA_MS) / 1000, "motivo": motivo,
+        e["fechadas"].append({**p, "saida": saida, "saida_t": saida_t, "motivo": motivo,
                               "resultado_usd": resultado, "R": resultado / (ORCAMENTO * STOP_SEG)})
         del e["abertas"][par]
         textos.append(f"⛏ Minerador SAIU da {'VENDA' if sinal_lado < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT")
@@ -100,9 +109,6 @@ def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
             candidatos.append((abs(s[1]), par, k[-1], s))
     for _, par, vela, (lado, r1, vol96) in sorted(candidatos, reverse=True):
         if (lado_ordem and lado != lado_ordem) or sum(1 for p in e["abertas"].values() if p["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
-            continue
-        from executor.sem_perseguir import persegue
-        if persegue(lado, todas.get(par)):                     # H55: não persegue o movimento de 15 min
             continue
         entrada = float(vela[4])
         e["caixa"] -= ORCAMENTO / ALAV

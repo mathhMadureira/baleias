@@ -89,9 +89,6 @@ def passo(e, velas, agora):
     for par in ordem[:K]:
         if par in e["abertas"] or len(e["abertas"]) >= K or par not in preco:
             continue
-        from executor.sem_perseguir import persegue
-        if persegue(lado, velas.get(par), preco[par]):         # H55: não persegue o movimento de 15 min
-            continue
         margem = min(e["caixa"], patrimonio / K)
         if margem < 0.05:
             break

@@ -1094,3 +1094,8 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   R3 reversão sem volume: 456 ops, −0,0169 (−0,017 / −0,030 / −0,002), 61%. Custo por operação US$ 0,03: antes do custo R1 +0,001,
   R2 +0,004, R3 +0,013 por operação — a leitura de 1 s quase empata e o custo leva tudo. Decisão do dono: o Radar (R3) entra na mesa
   SIMULADO, como comparação ao vivo (como o Robô Livre na H47), marcado como reprovado no laboratório.
+- **H55 REVOGADA pelo dono (16/11, ~20:40 BRT), antes de ter resultado ao vivo:** "a decisão não deve ser limitada por tempo". Saiu de todos
+  os robôs. Junto saíram os outros limites de 15 min: a rodada da nuvem não espera mais a vela (começa 1 min depois da anterior); Scalpers
+  A–D passam à rota R6 da H52 (sem saída no fim da vela; mantêm o alvo deles); Minerador sai por stop móvel, stop de 2% ou 24 h, não mais
+  no fim da vela seguinte (a regra H28 foi testada saindo na vela seguinte: a saída nova não foi testada). O v4 continua prevendo em velas de
+  15 min (é como foi treinado).

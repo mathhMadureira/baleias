@@ -56,10 +56,10 @@ jobs:
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.vigia_v4 | tee -a resumo.txt || echo "vigia falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_ROTA=r6 V4P_STOP=0.02 python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "rápido nuvem falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_ROTA=r6 V4P_STOP=0.02 V4P_MODO=ranking V4P_K=2 V4P_ARQ=robo_v4_cacador.json V4P_NOME="Caçador" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "caçador falhou"
-            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_ARQ=robo_scalper_nuvem.json V4P_NOME="Scalper nuvem" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper falhou"
-            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=99 V4P_ARQ=robo_scalper_b.json V4P_NOME="Scalper B" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper B falhou"
-            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_LIMIAR=0.08 V4P_ARQ=robo_scalper_c.json V4P_NOME="Scalper C" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper C falhou"
-            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_FOCO=foco_scalper.json V4P_ARQ=robo_scalper_d.json V4P_NOME="Scalper D" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper D falhou"
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_ROTA=r6 V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_ARQ=robo_scalper_nuvem.json V4P_NOME="Scalper nuvem" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper falhou"
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_ROTA=r6 V4P_STOP=0.015 V4P_REALIZAR=99 V4P_ARQ=robo_scalper_b.json V4P_NOME="Scalper B" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper B falhou"
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_ROTA=r6 V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_LIMIAR=0.08 V4P_ARQ=robo_scalper_c.json V4P_NOME="Scalper C" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper C falhou"
+            BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" V4P_ROTA=r6 V4P_STOP=0.015 V4P_REALIZAR=0.125 V4P_FOCO=foco_scalper.json V4P_ARQ=robo_scalper_d.json V4P_NOME="Scalper D" python -m executor.v4_perp_nuvem | tee -a resumo.txt || echo "scalper D falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.robo_lbank_nuvem | tee -a resumo.txt || echo "robô lbank falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.robo_livre_nuvem | tee -a resumo.txt || echo "robô livre falhou"
             BALEIAS_DADOS="$GITHUB_WORKSPACE/estado/dados" python -m executor.robo_claude_nuvem | tee -a resumo.txt || echo "robô claude falhou"
@@ -85,8 +85,8 @@ jobs:
             if [ -n "$TOKEN_TG" ] && [ -n "$CHAT_TG" ] && [ -f estado/avisos.txt ]; then
               curl -s -o /dev/null "https://api.telegram.org/bot${TOKEN_TG}/sendMessage" --data-urlencode "chat_id=${CHAT_TG}" --data-urlencode "text@estado/avisos.txt"
             fi
-            # dorme até 2 min depois do próximo fechamento de vela de 15 min
-            agora=$(date +%s); prox=$(( (agora / 900 + 1) * 900 + 120 )); sleep $(( prox - agora ))
+            # pedido do dono (16/11): a decisão não espera vela de 15 min — a rodada seguinte começa 1 min depois desta terminar
+            sleep 60
           done
           { echo '```'; tail -40 resumo.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 

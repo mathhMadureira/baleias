@@ -1395,7 +1395,7 @@ class MineradorNuvem(unittest.TestCase):
             px = novo
         return k
 
-    def test_queda_forte_sem_volume_compra_e_sai_na_vela_seguinte(self):
+    def test_queda_forte_sem_volume_compra_e_segue_sem_limite_de_vela(self):
         from executor import minerador_nuvem as MN
         k = self._velas(-0.01, 5.0)                                   # queda de 10σ com 5% do volume normal
         self.assertEqual(MN.sinal(k)[0], "compra")
@@ -1405,9 +1405,13 @@ class MineradorNuvem(unittest.TestCase):
         self.assertIn("XUSDT", e["abertas"])
         seguinte = k + [[k[-1][0] + 900_000, k[-1][4], "100", "98.5", "99.5", "100", k[-1][6] + 900_000]]
         MN.passo(e, {"XUSDT": seguinte}, seguinte[-1][6])
+        self.assertIn("XUSDT", e["abertas"])                          # pedido do dono (16/11): não sai só porque a vela acabou
+        entrada = float(k[-1][4])
+        queda = seguinte + [[seguinte[-1][0] + 900_000, "99.5", "99.6", str(entrada * 0.97), "98", "100", seguinte[-1][6] + 900_000]]
+        MN.passo(e, {"XUSDT": queda}, queda[-1][6])
         f = e["fechadas"][0]
-        self.assertEqual(f["motivo"], "fim da vela seguinte")
-        self.assertAlmostEqual(f["resultado_usd"], MN.ORCAMENTO * (99.5 / float(k[-1][4]) - 1) - 2 * MN.CUSTO_LADO * MN.ORCAMENTO)
+        self.assertEqual(f["motivo"], "stop de segurança −2%")
+        self.assertAlmostEqual(f["resultado_usd"], MN.ORCAMENTO * -MN.STOP_SEG - 2 * MN.CUSTO_LADO * MN.ORCAMENTO)
         self.assertAlmostEqual(e["caixa"], 10.0 + f["resultado_usd"])
 
 
@@ -1527,7 +1531,6 @@ class RoboLivre(unittest.TestCase):
         return {f"M{i}USDT": [[t0 + k * 900_000, 0, 100 * (1 + passo_pct * (i + 1)) ** k * 1.0005, 100 * (1 + passo_pct * (i + 1)) ** k * 0.9995,
                                100 * (1 + passo_pct * (i + 1)) ** k] for k in range(n)] for i in range(moedas)}
 
-    @unittest.mock.patch("executor.sem_perseguir.persegue", lambda *a, **k: False)   # regra antiga isolada; H55 tem teste próprio
     def test_entra_nas_lideres_do_lado_da_maioria_e_reinveste(self):
         from executor import robo_livre_nuvem as L
         e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "sem_custo": 0.0, "custo_pago": 0.0}
@@ -1607,18 +1610,6 @@ class Torneio(unittest.TestCase):
         self.assertIsNone(T.avaliar(est)["campeao"])
         est["rapido"] = self._e([0.2, -0.1] * 20, cart=10.5)
         self.assertEqual(T.avaliar(est)["campeao"], "rapido")
-
-
-class SemPerseguir(unittest.TestCase):
-    """H55: não compra acima da média de 20 velas de 15 min, não vende abaixo; sem velas suficientes não bloqueia."""
-
-    def test_regra(self):
-        from executor.sem_perseguir import persegue
-        sobe = [[0, 0, 0, 0, str(100 + i)] for i in range(20)]
-        self.assertTrue(persegue("compra", sobe))
-        self.assertFalse(persegue("venda", sobe))
-        self.assertFalse(persegue("compra", sobe, preco=105))       # preço abaixo da média (109,5): compra liberada
-        self.assertFalse(persegue("compra", sobe[:10]))              # poucas velas: não bloqueia
 
 
 class Radar(unittest.TestCase):
@@ -1840,7 +1831,6 @@ class RoboLBank(unittest.TestCase):
         self.assertIsNone(lado_desejado(None, 0.02))
         self.assertEqual(lado_desejado(None, -0.04), "venda")
 
-    @unittest.mock.patch("executor.sem_perseguir.persegue", lambda *a, **k: False)   # regra antiga isolada; H55 tem teste próprio
     @unittest.mock.patch("executor.robo_lbank_nuvem.velas15", lambda par: [])
     def test_entra_nas_que_mais_caem_e_sai_quando_vira(self):
         from executor import robo_lbank_nuvem as L
