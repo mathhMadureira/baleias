@@ -4,14 +4,14 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.7% | 1921 | 50.5%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 1922 | 50.5%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_graal_alta | promissor | 66.7% | 3 | 20.8%–93.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_wr_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | raschke_graal_baixa | promissor | 58.5% | 41 | 43.4%–72.2% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 57.1% | 28 | 39.1%–73.5% | física: alta anormal de 1 h → devolve |
-| williams_volb_alta | promissor | 56.2% | 32 | 39.3%–71.8% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | tres_soldados | promissor | 54.7% | 223 | 48.2%–61.1% | H6: três soldados → desce (efeito pequeno) |
+| williams_volb_alta | promissor | 54.5% | 33 | 38.0%–70.2% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 53.4% | 58 | 40.8%–65.7% | H14: queda anormal de 1 h → sobe |
 | velez_180_baixa | promissor | 51.9% | 27 | 34.0%–69.3% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | tres_corvos | promissor | 50.5% | 329 | 45.1%–55.8% | H6: três corvos → sobe (efeito pequeno) |
