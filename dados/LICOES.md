@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 04:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 04:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 10.33** · 42 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 10.30** · 42 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 28/42 com lucro (67%), resultado +0.83, média +0.020 por operação.
 - **Últimas 24 h:** 27/41 com lucro, +0.61.
@@ -21,7 +21,7 @@ Carteira **US$ 10.33** · 42 operações fechadas · 4 abertas · carteiras ante
 Carteira **US$ 7.02** · 193 operações fechadas · 2 abertas
 
 - **Total:** 79/193 com lucro (41%), resultado -2.71, média -0.014 por operação.
-- **Últimas 24 h:** 54/115 com lucro, +0.54.
+- **Últimas 24 h:** 53/113 com lucro, +0.43.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 12–17 UTC: 51 op, 41% certas, -0.35 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 31 op, 58% certas, +0.83
 - **Por lado:** compra: 143 op, 39% certas, -2.57 · venda: 50 op, 46% certas, -0.14
 - **Por confiança do v4:** alta (0,08–0,12): 63 op, 35% certas, -1.48 · média (0,05–0,08): 15 op, 47% certas, -0.70 · muito alta (≥0,12): 115 op, 43% certas, -0.53
@@ -32,7 +32,7 @@ Carteira **US$ 7.02** · 193 operações fechadas · 2 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 6.84** · 193 operações fechadas · 1 abertas
+Carteira **US$ 6.84** · 193 operações fechadas · 2 abertas
 
 - **Total:** 82/193 com lucro (42%), resultado -3.16, média -0.016 por operação.
 - **Últimas 24 h:** 27/79 com lucro, -2.46.
@@ -45,16 +45,16 @@ Carteira **US$ 6.84** · 193 operações fechadas · 1 abertas
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 6.40** · 62 operações fechadas · 2 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
+Carteira **US$ 6.34** · 64 operações fechadas · 2 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
-- **Total:** 18/62 com lucro (29%), resultado -3.60, média -0.058 por operação.
-- **Últimas 24 h:** 18/62 com lucro, -3.60.
-- **Por horário:** 18–23 UTC: 37 op, 32% certas, -2.02 · 00–05 UTC: 25 op, 24% certas, -1.59
-- **Por lado:** compra: 50 op, 30% certas, -3.03 · venda: 12 op, 25% certas, -0.58
-- **Por confiança do v4:** confiança baixa (<0,05): 30 op, 30% certas, -1.67 · média (0,05–0,08): 17 op, 35% certas, -1.12 · alta (0,08–0,12): 12 op, 25% certas, -0.53 · muito alta (≥0,12): 3 op, 0% certas, -0.29
-- **Por motivo de saída:** fim da vela do v4 (saída a mer: 25 op, 16% certas, -2.04 · stop de segurança −1% (saída a: 4 op, 0% certas, -1.47 · fim da vela do v4: 33 op, 42% certas, -0.09
+- **Total:** 19/64 com lucro (30%), resultado -3.66, média -0.057 por operação.
+- **Últimas 24 h:** 19/64 com lucro, -3.66.
+- **Por horário:** 18–23 UTC: 37 op, 32% certas, -2.02 · 00–05 UTC: 27 op, 26% certas, -1.65
+- **Por lado:** compra: 51 op, 31% certas, -2.95 · venda: 13 op, 23% certas, -0.71
+- **Por confiança do v4:** confiança baixa (<0,05): 32 op, 31% certas, -1.73 · média (0,05–0,08): 17 op, 35% certas, -1.12 · alta (0,08–0,12): 12 op, 25% certas, -0.53 · muito alta (≥0,12): 3 op, 0% certas, -0.29
+- **Por motivo de saída:** fim da vela do v4 (saída a mer: 25 op, 16% certas, -2.04 · stop de segurança −1% (saída a: 4 op, 0% certas, -1.47 · fim da vela do v4: 35 op, 43% certas, -0.15
 - **Moedas que mais perderam (≥ 3 op):** ASTER -0.73 (6 op) · INIT -0.49 (4 op) · SOPH -0.46 (5 op) · WLFI -0.36 (4 op) · BONK -0.29 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** ZEC +0.03 (3 op) · BTC -0.02 (3 op) · TRX -0.04 (3 op) · BONK -0.29 (3 op) · WLFI -0.36 (4 op)
+- **Moedas que mais ganharam (≥ 3 op):** BNB +0.08 (3 op) · ZEC +0.03 (3 op) · BTC -0.02 (3 op) · TRX -0.04 (3 op) · BONK -0.29 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
@@ -72,26 +72,26 @@ Carteira **US$ 5.73** · 18 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 56.2% das moedas subindo em 24 h, 15.7% em 4 h · BTC 24 h 0.44%, 4 h -0.36%.
+- **Amplitude:** 51.2% das moedas subindo em 24 h, 19.8% em 4 h · BTC 24 h 0.06%, 4 h -0.18%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.8%/ano · {'BTC': 2.5, 'ETH': -12.1, 'SOL': -9.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.7%/ano · {'BTC': 6.8, 'ETH': -12.2, 'SOL': -6.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AERO topo duplo (baixa, formado) · AERO fundo duplo (alta, formado) · ALT topo duplo (baixa, formado) · ALT fundo duplo (alta, formado) · BEAMX topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · ENA fundo duplo (alta, formado) · ENA triângulo ascendente (alta, formado) · ETH triângulo ascendente (alta, formado)
+- **Padrões gráficos em 1 h:** AERO topo duplo (baixa, formado) · AERO fundo duplo (alta, formado) · ALT topo duplo (baixa, formado) · ALT fundo duplo (alta, formado) · APT topo duplo (baixa, formado) · APT fundo duplo (alta, formado) · BEAMX topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · ENA fundo duplo (alta, formado)
 - 📰 16/11 02:33 UTC · Cointelegraph: Luxor CEO warns of AI ‘dark forest’ after Bitcoin miner hijack
 - 📰 15/11 23:47 UTC · Cointelegraph: Jensen Huang weighs Nvidia comeback days after shock exit: FT
 - 📰 15/11 22:50 UTC · Cointelegraph: US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest
 - 📰 15/11 19:30 UTC · CoinDesk: Did prediction markets call the U.S. midterm election?: State of Crypto
+- 📰 15/11 16:01 UTC · Decrypt: How Wall Street Is Racing to Claim the Onchain Dollar
 - 📰 15/11 14:30 UTC · Cointelegraph: Enterprise blockchain is going to come back from the dead
-- 📰 15/11 14:00 UTC · CoinDesk: Crypto insiders aren't counting on silver linings in Congress' 'lame duck' session
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 16/11 04:09 UTC · **fora do mercado** · Indeciso: 56,2% das moedas sobem em 24 h (entre 30% e 70%), 4 h com 15,7% subindo, BTC +0,44% em 24 h e −0,36% em 4 h com volume 1,06× a média; medo e ganância 
 - 16/11 03:09 UTC · **fora do mercado** · Mercado indeciso: 64,5% das moedas sobem em 24 h (abaixo de 70%), 4 h com 43,8% subindo e BTC +0,44% em 24 h, −0,06% em 4 h, volume 1,06× a média; pano de fundo
 - 16/11 02:10 UTC · **BTC compra, BLUR compra, SOL compra, DOGE compra** · Alta de 24 h com 82,7% das moedas subindo (BTC +3,11%); 4 h em recuo sem volume (9,4% subindo, BTC −0,68%, volume 0,83×): correção dentro da alta, ponto de comp
 - 16/11 01:09 UTC · **BTC compra, KITE compra, BLUR compra, DOGE compra** · Alta de 24 h com 81,5% das moedas subindo (mediana +3,03%), BTC +2,36% em 24 h; 4 h em correção (17,7% subindo, BTC −0,32%) com volume fraco (0,75×): recuo sem 
 - 16/11 00:09 UTC · **BTC compra, BLUR compra, KITE compra, AMP compra** · Alta de 24 h: 83,2% das moedas subindo (mediana +3,27%), BTC +1,87% em 24 h e +0,62% em 4 h com volume fraco (0,59×); 4 h com 68,7% subindo, sem quebra de fundo
 - 15/11 23:09 UTC · **BTC compra, KITE compra, TLM compra, BLUR compra** · Alta de 24 h: 89,3% das moedas subindo (mediana +5,02%), 4 h 77,9% e 1 h 78,6% subindo; BTC +2,64% em 24 h e +0,77% em 4 h com volume fraco (0,57×), subindo dev
-- 15/11 22:09 UTC · **BTC compra, TLM compra, KITE compra, XPL compra** · Alta de 24 h: 84,7% das moedas subindo (mediana +3,71%), BTC +0,87% em 24 h e +0,71% em 4 h; na última hora só 27% sobem e o BTC −0,18% com volume 0,54× (recuo 
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.73** · 18 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 14374 apostas conferidas ao vivo, acerto 52.9%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 14419 apostas conferidas ao vivo, acerto 53.0%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
