@@ -1,23 +1,16 @@
 {
- "t": 1794805762,
- "leitura": "Indeciso: 52,1% das moedas sobem em 24 h (56,2% há 1 h), 44,6% em 4 h; BTC −0,17% em 24 h, −0,16% em 4 h, volume 0,81×, triângulo simétrico em 1 h; medo extremo 10. Fora até o 24 h sair da faixa 30–70%.",
+ "t": 1794809437,
+ "leitura": "Indeciso: 45,4% das moedas sobem em 24 h (era 52,1% há 1 h), 51,3% em 4 h e só 7,6% em 1 h; BTC −0,06% em 24 h, −0,15% em 4 h, −0,54% em 1 h, volume 0,88×. Pano de fundo de baixa (BTC 64475 abaixo das médias de 50 e 200 dias, medo 10), mas o 24 h não chegou a 30%: fora.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Fora desde 03:19 UTC com 24 h entre 64,5% e 52,1% subindo; o BTC ficou entre −0,36% e −0,16% em 4 h e nenhuma das 18 operações (soma −4,27) seria refeita nesse quadro. Confirma a leitura de baixa: 24 h cair para 30% ou menos subindo com o BTC fechando 1 h abaixo de 64500; nega: 24 h passar de 70%.",
+ "licao": "Fora desde 03:19 UTC; o 24 h caiu de 64,5% para 45,4% subindo sem nenhuma operação minha (soma segue −4,27 em 18). O triângulo do BTC rompido para baixo em 64530 é família reprovada na H45 (−0,171%/op em 4 h), então não conta. Confirma baixa: 24 h em 30% ou menos com o BTC fechando 1 h abaixo de 64500; nega: 24 h voltar acima de 55%.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 52,1% das moedas sobem em 24 h e 44,6% em 4 h; BTC −0,17% em 24 h, volume 0,81×: Robô Claude fora. Minerador liberado: fator de lucro voltou a 0,70 em 194 operações (não está abaixo de 0,7). v4 só como informação: vigia dentro do esperado (53,3% contra 53,5%), mas compras dele acertam 49,4% e vendas 57,5%."
+   "texto": "Mercado indeciso: 45,4% das moedas sobem em 24 h e 51,3% em 4 h; BTC −0,06% em 24 h, volume 0,88×: Robô Claude fora. Sem ordens: nenhum robô que obedece tem fator de lucro < 0,7 em 30+ operações (Caçador 0,78, Scalper 0,90, Minerador 0,70, Rápido 1,28, LBank 1,80). v4 só como informação: vigia dentro do esperado (53,7% contra 53,5%), mas compras dele acertam 49,7%; exigir mais das compras."
   }
  ],
- "ordens": [
-  {
-   "agente": "minerador",
-   "acao": "liberar",
-   "horas": 1,
-   "motivo": "torneio: fator de lucro 0,70 em 194 operações, não está abaixo de 0,7; a pausa perdeu o motivo"
-  }
- ]
+ "ordens": []
 }
