@@ -1017,3 +1017,15 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   Contra o regime: −0,307% (2 de 9 blocos de 12 h positivos); regime neutro: −0,119%.
 - **Decisão (pelo protocolo):** R6 substitui o fim da vela no Rápido nuvem e no Caçador (`V4P_ROTA=r6`, stop 2%). Os Scalpers ficam como estão
   (torneio). **Juiz ao vivo até 29/11:** Rápido e Caçador com R6 precisam de média por operação > 0 em 30+ operações; senão voltam ao fim da vela.
+
+## Hipótese 53: Robô LBank — SOL, memecoins e Robinhood (HOOD) no perpétuo da LBank, simulado (registrada em 2026-11-15 21:30 BRT, antes de ligar)
+
+- **Pedido do dono (15/11):** "faz o robô simulado da LBank" (day trade em memecoins, Solana e Robinhood).
+- **Moedas (perpétuos da LBank):** SOL, DOGE, SHIB, PEPE, WIF, BONK, FLOKI, BRETT, POPCAT, FARTCOIN, PNUT, PENGU e HOOD (ação da Robinhood
+  tokenizada; o perpétuo custa o mesmo que o HOODX à vista). Preços públicos da LBank (`marketData` do perpétuo; velas de 1 min da API à vista).
+- **Regra (rota da H52 adaptada):** lado = regime da amplitude do mercado (140 moedas da Binance, H44): baixa → vende as até 4 moedas que mais caem
+  em 24 h (≤ −1%); alta → compra as que mais sobem (≥ +1%); neutro → segue a tendência de 24 h da própria moeda quando |variação| ≥ 3%.
+  Saídas: stop móvel (arma +0,5%, guarda 70%, minuto a minuto), stop de segurança de 2%, lado contra o regime (ou, no neutro, a moeda virar),
+  24 h. US$ 25 a 10× por posição, até 4, carteira de US$ 10, piso de US$ 5, 0,06% por lado. Funding não entra na conta (anotado).
+- **O que não sei:** a regra nunca foi testada nestas moedas nem na LBank; o neutro (|24 h| ≥ 3%) não tem teste nenhum.
+- **Juiz (torneio, H50):** fator de lucro e soma depois de 30 operações; comparação com o Rápido nuvem (mesma rota R6) no mesmo período.
