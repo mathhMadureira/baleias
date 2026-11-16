@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.8% | 1962 | 50.5%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 1963 | 50.5%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | velez_180_alta | promissor | 100.0% | 1 | 20.7%–100.0% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_graal_alta | promissor | 66.7% | 3 | 20.8%–93.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
