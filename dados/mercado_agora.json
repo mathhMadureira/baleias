@@ -1,27 +1,27 @@
 {
- "t": 1794848750,
- "hora_utc": "2026-11-16 17:05 UTC",
+ "t": 1794849653,
+ "hora_utc": "2026-11-16 17:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 128,
-  "subindo_pct": 82.8,
-  "mediana_pct": 0.79
+  "moedas": 129,
+  "subindo_pct": 86.0,
+  "mediana_pct": 1.13
  },
  "mercado_4h": {
-  "moedas": 128,
-  "subindo_pct": 85.2,
-  "mediana_pct": 1.72
+  "moedas": 129,
+  "subindo_pct": 85.3,
+  "mediana_pct": 1.83
  },
  "mercado_24h": {
-  "moedas": 128,
-  "subindo_pct": 57.8,
-  "mediana_pct": 0.2
+  "moedas": 129,
+  "subindo_pct": 61.2,
+  "mediana_pct": 0.34
  },
  "btc": {
-  "1h": 0.71,
-  "4h": 1.18,
-  "24h": 0.34,
-  "preco": 64927.22,
+  "1h": 0.94,
+  "4h": 1.27,
+  "24h": 0.35,
+  "preco": 64954.3,
   "vol_4h_vs_media": 1.38
  },
  "maiores_quedas_4h": [
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "GLMR",
-   "4h": -10.71,
-   "24h": -14.26,
-   "vol": 0.62
-  },
-  {
-   "moeda": "REQ",
-   "4h": -9.65,
-   "24h": 0.92,
-   "vol": 1.1
+   "4h": -10.07,
+   "24h": -14.94,
+   "vol": 0.65
   },
   {
    "moeda": "RARE",
-   "4h": -6.26,
-   "24h": 78.93,
-   "vol": 1.08
+   "4h": -8.65,
+   "24h": 73.73,
+   "vol": 1.04
+  },
+  {
+   "moeda": "REQ",
+   "4h": -8.03,
+   "24h": 1.4,
+   "vol": 1.04
   },
   {
    "moeda": "BEAMX",
-   "4h": -4.66,
-   "24h": -4.82,
-   "vol": 0.95
-  },
-  {
-   "moeda": "RAD",
-   "4h": -3.1,
-   "24h": 4.29,
-   "vol": 0.55
+   "4h": -4.7,
+   "24h": -5.47,
+   "vol": 0.93
   },
   {
    "moeda": "SHELL",
-   "4h": -2.42,
-   "24h": 3.48,
-   "vol": 0.94
+   "4h": -4.33,
+   "24h": 3.87,
+   "vol": 0.86
   },
   {
-   "moeda": "AUDIO",
-   "4h": -1.7,
-   "24h": 1.76,
-   "vol": 0.66
+   "moeda": "RAD",
+   "4h": -3.98,
+   "24h": 3.33,
+   "vol": 0.53
   },
   {
    "moeda": "MEGA",
-   "4h": -1.46,
-   "24h": 0.18,
-   "vol": 0.91
+   "4h": -2.38,
+   "24h": 0.24,
+   "vol": 0.9
   },
   {
    "moeda": "BEB",
-   "4h": -1.1,
-   "24h": -3.13,
-   "vol": 0.77
+   "4h": -1.41,
+   "24h": -3.57,
+   "vol": 0.76
+  },
+  {
+   "moeda": "AT",
+   "4h": -1.06,
+   "24h": 0.11,
+   "vol": 0.65
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "HUMA",
-   "4h": 34.24,
-   "24h": 35.88,
-   "vol": 5.19
+   "4h": 27.61,
+   "24h": 31.94,
+   "vol": 5.25
   },
   {
    "moeda": "ICP",
-   "4h": 12.9,
-   "24h": 15.6,
-   "vol": 3.96
+   "4h": 11.74,
+   "24h": 14.36,
+   "vol": 4.02
   },
   {
    "moeda": "HEI",
-   "4h": 8.78,
-   "24h": 8.92,
-   "vol": 4.59
+   "4h": 10.34,
+   "24h": 10.78,
+   "vol": 4.78
   },
   {
    "moeda": "0G",
-   "4h": 7.63,
-   "24h": 0.39,
-   "vol": 1.63
-  },
-  {
-   "moeda": "ERA",
-   "4h": 7.37,
-   "24h": 3.7,
-   "vol": 1.4
+   "4h": 9.34,
+   "24h": 2.18,
+   "vol": 1.69
   },
   {
    "moeda": "MARSCOIN",
-   "4h": 5.97,
-   "24h": 0.0,
-   "vol": 2.34
+   "4h": 7.23,
+   "24h": 1.79,
+   "vol": 2.3
+  },
+  {
+   "moeda": "ERA",
+   "4h": 6.8,
+   "24h": 3.74,
+   "vol": 1.61
   },
   {
    "moeda": "SYRUP",
-   "4h": 5.48,
-   "24h": 5.48,
+   "4h": 6.69,
+   "24h": 5.75,
    "vol": 1.7
   },
   {
-   "moeda": "MMT",
-   "4h": 5.43,
-   "24h": 6.7,
-   "vol": 3.95
-  },
-  {
-   "moeda": "ZAMA",
-   "4h": 5.21,
-   "24h": 3.05,
-   "vol": 2.77
-  },
-  {
    "moeda": "ZRO",
-   "4h": 5.1,
-   "24h": 6.32,
-   "vol": 1.14
+   "4h": 6.65,
+   "24h": 7.5,
+   "vol": 1.15
+  },
+  {
+   "moeda": "MMT",
+   "4h": 6.13,
+   "24h": 1.71,
+   "vol": 4.24
+  },
+  {
+   "moeda": "SOPH",
+   "4h": 5.21,
+   "24h": -20.47,
+   "vol": 0.69
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   1.53,
   -1.07,
   0.71,
-  0.0
+  0.17
  ],
  "contexto": {
-  "t": 1794848750,
+  "t": 1794849654,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1794848968,
+    "hora_utc": "16/11 17:09",
+    "titulo": "'Tokenization Is Not the Finish Line': Jupiter to Let Users Borrow Against Bullish Shares"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1794847302,
@@ -260,12 +266,6 @@
     "t": 1794834728,
     "hora_utc": "16/11 13:12",
     "titulo": "Ledger Brings Clear Signing to Solana, Ending 'Blind' Signing for Jupiter Swaps"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794834196,
-    "hora_utc": "16/11 13:03",
-    "titulo": "Solana drops ‘beta’ label after more than six years"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 11.7,
+   "media_top20_anual_pct": 6.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 9.9,
-    "SOL": 9.0
+    "ETH": 10.7,
+    "SOL": 6.6
    },
    "leitura": "neutro"
   },
@@ -379,42 +379,42 @@
   }
  },
  "v4": {
-  "vela": "17:00 UTC",
-  "apostas": 137,
-  "compras": 15,
-  "vendas": 122,
+  "vela": "05:30 UTC",
+  "apostas": 109,
+  "compras": 27,
+  "vendas": 82,
   "mais_confiantes_venda": [
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.291
+    "moeda": "ETC",
+    "prob_subir": 0.362
    },
    {
-    "moeda": "XEC",
-    "prob_subir": 0.32
+    "moeda": "FORM",
+    "prob_subir": 0.382
    },
    {
-    "moeda": "SLP",
-    "prob_subir": 0.324
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    },
    {
-    "moeda": "SKL",
-    "prob_subir": 0.34
+    "moeda": "BABAB",
+    "prob_subir": 0.386
    },
    {
-    "moeda": "BARD",
-    "prob_subir": 0.349
+    "moeda": "BB",
+    "prob_subir": 0.394
    },
    {
-    "moeda": "MARSCOIN",
-    "prob_subir": 0.351
+    "moeda": "SYRUP",
+    "prob_subir": 0.397
    },
    {
-    "moeda": "GTC",
-    "prob_subir": 0.354
+    "moeda": "HOME",
+    "prob_subir": 0.402
    },
    {
-    "moeda": "PLUME",
-    "prob_subir": 0.359
+    "moeda": "MUBARAK",
+    "prob_subir": 0.405
    }
   ],
   "mais_confiantes_compra": [
@@ -423,8 +423,8 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.641
+    "moeda": "PARTI",
+    "prob_subir": 0.638
    },
    {
     "moeda": "KAIA",
@@ -435,20 +435,20 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "COTI",
-    "prob_subir": 0.569
+    "moeda": "BEB",
+    "prob_subir": 0.608
    },
    {
-    "moeda": "RUNE",
-    "prob_subir": 0.561
+    "moeda": "CYBER",
+    "prob_subir": 0.604
    },
    {
-    "moeda": "STO",
-    "prob_subir": 0.56
+    "moeda": "RAD",
+    "prob_subir": 0.59
    },
    {
-    "moeda": "BOME",
-    "prob_subir": 0.549
+    "moeda": "REQ",
+    "prob_subir": 0.589
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -565,10 +565,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1794820245,
-    "texto": "Fora desde 03:19 UTC (18 operações, soma −4,27). Em 1 h o 24 h caiu de 63,6% para 39,2% subindo e o BTC fechou abaixo de 64500 (64465), metade da condição de baixa; a outra metade (24 h em 30% ou menos) falta. Com funding −15,4%/ano e medo 10, vender antes da confirmação repetiria as 7 vendas no stop (−0,405 cada). Confirma baixa: 24 h em 30% ou menos com BTC abaixo de 64500; nega: 24 h acima de 5"
-   },
-   {
     "t": 1794823836,
     "texto": "As 7 vendas que pararam no stop (−0,405 cada) eram moedas com 24 h perto de −14% (ZIL −13,85%, BARD −14,61%) ou entradas com 4 h em repique; BTC e ZRO (24 h −1% a −10%) seguraram 3,7 h. Agora vendo só com 24 h em 22% subindo e moedas com 24 h entre −1,6% e −6,4% (BTC, XRP, SKY, APE): conferir na próxima se passam de 1 h sem bater o stop; se o BTC fechar 1 h acima de 65216, a baixa falhou e fecho."
    },
@@ -595,6 +591,10 @@
    {
     "t": 1794845570,
     "texto": "Das 4 vendas de 13:20 UTC, JUP (24 h −5,16% na entrada) foi a única que segurou a vela de +1,53% do BTC e saiu +0,204 pelo stop móvel (pico +2,13%), enquanto BTC (stop 1,7%, −0,266) e XRP (stop 2,3%, −0,342) pararam no stop: o stop estreito das moedas grandes não aguenta um repique de 1 h de +1,5%. Agora 24 h em 39,4%: só volto a vender com 30% ou menos e a comprar com 70% ou mais."
+   },
+   {
+    "t": 1794849052,
+    "texto": "Fora desde 15:20 UTC e sem operações novas (26 operações, soma −4,40). O 24 h foi de 19,7% (14:20) a 39,4% (16:20) e 57,8% subindo agora, com o 4 h em 85,2%: comprar agora seria entrar no fim de um repique de 4 h (H39). Confirma alta: 24 h em 70% ou mais com o BTC acima de 65216; nega: 24 h voltar abaixo de 40% com o BTC abaixo de 64500."
    }
   ]
  },
@@ -617,7 +617,7 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 5.51,
+   "carteira": 5.35,
    "n_abertas": 2,
    "abertas": [
     [
@@ -630,7 +630,11 @@
     ]
    ],
    "n_fechadas": 207,
-   "ordem": null
+   "ordem": {
+    "acao": "pausar",
+    "motivo": "torneio: fator de lucro 0,68 em 207 operações (soma −4,61, carteira 5,51), abaixo de 0,7",
+    "ate_utc": "16/11 23:20"
+   }
   },
   {
    "id": "rapido",
@@ -638,7 +642,7 @@
    "avatar": "🌲",
    "motor": "Cérebro v4",
    "missao": "Todas as apostas do v4 nas 140 moedas, as mais confiantes primeiro, segurando enquanto a tendência dura.",
-   "carteira": 6.33,
+   "carteira": 6.22,
    "n_abertas": 1,
    "abertas": [
     [
@@ -659,19 +663,19 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Entradas do v4 com lucro realizado rápido e stop de 1,5%.",
-   "carteira": 7.13,
+   "carteira": 7.25,
    "n_abertas": 2,
    "abertas": [
     [
-     "CYBER",
-     "venda"
+     "PARTI",
+     "compra"
     ],
     [
-     "XEC",
-     "venda"
+     "BEB",
+     "compra"
     ]
    ],
-   "n_fechadas": 226,
+   "n_fechadas": 228,
    "ordem": null
   },
   {
@@ -680,23 +684,23 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
-   "carteira": 7.69,
+   "carteira": 7.88,
    "n_abertas": 3,
    "abertas": [
     [
+     "PARTI",
+     "compra"
+    ],
+    [
+     "BEB",
+     "compra"
+    ],
+    [
      "CYBER",
-     "venda"
-    ],
-    [
-     "XEC",
-     "venda"
-    ],
-    [
-     "SLP",
-     "venda"
+     "compra"
     ]
    ],
-   "n_fechadas": 227,
+   "n_fechadas": 230,
    "ordem": null
   },
   {
@@ -705,19 +709,19 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
-   "carteira": 6.54,
+   "carteira": 6.65,
    "n_abertas": 2,
    "abertas": [
     [
-     "CYBER",
-     "venda"
+     "PARTI",
+     "compra"
     ],
     [
-     "XEC",
-     "venda"
+     "BEB",
+     "compra"
     ]
    ],
-   "n_fechadas": 161,
+   "n_fechadas": 163,
    "ordem": null
   },
   {
@@ -726,19 +730,19 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H51): igual a ele, mas evita os segmentos (lado, horário, confiança) em que o Scalper perde com prova.",
-   "carteira": 6.19,
+   "carteira": 6.25,
    "n_abertas": 2,
    "abertas": [
     [
-     "S",
+     "KITE",
      "venda"
     ],
     [
-     "DASH",
+     "CELO",
      "venda"
     ]
    ],
-   "n_fechadas": 196,
+   "n_fechadas": 198,
    "ordem": null
   },
   {
@@ -768,7 +772,7 @@
    "avatar": "🦅",
    "motor": "maioria do mercado 24 h, 20×",
    "missao": "Livre de regras (pedido do dono, H47): segue a maioria do mercado nas 4 moedas líderes, carteira inteira a 20×, sem stop.",
-   "carteira": 1.15,
+   "carteira": 0.99,
    "n_abertas": 2,
    "abertas": [
     [
@@ -789,7 +793,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.35,
+   "carteira": 6.44,
    "n_abertas": 1,
    "abertas": [
     [
@@ -836,7 +840,7 @@
     "ganho_medio": 0.114,
     "perda_media": -0.119,
     "fator_lucro": 0.68,
-    "carteira": 5.51
+    "carteira": 5.35
    },
    "rapido": {
     "ops": 84,
@@ -845,43 +849,43 @@
     "ganho_medio": 0.119,
     "perda_media": -0.288,
     "fator_lucro": 0.64,
-    "carteira": 6.33
+    "carteira": 6.22
    },
    "scalper": {
-    "ops": 226,
-    "acerto": 0.504,
-    "soma": -2.868,
+    "ops": 228,
+    "acerto": 0.509,
+    "soma": -2.755,
     "ganho_medio": 0.079,
     "perda_media": -0.106,
-    "fator_lucro": 0.76,
-    "carteira": 7.13
+    "fator_lucro": 0.77,
+    "carteira": 7.25
    },
    "scalper_b": {
-    "ops": 227,
-    "acerto": 0.471,
-    "soma": -2.307,
+    "ops": 230,
+    "acerto": 0.474,
+    "soma": -2.117,
     "ganho_medio": 0.102,
-    "perda_media": -0.11,
-    "fator_lucro": 0.83,
-    "carteira": 7.69
+    "perda_media": -0.109,
+    "fator_lucro": 0.84,
+    "carteira": 7.88
    },
    "scalper_c": {
-    "ops": 161,
-    "acerto": 0.453,
-    "soma": -3.464,
-    "ganho_medio": 0.078,
+    "ops": 163,
+    "acerto": 0.46,
+    "soma": -3.352,
+    "ganho_medio": 0.077,
     "perda_media": -0.104,
-    "fator_lucro": 0.62,
-    "carteira": 6.54
+    "fator_lucro": 0.63,
+    "carteira": 6.65
    },
    "scalper_d": {
-    "ops": 196,
+    "ops": 198,
     "acerto": 0.48,
-    "soma": -3.807,
+    "soma": -3.749,
     "ganho_medio": 0.078,
     "perda_media": -0.109,
-    "fator_lucro": 0.66,
-    "carteira": 6.19
+    "fator_lucro": 0.67,
+    "carteira": 6.25
    },
    "minerador": {
     "ops": 211,
@@ -899,7 +903,7 @@
     "ganho_medio": 0.649,
     "perda_media": -0.639,
     "fator_lucro": 0.45,
-    "carteira": 1.15
+    "carteira": 0.99
    },
    "lbank": {
     "ops": 38,
@@ -908,7 +912,7 @@
     "ganho_medio": 0.098,
     "perda_media": -0.525,
     "fator_lucro": 0.46,
-    "carteira": 6.35
+    "carteira": 6.44
    },
    "testnet": {
     "ops": 96,
@@ -936,38 +940,38 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.9% em 17011 apostas (443 velas, 11/11 18:45–16/11 16:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5391,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.0% em 17105 apostas (444 velas, 11/11 18:45–16/11 16:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5397,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.34,
+  "z_contra_lab": 0.39,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5194,
-    "n": 13814
+    "acerto": 0.52,
+    "n": 13993
    },
    "segue_maioria_24h": {
-    "acerto": 0.5275,
-    "n": 16966
+    "acerto": 0.5285,
+    "n": 17078
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5738,
-    "n": 1091
+    "acerto": 0.5781,
+    "n": 1133
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5507,
-    "n": 681
+    "acerto": 0.5524,
+    "n": 706
    },
    "confianca:<0,05": {
-    "acerto": 0.5736,
-    "n": 2296
+    "acerto": 0.5728,
+    "n": 2308
    },
    "confianca:≥0,12": {
-    "acerto": 0.6463,
-    "n": 164
+    "acerto": 0.6592,
+    "n": 179
    },
    "horario_utc:00–06 h": {
     "acerto": 0.603,
@@ -978,37 +982,25 @@
     "n": 3968
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5222,
-    "n": 3968
+    "acerto": 0.5251,
+    "n": 4062
    },
    "horario_utc:18–24 h": {
     "acerto": 0.4648,
     "n": 4690
    },
    "lado:compra": {
-    "acerto": 0.503,
-    "n": 8603
+    "acerto": 0.5028,
+    "n": 8605
    },
    "lado:venda": {
-    "acerto": 0.576,
-    "n": 8408
+    "acerto": 0.5769,
+    "n": 8500
    }
   }
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "16/11 09:21",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Mercado indeciso: 39,2% das moedas sobem em 24 h e 12,5% em 4 h; BTC −1,15% em 24 h, −0,55% em 4 h, volume 0,88×: Robô Claude fora. Sem ordens: nenhum robô que obedece tem fator de lucro < 0,7 em 30+ operações (Caçador 0,75, Minerador 0,70, Scalper 0,88, Rápido 1,03, LBank 1,24) e nenhuma ordem em v"
-  },
-  {
-   "hora_utc": "16/11 10:21",
-   "de": "claude",
-   "para": "minerador",
-   "texto": "📣 Ordem para ⛏ Minerador: pausado (sem novas entradas) por 6 h — torneio: fator de lucro 0,69 em 209 operações (soma −3,37, carteira 6,63), abaixo de 0,7"
-  },
   {
    "hora_utc": "16/11 10:21",
    "de": "claude",
@@ -1068,6 +1060,18 @@
    "de": "claude",
    "para": "sala",
    "texto": "Mercado indeciso: 39,4% das moedas sobem em 24 h e 46,5% em 4 h; BTC −0,43% em 24 h, volume 1,4×: Robô Claude fora. Minerador: pausa renovada por 6 h (fator de lucro 0,69 em 211 operações, soma −3,35). Rápido pausado 6 h: fator de lucro 0,68 em 83 operações (soma −2,91). LBank segue pausado até 21:2"
+  },
+  {
+   "hora_utc": "16/11 17:20",
+   "de": "claude",
+   "para": "cacador",
+   "texto": "📣 Ordem para 🎯 Caçador: pausado (sem novas entradas) por 6 h — torneio: fator de lucro 0,68 em 207 operações (soma −4,61, carteira 5,51), abaixo de 0,7"
+  },
+  {
+   "hora_utc": "16/11 17:20",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Mercado indeciso: 57,8% das moedas sobem em 24 h e 85,2% em 4 h; BTC +0,34% em 24 h, +1,18% em 4 h, volume 1,38×: Robô Claude fora. Caçador pausado 6 h: fator de lucro 0,68 em 207 operações (soma −4,61). Seguem pausados: Rápido (0,64 em 84), Minerador (0,69 em 211), LBank (0,46 em 38). Scalper 0,76:"
   }
  ]
 }
