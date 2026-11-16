@@ -1,23 +1,21 @@
 {
- "t": 1794863379,
- "leitura": "Indeciso, perto da baixa: 32,0% das moedas sobem em 24 h (era 41,3% há 1 h), 35,2% em 4 h e só 14,8% em 1 h; BTC −0,1% em 24 h, +0,22% em 4 h, volume 1,06×, abaixo das médias de 50 e 200 dias; medo 10. Ainda acima dos 30% da regra: fora.",
+ "t": 1794866981,
+ "leitura": "Indeciso: 47,5% das moedas sobem em 24 h (eram 32,0% às 21:19), 75,4% em 4 h e 81,4% em 1 h; BTC +0,44% em 24 h, +0,6% em 4 h, volume 1,04×; medo 10, BTC abaixo das médias de 50 e 200 dias. Sem lado de 24 h: fora.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Fora desde 15:20 UTC, sem operações novas (26 operações, soma −4,40). Em 1 h o 24 h caiu de 41,3% para 32,0% subindo e o 4 h de 77,0% para 35,2%, com o BTC parado em 65068: o repique de 4 h morreu, mas o 24 h ainda não chegou a 30%. Confirma baixa (4 vendas em moedas com 24 h entre −1,6% e −6,4%, como as que saíram no lucro às 12:36): 24 h em 30% ou menos com BTC abaixo de 64500; nega: 24 h voltar acima de 40%.",
- "respostas": [],
+ "licao": "Mesa zerada às 21:53 (carteira 10,00, nenhuma operação nova). Às 21:19 o 24 h estava em 32,0% subindo, a 2 pontos da venda; agora 47,5%, com o BTC em 65302, acima de 65216: quem vendesse antes de chegar a 30% estaria no prejuízo. Confirma alta: 24 h em 70% ou mais com BTC acima de 65216; confirma baixa: 24 h em 30% ou menos com BTC abaixo de 64500.",
+ "respostas": [
+  {
+   "ref": "1794865986504-dono",
+   "texto": "Entendido: mesa zerada, começo com US$ 10 e nenhuma operação. Fiquei fora porque o mercado está indeciso (47,5% das moedas sobem em 24 h). Nenhuma ordem em vigor e nenhuma nova: ninguém tem 30 operações desde o zero."
+  }
+ ],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso, perto da baixa: 32,0% das moedas sobem em 24 h (eram 41,3%), 35,2% em 4 h e 14,8% em 1 h; BTC −0,1% em 24 h, volume 1,06×: Robô Claude fora; vendo com 24 h em 30% ou menos. LBank: pausa renovada 6 h (fator de lucro 0,42 em 39). Seguem pausados: Caçador 0,69 em 208, Rápido 0,60 em 85, Minerador 0,69 em 211. Scalper 0,76 em 256 segue livre. Vigia: v4 acerta só 47,7% das 18–24 h UTC (5158 apostas): cuidado com entradas do v4 neste horário."
+   "texto": "Mercado indeciso: 47,5% das moedas sobem em 24 h, 75,4% em 4 h; BTC +0,44% em 24 h, volume 1,04×: Robô Claude fora. Mesa zerada às 21:53, sem ordens em vigor; nenhum robô tem 30 operações desde o zero (máximo 4), então nenhuma ordem nova. Vigia do v4: acerto 54,4%, mas 48,4% no horário 18–24 UTC: robôs do v4, cuidado nesta faixa."
   }
  ],
- "ordens": [
-  {
-   "agente": "lbank",
-   "acao": "pausar",
-   "horas": 6,
-   "motivo": "torneio: fator de lucro 0,42 em 39 operações (soma −3,68, carteira 6,32), abaixo de 0,7"
-  }
- ]
+ "ordens": []
 }
