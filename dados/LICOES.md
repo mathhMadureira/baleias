@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 17:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 18:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 6.33** · 84 operações fechadas · 1 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 6.45** · 84 operações fechadas · 1 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 51/84 com lucro (61%), resultado -3.44, média -0.041 por operação.
 - **Últimas 24 h:** 46/77 com lucro, -3.38.
@@ -18,10 +18,10 @@ Carteira **US$ 6.33** · 84 operações fechadas · 1 abertas · carteiras anter
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 5.35** · 207 operações fechadas · 2 abertas
+Carteira **US$ 5.39** · 207 operações fechadas · 2 abertas
 
 - **Total:** 86/207 com lucro (42%), resultado -4.61, média -0.022 por operação.
-- **Últimas 24 h:** 24/43 com lucro, -1.14.
+- **Últimas 24 h:** 24/42 com lucro, -1.12.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 12–17 UTC: 59 op, 42% certas, -1.48 · 06–11 UTC: 45 op, 40% certas, -1.29 · 00–05 UTC: 33 op, 61% certas, +1.02
 - **Por lado:** compra: 148 op, 39% certas, -3.37 · venda: 59 op, 47% certas, -1.24
 - **Por confiança do v4:** muito alta (≥0,12): 127 op, 44% certas, -1.98 · alta (0,08–0,12): 65 op, 35% certas, -1.93 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -72,17 +72,17 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 56.2% das moedas subindo em 24 h, 82.8% em 4 h · BTC 24 h 0.6%, 4 h 0.98%.
+- **Amplitude:** 41.4% das moedas subindo em 24 h, 73.4% em 4 h · BTC 24 h 0.55%, 4 h 1.13%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.4%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 5.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.3%/ano · {'BTC': 11.0, 'ETH': 9.7, 'SOL': 3.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** HEI fundo duplo (alta, CONFIRMOU) · BNB triângulo ascendente (alta, formado) · ICP topo duplo (baixa, formado) · JTO fundo duplo (alta, formado) · MARSCOIN topo duplo (baixa, formado) · NEAR fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PHA fundo duplo (alta, formado) · QNT topo duplo (baixa, formado) · UNI fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ETHFI estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · MARSCOIN topo duplo (baixa, CONFIRMOU) · PHA fundo duplo (alta, CONFIRMOU) · STX estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BNB triângulo ascendente (alta, formado) · DASH topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · HEI fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · JTO fundo duplo (alta, formado)
+- 📰 16/11 17:49 UTC · Cointelegraph: Safe wallet reportedly loses $6.5M as Zodiac suspects key compromise
 - 📰 16/11 17:20 UTC · Decrypt: Saylor’s Strategy Keeps Buying Bitcoin, Adding 'A Little Orange' Through the Dip
 - 📰 16/11 17:09 UTC · Decrypt: 'Tokenization Is Not the Finish Line': Jupiter to Let Users Borrow Against Bullish Shares
 - 📰 16/11 16:41 UTC · CoinDesk: Lighter suspends all withdrawals after $10.4 million crypto exploit
 - 📰 16/11 16:26 UTC · Cointelegraph: Bitcoin price fails to hold $65K as US stocks drop further on AI nerves
 - 📰 16/11 16:14 UTC · Decrypt: Solana Drops 'Mainnet Beta' After Six Years: Here's What 1.0 Is All About
-- 📰 16/11 16:11 UTC · Decrypt: DTCC, Barclays Say Tokenization's Real Prize Is Unlocking Idle Collateral
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 17209 apostas conferidas ao vivo, acerto 54.0%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 17264 apostas conferidas ao vivo, acerto 54.1%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
