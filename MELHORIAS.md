@@ -64,3 +64,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   Não move dinheiro para quem ganhou porque lucro das 30 operações anteriores não se repetiu nas 30 seguintes (correlação −0,14, 112 janelas).
   (4) Robô LBank vê todas as moedas do perpétuo da LBank com volume ≥ US$ 1 mi (312 hoje; antes 13), adendo da H53. (5) Git local
   corrompido pela VM congelada (7 objetos vazios) deixava o placar do painel vazio: objetos apagados e ramo `estado` baixado de novo.
+- 2026-11-16 (noite): **Guarda do dia (H54)**, regra do dono "nenhum robô termina as 24 h no prejuízo": dia que chegou a +0,25 e devolveu
+  metade fecha tudo e trava até 21:00 de Brasília, em todos os robôs da nuvem. Medido em 36 dias-robô: dias positivos 7 → 11, soma −45,54 → −26,40.
+  O dia que nunca fica positivo segue operando (sem trava de perda). Placar do painel mostra "hoje ±X" e "🔒 dia garantido".

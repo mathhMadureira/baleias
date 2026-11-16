@@ -218,7 +218,15 @@ def main():
     pausado, lado_ord = equipe.lado_da_ordem(agente, None)
     o = equipe.ordem_vigente(agente)
     e["ordem"] = o
-    textos = passo(e, pendentes, velas, agora_ms, regime=reg, pausado=pausado, lado_ordem=lado_ord)
+    from executor import guarda_dia as GD                   # H54: dia que ficou positivo não é devolvido
+    guarda, pre = GD.checar(e), []
+    if guarda == "fechar":
+        for par in list(e["abertas"]):
+            k = velas.get(par) or []
+            pre.append(_fechar(e, par, float(k[-1][4]) if k else e["abertas"][par]["entrada"], GD.motivo(e), time.time()))
+        pre.append(GD.texto(NOME, e))
+    pausado = pausado or guarda != "normal"
+    textos = pre + passo(e, pendentes, velas, agora_ms, regime=reg, pausado=pausado, lado_ordem=lado_ord)
     if o:
         textos.insert(0, f"📣 {NOME} cumprindo ordem do chefe: {equipe.ACOES[o['acao']]} ({o.get('motivo', '')[:80]})")
     if reg:

@@ -1198,7 +1198,9 @@ function desenharPlacarMesa() {
     <th>operações</th><th>acerto</th><th title="soma dos ganhos ÷ soma das perdas; acima de 1 ganha mais do que perde">fator de lucro</th><th>abertas</th><th style="text-align:left">situação</th></tr>`;
   const linhas = mp.linhas.map((l, i) => {
     const sit = [l.campeao ? "🏆 campeão" : "", l.desafia ? `🥊 desafia o ${mpEsc(l.desafia)}: ${mpEsc(l.veredito || "")}` : "", l.ordem ? `📣 ${mpEsc(l.ordem)}` : "",
-                 l.alerta ? `⚠ ${mpEsc(l.alerta)}` : "", l.eliminado ? "⛔ abaixo do piso" : ""].filter(Boolean).join(" · ");
+                 l.alerta ? `⚠ ${mpEsc(l.alerta)}` : "", l.eliminado ? "⛔ abaixo do piso" : "",
+                 l.dia && l.dia.travado ? `🔒 dia garantido +${(+l.dia.resultado).toFixed(2)} (volta 21:00)` : "",
+                 l.dia && !l.dia.travado && l.dia.resultado != null ? `<span style="${mpCor(l.dia.resultado)}">hoje ${l.dia.resultado >= 0 ? "+" : ""}${(+l.dia.resultado).toFixed(2)}</span>` : ""].filter(Boolean).join(" · ");
     const fl = l.fator_lucro == null ? "—" : (+l.fator_lucro).toFixed(2);
     return `<tr style="text-align:right;border-bottom:1px solid #ffffff0d" title="${mpEsc(l.missao)}">
       <td style="text-align:left">${i + 1}</td><td style="text-align:left;white-space:nowrap">${l.avatar} ${mpEsc(l.nome)}<div class="mut" style="font-size:11px">${mpEsc(l.motor)}</div></td>

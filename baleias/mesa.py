@@ -459,7 +459,7 @@ def placar_painel():
                        "abertas": len(e.get("abertas") or {}), "resultado": round(m["carteira"] - 10.0, 2),
                        "campeao": a["id"] == r["campeao"], "desafia": desafiantes.get(a["id"]), "veredito": vered.get(a["id"]),
                        "ordem": equipe.ACOES.get(o["acao"]) if o else None, "alerta": e.get("alerta_rotina"),
-                       "eliminado": bool(e.get("eliminado") or e.get("quebrou")), "ultima_saida": ult})
+                       "eliminado": bool(e.get("eliminado") or e.get("quebrou")), "ultima_saida": ult, "dia": e.get("guarda_dia")})
     linhas.sort(key=lambda x: -x["carteira"])
     vg = _git_json("dados/vigia_v4.json") or {}
     dados = {"t": agora, "linhas": linhas, "campeao": r["campeao"], "min_ops": r["min_ops"], "vigia": vg.get("resumo"),

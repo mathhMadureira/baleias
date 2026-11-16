@@ -109,7 +109,15 @@ def main():
     velas = json.loads(cache.read_text()) if cache.exists() else {}
     agora = time.time()
     velas = {par: [x for x in k if x[6] < agora * 1000] for par, k in velas.items()}
-    textos = passo(e, velas, agora)
+    from executor import guarda_dia as GD                   # H54: dia que ficou positivo não é devolvido
+    guarda, textos = GD.checar(e, agora), []
+    if guarda == "fechar":
+        for par in list(e["abertas"]):
+            k = velas.get(par) or []
+            textos.append(_fechar(e, par, float(k[-1][4]) if k else e["abertas"][par]["entrada"], GD.motivo(e), agora))
+        textos.append(GD.texto(NOME, e))
+    if guarda == "normal":
+        textos += passo(e, velas, agora)
     preco = {par: float(k[-1][4]) for par, k in velas.items() if k}
     e["patrimonio"] = e["caixa"] + sum(q["margem"] + max(-q["margem"], (1 if q["lado"] == "compra" else -1) * q["nocional"] * (preco.get(q["moeda"], q["entrada"]) / q["entrada"] - 1))
                                        for q in e["abertas"].values())

@@ -1607,6 +1607,25 @@ class Torneio(unittest.TestCase):
         self.assertEqual(T.avaliar(est)["campeao"], "rapido")
 
 
+class GuardaDia(unittest.TestCase):
+    """H54: dia que chegou a +0,25 e devolveu metade fecha tudo e trava até o dia UTC seguinte; dia negativo segue operando."""
+
+    def test_trava_so_no_lucro_e_destrava_no_dia_seguinte(self):
+        from executor import guarda_dia as GD
+        t0 = 1794787200                                           # 00:00 UTC
+        e = {"patrimonio": 8.0}
+        self.assertEqual(GD.checar(e, t0), "normal")
+        e["patrimonio"] = 7.0
+        self.assertEqual(GD.checar(e, t0 + 3600), "normal")          # no prejuízo: nunca trava
+        e["patrimonio"] = 8.30
+        self.assertEqual(GD.checar(e, t0 + 7200), "normal")          # pico +0,30
+        e["patrimonio"] = 8.14
+        self.assertEqual(GD.checar(e, t0 + 9000), "fechar")          # voltou a +0,14 (≤ metade): fecha e trava
+        e["patrimonio"] = 9.0
+        self.assertEqual(GD.checar(e, t0 + 20000), "travado")
+        self.assertEqual(GD.checar(e, t0 + 86400 + 60), "normal")    # dia seguinte
+
+
 class BancoEPausa(unittest.TestCase):
     """16/11: banco tesoureiro (sem crédito, sem empréstimo) e nenhum robô pausado no prejuízo ou com operações abertas."""
 

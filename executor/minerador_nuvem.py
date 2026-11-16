@@ -134,7 +134,22 @@ def main():
     from baleias import equipe
     pausado, lado_ord = equipe.lado_da_ordem("minerador", None)
     e["ordem"] = equipe.ordem_vigente("minerador")
-    textos = passo(e, todas, time.time() * 1000, pausado=pausado, lado_ordem=lado_ord)
+    from executor import guarda_dia as GD                   # H54: dia que ficou positivo não é devolvido
+    guarda, pre = GD.checar(e), []
+    if guarda == "fechar":
+        for par in list(e["abertas"]):
+            p = e["abertas"].pop(par)
+            k = todas.get(par) or []
+            saida = float(k[-1][4]) if k else p["entrada"]
+            s = -1 if p["lado"] == "venda" else 1
+            resultado = ORCAMENTO * s * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
+            e["caixa"] += ORCAMENTO / ALAV + resultado
+            e["fechadas"].append({**p, "saida": saida, "saida_t": time.time(), "motivo": GD.motivo(e), "resultado_usd": resultado,
+                                  "R": resultado / (ORCAMENTO * STOP_SEG)})
+            pre.append(f"⛏ Minerador SAIU da {'VENDA' if s < 0 else 'COMPRA'} em {par[:-4]} (guarda do dia) a {saida:.6g}: {resultado:+.3f} USDT")
+        pre.append(GD.texto("Minerador", e))
+    pausado = pausado or guarda != "normal"
+    textos = pre + passo(e, todas, time.time() * 1000, pausado=pausado, lado_ordem=lado_ord)
     equipe.postar_eventos("minerador", [x for x in textos if "sem novas entradas hoje" not in x])
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
     e["patrimonio"] = e["caixa"] + sum(p["gasto"] for p in e["abertas"].values())

@@ -1046,3 +1046,16 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   30 seguintes deram em média −0,557 (n 37); depois de 30 no prejuízo, −0,435 (n 75); correlação −0,136. **Lucro recente não se repete** →
   o banco NÃO move dinheiro para quem ganhou. Ele é tesoureiro (soma, margem, exposição consolidada, robôs em lados opostos na mesma moeda) e
   refaz essa medida a cada rodada (`executor/banco.py`, `dados/banco.json`).
+
+## Hipótese 54: Guarda do dia — não devolver dia positivo (registrada em 16/11/2026 ~19:00 BRT, antes de ligar)
+
+- **Regra do dono (16/11):** "nenhum robô deve terminar as 24 h no prejuízo". Nenhuma regra impede o mercado de cair; o que se pode obrigar
+  é não devolver um dia que ficou positivo.
+- **Regra:** dia UTC; resultado do dia = patrimônio − patrimônio na 1ª rodada do dia. Se chegou a +US$ 0,25 e voltou a metade do pico,
+  fecha tudo no preço da rodada e não abre nada até 00:00 UTC (`executor/guarda_dia.py`). Dia negativo segue operando (regras 5 e 11).
+  Em todos os robôs da nuvem (Rápido, Caçador, Scalpers A–D, Minerador, LBank, Claude, Livre); testnet fica fora (outro fluxo).
+- **Medida antes de ligar** (estado de 16/11, 36 dias-robô, operações fechadas por dia de saída, sem as posições abertas no momento da
+  trava): sem trava 7 dias positivos, soma −45,54; gatilho +0,15 → 10 e −27,95; **+0,25 → 11 e −26,40**; +0,50 → 8 e −33,75.
+  3 gatilhos tentados; escolhido 0,25 depois de ver (0,15 e 0,25 dão quase o mesmo). Amostra pequena.
+- **Juiz ao vivo (17/11 a 23/11):** fração de dias-robô positivos e soma por dia-robô, contra os 36 dias-robô anteriores (7/36 = 19%;
+  −1,27 por dia-robô). Passa se as duas melhorarem.

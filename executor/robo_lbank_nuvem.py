@@ -151,7 +151,14 @@ def main():
     mins = {par: minutos(par_spot(par), max(int(p["entrada_t"] * 1000), int(p.get("movel_ate", 0))), agora * 1000) for par, p in e["abertas"].items()}
     from baleias import equipe
     pausado, lado_ord = equipe.lado_da_ordem("lbank", None)
-    textos = passo(e, mkt, reg, mins, agora, pausado=pausado, lado_ordem=lado_ord)
+    from executor import guarda_dia as GD                   # H54: dia que ficou positivo não é devolvido
+    guarda, pre = GD.checar(e), []
+    if guarda == "fechar":
+        for par in list(e["abertas"]):
+            pre.append(_fechar(e, par, mkt.get(par, (e["abertas"][par]["entrada"], 0))[0], GD.motivo(e), agora))
+        pre.append(GD.texto(NOME, e))
+    pausado = pausado or guarda != "normal"
+    textos = pre + passo(e, mkt, reg, mins, agora, pausado=pausado, lado_ordem=lado_ord)
     e["regime"] = {"lado": reg, "subindo_24h": s24, "t": int(agora)}
     e["patrimonio"] = e["caixa"] + sum(q["gasto"] + ORCAMENTO * (1 if q["lado"] == "compra" else -1) * (mkt.get(par, (q["entrada"], 0))[0] / q["entrada"] - 1)
                                        for par, q in e["abertas"].items())

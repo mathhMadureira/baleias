@@ -163,7 +163,19 @@ def main():
     antes = e.get("ultima_decisao_t")
     from executor import stop_movel as SM
     SM.preparar(e["abertas"], lambda q: int(q["entrada_t"] * 1000), agora * 1000)
-    textos = passo(e, decisao, velas, agora)
+    from executor import guarda_dia as GD                   # H54: dia que ficou positivo não é devolvido
+    guarda, textos = GD.checar(e, agora), []
+    if guarda == "fechar":
+        for par in list(e["abertas"]):
+            k = velas.get(par) or []
+            textos.append(fechar(e, par, e["abertas"][par], float(k[-1][4]) if k else e["abertas"][par]["entrada"], GD.motivo(e), agora))
+        textos.append(GD.texto("Robô Claude", e))
+    if guarda == "normal":
+        textos += passo(e, decisao, velas, agora)
+    else:                                                   # travado: sem posições e sem entradas; a decisão desta hora não vale depois
+        e["patrimonio"] = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
+        if decisao:
+            e["ultima_decisao_t"] = decisao.get("t")
     if decisao and e.get("ultima_decisao_t") != antes:                       # decisão nova: o chefe da mesa fala e dá ordens
         textos += falar_e_ordenar(decisao, agora)
     idade_h = (agora - decisao.get("t", 0)) / 3600 if decisao else 99.0      # saúde da rotina: sem decisão nova há mais de 2 h = alarme
