@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 18:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 19:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,10 +18,10 @@ Carteira **US$ 6.03** · 85 operações fechadas · 0 abertas · carteiras anter
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 5.31** · 207 operações fechadas · 2 abertas
+Carteira **US$ 5.23** · 207 operações fechadas · 2 abertas
 
 - **Total:** 86/207 com lucro (42%), resultado -4.61, média -0.022 por operação.
-- **Últimas 24 h:** 23/38 com lucro, -0.97.
+- **Últimas 24 h:** 22/37 com lucro, -0.97.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 12–17 UTC: 59 op, 42% certas, -1.48 · 06–11 UTC: 45 op, 40% certas, -1.29 · 00–05 UTC: 33 op, 61% certas, +1.02
 - **Por lado:** compra: 148 op, 39% certas, -3.37 · venda: 59 op, 47% certas, -1.24
 - **Por confiança do v4:** muito alta (≥0,12): 127 op, 44% certas, -1.98 · alta (0,08–0,12): 65 op, 35% certas, -1.93 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -35,7 +35,7 @@ Carteira **US$ 5.31** · 207 operações fechadas · 2 abertas
 Carteira **US$ 6.65** · 211 operações fechadas · 1 abertas
 
 - **Total:** 90/211 com lucro (43%), resultado -3.35, média -0.016 por operação.
-- **Últimas 24 h:** 16/43 com lucro, -1.23.
+- **Últimas 24 h:** 16/42 com lucro, -1.22.
 - **Por horário:** 00–05 UTC: 57 op, 44% certas, -1.49 · 06–11 UTC: 56 op, 39% certas, -1.18 · 12–17 UTC: 36 op, 39% certas, -0.55 · 18–23 UTC: 62 op, 47% certas, -0.14
 - **Por lado:** compra: 125 op, 45% certas, -2.78 · venda: 86 op, 40% certas, -0.57
 - **Por motivo de saída:** fim da vela seguinte: 205 op, 42% certas, -1.98 · stop de segurança −2%: 3 op, 0% certas, -1.59 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10
@@ -72,17 +72,17 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 62.0% das moedas subindo em 24 h, 61.2% em 4 h · BTC 24 h 0.44%, 4 h 0.51%.
+- **Amplitude:** 57.0% das moedas subindo em 24 h, 44.5% em 4 h · BTC 24 h 0.5%, 4 h -0.18%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': 11.0, 'ETH': 7.3, 'SOL': -1.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': 11.0, 'ETH': 4.4, 'SOL': -6.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ETHFI estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · MARSCOIN topo duplo (baixa, CONFIRMOU) · PHA fundo duplo (alta, CONFIRMOU) · STX estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BNB triângulo ascendente (alta, formado) · DASH topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · HEI fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · JTO fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ENA estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · DASH topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · HEI fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · MORPHO topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NEAR fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 16/11 18:54 UTC · CoinDesk: U.S. Senate Democrats tell CFTC to back off its demand prediction markets defy bans
 - 📰 16/11 18:36 UTC · Decrypt: Fed Is Modeling AI 'Super Intelligence' Scenarios, Including Job Losses and a Stock Market Slump
 - 📰 16/11 18:07 UTC · Cointelegraph: Nvidia turmoil tests Bitcoin miners’ AI funding plans
 - 📰 16/11 18:06 UTC · Decrypt: Nvidia Stock Has a 20% Rebound in Sight—If Bulls Can Clear a Hurdle
 - 📰 16/11 17:49 UTC · Cointelegraph: Safe wallet reportedly loses $6.5M as Zodiac suspects key compromise
 - 📰 16/11 17:20 UTC · Decrypt: Saylor’s Strategy Keeps Buying Bitcoin, Adding 'A Little Orange' Through the Dip
-- 📰 16/11 17:09 UTC · Decrypt: 'Tokenization Is Not the Finish Line': Jupiter to Let Users Borrow Against Bullish Shares
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -97,30 +97,30 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 
 **v3:**
 - ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
+- ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 18 em observação, 0 podadas)
 **v2:**
-- ❌ Errou. Dopamina negativa em: rede_neural. Rede corrigida (taxa ×2.6).
 - ❌ Errou. Dopamina negativa em: rede_neural. Rede corrigida (taxa ×2.9).
 - 😴 Sono: reencenei 1344 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1440 episódios guardados e renormalizei os pesos das sinapses.
+- ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 17309 apostas conferidas ao vivo, acerto 54.1%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 17309 apostas conferidas ao vivo, acerto 54.1%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
