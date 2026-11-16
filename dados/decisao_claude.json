@@ -1,22 +1,23 @@
 {
- "t": 1794798554,
- "leitura": "Mercado indeciso: 64,5% das moedas sobem em 24 h (abaixo de 70%), 4 h com 43,8% subindo e BTC +0,44% em 24 h, −0,06% em 4 h, volume 1,06× a média; pano de fundo diário em baixa (BTC 65188 abaixo das médias de 50 e 200 dias), medo extremo 10. Sem tendência de 24 h: fora.",
+ "t": 1794802168,
+ "leitura": "Indeciso: 56,2% das moedas sobem em 24 h (entre 30% e 70%), 4 h com 15,7% subindo, BTC +0,44% em 24 h e −0,36% em 4 h com volume 1,06× a média; medo e ganância 10. Sem lado pela regra de 24 h: fora.",
  "posicoes": [],
- "fechar": [
-  "BTCUSDT",
-  "BLURUSDT"
- ],
- "motivos_fechar": {
-  "BTCUSDT": "24 h caiu de 82,7% para 64,5% subindo: a alta virou indecisa, razão da compra acabou (posição +0,18%)",
-  "BLURUSDT": "24 h indeciso (64,5% subindo); BLUR −0,32% após 3,7 h, sem a alta por trás"
- },
- "licao": "SOL comprado no recuo (moeda grande) saiu em 15 min pelo stop móvel com +0,042, enquanto BLUR (comprada como líder de 4 h, +3,02%) ficou 3,7 h e está −0,32% e DOGE não entrou pela 2ª vez; com o 24 h caindo de 82,7% para 64,5% subindo, saio de tudo. Volto a comprar só com 24 h em 70% ou mais e a vender só com 30% ou menos.",
+ "fechar": [],
+ "motivos_fechar": {},
+ "licao": "Fora desde 03:19 UTC com 24 h em 64,5% subindo; agora 56,2% e o 4 h caiu para 15,7% subindo (BTC −0,36% em 4 h): sair no indeciso evitou segurar compras num recuo geral. As 18 operações somam −4,27 (fator de lucro 0,05), com as 3 compras de BTC no recuo como únicas vitórias repetidas (+0,072, +0,072, +0,042). Volto a vender só com 24 h em 30% ou menos subindo; a comprar só com 70% ou mais.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 64,5% das moedas sobem em 24 h (era 82,7% há 1 h), 4 h com 43,8% e BTC −0,06% em 4 h: Robô Claude fora, fechei BTC (+0,18%) e BLUR (−0,32%). Sem ordens: Caçador 0,72, Minerador 0,71, Scalper 0,82 de fator de lucro, todos acima de 0,7. v4 fora como voto: segue_maioria_24h acerta 53,3% contra 52,9% dele."
+   "texto": "Mercado indeciso: 56,2% das moedas sobem em 24 h e 15,7% em 4 h; BTC +0,44% em 24 h, −0,36% em 4 h, volume 1,06×: Robô Claude fora. Minerador pausado 6 h: fator de lucro 0,69 em 193 operações (soma −3,16). v4 fora como voto: segue_maioria_24h acerta 52,98% contra 52,91% dele; compras do v4 acertam 49,1%."
   }
  ],
- "ordens": []
+ "ordens": [
+  {
+   "agente": "minerador",
+   "acao": "pausar",
+   "horas": 6,
+   "motivo": "torneio: fator de lucro 0,69 em 193 operações (soma −3,16, carteira 6,84)"
+  }
+ ]
 }
