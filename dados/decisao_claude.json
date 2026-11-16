@@ -1,20 +1,15 @@
 {
- "t": 1794866981,
- "leitura": "Indeciso: 47,5% das moedas sobem em 24 h (eram 32,0% às 21:19), 75,4% em 4 h e 81,4% em 1 h; BTC +0,44% em 24 h, +0,6% em 4 h, volume 1,04×; medo 10, BTC abaixo das médias de 50 e 200 dias. Sem lado de 24 h: fora.",
+ "t": 1794870583,
+ "leitura": "Indeciso, colado na baixa: 30,2% das moedas sobem em 24 h (eram 47,5% às 22:19), 33,6% em 4 h e 16,4% em 1 h; BTC +0,15% em 24 h, +0,41% em 4 h, volume 1,0×, preço 65320 (acima de 65216). Medo 10, funding 8,5%/ano neutro, BTC abaixo das médias de 50 e 200 dias. Falta 0,2 ponto para a regra de venda.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Mesa zerada às 21:53 (carteira 10,00, nenhuma operação nova). Às 21:19 o 24 h estava em 32,0% subindo, a 2 pontos da venda; agora 47,5%, com o BTC em 65302, acima de 65216: quem vendesse antes de chegar a 30% estaria no prejuízo. Confirma alta: 24 h em 70% ou mais com BTC acima de 65216; confirma baixa: 24 h em 30% ou menos com BTC abaixo de 64500.",
- "respostas": [
-  {
-   "ref": "1794865986504-dono",
-   "texto": "Entendido: mesa zerada, começo com US$ 10 e nenhuma operação. Fiquei fora porque o mercado está indeciso (47,5% das moedas sobem em 24 h). Nenhuma ordem em vigor e nenhuma nova: ninguém tem 30 operações desde o zero."
-  }
- ],
+ "licao": "Mesa zerada desde 21:53, carteira 10,00 e nenhuma operação nova. Em 1 h o 24 h caiu de 47,5% para 30,2% subindo, mas o BTC ficou parado (65302 para 65320, +0,15% em 24 h): a queda é das alts, não do BTC. Às 21:19 o 24 h também chegou a 32,0% e voltou a 47,5%. Confirma baixa: 24 h em 30% ou menos, e aí vendo alts com 24 h entre −1% e −10% (KAVA −10,15%, JUP −8,68%, ETHFI −6,08%). Nega: 24 h voltar acima de 40%.",
+ "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 47,5% das moedas sobem em 24 h, 75,4% em 4 h; BTC +0,44% em 24 h, volume 1,04×: Robô Claude fora. Mesa zerada às 21:53, sem ordens em vigor; nenhum robô tem 30 operações desde o zero (máximo 4), então nenhuma ordem nova. Vigia do v4: acerto 54,4%, mas 48,4% no horário 18–24 UTC: robôs do v4, cuidado nesta faixa."
+   "texto": "Mercado indeciso, a 0,2 ponto da baixa: 30,2% das moedas sobem em 24 h, 33,6% em 4 h e 16,4% em 1 h; BTC +0,15% em 24 h, volume 1,0×: Robô Claude fora, vendo com 24 h em 30% ou menos. Sem ordens em vigor e nenhuma nova: ninguém tem 30 operações desde o zero (máximo 16, Scalpers). Vigia do v4: acerto 54,6%, mas 49,3% no horário 18–24 UTC: robôs do v4, sejam mais exigentes até 00:00."
   }
  ],
  "ordens": []
