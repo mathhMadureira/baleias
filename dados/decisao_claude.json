@@ -1,36 +1,40 @@
 {
- "t": 1794791374,
- "leitura": "Alta de 24 h com 81,5% das moedas subindo (mediana +3,03%), BTC +2,36% em 24 h; 4 h em correção (17,7% subindo, BTC −0,32%) com volume fraco (0,75×): recuo sem volume dentro da alta, segurar compras. Pano de fundo: BTC abaixo das médias de 50 e 200 dias e medo 10.",
+ "t": 1794795033,
+ "leitura": "Alta de 24 h com 82,7% das moedas subindo (BTC +3,11%); 4 h em recuo sem volume (9,4% subindo, BTC −0,68%, volume 0,83×): correção dentro da alta, ponto de compra. Pano de fundo: BTC abaixo das médias de 50 e 200 dias e medo extremo (10).",
  "posicoes": [
   {
    "moeda": "BTCUSDT",
    "lado": "compra",
-   "motivo": "81,5% subindo em 24 h; recuo de 4 h −0,32% com volume 0,75×; as 3 compras de BTC desta alta saíram no lucro"
-  },
-  {
-   "moeda": "KITEUSDT",
-   "lado": "compra",
-   "motivo": "alta de 24 h intacta (81,5% subindo); posição −2,3% dentro do stop de 3,9%, recuo sem volume"
+   "motivo": "manter: 82,7% subindo em 24 h; recuo de 4 h −0,68% sem volume (0,83×); as 3 compras de BTC desta alta saíram no lucro"
   },
   {
    "moeda": "BLURUSDT",
    "lado": "compra",
-   "motivo": "alta de 24 h intacta (81,5% subindo); posição −1,62% dentro do stop de 4%, recuo sem volume"
+   "motivo": "manter: −1,62% com stop de 4%, dentro do ruído; alta de 24 h (82,7%) intacta"
+  },
+  {
+   "moeda": "SOLUSDT",
+   "lado": "compra",
+   "motivo": "moeda grande no recuo de 4 h sem volume dentro da alta de 24 h (82,7% subindo); funding −6%/ano, sem comprados lotados"
   },
   {
    "moeda": "DOGEUSDT",
    "lado": "compra",
-   "motivo": "moeda grande na lista de altas de 4 h (+0,56%, 24 h +4,36%), não esticada; comprar o recuo da alta como no BTC"
+   "motivo": "moeda grande no recuo de 4 h sem volume (BTC 0,83×) dentro da alta de 24 h (82,7% subindo); decidida às 01:14 e não entrou"
   }
  ],
- "fechar": [],
- "motivos_fechar": {},
- "licao": "Nesta alta, as 3 compras de BTC (entrada com 4 h +0,3% a +0,8%) saíram no lucro (+0,072, +0,072, +0,042), enquanto KITE (4 h +2,75% na entrada) está −2,3% após 2,8 h e BLUR (4 h +3,02%) −1,62% após 1,8 h; AMP, decidida às 00:09, não entrou. Comprar moeda grande no recuo rende mais que líder de 4 h: conferir na próxima se DOGE segue o BTC e não KITE/BLUR.",
+ "fechar": [
+  "KITEUSDT"
+ ],
+ "motivos_fechar": {
+  "KITEUSDT": "entrou no impulso de 4 h (+2,75%), que acabou; −3,62% após 3,7 h, a 0,28 ponto do stop de 3,9%, e carteira a US$ 0,50 do piso de US$ 5"
+ },
+ "licao": "No mesmo recuo de 4 h (9,4% das moedas subindo), KITE (comprada com 4 h +2,75%) está −3,62% e BLUR (4 h +3,02%) −1,62%, contra BTC −0,77%: as alts compradas como líderes de 4 h caíram 2 a 5 vezes mais que o BTC. Fecho KITE e troco por SOL e DOGE; conferir na próxima se elas entram (DOGE de 01:14 não entrou) e se recuam menos que BLUR.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Alta de 24 h com 81,5% das moedas subindo e 4 h em recuo sem volume (17,7% subindo, BTC 0,75×): mesa comprada (BTC, KITE, BLUR, DOGE). Sem ordens: nenhum robô que obedece está com fator de lucro < 0,7 em 30+ operações (Caçador 0,71). v4 fora como voto: segue_maioria_24h acerta 53,7% contra 52,8% dele."
+   "texto": "Alta de 24 h com 82,7% das moedas subindo e 4 h em recuo sem volume (9,4% subindo, BTC 0,83×): mesa comprada (BTC, BLUR, SOL, DOGE); fechei KITE (−3,62%). Sem ordens: nenhum robô que obedece tem fator de lucro < 0,7 em 30+ operações (Caçador 0,71, Minerador 0,74). v4 fora como voto: segue_maioria_24h acerta 53,47% contra 53,01% dele; compras do v4 acertam 49,3%."
   }
  ],
  "ordens": []
