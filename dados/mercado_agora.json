@@ -1,21 +1,21 @@
 {
- "t": 1794791126,
- "hora_utc": "2026-11-16 01:05 UTC",
+ "t": 1794791652,
+ "hora_utc": "2026-11-16 01:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 130,
-  "subindo_pct": 4.6,
-  "mediana_pct": -1.25
+  "moedas": 129,
+  "subindo_pct": 4.7,
+  "mediana_pct": -1.24
  },
  "mercado_4h": {
-  "moedas": 130,
-  "subindo_pct": 17.7,
+  "moedas": 129,
+  "subindo_pct": 17.8,
   "mediana_pct": -0.77
  },
  "mercado_24h": {
-  "moedas": 130,
-  "subindo_pct": 81.5,
-  "mediana_pct": 3.03
+  "moedas": 129,
+  "subindo_pct": 81.4,
+  "mediana_pct": 3.07
  },
  "btc": {
   "1h": -0.65,
@@ -172,10 +172,10 @@
   0.32,
   0.19,
   -0.65,
-  -0.26
+  -0.13
  ],
  "contexto": {
-  "t": 1794791127,
+  "t": 1794791653,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -256,11 +256,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -0.6,
+   "media_top20_anual_pct": -0.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.0,
-    "SOL": -7.3
+    "ETH": 2.3,
+    "SOL": -7.6
    },
    "leitura": "neutro"
   },
@@ -542,7 +542,7 @@
     "entrada": 0.1437,
     "agora": 0.1404,
     "resultado_pct": -2.3,
-    "horas_aberta": 2.8,
+    "horas_aberta": 2.9,
     "motivo_de_entrada": "4 h +2,75% com volume 1,46× e 24 h +11,62%, abaixo de 15% em 4 h"
    },
    {
@@ -551,7 +551,7 @@
     "entrada": 0.00616,
     "agora": 0.00606,
     "resultado_pct": -1.62,
-    "horas_aberta": 1.8,
+    "horas_aberta": 1.9,
     "motivo_de_entrada": "4 h +3,02% com volume 5,3× a média e 24 h +6,03% (acima de +5%, longe de 15% em 4 h), a favor da alta de 24 h"
    },
    {
@@ -560,7 +560,7 @@
     "entrada": 65070.69,
     "agora": 64924.01,
     "resultado_pct": -0.23,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.9,
     "motivo_de_entrada": "83,2% subindo em 24 h; BTC +0,62% em 4 h; as 3 compras de BTC desta alta saíram todas no lucro pelo stop móvel"
    }
   ],
@@ -666,10 +666,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1794769758,
-    "texto": "ERA e KAVA, decididas às 18:09 UTC, não aparecem em abertas nem em fechadas: não entraram. Com 4 h em 43,2% subindo e volume 0,51× não abro novas; só volto a usar as 4 vagas se o 4 h cair abaixo de 40% subindo com o BTC fechando 1 h abaixo de 64500 e volume acima de 1,2×; se o BTC fechar 1 h acima de 65216, fecho BTC e ZRO."
-   },
-   {
     "t": 1794770153,
     "texto": "BTC e ZRO vendidos às 15:21 UTC seguraram 3,7 h sem stop (BTC −0,07%, ZRO +0,58%), enquanto as 7 vendas em moedas com 24 h perto de −14% pararam no stop; ERA e KAVA da rodada passada não aparecem como abertas nem fechadas: conferir na próxima se o executor as recusou. Fecho agora porque o 24 h subiu de baixa para 34,5% subindo (indeciso); só volto a vender com 24 h em 30% ou menos."
    },
@@ -696,6 +692,10 @@
    {
     "t": 1794787787,
     "texto": "Nesta alta, as 3 compras de BTC (entrada com 4 h +0,3% a +0,8%) saíram no lucro pelo stop móvel (+0,072, +0,072, +0,042), enquanto TLM (comprada com 4 h +8,26%) está −1,78% após 2,7 h e a recompra de KITE −0,63%: comprar quem já liderou forte o 4 h não rendeu. Fecho TLM e volto ao BTC; conferir na próxima se AMP (4 h +2,59%, volume 3,34×) segura como BLUR."
+   },
+   {
+    "t": 1794791374,
+    "texto": "Nesta alta, as 3 compras de BTC (entrada com 4 h +0,3% a +0,8%) saíram no lucro (+0,072, +0,072, +0,042), enquanto KITE (4 h +2,75% na entrada) está −2,3% após 2,8 h e BLUR (4 h +3,02%) −1,62% após 1,8 h; AMP, decidida às 00:09, não entrou. Comprar moeda grande no recuo rende mais que líder de 4 h: conferir na próxima se DOGE segue o BTC e não KITE/BLUR."
    }
   ]
  },
@@ -752,7 +752,7 @@
    "avatar": "🌲",
    "motor": "Cérebro v4",
    "missao": "Todas as apostas do v4 nas 140 moedas, as mais confiantes primeiro, segurando enquanto a tendência dura.",
-   "carteira": 9.6,
+   "carteira": 10.07,
    "n_abertas": 4,
    "abertas": [
     [
@@ -764,15 +764,15 @@
      "compra"
     ],
     [
-     "SOPH",
+     "KITE",
      "compra"
     ],
     [
-     "KAVA",
+     "BERA",
      "compra"
     ]
    ],
-   "n_fechadas": 33,
+   "n_fechadas": 35,
    "ordem": null
   },
   {
@@ -906,20 +906,53 @@
    "ordem": null
   },
   {
+   "id": "lbank",
+   "nome": "Robô LBank",
+   "avatar": "🟣",
+   "motor": "tendência 24 h + stop móvel (LBank)",
+   "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
+   "carteira": 10.0,
+   "n_abertas": 4,
+   "abertas": [
+    [
+     "BRETT",
+     "compra"
+    ],
+    [
+     "FARTCOIN",
+     "compra"
+    ],
+    [
+     "FLOKI",
+     "compra"
+    ],
+    [
+     "DOGE",
+     "compra"
+    ]
+   ],
+   "n_fechadas": 0,
+   "ordem": null
+  },
+  {
    "id": "testnet",
    "nome": "v4 Testnet",
    "avatar": "🧪",
    "motor": "Cérebro v4",
    "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram.",
-   "carteira": 7.17,
-   "n_abertas": 1,
+   "carteira": 7.15,
+   "n_abertas": 2,
    "abertas": [
     [
-     "BTC",
+     "SOPH",
+     "BUY"
+    ],
+    [
+     "TRX",
      "BUY"
     ]
    ],
-   "n_fechadas": 45,
+   "n_fechadas": 46,
    "ordem": null
   }
  ],
@@ -945,13 +978,13 @@
     "carteira": 6.24
    },
    "rapido": {
-    "ops": 33,
-    "acerto": 0.606,
-    "soma": 0.041,
-    "ganho_medio": 0.105,
+    "ops": 35,
+    "acerto": 0.629,
+    "soma": 0.512,
+    "ganho_medio": 0.117,
     "perda_media": -0.158,
-    "fator_lucro": 1.02,
-    "carteira": 9.6
+    "fator_lucro": 1.25,
+    "carteira": 10.07
    },
    "scalper": {
     "ops": 58,
@@ -1007,14 +1040,23 @@
     "fator_lucro": 0.0,
     "carteira": 5.05
    },
+   "lbank": {
+    "ops": 0,
+    "acerto": null,
+    "soma": 0,
+    "ganho_medio": null,
+    "perda_media": null,
+    "fator_lucro": null,
+    "carteira": 10.0
+   },
    "testnet": {
-    "ops": 45,
-    "acerto": 0.289,
-    "soma": -2.829,
+    "ops": 46,
+    "acerto": 0.283,
+    "soma": -2.854,
     "ganho_medio": 0.062,
-    "perda_media": -0.114,
+    "perda_media": -0.111,
     "fator_lucro": 0.22,
-    "carteira": 7.17
+    "carteira": 7.15
    }
   },
   "vereditos": [
@@ -1040,12 +1082,12 @@
   "z_contra_lab": -0.45,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5328,
-    "n": 11353
+    "acerto": 0.5332,
+    "n": 11297
    },
    "segue_maioria_24h": {
-    "acerto": 0.537,
-    "n": 13694
+    "acerto": 0.5371,
+    "n": 13780
    }
   },
   "referencia_ganha": [
@@ -1097,12 +1139,6 @@
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "15/11 20:34",
-   "de": "claude",
-   "para": "dono",
-   "texto": "Estou lendo a sala. Mesa: mercado indeciso (57,6% das moedas subindo em 24 h), Robô Claude fora com US$ 6,81; Caçador 2 posições, Rápido 4, Scalper 3, Minerador 3, sem ordens minhas."
-  },
   {
    "hora_utc": "15/11 20:34",
    "de": "claude",
@@ -1168,6 +1204,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Alta de 24 h com 83,2% das moedas subindo: mesa comprada (BTC, BLUR, KITE, AMP); fechei TLM (−1,78%). Caçador liberado: fator de lucro subiu para 0,71 em 189 operações. v4 fora como voto: segue_maioria_24h acerta 53,9% contra 52,5% dele."
+  },
+  {
+   "hora_utc": "16/11 01:14",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Alta de 24 h com 81,5% das moedas subindo e 4 h em recuo sem volume (17,7% subindo, BTC 0,75×): mesa comprada (BTC, KITE, BLUR, DOGE). Sem ordens: nenhum robô que obedece está com fator de lucro < 0,7 em 30+ operações (Caçador 0,71). v4 fora como voto: segue_maioria_24h acerta 53,7% contra 52,8% del"
   }
  ]
 }
