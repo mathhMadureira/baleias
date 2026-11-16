@@ -1,1 +1,1 @@
-{"t": 1794866239, "tesouro": {"robos": 10, "inicial": 100.0, "carteiras": 100.0, "resultado": 0.0, "em_margem": 82.5, "livre": 17.5, "no_lucro": []}, "exposicao": {"bruta": 925.0, "liquida": 925.0, "moedas": 11, "conflitos": []}, "persistencia": {"janelas": 0}}
+{"t": 1794866786, "tesouro": {"robos": 10, "inicial": 100.0, "carteiras": 98.97, "resultado": -1.03, "em_margem": 62.71, "livre": 36.26, "no_lucro": ["lbank", "livre"]}, "exposicao": {"bruta": 729.17, "liquida": 729.16, "moedas": 11, "conflitos": []}, "persistencia": {"janelas": 0}}

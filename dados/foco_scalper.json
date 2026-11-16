@@ -1,1 +1,1 @@
-{"t": 1794866239, "excluir": [], "segmentos": {}}
+{"t": 1794866786, "excluir": [], "segmentos": {"horario_utc:18-24": {"n": 2, "soma": -0.019, "z": -0.09}, "confianca:≥0,08": {"n": 4, "soma": -0.098, "z": -0.35}, "lado:venda": {"n": 2, "soma": -0.019, "z": -0.09}, "horario_utc:12-18": {"n": 1, "soma": -0.174, "z": 0.0}, "lado:compra": {"n": 2, "soma": -0.079, "z": -0.29}, "horario_utc:00-06": {"n": 1, "soma": 0.095, "z": 0.0}}}
