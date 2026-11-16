@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 08:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 08:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 10.56** · 50 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 10.51** · 50 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 34/50 com lucro (68%), resultado +0.46, média +0.009 por operação.
 - **Últimas 24 h:** 33/49 com lucro, +0.24.
@@ -18,10 +18,10 @@ Carteira **US$ 10.56** · 50 operações fechadas · 4 abertas · carteiras ante
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.93** · 195 operações fechadas · 2 abertas
+Carteira **US$ 6.83** · 195 operações fechadas · 2 abertas
 
 - **Total:** 80/195 com lucro (41%), resultado -3.11, média -0.016 por operação.
-- **Últimas 24 h:** 46/94 com lucro, +0.46.
+- **Últimas 24 h:** 45/93 com lucro, +0.29.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 06–11 UTC: 42 op, 40% certas, -0.86 · 12–17 UTC: 51 op, 41% certas, -0.35 · 00–05 UTC: 32 op, 59% certas, +0.96
 - **Por lado:** compra: 145 op, 39% certas, -2.96 · venda: 50 op, 46% certas, -0.14
 - **Por confiança do v4:** alta (0,08–0,12): 63 op, 35% certas, -1.48 · muito alta (≥0,12): 117 op, 44% certas, -0.93 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -32,29 +32,29 @@ Carteira **US$ 6.93** · 195 operações fechadas · 2 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 6.88** · 203 operações fechadas · 2 abertas
+Carteira **US$ 6.90** · 204 operações fechadas · 2 abertas
 
-- **Total:** 87/203 com lucro (43%), resultado -3.12, média -0.015 por operação.
-- **Últimas 24 h:** 25/75 com lucro, -2.40.
-- **Por horário:** 00–05 UTC: 57 op, 44% certas, -1.49 · 06–11 UTC: 48 op, 40% certas, -0.95 · 12–17 UTC: 36 op, 39% certas, -0.55 · 18–23 UTC: 62 op, 47% certas, -0.14
-- **Por lado:** compra: 121 op, 45% certas, -2.55 · venda: 82 op, 39% certas, -0.58
-- **Por motivo de saída:** fim da vela seguinte: 197 op, 43% certas, -1.76 · stop de segurança −2%: 3 op, 0% certas, -1.59 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10
+- **Total:** 88/204 com lucro (43%), resultado -3.10, média -0.015 por operação.
+- **Últimas 24 h:** 26/76 com lucro, -2.37.
+- **Por horário:** 00–05 UTC: 57 op, 44% certas, -1.49 · 06–11 UTC: 49 op, 41% certas, -0.93 · 12–17 UTC: 36 op, 39% certas, -0.55 · 18–23 UTC: 62 op, 47% certas, -0.14
+- **Por lado:** compra: 121 op, 45% certas, -2.55 · venda: 83 op, 40% certas, -0.55
+- **Por motivo de saída:** fim da vela seguinte: 198 op, 43% certas, -1.73 · stop de segurança −2%: 3 op, 0% certas, -1.59 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10
 - **Moedas que mais perderam (≥ 3 op):** CELO -1.10 (30 op) · U -0.75 (26 op) · RUNE -0.26 (4 op) · GENIUS -0.20 (8 op) · TRX -0.09 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** LSK +0.47 (8 op) · AERO +0.17 (3 op) · CYBER +0.16 (7 op) · PENDLE +0.16 (3 op) · VIRTUAL +0.13 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
 
-Carteira **US$ 5.83** · 86 operações fechadas · 2 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
+Carteira **US$ 5.75** · 87 operações fechadas · 2 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
-- **Total:** 32/86 com lucro (37%), resultado -4.17, média -0.049 por operação.
-- **Últimas 24 h:** 32/86 com lucro, -4.17.
-- **Por horário:** 00–05 UTC: 39 op, 38% certas, -2.04 · 18–23 UTC: 37 op, 32% certas, -2.02 · 06–11 UTC: 10 op, 50% certas, -0.11
-- **Por lado:** compra: 64 op, 36% certas, -3.14 · venda: 22 op, 41% certas, -1.03
-- **Por confiança do v4:** confiança baixa (<0,05): 51 op, 45% certas, -1.87 · média (0,05–0,08): 19 op, 32% certas, -1.38 · alta (0,08–0,12): 13 op, 23% certas, -0.63 · muito alta (≥0,12): 3 op, 0% certas, -0.29
-- **Por motivo de saída:** stop de segurança −1% (saída a: 5 op, 0% certas, -2.11 · fim da vela do v4 (saída a mer: 30 op, 20% certas, -2.03 · fim da vela do v4: 51 op, 51% certas, -0.04
+- **Total:** 32/87 com lucro (37%), resultado -4.25, média -0.049 por operação.
+- **Últimas 24 h:** 32/87 com lucro, -4.25.
+- **Por horário:** 00–05 UTC: 39 op, 38% certas, -2.04 · 18–23 UTC: 37 op, 32% certas, -2.02 · 06–11 UTC: 11 op, 45% certas, -0.19
+- **Por lado:** compra: 64 op, 36% certas, -3.14 · venda: 23 op, 39% certas, -1.11
+- **Por confiança do v4:** confiança baixa (<0,05): 52 op, 44% certas, -1.95 · média (0,05–0,08): 19 op, 32% certas, -1.38 · alta (0,08–0,12): 13 op, 23% certas, -0.63 · muito alta (≥0,12): 3 op, 0% certas, -0.29
+- **Por motivo de saída:** stop de segurança −1% (saída a: 5 op, 0% certas, -2.11 · fim da vela do v4 (saída a mer: 30 op, 20% certas, -2.03 · fim da vela do v4: 52 op, 50% certas, -0.12
 - **Moedas que mais perderam (≥ 3 op):** ASTER -0.73 (6 op) · SOPH -0.46 (5 op) · PEPE -0.39 (4 op) · WLFI -0.36 (4 op) · SOL -0.32 (7 op)
-- **Moedas que mais ganharam (≥ 3 op):** BNB +0.14 (4 op) · BTC +0.05 (8 op) · ZEC +0.03 (3 op) · ETH +0.02 (6 op) · TRX -0.04 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** BNB +0.14 (4 op) · BTC +0.05 (8 op) · ETH +0.02 (6 op) · TRX -0.04 (3 op) · ZEC -0.05 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
@@ -72,26 +72,26 @@ Carteira **US$ 5.73** · 18 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 63.6% das moedas subindo em 24 h, 20.7% em 4 h · BTC 24 h 1.53%, 4 h -0.18%.
+- **Amplitude:** 62.8% das moedas subindo em 24 h, 11.6% em 4 h · BTC 24 h 1.3%, 4 h -0.35%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -5.8%/ano · {'BTC': -16.8, 'ETH': -7.3, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.3%/ano · {'BTC': -13.4, 'ETH': -5.8, 'SOL': 9.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AERO topo duplo (baixa, formado) · AR topo duplo (baixa, formado) · BEAMX topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · ERA fundo duplo (alta, formado) · ETH triângulo ascendente (alta, formado) · HYPE topo duplo (baixa, formado) · NEAR fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** AR topo duplo (baixa, formado) · BEAMX topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · ERA fundo duplo (alta, formado) · ETH triângulo ascendente (alta, formado) · HYPE topo duplo (baixa, formado) · INJ fundo duplo (alta, formado) · NEAR fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 16/11 08:18 UTC · CoinDesk: Vitalik Buterin flips to ‘total bull’ on a faster route to quantum-safe Ethereum
 - 📰 16/11 07:51 UTC · CoinDesk: Bitcoin miners were hijacked and their BTC rewards redirected to an attacker
 - 📰 16/11 06:27 UTC · CoinDesk: Cardano holders vote down $5 million bid to buy warehouse copper
 - 📰 16/11 06:01 UTC · CoinDesk: Trump administration to name Nvidia, OpenAI and several others as AI national champions
 - 📰 16/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 16/11 05:28 UTC · Cointelegraph: Aster CEO suspects foul play after token plunges 32% in minutes
-- 📰 16/11 05:01 UTC · CoinDesk: Bitcoin’s biggest bet is now a drop below $60,000, not a rally above $100,000
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 16/11 08:13 UTC · **fora do mercado** · Indeciso: 63,6% das moedas sobem em 24 h (entre 30% e 70%) e 20,7% em 4 h; BTC +1,53% em 24 h, −0,18% em 4 h, volume 0,86×, abaixo das médias de 50 e 200 dias; 
 - 16/11 07:12 UTC · **fora do mercado** · Indeciso: 50,4% das moedas sobem em 24 h (mediana +0,01%), BTC +0,38% em 24 h e −0,73% em 4 h com volume 0,82×; o 4 h tem só 8,4% subindo, mas sem baixa de 24 h
 - 16/11 06:10 UTC · **fora do mercado** · Indeciso: 45,4% das moedas sobem em 24 h (era 52,1% há 1 h), 51,3% em 4 h e só 7,6% em 1 h; BTC −0,06% em 24 h, −0,15% em 4 h, −0,54% em 1 h, volume 0,88×. Pano
 - 16/11 05:09 UTC · **fora do mercado** · Indeciso: 52,1% das moedas sobem em 24 h (56,2% há 1 h), 44,6% em 4 h; BTC −0,17% em 24 h, −0,16% em 4 h, volume 0,81×, triângulo simétrico em 1 h; medo extremo
 - 16/11 04:09 UTC · **fora do mercado** · Indeciso: 56,2% das moedas sobem em 24 h (entre 30% e 70%), 4 h com 15,7% subindo, BTC +0,44% em 24 h e −0,36% em 4 h com volume 1,06× a média; medo e ganância 
 - 16/11 03:09 UTC · **fora do mercado** · Mercado indeciso: 64,5% das moedas sobem em 24 h (abaixo de 70%), 4 h com 43,8% subindo e BTC +0,44% em 24 h, −0,06% em 4 h, volume 1,06× a média; pano de fundo
-- 16/11 02:10 UTC · **BTC compra, BLUR compra, SOL compra, DOGE compra** · Alta de 24 h com 82,7% das moedas subindo (BTC +3,11%); 4 h em recuo sem volume (9,4% subindo, BTC −0,68%, volume 0,83×): correção dentro da alta, ponto de comp
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.73** · 18 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 15091 apostas conferidas ao vivo, acerto 53.7%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 15147 apostas conferidas ao vivo, acerto 53.8%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
