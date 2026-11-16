@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 21:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 21:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
 Carteira **US$ 6.03** · 85 operações fechadas · 0 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 51/85 com lucro (60%), resultado -3.97, média -0.047 por operação.
-- **Últimas 24 h:** 29/54 com lucro, -5.12.
+- **Últimas 24 h:** 29/53 com lucro, -5.09.
 - **Por horário:** 12–17 UTC: 19 op, 47% certas, -2.54 · 06–11 UTC: 16 op, 50% certas, -1.55 · 00–05 UTC: 18 op, 78% certas, -0.37 · 18–23 UTC: 32 op, 62% certas, +0.49
 - **Por lado:** compra: 44 op, 55% certas, -2.32 · venda: 41 op, 66% certas, -1.66
 - **Por confiança do v4:** alta (0,08–0,12): 26 op, 42% certas, -3.81 · média (0,05–0,08): 11 op, 73% certas, -0.36 · muito alta (≥0,12): 42 op, 64% certas, -0.10 · confiança baixa (<0,05): 6 op, 83% certas, +0.31
@@ -21,7 +21,7 @@ Carteira **US$ 6.03** · 85 operações fechadas · 0 abertas · carteiras anter
 Carteira **US$ 5.50** · 208 operações fechadas · 1 abertas
 
 - **Total:** 87/208 com lucro (42%), resultado -4.50, média -0.022 por operação.
-- **Últimas 24 h:** 15/26 com lucro, -1.22.
+- **Últimas 24 h:** 15/25 com lucro, -1.19.
 - **Por horário:** 18–23 UTC: 71 op, 34% certas, -2.74 · 12–17 UTC: 59 op, 42% certas, -1.48 · 06–11 UTC: 45 op, 40% certas, -1.29 · 00–05 UTC: 33 op, 61% certas, +1.02
 - **Por lado:** compra: 148 op, 39% certas, -3.37 · venda: 60 op, 48% certas, -1.13
 - **Por confiança do v4:** alta (0,08–0,12): 65 op, 35% certas, -1.93 · muito alta (≥0,12): 128 op, 45% certas, -1.87 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -35,7 +35,7 @@ Carteira **US$ 5.50** · 208 operações fechadas · 1 abertas
 Carteira **US$ 6.65** · 211 operações fechadas · 1 abertas
 
 - **Total:** 90/211 com lucro (43%), resultado -3.35, média -0.016 por operação.
-- **Últimas 24 h:** 13/36 com lucro, -1.21.
+- **Últimas 24 h:** 13/35 com lucro, -1.18.
 - **Por horário:** 00–05 UTC: 57 op, 44% certas, -1.49 · 06–11 UTC: 56 op, 39% certas, -1.18 · 12–17 UTC: 36 op, 39% certas, -0.55 · 18–23 UTC: 62 op, 47% certas, -0.14
 - **Por lado:** compra: 125 op, 45% certas, -2.78 · venda: 86 op, 40% certas, -0.57
 - **Por motivo de saída:** fim da vela seguinte: 205 op, 42% certas, -1.98 · stop de segurança −2%: 3 op, 0% certas, -1.59 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10
@@ -48,7 +48,7 @@ Carteira **US$ 6.65** · 211 operações fechadas · 1 abertas
 Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
 - **Total:** 34/96 com lucro (35%), resultado -5.04, média -0.053 por operação.
-- **Últimas 24 h:** 30/83 com lucro, -4.67.
+- **Últimas 24 h:** 29/80 com lucro, -4.28.
 - **Por horário:** 00–05 UTC: 39 op, 38% certas, -2.04 · 18–23 UTC: 37 op, 32% certas, -2.02 · 06–11 UTC: 20 op, 35% certas, -0.98
 - **Por lado:** compra: 67 op, 34% certas, -3.42 · venda: 29 op, 38% certas, -1.63
 - **Por confiança do v4:** confiança baixa (<0,05): 59 op, 42% certas, -2.67 · média (0,05–0,08): 21 op, 29% certas, -1.46 · alta (0,08–0,12): 13 op, 23% certas, -0.63 · muito alta (≥0,12): 3 op, 0% certas, -0.29
@@ -72,26 +72,26 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 32.0% das moedas subindo em 24 h, 35.2% em 4 h · BTC 24 h -0.1%, 4 h 0.22%.
+- **Amplitude:** 33.9% das moedas subindo em 24 h, 38.0% em 4 h · BTC 24 h 0.06%, 4 h 0.14%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.4%/ano · {'BTC': 8.4, 'ETH': 11.0, 'SOL': 1.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 12.8%/ano · {'BTC': 6.4, 'ETH': 9.3, 'SOL': -3.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** PHA fundo duplo (alta, CONFIRMOU) · SENT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BCH topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · GIGGLE topo duplo (baixa, formado) · HEI fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · MORPHO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** PHA fundo duplo (alta, CONFIRMOU) · SENT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BCH topo duplo (baixa, formado) · DASH topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · GIGGLE topo duplo (baixa, formado) · HEI fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · MORPHO topo duplo (baixa, formado)
+- 📰 16/11 21:16 UTC · Decrypt: Hackers Redirected Bitcoin Miner Rewards via AI Attack, Luxor CEO Says
 - 📰 16/11 20:45 UTC · Cointelegraph: Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump
 - 📰 16/11 20:36 UTC · Decrypt: Tom Lee Blames Nvidia and Anthropic IPO for Ethereum Plunge as Bitmine Buys the Dip
 - 📰 16/11 20:35 UTC · CoinDesk: Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off
 - 📰 16/11 20:18 UTC · Cointelegraph: Boris Johnson says UK must lead blockchain development despite crypto doubts
 - 📰 16/11 19:56 UTC · Cointelegraph: Coinbase and Broadridge propose standard for tokenized stock disclosures
-- 📰 16/11 19:36 UTC · Decrypt: Clarity Act Defeat ‘Failure of American Leadership’: Trump’s Former Crypto Chief
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 16/11 21:09 UTC · **fora do mercado** · Indeciso, perto da baixa: 32,0% das moedas sobem em 24 h (era 41,3% há 1 h), 35,2% em 4 h e só 14,8% em 1 h; BTC −0,1% em 24 h, +0,22% em 4 h, volume 1,06×, aba
 - 16/11 20:09 UTC · **fora do mercado** · Indeciso: 41,3% das moedas sobem em 24 h (mediana −0,29%) e 77,0% em 4 h; BTC +0,19% em 24 h, +0,93% em 4 h, volume 1,1×, em 65068 (entre 64500 e 65216). BTC ab
 - 16/11 19:09 UTC · **fora do mercado** · Mercado indeciso: 57,0% das moedas sobem em 24 h (41,4% há 1 h), 44,5% em 4 h; BTC +0,5% em 24 h, −0,18% em 4 h, volume 1,07× a média, preço 65052 entre 64500 e
 - 16/11 18:09 UTC · **fora do mercado** · Mercado indeciso: 41,4% das moedas sobem em 24 h (mediana −0,19%), 73,4% em 4 h e só 23,4% na última hora; BTC +0,55% em 24 h, +1,13% em 4 h com volume 1,31×, a
 - 16/11 17:10 UTC · **fora do mercado** · Indeciso: 57,8% das moedas sobem em 24 h (39,4% há 1 h) e 85,2% em 4 h; BTC +0,34% em 24 h, +1,18% em 4 h, volume 1,38×, ainda abaixo das médias de 50 e 200 dia
 - 16/11 16:12 UTC · **fora do mercado** · Mercado indeciso: 39,4% das moedas sobem em 24 h e 46,5% em 4 h; BTC −0,43% em 24 h, +0,03% em 4 h, −1,07% na última hora, volume 1,4×. 24 h entre 30% e 70%: fo
-- 16/11 15:13 UTC · **fora do mercado** · Mercado indeciso: 24 h virou de 19,7% para 57,9% das moedas subindo em 1 h; BTC +0,62% em 24 h, +0,92% em 4 h e +1,53% na última hora com volume 1,37×, preço 65
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 17757 apostas conferidas ao vivo, acerto 54.2%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 17818 apostas conferidas ao vivo, acerto 54.2%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
