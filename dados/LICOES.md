@@ -1,27 +1,27 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 15:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 15:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 6.91** · 81 operações fechadas · 2 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 7.09** · 83 operações fechadas · 2 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
-- **Total:** 49/81 com lucro (60%), resultado -3.09, média -0.038 por operação.
-- **Últimas 24 h:** 44/74 com lucro, -3.03.
-- **Por horário:** 12–17 UTC: 17 op, 47% certas, -2.12 · 06–11 UTC: 16 op, 50% certas, -1.55 · 00–05 UTC: 17 op, 76% certas, -0.44 · 18–23 UTC: 31 op, 65% certas, +1.02
-- **Por lado:** compra: 44 op, 55% certas, -2.32 · venda: 37 op, 68% certas, -0.77
-- **Por confiança do v4:** alta (0,08–0,12): 23 op, 43% certas, -2.86 · média (0,05–0,08): 10 op, 70% certas, -0.43 · muito alta (≥0,12): 42 op, 64% certas, -0.10 · confiança baixa (<0,05): 6 op, 83% certas, +0.31
-- **Por motivo de saída:** stop de segurança −2.0%: 12 op, 0% certas, -6.36 · stop de segurança −1.0%: 4 op, 0% certas, -1.12 · tendência de 24 h virou para b: 5 op, 0% certas, -0.59 · tendência de 24 h virou para a: 3 op, 0% certas, -0.51 · fim da vela (contra a tendênci: 4 op, 50% certas, -0.00 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.59%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.60%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.65%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.66%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.68%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.76%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.80%, guard: 1 op, 100% certas, +0.11 · stop móvel (pico +0.50%, guard: 2 op, 100% certas, +0.12 · stop móvel (pico +0.87%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.89%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.90%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.94%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.97%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.16 · stop móvel (pico +1.14%, guard: 1 op, 100% certas, +0.17 · stop móvel (pico +1.16%, guard: 1 op, 100% certas, +0.17 · stop móvel (pico +1.22%, guard: 1 op, 100% certas, +0.18 · stop móvel (pico +1.27%, guard: 1 op, 100% certas, +0.19 · stop móvel (pico +1.39%, guard: 1 op, 100% certas, +0.21 · stop móvel (pico +1.41%, guard: 1 op, 100% certas, +0.22 · stop móvel (pico +1.44%, guard: 1 op, 100% certas, +0.22 · stop móvel (pico +0.84%, guard: 2 op, 100% certas, +0.23 · stop móvel (pico +1.55%, guard: 1 op, 100% certas, +0.24 · stop móvel (pico +0.93%, guard: 2 op, 100% certas, +0.27 · stop móvel (pico +1.00%, guard: 2 op, 100% certas, +0.29 · stop móvel (pico +1.87%, guard: 1 op, 100% certas, +0.30 · fim da vela do v4: 19 op, 68% certas, +0.98
+- **Total:** 51/83 com lucro (61%), resultado -2.91, média -0.035 por operação.
+- **Últimas 24 h:** 46/76 com lucro, -2.85.
+- **Por horário:** 12–17 UTC: 18 op, 50% certas, -2.01 · 06–11 UTC: 16 op, 50% certas, -1.55 · 00–05 UTC: 18 op, 78% certas, -0.37 · 18–23 UTC: 31 op, 65% certas, +1.02
+- **Por lado:** compra: 44 op, 55% certas, -2.32 · venda: 39 op, 69% certas, -0.60
+- **Por confiança do v4:** alta (0,08–0,12): 24 op, 46% certas, -2.75 · média (0,05–0,08): 11 op, 73% certas, -0.36 · muito alta (≥0,12): 42 op, 64% certas, -0.10 · confiança baixa (<0,05): 6 op, 83% certas, +0.31
+- **Por motivo de saída:** stop de segurança −2.0%: 12 op, 0% certas, -6.36 · stop de segurança −1.0%: 4 op, 0% certas, -1.12 · tendência de 24 h virou para b: 5 op, 0% certas, -0.59 · tendência de 24 h virou para a: 3 op, 0% certas, -0.51 · fim da vela (contra a tendênci: 4 op, 50% certas, -0.00 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.58%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.59%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.60%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.65%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.66%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.68%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.76%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.77%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.80%, guard: 1 op, 100% certas, +0.11 · stop móvel (pico +0.50%, guard: 2 op, 100% certas, +0.12 · stop móvel (pico +0.87%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.89%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.90%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.94%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.97%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.16 · stop móvel (pico +1.14%, guard: 1 op, 100% certas, +0.17 · stop móvel (pico +1.16%, guard: 1 op, 100% certas, +0.17 · stop móvel (pico +1.22%, guard: 1 op, 100% certas, +0.18 · stop móvel (pico +1.27%, guard: 1 op, 100% certas, +0.19 · stop móvel (pico +1.39%, guard: 1 op, 100% certas, +0.21 · stop móvel (pico +1.41%, guard: 1 op, 100% certas, +0.22 · stop móvel (pico +1.44%, guard: 1 op, 100% certas, +0.22 · stop móvel (pico +0.84%, guard: 2 op, 100% certas, +0.23 · stop móvel (pico +1.55%, guard: 1 op, 100% certas, +0.24 · stop móvel (pico +0.93%, guard: 2 op, 100% certas, +0.27 · stop móvel (pico +1.00%, guard: 2 op, 100% certas, +0.29 · stop móvel (pico +1.87%, guard: 1 op, 100% certas, +0.30 · fim da vela do v4: 19 op, 68% certas, +0.98
 - **Moedas que mais perderam (≥ 3 op):** CELO -0.59 (3 op) · ALT -0.36 (5 op) · CYBER -0.28 (8 op) · U -0.12 (4 op) · STO -0.07 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** BLUR +0.26 (3 op) · STO -0.07 (3 op) · U -0.12 (4 op) · CYBER -0.28 (8 op) · ALT -0.36 (5 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 5.92** · 206 operações fechadas · 0 abertas
+Carteira **US$ 5.92** · 206 operações fechadas · 1 abertas
 
 - **Total:** 86/206 com lucro (42%), resultado -4.08, média -0.020 por operação.
-- **Últimas 24 h:** 32/55 com lucro, +0.02.
+- **Últimas 24 h:** 31/53 com lucro, -0.06.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 06–11 UTC: 45 op, 40% certas, -1.29 · 12–17 UTC: 58 op, 43% certas, -0.95 · 00–05 UTC: 33 op, 61% certas, +1.02
 - **Por lado:** compra: 148 op, 39% certas, -3.37 · venda: 58 op, 48% certas, -0.71
 - **Por confiança do v4:** muito alta (≥0,12): 127 op, 44% certas, -1.98 · alta (0,08–0,12): 64 op, 36% certas, -1.40 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -72,17 +72,17 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 28.3% das moedas subindo em 24 h, 27.6% em 4 h · BTC 24 h -0.44%, 4 h -0.47%.
+- **Amplitude:** 35.4% das moedas subindo em 24 h, 31.5% em 4 h · BTC 24 h -0.4%, 4 h -0.24%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.8%/ano · {'BTC': 11.0, 'ETH': 6.4, 'SOL': -0.7} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 5.0% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.8%/ano · {'BTC': 11.0, 'ETH': 8.0, 'SOL': 3.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETH triângulo ascendente (alta, CONFIRMOU) · AERO topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · HYPE topo duplo (baixa, formado) · HYPE fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · ICP fundo duplo (alta, formado) · MARSCOIN topo duplo (baixa, formado) · MMT fundo duplo (alta, formado)
+- 📰 16/11 15:44 UTC · CoinDesk: German parliament proposes crypto seizures without criminal charges
 - 📰 16/11 15:04 UTC · Decrypt: 'Nobody Knows Who's in Charge': Boris Johnson Stands by Bitcoin Skepticism at Breakpoint
 - 📰 16/11 14:55 UTC · Cointelegraph: Zelle picks Solana for ZelleUSD stablecoin and international payments
 - 📰 16/11 14:19 UTC · Cointelegraph: Lighter pauses withdrawals after reported $10M account theft
 - 📰 16/11 13:31 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 16/11 13:30 UTC · Cointelegraph: Banks are banning AI agents over security... and competition concerns
-- 📰 16/11 13:29 UTC · Cointelegraph: Strategy buys $33M in Bitcoin, spends $228M on STRC buybacks
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.60** · 26 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 16764 apostas conferidas ao vivo, acerto 53.6%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 16772 apostas conferidas ao vivo, acerto 53.6%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
