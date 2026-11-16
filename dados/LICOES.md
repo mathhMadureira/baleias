@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 01:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 01:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 10.07** · 35 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 9.62** · 35 operações fechadas · 4 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 22/35 com lucro (63%), resultado +0.51, média +0.015 por operação.
 - **Últimas 24 h:** 22/35 com lucro, +0.51.
@@ -18,10 +18,10 @@ Carteira **US$ 10.07** · 35 operações fechadas · 4 abertas · carteiras ante
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.24** · 189 operações fechadas · 2 abertas
+Carteira **US$ 6.19** · 189 operações fechadas · 2 abertas
 
 - **Total:** 75/189 com lucro (40%), resultado -3.50, média -0.019 por operação.
-- **Últimas 24 h:** 57/126 com lucro, -0.22.
+- **Últimas 24 h:** 57/125 com lucro, -0.19.
 - **Por horário:** 18–23 UTC: 69 op, 32% certas, -2.93 · 12–17 UTC: 51 op, 41% certas, -0.35 · 06–11 UTC: 41 op, 41% certas, -0.33 · 00–05 UTC: 28 op, 54% certas, +0.11
 - **Por lado:** compra: 140 op, 38% certas, -3.28 · venda: 49 op, 45% certas, -0.22
 - **Por confiança do v4:** alta (0,08–0,12): 61 op, 33% certas, -1.78 · muito alta (≥0,12): 113 op, 42% certas, -1.02 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -35,7 +35,7 @@ Carteira **US$ 6.24** · 189 operações fechadas · 2 abertas
 Carteira **US$ 7.81** · 184 operações fechadas · 1 abertas
 
 - **Total:** 80/184 com lucro (43%), resultado -2.19, média -0.012 por operação.
-- **Últimas 24 h:** 29/78 com lucro, -1.38.
+- **Últimas 24 h:** 28/75 com lucro, -1.26.
 - **Por horário:** 00–05 UTC: 46 op, 46% certas, -0.76 · 06–11 UTC: 40 op, 40% certas, -0.75 · 12–17 UTC: 36 op, 39% certas, -0.55 · 18–23 UTC: 62 op, 47% certas, -0.14
 - **Por lado:** compra: 111 op, 46% certas, -2.14 · venda: 73 op, 40% certas, -0.05
 - **Por motivo de saída:** stop de segurança −2%: 3 op, 0% certas, -1.59 · fim da vela seguinte: 180 op, 44% certas, -0.70 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10
@@ -59,7 +59,7 @@ Carteira **US$ 7.15** · 46 operações fechadas · 2 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 5.81** · 14 operações fechadas · 3 abertas
+Carteira **US$ 5.82** · 14 operações fechadas · 3 abertas
 
 - **Total:** 3/14 com lucro (21%), resultado -3.49, média -0.249 por operação.
 - **Últimas 24 h:** 3/14 com lucro, -3.49.
@@ -72,11 +72,11 @@ Carteira **US$ 5.81** · 14 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 81.4% das moedas subindo em 24 h, 17.8% em 4 h · BTC 24 h 2.36%, 4 h -0.32%.
+- **Amplitude:** 80.6% das moedas subindo em 24 h, 15.5% em 4 h · BTC 24 h 3.19%, 4 h -0.17%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': 11.0, 'ETH': 2.3, 'SOL': -7.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.2%/ano · {'BTC': 11.0, 'ETH': 1.0, 'SOL': -5.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** JUP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ZIL bandeira de baixa (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BLUR fundo duplo (alta, formado) · CELO topo duplo (baixa, formado) · GTC fundo duplo (alta, formado) · JTO topo duplo (baixa, formado) · JTO fundo duplo (alta, formado) · JUP topo duplo (baixa, formado) · LSK fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BEAMX topo duplo (baixa, CONFIRMOU) · ZIL bandeira de baixa (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · CELO topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ENA fundo duplo (alta, formado) · GTC fundo duplo (alta, formado) · JTO topo duplo (baixa, formado) · JTO fundo duplo (alta, formado) · LSK fundo duplo (alta, formado)
 - 📰 15/11 23:47 UTC · Cointelegraph: Jensen Huang weighs Nvidia comeback days after shock exit: FT
 - 📰 15/11 22:50 UTC · Cointelegraph: US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest
 - 📰 15/11 19:30 UTC · CoinDesk: Did prediction markets call the U.S. midterm election?: State of Crypto
@@ -120,7 +120,7 @@ Carteira **US$ 5.81** · 14 operações fechadas · 3 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 13780 apostas conferidas ao vivo, acerto 52.8%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 13849 apostas conferidas ao vivo, acerto 53.0%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
