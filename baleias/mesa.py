@@ -262,9 +262,8 @@ def realizados():
     """Todas as operações FECHADAS dos robôs que operam no dia (Rápido, Scalper e as apostas do Cérebro v3), numa lista só,
     com o total realizado hoje (dia UTC) de cada um — o que o dono quer ver: lucro realizado, não só o saldo."""
     saida = []
-    for arq, robo in (("robo_minerador.json", "⛏ Minerador"),
-                      ("robo_v4_perp.json", "🌲 Rápido nuvem"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_testnet.json", "🧪 v4 Testnet"), ("robo_scalper_nuvem.json", "✂ Scalper nuvem"),
-                      ("robo_claude.json", "🤖 Robô Claude")):
+    from . import equipe
+    for arq, robo in tuple((a["arquivo"], f"{a['avatar']} {a['nome']}") for a in equipe.EQUIPE):     # todos os robôs da equipe (15/11)
         try:
             e = _git_json(f"dados/{arq}") if arq.startswith(("robo_minerador", "robo_v4_", "robo_claude", "robo_scalper_nuvem")) else json.loads((config.RAIZ / arq).read_text())
         except (OSError, ValueError):
@@ -426,3 +425,44 @@ def enviar_ao_chefe(texto, para="claude"):
         return {"erro": (r.stderr or r.stdout or "falha no gh")[:300]}
     _enviadas.append(m)
     return {"ok": True, "mensagem": m}
+
+
+# ---------------- Placar da mesa (painel novo de 15/11) ----------------
+
+_placar = {"t": 0.0, "dados": None}
+
+
+def placar_painel():
+    """Todos os robôs da equipe com as medidas do torneio (executor.torneio): carteira, resultado, operações, acerto, fator de lucro,
+    posições abertas e situação (campeão, desafiante, ordem do chefe, alerta). Mais o campeão, os vereditos e o vigia do v4."""
+    if time.time() - _placar["t"] < 20 and _placar["dados"]:
+        return _placar["dados"]
+    from . import equipe
+    from executor import torneio as T
+    _buscar_estado()
+    estados = {a["id"]: _git_json(f"dados/{a['arquivo']}") for a in equipe.EQUIPE}
+    r = T.avaliar(estados)
+    ordens = _git_json("dados/ordens.json") or {}
+    agora = time.time()
+    desafiantes = {d: c for c, ds in T.DESAFIANTES.items() for d in ds}
+    vered = {v["desafiante"]: v["veredito"] for v in r["vereditos"]}
+    linhas = []
+    for a in equipe.EQUIPE:
+        e, m = estados.get(a["id"]), r["placar"].get(a["id"])
+        if not e or not m:
+            continue
+        o = ordens.get(a["id"])
+        o = o if o and o.get("acao") != "liberar" and o.get("ate", 0) > agora else None
+        fech = e.get("fechadas") or []
+        ult = max((x.get("saida_t") or 0) for x in fech) if fech else None
+        linhas.append({**m, "id": a["id"], "nome": a["nome"], "avatar": a["avatar"], "motor": a["motor"], "missao": a["missao"],
+                       "abertas": len(e.get("abertas") or {}), "resultado": round(m["carteira"] - 10.0, 2),
+                       "campeao": a["id"] == r["campeao"], "desafia": desafiantes.get(a["id"]), "veredito": vered.get(a["id"]),
+                       "ordem": equipe.ACOES.get(o["acao"]) if o else None, "alerta": e.get("alerta_rotina"),
+                       "eliminado": bool(e.get("eliminado") or e.get("quebrou")), "ultima_saida": ult})
+    linhas.sort(key=lambda x: -x["carteira"])
+    vg = _git_json("dados/vigia_v4.json") or {}
+    dados = {"t": agora, "linhas": linhas, "campeao": r["campeao"], "min_ops": r["min_ops"], "vigia": vg.get("resumo"),
+             "regime": ((_git_json("dados/robo_v4_perp.json") or {}).get("regime") or {})}
+    _placar.update(t=agora, dados=dados)
+    return dados

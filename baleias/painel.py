@@ -198,6 +198,13 @@ class Manipulador(BaseHTTPRequestHandler):
             except Exception as ex:
                 corpo = {"erro": f"{type(ex).__name__}: {ex}"}
             self._enviar(200, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")
+        elif self.path.startswith("/api/placar"):
+            from . import mesa
+            try:
+                corpo = mesa.placar_painel()
+            except Exception as ex:
+                corpo = {"erro": f"{type(ex).__name__}: {ex}"}
+            self._enviar(200, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")
         elif self.path.startswith("/api/sala"):
             from . import mesa
             try:

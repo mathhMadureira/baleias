@@ -124,10 +124,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 <header>
   <div class="marca">BALEIAS <b>TERMINAL</b></div>
   <nav>
-    <button data-aba="robo" class="ativo">Robô</button>
-    <button data-aba="mesa">🏦 Mesa proprietária</button>
-    <button data-aba="mapa">🗺 Mapa do mercado</button>
-    <button data-aba="replay">▶ Replay</button>
+    <button data-aba="robo" class="ativo">🐋 Mesa</button>
     <button data-aba="mercado">Mercado ao vivo</button>
     <button data-aba="lab">Laboratório</button>
   </nav>
@@ -142,8 +139,13 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 <main>
 <section class="aba ativa" id="aba-robo">
   <div class="subnav">
-    <a href="#sec-sala">🐋 Sala</a><a href="#sec-placar">🏁 Placar</a><a href="#sec-lucros">💵 Lucros</a><a href="#sec-varredura">🔎 Varredura</a><a href="#sec-cerebro">🧠 Cérebros</a><a href="#sec-rapido">⚡ Rápido</a>
-    <a href="#sec-scalper">✂ Scalper</a><a href="#sec-vortice">🎯 H19</a><a href="#sec-funding">💰 Funding</a><a href="#sec-diario">🐢 Diário</a>
+    <a href="#sec-mesa">🏆 Placar</a><a href="#sec-sala">🐋 Sala</a><a href="#sec-nuvem">☁ Posições</a><a href="#sec-lucros">💵 Lucros</a><a href="#sec-licoes">📓 Lições</a><a href="#arquivo">🗄 Arquivo</a>
+  </div>
+  <div class="card" id="sec-mesa" style="margin-bottom:14px;border-color:#f0b90baa">
+    <h3>🏆 Placar da mesa · todos os robôs, carteira de US$ 10 cada, medidos do mesmo jeito · atualiza a cada minuto<span class="dir mut num" id="mp-t"></span></h3>
+    <div id="mp-resumo" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
+    <div style="overflow-x:auto"><table class="num" id="mp-tabela" style="width:100%;border-collapse:collapse;font-size:13px"><tr><td class="vazio">carregando…</td></tr></table></div>
+    <div id="mp-notas" class="mut" style="font-size:12px;margin-top:8px"></div>
   </div>
   <div class="card" id="sec-sala" style="margin-bottom:14px;border-color:#f5a623aa">
     <h3>🐋 Sala de operações · a mesa inteira numa conversa só: o 🤖 Robô Claude é o chefe, responde você e dá ordens aos robôs<span class="dir mut num" id="sl-t"></span></h3>
@@ -169,17 +171,24 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     </div>
     <div id="nv-grafico" class="tv" style="height:380px"></div>
   </div>
-  <div class="card" id="sec-placar" style="margin-bottom:14px">
-    <h3>🏁 Carteiras · US$ 10 por robô desde 11/11 13:35 · todos no perpétuo, com o cérebro v4 · ☁ = roda na nuvem 24 h<span class="dir mut num" id="pl-t"></span></h3>
-    <div id="pl-relogio" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
-    <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
-  </div>
   <div class="card" id="sec-lucros" style="margin-bottom:14px;border-color:#50e3c255">
     <h3>💵 Lucros e perdas realizados — operações fechadas de cada carteira desde o início do desafio (cada robô é uma conta separada; não se somam)<span class="dir mut num" id="lr-t"></span></h3>
     <div class="grade" style="grid-template-columns:minmax(260px,1fr) minmax(0,2.4fr)">
       <div id="lr-totais"></div>
       <div id="lr-lista" style="max-height:300px;overflow:auto"></div>
     </div>
+  </div>
+  <div class="card" id="sec-licoes" style="margin-bottom:14px;border-color:#f0b90b55">
+    <h3>📓 Diário de lições dos robôs · escrito pela nuvem a cada 15 min a partir do estado real<span class="dir mut num" id="lc-t"></span></h3>
+    <pre id="licoes" style="white-space:pre-wrap;font-family:system-ui;font-size:13px;line-height:1.45;max-height:520px;overflow:auto;margin:0;color:var(--text)">carregando…</pre>
+  </div>
+  <details id="arquivo" class="card" style="margin-bottom:14px;border-color:#2a3746">
+    <summary style="cursor:pointer;font-weight:600">🗄 Arquivo — robôs e pesquisas desligados ou fora da mesa (clique para abrir). Nada aqui decide dinheiro.</summary>
+    <div style="margin-top:12px">
+  <div class="card" id="sec-placar" style="margin-bottom:14px">
+    <h3>🏁 Carteiras · US$ 10 por robô desde 11/11 13:35 · todos no perpétuo, com o cérebro v4 · ☁ = roda na nuvem 24 h<span class="dir mut num" id="pl-t"></span></h3>
+    <div id="pl-relogio" class="num" style="margin:-4px 0 10px;font-size:13px"></div>
+    <div class="placar-robos" id="pl-robos"><div class="vazio">carregando…</div></div>
   </div>
   <div class="card" id="sec-varredura" style="margin-bottom:14px;border-color:#16c78466">
     <h3>🔎 Varredura ao vivo — o robô analisa as 33 moedas sem parar <span class="ponto ok" id="vr-pulso" style="display:inline-block"></span>
@@ -271,10 +280,6 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     </div>
     <details class="ajuda"><summary>Como funciona</summary><div class="mut" style="font-size:12px;margin-top:6px">Comprado no spot e vendido no perpétuo da mesma moeda: o preço se anula e sobra a taxa que os alavancados pagam a cada hora. Entra numa moeda só quando a média de 72 h paga o custo (probabilidade medida: 84% dos dias positivos). Pequeno, mas constante. Ganho real só com conta de futuros.</div></details>
   </div>
-  <div class="card" id="sec-licoes" style="margin-bottom:14px;border-color:#f0b90b55">
-    <h3>📓 Diário de lições dos robôs · escrito pela nuvem a cada 15 min a partir do estado real<span class="dir mut num" id="lc-t"></span></h3>
-    <pre id="licoes" style="white-space:pre-wrap;font-family:system-ui;font-size:13px;line-height:1.45;max-height:520px;overflow:auto;margin:0;color:var(--text)">carregando…</pre>
-  </div>
   <div class="card" id="sec-diario" style="margin-bottom:14px;border-color:#2a3746;padding-bottom:4px">
     <h3>🐢 Robô diário (Tartaruga) — 33 moedas, decide uma vez por dia na nuvem (simulado, US$ 700)</h3>
   </div>
@@ -333,6 +338,8 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
       </div>
     </div>
   </div>
+    </div>
+  </details>
 </section>
 
 <section class="aba" id="aba-mesa">
@@ -1163,6 +1170,41 @@ $("sl-form").addEventListener("submit", async ev => {
   } catch (e) { $("sl-aviso").textContent = "❌ não enviou: " + e; }
 });
 cicloSala();
+
+// ---------- Placar da mesa (painel novo de 15/11): todos os robôs, mesmas medidas do torneio ----------
+let mp = null, mpTimer = null;
+const mpEsc = x => String(x ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+function mpCor(v) { return v == null ? "" : v > 0 ? "color:var(--verde,#3fb950)" : v < 0 ? "color:var(--verm,#f85149)" : ""; }
+function desenharPlacarMesa() {
+  if (!mp || mp.erro) { $("mp-tabela").innerHTML = `<tr><td class="vazio">${mpEsc(mp && mp.erro || "sem dados")}</td></tr>`; return; }
+  const reg = mp.regime || {}, s24 = reg.subindo_24h;
+  const txtReg = s24 == null ? "regime: não sei" : s24 <= 30 ? `📉 mercado em BAIXA (${s24}% das moedas subindo em 24 h) → robôs vendem`
+    : s24 >= 70 ? `📈 mercado em ALTA (${s24}% subindo em 24 h) → robôs compram` : `↔ sem tendência clara (${s24}% subindo em 24 h)`;
+  const camp = mp.linhas.find(l => l.campeao);
+  $("mp-resumo").innerHTML = `${txtReg} · 🏆 campeão: <b>${camp ? `${camp.avatar} ${mpEsc(camp.nome)}` : `ninguém ainda (precisa de ${mp.min_ops} operações)`}</b>`;
+  const cab = `<tr class="mut" style="text-align:right;border-bottom:1px solid var(--line)"><th style="text-align:left">#</th><th style="text-align:left">robô</th><th>carteira</th><th>resultado</th>
+    <th>operações</th><th>acerto</th><th title="soma dos ganhos ÷ soma das perdas; acima de 1 ganha mais do que perde">fator de lucro</th><th>abertas</th><th style="text-align:left">situação</th></tr>`;
+  const linhas = mp.linhas.map((l, i) => {
+    const sit = [l.campeao ? "🏆 campeão" : "", l.desafia ? `🥊 desafia o ${mpEsc(l.desafia)}: ${mpEsc(l.veredito || "")}` : "", l.ordem ? `📣 ${mpEsc(l.ordem)}` : "",
+                 l.alerta ? `⚠ ${mpEsc(l.alerta)}` : "", l.eliminado ? "⛔ abaixo do piso" : ""].filter(Boolean).join(" · ");
+    const fl = l.fator_lucro == null ? "—" : (+l.fator_lucro).toFixed(2);
+    return `<tr style="text-align:right;border-bottom:1px solid #ffffff0d" title="${mpEsc(l.missao)}">
+      <td style="text-align:left">${i + 1}</td><td style="text-align:left;white-space:nowrap">${l.avatar} ${mpEsc(l.nome)}<div class="mut" style="font-size:11px">${mpEsc(l.motor)}</div></td>
+      <td><b>US$ ${(+l.carteira).toFixed(2)}</b></td><td style="${mpCor(l.resultado)}">${l.resultado >= 0 ? "+" : ""}${(+l.resultado).toFixed(2)}</td>
+      <td>${l.ops}</td><td>${l.acerto == null ? "—" : (l.acerto * 100).toFixed(0) + "%"}</td>
+      <td style="${l.fator_lucro == null ? "" : l.fator_lucro >= 1 ? "color:var(--verde,#3fb950)" : "color:var(--verm,#f85149)"}">${fl}</td>
+      <td>${l.abertas}</td><td style="text-align:left;font-size:12px">${sit}</td></tr>`;
+  }).join("");
+  $("mp-tabela").innerHTML = cab + linhas;
+  $("mp-notas").innerHTML = (mp.vigia ? mpEsc(mp.vigia) + "<br>" : "") + "Carteira inclui as posições abertas no último preço. Passe o mouse num robô para ver a missão dele.";
+}
+async function cicloPlacarMesa() {
+  clearTimeout(mpTimer);
+  try { mp = await j("/api/placar"); $("mp-t").textContent = "atualizado " + new Date().toLocaleTimeString("pt-BR"); desenharPlacarMesa(); }
+  catch (e) { $("mp-t").textContent = "erro ao ler o placar"; }
+  mpTimer = setTimeout(cicloPlacarMesa, 60000);
+}
+cicloPlacarMesa();
 async function cicloLicoes() {
   try {
     const r = await fetch("/api/licoes", {cache: "no-store"}); const txt = await r.text();
