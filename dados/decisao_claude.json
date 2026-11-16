@@ -1,37 +1,27 @@
 {
- "t": 1794838452,
- "leitura": "Baixa de 24 h: só 19,7% das moedas sobem (mediana −2,11%), BTC −1,92% em 24 h e −0,22% em 4 h; o repique de 1 h (79,5% subindo, BTC +0,03%) vem sem volume (BTC 1,13× a média, abaixo de 1,5×) e o BTC segue abaixo das médias de 50 e 200 dias, medo 10: ponto de venda, mesa segue vendida.",
- "posicoes": [
-  {
-   "moeda": "BTCUSDT",
-   "lado": "venda",
-   "motivo": "manter: baixa de 24 h (19,7% subindo), BTC −1,92% em 24 h, repique de 1 h sem volume (1,13×); posição −0,08% contra stop de 1,7%"
-  },
-  {
-   "moeda": "XRPUSDT",
-   "lado": "venda",
-   "motivo": "manter: a favor da baixa de 24 h; −0,35% após 3,7 h contra stop de 2,3%, a razão da entrada continua"
-  },
-  {
-   "moeda": "JUPUSDT",
-   "lado": "venda",
-   "motivo": "manter: a favor da baixa de 24 h; −0,87% contra stop de 3,3%, dentro do ruído do repique de 1 h"
-  },
-  {
-   "moeda": "BEAMXUSDT",
-   "lado": "venda",
-   "motivo": "manter: segue entre as maiores quedas de 4 h (−3,53%, volume 1,12×) com 24 h só −0,49%, não esticada; −0,27% contra stop de 4%"
-  }
+ "t": 1794842032,
+ "leitura": "Mercado indeciso: 24 h virou de 19,7% para 57,9% das moedas subindo em 1 h; BTC +0,62% em 24 h, +0,92% em 4 h e +1,53% na última hora com volume 1,37×, preço 65166 (a 50 da máxima 65216). A baixa de 24 h acabou: mesa fora.",
+ "posicoes": [],
+ "fechar": [
+  "JUPUSDT"
  ],
- "fechar": [],
- "motivos_fechar": {},
- "licao": "As 4 vendas abertas (BTC, JUP, BEAMX com 0,8 h; XRP com 3,7 h) aguentam o repique de 1 h com 79,5% das moedas subindo sem bater o stop (−0,08%, −0,87%, −0,27%, −0,35%), repetindo as vendas de 10:21 em moedas com 24 h entre −0,5% e −6% que saíram no lucro pelo stop móvel. Conferir na próxima se passam de 2 h; fecho se o 24 h passar de 30% subindo ou o BTC fechar 1 h acima de 65216.",
+ "motivos_fechar": {
+  "JUPUSDT": "a razão da venda (baixa de 24 h) acabou: 24 h em 57,9% subindo, faixa indecisa; posição −0,47% após 1,8 h"
+ },
+ "licao": "A virada de 19,7% para 57,9% subindo em 24 h veio numa vela de 1 h do BTC de +1,53%: as vendas de BTC (−0,266, stop 1,7% a 65207) e XRP (−0,342, stop 2,3%) bateram o stop antes do meu critério de saída (BTC fechar 1 h acima de 65216), e só BEAMX (+0,059) saiu no lucro pelo stop móvel. Saída por fechamento de 1 h é lenta demais para stop de 1,7%; conferir na próxima se o 24 h passa de 70% (compras) ou volta a 30% (vendas) antes de abrir qualquer lado.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Baixa de 24 h com só 19,7% das moedas subindo (BTC −1,92% em 24 h, −0,22% em 4 h, volume 1,13×): repique de 1 h sem volume, mesa segue vendida (BTC, XRP, JUP, BEAMX). Minerador segue pausado até 16:21: fator de lucro 0,69 em 211 operações, ainda abaixo de 0,7. Sem ordens novas: Caçador 0,76, Scalper 0,89, Rápido 1,00, LBank 0,89. v4 como voto a favor (86 vendas contra 21 compras; vigia 53,7% contra 53,5% do laboratório), mas o horário 12–18 h UTC acerta só 51,0%: entradas exigentes nesta faixa."
+   "texto": "Mercado indeciso: 57,9% das moedas sobem em 24 h (eram 19,7% há 1 h), BTC +1,53% na última hora com volume 1,37×: a baixa acabou, Robô Claude fecha JUP e fica fora. Minerador segue pausado até 16:21 (fator de lucro 0,69 em 211 operações). LBank pausado 6 h: fator de lucro 0,51 em 34 operações (soma −2,30). v4 só como voto: vigia dentro do esperado (53,7% contra 53,5%), mas acerta 51,1% das 12–18 h UTC."
   }
  ],
- "ordens": []
+ "ordens": [
+  {
+   "agente": "lbank",
+   "acao": "pausar",
+   "horas": 6,
+   "motivo": "torneio: fator de lucro 0,51 em 34 operações (soma −2,30, carteira 7,02), abaixo de 0,7"
+  }
+ ]
 }
