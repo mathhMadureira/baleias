@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 11:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 11:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 9.01** · 63 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 9.15** · 63 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 40/63 com lucro (63%), resultado -0.84, média -0.013 por operação.
 - **Últimas 24 h:** 38/60 com lucro, -0.62.
@@ -18,10 +18,10 @@ Carteira **US$ 9.01** · 63 operações fechadas · 3 abertas · carteiras anter
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.40** · 199 operações fechadas · 2 abertas
+Carteira **US$ 6.46** · 199 operações fechadas · 2 abertas
 
 - **Total:** 82/199 com lucro (41%), resultado -3.48, média -0.017 por operação.
-- **Últimas 24 h:** 36/74 com lucro, -0.16.
+- **Últimas 24 h:** 35/72 com lucro, +0.02.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 06–11 UTC: 45 op, 40% certas, -1.29 · 12–17 UTC: 51 op, 41% certas, -0.35 · 00–05 UTC: 33 op, 61% certas, +1.02
 - **Por lado:** compra: 147 op, 39% certas, -3.45 · venda: 52 op, 48% certas, -0.03
 - **Por confiança do v4:** alta (0,08–0,12): 63 op, 35% certas, -1.48 · muito alta (≥0,12): 121 op, 44% certas, -1.30 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -35,7 +35,7 @@ Carteira **US$ 6.40** · 199 operações fechadas · 2 abertas
 Carteira **US$ 6.65** · 211 operações fechadas · 1 abertas
 
 - **Total:** 90/211 com lucro (43%), resultado -3.35, média -0.016 por operação.
-- **Últimas 24 h:** 20/64 com lucro, -2.26.
+- **Últimas 24 h:** 20/63 com lucro, -2.23.
 - **Por horário:** 00–05 UTC: 57 op, 44% certas, -1.49 · 06–11 UTC: 56 op, 39% certas, -1.18 · 12–17 UTC: 36 op, 39% certas, -0.55 · 18–23 UTC: 62 op, 47% certas, -0.14
 - **Por lado:** compra: 125 op, 45% certas, -2.78 · venda: 86 op, 40% certas, -0.57
 - **Por motivo de saída:** fim da vela seguinte: 205 op, 42% certas, -1.98 · stop de segurança −2%: 3 op, 0% certas, -1.59 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.72%, guard: 1 op, 100% certas, +0.10
@@ -59,7 +59,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 5.25** · 18 operações fechadas · 4 abertas
+Carteira **US$ 5.24** · 18 operações fechadas · 4 abertas
 
 - **Total:** 5/18 com lucro (28%), resultado -4.27, média -0.237 por operação.
 - **Últimas 24 h:** 5/13 com lucro, -2.25.
@@ -72,17 +72,17 @@ Carteira **US$ 5.25** · 18 operações fechadas · 4 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 22.0% das moedas subindo em 24 h, 35.6% em 4 h · BTC 24 h -1.21%, 4 h -0.13%.
+- **Amplitude:** 22.7% das moedas subindo em 24 h, 33.6% em 4 h · BTC 24 h -1.4%, 4 h -0.53%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 11.0, 'ETH': -10.7, 'SOL': 6.1} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AR topo duplo (baixa, formado) · AUDIO fundo duplo (alta, formado) · AUDIO ombro-cabeça-ombro (baixa, formado) · BEAMX topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · CYBER ombro-cabeça-ombro (baixa, formado) · ETH triângulo ascendente (alta, formado) · GRAM topo duplo (baixa, formado) · JUV fundo duplo (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.1%/ano · {'BTC': 11.0, 'ETH': -9.9, 'SOL': 9.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 10.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** AR topo duplo (baixa, formado) · AUDIO fundo duplo (alta, formado) · AUDIO ombro-cabeça-ombro (baixa, formado) · BEAMX topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · CYBER ombro-cabeça-ombro (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH triângulo ascendente (alta, formado)
+- 📰 16/11 11:47 UTC · CoinDesk: Singapore, Germany test cross-border payments to reduce settlement risk
 - 📰 16/11 11:03 UTC · CoinDesk: Bitcoin slips after rebounding from July 14 low that triggered $2 billion of liquidations
 - 📰 16/11 10:49 UTC · Cointelegraph: Singapore, Germany test cross-border FX settlement with CBDCs
 - 📰 16/11 10:39 UTC · Cointelegraph: BTC price tags 18-week low into Nvidia earnings: Three things to know in Bitcoin this week
 - 📰 16/11 10:25 UTC · Decrypt: German Lawmakers Back Customs Powers to Seize Crypto of 'Unclear Origin'
 - 📰 16/11 09:54 UTC · Decrypt: Vitalik Buterin Now ‘a Total Bull’ on leanPCS as Fast Track to Quantum-Safe Ethereum
-- 📰 16/11 09:34 UTC · CoinDesk: Live news: Bitcoin posts sixth weekly loss as tech stocks and metals slide
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.25** · 18 operações fechadas · 4 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 15840 apostas conferidas ao vivo, acerto 54.0%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 15867 apostas conferidas ao vivo, acerto 54.0%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
