@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.7% | 1979 | 50.5%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 1980 | 50.5%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | raschke_graal_alta | promissor | 66.7% | 3 | 20.8%–93.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
 | connors_8020_alta | promissor | 60.0% | 5 | 23.1%–88.2% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
@@ -26,6 +26,6 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_espaco_duplo_baixo | reprovado | — | 0 | — | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | velez_elefante | reprovado | — | 0 | — | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
 | velez_estreito_rompe | reprovado | 0.0% | 1 | 0.0%–79.3% | Velez: rompimento do estado estreito (H23: sem vantagem) |
-| demark_td9_baixa | reprovado | — | 0 | — | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
+| demark_td9_baixa | reprovado | 0.0% | 1 | 0.0%–79.3% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | williams_wr_baixa | reprovado | — | 0 | — | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | connors_8020_baixa | reprovado | — | 0 | — | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |

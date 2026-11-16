@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 22:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 22:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 9.53** · 3 operações fechadas · 3 abertas
+Carteira **US$ 9.61** · 3 operações fechadas · 3 abertas
 
 - **Total:** 2/3 com lucro (67%), resultado -0.38, média -0.128 por operação.
 - **Últimas 24 h:** 2/2 com lucro, +0.15.
@@ -16,7 +16,7 @@ Carteira **US$ 9.53** · 3 operações fechadas · 3 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 9.53** · 3 operações fechadas · 3 abertas
+Carteira **US$ 9.61** · 3 operações fechadas · 3 abertas
 
 - **Total:** 2/3 com lucro (67%), resultado -0.38, média -0.128 por operação.
 - **Últimas 24 h:** 2/2 com lucro, +0.15.
@@ -42,7 +42,7 @@ Carteira **US$ 9.89** · 1 operações fechadas · 0 abertas
 Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
 - **Total:** 34/96 com lucro (35%), resultado -5.04, média -0.053 por operação.
-- **Últimas 24 h:** 27/73 com lucro, -3.56.
+- **Últimas 24 h:** 25/70 com lucro, -3.65.
 - **Por horário:** 00–05 UTC: 39 op, 38% certas, -2.04 · 18–23 UTC: 37 op, 32% certas, -2.02 · 06–11 UTC: 20 op, 35% certas, -0.98
 - **Por lado:** compra: 67 op, 34% certas, -3.42 · venda: 29 op, 38% certas, -1.63
 - **Por confiança do v4:** confiança baixa (<0,05): 59 op, 42% certas, -2.67 · média (0,05–0,08): 21 op, 29% certas, -1.46 · alta (0,08–0,12): 13 op, 23% certas, -0.63 · muito alta (≥0,12): 3 op, 0% certas, -0.29
@@ -59,20 +59,21 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 47.5% das moedas subindo em 24 h, 75.4% em 4 h · BTC 24 h 0.44%, 4 h 0.6%.
+- **Amplitude:** 45.8% das moedas subindo em 24 h, 76.3% em 4 h · BTC 24 h 0.42%, 4 h 0.81%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 20.5%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 10.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 18.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BANANAS31 bandeira de alta (alta, CONFIRMOU) · ZRO fundo duplo (alta, CONFIRMOU) · BCH topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DOT fundo duplo (alta, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · GRAM topo duplo (baixa, formado) · GRAM fundo duplo (alta, formado) · HEI fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BANANAS31 bandeira de alta (alta, CONFIRMOU) · BCH topo duplo (baixa, formado) · CYBER topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DOT fundo duplo (alta, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · GRAM topo duplo (baixa, formado) · GRAM fundo duplo (alta, formado) · HEI fundo duplo (alta, formado)
+- 📰 16/11 22:18 UTC · Decrypt: Bitcoin Wallet Maker Trezor Says Customer Data Was Exposed Again
+- 📰 16/11 22:07 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 16/11 21:51 UTC · CoinDesk: Former Robinhood engineer pleads guilty to insider trading scheme on Hyperliquid
 - 📰 16/11 21:46 UTC · Decrypt: Bitcoin's $2 Billion Liquidation Weekend Leaves Traders Watching $60,000
 - 📰 16/11 21:16 UTC · Decrypt: Hackers Redirected Bitcoin Miner Rewards via AI Attack, Luxor CEO Says
 - 📰 16/11 20:45 UTC · Cointelegraph: Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump
-- 📰 16/11 20:36 UTC · Decrypt: Tom Lee Blames Nvidia and Anthropic IPO for Ethereum Plunge as Bitmine Buys the Dip
-- 📰 16/11 20:35 UTC · CoinDesk: Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 16/11 22:09 UTC · **fora do mercado** · Indeciso: 47,5% das moedas sobem em 24 h (eram 32,0% às 21:19), 75,4% em 4 h e 81,4% em 1 h; BTC +0,44% em 24 h, +0,6% em 4 h, volume 1,04×; medo 10, BTC abaixo
 - 16/11 21:09 UTC · **fora do mercado** · Indeciso, perto da baixa: 32,0% das moedas sobem em 24 h (era 41,3% há 1 h), 35,2% em 4 h e só 14,8% em 1 h; BTC −0,1% em 24 h, +0,22% em 4 h, volume 1,06×, aba
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
@@ -94,7 +95,7 @@ Sem operações fechadas ainda.
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
@@ -102,7 +103,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 17943 apostas conferidas ao vivo, acerto 54.4%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 18005 apostas conferidas ao vivo, acerto 54.4%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
