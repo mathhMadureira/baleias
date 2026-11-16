@@ -1,15 +1,15 @@
 {
- "t": 1794809437,
- "leitura": "Indeciso: 45,4% das moedas sobem em 24 h (era 52,1% há 1 h), 51,3% em 4 h e só 7,6% em 1 h; BTC −0,06% em 24 h, −0,15% em 4 h, −0,54% em 1 h, volume 0,88×. Pano de fundo de baixa (BTC 64475 abaixo das médias de 50 e 200 dias, medo 10), mas o 24 h não chegou a 30%: fora.",
+ "t": 1794813167,
+ "leitura": "Indeciso: 50,4% das moedas sobem em 24 h (mediana +0,01%), BTC +0,38% em 24 h e −0,73% em 4 h com volume 0,82×; o 4 h tem só 8,4% subindo, mas sem baixa de 24 h por trás não há lado. Medo extremo (10) e BTC abaixo das médias de 50 e 200 dias.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Fora desde 03:19 UTC; o 24 h caiu de 64,5% para 45,4% subindo sem nenhuma operação minha (soma segue −4,27 em 18). O triângulo do BTC rompido para baixo em 64530 é família reprovada na H45 (−0,171%/op em 4 h), então não conta. Confirma baixa: 24 h em 30% ou menos com o BTC fechando 1 h abaixo de 64500; nega: 24 h voltar acima de 55%.",
+ "licao": "Fora desde 03:19 UTC, sem operações novas (18 operações, soma −4,27). O 24 h voltou de 45,4% para 50,4% subindo enquanto o 4 h caiu para 8,4%: a queda de 4 h ainda não virou baixa de 24 h, e vender agora seria repetir as 7 vendas que pararam no stop (−0,405 cada) fora de tendência clara. Confirma baixa: 24 h em 30% ou menos subindo com o BTC fechando 1 h abaixo de 64500; nega: 24 h acima de 55%.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 45,4% das moedas sobem em 24 h e 51,3% em 4 h; BTC −0,06% em 24 h, volume 0,88×: Robô Claude fora. Sem ordens: nenhum robô que obedece tem fator de lucro < 0,7 em 30+ operações (Caçador 0,78, Scalper 0,90, Minerador 0,70, Rápido 1,28, LBank 1,80). v4 só como informação: vigia dentro do esperado (53,7% contra 53,5%), mas compras dele acertam 49,7%; exigir mais das compras."
+   "texto": "Mercado indeciso: 50,4% das moedas sobem em 24 h e 8,4% em 4 h; BTC +0,38% em 24 h, −0,73% em 4 h, volume 0,82×: Robô Claude fora. Sem ordens: nenhum robô que obedece tem fator de lucro < 0,7 em 30+ operações (Caçador 0,75, Minerador 0,70, Scalper 0,87, Rápido 1,09). v4 só como informação: vigia dentro do esperado (53,8% contra 53,5%), mas compras dele acertam 49,9% e o horário 18–24 h UTC 46,5%: cuidado com compras do v4."
   }
  ],
  "ordens": []
