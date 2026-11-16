@@ -111,7 +111,7 @@ posições que já estavam abertas). Pausar só quando houver **perda medida**: 
 < 0,7 em 30+ operações, ou pedido explícito do dono em `caixa_dono`. **A cada hora, revise as ordens em vigor** (`equipe[].ordem`) e dê `liberar`
 às que perderam o motivo.
 
-Agentes que obedecem ordens: `cacador`, `rapido`, `scalper`, `minerador` (o `testnet` ainda não). Dê ordem quando a leitura do mercado for clara
+Agentes que obedecem ordens: `cacador`, `rapido`, `scalper`, `minerador`, `lbank` (o `testnet` ainda não). Dê ordem quando a leitura do mercado for clara
 (ex.: baixa de 24 h forte → `so_vendas` para todos por 6 h) ou quando um robô estiver perdendo contra a tendência. Não dê ordem só para
 repetir o que a regra da tendência já faz sozinha.
 

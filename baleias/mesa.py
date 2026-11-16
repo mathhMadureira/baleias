@@ -323,7 +323,7 @@ def mesa():
 
 _nuvem = {"t": 0.0, "dados": None}
 _precos = {"t": 0.0, "px": {}}
-ROBOS_NUVEM = (("robo_claude.json", "🤖 Robô Claude (decide de hora em hora)"), ("robo_livre.json", "🦅 Robô Livre (sem regras, 20×)"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_perp.json", "🌲 Rápido nuvem"),
+ROBOS_NUVEM = (("robo_claude.json", "🤖 Robô Claude (decide de hora em hora)"), ("robo_livre.json", "🦅 Robô Livre (sem regras, 20×)"), ("robo_lbank.json", "🟣 Robô LBank (SOL, memecoins, HOOD)"), ("robo_v4_cacador.json", "🎯 Caçador"), ("robo_v4_perp.json", "🌲 Rápido nuvem"),
                ("robo_scalper_nuvem.json", "✂ Scalper nuvem"), ("robo_scalper_b.json", "✂ Scalper B (sem alvo)"), ("robo_scalper_c.json", "✂ Scalper C (só confiantes)"), ("robo_scalper_d.json", "✂ Scalper D (foco)"), ("robo_minerador.json", "⛏ Minerador"), ("robo_v4_testnet.json", "🧪 v4 Testnet (Binance)"))
 
 

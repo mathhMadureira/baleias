@@ -1720,3 +1720,27 @@ class LBankSoLeitura(unittest.TestCase):
         self.assertEqual(s, {"USDT": {"total": 12.5, "livre": 10.0, "preso": 2.5}})
         self.assertIn(b"sign=", pedidos[0].data)
         self.assertNotIn(b"s" * 32, pedidos[0].data)                # o segredo nunca vai no pedido
+
+
+class RoboLBank(unittest.TestCase):
+    """H53: Robô LBank simulado — lado pelo regime, segura, sai quando o lado vira."""
+
+    def test_lado_desejado(self):
+        from executor.robo_lbank_nuvem import lado_desejado
+        self.assertEqual(lado_desejado("baixa", -0.05), "venda")
+        self.assertIsNone(lado_desejado("baixa", 0.02))
+        self.assertEqual(lado_desejado("alta", 0.02), "compra")
+        self.assertIsNone(lado_desejado(None, 0.02))
+        self.assertEqual(lado_desejado(None, -0.04), "venda")
+
+    def test_entra_nas_que_mais_caem_e_sai_quando_vira(self):
+        from executor import robo_lbank_nuvem as L
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": []}
+        mkt = {"SOLUSDT": (70.0, -0.06), "PEPEUSDT": (1e-5, -0.10), "DOGEUSDT": (0.2, -0.02), "WIFUSDT": (1.0, -0.03),
+               "BONKUSDT": (1e-5, -0.04), "HOODUSDT": (75.0, 0.03)}
+        L.passo(e, mkt, "baixa", {}, 1000.0)
+        self.assertEqual(set(e["abertas"]), {"PEPEUSDT", "SOLUSDT", "BONKUSDT", "WIFUSDT"})     # as 4 maiores quedas
+        self.assertEqual({p["lado"] for p in e["abertas"].values()}, {"venda"})
+        L.passo(e, {"SOLUSDT": (69.0, 0.02)}, "alta", {}, 2000.0)
+        self.assertEqual(e["fechadas"][0]["moeda"], "SOLUSDT")
+        self.assertGreater(e["fechadas"][0]["resultado_usd"], 0)                                 # vendeu a 70, saiu a 69
