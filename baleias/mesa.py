@@ -463,6 +463,6 @@ def placar_painel():
     linhas.sort(key=lambda x: -x["carteira"])
     vg = _git_json("dados/vigia_v4.json") or {}
     dados = {"t": agora, "linhas": linhas, "campeao": r["campeao"], "min_ops": r["min_ops"], "vigia": vg.get("resumo"),
-             "regime": ((_git_json("dados/robo_v4_perp.json") or {}).get("regime") or {})}
+             "regime": ((_git_json("dados/robo_v4_perp.json") or {}).get("regime") or {}), "banco": _git_json("dados/banco.json")}
     _placar.update(t=agora, dados=dados)
     return dados

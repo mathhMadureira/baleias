@@ -32,6 +32,9 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 6. Não citar ao dono taxa de tomador, contrato binário ou Polymarket: assuntos encerrados por decisão dele (13/11).
 7. Sem ressalvas repetidas, sem "convencimento", sem lista de opções: decida e faça; se houver um problema real, uma frase e seguir.
 8. Respostas curtas, números em tabela, português.
+9. **Tudo é feito para operar com dinheiro real** (16/11): nenhum robô recebe crédito nem empréstimo; cada um opera só o próprio dinheiro.
+10. **Não existe campeão no prejuízo** (16/11): campeão só com carteira acima de US$ 10 e fator de lucro > 1 (`executor/torneio.py`).
+11. **Nenhum robô é pausado no prejuízo ou com operações abertas** (16/11): `baleias/equipe.pausa_proibida` recusa a ordem.
 
 ## Segurança
 

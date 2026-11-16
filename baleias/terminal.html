@@ -1121,6 +1121,7 @@ function slNome(id) {
   if (id === "sala") return "sala";
   if (id === "vigia") return "🔬 Vigia do v4";
   if (id === "torneio") return "🏆 Torneio";
+  if (id === "banco") return "🏦 Banco";
   const a = (sl && sl.equipe || []).find(x => x.id === id);
   return a ? `${a.avatar} ${a.nome}` : id;
 }
@@ -1181,7 +1182,18 @@ function desenharPlacarMesa() {
   const txtReg = s24 == null ? "regime: não sei" : s24 <= 30 ? `📉 mercado em BAIXA (${s24}% das moedas subindo em 24 h) → robôs vendem`
     : s24 >= 70 ? `📈 mercado em ALTA (${s24}% subindo em 24 h) → robôs compram` : `↔ sem tendência clara (${s24}% subindo em 24 h)`;
   const camp = mp.linhas.find(l => l.campeao);
-  $("mp-resumo").innerHTML = `${txtReg} · 🏆 campeão: <b>${camp ? `${camp.avatar} ${mpEsc(camp.nome)}` : `ninguém ainda (precisa de ${mp.min_ops} operações)`}</b>`;
+  $("mp-resumo").innerHTML = `${txtReg} · 🏆 campeão: <b>${camp ? `${camp.avatar} ${mpEsc(camp.nome)}` : `nenhum — campeão só no lucro (carteira acima de US$ 10 e fator de lucro acima de 1, com ${mp.min_ops}+ operações)`}</b>`;
+  const bc = mp.banco;
+  if (bc && bc.tesouro) {
+    const t = bc.tesouro, x = bc.exposicao || {}, pe = bc.persistencia || {};
+    const conf = (x.conflitos || []).map(c => `${mpEsc(c.moeda.replace("USDT", ""))} (${c.robos.map(mpEsc).join(", ")}: US$ ${c.anulado_usd.toFixed(0)} se anulam)`).join("; ");
+    $("mp-resumo").innerHTML += `<div style="margin-top:6px">🏦 <b>Banco</b> · mesa US$ ${t.carteiras.toFixed(2)} de ${t.inicial.toFixed(0)}
+      (<span style="${mpCor(t.resultado)}">${t.resultado >= 0 ? "+" : ""}${t.resultado.toFixed(2)}</span>) · em margem ${t.em_margem.toFixed(2)} · livre ${t.livre.toFixed(2)}
+      · exposição bruta US$ ${(x.bruta || 0).toFixed(0)}, líquida US$ ${(x.liquida || 0).toFixed(0)}
+      ${conf ? `<div style="color:var(--amar,#d29922)">⚠ lados opostos na mesma moeda (numa conta real se anulam e só pagam taxa): ${conf}</div>` : ""}
+      ${pe.correlacao != null ? `<div class="mut" style="font-size:12px">lucro das últimas 30 operações se repete nas 30 seguintes? correlação ${pe.correlacao} em ${pe.janelas} janelas
+        (depois do lucro: ${pe.depois_do_lucro}; depois do prejuízo: ${pe.depois_do_prejuizo}) → ${pe.correlacao > 0.2 ? "sim" : "não: o banco não muda o dinheiro de lugar"}</div>` : ""}</div>`;
+  }
   const cab = `<tr class="mut" style="text-align:right;border-bottom:1px solid var(--line)"><th style="text-align:left">#</th><th style="text-align:left">robô</th><th>carteira</th><th>resultado</th>
     <th>operações</th><th>acerto</th><th title="soma dos ganhos ÷ soma das perdas; acima de 1 ganha mais do que perde">fator de lucro</th><th>abertas</th><th style="text-align:left">situação</th></tr>`;
   const linhas = mp.linhas.map((l, i) => {

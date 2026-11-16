@@ -1590,13 +1590,62 @@ class Torneio(unittest.TestCase):
     def test_campeao_exige_30_operacoes_e_desafiante_no_mesmo_periodo(self):
         from executor import torneio as T
         est = {"caçador": self._e([0.1, -0.2] * 20), "rapido": self._e([1.0] * 10),                    # rápido: ótimo, mas só 10 ops
-               "scalper": self._e([0.2, -0.1] * 30, t0=0), "scalper_b": self._e([0.5, -0.1] * 20, t0=20)}
+               "scalper": self._e([0.2, -0.1] * 30, t0=0, cart=13.0), "scalper_b": self._e([0.5, -0.1] * 20, t0=20)}
         r = T.avaliar(est)
         self.assertEqual(r["campeao"], "scalper")
         v = next(x for x in r["vereditos"] if x["desafiante"] == "scalper_b")
         self.assertEqual(v["campeao_mede"]["ops"], 40)          # só as operações do campeão desde que o desafiante começou
         self.assertTrue(v["veredito"].startswith("GANHOU"))
         self.assertIsNone(T.avaliar({"x": self._e([1.0] * 5)})["campeao"])
+
+    def test_nao_existe_campeao_no_prejuizo(self):
+        """Regra do dono (16/11): maior fator de lucro e maior acerto não bastam; carteira abaixo de US$ 10 não é campeã."""
+        from executor import torneio as T
+        est = {"scalper": self._e([0.3, -0.1] * 20, cart=9.5), "rapido": self._e([0.1, -0.2] * 20, cart=8.0)}
+        self.assertIsNone(T.avaliar(est)["campeao"])
+        est["rapido"] = self._e([0.2, -0.1] * 20, cart=10.5)
+        self.assertEqual(T.avaliar(est)["campeao"], "rapido")
+
+
+class BancoEPausa(unittest.TestCase):
+    """16/11: banco tesoureiro (sem crédito, sem empréstimo) e nenhum robô pausado no prejuízo ou com operações abertas."""
+
+    def test_banco_soma_e_acha_lados_opostos_sem_mexer_nos_robos(self):
+        import copy
+        from executor import banco as B
+        est = {"rapido": {"patrimonio": 9.0, "abertas": {"BTCUSDT": {"moeda": "BTCUSDT", "lado": "compra", "gasto": 2.5}}, "fechadas": []},
+               "cacador": {"patrimonio": 12.0, "abertas": {"BTCUSDT": {"moeda": "BTCUSDT", "lado": "venda", "gasto": 2.5},
+                                                           "ETHUSDT": {"moeda": "ETHUSDT", "lado": "venda", "gasto": 2.5}}, "fechadas": []},
+               "livre": {"patrimonio": 0.86, "caixa": 0.86, "abertas": {}, "fechadas": []}}
+        antes = copy.deepcopy(est)
+        b = B.rodar(est)
+        self.assertEqual(est, antes)                                   # não empresta, não muda carteira de ninguém
+        self.assertEqual(b["tesouro"]["carteiras"], 21.86)
+        self.assertEqual(b["tesouro"]["no_lucro"], ["cacador"])
+        self.assertEqual(b["exposicao"]["bruta"], 75.0)
+        self.assertEqual(b["exposicao"]["liquida"], 25.0)              # BTC comprado e vendido se anula
+        self.assertEqual([c["moeda"] for c in b["exposicao"]["conflitos"]], ["BTCUSDT"])
+
+    def test_pausa_recusada_no_prejuizo_ou_com_abertas(self):
+        import json, pathlib, tempfile, time
+        from baleias import config, equipe
+        with tempfile.TemporaryDirectory() as d:
+            antigo, config.RAIZ = config.RAIZ, pathlib.Path(d)
+            try:
+                arq = lambda ag: pathlib.Path(d) / equipe.POR_ID[ag]["arquivo"]
+                arq("rapido").write_text(json.dumps({"patrimonio": 8.0, "abertas": {}}))
+                arq("cacador").write_text(json.dumps({"patrimonio": 12.0, "abertas": {"BTCUSDT": {"lado": "compra"}}}))
+                arq("minerador").write_text(json.dumps({"patrimonio": 12.0, "abertas": {}}))
+                txt = equipe.aplicar_ordens([{"agente": ag, "acao": "pausar", "horas": 6} for ag in ("rapido", "cacador", "minerador")])
+                self.assertEqual(sum(x.startswith("🚫") for x in txt), 2)
+                self.assertIsNone(equipe.ordem_vigente("rapido"))
+                self.assertIsNone(equipe.ordem_vigente("cacador"))
+                self.assertEqual(equipe.ordem_vigente("minerador")["acao"], "pausar")   # no lucro e sem abertas: pode
+                o = equipe.ordens(); o["rapido"] = {"acao": "pausar", "ate": time.time() + 3600}
+                equipe._gravar(equipe.ORDENS, o)                                       # pausa antiga em vigor não vale no prejuízo
+                self.assertEqual(equipe.lado_da_ordem("rapido", None), (False, None))
+            finally:
+                config.RAIZ = antigo
 
 
 class FocoScalper(unittest.TestCase):

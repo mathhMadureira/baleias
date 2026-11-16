@@ -107,8 +107,11 @@ Ordens que você pode dar (valem de 1 a 24 h e vencem sozinhas):
 
 **Quando NÃO dar ordem (revisão de 15/11):** nunca pause um robô para "guardar lucro" ou "realizar lucro": quem guarda o lucro é o stop
 móvel (seção 8), e um robô pausado no lucro só deixa de ganhar (15/11 21:21 UTC: o Rápido foi pausado com +0,45 e voltou ao prejuízo com as
-posições que já estavam abertas). Pausar só quando houver **perda medida**: o `vigia_v4` em alarme, o `torneio` mostrando o robô com fator de lucro
-< 0,7 em 30+ operações, ou pedido explícito do dono em `caixa_dono`. **A cada hora, revise as ordens em vigor** (`equipe[].ordem`) e dê `liberar`
+posições que já estavam abertas). **Regras do dono (16/11), pensando no dinheiro real:** (1) nenhum robô é pausado no prejuízo (carteira < US$ 10) ou com operações
+abertas — o sistema recusa essa ordem; (2) não existe campeão no prejuízo: o torneio só nomeia campeão com carteira acima de US$ 10 e fator
+de lucro > 1; (3) ninguém dá crédito nem empresta: cada robô opera só o próprio dinheiro. O **🏦 Banco da mesa** (`dados/banco.json`) é o
+tesoureiro: soma as carteiras e mostra a exposição consolidada (robôs em lados opostos na mesma moeda se anulam numa conta real e só pagam
+taxa). Use `so_vendas`/`so_compras` quando a leitura do mercado for clara e para desfazer esses conflitos. **A cada hora, revise as ordens em vigor** (`equipe[].ordem`) e dê `liberar`
 às que perderam o motivo.
 
 Agentes que obedecem ordens: `cacador`, `rapido`, `scalper`, `minerador`, `lbank` (o `testnet` ainda não). Dê ordem quando a leitura do mercado for clara

@@ -2,7 +2,8 @@
 
 Missão do dono (15/11): "ver qual robô performa melhor e aperfeiçoá-lo, inclusive suas habilidades".
 A cada rodada da nuvem: placar de todos os robôs com as mesmas medidas (carteira, operações, acerto, ganho e perda médios, fator de lucro =
-soma dos ganhos ÷ soma das perdas). Campeão = maior fator de lucro entre os que têm pelo menos MIN_OPS operações (com menos, "não sei").
+soma dos ganhos ÷ soma das perdas). Campeão = maior fator de lucro entre os que têm pelo menos MIN_OPS operações E estão no lucro (regra do dono, 16/11: não existe campeão
+no prejuízo; sem ninguém no lucro, não há campeão).
 Os desafiantes do campeão (clones com UMA mudança, H50) são julgados contra ele nas operações do mesmo período: o desafiante que tiver
 fator de lucro maior E carteira maior depois de MIN_OPS operações é anunciado na sala para virar a nova versão do campeão.
 Escreve dados/torneio.json e vai no retrato do chefe da mesa.
@@ -13,6 +14,7 @@ import time
 from baleias import config, equipe
 
 MIN_OPS = 30
+CAPITAL = 10.0
 DESAFIANTES = {"scalper": ["scalper_b", "scalper_c", "scalper_d"]}     # H50/H51: clones do Scalper
 FOCO_MIN_OPS, FOCO_Z = 50, -2.0                           # H51: segmento a evitar só com ≥ 50 operações e perda de 2 erros-padrão
 
@@ -57,7 +59,9 @@ def foco(fechadas):
 def avaliar(estados):
     """estados: {id do agente: estado}. Devolve o placar, o campeão e os vereditos dos desafiantes."""
     placar = {ag: medir(e) for ag, e in estados.items() if e}
-    validos = {ag: m for ag, m in placar.items() if m["ops"] >= MIN_OPS and m["fator_lucro"] is not None and ag not in sum(DESAFIANTES.values(), [])}
+    # regra do dono (16/11): não existe campeão no prejuízo — só concorre quem tem carteira acima de US$ 10 e fator de lucro > 1
+    validos = {ag: m for ag, m in placar.items() if m["ops"] >= MIN_OPS and (m["fator_lucro"] or 0) > 1 and m["carteira"] > CAPITAL
+               and ag not in sum(DESAFIANTES.values(), [])}
     campeao = max(validos, key=lambda a: (validos[a]["fator_lucro"], validos[a]["carteira"])) if validos else None
     vereditos = []
     for camp, desafs in DESAFIANTES.items():
@@ -69,6 +73,8 @@ def avaliar(estados):
             md, mc = medir(ed, desde), medir(ec, desde)          # mesmo período
             if md["ops"] < MIN_OPS:
                 v = f"não sei ainda ({md['ops']} de {MIN_OPS} operações)"
+            elif md["soma"] <= 0:
+                v = "no prejuízo: não vira versão nova"
             elif (md["fator_lucro"] or 0) > (mc["fator_lucro"] or 0) and md["soma"] > mc["soma"]:
                 v = "GANHOU do campeão: candidato a nova versão"
             else:
@@ -106,7 +112,7 @@ def main():
         if v["veredito"].startswith("GANHOU") and not vel.get(v["desafiante"], "").startswith("GANHOU"):
             equipe.postar("torneio", f"🥊 {nome(v['desafiante'])} ganhou de {nome(v['campeao'])} no mesmo período: fator {v['desafiante_mede']['fator_lucro']} × {v['campeao_mede']['fator_lucro']}, "
                           f"soma {v['desafiante_mede']['soma']:+.2f} × {v['campeao_mede']['soma']:+.2f}", tipo="evento")
-    print("🏆 Torneio: campeão", nome(r["campeao"]) if r["campeao"] else "não sei (ninguém com 30 operações)", "·",
+    print("🏆 Torneio: campeão", nome(r["campeao"]) if r["campeao"] else "nenhum (ninguém no lucro com 30+ operações)", "·",
           " · ".join(f"{nome(a)} FL {m['fator_lucro']} ({m['ops']})" for a, m in sorted(r["placar"].items(), key=lambda kv: -(kv[1]["fator_lucro"] or 0))))
 
 

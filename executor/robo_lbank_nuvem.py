@@ -1,4 +1,4 @@
-"""Robô LBank (H53) — SIMULADO: day trade em SOL, memecoins e HOOD (Robinhood tokenizada) com os preços públicos do perpétuo da LBank.
+"""Robô LBank (H53) — SIMULADO: day trade em TODAS as moedas do perpétuo da LBank (memecoins e HOOD inclusive; desde 16/11) com os preços públicos do perpétuo da LBank.
 
 Nenhuma chave, nenhuma ordem: só dados públicos (`marketData` do perpétuo e velas de 1 min da API à vista da LBank).
 Regra (rota R6 da H52 adaptada; lab/PROTOCOLO_LAB.md, H53):
@@ -20,10 +20,16 @@ from baleias import config
 PERP = "https://lbkperp.lbank.com"
 SPOT = "https://api.lbank.info"
 UA = {"User-Agent": "baleias/1.0"}
-# perpétuo → par à vista (velas de 1 min)
-MOEDAS = {"SOLUSDT": "sol_usdt", "DOGEUSDT": "doge_usdt", "SHIBUSDT": "shib_usdt", "PEPEUSDT": "pepe_usdt", "WIFUSDT": "wif_usdt",
-          "BONKUSDT": "bonk_usdt", "FLOKIUSDT": "floki_usdt", "BRETTUSDT": "brett_usdt", "POPCATUSDT": "popcat_usdt",
-          "FARTCOINUSDT": "fartcoin_usdt", "PNUTUSDT": "pnut_usdt", "PENGUUSDT": "pengu_usdt", "HOODUSDT": "hoodx_usdt"}
+# Pedido do dono (16/11): o robô vê TODAS as moedas do perpétuo da LBank (memecoins inclusive), sem lista fixa, como os robôs da Binance.
+# Velas de 1 min vêm do par à vista de mesmo nome (base_usdt); as exceções de nome ficam aqui.
+SPOT_NOME = {"HOODUSDT": "hoodx_usdt"}
+VOLUME_MIN = 1_000_000          # mesmo corte do universo da Binance (lab/universo.py): com dinheiro real, abaixo disso a ordem não executa no preço
+
+
+def par_spot(perp):
+    return SPOT_NOME.get(perp, perp[:-4].lower() + "_usdt")
+
+
 ORCAMENTO, ALAV, CUSTO_LADO, STOP, MAX_POS, CAPITAL, PISO, MAX_HORAS = 25.0, 10.0, 0.0006, 0.02, 4, 10.0, 5.0, 24
 MIN_REGIME, MIN_NEUTRO = 0.01, 0.03
 ARQ, NOME = "robo_lbank.json", "Robô LBank"
@@ -38,13 +44,13 @@ def _get(url):
 
 
 def mercado():
-    """{perpétuo: (último preço, variação de 24 h)} das moedas do robô."""
+    """{perpétuo: (último preço, variação de 24 h)} de todas as moedas USDT do perpétuo da LBank com volume ≥ US$ 1 mi em 24 h."""
     out = {}
     for x in _get(f"{PERP}/cfd/openApi/v1/pub/marketData?productGroup=SwapU") or []:
         s = str(x.get("symbol", ""))
-        if s in MOEDAS:
-            ultimo, abertura = float(x["lastPrice"]), float(x["openPrice"])
-            if ultimo > 0 and abertura > 0:
+        if s.endswith("USDT"):
+            ultimo, abertura = float(x.get("lastPrice") or 0), float(x.get("openPrice") or 0)
+            if ultimo > 0 and abertura > 0 and float(x.get("turnover") or 0) >= VOLUME_MIN:
                 out[s] = (ultimo, ultimo / abertura - 1)
     return out
 
@@ -100,6 +106,9 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
         if par not in mkt:
             continue
         preco, var = mkt[par]
+        if not mins.get(par) and (preco <= p["entrada"] * (1 - STOP) if p["lado"] == "compra" else preco >= p["entrada"] * (1 + STOP)):
+            textos.append(_fechar(e, par, preco, f"stop de segurança −{STOP:.0%} (preço da rodada; moeda sem velas de 1 min)", agora))
+            continue
         quer = lado_ordem or lado_desejado(regime, var)
         if regime and quer and quer != p["lado"]:
             textos.append(_fechar(e, par, preco, f"tendência de 24 h virou para {regime}", agora))
@@ -139,7 +148,7 @@ def main():
     velas = json.loads(cache.read_text()) if cache.exists() else {}
     from executor import regime as RG
     reg, s24, _ = RG.de_velas({par: [x for x in k if x[6] < agora * 1000] for par, k in velas.items()})
-    mins = {par: minutos(MOEDAS[par], max(int(p["entrada_t"] * 1000), int(p.get("movel_ate", 0))), agora * 1000) for par, p in e["abertas"].items()}
+    mins = {par: minutos(par_spot(par), max(int(p["entrada_t"] * 1000), int(p.get("movel_ate", 0))), agora * 1000) for par, p in e["abertas"].items()}
     from baleias import equipe
     pausado, lado_ord = equipe.lado_da_ordem("lbank", None)
     textos = passo(e, mkt, reg, mins, agora, pausado=pausado, lado_ordem=lado_ord)

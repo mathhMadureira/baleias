@@ -1029,3 +1029,20 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   24 h. US$ 25 a 10× por posição, até 4, carteira de US$ 10, piso de US$ 5, 0,06% por lado. Funding não entra na conta (anotado).
 - **O que não sei:** a regra nunca foi testada nestas moedas nem na LBank; o neutro (|24 h| ≥ 3%) não tem teste nenhum.
 - **Juiz (torneio, H50):** fator de lucro e soma depois de 30 operações; comparação com o Rápido nuvem (mesma rota R6) no mesmo período.
+
+### H53 — adendo (16/11/2026, antes de ligar): universo do Robô LBank = todo o perpétuo da LBank
+
+- **Pedido do dono (16/11):** "o robô da LBank olhe todas as moedas e todas as memecoins igual na Binance, não restrinja ele de ver".
+- **Mudança única:** a lista fixa de 13 moedas (SOL, 11 memecoins, HOOD) vira todas as moedas USDT do perpétuo da LBank com volume ≥ US$ 1 mi
+  em 24 h (mesmo corte de `lab/universo.py`; em 16/11 18:45 BRT: 312 de 845). Regra de entrada e saída, tamanho e custo não mudam.
+- Moeda sem par à vista de mesmo nome não tem velas de 1 min: o stop de 2% é conferido no preço de cada rodada (15 min).
+- **Até aqui (lista antiga):** 39 operações, carteira US$ 6,32, fator de lucro 0,42. **Juiz:** as próximas 30 operações com o universo novo,
+  comparadas com essas 39 (soma e fator de lucro); sem ajuste depois de ver o resultado.
+
+### Banco da mesa (16/11/2026) — medida que decidiu o desenho
+
+- Pedido do dono: um robô que coordene as carteiras como um banco, sem dar crédito nem emprestar (tudo será dinheiro real).
+- Medido antes de decidir (estado da nuvem de 16/11, 112 janelas de 30 operações, passo 10, todos os robôs): depois de 30 operações no lucro, as
+  30 seguintes deram em média −0,557 (n 37); depois de 30 no prejuízo, −0,435 (n 75); correlação −0,136. **Lucro recente não se repete** →
+  o banco NÃO move dinheiro para quem ganhou. Ele é tesoureiro (soma, margem, exposição consolidada, robôs em lados opostos na mesma moeda) e
+  refaz essa medida a cada rodada (`executor/banco.py`, `dados/banco.json`).

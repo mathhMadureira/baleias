@@ -164,11 +164,23 @@ def ordens():
     return _ler(ORDENS, {})
 
 
+def pausa_proibida(agente):
+    """Regra do dono (16/11): nenhum robô é pausado no prejuízo (carteira abaixo de US$ 10) ou com operações abertas."""
+    a = POR_ID.get(agente)
+    e = _ler(a["arquivo"], None) if a else None
+    if not e:
+        return False
+    return float(e.get("patrimonio", e.get("carteira", 10.0)) or 0) < 10.0 or bool(e.get("abertas"))
+
+
 def ordem_vigente(agente, agora=None):
-    """{'acao', 'motivo', 'ate'} da ordem em vigor para o agente, ou None (ordem vence sozinha em até 24 h)."""
+    """{'acao', 'motivo', 'ate'} da ordem em vigor para o agente, ou None (ordem vence sozinha em até 24 h).
+    Ordem de pausa não vale enquanto o robô estiver no prejuízo ou com operações abertas (pausa_proibida)."""
     o = ordens().get(agente)
     agora = agora or time.time()
     if not o or o.get("acao") == "liberar" or o.get("ate", 0) < agora:
+        return None
+    if o.get("acao") == "pausar" and pausa_proibida(agente):
         return None
     return o
 
@@ -190,6 +202,11 @@ def aplicar_ordens(lista, de=CHEFE, agora=None):
         except (TypeError, ValueError):
             horas = 6.0
         motivo = str(o.get("motivo", ""))[:200]
+        if acao == "pausar" and pausa_proibida(ag):
+            textos.append(f"🚫 Pausa de {POR_ID[ag]['avatar']} {POR_ID[ag]['nome']} recusada: regra do dono, nenhum robô é pausado no prejuízo "
+                          "ou com operações abertas (o Banco reduz o tamanho dele em vez disso)")
+            postar(de, textos[-1], para=ag, tipo="ordem", t=agora + len(textos) / 1000)
+            continue
         atuais[ag] = {"acao": acao, "motivo": motivo, "de": de, "t": agora, "ate": agora + horas * 3600}
         a = POR_ID[ag]
         textos.append(f"📣 Ordem para {a['avatar']} {a['nome']}: {ACOES[acao]}" + (f" por {horas:.0f} h" if acao != "liberar" else "") + (f" — {motivo}" if motivo else ""))
