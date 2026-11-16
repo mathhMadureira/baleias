@@ -119,6 +119,10 @@ def passo(e, decisao, velas, agora):
             noc = min(ORCAMENTO, patrimonio * ALAV / MAX_POS)          # as 4 posições sempre cabem na carteira (15/11: ERA e KAVA não couberam)
             if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < noc / ALAV - 1e-9:
                 continue
+            from executor.sem_perseguir import persegue
+            if persegue(lado, velas.get(par), preco[par]):     # H55: não persegue o movimento de 15 min
+                textos.append(f"🤖 Robô Claude NÃO entrou {'vendido' if lado == 'venda' else 'comprado'} em {par[:-4]}: perseguiria o movimento de 15 min (H55)")
+                continue
             sp = stop_da_moeda(velas.get(par, []))
             e["caixa"] -= noc / ALAV
             e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc, "stop_pct": sp,

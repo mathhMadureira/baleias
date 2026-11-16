@@ -1059,3 +1059,18 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   3 gatilhos tentados; escolhido 0,25 depois de ver (0,15 e 0,25 dão quase o mesmo). Amostra pequena.
 - **Juiz ao vivo (17/11 a 23/11):** fração de dias-robô positivos e soma por dia-robô, contra os 36 dias-robô anteriores (7/36 = 19%;
   −1,27 por dia-robô). Passa se as duas melhorarem.
+
+## Hipótese 55: Não perseguir o movimento de 15 min (registrada em 16/11/2026 ~19:40 BRT, antes de ligar)
+
+- **Pedido do dono (16/11):** "tire esse negócio de rompimento de entrada, acho que isso tá atrapalhando; analisar a moeda em todos os tempos gráficos".
+- **Medido antes** (`estado-antes-do-zero-2026-11-16`, 1455 operações fechadas de 10 robôs com velas da Binance; tendência de cada tempo
+  gráfico = último fechamento acima/abaixo da média das 20 velas fechadas antes da entrada; resultado por posição de US$ 25):
+  todos os 5 tempos (15m, 1h, 4h, 1d, 1w) a favor: n 171, −0,054/op; ≥4 a favor: n 431, −0,053; <4: n 1024, −0,013 → exigir todos os
+  tempos a favor PIORA. Isolado, 15 min a favor (perseguir): n 395, −0,070; contra: n 1060, −0,008. 3 blocos de tempo: a favor −0,046 /
+  −0,043 / −0,111; contra −0,020 / +0,012 / −0,014 (3/3). 1 tentativa principal (5 tempos) + leitura por tempo gráfico; o de 15 min foi
+  escolhido depois de ver os 5.
+- **Regra:** nenhum robô abre compra com o preço acima da média de 20 velas de 15 min, nem venda abaixo dela (`executor/sem_perseguir.py`).
+  Vale para todos (Rápido, Caçador, Scalpers, Minerador, Claude, Livre, LBank), sem escolher robô depois de ver (Caçador e Minerador foram
+  melhores a favor no recorte por robô; não são excluídos).
+- **Juiz ao vivo (17/11 a 23/11):** média por operação da mesa contra −0,0175/op (média das 1455 operações antes). Passa se for maior nos
+  3 terços da semana.

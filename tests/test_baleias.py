@@ -4,6 +4,7 @@ import json
 import pathlib
 import random
 import unittest
+import unittest.mock
 
 from baleias import aprendizado as A, api, backtest as B, config, selecao, sinais as S
 
@@ -1526,6 +1527,7 @@ class RoboLivre(unittest.TestCase):
         return {f"M{i}USDT": [[t0 + k * 900_000, 0, 100 * (1 + passo_pct * (i + 1)) ** k * 1.0005, 100 * (1 + passo_pct * (i + 1)) ** k * 0.9995,
                                100 * (1 + passo_pct * (i + 1)) ** k] for k in range(n)] for i in range(moedas)}
 
+    @unittest.mock.patch("executor.sem_perseguir.persegue", lambda *a, **k: False)   # regra antiga isolada; H55 tem teste próprio
     def test_entra_nas_lideres_do_lado_da_maioria_e_reinveste(self):
         from executor import robo_livre_nuvem as L
         e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "sem_custo": 0.0, "custo_pago": 0.0}
@@ -1605,6 +1607,18 @@ class Torneio(unittest.TestCase):
         self.assertIsNone(T.avaliar(est)["campeao"])
         est["rapido"] = self._e([0.2, -0.1] * 20, cart=10.5)
         self.assertEqual(T.avaliar(est)["campeao"], "rapido")
+
+
+class SemPerseguir(unittest.TestCase):
+    """H55: não compra acima da média de 20 velas de 15 min, não vende abaixo; sem velas suficientes não bloqueia."""
+
+    def test_regra(self):
+        from executor.sem_perseguir import persegue
+        sobe = [[0, 0, 0, 0, str(100 + i)] for i in range(20)]
+        self.assertTrue(persegue("compra", sobe))
+        self.assertFalse(persegue("venda", sobe))
+        self.assertFalse(persegue("compra", sobe, preco=105))       # preço abaixo da média (109,5): compra liberada
+        self.assertFalse(persegue("compra", sobe[:10]))              # poucas velas: não bloqueia
 
 
 class GuardaDia(unittest.TestCase):
@@ -1801,6 +1815,8 @@ class RoboLBank(unittest.TestCase):
         self.assertIsNone(lado_desejado(None, 0.02))
         self.assertEqual(lado_desejado(None, -0.04), "venda")
 
+    @unittest.mock.patch("executor.sem_perseguir.persegue", lambda *a, **k: False)   # regra antiga isolada; H55 tem teste próprio
+    @unittest.mock.patch("executor.robo_lbank_nuvem.velas15", lambda par: [])
     def test_entra_nas_que_mais_caem_e_sai_quando_vira(self):
         from executor import robo_lbank_nuvem as L
         e = {"caixa": 10.0, "abertas": {}, "fechadas": []}

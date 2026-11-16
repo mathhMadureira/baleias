@@ -101,6 +101,9 @@ def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
     for _, par, vela, (lado, r1, vol96) in sorted(candidatos, reverse=True):
         if (lado_ordem and lado != lado_ordem) or sum(1 for p in e["abertas"].values() if p["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
             continue
+        from executor.sem_perseguir import persegue
+        if persegue(lado, todas.get(par)):                     # H55: não persegue o movimento de 15 min
+            continue
         entrada = float(vela[4])
         e["caixa"] -= ORCAMENTO / ALAV
         e["ultimo_sinal"][par] = vela[0]

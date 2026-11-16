@@ -73,6 +73,15 @@ def minutos(par_spot, desde_ms, ate_ms):
     return saida
 
 
+def velas15(perp):
+    """Últimas 21 velas de 15 min do par à vista da LBank ([t, o, h, l, c, v]); a última, ainda aberta, sai. [] sem dados."""
+    try:
+        k = _get(f"{SPOT}/v2/kline.do?symbol={par_spot(perp)}&size=21&type=minute15&time={int(time.time()) - 21 * 900}") or []
+    except (OSError, ValueError, RuntimeError):
+        return []
+    return [x for x in k if int(x[0]) + 900 <= time.time()]
+
+
 def lado_desejado(regime, var24):
     if regime == "baixa":
         return "venda" if var24 <= -MIN_REGIME else None
@@ -123,9 +132,14 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
         lado = lado_desejado(regime, var)
         if lado and (not lado_ordem or lado == lado_ordem) and par not in e["abertas"]:
             candidatos.append((abs(var), par, lado, preco, var))
+    from executor.sem_perseguir import persegue
+    olhadas = 0
     for _, par, lado, preco, var in sorted(candidatos, reverse=True):
-        if len(e["abertas"]) >= MAX_POS or e["caixa"] < ORCAMENTO / ALAV:
+        if len(e["abertas"]) >= MAX_POS or e["caixa"] < ORCAMENTO / ALAV or olhadas >= 40:
             break
+        olhadas += 1
+        if persegue(lado, velas15(par), preco):                # H55: não persegue o movimento de 15 min
+            continue
         e["caixa"] -= ORCAMENTO / ALAV
         e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco, "entrada_t": agora, "gasto": ORCAMENTO / ALAV}
         textos.append(f"🟣 {NOME} ENTROU {'COMPRADO' if lado == 'compra' else 'VENDIDO'} em {par[:-4]} a {preco:.6g} "

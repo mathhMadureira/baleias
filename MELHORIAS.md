@@ -67,3 +67,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-16 (noite): **Guarda do dia (H54)**, regra do dono "nenhum robô termina as 24 h no prejuízo": dia que chegou a +0,25 e devolveu
   metade fecha tudo e trava até 21:00 de Brasília, em todos os robôs da nuvem. Medido em 36 dias-robô: dias positivos 7 → 11, soma −45,54 → −26,40.
   O dia que nunca fica positivo segue operando (sem trava de perda). Placar do painel mostra "hoje ±X" e "🔒 dia garantido".
+- 2026-11-16 (noite): **Mesa zerada** a pedido do dono (histórico na etiqueta `estado-antes-do-zero-2026-11-16`; testnet não zerado: tem
+  ordens na conta de teste). **H55 "não perseguir"** (`executor/sem_perseguir.py`) em todos os robôs: não compra acima da média de 20 velas
+  de 15 min, não vende abaixo. Medido em 1455 operações: perseguir −0,070/op × contra −0,008 (3/3 blocos); exigir os 5 tempos gráficos a
+  favor deu −0,054 (pior), por isso não virou regra.
