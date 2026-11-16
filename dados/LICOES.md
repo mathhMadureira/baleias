@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 16/11/2026 11:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 16/11/2026 11:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 8.79** · 63 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
+Carteira **US$ 8.78** · 63 operações fechadas · 3 abertas · carteiras anteriores zeradas: 1 (última terminou em 4.82 com 155 op.)
 
 - **Total:** 40/63 com lucro (63%), resultado -0.84, média -0.013 por operação.
 - **Últimas 24 h:** 38/60 com lucro, -0.62.
@@ -18,10 +18,10 @@ Carteira **US$ 8.79** · 63 operações fechadas · 3 abertas · carteiras anter
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 6.28** · 199 operações fechadas · 2 abertas
+Carteira **US$ 6.22** · 199 operações fechadas · 2 abertas
 
 - **Total:** 82/199 com lucro (41%), resultado -3.48, média -0.017 por operação.
-- **Últimas 24 h:** 39/78 com lucro, -0.06.
+- **Últimas 24 h:** 38/76 com lucro, -0.07.
 - **Por horário:** 18–23 UTC: 70 op, 33% certas, -2.86 · 06–11 UTC: 45 op, 40% certas, -1.29 · 12–17 UTC: 51 op, 41% certas, -0.35 · 00–05 UTC: 33 op, 61% certas, +1.02
 - **Por lado:** compra: 147 op, 39% certas, -3.45 · venda: 52 op, 48% certas, -0.03
 - **Por confiança do v4:** alta (0,08–0,12): 63 op, 35% certas, -1.48 · muito alta (≥0,12): 121 op, 44% certas, -1.30 · média (0,05–0,08): 15 op, 47% certas, -0.70
@@ -59,7 +59,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 5.37** · 18 operações fechadas · 4 abertas
+Carteira **US$ 5.24** · 18 operações fechadas · 4 abertas
 
 - **Total:** 5/18 com lucro (28%), resultado -4.27, média -0.237 por operação.
 - **Últimas 24 h:** 5/13 com lucro, -2.25.
@@ -72,9 +72,9 @@ Carteira **US$ 5.37** · 18 operações fechadas · 4 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 26.9% das moedas subindo em 24 h, 39.5% em 4 h · BTC 24 h -1.56%, 4 h -0.21%.
+- **Amplitude:** 31.1% das moedas subindo em 24 h, 69.7% em 4 h · BTC 24 h -1.08%, 4 h 0.18%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': 11.0, 'ETH': -15.7, 'SOL': 7.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.2%/ano · {'BTC': 11.0, 'ETH': -10.9, 'SOL': 7.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79844, MM200 72978); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AR topo duplo (baixa, formado) · AUDIO fundo duplo (alta, formado) · AUDIO ombro-cabeça-ombro (baixa, formado) · BEAMX topo duplo (baixa, formado) · BNB triângulo ascendente (alta, formado) · BTC triângulo simétrico (?, formado) · CYBER ombro-cabeça-ombro (baixa, formado) · ETH triângulo ascendente (alta, formado) · GRAM topo duplo (baixa, formado) · JUV fundo duplo (alta, formado)
 - 📰 16/11 11:03 UTC · CoinDesk: Bitcoin slips after rebounding from July 14 low that triggered $2 billion of liquidations
@@ -86,12 +86,12 @@ Carteira **US$ 5.37** · 18 operações fechadas · 4 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 16/11 11:11 UTC · **BTC venda, XRP venda, SKY venda, APE venda** · Baixa de 24 h: só 26,9% das moedas sobem (mediana −1,32%), BTC −1,56% em 24 h e −0,21% em 4 h; o 1 h com 78,2% subindo (BTC +0,38%) é repique sem volume (0,89×)
 - 16/11 10:10 UTC · **BTC venda, XRP venda, SKY venda, APE venda** · Baixa de 24 h: só 22,0% das moedas sobem em 24 h (mediana −1,54%), 4 h com 22,9% e BTC −1,57% em 24 h, −0,23% em 4 h, volume 0,89× (sem repique forte); BTC abai
 - 16/11 09:10 UTC · **fora do mercado** · Indeciso: 39,2% das moedas sobem em 24 h (era 63,6% há 1 h), 12,5% em 4 h; BTC −1,15% em 24 h, −0,55% em 4 h, a 64465, volume 0,88×. Medo 10 e funding médio −15
 - 16/11 08:13 UTC · **fora do mercado** · Indeciso: 63,6% das moedas sobem em 24 h (entre 30% e 70%) e 20,7% em 4 h; BTC +1,53% em 24 h, −0,18% em 4 h, volume 0,86×, abaixo das médias de 50 e 200 dias; 
 - 16/11 07:12 UTC · **fora do mercado** · Indeciso: 50,4% das moedas sobem em 24 h (mediana +0,01%), BTC +0,38% em 24 h e −0,73% em 4 h com volume 0,82×; o 4 h tem só 8,4% subindo, mas sem baixa de 24 h
 - 16/11 06:10 UTC · **fora do mercado** · Indeciso: 45,4% das moedas sobem em 24 h (era 52,1% há 1 h), 51,3% em 4 h e só 7,6% em 1 h; BTC −0,06% em 24 h, −0,15% em 4 h, −0,54% em 1 h, volume 0,88×. Pano
-- 16/11 05:09 UTC · **fora do mercado** · Indeciso: 52,1% das moedas sobem em 24 h (56,2% há 1 h), 44,6% em 4 h; BTC −0,17% em 24 h, −0,16% em 4 h, volume 0,81×, triângulo simétrico em 1 h; medo extremo
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -120,7 +120,7 @@ Carteira **US$ 5.37** · 18 operações fechadas · 4 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 15697 apostas conferidas ao vivo, acerto 54.0%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 15785 apostas conferidas ao vivo, acerto 53.9%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
