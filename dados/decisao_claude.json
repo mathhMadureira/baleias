@@ -1,15 +1,15 @@
 {
- "t": 1794813167,
- "leitura": "Indeciso: 50,4% das moedas sobem em 24 h (mediana +0,01%), BTC +0,38% em 24 h e −0,73% em 4 h com volume 0,82×; o 4 h tem só 8,4% subindo, mas sem baixa de 24 h por trás não há lado. Medo extremo (10) e BTC abaixo das médias de 50 e 200 dias.",
+ "t": 1794816812,
+ "leitura": "Indeciso: 63,6% das moedas sobem em 24 h (entre 30% e 70%) e 20,7% em 4 h; BTC +1,53% em 24 h, −0,18% em 4 h, volume 0,86×, abaixo das médias de 50 e 200 dias; medo 10. Sem tendência de 24 h para escolher lado.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Fora desde 03:19 UTC, sem operações novas (18 operações, soma −4,27). O 24 h voltou de 45,4% para 50,4% subindo enquanto o 4 h caiu para 8,4%: a queda de 4 h ainda não virou baixa de 24 h, e vender agora seria repetir as 7 vendas que pararam no stop (−0,405 cada) fora de tendência clara. Confirma baixa: 24 h em 30% ou menos subindo com o BTC fechando 1 h abaixo de 64500; nega: 24 h acima de 55%.",
+ "licao": "Fora desde 03:19 UTC (18 operações, soma −4,27). Na hora passada a baixa só valeria com 24 h em 30% ou menos e BTC fechando 1 h abaixo de 64500; aconteceu o contrário: 24 h subiu de 50,4% para 63,6% e o BTC está em 64995, então vender a queda de 4 h (8,4% subindo) teria sido contra o dia. Confirma alta: 24 h em 70% ou mais com BTC acima de 65216; confirma baixa: 24 h em 30% ou menos com BTC abaixo de 64500.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 50,4% das moedas sobem em 24 h e 8,4% em 4 h; BTC +0,38% em 24 h, −0,73% em 4 h, volume 0,82×: Robô Claude fora. Sem ordens: nenhum robô que obedece tem fator de lucro < 0,7 em 30+ operações (Caçador 0,75, Minerador 0,70, Scalper 0,87, Rápido 1,09). v4 só como informação: vigia dentro do esperado (53,8% contra 53,5%), mas compras dele acertam 49,9% e o horário 18–24 h UTC 46,5%: cuidado com compras do v4."
+   "texto": "Mercado indeciso: 63,6% das moedas sobem em 24 h e 20,7% em 4 h; BTC +1,53% em 24 h, −0,18% em 4 h, volume 0,86×: Robô Claude fora. Sem ordens: nenhum robô que obedece tem fator de lucro < 0,7 em 30+ operações (Caçador 0,75, Minerador 0,70, Scalper 0,86, Rápido 1,13, LBank 1,19) e nenhuma ordem em vigor. v4 só como informação: vigia dentro do esperado (53,7% contra 53,5%), mas compras dele acertam 49,8% e o horário 18–24 h UTC 46,5%."
   }
  ],
  "ordens": []
