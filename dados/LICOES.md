@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 22:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 22:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,7 +18,7 @@ Carteira **US$ 10.27** · 31 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 11.79** · 25 operações fechadas · 3 abertas
+Carteira **US$ 11.76** · 25 operações fechadas · 4 abertas
 
 - **Total:** 21/25 com lucro (84%), resultado +1.86, média +0.074 por operação.
 - **Últimas 24 h:** 15/18 com lucro, +1.86.
@@ -35,7 +35,7 @@ Carteira **US$ 11.79** · 25 operações fechadas · 3 abertas
 Carteira **US$ 10.87** · 27 operações fechadas · 4 abertas
 
 - **Total:** 15/27 com lucro (56%), resultado +0.87, média +0.032 por operação.
-- **Últimas 24 h:** 15/26 com lucro, +0.98.
+- **Últimas 24 h:** 13/23 com lucro, +0.97.
 - **Por horário:** 06–11 UTC: 5 op, 20% certas, -0.07 · 00–05 UTC: 10 op, 50% certas, +0.46 · 18–23 UTC: 12 op, 75% certas, +0.49
 - **Por lado:** venda: 15 op, 53% certas, +0.43 · compra: 12 op, 58% certas, +0.44
 - **Por motivo de saída:** meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.52%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.62%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.68%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.17
@@ -69,11 +69,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 63.1% das moedas subindo em 24 h, 79.5% em 4 h · BTC 24 h -1.12%, 4 h 1.04%.
+- **Amplitude:** 66.4% das moedas subindo em 24 h, 87.7% em 4 h · BTC 24 h -1.09%, 4 h 1.69%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 2.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 2.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP topo duplo (baixa, formado) · RENDER topo duplo (baixa, formado)
 - 📰 17/11 22:39 UTC · Decrypt: Nvidia Board Shuts Down Jensen Huang Comeback, Launches Search for New CEO
 - 📰 17/11 22:37 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 17/11 22:20 UTC · Cointelegraph: CFTC halts some Kalshi Trump mention markets over manipulation concerns
@@ -117,7 +117,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 21548 apostas conferidas ao vivo, acerto 55.5%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 21583 apostas conferidas ao vivo, acerto 55.4%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
