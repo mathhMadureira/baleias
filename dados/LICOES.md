@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 14:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 14:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,7 +69,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 53.2% das moedas subindo em 24 h, 77.1% em 4 h · BTC 24 h -0.23%, 4 h 1.36%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': 11.0, 'ETH': 2.3, 'SOL': 6.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.3%/ano · {'BTC': 11.0, 'ETH': 1.8, 'SOL': 6.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AVAX topo duplo (baixa, formado) · BREV topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · MEGA topo duplo (baixa, formado) · MEGA fundo duplo (alta, formado) · MEGA triângulo ascendente (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado)
 - 📰 17/11 14:45 UTC · Cointelegraph: Solana Foundation takes majority interest in crypto data firm CoinGecko
