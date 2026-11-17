@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 11:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 11:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -64,15 +64,15 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 60.9% das moedas subindo em 24 h, 27.3% em 4 h · BTC 24 h -0.39%, 4 h -0.39%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': 10.9, 'ETH': -8.4, 'SOL': -3.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': 10.2, 'ETH': -8.3, 'SOL': -2.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · KITE topo duplo (baixa, formado)
+- 📰 17/11 11:25 UTC · CoinDesk: New DeFi-yield generation targets ‘scam-like’ bank accounts that keep all the interest
 - 📰 17/11 11:18 UTC · Cointelegraph: BlackRock’s Bitcoin ETF snaps $2.35B outflow streak amid extreme fear
 - 📰 17/11 11:14 UTC · Cointelegraph: Bitcoin realized loss metric beats June high as open interest eyes 2-year low
 - 📰 17/11 11:05 UTC · Decrypt: Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses
 - 📰 17/11 10:48 UTC · CoinDesk: Fed Governor Michael Barr warns AI agents could trigger bank runs in minutes
 - 📰 17/11 10:33 UTC · CoinDesk: Live updates: Bitcoin holds near $64,000 as tech slides ahead of Nvidia earnings
-- 📰 17/11 10:22 UTC · CoinDesk: Hackers plant crypto-stealing code on 178 major websites, including HSBC and Ledger
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
