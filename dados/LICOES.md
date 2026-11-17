@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 11:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 11:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -64,7 +64,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 49.1% das moedas subindo em 24 h, 13.6% em 4 h · BTC 24 h -0.71%, 4 h -0.68%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': 7.7, 'ETH': -8.8, 'SOL': -8.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': 9.1, 'ETH': -8.2, 'SOL': -7.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado)
 - 📰 17/11 11:05 UTC · Decrypt: Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses
