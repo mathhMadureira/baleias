@@ -1,6 +1,6 @@
 {
- "t": 1794948943,
- "hora_utc": "2026-11-17 20:55 UTC",
+ "t": 1794949181,
+ "hora_utc": "2026-11-17 20:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 118,
@@ -172,11 +172,17 @@
   0.13,
   -0.08,
   -0.03,
-  0.22
+  0.37
  ],
  "contexto": {
-  "t": 1794948944,
+  "t": 1794949182,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1794948963,
+    "hora_utc": "17/11 20:56",
+    "titulo": "World Bank Taps Circle and Citi to Test Stablecoins for Development Payments"
+   },
    {
     "fonte": "Decrypt",
     "t": 1794947763,
@@ -260,12 +266,6 @@
     "t": 1794933583,
     "hora_utc": "17/11 16:39",
     "titulo": "Bitcoin drops 2.5% as Nvidia stock risks new 5-month lows into Q3 earnings"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1794929437,
-    "hora_utc": "17/11 15:30",
-    "titulo": "Standard Life Chair Wants Tokenized Gilts to Open UK Government Bonds to Retail Savers"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.7,
+   "media_top20_anual_pct": 5.0,
    "principais_anual_pct": {
-    "BTC": 5.9,
-    "ETH": 0.1,
-    "SOL": -4.1
+    "BTC": 6.0,
+    "ETH": 0.5,
+    "SOL": -3.7
    },
    "leitura": "neutro"
   },
@@ -707,7 +707,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.37,
+   "carteira": 6.32,
    "n_abertas": 1,
    "abertas": [
     [
@@ -724,7 +724,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.61,
+   "carteira": 7.63,
    "n_abertas": 3,
    "abertas": [
     [
@@ -847,7 +847,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.37
+    "carteira": 6.32
    },
    "radar": {
     "ops": 85,
@@ -856,7 +856,7 @@
     "ganho_medio": 0.085,
     "perda_media": -0.127,
     "fator_lucro": 0.6,
-    "carteira": 7.61
+    "carteira": 7.63
    },
    "testnet": {
     "ops": 96,

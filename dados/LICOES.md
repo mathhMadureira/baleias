@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 20:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 21:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,15 +69,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 61.0% das moedas subindo em 24 h, 69.5% em 4 h · BTC 24 h -1.49%, 4 h 0.24%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 5.9, 'ETH': 0.1, 'SOL': -4.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': 6.0, 'ETH': 0.5, 'SOL': -3.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · CYBER fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · XLM fundo duplo (alta, formado)
+- 📰 17/11 20:56 UTC · Decrypt: World Bank Taps Circle and Citi to Test Stablecoins for Development Payments
 - 📰 17/11 20:36 UTC · Decrypt: Bitcoin Investors Are Capitulating—That’s Historically Been a Bottom Signal
 - 📰 17/11 20:05 UTC · Cointelegraph: Eastern Europe crypto flows fall 7.9% as Ukraine draws $12B in stablecoins
 - 📰 17/11 19:46 UTC · Decrypt: Cathie Wood's ARK Sells $85 Million in Nvidia, Buys $40 Million in Crypto Stocks
 - 📰 17/11 19:45 UTC · CoinDesk: Coinbase CEO says AI agents will account for '99.9%' of transactions within a decade
 - 📰 17/11 19:26 UTC · Decrypt: Ethereum Devs Weigh a Scaling Upgrade That Could Break 15,000 Apps
-- 📰 17/11 19:16 UTC · CoinDesk: Predictions platform Kalshi complies with order to halt Trump mention contracts
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
