@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 21:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 22:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
 Carteira **US$ 10.27** · 31 operações fechadas · 0 abertas
 
 - **Total:** 20/31 com lucro (65%), resultado +0.27, média +0.009 por operação.
-- **Últimas 24 h:** 14/22 com lucro, +0.87.
+- **Últimas 24 h:** 13/21 com lucro, +0.78.
 - **Por horário:** 12–17 UTC: 2 op, 50% certas, -0.42 · 00–05 UTC: 14 op, 64% certas, -0.20 · 06–11 UTC: 1 op, 0% certas, -0.03 · 18–23 UTC: 14 op, 71% certas, +0.92
 - **Por lado:** compra: 12 op, 58% certas, -0.11 · venda: 19 op, 68% certas, +0.39
 - **Por confiança do v4:** alta (0,08–0,12): 8 op, 62% certas, -0.38 · muito alta (≥0,12): 23 op, 65% certas, +0.65
@@ -21,7 +21,7 @@ Carteira **US$ 10.27** · 31 operações fechadas · 0 abertas
 Carteira **US$ 11.43** · 21 operações fechadas · 2 abertas
 
 - **Total:** 17/21 com lucro (81%), resultado +1.30, média +0.062 por operação.
-- **Últimas 24 h:** 14/17 com lucro, +1.58.
+- **Últimas 24 h:** 13/16 com lucro, +1.49.
 - **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.53 · 00–05 UTC: 8 op, 75% certas, +0.44 · 18–23 UTC: 12 op, 92% certas, +1.39
 - **Por lado:** compra: 11 op, 82% certas, +0.45 · venda: 10 op, 80% certas, +0.85
 - **Por confiança do v4:** alta (0,08–0,12): 1 op, 100% certas, +0.10 · muito alta (≥0,12): 20 op, 80% certas, +1.20
@@ -35,7 +35,7 @@ Carteira **US$ 11.43** · 21 operações fechadas · 2 abertas
 Carteira **US$ 10.71** · 25 operações fechadas · 4 abertas
 
 - **Total:** 13/25 com lucro (52%), resultado +0.71, média +0.028 por operação.
-- **Últimas 24 h:** 13/25 com lucro, +0.71.
+- **Últimas 24 h:** 13/24 com lucro, +0.82.
 - **Por horário:** 06–11 UTC: 5 op, 20% certas, -0.07 · 18–23 UTC: 10 op, 70% certas, +0.33 · 00–05 UTC: 10 op, 50% certas, +0.46
 - **Por lado:** venda: 14 op, 50% certas, +0.33 · compra: 11 op, 55% certas, +0.37
 - **Por motivo de saída:** meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.62%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.17
@@ -71,15 +71,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 57.0% das moedas subindo em 24 h, 79.3% em 4 h · BTC 24 h -1.42%, 4 h 0.91%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -0.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 7.4, 'ETH': 11.0, 'SOL': -2.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · CYBER fundo duplo (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP topo duplo (baixa, formado) · RENDER topo duplo (baixa, formado) · SOL fundo duplo (alta, formado)
+- 📰 17/11 21:56 UTC · Cointelegraph: Maple Finance CEO targets up to $15B in assets by the end of 2027
 - 📰 17/11 21:46 UTC · Decrypt: OpenAI's GPT 6.2 Astra Challenges Anthropic on Price, But Not Every Benchmark
 - 📰 17/11 21:25 UTC · CoinDesk: Nvidia tops estimates, issues strong guidance; shares rise
 - 📰 17/11 20:56 UTC · Decrypt: World Bank Taps Circle and Citi to Test Stablecoins for Development Payments
 - 📰 17/11 20:36 UTC · Decrypt: Bitcoin Investors Are Capitulating—That’s Historically Been a Bottom Signal
 - 📰 17/11 20:05 UTC · Cointelegraph: Eastern Europe crypto flows fall 7.9% as Ukraine draws $12B in stablecoins
-- 📰 17/11 19:46 UTC · Decrypt: Cathie Wood's ARK Sells $85 Million in Nvidia, Buys $40 Million in Crypto Stocks
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
