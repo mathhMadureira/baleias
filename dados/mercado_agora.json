@@ -1,21 +1,21 @@
 {
- "t": 1794944202,
- "hora_utc": "2026-11-17 19:36 UTC",
+ "t": 1794944529,
+ "hora_utc": "2026-11-17 19:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 14.4,
+  "moedas": 119,
+  "subindo_pct": 14.3,
   "mediana_pct": -0.7
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 13.6,
-  "mediana_pct": -1.77
+  "moedas": 119,
+  "subindo_pct": 13.4,
+  "mediana_pct": -1.72
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 43.2,
-  "mediana_pct": -0.47
+  "moedas": 119,
+  "subindo_pct": 42.9,
+  "mediana_pct": -0.51
  },
  "btc": {
   "1h": -0.35,
@@ -175,7 +175,7 @@
   -0.06
  ],
  "contexto": {
-  "t": 1794944203,
+  "t": 1794944530,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,10 +274,10 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.0,
+   "media_top20_anual_pct": 2.8,
    "principais_anual_pct": {
-    "BTC": 8.9,
-    "ETH": -7.0,
+    "BTC": 9.1,
+    "ETH": -7.5,
     "SOL": -12.6
    },
    "leitura": "neutro"
@@ -380,9 +380,9 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 77,
+  "apostas": 76,
   "compras": 45,
-  "vendas": 32,
+  "vendas": 31,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
@@ -657,7 +657,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.39,
+   "carteira": 6.4,
    "n_abertas": 1,
    "abertas": [
     [
@@ -789,7 +789,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.39
+    "carteira": 6.4
    },
    "radar": {
     "ops": 80,
@@ -833,12 +833,12 @@
   "z_contra_lab": 1.73,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.522,
-    "n": 15950
+    "acerto": 0.5214,
+    "n": 16092
    },
    "segue_maioria_24h": {
-    "acerto": 0.5206,
-    "n": 20879
+    "acerto": 0.5218,
+    "n": 20826
    }
   },
   "referencia_ganha": [],
