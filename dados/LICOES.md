@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 11:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 11:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -62,11 +62,11 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 49.1% das moedas subindo em 24 h, 13.6% em 4 h · BTC 24 h -0.71%, 4 h -0.68%.
+- **Amplitude:** 60.9% das moedas subindo em 24 h, 27.3% em 4 h · BTC 24 h -0.39%, 4 h -0.39%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': 10.9, 'ETH': -7.5, 'SOL': -6.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': 10.4, 'ETH': -8.0, 'SOL': -6.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · KITE topo duplo (baixa, formado)
 - 📰 17/11 11:05 UTC · Decrypt: Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses
 - 📰 17/11 10:48 UTC · CoinDesk: Fed Governor Michael Barr warns AI agents could trigger bank runs in minutes
 - 📰 17/11 10:33 UTC · CoinDesk: Live updates: Bitcoin holds near $64,000 as tech slides ahead of Nvidia earnings
@@ -110,7 +110,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 19634 apostas conferidas ao vivo, acerto 54.9%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 19685 apostas conferidas ao vivo, acerto 54.9%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
