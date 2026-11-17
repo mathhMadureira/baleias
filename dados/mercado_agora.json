@@ -1,21 +1,21 @@
 {
- "t": 1794941600,
- "hora_utc": "2026-11-17 18:53 UTC",
+ "t": 1794941924,
+ "hora_utc": "2026-11-17 18:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 114,
-  "subindo_pct": 26.3,
+  "moedas": 115,
+  "subindo_pct": 27.0,
   "mediana_pct": -0.48
  },
  "mercado_4h": {
-  "moedas": 114,
-  "subindo_pct": 12.3,
-  "mediana_pct": -2.31
+  "moedas": 115,
+  "subindo_pct": 12.2,
+  "mediana_pct": -2.26
  },
  "mercado_24h": {
-  "moedas": 114,
-  "subindo_pct": 39.5,
-  "mediana_pct": -0.89
+  "moedas": 115,
+  "subindo_pct": 40.0,
+  "mediana_pct": -0.85
  },
  "btc": {
   "1h": -0.11,
@@ -172,10 +172,10 @@
   -1.39,
   -0.57,
   0.13,
-  0.16
+  -0.08
  ],
  "contexto": {
-  "t": 1794941601,
+  "t": 1794941925,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 0.9,
+   "media_top20_anual_pct": 2.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -3.5,
-    "SOL": -12.0
+    "ETH": -4.0,
+    "SOL": -12.6
    },
    "leitura": "neutro"
   },
@@ -373,9 +373,9 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 107,
+  "apostas": 106,
   "compras": 74,
-  "vendas": 33,
+  "vendas": 32,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
@@ -650,7 +650,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.44,
+   "carteira": 6.45,
    "n_abertas": 1,
    "abertas": [
     [
@@ -667,7 +667,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.81,
+   "carteira": 7.75,
    "n_abertas": 4,
    "abertas": [
     [
@@ -683,11 +683,11 @@
      "venda"
     ],
     [
-     "XRP",
-     "venda"
+     "SOL",
+     "compra"
     ]
    ],
-   "n_fechadas": 75,
+   "n_fechadas": 76,
    "ordem": null
   },
   {
@@ -794,16 +794,16 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.44
+    "carteira": 6.45
    },
    "radar": {
-    "ops": 75,
-    "acerto": 0.453,
-    "soma": -2.404,
-    "ganho_medio": 0.09,
+    "ops": 76,
+    "acerto": 0.461,
+    "soma": -2.35,
+    "ganho_medio": 0.089,
     "perda_media": -0.134,
-    "fator_lucro": 0.56,
-    "carteira": 7.81
+    "fator_lucro": 0.57,
+    "carteira": 7.75
    },
    "testnet": {
     "ops": 96,
@@ -838,12 +838,12 @@
   "z_contra_lab": 1.6,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5216,
-    "n": 15683
+    "acerto": 0.5215,
+    "n": 15715
    },
    "segue_maioria_24h": {
-    "acerto": 0.5215,
-    "n": 20714
+    "acerto": 0.5235,
+    "n": 20694
    }
   },
   "referencia_ganha": [],
