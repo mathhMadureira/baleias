@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 22:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 22:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,7 +71,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 59.5% das moedas subindo em 24 h, 74.4% em 4 h · BTC 24 h -1.45%, 4 h 0.83%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.9%/ano · {'BTC': 6.4, 'ETH': 11.0, 'SOL': -0.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 6.1, 'ETH': 11.0, 'SOL': -2.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SKY estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · CYBER fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 17/11 21:56 UTC · Cointelegraph: Maple Finance CEO targets up to $15B in assets by the end of 2027
