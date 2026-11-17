@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 13:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 13:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -56,20 +56,20 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 10.18** · 5 operações fechadas · 2 abertas
+Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
-- **Total:** 5/5 com lucro (100%), resultado +0.38, média +0.076 por operação.
-- **Últimas 24 h:** 5/5 com lucro, +0.38.
-- **Por horário:** 12–17 UTC: 5 op, 100% certas, +0.38
-- **Por lado:** compra: 5 op, 100% certas, +0.38
-- **Por motivo de saída:** 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · moeda grande a favor da alta d: 1 op, 100% certas, +0.09 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
+- **Total:** 5/7 com lucro (71%), resultado +0.11, média +0.016 por operação.
+- **Últimas 24 h:** 5/7 com lucro, +0.11.
+- **Por horário:** 12–17 UTC: 7 op, 71% certas, +0.11
+- **Por lado:** compra: 7 op, 71% certas, +0.11
+- **Por motivo de saída:** moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
 - **Amplitude:** 80.0% das moedas subindo em 24 h, 70.0% em 4 h · BTC 24 h 0.95%, 4 h 0.82%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.2%/ano · {'BTC': 11.0, 'ETH': 2.9, 'SOL': 3.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.3%/ano · {'BTC': 11.0, 'ETH': 3.0, 'SOL': 2.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MEGA fundo duplo (alta, CONFIRMOU) · MEGA triângulo ascendente (alta, CONFIRMOU) · STX OCO invertido (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · BREV topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado)
 - 📰 17/11 13:30 UTC · Cointelegraph: Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi

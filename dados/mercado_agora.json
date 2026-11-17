@@ -1,6 +1,6 @@
 {
- "t": 1794923199,
- "hora_utc": "2026-11-17 13:46 UTC",
+ "t": 1794923437,
+ "hora_utc": "2026-11-17 13:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,10 +172,10 @@
   -0.39,
   1.37,
   0.11,
-  -0.15
+  -0.16
  ],
  "contexto": {
-  "t": 1794923200,
+  "t": 1794923438,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 7.2,
+   "media_top20_anual_pct": 7.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.9,
-    "SOL": 3.0
+    "ETH": 3.0,
+    "SOL": 2.4
    },
    "leitura": "neutro"
   },
@@ -489,27 +489,8 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.18,
-  "abertas": [
-   {
-    "moeda": "BTC",
-    "lado": "compra",
-    "entrada": 65068.99,
-    "agora": 64971.99,
-    "resultado_pct": -0.15,
-    "horas_aberta": 0.5,
-    "motivo_de_entrada": "recompra a favor da alta de 24 h (84,5% subindo), BTC +1,13% em 4 h com volume 1,29×; a compra de 12:18 saiu +0,065 pelo stop móvel"
-   },
-   {
-    "moeda": "SOL",
-    "lado": "compra",
-    "entrada": 73.94,
-    "agora": 73.46,
-    "resultado_pct": -0.65,
-    "horas_aberta": 0.5,
-    "motivo_de_entrada": "moeda grande a favor da alta de 24 h; a compra de 12:18 saiu +0,090 pelo stop móvel"
-   }
-  ],
+  "carteira": 10.11,
+  "abertas": [],
   "ultimas_fechadas": [
    {
     "moeda": "ZEC",
@@ -545,6 +526,20 @@
     "resultado_usd": 0.064,
     "motivo_saida": "stop móvel (pico +0.54%, guardou +0.38%)",
     "motivo_de_entrada": "24 h +8,33%, 4 h +7,29% com volume 4,51× (abaixo de 15% em 4 h)"
+   },
+   {
+    "moeda": "BTC",
+    "lado": "compra",
+    "resultado_usd": -0.069,
+    "motivo_saida": "guarda do dia: chegou a +0.40 e voltou a +0.18; dia garantido no lucro",
+    "motivo_de_entrada": "recompra a favor da alta de 24 h (84,5% subindo), BTC +1,13% em 4 h com volume 1,29×; a compra de 12:18 saiu +0,065 pelo"
+   },
+   {
+    "moeda": "SOL",
+    "lado": "compra",
+    "resultado_usd": -0.197,
+    "motivo_saida": "guarda do dia: chegou a +0.40 e voltou a +0.18; dia garantido no lucro",
+    "motivo_de_entrada": "moeda grande a favor da alta de 24 h; a compra de 12:18 saiu +0,090 pelo stop móvel"
    }
   ],
   "licoes_anteriores": [
@@ -589,19 +584,10 @@
    "avatar": "🤖",
    "motor": "Claude (rotina de hora em hora)",
    "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs.",
-   "carteira": 10.18,
-   "n_abertas": 2,
-   "abertas": [
-    [
-     "BTC",
-     "compra"
-    ],
-    [
-     "SOL",
-     "compra"
-    ]
-   ],
-   "n_fechadas": 5,
+   "carteira": 10.11,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 7,
    "ordem": null
   },
   {
@@ -706,7 +692,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.24,
+   "carteira": 6.23,
    "n_abertas": 1,
    "abertas": [
     [
@@ -755,13 +741,13 @@
   "campeao": "scalper",
   "placar": {
    "claude": {
-    "ops": 5,
-    "acerto": 1.0,
-    "soma": 0.38,
+    "ops": 7,
+    "acerto": 0.714,
+    "soma": 0.114,
     "ganho_medio": 0.076,
-    "perda_media": null,
-    "fator_lucro": 99.0,
-    "carteira": 10.18
+    "perda_media": -0.133,
+    "fator_lucro": 1.43,
+    "carteira": 10.11
    },
    "cacador": {
     "ops": 17,
@@ -842,7 +828,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.24
+    "carteira": 6.23
    },
    "radar": {
     "ops": 53,
