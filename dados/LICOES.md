@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 03:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 03:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -65,7 +65,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 38.2% das moedas subindo em 24 h, 50.9% em 4 h · BTC 24 h -0.79%, 4 h -0.97%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 7.1, 'ETH': 6.0, 'SOL': -6.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 6.8, 'ETH': 6.1, 'SOL': -7.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** GTC fundo duplo (alta, CONFIRMOU) · INJ OCO invertido (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · GTC topo duplo (baixa, formado) · INJ topo duplo (baixa, formado) · MORPHO topo duplo (baixa, formado) · MORPHO fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · PENGU fundo duplo (alta, formado)
 - 📰 17/11 01:02 UTC · Cointelegraph: Hackers inject credit card, crypto-stealing malware into 178 major websites
