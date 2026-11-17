@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 16:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 18:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,17 +67,17 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 65.2% das moedas subindo em 24 h, 14.8% em 4 h · BTC 24 h -0.21%, 4 h -0.95%.
+- **Amplitude:** 43.8% das moedas subindo em 24 h, 15.2% em 4 h · BTC 24 h -1.67%, 4 h -2.02%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.2%/ano · {'BTC': 11.0, 'ETH': -11.1, 'SOL': -4.5} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BCH triângulo simétrico (baixa, CONFIRMOU) · EIGEN triângulo descendente (baixa, CONFIRMOU) · JTO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · STRK estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEAMX fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · MEGA topo duplo (baixa, formado) · MEGA fundo duplo (alta, formado)
-- 📰 17/11 15:30 UTC · Decrypt: Standard Life Chair Wants Tokenized Gilts to Open UK Government Bonds to Retail Savers
-- 📰 17/11 15:11 UTC · CoinDesk: Hong Kong, Swift test tokenized deposits as banks chase stablecoin-style speed
-- 📰 17/11 14:54 UTC · Cointelegraph: Here’s what happened in crypto today
-- 📰 17/11 14:45 UTC · Cointelegraph: Solana Foundation takes majority interest in crypto data firm CoinGecko
-- 📰 17/11 13:30 UTC · Cointelegraph: Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi
-- 📰 17/11 13:12 UTC · Cointelegraph: ARK sells $85M in Nvidia shares ahead of chipmaker’s Q3 earnings results
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.9%/ano · {'BTC': 11.0, 'ETH': -1.5, 'SOL': -11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ADA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · ASTER topo duplo (baixa, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado) · ZEN topo duplo (baixa, formado)
+- 📰 17/11 17:51 UTC · Cointelegraph: Lighter incident exposes risks beyond withdrawal controls
+- 📰 17/11 17:42 UTC · CoinDesk: Druckenmiller says he is short copper, warns of economic weakness in 2027
+- 📰 17/11 17:39 UTC · Cointelegraph: Fed’s Waller cites Binance hack in warning over tokenized finance
+- 📰 17/11 17:18 UTC · Decrypt: Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence
+- 📰 17/11 17:00 UTC · CoinDesk: U.S. Fed Governor Waller pitches keeping central bank at the center of tokenization
+- 📰 17/11 16:41 UTC · Decrypt: Former Robinhood Engineer Pleads Guilty to Crypto Insider Trading Scheme
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -92,30 +92,30 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 **v3:**
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (desce). Peso reduzido de: tres_soldados. Rede neural corrigida.
+- ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 18 em observação, 0 podadas)
 **v2:**
-- ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1440 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1536 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: reversao_queda. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, reversao_queda. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20612 apostas conferidas ao vivo, acerto 55.0%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20612 apostas conferidas ao vivo, acerto 55.0%; prevê 83 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
