@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 07:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 07:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -65,7 +65,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 65.8% das moedas subindo em 24 h, 37.8% em 4 h · BTC 24 h -0.51%, 4 h -0.66%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.6%/ano · {'BTC': 5.0, 'ETH': 1.8, 'SOL': -7.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.6%/ano · {'BTC': 5.0, 'ETH': 2.1, 'SOL': -8.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · OP fundo duplo (alta, formado)
 - 📰 17/11 07:38 UTC · CoinDesk: Bitcoin could slide into the $50,000s as Fed rate hike bets build, Wintermute says
