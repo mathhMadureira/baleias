@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 12:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 12:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,17 +67,17 @@ Carteira **US$ 10.07** · 1 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 81.1% das moedas subindo em 24 h, 63.1% em 4 h · BTC 24 h 1.22%, 4 h 0.33%.
+- **Amplitude:** 82.0% das moedas subindo em 24 h, 65.8% em 4 h · BTC 24 h 1.22%, 4 h 0.33%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.9%/ano · {'BTC': 11.0, 'ETH': -5.0, 'SOL': 6.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.6%/ano · {'BTC': 11.0, 'ETH': -4.5, 'SOL': 6.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH OCO invertido (alta, CONFIRMOU) · INJ bandeira de alta (alta, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FET OCO invertido (alta, formado)
+- 📰 17/11 12:24 UTC · Cointelegraph: Revolut plans four blockchain-based funds for private markets, chair says
 - 📰 17/11 12:16 UTC · CoinDesk: Crypto's 'casino-chips' are disappearing, adding to pain from spot ETF outflows
 - 📰 17/11 12:00 UTC · CoinDesk: Ex-OpenAI researcher fund dumps bitcoin miners, cuts IREN 94% after portfolio slump
 - 📰 17/11 11:36 UTC · Cointelegraph: US senators seek SEC answers on tokenized stock money laundering risks
 - 📰 17/11 11:36 UTC · CoinDesk: Bitcoin remains penned in near $64,000 even as ETF outflow streak ends
 - 📰 17/11 11:29 UTC · CoinDesk: Solana Foundation takes majority stake in crypto data provider CoinGecko
-- 📰 17/11 11:25 UTC · CoinDesk: New DeFi-yield generation targets ‘scam-like’ bank accounts that keep all the interest
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -115,7 +115,7 @@ Carteira **US$ 10.07** · 1 operações fechadas · 3 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 19990 apostas conferidas ao vivo, acerto 54.6%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20004 apostas conferidas ao vivo, acerto 54.6%; prevê 18 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
