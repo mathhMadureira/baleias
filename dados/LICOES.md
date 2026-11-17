@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 22:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 22:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,9 +69,9 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 66.4% das moedas subindo em 24 h, 87.7% em 4 h · BTC 24 h -1.09%, 4 h 1.69%.
+- **Amplitude:** 66.9% das moedas subindo em 24 h, 87.6% em 4 h · BTC 24 h -1.09%, 4 h 1.69%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 2.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.3%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 2.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP topo duplo (baixa, formado) · RENDER topo duplo (baixa, formado)
 - 📰 17/11 22:39 UTC · Decrypt: Nvidia Board Shuts Down Jensen Huang Comeback, Launches Search for New CEO
@@ -117,7 +117,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 21583 apostas conferidas ao vivo, acerto 55.4%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 21583 apostas conferidas ao vivo, acerto 55.4%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
