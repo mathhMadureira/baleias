@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 08:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 08:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -46,7 +46,7 @@ Carteira **US$ 10.44** · 22 operações fechadas · 0 abertas
 Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
 - **Total:** 34/96 com lucro (35%), resultado -5.04, média -0.053 por operação.
-- **Últimas 24 h:** 2/9 com lucro, -0.79.
+- **Últimas 24 h:** 1/8 com lucro, -0.79.
 - **Por horário:** 00–05 UTC: 39 op, 38% certas, -2.04 · 18–23 UTC: 37 op, 32% certas, -2.02 · 06–11 UTC: 20 op, 35% certas, -0.98
 - **Por lado:** compra: 67 op, 34% certas, -3.42 · venda: 29 op, 38% certas, -1.63
 - **Por confiança do v4:** confiança baixa (<0,05): 59 op, 42% certas, -2.67 · média (0,05–0,08): 21 op, 29% certas, -1.46 · alta (0,08–0,12): 13 op, 23% certas, -0.63 · muito alta (≥0,12): 3 op, 0% certas, -0.29
@@ -65,7 +65,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 66.1% das moedas subindo em 24 h, 38.4% em 4 h · BTC 24 h -0.39%, 4 h -0.49%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 2.9, 'ETH': 0.7, 'SOL': -12.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 4.0, 'ETH': 1.4, 'SOL': -11.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PUMP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · BCH OCO invertido (alta, formado) · ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN OCO invertido (alta, formado) · MITO ombro-cabeça-ombro (baixa, formado)
 - 📰 17/11 07:38 UTC · CoinDesk: Bitcoin could slide into the $50,000s as Fed rate hike bets build, Wintermute says
@@ -77,12 +77,12 @@ Sem operações fechadas ainda.
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 17/11 08:09 UTC · **fora do mercado** · Mercado indeciso: 66,1% das moedas sobem em 24 h (eram 64,5%), 38,4% em 4 h e 55,4% em 1 h; BTC −0,39% em 24 h, −0,49% em 4 h, volume 1,23×, abaixo das médias d
 - 17/11 07:10 UTC · **fora do mercado** · Mercado indeciso: 64,5% das moedas sobem em 24 h (eram 69,1%), 71,8% em 4 h e 32,7% em 1 h; BTC −0,24% em 24 h, +0,08% em 4 h, −0,4% em 1 h, volume 1,24×, abaix
 - 17/11 06:09 UTC · **fora do mercado** · Indeciso, a 0,9 ponto da alta: 69,1% das moedas sobem em 24 h (eram 67,3%), 74,5% em 4 h e só 21,8% em 1 h; BTC +0,53% em 24 h, +0,1% em 4 h, −0,36% em 1 h, em 
 - 17/11 05:09 UTC · **fora do mercado** · Indeciso, perto da alta: 67,3% das moedas sobem em 24 h (eram 57,3%), 87,3% em 4 h e 57,3% em 1 h; BTC +0,35% em 24 h, +0,64% em 4 h, em 65046, volume 1,18× (se
 - 17/11 04:09 UTC · **fora do mercado** · Indeciso: 57,3% das moedas sobem em 24 h (eram 33,3% às 03:15), 80,9% em 4 h e 83,6% em 1 h; BTC −0,09% em 24 h, +0,27% em 4 h, 65057, volume 0,93×; BTC abaixo 
 - 17/11 03:08 UTC · **fora do mercado** · Indeciso, perto da baixa: 33,3% das moedas sobem em 24 h (eram 58,4% às 02:20), 39,6% em 4 h e 37,8% em 1 h; BTC −1,05% em 24 h, −1,25% em 4 h, a 64504, volume 
-- 17/11 02:09 UTC · **fora do mercado** · Indeciso: 58,4% das moedas sobem em 24 h (eram 35,1% às 01:20), 32,7% em 4 h e 84,1% em 1 h; BTC +0,27% em 24 h, −0,85% em 4 h, volume 1,02×, abaixo das médias 
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
