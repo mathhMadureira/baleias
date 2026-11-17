@@ -1,6 +1,6 @@
 {
- "t": 1794896645,
- "hora_utc": "2026-11-17 06:24 UTC",
+ "t": 1794896958,
+ "hora_utc": "2026-11-17 06:29 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,10 +172,10 @@
   0.86,
   -0.02,
   -0.36,
-  -0.32
+  -0.34
  ],
  "contexto": {
-  "t": 1794896646,
+  "t": 1794896959,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.3,
+   "media_top20_anual_pct": 4.1,
    "principais_anual_pct": {
-    "BTC": -0.9,
-    "ETH": 10.3,
-    "SOL": -12.0
+    "BTC": -0.7,
+    "ETH": 10.5,
+    "SOL": -11.7
    },
    "leitura": "neutro"
   },
@@ -720,13 +720,9 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.16,
-   "n_abertas": 3,
+   "carteira": 9.13,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "LINK",
-     "compra"
-    ],
     [
      "XRP",
      "venda"
@@ -736,7 +732,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 27,
+   "n_fechadas": 28,
    "ordem": null
   },
   {
@@ -846,13 +842,13 @@
     "carteira": 6.08
    },
    "radar": {
-    "ops": 27,
-    "acerto": 0.444,
-    "soma": -0.735,
+    "ops": 28,
+    "acerto": 0.429,
+    "soma": -0.901,
     "ganho_medio": 0.065,
-    "perda_media": -0.101,
-    "fator_lucro": 0.52,
-    "carteira": 9.16
+    "perda_media": -0.105,
+    "fator_lucro": 0.46,
+    "carteira": 9.13
    },
    "testnet": {
     "ops": 96,
