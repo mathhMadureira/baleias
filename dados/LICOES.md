@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 12:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 12:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -64,7 +64,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 79.5% das moedas subindo em 24 h, 68.8% em 4 h · BTC 24 h 0.85%, 4 h 0.39%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.7%/ano · {'BTC': 11.0, 'ETH': -6.3, 'SOL': 5.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.8%/ano · {'BTC': 11.0, 'ETH': -6.9, 'SOL': 4.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH OCO invertido (alta, CONFIRMOU) · INJ bandeira de alta (alta, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FET OCO invertido (alta, formado)
 - 📰 17/11 12:00 UTC · CoinDesk: Ex-OpenAI researcher fund dumps bitcoin miners, cuts IREN 94% after portfolio slump

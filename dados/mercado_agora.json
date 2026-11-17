@@ -1,6 +1,6 @@
 {
- "t": 1794917459,
- "hora_utc": "2026-11-17 12:10 UTC",
+ "t": 1794917686,
+ "hora_utc": "2026-11-17 12:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 112,
@@ -172,10 +172,10 @@
   0.04,
   -0.39,
   1.37,
-  -0.2
+  -0.25
  ],
  "contexto": {
-  "t": 1794917460,
+  "t": 1794917687,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -2.7,
+   "media_top20_anual_pct": -2.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -6.3,
-    "SOL": 5.9
+    "ETH": -6.9,
+    "SOL": 4.9
    },
    "leitura": "neutro"
   },
@@ -649,7 +649,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.1,
+   "carteira": 6.11,
    "n_abertas": 1,
    "abertas": [
     [
@@ -666,19 +666,15 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.53,
-   "n_abertas": 2,
+   "carteira": 9.49,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "BTC",
-     "compra"
-    ],
     [
      "BNB",
      "venda"
     ]
    ],
-   "n_fechadas": 48,
+   "n_fechadas": 49,
    "ordem": null
   },
   {
@@ -785,16 +781,16 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.1
+    "carteira": 6.11
    },
    "radar": {
-    "ops": 48,
-    "acerto": 0.458,
-    "soma": -0.582,
-    "ganho_medio": 0.092,
+    "ops": 49,
+    "acerto": 0.469,
+    "soma": -0.461,
+    "ganho_medio": 0.094,
     "perda_media": -0.101,
-    "fator_lucro": 0.78,
-    "carteira": 9.53
+    "fator_lucro": 0.82,
+    "carteira": 9.49
    },
    "testnet": {
     "ops": 96,
