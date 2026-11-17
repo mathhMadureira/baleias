@@ -14,7 +14,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | reversao_queda | promissor | 53.4% | 58 | 40.8%–65.7% | H14: queda anormal de 1 h → sobe |
 | williams_wr_alta | promissor | 52.2% | 23 | 33.0%–70.8% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | tres_corvos | promissor | 50.4% | 349 | 45.2%–55.6% | H6: três corvos → sobe (efeito pequeno) |
-| williams_volb_baixa | reprovado | 49.4% | 85 | 39.0%–59.8% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
+| williams_volb_baixa | reprovado | 50.0% | 86 | 39.7%–60.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_volb_alta | reprovado | 49.3% | 67 | 37.7%–60.9% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | vortice_invertido | reprovado | 49.0% | 382 | 44.0%–54.0% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 48.6% | 37 | 33.4%–64.1% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
