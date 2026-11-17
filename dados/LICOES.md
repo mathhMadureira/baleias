@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 23:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 23:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -21,7 +21,7 @@ Carteira **US$ 10.27** · 31 operações fechadas · 0 abertas
 Carteira **US$ 12.09** · 31 operações fechadas · 1 abertas
 
 - **Total:** 25/31 com lucro (81%), resultado +2.09, média +0.068 por operação.
-- **Últimas 24 h:** 18/22 com lucro, +2.04.
+- **Últimas 24 h:** 17/21 com lucro, +1.92.
 - **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.53 · 06–11 UTC: 1 op, 0% certas, -0.04 · 00–05 UTC: 8 op, 75% certas, +0.44 · 18–23 UTC: 21 op, 90% certas, +2.22
 - **Por lado:** venda: 13 op, 77% certas, +0.83 · compra: 18 op, 83% certas, +1.26
 - **Por confiança do v4:** alta (0,08–0,12): 3 op, 67% certas, +0.15 · muito alta (≥0,12): 28 op, 82% certas, +1.95
