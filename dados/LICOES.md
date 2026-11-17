@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 13:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 14:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,11 +67,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 80.0% das moedas subindo em 24 h, 70.0% em 4 h · BTC 24 h 0.95%, 4 h 0.82%.
+- **Amplitude:** 79.3% das moedas subindo em 24 h, 73.0% em 4 h · BTC 24 h 1.49%, 4 h 1.21%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 11.0, 'ETH': 3.0, 'SOL': 3.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': 11.0, 'ETH': 6.7, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** MEGA fundo duplo (alta, CONFIRMOU) · MEGA triângulo ascendente (alta, CONFIRMOU) · STX OCO invertido (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · BREV topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** AERO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BREV topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · MEGA topo duplo (baixa, formado) · MEGA fundo duplo (alta, formado) · MEGA triângulo ascendente (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado)
 - 📰 17/11 13:30 UTC · Cointelegraph: Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi
 - 📰 17/11 13:12 UTC · Cointelegraph: ARK sells $85M in Nvidia shares ahead of chipmaker’s Q3 earnings results
 - 📰 17/11 13:02 UTC · CoinDesk: Ethereum's Glamsterdam upgrade risks breaking up to 15,000 automated apps
@@ -115,7 +115,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20322 apostas conferidas ao vivo, acerto 54.8%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20346 apostas conferidas ao vivo, acerto 54.9%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
