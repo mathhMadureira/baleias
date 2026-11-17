@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 20:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 20:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,11 +67,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 44.5% das moedas subindo em 24 h, 51.3% em 4 h · BTC 24 h -2.02%, 4 h -0.56%.
+- **Amplitude:** 44.2% das moedas subindo em 24 h, 50.8% em 4 h · BTC 24 h -2.02%, 4 h -0.56%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.3%/ano · {'BTC': 7.4, 'ETH': -9.1, 'SOL': -16.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 5.7, 'ETH': -9.0, 'SOL': -13.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AAVE topo duplo (baixa, formado) · ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** AAVE topo duplo (baixa, formado) · ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · ZEN topo duplo (baixa, formado)
 - 📰 17/11 19:46 UTC · Decrypt: Cathie Wood's ARK Sells $85 Million in Nvidia, Buys $40 Million in Crypto Stocks
 - 📰 17/11 19:45 UTC · CoinDesk: Coinbase CEO says AI agents will account for '99.9%' of transactions within a decade
 - 📰 17/11 19:26 UTC · Decrypt: Ethereum Devs Weigh a Scaling Upgrade That Could Break 15,000 Apps
@@ -115,7 +115,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 21028 apostas conferidas ao vivo, acerto 55.4%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 21028 apostas conferidas ao vivo, acerto 55.4%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
