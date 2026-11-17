@@ -1,6 +1,6 @@
 {
- "t": 1794890970,
- "hora_utc": "2026-11-17 04:49 UTC",
+ "t": 1794891287,
+ "hora_utc": "2026-11-17 04:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,10 +172,10 @@
   0.18,
   -0.38,
   0.86,
-  0.0
+  -0.03
  ],
  "contexto": {
-  "t": 1794890971,
+  "t": 1794891288,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 7.8,
+   "media_top20_anual_pct": 7.6,
    "principais_anual_pct": {
     "BTC": 8.9,
     "ETH": 11.0,
-    "SOL": 1.2
+    "SOL": 0.6
    },
    "leitura": "neutro"
   },
@@ -679,7 +679,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 4.9,
+   "carteira": 4.87,
    "n_abertas": 1,
    "abertas": [
     [
@@ -696,15 +696,11 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.56,
-   "n_abertas": 4,
+   "carteira": 9.52,
+   "n_abertas": 3,
    "abertas": [
     [
      "LINK",
-     "compra"
-    ],
-    [
-     "AVAX",
      "compra"
     ],
     [
@@ -716,7 +712,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 19,
+   "n_fechadas": 20,
    "ordem": null
   },
   {
@@ -823,16 +819,16 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 4.9
+    "carteira": 4.87
    },
    "radar": {
-    "ops": 19,
-    "acerto": 0.316,
-    "soma": -0.83,
-    "ganho_medio": 0.072,
+    "ops": 20,
+    "acerto": 0.35,
+    "soma": -0.766,
+    "ganho_medio": 0.071,
     "perda_media": -0.097,
-    "fator_lucro": 0.34,
-    "carteira": 9.56
+    "fator_lucro": 0.39,
+    "carteira": 9.52
    },
    "testnet": {
     "ops": 96,
