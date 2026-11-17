@@ -1,6 +1,6 @@
 {
- "t": 1794946167,
- "hora_utc": "2026-11-17 20:09 UTC",
+ "t": 1794946494,
+ "hora_utc": "2026-11-17 20:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,11 +172,17 @@
   0.13,
   -0.08,
   -0.03,
-  0.0
+  0.07
  ],
  "contexto": {
-  "t": 1794946168,
+  "t": 1794946495,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1794945904,
+    "hora_utc": "17/11 20:05",
+    "titulo": "Eastern Europe crypto flows fall 7.9% as Ukraine draws $12B in stablecoins"
+   },
    {
     "fonte": "Decrypt",
     "t": 1794944763,
@@ -260,12 +266,6 @@
     "t": 1794928260,
     "hora_utc": "17/11 15:11",
     "titulo": "Hong Kong, Swift test tokenized deposits as banks chase stablecoin-style speed"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794927280,
-    "hora_utc": "17/11 14:54",
-    "titulo": "Here’s what happened in crypto today"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 2.7,
+   "media_top20_anual_pct": 3.2,
    "principais_anual_pct": {
-    "BTC": 5.7,
-    "ETH": -9.0,
-    "SOL": -13.5
+    "BTC": 5.8,
+    "ETH": -8.4,
+    "SOL": -10.7
    },
    "leitura": "neutro"
   },
@@ -664,7 +664,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.42,
+   "carteira": 6.4,
    "n_abertas": 1,
    "abertas": [
     [
@@ -681,7 +681,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.76,
+   "carteira": 7.71,
    "n_abertas": 4,
    "abertas": [
     [
@@ -808,7 +808,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.42
+    "carteira": 6.4
    },
    "radar": {
     "ops": 82,
@@ -817,7 +817,7 @@
     "ganho_medio": 0.088,
     "perda_media": -0.128,
     "fator_lucro": 0.59,
-    "carteira": 7.76
+    "carteira": 7.71
    },
    "testnet": {
     "ops": 96,
@@ -907,12 +907,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "17/11 06:18",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Mercado indeciso, a 0,9 ponto da alta: 69,1% das moedas sobem em 24 h (eram 67,3%), 74,5% em 4 h e 21,8% em 1 h; BTC +0,53% em 24 h, −0,36% em 1 h, volume 1,19×: Robô Claude fora, compro com 24 h em 70% ou mais. Sem ordens em vigor e nenhuma nova: nenhum robô que obedece ordens tem fator de lucro ab"
-  },
-  {
    "hora_utc": "17/11 07:16",
    "de": "claude",
    "para": "sala",
@@ -977,6 +971,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Mercado indeciso: 38,8% das moedas sobem em 24 h (eram 65,2%), 14,7% em 4 h; BTC −1,91% em 4 h, volume 1,19×: Robô Claude fora e travado pela guarda do dia até 00:00 UTC (+0,11). Vendo só com 24 h em 30% ou menos. Sem ordens em vigor e nenhuma nova: abaixo de 0,7 de fator de lucro em 30+ operações s"
+  },
+  {
+   "hora_utc": "17/11 20:14",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Mercado indeciso: 44,5% das moedas sobem em 24 h, 51,3% em 4 h; BTC −2,02% em 24 h, volume 0,81×: Robô Claude fora e travado pela guarda do dia até 00:00 UTC (+0,11). Sem ordens em vigor e nenhuma nova: abaixo de 0,7 de fator de lucro em 30+ operações só Radar (0,59 em 82) e Testnet (0,33 em 96), qu"
   }
  ]
 }

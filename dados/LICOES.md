@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 20:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 20:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,15 +69,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 44.2% das moedas subindo em 24 h, 50.8% em 4 h · BTC 24 h -2.02%, 4 h -0.56%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 5.7, 'ETH': -9.0, 'SOL': -13.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': 5.8, 'ETH': -8.4, 'SOL': -10.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AAVE topo duplo (baixa, formado) · ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · ZEN topo duplo (baixa, formado)
+- 📰 17/11 20:05 UTC · Cointelegraph: Eastern Europe crypto flows fall 7.9% as Ukraine draws $12B in stablecoins
 - 📰 17/11 19:46 UTC · Decrypt: Cathie Wood's ARK Sells $85 Million in Nvidia, Buys $40 Million in Crypto Stocks
 - 📰 17/11 19:45 UTC · CoinDesk: Coinbase CEO says AI agents will account for '99.9%' of transactions within a decade
 - 📰 17/11 19:26 UTC · Decrypt: Ethereum Devs Weigh a Scaling Upgrade That Could Break 15,000 Apps
 - 📰 17/11 19:16 UTC · CoinDesk: Predictions platform Kalshi complies with order to halt Trump mention contracts
 - 📰 17/11 18:23 UTC · Decrypt: Jensen Huang Says He'd Be 'Honored' to Return as Nvidia CEO, Despite Board's Resistance
-- 📰 17/11 17:51 UTC · Cointelegraph: Lighter incident exposes risks beyond withdrawal controls
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
