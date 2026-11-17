@@ -4,12 +4,12 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.7% | 2042 | 50.5%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 2043 | 50.5%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | demark_td9_baixa | promissor | 66.7% | 9 | 35.4%–87.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
 | raschke_graal_baixa | promissor | 60.0% | 50 | 46.2%–72.4% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | connors_8020_alta | promissor | 60.0% | 5 | 23.1%–88.2% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
-| tres_soldados | promissor | 55.6% | 232 | 49.2%–61.9% | H6: três soldados → desce (efeito pequeno) |
+| tres_soldados | promissor | 55.8% | 233 | 49.4%–62.0% | H6: três soldados → desce (efeito pequeno) |
 | williams_wr_alta | promissor | 55.2% | 29 | 37.5%–71.6% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 52.5% | 61 | 40.2%–64.5% | H14: queda anormal de 1 h → sobe |
 | tres_corvos | promissor | 50.6% | 350 | 45.4%–55.8% | H6: três corvos → sobe (efeito pequeno) |
