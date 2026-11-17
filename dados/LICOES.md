@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 11:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 11:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -64,7 +64,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 67.6% das moedas subindo em 24 h, 33.3% em 4 h · BTC 24 h -0.35%, 4 h -0.44%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': 10.4, 'ETH': -7.5, 'SOL': 1.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': 10.8, 'ETH': -7.2, 'SOL': 3.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FET OCO invertido (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado)
 - 📰 17/11 11:36 UTC · CoinDesk: Bitcoin remains penned in near $64,000 even as ETF outflow streak ends
