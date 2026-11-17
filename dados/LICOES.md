@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 13:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 13:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,15 +69,15 @@ Carteira **US$ 10.38** · 4 operações fechadas · 3 abertas
 
 - **Amplitude:** 83.6% das moedas subindo em 24 h, 79.1% em 4 h · BTC 24 h 1.32%, 4 h 1.05%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.7%/ano · {'BTC': 11.0, 'ETH': 3.8, 'SOL': 7.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 11.0, 'ETH': 3.4, 'SOL': 6.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MEGA fundo duplo (alta, CONFIRMOU) · MEGA triângulo ascendente (alta, CONFIRMOU) · STX OCO invertido (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · BREV topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado)
+- 📰 17/11 13:30 UTC · Cointelegraph: Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi
 - 📰 17/11 13:12 UTC · Cointelegraph: ARK sells $85M in Nvidia shares ahead of chipmaker’s Q3 earnings results
 - 📰 17/11 13:02 UTC · CoinDesk: Ethereum's Glamsterdam upgrade risks breaking up to 15,000 automated apps
 - 📰 17/11 13:00 UTC · CoinDesk: Decentralized exchange Grvt looks to makes commodity trading more predictable with stable funding perps
 - 📰 17/11 12:56 UTC · Decrypt: Morning Minute: The CFTC Officially Greenlights Perps in the US, Starting with Backpack
 - 📰 17/11 12:50 UTC · Decrypt: 'The Biggest Opportunity in Crypto Is Already Underway': Solana Bets Big on AI Agents
-- 📰 17/11 12:24 UTC · Cointelegraph: Revolut plans four blockchain-based funds for private markets, chair says
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

@@ -1,6 +1,6 @@
 {
- "t": 1794922263,
- "hora_utc": "2026-11-17 13:31 UTC",
+ "t": 1794922498,
+ "hora_utc": "2026-11-17 13:34 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   -0.39,
   1.37,
   0.11,
-  -0.12
+  -0.11
  ],
  "contexto": {
-  "t": 1794922263,
+  "t": 1794922499,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1794922200,
+    "hora_utc": "17/11 13:30",
+    "titulo": "Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1794921130,
@@ -260,12 +266,6 @@
     "t": 1794914045,
     "hora_utc": "17/11 11:14",
     "titulo": "Bitcoin realized loss metric beats June high as open interest eyes 2-year low"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1794913525,
-    "hora_utc": "17/11 11:05",
-    "titulo": "Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 7.7,
+   "media_top20_anual_pct": 7.5,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.8,
-    "SOL": 7.9
+    "ETH": 3.4,
+    "SOL": 6.7
    },
    "leitura": "neutro"
   },
@@ -497,7 +497,7 @@
     "entrada": 0.556,
     "agora": 0.557,
     "resultado_pct": 0.18,
-    "horas_aberta": 1.2,
+    "horas_aberta": 1.3,
     "motivo_de_entrada": "24 h +8,33%, 4 h +7,29% com volume 4,51× (abaixo de 15% em 4 h)"
    },
    {
@@ -506,7 +506,7 @@
     "entrada": 65068.99,
     "agora": 65058.01,
     "resultado_pct": -0.02,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "recompra a favor da alta de 24 h (84,5% subindo), BTC +1,13% em 4 h com volume 1,29×; a compra de 12:18 saiu +0,065 pelo stop móvel"
    },
    {
@@ -515,7 +515,7 @@
     "entrada": 73.94,
     "agora": 74.02,
     "resultado_pct": 0.11,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "moeda grande a favor da alta de 24 h; a compra de 12:18 saiu +0,090 pelo stop móvel"
    }
   ],
@@ -712,7 +712,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.18,
+   "carteira": 6.21,
    "n_abertas": 1,
    "abertas": [
     [
@@ -848,7 +848,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.18
+    "carteira": 6.21
    },
    "radar": {
     "ops": 52,
