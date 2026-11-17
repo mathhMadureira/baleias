@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.8% | 2039 | 50.6%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 2040 | 50.6%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | demark_td9_baixa | promissor | 66.7% | 9 | 35.4%–87.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
 | raschke_graal_baixa | promissor | 60.0% | 50 | 46.2%–72.4% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
