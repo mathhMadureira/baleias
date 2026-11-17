@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 13:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 13:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -56,7 +56,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 10.27** · 3 operações fechadas · 1 abertas
+Carteira **US$ 10.27** · 3 operações fechadas · 4 abertas
 
 - **Total:** 3/3 com lucro (100%), resultado +0.23, média +0.075 por operação.
 - **Últimas 24 h:** 3/3 com lucro, +0.23.
@@ -67,26 +67,26 @@ Carteira **US$ 10.27** · 3 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 86.4% das moedas subindo em 24 h, 76.4% em 4 h · BTC 24 h 1.39%, 4 h 1.13%.
+- **Amplitude:** 86.4% das moedas subindo em 24 h, 77.3% em 4 h · BTC 24 h 1.45%, 4 h 1.27%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 11.0, 'ETH': 5.1, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 11.0, 'ETH': 4.3, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MEGA fundo duplo (alta, CONFIRMOU) · MEGA triângulo ascendente (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · BREV topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado)
+- 📰 17/11 13:12 UTC · Cointelegraph: ARK sells $85M in Nvidia shares ahead of chipmaker’s Q3 earnings results
 - 📰 17/11 13:02 UTC · CoinDesk: Ethereum's Glamsterdam upgrade risks breaking up to 15,000 automated apps
 - 📰 17/11 13:00 UTC · CoinDesk: Decentralized exchange Grvt looks to makes commodity trading more predictable with stable funding perps
 - 📰 17/11 12:56 UTC · Decrypt: Morning Minute: The CFTC Officially Greenlights Perps in the US, Starting with Backpack
 - 📰 17/11 12:50 UTC · Decrypt: 'The Biggest Opportunity in Crypto Is Already Underway': Solana Bets Big on AI Agents
 - 📰 17/11 12:24 UTC · Cointelegraph: Revolut plans four blockchain-based funds for private markets, chair says
-- 📰 17/11 12:16 UTC · CoinDesk: Crypto's 'casino-chips' are disappearing, adding to pain from spot ETF outflows
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 17/11 13:13 UTC · **RUNE compra, BTC compra, SOL compra, ZEC compra** · Alta de 24 h: 84,5% das moedas sobem em 24 h (eram 79,5%), 70,9% em 4 h; BTC +1,39% em 24 h, +1,13% em 4 h, volume 1,29×. Pano de fundo: BTC abaixo das médias d
 - 17/11 12:12 UTC · **BTC compra, SOL compra, ZEC compra, RUNE compra** · Alta de 24 h: 79,5% das moedas sobem em 24 h (eram 49,1% às 11:13), 68,8% em 4 h e 86,6% em 1 h; BTC +0,85% em 24 h, +1,37% em 1 h, volume 1,48×. Pano de fundo 
 - 17/11 11:10 UTC · **fora do mercado** · Mercado indeciso: 49,1% das moedas sobem em 24 h (eram 68,2% às 10:40), 13,6% em 4 h e 14,5% em 1 h; BTC −0,71% em 24 h, −0,68% em 4 h, volume 1,3×, em 64117, a
 - 17/11 10:10 UTC · **fora do mercado** · Indeciso: 68,2% das moedas sobem em 24 h (eram 66,1%), mas só 31,8% em 4 h e 23,6% em 1 h; BTC −0,06% em 24 h, −0,73% em 4 h, em 64507, volume 1,19×; medo 12. A
 - 17/11 08:09 UTC · **fora do mercado** · Mercado indeciso: 66,1% das moedas sobem em 24 h (eram 64,5%), 38,4% em 4 h e 55,4% em 1 h; BTC −0,39% em 24 h, −0,49% em 4 h, volume 1,23×, abaixo das médias d
 - 17/11 07:10 UTC · **fora do mercado** · Mercado indeciso: 64,5% das moedas sobem em 24 h (eram 69,1%), 71,8% em 4 h e 32,7% em 1 h; BTC −0,24% em 24 h, +0,08% em 4 h, −0,4% em 1 h, volume 1,24×, abaix
-- 17/11 06:09 UTC · **fora do mercado** · Indeciso, a 0,9 ponto da alta: 69,1% das moedas sobem em 24 h (eram 67,3%), 74,5% em 4 h e só 21,8% em 1 h; BTC +0,53% em 24 h, +0,1% em 4 h, −0,36% em 1 h, em 
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -115,7 +115,7 @@ Carteira **US$ 10.27** · 3 operações fechadas · 1 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20219 apostas conferidas ao vivo, acerto 54.8%; prevê 75 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20233 apostas conferidas ao vivo, acerto 54.8%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
