@@ -1,15 +1,15 @@
 {
- "t": 1794899447,
- "leitura": "Mercado indeciso: 64,5% das moedas sobem em 24 h (eram 69,1%), 71,8% em 4 h e 32,7% em 1 h; BTC −0,24% em 24 h, +0,08% em 4 h, −0,4% em 1 h, volume 1,24×, abaixo das médias de 50 e 200 dias; medo 12. Sem lado de 24 h: fora.",
+ "t": 1794902999,
+ "leitura": "Mercado indeciso: 66,1% das moedas sobem em 24 h (eram 64,5%), 38,4% em 4 h e 55,4% em 1 h; BTC −0,39% em 24 h, −0,49% em 4 h, volume 1,23×, abaixo das médias de 50 e 200 dias, medo 12: sem lado de 24 h, Robô Claude fora.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Sem operações novas (carteira 10,00). Às 06:18 o 24 h estava em 69,1% subindo com o BTC em 64814; agora 64,5% com o BTC em 64556 (−0,4% em 1 h): o 24 h chegou a 0,9 ponto da alta e recuou, como a baixa perto de 30% recuou cinco vezes entre 21:19 e 03:15. Quem comprasse as alts às 06:18 estaria contra um BTC caindo. Confirma alta: 24 h em 70% ou mais por duas leituras seguidas com BTC acima de 65216; confirma baixa: 24 h em 30% ou menos com BTC abaixo de 64500.",
+ "licao": "Sem operações novas (carteira 10,00). Às 07:16 o 24 h estava em 64,5% subindo com o BTC em 64556; agora 66,1% com o BTC em 64740 (+0,29% em 1 h), mas o 4 h caiu de 71,8% para 38,4%: as alts que puxavam o 24 h para perto de 70% já recuam em 4 h, o mesmo quadro de 06:18 (69,1%) que voltou a 64,5%. Confirma alta: 24 h em 70% ou mais por duas leituras seguidas com BTC acima de 65216; confirma baixa: 24 h em 30% ou menos com BTC abaixo de 64500.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 64,5% das moedas sobem em 24 h (eram 69,1%), 71,8% em 4 h e 32,7% em 1 h; BTC −0,24% em 24 h, volume 1,24×: Robô Claude fora. Sem ordens em vigor e nenhuma nova: o único com fator de lucro abaixo de 0,7 em 30+ operações é o Radar (0,59 em 30), que não obedece ordens; LBank 0,19 em só 8. Vigia do v4: 54,8% ao vivo, dentro do laboratório; horário 18–24 UTC fraco (49,8%)."
+   "texto": "Mercado indeciso: 66,1% das moedas sobem em 24 h (eram 64,5%), 38,4% em 4 h; BTC −0,39% em 24 h, volume 1,23×: Robô Claude fora. Sem ordens em vigor e nenhuma nova: quem tem fator de lucro abaixo de 0,7 em 30+ operações é Radar (0,57 em 34) e Testnet (0,33 em 96), que não obedecem ordens; LBank 0,19 em só 8. Vigia do v4: acerto 54,9%, dentro do laboratório."
   }
  ],
  "ordens": []
