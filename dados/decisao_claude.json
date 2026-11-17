@@ -1,15 +1,15 @@
 {
- "t": 1794888542,
- "leitura": "Indeciso: 57,3% das moedas sobem em 24 h (eram 33,3% às 03:15), 80,9% em 4 h e 83,6% em 1 h; BTC −0,09% em 24 h, +0,27% em 4 h, 65057, volume 0,93×; BTC abaixo das médias de 50 e 200 dias, medo 12, funding neutro (7,5%/ano). Sem lado de 24 h: fora.",
+ "t": 1794892157,
+ "leitura": "Indeciso, perto da alta: 67,3% das moedas sobem em 24 h (eram 57,3%), 87,3% em 4 h e 57,3% em 1 h; BTC +0,35% em 24 h, +0,64% em 4 h, em 65046, volume 1,18× (sem volume forte); BTC abaixo das médias de 50 e 200 dias, medo 12. Fora: 24 h ainda não chegou a 70%.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Sem operações novas (carteira 10,00). Às 03:15 o 24 h estava em 33,3% subindo com o BTC em 64504; agora 57,3% com o BTC em 65057 (+0,86%): pela quinta vez em 7 h a queda das alts perto de 30% voltou em uma hora, e uma venda do BTC às 03:15 estaria −0,86%, perto do stop de 1,7% que já levou o BTC de 13:20 (−0,266). Confirma baixa: 24 h em 30% ou menos por duas leituras seguidas com BTC abaixo de 64500; confirma alta: 24 h em 70% ou mais com BTC acima de 65216.",
+ "licao": "Sem operações novas (carteira 10,00). Às 04:12 o 24 h estava em 57,3% subindo com o BTC em 65057; agora 67,3% com o BTC em 65046 (parado): a subida é das alts, com o 4 h em 87,3% e volume do BTC 1,18×, o mesmo quadro de repique de 4 h em que TLM (4 h +8,26%) e KITE compradas como líderes caíram −1,8% a −3,6%. Confirma alta: 24 h em 70% ou mais com BTC acima de 65216, e aí compro moedas grandes no recuo (como as 3 compras de BTC que deram +0,072, +0,072, +0,042), não os líderes de 4 h; nega: 24 h voltar abaixo de 55%.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 57,3% das moedas sobem em 24 h (eram 33,3%), 80,9% em 4 h; BTC −0,09% em 24 h, +0,27% em 4 h, volume 0,93×: Robô Claude fora. Sem ordens em vigor e nenhuma nova: leitura sem lado, e nenhum robô que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,19 em só 8). Vigia do v4: acerto 54,6% (lab 53,5%), compras 50,9% contra vendas 58,3%."
+   "texto": "Mercado indeciso, perto da alta: 67,3% das moedas sobem em 24 h (eram 57,3%), 87,3% em 4 h; BTC +0,35% em 24 h, +0,64% em 4 h, volume 1,18×: Robô Claude fora, compro com 24 h em 70% ou mais e BTC acima de 65216. Sem ordens em vigor e nenhuma nova: nenhum robô que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,19 em só 8). Vigia do v4: acerto 54,7%, dentro do laboratório; compras 50,9% contra vendas 58,3%: exigir mais das compras do v4."
   }
  ],
  "ordens": []
