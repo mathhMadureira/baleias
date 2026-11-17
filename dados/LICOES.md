@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 18:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 18:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,11 +67,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 43.8% das moedas subindo em 24 h, 15.2% em 4 h · BTC 24 h -1.67%, 4 h -2.02%.
+- **Amplitude:** 41.1% das moedas subindo em 24 h, 14.3% em 4 h · BTC 24 h -1.9%, 4 h -2.01%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.9%/ano · {'BTC': 11.0, 'ETH': -1.5, 'SOL': -11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.0%/ano · {'BTC': 11.0, 'ETH': -1.2, 'SOL': -10.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ADA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · ASTER topo duplo (baixa, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado) · ZEN topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ADA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado) · ZEN topo duplo (baixa, formado)
 - 📰 17/11 17:51 UTC · Cointelegraph: Lighter incident exposes risks beyond withdrawal controls
 - 📰 17/11 17:42 UTC · CoinDesk: Druckenmiller says he is short copper, warns of economic weakness in 2027
 - 📰 17/11 17:39 UTC · Cointelegraph: Fed’s Waller cites Binance hack in warning over tokenized finance
@@ -107,15 +107,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: reversao_queda. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, reversao_queda. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20612 apostas conferidas ao vivo, acerto 55.0%; prevê 83 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20612 apostas conferidas ao vivo, acerto 55.0%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

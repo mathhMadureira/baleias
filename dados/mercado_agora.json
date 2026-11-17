@@ -1,28 +1,28 @@
 {
- "t": 1794939361,
- "hora_utc": "2026-11-17 18:16 UTC",
+ "t": 1794939688,
+ "hora_utc": "2026-11-17 18:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 112,
-  "subindo_pct": 33.9,
-  "mediana_pct": -0.25
+  "subindo_pct": 19.6,
+  "mediana_pct": -0.43
  },
  "mercado_4h": {
   "moedas": 112,
-  "subindo_pct": 15.2,
-  "mediana_pct": -2.54
+  "subindo_pct": 14.3,
+  "mediana_pct": -2.68
  },
  "mercado_24h": {
   "moedas": 112,
-  "subindo_pct": 43.8,
-  "mediana_pct": -0.48
+  "subindo_pct": 41.1,
+  "mediana_pct": -0.62
  },
  "btc": {
-  "1h": 0.13,
-  "4h": -2.02,
-  "24h": -1.67,
-  "preco": 63827.64,
-  "vol_4h_vs_media": 1.38
+  "1h": -0.27,
+  "4h": -2.01,
+  "24h": -1.9,
+  "preco": 63693.69,
+  "vol_4h_vs_media": 1.37
  },
  "maiores_quedas_4h": [
   {
@@ -33,15 +33,21 @@
   },
   {
    "moeda": "HUMA",
-   "4h": -7.88,
-   "24h": -12.9,
-   "vol": 0.6
+   "4h": -6.23,
+   "24h": -9.0,
+   "vol": 0.59
   },
   {
    "moeda": "MUBARAK",
    "4h": -5.66,
    "24h": -1.83,
    "vol": 1.12
+  },
+  {
+   "moeda": "INJ",
+   "4h": -5.43,
+   "24h": 4.16,
+   "vol": 1.14
   },
   {
    "moeda": "MARSCOIN",
@@ -54,12 +60,6 @@
    "4h": -4.92,
    "24h": 0.92,
    "vol": 1.08
-  },
-  {
-   "moeda": "INJ",
-   "4h": -4.74,
-   "24h": 5.48,
-   "vol": 1.16
   },
   {
    "moeda": "RARE",
@@ -89,8 +89,8 @@
  "maiores_altas_4h": [
   {
    "moeda": "MMT",
-   "4h": 21.69,
-   "24h": 32.15,
+   "4h": 17.8,
+   "24h": 30.27,
    "vol": 2.39
   },
   {
@@ -112,18 +112,6 @@
    "vol": 1.08
   },
   {
-   "moeda": "GRAM",
-   "4h": 2.91,
-   "24h": 1.53,
-   "vol": 2.89
-  },
-  {
-   "moeda": "BREV",
-   "4h": 2.61,
-   "24h": 81.53,
-   "vol": 3.36
-  },
-  {
    "moeda": "FF",
    "4h": 2.44,
    "24h": 4.18,
@@ -142,10 +130,22 @@
    "vol": 0.98
   },
   {
+   "moeda": "GRAM",
+   "4h": 1.74,
+   "24h": 0.29,
+   "vol": 2.91
+  },
+  {
    "moeda": "LUNC",
    "4h": 1.23,
    "24h": 12.98,
    "vol": 1.16
+  },
+  {
+   "moeda": "BREV",
+   "4h": 1.0,
+   "24h": 81.04,
+   "vol": 3.11
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -1.39,
   -0.57,
   0.13,
-  -0.24
+  0.06
  ],
  "contexto": {
-  "t": 1794939362,
+  "t": 1794939689,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -0.9,
+   "media_top20_anual_pct": -1.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -1.5,
-    "SOL": -11.0
+    "ETH": -1.2,
+    "SOL": -10.9
    },
    "leitura": "neutro"
   },
@@ -316,13 +316,6 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.4625
-   },
-   {
-    "moeda": "ASTER",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.5592
    },
    {
     "moeda": "BREV",
@@ -380,9 +373,9 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 105,
-  "compras": 62,
-  "vendas": 43,
+  "apostas": 102,
+  "compras": 64,
+  "vendas": 38,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
@@ -409,12 +402,12 @@
     "prob_subir": 0.394
    },
    {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
+    "moeda": "CHIP",
+    "prob_subir": 0.412
    },
    {
-    "moeda": "APE",
-    "prob_subir": 0.419
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
@@ -423,16 +416,12 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.624
+    "moeda": "MARSCOIN",
+    "prob_subir": 0.635
    },
    {
     "moeda": "KAIA",
     "prob_subir": 0.616
-   },
-   {
-    "moeda": "MARSCOIN",
-    "prob_subir": 0.612
    },
    {
     "moeda": "RWUSD",
@@ -440,7 +429,7 @@
    },
    {
     "moeda": "GTC",
-    "prob_subir": 0.609
+    "prob_subir": 0.605
    },
    {
     "moeda": "LSK",
@@ -449,6 +438,10 @@
    {
     "moeda": "PARTI",
     "prob_subir": 0.58
+   },
+   {
+    "moeda": "KITE",
+    "prob_subir": 0.576
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -657,7 +650,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.49,
+   "carteira": 6.42,
    "n_abertas": 1,
    "abertas": [
     [
@@ -784,7 +777,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.49
+    "carteira": 6.42
    },
    "radar": {
     "ops": 75,
