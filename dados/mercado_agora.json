@@ -1,11 +1,11 @@
 {
- "t": 1794956458,
- "hora_utc": "2026-11-17 23:00 UTC",
+ "t": 1794956699,
+ "hora_utc": "2026-11-17 23:04 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 122,
   "subindo_pct": 86.9,
-  "mediana_pct": 0.67
+  "mediana_pct": 0.68
  },
  "mercado_4h": {
   "moedas": 122,
@@ -15,14 +15,14 @@
  "mercado_24h": {
   "moedas": 122,
   "subindo_pct": 68.0,
-  "mediana_pct": 1.21
+  "mediana_pct": 1.27
  },
  "btc": {
-  "1h": 0.67,
-  "4h": 1.69,
-  "24h": -1.09,
-  "preco": 64814.92,
-  "vol_4h_vs_media": 0.79
+  "1h": 0.58,
+  "4h": 1.5,
+  "24h": -0.9,
+  "preco": 64731.92,
+  "vol_4h_vs_media": 0.77
  },
  "maiores_quedas_4h": [
   {
@@ -106,12 +106,6 @@
    "vol": 4.44
   },
   {
-   "moeda": "ASTER",
-   "4h": 5.76,
-   "24h": 2.54,
-   "vol": 0.29
-  },
-  {
    "moeda": "SHELL",
    "4h": 5.47,
    "24h": 9.13,
@@ -119,15 +113,21 @@
   },
   {
    "moeda": "NEAR",
-   "4h": 5.39,
-   "24h": 4.69,
-   "vol": 1.23
+   "4h": 5.12,
+   "24h": 4.89,
+   "vol": 1.26
   },
   {
    "moeda": "VIRTUAL",
    "4h": 5.02,
    "24h": 0.72,
    "vol": 1.15
+  },
+  {
+   "moeda": "ASTER",
+   "4h": 5.0,
+   "24h": 2.85,
+   "vol": 0.29
   },
   {
    "moeda": "PENGU",
@@ -172,10 +172,10 @@
   0.38,
   0.56,
   0.58,
-  0.03
+  0.32
  ],
  "contexto": {
-  "t": 1794956459,
+  "t": 1794956701,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,9 +274,9 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.0,
+   "media_top20_anual_pct": 10.1,
    "principais_anual_pct": {
-    "BTC": 7.4,
+    "BTC": 11.0,
     "ETH": 11.0,
     "SOL": 11.0
    },
@@ -422,9 +422,9 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 72,
-  "compras": 26,
-  "vendas": 46,
+  "apostas": 87,
+  "compras": 39,
+  "vendas": 48,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
@@ -465,6 +465,10 @@
     "prob_subir": 0.645
    },
    {
+    "moeda": "BONK",
+    "prob_subir": 0.627
+   },
+   {
     "moeda": "KAIA",
     "prob_subir": 0.616
    },
@@ -473,24 +477,20 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.601
+    "moeda": "ERA",
+    "prob_subir": 0.603
    },
    {
-    "moeda": "PARTI",
-    "prob_subir": 0.58
+    "moeda": "LUNA",
+    "prob_subir": 0.595
    },
    {
-    "moeda": "COTI",
-    "prob_subir": 0.569
+    "moeda": "HOME",
+    "prob_subir": 0.595
    },
    {
-    "moeda": "SKL",
-    "prob_subir": 0.564
-   },
-   {
-    "moeda": "STO",
-    "prob_subir": 0.56
+    "moeda": "ATOM",
+    "prob_subir": 0.595
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -733,7 +733,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 5.95,
+   "carteira": 5.92,
    "n_abertas": 1,
    "abertas": [
     [
@@ -869,7 +869,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 5.95
+    "carteira": 5.92
    },
    "radar": {
     "ops": 93,
@@ -906,19 +906,19 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 21622 apostas (546 velas, 11/11 18:45–17/11 22:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 21624 apostas (546 velas, 11/11 18:45–17/11 22:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5548,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
   "z_contra_lab": 1.77,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5189,
-    "n": 16989
+    "acerto": 0.519,
+    "n": 16991
    },
    "segue_maioria_24h": {
     "acerto": 0.5182,
-    "n": 21501
+    "n": 21503
    }
   },
   "referencia_ganha": [],
@@ -932,8 +932,8 @@
     "n": 1099
    },
    "confianca:<0,05": {
-    "acerto": 0.5939,
-    "n": 4964
+    "acerto": 0.5938,
+    "n": 4966
    },
    "confianca:≥0,12": {
     "acerto": 0.6714,
@@ -953,7 +953,7 @@
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5194,
-    "n": 6716
+    "n": 6718
    },
    "lado:compra": {
     "acerto": 0.5246,
@@ -961,7 +961,7 @@
    },
    "lado:venda": {
     "acerto": 0.5819,
-    "n": 11374
+    "n": 11376
    }
   }
  },
