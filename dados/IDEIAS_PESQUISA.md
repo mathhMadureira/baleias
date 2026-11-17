@@ -3,6 +3,84 @@
 Cada seção é escrita pela rotina diária de pesquisa. Nada aqui é resultado: é candidato a pré-registro em `lab/PROTOCOLO_LAB.md`.
 Fontes da internet são dados de terceiros; números entre aspas são os que a fonte dá, e "não sei" onde ela não dá.
 
+## 2026-11-17
+
+**Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/robo_scalper_nuvem.json`, 08:45 UTC):
+
+| | |
+|---|---|
+| Campeão do torneio | **Scalper nuvem** (70 op, fator de lucro 1,17, soma +0,43, carteira 10,43) |
+| Melhor fator de lucro com ≥ 30 op | Scalper C 1,38 (64 op, soma +0,79; "GANHOU do campeão") · Rápido 1,72 e Caçador 1,94 com < 30 op |
+| Onde o Scalper perde | saída **no fim da vela do v4**: 42 op, −1,68 (lucro realizado 24 op +2,28; guarda do dia 4 op −0,17); compras 00–06 UTC 16 op −0,02; 12–18 UTC 2 op −0,20 |
+| Segmento fraco do vigia | 18–24 h UTC 49,75% (5.706 apostas) e compras 51,1% (9.539) contra vendas 58,6%; ≥ 0,12 de confiança 70,4% (277) |
+
+Duas observações do dado, sem ação proposta: (1) as 70 operações do Scalper (e as 64 do C) caem todas numa única noite, 16/11 21:45 a
+17/11 02:35 UTC; depois disso a guarda/meta do dia travou até 00:00 UTC. O torneio está julgando um episódio só. (2) O Scalper D tem
+exatamente os números do Scalper (70 op, 0,432): o foco da H51 ainda não excluiu nada (exige ≥ 50 op e z ≤ −2; o pior segmento tem z −1,42).
+
+**Mercado hoje** (`dados/mercado_agora.json`): BTC 64.507, −0,06% em 24 h, −0,73% em 4 h; 68,2% das 110 moedas sobem em 24 h, mas só
+23,6% em 1 h e 31,8% em 4 h; medo e ganância 12; funding médio das 20 maiores da Hyperliquid +2,6%/ano (ontem −6,5%).
+
+**Já testado ou já proposto (fora desta lista):** alvo por ATR (H40), stop por ATR e filtro OI × prêmio (ideias de 16/11), fluxo do quarto
+de hora, tamanho por volatilidade e alarme de cascata (15/11), saídas curtas (H24), rotas de saída (H52), 18–24 h UTC (H46, em teste),
+primeira meia hora (H34), 1 s (H56). Realização parcial: a única medida pública que achei (Enlightened Stock Trading, 1.432 trades de
+tendência em ações) diz que "toda" realização parcial testada reduziu o retorno — não virou ideia.
+
+### Ideia 1 — Janela macro: não abrir posição nova de 30 min antes a 60 min depois de FOMC (comunicado e ata) e CPI dos EUA
+
+- **Regra:** calendário fixo (publicado com meses de antecedência pelo Fed e pelo BLS). Se t ∈ [evento − 30 min, evento + 60 min], os robôs
+  do v4 (Scalpers A–D, Rápido, Caçador) não abrem posição; as abertas seguem as saídas normais (regra 11: nada é fechado à força).
+  1 tentativa (janela fixa, escrita agora).
+- **Por quê no Scalper:** o v4 é um modelo de microestrutura e horário (seção 3.1 do PROJETO), treinado em velas comuns; nos minutos de
+  anúncio a volatilidade é outra e a vela do sinal não diz nada do que vem. As saídas "fim da vela" do Scalper (−1,68) são exatamente as
+  apostas que não andaram a favor; numa vela de anúncio o movimento é maior e de direção imprevisível. Liga também ao 12–18 UTC
+  (horário dos anúncios americanos: 13:30 e 19:00 UTC), onde o Scalper tem 2 op e −0,20 e o vigia 53,0%.
+- **Dados:** velas de 15 min e 1 min da Binance (grátis) + datas dos eventos (federalreserve.gov e bls.gov, grátis).
+- **Evidência:** Benigno & Rosa, NY Fed Staff Report 1052 — https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr1052.pdf :
+  com dados intradiários, o BTC é "ortogonal" às notícias macro, **exceto o CPI**. Kyriazis, Ofeidis, Palaiokrassas & Tassiulas, "Monetary
+  Policy, Digital Assets, and DeFi Activity", arXiv 2302.10252 — https://arxiv.org/abs/2302.10252 : o comunicado do FOMC "afeta fortemente a
+  volatilidade" dos ativos digitais, a ata menos, e o efeito "se fortaleceu depois de dezembro de 2021". A razão numérica de volatilidade:
+  não sei (o resumo não dá; um resumo de busca fala em "pelo menos duas vezes maior", não conferi no texto). Nenhuma das duas mede lucro de
+  robô: a evidência é de volatilidade, não de direção.
+- **Teste:** todas as apostas do v4 conferidas ao vivo + histórico do laboratório (v4 desde mai/2025), simulando a rota do Scalper (R6,
+  stop 1,5%, realizar +0,125). Custo 0,12% ida e volta. Compara apostas dentro × fora da janela em 3 blocos de tempo. Passa se as apostas
+  dentro da janela têm média líquida < 0 nos 3 blocos e < a de fora com z ≤ −2 (erro-padrão por evento, não por aposta). 1 tentativa.
+  Risco honesto: são ~8 FOMC e 12 CPI por ano → poucas dezenas de eventos; se der < 20 eventos, o veredito é "não sei".
+
+### Ideia 2 — Confirmação do fluxo agressor na vela do sinal
+
+- **Regra:** f = volume comprador tomador ÷ volume total da vela de 15 min que gerou a aposta (campo "taker buy base volume" das velas da
+  Binance). Compra só se f ≥ 0,50; venda só se f ≤ 0,50. 1 tentativa (limiar 0,50 sem ajuste).
+- **Por quê no Scalper:** 42 das 70 operações saem no fim da vela sem ter andado (−1,68). Se o v4 aposta contra o fluxo agressor da própria
+  vela, é provável que o preço não acompanhe na vela seguinte. O v4 já usa volume relativo, mas não o lado do volume (16 medidas,
+  `lab/minerador.py`).
+- **Dados:** velas de 15 min da Binance (grátis, histórico longo; o campo já vem em cada vela).
+- **Evidência (fraca, por isso 1 tentativa):** Bieganowski & Ślepaczuk, "Explainable Patterns in Cryptocurrency Microstructure", arXiv
+  2602.00776 — https://arxiv.org/html/2602.00776v1 : Binance Futures, BTC, LTC, ETC, ENJ, ROSE, 01/01/2022–12/10/2025, 1 s; o desequilíbrio
+  de fluxo tem efeito "em grande parte monótono" no retorno. Mas o horizonte é de **3 segundos**, a taxa de tomador usada e o resultado
+  líquido não aparecem no texto (não sei); IR* do tomador (bruto) 0,25 no BTC a 8,97 no ETC. Contra: estudo de opções de BTC (arXiv
+  2109.02776) acha desequilíbrio horário "sem poder preditivo" para o intervalo seguinte. A H56 (1 s) mostrou que o sinal quase empata
+  antes do custo. Não há prova no nosso horizonte: o teste decide.
+- **Teste:** apostas do v4 conferidas ao vivo (11/11 até a data) em 3 blocos de tempo, rota do Scalper, custo 0,12%. Passa se as apostas
+  mantidas têm média líquida maior que todas as apostas nos 3 blocos E as excluídas têm média < 0 com z ≤ −2 (erro por blocos de 12 h).
+  1 tentativa.
+
+### O que aprendi hoje sobre o mercado cripto
+
+O mercado agora é dirigido por juros, não por cripto: a CoinDesk (17/11, citando a Wintermute —
+https://www.coindesk.com/markets/2026/11/17/bitcoin-could-slide-into-the-usd50-000s-as-fed-rate-hike-bets-build-wintermute-says ) dá
+"cerca de 92%" de chance de **alta** de juros em dezembro depois de inflação de outubro acima do esperado, título de 10 anos acima de 5%,
+BTC −15% em novembro e abaixo da média de 200 semanas (~68.000); ETFs à vista com ~US$ 1,9 bi de saída líquida em 2026 (contra US$ 21 bi de
+entrada em 2025); a maior posição em opções na Deribit é a venda de 60.000 (> US$ 900 mi de nocional). Níveis citados: 62.000 (mínima de
+sábado), 60.000, "pressão para os 50 mil"; a Wintermute muda de ideia se o BTC fechar um dia UTC acima de 68.000 com entrada nos ETFs. Funding
+e liquidações de hoje: o artigo não dá. Sobre cascatas: o preprint arXiv 2607.27070 (7 cascatas do BTCUSDT na Binance, mai/2022–out/2025)
+achou o sinal de alerta pelo preço significativo em só 4 de 39 configurações e queda média de −24,6% nos juros em aberto durante a cascata
+(via https://cryptoslate.com/new-bitcoin-study-shows-the-strongest-recurring-liquidation-warning-signs-cannot-warn-of-an-individual-crash/ ;
+não li o PDF). Depois das maiores liquidações, o BTC rendeu 0,78% em 30 dias contra 5,9% típico, mediana −1,1% (K33 via The Block,
+https://www.theblock.co/post/372115/whats-next-after-cryptos-fourth-largest-long-liquidation-event-of-2025 ) — horizonte de 30 dias, não serve
+para os nossos robôs de horas. Para hoje, o que importa ao robô: semana com ata do FOMC e o mercado sensível a cada número de inflação,
+o que pesa na Ideia 1; e o retrato da mesa mostra 68% das moedas subindo em 24 h com só 24% subindo na última hora — repique perdendo força.
+
 ## 2026-11-16
 
 **Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/LICOES.md`, 10:06 UTC):
