@@ -1,21 +1,21 @@
 {
- "t": 1794926862,
- "hora_utc": "2026-11-17 14:47 UTC",
+ "t": 1794927089,
+ "hora_utc": "2026-11-17 14:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 110,
-  "subindo_pct": 60.0,
-  "mediana_pct": 0.17
+  "moedas": 109,
+  "subindo_pct": 59.6,
+  "mediana_pct": 0.15
  },
  "mercado_4h": {
-  "moedas": 110,
-  "subindo_pct": 77.3,
-  "mediana_pct": 1.42
+  "moedas": 109,
+  "subindo_pct": 77.1,
+  "mediana_pct": 1.46
  },
  "mercado_24h": {
-  "moedas": 110,
-  "subindo_pct": 52.7,
-  "mediana_pct": 0.28
+  "moedas": 109,
+  "subindo_pct": 53.2,
+  "mediana_pct": 0.41
  },
  "btc": {
   "1h": 0.26,
@@ -172,11 +172,17 @@
   1.37,
   0.11,
   0.12,
-  -0.25
+  -0.2
  ],
  "contexto": {
-  "t": 1794926863,
+  "t": 1794927089,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1794926749,
+    "hora_utc": "17/11 14:45",
+    "titulo": "Solana Foundation takes majority interest in crypto data firm CoinGecko"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1794922200,
@@ -260,12 +266,6 @@
     "t": 1794914298,
     "hora_utc": "17/11 11:18",
     "titulo": "BlackRock’s Bitcoin ETF snaps $2.35B outflow streak amid extreme fear"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794914045,
-    "hora_utc": "17/11 11:14",
-    "titulo": "Bitcoin realized loss metric beats June high as open interest eyes 2-year low"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.3,
+   "media_top20_anual_pct": 8.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.0,
-    "SOL": 7.6
+    "ETH": 2.3,
+    "SOL": 6.9
    },
    "leitura": "neutro"
   },
@@ -650,7 +650,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.19,
+   "carteira": 6.21,
    "n_abertas": 1,
    "abertas": [
     [
@@ -786,7 +786,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.19
+    "carteira": 6.21
    },
    "radar": {
     "ops": 59,
@@ -830,12 +830,12 @@
   "z_contra_lab": 1.23,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.521,
-    "n": 15243
+    "acerto": 0.5205,
+    "n": 15148
    },
    "segue_maioria_24h": {
-    "acerto": 0.5248,
-    "n": 20435
+    "acerto": 0.5241,
+    "n": 20355
    }
   },
   "referencia_ganha": [],
