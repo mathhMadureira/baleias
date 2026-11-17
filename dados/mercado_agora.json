@@ -1,20 +1,20 @@
 {
- "t": 1794899154,
- "hora_utc": "2026-11-17 07:05 UTC",
+ "t": 1794899473,
+ "hora_utc": "2026-11-17 07:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 110,
-  "subindo_pct": 32.7,
+  "moedas": 111,
+  "subindo_pct": 33.3,
   "mediana_pct": -0.19
  },
  "mercado_4h": {
-  "moedas": 110,
-  "subindo_pct": 71.8,
-  "mediana_pct": 0.57
+  "moedas": 111,
+  "subindo_pct": 72.1,
+  "mediana_pct": 0.58
  },
  "mercado_24h": {
-  "moedas": 110,
-  "subindo_pct": 64.5,
+  "moedas": 111,
+  "subindo_pct": 64.9,
   "mediana_pct": 0.89
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.02,
   -0.36,
   -0.4,
-  0.06
+  0.18
  ],
  "contexto": {
-  "t": 1794899155,
+  "t": 1794899474,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.0,
+   "media_top20_anual_pct": 8.3,
    "principais_anual_pct": {
-    "BTC": 7.9,
-    "ETH": 4.4,
-    "SOL": -1.6
+    "BTC": 6.8,
+    "ETH": 3.7,
+    "SOL": -2.1
    },
    "leitura": "neutro"
   },
@@ -296,13 +296,6 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
-   {
-    "moeda": "BARD",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.0977
-   },
    {
     "moeda": "ETH",
     "padrao": "fundo duplo",
@@ -668,7 +661,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 5.81,
+   "carteira": 5.76,
    "n_abertas": 1,
    "abertas": [
     [
@@ -685,7 +678,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.22,
+   "carteira": 9.18,
    "n_abertas": 4,
    "abertas": [
     [
@@ -812,7 +805,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 5.81
+    "carteira": 5.76
    },
    "radar": {
     "ops": 30,
@@ -821,7 +814,7 @@
     "ganho_medio": 0.071,
     "perda_media": -0.105,
     "fator_lucro": 0.59,
-    "carteira": 9.22
+    "carteira": 9.18
    },
    "testnet": {
     "ops": 96,
@@ -857,11 +850,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5234,
-    "n": 14510
+    "n": 14590
    },
    "segue_maioria_24h": {
     "acerto": 0.5276,
-    "n": 19128
+    "n": 19305
    }
   },
   "referencia_ganha": [],
