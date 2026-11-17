@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 12:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 12:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,7 +69,7 @@ Carteira **US$ 10.16** · 2 operações fechadas · 2 abertas
 
 - **Amplitude:** 83.6% das moedas subindo em 24 h, 70.0% em 4 h · BTC 24 h 0.95%, 4 h 0.83%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.3%/ano · {'BTC': 11.0, 'ETH': -2.5, 'SOL': 8.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.5%/ano · {'BTC': 11.0, 'ETH': -2.5, 'SOL': 8.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH OCO invertido (alta, CONFIRMOU) · INJ bandeira de alta (alta, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado)
 - 📰 17/11 12:50 UTC · Decrypt: 'The Biggest Opportunity in Crypto Is Already Underway': Solana Bets Big on AI Agents
