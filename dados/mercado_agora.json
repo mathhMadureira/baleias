@@ -1,28 +1,28 @@
 {
- "t": 1794947480,
- "hora_utc": "2026-11-17 20:31 UTC",
+ "t": 1794947975,
+ "hora_utc": "2026-11-17 20:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 119,
-  "subindo_pct": 81.5,
-  "mediana_pct": 0.7
+  "moedas": 120,
+  "subindo_pct": 82.5,
+  "mediana_pct": 0.73
  },
  "mercado_4h": {
-  "moedas": 119,
-  "subindo_pct": 47.9,
-  "mediana_pct": 0.0
+  "moedas": 120,
+  "subindo_pct": 50.0,
+  "mediana_pct": 0.01
  },
  "mercado_24h": {
-  "moedas": 119,
-  "subindo_pct": 52.9,
-  "mediana_pct": 0.27
+  "moedas": 120,
+  "subindo_pct": 53.3,
+  "mediana_pct": 0.28
  },
  "btc": {
-  "1h": -0.09,
-  "4h": -0.62,
-  "24h": -1.87,
-  "preco": 63816.51,
-  "vol_4h_vs_media": 0.73
+  "1h": 0.4,
+  "4h": 0.14,
+  "24h": -1.78,
+  "preco": 63998.04,
+  "vol_4h_vs_media": 0.71
  },
  "maiores_quedas_4h": [
   {
@@ -74,16 +74,16 @@
    "vol": 0.56
   },
   {
-   "moeda": "ZEC",
-   "4h": -2.33,
-   "24h": 2.11,
-   "vol": 0.73
-  },
-  {
    "moeda": "JUP",
    "4h": -1.92,
    "24h": 1.79,
    "vol": 0.56
+  },
+  {
+   "moeda": "AAVE",
+   "4h": -1.84,
+   "24h": 2.73,
+   "vol": 1.28
   }
  ],
  "maiores_altas_4h": [
@@ -172,11 +172,17 @@
   0.13,
   -0.08,
   -0.03,
-  0.37
+  0.51
  ],
  "contexto": {
-  "t": 1794947481,
+  "t": 1794947976,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1794947763,
+    "hora_utc": "17/11 20:36",
+    "titulo": "Bitcoin Investors Are Capitulating—That’s Historically Been a Bottom Signal"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1794945904,
@@ -260,12 +266,6 @@
     "t": 1794929437,
     "hora_utc": "17/11 15:30",
     "titulo": "Standard Life Chair Wants Tokenized Gilts to Open UK Government Bonds to Retail Savers"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794928260,
-    "hora_utc": "17/11 15:11",
-    "titulo": "Hong Kong, Swift test tokenized deposits as banks chase stablecoin-style speed"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.2,
+   "media_top20_anual_pct": 4.5,
    "principais_anual_pct": {
-    "BTC": 6.5,
-    "ETH": -2.8,
-    "SOL": -6.3
+    "BTC": 7.3,
+    "ETH": -1.1,
+    "SOL": -4.6
    },
    "leitura": "neutro"
   },
@@ -393,22 +393,26 @@
   }
  },
  "v4": {
-  "vela": "05:30 UTC",
-  "apostas": 67,
-  "compras": 34,
-  "vendas": 33,
+  "vela": "20:30 UTC",
+  "apostas": 134,
+  "compras": 33,
+  "vendas": 101,
   "mais_confiantes_venda": [
+   {
+    "moeda": "CYBER",
+    "prob_subir": 0.36
+   },
    {
     "moeda": "ETC",
     "prob_subir": 0.362
    },
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.367
-   },
-   {
     "moeda": "SLP",
     "prob_subir": 0.376
+   },
+   {
+    "moeda": "BMT",
+    "prob_subir": 0.379
    },
    {
     "moeda": "FORM",
@@ -423,10 +427,6 @@
     "prob_subir": 0.386
    },
    {
-    "moeda": "BMT",
-    "prob_subir": 0.387
-   },
-   {
     "moeda": "BB",
     "prob_subir": 0.394
    }
@@ -434,7 +434,7 @@
   "mais_confiantes_compra": [
    {
     "moeda": "SOPH",
-    "prob_subir": 0.665
+    "prob_subir": 0.676
    },
    {
     "moeda": "HEMI",
@@ -450,7 +450,7 @@
    },
    {
     "moeda": "ONE",
-    "prob_subir": 0.585
+    "prob_subir": 0.6
    },
    {
     "moeda": "PARTI",
@@ -461,8 +461,8 @@
     "prob_subir": 0.569
    },
    {
-    "moeda": "ERA",
-    "prob_subir": 0.565
+    "moeda": "COOKIE",
+    "prob_subir": 0.566
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -576,8 +576,17 @@
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
    "carteira": 10.69,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "SOPH",
+     "compra"
+    ],
+    [
+     "CYBER",
+     "venda"
+    ]
+   ],
    "n_fechadas": 17,
    "ordem": null
   },
@@ -588,8 +597,25 @@
    "motor": "Cérebro v4",
    "missao": "Todas as apostas do v4 nas 140 moedas, as mais confiantes primeiro, segurando enquanto a tendência dura.",
    "carteira": 10.86,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 4,
+   "abertas": [
+    [
+     "SOPH",
+     "compra"
+    ],
+    [
+     "CYBER",
+     "venda"
+    ],
+    [
+     "BMT",
+     "venda"
+    ],
+    [
+     "RWUSD",
+     "compra"
+    ]
+   ],
    "n_fechadas": 24,
    "ordem": null
   },
@@ -624,8 +650,25 @@
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
    "carteira": 10.79,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 4,
+   "abertas": [
+    [
+     "SOPH",
+     "compra"
+    ],
+    [
+     "CYBER",
+     "venda"
+    ],
+    [
+     "BMT",
+     "venda"
+    ],
+    [
+     "ONE",
+     "compra"
+    ]
+   ],
    "n_fechadas": 64,
    "ordem": null
   },
@@ -648,8 +691,25 @@
    "motor": "regra H28",
    "missao": "Vende alta forte sem volume e compra queda forte sem volume (a regra de minutos que pagou custo no laboratório).",
    "carteira": 10.44,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 4,
+   "abertas": [
+    [
+     "BEAMX",
+     "venda"
+    ],
+    [
+     "OP",
+     "venda"
+    ],
+    [
+     "LA",
+     "venda"
+    ],
+    [
+     "CRV",
+     "venda"
+    ]
+   ],
    "n_fechadas": 22,
    "ordem": null
   },
@@ -671,7 +731,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.37,
+   "carteira": 6.34,
    "n_abertas": 1,
    "abertas": [
     [
@@ -815,7 +875,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.37
+    "carteira": 6.34
    },
    "radar": {
     "ops": 82,
@@ -852,34 +912,34 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.6% em 21105 apostas (536 velas, 11/11 18:45–17/11 20:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5558,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.6% em 21108 apostas (536 velas, 11/11 18:45–17/11 20:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5559,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.84,
+  "z_contra_lab": 1.85,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5205,
-    "n": 16247
+    "acerto": 0.521,
+    "n": 16352
    },
    "segue_maioria_24h": {
-    "acerto": 0.5177,
-    "n": 20952
+    "acerto": 0.5173,
+    "n": 21105
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.594,
-    "n": 2298
+    "acerto": 0.5942,
+    "n": 2299
    },
    "confianca:0,08–0,12": {
     "acerto": 0.5808,
     "n": 1064
    },
    "confianca:<0,05": {
-    "acerto": 0.5995,
-    "n": 4629
+    "acerto": 0.5997,
+    "n": 4631
    },
    "confianca:≥0,12": {
     "acerto": 0.6746,
@@ -898,12 +958,12 @@
     "n": 4868
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5199,
-    "n": 6199
+    "acerto": 0.5202,
+    "n": 6202
    },
    "lado:compra": {
-    "acerto": 0.523,
-    "n": 10017
+    "acerto": 0.5232,
+    "n": 10020
    },
    "lado:venda": {
     "acerto": 0.5854,
