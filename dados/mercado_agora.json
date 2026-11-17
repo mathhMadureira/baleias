@@ -1,6 +1,6 @@
 {
- "t": 1794957423,
- "hora_utc": "2026-11-17 23:17 UTC",
+ "t": 1794957669,
+ "hora_utc": "2026-11-17 23:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 121,
@@ -172,10 +172,10 @@
   0.38,
   0.56,
   0.58,
-  0.51
+  0.39
  ],
  "contexto": {
-  "t": 1794957423,
+  "t": 1794957670,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,7 +274,7 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 10.4,
+   "media_top20_anual_pct": 10.2,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -617,23 +617,15 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 12.04,
-   "n_abertas": 3,
+   "carteira": 12.09,
+   "n_abertas": 1,
    "abertas": [
     [
      "U",
      "compra"
-    ],
-    [
-     "RWUSD",
-     "compra"
-    ],
-    [
-     "PARTI",
-     "compra"
     ]
    ],
-   "n_fechadas": 29,
+   "n_fechadas": 31,
    "ordem": null
   },
   {
@@ -726,7 +718,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 5.71,
+   "carteira": 5.66,
    "n_abertas": 1,
    "abertas": [
     [
@@ -743,7 +735,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.29,
+   "carteira": 7.24,
    "n_abertas": 3,
    "abertas": [
     [
@@ -776,7 +768,7 @@
   }
  ],
  "torneio": {
-  "campeao": "scalper",
+  "campeao": "cacador",
   "placar": {
    "claude": {
     "ops": 7,
@@ -788,13 +780,13 @@
     "carteira": 10.11
    },
    "cacador": {
-    "ops": 29,
-    "acerto": 0.828,
-    "soma": 2.045,
-    "ganho_medio": 0.131,
-    "perda_media": -0.222,
-    "fator_lucro": 2.84,
-    "carteira": 12.04
+    "ops": 31,
+    "acerto": 0.806,
+    "soma": 2.094,
+    "ganho_medio": 0.13,
+    "perda_media": -0.191,
+    "fator_lucro": 2.83,
+    "carteira": 12.09
    },
    "rapido": {
     "ops": 31,
@@ -866,7 +858,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 5.71
+    "carteira": 5.66
    },
    "radar": {
     "ops": 97,
@@ -875,7 +867,7 @@
     "ganho_medio": 0.082,
     "perda_media": -0.128,
     "fator_lucro": 0.58,
-    "carteira": 7.29
+    "carteira": 7.24
    },
    "testnet": {
     "ops": 96,
