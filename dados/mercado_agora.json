@@ -1,6 +1,6 @@
 {
- "t": 1794953781,
- "hora_utc": "2026-11-17 22:16 UTC",
+ "t": 1794954028,
+ "hora_utc": "2026-11-17 22:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 121,
@@ -175,8 +175,14 @@
   0.15
  ],
  "contexto": {
-  "t": 1794953782,
+  "t": 1794954029,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1794953898,
+    "hora_utc": "17/11 22:18",
+    "titulo": "Nvidia Shares Rise After Earnings Beat in First Report Since Jensen Huang's Exit"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1794952595,
@@ -260,12 +266,6 @@
     "t": 1794937181,
     "hora_utc": "17/11 17:39",
     "titulo": "Fed’s Waller cites Binance hack in warning over tokenized finance"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1794935921,
-    "hora_utc": "17/11 17:18",
-    "titulo": "Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 7.5,
+   "media_top20_anual_pct": 7.6,
    "principais_anual_pct": {
-    "BTC": 7.7,
+    "BTC": 7.2,
     "ETH": 11.0,
-    "SOL": 1.5
+    "SOL": 1.1
    },
    "leitura": "neutro"
   },
@@ -617,8 +617,8 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 11.56,
-   "n_abertas": 4,
+   "carteira": 11.51,
+   "n_abertas": 3,
    "abertas": [
     [
      "U",
@@ -629,15 +629,11 @@
      "compra"
     ],
     [
-     "ONE",
-     "compra"
-    ],
-    [
      "LUNA",
      "compra"
     ]
    ],
-   "n_fechadas": 22,
+   "n_fechadas": 23,
    "ordem": null
   },
   {
@@ -747,7 +743,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.24,
+   "carteira": 6.19,
    "n_abertas": 1,
    "abertas": [
     [
@@ -764,7 +760,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.59,
+   "carteira": 7.65,
    "n_abertas": 3,
    "abertas": [
     [
@@ -809,13 +805,13 @@
     "carteira": 10.11
    },
    "cacador": {
-    "ops": 22,
-    "acerto": 0.818,
-    "soma": 1.462,
-    "ganho_medio": 0.122,
+    "ops": 23,
+    "acerto": 0.826,
+    "soma": 1.576,
+    "ganho_medio": 0.121,
     "perda_media": -0.183,
-    "fator_lucro": 3.0,
-    "carteira": 11.56
+    "fator_lucro": 3.16,
+    "carteira": 11.51
    },
    "rapido": {
     "ops": 31,
@@ -887,7 +883,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.24
+    "carteira": 6.19
    },
    "radar": {
     "ops": 92,
@@ -896,7 +892,7 @@
     "ganho_medio": 0.082,
     "perda_media": -0.127,
     "fator_lucro": 0.62,
-    "carteira": 7.59
+    "carteira": 7.65
    },
    "testnet": {
     "ops": 96,
