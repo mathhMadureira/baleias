@@ -1,6 +1,6 @@
 {
- "t": 1794895703,
- "hora_utc": "2026-11-17 06:08 UTC",
+ "t": 1794896016,
+ "hora_utc": "2026-11-17 06:13 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,10 +172,10 @@
   0.86,
   -0.02,
   -0.36,
-  -0.07
+  -0.18
  ],
  "contexto": {
-  "t": 1794895704,
+  "t": 1794896017,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.8,
+   "media_top20_anual_pct": 5.0,
    "principais_anual_pct": {
-    "BTC": 0.8,
-    "ETH": 11.0,
-    "SOL": -15.6
+    "BTC": -0.6,
+    "ETH": 10.6,
+    "SOL": -13.1
    },
    "leitura": "neutro"
   },
@@ -703,7 +703,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 5.74,
+   "carteira": 5.77,
    "n_abertas": 1,
    "abertas": [
     [
@@ -720,7 +720,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.19,
+   "carteira": 9.18,
    "n_abertas": 1,
    "abertas": [
     [
@@ -835,7 +835,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 5.74
+    "carteira": 5.77
    },
    "radar": {
     "ops": 27,
@@ -844,7 +844,7 @@
     "ganho_medio": 0.065,
     "perda_media": -0.101,
     "fator_lucro": 0.52,
-    "carteira": 9.19
+    "carteira": 9.18
    },
    "testnet": {
     "ops": 96,
