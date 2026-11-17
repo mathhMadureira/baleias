@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 22:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 22:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,15 +71,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 56.2% das moedas subindo em 24 h, 80.2% em 4 h · BTC 24 h -1.52%, 4 h 1.21%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 8.1, 'ETH': 11.0, 'SOL': 1.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 9.7, 'ETH': 11.0, 'SOL': 2.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SKY estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 17/11 22:20 UTC · Cointelegraph: CFTC halts some Kalshi Trump mention markets over manipulation concerns
 - 📰 17/11 22:18 UTC · Decrypt: Nvidia Shares Rise After Earnings Beat in First Report Since Jensen Huang's Exit
 - 📰 17/11 21:56 UTC · Cointelegraph: Maple Finance CEO targets up to $15B in assets by the end of 2027
 - 📰 17/11 21:46 UTC · Decrypt: OpenAI's GPT 6.2 Astra Challenges Anthropic on Price, But Not Every Benchmark
 - 📰 17/11 21:25 UTC · CoinDesk: Nvidia tops estimates, issues strong guidance; shares rise
 - 📰 17/11 20:56 UTC · Decrypt: World Bank Taps Circle and Citi to Test Stablecoins for Development Payments
-- 📰 17/11 20:36 UTC · Decrypt: Bitcoin Investors Are Capitulating—That’s Historically Been a Bottom Signal
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
