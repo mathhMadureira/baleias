@@ -80,3 +80,5 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-17: ideias dos vídeos do "Grok bot", medidas antes: **H57 meta do dia +US$ 0,50** (fecha e trava; carteiras 78,45 → 82,58, dias
   positivos 9 → 11 de 34; meta de +12 nunca foi alcançada) e **H58 posição = 2,5 × carteira** (reinveste o lucro, encolhe na perda; 78,45 →
   81,91, nenhum robô abaixo do piso). O jeito do vídeo (60% do caixa) piorou e ficou fora.
+- 2026-11-17: meta do dia volta a **US$ 12** (a de +0,50 travava quem ganhava: 8 robôs entre 10,11 e 10,86 parados); travas da meta antiga
+  soltas; a guarda do dia (H54) segue. Robô LBank só entra onde há velas de 1 min (stop de 2% furado em SPACE1 −11% e AIOT −7%).

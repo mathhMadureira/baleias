@@ -138,6 +138,8 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
         noc = TM.nocional(e)                                   # H58: proporcional à carteira
         if len(e["abertas"]) >= MAX_POS or not noc:
             break
+        if not minutos(par_spot(par), (agora - 900) * 1000, agora * 1000):   # 17/11: sem velas de 1 min o stop não é conferido a tempo
+            continue                                           # (SPACE1 −11% e AIOT −7% com stop de 2%): só entra onde o stop funciona
         e["caixa"] -= noc / ALAV
         e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco, "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc}
         textos.append(f"🟣 {NOME} ENTROU {'COMPRADO' if lado == 'compra' else 'VENDIDO'} em {par[:-4]} a {preco:.6g} "

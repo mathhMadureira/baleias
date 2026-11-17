@@ -1116,3 +1116,7 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   11/34 — aprovada**. **H58 proporcional 2,5×: 81,91, 0 robôs < US$ 5 — aprovada**; 60% do caixa (vídeo): 70,26, 7/34, 2 < US$ 5 —
   reprovada. Aproximação: depois da trava, as posições abertas seguem até a saída real. Ligadas em 17/11 (`executor/guarda_dia.py` META,
   `executor/tamanho.py`) em Rápido, Caçador, Scalpers, Minerador, LBank, Claude e Radar (Livre já usa a carteira inteira).
+- **H57 alterada pelo dono (17/11):** com a meta de +0,50, 8 robôs passaram de US$ 10 (10,11 a 10,86) e ficaram travados ("ninguém
+  conseguiu fazer mais de 10"). META volta a US$ 12 (meta do dono; no contrafactual, igual a não ter meta); a guarda H54 continua. Travas
+  antigas pela meta de 0,50 são soltas. Robô LBank só entra em moeda com velas de 1 min na LBank (SPACE1 −11% e AIOT −7% com stop de 2%:
+  sem velas de 1 min o stop só era conferido a cada rodada).

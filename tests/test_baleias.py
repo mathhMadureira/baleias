@@ -1667,8 +1667,12 @@ class MetaETamanho(unittest.TestCase):
         e["patrimonio"] = 10.49
         self.assertEqual(GD.checar(e, t0 + 60), "normal")
         e["patrimonio"] = 10.55
-        self.assertEqual(GD.checar(e, t0 + 120), "fechar")
+        self.assertEqual(GD.checar(e, t0 + 120), "normal")            # meta é US$ 12: +0,55 segue operando
+        e["patrimonio"] = 22.1
+        self.assertEqual(GD.checar(e, t0 + 180), "fechar")
         self.assertTrue(GD.motivo(e).startswith("meta do dia"))
+        e2 = {"patrimonio": 10.6, "guarda_dia": {"data": GD._hoje(t0), "inicio": 10.0, "pico": 0.6, "travado": True}}
+        self.assertEqual(GD.checar(e2, t0 + 240), "normal")           # travado pela meta antiga de 0,50: destrava
 
     def test_tamanho_proporcional(self):
         from executor import tamanho as TM
@@ -1854,6 +1858,7 @@ class RoboLBank(unittest.TestCase):
         self.assertEqual(lado_desejado(None, -0.04), "venda")
 
     @unittest.mock.patch("executor.robo_lbank_nuvem.velas15", lambda par: [])
+    @unittest.mock.patch("executor.robo_lbank_nuvem.minutos", lambda *a: [(0, 1.0, 1.0)])
     def test_entra_nas_que_mais_caem_e_sai_quando_vira(self):
         from executor import robo_lbank_nuvem as L
         e = {"caixa": 10.0, "abertas": {}, "fechadas": []}

@@ -10,7 +10,8 @@ Medido antes de ligar (16/11, 36 dias-robô da mesa): dias positivos 7 → 11 e 
 import time
 
 GATILHO, DEVOLVE = 0.25, 0.5
-META = 0.50          # H57: dia que chega a +US$ 0,50 fecha tudo e trava (medido: carteiras 78,45 → 82,58, dias positivos 9 → 11 de 34)
+META = 12.0          # H57: meta do dono (17/11: "ninguém conseguiu fazer mais de 10"). A de +0,50 passou no teste mas segurava quem ganhava;
+                     # a de 12 não mudou nada nos dados antigos. Quem protege o lucro do dia é a guarda (GATILHO/DEVOLVE).
 
 
 def _hoje(agora):
@@ -27,10 +28,12 @@ def checar(e, agora=None):
     res = pat - d["inicio"]
     d["resultado"], d["pico"] = round(res, 4), round(max(d["pico"], res), 4)
     e["guarda_dia"] = d
+    if d["travado"] and not d.get("por") and res > d["pico"] * DEVOLVE and res < META:   # trava antiga pela meta de 0,50: destrava
+        d["travado"] = False
     if d["travado"]:
         return "travado"
     if res >= META or (d["pico"] >= GATILHO and res <= d["pico"] * DEVOLVE):
-        d["travado"], d["travado_em"] = True, int(agora)
+        d["travado"], d["travado_em"], d["por"] = True, int(agora), "meta" if res >= META else "guarda"
         return "fechar"
     return "normal"
 
