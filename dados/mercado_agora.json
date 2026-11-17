@@ -1,6 +1,6 @@
 {
- "t": 1794914258,
- "hora_utc": "2026-11-17 11:17 UTC",
+ "t": 1794914487,
+ "hora_utc": "2026-11-17 11:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   -0.62,
   0.04,
   -0.39,
-  0.43
+  0.42
  ],
  "contexto": {
-  "t": 1794914259,
+  "t": 1794914488,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1794914045,
+    "hora_utc": "17/11 11:14",
+    "titulo": "Bitcoin realized loss metric beats June high as open interest eyes 2-year low"
+   },
    {
     "fonte": "Decrypt",
     "t": 1794913525,
@@ -260,12 +266,6 @@
     "t": 1794898489,
     "hora_utc": "17/11 06:54",
     "titulo": "Cardano Foundation seeks $5 million from treasury using ADA price 33% above market"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794897319,
-    "hora_utc": "17/11 06:35",
-    "titulo": "Ex-Robinhood engineer pleads guilty to $125K Hyperliquid trading scheme"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.4,
+   "media_top20_anual_pct": 3.6,
    "principais_anual_pct": {
-    "BTC": 10.4,
-    "ETH": -8.0,
-    "SOL": -6.9
+    "BTC": 10.8,
+    "ETH": -8.4,
+    "SOL": -5.5
    },
    "leitura": "neutro"
   },
@@ -649,7 +649,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.29,
+   "carteira": 6.26,
    "n_abertas": 1,
    "abertas": [
     [
@@ -666,7 +666,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.22,
+   "carteira": 9.28,
    "n_abertas": 3,
    "abertas": [
     [
@@ -789,7 +789,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.29
+    "carteira": 6.26
    },
    "radar": {
     "ops": 45,
@@ -798,7 +798,7 @@
     "ganho_medio": 0.076,
     "perda_media": -0.094,
     "fator_lucro": 0.64,
-    "carteira": 9.22
+    "carteira": 9.28
    },
    "testnet": {
     "ops": 96,
