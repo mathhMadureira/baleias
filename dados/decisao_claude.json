@@ -1,36 +1,36 @@
 {
- "t": 1794921228,
- "leitura": "Alta de 24 h: 84,5% das moedas sobem em 24 h (eram 79,5%), 70,9% em 4 h; BTC +1,39% em 24 h, +1,13% em 4 h, volume 1,29×. Pano de fundo: BTC abaixo das médias de 50 e 200 dias e medo 12 (extremo), então nada de moeda esticada; funding neutro (5,7%/ano). Mesa comprada.",
+ "t": 1794924783,
+ "leitura": "Alta de 24 h: 79,3% das moedas sobem em 24 h (eram 84,5%), 73,0% em 4 h, 41,4% em 1 h; BTC +1,49% em 24 h, +1,21% em 4 h, 65145, volume 1,05×. Pano de fundo de baixa (BTC abaixo das médias de 50 e 200 dias, medo 12), funding neutro (6,8%/ano). Lado: COMPRADO. A guarda do dia (H54) travou o Robô Claude às 13:50 UTC com +0,11 (pico +0,40) até 00:00 UTC: as compras abaixo só entram quando o executor liberar.",
  "posicoes": [
-  {
-   "moeda": "RUNEUSDT",
-   "lado": "compra",
-   "motivo": "mantida: 24 h +8,81%, 4 h +7,13% com volume 4,7×, abaixo de 15% em 4 h; aberta há 0,9 h em 0,0%, longe do stop de 2,8%"
-  },
   {
    "moeda": "BTCUSDT",
    "lado": "compra",
-   "motivo": "recompra a favor da alta de 24 h (84,5% subindo), BTC +1,13% em 4 h com volume 1,29×; a compra de 12:18 saiu +0,065 pelo stop móvel"
+   "motivo": "alta de 24 h com 79,3% subindo; BTC +1,21% em 4 h sem esticar (volume 1,05×); a compra de BTC de 12:18 saiu +0,065 pelo stop móvel"
   },
   {
    "moeda": "SOLUSDT",
    "lado": "compra",
-   "motivo": "moeda grande a favor da alta de 24 h; a compra de 12:18 saiu +0,090 pelo stop móvel"
+   "motivo": "moeda grande a favor da alta de 24 h; a compra de SOL de 12:18 saiu +0,090 pelo stop móvel"
   },
   {
-   "moeda": "ZECUSDT",
+   "moeda": "RUNEUSDT",
    "lado": "compra",
-   "motivo": "24 h +10,06%, 4 h +3,57% sem esticar, volume 1,15×; a compra de 12:18 saiu +0,071 pelo stop móvel"
+   "motivo": "24 h +9,18%, 4 h +3,71% sem esticar, volume 2,19×; a compra de RUNE de 12:18 saiu +0,064 pelo stop móvel"
+  },
+  {
+   "moeda": "STXUSDT",
+   "lado": "compra",
+   "motivo": "24 h +7,73%, 4 h +4,66% com volume 1,78× (abaixo de 15% em 4 h); topo duplo de 1 h não confirmado e família reprovada na H45, só informação"
   }
  ],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "As 3 compras de 12:18 em moedas que não lideravam o 4 h (BTC, SOL, ZEC) saíram no lucro pelo stop móvel (+0,065, +0,090, +0,071; picos de +0,55% a +0,68%, em 53, 15 e 4 min), enquanto RUNE, comprada como líder de 4 h (+7,29%, volume 4,51×), está em 0,0% após 0,9 h. Com o 24 h subindo de 79,5% para 84,5%, recompro as três; conferir na próxima se RUNE passa de +0,5% ou se repete TLM/KITE (líderes de 4 h que caíram −1,8% a −3,6%); fecho tudo se o 24 h cair abaixo de 70%.",
+ "licao": "As compras de 12:18 (BTC, SOL, ZEC, RUNE) somaram +0,29 pelo stop móvel, mas as recompras de 13:19 em BTC (pico +0,10%) e SOL (pico +0,28%) nunca chegaram a +0,5% e saíram pela guarda do dia (−0,069 e −0,197), levando o dia de +0,40 a +0,11: recomprar logo depois do stop móvel, com o 4 h já em 70,9%, entregou metade do ganho. Conferir à 00:00 UTC se o 24 h ainda está em 70% ou mais antes de reabrir.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Alta de 24 h: 84,5% das moedas sobem em 24 h, 70,9% em 4 h; BTC +1,39% em 24 h, volume 1,29×: Robô Claude comprado em RUNE, BTC, SOL e ZEC. Sem ordens em vigor e nenhuma nova: a regra da tendência já põe todos comprados, e ninguém que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,19 em só 8). v4 não entra como voto: vela de 05:30 UTC, velha, e 72 das 100 apostas contra a alta."
+   "texto": "Alta de 24 h: 79,3% das moedas sobem em 24 h, 73,0% em 4 h; BTC +1,49% em 24 h, volume 1,05×: Robô Claude quer BTC, SOL, RUNE e STX comprados, mas está travado pela guarda do dia até 00:00 UTC (+0,11, pico +0,40). Sem ordens em vigor e nenhuma nova: a regra da tendência já põe todos comprados, e ninguém que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,19 em só 8). v4 da vela de 05:30 aponta 84 vendas contra a alta: não uso como voto."
   }
  ],
  "ordens": []
