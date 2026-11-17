@@ -1,28 +1,28 @@
 {
- "t": 1794914958,
- "hora_utc": "2026-11-17 11:29 UTC",
+ "t": 1794915184,
+ "hora_utc": "2026-11-17 11:33 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 110,
-  "subindo_pct": 68.2,
-  "mediana_pct": 0.24
+  "moedas": 111,
+  "subindo_pct": 77.5,
+  "mediana_pct": 0.57
  },
  "mercado_4h": {
-  "moedas": 110,
-  "subindo_pct": 27.3,
-  "mediana_pct": -0.33
+  "moedas": 111,
+  "subindo_pct": 33.3,
+  "mediana_pct": -0.4
  },
  "mercado_24h": {
-  "moedas": 110,
-  "subindo_pct": 60.9,
-  "mediana_pct": 0.59
+  "moedas": 111,
+  "subindo_pct": 67.6,
+  "mediana_pct": 0.95
  },
  "btc": {
-  "1h": 0.06,
-  "4h": -0.39,
-  "24h": -0.39,
-  "preco": 64366.31,
-  "vol_4h_vs_media": 1.39
+  "1h": 0.25,
+  "4h": -0.44,
+  "24h": -0.35,
+  "preco": 64427.18,
+  "vol_4h_vs_media": 1.43
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "RARE",
-   "4h": -9.78,
-   "24h": -10.54,
+   "4h": -7.68,
+   "24h": -11.27,
    "vol": 0.48
   },
   {
-   "moeda": "SHELL",
-   "4h": -3.64,
-   "24h": 2.9,
-   "vol": 0.73
+   "moeda": "KAVA",
+   "4h": -6.07,
+   "24h": -14.7,
+   "vol": 1.28
   },
   {
    "moeda": "SOPH",
-   "4h": -3.06,
-   "24h": 2.15,
-   "vol": 0.79
+   "4h": -4.95,
+   "24h": 3.23,
+   "vol": 0.78
+  },
+  {
+   "moeda": "MITO",
+   "4h": -4.19,
+   "24h": 0.82,
+   "vol": 0.85
   },
   {
    "moeda": "MARSCOIN",
-   "4h": -2.96,
-   "24h": 0.92,
-   "vol": 0.8
+   "4h": -3.82,
+   "24h": 0.93,
+   "vol": 0.71
   },
   {
-   "moeda": "PLUME",
-   "4h": -2.95,
-   "24h": -1.5,
-   "vol": 1.52
-  },
-  {
-   "moeda": "KAVA",
-   "4h": -2.8,
-   "24h": -13.49,
-   "vol": 1.25
+   "moeda": "SHELL",
+   "4h": -3.18,
+   "24h": 1.88,
+   "vol": 0.76
   },
   {
    "moeda": "ONE",
-   "4h": -2.65,
-   "24h": -4.07,
-   "vol": 1.35
+   "4h": -3.12,
+   "24h": -4.09,
+   "vol": 1.56
   },
   {
-   "moeda": "ICP",
-   "4h": -2.56,
-   "24h": 6.66,
-   "vol": 0.47
+   "moeda": "PLUME",
+   "4h": -2.7,
+   "24h": -0.67,
+   "vol": 1.49
   },
   {
-   "moeda": "CYBER",
-   "4h": -2.37,
-   "24h": -4.63,
-   "vol": 0.98
+   "moeda": "PROM",
+   "4h": -2.55,
+   "24h": 7.56,
+   "vol": 2.37
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "LUNC",
-   "4h": 7.34,
-   "24h": 14.67,
-   "vol": 4.54
-  },
-  {
-   "moeda": "HAEDAL",
-   "4h": 6.69,
-   "24h": 3.67,
-   "vol": 3.98
+   "4h": 7.59,
+   "24h": 16.23,
+   "vol": 4.59
   },
   {
    "moeda": "RUNE",
-   "4h": 4.6,
-   "24h": 5.81,
-   "vol": 4.37
+   "4h": 5.76,
+   "24h": 6.58,
+   "vol": 4.44
   },
   {
-   "moeda": "MMT",
-   "4h": 2.57,
-   "24h": 12.98,
-   "vol": 0.43
-  },
-  {
-   "moeda": "MEGA",
-   "4h": 2.44,
-   "24h": 0.61,
-   "vol": 0.77
-  },
-  {
-   "moeda": "NOM",
-   "4h": 2.32,
-   "24h": -2.37,
-   "vol": 0.3
-  },
-  {
-   "moeda": "ALLO",
-   "4h": 2.15,
-   "24h": -5.35,
-   "vol": 2.16
-  },
-  {
-   "moeda": "DODO",
-   "4h": 1.94,
-   "24h": 4.22,
-   "vol": 1.96
+   "moeda": "HAEDAL",
+   "4h": 5.2,
+   "24h": 2.88,
+   "vol": 3.97
   },
   {
    "moeda": "GTC",
-   "4h": 1.6,
-   "24h": 7.31,
-   "vol": 1.94
+   "4h": 3.31,
+   "24h": 10.1,
+   "vol": 1.89
+  },
+  {
+   "moeda": "ALLO",
+   "4h": 2.36,
+   "24h": -4.47,
+   "vol": 2.19
   },
   {
    "moeda": "QNT",
-   "4h": 1.59,
-   "24h": -0.37,
-   "vol": 0.64
+   "4h": 1.89,
+   "24h": 0.47,
+   "vol": 0.66
+  },
+  {
+   "moeda": "MMT",
+   "4h": 1.84,
+   "24h": 13.44,
+   "vol": 0.51
+  },
+  {
+   "moeda": "NOM",
+   "4h": 1.75,
+   "24h": 0.55,
+   "vol": 0.34
+  },
+  {
+   "moeda": "INIT",
+   "4h": 1.7,
+   "24h": -2.57,
+   "vol": 1.34
+  },
+  {
+   "moeda": "MEGA",
+   "4h": 1.69,
+   "24h": 0.72,
+   "vol": 0.83
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.62,
   0.04,
   -0.39,
-  0.47
+  0.72
  ],
  "contexto": {
-  "t": 1794914959,
+  "t": 1794915185,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1794914991,
+    "hora_utc": "17/11 11:29",
+    "titulo": "Solana Foundation takes majority stake in crypto data provider CoinGecko"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1794914758,
@@ -260,12 +266,6 @@
     "t": 1794906512,
     "hora_utc": "17/11 09:08",
     "titulo": "Goldman Sachs reports $1.22B in Ether ETFs as ETHA share count jumps"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1794906063,
-    "hora_utc": "17/11 09:01",
-    "titulo": "Solana Foundation Backs CoinGecko as Crypto Data Giant Eyes Trading"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.5,
+   "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": 10.2,
-    "ETH": -8.3,
-    "SOL": -2.4
+    "BTC": 10.5,
+    "ETH": -7.2,
+    "SOL": 0.2
    },
    "leitura": "neutro"
   },
@@ -337,6 +337,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 1866.89
+   },
+   {
+    "moeda": "FET",
+    "padrao": "OCO invertido",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.1341
    },
    {
     "moeda": "FIL",
@@ -421,42 +428,42 @@
   }
  },
  "v4": {
-  "vela": "11:15 UTC",
-  "apostas": 133,
-  "compras": 22,
-  "vendas": 111,
+  "vela": "11:30 UTC",
+  "apostas": 125,
+  "compras": 32,
+  "vendas": 93,
   "mais_confiantes_venda": [
    {
-    "moeda": "CELO",
-    "prob_subir": 0.344
-   },
-   {
-    "moeda": "DOT",
+    "moeda": "CRV",
     "prob_subir": 0.359
-   },
-   {
-    "moeda": "PEPE",
-    "prob_subir": 0.361
    },
    {
     "moeda": "ETC",
     "prob_subir": 0.362
    },
    {
-    "moeda": "XLM",
-    "prob_subir": 0.367
+    "moeda": "DASH",
+    "prob_subir": 0.364
    },
    {
-    "moeda": "CRV",
-    "prob_subir": 0.371
+    "moeda": "CYBER",
+    "prob_subir": 0.376
    },
    {
-    "moeda": "MORPHO",
-    "prob_subir": 0.371
+    "moeda": "TRUMP",
+    "prob_subir": 0.376
    },
    {
-    "moeda": "FET",
-    "prob_subir": 0.372
+    "moeda": "SLP",
+    "prob_subir": 0.376
+   },
+   {
+    "moeda": "ENA",
+    "prob_subir": 0.382
+   },
+   {
+    "moeda": "FORM",
+    "prob_subir": 0.382
    }
   ],
   "mais_confiantes_compra": [
@@ -465,32 +472,32 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "KAIA",
-    "prob_subir": 0.616
+    "moeda": "REQ",
+    "prob_subir": 0.639
    },
    {
-    "moeda": "SOPH",
-    "prob_subir": 0.612
+    "moeda": "MITO",
+    "prob_subir": 0.636
+   },
+   {
+    "moeda": "KAIA",
+    "prob_subir": 0.616
    },
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
    },
    {
+    "moeda": "KAVA",
+    "prob_subir": 0.589
+   },
+   {
     "moeda": "PARTI",
     "prob_subir": 0.58
    },
    {
-    "moeda": "COTI",
-    "prob_subir": 0.569
-   },
-   {
-    "moeda": "SKL",
-    "prob_subir": 0.564
-   },
-   {
-    "moeda": "STO",
-    "prob_subir": 0.56
+    "moeda": "ONE",
+    "prob_subir": 0.58
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -649,7 +656,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.28,
+   "carteira": 6.21,
    "n_abertas": 1,
    "abertas": [
     [
@@ -785,7 +792,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.28
+    "carteira": 6.21
    },
    "radar": {
     "ops": 47,
@@ -822,46 +829,46 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.9% em 19685 apostas (507 velas, 11/11 18:45–17/11 10:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5493,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.8% em 19769 apostas (508 velas, 11/11 18:45–17/11 11:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5477,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.24,
+  "z_contra_lab": 1.11,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5217,
-    "n": 14726
+    "acerto": 0.5212,
+    "n": 14811
    },
    "segue_maioria_24h": {
-    "acerto": 0.5245,
-    "n": 19543
+    "acerto": 0.5234,
+    "n": 19544
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5889,
-    "n": 1839
+    "acerto": 0.577,
+    "n": 1889
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5605,
-    "n": 892
+    "acerto": 0.5604,
+    "n": 894
    },
    "confianca:<0,05": {
-    "acerto": 0.5872,
-    "n": 3895
+    "acerto": 0.5849,
+    "n": 3920
    },
    "confianca:≥0,12": {
-    "acerto": 0.7,
-    "n": 280
+    "acerto": 0.6864,
+    "n": 287
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5959,
     "n": 5362
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5779,
-    "n": 4371
+    "acerto": 0.5704,
+    "n": 4455
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5304,
@@ -873,11 +880,11 @@
    },
    "lado:compra": {
     "acerto": 0.5112,
-    "n": 9630
+    "n": 9633
    },
    "lado:venda": {
-    "acerto": 0.5857,
-    "n": 10055
+    "acerto": 0.5824,
+    "n": 10136
    }
   }
  },
