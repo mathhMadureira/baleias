@@ -1,6 +1,6 @@
 {
- "t": 1794915184,
- "hora_utc": "2026-11-17 11:33 UTC",
+ "t": 1794915410,
+ "hora_utc": "2026-11-17 11:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -172,11 +172,17 @@
   -0.62,
   0.04,
   -0.39,
-  0.72
+  0.78
  ],
  "contexto": {
-  "t": 1794915185,
+  "t": 1794915411,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1794915367,
+    "hora_utc": "17/11 11:36",
+    "titulo": "Bitcoin remains penned in near $64,000 even as ETF outflow streak ends"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1794914991,
@@ -260,12 +266,6 @@
     "t": 1794907279,
     "hora_utc": "17/11 09:21",
     "titulo": "Binance hacker moves $63 million in stolen ether after 2 weeks of silence"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794906512,
-    "hora_utc": "17/11 09:08",
-    "titulo": "Goldman Sachs reports $1.22B in Ether ETFs as ETHA share count jumps"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.8,
+   "media_top20_anual_pct": 4.0,
    "principais_anual_pct": {
-    "BTC": 10.5,
-    "ETH": -7.2,
-    "SOL": 0.2
+    "BTC": 10.4,
+    "ETH": -7.5,
+    "SOL": 1.3
    },
    "leitura": "neutro"
   },
@@ -656,7 +656,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.21,
+   "carteira": 6.15,
    "n_abertas": 1,
    "abertas": [
     [
@@ -673,7 +673,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.25,
+   "carteira": 9.34,
    "n_abertas": 2,
    "abertas": [
     [
@@ -792,7 +792,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.21
+    "carteira": 6.15
    },
    "radar": {
     "ops": 47,
@@ -801,7 +801,7 @@
     "ganho_medio": 0.079,
     "perda_media": -0.101,
     "fator_lucro": 0.64,
-    "carteira": 9.25
+    "carteira": 9.34
    },
    "testnet": {
     "ops": 96,
