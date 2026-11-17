@@ -1,20 +1,20 @@
 {
- "t": 1794884525,
- "hora_utc": "2026-11-17 03:02 UTC",
+ "t": 1794884995,
+ "hora_utc": "2026-11-17 03:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 111,
-  "subindo_pct": 37.8,
-  "mediana_pct": -0.08
+  "moedas": 110,
+  "subindo_pct": 38.2,
+  "mediana_pct": -0.07
  },
  "mercado_4h": {
-  "moedas": 111,
-  "subindo_pct": 39.6,
-  "mediana_pct": -0.22
+  "moedas": 110,
+  "subindo_pct": 40.0,
+  "mediana_pct": -0.19
  },
  "mercado_24h": {
-  "moedas": 111,
-  "subindo_pct": 33.3,
+  "moedas": 110,
+  "subindo_pct": 33.6,
   "mediana_pct": -1.11
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.39,
   0.18,
   -0.38,
-  0.13
+  0.27
  ],
  "contexto": {
-  "t": 1794884526,
+  "t": 1794884996,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 9.6,
+   "media_top20_anual_pct": 9.2,
    "principais_anual_pct": {
-    "BTC": 7.0,
-    "ETH": 7.2,
-    "SOL": -15.1
+    "BTC": 7.7,
+    "ETH": 6.6,
+    "SOL": -8.3
    },
    "leitura": "neutro"
   },
@@ -572,27 +572,10 @@
    "avatar": "🌲",
    "motor": "Cérebro v4",
    "missao": "Todas as apostas do v4 nas 140 moedas, as mais confiantes primeiro, segurando enquanto a tendência dura.",
-   "carteira": 10.98,
-   "n_abertas": 4,
-   "abertas": [
-    [
-     "JUV",
-     "venda"
-    ],
-    [
-     "U",
-     "venda"
-    ],
-    [
-     "KMNO",
-     "compra"
-    ],
-    [
-     "FIDA",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 20,
+   "carteira": 10.86,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 24,
    "ordem": null
   },
   {
@@ -625,27 +608,10 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
-   "carteira": 10.91,
-   "n_abertas": 4,
-   "abertas": [
-    [
-     "BEAMX",
-     "compra"
-    ],
-    [
-     "FIDA",
-     "venda"
-    ],
-    [
-     "BONK",
-     "venda"
-    ],
-    [
-     "JUV",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 60,
+   "carteira": 10.79,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 64,
    "ordem": null
   },
   {
@@ -707,7 +673,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 4.79,
+   "carteira": 4.56,
    "n_abertas": 1,
    "abertas": [
     [
@@ -724,7 +690,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.34,
+   "carteira": 9.36,
    "n_abertas": 3,
    "abertas": [
     [
@@ -778,13 +744,13 @@
     "carteira": 10.69
    },
    "rapido": {
-    "ops": 20,
-    "acerto": 0.9,
-    "soma": 1.511,
+    "ops": 24,
+    "acerto": 0.75,
+    "soma": 0.863,
     "ganho_medio": 0.115,
-    "perda_media": -0.279,
-    "fator_lucro": 3.71,
-    "carteira": 10.98
+    "perda_media": -0.201,
+    "fator_lucro": 1.72,
+    "carteira": 10.86
    },
    "scalper": {
     "ops": 70,
@@ -805,13 +771,13 @@
     "carteira": 10.55
    },
    "scalper_c": {
-    "ops": 60,
-    "acerto": 0.567,
-    "soma": 0.912,
+    "ops": 64,
+    "acerto": 0.547,
+    "soma": 0.794,
     "ganho_medio": 0.083,
-    "perda_media": -0.074,
-    "fator_lucro": 1.48,
-    "carteira": 10.91
+    "perda_media": -0.073,
+    "fator_lucro": 1.38,
+    "carteira": 10.79
    },
    "scalper_d": {
     "ops": 70,
@@ -847,7 +813,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 4.79
+    "carteira": 4.56
    },
    "radar": {
     "ops": 13,
@@ -856,7 +822,7 @@
     "ganho_medio": 0.072,
     "perda_media": -0.091,
     "fator_lucro": 0.35,
-    "carteira": 9.34
+    "carteira": 9.36
    },
    "testnet": {
     "ops": 96,
@@ -891,12 +857,12 @@
   "z_contra_lab": 1.04,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5256,
-    "n": 14009
+    "acerto": 0.5254,
+    "n": 13894
    },
    "segue_maioria_24h": {
-    "acerto": 0.5319,
-    "n": 18712
+    "acerto": 0.5327,
+    "n": 18678
    }
   },
   "referencia_ganha": [],
