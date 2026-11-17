@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 06:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 06:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -30,13 +30,13 @@ Carteira **US$ 10.69** · 17 operações fechadas · 0 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 10.52** · 17 operações fechadas · 4 abertas
+Carteira **US$ 10.66** · 18 operações fechadas · 4 abertas
 
-- **Total:** 9/17 com lucro (53%), resultado +0.52, média +0.030 por operação.
-- **Últimas 24 h:** 9/17 com lucro, +0.52.
-- **Por horário:** 18–23 UTC: 7 op, 57% certas, +0.06 · 00–05 UTC: 10 op, 50% certas, +0.46
-- **Por lado:** venda: 9 op, 44% certas, +0.06 · compra: 8 op, 62% certas, +0.46
-- **Por motivo de saída:** fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.64%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14
+- **Total:** 10/18 com lucro (56%), resultado +0.66, média +0.037 por operação.
+- **Últimas 24 h:** 10/18 com lucro, +0.66.
+- **Por horário:** 18–23 UTC: 7 op, 57% certas, +0.06 · 06–11 UTC: 1 op, 100% certas, +0.15 · 00–05 UTC: 10 op, 50% certas, +0.46
+- **Por lado:** venda: 10 op, 50% certas, +0.20 · compra: 8 op, 62% certas, +0.46
+- **Por motivo de saída:** fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.64%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15
 - **Moedas que mais perderam (≥ 3 op):** LSK -0.05 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** LSK -0.05 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -65,15 +65,15 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 69.1% das moedas subindo em 24 h, 78.2% em 4 h · BTC 24 h 0.19%, 4 h 0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': -0.7, 'ETH': 10.4, 'SOL': -10.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': -0.6, 'ETH': 9.7, 'SOL': -10.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BARD fundo duplo (alta, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · PUMP topo duplo (baixa, CONFIRMOU) · ARB topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · GLMR triângulo simétrico (?, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado)
+- 📰 17/11 06:35 UTC · Cointelegraph: Ex-Robinhood engineer pleads guilty to $125K Hyperliquid trading scheme
 - 📰 17/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 17/11 05:37 UTC · CoinDesk: Wells Fargo's reported BlackRock bitcoin ETF holdings double to $2.35 billion
 - 📰 17/11 05:02 UTC · CoinDesk: Ripple-backed Evernorth has written down its pre-listing XRP holdings by 60%
 - 📰 17/11 03:46 UTC · Cointelegraph: Trezor customer data exposed in 3rd partner breach this year
 - 📰 17/11 01:02 UTC · Cointelegraph: Hackers inject credit card, crypto-stealing malware into 178 major websites
-- 📰 16/11 23:50 UTC · Cointelegraph: Nvidia shares fall 4% as board reportedly rules out Huang return
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

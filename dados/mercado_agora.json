@@ -1,6 +1,6 @@
 {
- "t": 1794897272,
- "hora_utc": "2026-11-17 06:34 UTC",
+ "t": 1794897588,
+ "hora_utc": "2026-11-17 06:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   0.86,
   -0.02,
   -0.36,
-  -0.68
+  -0.75
  ],
  "contexto": {
-  "t": 1794897273,
+  "t": 1794897589,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1794897319,
+    "hora_utc": "17/11 06:35",
+    "titulo": "Ex-Robinhood engineer pleads guilty to $125K Hyperliquid trading scheme"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1794895200,
@@ -260,12 +266,6 @@
     "t": 1794863763,
     "hora_utc": "16/11 21:16",
     "titulo": "Hackers Redirected Bitcoin Miner Rewards via AI Attack, Luxor CEO Says"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794861947,
-    "hora_utc": "16/11 20:45",
-    "titulo": "Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 4.1,
    "principais_anual_pct": {
-    "BTC": -0.7,
-    "ETH": 10.4,
-    "SOL": -10.8
+    "BTC": -0.6,
+    "ETH": 9.7,
+    "SOL": -10.1
    },
    "leitura": "neutro"
   },
@@ -667,7 +667,7 @@
    "avatar": "⛏",
    "motor": "regra H28",
    "missao": "Vende alta forte sem volume e compra queda forte sem volume (a regra de minutos que pagou custo no laboratório).",
-   "carteira": 10.52,
+   "carteira": 10.66,
    "n_abertas": 4,
    "abertas": [
     [
@@ -683,11 +683,11 @@
      "compra"
     ],
     [
-     "GRAM",
-     "venda"
+     "BMT",
+     "compra"
     ]
    ],
-   "n_fechadas": 17,
+   "n_fechadas": 18,
    "ordem": null
   },
   {
@@ -717,7 +717,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.29,
+   "carteira": 6.26,
    "n_abertas": 1,
    "abertas": [
     [
@@ -734,7 +734,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.15,
+   "carteira": 9.22,
    "n_abertas": 3,
    "abertas": [
     [
@@ -833,13 +833,13 @@
     "carteira": 10.43
    },
    "minerador": {
-    "ops": 17,
-    "acerto": 0.529,
-    "soma": 0.516,
-    "ganho_medio": 0.116,
+    "ops": 18,
+    "acerto": 0.556,
+    "soma": 0.662,
+    "ganho_medio": 0.119,
     "perda_media": -0.066,
-    "fator_lucro": 1.98,
-    "carteira": 10.52
+    "fator_lucro": 2.26,
+    "carteira": 10.66
    },
    "livre": {
     "ops": 23,
@@ -857,7 +857,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.29
+    "carteira": 6.26
    },
    "radar": {
     "ops": 28,
@@ -866,7 +866,7 @@
     "ganho_medio": 0.065,
     "perda_media": -0.105,
     "fator_lucro": 0.46,
-    "carteira": 9.15
+    "carteira": 9.22
    },
    "testnet": {
     "ops": 96,
