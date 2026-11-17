@@ -1,21 +1,21 @@
 {
- "t": 1794920882,
- "hora_utc": "2026-11-17 13:08 UTC",
+ "t": 1794921109,
+ "hora_utc": "2026-11-17 13:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 109,
-  "subindo_pct": 58.7,
-  "mediana_pct": 0.12
+  "moedas": 110,
+  "subindo_pct": 59.1,
+  "mediana_pct": 0.13
  },
  "mercado_4h": {
-  "moedas": 109,
-  "subindo_pct": 70.6,
+  "moedas": 110,
+  "subindo_pct": 70.9,
   "mediana_pct": 0.97
  },
  "mercado_24h": {
-  "moedas": 109,
-  "subindo_pct": 84.4,
-  "mediana_pct": 3.14
+  "moedas": 110,
+  "subindo_pct": 84.5,
+  "mediana_pct": 3.04
  },
  "btc": {
   "1h": 0.11,
@@ -172,10 +172,10 @@
   -0.39,
   1.37,
   0.11,
-  0.1
+  -0.02
  ],
  "contexto": {
-  "t": 1794920882,
+  "t": 1794921110,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,10 +274,10 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 5.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.3,
+    "ETH": 4.2,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -431,6 +431,10 @@
     "prob_subir": 0.362
    },
    {
+    "moeda": "ATM",
+    "prob_subir": 0.374
+   },
+   {
     "moeda": "SLP",
     "prob_subir": 0.376
    },
@@ -453,10 +457,6 @@
    {
     "moeda": "HOME",
     "prob_subir": 0.402
-   },
-   {
-    "moeda": "TRX",
-    "prob_subir": 0.416
    }
   ],
   "mais_confiantes_compra": [
@@ -496,24 +496,15 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.25,
+  "carteira": 10.23,
   "abertas": [
-   {
-    "moeda": "BTC",
-    "lado": "compra",
-    "entrada": 64830.67,
-    "agora": 65064.0,
-    "resultado_pct": 0.36,
-    "horas_aberta": 0.8,
-    "motivo_de_entrada": "alta de 24 h com 79,5% subindo; BTC +1,37% em 1 h com volume 1,48×; as 3 compras de BTC na alta anterior saíram no lucro"
-   },
    {
     "moeda": "RUNE",
     "lado": "compra",
     "entrada": 0.556,
     "agora": 0.556,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.8,
+    "horas_aberta": 0.9,
     "motivo_de_entrada": "24 h +8,33%, 4 h +7,29% com volume 4,51× (abaixo de 15% em 4 h)"
    }
   ],
@@ -531,6 +522,13 @@
     "resultado_usd": 0.09,
     "motivo_saida": "stop móvel (pico +0.68%, guardou +0.48%)",
     "motivo_de_entrada": "moeda grande a favor da alta de 24 h; a compra de SOL na alta anterior saiu no lucro (+0,042)"
+   },
+   {
+    "moeda": "BTC",
+    "lado": "compra",
+    "resultado_usd": 0.065,
+    "motivo_saida": "stop móvel (pico +0.55%, guardou +0.38%)",
+    "motivo_de_entrada": "alta de 24 h com 79,5% subindo; BTC +1,37% em 1 h com volume 1,48×; as 3 compras de BTC na alta anterior saíram no lucro"
    }
   ],
   "licoes_anteriores": [
@@ -575,19 +573,15 @@
    "avatar": "🤖",
    "motor": "Claude (rotina de hora em hora)",
    "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs.",
-   "carteira": 10.25,
-   "n_abertas": 2,
+   "carteira": 10.23,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "BTC",
-     "compra"
-    ],
     [
      "RUNE",
      "compra"
     ]
    ],
-   "n_fechadas": 2,
+   "n_fechadas": 3,
    "ordem": null
   },
   {
@@ -709,7 +703,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.24,
+   "carteira": 9.07,
    "n_abertas": 3,
    "abertas": [
     [
@@ -745,13 +739,13 @@
   "campeao": "scalper",
   "placar": {
    "claude": {
-    "ops": 2,
+    "ops": 3,
     "acerto": 1.0,
-    "soma": 0.16,
-    "ganho_medio": 0.08,
+    "soma": 0.226,
+    "ganho_medio": 0.075,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 10.25
+    "carteira": 10.23
    },
    "cacador": {
     "ops": 17,
@@ -841,7 +835,7 @@
     "ganho_medio": 0.094,
     "perda_media": -0.1,
     "fator_lucro": 0.8,
-    "carteira": 9.24
+    "carteira": 9.07
    },
    "testnet": {
     "ops": 96,
@@ -877,11 +871,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.522,
-    "n": 15252
+    "n": 15256
    },
    "segue_maioria_24h": {
-    "acerto": 0.5268,
-    "n": 20132
+    "acerto": 0.5271,
+    "n": 20086
    }
   },
   "referencia_ganha": [],
