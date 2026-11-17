@@ -1,16 +1,1 @@
-{
- "t": 1794956979,
- "leitura": "Indeciso: 68,0% das moedas sobem em 24 h (entre 30% e 70%), 88,5% em 4 h e 86,9% em 1 h; BTC −0,9% em 24 h, +1,5% em 4 h, volume 0,77×: repique das alts sem volume do BTC, abaixo das médias de 50 e 200 dias, medo 12. Fora; além disso a guarda do dia trava até 00:00 UTC (+0,11).",
- "posicoes": [],
- "fechar": [],
- "motivos_fechar": {},
- "licao": "Sem operações novas desde 13:19 (7 operações, soma +0,114). Hoje o 24 h parou três vezes entre 66,1% e 69,1% (06:18, 08:14, 10:40) sem volume e recuou; só às 12:18, com 79,5% e BTC +1,37% em 1 h com volume 1,48×, as compras de BTC, SOL e ZEC saíram no lucro (+0,065, +0,090, +0,071). Agora 68,0% com volume do BTC 0,77×: o mesmo quadro sem volume. Confirma alta: 24 h em 70% ou mais com volume do BTC ≥ 1,2×; nega: 4 h cair abaixo de 40% subindo.",
- "respostas": [],
- "mensagens": [
-  {
-   "para": "sala",
-   "texto": "Mercado indeciso: 68,0% das moedas sobem em 24 h, 88,5% em 4 h; BTC −0,9% em 24 h, +1,5% em 4 h, volume 0,77×: Robô Claude fora e travado pela guarda do dia até 00:00 UTC (+0,11). Sem ordens em vigor e nenhuma nova: abaixo de 0,7 de fator de lucro em 30+ operações só Radar (0,61 em 93) e Testnet (0,33 em 96), que não obedecem ordens; LBank (0,19) tem só 8 operações. v4 dentro do laboratório (55,5% ao vivo), mais fraco das 18–24 h UTC (51,9%)."
-  }
- ],
- "ordens": []
-}
+{"t": 1794958798, "leitura": "Alta de 24 h pela régua, ainda sem confirmação: 81,8% das moedas sobem em 24 h (eram 68,0% às 23:09), 90,9% em 4 h e 94,2% em 1 h; BTC −0,32% em 24 h, +1,95% em 4 h, volume 0,82×, abaixo das médias de 50 e 200 dias, medo 12. Primeira leitura acima de 70% e sem volume do BTC. Robô Claude travado pela guarda do dia até 00:00 UTC (+0,11): sem posições nesta rodada; as entradas ficam para a primeira rodada depois da virada do dia.", "posicoes": [], "fechar": [], "motivos_fechar": {}, "licao": "As recompras de 13:19 depois das saídas no lucro das 12:18 deram ZEC +0,090, BTC −0,069 e SOL −0,197 (soma −0,176): BTC e SOL fecharam pela guarda do dia quando a carteira devolveu de +0,40 para +0,18. Com o dia já positivo, recomprar sem a mesma confirmação da primeira entrada (BTC +1,37% em 1 h com volume 1,48×) devolveu o lucro do dia. Depois da virada: compro só se o 24 h seguir em 70% ou mais na próxima leitura e o BTC mostrar volume de 1,2× ou mais.", "respostas": [], "mensagens": [{"para": "sala", "texto": "O chefe da mesa passa a decidir pelo OpenBot, a cada 30 min. Mercado: 81,8% das moedas sobem em 24 h e 90,9% em 4 h, mas o BTC está −0,32% em 24 h com volume 0,82×. Pela régua de 70%, a regra da tendência já põe os robôs só em compras: nenhuma ordem nova, nenhuma em vigor, nenhum conflito no banco (exposição US$ 137 em 6 moedas). Robô Claude fora e travado pela guarda do dia até 21:00 de Brasília (+0,11)."}], "ordens": []}
