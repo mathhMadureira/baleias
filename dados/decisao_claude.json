@@ -1,15 +1,36 @@
 {
- "t": 1794913844,
- "leitura": "Mercado indeciso: 49,1% das moedas sobem em 24 h (eram 68,2% às 10:40), 13,6% em 4 h e 14,5% em 1 h; BTC −0,71% em 24 h, −0,68% em 4 h, volume 1,3×, em 64117, abaixo das médias de 50 e 200 dias; medo 12. A queda é de 4 h, ainda não virou baixa de 24 h: fora.",
- "posicoes": [],
+ "t": 1794917566,
+ "leitura": "Alta de 24 h: 79,5% das moedas sobem em 24 h (eram 49,1% às 11:13), 68,8% em 4 h e 86,6% em 1 h; BTC +0,85% em 24 h, +1,37% em 1 h, volume 1,48×. Pano de fundo de baixa (BTC 64995 abaixo das médias de 50 e 200 dias, medo 12), mas a regra de 24 h manda: mesa comprada.",
+ "posicoes": [
+  {
+   "moeda": "BTCUSDT",
+   "lado": "compra",
+   "motivo": "alta de 24 h com 79,5% subindo; BTC +1,37% em 1 h com volume 1,48×; as 3 compras de BTC na alta anterior saíram no lucro"
+  },
+  {
+   "moeda": "SOLUSDT",
+   "lado": "compra",
+   "motivo": "moeda grande a favor da alta de 24 h; a compra de SOL na alta anterior saiu no lucro (+0,042)"
+  },
+  {
+   "moeda": "ZECUSDT",
+   "lado": "compra",
+   "motivo": "24 h +7,03% (entre +5% e +10%), 4 h +2,69% sem esticar, volume 1,11×"
+  },
+  {
+   "moeda": "RUNEUSDT",
+   "lado": "compra",
+   "motivo": "24 h +8,33%, 4 h +7,29% com volume 4,51× (abaixo de 15% em 4 h)"
+  }
+ ],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Sem operações novas (carteira 10,00). Às 10:40 o 24 h estava em 68,2% subindo com o BTC em 64507; agora 49,1% com o BTC em 64117 (−0,6%): pela terceira leitura seguida (06:18 69,1%, 08:14 66,1%, 10:40 68,2%) o 24 h perto de 70% recuou, e quem comprasse as alts ali estaria contra um 4 h que caiu para 13,6% subindo. Confirma baixa: 24 h em 30% ou menos por duas leituras seguidas com BTC abaixo de 64500; confirma alta: 24 h em 70% ou mais com BTC acima de 65216.",
+ "licao": "Sem operações novas (carteira 10,00). Às 11:13 o 24 h estava em 49,1% subindo com o BTC em 64117; agora 79,5% com o BTC em 64995 (+1,37% em 1 h, volume 1,48×): depois de parar três vezes entre 66,1% e 69,1% (06:18, 08:14, 10:40), o 24 h passou de 70%. Compro BTC, SOL, ZEC (24 h +7,03%) e RUNE (24 h +8,33%), evitando MMT (4 h +18,21%) e INJ/LUNC (24 h acima de +10%, como TLM e KITE que caíram −1,8% a −3,6%). Conferir na próxima se o 24 h segue em 70% ou mais e se ZEC e RUNE seguram como o BTC; se o 24 h cair abaixo de 70%, a alta falhou.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 49,1% das moedas sobem em 24 h (eram 68,2%), 13,6% em 4 h; BTC −0,71% em 24 h, volume 1,3×: Robô Claude fora, vendo com 24 h em 30% ou menos. Sem ordens em vigor e nenhuma nova: quem tem fator de lucro abaixo de 0,7 em 30+ operações é Radar (0,66 em 44) e Testnet (0,33 em 96), que não obedecem ordens; LBank 0,19 em só 8. Vigia do v4: acerto 54,9%, dentro do laboratório; compras 51,0% contra vendas 58,6%."
+   "texto": "Alta de 24 h: 79,5% das moedas sobem em 24 h (eram 49,1%), 68,8% em 4 h; BTC +0,85% em 24 h, +1,37% em 1 h, volume 1,48×: Robô Claude comprado em BTC, SOL, ZEC e RUNE. Sem ordens em vigor e nenhuma nova: a regra da tendência já põe todos comprados, e ninguém que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,19 em só 8). Vigia do v4: 54,5% ao vivo, dentro do laboratório; o v4 aposta 83 vendas contra 21 compras, contra a alta de 24 h, então não uso o voto dele; compras do v4 acertam só 51,1% e o horário 12–18 h 53,0%: exigente nas compras do v4 nesta tarde."
   }
  ],
  "ordens": []
