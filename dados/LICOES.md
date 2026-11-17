@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 18:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 18:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,15 +69,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 41.1% das moedas subindo em 24 h, 14.3% em 4 h · BTC 24 h -1.9%, 4 h -2.01%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.0%/ano · {'BTC': 11.0, 'ETH': -1.2, 'SOL': -10.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.3%/ano · {'BTC': 11.0, 'ETH': 0.5, 'SOL': -11.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ADA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado) · ZEN topo duplo (baixa, formado)
+- 📰 17/11 18:23 UTC · Decrypt: Jensen Huang Says He'd Be 'Honored' to Return as Nvidia CEO, Despite Board's Resistance
 - 📰 17/11 17:51 UTC · Cointelegraph: Lighter incident exposes risks beyond withdrawal controls
 - 📰 17/11 17:42 UTC · CoinDesk: Druckenmiller says he is short copper, warns of economic weakness in 2027
 - 📰 17/11 17:39 UTC · Cointelegraph: Fed’s Waller cites Binance hack in warning over tokenized finance
 - 📰 17/11 17:18 UTC · Decrypt: Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence
 - 📰 17/11 17:00 UTC · CoinDesk: U.S. Fed Governor Waller pitches keeping central bank at the center of tokenization
-- 📰 17/11 16:41 UTC · Decrypt: Former Robinhood Engineer Pleads Guilty to Crypto Insider Trading Scheme
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
