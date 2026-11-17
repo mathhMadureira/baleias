@@ -1,15 +1,36 @@
 {
- "t": 1794870583,
- "leitura": "Indeciso, colado na baixa: 30,2% das moedas sobem em 24 h (eram 47,5% às 22:19), 33,6% em 4 h e 16,4% em 1 h; BTC +0,15% em 24 h, +0,41% em 4 h, volume 1,0×, preço 65320 (acima de 65216). Medo 10, funding 8,5%/ano neutro, BTC abaixo das médias de 50 e 200 dias. Falta 0,2 ponto para a regra de venda.",
- "posicoes": [],
+ "t": 1794874197,
+ "leitura": "Baixa de 24 h: só 23,7% das moedas sobem em 24 h (eram 30,2% às 23:20), mediana −1,45%; 4 h 35,1% subindo, BTC −0,72% em 24 h, −0,28% em 4 h, volume 0,83× (sem repique com volume). BTC abaixo das médias de 50 e 200 dias, medo 12. Mesa vendida.",
+ "posicoes": [
+  {
+   "moeda": "JUPUSDT",
+   "lado": "venda",
+   "motivo": "lidera as quedas de 4 h (−2,7%) com 24 h −9,63% e volume 0,85×; JUP vendida em 13:20 saiu +0,204"
+  },
+  {
+   "moeda": "ETHFIUSDT",
+   "lado": "venda",
+   "motivo": "4 h −2,33%, 24 h −5,44%, volume 1,0×: moeda não esticada caindo a favor da baixa de 24 h"
+  },
+  {
+   "moeda": "KAVAUSDT",
+   "lado": "venda",
+   "motivo": "4 h −4,15%, 24 h −11,24%, volume 0,66×: segunda maior queda de 4 h abaixo de 15%"
+  },
+  {
+   "moeda": "GALAUSDT",
+   "lado": "venda",
+   "motivo": "4 h −2,07%, 24 h −0,51%: começa a cair agora, sem estar esticada no dia"
+  }
+ ],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "Mesa zerada desde 21:53, carteira 10,00 e nenhuma operação nova. Em 1 h o 24 h caiu de 47,5% para 30,2% subindo, mas o BTC ficou parado (65302 para 65320, +0,15% em 24 h): a queda é das alts, não do BTC. Às 21:19 o 24 h também chegou a 32,0% e voltou a 47,5%. Confirma baixa: 24 h em 30% ou menos, e aí vendo alts com 24 h entre −1% e −10% (KAVA −10,15%, JUP −8,68%, ETHFI −6,08%). Nega: 24 h voltar acima de 40%.",
+ "licao": "Às 23:20 o 24 h estava em 30,2% subindo; agora 23,7% com o BTC em 64883 (era 65320): a baixa das alts se confirmou. As vendas que deram lucro (BTC, SKY, APE, BEAMX, JUP +0,204) eram moedas com 24 h entre −0,5% e −6% na entrada; ZIL e BARD (≈ −14%) pararam no stop em 15 min. Agora vendo JUP (−9,63%), ETHFI (−5,44%), KAVA (−11,24%) e GALA (−0,51%): conferir na próxima se KAVA, a mais esticada, bate o stop antes das outras.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso, a 0,2 ponto da baixa: 30,2% das moedas sobem em 24 h, 33,6% em 4 h e 16,4% em 1 h; BTC +0,15% em 24 h, volume 1,0×: Robô Claude fora, vendo com 24 h em 30% ou menos. Sem ordens em vigor e nenhuma nova: ninguém tem 30 operações desde o zero (máximo 16, Scalpers). Vigia do v4: acerto 54,6%, mas 49,3% no horário 18–24 UTC: robôs do v4, sejam mais exigentes até 00:00."
+   "texto": "Baixa de 24 h: 23,7% das moedas sobem em 24 h, 35,1% em 4 h; BTC −0,72% em 24 h, volume 0,83×: Robô Claude vendido em JUP, ETHFI, KAVA e GALA. Sem ordens em vigor e nenhuma nova: a regra da tendência já põe todos vendidos, e ninguém que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,26 em só 7). Vigia do v4: acerto 54,6%, dentro do laboratório; 00–06 UTC é o melhor horário (60,3%)."
   }
  ],
  "ordens": []
