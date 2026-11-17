@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 19:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 19:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,7 +69,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 38.8% das moedas subindo em 24 h, 14.7% em 4 h · BTC 24 h -1.96%, 4 h -1.91%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.0%/ano · {'BTC': 2.9, 'ETH': -8.3, 'SOL': -26.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.0%/ano · {'BTC': 5.6, 'ETH': -5.8, 'SOL': -21.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · TRX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · ZEN topo duplo (baixa, formado)
 - 📰 17/11 18:23 UTC · Decrypt: Jensen Huang Says He'd Be 'Honored' to Return as Nvidia CEO, Despite Board's Resistance
