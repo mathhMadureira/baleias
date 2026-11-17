@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 06:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 06:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -30,15 +30,15 @@ Carteira **US$ 10.69** · 17 operações fechadas · 0 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 10.66** · 18 operações fechadas · 4 abertas
+Carteira **US$ 10.44** · 22 operações fechadas · 0 abertas
 
-- **Total:** 10/18 com lucro (56%), resultado +0.66, média +0.037 por operação.
-- **Últimas 24 h:** 10/18 com lucro, +0.66.
-- **Por horário:** 18–23 UTC: 7 op, 57% certas, +0.06 · 06–11 UTC: 1 op, 100% certas, +0.15 · 00–05 UTC: 10 op, 50% certas, +0.46
-- **Por lado:** venda: 10 op, 50% certas, +0.20 · compra: 8 op, 62% certas, +0.46
-- **Por motivo de saída:** fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.64%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15
-- **Moedas que mais perderam (≥ 3 op):** LSK -0.05 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** LSK -0.05 (3 op)
+- **Total:** 10/22 com lucro (45%), resultado +0.44, média +0.020 por operação.
+- **Últimas 24 h:** 10/22 com lucro, +0.44.
+- **Por horário:** 06–11 UTC: 5 op, 20% certas, -0.07 · 18–23 UTC: 7 op, 57% certas, +0.06 · 00–05 UTC: 10 op, 50% certas, +0.46
+- **Por lado:** venda: 12 op, 42% certas, +0.15 · compra: 10 op, 50% certas, +0.29
+- **Por motivo de saída:** meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.64%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15
+- **Moedas que mais perderam (≥ 3 op):** LSK -0.05 (3 op) · CELO -0.04 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** CELO -0.04 (3 op) · LSK -0.05 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
@@ -46,7 +46,7 @@ Carteira **US$ 10.66** · 18 operações fechadas · 4 abertas
 Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anteriores zeradas: 2 (última terminou em 4.94 com 126 op.)
 
 - **Total:** 34/96 com lucro (35%), resultado -5.04, média -0.053 por operação.
-- **Últimas 24 h:** 7/17 com lucro, -0.75.
+- **Últimas 24 h:** 6/16 com lucro, -0.81.
 - **Por horário:** 00–05 UTC: 39 op, 38% certas, -2.04 · 18–23 UTC: 37 op, 32% certas, -2.02 · 06–11 UTC: 20 op, 35% certas, -0.98
 - **Por lado:** compra: 67 op, 34% certas, -3.42 · venda: 29 op, 38% certas, -1.63
 - **Por confiança do v4:** confiança baixa (<0,05): 59 op, 42% certas, -2.67 · média (0,05–0,08): 21 op, 29% certas, -1.46 · alta (0,08–0,12): 13 op, 23% certas, -0.63 · muito alta (≥0,12): 3 op, 0% certas, -0.29
@@ -65,7 +65,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 69.1% das moedas subindo em 24 h, 78.2% em 4 h · BTC 24 h 0.19%, 4 h 0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': -0.6, 'ETH': 9.7, 'SOL': -10.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 0.2, 'ETH': 9.2, 'SOL': -9.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BARD fundo duplo (alta, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · PUMP topo duplo (baixa, CONFIRMOU) · ARB topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · GLMR triângulo simétrico (?, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado)
 - 📰 17/11 06:35 UTC · Cointelegraph: Ex-Robinhood engineer pleads guilty to $125K Hyperliquid trading scheme
