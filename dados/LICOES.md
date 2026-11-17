@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 06:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 06:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -63,11 +63,11 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 71.8% das moedas subindo em 24 h, 78.2% em 4 h · BTC 24 h 0.67%, 4 h 0.21%.
+- **Amplitude:** 69.1% das moedas subindo em 24 h, 78.2% em 4 h · BTC 24 h 0.19%, 4 h 0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': -0.7, 'ETH': 10.5, 'SOL': -11.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': -0.7, 'ETH': 10.4, 'SOL': -10.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BARD fundo duplo (alta, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · PUMP topo duplo (baixa, CONFIRMOU) · CRV topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** BARD fundo duplo (alta, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · PUMP topo duplo (baixa, CONFIRMOU) · ARB topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · GLMR triângulo simétrico (?, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado)
 - 📰 17/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 17/11 05:37 UTC · CoinDesk: Wells Fargo's reported BlackRock bitcoin ETF holdings double to $2.35 billion
 - 📰 17/11 05:02 UTC · CoinDesk: Ripple-backed Evernorth has written down its pre-listing XRP holdings by 60%
@@ -87,12 +87,12 @@ Sem operações fechadas ainda.
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
   (v3: 7 sinapses votando, 18 em observação, 0 podadas)
 **v2:**
 - ❌ Errou. Dopamina negativa em: rede_neural. Rede corrigida (taxa ×2.9).
@@ -111,7 +111,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 19282 apostas conferidas ao vivo, acerto 54.8%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 19301 apostas conferidas ao vivo, acerto 54.8%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
