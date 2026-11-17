@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 12:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 12:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -56,15 +56,20 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 10.00** · 0 operações fechadas · 4 abertas
+Carteira **US$ 10.07** · 1 operações fechadas · 3 abertas
 
-Sem operações fechadas ainda.
+- **Total:** 1/1 com lucro (100%), resultado +0.07, média +0.071 por operação.
+- **Últimas 24 h:** 1/1 com lucro, +0.07.
+- **Por horário:** 12–17 UTC: 1 op, 100% certas, +0.07
+- **Por lado:** compra: 1 op, 100% certas, +0.07
+- **Por motivo de saída:** 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07
+- Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 79.5% das moedas subindo em 24 h, 62.5% em 4 h · BTC 24 h 1.22%, 4 h 0.33%.
+- **Amplitude:** 80.4% das moedas subindo em 24 h, 62.5% em 4 h · BTC 24 h 1.22%, 4 h 0.33%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.8%/ano · {'BTC': 11.0, 'ETH': -5.6, 'SOL': 6.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.4%/ano · {'BTC': 11.0, 'ETH': -5.7, 'SOL': 5.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH OCO invertido (alta, CONFIRMOU) · INJ bandeira de alta (alta, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FET OCO invertido (alta, formado)
 - 📰 17/11 12:16 UTC · CoinDesk: Crypto's 'casino-chips' are disappearing, adding to pain from spot ETF outflows
