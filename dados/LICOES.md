@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 10:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 10:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -62,11 +62,11 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 60.6% das moedas subindo em 24 h, 21.1% em 4 h · BTC 24 h -0.46%, 4 h -0.52%.
+- **Amplitude:** 60.2% das moedas subindo em 24 h, 21.3% em 4 h · BTC 24 h -0.46%, 4 h -0.52%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.4%/ano · {'BTC': 8.5, 'ETH': -7.9, 'SOL': -6.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.4%/ano · {'BTC': 8.2, 'ETH': -7.8, 'SOL': -6.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · KITE topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** JUP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · APT fundo duplo (alta, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · JUP topo duplo (baixa, formado)
 - 📰 17/11 10:33 UTC · CoinDesk: Live updates: Bitcoin holds near $64,000 as tech slides ahead of Nvidia earnings
 - 📰 17/11 10:22 UTC · CoinDesk: Hackers plant crypto-stealing code on 178 major websites, including HSBC and Ledger
 - 📰 17/11 10:17 UTC · CoinDesk: Nvidia faces first earnings test without Jensen Huang as AI stocks slide
@@ -110,7 +110,7 @@ Sem operações fechadas ainda.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 19533 apostas conferidas ao vivo, acerto 54.9%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 19533 apostas conferidas ao vivo, acerto 54.9%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
