@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 15:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 15:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,15 +69,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 63.6% das moedas subindo em 24 h, 82.7% em 4 h · BTC 24 h -0.23%, 4 h 1.41%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': 11.0, 'ETH': -11.9, 'SOL': -12.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.3%/ano · {'BTC': 11.0, 'ETH': -12.3, 'SOL': -14.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** TRUMP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · AVAX triângulo simétrico (?, formado) · BREV topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · MEGA topo duplo (baixa, formado) · MEGA fundo duplo (alta, formado) · MEGA triângulo ascendente (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado)
+- 📰 17/11 15:11 UTC · CoinDesk: Hong Kong, Swift test tokenized deposits as banks chase stablecoin-style speed
 - 📰 17/11 14:54 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 17/11 14:45 UTC · Cointelegraph: Solana Foundation takes majority interest in crypto data firm CoinGecko
 - 📰 17/11 13:30 UTC · Cointelegraph: Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi
 - 📰 17/11 13:12 UTC · Cointelegraph: ARK sells $85M in Nvidia shares ahead of chipmaker’s Q3 earnings results
 - 📰 17/11 13:02 UTC · CoinDesk: Ethereum's Glamsterdam upgrade risks breaking up to 15,000 automated apps
-- 📰 17/11 13:00 UTC · CoinDesk: Decentralized exchange Grvt looks to makes commodity trading more predictable with stable funding perps
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
