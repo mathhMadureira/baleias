@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 22:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 22:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,7 +71,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 63.6% das moedas subindo em 24 h, 79.3% em 4 h · BTC 24 h -1.12%, 4 h 1.04%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.3%/ano · {'BTC': 10.5, 'ETH': 11.0, 'SOL': 2.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.7%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 2.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ATM topo duplo (baixa, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP topo duplo (baixa, formado)
 - 📰 17/11 22:20 UTC · Cointelegraph: CFTC halts some Kalshi Trump mention markets over manipulation concerns
@@ -109,7 +109,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
