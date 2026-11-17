@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 14:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 14:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,7 +69,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 - **Amplitude:** 79.3% das moedas subindo em 24 h, 73.0% em 4 h · BTC 24 h 1.49%, 4 h 1.21%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.7%/ano · {'BTC': 11.0, 'ETH': 6.7, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 4.8, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AERO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BREV topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · MEGA topo duplo (baixa, formado) · MEGA fundo duplo (alta, formado) · MEGA triângulo ascendente (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado)
 - 📰 17/11 13:30 UTC · Cointelegraph: Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi
