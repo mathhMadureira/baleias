@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 10:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 10:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -64,7 +64,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 61.1% das moedas subindo em 24 h, 27.8% em 4 h · BTC 24 h -0.43%, 4 h -0.29%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.2%/ano · {'BTC': 8.2, 'ETH': -7.6, 'SOL': -6.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.2%/ano · {'BTC': 7.8, 'ETH': -7.7, 'SOL': -6.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JUP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · APT fundo duplo (alta, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · JUP topo duplo (baixa, formado)
 - 📰 17/11 10:33 UTC · CoinDesk: Live updates: Bitcoin holds near $64,000 as tech slides ahead of Nvidia earnings
