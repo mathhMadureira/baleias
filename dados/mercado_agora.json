@@ -1,6 +1,6 @@
 {
- "t": 1794924122,
- "hora_utc": "2026-11-17 14:02 UTC",
+ "t": 1794924351,
+ "hora_utc": "2026-11-17 14:05 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -172,10 +172,10 @@
   1.37,
   0.11,
   0.12,
-  -0.13
+  -0.18
  ],
  "contexto": {
-  "t": 1794924123,
+  "t": 1794924352,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,7 +274,7 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.2,
+   "media_top20_anual_pct": 7.7,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 6.7,
@@ -664,7 +664,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.15,
+   "carteira": 6.13,
    "n_abertas": 1,
    "abertas": [
     [
@@ -804,7 +804,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.15
+    "carteira": 6.13
    },
    "radar": {
     "ops": 54,
