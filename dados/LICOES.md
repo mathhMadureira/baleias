@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 11:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 11:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -64,7 +64,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 49.1% das moedas subindo em 24 h, 13.6% em 4 h · BTC 24 h -0.71%, 4 h -0.68%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': 9.1, 'ETH': -8.2, 'SOL': -7.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': 10.9, 'ETH': -7.5, 'SOL': -6.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado)
 - 📰 17/11 11:05 UTC · Decrypt: Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses
@@ -76,12 +76,12 @@ Sem operações fechadas ainda.
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 17/11 11:10 UTC · **fora do mercado** · Mercado indeciso: 49,1% das moedas sobem em 24 h (eram 68,2% às 10:40), 13,6% em 4 h e 14,5% em 1 h; BTC −0,71% em 24 h, −0,68% em 4 h, volume 1,3×, em 64117, a
 - 17/11 10:10 UTC · **fora do mercado** · Indeciso: 68,2% das moedas sobem em 24 h (eram 66,1%), mas só 31,8% em 4 h e 23,6% em 1 h; BTC −0,06% em 24 h, −0,73% em 4 h, em 64507, volume 1,19×; medo 12. A
 - 17/11 08:09 UTC · **fora do mercado** · Mercado indeciso: 66,1% das moedas sobem em 24 h (eram 64,5%), 38,4% em 4 h e 55,4% em 1 h; BTC −0,39% em 24 h, −0,49% em 4 h, volume 1,23×, abaixo das médias d
 - 17/11 07:10 UTC · **fora do mercado** · Mercado indeciso: 64,5% das moedas sobem em 24 h (eram 69,1%), 71,8% em 4 h e 32,7% em 1 h; BTC −0,24% em 24 h, +0,08% em 4 h, −0,4% em 1 h, volume 1,24×, abaix
 - 17/11 06:09 UTC · **fora do mercado** · Indeciso, a 0,9 ponto da alta: 69,1% das moedas sobem em 24 h (eram 67,3%), 74,5% em 4 h e só 21,8% em 1 h; BTC +0,53% em 24 h, +0,1% em 4 h, −0,36% em 1 h, em 
 - 17/11 05:09 UTC · **fora do mercado** · Indeciso, perto da alta: 67,3% das moedas sobem em 24 h (eram 57,3%), 87,3% em 4 h e 57,3% em 1 h; BTC +0,35% em 24 h, +0,64% em 4 h, em 65046, volume 1,18× (se
-- 17/11 04:09 UTC · **fora do mercado** · Indeciso: 57,3% das moedas sobem em 24 h (eram 33,3% às 03:15), 80,9% em 4 h e 83,6% em 1 h; BTC −0,09% em 24 h, +0,27% em 4 h, 65057, volume 0,93×; BTC abaixo 
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
