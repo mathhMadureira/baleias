@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 13:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 13:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -56,20 +56,20 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 10.27** · 3 operações fechadas · 4 abertas
+Carteira **US$ 10.36** · 4 operações fechadas · 3 abertas
 
-- **Total:** 3/3 com lucro (100%), resultado +0.23, média +0.075 por operação.
-- **Últimas 24 h:** 3/3 com lucro, +0.23.
-- **Por horário:** 12–17 UTC: 3 op, 100% certas, +0.23
-- **Por lado:** compra: 3 op, 100% certas, +0.23
-- **Por motivo de saída:** alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · moeda grande a favor da alta d: 1 op, 100% certas, +0.09
+- **Total:** 4/4 com lucro (100%), resultado +0.32, média +0.079 por operação.
+- **Últimas 24 h:** 4/4 com lucro, +0.32.
+- **Por horário:** 12–17 UTC: 4 op, 100% certas, +0.32
+- **Por lado:** compra: 4 op, 100% certas, +0.32
+- **Por motivo de saída:** alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · moeda grande a favor da alta d: 1 op, 100% certas, +0.09 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
 - **Amplitude:** 86.4% das moedas subindo em 24 h, 77.3% em 4 h · BTC 24 h 1.45%, 4 h 1.27%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 11.0, 'ETH': 4.3, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': 11.0, 'ETH': 4.1, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MEGA fundo duplo (alta, CONFIRMOU) · MEGA triângulo ascendente (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · BREV topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado)
 - 📰 17/11 13:12 UTC · Cointelegraph: ARK sells $85M in Nvidia shares ahead of chipmaker’s Q3 earnings results
