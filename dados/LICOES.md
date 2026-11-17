@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 05:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 05:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
 Carteira **US$ 10.86** · 24 operações fechadas · 0 abertas
 
 - **Total:** 18/24 com lucro (75%), resultado +0.86, média +0.036 por operação.
-- **Últimas 24 h:** 14/19 com lucro, +0.99.
+- **Últimas 24 h:** 13/18 com lucro, +0.93.
 - **Por horário:** 12–17 UTC: 2 op, 50% certas, -0.42 · 00–05 UTC: 13 op, 69% certas, +0.39 · 18–23 UTC: 9 op, 89% certas, +0.90
 - **Por lado:** compra: 8 op, 62% certas, -0.31 · venda: 16 op, 81% certas, +1.18
 - **Por confiança do v4:** alta (0,08–0,12): 5 op, 80% certas, +0.16 · muito alta (≥0,12): 19 op, 74% certas, +0.71
@@ -21,7 +21,7 @@ Carteira **US$ 10.86** · 24 operações fechadas · 0 abertas
 Carteira **US$ 10.69** · 17 operações fechadas · 0 abertas
 
 - **Total:** 13/17 com lucro (76%), resultado +0.69, média +0.041 por operação.
-- **Últimas 24 h:** 13/16 com lucro, +1.22.
+- **Últimas 24 h:** 12/15 com lucro, +1.16.
 - **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.53 · 00–05 UTC: 8 op, 75% certas, +0.44 · 18–23 UTC: 8 op, 88% certas, +0.77
 - **Por lado:** compra: 8 op, 75% certas, -0.02 · venda: 9 op, 78% certas, +0.71
 - **Por confiança do v4:** muito alta (≥0,12): 17 op, 76% certas, +0.69
@@ -65,15 +65,15 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 61.8% das moedas subindo em 24 h, 85.5% em 4 h · BTC 24 h 0.18%, 4 h 0.6%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.0%/ano · {'BTC': 4.8, 'ETH': 11.0, 'SOL': -2.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': 4.6, 'ETH': 11.0, 'SOL': -3.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SOL OCO invertido (alta, CONFIRMOU) · BARD fundo duplo (alta, formado) · CRV topo duplo (baixa, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · OP fundo duplo (alta, formado)
+- 📰 17/11 05:37 UTC · CoinDesk: Wells Fargo's reported BlackRock bitcoin ETF holdings double to $2.35 billion
 - 📰 17/11 05:02 UTC · CoinDesk: Ripple-backed Evernorth has written down its pre-listing XRP holdings by 60%
 - 📰 17/11 03:46 UTC · Cointelegraph: Trezor customer data exposed in 3rd partner breach this year
 - 📰 17/11 01:02 UTC · Cointelegraph: Hackers inject credit card, crypto-stealing malware into 178 major websites
 - 📰 16/11 23:50 UTC · Cointelegraph: Nvidia shares fall 4% as board reportedly rules out Huang return
 - 📰 16/11 22:54 UTC · Cointelegraph: Custodia Bank loses Supreme Court bid for direct Fed payment access
-- 📰 16/11 22:46 UTC · Cointelegraph: German lawmakers back crypto freezes outside criminal cases
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
