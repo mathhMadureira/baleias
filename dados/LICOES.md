@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 12:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 12:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -56,22 +56,22 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 10.07** · 1 operações fechadas · 3 abertas
+Carteira **US$ 10.22** · 2 operações fechadas · 2 abertas
 
-- **Total:** 1/1 com lucro (100%), resultado +0.07, média +0.071 por operação.
-- **Últimas 24 h:** 1/1 com lucro, +0.07.
-- **Por horário:** 12–17 UTC: 1 op, 100% certas, +0.07
-- **Por lado:** compra: 1 op, 100% certas, +0.07
-- **Por motivo de saída:** 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07
+- **Total:** 2/2 com lucro (100%), resultado +0.16, média +0.080 por operação.
+- **Últimas 24 h:** 2/2 com lucro, +0.16.
+- **Por horário:** 12–17 UTC: 2 op, 100% certas, +0.16
+- **Por lado:** compra: 2 op, 100% certas, +0.16
+- **Por motivo de saída:** 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · moeda grande a favor da alta d: 1 op, 100% certas, +0.09
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 82.0% das moedas subindo em 24 h, 65.8% em 4 h · BTC 24 h 1.22%, 4 h 0.33%.
+- **Amplitude:** 84.5% das moedas subindo em 24 h, 70.0% em 4 h · BTC 24 h 1.66%, 4 h 0.74%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.6%/ano · {'BTC': 11.0, 'ETH': -4.5, 'SOL': 6.8} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BCH OCO invertido (alta, CONFIRMOU) · INJ bandeira de alta (alta, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FET OCO invertido (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.6%/ano · {'BTC': 11.0, 'ETH': -4.1, 'SOL': 7.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BCH OCO invertido (alta, CONFIRMOU) · INJ bandeira de alta (alta, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FIL OCO invertido (alta, formado)
 - 📰 17/11 12:24 UTC · Cointelegraph: Revolut plans four blockchain-based funds for private markets, chair says
 - 📰 17/11 12:16 UTC · CoinDesk: Crypto's 'casino-chips' are disappearing, adding to pain from spot ETF outflows
 - 📰 17/11 12:00 UTC · CoinDesk: Ex-OpenAI researcher fund dumps bitcoin miners, cuts IREN 94% after portfolio slump
@@ -115,7 +115,7 @@ Carteira **US$ 10.07** · 1 operações fechadas · 3 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20004 apostas conferidas ao vivo, acerto 54.6%; prevê 18 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20068 apostas conferidas ao vivo, acerto 54.7%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
