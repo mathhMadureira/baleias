@@ -466,3 +466,175 @@ def placar_painel():
              "regime": ((_git_json("dados/robo_v4_perp.json") or {}).get("regime") or {}), "banco": _git_json("dados/banco.json")}
     _placar.update(t=agora, dados=dados)
     return dados
+
+
+# ---------------- Painel da mesa em tela única (17/11) ----------------
+# Tudo vem dos arquivos do ramo `estado` (dados/*.json); o único número calculado aqui que não está num arquivo é o resultado ABERTO
+# das posições, com o preço de agora (Binance à vista, a mesma fonte das rodadas da nuvem; LBank para o Robô LBank).
+
+ZERO_T = 1794865986          # 16/11 21:53:06 UTC: commit "Mesa zerada a pedido do dono" (histórico na etiqueta estado-antes-do-zero-2026-11-16)
+PISO_USD = CONTA * PISO      # US$ 5: abaixo disso o robô está sem dinheiro (regra 5 do dono)
+_pm = {"t": 0.0, "dados": None}
+_px_lbank = {"t": 0.0, "px": {}}
+
+
+def _lado(x):
+    return "venda" if str(x.get("lado", "")).lower() in ("venda", "sell") else "compra"
+
+
+def _nocional_pos(p):
+    ent = float(p.get("entrada") or 0)
+    if p.get("nocional"):
+        return float(p["nocional"])
+    if p.get("qtd") and ent:
+        return float(p["qtd"]) * ent
+    if p.get("gasto"):
+        return float(p["gasto"]) * 10.0        # robôs a 10× (o Robô LBank grava só a margem)
+    return 25.0
+
+
+def _situacao(e, carteira, ordem, hoje):
+    """(código, texto) do estado do robô: sem dinheiro, meta batida, travado pela guarda do dia, pausado pelo chefe ou operando."""
+    g = e.get("guarda_dia") or {}
+    trava = str(e.get("trava") or "")
+    if carteira < PISO_USD or e.get("quebrou") or e.get("eliminado") or "abaixo de US$ 5" in trava:
+        return "sem_dinheiro", "sem dinheiro" + (" (quebrou)" if e.get("quebrou") else f" (abaixo de US$ {PISO_USD:.0f})")
+    if g.get("data") == hoje and g.get("travado"):
+        if g.get("por") == "meta":
+            return "meta", f"meta do dia batida (+{float(g.get('resultado') or 0):.2f})"
+        return "guarda", f"travado pela guarda do dia (pico +{float(g.get('pico') or 0):.2f}, guardou +{float(g.get('resultado') or 0):.2f}); volta 21:00 de Brasília"
+    if ordem and ordem.get("acao") == "pausar":
+        return "pausado", "pausado pelo chefe"
+    return "operando", "operando"
+
+
+def _zerado(e):
+    """O robô recomeçou no zero de 16/11? (o testnet não foi zerado: tem ordens na conta de teste)."""
+    return str(e.get("inicio") or "") >= "2026-11-16"
+
+
+def _curva(e, capital, carteira, t_fim):
+    """Carteira ao longo do tempo: começa no capital, soma cada operação fechada na hora da saída e termina na carteira do arquivo
+    (que inclui as posições abertas no preço da última rodada). Nos robôs zerados, a curva começa no zero: operação gravada depois do
+    zero com data anterior (sinal velho reprocessado) entra no primeiro ponto, não antes dele."""
+    fech = sorted(e.get("fechadas") or [], key=lambda x: x.get("saida_t") or 0)
+    if _zerado(e):
+        t0 = ZERO_T
+    else:
+        entradas = [float(x.get("entrada_t") or 0) for x in fech + list((e.get("abertas") or {}).values()) if x.get("entrada_t")]
+        t0 = min(entradas) if entradas else ZERO_T
+    pontos, acum = [[int(t0), round(capital, 4)]], capital
+    for x in fech:
+        acum += float(x.get("resultado_usd") or 0)
+        pontos.append([int(max(t0, x.get("saida_t") or t0)), round(acum, 4)])
+    pontos.append([int(max(t_fim, pontos[-1][0])), round(carteira, 4)])
+    return pontos
+
+
+def montar_painel(estados, ordens, banco, precos, precos_lbank, idades, agora, regime=None):
+    """Função pura (sem rede nem git): estados = {id: estado do robô}, precos = {par: preço Binance}, precos_lbank = {par: preço LBank},
+    idades = {arquivo: hora da última gravação no ramo estado}. Devolve o placar, as curvas, as posições, a linha do tempo e o banco."""
+    from . import equipe
+    from executor import torneio as T
+    hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
+    meia_noite = agora - agora % 86400
+    linhas, abertas, tempo = [], [], []
+    for a in equipe.EQUIPE:
+        e = estados.get(a["id"])
+        if not e:
+            continue
+        m = T.medir(e)
+        capital = float(e.get("capital_inicial") or CONTA)
+        carteira = float(e.get("patrimonio", e.get("carteira", capital)) or 0)
+        o = (ordens or {}).get(a["id"])
+        o = o if o and o.get("acao") != "liberar" and float(o.get("ate") or 0) > agora else None
+        cod, txt = _situacao(e, carteira, o, hoje)
+        g = e.get("guarda_dia") or {}
+        fech = e.get("fechadas") or []
+        if g.get("data") == hoje and g.get("resultado") is not None:
+            hoje_res, hoje_fonte = float(g["resultado"]), "guarda do dia (carteira agora − carteira na 1ª rodada do dia)"
+        else:
+            hoje_res = sum(float(x.get("resultado_usd") or 0) for x in fech if (x.get("saida_t") or 0) >= meia_noite)
+            hoje_fonte = "soma das operações fechadas hoje"
+        t_arq = idades.get(a["arquivo"])
+        velhas = [x for x in fech if (x.get("saida_t") or 0) < ZERO_T] if _zerado(e) else []
+        antes_zero = {"n": len(velhas), "soma": round(sum(float(x.get("resultado_usd") or 0) for x in velhas), 4)} if velhas else None
+        aberto_vivo, n_ab = 0.0, 0
+        for par, p in (e.get("abertas") or {}).items():
+            par = str(p.get("moeda") or par)
+            par = par if par.endswith("USDT") else par + "USDT"
+            ent, lado, noc = float(p.get("entrada") or 0), _lado(p), _nocional_pos(p)
+            px_agora = (precos_lbank if a["id"] == "lbank" else precos).get(par)
+            res = (1 if lado == "compra" else -1) * noc * (px_agora / ent - 1) if px_agora and ent else None
+            t0 = float(p.get("entrada_t") or 0) or None
+            n_ab += 1
+            aberto_vivo += res or 0.0
+            abertas.append({"robo": a["id"], "nome": a["nome"], "avatar": a["avatar"], "moeda": par[:-4], "lado": lado, "entrada": ent,
+                            "agora": px_agora, "nocional": round(noc, 2), "resultado_usd": None if res is None else round(res, 4),
+                            "resultado_pct": None if res is None else round(res / noc * 100, 3), "desde": t0,
+                            "fonte_preco": "LBank" if a["id"] == "lbank" else "Binance à vista", "motivo": str(p.get("motivo") or "")[:160]})
+            if t0:
+                tempo.append({"t": t0, "tipo": "entrada", "robo": a["id"], "nome": a["nome"], "avatar": a["avatar"], "moeda": par[:-4],
+                              "lado": lado, "preco": ent, "motivo": str(p.get("motivo") or "")[:160], "aberta": True})
+        for x in fech:
+            moeda = str(x.get("moeda", "")).replace("USDT", "")
+            saida_motivo = x.get("motivo_saida") or x.get("motivo") or ""
+            entrada_motivo = x.get("motivo") if x.get("motivo_saida") else ""
+            if x.get("entrada_t"):
+                tempo.append({"t": float(x["entrada_t"]), "tipo": "entrada", "robo": a["id"], "nome": a["nome"], "avatar": a["avatar"], "moeda": moeda,
+                              "lado": _lado(x), "preco": x.get("entrada"), "motivo": str(entrada_motivo or "")[:160]})
+            if x.get("saida_t"):
+                tempo.append({"t": float(x["saida_t"]), "tipo": "saida", "robo": a["id"], "nome": a["nome"], "avatar": a["avatar"], "moeda": moeda,
+                              "lado": _lado(x), "preco": x.get("saida"), "resultado_usd": round(float(x.get("resultado_usd") or 0), 4),
+                              "motivo": str(saida_motivo)[:160]})
+        linhas.append({"id": a["id"], "nome": a["nome"], "avatar": a["avatar"], "motor": a["motor"], "missao": a["missao"],
+                       "carteira": round(carteira, 4), "capital": capital, "desde_zero": round(carteira - capital, 4),
+                       "inicio": e.get("inicio"), "zerado": _zerado(e), "antes_do_zero": antes_zero,
+                       "hoje": round(hoje_res, 4), "hoje_fonte": hoje_fonte, "ops": m["ops"], "acerto": m["acerto"], "fator_lucro": m["fator_lucro"],
+                       "soma_fechadas": m["soma"], "abertas": n_ab, "aberto_vivo": round(aberto_vivo, 4),
+                       "estado": cod, "estado_txt": txt, "ordem": equipe.ACOES.get(o["acao"], o["acao"]) if o else None,
+                       "alerta": e.get("alerta_rotina"), "atualizado": t_arq,
+                       "curva": _curva(e, capital, carteira, t_arq or agora)})
+    linhas.sort(key=lambda l: -l["carteira"])
+    abertas.sort(key=lambda p: (p["desde"] or 0), reverse=True)
+    tempo.sort(key=lambda x: -x["t"])
+    return {"t": agora, "hoje": hoje, "zero_t": ZERO_T, "piso": PISO_USD, "linhas": linhas, "abertas": abertas, "tempo": tempo[:150],
+            "banco": banco, "regime": regime or {}}
+
+
+def _idades_estado():
+    """{arquivo: hora (s) do último commit do ramo estado que mudou aquele arquivo} — mostra se um robô parou de gravar."""
+    r = subprocess.run(["git", "-C", str(REPO), "log", "-n", "400", "--format=@%ct", "--name-only", "origin/estado", "--", "dados/"],
+                       capture_output=True, text=True, timeout=60)
+    idades, t = {}, None
+    for linha in r.stdout.splitlines():
+        if linha.startswith("@"):
+            t = int(linha[1:])
+        elif linha.startswith("dados/") and t:
+            idades.setdefault(linha[len("dados/"):], t)
+    return idades
+
+
+def _precos_lbank():
+    if time.time() - _px_lbank["t"] > 10:
+        try:
+            from executor import robo_lbank_nuvem as L
+            _px_lbank.update(t=time.time(), px={par: v[0] for par, v in L.mercado().items()})
+        except Exception:                         # LBank fora do ar: posição fica sem preço ("não sei"), não derruba o painel
+            _px_lbank["t"] = time.time()
+    return _px_lbank["px"]
+
+
+def painel_mesa():
+    """/api/painel-mesa: a mesa inteira numa resposta só, guardada por 10 s."""
+    if time.time() - _pm["t"] < 10 and _pm["dados"]:
+        return _pm["dados"]
+    from . import equipe
+    _buscar_estado()
+    estados = {a["id"]: _git_json(f"dados/{a['arquivo']}") for a in equipe.EQUIPE}
+    lb = estados.get("lbank") or {}
+    dados = montar_painel(estados, _git_json("dados/ordens.json") or {}, _git_json("dados/banco.json"), _precos_agora(),
+                          _precos_lbank() if lb.get("abertas") else {}, _idades_estado(), time.time(),
+                          regime=(estados.get("rapido") or {}).get("regime"))
+    _pm.update(t=time.time(), dados=dados)
+    return dados

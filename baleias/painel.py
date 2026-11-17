@@ -122,7 +122,7 @@ class Manipulador(BaseHTTPRequestHandler):
         self.send_response(codigo)
         self.send_header("Content-Type", tipo)
         self.send_header("Cache-Control", "no-store")
-        self.send_header("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://unpkg.com/lightweight-charts@4.2.3/")
+        self.send_header("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'")
         self.end_headers()
         try:
             self.wfile.write(corpo)
@@ -195,6 +195,13 @@ class Manipulador(BaseHTTPRequestHandler):
             from . import mesa
             try:
                 corpo = mesa.nuvem()
+            except Exception as ex:
+                corpo = {"erro": f"{type(ex).__name__}: {ex}"}
+            self._enviar(200, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")
+        elif self.path.startswith("/api/painel-mesa"):
+            from . import mesa
+            try:
+                corpo = mesa.painel_mesa()
             except Exception as ex:
                 corpo = {"erro": f"{type(ex).__name__}: {ex}"}
             self._enviar(200, json.dumps(corpo, ensure_ascii=False).encode("utf-8"), "application/json")

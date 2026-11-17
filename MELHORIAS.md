@@ -82,3 +82,16 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   81,91, nenhum robô abaixo do piso). O jeito do vídeo (60% do caixa) piorou e ficou fora.
 - 2026-11-17: meta do dia volta a **US$ 12** (a de +0,50 travava quem ganhava: 8 robôs entre 10,11 e 10,86 parados); travas da meta antiga
   soltas; a guarda do dia (H54) segue. Robô LBank só entra onde há velas de 1 min (stop de 2% furado em SPACE1 −11% e AIOT −7%).
+- 2026-11-17 (noite): **Painel da mesa em tela única** (pedido do dono). Aba "🐋 Mesa ao vivo" lê `/api/painel-mesa` (`mesa.painel_mesa`,
+  função pura `montar_painel`, a cada 10 s): placar (carteira, hoje, desde o zero, operações, acerto, fator de lucro, abertas, estado, quando
+  o robô gravou), curva da carteira de cada robô desde o zero (SVG), posições abertas com o preço de agora (Binance à vista; LBank para o Robô
+  LBank) e há quanto tempo, linha do tempo de entradas e saídas com o motivo, estado (operando, guarda do dia, meta batida, sem dinheiro,
+  pausado) e banco (`dados/banco.json`: soma, exposição, conflitos). Conferido número por número contra o ramo `estado` (12 robôs e banco:
+  0 diferenças). Sem biblioteca externa (lightweight-charts saiu; velas em SVG próprio). **Tirado do painel por estar desatualizado:** placar
+  antigo do desafio de 24 h de 11/11, aba da mesa proprietária (regra de violação de US$ 1/dia, contra a regra 5), robô diário Tartaruga,
+  varredura de 33 moedas e Rápido/Scalper locais (desligados em 15/11), cérebros v1–v3 de contrato binário (fora do placar em 13/11; o
+  título citava assunto encerrado pela regra 6), previsor H19, robô de funding (fora do placar em 15/11), cartões antigos "robôs operando
+  agora", "lucros realizados" desde 11/11, abas sem botão (mapa, replay). Os endereços da API continuam. 149 testes.
+  **Achado (não corrigido aqui, é do `executor/`):** depois do zero de 16/11, Caçador, Rápido nuvem e os 4 Scalpers gravaram 4 a 20
+  operações abertas e fechadas ANTES do zero (sinais velhos do v4 reprocessados com o estado vazio); estão na carteira (−0,59 a +0,13).
+  O painel mostra a contagem em cada robô.

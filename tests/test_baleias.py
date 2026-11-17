@@ -1870,3 +1870,102 @@ class RoboLBank(unittest.TestCase):
         L.passo(e, {"SOLUSDT": (69.0, 0.02)}, "alta", {}, 2000.0)
         self.assertEqual(e["fechadas"][0]["moeda"], "SOLUSDT")
         self.assertGreater(e["fechadas"][0]["resultado_usd"], 0)                                 # vendeu a 70, saiu a 69
+
+
+class PainelMesa(unittest.TestCase):
+    """Painel da mesa em tela única (17/11): cada número vem do arquivo do robô; nada é inventado."""
+
+    def _estados(self, agora):
+        from baleias import mesa
+        Z = mesa.ZERO_T
+        hoje = __import__("time").strftime("%Y-%m-%d", __import__("time").gmtime(agora))
+        f = lambda t, r, **k: {"moeda": "BTCUSDT", "lado": "compra", "entrada": 100.0, "entrada_t": t, "saida": 101.0, "saida_t": t + 600, "resultado_usd": r, **k}
+        return {
+            "cacador": {"inicio": "2026-11-16", "patrimonio": 10.7, "caixa": 8.0, "guarda_dia": {"data": hoje, "resultado": 0.3, "pico": 0.4, "travado": False},
+                        "fechadas": [f(Z - 7200, -0.1), f(Z + 100, 0.5, motivo="stop móvel (pico +0.6%)"), f(Z + 5000, 0.3)],
+                        "abertas": {"ETHUSDT": {"moeda": "ETHUSDT", "lado": "venda", "entrada": 2000.0, "entrada_t": agora - 120, "nocional": 25.0},
+                                    "XYZUSDT": {"moeda": "XYZUSDT", "lado": "compra", "entrada": 1.0, "entrada_t": agora - 60, "gasto": 2.5}}},
+            "claude": {"inicio": "2026-11-16", "patrimonio": 10.2, "guarda_dia": {"data": hoje, "resultado": 0.2, "pico": 0.5, "travado": True, "por": "guarda"},
+                       "fechadas": [f(Z + 200, 0.2, motivo="entrada pela tendência", motivo_saida="guarda do dia: chegou a +0.50")]},
+            "rapido": {"inicio": "2026-11-16", "patrimonio": 12.5, "guarda_dia": {"data": hoje, "resultado": 12.5, "pico": 12.5, "travado": True, "por": "meta"}, "fechadas": []},
+            "scalper": {"inicio": "2026-11-16", "patrimonio": 10.0, "guarda_dia": {"data": "2026-01-01", "resultado": 0.9, "pico": 1.0, "travado": True, "por": "guarda"}, "fechadas": []},
+            "minerador": {"inicio": "2026-11-16", "patrimonio": 10.0, "fechadas": []},
+            "livre": {"inicio": "2026-11-16 21:57 UTC", "patrimonio": 0.9, "quebrou": True, "fechadas": []},
+            "lbank": {"inicio": "2026-11-16", "patrimonio": 9.0, "fechadas": [],
+                      "abertas": {"SOLUSDT": {"moeda": "SOLUSDT", "lado": "venda", "entrada": 100.0, "entrada_t": agora - 30, "gasto": 2.5}}},
+            "testnet": {"inicio": "2026-11-12", "capital_inicial": 10.0, "carteira": 4.96, "trava": "2026-11-17 conta abaixo de US$ 5",
+                        "fechadas": [f(Z - 86400 * 3, -5.04)]},
+        }
+
+    def _montar(self):
+        from baleias import mesa
+        agora = mesa.ZERO_T + 86400
+        ordens = {"minerador": {"acao": "pausar", "ate": agora + 3600}, "scalper": {"acao": "pausar", "ate": agora - 1}}
+        precos = {"ETHUSDT": 1990.0, "SOLUSDT": 50.0}            # preço Binance; o Robô LBank tem de usar o da LBank
+        return mesa.montar_painel(self._estados(agora), ordens, {"tesouro": {"carteiras": 1.0}}, precos, {"SOLUSDT": 99.0}, {"robo_v4_cacador.json": agora - 50}, agora), agora
+
+    def test_placar_usa_os_numeros_do_arquivo_e_do_torneio(self):
+        from executor import torneio as T
+        d, agora = self._montar()
+        l = {x["id"]: x for x in d["linhas"]}
+        e = self._estados(agora)["cacador"]
+        m = T.medir(e)
+        self.assertEqual((l["cacador"]["ops"], l["cacador"]["acerto"], l["cacador"]["fator_lucro"]), (m["ops"], m["acerto"], m["fator_lucro"]))
+        self.assertAlmostEqual(l["cacador"]["carteira"], 10.7)
+        self.assertAlmostEqual(l["cacador"]["desde_zero"], 0.7)
+        self.assertAlmostEqual(l["cacador"]["hoje"], 0.3)                       # da guarda do dia
+        self.assertEqual(l["cacador"]["atualizado"], agora - 50)
+        self.assertEqual(l["testnet"]["carteira"], 4.96)                          # testnet grava "carteira", não "patrimonio"
+        self.assertFalse(l["testnet"]["zerado"])
+        self.assertEqual([x["id"] for x in d["linhas"]][0], "rapido")             # ordenado pela carteira
+        self.assertEqual(d["banco"], {"tesouro": {"carteiras": 1.0}})             # banco.json passa sem mudança
+
+    def test_estado_de_cada_robo(self):
+        d, _ = self._montar()
+        est = {x["id"]: x["estado"] for x in d["linhas"]}
+        self.assertEqual(est["claude"], "guarda")
+        self.assertEqual(est["rapido"], "meta")
+        self.assertEqual(est["scalper"], "operando")          # trava da guarda de outro dia e ordem vencida não contam
+        self.assertEqual(est["minerador"], "pausado")
+        self.assertEqual(est["livre"], "sem_dinheiro")
+        self.assertEqual(est["testnet"], "sem_dinheiro")
+        self.assertEqual(est["cacador"], "operando")
+
+    def test_curva_comeca_no_zero_e_termina_na_carteira(self):
+        from baleias import mesa
+        d, agora = self._montar()
+        c = {x["id"]: x for x in d["linhas"]}["cacador"]
+        self.assertEqual(c["curva"][0], [mesa.ZERO_T, 10.0])
+        self.assertEqual(c["curva"][-1][1], 10.7)
+        self.assertTrue(all(p[0] >= mesa.ZERO_T for p in c["curva"]))           # operação com data antes do zero não fica antes dele
+        self.assertAlmostEqual(c["curva"][1][1], 9.9)
+        self.assertEqual(c["antes_do_zero"], {"n": 1, "soma": -0.1})
+        t = {x["id"]: x for x in d["linhas"]}["testnet"]
+        self.assertLess(t["curva"][0][0], mesa.ZERO_T)                            # testnet não foi zerado: curva desde o início dele
+
+    def test_posicoes_abertas_com_preco_de_agora(self):
+        d, _ = self._montar()
+        p = {(x["robo"], x["moeda"]): x for x in d["abertas"]}
+        self.assertAlmostEqual(p[("cacador", "ETH")]["resultado_usd"], 25.0 * (1 - 1990 / 2000), places=4)   # vendido e o preço caiu: ganha
+        self.assertIsNone(p[("cacador", "XYZ")]["resultado_usd"])                                                # sem preço: não sei
+        self.assertAlmostEqual(p[("lbank", "SOL")]["resultado_usd"], 25.0 * (1 - 99 / 100), places=4)          # preço da LBank, margem × 10
+        self.assertEqual(p[("lbank", "SOL")]["fonte_preco"], "LBank")
+
+    def test_linha_do_tempo_com_motivo_da_saida(self):
+        d, _ = self._montar()
+        ts = [x["t"] for x in d["tempo"]]
+        self.assertEqual(ts, sorted(ts, reverse=True))
+        s = [x for x in d["tempo"] if x["robo"] == "claude" and x["tipo"] == "saida"][0]
+        self.assertEqual(s["motivo"], "guarda do dia: chegou a +0.50")
+        e = [x for x in d["tempo"] if x["robo"] == "claude" and x["tipo"] == "entrada"][0]
+        self.assertEqual(e["motivo"], "entrada pela tendência")
+        s2 = [x for x in d["tempo"] if x["robo"] == "cacador" and x["tipo"] == "saida" and x["resultado_usd"] == 0.5][0]
+        self.assertEqual(s2["motivo"], "stop móvel (pico +0.6%)")
+        self.assertTrue(any(x.get("aberta") for x in d["tempo"]))
+
+    def test_tela_sem_biblioteca_externa_e_com_as_seis_partes(self):
+        html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
+        self.assertNotIn("<script src", html.replace("<script defer src", "<script src"))
+        self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
+        for parte in ('id="placar-tab"', 'id="curvas"', 'id="pos-tab"', 'id="lt-tab"', 'id="kpis"', 'id="banco"', "/api/painel-mesa"):
+            self.assertIn(parte, html)
