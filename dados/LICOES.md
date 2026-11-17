@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 12:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 12:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -56,32 +56,32 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 10.00** · 0 operações fechadas · 0 abertas
+Carteira **US$ 10.00** · 0 operações fechadas · 4 abertas
 
 Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 79.5% das moedas subindo em 24 h, 68.8% em 4 h · BTC 24 h 0.85%, 4 h 0.39%.
+- **Amplitude:** 79.5% das moedas subindo em 24 h, 62.5% em 4 h · BTC 24 h 1.22%, 4 h 0.33%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.8%/ano · {'BTC': 11.0, 'ETH': -6.9, 'SOL': 4.9} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.8%/ano · {'BTC': 11.0, 'ETH': -5.6, 'SOL': 6.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH OCO invertido (alta, CONFIRMOU) · INJ bandeira de alta (alta, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FET OCO invertido (alta, formado)
+- 📰 17/11 12:16 UTC · CoinDesk: Crypto's 'casino-chips' are disappearing, adding to pain from spot ETF outflows
 - 📰 17/11 12:00 UTC · CoinDesk: Ex-OpenAI researcher fund dumps bitcoin miners, cuts IREN 94% after portfolio slump
 - 📰 17/11 11:36 UTC · Cointelegraph: US senators seek SEC answers on tokenized stock money laundering risks
 - 📰 17/11 11:36 UTC · CoinDesk: Bitcoin remains penned in near $64,000 even as ETF outflow streak ends
 - 📰 17/11 11:29 UTC · CoinDesk: Solana Foundation takes majority stake in crypto data provider CoinGecko
 - 📰 17/11 11:25 UTC · CoinDesk: New DeFi-yield generation targets ‘scam-like’ bank accounts that keep all the interest
-- 📰 17/11 11:18 UTC · Cointelegraph: BlackRock’s Bitcoin ETF snaps $2.35B outflow streak amid extreme fear
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 17/11 12:12 UTC · **BTC compra, SOL compra, ZEC compra, RUNE compra** · Alta de 24 h: 79,5% das moedas sobem em 24 h (eram 49,1% às 11:13), 68,8% em 4 h e 86,6% em 1 h; BTC +0,85% em 24 h, +1,37% em 1 h, volume 1,48×. Pano de fundo 
 - 17/11 11:10 UTC · **fora do mercado** · Mercado indeciso: 49,1% das moedas sobem em 24 h (eram 68,2% às 10:40), 13,6% em 4 h e 14,5% em 1 h; BTC −0,71% em 24 h, −0,68% em 4 h, volume 1,3×, em 64117, a
 - 17/11 10:10 UTC · **fora do mercado** · Indeciso: 68,2% das moedas sobem em 24 h (eram 66,1%), mas só 31,8% em 4 h e 23,6% em 1 h; BTC −0,06% em 24 h, −0,73% em 4 h, em 64507, volume 1,19×; medo 12. A
 - 17/11 08:09 UTC · **fora do mercado** · Mercado indeciso: 66,1% das moedas sobem em 24 h (eram 64,5%), 38,4% em 4 h e 55,4% em 1 h; BTC −0,39% em 24 h, −0,49% em 4 h, volume 1,23×, abaixo das médias d
 - 17/11 07:10 UTC · **fora do mercado** · Mercado indeciso: 64,5% das moedas sobem em 24 h (eram 69,1%), 71,8% em 4 h e 32,7% em 1 h; BTC −0,24% em 24 h, +0,08% em 4 h, −0,4% em 1 h, volume 1,24×, abaix
 - 17/11 06:09 UTC · **fora do mercado** · Indeciso, a 0,9 ponto da alta: 69,1% das moedas sobem em 24 h (eram 67,3%), 74,5% em 4 h e só 21,8% em 1 h; BTC +0,53% em 24 h, +0,1% em 4 h, −0,36% em 1 h, em 
-- 17/11 05:09 UTC · **fora do mercado** · Indeciso, perto da alta: 67,3% das moedas sobem em 24 h (eram 57,3%), 87,3% em 4 h e 57,3% em 1 h; BTC +0,35% em 24 h, +0,64% em 4 h, em 65046, volume 1,18× (se
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -110,7 +110,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 19931 apostas conferidas ao vivo, acerto 54.5%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 19990 apostas conferidas ao vivo, acerto 54.6%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
