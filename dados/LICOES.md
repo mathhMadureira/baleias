@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 18:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 19:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,11 +67,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 40.0% das moedas subindo em 24 h, 12.2% em 4 h · BTC 24 h -1.87%, 4 h -2.15%.
+- **Amplitude:** 38.8% das moedas subindo em 24 h, 14.7% em 4 h · BTC 24 h -1.96%, 4 h -1.91%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 11.0, 'ETH': -4.0, 'SOL': -12.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.0%/ano · {'BTC': 2.9, 'ETH': -8.3, 'SOL': -26.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ADA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STX topo duplo (baixa, formado) · ZEN topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** BLUR estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · TRX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · ZEN topo duplo (baixa, formado)
 - 📰 17/11 18:23 UTC · Decrypt: Jensen Huang Says He'd Be 'Honored' to Return as Nvidia CEO, Despite Board's Resistance
 - 📰 17/11 17:51 UTC · Cointelegraph: Lighter incident exposes risks beyond withdrawal controls
 - 📰 17/11 17:42 UTC · CoinDesk: Druckenmiller says he is short copper, warns of economic weakness in 2027
@@ -115,7 +115,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20764 apostas conferidas ao vivo, acerto 55.3%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20820 apostas conferidas ao vivo, acerto 55.4%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
