@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 21:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 21:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,7 +18,7 @@ Carteira **US$ 10.27** · 31 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 10.85** · 19 operações fechadas · 2 abertas
+Carteira **US$ 10.84** · 19 operações fechadas · 3 abertas
 
 - **Total:** 15/19 com lucro (79%), resultado +0.97, média +0.051 por operação.
 - **Últimas 24 h:** 12/15 com lucro, +1.25.
@@ -67,12 +67,12 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 61.2% das moedas subindo em 24 h, 72.7% em 4 h · BTC 24 h -1.49%, 4 h 0.34%.
+- **Amplitude:** 62.0% das moedas subindo em 24 h, 83.5% em 4 h · BTC 24 h -1.25%, 4 h 1.0%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': 11.0, 'ETH': 9.7, 'SOL': -3.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.5%/ano · {'BTC': 11.0, 'ETH': 10.5, 'SOL': -3.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · CYBER fundo duplo (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · XLM fundo duplo (alta, formado)
-- 📰 17/11 21:25 UTC · CoinDesk: Nvidia tops estimates, issues strong guidance, adds $150 billion to buyback authorization
+- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · CYBER fundo duplo (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RENDER topo duplo (baixa, formado) · SOL fundo duplo (alta, formado) · TIA topo duplo (baixa, formado) · USTC fundo duplo (alta, formado)
+- 📰 17/11 21:25 UTC · CoinDesk: Nvidia tops estimates, issues strong guidance; shares rise
 - 📰 17/11 20:56 UTC · Decrypt: World Bank Taps Circle and Citi to Test Stablecoins for Development Payments
 - 📰 17/11 20:36 UTC · Decrypt: Bitcoin Investors Are Capitulating—That’s Historically Been a Bottom Signal
 - 📰 17/11 20:05 UTC · Cointelegraph: Eastern Europe crypto flows fall 7.9% as Ukraine draws $12B in stablecoins
@@ -115,7 +115,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 21253 apostas conferidas ao vivo, acerto 55.5%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 21300 apostas conferidas ao vivo, acerto 55.5%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
