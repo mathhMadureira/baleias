@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 03:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 03:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -63,9 +63,9 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 33.6% das moedas subindo em 24 h, 40.0% em 4 h · BTC 24 h -1.05%, 4 h -1.25%.
+- **Amplitude:** 33.6% das moedas subindo em 24 h, 40.9% em 4 h · BTC 24 h -1.05%, 4 h -1.25%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.2%/ano · {'BTC': 7.7, 'ETH': 6.6, 'SOL': -8.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 7.4, 'ETH': 5.8, 'SOL': -8.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** GTC fundo duplo (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · GTC topo duplo (baixa, formado) · MORPHO topo duplo (baixa, formado) · MORPHO fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · OP topo duplo (baixa, formado) · PENGU fundo duplo (alta, formado) · PUMP topo duplo (baixa, formado)
 - 📰 17/11 01:02 UTC · Cointelegraph: Hackers inject credit card, crypto-stealing malware into 178 major websites
@@ -77,12 +77,12 @@ Sem operações fechadas ainda.
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 17/11 03:08 UTC · **fora do mercado** · Indeciso, perto da baixa: 33,3% das moedas sobem em 24 h (eram 58,4% às 02:20), 39,6% em 4 h e 37,8% em 1 h; BTC −1,05% em 24 h, −1,25% em 4 h, a 64504, volume 
 - 17/11 02:09 UTC · **fora do mercado** · Indeciso: 58,4% das moedas sobem em 24 h (eram 35,1% às 01:20), 32,7% em 4 h e 84,1% em 1 h; BTC +0,27% em 24 h, −0,85% em 4 h, volume 1,02×, abaixo das médias 
 - 17/11 01:09 UTC · **fora do mercado** · Mercado indeciso: 35,1% das moedas sobem em 24 h (eram 23,7% às 00:20), 29,8% em 4 h e 20,2% em 1 h; BTC −0,45% em 24 h, −0,67% em 4 h, volume 0,9×, abaixo das 
 - 17/11 00:09 UTC · **JUP venda, ETHFI venda, KAVA venda, GALA venda** · Baixa de 24 h: só 23,7% das moedas sobem em 24 h (eram 30,2% às 23:20), mediana −1,45%; 4 h 35,1% subindo, BTC −0,72% em 24 h, −0,28% em 4 h, volume 0,83× (sem 
 - 16/11 23:09 UTC · **fora do mercado** · Indeciso, colado na baixa: 30,2% das moedas sobem em 24 h (eram 47,5% às 22:19), 33,6% em 4 h e 16,4% em 1 h; BTC +0,15% em 24 h, +0,41% em 4 h, volume 1,0×, pr
 - 16/11 22:09 UTC · **fora do mercado** · Indeciso: 47,5% das moedas sobem em 24 h (eram 32,0% às 21:19), 75,4% em 4 h e 81,4% em 1 h; BTC +0,44% em 24 h, +0,6% em 4 h, volume 1,04×; medo 10, BTC abaixo
-- 16/11 21:09 UTC · **fora do mercado** · Indeciso, perto da baixa: 32,0% das moedas sobem em 24 h (era 41,3% há 1 h), 35,2% em 4 h e só 14,8% em 1 h; BTC −0,1% em 24 h, +0,22% em 4 h, volume 1,06×, aba
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -111,7 +111,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 18744 apostas conferidas ao vivo, acerto 54.7%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 18745 apostas conferidas ao vivo, acerto 54.7%; prevê 1 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
