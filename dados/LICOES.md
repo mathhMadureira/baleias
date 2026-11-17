@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 06:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 06:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -65,7 +65,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 71.8% das moedas subindo em 24 h, 78.2% em 4 h · BTC 24 h 0.67%, 4 h 0.21%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.9%/ano · {'BTC': -0.3, 'ETH': 10.8, 'SOL': -12.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': -0.9, 'ETH': 10.3, 'SOL': -12.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BARD fundo duplo (alta, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · PUMP topo duplo (baixa, CONFIRMOU) · CRV topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 17/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
