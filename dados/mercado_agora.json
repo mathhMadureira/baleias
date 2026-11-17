@@ -1,21 +1,21 @@
 {
- "t": 1794943547,
- "hora_utc": "2026-11-17 19:25 UTC",
+ "t": 1794943871,
+ "hora_utc": "2026-11-17 19:31 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 72.0,
-  "mediana_pct": 0.51
+  "moedas": 117,
+  "subindo_pct": 25.6,
+  "mediana_pct": -0.53
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 17.8,
-  "mediana_pct": -1.15
+  "moedas": 117,
+  "subindo_pct": 13.7,
+  "mediana_pct": -1.61
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 49.2,
-  "mediana_pct": -0.06
+  "moedas": 117,
+  "subindo_pct": 43.6,
+  "mediana_pct": -0.21
  },
  "btc": {
   "1h": 0.28,
@@ -32,90 +32,108 @@
    "vol": 2.08
   },
   {
+   "moeda": "BLUR",
+   "4h": -18.4,
+   "24h": 1.32,
+   "vol": 3.29
+  },
+  {
    "moeda": "BREV",
    "4h": -17.74,
    "24h": 76.74,
    "vol": 2.38
   },
   {
-   "moeda": "PHA",
-   "4h": -8.52,
-   "24h": 0.94,
-   "vol": 1.23
+   "moeda": "SPK",
+   "4h": -5.86,
+   "24h": 2.36,
+   "vol": 1.15
   },
   {
    "moeda": "ALLO",
-   "4h": -5.42,
-   "24h": -5.42,
-   "vol": 0.34
-  },
-  {
-   "moeda": "BLUR",
-   "4h": -4.96,
-   "24h": 1.49,
-   "vol": 5.3
-  },
-  {
-   "moeda": "HUMA",
-   "4h": -4.28,
-   "24h": -14.88,
-   "vol": 0.43
-  },
-  {
-   "moeda": "SPK",
-   "4h": -4.27,
-   "24h": 2.7,
-   "vol": 1.35
+   "4h": -5.36,
+   "24h": -5.74,
+   "vol": 0.33
   },
   {
    "moeda": "ZRO",
-   "4h": -3.92,
-   "24h": -2.44,
-   "vol": 1.24
+   "4h": -5.33,
+   "24h": -3.08,
+   "vol": 1.23
+  },
+  {
+   "moeda": "MARSCOIN",
+   "4h": -4.28,
+   "24h": -3.99,
+   "vol": 1.43
+  },
+  {
+   "moeda": "ICP",
+   "4h": -4.08,
+   "24h": -11.5,
+   "vol": 1.59
+  },
+  {
+   "moeda": "PHA",
+   "4h": -3.88,
+   "24h": 0.62,
+   "vol": 1.0
   },
   {
    "moeda": "INJ",
    "4h": -3.78,
    "24h": 3.83,
    "vol": 1.07
-  },
-  {
-   "moeda": "KITE",
-   "4h": -3.75,
-   "24h": -0.54,
-   "vol": 0.95
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "MMT",
-   "4h": 18.88,
-   "24h": 31.81,
-   "vol": 2.33
-  },
-  {
-   "moeda": "TLM",
-   "4h": 12.16,
-   "24h": 14.93,
-   "vol": 4.64
+   "4h": 20.63,
+   "24h": 29.34,
+   "vol": 2.27
   },
   {
    "moeda": "ATM",
-   "4h": 5.75,
-   "24h": 8.39,
-   "vol": 2.35
+   "4h": 12.45,
+   "24h": 14.91,
+   "vol": 3.91
   },
   {
    "moeda": "KAVA",
-   "4h": 5.57,
-   "24h": 4.92,
-   "vol": 1.57
+   "4h": 6.56,
+   "24h": 5.59,
+   "vol": 1.54
   },
   {
-   "moeda": "ZIL",
-   "4h": 3.7,
-   "24h": -2.53,
-   "vol": 2.16
+   "moeda": "INIT",
+   "4h": 5.73,
+   "24h": 3.91,
+   "vol": 1.35
+  },
+  {
+   "moeda": "PENGU",
+   "4h": 5.19,
+   "24h": -0.27,
+   "vol": 2.49
+  },
+  {
+   "moeda": "GLMR",
+   "4h": 4.68,
+   "24h": 8.4,
+   "vol": 1.09
+  },
+  {
+   "moeda": "LUNC",
+   "4h": 3.85,
+   "24h": 13.38,
+   "vol": 1.07
+  },
+  {
+   "moeda": "BEAMX",
+   "4h": 3.79,
+   "24h": -2.09,
+   "vol": 1.69
   },
   {
    "moeda": "ASTER",
@@ -124,28 +142,10 @@
    "vol": 0.6
   },
   {
-   "moeda": "PENGU",
-   "4h": 2.96,
-   "24h": -2.99,
-   "vol": 2.25
-  },
-  {
-   "moeda": "INIT",
-   "4h": 2.61,
-   "24h": -1.27,
-   "vol": 1.15
-  },
-  {
-   "moeda": "BEAMX",
-   "4h": 2.35,
-   "24h": -2.56,
-   "vol": 2.09
-  },
-  {
-   "moeda": "FF",
-   "4h": 2.15,
-   "24h": 4.89,
-   "vol": 2.25
+   "moeda": "ZIL",
+   "4h": 3.01,
+   "24h": -2.53,
+   "vol": 2.16
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.57,
   0.13,
   -0.08,
-  0.05
+  -0.1
  ],
  "contexto": {
-  "t": 1794943548,
+  "t": 1794943872,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1794943562,
+    "hora_utc": "17/11 19:26",
+    "titulo": "Ethereum Devs Weigh a Scaling Upgrade That Could Break 15,000 Apps"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1794942960,
@@ -260,12 +266,6 @@
     "t": 1794922200,
     "hora_utc": "17/11 13:30",
     "titulo": "Bitcoin to $1M by 2030? ‘Almost certainly not,’ says Dragonfly’s Qureshi"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794921130,
-    "hora_utc": "17/11 13:12",
-    "titulo": "ARK sells $85M in Nvidia shares ahead of chipmaker’s Q3 earnings results"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.8,
+   "media_top20_anual_pct": 3.2,
    "principais_anual_pct": {
-    "BTC": 8.6,
-    "ETH": -5.1,
-    "SOL": -13.8
+    "BTC": 8.8,
+    "ETH": -5.8,
+    "SOL": -13.2
    },
    "leitura": "neutro"
   },
@@ -332,6 +332,13 @@
     "nivel": 0.00484
    },
    {
+    "moeda": "QNT",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 157.31
+   },
+   {
     "moeda": "SOL",
     "padrao": "fundo duplo",
     "sentido": "alta",
@@ -379,22 +386,14 @@
   }
  },
  "v4": {
-  "vela": "19:15 UTC",
-  "apostas": 124,
-  "compras": 25,
-  "vendas": 99,
+  "vela": "05:30 UTC",
+  "apostas": 71,
+  "compras": 27,
+  "vendas": 44,
   "mais_confiantes_venda": [
-   {
-    "moeda": "AR",
-    "prob_subir": 0.32
-   },
    {
     "moeda": "ETC",
     "prob_subir": 0.362
-   },
-   {
-    "moeda": "CELO",
-    "prob_subir": 0.376
    },
    {
     "moeda": "SLP",
@@ -405,30 +404,30 @@
     "prob_subir": 0.382
    },
    {
-    "moeda": "STX",
-    "prob_subir": 0.384
-   },
-   {
     "moeda": "PEOPLE",
     "prob_subir": 0.386
    },
    {
     "moeda": "BABAB",
     "prob_subir": 0.386
+   },
+   {
+    "moeda": "BB",
+    "prob_subir": 0.394
+   },
+   {
+    "moeda": "TRX",
+    "prob_subir": 0.395
+   },
+   {
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
    {
-    "moeda": "SOPH",
-    "prob_subir": 0.649
-   },
-   {
     "moeda": "HEMI",
     "prob_subir": 0.645
-   },
-   {
-    "moeda": "HAEDAL",
-    "prob_subir": 0.625
    },
    {
     "moeda": "KAIA",
@@ -439,16 +438,24 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.599
-   },
-   {
-    "moeda": "HMSTR",
-    "prob_subir": 0.584
-   },
-   {
     "moeda": "PARTI",
     "prob_subir": 0.58
+   },
+   {
+    "moeda": "ICP",
+    "prob_subir": 0.58
+   },
+   {
+    "moeda": "BONK",
+    "prob_subir": 0.577
+   },
+   {
+    "moeda": "HUMA",
+    "prob_subir": 0.574
+   },
+   {
+    "moeda": "COTI",
+    "prob_subir": 0.569
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -657,7 +664,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.37,
+   "carteira": 6.39,
    "n_abertas": 1,
    "abertas": [
     [
@@ -675,22 +682,14 @@
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
    "carteira": 7.55,
-   "n_abertas": 3,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "BNB",
-     "venda"
-    ],
-    [
-     "LINK",
-     "venda"
-    ],
     [
      "ETH",
      "venda"
     ]
    ],
-   "n_fechadas": 77,
+   "n_fechadas": 80,
    "ordem": null
   },
   {
@@ -797,15 +796,15 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.37
+    "carteira": 6.39
    },
    "radar": {
-    "ops": 77,
-    "acerto": 0.468,
-    "soma": -2.302,
+    "ops": 80,
+    "acerto": 0.45,
+    "soma": -2.445,
     "ganho_medio": 0.088,
-    "perda_media": -0.134,
-    "fator_lucro": 0.58,
+    "perda_media": -0.128,
+    "fator_lucro": 0.56,
     "carteira": 7.55
    },
    "testnet": {
@@ -834,38 +833,38 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.3% em 20853 apostas (531 velas, 11/11 18:45–17/11 18:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5533,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.4% em 20915 apostas (532 velas, 11/11 18:45–17/11 19:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5543,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.62,
+  "z_contra_lab": 1.71,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.521,
-    "n": 15924
+    "acerto": 0.5216,
+    "n": 15872
    },
    "segue_maioria_24h": {
-    "acerto": 0.5219,
-    "n": 20720
+    "acerto": 0.5241,
+    "n": 20812
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5886,
-    "n": 2217
+    "acerto": 0.5935,
+    "n": 2251
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5792,
-    "n": 1048
+    "acerto": 0.5789,
+    "n": 1052
    },
    "confianca:<0,05": {
-    "acerto": 0.5934,
-    "n": 4479
+    "acerto": 0.595,
+    "n": 4499
    },
    "confianca:≥0,12": {
-    "acerto": 0.6727,
-    "n": 330
+    "acerto": 0.6737,
+    "n": 334
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5959,
@@ -880,16 +879,16 @@
     "n": 4868
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5097,
-    "n": 5947
+    "acerto": 0.5136,
+    "n": 6009
    },
    "lado:compra": {
-    "acerto": 0.5206,
-    "n": 9951
+    "acerto": 0.5205,
+    "n": 9956
    },
    "lado:venda": {
-    "acerto": 0.5832,
-    "n": 10902
+    "acerto": 0.585,
+    "n": 10959
    }
   }
  },
