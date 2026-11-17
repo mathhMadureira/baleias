@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 21:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 21:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -30,15 +30,15 @@ Carteira **US$ 10.75** · 18 operações fechadas · 2 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 10.62** · 24 operações fechadas · 4 abertas
+Carteira **US$ 10.71** · 25 operações fechadas · 3 abertas
 
-- **Total:** 12/24 com lucro (50%), resultado +0.62, média +0.026 por operação.
-- **Últimas 24 h:** 12/24 com lucro, +0.62.
-- **Por horário:** 06–11 UTC: 5 op, 20% certas, -0.07 · 18–23 UTC: 9 op, 67% certas, +0.24 · 00–05 UTC: 10 op, 50% certas, +0.46
-- **Por lado:** compra: 10 op, 50% certas, +0.29 · venda: 14 op, 50% certas, +0.33
-- **Por motivo de saída:** meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.64%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.62%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15
-- **Moedas que mais perderam (≥ 3 op):** LSK -0.05 (3 op) · CELO +0.04 (4 op)
-- **Moedas que mais ganharam (≥ 3 op):** CELO +0.04 (4 op) · LSK -0.05 (3 op)
+- **Total:** 13/25 com lucro (52%), resultado +0.71, média +0.028 por operação.
+- **Últimas 24 h:** 13/25 com lucro, +0.71.
+- **Por horário:** 06–11 UTC: 5 op, 20% certas, -0.07 · 18–23 UTC: 10 op, 70% certas, +0.33 · 00–05 UTC: 10 op, 50% certas, +0.46
+- **Por lado:** venda: 14 op, 50% certas, +0.33 · compra: 11 op, 55% certas, +0.37
+- **Por motivo de saída:** meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.51%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.62%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.17
+- **Moedas que mais perderam (≥ 3 op):** LSK -0.05 (3 op) · CELO +0.13 (5 op)
+- **Moedas que mais ganharam (≥ 3 op):** CELO +0.13 (5 op) · LSK -0.05 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧪 v4 Testnet (ordens reais na conta de teste)
@@ -67,9 +67,9 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 61.9% das moedas subindo em 24 h, 77.1% em 4 h · BTC 24 h -1.65%, 4 h 0.39%.
+- **Amplitude:** 62.2% das moedas subindo em 24 h, 77.3% em 4 h · BTC 24 h -1.65%, 4 h 0.39%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 10.5, 'ETH': 10.7, 'SOL': -0.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 11.0, 'ETH': 9.5, 'SOL': -2.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · CYBER fundo duplo (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · XLM fundo duplo (alta, formado)
 - 📰 17/11 20:56 UTC · Decrypt: World Bank Taps Circle and Citi to Test Stablecoins for Development Payments
@@ -115,7 +115,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 21212 apostas conferidas ao vivo, acerto 55.4%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 21212 apostas conferidas ao vivo, acerto 55.4%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
