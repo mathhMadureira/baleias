@@ -1,27 +1,27 @@
 {
- "t": 1794899473,
- "hora_utc": "2026-11-17 07:11 UTC",
+ "t": 1794899789,
+ "hora_utc": "2026-11-17 07:16 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
-  "subindo_pct": 33.3,
-  "mediana_pct": -0.19
+  "subindo_pct": 31.5,
+  "mediana_pct": -0.17
  },
  "mercado_4h": {
   "moedas": 111,
-  "subindo_pct": 72.1,
-  "mediana_pct": 0.58
+  "subindo_pct": 61.3,
+  "mediana_pct": 0.3
  },
  "mercado_24h": {
   "moedas": 111,
-  "subindo_pct": 64.9,
-  "mediana_pct": 0.89
+  "subindo_pct": 69.4,
+  "mediana_pct": 1.19
  },
  "btc": {
-  "1h": -0.4,
-  "4h": 0.08,
-  "24h": -0.24,
-  "preco": 64555.58,
+  "1h": -0.19,
+  "4h": -0.06,
+  "24h": 0.19,
+  "preco": 64620.52,
   "vol_4h_vs_media": 1.24
  },
  "maiores_quedas_4h": [
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
-   "moeda": "HUMA",
-   "4h": -6.65,
-   "24h": 37.17,
-   "vol": 0.97
-  },
-  {
    "moeda": "INIT",
-   "4h": -4.68,
-   "24h": -2.24,
-   "vol": 0.86
+   "4h": -5.86,
+   "24h": -3.85,
+   "vol": 0.89
   },
   {
-   "moeda": "ERA",
-   "4h": -2.68,
-   "24h": 4.76,
-   "vol": 0.48
-  },
-  {
-   "moeda": "HEI",
-   "4h": -2.22,
-   "24h": 3.94,
-   "vol": 0.61
-  },
-  {
-   "moeda": "PHA",
-   "4h": -2.08,
-   "24h": 7.87,
-   "vol": 1.59
+   "moeda": "HUMA",
+   "4h": -5.59,
+   "24h": 36.92,
+   "vol": 0.98
   },
   {
    "moeda": "BARD",
-   "4h": -2.03,
-   "24h": -5.5,
+   "4h": -4.69,
+   "24h": -5.81,
+   "vol": 0.81
+  },
+  {
+   "moeda": "ERA",
+   "4h": -3.72,
+   "24h": 4.92,
+   "vol": 0.47
+  },
+  {
+   "moeda": "PHA",
+   "4h": -3.25,
+   "24h": 8.28,
+   "vol": 1.47
+  },
+  {
+   "moeda": "NIGHT",
+   "4h": -2.1,
+   "24h": 9.01,
+   "vol": 1.08
+  },
+  {
+   "moeda": "HEI",
+   "4h": -2.09,
+   "24h": 4.88,
+   "vol": 0.6
+  },
+  {
+   "moeda": "ZRO",
+   "4h": -2.08,
+   "24h": 8.76,
+   "vol": 1.15
+  },
+  {
+   "moeda": "MMT",
+   "4h": -2.0,
+   "24h": 10.58,
    "vol": 1.04
-  },
-  {
-   "moeda": "KAVA",
-   "4h": -1.83,
-   "24h": -11.78,
-   "vol": 0.94
-  },
-  {
-   "moeda": "ALLO",
-   "4h": -1.67,
-   "24h": -7.89,
-   "vol": 1.81
-  },
-  {
-   "moeda": "OP",
-   "4h": -1.52,
-   "24h": -3.24,
-   "vol": 4.69
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "RARE",
-   "4h": 15.18,
-   "24h": 19.11,
-   "vol": 0.72
+   "4h": 15.19,
+   "24h": 15.89,
+   "vol": 0.8
   },
   {
    "moeda": "SHELL",
-   "4h": 6.34,
-   "24h": -4.58,
-   "vol": 0.88
+   "4h": 5.99,
+   "24h": -2.48,
+   "vol": 0.95
   },
   {
    "moeda": "JUP",
-   "4h": 6.26,
+   "4h": 5.33,
    "24h": -1.15,
-   "vol": 1.05
+   "vol": 1.13
   },
   {
    "moeda": "PROM",
-   "4h": 5.49,
-   "24h": 6.67,
-   "vol": 2.94
+   "4h": 5.27,
+   "24h": 7.49,
+   "vol": 2.95
   },
   {
    "moeda": "KMNO",
-   "4h": 4.92,
-   "24h": -3.11,
-   "vol": 1.91
+   "4h": 4.75,
+   "24h": -2.39,
+   "vol": 1.88
   },
   {
    "moeda": "GTC",
-   "4h": 3.56,
-   "24h": 7.06,
-   "vol": 2.15
-  },
-  {
-   "moeda": "ZAMA",
-   "4h": 3.36,
-   "24h": 10.39,
-   "vol": 1.02
+   "4h": 3.72,
+   "24h": 7.57,
+   "vol": 1.65
   },
   {
    "moeda": "UNI",
-   "4h": 2.84,
-   "24h": 2.37,
-   "vol": 1.06
+   "4h": 2.55,
+   "24h": 2.61,
+   "vol": 1.18
+  },
+  {
+   "moeda": "ZAMA",
+   "4h": 2.36,
+   "24h": 11.47,
+   "vol": 1.2
+  },
+  {
+   "moeda": "RAD",
+   "4h": 2.28,
+   "24h": 5.66,
+   "vol": 0.15
   },
   {
    "moeda": "MARSCOIN",
-   "4h": 2.74,
-   "24h": 2.11,
-   "vol": 0.78
-  },
-  {
-   "moeda": "CHIP",
-   "4h": 2.56,
-   "24h": 3.73,
-   "vol": 0.62
+   "4h": 2.11,
+   "24h": 2.42,
+   "vol": 1.01
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.02,
   -0.36,
   -0.4,
-  0.18
+  0.1
  ],
  "contexto": {
-  "t": 1794899474,
+  "t": 1794899790,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.3,
+   "media_top20_anual_pct": 8.2,
    "principais_anual_pct": {
-    "BTC": 6.8,
-    "ETH": 3.7,
-    "SOL": -2.1
+    "BTC": 5.8,
+    "ETH": 2.0,
+    "SOL": -3.7
    },
    "leitura": "neutro"
   },
@@ -323,13 +323,6 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 6.969
-   },
-   {
-    "moeda": "KITE",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.1245
    },
    {
     "moeda": "NFP",
@@ -428,22 +421,18 @@
   }
  },
  "v4": {
-  "vela": "07:00 UTC",
-  "apostas": 89,
-  "compras": 36,
-  "vendas": 53,
+  "vela": "05:30 UTC",
+  "apostas": 56,
+  "compras": 23,
+  "vendas": 33,
   "mais_confiantes_venda": [
-   {
-    "moeda": "MORPHO",
-    "prob_subir": 0.327
-   },
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.36
-   },
    {
     "moeda": "ETC",
     "prob_subir": 0.362
+   },
+   {
+    "moeda": "CYBER",
+    "prob_subir": 0.373
    },
    {
     "moeda": "SLP",
@@ -464,6 +453,10 @@
    {
     "moeda": "BB",
     "prob_subir": 0.394
+   },
+   {
+    "moeda": "HOME",
+    "prob_subir": 0.402
    }
   ],
   "mais_confiantes_compra": [
@@ -508,10 +501,6 @@
   "ultimas_fechadas": [],
   "licoes_anteriores": [
    {
-    "t": 1794870583,
-    "texto": "Mesa zerada desde 21:53, carteira 10,00 e nenhuma operação nova. Em 1 h o 24 h caiu de 47,5% para 30,2% subindo, mas o BTC ficou parado (65302 para 65320, +0,15% em 24 h): a queda é das alts, não do BTC. Às 21:19 o 24 h também chegou a 32,0% e voltou a 47,5%. Confirma baixa: 24 h em 30% ou menos, e aí vendo alts com 24 h entre −1% e −10% (KAVA −10,15%, JUP −8,68%, ETHFI −6,08%). Nega: 24 h voltar "
-   },
-   {
     "t": 1794874197,
     "texto": "Às 23:20 o 24 h estava em 30,2% subindo; agora 23,7% com o BTC em 64883 (era 65320): a baixa das alts se confirmou. As vendas que deram lucro (BTC, SKY, APE, BEAMX, JUP +0,204) eram moedas com 24 h entre −0,5% e −6% na entrada; ZIL e BARD (≈ −14%) pararam no stop em 15 min. Agora vendo JUP (−9,63%), ETHFI (−5,44%), KAVA (−11,24%) e GALA (−0,51%): conferir na próxima se KAVA, a mais esticada, bate "
    },
@@ -538,6 +527,10 @@
    {
     "t": 1794895799,
     "texto": "Sem operações novas (carteira 10,00). Às 05:15 o 24 h estava em 67,3% subindo com o BTC em 65046; agora 69,1% com o BTC em 64814 (−0,36%) e o 1 h em 21,8%: as alts sobem enquanto o BTC recua, e o 4 h caiu de 87,3% para 74,5% — o repique de 4 h está perdendo força, como antes das compras de TLM e KITE como líderes (−1,8% a −3,6%). Confirma alta: 24 h em 70% ou mais e, para comprar o BTC, ele acima "
+   },
+   {
+    "t": 1794899447,
+    "texto": "Sem operações novas (carteira 10,00). Às 06:18 o 24 h estava em 69,1% subindo com o BTC em 64814; agora 64,5% com o BTC em 64556 (−0,4% em 1 h): o 24 h chegou a 0,9 ponto da alta e recuou, como a baixa perto de 30% recuou cinco vezes entre 21:19 e 03:15. Quem comprasse as alts às 06:18 estaria contra um BTC caindo. Confirma alta: 24 h em 70% ou mais por duas leituras seguidas com BTC acima de 6521"
    }
   ]
  },
@@ -644,7 +637,7 @@
    "avatar": "🦅",
    "motor": "maioria do mercado 24 h, 20×",
    "missao": "Livre de regras (pedido do dono, H47): segue a maioria do mercado nas 4 moedas líderes, carteira inteira a 20×, sem stop.",
-   "carteira": 0.8,
+   "carteira": 0.78,
    "n_abertas": 1,
    "abertas": [
     [
@@ -661,7 +654,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 5.76,
+   "carteira": 5.82,
    "n_abertas": 1,
    "abertas": [
     [
@@ -679,7 +672,7 @@
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
    "carteira": 9.18,
-   "n_abertas": 4,
+   "n_abertas": 3,
    "abertas": [
     [
      "ADA",
@@ -692,13 +685,9 @@
     [
      "AVAX",
      "venda"
-    ],
-    [
-     "LINK",
-     "compra"
     ]
    ],
-   "n_fechadas": 30,
+   "n_fechadas": 31,
    "ordem": null
   },
   {
@@ -796,7 +785,7 @@
     "ganho_medio": 0.264,
     "perda_media": -0.621,
     "fator_lucro": 0.17,
-    "carteira": 0.8
+    "carteira": 0.78
    },
    "lbank": {
     "ops": 8,
@@ -805,15 +794,15 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 5.76
+    "carteira": 5.82
    },
    "radar": {
-    "ops": 30,
-    "acerto": 0.467,
-    "soma": -0.687,
-    "ganho_medio": 0.071,
+    "ops": 31,
+    "acerto": 0.484,
+    "soma": -0.592,
+    "ganho_medio": 0.073,
     "perda_media": -0.105,
-    "fator_lucro": 0.59,
+    "fator_lucro": 0.65,
     "carteira": 9.18
    },
    "testnet": {
@@ -842,46 +831,46 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.8% em 19351 apostas (497 velas, 11/11 18:45–17/11 06:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5482,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.8% em 19389 apostas (498 velas, 11/11 18:45–17/11 06:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5483,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
   "z_contra_lab": 1.14,
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5234,
-    "n": 14590
+    "n": 14628
    },
    "segue_maioria_24h": {
     "acerto": 0.5276,
-    "n": 19305
+    "n": 19343
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.591,
-    "n": 1758
+    "acerto": 0.592,
+    "n": 1767
    },
    "confianca:0,08–0,12": {
     "acerto": 0.5591,
     "n": 871
    },
    "confianca:<0,05": {
-    "acerto": 0.5846,
-    "n": 3671
+    "acerto": 0.5842,
+    "n": 3699
    },
    "confianca:≥0,12": {
-    "acerto": 0.7022,
-    "n": 272
+    "acerto": 0.6996,
+    "n": 273
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5959,
     "n": 5362
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5754,
-    "n": 4037
+    "acerto": 0.5755,
+    "n": 4075
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5304,
@@ -892,23 +881,17 @@
     "n": 5706
    },
    "lado:compra": {
-    "acerto": 0.5106,
-    "n": 9488
+    "acerto": 0.5108,
+    "n": 9503
    },
    "lado:venda": {
     "acerto": 0.5844,
-    "n": 9863
+    "n": 9886
    }
   }
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "16/11 21:57",
-   "de": "claude",
-   "para": "lbank",
-   "texto": "🚫 Pausa de 🟣 Robô LBank recusada: regra do dono, nenhum robô é pausado no prejuízo ou com operações abertas (o Banco reduz o tamanho dele em vez disso)"
-  },
   {
    "hora_utc": "16/11 21:57",
    "de": "claude",
@@ -974,6 +957,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Mercado indeciso, a 0,9 ponto da alta: 69,1% das moedas sobem em 24 h (eram 67,3%), 74,5% em 4 h e 21,8% em 1 h; BTC +0,53% em 24 h, −0,36% em 1 h, volume 1,19×: Robô Claude fora, compro com 24 h em 70% ou mais. Sem ordens em vigor e nenhuma nova: nenhum robô que obedece ordens tem fator de lucro ab"
+  },
+  {
+   "hora_utc": "17/11 07:16",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Mercado indeciso: 64,5% das moedas sobem em 24 h (eram 69,1%), 71,8% em 4 h e 32,7% em 1 h; BTC −0,24% em 24 h, volume 1,24×: Robô Claude fora. Sem ordens em vigor e nenhuma nova: o único com fator de lucro abaixo de 0,7 em 30+ operações é o Radar (0,59 em 30), que não obedece ordens; LBank 0,19 em "
   }
  ]
 }
