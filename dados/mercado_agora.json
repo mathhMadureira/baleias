@@ -1,6 +1,6 @@
 {
- "t": 1794945187,
- "hora_utc": "2026-11-17 19:53 UTC",
+ "t": 1794945512,
+ "hora_utc": "2026-11-17 19:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   -0.57,
   0.13,
   -0.08,
-  0.02
+  0.03
  ],
  "contexto": {
-  "t": 1794945188,
+  "t": 1794945513,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 2.8,
+   "media_top20_anual_pct": 3.0,
    "principais_anual_pct": {
-    "BTC": 9.1,
-    "ETH": -7.9,
-    "SOL": -12.7
+    "BTC": 8.7,
+    "ETH": -8.2,
+    "SOL": -13.2
    },
    "leitura": "neutro"
   },
@@ -657,7 +657,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.42,
+   "carteira": 6.39,
    "n_abertas": 1,
    "abertas": [
     [
@@ -674,27 +674,19 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.79,
-   "n_abertas": 4,
+   "carteira": 7.69,
+   "n_abertas": 2,
    "abertas": [
     [
      "ETH",
      "venda"
     ],
     [
-     "AVAX",
-     "compra"
-    ],
-    [
-     "LINK",
-     "compra"
-    ],
-    [
      "BNB",
      "compra"
     ]
    ],
-   "n_fechadas": 80,
+   "n_fechadas": 82,
    "ordem": null
   },
   {
@@ -801,16 +793,16 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.42
+    "carteira": 6.39
    },
    "radar": {
-    "ops": 80,
-    "acerto": 0.45,
-    "soma": -2.445,
+    "ops": 82,
+    "acerto": 0.463,
+    "soma": -2.291,
     "ganho_medio": 0.088,
     "perda_media": -0.128,
-    "fator_lucro": 0.56,
-    "carteira": 7.79
+    "fator_lucro": 0.59,
+    "carteira": 7.69
    },
    "testnet": {
     "ops": 96,
