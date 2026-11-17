@@ -1,6 +1,6 @@
 {
- "t": 1794884062,
- "hora_utc": "2026-11-17 02:54 UTC",
+ "t": 1794884292,
+ "hora_utc": "2026-11-17 02:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -172,10 +172,10 @@
   -0.67,
   -0.39,
   0.18,
-  -0.38
+  -0.47
  ],
  "contexto": {
-  "t": 1794884063,
+  "t": 1794884293,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 5.1,
+   "media_top20_anual_pct": 5.3,
    "principais_anual_pct": {
-    "BTC": 8.9,
-    "ETH": 7.1,
-    "SOL": -15.9
+    "BTC": 8.4,
+    "ETH": 6.6,
+    "SOL": -15.7
    },
    "leitura": "neutro"
   },
@@ -579,15 +579,11 @@
    "avatar": "🌲",
    "motor": "Cérebro v4",
    "missao": "Todas as apostas do v4 nas 140 moedas, as mais confiantes primeiro, segurando enquanto a tendência dura.",
-   "carteira": 10.99,
+   "carteira": 11.23,
    "n_abertas": 4,
    "abertas": [
     [
      "JUV",
-     "venda"
-    ],
-    [
-     "RAD",
      "venda"
     ],
     [
@@ -597,9 +593,13 @@
     [
      "KMNO",
      "compra"
+    ],
+    [
+     "FIDA",
+     "venda"
     ]
    ],
-   "n_fechadas": 19,
+   "n_fechadas": 20,
    "ordem": null
   },
   {
@@ -710,7 +710,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 5.44,
+   "carteira": 5.35,
    "n_abertas": 1,
    "abertas": [
     [
@@ -781,13 +781,13 @@
     "carteira": 10.69
    },
    "rapido": {
-    "ops": 19,
-    "acerto": 0.895,
-    "soma": 1.382,
-    "ganho_medio": 0.114,
+    "ops": 20,
+    "acerto": 0.9,
+    "soma": 1.511,
+    "ganho_medio": 0.115,
     "perda_media": -0.279,
-    "fator_lucro": 3.48,
-    "carteira": 10.99
+    "fator_lucro": 3.71,
+    "carteira": 11.23
    },
    "scalper": {
     "ops": 70,
@@ -850,7 +850,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 5.44
+    "carteira": 5.35
    },
    "radar": {
     "ops": 13,
