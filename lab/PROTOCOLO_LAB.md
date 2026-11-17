@@ -1099,3 +1099,20 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   A–D passam à rota R6 da H52 (sem saída no fim da vela; mantêm o alvo deles); Minerador sai por stop móvel, stop de 2% ou 24 h, não mais
   no fim da vela seguinte (a regra H28 foi testada saindo na vela seguinte: a saída nova não foi testada). O v4 continua prevendo em velas de
   15 min (é como foi treinado).
+
+## Hipóteses 57 e 58: meta do dia e reinvestir % da carteira (registradas em 17/11/2026, antes de rodar; ideias dos vídeos do "Grok bot")
+
+- **H57 meta do dia:** quando o resultado do dia (patrimônio − patrimônio na 1ª rodada do dia UTC) chega a +META, o robô fecha tudo e trava
+  até 00:00 UTC (soma-se à guarda do dia H54). META testadas: US$ 12 (meta do dono), US$ 1 e US$ 0,50 — 3 tentativas.
+- **H58 reinvestir:** o tamanho da posição deixa de ser fixo (US$ 25) e passa a ser proporcional à carteira: nocional = 2,5 × patrimônio
+  realizado no momento da entrada (igual a US$ 25 com US$ 10; cresce com o lucro e encolhe com a perda). Variante do vídeo: margem = 60% do
+  caixa livre (nocional = 6 × caixa livre a 10×) — 2 tentativas.
+- **Dados:** operações fechadas da etiqueta `estado-antes-do-zero-2026-11-16` (robôs da mesa menos testnet), na ordem real de entradas e
+  saídas; resultado em % do nocional preservado.
+- **Aprovação:** carteira final somada dos robôs maior que a regra atual E maior fração de dias-robô positivos (H57) / sem robô abaixo do
+  piso de US$ 5 que não estava antes (H58).
+- **Resultado H57/H58 (17/11, contrafactual nas operações da etiqueta, 9 robôs, 34 dias-robô):** atual 78,45 (9/34 dias positivos, 1 robô
+  < US$ 5). H57 meta 12: 78,45 (nenhum dia chegou) — sem efeito; meta 1: 78,65, 9/34 — reprovada (dias não melhoram); **meta 0,50: 82,58,
+  11/34 — aprovada**. **H58 proporcional 2,5×: 81,91, 0 robôs < US$ 5 — aprovada**; 60% do caixa (vídeo): 70,26, 7/34, 2 < US$ 5 —
+  reprovada. Aproximação: depois da trava, as posições abertas seguem até a saída real. Ligadas em 17/11 (`executor/guarda_dia.py` META,
+  `executor/tamanho.py`) em Rápido, Caçador, Scalpers, Minerador, LBank, Claude e Radar (Livre já usa a carteira inteira).

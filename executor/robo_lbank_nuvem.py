@@ -95,8 +95,9 @@ def lado_desejado(regime, var24):
 def _fechar(e, par, saida, motivo, agora):
     p = e["abertas"].pop(par)
     s = 1 if p["lado"] == "compra" else -1
-    resultado = ORCAMENTO * s * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
-    e["caixa"] += ORCAMENTO / ALAV + resultado
+    noc = p.get("nocional", ORCAMENTO)
+    resultado = noc * s * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * noc
+    e["caixa"] += p["gasto"] + resultado
     e["fechadas"].append({**p, "saida": saida, "saida_t": agora, "motivo": motivo, "resultado_usd": resultado})
     e["fechadas"] = e["fechadas"][-3000:]
     return f"🟣 {NOME} SAIU da {'COMPRA' if s > 0 else 'VENDA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
@@ -133,10 +134,12 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
         if lado and (not lado_ordem or lado == lado_ordem) and par not in e["abertas"]:
             candidatos.append((abs(var), par, lado, preco, var))
     for _, par, lado, preco, var in sorted(candidatos, reverse=True):
-        if len(e["abertas"]) >= MAX_POS or e["caixa"] < ORCAMENTO / ALAV:
+        from executor import tamanho as TM
+        noc = TM.nocional(e)                                   # H58: proporcional à carteira
+        if len(e["abertas"]) >= MAX_POS or not noc:
             break
-        e["caixa"] -= ORCAMENTO / ALAV
-        e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco, "entrada_t": agora, "gasto": ORCAMENTO / ALAV}
+        e["caixa"] -= noc / ALAV
+        e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco, "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc}
         textos.append(f"🟣 {NOME} ENTROU {'COMPRADO' if lado == 'compra' else 'VENDIDO'} em {par[:-4]} a {preco:.6g} "
                       f"({var:+.1%} em 24 h; regime {regime or 'neutro'})")
     return textos
@@ -169,7 +172,7 @@ def main():
     pausado = pausado or guarda != "normal"
     textos = pre + passo(e, mkt, reg, mins, agora, pausado=pausado, lado_ordem=lado_ord)
     e["regime"] = {"lado": reg, "subindo_24h": s24, "t": int(agora)}
-    e["patrimonio"] = e["caixa"] + sum(q["gasto"] + ORCAMENTO * (1 if q["lado"] == "compra" else -1) * (mkt.get(par, (q["entrada"], 0))[0] / q["entrada"] - 1)
+    e["patrimonio"] = e["caixa"] + sum(q["gasto"] + q.get("nocional", ORCAMENTO) * (1 if q["lado"] == "compra" else -1) * (mkt.get(par, (q["entrada"], 0))[0] / q["entrada"] - 1)
                                        for par, q in e["abertas"].items())
     e["eventos"] = ([{"t": agora, "texto": x} for x in textos] + e["eventos"])[:100]
     arq.write_text(json.dumps(e, ensure_ascii=False))

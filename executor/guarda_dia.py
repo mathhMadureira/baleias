@@ -10,6 +10,7 @@ Medido antes de ligar (16/11, 36 dias-robô da mesa): dias positivos 7 → 11 e 
 import time
 
 GATILHO, DEVOLVE = 0.25, 0.5
+META = 0.50          # H57: dia que chega a +US$ 0,50 fecha tudo e trava (medido: carteiras 78,45 → 82,58, dias positivos 9 → 11 de 34)
 
 
 def _hoje(agora):
@@ -28,7 +29,7 @@ def checar(e, agora=None):
     e["guarda_dia"] = d
     if d["travado"]:
         return "travado"
-    if d["pico"] >= GATILHO and res <= d["pico"] * DEVOLVE:
+    if res >= META or (d["pico"] >= GATILHO and res <= d["pico"] * DEVOLVE):
         d["travado"], d["travado_em"] = True, int(agora)
         return "fechar"
     return "normal"
@@ -36,6 +37,8 @@ def checar(e, agora=None):
 
 def motivo(e):
     d = e.get("guarda_dia") or {}
+    if d.get("resultado", 0) >= META:
+        return f"meta do dia: +{d.get('resultado', 0):.2f} (meta +{META:.2f}); dia garantido no lucro"
     return f"guarda do dia: chegou a +{d.get('pico', 0):.2f} e voltou a +{d.get('resultado', 0):.2f}; dia garantido no lucro"
 
 

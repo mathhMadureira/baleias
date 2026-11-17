@@ -116,7 +116,7 @@ def passo(e, decisao, velas, agora):
             patrimonio = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
             if patrimonio < PISO:
                 break
-            noc = min(ORCAMENTO, patrimonio * ALAV / MAX_POS)          # as 4 posições sempre cabem na carteira (15/11: ERA e KAVA não couberam)
+            noc = min(2.5 * patrimonio, patrimonio * ALAV / MAX_POS)   # H58: proporcional à carteira; as 4 posições sempre cabem
             if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < noc / ALAV - 1e-9:
                 continue
             sp = stop_da_moeda(velas.get(par, []))

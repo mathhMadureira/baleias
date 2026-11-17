@@ -90,10 +90,11 @@ def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
             continue
         saida, motivo, saida_t = r
         sinal_lado = -1 if p["lado"] == "venda" else 1
-        resultado = ORCAMENTO * sinal_lado * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO   # lucro líquido da posição de US$ 25
-        e["caixa"] += ORCAMENTO / ALAV + resultado
+        noc = p.get("nocional", ORCAMENTO)
+        resultado = noc * sinal_lado * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * noc   # lucro líquido da posição
+        e["caixa"] += p["gasto"] + resultado
         e["fechadas"].append({**p, "saida": saida, "saida_t": saida_t, "motivo": motivo,
-                              "resultado_usd": resultado, "R": resultado / (ORCAMENTO * STOP_SEG)})
+                              "resultado_usd": resultado, "R": resultado / (noc * STOP_SEG)})
         del e["abertas"][par]
         textos.append(f"⛏ Minerador SAIU da {'VENDA' if sinal_lado < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT")
     hoje = time.strftime("%Y-%m-%d", time.gmtime(agora_ms / 1000))
@@ -108,13 +109,17 @@ def passo(e, todas, agora_ms, pausado=False, lado_ordem=None):
         if s and par not in e["abertas"] and k[-1][0] != e["ultimo_sinal"].get(par):
             candidatos.append((abs(s[1]), par, k[-1], s))
     for _, par, vela, (lado, r1, vol96) in sorted(candidatos, reverse=True):
-        if (lado_ordem and lado != lado_ordem) or sum(1 for p in e["abertas"].values() if p["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
+        if (lado_ordem and lado != lado_ordem) or sum(1 for p in e["abertas"].values() if p["lado"] == lado) >= MAX_MESMO_LADO:
+            continue
+        from executor import tamanho as TM
+        noc = TM.nocional(e)                                   # H58: proporcional à carteira
+        if not noc:
             continue
         entrada = float(vela[4])
-        e["caixa"] -= ORCAMENTO / ALAV
+        e["caixa"] -= noc / ALAV
         e["ultimo_sinal"][par] = vela[0]
         e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": entrada, "entrada_t": (vela[0] + VELA_MS) / 1000,
-                             "vela_saida": vela[0] + VELA_MS, "r1": r1, "vol96": vol96, "gasto": ORCAMENTO / ALAV}
+                             "vela_saida": vela[0] + VELA_MS, "r1": r1, "vol96": vol96, "gasto": noc / ALAV, "nocional": noc}
         textos.append(f"⛏ Minerador ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {entrada:.6g}: "
                       f"movimento de {r1:+.1f}σ com volume de só {vol96:.0%} da média (aposta na reversão)")
     return textos
@@ -151,10 +156,11 @@ def main():
             k = todas.get(par) or []
             saida = float(k[-1][4]) if k else p["entrada"]
             s = -1 if p["lado"] == "venda" else 1
-            resultado = ORCAMENTO * s * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
-            e["caixa"] += ORCAMENTO / ALAV + resultado
+            noc = p.get("nocional", ORCAMENTO)
+            resultado = noc * s * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * noc
+            e["caixa"] += p["gasto"] + resultado
             e["fechadas"].append({**p, "saida": saida, "saida_t": time.time(), "motivo": GD.motivo(e), "resultado_usd": resultado,
-                                  "R": resultado / (ORCAMENTO * STOP_SEG)})
+                                  "R": resultado / (noc * STOP_SEG)})
             pre.append(f"⛏ Minerador SAIU da {'VENDA' if s < 0 else 'COMPRA'} em {par[:-4]} (guarda do dia) a {saida:.6g}: {resultado:+.3f} USDT")
         pre.append(GD.texto("Minerador", e))
     pausado = pausado or guarda != "normal"

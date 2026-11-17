@@ -15,6 +15,7 @@ import time
 from pathlib import Path
 
 from baleias import config
+from executor import tamanho as TM
 
 ORCAMENTO, ALAV, CUSTO_LADO = 25.0, 10.0, 0.0006
 STOP_SEG = float(os.environ.get("V4P_STOP", "0.01"))
@@ -66,9 +67,10 @@ def evitar(lado, prob, t):
 def _fechar(e, par, saida, motivo, saida_t):
     p = e["abertas"].pop(par)
     sinal = -1 if p["lado"] == "venda" else 1
-    resultado = ORCAMENTO * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
-    e["caixa"] += ORCAMENTO / ALAV + resultado
-    e["fechadas"].append({**p, "saida": saida, "saida_t": saida_t, "motivo": motivo, "resultado_usd": resultado, "R": resultado / (ORCAMENTO * STOP_SEG)})
+    noc = p.get("nocional", ORCAMENTO)
+    resultado = noc * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * noc
+    e["caixa"] += p["gasto"] + resultado
+    e["fechadas"].append({**p, "saida": saida, "saida_t": saida_t, "motivo": motivo, "resultado_usd": resultado, "R": resultado / (noc * STOP_SEG)})
     return f"🌲 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
 
 
@@ -132,16 +134,17 @@ def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=
             p["vela_saida"] = vela[0] + VELA_MS                         # segura: a tendência continua e o v4 concorda
             p["rolagens"] = p.get("rolagens", 0) + 1
             e["ultimo_sinal"][par] = nova["t"]
-            res_aberto = ORCAMENTO * (1 if p["lado"] == "compra" else -1) * (float(vela[4]) / p["entrada"] - 1)
+            res_aberto = p.get("nocional", ORCAMENTO) * (1 if p["lado"] == "compra" else -1) * (float(vela[4]) / p["entrada"] - 1)
             textos.append(f"🌲 {NOME} SEGUROU a {'VENDA' if p['lado'] == 'venda' else 'COMPRA'} em {par[:-4]} ({p['rolagens']}ª vela; tendência de {regime}; "
                           f"{res_aberto:+.3f} até agora)")
             continue
         saida, motivo = (saida, motivo) if not (permitido and permitido != p["lado"] and motivo == "fim da vela do v4") else (saida, f"fim da vela (contra a tendência de {regime})")
         sinal = -1 if p["lado"] == "venda" else 1
-        resultado = ORCAMENTO * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * ORCAMENTO
-        e["caixa"] += ORCAMENTO / ALAV + resultado
+        noc = p.get("nocional", ORCAMENTO)
+        resultado = noc * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * noc
+        e["caixa"] += p["gasto"] + resultado
         e["fechadas"].append({**p, "saida": saida, "saida_t": (vela[0] + VELA_MS) / 1000, "motivo": motivo,
-                              "resultado_usd": resultado, "R": resultado / (ORCAMENTO * STOP_SEG)})
+                              "resultado_usd": resultado, "R": resultado / (noc * STOP_SEG)})
         del e["abertas"][par]
         textos.append(f"🌲 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT")
     e["fechadas"] = e["fechadas"][-3000:]
@@ -172,12 +175,13 @@ def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=
         lado = "compra" if p["prob"] > 0.5 else "venda"
         if FOCO and evitar(lado, p["prob"], (p["t"] + VELA_MS) / 1000):
             continue
-        if sum(1 for q in e["abertas"].values() if q["lado"] == lado) >= MAX_MESMO_LADO or e["caixa"] < ORCAMENTO / ALAV:
+        noc = TM.nocional(e)                                   # H58: proporcional à carteira
+        if sum(1 for q in e["abertas"].values() if q["lado"] == lado) >= MAX_MESMO_LADO or not noc:
             continue
-        e["caixa"] -= ORCAMENTO / ALAV
+        e["caixa"] -= noc / ALAV
         e["ultimo_sinal"][par] = p["t"]
         e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": p["px"], "entrada_t": (p["t"] + VELA_MS) / 1000,
-                             "vela_saida": p["t"] + VELA_MS, "prob": p["prob"], "gasto": ORCAMENTO / ALAV}
+                             "vela_saida": p["t"] + VELA_MS, "prob": p["prob"], "gasto": noc / ALAV, "nocional": noc}
         textos.append(f"🌲 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {p['px']:.6g} "
                       f"(v4 {max(p['prob'], 1 - p['prob']):.0%} até o fim da vela)")
     return textos
@@ -205,9 +209,9 @@ def main():
         except (OSError, ValueError):
             velas[par] = []
         if not velas[par]:                                    # sem dados nenhum: fecha no preço de entrada e anota (não dá para inventar o preço)
-            e["caixa"] += p["gasto"] - 2 * CUSTO_LADO * ORCAMENTO
+            e["caixa"] += p["gasto"] - 2 * CUSTO_LADO * p.get("nocional", ORCAMENTO)
             e["fechadas"].append({**p, "saida": p["entrada"], "saida_t": time.time(), "motivo": "moeda saiu do universo (fechada no preço de entrada)",
-                                  "resultado_usd": -2 * CUSTO_LADO * ORCAMENTO, "R": 0.0})
+                                  "resultado_usd": -2 * CUSTO_LADO * p.get("nocional", ORCAMENTO), "R": 0.0})
             del e["abertas"][par]
     from executor import regime as RG
     reg, s24, s4 = RG.de_velas(velas)
@@ -234,7 +238,7 @@ def main():
         textos.insert(0, f"🧭 {NOME}: mercado em tendência de {reg} ({s24}% das moedas subindo em 24 h, {s4}% em 4 h) → só {'vendas' if reg == 'baixa' else 'compras'}")
     e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
     ultimo = {par: float(k[-1][4]) for par, k in velas.items() if k}        # revisão 15/11: a carteira inclui o resultado das posições abertas
-    e["patrimonio"] = e["caixa"] + sum(p["gasto"] + ORCAMENTO * (1 if p["lado"] == "compra" else -1) * (ultimo.get(par, p["entrada"]) / p["entrada"] - 1)
+    e["patrimonio"] = e["caixa"] + sum(p["gasto"] + p.get("nocional", ORCAMENTO) * (1 if p["lado"] == "compra" else -1) * (ultimo.get(par, p["entrada"]) / p["entrada"] - 1)
                                        for par, p in e["abertas"].items())
     arq.write_text(json.dumps(e))
     equipe.postar_eventos(agente, [x for x in textos if not x.startswith(("🧭", "📣"))])

@@ -77,3 +77,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-16 (noite): **Fim dos limites de 15 min** (dono: "a decisão não deve ser limitada por tempo"): H55 revogada; rodada da nuvem
   sem esperar a vela (1 min de intervalo); Scalpers A–D na rota R6 (sem saída no fim da vela, alvo deles mantido); Minerador sai por stop
   móvel, stop 2% ou 24 h.
+- 2026-11-17: ideias dos vídeos do "Grok bot", medidas antes: **H57 meta do dia +US$ 0,50** (fecha e trava; carteiras 78,45 → 82,58, dias
+  positivos 9 → 11 de 34; meta de +12 nunca foi alcançada) e **H58 posição = 2,5 × carteira** (reinveste o lucro, encolhe na perda; 78,45 →
+  81,91, nenhum robô abaixo do piso). O jeito do vídeo (60% do caixa) piorou e ficou fora.

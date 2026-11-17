@@ -1656,6 +1656,28 @@ class GuardaDia(unittest.TestCase):
         self.assertEqual(GD.checar(e, t0 + 86400 + 60), "normal")    # dia seguinte
 
 
+class MetaETamanho(unittest.TestCase):
+    """H57: dia que chega a +0,50 fecha e trava. H58: nocional = 2,5 × carteira realizada, só se a margem cabe."""
+
+    def test_meta_do_dia(self):
+        from executor import guarda_dia as GD
+        t0 = 1794787200
+        e = {"patrimonio": 10.0}
+        self.assertEqual(GD.checar(e, t0), "normal")
+        e["patrimonio"] = 10.49
+        self.assertEqual(GD.checar(e, t0 + 60), "normal")
+        e["patrimonio"] = 10.55
+        self.assertEqual(GD.checar(e, t0 + 120), "fechar")
+        self.assertTrue(GD.motivo(e).startswith("meta do dia"))
+
+    def test_tamanho_proporcional(self):
+        from executor import tamanho as TM
+        self.assertAlmostEqual(TM.nocional({"caixa": 10.0, "abertas": {}}), 25.0)
+        self.assertAlmostEqual(TM.nocional({"caixa": 7.5, "abertas": {"X": {"gasto": 4.5}}}), 30.0)   # carteira realizada 12 → 30
+        self.assertAlmostEqual(TM.nocional({"caixa": 6.0, "abertas": {}}), 15.0)                      # encolhe na perda
+        self.assertEqual(TM.nocional({"caixa": 1.0, "abertas": {"X": {"gasto": 9.0}}}), 0.0)            # margem de 2,50 não cabe
+
+
 class BancoEPausa(unittest.TestCase):
     """16/11: banco tesoureiro (sem crédito, sem empréstimo) e nenhum robô pausado no prejuízo ou com operações abertas."""
 

@@ -75,7 +75,8 @@ def leitura(s, i):
 
 def _fechar(e, par, preco, motivo, t):
     p = e["abertas"].pop(par)
-    res = NOC * p["sinal"] * (preco / p["entrada"] - 1) - 2 * CUSTO * NOC
+    noc = p.get("nocional", NOC)
+    res = noc * p["sinal"] * (preco / p["entrada"] - 1) - 2 * CUSTO * noc
     e["caixa"] += p["gasto"] + res
     e["fechadas"].append({**p, "saida": preco, "saida_t": t, "motivo": motivo, "resultado_usd": res})
     e["fechadas"] = e["fechadas"][-3000:]
@@ -114,7 +115,9 @@ def passo(e, series, ultimos, pausado=False):
                 if x:
                     textos.append(x)
                 continue
-            if pausado or seg[0] / 1000 < e["espera"].get(par, 0) or e["caixa"] < NOC / ALAV - 1e-9:
+            from executor import tamanho as TM
+            noc = TM.nocional(e)                               # H58: proporcional à carteira
+            if pausado or seg[0] / 1000 < e["espera"].get(par, 0) or not noc:
                 continue
             if e["caixa"] + sum(q["gasto"] for q in e["abertas"].values()) < PISO:
                 continue
@@ -122,9 +125,9 @@ def passo(e, series, ultimos, pausado=False):
             if not r or abs(r[0]) < Z or r[1] > 1.0:
                 continue
             sinal = -1 if r[0] > 0 else 1
-            e["caixa"] -= NOC / ALAV
+            e["caixa"] -= noc / ALAV
             e["abertas"][par] = {"moeda": par, "sinal": sinal, "lado": "compra" if sinal > 0 else "venda", "entrada": seg[3],
-                                 "entrada_t": seg[0] / 1000, "gasto": NOC / ALAV, "nocional": NOC, "pico": 0.0, "z": round(r[0], 2), "vol": round(r[1], 2)}
+                                 "entrada_t": seg[0] / 1000, "gasto": noc / ALAV, "nocional": noc, "pico": 0.0, "z": round(r[0], 2), "vol": round(r[1], 2)}
             textos.append(f"📡 {NOME} ENTROU {'COMPRADO' if sinal > 0 else 'VENDIDO'} em {par[:-4]} a {seg[3]:.6g} "
                           f"(movimento de {r[0]:+.1f}σ com volume {r[1]:.0%} da média: aposta na volta)")
         if len(s):
@@ -167,7 +170,7 @@ def main():
             if len(s) and (par not in ultimos or s[-1, 0] - ultimos[par] > 60_000):   # (não opera o passado como se fosse ao vivo)
                 ultimos[par] = float(s[-1, 0])
         textos += passo(e, series, ultimos, pausado=guarda != "normal")
-        e["patrimonio"] = e["caixa"] + sum(q["gasto"] + NOC * q["sinal"] * (float(series[par][-1, 3]) / q["entrada"] - 1)
+        e["patrimonio"] = e["caixa"] + sum(q["gasto"] + q.get("nocional", NOC) * q["sinal"] * (float(series[par][-1, 3]) / q["entrada"] - 1)
                                            for par, q in e["abertas"].items() if par in series and len(series[par]))
         e["ultimos"] = ultimos
         e["eventos"] = ([{"t": time.time(), "texto": x} for x in textos] + e["eventos"])[:100]
