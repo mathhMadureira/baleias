@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 21:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 21:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,7 +18,7 @@ Carteira **US$ 10.27** · 31 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 10.75** · 18 operações fechadas · 2 abertas
+Carteira **US$ 10.75** · 18 operações fechadas · 3 abertas
 
 - **Total:** 14/18 com lucro (78%), resultado +0.87, média +0.048 por operação.
 - **Últimas 24 h:** 12/15 com lucro, +1.25.
@@ -30,7 +30,7 @@ Carteira **US$ 10.75** · 18 operações fechadas · 2 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 10.71** · 25 operações fechadas · 3 abertas
+Carteira **US$ 10.71** · 25 operações fechadas · 4 abertas
 
 - **Total:** 13/25 com lucro (52%), resultado +0.71, média +0.028 por operação.
 - **Últimas 24 h:** 13/25 com lucro, +0.71.
@@ -67,11 +67,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 63.0% das moedas subindo em 24 h, 73.9% em 4 h · BTC 24 h -1.65%, 4 h 0.39%.
+- **Amplitude:** 61.7% das moedas subindo em 24 h, 72.5% em 4 h · BTC 24 h -1.49%, 4 h 0.34%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': 11.0, 'ETH': 8.9, 'SOL': -5.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 10.9, 'ETH': 8.8, 'SOL': -4.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · CYBER fundo duplo (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · XLM fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · CYBER fundo duplo (alta, CONFIRMOU) · ATM topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KAVA OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL fundo duplo (alta, formado) · USTC fundo duplo (alta, formado) · W fundo duplo (alta, formado) · XLM fundo duplo (alta, formado)
 - 📰 17/11 20:56 UTC · Decrypt: World Bank Taps Circle and Citi to Test Stablecoins for Development Payments
 - 📰 17/11 20:36 UTC · Decrypt: Bitcoin Investors Are Capitulating—That’s Historically Been a Bottom Signal
 - 📰 17/11 20:05 UTC · Cointelegraph: Eastern Europe crypto flows fall 7.9% as Ukraine draws $12B in stablecoins
@@ -107,15 +107,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 21246 apostas conferidas ao vivo, acerto 55.4%; prevê 82 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 21253 apostas conferidas ao vivo, acerto 55.5%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
