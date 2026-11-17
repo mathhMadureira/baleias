@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 15:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 15:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,9 +67,9 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 75.2% das moedas subindo em 24 h, 59.3% em 4 h · BTC 24 h 1.04%, 4 h 0.92%.
+- **Amplitude:** 72.6% das moedas subindo em 24 h, 55.8% em 4 h · BTC 24 h 1.04%, 4 h 0.92%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 11.0, 'ETH': -9.5, 'SOL': -7.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 11.0, 'ETH': -11.6, 'SOL': -8.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** TRUMP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · AVAX triângulo simétrico (?, formado) · BEAMX fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · JTO fundo duplo (alta, formado) · JTO ombro-cabeça-ombro (baixa, formado) · MEGA topo duplo (baixa, formado) · MEGA fundo duplo (alta, formado)
 - 📰 17/11 15:30 UTC · Decrypt: Standard Life Chair Wants Tokenized Gilts to Open UK Government Bonds to Retail Savers
@@ -115,7 +115,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20533 apostas conferidas ao vivo, acerto 55.0%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20537 apostas conferidas ao vivo, acerto 55.0%; prevê 10 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
