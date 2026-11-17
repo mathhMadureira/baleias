@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 11:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 11:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -62,9 +62,9 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 77.5% das moedas subindo em 24 h, 71.2% em 4 h · BTC 24 h 0.46%, 4 h 0.44%.
+- **Amplitude:** 77.3% das moedas subindo em 24 h, 70.9% em 4 h · BTC 24 h 0.46%, 4 h 0.44%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': 11.0, 'ETH': -5.9, 'SOL': 5.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': 11.0, 'ETH': -5.8, 'SOL': 5.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT fundo duplo (alta, formado) · APT ombro-cabeça-ombro (baixa, formado) · AVAX topo duplo (baixa, formado) · BCH OCO invertido (alta, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · ETH fundo duplo (alta, formado) · FET OCO invertido (alta, formado) · FIL OCO invertido (alta, formado) · GTC fundo duplo (alta, formado)
 - 📰 17/11 11:36 UTC · Cointelegraph: US senators seek SEC answers on tokenized stock money laundering risks
@@ -110,7 +110,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 19849 apostas conferidas ao vivo, acerto 54.6%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 19849 apostas conferidas ao vivo, acerto 54.6%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
