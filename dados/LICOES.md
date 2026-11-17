@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 16:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 16:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -67,11 +67,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 53.0% das moedas subindo em 24 h, 14.8% em 4 h · BTC 24 h -0.39%, 4 h -1.08%.
+- **Amplitude:** 50.4% das moedas subindo em 24 h, 13.9% em 4 h · BTC 24 h -0.55%, 4 h -1.35%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 11.0, 'ETH': -4.4, 'SOL': 10.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 11.0, 'ETH': -2.3, 'SOL': 5.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BCH triângulo simétrico (baixa, CONFIRMOU) · EIGEN triângulo descendente (baixa, CONFIRMOU) · JTO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · STRK estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEAMX fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · JTO fundo duplo (alta, formado) · MEGA topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** BCH triângulo simétrico (baixa, CONFIRMOU) · EIGEN triângulo descendente (baixa, CONFIRMOU) · JTO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · STRK estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEAMX fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · MEGA topo duplo (baixa, formado) · MEGA fundo duplo (alta, formado)
 - 📰 17/11 15:30 UTC · Decrypt: Standard Life Chair Wants Tokenized Gilts to Open UK Government Bonds to Retail Savers
 - 📰 17/11 15:11 UTC · CoinDesk: Hong Kong, Swift test tokenized deposits as banks chase stablecoin-style speed
 - 📰 17/11 14:54 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -107,15 +107,15 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: reversao_queda. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 20580 apostas conferidas ao vivo, acerto 55.1%; prevê 81 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 20587 apostas conferidas ao vivo, acerto 55.1%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
