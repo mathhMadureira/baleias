@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 07:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 07:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -65,15 +65,15 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 65.8% das moedas subindo em 24 h, 45.9% em 4 h · BTC 24 h -0.05%, 4 h -0.46%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.3%/ano · {'BTC': 4.9, 'ETH': 1.4, 'SOL': -5.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 4.9, 'ETH': 1.3, 'SOL': -6.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · INJ OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · OP fundo duplo (alta, formado) · PROM topo duplo (baixa, formado) · PUMP topo duplo (baixa, formado)
+- 📰 17/11 07:38 UTC · CoinDesk: Bitcoin could slide into the $50,000s as Fed rate hike bets build, Wintermute says
 - 📰 17/11 06:54 UTC · CoinDesk: Cardano Foundation seeks $5 million from treasury using ADA price 33% above market
 - 📰 17/11 06:35 UTC · Cointelegraph: Ex-Robinhood engineer pleads guilty to $125K Hyperliquid trading scheme
 - 📰 17/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 17/11 05:37 UTC · CoinDesk: Wells Fargo's reported BlackRock bitcoin ETF holdings double to $2.35 billion
 - 📰 17/11 05:02 UTC · CoinDesk: Ripple-backed Evernorth has written down its pre-listing XRP holdings by 60%
-- 📰 17/11 03:46 UTC · Cointelegraph: Trezor customer data exposed in 3rd partner breach this year
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
