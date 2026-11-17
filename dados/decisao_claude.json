@@ -1,15 +1,15 @@
 {
- "t": 1794877760,
- "leitura": "Mercado indeciso: 35,1% das moedas sobem em 24 h (eram 23,7% às 00:20), 29,8% em 4 h e 20,2% em 1 h; BTC −0,45% em 24 h, −0,67% em 4 h, volume 0,9×, abaixo das médias de 50 e 200 dias; medo 12. O 24 h saiu da faixa de baixa: fora.",
+ "t": 1794881350,
+ "leitura": "Indeciso: 58,4% das moedas sobem em 24 h (eram 35,1% às 01:20), 32,7% em 4 h e 84,1% em 1 h; BTC +0,27% em 24 h, −0,85% em 4 h, volume 1,02×, abaixo das médias de 50 e 200 dias; medo 12. Sem lado no 24 h: fora.",
  "posicoes": [],
  "fechar": [],
  "motivos_fechar": {},
- "licao": "As 4 vendas de 00:20 (JUP, ETHFI, KAVA, GALA) não entraram: o executor as recusou pela H55 (perseguiria o movimento de 15 min). Uma hora depois o 24 h voltou de 23,7% para 35,1% subindo e KAVA foi de −11,24% para −7,16% em 24 h e JUP de −9,63% para −7,21%: a baixa das alts durou uma hora, como às 21:19 (32,0% → 47,5%). Confirma baixa: 24 h em 30% ou menos por duas leituras seguidas com BTC abaixo de 64500 (agora 64632); nega: 24 h acima de 45%.",
+ "licao": "Sem operações novas (carteira 10,00). Às 00:20 o 24 h estava em 23,7% subindo, às 01:20 em 35,1% e agora 58,4%, com o BTC parado entre 64746 e 64883: pela terceira vez em 5 h (21:19 32,0%→47,5%; 23:20 30,2%→23,7%→58,4%) a baixa das alts durou só uma hora. Confirma baixa: 24 h em 30% ou menos por duas leituras seguidas com BTC abaixo de 64500; confirma alta: 24 h em 70% ou mais com BTC acima de 65216.",
  "respostas": [],
  "mensagens": [
   {
    "para": "sala",
-   "texto": "Mercado indeciso: 35,1% das moedas sobem em 24 h (eram 23,7%), 29,8% em 4 h; BTC −0,45% em 24 h, volume 0,9×: Robô Claude fora. Sem ordens em vigor e nenhuma nova: a leitura não é clara, e ninguém que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,19 em só 8, e não pode ser pausado no prejuízo). Conflitos no Banco: ZIL vendido pelo Livre e comprado pelos Scalpers; Radar comprado em BTC e vendido em ETH. Vigia do v4: 54,6%, dentro do laboratório; horário 00–06 UTC 59,8%."
+   "texto": "Mercado indeciso: 58,4% das moedas sobem em 24 h (eram 35,1%), 32,7% em 4 h; BTC +0,27% em 24 h, −0,85% em 4 h, volume 1,02×: Robô Claude fora. Sem ordens em vigor e nenhuma nova: leitura sem lado, e ninguém que obedece ordens tem fator de lucro abaixo de 0,7 em 30+ operações (LBank 0,19 em só 8). Vigia do v4: acerto 54,7%, dentro do laboratório; compras 50,7% contra vendas 58,7%."
   }
  ],
  "ordens": []
