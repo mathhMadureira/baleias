@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 17/11/2026 08:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 17/11/2026 08:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -63,11 +63,11 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 66.1% das moedas subindo em 24 h, 38.4% em 4 h · BTC 24 h -0.39%, 4 h -0.49%.
+- **Amplitude:** 68.1% das moedas subindo em 24 h, 34.5% em 4 h · BTC 24 h -0.16%, 4 h -0.54%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 4.0, 'ETH': 1.4, 'SOL': -11.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': 4.8, 'ETH': 2.3, 'SOL': -12.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79452, MM200 72921); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** PUMP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · BCH OCO invertido (alta, formado) · ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN OCO invertido (alta, formado) · MITO ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** PUMP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SOL OCO invertido (alta, CONFIRMOU) · BCH OCO invertido (alta, formado) · ETH fundo duplo (alta, formado) · GTC fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · MITO ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP fundo duplo (alta, formado)
 - 📰 17/11 07:38 UTC · CoinDesk: Bitcoin could slide into the $50,000s as Fed rate hike bets build, Wintermute says
 - 📰 17/11 06:54 UTC · CoinDesk: Cardano Foundation seeks $5 million from treasury using ADA price 33% above market
 - 📰 17/11 06:35 UTC · Cointelegraph: Ex-Robinhood engineer pleads guilty to $125K Hyperliquid trading scheme
@@ -111,7 +111,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 19444 apostas conferidas ao vivo, acerto 54.9%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 19487 apostas conferidas ao vivo, acerto 54.9%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
