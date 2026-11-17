@@ -1,6 +1,6 @@
 {
- "t": 1794952084,
- "hora_utc": "2026-11-17 21:48 UTC",
+ "t": 1794952326,
+ "hora_utc": "2026-11-17 21:52 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 121,
@@ -172,10 +172,10 @@
   -0.08,
   -0.03,
   0.38,
-  0.55
+  0.45
  ],
  "contexto": {
-  "t": 1794952084,
+  "t": 1794952327,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.3,
+   "media_top20_anual_pct": 8.1,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -1.4
+    "SOL": -1.0
    },
    "leitura": "neutro"
   },
@@ -589,8 +589,8 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 11.1,
-   "n_abertas": 4,
+   "carteira": 11.28,
+   "n_abertas": 3,
    "abertas": [
     [
      "CYBER",
@@ -603,13 +603,9 @@
     [
      "CELO",
      "venda"
-    ],
-    [
-     "SOPH",
-     "compra"
     ]
    ],
-   "n_fechadas": 19,
+   "n_fechadas": 20,
    "ordem": null
   },
   {
@@ -736,7 +732,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.62,
+   "carteira": 7.63,
    "n_abertas": 2,
    "abertas": [
     [
@@ -777,13 +773,13 @@
     "carteira": 10.11
    },
    "cacador": {
-    "ops": 19,
-    "acerto": 0.789,
-    "soma": 0.971,
-    "ganho_medio": 0.113,
+    "ops": 20,
+    "acerto": 0.8,
+    "soma": 1.158,
+    "ganho_medio": 0.118,
     "perda_media": -0.183,
-    "fator_lucro": 2.33,
-    "carteira": 11.1
+    "fator_lucro": 2.59,
+    "carteira": 11.28
    },
    "rapido": {
     "ops": 31,
@@ -864,7 +860,7 @@
     "ganho_medio": 0.083,
     "perda_media": -0.127,
     "fator_lucro": 0.61,
-    "carteira": 7.62
+    "carteira": 7.63
    },
    "testnet": {
     "ops": 96,
