@@ -1,20 +1,20 @@
 {
- "t": 1794901674,
- "hora_utc": "2026-11-17 07:47 UTC",
+ "t": 1794901990,
+ "hora_utc": "2026-11-17 07:53 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 110,
-  "subindo_pct": 70.9,
+  "moedas": 111,
+  "subindo_pct": 70.3,
   "mediana_pct": 0.28
  },
  "mercado_4h": {
-  "moedas": 110,
-  "subindo_pct": 38.2,
+  "moedas": 111,
+  "subindo_pct": 37.8,
   "mediana_pct": -0.28
  },
  "mercado_24h": {
-  "moedas": 110,
-  "subindo_pct": 65.5,
+  "moedas": 111,
+  "subindo_pct": 65.8,
   "mediana_pct": 0.96
  },
  "btc": {
@@ -74,16 +74,16 @@
    "vol": 0.99
   },
   {
+   "moeda": "ATM",
+   "4h": -2.41,
+   "24h": 1.03,
+   "vol": 0.73
+  },
+  {
    "moeda": "BMT",
    "4h": -2.23,
    "24h": 1.34,
    "vol": 0.72
-  },
-  {
-   "moeda": "ERA",
-   "4h": -2.15,
-   "24h": 6.58,
-   "vol": 0.53
   }
  ],
  "maiores_altas_4h": [
@@ -172,10 +172,10 @@
   -0.02,
   -0.36,
   -0.4,
-  0.12
+  0.2
  ],
  "contexto": {
-  "t": 1794901675,
+  "t": 1794901991,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 7.5,
+   "media_top20_anual_pct": 7.6,
    "principais_anual_pct": {
-    "BTC": 5.1,
-    "ETH": 1.5,
-    "SOL": -6.8
+    "BTC": 5.0,
+    "ETH": 1.8,
+    "SOL": -7.8
    },
    "leitura": "neutro"
   },
@@ -436,8 +436,8 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 77,
-  "compras": 47,
+  "apostas": 78,
+  "compras": 48,
   "vendas": 30,
   "mais_confiantes_venda": [
    {
@@ -668,7 +668,7 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.0,
+   "carteira": 6.02,
    "n_abertas": 1,
    "abertas": [
     [
@@ -685,8 +685,8 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 9.22,
-   "n_abertas": 2,
+   "carteira": 9.23,
+   "n_abertas": 3,
    "abertas": [
     [
      "BTC",
@@ -695,6 +695,10 @@
     [
      "LINK",
      "compra"
+    ],
+    [
+     "ADA",
+     "venda"
     ]
    ],
    "n_fechadas": 34,
@@ -804,7 +808,7 @@
     "ganho_medio": 0.387,
     "perda_media": -1.242,
     "fator_lucro": 0.19,
-    "carteira": 6.0
+    "carteira": 6.02
    },
    "radar": {
     "ops": 34,
@@ -813,7 +817,7 @@
     "ganho_medio": 0.073,
     "perda_media": -0.1,
     "fator_lucro": 0.57,
-    "carteira": 9.22
+    "carteira": 9.23
    },
    "testnet": {
     "ops": 96,
@@ -852,8 +856,8 @@
     "n": 14561
    },
    "segue_maioria_24h": {
-    "acerto": 0.5271,
-    "n": 19394
+    "acerto": 0.5273,
+    "n": 19384
    }
   },
   "referencia_ganha": [],
