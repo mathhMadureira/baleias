@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 14:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 14:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,17 +71,17 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 36.2% das moedas subindo em 24 h, 19.8% em 4 h · BTC 24 h -1.65%, 4 h -1.04%.
+- **Amplitude:** 36.5% das moedas subindo em 24 h, 20.0% em 4 h · BTC 24 h -1.65%, 4 h -1.04%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 4.5, 'ETH': -4.6, 'SOL': -5.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': 4.4, 'ETH': -4.0, 'SOL': -4.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ZRO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · APT OCO invertido (alta, formado) · ENA topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · FF fundo duplo (alta, formado) · GRAM topo duplo (baixa, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 18/11 14:20 UTC · Decrypt: Movie2K Defendant Could Hand Over 40,000 Bitcoin to End Trial—and Stay a Billionaire
 - 📰 18/11 14:04 UTC · Cointelegraph: Bitcoin Covenants Part 6: FE Covenants — Enforcing covenants through cryptographically restricted signing keys
 - 📰 18/11 13:42 UTC · Cointelegraph: CoinShares sells all treasury ETH, halves SOL holdings for buybacks
 - 📰 18/11 13:37 UTC · Decrypt: Morning Minute: Nvidia Beats, Board Says ‘No’ on Jensen
 - 📰 18/11 13:34 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 18/11 13:32 UTC · Cointelegraph: Sanctions fears loom over Russia’s regulated crypto trading launch
-- 📰 18/11 13:30 UTC · Cointelegraph: How to preserve wealth and access funds during a national emergency
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -120,7 +120,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24067 apostas conferidas ao vivo, acerto 55.5%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24067 apostas conferidas ao vivo, acerto 55.5%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

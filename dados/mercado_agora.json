@@ -1,21 +1,21 @@
 {
- "t": 1795011512,
- "hora_utc": "2026-11-18 14:18 UTC",
+ "t": 1795011799,
+ "hora_utc": "2026-11-18 14:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 116,
-  "subindo_pct": 19.0,
-  "mediana_pct": -0.54
+  "moedas": 115,
+  "subindo_pct": 19.1,
+  "mediana_pct": -0.53
  },
  "mercado_4h": {
-  "moedas": 116,
-  "subindo_pct": 19.8,
-  "mediana_pct": -0.86
+  "moedas": 115,
+  "subindo_pct": 20.0,
+  "mediana_pct": -0.87
  },
  "mercado_24h": {
-  "moedas": 116,
-  "subindo_pct": 36.2,
-  "mediana_pct": -1.3
+  "moedas": 115,
+  "subindo_pct": 36.5,
+  "mediana_pct": -1.29
  },
  "btc": {
   "1h": -0.26,
@@ -172,11 +172,17 @@
   -0.22,
   -0.22,
   -0.23,
-  0.11
+  0.06
  ],
  "contexto": {
-  "t": 1795011513,
+  "t": 1795011800,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795011652,
+    "hora_utc": "18/11 14:20",
+    "titulo": "Movie2K Defendant Could Hand Over 40,000 Bitcoin to End Trial—and Stay a Billionaire"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795010690,
@@ -260,12 +266,6 @@
     "t": 1795002172,
     "hora_utc": "18/11 11:42",
     "titulo": "Bitcoin drops as Nvidia earnings report drives stock index futures higher"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794999516,
-    "hora_utc": "18/11 10:58",
-    "titulo": "Bitcoin outpaces gold even as both assets tumble ahead of a likely Fed rate hike"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.7,
+   "media_top20_anual_pct": 5.8,
    "principais_anual_pct": {
-    "BTC": 4.5,
-    "ETH": -4.6,
-    "SOL": -5.0
+    "BTC": 4.4,
+    "ETH": -4.0,
+    "SOL": -4.3
    },
    "leitura": "neutro"
   },
@@ -945,12 +945,12 @@
   "z_contra_lab": 1.95,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5118,
-    "n": 18394
+    "acerto": 0.5122,
+    "n": 18228
    },
    "segue_maioria_24h": {
-    "acerto": 0.5162,
-    "n": 23948
+    "acerto": 0.5163,
+    "n": 23912
    }
   },
   "referencia_ganha": [],
