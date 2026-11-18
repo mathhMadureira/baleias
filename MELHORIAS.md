@@ -128,3 +128,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-18 (fim da tarde): **H62 — agentes operam livres, estilo scalper (pedido do dono)**: cada agente escolhe moeda, lado, stop, alvo e prazo de cada
   posição (limites 0,3–4% / 0,2–5% / 5–1440 min); a nuvem confere stop e alvo minuto a minuto; na conta de teste o alvo também fica guardado na corretora
   (TAKE_PROFIT_MARKET). `operar.py escolher` virou panorama (v4 subir/cair, movimento de 1 h, memecoins) + sugestão. 155 testes.
+- 2026-11-18 (noite): **H63 — "monitor fomo": raspagem das melhores carteiras (pedido do dono).** Referências buscadas antes (bots que copiam o
+  ranking da Hyperliquid, fomo.family, aviso sobre copiadores perto do topo). `executor/carteiras_nuvem.py` na nuvem a cada rodada: ranking público
+  da Hyperliquid a cada 24 h → 40 contas ativas e lucrativas (filtro fixo da H63); posições delas e preços de meio (API pública, só leitura);
+  feed de aberturas e fechamentos; cada abertura é resolvida em 60–75 min (juiz automático, passa com ≥ 300 eventos e t ≥ 2). Agentes recebem a
+  tabela das carteiras e o feed na raspagem (`operar.py escolher`, `universo.py`) e decidem o scalper depois dela (rotina r4). 157 testes.

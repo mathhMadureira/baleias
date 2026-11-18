@@ -2045,3 +2045,31 @@ class OperarLivre(unittest.TestCase):
         self.assertAlmostEqual(f["saida"], 1.006)
         self.assertIn("lucro realizado", f["motivo_saida"])
         self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04})
+
+
+class CarteirasTopH63(unittest.TestCase):
+    """H63 (18/11): raspagem das melhores carteiras da Hyperliquid; abertura nova vira evento resolvido em 60–75 min."""
+
+    def test_filtro_fixo(self):
+        from executor import carteiras_nuvem as C
+        w = lambda m, s, a, roi=0.2, vlm=2e6: [["day", {"pnl": "1"}], ["week", {"pnl": s, "roi": "0.1"}], ["month", {"pnl": m, "roi": str(roi), "vlm": str(vlm)}],
+                                              ["allTime", {"pnl": a}]]
+        linhas = [{"ethAddress": "0xa", "accountValue": "100000", "windowPerformances": w("10", "1", "5")},
+                  {"ethAddress": "0xb", "accountValue": "100000", "windowPerformances": w("10", "-1", "5")},          # semana no prejuízo
+                  {"ethAddress": "0xc", "accountValue": "10000", "windowPerformances": w("10", "1", "5")},           # conta pequena
+                  {"ethAddress": "0xd", "accountValue": "100000", "windowPerformances": w("10", "1", "5", vlm=5e5)}]  # giro 5× < 10×
+        self.assertEqual([c["endereco"] for c in C.selecionar(linhas)], ["0xa"])
+        self.assertEqual((C.par_binance("kPEPE"), C.par_binance("BTC"), C.par_binance("xyz:TSLA")), ("PEPEUSDT", "BTCUSDT", None))
+
+    def test_feed_e_juiz(self):
+        from executor import carteiras_nuvem as C
+        antes = {"0x1": {"BTC": {"lado": "venda", "valor_usd": 100, "entrada": 1, "alavancagem": 5}}}
+        agora = {"0x1": {"ETH": {"lado": "compra", "valor_usd": 50, "entrada": 2, "alavancagem": 3}}, "0x2": {"SOL": {"lado": "compra", "valor_usd": 9}}}
+        ev = C.diferencas(antes, agora, {"ETH": "2000", "BTC": "60000"}, 1000)
+        self.assertEqual(sorted((x["tipo"], x["coin"]) for x in ev), [("abriu", "ETH"), ("fechou", "BTC")])   # 0x2 é nova na lista: não conta
+        ev = C.resolver(ev, {"ETH": "2020"}, 1000 + 3700)
+        r = [x for x in ev if x["tipo"] == "abriu"][0]
+        self.assertAlmostEqual(r["resultado"], 0.01 - 0.0012, places=6)
+        ev2 = C.resolver([{"t": 0, "tipo": "abriu", "coin": "X", "lado": "compra", "px": 1.0}], {"X": "1"}, 5000)
+        self.assertTrue(ev2[0].get("descartado"))                                                              # janela perdida
+        self.assertEqual(C.avaliar(ev)["n"], 1)
