@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 22:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 22:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.75** · 21 operações fechadas · 2 abertas
+Carteira **US$ 8.69** · 21 operações fechadas · 2 abertas
 
 - **Total:** 12/21 com lucro (57%), resultado -1.40, média -0.067 por operação.
 - **Últimas 24 h:** 7/14 com lucro, -1.51.
@@ -17,13 +17,13 @@ Carteira **US$ 8.75** · 21 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.35** · 10 operações fechadas · 3 abertas
+Carteira **US$ 8.34** · 11 operações fechadas · 2 abertas
 
-- **Total:** 2/10 com lucro (20%), resultado -1.70, média -0.170 por operação.
-- **Últimas 24 h:** 2/10 com lucro, -1.70.
-- **Por horário:** 12–17 UTC: 2 op, 0% certas, -1.42 · 06–11 UTC: 1 op, 0% certas, -0.79 · 18–23 UTC: 7 op, 29% certas, +0.52
-- **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 6 op, 33% certas, +0.57
-- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · fora da lista de posições do c: 4 op, 25% certas, +0.69
+- **Total:** 3/11 com lucro (27%), resultado -1.63, média -0.148 por operação.
+- **Últimas 24 h:** 3/11 com lucro, -1.63.
+- **Por horário:** 12–17 UTC: 2 op, 0% certas, -1.42 · 06–11 UTC: 1 op, 0% certas, -0.79 · 18–23 UTC: 8 op, 38% certas, +0.58
+- **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 7 op, 43% certas, +0.64
+- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 1 op, 100% certas, +0.07 · fora da lista de posições do c: 4 op, 25% certas, +0.69
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
@@ -45,20 +45,20 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.87** · 7 operações fechadas · 3 abertas
+Carteira **US$ 10.72** · 9 operações fechadas · 1 abertas
 
-- **Total:** 6/7 com lucro (86%), resultado +0.58, média +0.083 por operação.
-- **Últimas 24 h:** 6/7 com lucro, +0.58.
-- **Por horário:** 18–23 UTC: 7 op, 86% certas, +0.58
-- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 5 op, 80% certas, +0.40
-- **Por motivo de saída:** memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18
+- **Total:** 8/9 com lucro (89%), resultado +0.71, média +0.079 por operação.
+- **Últimas 24 h:** 8/9 com lucro, +0.71.
+- **Por horário:** 18–23 UTC: 9 op, 89% certas, +0.71
+- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 7 op, 86% certas, +0.53
+- **Por motivo de saída:** memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
 - **Amplitude:** 25.5% das moedas subindo em 24 h, 17.0% em 4 h · BTC 24 h -3.12%, 4 h -1.2%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.5%/ano · {'BTC': 2.1, 'ETH': -2.9, 'SOL': -5.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.6%/ano · {'BTC': 1.4, 'ETH': -3.7, 'SOL': -5.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:57 UTC · Cointelegraph: Tether invokes The Big Short in swipe at S&P over USDT reserve risks

@@ -1,6 +1,6 @@
 {
- "t": 1795039813,
- "hora_utc": "2026-11-18 22:10 UTC",
+ "t": 1795040040,
+ "hora_utc": "2026-11-18 22:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
@@ -172,10 +172,10 @@
   -0.67,
   -0.19,
   -0.44,
-  0.02
+  0.07
  ],
  "contexto": {
-  "t": 1795039814,
+  "t": 1795040042,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -2.5,
+   "media_top20_anual_pct": -1.6,
    "principais_anual_pct": {
-    "BTC": 2.1,
-    "ETH": -2.9,
-    "SOL": -5.2
+    "BTC": 1.4,
+    "ETH": -3.7,
+    "SOL": -5.7
    },
    "leitura": "neutro"
   },
@@ -440,7 +440,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.75,
+  "carteira": 8.69,
   "abertas": [
    {
     "moeda": "ZEC",
@@ -448,7 +448,7 @@
     "entrada": 913.19,
     "agora": 911.8,
     "resultado_pct": 0.15,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "regime de baixa (24,5% subindo); 6 de 6 tempos abaixo da MM20; ZEC 4 h −1,23%, 1 dia −2,41%; 3 das melhores carteiras vendidas e 0 compradas; v4 neutro 0,517"
    },
    {
@@ -457,7 +457,7 @@
     "entrada": 107.83,
     "agora": 107.59,
     "resultado_pct": 0.22,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "regime de baixa; 6 de 6 tempos abaixo da MM20; AAVE 4 h −0,77%, 1 dia −2,83%; 3 das melhores carteiras vendidas e 0 compradas; v4 neutro 0,526"
    }
   ],
@@ -610,7 +610,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.75,
+   "carteira": 8.69,
    "n_abertas": 2,
    "abertas": [
     [
@@ -631,13 +631,9 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.35,
-   "n_abertas": 3,
+   "carteira": 8.34,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "RUNE",
-     "venda"
-    ],
     [
      "ZEC",
      "venda"
@@ -647,7 +643,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 10,
+   "n_fechadas": 11,
    "ordem": null
   },
   {
@@ -680,23 +676,15 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.87,
-   "n_abertas": 3,
+   "carteira": 10.72,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "SHIB",
-     "venda"
-    ],
-    [
-     "TRUMP",
-     "venda"
-    ],
     [
      "PUMP",
      "venda"
     ]
    ],
-   "n_fechadas": 7,
+   "n_fechadas": 9,
    "ordem": null
   }
  ],
@@ -710,16 +698,16 @@
     "ganho_medio": 0.065,
     "perda_media": -0.242,
     "fator_lucro": 0.36,
-    "carteira": 8.75
+    "carteira": 8.69
    },
    "openbot_testnet": {
-    "ops": 10,
-    "acerto": 0.2,
-    "soma": -1.699,
-    "ganho_medio": 0.457,
+    "ops": 11,
+    "acerto": 0.273,
+    "soma": -1.632,
+    "ganho_medio": 0.327,
     "perda_media": -0.373,
-    "fator_lucro": 0.35,
-    "carteira": 8.35
+    "fator_lucro": 0.38,
+    "carteira": 8.34
    },
    "treinador": {
     "ops": 6,
@@ -740,13 +728,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 7,
-    "acerto": 0.857,
-    "soma": 0.58,
-    "ganho_medio": 0.113,
+    "ops": 9,
+    "acerto": 0.889,
+    "soma": 0.711,
+    "ganho_medio": 0.101,
     "perda_media": -0.096,
-    "fator_lucro": 7.03,
-    "carteira": 10.87
+    "fator_lucro": 8.39,
+    "carteira": 10.72
    }
   },
   "vereditos": []
