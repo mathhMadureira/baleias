@@ -1316,3 +1316,24 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   das posições dos agentes (stop até o da rota; alvo ≥ 3 × stop ou sem alvo, deixando o stop móvel levar o lucro); o `operar.py` e o `gravar.py`
   recusam decisão fora dela. O que não passar não entra e fica registrado; o dono recebe os números.
 - **Juiz ao vivo do que entrar (até 02/12):** por agente, em 30+ operações: ganho médio ≥ 2 × perda média e carteira > US$ 10.
+
+### Resultado da H64 (18/11 22:50 UTC, `lab/colher_balde.py` → `dados/lab/colher_balde_resultado.json`): parte T aprovada; parte S reprovada
+**Parte T (tamanho que cresce com o ganho): PASSOU.**
+| conjunto | soma atual (2,5×) | soma H64 | abaixo do piso só na H64 |
+|---|---|---|---|
+| antes do zero (9 robôs) | 60,93 | 63,40 | — |
+| desde o zero (12 robôs e agentes) | 116,92 | 117,47 | — |
+- Leitura: ajuda sobretudo quando a carteira cai (a posição encolhe: o Robô Claude antes do zero 5,85 → 6,40; o Radar 5,88 → 6,47). Com lucro a
+  diferença é pequena (+0,55 na soma desde o zero). Entra na nuvem e na conta de teste.
+
+**Parte S (saída colher/balde): nenhuma rota passou.** 24.891 apostas do v4, 5.842 a favor do regime, 236 moedas (1ª rodada do script perdeu 46
+moedas por erro de rede e símbolo; refeita com nova tentativa e velas do à vista quando o perpétuo não tem o símbolo, mesma regra):
+| rota | média/aposta | z | blocos | acerto | G | L | G ÷ L |
+|---|---|---|---|---|---|---|---|
+| S1 stop 0,5% alvo 1,5% | +0,055% | +1,04 | +0,197 +0,152 −0,180 | 33,0% | 1,38% | 0,60% | 2,30 |
+| S2 stop 0,5% + móvel | +0,017% | +0,44 | +0,091 +0,047 −0,085 | 50,8% | 0,60% | 0,59% | 1,03 |
+| S3 stop 1% + móvel | +0,084% | +1,60 | +0,229 +0,056 −0,028 | 68,0% | 0,61% | 1,03% | 0,59 |
+| S4 stop 1% alvo 3% | +0,362% | +3,27 | +1,176 +0,299 −0,359 | 37,4% | 2,76% | 1,07% | 2,58 |
+| R6 (referência) stop 2% + móvel | +0,134% | +1,94 | +0,336 +0,070 +0,006 | 80,4% | 0,61% | 1,80% | 0,34 |
+- S4 é a melhor e é "colher/balde" (ganha 2,6 × o que perde), mas perdeu no bloco mais recente (−0,359%): não passa. O stop móvel corta o ganho
+  em ~0,6% (G 0,60–0,61% em S2, S3 e R6): com ele não há balde. Nada vira obrigação; os números vão para o manual dos agentes como informação.
