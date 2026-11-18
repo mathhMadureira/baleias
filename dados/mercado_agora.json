@@ -1,21 +1,21 @@
 {
- "t": 1794987365,
- "hora_utc": "2026-11-18 07:36 UTC",
+ "t": 1794987621,
+ "hora_utc": "2026-11-18 07:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 52.5,
-  "mediana_pct": 0.04
+  "moedas": 119,
+  "subindo_pct": 52.1,
+  "mediana_pct": 0.03
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 61.9,
-  "mediana_pct": 0.28
+  "moedas": 119,
+  "subindo_pct": 62.2,
+  "mediana_pct": 0.3
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 51.7,
-  "mediana_pct": 0.08
+  "moedas": 119,
+  "subindo_pct": 52.1,
+  "mediana_pct": 0.1
  },
  "btc": {
   "1h": 0.09,
@@ -172,11 +172,17 @@
   -0.05,
   0.4,
   -0.11,
-  -0.05
+  -0.09
  ],
  "contexto": {
-  "t": 1794987366,
+  "t": 1794987622,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1794987479,
+    "hora_utc": "18/11 07:37",
+    "titulo": "Google finds self-running AI hacking tool with Russian comments in its files"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1794986868,
@@ -260,12 +266,6 @@
     "t": 1794951962,
     "hora_utc": "17/11 21:46",
     "titulo": "OpenAI's GPT 6.2 Astra Challenges Anthropic on Price, But Not Every Benchmark"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794950750,
-    "hora_utc": "17/11 21:25",
-    "titulo": "Nvidia shares rise on earnings beat, raised outlook despite leadership uncertainty"
    }
   ],
   "medo_ganancia": {
@@ -278,7 +278,7 @@
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -2.3
+    "SOL": -2.9
    },
    "leitura": "neutro"
   },
@@ -302,13 +302,6 @@
     "sentido": "baixa",
     "confirmado": true,
     "nivel": null
-   },
-   {
-    "moeda": "ARB",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.128
    },
    {
     "moeda": "BTC",
@@ -428,6 +421,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 74.34
+   },
+   {
+    "moeda": "STEEM",
+    "padrao": "ombro-cabeça-ombro",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.04199
    },
    {
     "moeda": "USUAL",
@@ -581,7 +581,7 @@
     "entrada": 1.466,
     "agora": 1.436,
     "resultado_pct": -2.05,
-    "horas_aberta": 6.9,
+    "horas_aberta": 7.0,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -590,7 +590,7 @@
     "entrada": 3.86e-06,
     "agora": 3.86e-06,
     "resultado_pct": 0.0,
-    "horas_aberta": 5.7,
+    "horas_aberta": 5.8,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -722,15 +722,11 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 11.34,
-   "n_abertas": 4,
+   "carteira": 11.21,
+   "n_abertas": 3,
    "abertas": [
     [
      "U",
-     "compra"
-    ],
-    [
-     "BCH",
      "compra"
     ],
     [
@@ -742,7 +738,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 35,
+   "n_fechadas": 36,
    "ordem": null
   },
   {
@@ -934,13 +930,13 @@
     "carteira": 9.72
    },
    "cacador": {
-    "ops": 35,
-    "acerto": 0.8,
-    "soma": 1.91,
+    "ops": 36,
+    "acerto": 0.778,
+    "soma": 1.263,
     "ganho_medio": 0.132,
-    "perda_media": -0.256,
-    "fator_lucro": 2.07,
-    "carteira": 11.34
+    "perda_media": -0.305,
+    "fator_lucro": 1.52,
+    "carteira": 11.21
    },
    "rapido": {
     "ops": 45,
@@ -1069,8 +1065,8 @@
     "n": 17868
    },
    "segue_maioria_24h": {
-    "acerto": 0.5118,
-    "n": 23017
+    "acerto": 0.5111,
+    "n": 22894
    }
   },
   "referencia_ganha": [],
