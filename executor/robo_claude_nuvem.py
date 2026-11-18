@@ -60,6 +60,22 @@ def fechar(e, par, p, saida, motivo, agora):
     return f"🤖 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
 
 
+LIMITES = {"stop_pct": (0.003, 0.04), "alvo_pct": (0.002, 0.05), "max_min": (5, MAX_HORAS * 60)}
+
+
+def parametros(pos):
+    """H62 (18/11, dono: "operar livremente e tomar suas próprias decisões de entrada e stop; scalper, operações rápidas"): o agente pode
+    escolher, por posição, stop_pct, alvo_pct (realiza o lucro) e max_min (prazo). Fora dos limites, o valor é encostado no limite."""
+    out = {}
+    for k, (lo, hi) in LIMITES.items():
+        try:
+            v = float(pos.get(k))
+        except (TypeError, ValueError):
+            continue
+        out[k] = min(hi, max(lo, v))
+    return out
+
+
 def passo(e, decisao, velas, agora, vivos=None):
     """e: estado; decisao: dados/decisao_claude.json (ou {}); velas: {par: velas fechadas de 15 min}. Devolve os textos."""
     textos = []
@@ -76,7 +92,7 @@ def passo(e, decisao, velas, agora, vivos=None):
         saiu = None
         motivo_saida = f"stop de segurança −{sp:.1%}"
         from executor import stop_movel as SM                  # H49 (substitui a trava fixa da H48): stop móvel minuto a minuto
-        r = SM.conferir(p, SM.MINUTOS.get(par), sp, int(agora * 1000), int(p["entrada_t"] * 1000))
+        r = SM.conferir(p, SM.MINUTOS.get(par), sp, int(agora * 1000), int(p["entrada_t"] * 1000), alvo_pct=p.get("alvo_pct"))   # H62: alvo do agente
         if r:
             saiu, motivo_saida = r[0], r[1]
             k = []
@@ -88,8 +104,9 @@ def passo(e, decisao, velas, agora, vivos=None):
             p["conferido_ate"] = x[0] + VELA_MS
         if saiu is not None:
             textos.append(fechar(e, par, p, saiu, motivo_saida, agora))
-        elif agora - p["entrada_t"] > MAX_HORAS * 3600 and par in preco:
-            textos.append(fechar(e, par, p, preco[par], f"tempo máximo ({MAX_HORAS} h) sem nova decisão", agora))
+        elif agora - p["entrada_t"] > p.get("max_min", MAX_HORAS * 60) * 60 and par in preco:
+            textos.append(fechar(e, par, p, preco[par], f"prazo da operação ({p['max_min']:.0f} min)" if p.get("max_min") else
+                                 f"tempo máximo ({MAX_HORAS} h) sem nova decisão", agora))
     # 2) decisão do Claude (se recente)
     fresca = decisao and agora - decisao.get("t", 0) <= VALIDADE_S
     if fresca and decisao.get("t") != e.get("ultima_decisao_t"):
@@ -118,6 +135,7 @@ def passo(e, decisao, velas, agora, vivos=None):
                 if e["abertas"][par]["lado"] != lado and par in preco:                      # inverteu o lado: fecha e reabre
                     textos.append(fechar(e, par, e["abertas"][par], preco[par], "o Claude inverteu o lado", agora))
                 else:
+                    e["abertas"][par].update(parametros(pos))                         # H62: o agente pode apertar stop, alvo e prazo
                     continue
             patrimonio = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
             if patrimonio < PISO:
@@ -125,12 +143,15 @@ def passo(e, decisao, velas, agora, vivos=None):
             noc = min(2.5 * patrimonio, patrimonio * ALAV / MAX_POS)   # H58: proporcional à carteira; as 4 posições sempre cabem
             if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < noc / ALAV - 1e-9:
                 continue
-            sp = stop_da_moeda(velas.get(par, []))
+            prm = parametros(pos)
+            sp = prm.pop("stop_pct", None) or stop_da_moeda(velas.get(par, []))
             e["caixa"] -= noc / ALAV
             e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc, "stop_pct": sp,
                                  "motivo": str(pos.get("motivo", ""))[:300], "decisao_t": decisao["t"],
-                                 "conferido_ate": -(-int(agora * 1000) // VELA_MS) * VELA_MS}   # P1: só velas de 15 min que começam depois da entrada
-            textos.append(f"🤖 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.1%}): {str(pos.get('motivo', ''))[:120]}")
+                                 "conferido_ate": -(-int(agora * 1000) // VELA_MS) * VELA_MS, **prm}   # P1: só velas de 15 min depois da entrada
+            textos.append(f"🤖 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.2%}"
+                          + (f", alvo {prm['alvo_pct']:.2%}" if prm.get("alvo_pct") else "") + (f", prazo {prm['max_min']:.0f} min" if prm.get("max_min") else "")
+                          + f"): {str(pos.get('motivo', ''))[:120]}")
     e["patrimonio"] = e["caixa"] + sum(q["gasto"] + (1 if q["lado"] == "compra" else -1) * q.get("nocional", ORCAMENTO) * (preco.get(q["moeda"], q["entrada"]) / q["entrada"] - 1)
                                        for q in e["abertas"].values())
     if e["patrimonio"] < PISO and not e.get("eliminado"):

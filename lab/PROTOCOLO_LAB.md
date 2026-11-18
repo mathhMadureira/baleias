@@ -1262,3 +1262,16 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   (`stop_movel.precos_da_rodada`), `entrada_t` = hora da rodada, stop de 15 min só em velas que começam depois da entrada. (a)+(b) também em
   `executor/v4_perp_nuvem.py` (só aposta da última vela fechada; entrada no preço e na hora da rodada), que está parado desde a H61 (robôs aposentados):
   vale se os robôs voltarem. Testes `P1EntradaNaRodada`.
+
+## Hipótese 62: agentes operam livres, estilo scalper (decisão do dono, registrada em 18/11/2026 ~17:45 BRT = 20:45 UTC, antes de ligar)
+- **Dono:** "põe os robôs para operar livremente e tomar suas próprias decisões de entrada e stop. Quero ver eles fazendo scalper, operações rápidas."
+  Os operadores são os agentes do OpenBot (H61). A escolha das moedas deixa de ser a regra fixa do `operar.py`/`universo.py` (vira sugestão e panorama):
+  cada agente decide moeda, lado e, por posição, `stop_pct` (0,3–4%), `alvo_pct` (0,2–5%, realiza o lucro) e `max_min` (5–1440 min).
+- **Execução:** a nuvem (`executor/robo_claude_nuvem.py`) confere stop, alvo e stop móvel minuto a minuto e fecha no prazo; reabre só na próxima decisão
+  do agente (a cada 30 min). Na conta de teste o chefe guarda na corretora o stop E o alvo (TAKE_PROFIT_MARKET reduce-only); o prazo é conferido a cada
+  rodada dele. Custo 0,06%/lado, tamanho 2,5 × carteira a 10×, até 4 posições, meta de US$ 12, piso de US$ 5 continuam.
+- **O que o laboratório já sabe (não decide; o dono decidiu):** saídas curtas de scalper perderam para o custo em 5 min (H24, todos os pares alvo/stop),
+  rompimento de 5 min perdeu (H25) e nenhuma regra de 1 min pagou 0,12% (H32). Previsão registrada: não sei para decisões discricionárias; o histórico
+  aponta perda por operação perto do custo.
+- **Juiz (torneio H50):** por agente, depois de 30 operações abertas a partir desta hora: fator de lucro > 1 e carteira > US$ 10. As operações de antes
+  desta hora (H61) ficam separadas.

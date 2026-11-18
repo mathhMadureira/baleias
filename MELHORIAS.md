@@ -125,3 +125,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   Painel, placar, torneio, banco e diário de lições mostram os agentes. Regime do painel vem do retrato do mercado. 152 testes.
 - 2026-11-18 (tarde): **P1 do Treinador aprovada pelo Laboratório e aplicada**: entrada no preço e na hora da rodada (vela de 1 min fechada), não no
   fechamento de uma vela de 15 min passada; no executor dos agentes (`robo_claude_nuvem.py`) e no dos robôs do v4 (com o filtro de aposta velha). 154 testes.
+- 2026-11-18 (fim da tarde): **H62 — agentes operam livres, estilo scalper (pedido do dono)**: cada agente escolhe moeda, lado, stop, alvo e prazo de cada
+  posição (limites 0,3–4% / 0,2–5% / 5–1440 min); a nuvem confere stop e alvo minuto a minuto; na conta de teste o alvo também fica guardado na corretora
+  (TAKE_PROFIT_MARKET). `operar.py escolher` virou panorama (v4 subir/cair, movimento de 1 h, memecoins) + sugestão. 155 testes.

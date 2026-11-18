@@ -2024,3 +2024,24 @@ class P1EntradaNaRodada(unittest.TestCase):
         self.assertEqual(a["entrada"], 1.05)                       # preço da rodada, não o fechamento de 15 min (1,0)
         self.assertEqual(a["entrada_t"], agora)
         self.assertGreaterEqual(a["conferido_ate"], agora * 1000)  # stop de 15 min só em velas depois da entrada
+
+
+class OperarLivre(unittest.TestCase):
+    """H62 (18/11): o agente escolhe stop, alvo e prazo de cada posição; a nuvem confere minuto a minuto."""
+
+    def test_stop_alvo_e_prazo_do_agente(self):
+        from executor import robo_claude_nuvem as R, stop_movel as SM
+        agora = 1795000000.0
+        k = [[int(agora * 1000) - 900_000 * (100 - i), "1", "1", "1", "1.0"] for i in range(100)]
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "licoes": []}
+        d = {"t": agora - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "scalper", "stop_pct": 0.004, "alvo_pct": 0.006, "max_min": 2}]}
+        R.passo(e, d, {"AUSDT": k}, agora, vivos={"AUSDT": 1.0})
+        a = e["abertas"]["AUSDT"]
+        self.assertEqual((a["stop_pct"], a["alvo_pct"], a["max_min"]), (0.004, 0.006, 5))     # prazo encostado no mínimo de 5 min
+        SM.MINUTOS["AUSDT"] = [(int(agora * 1000) + 60_000, 1.007, 0.999)]                   # tocou +0,7%: realiza no alvo de +0,6%
+        R.passo(e, d, {"AUSDT": k}, agora + 180, vivos={"AUSDT": 1.007})
+        SM.MINUTOS.clear()
+        f = e["fechadas"][-1]
+        self.assertAlmostEqual(f["saida"], 1.006)
+        self.assertIn("lucro realizado", f["motivo_saida"])
+        self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04})
