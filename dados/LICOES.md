@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 13:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 13:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -73,7 +73,7 @@ Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 
 - **Amplitude:** 41.4% das moedas subindo em 24 h, 26.7% em 4 h · BTC 24 h -1.46%, 4 h -0.98%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': 11.0, 'ETH': -5.3, 'SOL': 0.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': 10.4, 'ETH': -5.5, 'SOL': -0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · GRAM topo duplo (baixa, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SHIB OCO invertido (alta, formado) · SPK fundo duplo (alta, formado) · SPK ombro-cabeça-ombro (baixa, formado) · ZK OCO invertido (alta, formado)
 - 📰 18/11 13:42 UTC · Cointelegraph: CoinShares sells all treasury ETH, halves SOL holdings for buybacks
