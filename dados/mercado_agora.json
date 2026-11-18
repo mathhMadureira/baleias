@@ -1,6 +1,6 @@
 {
- "t": 1794969205,
- "hora_utc": "2026-11-18 02:33 UTC",
+ "t": 1794969461,
+ "hora_utc": "2026-11-18 02:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.33,
   -0.24,
   -0.75,
-  0.24
+  0.26
  ],
  "contexto": {
-  "t": 1794969206,
+  "t": 1794969462,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.8,
+   "media_top20_anual_pct": 7.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.1,
-    "SOL": 3.8
+    "ETH": 6.8,
+    "SOL": 3.0
    },
    "leitura": "neutro"
   },
@@ -518,7 +518,7 @@
     "entrada": 964.92,
     "agora": 959.51,
     "resultado_pct": -0.56,
-    "horas_aberta": 1.9,
+    "horas_aberta": 2.0,
     "motivo_de_entrada": "a favor da alta de 24 h (73,3% subindo): ZEC 24 h +6,91%, 4 h +4,65% sem esticar, comprada no recuo de 1 h (20,0% das moedas subindo); as 2 compras anteriores d"
    },
    {
@@ -527,7 +527,7 @@
     "entrada": 1.466,
     "agora": 1.454,
     "resultado_pct": -0.82,
-    "horas_aberta": 1.9,
+    "horas_aberta": 2.0,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -536,7 +536,7 @@
     "entrada": 0.00393,
     "agora": 0.00393,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "maior confiança do universo: v4 0,343 de subir (confiança 0,157, faixa ≥ 0,12 da H36); 1 h +1,02%, 4 h −0,25%, 24 h +4,77%, volume 4 h 0,2×; regime neutro"
    },
    {
@@ -545,7 +545,7 @@
     "entrada": 3.86e-06,
     "agora": 3.86e-06,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
