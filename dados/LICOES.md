@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 11:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 12:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,11 +71,11 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 41.2% das moedas subindo em 24 h, 37.8% em 4 h · BTC 24 h -1.06%, 4 h -0.6%.
+- **Amplitude:** 42.0% das moedas subindo em 24 h, 33.6% em 4 h · BTC 24 h -1.18%, 4 h -1.01%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 4.6, 'ETH': 2.2, 'SOL': -15.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 6.6, 'ETH': 3.6, 'SOL': -9.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · BONK topo duplo (baixa, formado) · ENSO topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · NIGHT fundo duplo (alta, formado) · PLUME topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ZKP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · APT OCO invertido (alta, formado) · ENSO topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado) · PLUME OCO invertido (alta, formado)
 - 📰 18/11 11:42 UTC · CoinDesk: Bitcoin drops as Nvidia earnings report drives stock index futures higher
 - 📰 18/11 10:58 UTC · CoinDesk: Bitcoin outpaces gold even as both assets tumble ahead of a likely Fed rate hike
 - 📰 18/11 10:33 UTC · Cointelegraph: Bitwise seeks Texas Stock Exchange listing for Zcash ETF
@@ -85,7 +85,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 10.2 h.
+- ⚠️ **Rotina parada:** sem decisão há 10.3 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
@@ -120,7 +120,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 23541 apostas conferidas ao vivo, acerto 55.5%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 23582 apostas conferidas ao vivo, acerto 55.5%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
