@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 14:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 14:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -73,19 +73,19 @@ Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 
 - **Amplitude:** 39.7% das moedas subindo em 24 h, 19.8% em 4 h · BTC 24 h -1.84%, 4 h -1.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 4.6, 'ETH': -5.7, 'SOL': -5.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.9%/ano · {'BTC': 3.8, 'ETH': -5.6, 'SOL': -6.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ZRO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · APT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · FF fundo duplo (alta, formado) · GRAM topo duplo (baixa, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SPK fundo duplo (alta, formado)
+- 📰 18/11 14:04 UTC · Cointelegraph: Bitcoin Covenants Part 6: FE Covenants — Enforcing covenants through cryptographically restricted signing keys
 - 📰 18/11 13:42 UTC · Cointelegraph: CoinShares sells all treasury ETH, halves SOL holdings for buybacks
 - 📰 18/11 13:37 UTC · Decrypt: Morning Minute: Nvidia Beats, Board Says ‘No’ on Jensen
 - 📰 18/11 13:34 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 18/11 13:32 UTC · Cointelegraph: Sanctions fears loom over Russia’s regulated crypto trading launch
 - 📰 18/11 13:30 UTC · Cointelegraph: How to preserve wealth and access funds during a national emergency
-- 📰 18/11 12:53 UTC · CoinDesk: Bitcoin miner MARA raises $185 million in debt after selling $1 billion BTC to repay loans
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 12.4 h.
+- ⚠️ **Rotina parada:** sem decisão há 12.5 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
