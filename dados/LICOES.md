@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 14:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 18:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -58,34 +58,34 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 9.02** · 10 operações fechadas · 1 abertas
+Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 
-- **Total:** 7/10 com lucro (70%), resultado -0.58, média -0.058 por operação.
-- **Últimas 24 h:** 2/3 com lucro, -0.70.
-- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
-- **Por lado:** compra: 9 op, 67% certas, -0.64 · venda: 1 op, 100% certas, +0.06
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
+- **Total:** 7/11 com lucro (64%), resultado -1.15, média -0.105 por operação.
+- **Últimas 24 h:** 2/4 com lucro, -1.27.
+- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 1 op, 0% certas, -0.57 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
+- **Por lado:** compra: 10 op, 60% certas, -1.21 · venda: 1 op, 100% certas, +0.06
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
 - **Moedas que mais perderam (≥ 3 op):** ZEC +0.22 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** ZEC +0.22 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 32.5% das moedas subindo em 24 h, 21.9% em 4 h · BTC 24 h -2.79%, 4 h -1.55%.
+- **Amplitude:** 53.7% das moedas subindo em 24 h, 13.0% em 4 h · BTC 24 h -0.83%, 4 h -1.2%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 4.6, 'ETH': -4.7, 'SOL': -3.2} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ZRO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · APT OCO invertido (alta, formado) · ARB topo duplo (baixa, formado) · ARB fundo duplo (alta, formado) · DASH topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · FF fundo duplo (alta, formado) · GRAM topo duplo (baixa, formado)
-- 📰 18/11 14:20 UTC · Decrypt: Movie2K Defendant Could Hand Over 40,000 Bitcoin to End Trial—and Stay a Billionaire
-- 📰 18/11 14:04 UTC · Cointelegraph: Bitcoin Covenants Part 6: FE Covenants — Enforcing covenants through cryptographically restricted signing keys
-- 📰 18/11 13:42 UTC · Cointelegraph: CoinShares sells all treasury ETH, halves SOL holdings for buybacks
-- 📰 18/11 13:37 UTC · Decrypt: Morning Minute: Nvidia Beats, Board Says ‘No’ on Jensen
-- 📰 18/11 13:34 UTC · Cointelegraph: Here’s what happened in crypto today
-- 📰 18/11 13:32 UTC · Cointelegraph: Sanctions fears loom over Russia’s regulated crypto trading launch
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.0%/ano · {'BTC': 6.5, 'ETH': 4.8, 'SOL': 6.5} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** WCT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ADA OCO invertido (alta, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DOGE OCO invertido (alta, formado) · DOT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 18/11 18:16 UTC · Decrypt: Fed's Waller Calls for 50-Basis-Point Rate Hike, Says Tokenized Finance Still Needs Traditional Banks
+- 📰 18/11 17:32 UTC · Decrypt: Lucky Trader Banks 66,000% Profit on GTA 6 Meme Coin Ticker Confusion
+- 📰 18/11 17:22 UTC · CoinDesk: A $1.5 billion crypto startup is taking on Hyperliquid with a Wall Street playbook
+- 📰 18/11 17:05 UTC · Cointelegraph: $25M Ethereum MEV acquittal tests criminal enforcement limits
+- 📰 18/11 17:00 UTC · Cointelegraph: Polymarket US takes rapid-fire crypto trading format to oil, natural gas
+- 📰 18/11 16:57 UTC · Decrypt: 'It Speaks in Tongues That Only 6.2 Astra Understands': Why Early Testers Hate OpenAI’s New Model
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 13.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 16.5 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
@@ -96,31 +96,31 @@ Carteira **US$ 9.02** · 10 operações fechadas · 1 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
-- ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
 - ⏸ Revivi 5 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
+- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 18 em observação, 0 podadas)
 **v2:**
-- ⏸ Revivi 2 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1536 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 5 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1632 episódios guardados e renormalizei os pesos das sinapses.
+- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, reversao_queda, tres_corvos. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24123 apostas conferidas ao vivo, acerto 55.6%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24123 apostas conferidas ao vivo, acerto 55.6%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
