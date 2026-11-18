@@ -1,6 +1,6 @@
 {
- "t": 1795040269,
- "hora_utc": "2026-11-18 22:17 UTC",
+ "t": 1795040495,
+ "hora_utc": "2026-11-18 22:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
@@ -172,10 +172,10 @@
   -0.67,
   -0.19,
   -0.44,
-  0.08
+  0.22
  ],
  "contexto": {
-  "t": 1795040270,
+  "t": 1795040496,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.9,
+   "media_top20_anual_pct": -0.0,
    "principais_anual_pct": {
-    "BTC": 1.4,
-    "ETH": -2.9,
-    "SOL": -5.8
+    "BTC": 2.3,
+    "ETH": -2.0,
+    "SOL": -4.7
    },
    "leitura": "neutro"
   },
@@ -440,7 +440,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.71,
+  "carteira": 8.67,
   "abertas": [
    {
     "moeda": "ZEC",
@@ -610,7 +610,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.71,
+   "carteira": 8.67,
    "n_abertas": 2,
    "abertas": [
     [
@@ -631,7 +631,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.34,
+   "carteira": 8.37,
    "n_abertas": 2,
    "abertas": [
     [
@@ -698,7 +698,7 @@
     "ganho_medio": 0.065,
     "perda_media": -0.242,
     "fator_lucro": 0.36,
-    "carteira": 8.71
+    "carteira": 8.67
    },
    "openbot_testnet": {
     "ops": 11,
@@ -707,7 +707,7 @@
     "ganho_medio": 0.327,
     "perda_media": -0.373,
     "fator_lucro": 0.38,
-    "carteira": 8.34
+    "carteira": 8.37
    },
    "treinador": {
     "ops": 6,

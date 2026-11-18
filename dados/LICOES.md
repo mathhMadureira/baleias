@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 22:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 22:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.71** · 21 operações fechadas · 2 abertas
+Carteira **US$ 8.67** · 21 operações fechadas · 2 abertas
 
 - **Total:** 12/21 com lucro (57%), resultado -1.40, média -0.067 por operação.
 - **Últimas 24 h:** 7/14 com lucro, -1.51.
@@ -17,7 +17,7 @@ Carteira **US$ 8.71** · 21 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.34** · 11 operações fechadas · 2 abertas
+Carteira **US$ 8.37** · 11 operações fechadas · 2 abertas
 
 - **Total:** 3/11 com lucro (27%), resultado -1.63, média -0.148 por operação.
 - **Últimas 24 h:** 3/11 com lucro, -1.63.
@@ -58,7 +58,7 @@ Carteira **US$ 10.68** · 9 operações fechadas · 1 abertas
 
 - **Amplitude:** 25.5% das moedas subindo em 24 h, 18.9% em 4 h · BTC 24 h -3.22%, 4 h -1.23%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.9%/ano · {'BTC': 1.4, 'ETH': -2.9, 'SOL': -5.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.0%/ano · {'BTC': 2.3, 'ETH': -2.0, 'SOL': -4.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 22:16 UTC · Decrypt: Ledger Confirms Tampered Bitcoin Wallets in Berlin as Spy Implant Probe Spreads Beyond Asia
