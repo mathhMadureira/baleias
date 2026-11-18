@@ -1,16 +1,16 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.72** · 17 operações fechadas · 2 abertas
+Carteira **US$ 8.54** · 18 operações fechadas · 1 abertas
 
-- **Total:** 10/17 com lucro (59%), resultado -1.26, média -0.074 por operação.
-- **Últimas 24 h:** 5/10 com lucro, -1.38.
-- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 7 op, 43% certas, -0.68 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
-- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 6 op, 67% certas, -0.03
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
+- **Total:** 10/18 com lucro (56%), resultado -1.42, média -0.079 por operação.
+- **Últimas 24 h:** 5/11 com lucro, -1.54.
+- **Por horário:** 18–23 UTC: 8 op, 38% certas, -0.84 · 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
+- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 7 op, 57% certas, -0.18
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
 - **Moedas que mais perderam (≥ 3 op):** ZEC +0.22 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** ZEC +0.22 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -28,7 +28,7 @@ Carteira **US$ 8.39** · 8 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.14** · 5 operações fechadas · 1 abertas
+Carteira **US$ 10.09** · 5 operações fechadas · 1 abertas
 
 - **Total:** 2/5 com lucro (40%), resultado +0.14, média +0.027 por operação.
 - **Últimas 24 h:** 2/5 com lucro, +0.14.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.43** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.24** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -56,17 +56,17 @@ Carteira **US$ 10.43** · 4 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 26.2% das moedas subindo em 24 h, 69.2% em 4 h · BTC 24 h -2.14%, 4 h -0.21%.
+- **Amplitude:** 27.1% das moedas subindo em 24 h, 69.2% em 4 h · BTC 24 h -2.51%, 4 h -0.31%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -0.5, 'ETH': -0.7, 'SOL': -0.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 0.8, 'ETH': 0.8, 'SOL': -1.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
+- 📰 18/11 21:16 UTC · Decrypt: Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine
 - 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
 - 📰 18/11 20:20 UTC · Cointelegraph: Binance says it obtained $6.5B worldwide freezing order after hack
 - 📰 18/11 20:16 UTC · Decrypt: Google's Genie 4 Is Here, Letting Ultra Subscribers Build AI Worlds in Real Time
 - 📰 18/11 19:46 UTC · Decrypt: Why CoinShares Just Sold All Its Ethereum and Half Its Solana
 - 📰 18/11 19:16 UTC · Decrypt: Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?
-- 📰 18/11 18:46 UTC · Decrypt: Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -104,7 +104,7 @@ Carteira **US$ 10.43** · 4 operações fechadas · 3 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24622 apostas conferidas ao vivo, acerto 55.8%; prevê 100 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24627 apostas conferidas ao vivo, acerto 55.8%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
