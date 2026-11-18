@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 13:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 13:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,17 +71,17 @@ Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 37.9% das moedas subindo em 24 h, 31.0% em 4 h · BTC 24 h -1.5%, 4 h -0.95%.
+- **Amplitude:** 39.7% das moedas subindo em 24 h, 27.6% em 4 h · BTC 24 h -1.51%, 4 h -0.96%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 10.3, 'ETH': -7.3, 'SOL': -4.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.3%/ano · {'BTC': 11.0, 'ETH': -6.3, 'SOL': -2.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · GRAM topo duplo (baixa, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SHIB OCO invertido (alta, formado) · ZK OCO invertido (alta, formado) · ZKC fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · GRAM topo duplo (baixa, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SHIB OCO invertido (alta, formado) · SPK fundo duplo (alta, formado) · SPK ombro-cabeça-ombro (baixa, formado) · ZK OCO invertido (alta, formado)
+- 📰 18/11 13:30 UTC · Cointelegraph: How to preserve wealth and access funds during a national emergency
 - 📰 18/11 12:53 UTC · CoinDesk: Bitcoin miner MARA raises $185 million in debt after selling $1 billion BTC to repay loans
 - 📰 18/11 12:53 UTC · Cointelegraph: Tokenized Nvidia market cap surges 159% amid Jensen Huang’s exit
 - 📰 18/11 12:45 UTC · Decrypt: 'Doomed From the Start': President Trump's Meme Coin Hits New Lows After Midterms
 - 📰 18/11 12:41 UTC · CoinDesk: Bullish beats revenue estimates as institutional services offset sluggish spot crypto volumes
 - 📰 18/11 12:25 UTC · CoinDesk: Circle turns to DBS as banks build rival digital payment systems across Asia
-- 📰 18/11 12:15 UTC · CoinDesk: Blaming Anthropic’s IPO for bitcoin’s slide is 'easy to believe,' but flawed, analysts say
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -112,15 +112,15 @@ Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 - 😴 Sono: reencenei 1632 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 5 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 23874 apostas conferidas ao vivo, acerto 55.5%; prevê 61 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 23907 apostas conferidas ao vivo, acerto 55.5%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
