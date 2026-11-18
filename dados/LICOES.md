@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 01:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 01:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,7 +71,7 @@ Carteira **US$ 10.08** · 7 operações fechadas · 2 abertas
 
 - **Amplitude:** 78.2% das moedas subindo em 24 h, 78.2% em 4 h · BTC 24 h 0.25%, 4 h 1.24%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 6.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.8%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 8.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AR topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · ETHFI fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · ICP fundo duplo (alta, formado) · NEAR topo duplo (baixa, formado)
 - 📰 18/11 00:46 UTC · CoinDesk: CFTC nominee questions public benefit of prediction markets as legal fight grows
@@ -83,12 +83,12 @@ Carteira **US$ 10.08** · 7 operações fechadas · 2 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
 - 18/11 00:08 UTC · **fora do mercado** · Alta de 24 h pela segunda leitura seguida: 81,0% das moedas sobem em 24 h (81,8% na leitura anterior), 93,4% em 4 h (mediana +2,27%) e 89,3% em 1 h; BTC +0,10% 
 - 17/11 13:13 UTC · **RUNE compra, BTC compra, SOL compra, ZEC compra** · Alta de 24 h: 84,5% das moedas sobem em 24 h (eram 79,5%), 70,9% em 4 h; BTC +1,39% em 24 h, +1,13% em 4 h, volume 1,29×. Pano de fundo: BTC abaixo das médias d
 - 17/11 12:12 UTC · **BTC compra, SOL compra, ZEC compra, RUNE compra** · Alta de 24 h: 79,5% das moedas sobem em 24 h (eram 49,1% às 11:13), 68,8% em 4 h e 86,6% em 1 h; BTC +0,85% em 24 h, +1,37% em 1 h, volume 1,48×. Pano de fundo 
 - 17/11 11:10 UTC · **fora do mercado** · Mercado indeciso: 49,1% das moedas sobem em 24 h (eram 68,2% às 10:40), 13,6% em 4 h e 14,5% em 1 h; BTC −0,71% em 24 h, −0,68% em 4 h, volume 1,3×, em 64117, a
-- 17/11 10:10 UTC · **fora do mercado** · Indeciso: 68,2% das moedas sobem em 24 h (eram 66,1%), mas só 31,8% em 4 h e 23,6% em 1 h; BTC −0,06% em 24 h, −0,73% em 4 h, em 64507, volume 1,19×; medo 12. A
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 

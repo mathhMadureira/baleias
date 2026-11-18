@@ -1,6 +1,6 @@
 {
- "t": 1794964176,
- "hora_utc": "2026-11-18 01:09 UTC",
+ "t": 1794964424,
+ "hora_utc": "2026-11-18 01:13 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.58,
   0.33,
   -0.24,
-  -0.27
+  -0.24
  ],
  "contexto": {
-  "t": 1794964177,
+  "t": 1794964424,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -235,7 +235,7 @@
     "fonte": "CoinDesk",
     "t": 1794950750,
     "hora_utc": "17/11 21:25",
-    "titulo": "Nvidia tops estimates, issues strong guidance; shares rise"
+    "titulo": "Nvidia shares rise on earnings beat, raised outlook despite leadership uncertainty"
    },
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 9.6,
+   "media_top20_anual_pct": 9.8,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": 6.3
+    "SOL": 8.3
    },
    "leitura": "neutro"
   },
@@ -525,7 +525,7 @@
     "entrada": 964.92,
     "agora": 964.98,
     "resultado_pct": 0.01,
-    "horas_aberta": 0.5,
+    "horas_aberta": 0.6,
     "motivo_de_entrada": "a favor da alta de 24 h (73,3% subindo): ZEC 24 h +6,91%, 4 h +4,65% sem esticar, comprada no recuo de 1 h (20,0% das moedas subindo); as 2 compras anteriores d"
    },
    {
@@ -534,7 +534,7 @@
     "entrada": 1.466,
     "agora": 1.464,
     "resultado_pct": -0.14,
-    "horas_aberta": 0.5,
+    "horas_aberta": 0.6,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    }
   ],
@@ -591,10 +591,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1794899447,
-    "texto": "Sem operações novas (carteira 10,00). Às 06:18 o 24 h estava em 69,1% subindo com o BTC em 64814; agora 64,5% com o BTC em 64556 (−0,4% em 1 h): o 24 h chegou a 0,9 ponto da alta e recuou, como a baixa perto de 30% recuou cinco vezes entre 21:19 e 03:15. Quem comprasse as alts às 06:18 estaria contra um BTC caindo. Confirma alta: 24 h em 70% ou mais por duas leituras seguidas com BTC acima de 6521"
-   },
-   {
     "t": 1794902999,
     "texto": "Sem operações novas (carteira 10,00). Às 07:16 o 24 h estava em 64,5% subindo com o BTC em 64556; agora 66,1% com o BTC em 64740 (+0,29% em 1 h), mas o 4 h caiu de 71,8% para 38,4%: as alts que puxavam o 24 h para perto de 70% já recuam em 4 h, o mesmo quadro de 06:18 (69,1%) que voltou a 64,5%. Confirma alta: 24 h em 70% ou mais por duas leituras seguidas com BTC acima de 65216; confirma baixa: 2"
    },
@@ -621,6 +617,10 @@
    {
     "t": 1794962166,
     "texto": "Das 7 operações desde o zero, as 5 que saíram pelo stop móvel deram lucro (ZEC compra +0,071 e +0,090, SOL compra +0,090, BTC compra +0,065, RUNE compra +0,064) e as 2 recompras que saíram pela guarda do dia perderam (BTC compra −0,069, SOL compra −0,197). Na rodada anterior fiquei fora com o 4 h no pico (93,4% subindo); agora entro no recuo de 1 h (20,0% subindo). Conferir na próxima se ZEC e REN"
+   },
+   {
+    "t": 1794964184,
+    "texto": "Das 7 operações desde o zero, as 5 que saíram pelo stop móvel deram lucro (ZEC compra +0,071 e +0,090, SOL compra +0,090, BTC compra +0,065, RUNE compra +0,064) e as 2 recompras que saíram pela guarda do dia perderam (BTC −0,069, SOL −0,197). As compras de ZEC e RENDER abertas no recuo ainda não armaram o stop móvel (picos de +0,16% e +0,27%; dia em −0,0911). Não recompro nem somo posição com o BT"
    }
   ]
  },
@@ -875,7 +875,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.07,
+   "carteira": 7.04,
    "n_abertas": 4,
    "abertas": [
     [
@@ -1011,7 +1011,7 @@
     "ganho_medio": 0.081,
     "perda_media": -0.126,
     "fator_lucro": 0.58,
-    "carteira": 7.07
+    "carteira": 7.04
    },
    "testnet": {
     "ops": 96,
@@ -1101,12 +1101,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "17/11 14:17",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Alta de 24 h: 79,3% das moedas sobem em 24 h, 73,0% em 4 h; BTC +1,49% em 24 h, volume 1,05×: Robô Claude quer BTC, SOL, RUNE e STX comprados, mas está travado pela guarda do dia até 00:00 UTC (+0,11, pico +0,40). Sem ordens em vigor e nenhuma nova: a regra da tendência já põe todos comprados, e nin"
-  },
-  {
    "hora_utc": "17/11 15:14",
    "de": "claude",
    "para": "sala",
@@ -1171,6 +1165,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Recuo dentro da alta: 73,3% das moedas sobem em 24 h, 87,5% em 4 h, só 20,0% em 1 h; BTC −0,35% em 1 h, volume 0,82×. Robô Claude compra ZEC (24 h +6,91%) e RENDER (4 h +6,39%, volume 2,81×), só 2 posições por falta de volume no BTC. O v4 acerta menos nas compras (52,4%) que nas vendas (58,4%): não "
+  },
+  {
+   "hora_utc": "18/11 01:13",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Alta de 24 h firme: 78,8% das moedas sobem em 24 h, 78,0% em 4 h e só 11,0% em 1 h; BTC −0,24% em 1 h, volume 0,56×. Robô Claude mantém as compras de ZEC e RENDER e não abre mais nada por falta de volume. Sem ordens: a regra da tendência já põe os robôs em compras e o banco não tem conflitos."
   }
  ]
 }
