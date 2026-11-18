@@ -1,27 +1,27 @@
 {
- "t": 1795040040,
- "hora_utc": "2026-11-18 22:14 UTC",
+ "t": 1795040269,
+ "hora_utc": "2026-11-18 22:17 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
-  "subindo_pct": 18.9,
-  "mediana_pct": -0.32
+  "subindo_pct": 25.5,
+  "mediana_pct": -0.4
  },
  "mercado_4h": {
   "moedas": 106,
-  "subindo_pct": 17.0,
-  "mediana_pct": -0.62
+  "subindo_pct": 18.9,
+  "mediana_pct": -0.76
  },
  "mercado_24h": {
   "moedas": 106,
   "subindo_pct": 25.5,
-  "mediana_pct": -1.78
+  "mediana_pct": -2.16
  },
  "btc": {
-  "1h": -0.44,
-  "4h": -1.2,
-  "24h": -3.12,
-  "preco": 62352.3,
+  "1h": -0.14,
+  "4h": -1.23,
+  "24h": -3.22,
+  "preco": 62385.19,
   "vol_4h_vs_media": 0.85
  },
  "maiores_quedas_4h": [
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "MMT",
-   "4h": -3.4,
-   "24h": 69.1,
-   "vol": 0.25
+   "4h": -4.98,
+   "24h": 70.87,
+   "vol": 0.23
+  },
+  {
+   "moeda": "ZKC",
+   "4h": -4.13,
+   "24h": 26.36,
+   "vol": 0.4
+  },
+  {
+   "moeda": "RARE",
+   "4h": -3.84,
+   "24h": -9.92,
+   "vol": 0.63
+  },
+  {
+   "moeda": "HUMA",
+   "4h": -3.28,
+   "24h": 14.02,
+   "vol": 1.09
   },
   {
    "moeda": "ERA",
    "4h": -3.1,
-   "24h": -4.18,
-   "vol": 0.55
-  },
-  {
-   "moeda": "RARE",
-   "4h": -2.84,
-   "24h": -9.74,
-   "vol": 0.6
-  },
-  {
-   "moeda": "OPG",
-   "4h": -2.78,
-   "24h": -3.8,
-   "vol": 1.34
+   "24h": -4.44,
+   "vol": 0.58
   },
   {
    "moeda": "ASTER",
-   "4h": -2.55,
-   "24h": -7.71,
-   "vol": 0.83
+   "4h": -2.22,
+   "24h": -7.6,
+   "vol": 0.84
   },
   {
    "moeda": "PUMP",
-   "4h": -2.04,
-   "24h": -7.67,
+   "4h": -2.15,
+   "24h": -8.06,
    "vol": 0.59
   },
   {
-   "moeda": "ZK",
-   "4h": -2.02,
-   "24h": -0.64,
-   "vol": 0.66
+   "moeda": "RENDER",
+   "4h": -2.13,
+   "24h": -4.04,
+   "vol": 0.52
   },
   {
-   "moeda": "SHELL",
-   "4h": -1.97,
-   "24h": -2.33,
-   "vol": 0.26
-  },
-  {
-   "moeda": "ZKC",
-   "4h": -1.92,
-   "24h": 28.99,
-   "vol": 0.4
+   "moeda": "ZIL",
+   "4h": -2.06,
+   "24h": 9.98,
+   "vol": 0.53
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "LUNC",
-   "4h": 3.91,
-   "24h": 0.85,
-   "vol": 0.88
-  },
-  {
-   "moeda": "ZRO",
-   "4h": 2.94,
-   "24h": -2.78,
-   "vol": 0.54
+   "4h": 5.23,
+   "24h": 2.77,
+   "vol": 0.98
   },
   {
    "moeda": "MEGA",
-   "4h": 2.44,
-   "24h": 7.69,
+   "4h": 3.14,
+   "24h": 7.68,
    "vol": 0.95
   },
   {
    "moeda": "SENT",
-   "4h": 2.21,
-   "24h": 11.56,
-   "vol": 1.02
+   "4h": 3.1,
+   "24h": 12.7,
+   "vol": 1.21
   },
   {
-   "moeda": "STEEM",
-   "4h": 2.17,
-   "24h": -0.14,
-   "vol": 0.09
-  },
-  {
-   "moeda": "PENDLE",
-   "4h": 2.08,
-   "24h": -0.56,
-   "vol": 3.65
-  },
-  {
-   "moeda": "KAVA",
-   "4h": 1.75,
-   "24h": 3.3,
+   "moeda": "ZRO",
+   "4h": 2.8,
+   "24h": -2.86,
    "vol": 0.52
   },
   {
+   "moeda": "PENDLE",
+   "4h": 2.51,
+   "24h": -0.28,
+   "vol": 3.69
+  },
+  {
+   "moeda": "STEEM",
+   "4h": 2.44,
+   "24h": -0.05,
+   "vol": 0.09
+  },
+  {
    "moeda": "JUP",
-   "4h": 1.56,
-   "24h": 0.04,
+   "4h": 1.15,
+   "24h": -0.63,
    "vol": 1.1
   },
   {
-   "moeda": "ZIL",
-   "4h": 1.43,
-   "24h": 14.87,
-   "vol": 0.57
+   "moeda": "KAVA",
+   "4h": 1.01,
+   "24h": 1.9,
+   "vol": 0.5
+  },
+  {
+   "moeda": "SOPH",
+   "4h": 1.0,
+   "24h": 16.09,
+   "vol": 0.95
   },
   {
    "moeda": "ETHFI",
-   "4h": 0.91,
-   "24h": -0.06,
-   "vol": 1.04
+   "4h": 0.55,
+   "24h": -0.42,
+   "vol": 1.02
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,23 @@
   -0.67,
   -0.19,
   -0.44,
-  0.07
+  0.08
  ],
  "contexto": {
-  "t": 1795040042,
+  "t": 1795040270,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795040162,
+    "hora_utc": "18/11 22:16",
+    "titulo": "Ledger Confirms Tampered Bitcoin Wallets in Berlin as Spy Implant Probe Spreads Beyond Asia"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795039755,
+    "hora_utc": "18/11 22:09",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795039055,
@@ -254,18 +266,6 @@
     "t": 1795023133,
     "hora_utc": "18/11 17:32",
     "titulo": "Lucky Trader Banks 66,000% Profit on GTA 6 Meme Coin Ticker Confusion"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795022523,
-    "hora_utc": "18/11 17:22",
-    "titulo": "A $1.5 billion crypto startup is taking on Hyperliquid with a Wall Street playbook"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795021504,
-    "hora_utc": "18/11 17:05",
-    "titulo": "$25M Ethereum MEV acquittal tests criminal enforcement limits"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.6,
+   "media_top20_anual_pct": -0.9,
    "principais_anual_pct": {
     "BTC": 1.4,
-    "ETH": -3.7,
-    "SOL": -5.7
+    "ETH": -2.9,
+    "SOL": -5.8
    },
    "leitura": "neutro"
   },
@@ -366,13 +366,17 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 134,
-  "compras": 107,
-  "vendas": 27,
+  "apostas": 82,
+  "compras": 48,
+  "vendas": 34,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
     "prob_subir": 0.362
+   },
+   {
+    "moeda": "STEEM",
+    "prob_subir": 0.371
    },
    {
     "moeda": "SLP",
@@ -396,68 +400,64 @@
    },
    {
     "moeda": "LA",
-    "prob_subir": 0.397
-   },
-   {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
+    "prob_subir": 0.399
    }
   ],
   "mais_confiantes_compra": [
-   {
-    "moeda": "U",
-    "prob_subir": 0.662
-   },
-   {
-    "moeda": "ERA",
-    "prob_subir": 0.659
-   },
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
    },
    {
-    "moeda": "RUNE",
-    "prob_subir": 0.636
-   },
-   {
-    "moeda": "CELO",
-    "prob_subir": 0.628
-   },
-   {
-    "moeda": "RLC",
-    "prob_subir": 0.621
-   },
-   {
-    "moeda": "AR",
+    "moeda": "ZKP",
     "prob_subir": 0.619
    },
    {
     "moeda": "KAIA",
     "prob_subir": 0.616
+   },
+   {
+    "moeda": "RWUSD",
+    "prob_subir": 0.61
+   },
+   {
+    "moeda": "ZIL",
+    "prob_subir": 0.605
+   },
+   {
+    "moeda": "COOKIE",
+    "prob_subir": 0.593
+   },
+   {
+    "moeda": "CYBER",
+    "prob_subir": 0.592
+   },
+   {
+    "moeda": "VET",
+    "prob_subir": 0.591
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.69,
+  "carteira": 8.71,
   "abertas": [
    {
     "moeda": "ZEC",
     "lado": "venda",
     "entrada": 913.19,
-    "agora": 911.8,
-    "resultado_pct": 0.15,
-    "horas_aberta": 0.2,
+    "agora": 909.91,
+    "resultado_pct": 0.36,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "regime de baixa (24,5% subindo); 6 de 6 tempos abaixo da MM20; ZEC 4 h −1,23%, 1 dia −2,41%; 3 das melhores carteiras vendidas e 0 compradas; v4 neutro 0,517"
    },
    {
     "moeda": "AAVE",
     "lado": "venda",
     "entrada": 107.83,
-    "agora": 107.59,
-    "resultado_pct": 0.22,
-    "horas_aberta": 0.2,
+    "agora": 107.53,
+    "resultado_pct": 0.28,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "regime de baixa; 6 de 6 tempos abaixo da MM20; AAVE 4 h −0,77%, 1 dia −2,83%; 3 das melhores carteiras vendidas e 0 compradas; v4 neutro 0,526"
    }
   ],
@@ -570,10 +570,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1794966309,
-    "texto": "As compras de ZEC e RENDER de 00:36 UTC (recuo de 1 h com 73,3% das moedas subindo em 24 h e volume do BTC 0,82×) estão abertas no negativo: ZEC 961,76 → 953,35 e RENDER 1,462 → 1,446 no testnet, enquanto o 24 h caiu para 67,8% e o 1 h para 16,8%. Comprar o recuo sem volume do BTC ainda não pagou; conferir se o stop (ZEC 925,33, RENDER 1,417) ou o stop móvel decide a saída."
-   },
-   {
     "t": 1795029390,
     "texto": "As 3 compras mantidas desde a madrugada saíram no stop de segurança (simulado: RENDER −0,82 e SHIB −0,567; testnet: ZEC −0,97, RENDER −0,79, SHIB −0,45), enquanto a venda de USTC (confiança 0,157) está +0,90 no testnet com o stop móvel armado. Manter compras sem confiança do v4 (ZEC 0,481, RENDER 0,506) num mercado que caiu de 73% para 46% subindo custou ~2,2 no testnet; conferir se as vendas de c"
    },
@@ -600,6 +596,10 @@
    {
     "t": 1795039019,
     "texto": "A venda de LA (aberta às 21:35 UTC, regime neutro) fica em +0,02 na conta de teste e sai porque o v4 virou para alta (0,533); RUNE vendida segue em −0,05. Com o regime virando para baixa (24,5%), entro só onde moedas, tempos gráficos e carteiras concordam (ZEC, AAVE) e deixo SOL de fora porque o v4 aponta alta (0,546)."
+   },
+   {
+    "t": 1795040034,
+    "texto": "RUNE venda (entrada 0,5246, saída 0,5225) fechou +0,067 na corretora a favor do regime de baixa. Conta de teste com 11 fechadas: p = 0,273 (3 ganhos, 7 perdas, 1 zero), G = 0,327, L = 0,374, E = −0,148 por operação; ainda negativo, então só entro onde regime, tempos e carteiras concordam."
    }
   ]
  },
@@ -610,7 +610,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.69,
+   "carteira": 8.71,
    "n_abertas": 2,
    "abertas": [
     [
@@ -676,7 +676,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.72,
+   "carteira": 10.68,
    "n_abertas": 1,
    "abertas": [
     [
@@ -698,7 +698,7 @@
     "ganho_medio": 0.065,
     "perda_media": -0.242,
     "fator_lucro": 0.36,
-    "carteira": 8.69
+    "carteira": 8.71
    },
    "openbot_testnet": {
     "ops": 11,
@@ -734,44 +734,44 @@
     "ganho_medio": 0.101,
     "perda_media": -0.096,
     "fator_lucro": 8.39,
-    "carteira": 10.72
+    "carteira": 10.68
    }
   },
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.8% em 24576 apostas (604 velas, 11/11 22:15–18/11 21:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5583,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.8% em 24636 apostas (604 velas, 11/11 22:30–18/11 21:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5576,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.3,
+  "z_contra_lab": 2.23,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5134,
-    "n": 17671
+    "acerto": 0.5138,
+    "n": 17731
    },
    "segue_maioria_24h": {
-    "acerto": 0.5178,
-    "n": 24274
+    "acerto": 0.5183,
+    "n": 24334
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5831,
-    "n": 3207
+    "acerto": 0.5796,
+    "n": 3235
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5917,
-    "n": 1401
+    "acerto": 0.591,
+    "n": 1406
    },
    "confianca:<0,05": {
-    "acerto": 0.5845,
-    "n": 6963
+    "acerto": 0.5825,
+    "n": 6997
    },
    "confianca:≥0,12": {
-    "acerto": 0.6802,
-    "n": 444
+    "acerto": 0.6808,
+    "n": 448
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5846,
@@ -786,27 +786,21 @@
     "n": 5374
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5358,
-    "n": 7496
+    "acerto": 0.5336,
+    "n": 7556
    },
    "lado:compra": {
-    "acerto": 0.5287,
-    "n": 11465
+    "acerto": 0.5274,
+    "n": 11524
    },
    "lado:venda": {
     "acerto": 0.5842,
-    "n": 13111
+    "n": 13112
    }
   }
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "17/11 23:45",
-   "de": "claude",
-   "para": "sala",
-   "texto": "O chefe da mesa passa a decidir pelo OpenBot, a cada 30 min. Mercado: 81,8% das moedas sobem em 24 h e 90,9% em 4 h, mas o BTC está −0,32% em 24 h com volume 0,82×. Pela régua de 70%, a regra da tendência já põe os robôs só em compras: nenhuma ordem nova, nenhuma em vigor, nenhum conflito no banco ("
-  },
   {
    "hora_utc": "18/11 00:14",
    "de": "claude",
@@ -872,6 +866,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Regime de baixa (24,5% sobem em 24 h). Varredura de 1 s a 1 dia + melhores carteiras: vendo ZEC e AAVE (6/6 tempos abaixo da MM20; 3 carteiras vendidas em cada), mantenho RUNE, fecho LA (v4 virou para alta). Scalper: stop 0,6%, alvo 0,5%, prazo 45 min."
+  },
+  {
+   "hora_utc": "18/11 22:17",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Baixa mais forte (17,1% sobem em 4 h; BTC −1,20% em 4 h). RUNE vendida saiu +0,067. Mantenho ZEC e AAVE vendidas (3 carteiras vendidas × 0 em cada; abaixo da MM20 em 6/6 e 5/6 tempos). LA fica de fora: 5/6 tempos acima da MM20. Conta de teste: 11 fechadas, p 0,27, E −0,15."
   }
  ]
 }
