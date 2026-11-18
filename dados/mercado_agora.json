@@ -1,6 +1,6 @@
 {
- "t": 1794993642,
- "hora_utc": "2026-11-18 09:20 UTC",
+ "t": 1794993933,
+ "hora_utc": "2026-11-18 09:25 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 116,
@@ -172,11 +172,17 @@
   -0.11,
   0.43,
   -0.31,
-  0.0
+  0.05
  ],
  "contexto": {
-  "t": 1794993642,
+  "t": 1794993933,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1794993438,
+    "hora_utc": "18/11 09:17",
+    "titulo": "World Bank partners with Circle, Citi to explore stablecoins for payments"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1794993255,
@@ -260,12 +266,6 @@
     "t": 1794955193,
     "hora_utc": "17/11 22:39",
     "titulo": "Nvidia Board Shuts Down Jensen Huang Comeback, Launches Search for New CEO"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794954004,
-    "hora_utc": "17/11 22:20",
-    "titulo": "CFTC halts some Kalshi Trump mention markets over manipulation concerns"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.1,
+   "media_top20_anual_pct": 7.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.4,
-    "SOL": -8.4
+    "ETH": 3.6,
+    "SOL": -9.1
    },
    "leitura": "neutro"
   },
@@ -574,7 +574,7 @@
     "entrada": 1.466,
     "agora": 1.447,
     "resultado_pct": -1.3,
-    "horas_aberta": 8.7,
+    "horas_aberta": 8.8,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -583,7 +583,7 @@
     "entrada": 3.86e-06,
     "agora": 3.86e-06,
     "resultado_pct": 0.0,
-    "horas_aberta": 7.5,
+    "horas_aberta": 7.6,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -849,13 +849,9 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.02,
-   "n_abertas": 3,
+   "carteira": 7.01,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "LINK",
-     "compra"
-    ],
     [
      "SOL",
      "venda"
@@ -865,7 +861,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 133,
+   "n_fechadas": 134,
    "ordem": null
   },
   {
@@ -1004,13 +1000,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 133,
-    "acerto": 0.489,
-    "soma": -3.023,
-    "ganho_medio": 0.074,
+    "ops": 134,
+    "acerto": 0.493,
+    "soma": -3.018,
+    "ganho_medio": 0.073,
     "perda_media": -0.115,
     "fator_lucro": 0.61,
-    "carteira": 7.02
+    "carteira": 7.01
    },
    "testnet": {
     "ops": 96,
