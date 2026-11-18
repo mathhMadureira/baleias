@@ -1263,7 +1263,7 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   `executor/v4_perp_nuvem.py` (só aposta da última vela fechada; entrada no preço e na hora da rodada), que está parado desde a H61 (robôs aposentados):
   vale se os robôs voltarem. Testes `P1EntradaNaRodada`.
 
-## Hipótese 62: agentes operam livres, estilo scalper (decisão do dono, registrada em 18/11/2026 ~17:45 BRT = 20:45 UTC, antes de ligar)
+## Hipótese 62: agentes operam livres, estilo scalper (decisão do dono, registrada em 18/11/2026 17:37 BRT = 20:37 UTC, antes de ligar; nuvem com o código novo desde a rodada 44393086663, 20:38 UTC)
 - **Dono:** "põe os robôs para operar livremente e tomar suas próprias decisões de entrada e stop. Quero ver eles fazendo scalper, operações rápidas."
   Os operadores são os agentes do OpenBot (H61). A escolha das moedas deixa de ser a regra fixa do `operar.py`/`universo.py` (vira sugestão e panorama):
   cada agente decide moeda, lado e, por posição, `stop_pct` (0,3–4%), `alvo_pct` (0,2–5%, realiza o lucro) e `max_min` (5–1440 min).
