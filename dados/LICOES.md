@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 12:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 12:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,17 +71,17 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 34.7% das moedas subindo em 24 h, 37.3% em 4 h · BTC 24 h -1.15%, 4 h -0.81%.
+- **Amplitude:** 35.0% das moedas subindo em 24 h, 37.6% em 4 h · BTC 24 h -1.15%, 4 h -0.81%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 11.0, 'ETH': 2.0, 'SOL': -7.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': 11.0, 'ETH': 1.8, 'SOL': -5.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZKP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · APT OCO invertido (alta, formado) · ENSO topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado)
+- 📰 18/11 12:41 UTC · CoinDesk: Bullish beats revenue estimates as institutional services offset sluggish spot crypto volumes
 - 📰 18/11 12:25 UTC · CoinDesk: Circle turns to DBS as banks build rival digital payment systems across Asia
 - 📰 18/11 12:15 UTC · CoinDesk: Blaming Anthropic’s IPO for bitcoin’s slide is 'easy to believe,' but flawed, analysts say
 - 📰 18/11 12:10 UTC · Decrypt: AI Will Make the Next 12 Months 'a Slaughterhouse' for Crypto Security: Anchorage Exec
 - 📰 18/11 11:42 UTC · CoinDesk: Bitcoin drops as Nvidia earnings report drives stock index futures higher
 - 📰 18/11 10:58 UTC · CoinDesk: Bitcoin outpaces gold even as both assets tumble ahead of a likely Fed rate hike
-- 📰 18/11 10:33 UTC · Cointelegraph: Bitwise seeks Texas Stock Exchange listing for Zcash ETF
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -120,7 +120,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 23660 apostas conferidas ao vivo, acerto 55.5%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 23660 apostas conferidas ao vivo, acerto 55.5%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
