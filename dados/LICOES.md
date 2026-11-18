@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 03:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 03:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,9 +69,9 @@ Carteira **US$ 9.52** · 8 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 58.0% das moedas subindo em 24 h, 11.8% em 4 h · BTC 24 h -0.26%, 4 h -1.02%.
+- **Amplitude:** 58.3% das moedas subindo em 24 h, 12.5% em 4 h · BTC 24 h -0.26%, 4 h -1.02%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 11.0, 'ETH': 9.2, 'SOL': -7.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 11.0, 'ETH': 9.1, 'SOL': -6.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 20.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · KITE bandeira de baixa (baixa, CONFIRMOU) · SOL fundo duplo (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BTC topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LINK topo duplo (baixa, formado)
 - 📰 18/11 02:39 UTC · Cointelegraph: Ledger hardware implant saga reaches Dubai’s Virgin Megastore
@@ -117,7 +117,7 @@ Carteira **US$ 9.52** · 8 operações fechadas · 3 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 22438 apostas conferidas ao vivo, acerto 55.5%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 22438 apostas conferidas ao vivo, acerto 55.5%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
