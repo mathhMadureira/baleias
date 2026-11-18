@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 18:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 18:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -73,7 +73,7 @@ Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 
 - **Amplitude:** 38.3% das moedas subindo em 24 h, 13.1% em 4 h · BTC 24 h -1.28%, 4 h -1.34%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 8.9, 'ETH': 4.3, 'SOL': 7.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.2%/ano · {'BTC': 9.7, 'ETH': 4.5, 'SOL': 8.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ADA OCO invertido (alta, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DOGE OCO invertido (alta, formado) · DOT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SUI OCO invertido (alta, formado)
 - 📰 18/11 18:27 UTC · Cointelegraph: MARA prices $185M debt offering after $1.1B Bitcoin sale
