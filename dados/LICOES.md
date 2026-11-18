@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 23:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 23:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,9 +58,9 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.6% das moedas subindo em 24 h, 25.2% em 4 h · BTC 24 h -3.92%, 4 h -0.39%.
+- **Amplitude:** 22.4% das moedas subindo em 24 h, 26.2% em 4 h · BTC 24 h -3.4%, 4 h -0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 0.6, 'ETH': 10.3, 'SOL': 10.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 0.8, 'ETH': 10.3, 'SOL': 10.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
@@ -98,15 +98,15 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (sobe). Peso reduzido de: rede_neural, reversao_queda, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 25038 apostas conferidas ao vivo, acerto 55.6%; prevê 18 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 25087 apostas conferidas ao vivo, acerto 55.6%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
