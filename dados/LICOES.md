@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 05:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 05:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,7 +18,7 @@ Carteira **US$ 10.71** · 45 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 11.25** · 34 operações fechadas · 3 abertas
+Carteira **US$ 11.30** · 34 operações fechadas · 3 abertas
 
 - **Total:** 27/34 com lucro (79%), resultado +1.83, média +0.054 por operação.
 - **Últimas 24 h:** 12/14 com lucro, +1.00.
@@ -69,11 +69,11 @@ Carteira **US$ 9.34** · 8 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 38.5% das moedas subindo em 24 h, 17.9% em 4 h · BTC 24 h -1.05%, 4 h -0.55%.
+- **Amplitude:** 37.6% das moedas subindo em 24 h, 18.8% em 4 h · BTC 24 h -0.95%, 4 h -0.56%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 11.0, 'ETH': 9.0, 'SOL': -16.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -11.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 17.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** APT topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BONK OCO invertido (alta, formado) · BTC topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · LINK topo duplo (baixa, formado) · LSK fundo duplo (alta, formado) · LSK ombro-cabeça-ombro (baixa, formado) · MEGA fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** APT topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BONK OCO invertido (alta, formado) · BTC topo duplo (baixa, formado) · DOT topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · LINK topo duplo (baixa, formado) · LSK fundo duplo (alta, formado) · LSK ombro-cabeça-ombro (baixa, formado)
 - 📰 18/11 04:34 UTC · CoinDesk: Bitcoin's 12% slide through key support looks scary, but history says give it 3 months.
 - 📰 18/11 04:28 UTC · CoinDesk: XRP whales moved $270 million during the selloff. The coins didn’t go to exchanges
 - 📰 18/11 02:39 UTC · Cointelegraph: Ledger hardware implant saga reaches Dubai’s Virgin Megastore
@@ -118,7 +118,7 @@ Carteira **US$ 9.34** · 8 operações fechadas · 3 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 22686 apostas conferidas ao vivo, acerto 55.6%; prevê 61 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 22723 apostas conferidas ao vivo, acerto 55.6%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
