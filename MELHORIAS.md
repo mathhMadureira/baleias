@@ -139,3 +139,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   15 min, 1 h e 4 h (a H45 mostrou que nenhum padrão passa sozinho: contexto, não gatilho). Cada agente varre o PRÓPRIO foco e anota num caderno a
   leitura de cada entrada; `operar.py aprender` cruza com as fechadas e mostra o que funcionou para ele. Manual de treino: `LEITURA_GRAFICOS.md`.
   Rotinas r5. Primeira rodada ao vivo (18/11 21:58 UTC) vista na tela do Demo Trading: RUNE, ZEC e AAVE vendidas com stop e alvo na corretora.
+- 2026-11-18 (noite): **H64 — "perder de colher e ganhar de balde" (pedido do dono).** `lab/colher_balde.py`, pré-registrado antes de rodar.
+  Parte T aprovada: a fatia de cada entrada = 2,5 × carteira ÷ US$ 10 (1,25× a 5×) × a carteira, 10× até 2,5× e 20× acima (as 4 margens cabem;
+  perda para na margem). Soma das carteiras 60,93 → 63,40 antes do zero e 116,92 → 117,47 desde o zero. Entrou em `executor/robo_claude_nuvem.py`
+  (`tamanho()`) e na conta de teste (com alavancagem rebaixada se a corretora recusar, ex.: KITE). Parte S reprovada: das 4 saídas com stop pequeno e
+  lucro grande, a melhor (stop 1%, alvo 3%: +0,362%/aposta, G ÷ L 2,58) perdeu no bloco mais recente; vai como informação no manual dos agentes. 159 testes.

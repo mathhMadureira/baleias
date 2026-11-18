@@ -2047,6 +2047,35 @@ class OperarLivre(unittest.TestCase):
         self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04})
 
 
+class TamanhoH64(unittest.TestCase):
+    """H64 (18/11, aprovada no lab/colher_balde.py): a fatia de cada entrada cresce com o ganho e encolhe na perda."""
+
+    def test_fator_cresce_e_encolhe(self):
+        from executor import robo_claude_nuvem as R
+        self.assertEqual(R.tamanho(10.0), (25.0, 10))               # carteira inicial: igual à H58
+        noc, a = R.tamanho(12.0)
+        self.assertAlmostEqual(noc, 36.0)                           # 3,0 × 12
+        self.assertEqual(a, 20)
+        self.assertAlmostEqual(R.tamanho(8.0)[0], 16.0)             # 2,0 × 8
+        self.assertEqual(R.tamanho(40.0), (200.0, 20))              # teto 5×
+        self.assertAlmostEqual(R.tamanho(4.0)[0], 5.0)              # piso 1,25×
+
+    def test_quatro_margens_cabem_e_perda_para_na_margem(self):
+        from executor import robo_claude_nuvem as R
+        agora = 1795000000.0
+        k = [[int(agora * 1000) - 900_000 * (100 - i), "1", "1", "1", "1.0"] for i in range(100)]
+        e = {"caixa": 14.0, "abertas": {}, "fechadas": [], "licoes": []}
+        ps = [{"moeda": m, "lado": "compra", "motivo": "teste"} for m in ("AUSDT", "BUSDT", "CUSDT", "DUSDT")]
+        R.passo(e, {"t": agora - 5, "posicoes": ps}, {m["moeda"]: k for m in ps}, agora, vivos={m["moeda"]: 1.0 for m in ps})
+        self.assertEqual(len(e["abertas"]), 4)
+        a = e["abertas"]["AUSDT"]
+        self.assertAlmostEqual(a["nocional"], 2.5 * 1.4 * 14.0)
+        self.assertEqual(a["alav"], 20)
+        self.assertGreaterEqual(e["caixa"], -1e-9)
+        R.fechar(e, "AUSDT", a, 0.5, "teste", agora + 60)            # −50% a 20×: perde só a margem
+        self.assertAlmostEqual(e["fechadas"][-1]["resultado_usd"], -a["gasto"])
+
+
 class CarteirasTopH63(unittest.TestCase):
     """H63 (18/11): raspagem das melhores carteiras da Hyperliquid; abertura nova vira evento resolvido em 60–75 min."""
 

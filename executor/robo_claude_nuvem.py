@@ -20,6 +20,15 @@ ORCAMENTO, ALAV, CUSTO_LADO = 25.0, 10.0, 0.0006
 STOP_SEG = float(os.environ.get("RC_STOP", "0.015"))
 MAX_POS, CAPITAL, PISO = 4, 10.0, 5.0
 MAX_HORAS = 24
+
+
+def tamanho(carteira):
+    """H64 (dono, 18/11: "com os ganhos, aumentar a porcentagem de entrada"; aprovada no lab/colher_balde.py): nocional = fator × carteira
+    realizada, fator = 2,5 × carteira ÷ US$ 10 em [1,25; 5] — cresce no ganho, encolhe na perda. Alavancagem 10× até 2,5× e 20× acima
+    (as 4 margens cabem). Devolve (nocional, alavancagem)."""
+    fator = min(5.0, max(1.25, 2.5 * carteira / CAPITAL))
+    return fator * carteira, (10 if fator <= 2.5 else 20)
+
 VALIDADE_S = 75 * 60
 VELA_MS = 900_000
 # 18/11 (dono: "quem opera são vocês, os agentes do OpenBot, no lugar dos robôs"): o mesmo executor serve a cada agente operador.
@@ -52,6 +61,8 @@ def fechar(e, par, p, saida, motivo, agora):
     sinal = -1 if p["lado"] == "venda" else 1
     noc = p.get("nocional", ORCAMENTO)
     resultado = noc * sinal * (saida / p["entrada"] - 1) - 2 * CUSTO_LADO * noc
+    if p.get("alav", ALAV) > ALAV:
+        resultado = max(resultado, -p["gasto"])                  # H64: a 20× a perda de uma posição para na margem (liquidação)
     e["caixa"] += p["gasto"] + resultado
     e["fechadas"].append({**p, "saida": saida, "saida_t": agora, "motivo_saida": motivo, "resultado_usd": resultado,
                           "R": resultado / (noc * p.get("stop_pct", STOP_SEG))})
@@ -140,13 +151,15 @@ def passo(e, decisao, velas, agora, vivos=None):
             patrimonio = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
             if patrimonio < PISO:
                 break
-            noc = min(2.5 * patrimonio, patrimonio * ALAV / MAX_POS)   # H58: proporcional à carteira; as 4 posições sempre cabem
-            if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < noc / ALAV - 1e-9:
+            noc, alav = tamanho(patrimonio)                              # H64 (antes H58: 2,5 × a carteira a 10×)
+            if 0.95 * noc / alav <= e["caixa"] < noc / alav:             # a 4ª posição: centavos de menos pelo arredondamento
+                noc = e["caixa"] * alav
+            if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < noc / alav - 1e-9:
                 continue
             prm = parametros(pos)
             sp = prm.pop("stop_pct", None) or stop_da_moeda(velas.get(par, []))
-            e["caixa"] -= noc / ALAV
-            e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc, "stop_pct": sp,
+            e["caixa"] -= noc / alav
+            e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / alav, "nocional": noc, "alav": alav, "stop_pct": sp,
                                  "motivo": str(pos.get("motivo", ""))[:300], "decisao_t": decisao["t"],
                                  "conferido_ate": -(-int(agora * 1000) // VELA_MS) * VELA_MS, **prm}   # P1: só velas de 15 min depois da entrada
             textos.append(f"🤖 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.2%}"
