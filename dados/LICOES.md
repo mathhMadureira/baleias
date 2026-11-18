@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.58** · 18 operações fechadas · 2 abertas
+Carteira **US$ 8.53** · 18 operações fechadas · 2 abertas
 
 - **Total:** 10/18 com lucro (56%), resultado -1.42, média -0.079 por operação.
 - **Últimas 24 h:** 5/11 com lucro, -1.54.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.39** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.51** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -58,7 +58,7 @@ Carteira **US$ 10.39** · 4 operações fechadas · 3 abertas
 
 - **Amplitude:** 24.3% das moedas subindo em 24 h, 25.2% em 4 h · BTC 24 h -3.19%, 4 h -1.37%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': 1.4, 'ETH': 1.7, 'SOL': 0.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.1%/ano · {'BTC': 1.2, 'ETH': 1.0, 'SOL': -0.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:46 UTC · Decrypt: ChatGPT, Claude, Gemini and Grok Helped Plan Terror Attacks in Government Tests
