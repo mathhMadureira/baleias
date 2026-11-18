@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 22:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 22:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -45,22 +45,22 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.89** · 10 operações fechadas · 1 abertas
+Carteira **US$ 10.96** · 11 operações fechadas · 0 abertas
 
-- **Total:** 9/10 com lucro (90%), resultado +0.84, média +0.084 por operação.
-- **Últimas 24 h:** 9/10 com lucro, +0.84.
-- **Por horário:** 18–23 UTC: 10 op, 90% certas, +0.84
-- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 8 op, 88% certas, +0.66
-- **Por motivo de saída:** memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin com 6 de 6 tem: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18
-- **Moedas que mais perderam (≥ 3 op):** TRUMP +0.32 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** TRUMP +0.32 (3 op)
+- **Total:** 10/11 com lucro (91%), resultado +0.96, média +0.088 por operação.
+- **Últimas 24 h:** 10/11 com lucro, +0.96.
+- **Por horário:** 18–23 UTC: 11 op, 91% certas, +0.96
+- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 9 op, 89% certas, +0.79
+- **Por motivo de saída:** memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · entra: memecoin com 6 de 6 tem: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18
+- **Moedas que mais perderam (≥ 3 op):** TRUMP +0.32 (3 op) · PUMP +0.38 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** PUMP +0.38 (3 op) · TRUMP +0.32 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
 - **Amplitude:** 21.5% das moedas subindo em 24 h, 7.5% em 4 h · BTC 24 h -3.56%, 4 h -1.19%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 5.0, 'ETH': 2.5, 'SOL': -2.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': 4.4, 'ETH': 2.5, 'SOL': -2.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · INIT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
@@ -110,10 +110,10 @@ Carteira **US$ 10.89** · 10 operações fechadas · 1 abertas
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H40 (2026-11-14 10:55 BRT): reprovada nos três braços
 - Resultado da H41 (2026-11-14 15:40 BRT): PASSOU — v4.1 substitui o v4
 - Resultado da H42 (2026-11-14 16:00 BRT): reprovada nos três braços
 - Resultado da H45 (2026-11-15 17:10 BRT): reprovada nas 14 tentativas
 - Resultado da H52 (2026-11-15 20:40 BRT): R6 aprovada no juiz pré-registrado; robustez fraca
 - Resultado da H60 (18/11 02:10 UTC, `lab/alavancagem.py` → `dados/lab/alavancagem_resultado.json`): reprovada nos três braços
+- Resultado da H64 (18/11 22:50 UTC, `lab/colher_balde.py` → `dados/lab/colher_balde_resultado.json`): parte T aprovada; parte S reprovada
 
