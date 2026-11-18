@@ -4,22 +4,22 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.8% | 2063 | 50.7%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.9% | 2064 | 50.7%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 100.0% | 1 | 20.7%–100.0% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 62.5% | 16 | 38.6%–81.5% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
-| raschke_graal_baixa | promissor | 60.8% | 51 | 47.1%–73.0% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
 | connors_8020_alta | promissor | 60.0% | 5 | 23.1%–88.2% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
+| raschke_graal_baixa | promissor | 59.6% | 52 | 46.1%–71.8% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | tres_soldados | promissor | 56.0% | 234 | 49.6%–62.2% | H6: três soldados → desce (efeito pequeno) |
 | williams_wr_alta | promissor | 55.2% | 29 | 37.5%–71.6% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 52.5% | 61 | 40.2%–64.5% | H14: queda anormal de 1 h → sobe |
 | tres_corvos | promissor | 50.6% | 354 | 45.4%–55.7% | H6: três corvos → sobe (efeito pequeno) |
-| williams_volb_baixa | promissor | 50.5% | 97 | 40.7%–60.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | reprovado | 50.0% | 6 | 18.8%–81.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
+| williams_volb_baixa | reprovado | 50.0% | 98 | 40.3%–59.7% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | vortice_invertido | reprovado | 49.4% | 391 | 44.4%–54.3% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| demark_td9_alta | reprovado | 48.1% | 27 | 30.7%–66.0% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | williams_volb_alta | reprovado | 47.4% | 76 | 36.5%–58.4% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | velez_180_baixa | reprovado | 46.2% | 39 | 31.6%–61.4% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
-| demark_td9_alta | reprovado | 46.2% | 26 | 28.8%–64.5% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | velez_180_alta | reprovado | 40.0% | 5 | 11.8%–76.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_sopa_alta | reprovado | 40.0% | 10 | 16.8%–68.7% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
 | rompimento | reprovado | 36.4% | 33 | 22.2%–53.4% | Tartaruga em 15 min: rompeu a máxima de 55 |
