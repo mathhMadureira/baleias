@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 18:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 18:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,11 +71,11 @@ Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 53.7% das moedas subindo em 24 h, 13.0% em 4 h · BTC 24 h -0.83%, 4 h -1.2%.
+- **Amplitude:** 53.3% das moedas subindo em 24 h, 13.1% em 4 h · BTC 24 h -0.83%, 4 h -1.2%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 7.9, 'ETH': 5.0, 'SOL': 5.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.4%/ano · {'BTC': 8.1, 'ETH': 4.6, 'SOL': 6.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** WCT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ADA OCO invertido (alta, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DOGE OCO invertido (alta, formado) · DOT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** ADA OCO invertido (alta, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DOGE OCO invertido (alta, formado) · DOT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SUI OCO invertido (alta, formado)
 - 📰 18/11 18:16 UTC · Decrypt: Fed's Waller Calls for 50-Basis-Point Rate Hike, Says Tokenized Finance Still Needs Traditional Banks
 - 📰 18/11 17:32 UTC · Decrypt: Lucky Trader Banks 66,000% Profit on GTA 6 Meme Coin Ticker Confusion
 - 📰 18/11 17:22 UTC · CoinDesk: A $1.5 billion crypto startup is taking on Hyperliquid with a Wall Street playbook
@@ -120,7 +120,7 @@ Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24123 apostas conferidas ao vivo, acerto 55.6%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24123 apostas conferidas ao vivo, acerto 55.6%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
