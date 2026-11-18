@@ -531,7 +531,7 @@ def _curva(e, capital, carteira, t_fim):
     return pontos
 
 
-def montar_painel(estados, ordens, banco, precos, precos_lbank, idades, agora, regime=None):
+def montar_painel(estados, ordens, banco, precos, precos_lbank, idades, agora, regime=None, equipe_lista=None):
     """Função pura (sem rede nem git): estados = {id: estado do robô}, precos = {par: preço Binance}, precos_lbank = {par: preço LBank},
     idades = {arquivo: hora da última gravação no ramo estado}. Devolve o placar, as curvas, as posições, a linha do tempo e o banco."""
     from . import equipe
@@ -539,7 +539,7 @@ def montar_painel(estados, ordens, banco, precos, precos_lbank, idades, agora, r
     hoje = time.strftime("%Y-%m-%d", time.gmtime(agora))
     meia_noite = agora - agora % 86400
     linhas, abertas, tempo = [], [], []
-    for a in equipe.EQUIPE:
+    for a in (equipe_lista or equipe.EQUIPE):                  # 18/11: a equipe que opera são os agentes do OpenBot
         e = estados.get(a["id"])
         if not e:
             continue
@@ -627,6 +627,12 @@ def _precos_lbank():
     return _px_lbank["px"]
 
 
+def _regime_retrato():
+    r = _git_json("dados/mercado_agora.json") or {}
+    return {"subindo_24h": (r.get("mercado_24h") or {}).get("subindo_pct"), "subindo_4h": (r.get("mercado_4h") or {}).get("subindo_pct"),
+            "t": r.get("t")}
+
+
 def painel_mesa():
     """/api/painel-mesa: a mesa inteira numa resposta só, guardada por 10 s."""
     if time.time() - _pm["t"] < 10 and _pm["dados"]:
@@ -637,6 +643,6 @@ def painel_mesa():
     lb = estados.get("lbank") or {}
     dados = montar_painel(estados, _git_json("dados/ordens.json") or {}, _git_json("dados/banco.json"), _precos_agora(),
                           _precos_lbank() if lb.get("abertas") else {}, _idades_estado(), time.time(),
-                          regime=(estados.get("rapido") or {}).get("regime"))
+                          regime=_regime_retrato())
     _pm.update(t=time.time(), dados=dados)
     return dados

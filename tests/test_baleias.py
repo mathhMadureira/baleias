@@ -1909,7 +1909,9 @@ class PainelMesa(unittest.TestCase):
         agora = mesa.ZERO_T + 86400
         ordens = {"minerador": {"acao": "pausar", "ate": agora + 3600}, "scalper": {"acao": "pausar", "ate": agora - 1}}
         precos = {"ETHUSDT": 1990.0, "SOLUSDT": 50.0}            # preço Binance; o Robô LBank tem de usar o da LBank
-        return mesa.montar_painel(self._estados(agora), ordens, {"tesouro": {"carteiras": 1.0}}, precos, {"SOLUSDT": 99.0}, {"robo_v4_cacador.json": agora - 50}, agora), agora
+        from baleias import equipe
+        return mesa.montar_painel(self._estados(agora), ordens, {"tesouro": {"carteiras": 1.0}}, precos, {"SOLUSDT": 99.0}, {"robo_v4_cacador.json": agora - 50}, agora,
+                                  equipe_lista=equipe.ROBOS_APOSENTADOS + equipe.EQUIPE), agora
 
     def test_placar_usa_os_numeros_do_arquivo_e_do_torneio(self):
         from executor import torneio as T

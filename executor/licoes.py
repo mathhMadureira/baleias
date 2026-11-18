@@ -13,9 +13,10 @@ from pathlib import Path
 from baleias import config
 
 PROTOCOLO = Path(__file__).resolve().parent.parent / "lab" / "PROTOCOLO_LAB.md"
-ROBOS = (("robo_v4_perp.json", "🌲 Rápido nuvem (v4, todas as apostas)"), ("robo_v4_cacador.json", "🎯 Caçador (2 compras + 2 vendas por vela)"),
-         ("robo_minerador.json", "⛏ Minerador (reversão sem volume)"), ("robo_v4_testnet.json", "🧪 v4 Testnet (ordens reais na conta de teste)"),
-         ("robo_claude.json", "🤖 Robô Claude (decide de hora em hora lendo o mercado)"))
+def _robos():
+    """18/11: o diário segue a equipe que opera (os agentes do OpenBot), não mais a lista fixa de robôs."""
+    from baleias import equipe
+    return tuple((a["arquivo"], f"{a['avatar']} {a['nome']} ({a['motor']})") for a in equipe.EQUIPE)
 
 
 def ler(nome):
@@ -166,9 +167,9 @@ def secao_laboratorio():
 
 def main():
     config.RAIZ.mkdir(parents=True, exist_ok=True)
-    texto = f"# 📓 Diário de lições dos robôs\n\nAtualizado em {time.strftime('%d/%m/%Y %H:%M')} UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. " \
+    texto = f"# 📓 Diário de lições dos agentes\n\nAtualizado em {time.strftime('%d/%m/%Y %H:%M')} UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. " \
             "Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).\n\n"
-    for arq, titulo in ROBOS:
+    for arq, titulo in _robos():
         e = ler(arq)
         if e:
             texto += secao_robo(titulo, e)

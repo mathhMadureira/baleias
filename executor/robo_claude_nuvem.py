@@ -22,7 +22,12 @@ MAX_POS, CAPITAL, PISO = 4, 10.0, 5.0
 MAX_HORAS = 24
 VALIDADE_S = 75 * 60
 VELA_MS = 900_000
-ARQ = "robo_claude.json"
+# 18/11 (dono: "quem opera são vocês, os agentes do OpenBot, no lugar dos robôs"): o mesmo executor serve a cada agente operador.
+# Cada agente escreve SÓ a própria decisão (DECISAO) e este módulo executa na carteira dele (ARQ). Só o chefe (claude) fala com o dono e dá ordens.
+AGENTE = os.environ.get("RC_AGENTE", "claude")
+ARQ = os.environ.get("RC_ARQ", "robo_claude.json")
+DECISAO = os.environ.get("RC_DECISAO", "decisao_claude.json")
+NOME = os.environ.get("RC_NOME", "Baleias (chefe da mesa)")
 
 
 def ler(nome):
@@ -52,7 +57,7 @@ def fechar(e, par, p, saida, motivo, agora):
                           "R": resultado / (noc * p.get("stop_pct", STOP_SEG))})
     e["fechadas"] = e["fechadas"][-3000:]
     del e["abertas"][par]
-    return f"🤖 Robô Claude SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
+    return f"🤖 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
 
 
 def passo(e, decisao, velas, agora):
@@ -94,7 +99,7 @@ def passo(e, decisao, velas, agora):
             "fechar": list(decisao.get("fechar", []) or []), "licao": str(decisao.get("licao", ""))[:300]}])[-300:]
         if decisao.get("licao"):
             e["licoes"] = (e.get("licoes", []) + [{"t": decisao["t"], "texto": str(decisao["licao"])[:400]}])[-50:]
-            textos.append(f"🤖 Robô Claude anotou uma lição: {str(decisao['licao'])[:160]}")
+            textos.append(f"🤖 {NOME} anotou uma lição: {str(decisao['licao'])[:160]}")
         for par in decisao.get("fechar", []) or []:
             par = par if par.endswith("USDT") else par + "USDT"
             if par in e["abertas"] and par in preco:
@@ -123,12 +128,12 @@ def passo(e, decisao, velas, agora):
             e["caixa"] -= noc / ALAV
             e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc, "stop_pct": sp,
                                  "motivo": str(pos.get("motivo", ""))[:300], "decisao_t": decisao["t"], "conferido_ate": ultimo[par][0] + VELA_MS}
-            textos.append(f"🤖 Robô Claude ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.1%}): {str(pos.get('motivo', ''))[:120]}")
+            textos.append(f"🤖 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.1%}): {str(pos.get('motivo', ''))[:120]}")
     e["patrimonio"] = e["caixa"] + sum(q["gasto"] + (1 if q["lado"] == "compra" else -1) * q.get("nocional", ORCAMENTO) * (preco.get(q["moeda"], q["entrada"]) / q["entrada"] - 1)
                                        for q in e["abertas"].values())
     if e["patrimonio"] < PISO and not e.get("eliminado"):
         e["eliminado"] = True
-        textos.append(f"⛔ Robô Claude abaixo de US$ {PISO:.0f}: eliminado, sem novas entradas até o dono decidir")
+        textos.append(f"⛔ {NOME} abaixo de US$ {PISO:.0f}: eliminado, sem novas entradas até o dono decidir")
     return textos
 
 
@@ -157,7 +162,7 @@ def main():
     velas = json.loads(cache.read_text()) if cache.exists() else {}
     agora = time.time()
     velas = {par: [x for x in k if x[6] < agora * 1000] for par, k in velas.items()}
-    decisao = ler("decisao_claude.json")
+    decisao = ler(DECISAO)
     from baleias import equipe
     equipe.sincronizar_caixa()                                               # mensagens novas do dono (painel → dados/caixa/) entram na sala
     antes = e.get("ultima_decisao_t")
@@ -169,7 +174,7 @@ def main():
         for par in list(e["abertas"]):
             k = velas.get(par) or []
             textos.append(fechar(e, par, e["abertas"][par], float(k[-1][4]) if k else e["abertas"][par]["entrada"], GD.motivo(e), agora))
-        textos.append(GD.texto("Robô Claude", e))
+        textos.append(GD.texto(NOME, e))
     if guarda == "normal":
         textos += passo(e, decisao, velas, agora)
     else:                                                   # travado: sem posições e sem entradas; a decisão desta hora não vale depois
@@ -177,20 +182,26 @@ def main():
         if decisao:
             e["ultima_decisao_t"] = decisao.get("t")
     if decisao and e.get("ultima_decisao_t") != antes:                       # decisão nova: o chefe da mesa fala e dá ordens
-        textos += falar_e_ordenar(decisao, agora)
+        if AGENTE == "claude":
+            textos += falar_e_ordenar(decisao, agora)
+        else:                                                                 # os outros agentes só falam na sala (sem ordens, sem respostas)
+            from baleias import equipe as EQ
+            for i, m in enumerate(decisao.get("mensagens", []) or []):
+                if isinstance(m, dict) and str(m.get("texto", "")).strip():
+                    EQ.postar(AGENTE, m["texto"], t=agora + 0.1 + i / 1000)
     idade_h = (agora - decisao.get("t", 0)) / 3600 if decisao else 99.0      # saúde da rotina: sem decisão nova há mais de 2 h = alarme
     if idade_h > 2:                                                           # (15/11: a rotina ficou morta das 03:10 às 09:08 por limite de modelo)
         if not e.get("alerta_rotina"):
-            textos.append(f"⚠️ Robô Claude: a rotina do Claude não decide há {idade_h:.1f} h (limite de uso, erro ou rotina parada). As posições seguem só com stop e tempo máximo.")
+            textos.append(f"⚠️ {NOME}: a rotina não decide há {idade_h:.1f} h (limite de uso, erro ou rotina parada). As posições seguem só com stop e tempo máximo.")
         e["alerta_rotina"] = f"sem decisão há {idade_h:.1f} h"
     else:
         if e.get("alerta_rotina"):
-            textos.append("✅ Robô Claude: a rotina voltou a decidir.")
+            textos.append(f"✅ {NOME}: a rotina voltou a decidir.")
         e["alerta_rotina"] = None
     e["eventos"] = ([{"t": agora, "texto": x} for x in textos] + e["eventos"])[:100]
     arq.write_text(json.dumps(e, ensure_ascii=False))
-    equipe.postar_eventos("claude", [x for x in textos if not x.startswith("📣")])
-    print(f"🤖 Robô Claude: patrimônio US$ {e['patrimonio']:.2f} · {len(e['fechadas'])} fechadas · {len(e['abertas'])} abertas · {len(e.get('licoes', []))} lições")
+    equipe.postar_eventos(AGENTE, [x for x in textos if not x.startswith("📣")])
+    print(f"🤖 {NOME}: patrimônio US$ {e['patrimonio']:.2f} · {len(e['fechadas'])} fechadas · {len(e['abertas'])} abertas · {len(e.get('licoes', []))} lições")
     for x in textos:
         print("  ", x)
 

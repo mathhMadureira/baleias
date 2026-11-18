@@ -1243,3 +1243,17 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   também olham até 20 min do passado.
 - **Não conferido:** Robô Claude simulado (entra no "fechamento de 15 min da rodada seguinte", então pode ter o mesmo defeito), Minerador, Radar, LBank.
   O Chefe OpenBot no testnet usa ordens reais, então não tem esse defeito.
+
+## Hipótese 61: os agentes do OpenBot operam no lugar dos robôs (registrada em 18/11/2026 ~17:00 BRT = 20:00 UTC, antes de ligar)
+- **Dono (18/11):** "a partir de agora quem opera são vocês no lugar dos robôs. Retire os robôs do painel e coloque no lugar deles os agentes do
+  OpenBot". Os robôs (Rápido, Caçador, Scalpers A–D, Minerador, LBank, Livre, Radar) saem do laço da nuvem e do painel (`ROBOS_APOSENTADOS` em
+  `baleias/equipe.py`; `radar.yml` desligado); as carteiras deles ficam congeladas como estão (histórico). Cérebro v4, vigia, retrato, torneio e banco seguem.
+- **Quem opera (carteira simulada de US$ 10 cada, mesma execução do Robô Claude: até 4 posições, stop pela volatilidade 1,5–4%, stop móvel H49,
+  24 h, 2,5 × a carteira a 10×, custo 0,06%/lado, meta de US$ 12, piso de US$ 5):** ⚓ Baleias (chefe; método H59: v4 com confiança ≥ 0,08 no
+  lado do regime, e a conta de TESTE com ordens reais), 🎯 Treinador (método do Caçador: as apostas mais confiantes do v4 — regime de baixa 4 vendas,
+  alta 4 compras, neutro 2 + 2), 🔬 Laboratório (só v4 com confiança ≥ 0,12, o achado H36, no lado do regime) e 🛡 Guardião (tendência de 24 h decide
+  o lado; as moedas que lideram o movimento, memecoins primeiro; neutro: |24 h| ≥ 3%, memecoins ≥ 1%). Todos mantêm a posição enquanto o regime e o
+  sinal do próprio método não virarem contra; nenhuma moeda esticada (|4 h| ≥ 15%). A escolha é a do script `operar.py` (regra fixa); o agente
+  escreve leitura e lição, não troca moedas por opinião. Decisão a cada 30 min por agente; vale 75 min.
+- **Juiz (torneio H50, ao vivo):** depois de 30 operações de cada agente, fator de lucro > 1 e carteira > US$ 10; campeão entre os aprovados.
+  Comparação declarada (não decide): resultado dos robôs aposentados que faziam o mesmo método (Caçador, LBank) até 18/11. Previsão: não sei.

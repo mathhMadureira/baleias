@@ -27,9 +27,22 @@ MAX_HORAS_ORDEM = 24
 CHEFE = "claude"
 
 # id, nome, avatar, arquivo de estado, o que move o agente, missão (uma frase)
+# id, nome, avatar, arquivo de estado, motor, missão. 18/11 (pedido do dono): quem opera são os AGENTES do OpenBot, cada um com carteira própria de
+# US$ 10 executada na nuvem (executor.robo_claude_nuvem com RC_AGENTE) a partir da decisão que o próprio agente grava (dados/decisao_<id>.json).
 EQUIPE = (
-    {"id": "claude", "nome": "Robô Claude", "avatar": "🤖", "arquivo": "robo_claude.json", "motor": "Claude (rotina de hora em hora)",
-     "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs."},
+    {"id": "claude", "nome": "Baleias (chefe da mesa)", "avatar": "⚓", "arquivo": "robo_claude.json", "motor": "agente OpenBot · v4 no universo inteiro",
+     "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe."},
+    {"id": "openbot_testnet", "nome": "Baleias (conta de teste)", "avatar": "⚓", "arquivo": "robo_openbot_testnet.json",
+     "motor": "agente OpenBot · ordens reais no testnet",
+     "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide."},
+    {"id": "treinador", "nome": "Treinador", "avatar": "🎯", "arquivo": "agente_treinador.json", "motor": "agente OpenBot · método do Caçador",
+     "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel."},
+    {"id": "laboratorio", "nome": "Laboratório", "avatar": "🔬", "arquivo": "agente_laboratorio.json", "motor": "agente OpenBot · só o que passou no lab",
+     "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h."},
+    {"id": "guardiao", "nome": "Guardião", "avatar": "🛡", "arquivo": "agente_guardiao.json", "motor": "agente OpenBot · tendência de 24 h + memecoins",
+     "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados."},
+)
+ROBOS_APOSENTADOS = (      # 18/11: saíram da operação e do painel (dono: "quem opera são vocês, os agentes"); ficam para o histórico
     {"id": "cacador", "nome": "Caçador", "avatar": "🎯", "arquivo": "robo_v4_cacador.json", "motor": "Cérebro v4",
      "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h."},
     {"id": "rapido", "nome": "Rápido nuvem", "avatar": "🌲", "arquivo": "robo_v4_perp.json", "motor": "Cérebro v4",
@@ -52,12 +65,9 @@ EQUIPE = (
      "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo."},
     {"id": "testnet", "nome": "v4 Testnet", "avatar": "🧪", "arquivo": "robo_v4_testnet.json", "motor": "Cérebro v4",
      "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram. Desligado em 17/11 (a conta passou ao Chefe OpenBot)."},
-    {"id": "openbot_testnet", "nome": "Chefe OpenBot (testnet)", "avatar": "⚓", "arquivo": "robo_openbot_testnet.json",
-     "motor": "chefe da mesa (OpenBot, rotina de 30 min)",
-     "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide para a mesa."},
 )
-POR_ID = {a["id"]: a for a in EQUIPE}
-POR_ARQUIVO = {a["arquivo"]: a for a in EQUIPE}
+POR_ID = {a["id"]: a for a in EQUIPE + ROBOS_APOSENTADOS}
+POR_ARQUIVO = {a["arquivo"]: a for a in EQUIPE + ROBOS_APOSENTADOS}
 ACOES = {"pausar": "pausado (sem novas entradas)", "so_vendas": "só vendas", "so_compras": "só compras", "liberar": "livre"}
 
 

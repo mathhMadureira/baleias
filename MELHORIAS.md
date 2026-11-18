@@ -118,3 +118,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-18 (tarde): **todos os robôs destravados (decisão do dono)**: guarda do dia (H54) revogada em `executor/guarda_dia.py` (GUARDA_LIGADA =
   False; travas antigas soltas na rodada seguinte); ficam a meta de US$ 12, o piso de US$ 5 e os stops. Robô LBank: memecoins primeiro e, no regime
   neutro, a partir de 1% em 24 h (as outras 3%). Regra 12 do AGENTS.md marcada como revogada. 152 testes.
+- 2026-11-18 (tarde): **os agentes do OpenBot operam no lugar dos robôs (H61, pedido do dono).** Robôs aposentados do laço da nuvem e do painel
+  (`ROBOS_APOSENTADOS`; `radar.yml` desligado; carteiras congeladas). `executor/robo_claude_nuvem.py` virou o executor de qualquer agente
+  (RC_AGENTE/RC_ARQ/RC_DECISAO): Baleias (chefe + conta de teste), Treinador (método do Caçador), Laboratório (v4 ≥ 0,12) e Guardião (tendência de
+  24 h + memecoins), cada um com US$ 10. Cada agente grava só `dados/decisao_<id>.json` com a ferramenta `OpenBot/Shared/baleias/operar/operar.py`.
+  Painel, placar, torneio, banco e diário de lições mostram os agentes. Regime do painel vem do retrato do mercado. 152 testes.
