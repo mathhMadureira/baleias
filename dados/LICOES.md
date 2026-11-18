@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 22:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 22:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.52** · 20 operações fechadas · 3 abertas
+Carteira **US$ 8.63** · 20 operações fechadas · 3 abertas
 
 - **Total:** 11/20 com lucro (55%), resultado -1.48, média -0.074 por operação.
 - **Últimas 24 h:** 6/13 com lucro, -1.59.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.46** · 6 operações fechadas · 4 abertas
+Carteira **US$ 10.59** · 6 operações fechadas · 4 abertas
 
 - **Total:** 5/6 com lucro (83%), resultado +0.46, média +0.076 por operação.
 - **Últimas 24 h:** 5/6 com lucro, +0.46.
@@ -58,15 +58,15 @@ Carteira **US$ 10.46** · 6 operações fechadas · 4 abertas
 
 - **Amplitude:** 25.5% das moedas subindo em 24 h, 17.0% em 4 h · BTC 24 h -3.12%, 4 h -1.2%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.3%/ano · {'BTC': 0.2, 'ETH': -4.3, 'SOL': -6.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.9%/ano · {'BTC': 3.3, 'ETH': -2.0, 'SOL': -4.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
+- 📰 18/11 21:57 UTC · Cointelegraph: Tether invokes The Big Short in swipe at S&P over USDT reserve risks
 - 📰 18/11 21:46 UTC · Decrypt: ChatGPT, Claude, Gemini and Grok Helped Plan Terror Attacks in Government Tests
 - 📰 18/11 21:16 UTC · Decrypt: Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine
 - 📰 18/11 21:13 UTC · Cointelegraph: Ledger warns Berlin customers as hardware wallet tampering investigation expands
 - 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
 - 📰 18/11 20:20 UTC · Cointelegraph: Binance says it obtained $6.5B worldwide freezing order after hack
-- 📰 18/11 20:16 UTC · Decrypt: Google's Genie 4 Is Here, Letting Ultra Subscribers Build AI Worlds in Real Time
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

@@ -1,6 +1,6 @@
 {
- "t": 1795039354,
- "hora_utc": "2026-11-18 22:02 UTC",
+ "t": 1795039582,
+ "hora_utc": "2026-11-18 22:06 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
@@ -172,11 +172,17 @@
   -0.67,
   -0.19,
   -0.44,
-  0.03
+  0.14
  ],
  "contexto": {
-  "t": 1795039355,
+  "t": 1795039583,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795039055,
+    "hora_utc": "18/11 21:57",
+    "titulo": "Tether invokes The Big Short in swipe at S&P over USDT reserve risks"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795038363,
@@ -260,12 +266,6 @@
     "t": 1795021504,
     "hora_utc": "18/11 17:05",
     "titulo": "$25M Ethereum MEV acquittal tests criminal enforcement limits"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795021200,
-    "hora_utc": "18/11 17:00",
-    "titulo": "Polymarket US takes rapid-fire crypto trading format to oil, natural gas"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -3.3,
+   "media_top20_anual_pct": -1.9,
    "principais_anual_pct": {
-    "BTC": 0.2,
-    "ETH": -4.3,
-    "SOL": -6.1
+    "BTC": 3.3,
+    "ETH": -2.0,
+    "SOL": -4.1
    },
    "leitura": "neutro"
   },
@@ -440,7 +440,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.52,
+  "carteira": 8.63,
   "abertas": [
    {
     "moeda": "RUNE",
@@ -448,7 +448,7 @@
     "entrada": 0.522,
     "agora": 0.522,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "mantida: regime de baixa e v4 não aponta contra (0,492)"
    },
    {
@@ -457,7 +457,7 @@
     "entrada": 913.19,
     "agora": 911.8,
     "resultado_pct": 0.15,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "regime de baixa (24,5% subindo); 6 de 6 tempos abaixo da MM20; ZEC 4 h −1,23%, 1 dia −2,41%; 3 das melhores carteiras vendidas e 0 compradas; v4 neutro 0,517"
    },
    {
@@ -466,7 +466,7 @@
     "entrada": 107.83,
     "agora": 107.59,
     "resultado_pct": 0.22,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "regime de baixa; 6 de 6 tempos abaixo da MM20; AAVE 4 h −0,77%, 1 dia −2,83%; 3 das melhores carteiras vendidas e 0 compradas; v4 neutro 0,526"
    }
   ],
@@ -619,7 +619,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.52,
+   "carteira": 8.63,
    "n_abertas": 3,
    "abertas": [
     [
@@ -693,7 +693,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.46,
+   "carteira": 10.59,
    "n_abertas": 4,
    "abertas": [
     [
@@ -727,7 +727,7 @@
     "ganho_medio": 0.063,
     "perda_media": -0.242,
     "fator_lucro": 0.32,
-    "carteira": 8.52
+    "carteira": 8.63
    },
    "openbot_testnet": {
     "ops": 10,
@@ -763,7 +763,7 @@
     "ganho_medio": 0.11,
     "perda_media": -0.096,
     "fator_lucro": 5.74,
-    "carteira": 10.46
+    "carteira": 10.59
    }
   },
   "vereditos": []
