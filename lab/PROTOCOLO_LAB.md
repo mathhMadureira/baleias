@@ -1184,3 +1184,15 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   (não se escolhe robô depois de ver). Se nenhum passar: nada muda e o resultado fica registrado.
 - **Contexto já medido (não decide):** o Banco mediu que o lucro de 30 operações não se repete nas 30 seguintes (correlação −0,14; 16/11), e o Robô
   Livre (carteira inteira a 20×) quebrou em 1 dia (4 liquidações, carteira 0,90).
+
+### Resultado da H60 (18/11 02:10 UTC, `lab/alavancagem.py` → `dados/lab/alavancagem_resultado.json`): reprovada nos três braços
+| braço | antes do zero: soma (9 robôs) | robôs < US$ 5 | desde o zero: soma (10 robôs) | robôs < US$ 5 |
+|---|---|---|---|---|
+| atual 2,5× a 10× | 60,93 | — | 95,04 | — |
+| A 3,75× a 20× | 48,89 | Caçador, Claude, Rápido | 96,53 | Radar |
+| B 5× a 20× | 42,63 | os 9 | 96,52 | Radar |
+| C 5× só no lucro com prova | 58,58 | — | 94,21 | — |
+- Conferência: o braço atual reproduz as carteiras reais desde o zero (Caçador 12,00 × 11,97; Claude 8,85 × 8,85; Radar 5,80 × 5,85).
+- Leitura: alavancar multiplica o resultado dos dois lados. Antes do zero (mesa perdendo) o 5× levaria os 9 robôs ao piso; desde o zero o Caçador
+  iria a 14,26 e o Scalper B a 11,76, mas o Radar cairia abaixo de US$ 5. Alavancar só quem está no lucro com prova (C) perde nos dois conjuntos:
+  o lucro não se repete (como o Banco já mediu). O gargalo é a vantagem por operação, não o tamanho. Nada muda.

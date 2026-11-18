@@ -112,3 +112,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   (1000SHIB a 0,003864; v4 0,645; stop 0,003797). A tela do testnet é o Demo Trading da Binance (demo.binance.com), mesma conta da API: posições e
   stops (Conditional, reduce-only) aparecem lá. **Achado:** a nuvem às vezes calcula o v4 só nas 33 moedas de reserva (exchangeInfo da Binance
   levou 38 s; 22:30 BRT: 34 moedas); a análise usa então a rodada completa mais nova de até 15 min. Não corrigido em `lab/universo.py` (anotado).
+- 2026-11-17 (noite, 23:10 BRT): **H60 alavancagem na carteira — reprovada, nada muda** (pedido do dono: "não passa de 11 dólares, quero
+  alavancagem"). Pré-registrada antes de rodar (c5ea773b); contrafactual nas operações reais (`lab/alavancagem.py`): 3,75× e 5× a carteira a 20×
+  levam robôs ao piso (antes do zero: os 9 com 5×; desde o zero: o Radar) e alavancar só quem está no lucro com prova perde nos dois conjuntos.
