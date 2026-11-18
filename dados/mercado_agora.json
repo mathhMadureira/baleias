@@ -1,6 +1,6 @@
 {
- "t": 1795012374,
- "hora_utc": "2026-11-18 14:32 UTC",
+ "t": 1795012660,
+ "hora_utc": "2026-11-18 14:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
@@ -172,10 +172,10 @@
   -0.22,
   -0.22,
   -0.23,
-  0.05
+  -0.76
  ],
  "contexto": {
-  "t": 1795012375,
+  "t": 1795012661,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 6.2,
    "principais_anual_pct": {
-    "BTC": 3.6,
-    "ETH": -2.8,
-    "SOL": -2.6
+    "BTC": 3.0,
+    "ETH": -3.5,
+    "SOL": -3.2
    },
    "leitura": "neutro"
   },
@@ -504,7 +504,7 @@
     "entrada": 3.86e-06,
     "agora": 3.84e-06,
     "resultado_pct": -0.52,
-    "horas_aberta": 12.7,
+    "horas_aberta": 12.8,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -747,23 +747,27 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.29,
-   "n_abertas": 3,
+   "carteira": 6.41,
+   "n_abertas": 4,
    "abertas": [
     [
      "BTC",
      "venda"
     ],
     [
-     "LINK",
+     "ETH",
      "compra"
     ],
     [
-     "SUI",
+     "DOGE",
+     "venda"
+    ],
+    [
+     "ADA",
      "compra"
     ]
    ],
-   "n_fechadas": 150,
+   "n_fechadas": 152,
    "ordem": null
   },
   {
@@ -902,13 +906,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 150,
-    "acerto": 0.453,
-    "soma": -3.758,
+    "ops": 152,
+    "acerto": 0.461,
+    "soma": -3.655,
     "ganho_medio": 0.071,
     "perda_media": -0.105,
-    "fator_lucro": 0.56,
-    "carteira": 6.29
+    "fator_lucro": 0.58,
+    "carteira": 6.41
    },
    "testnet": {
     "ops": 96,
