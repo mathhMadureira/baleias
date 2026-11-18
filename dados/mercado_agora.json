@@ -1,6 +1,6 @@
 {
- "t": 1794970228,
- "hora_utc": "2026-11-18 02:50 UTC",
+ "t": 1794970482,
+ "hora_utc": "2026-11-18 02:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.33,
   -0.24,
   -0.75,
-  -0.1
+  -0.16
  ],
  "contexto": {
-  "t": 1794970229,
+  "t": 1794970483,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -277,8 +277,8 @@
    "media_top20_anual_pct": 7.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.1,
-    "SOL": 0.6
+    "ETH": 6.9,
+    "SOL": 0.2
    },
    "leitura": "neutro"
   },
@@ -524,21 +524,12 @@
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
-    "moeda": "USTC",
-    "lado": "venda",
-    "entrada": 0.00393,
-    "agora": 0.00392,
-    "resultado_pct": 0.25,
-    "horas_aberta": 1.0,
-    "motivo_de_entrada": "maior confiança do universo: v4 0,343 de subir (confiança 0,157, faixa ≥ 0,12 da H36); 1 h +1,02%, 4 h −0,25%, 24 h +4,77%, volume 4 h 0,2×; regime neutro"
-   },
-   {
     "moeda": "SHIB",
     "lado": "compra",
     "entrada": 3.86e-06,
     "agora": 3.84e-06,
     "resultado_pct": -0.52,
-    "horas_aberta": 1.0,
+    "horas_aberta": 1.1,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -591,6 +582,13 @@
     "resultado_usd": -0.197,
     "motivo_saida": "guarda do dia: chegou a +0.40 e voltou a +0.18; dia garantido no lucro",
     "motivo_de_entrada": "moeda grande a favor da alta de 24 h; a compra de 12:18 saiu +0,090 pelo stop móvel"
+   },
+   {
+    "moeda": "USTC",
+    "lado": "venda",
+    "resultado_usd": 0.06,
+    "motivo_saida": "stop móvel (pico +0.51%, guardou +0.36%)",
+    "motivo_de_entrada": "maior confiança do universo: v4 0,343 de subir (confiança 0,157, faixa ≥ 0,12 da H36); 1 h +1,02%, 4 h −0,25%, 24 h +4,7"
    }
   ],
   "licoes_anteriores": [
@@ -636,7 +634,7 @@
    "motor": "Claude (rotina de hora em hora)",
    "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs.",
    "carteira": 9.47,
-   "n_abertas": 4,
+   "n_abertas": 3,
    "abertas": [
     [
      "ZEC",
@@ -647,15 +645,11 @@
      "compra"
     ],
     [
-     "USTC",
-     "venda"
-    ],
-    [
      "SHIB",
      "compra"
     ]
    ],
-   "n_fechadas": 7,
+   "n_fechadas": 8,
    "ordem": null
   },
   {
@@ -730,7 +724,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
-   "carteira": 11.92,
+   "carteira": 11.94,
    "n_abertas": 4,
    "abertas": [
     [
@@ -746,11 +740,11 @@
      "compra"
     ],
     [
-     "CYBER",
-     "venda"
+     "CRV",
+     "compra"
     ]
    ],
-   "n_fechadas": 88,
+   "n_fechadas": 89,
    "ordem": null
   },
   {
@@ -893,12 +887,12 @@
   "campeao": "cacador",
   "placar": {
    "claude": {
-    "ops": 7,
-    "acerto": 0.714,
-    "soma": 0.114,
-    "ganho_medio": 0.076,
+    "ops": 8,
+    "acerto": 0.75,
+    "soma": 0.174,
+    "ganho_medio": 0.073,
     "perda_media": -0.133,
-    "fator_lucro": 1.43,
+    "fator_lucro": 1.66,
     "carteira": 9.47
    },
    "cacador": {
@@ -929,13 +923,13 @@
     "carteira": 10.62
    },
    "scalper_b": {
-    "ops": 88,
-    "acerto": 0.58,
-    "soma": 2.182,
-    "ganho_medio": 0.11,
+    "ops": 89,
+    "acerto": 0.584,
+    "soma": 2.342,
+    "ganho_medio": 0.111,
     "perda_media": -0.092,
-    "fator_lucro": 1.64,
-    "carteira": 11.92
+    "fator_lucro": 1.69,
+    "carteira": 11.94
    },
    "scalper_c": {
     "ops": 83,
