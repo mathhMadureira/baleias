@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 13:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 13:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -61,7 +61,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 - **Total:** 7/10 com lucro (70%), resultado -0.58, média -0.058 por operação.
-- **Últimas 24 h:** 5/8 com lucro, -0.74.
+- **Últimas 24 h:** 4/7 com lucro, -0.81.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
 - **Por lado:** compra: 9 op, 67% certas, -0.64 · venda: 1 op, 100% certas, +0.06
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
@@ -73,7 +73,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 - **Amplitude:** 35.0% das moedas subindo em 24 h, 30.8% em 4 h · BTC 24 h -1.5%, 4 h -0.92%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': 3.8, 'ETH': -8.5, 'SOL': -8.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 6.0, 'ETH': -8.5, 'SOL': -8.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PLUME topo duplo (baixa, formado) · PLUME OCO invertido (alta, formado) · SHIB OCO invertido (alta, formado) · ZK OCO invertido (alta, formado) · ZKC fundo duplo (alta, formado)
 - 📰 18/11 12:53 UTC · CoinDesk: Bitcoin miner MARA raises $185 million in debt after selling $1 billion BTC to repay loans
