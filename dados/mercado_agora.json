@@ -1,21 +1,21 @@
 {
- "t": 1794993933,
- "hora_utc": "2026-11-18 09:25 UTC",
+ "t": 1794994224,
+ "hora_utc": "2026-11-18 09:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 116,
-  "subindo_pct": 69.8,
-  "mediana_pct": 0.27
+  "subindo_pct": 67.2,
+  "mediana_pct": 0.24
  },
  "mercado_4h": {
   "moedas": 116,
-  "subindo_pct": 69.8,
-  "mediana_pct": 0.45
+  "subindo_pct": 66.4,
+  "mediana_pct": 0.34
  },
  "mercado_24h": {
   "moedas": 116,
-  "subindo_pct": 67.2,
-  "mediana_pct": 0.8
+  "subindo_pct": 68.1,
+  "mediana_pct": 0.83
  },
  "btc": {
   "1h": 0.14,
@@ -131,21 +131,21 @@
   },
   {
    "moeda": "SPK",
-   "4h": 5.08,
-   "24h": 7.18,
+   "4h": 5.29,
+   "24h": 8.09,
    "vol": 1.19
+  },
+  {
+   "moeda": "ONE",
+   "4h": 4.18,
+   "24h": -1.27,
+   "vol": 1.59
   },
   {
    "moeda": "MARSCOIN",
    "4h": 3.65,
    "24h": 3.33,
    "vol": 1.17
-  },
-  {
-   "moeda": "HOME",
-   "4h": 3.26,
-   "24h": 4.98,
-   "vol": 0.52
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.11,
   0.43,
   -0.31,
-  0.05
+  0.03
  ],
  "contexto": {
-  "t": 1794993933,
+  "t": 1794994225,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.2,
+   "media_top20_anual_pct": 7.5,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.6,
-    "SOL": -9.1
+    "ETH": 4.0,
+    "SOL": -8.5
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": true,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 12.5,
+   "amplitude_acima_mm50_pct": 15.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -491,14 +491,22 @@
   }
  },
  "v4": {
-  "vela": "05:30 UTC",
+  "vela": "09:30 UTC",
   "apostas": 70,
   "compras": 27,
   "vendas": 43,
   "mais_confiantes_venda": [
    {
+    "moeda": "CYBER",
+    "prob_subir": 0.338
+   },
+   {
     "moeda": "ETC",
     "prob_subir": 0.362
+   },
+   {
+    "moeda": "CELO",
+    "prob_subir": 0.364
    },
    {
     "moeda": "SLP",
@@ -519,14 +527,6 @@
    {
     "moeda": "BB",
     "prob_subir": 0.394
-   },
-   {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
-   },
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
@@ -583,7 +583,7 @@
     "entrada": 3.86e-06,
     "agora": 3.86e-06,
     "resultado_pct": 0.0,
-    "horas_aberta": 7.6,
+    "horas_aberta": 7.7,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -715,7 +715,7 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 11.78,
+   "carteira": 11.66,
    "n_abertas": 2,
    "abertas": [
     [
@@ -723,11 +723,11 @@
      "compra"
     ],
     [
-     "STX",
+     "CYBER",
      "venda"
     ]
    ],
-   "n_fechadas": 37,
+   "n_fechadas": 38,
    "ordem": null
   },
   {
@@ -760,7 +760,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
-   "carteira": 12.41,
+   "carteira": 12.33,
    "n_abertas": 4,
    "abertas": [
     [
@@ -776,11 +776,11 @@
      "venda"
     ],
     [
-     "STX",
+     "CYBER",
      "venda"
     ]
    ],
-   "n_fechadas": 92,
+   "n_fechadas": 93,
    "ordem": null
   },
   {
@@ -849,8 +849,8 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.01,
-   "n_abertas": 2,
+   "carteira": 7.03,
+   "n_abertas": 3,
    "abertas": [
     [
      "SOL",
@@ -859,6 +859,10 @@
     [
      "ETH",
      "venda"
+    ],
+    [
+     "AVAX",
+     "compra"
     ]
    ],
    "n_fechadas": 134,
@@ -919,13 +923,13 @@
     "carteira": 9.91
    },
    "cacador": {
-    "ops": 37,
-    "acerto": 0.784,
-    "soma": 1.355,
-    "ganho_medio": 0.131,
+    "ops": 38,
+    "acerto": 0.789,
+    "soma": 1.673,
+    "ganho_medio": 0.137,
     "perda_media": -0.305,
-    "fator_lucro": 1.56,
-    "carteira": 11.78
+    "fator_lucro": 1.69,
+    "carteira": 11.66
    },
    "rapido": {
     "ops": 45,
@@ -946,13 +950,13 @@
     "carteira": 10.62
    },
    "scalper_b": {
-    "ops": 92,
-    "acerto": 0.587,
-    "soma": 2.15,
-    "ganho_medio": 0.111,
+    "ops": 93,
+    "acerto": 0.591,
+    "soma": 2.474,
+    "ganho_medio": 0.115,
     "perda_media": -0.101,
-    "fator_lucro": 1.56,
-    "carteira": 12.41
+    "fator_lucro": 1.65,
+    "carteira": 12.33
    },
    "scalper_c": {
     "ops": 93,
@@ -1006,7 +1010,7 @@
     "ganho_medio": 0.073,
     "perda_media": -0.115,
     "fator_lucro": 0.61,
-    "carteira": 7.01
+    "carteira": 7.03
    },
    "testnet": {
     "ops": 96,
@@ -1043,7 +1047,7 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 23131 apostas (581 velas, 11/11 18:45–18/11 07:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 23135 apostas (582 velas, 11/11 18:45–18/11 09:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5552,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
@@ -1051,11 +1055,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.513,
-    "n": 17767
+    "n": 17771
    },
    "segue_maioria_24h": {
     "acerto": 0.5115,
-    "n": 22918
+    "n": 22922
    }
   },
   "referencia_ganha": [],
@@ -1070,7 +1074,7 @@
    },
    "confianca:<0,05": {
     "acerto": 0.5862,
-    "n": 5943
+    "n": 5947
    },
    "confianca:≥0,12": {
     "acerto": 0.674,
@@ -1081,8 +1085,8 @@
     "n": 6367
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.564,
-    "n": 4853
+    "acerto": 0.5639,
+    "n": 4857
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5507,
@@ -1098,7 +1102,7 @@
    },
    "lado:venda": {
     "acerto": 0.5822,
-    "n": 12290
+    "n": 12294
    }
   }
  },
