@@ -1,21 +1,21 @@
 {
- "t": 1794977526,
- "hora_utc": "2026-11-18 04:52 UTC",
+ "t": 1794977790,
+ "hora_utc": "2026-11-18 04:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 16.9,
-  "mediana_pct": -0.44
+  "moedas": 117,
+  "subindo_pct": 17.1,
+  "mediana_pct": -0.47
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 16.1,
-  "mediana_pct": -1.1
+  "moedas": 117,
+  "subindo_pct": 16.2,
+  "mediana_pct": -1.09
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 39.0,
-  "mediana_pct": -0.37
+  "moedas": 117,
+  "subindo_pct": 39.3,
+  "mediana_pct": -0.38
  },
  "btc": {
   "1h": -0.25,
@@ -172,10 +172,10 @@
   -0.75,
   0.03,
   0.21,
-  -0.04
+  -0.02
  ],
  "contexto": {
-  "t": 1794977527,
+  "t": 1794977791,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 4.5,
+   "media_top20_anual_pct": 4.9,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -15.8
+    "SOL": -15.0
    },
    "leitura": "neutro"
   },
@@ -567,7 +567,7 @@
     "entrada": 964.92,
     "agora": 952.69,
     "resultado_pct": -1.27,
-    "horas_aberta": 4.2,
+    "horas_aberta": 4.3,
     "motivo_de_entrada": "a favor da alta de 24 h (73,3% subindo): ZEC 24 h +6,91%, 4 h +4,65% sem esticar, comprada no recuo de 1 h (20,0% das moedas subindo); as 2 compras anteriores d"
    },
    {
@@ -576,7 +576,7 @@
     "entrada": 1.466,
     "agora": 1.442,
     "resultado_pct": -1.64,
-    "horas_aberta": 4.2,
+    "horas_aberta": 4.3,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -585,7 +585,7 @@
     "entrada": 3.86e-06,
     "agora": 3.84e-06,
     "resultado_pct": -0.52,
-    "horas_aberta": 3.0,
+    "horas_aberta": 3.1,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -869,11 +869,15 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.46,
-   "n_abertas": 1,
+   "carteira": 6.48,
+   "n_abertas": 2,
    "abertas": [
     [
      "LINK",
+     "compra"
+    ],
+    [
+     "BTC",
      "compra"
     ]
    ],
@@ -1022,7 +1026,7 @@
     "ganho_medio": 0.077,
     "perda_media": -0.122,
     "fator_lucro": 0.54,
-    "carteira": 6.46
+    "carteira": 6.48
    },
    "testnet": {
     "ops": 96,
@@ -1066,12 +1070,12 @@
   "z_contra_lab": 1.92,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.514,
-    "n": 17363
+    "acerto": 0.5142,
+    "n": 17250
    },
    "segue_maioria_24h": {
-    "acerto": 0.5174,
-    "n": 22651
+    "acerto": 0.5166,
+    "n": 22596
    }
   },
   "referencia_ganha": [],
