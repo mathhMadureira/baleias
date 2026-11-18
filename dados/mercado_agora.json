@@ -1,21 +1,21 @@
 {
- "t": 1794980316,
- "hora_utc": "2026-11-18 05:38 UTC",
+ "t": 1794980569,
+ "hora_utc": "2026-11-18 05:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 54.2,
+  "moedas": 117,
+  "subindo_pct": 53.8,
   "mediana_pct": 0.05
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 47.5,
+  "moedas": 117,
+  "subindo_pct": 47.9,
   "mediana_pct": 0.0
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 49.2,
-  "mediana_pct": -0.02
+  "moedas": 117,
+  "subindo_pct": 49.6,
+  "mediana_pct": 0.0
  },
  "btc": {
   "1h": 0.22,
@@ -172,10 +172,10 @@
   0.03,
   0.21,
   -0.05,
-  0.51
+  0.45
  ],
  "contexto": {
-  "t": 1794980317,
+  "t": 1794980570,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 6.7,
+   "media_top20_anual_pct": 6.6,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -8.7
+    "SOL": -8.6
    },
    "leitura": "neutro"
   },
@@ -576,7 +576,7 @@
     "entrada": 3.86e-06,
     "agora": 3.85e-06,
     "resultado_pct": -0.26,
-    "horas_aberta": 3.8,
+    "horas_aberta": 3.9,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -863,17 +863,9 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.74,
-   "n_abertas": 4,
+   "carteira": 6.7,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "BTC",
-     "compra"
-    ],
-    [
-     "AVAX",
-     "compra"
-    ],
     [
      "SUI",
      "venda"
@@ -883,7 +875,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 117,
+   "n_fechadas": 119,
    "ordem": null
   },
   {
@@ -1022,13 +1014,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 117,
-    "acerto": 0.462,
-    "soma": -3.474,
+    "ops": 119,
+    "acerto": 0.471,
+    "soma": -3.316,
     "ganho_medio": 0.077,
     "perda_media": -0.121,
-    "fator_lucro": 0.54,
-    "carteira": 6.74
+    "fator_lucro": 0.56,
+    "carteira": 6.7
    },
    "testnet": {
     "ops": 96,
@@ -1072,12 +1064,12 @@
   "z_contra_lab": 1.9,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5135,
-    "n": 17551
+    "acerto": 0.5142,
+    "n": 17395
    },
    "segue_maioria_24h": {
-    "acerto": 0.5149,
-    "n": 22679
+    "acerto": 0.5128,
+    "n": 22666
    }
   },
   "referencia_ganha": [],
