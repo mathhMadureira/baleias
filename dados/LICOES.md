@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 19:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 19:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -58,7 +58,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
+Carteira **US$ 8.85** · 11 operações fechadas · 3 abertas
 
 - **Total:** 7/11 com lucro (64%), resultado -1.15, média -0.105 por operação.
 - **Últimas 24 h:** 2/4 com lucro, -1.27.
@@ -73,7 +73,7 @@ Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 
 - **Amplitude:** 42.1% das moedas subindo em 24 h, 26.2% em 4 h · BTC 24 h -1.6%, 4 h -1.23%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 7.4, 'ETH': 3.9, 'SOL': 3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.7%/ano · {'BTC': 9.1, 'ETH': 4.8, 'SOL': 4.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CHIP ombro-cabeça-ombro (baixa, formado) · DOT OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · VIRTUAL OCO invertido (alta, formado)
 - 📰 18/11 19:16 UTC · Decrypt: Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?
@@ -85,13 +85,12 @@ Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 17.6 h.
+- 18/11 19:16 UTC · **USTC venda, GTC venda, ZKP venda, OP venda** · Regime neutro: 46,2% das 106 moedas do universo sobem em 24 h (retrato: 57,9% de 107), 25,5% em 4 h e 80,4% em 1 h; BTC −0,95% em 24 h, −0,80% em 4 h, +0,09% em
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
 - 18/11 00:08 UTC · **fora do mercado** · Alta de 24 h pela segunda leitura seguida: 81,0% das moedas sobem em 24 h (81,8% na leitura anterior), 93,4% em 4 h (mediana +2,27%) e 89,3% em 1 h; BTC +0,10% 
 - 17/11 13:13 UTC · **RUNE compra, BTC compra, SOL compra, ZEC compra** · Alta de 24 h: 84,5% das moedas sobem em 24 h (eram 79,5%), 70,9% em 4 h; BTC +1,39% em 24 h, +1,13% em 4 h, volume 1,29×. Pano de fundo: BTC abaixo das médias d
-- 17/11 12:12 UTC · **BTC compra, SOL compra, ZEC compra, RUNE compra** · Alta de 24 h: 79,5% das moedas sobem em 24 h (eram 49,1% às 11:13), 68,8% em 4 h e 86,6% em 1 h; BTC +0,85% em 24 h, +1,37% em 1 h, volume 1,48×. Pano de fundo 
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 

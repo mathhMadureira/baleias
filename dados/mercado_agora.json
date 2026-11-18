@@ -1,6 +1,6 @@
 {
- "t": 1795029528,
- "hora_utc": "2026-11-18 19:18 UTC",
+ "t": 1795029756,
+ "hora_utc": "2026-11-18 19:22 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
@@ -172,10 +172,10 @@
   -0.57,
   0.56,
   0.09,
-  -0.49
+  -0.51
  ],
  "contexto": {
-  "t": 1795029529,
+  "t": 1795029757,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.5,
+   "media_top20_anual_pct": 7.7,
    "principais_anual_pct": {
-    "BTC": 7.4,
-    "ETH": 3.9,
-    "SOL": 3.9
+    "BTC": 9.1,
+    "ETH": 4.8,
+    "SOL": 4.4
    },
    "leitura": "neutro"
   },
@@ -441,7 +441,35 @@
  },
  "robo_claude": {
   "carteira": 8.85,
-  "abertas": [],
+  "abertas": [
+   {
+    "moeda": "GTC",
+    "lado": "venda",
+    "entrada": 0.1358,
+    "agora": 0.1358,
+    "resultado_pct": -0.0,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "v4 0.370 de subir (confiança 0.130, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h -0.38%, 4 h -1.71%, 24 h -0.13%, volume 4 h 0."
+   },
+   {
+    "moeda": "ZKP",
+    "lado": "venda",
+    "entrada": 0.0341,
+    "agora": 0.0341,
+    "resultado_pct": -0.0,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "v4 0.403 de subir (confiança 0.097, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h +0.00%, 4 h +1.79%, 24 h +9.65%, volume 4 h 0."
+   },
+   {
+    "moeda": "OP",
+    "lado": "venda",
+    "entrada": 0.0765,
+    "agora": 0.0765,
+    "resultado_pct": -0.0,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "v4 0.413 de subir (confiança 0.087, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h +0.53%, 4 h -0.65%, 24 h +0.13%, volume 4 h 1."
+   }
+  ],
   "ultimas_fechadas": [
    {
     "moeda": "ZEC",
@@ -523,10 +551,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1794910229,
-    "texto": "Sem operações novas (carteira 10,00). Às 08:14 o 24 h estava em 66,1% subindo com o BTC em 64740; agora 68,2% com o BTC em 64507 (−0,36%) e o 4 h caiu de 38,4% para 31,8%: o 24 h perto de 70% vem de altas antigas das alts, não do momento, que já é de queda. Quem comprasse as alts com o 24 h a 69,1% (06:18) estaria contra um BTC que foi de 64814 a 64507. Confirma alta: 24 h em 70% ou mais por duas "
-   },
-   {
     "t": 1794913844,
     "texto": "Sem operações novas (carteira 10,00). Às 10:40 o 24 h estava em 68,2% subindo com o BTC em 64507; agora 49,1% com o BTC em 64117 (−0,6%): pela terceira leitura seguida (06:18 69,1%, 08:14 66,1%, 10:40 68,2%) o 24 h perto de 70% recuou, e quem comprasse as alts ali estaria contra um 4 h que caiu para 13,6% subindo. Confirma baixa: 24 h em 30% ou menos por duas leituras seguidas com BTC abaixo de 64"
    },
@@ -553,6 +577,10 @@
    {
     "t": 1794966309,
     "texto": "As compras de ZEC e RENDER de 00:36 UTC (recuo de 1 h com 73,3% das moedas subindo em 24 h e volume do BTC 0,82×) estão abertas no negativo: ZEC 961,76 → 953,35 e RENDER 1,462 → 1,446 no testnet, enquanto o 24 h caiu para 67,8% e o 1 h para 16,8%. Comprar o recuo sem volume do BTC ainda não pagou; conferir se o stop (ZEC 925,33, RENDER 1,417) ou o stop móvel decide a saída."
+   },
+   {
+    "t": 1795029390,
+    "texto": "As 3 compras mantidas desde a madrugada saíram no stop de segurança (simulado: RENDER −0,82 e SHIB −0,567; testnet: ZEC −0,97, RENDER −0,79, SHIB −0,45), enquanto a venda de USTC (confiança 0,157) está +0,90 no testnet com o stop móvel armado. Manter compras sem confiança do v4 (ZEC 0,481, RENDER 0,506) num mercado que caiu de 73% para 46% subindo custou ~2,2 no testnet; conferir se as vendas de c"
    }
   ]
  },
@@ -564,8 +592,21 @@
    "motor": "Claude (rotina de hora em hora)",
    "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs.",
    "carteira": 8.85,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 3,
+   "abertas": [
+    [
+     "GTC",
+     "venda"
+    ],
+    [
+     "ZKP",
+     "venda"
+    ],
+    [
+     "OP",
+     "venda"
+    ]
+   ],
    "n_fechadas": 11,
    "ordem": null
   },
@@ -683,7 +724,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 5.92,
+   "carteira": 5.9,
    "n_abertas": 3,
    "abertas": [
     [
@@ -695,11 +736,11 @@
      "compra"
     ],
     [
-     "LINK",
-     "venda"
+     "SOL",
+     "compra"
     ]
    ],
-   "n_fechadas": 173,
+   "n_fechadas": 174,
    "ordem": null
   },
   {
@@ -720,11 +761,19 @@
    "avatar": "⚓",
    "motor": "chefe da mesa (OpenBot, rotina de 30 min)",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide para a mesa.",
-   "carteira": 8.68,
-   "n_abertas": 1,
+   "carteira": 8.59,
+   "n_abertas": 3,
    "abertas": [
     [
      "USTC",
+     "venda"
+    ],
+    [
+     "GTC",
+     "venda"
+    ],
+    [
+     "ZKP",
      "venda"
     ]
    ],
@@ -826,13 +875,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 173,
-    "acerto": 0.474,
-    "soma": -4.2,
+    "ops": 174,
+    "acerto": 0.477,
+    "soma": -4.135,
     "ganho_medio": 0.071,
     "perda_media": -0.11,
-    "fator_lucro": 0.58,
-    "carteira": 5.92
+    "fator_lucro": 0.59,
+    "carteira": 5.9
    },
    "testnet": {
     "ops": 96,
@@ -850,7 +899,7 @@
     "ganho_medio": null,
     "perda_media": -0.738,
     "fator_lucro": 0.0,
-    "carteira": 8.68
+    "carteira": 8.59
    }
   },
   "vereditos": [
@@ -931,12 +980,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "17/11 16:16",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Mercado indeciso: 50,4% das moedas sobem em 24 h (eram 63,6%), 13,9% em 4 h; BTC −0,55% em 24 h, −1,39% em 1 h, volume 1,32×: Robô Claude fora e travado pela guarda do dia até 00:00 UTC (+0,11). Sem ordens em vigor e nenhuma nova: quem tem fator de lucro abaixo de 0,7 em 30+ operações é Radar (0,64 "
-  },
-  {
    "hora_utc": "17/11 18:16",
    "de": "claude",
    "para": "sala",
@@ -1001,6 +1044,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "O chefe passa a escolher pelo universo inteiro (118 moedas) com a confiança do v4 (H59, emenda): entra só com confiança ≥ 0,08. Regime neutro (67,8% subindo em 24 h): os dois lados valem. Robô Claude e conta de teste abrem USTC vendido (v4 0,343) e SHIB comprado (v4 0,645) e mantêm ZEC e RENDER. Sem"
+  },
+  {
+   "hora_utc": "18/11 19:22",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Regime neutro (46,2% sobem em 24 h, 25,5% em 4 h; BTC −0,95% em 24 h, volume 1,71×). Robô Claude e testnet vendidos em USTC (mantida), GTC (v4 0,370), ZKP (0,403) e OP (0,413). Stops da corretora fecharam ZEC, RENDER e SHIB comprados (−2,21 no testnet). Sem ordens: nenhum robô aberto e nenhum confli"
   }
  ]
 }
