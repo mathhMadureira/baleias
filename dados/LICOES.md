@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 03:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 03:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.58** · 8 operações fechadas · 3 abertas
 
 - **Amplitude:** 50.0% das moedas subindo em 24 h, 16.9% em 4 h · BTC 24 h -0.81%, 4 h -0.74%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.5%/ano · {'BTC': 11.0, 'ETH': 9.2, 'SOL': -8.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 11.0, 'ETH': 9.5, 'SOL': -9.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · KITE bandeira de baixa (baixa, CONFIRMOU) · SOL fundo duplo (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BTC topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · LINK topo duplo (baixa, formado) · LSK fundo duplo (alta, formado)
 - 📰 18/11 02:39 UTC · Cointelegraph: Ledger hardware implant saga reaches Dubai’s Virgin Megastore
@@ -83,7 +83,7 @@ Carteira **US$ 9.58** · 8 operações fechadas · 3 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.1 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%

@@ -1,6 +1,6 @@
 {
- "t": 1794973615,
- "hora_utc": "2026-11-18 03:46 UTC",
+ "t": 1794973882,
+ "hora_utc": "2026-11-18 03:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 118,
@@ -172,10 +172,10 @@
   -0.24,
   -0.75,
   0.03,
-  0.35
+  0.36
  ],
  "contexto": {
-  "t": 1794973616,
+  "t": 1794973882,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 4.5,
+   "media_top20_anual_pct": 4.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 9.2,
-    "SOL": -8.4
+    "ETH": 9.5,
+    "SOL": -9.2
    },
    "leitura": "neutro"
   },
@@ -553,7 +553,7 @@
     "entrada": 964.92,
     "agora": 952.2,
     "resultado_pct": -1.32,
-    "horas_aberta": 3.1,
+    "horas_aberta": 3.2,
     "motivo_de_entrada": "a favor da alta de 24 h (73,3% subindo): ZEC 24 h +6,91%, 4 h +4,65% sem esticar, comprada no recuo de 1 h (20,0% das moedas subindo); as 2 compras anteriores d"
    },
    {
@@ -562,7 +562,7 @@
     "entrada": 1.466,
     "agora": 1.451,
     "resultado_pct": -1.02,
-    "horas_aberta": 3.1,
+    "horas_aberta": 3.2,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -571,7 +571,7 @@
     "entrada": 3.86e-06,
     "agora": 3.86e-06,
     "resultado_pct": 0.0,
-    "horas_aberta": 1.9,
+    "horas_aberta": 2.0,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -873,12 +873,8 @@
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
    "carteira": 6.41,
-   "n_abertas": 3,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "ADA",
-     "venda"
-    ],
     [
      "BNB",
      "venda"
@@ -888,7 +884,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 110,
+   "n_fechadas": 111,
    "ordem": null
   },
   {
@@ -1027,11 +1023,11 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 110,
-    "acerto": 0.455,
-    "soma": -3.477,
+    "ops": 111,
+    "acerto": 0.45,
+    "soma": -3.563,
     "ganho_medio": 0.079,
-    "perda_media": -0.124,
+    "perda_media": -0.123,
     "fator_lucro": 0.53,
     "carteira": 6.41
    },
