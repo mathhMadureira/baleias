@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 20:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 20:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -28,13 +28,13 @@ Carteira **US$ 8.55** · 6 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.09** · 1 operações fechadas · 3 abertas
+Carteira **US$ 10.02** · 3 operações fechadas · 2 abertas
 
-- **Total:** 1/1 com lucro (100%), resultado +0.24, média +0.237 por operação.
-- **Últimas 24 h:** 1/1 com lucro, +0.24.
-- **Por horário:** 18–23 UTC: 1 op, 100% certas, +0.24
-- **Por lado:** venda: 1 op, 100% certas, +0.24
-- **Por motivo de saída:** v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- **Total:** 1/3 com lucro (33%), resultado +0.12, média +0.041 por operação.
+- **Últimas 24 h:** 1/3 com lucro, +0.12.
+- **Por horário:** 18–23 UTC: 3 op, 33% certas, +0.12
+- **Por lado:** compra: 1 op, 0% certas, -0.09 · venda: 2 op, 50% certas, +0.21
+- **Por motivo de saída:** v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
@@ -58,7 +58,7 @@ Carteira **US$ 10.30** · 3 operações fechadas · 1 abertas
 
 - **Amplitude:** 28.0% das moedas subindo em 24 h, 60.7% em 4 h · BTC 24 h -2.23%, 4 h 0.04%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 10.8, 'ETH': 7.7, 'SOL': -0.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 10.1, 'ETH': 7.2, 'SOL': -0.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DASH fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
