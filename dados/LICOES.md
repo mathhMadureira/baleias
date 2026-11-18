@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 03:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 03:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
 Carteira **US$ 11.00** · 41 operações fechadas · 4 abertas
 
 - **Total:** 30/41 com lucro (73%), resultado +1.77, média +0.043 por operação.
-- **Últimas 24 h:** 6/13 com lucro, -0.07.
+- **Últimas 24 h:** 6/9 com lucro, +0.58.
 - **Por horário:** 12–17 UTC: 2 op, 50% certas, -0.42 · 06–11 UTC: 2 op, 50% certas, +0.05 · 00–05 UTC: 19 op, 74% certas, +0.49 · 18–23 UTC: 18 op, 78% certas, +1.66
 - **Por lado:** venda: 20 op, 70% certas, +0.51 · compra: 21 op, 76% certas, +1.27
 - **Por confiança do v4:** alta (0,08–0,12): 9 op, 67% certas, -0.31 · confiança baixa (<0,05): 3 op, 100% certas, +0.47 · média (0,05–0,08): 4 op, 100% certas, +0.57 · muito alta (≥0,12): 25 op, 68% certas, +1.04
@@ -71,7 +71,7 @@ Carteira **US$ 9.23** · 8 operações fechadas · 3 abertas
 
 - **Amplitude:** 58.8% das moedas subindo em 24 h, 26.1% em 4 h · BTC 24 h -0.28%, 4 h -0.63%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 10.8, 'SOL': -6.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': 11.0, 'ETH': 10.4, 'SOL': -8.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · KITE bandeira de baixa (baixa, CONFIRMOU) · SOL fundo duplo (alta, CONFIRMOU) · AR fundo duplo (alta, formado) · ARB topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BTC topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado)
 - 📰 18/11 02:39 UTC · Cointelegraph: Ledger hardware implant saga reaches Dubai’s Virgin Megastore
