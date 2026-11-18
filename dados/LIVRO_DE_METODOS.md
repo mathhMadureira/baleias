@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 53.1% | 2101 | 51.0%–55.2% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.1% | 2102 | 51.0%–55.2% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 100.0% | 1 | 20.7%–100.0% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | connors_8020_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | demark_td9_baixa | promissor | 62.5% | 16 | 38.6%–81.5% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
