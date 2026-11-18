@@ -1,6 +1,6 @@
 {
- "t": 1795039582,
- "hora_utc": "2026-11-18 22:06 UTC",
+ "t": 1795039813,
+ "hora_utc": "2026-11-18 22:10 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
@@ -172,10 +172,10 @@
   -0.67,
   -0.19,
   -0.44,
-  0.14
+  0.02
  ],
  "contexto": {
-  "t": 1795039583,
+  "t": 1795039814,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.9,
+   "media_top20_anual_pct": -2.5,
    "principais_anual_pct": {
-    "BTC": 3.3,
-    "ETH": -2.0,
-    "SOL": -4.1
+    "BTC": 2.1,
+    "ETH": -2.9,
+    "SOL": -5.2
    },
    "leitura": "neutro"
   },
@@ -440,17 +440,8 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.63,
+  "carteira": 8.75,
   "abertas": [
-   {
-    "moeda": "RUNE",
-    "lado": "venda",
-    "entrada": 0.522,
-    "agora": 0.522,
-    "resultado_pct": -0.0,
-    "horas_aberta": 0.1,
-    "motivo_de_entrada": "mantida: regime de baixa e v4 não aponta contra (0,492)"
-   },
    {
     "moeda": "ZEC",
     "lado": "venda",
@@ -471,13 +462,6 @@
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "BTC",
-    "lado": "compra",
-    "resultado_usd": -0.069,
-    "motivo_saida": "guarda do dia: chegou a +0.40 e voltou a +0.18; dia garantido no lucro",
-    "motivo_de_entrada": "recompra a favor da alta de 24 h (84,5% subindo), BTC +1,13% em 4 h com volume 1,29×; a compra de 12:18 saiu +0,065 pelo"
-   },
    {
     "moeda": "SOL",
     "lado": "compra",
@@ -575,6 +559,13 @@
     "resultado_usd": -0.074,
     "motivo_saida": "fora da lista de posições do Claude",
     "motivo_de_entrada": "v4 0,402 de subir (confiança 0,098, faixa 0,08–0,12 acerta 59,2% ao vivo em 1.398); regime baixa (25,5% sobem em 24 h); "
+   },
+   {
+    "moeda": "RUNE",
+    "lado": "venda",
+    "resultado_usd": 0.081,
+    "motivo_saida": "lucro realizado +0.5%",
+    "motivo_de_entrada": "mantida: regime de baixa e v4 não aponta contra (0,492)"
    }
   ],
   "licoes_anteriores": [
@@ -619,13 +610,9 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.63,
-   "n_abertas": 3,
+   "carteira": 8.75,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "RUNE",
-     "venda"
-    ],
     [
      "ZEC",
      "venda"
@@ -635,7 +622,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 20,
+   "n_fechadas": 21,
    "ordem": null
   },
   {
@@ -693,13 +680,9 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.59,
-   "n_abertas": 4,
+   "carteira": 10.87,
+   "n_abertas": 3,
    "abertas": [
-    [
-     "BONK",
-     "venda"
-    ],
     [
      "SHIB",
      "venda"
@@ -713,7 +696,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 6,
+   "n_fechadas": 7,
    "ordem": null
   }
  ],
@@ -721,13 +704,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 20,
-    "acerto": 0.55,
-    "soma": -1.48,
-    "ganho_medio": 0.063,
+    "ops": 21,
+    "acerto": 0.571,
+    "soma": -1.399,
+    "ganho_medio": 0.065,
     "perda_media": -0.242,
-    "fator_lucro": 0.32,
-    "carteira": 8.63
+    "fator_lucro": 0.36,
+    "carteira": 8.75
    },
    "openbot_testnet": {
     "ops": 10,
@@ -757,13 +740,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 6,
-    "acerto": 0.833,
-    "soma": 0.456,
-    "ganho_medio": 0.11,
+    "ops": 7,
+    "acerto": 0.857,
+    "soma": 0.58,
+    "ganho_medio": 0.113,
     "perda_media": -0.096,
-    "fator_lucro": 5.74,
-    "carteira": 10.59
+    "fator_lucro": 7.03,
+    "carteira": 10.87
    }
   },
   "vereditos": []
