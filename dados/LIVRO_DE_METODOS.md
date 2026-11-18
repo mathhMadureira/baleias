@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 53.0% | 2079 | 50.9%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 2084 | 50.9%–55.2% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 100.0% | 1 | 20.7%–100.0% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | connors_8020_alta | promissor | 66.7% | 6 | 30.0%–90.3% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | demark_td9_baixa | promissor | 62.5% | 16 | 38.6%–81.5% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
@@ -15,10 +15,10 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | williams_wr_alta | promissor | 51.4% | 35 | 35.6%–67.0% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | tres_corvos | promissor | 50.7% | 355 | 45.5%–55.9% | H6: três corvos → sobe (efeito pequeno) |
 | raschke_sopa_baixa | reprovado | 50.0% | 6 | 18.8%–81.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
-| williams_volb_baixa | reprovado | 50.0% | 100 | 40.4%–59.6% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | vortice_invertido | reprovado | 49.4% | 391 | 44.4%–54.3% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| williams_volb_baixa | reprovado | 49.0% | 102 | 39.5%–58.6% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | demark_td9_alta | reprovado | 48.1% | 27 | 30.7%–66.0% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
-| williams_volb_alta | reprovado | 46.2% | 80 | 35.7%–57.1% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
+| williams_volb_alta | reprovado | 45.7% | 81 | 35.3%–56.5% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | velez_180_baixa | reprovado | 45.0% | 40 | 30.7%–60.2% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | velez_180_alta | reprovado | 40.0% | 5 | 11.8%–76.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_sopa_alta | reprovado | 40.0% | 10 | 16.8%–68.7% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
@@ -27,5 +27,5 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_espaco_duplo_alto | reprovado | — | 0 | — | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | velez_espaco_duplo_baixo | reprovado | — | 0 | — | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | velez_elefante | reprovado | 0.0% | 1 | 0.0%–79.3% | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
-| velez_estreito_rompe | reprovado | 0.0% | 1 | 0.0%–79.3% | Velez: rompimento do estado estreito (H23: sem vantagem) |
+| velez_estreito_rompe | reprovado | 0.0% | 2 | 0.0%–65.8% | Velez: rompimento do estado estreito (H23: sem vantagem) |
 | williams_wr_baixa | reprovado | — | 0 | — | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
