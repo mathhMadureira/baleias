@@ -1,28 +1,28 @@
 {
- "t": 1795027448,
- "hora_utc": "2026-11-18 18:44 UTC",
+ "t": 1795027679,
+ "hora_utc": "2026-11-18 18:47 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
-  "subindo_pct": 18.7,
-  "mediana_pct": -0.56
+  "subindo_pct": 61.7,
+  "mediana_pct": 0.16
  },
  "mercado_4h": {
   "moedas": 107,
-  "subindo_pct": 13.1,
-  "mediana_pct": -1.34
+  "subindo_pct": 38.3,
+  "mediana_pct": -0.16
  },
  "mercado_24h": {
   "moedas": 107,
-  "subindo_pct": 38.3,
-  "mediana_pct": -0.69
+  "subindo_pct": 60.7,
+  "mediana_pct": 0.54
  },
  "btc": {
-  "1h": -0.33,
-  "4h": -1.34,
-  "24h": -1.28,
-  "preco": 63143.41,
-  "vol_4h_vs_media": 2.11
+  "1h": 0.1,
+  "4h": -0.1,
+  "24h": -0.75,
+  "preco": 63260.79,
+  "vol_4h_vs_media": 1.84
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "SHELL",
-   "4h": -6.13,
-   "24h": 0.34,
-   "vol": 0.71
-  },
-  {
-   "moeda": "ZKC",
-   "4h": -4.85,
-   "24h": 31.93,
-   "vol": 1.13
+   "4h": -6.06,
+   "24h": 1.45,
+   "vol": 0.65
   },
   {
    "moeda": "BREV",
-   "4h": -4.75,
-   "24h": -15.72,
+   "4h": -3.17,
+   "24h": -16.03,
    "vol": 0.24
   },
   {
    "moeda": "NIGHT",
-   "4h": -4.02,
-   "24h": 1.53,
-   "vol": 1.02
+   "4h": -2.85,
+   "24h": 2.1,
+   "vol": 0.99
+  },
+  {
+   "moeda": "ZKP",
+   "4h": -2.83,
+   "24h": 9.94,
+   "vol": 0.47
+  },
+  {
+   "moeda": "COOKIE",
+   "4h": -2.65,
+   "24h": 9.32,
+   "vol": 0.13
   },
   {
    "moeda": "RLC",
-   "4h": -3.65,
-   "24h": 0.95,
-   "vol": 0.59
+   "4h": -2.62,
+   "24h": 1.61,
+   "vol": 0.57
   },
   {
-   "moeda": "INJ",
-   "4h": -3.51,
-   "24h": -2.91,
-   "vol": 1.88
+   "moeda": "ONE",
+   "4h": -2.61,
+   "24h": -1.24,
+   "vol": 1.52
   },
   {
-   "moeda": "NEAR",
-   "4h": -3.44,
-   "24h": 1.45,
-   "vol": 1.74
+   "moeda": "BMT",
+   "4h": -2.44,
+   "24h": -1.08,
+   "vol": 0.73
   },
   {
-   "moeda": "PYTH",
-   "4h": -3.37,
-   "24h": -1.8,
-   "vol": 1.77
-  },
-  {
-   "moeda": "PUMP",
-   "4h": -3.23,
-   "24h": -5.61,
-   "vol": 1.6
+   "moeda": "HEI",
+   "4h": -2.38,
+   "24h": 10.97,
+   "vol": 1.27
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "HUMA",
-   "4h": 23.89,
-   "24h": 20.54,
-   "vol": 3.82
+   "4h": 23.75,
+   "24h": 20.41,
+   "vol": 3.84
   },
   {
    "moeda": "MMT",
-   "4h": 3.09,
-   "24h": 66.78,
-   "vol": 0.96
-  },
-  {
-   "moeda": "ZIL",
-   "4h": 2.74,
-   "24h": 14.63,
-   "vol": 2.74
-  },
-  {
-   "moeda": "PROM",
-   "4h": 1.87,
-   "24h": 3.44,
-   "vol": 2.12
-  },
-  {
-   "moeda": "SENT",
-   "4h": 1.83,
-   "24h": 9.05,
-   "vol": 1.16
-  },
-  {
-   "moeda": "BLUR",
-   "4h": 1.74,
-   "24h": 2.06,
-   "vol": 0.94
+   "4h": 3.39,
+   "24h": 68.53,
+   "vol": 0.95
   },
   {
    "moeda": "CHIP",
-   "4h": 0.56,
-   "24h": 1.83,
-   "vol": 2.92
+   "4h": 3.24,
+   "24h": 5.23,
+   "vol": 2.9
   },
   {
-   "moeda": "DODO",
-   "4h": 0.37,
-   "24h": 2.84,
-   "vol": 1.26
+   "moeda": "BLUR",
+   "4h": 3.17,
+   "24h": 3.83,
+   "vol": 0.88
   },
   {
-   "moeda": "CELO",
-   "4h": 0.35,
-   "24h": 1.13,
-   "vol": 1.63
+   "moeda": "ZIL",
+   "4h": 3.16,
+   "24h": 18.82,
+   "vol": 2.74
   },
   {
    "moeda": "LUNC",
-   "4h": 0.28,
-   "24h": -3.16,
-   "vol": 0.57
+   "4h": 1.85,
+   "24h": -2.96,
+   "vol": 0.59
+  },
+  {
+   "moeda": "SENT",
+   "4h": 1.68,
+   "24h": 8.94,
+   "vol": 1.16
+  },
+  {
+   "moeda": "CELO",
+   "4h": 1.58,
+   "24h": 2.02,
+   "vol": 1.55
+  },
+  {
+   "moeda": "HYPE",
+   "4h": 1.47,
+   "24h": 0.03,
+   "vol": 1.78
+  },
+  {
+   "moeda": "ENSO",
+   "4h": 1.26,
+   "24h": 3.08,
+   "vol": 0.52
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.87,
   -0.57,
   0.56,
-  0.27
+  0.19
  ],
  "contexto": {
-  "t": 1795027449,
+  "t": 1795027679,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795027563,
+    "hora_utc": "18/11 18:46",
+    "titulo": "Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795026472,
@@ -260,12 +266,6 @@
     "t": 1795009357,
     "hora_utc": "18/11 13:42",
     "titulo": "CoinShares sells all treasury ETH, halves SOL holdings for buybacks"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795009040,
-    "hora_utc": "18/11 13:37",
-    "titulo": "Morning Minute: Nvidia Beats, Board Says ‘No’ on Jensen"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 7.7,
    "principais_anual_pct": {
-    "BTC": 10.4,
+    "BTC": 10.9,
     "ETH": 5.4,
-    "SOL": 9.3
+    "SOL": 9.2
    },
    "leitura": "neutro"
   },
@@ -393,18 +393,22 @@
   }
  },
  "v4": {
-  "vela": "18:30 UTC",
-  "apostas": 91,
-  "compras": 51,
-  "vendas": 40,
+  "vela": "18:45 UTC",
+  "apostas": 106,
+  "compras": 30,
+  "vendas": 76,
   "mais_confiantes_venda": [
    {
-    "moeda": "STEEM",
-    "prob_subir": 0.358
+    "moeda": "CYBER",
+    "prob_subir": 0.351
    },
    {
     "moeda": "ETC",
     "prob_subir": 0.362
+   },
+   {
+    "moeda": "COOKIE",
+    "prob_subir": 0.369
    },
    {
     "moeda": "SLP",
@@ -415,30 +419,22 @@
     "prob_subir": 0.382
    },
    {
+    "moeda": "RUNE",
+    "prob_subir": 0.384
+   },
+   {
+    "moeda": "OP",
+    "prob_subir": 0.384
+   },
+   {
     "moeda": "PEOPLE",
     "prob_subir": 0.386
-   },
-   {
-    "moeda": "BABAB",
-    "prob_subir": 0.386
-   },
-   {
-    "moeda": "BB",
-    "prob_subir": 0.394
-   },
-   {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
-   },
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.635
    },
    {
     "moeda": "KAIA",
@@ -463,6 +459,10 @@
    {
     "moeda": "COTI",
     "prob_subir": 0.569
+   },
+   {
+    "moeda": "SKL",
+    "prob_subir": 0.564
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -909,38 +909,38 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.6% em 24184 apostas (604 velas, 11/11 18:45–18/11 18:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5562,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.7% em 24205 apostas (604 velas, 11/11 19:00–18/11 18:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5567,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.05,
+  "z_contra_lab": 2.11,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5129,
-    "n": 17334
+    "acerto": 0.5133,
+    "n": 17355
    },
    "segue_maioria_24h": {
-    "acerto": 0.5189,
-    "n": 24171
+    "acerto": 0.5198,
+    "n": 24192
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
     "acerto": 0.5841,
-    "n": 3063
+    "n": 3068
    },
    "confianca:0,08–0,12": {
     "acerto": 0.5895,
     "n": 1357
    },
    "confianca:<0,05": {
-    "acerto": 0.5832,
-    "n": 6554
+    "acerto": 0.5839,
+    "n": 6582
    },
    "confianca:≥0,12": {
-    "acerto": 0.6821,
-    "n": 431
+    "acerto": 0.6813,
+    "n": 433
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5846,
@@ -955,16 +955,16 @@
     "n": 5374
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5272,
-    "n": 7104
+    "acerto": 0.5291,
+    "n": 7125
    },
    "lado:compra": {
-    "acerto": 0.5251,
-    "n": 11219
+    "acerto": 0.5267,
+    "n": 11228
    },
    "lado:venda": {
-    "acerto": 0.5831,
-    "n": 12965
+    "acerto": 0.5827,
+    "n": 12977
    }
   }
  },
