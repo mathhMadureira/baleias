@@ -1,6 +1,6 @@
 {
- "t": 1794994515,
- "hora_utc": "2026-11-18 09:35 UTC",
+ "t": 1794994808,
+ "hora_utc": "2026-11-18 09:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 116,
@@ -172,10 +172,10 @@
   -0.11,
   0.43,
   -0.31,
-  0.07
+  0.03
  ],
  "contexto": {
-  "t": 1794994516,
+  "t": 1794994809,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -277,8 +277,8 @@
    "media_top20_anual_pct": 7.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.1,
-    "SOL": -8.1
+    "ETH": 4.6,
+    "SOL": -7.1
    },
    "leitura": "neutro"
   },
@@ -581,7 +581,7 @@
     "entrada": 1.466,
     "agora": 1.445,
     "resultado_pct": -1.43,
-    "horas_aberta": 8.9,
+    "horas_aberta": 9.0,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -590,7 +590,7 @@
     "entrada": 3.86e-06,
     "agora": 3.87e-06,
     "resultado_pct": 0.26,
-    "horas_aberta": 7.7,
+    "horas_aberta": 7.8,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -722,19 +722,15 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 11.63,
-   "n_abertas": 2,
+   "carteira": 11.8,
+   "n_abertas": 1,
    "abertas": [
     [
      "U",
      "compra"
-    ],
-    [
-     "VET",
-     "compra"
     ]
    ],
-   "n_fechadas": 39,
+   "n_fechadas": 40,
    "ordem": null
   },
   {
@@ -767,7 +763,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
-   "carteira": 12.13,
+   "carteira": 12.32,
    "n_abertas": 4,
    "abertas": [
     [
@@ -779,15 +775,15 @@
      "compra"
     ],
     [
-     "VET",
+     "TLM",
      "compra"
     ],
     [
-     "TLM",
+     "BEAMX",
      "compra"
     ]
    ],
-   "n_fechadas": 95,
+   "n_fechadas": 96,
    "ordem": null
   },
   {
@@ -856,8 +852,8 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.03,
-   "n_abertas": 3,
+   "carteira": 7.01,
+   "n_abertas": 4,
    "abertas": [
     [
      "SOL",
@@ -869,6 +865,10 @@
     ],
     [
      "AVAX",
+     "compra"
+    ],
+    [
+     "BNB",
      "compra"
     ]
    ],
@@ -930,13 +930,13 @@
     "carteira": 9.94
    },
    "cacador": {
-    "ops": 39,
-    "acerto": 0.769,
-    "soma": 1.638,
-    "ganho_medio": 0.137,
+    "ops": 40,
+    "acerto": 0.775,
+    "soma": 1.812,
+    "ganho_medio": 0.138,
     "perda_media": -0.275,
-    "fator_lucro": 1.66,
-    "carteira": 11.63
+    "fator_lucro": 1.73,
+    "carteira": 11.8
    },
    "rapido": {
     "ops": 45,
@@ -957,13 +957,13 @@
     "carteira": 10.62
    },
    "scalper_b": {
-    "ops": 95,
-    "acerto": 0.579,
-    "soma": 2.273,
-    "ganho_medio": 0.115,
+    "ops": 96,
+    "acerto": 0.583,
+    "soma": 2.457,
+    "ganho_medio": 0.116,
     "perda_media": -0.101,
-    "fator_lucro": 1.56,
-    "carteira": 12.13
+    "fator_lucro": 1.61,
+    "carteira": 12.32
    },
    "scalper_c": {
     "ops": 93,
@@ -1017,7 +1017,7 @@
     "ganho_medio": 0.073,
     "perda_media": -0.115,
     "fator_lucro": 0.61,
-    "carteira": 7.03
+    "carteira": 7.01
    },
    "testnet": {
     "ops": 96,
