@@ -1,6 +1,6 @@
 {
- "t": 1794962413,
- "hora_utc": "2026-11-18 00:40 UTC",
+ "t": 1794962661,
+ "hora_utc": "2026-11-18 00:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.56,
   0.58,
   0.33,
-  -0.2
+  -0.36
  ],
  "contexto": {
-  "t": 1794962413,
+  "t": 1794962662,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,7 +274,7 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 9.9,
+   "media_top20_anual_pct": 10.0,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -518,7 +518,7 @@
     "entrada": 964.92,
     "agora": 964.92,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "a favor da alta de 24 h (73,3% subindo): ZEC 24 h +6,91%, 4 h +4,65% sem esticar, comprada no recuo de 1 h (20,0% das moedas subindo); as 2 compras anteriores d"
    },
    {
@@ -527,7 +527,7 @@
     "entrada": 1.466,
     "agora": 1.466,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    }
   ],
@@ -868,7 +868,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 7.25,
+   "carteira": 7.3,
    "n_abertas": 4,
    "abertas": [
     [
@@ -1004,7 +1004,7 @@
     "ganho_medio": 0.081,
     "perda_media": -0.126,
     "fator_lucro": 0.58,
-    "carteira": 7.25
+    "carteira": 7.3
    },
    "testnet": {
     "ops": 96,
