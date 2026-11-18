@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 20:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 20:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -28,7 +28,7 @@ Carteira **US$ 8.48** · 7 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.07** · 4 operações fechadas · 1 abertas
+Carteira **US$ 10.11** · 4 operações fechadas · 1 abertas
 
 - **Total:** 2/4 com lucro (50%), resultado +0.18, média +0.046 por operação.
 - **Últimas 24 h:** 2/4 com lucro, +0.18.
@@ -58,7 +58,7 @@ Carteira **US$ 10.30** · 3 operações fechadas · 1 abertas
 
 - **Amplitude:** 28.0% das moedas subindo em 24 h, 75.7% em 4 h · BTC 24 h -2.29%, 4 h 0.19%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 8.6, 'ETH': 6.8, 'SOL': -1.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 8.2, 'ETH': 6.7, 'SOL': -1.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
