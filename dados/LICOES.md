@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 19:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 19:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 10.71** · 45 operações fechadas · 0 abertas
+Carteira **US$ 10.71** · 45 operações fechadas · 4 abertas
 
 - **Total:** 30/45 com lucro (67%), resultado +0.71, média +0.016 por operação.
 - **Últimas 24 h:** 4/11 com lucro, -0.65.
@@ -32,7 +32,7 @@ Carteira **US$ 11.97** · 48 operações fechadas · 0 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 9.16** · 40 operações fechadas · 0 abertas
+Carteira **US$ 9.16** · 40 operações fechadas · 4 abertas
 
 - **Total:** 21/40 com lucro (52%), resultado -0.84, média -0.021 por operação.
 - **Últimas 24 h:** 11/18 com lucro, -1.28.
@@ -58,30 +58,30 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 8.81** · 13 operações fechadas · 3 abertas
+Carteira **US$ 8.87** · 14 operações fechadas · 2 abertas
 
-- **Total:** 8/13 com lucro (62%), resultado -1.20, média -0.092 por operação.
-- **Últimas 24 h:** 3/6 com lucro, -1.31.
-- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 3 op, 33% certas, -0.62 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
-- **Por lado:** compra: 10 op, 60% certas, -1.21 · venda: 3 op, 67% certas, +0.01
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
+- **Total:** 9/14 com lucro (64%), resultado -1.14, média -0.081 por operação.
+- **Últimas 24 h:** 4/7 com lucro, -1.25.
+- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 4 op, 50% certas, -0.55 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
+- **Por lado:** compra: 10 op, 60% certas, -1.21 · venda: 4 op, 75% certas, +0.07
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
 - **Moedas que mais perderam (≥ 3 op):** ZEC +0.22 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** ZEC +0.22 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 56.1% das moedas subindo em 24 h, 40.2% em 4 h · BTC 24 h -1.39%, 4 h -1.14%.
+- **Amplitude:** 35.5% das moedas subindo em 24 h, 53.3% em 4 h · BTC 24 h -1.66%, 4 h -0.87%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 11.0, 'ETH': 9.4, 'SOL': 3.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 11.0, 'ETH': 9.7, 'SOL': 2.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DOT OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · VIRTUAL OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DOT OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENDLE fundo duplo (alta, formado) · VIRTUAL OCO invertido (alta, formado)
+- 📰 18/11 19:46 UTC · Decrypt: Why CoinShares Just Sold All Its Ethereum and Half Its Solana
 - 📰 18/11 19:16 UTC · Decrypt: Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?
 - 📰 18/11 18:46 UTC · Decrypt: Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom
 - 📰 18/11 18:27 UTC · Cointelegraph: MARA prices $185M debt offering after $1.1B Bitcoin sale
 - 📰 18/11 18:16 UTC · Decrypt: Fed's Waller Calls for 50-Basis-Point Rate Hike, Says Tokenized Finance Still Needs Traditional Banks
 - 📰 18/11 17:32 UTC · Decrypt: Lucky Trader Banks 66,000% Profit on GTA 6 Meme Coin Ticker Confusion
-- 📰 18/11 17:22 UTC · CoinDesk: A $1.5 billion crypto startup is taking on Hyperliquid with a Wall Street playbook
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -119,14 +119,14 @@ Carteira **US$ 8.81** · 13 operações fechadas · 3 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24313 apostas conferidas ao vivo, acerto 55.6%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24377 apostas conferidas ao vivo, acerto 55.7%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H39 (2026-11-13 17:15 BRT): reprovada nos três braços
 - Resultado da H40 (2026-11-14 10:55 BRT): reprovada nos três braços
 - Resultado da H41 (2026-11-14 15:40 BRT): PASSOU — v4.1 substitui o v4
 - Resultado da H42 (2026-11-14 16:00 BRT): reprovada nos três braços
 - Resultado da H45 (2026-11-15 17:10 BRT): reprovada nas 14 tentativas
 - Resultado da H52 (2026-11-15 20:40 BRT): R6 aprovada no juiz pré-registrado; robustez fraca
+- Resultado da H60 (18/11 02:10 UTC, `lab/alavancagem.py` → `dados/lab/alavancagem_resultado.json`): reprovada nos três braços
 
