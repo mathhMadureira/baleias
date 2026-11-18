@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 03:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 03:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.23** · 8 operações fechadas · 3 abertas
 
 - **Amplitude:** 58.8% das moedas subindo em 24 h, 26.1% em 4 h · BTC 24 h -0.28%, 4 h -0.63%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.3%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -3.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 10.8, 'SOL': -6.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · KITE bandeira de baixa (baixa, CONFIRMOU) · SOL fundo duplo (alta, CONFIRMOU) · AR fundo duplo (alta, formado) · ARB topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BTC topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA topo duplo (baixa, formado) · ETH topo duplo (baixa, formado)
 - 📰 18/11 02:39 UTC · Cointelegraph: Ledger hardware implant saga reaches Dubai’s Virgin Megastore
