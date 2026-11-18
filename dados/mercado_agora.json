@@ -1,6 +1,6 @@
 {
- "t": 1794996316,
- "hora_utc": "2026-11-18 10:05 UTC",
+ "t": 1794996610,
+ "hora_utc": "2026-11-18 10:10 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 115,
@@ -172,10 +172,10 @@
   0.43,
   -0.31,
   -0.05,
-  -0.12
+  -0.04
  ],
  "contexto": {
-  "t": 1794996316,
+  "t": 1794996611,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.9,
+   "media_top20_anual_pct": 6.2,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -1.8
+    "SOL": -1.5
    },
    "leitura": "neutro"
   },
@@ -567,7 +567,7 @@
     "entrada": 1.466,
     "agora": 1.439,
     "resultado_pct": -1.84,
-    "horas_aberta": 9.4,
+    "horas_aberta": 9.5,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -576,7 +576,7 @@
     "entrada": 3.86e-06,
     "agora": 3.84e-06,
     "resultado_pct": -0.52,
-    "horas_aberta": 8.2,
+    "horas_aberta": 8.3,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -708,8 +708,8 @@
    "avatar": "🎯",
    "motor": "Cérebro v4",
    "missao": "Sempre posicionado: as apostas mais confiantes do v4, a favor da tendência de 24 h.",
-   "carteira": 11.93,
-   "n_abertas": 3,
+   "carteira": 12.07,
+   "n_abertas": 2,
    "abertas": [
     [
      "U",
@@ -718,13 +718,9 @@
     [
      "VIRTUAL",
      "compra"
-    ],
-    [
-     "BONK",
-     "venda"
     ]
    ],
-   "n_fechadas": 41,
+   "n_fechadas": 42,
    "ordem": null
   },
   {
@@ -846,13 +842,9 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.9,
+   "carteira": 6.84,
    "n_abertas": 3,
    "abertas": [
-    [
-     "ETH",
-     "venda"
-    ],
     [
      "AVAX",
      "compra"
@@ -860,9 +852,13 @@
     [
      "BNB",
      "compra"
+    ],
+    [
+     "LINK",
+     "compra"
     ]
    ],
-   "n_fechadas": 135,
+   "n_fechadas": 136,
    "ordem": null
   },
   {
@@ -920,13 +916,13 @@
     "carteira": 9.64
    },
    "cacador": {
-    "ops": 41,
-    "acerto": 0.78,
-    "soma": 1.887,
+    "ops": 42,
+    "acerto": 0.786,
+    "soma": 2.026,
     "ganho_medio": 0.136,
     "perda_media": -0.275,
-    "fator_lucro": 1.76,
-    "carteira": 11.93
+    "fator_lucro": 1.82,
+    "carteira": 12.07
    },
    "rapido": {
     "ops": 45,
@@ -1001,13 +997,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 135,
-    "acerto": 0.489,
-    "soma": -3.076,
+    "ops": 136,
+    "acerto": 0.485,
+    "soma": -3.094,
     "ganho_medio": 0.073,
-    "perda_media": -0.114,
+    "perda_media": -0.113,
     "fator_lucro": 0.61,
-    "carteira": 6.9
+    "carteira": 6.84
    },
    "testnet": {
     "ops": 96,
