@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.17** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.36** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -58,7 +58,7 @@ Carteira **US$ 10.17** · 4 operações fechadas · 3 abertas
 
 - **Amplitude:** 25.2% das moedas subindo em 24 h, 20.6% em 4 h · BTC 24 h -3.08%, 4 h -1.43%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': 1.3, 'ETH': 1.5, 'SOL': 0.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': 1.2, 'ETH': 1.8, 'SOL': 0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:16 UTC · Decrypt: Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine
