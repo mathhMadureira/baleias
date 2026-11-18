@@ -1,6 +1,6 @@
 {
- "t": 1795006900,
- "hora_utc": "2026-11-18 13:01 UTC",
+ "t": 1795007193,
+ "hora_utc": "2026-11-18 13:06 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   -0.43,
   -0.22,
   -0.22,
-  -0.03
+  -0.02
  ],
  "contexto": {
-  "t": 1795006901,
+  "t": 1795007194,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 2.9,
+   "media_top20_anual_pct": 1.2,
    "principais_anual_pct": {
-    "BTC": 1.3,
-    "ETH": -10.0,
-    "SOL": -7.0
+    "BTC": 3.8,
+    "ETH": -8.5,
+    "SOL": -8.9
    },
    "leitura": "neutro"
   },
@@ -469,7 +469,7 @@
     "entrada": 3.86e-06,
     "agora": 3.83e-06,
     "resultado_pct": -0.78,
-    "horas_aberta": 11.2,
+    "horas_aberta": 11.3,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -712,17 +712,9 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.35,
-   "n_abertas": 4,
+   "carteira": 6.32,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "BTC",
-     "compra"
-    ],
-    [
-     "ETH",
-     "compra"
-    ],
     [
      "XRP",
      "compra"
@@ -732,7 +724,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 143,
+   "n_fechadas": 145,
    "ordem": null
   },
   {
@@ -871,13 +863,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 143,
-    "acerto": 0.476,
-    "soma": -3.475,
+    "ops": 145,
+    "acerto": 0.469,
+    "soma": -3.602,
     "ganho_medio": 0.071,
-    "perda_media": -0.111,
-    "fator_lucro": 0.58,
-    "carteira": 6.35
+    "perda_media": -0.11,
+    "fator_lucro": 0.57,
+    "carteira": 6.32
    },
    "testnet": {
     "ops": 96,
