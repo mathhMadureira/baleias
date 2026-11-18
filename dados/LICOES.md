@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 10:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 10:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -73,7 +73,7 @@ Carteira **US$ 9.53** · 9 operações fechadas · 2 abertas
 
 - **Amplitude:** 63.8% das moedas subindo em 24 h, 36.2% em 4 h · BTC 24 h 0.42%, 4 h -0.17%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.3%/ano · {'BTC': 11.0, 'ETH': 10.4, 'SOL': -4.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': 11.0, 'ETH': 9.5, 'SOL': -5.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT topo duplo (baixa, formado) · APT OCO invertido (alta, formado) · BONK topo duplo (baixa, formado) · BTC topo duplo (baixa, formado) · ENSO topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · KAVA fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 18/11 10:17 UTC · Decrypt: Scattered Spider Hacker Sentenced to 6 Years Over $11.6M in Stolen Crypto
