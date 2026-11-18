@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 00:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 00:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -69,9 +69,9 @@ Carteira **US$ 9.99** · 7 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 76.5% das moedas subindo em 24 h, 79.8% em 4 h · BTC 24 h 0.18%, 4 h 1.1%.
+- **Amplitude:** 77.1% das moedas subindo em 24 h, 79.7% em 4 h · BTC 24 h 0.18%, 4 h 1.1%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.3%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SOL fundo duplo (alta, CONFIRMOU) · XLM fundo duplo (alta, CONFIRMOU) · AR topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · ETHFI fundo duplo (alta, formado) · GALA fundo duplo (alta, formado)
 - 📰 18/11 00:46 UTC · CoinDesk: CFTC nominee questions public benefit of prediction markets as legal fight grows
@@ -117,7 +117,7 @@ Carteira **US$ 9.99** · 7 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 22042 apostas conferidas ao vivo, acerto 55.6%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 22042 apostas conferidas ao vivo, acerto 55.6%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
