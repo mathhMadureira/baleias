@@ -1,6 +1,6 @@
 {
- "t": 1794966925,
- "hora_utc": "2026-11-18 01:55 UTC",
+ "t": 1794967171,
+ "hora_utc": "2026-11-18 01:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.58,
   0.33,
   -0.24,
-  -0.55
+  -0.73
  ],
  "contexto": {
-  "t": 1794966926,
+  "t": 1794967172,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 9.5,
+   "media_top20_anual_pct": 9.4,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": 3.5
+    "SOL": 2.9
    },
    "leitura": "neutro"
   },
@@ -741,7 +741,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
-   "carteira": 11.81,
+   "carteira": 11.64,
    "n_abertas": 4,
    "abertas": [
     [
@@ -753,15 +753,15 @@
      "compra"
     ],
     [
-     "BCH",
+     "SHIB",
      "compra"
     ],
     [
-     "SHIB",
-     "compra"
+     "SOPH",
+     "venda"
     ]
    ],
-   "n_fechadas": 84,
+   "n_fechadas": 85,
    "ordem": null
   },
   {
@@ -770,27 +770,23 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
-   "carteira": 9.71,
-   "n_abertas": 4,
+   "carteira": 9.43,
+   "n_abertas": 3,
    "abertas": [
     [
      "U",
      "compra"
     ],
     [
-     "BCH",
-     "compra"
-    ],
-    [
-     "GALA",
-     "compra"
-    ],
-    [
      "TIA",
      "compra"
+    ],
+    [
+     "SOPH",
+     "venda"
     ]
    ],
-   "n_fechadas": 73,
+   "n_fechadas": 75,
    "ordem": null
   },
   {
@@ -847,7 +843,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.76,
+   "carteira": 6.72,
    "n_abertas": 4,
    "abertas": [
     [
@@ -923,22 +919,22 @@
     "carteira": 10.62
    },
    "scalper_b": {
-    "ops": 84,
-    "acerto": 0.571,
-    "soma": 2.234,
+    "ops": 85,
+    "acerto": 0.565,
+    "soma": 1.755,
     "ganho_medio": 0.107,
-    "perda_media": -0.081,
-    "fator_lucro": 1.76,
-    "carteira": 11.81
+    "perda_media": -0.092,
+    "fator_lucro": 1.52,
+    "carteira": 11.64
    },
    "scalper_c": {
-    "ops": 73,
-    "acerto": 0.548,
-    "soma": 0.357,
+    "ops": 75,
+    "acerto": 0.533,
+    "soma": -0.47,
     "ganho_medio": 0.085,
-    "perda_media": -0.092,
-    "fator_lucro": 1.12,
-    "carteira": 9.71
+    "perda_media": -0.111,
+    "fator_lucro": 0.88,
+    "carteira": 9.43
    },
    "scalper_d": {
     "ops": 83,
@@ -983,7 +979,7 @@
     "ganho_medio": 0.08,
     "perda_media": -0.126,
     "fator_lucro": 0.56,
-    "carteira": 6.76
+    "carteira": 6.72
    },
    "testnet": {
     "ops": 96,
@@ -1002,7 +998,7 @@
    },
    {
     "desafiante": "scalper_c",
-    "veredito": "não ganhou do campeão"
+    "veredito": "no prejuízo: não vira versão nova"
    },
    {
     "desafiante": "scalper_d",
