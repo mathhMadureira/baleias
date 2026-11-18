@@ -1150,7 +1150,7 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
      de resultado por operação = custo real de execução (taxas, escorregamento, stop móvel de 30 min). Relatada, não aprova nem reprova.
   Previsão registrada antes: não sei (o Robô Claude tem 7 operações; amostra pequena).
 
-### H59 — emenda (18/11/2026 ~22:40 BRT = 01:40 UTC, antes de qualquer ordem pela regra nova): a escolha passa a vir do universo inteiro pelo v4
+### H59 — emenda (17/11/2026 ~22:40 BRT = 18/11 01:40 UTC, antes de qualquer ordem pela regra nova): a escolha passa a vir do universo inteiro pelo v4
 - **Pedido do dono (17/11):** "operar no testnet olhando TODAS as moedas"; analisar a cada rodada a probabilidade do v4 de cada moeda, o regime de
   24 h, volume e movimento de 1 h/4 h/24 h, e escolher as melhores oportunidades nos dois lados.
 - **Muda só como o chefe escolhe as `posicoes`** (que valem para o Robô Claude simulado E para o testnet, como antes). Script `universo.py` do chefe:
