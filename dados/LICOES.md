@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 14:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 14:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -58,7 +58,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
+Carteira **US$ 9.02** · 10 operações fechadas · 1 abertas
 
 - **Total:** 7/10 com lucro (70%), resultado -0.58, média -0.058 por operação.
 - **Últimas 24 h:** 2/3 com lucro, -0.70.
@@ -71,11 +71,11 @@ Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 40.4% das moedas subindo em 24 h, 34.2% em 4 h · BTC 24 h -1.42%, 4 h -0.54%.
+- **Amplitude:** 32.5% das moedas subindo em 24 h, 21.9% em 4 h · BTC 24 h -2.79%, 4 h -1.55%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 3.6, 'ETH': -3.0, 'SOL': -3.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': 3.6, 'ETH': -4.0, 'SOL': -3.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ZRO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · APT OCO invertido (alta, formado) · ENA topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · ETHFI topo duplo (baixa, formado) · ETHFI fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · GRAM topo duplo (baixa, formado) · HEI topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ZRO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · APT OCO invertido (alta, formado) · ARB topo duplo (baixa, formado) · ARB fundo duplo (alta, formado) · DASH topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · FF fundo duplo (alta, formado) · GRAM topo duplo (baixa, formado)
 - 📰 18/11 14:20 UTC · Decrypt: Movie2K Defendant Could Hand Over 40,000 Bitcoin to End Trial—and Stay a Billionaire
 - 📰 18/11 14:04 UTC · Cointelegraph: Bitcoin Covenants Part 6: FE Covenants — Enforcing covenants through cryptographically restricted signing keys
 - 📰 18/11 13:42 UTC · Cointelegraph: CoinShares sells all treasury ETH, halves SOL holdings for buybacks
@@ -120,7 +120,7 @@ Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24085 apostas conferidas ao vivo, acerto 55.5%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24123 apostas conferidas ao vivo, acerto 55.6%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
