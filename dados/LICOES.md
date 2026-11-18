@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 22:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 23:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -17,13 +17,13 @@ Carteira **US$ 8.76** · 23 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.37** · 11 operações fechadas · 2 abertas
+Carteira **US$ 8.42** · 13 operações fechadas · 0 abertas
 
-- **Total:** 3/11 com lucro (27%), resultado -1.63, média -0.148 por operação.
-- **Últimas 24 h:** 3/11 com lucro, -1.63.
-- **Por horário:** 12–17 UTC: 2 op, 0% certas, -1.42 · 06–11 UTC: 1 op, 0% certas, -0.79 · 18–23 UTC: 8 op, 38% certas, +0.58
-- **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 7 op, 43% certas, +0.64
-- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 1 op, 100% certas, +0.07 · fora da lista de posições do c: 4 op, 25% certas, +0.69
+- **Total:** 4/13 com lucro (31%), resultado -1.58, média -0.122 por operação.
+- **Últimas 24 h:** 4/13 com lucro, -1.58.
+- **Por horário:** 12–17 UTC: 2 op, 0% certas, -1.42 · 06–11 UTC: 1 op, 0% certas, -0.79 · 18–23 UTC: 10 op, 40% certas, +0.63
+- **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 9 op, 44% certas, +0.69
+- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · fora da lista de posições do c: 4 op, 25% certas, +0.69
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
@@ -58,11 +58,11 @@ Carteira **US$ 10.96** · 11 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 21.5% das moedas subindo em 24 h, 7.5% em 4 h · BTC 24 h -3.56%, 4 h -1.19%.
+- **Amplitude:** 20.4% das moedas subindo em 24 h, 8.3% em 4 h · BTC 24 h -3.56%, 4 h -1.19%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': 3.9, 'ETH': 2.9, 'SOL': -2.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 2.9, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · INIT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · INIT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
 - 📰 18/11 22:16 UTC · Decrypt: Ledger Confirms Tampered Bitcoin Wallets in Berlin as Spy Implant Probe Spreads Beyond Asia
 - 📰 18/11 22:09 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -106,7 +106,7 @@ Carteira **US$ 10.96** · 11 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24923 apostas conferidas ao vivo, acerto 55.6%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24944 apostas conferidas ao vivo, acerto 55.6%; prevê 58 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
