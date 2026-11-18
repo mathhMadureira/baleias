@@ -1,6 +1,6 @@
 {
- "t": 1794965936,
- "hora_utc": "2026-11-18 01:38 UTC",
+ "t": 1794966181,
+ "hora_utc": "2026-11-18 01:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.58,
   0.33,
   -0.24,
-  -0.46
+  -0.55
  ],
  "contexto": {
-  "t": 1794965937,
+  "t": 1794966181,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 10.2,
+   "media_top20_anual_pct": 10.0,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": 5.0
+    "SOL": 4.3
    },
    "leitura": "neutro"
   },
@@ -674,7 +674,7 @@
    "avatar": "🌲",
    "motor": "Cérebro v4",
    "missao": "Todas as apostas do v4 nas 140 moedas, as mais confiantes primeiro, segurando enquanto a tendência dura.",
-   "carteira": 11.11,
+   "carteira": 11.23,
    "n_abertas": 4,
    "abertas": [
     [
@@ -690,11 +690,11 @@
      "compra"
     ],
     [
-     "USTC",
-     "venda"
+     "SHIB",
+     "compra"
     ]
    ],
-   "n_fechadas": 40,
+   "n_fechadas": 41,
    "ordem": null
   },
   {
@@ -715,7 +715,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
-   "carteira": 11.54,
+   "carteira": 11.67,
    "n_abertas": 4,
    "abertas": [
     [
@@ -731,11 +731,11 @@
      "compra"
     ],
     [
-     "USTC",
-     "venda"
+     "SHIB",
+     "compra"
     ]
    ],
-   "n_fechadas": 83,
+   "n_fechadas": 84,
    "ordem": null
   },
   {
@@ -838,7 +838,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.91,
+   "carteira": 6.87,
    "n_abertas": 4,
    "abertas": [
     [
@@ -896,13 +896,13 @@
     "carteira": 11.86
    },
    "rapido": {
-    "ops": 40,
-    "acerto": 0.725,
-    "soma": 1.653,
+    "ops": 41,
+    "acerto": 0.732,
+    "soma": 1.773,
     "ganho_medio": 0.128,
     "perda_media": -0.187,
-    "fator_lucro": 1.8,
-    "carteira": 11.11
+    "fator_lucro": 1.86,
+    "carteira": 11.23
    },
    "scalper": {
     "ops": 83,
@@ -914,13 +914,13 @@
     "carteira": 10.62
    },
    "scalper_b": {
-    "ops": 83,
-    "acerto": 0.566,
-    "soma": 2.11,
+    "ops": 84,
+    "acerto": 0.571,
+    "soma": 2.234,
     "ganho_medio": 0.107,
     "perda_media": -0.081,
-    "fator_lucro": 1.72,
-    "carteira": 11.54
+    "fator_lucro": 1.76,
+    "carteira": 11.67
    },
    "scalper_c": {
     "ops": 73,
@@ -974,7 +974,7 @@
     "ganho_medio": 0.08,
     "perda_media": -0.126,
     "fator_lucro": 0.56,
-    "carteira": 6.91
+    "carteira": 6.87
    },
    "testnet": {
     "ops": 96,
