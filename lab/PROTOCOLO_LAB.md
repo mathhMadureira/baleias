@@ -1275,3 +1275,21 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   aponta perda por operação perto do custo.
 - **Juiz (torneio H50):** por agente, depois de 30 operações abertas a partir desta hora: fator de lucro > 1 e carteira > US$ 10. As operações de antes
   desta hora (H61) ficam separadas.
+
+## Hipótese 63: raspagem das melhores carteiras da Hyperliquid ("monitor fomo") como sinal para os agentes (registrada em 18/11/2026 ~18:40 BRT = 21:40 UTC, antes de rodar)
+- **Pedido do dono (18/11):** "os agentes façam uma raspagem pelas moedas e também nas melhores carteiras, tipo um monitor fomo, e comecem a operar
+  depois dessa raspagem em scalper". Referências buscadas antes: bots que copiam o ranking da Hyperliquid (ranking 1×/dia, posições a cada poucos
+  minutos, posição nova = sinal), o fomo.family (feed do que os melhores traders compram e vendem) e o aviso de que perto do topo do ranking há
+  carteiras que só copiam as 10 primeiras. O teste 1 deste projeto (copiar carteiras grandes da Hyperliquid, saída em 4 h) parou com 18 sinais:
+  +0,239% [−0,655; +1,132], sem conclusão.
+- **Raspagem das carteiras (fixa):** ranking público `stats-data.hyperliquid.xyz/Mainnet/leaderboard`, renovado a cada 24 h. Entram contas com
+  valor ≥ US$ 50 mil, lucro > 0 no mês, na semana e no total, ROI do mês ≥ 5% e giro do mês (volume ÷ conta) ≥ 10 (trader ativo, não quem só segura);
+  as 40 de maior ROI do mês. A cada rodada da nuvem (~4 min), as posições abertas delas (`clearinghouseState`, API pública) e os preços de meio de
+  livro (`allMids`). Moeda da Hyperliquid vira o par USDT da Binance (kPEPE → PEPE). Arquivo: `dados/carteiras_top.json`.
+- **O que os agentes recebem (descritivo, não decide sozinho):** por moeda, quantas das 40 estão compradas e vendidas, o valor líquido, e o "feed":
+  posições abertas ou fechadas por elas na última hora. A raspagem das moedas (v4, movimento, memecoins) continua. Os agentes decidem livres (H62).
+- **Teste automático do sinal (o juiz desta hipótese):** cada abertura nova (moeda, lado) por uma das 40 vira um evento com o preço de meio da hora;
+  é resolvido entre 60 e 75 min depois: retorno no lado da carteira menos 0,12% de custo. Rodadas que perderem a janela não resolvem (evento descartado).
+  **Passa** com ≥ 300 eventos resolvidos: média > 0, t ≥ 2 com erro-padrão por hora de abertura (aberturas da mesma hora andam juntas) e média > 0 em
+  2 dos 3 blocos de tempo. Leitura extra, não decide: o mesmo para eventos em que 2+ das 40 abriram o mesmo lado na mesma moeda em 1 hora.
+  Uma tentativa só; o filtro das 40 não muda depois de ver.
