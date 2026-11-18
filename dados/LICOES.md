@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.24** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.10** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -58,15 +58,15 @@ Carteira **US$ 10.24** · 4 operações fechadas · 3 abertas
 
 - **Amplitude:** 27.1% das moedas subindo em 24 h, 69.2% em 4 h · BTC 24 h -2.51%, 4 h -0.31%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 0.8, 'ETH': 0.8, 'SOL': -1.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 0.9, 'ETH': 1.1, 'SOL': -1.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:16 UTC · Decrypt: Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine
+- 📰 18/11 21:13 UTC · Cointelegraph: Ledger warns Berlin customers as hardware wallet tampering investigation expands
 - 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
 - 📰 18/11 20:20 UTC · Cointelegraph: Binance says it obtained $6.5B worldwide freezing order after hack
 - 📰 18/11 20:16 UTC · Decrypt: Google's Genie 4 Is Here, Letting Ultra Subscribers Build AI Worlds in Real Time
 - 📰 18/11 19:46 UTC · Decrypt: Why CoinShares Just Sold All Its Ethereum and Half Its Solana
-- 📰 18/11 19:16 UTC · Decrypt: Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

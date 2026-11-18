@@ -1,6 +1,6 @@
 {
- "t": 1795036797,
- "hora_utc": "2026-11-18 21:19 UTC",
+ "t": 1795037015,
+ "hora_utc": "2026-11-18 21:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
@@ -172,16 +172,22 @@
   0.09,
   -0.67,
   -0.19,
-  -0.01
+  -0.15
  ],
  "contexto": {
-  "t": 1795036798,
+  "t": 1795037015,
   "noticias": [
    {
     "fonte": "Decrypt",
     "t": 1795036562,
     "hora_utc": "18/11 21:16",
     "titulo": "Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795036438,
+    "hora_utc": "18/11 21:13",
+    "titulo": "Ledger warns Berlin customers as hardware wallet tampering investigation expands"
    },
    {
     "fonte": "Cointelegraph",
@@ -260,12 +266,6 @@
     "t": 1795021073,
     "hora_utc": "18/11 16:57",
     "titulo": "'It Speaks in Tongues That Only 6.2 Astra Understands': Why Early Testers Hate OpenAI’s New Model"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795019660,
-    "hora_utc": "18/11 16:34",
-    "titulo": "Bitcoin, stocks wobble as Fed’s Waller talks of ‘shock’ 50-point rate hike"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 4.8,
    "principais_anual_pct": {
-    "BTC": 0.8,
-    "ETH": 0.8,
-    "SOL": -1.6
+    "BTC": 0.9,
+    "ETH": 1.1,
+    "SOL": -1.5
    },
    "leitura": "neutro"
   },
@@ -469,7 +469,7 @@
     "entrada": 0.526,
     "agora": 0.526,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "v4 0,392 de subir (confiança 0,108); regime baixa (26,4% sobem em 24 h); repique 4 h +1,94% contra 24 h −4,54%, 1 h +0,00%, volume 4 h 0,55×"
    }
   ],
@@ -685,7 +685,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.24,
+   "carteira": 10.1,
    "n_abertas": 3,
    "abertas": [
     [
@@ -751,7 +751,7 @@
     "ganho_medio": 0.107,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 10.24
+    "carteira": 10.1
    }
   },
   "vereditos": []
