@@ -3,6 +3,80 @@
 Cada seção é escrita pela rotina diária de pesquisa. Nada aqui é resultado: é candidato a pré-registro em `lab/PROTOCOLO_LAB.md`.
 Fontes da internet são dados de terceiros; números entre aspas são os que a fonte dá, e "não sei" onde ela não dá.
 
+## 2026-11-18
+
+**Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/robo_v4_cacador.json`, 10:19 UTC):
+
+| | |
+|---|---|
+| Campeão do torneio | **Caçador** (42 op, acerto 78,6%, fator de lucro 1,82, soma +2,03, carteira 11,98) |
+| Outros com ≥ 30 op | Scalper B 1,61 (96 op, +2,46; "GANHOU do campeão" do Scalper) · Rápido 1,23 (45) · Scalper 1,19 (83) · Minerador 0,70 (40) |
+| Onde o Caçador perde | 9 perdas somam −2,47; **3 stops de segurança de −2% = −1,82 (74%)**: HEMI compra 15/11 14:00, BCH compra 18/11 00:15, PYTH compra 18/11 00:30 |
+| Por horário / lado | 00–06 UTC 11 op −0,14; 12–18 UTC 1 op −0,53; 18–24 UTC 25 op +2,11 · compras 26 op +0,77, vendas 16 op +1,25 |
+| Segmento fraco do vigia | compras 52,5% (10.864) × vendas 58,3% (12.396); 18–24 h UTC 52,6% (7.043); ≥ 0,12 de confiança 67,9% (414) |
+
+Observação do dado: o Caçador escolhe **moedas estáveis** pela probabilidade do v4. RWUSDUSDT ficou 12,5 h aberta (−0,036, "tempo máximo"),
+UUSDT fechou −0,028 em 16/11, e agora há **UUSDT comprada de novo a 1,0003 há 13,6 h** (pico +0,01%), ocupando 1 das 4 vagas
+(caixa 6,35 de 12,09). Uma moeda que não se move não paga 0,12% de custo.
+
+**Mercado hoje** (`dados/mercado_agora.json`): BTC 64.599, +0,42% em 24 h, −0,17% em 4 h, volume de 4 h 0,49× a média; 63,8% das 116
+moedas sobem em 24 h, só 33,6% em 1 h. Extremos: NFP −66% em 24 h, MMT +115%, ZKC +34,5% em 4 h.
+
+**Já testado ou já proposto (fora desta lista):** stop/alvo por ATR (H40, ideia de 16/11), OI × prêmio (16/11), janela FOMC/CPI e fluxo
+agressor na vela (17/11), fluxo do quarto de hora, tamanho por volatilidade, alarme de cascata (15/11), 18–24 h UTC (H46), humor como
+filtro de lado (H42), regime de 24 h (H44).
+
+### Ideia 1 — Piso de movimento: não escolher moeda que não paga o custo
+
+- **Regra:** para cada moeda candidata, A = (máxima − mínima) ÷ fechamento das últimas 96 velas de 15 min (24 h). O Caçador (e o Rápido
+  nuvem, que usa a mesma escolha) só pode pegar a moeda se A ≥ 2,0% (= o próprio stop de segurança da R6; parâmetro fixo, sem varredura).
+  Abaixo do piso, a vaga passa para a próxima da lista do v4. 1 tentativa.
+- **Por quê no Caçador:** é um defeito de escolha, não de previsão. Com stop móvel e lucro realizado a +0,50, uma moeda com amplitude
+  diária abaixo do custo × alavancagem fica presa até o "tempo máximo (24 h)" ou a virada de tendência, rendendo ≈ 0 menos custo e
+  tirando a vaga de uma aposta de 18–24 UTC (onde ganha +2,11). Hoje 1 de 4 vagas está assim (UUSDT).
+- **Dados:** velas de 15 min da Binance (grátis); nada novo.
+- **Evidência:** interna e aritmética (3 operações em moedas estáveis: −0,028, −0,036 e uma aberta há 13,6 h). Externa, só qualitativa:
+  o artigo de pares com aprendizado por reforço (arXiv 2407.16103, https://arxiv.org/pdf/2407.16103) diz que o lucro de alta frequência
+  é "sempre significativamente" afetado pelo custo; número para este caso: não sei.
+- **Teste:** todas as apostas do v4 conferidas ao vivo (11/11 em diante, 23.260) + histórico do laboratório, simulando a rota R6 do
+  Caçador com custo 0,12% ida e volta. Compara a carteira com e sem o piso em 3 blocos de tempo. Passa se a média líquida por vaga-hora
+  sobe nos 3 blocos e a soma não cai. 1 tentativa. Risco: poucas moedas estáveis no universo → efeito pequeno; se < 20 apostas forem
+  barradas, veredito "não sei".
+
+### Ideia 2 — Compras na abertura de segunda-feira da Ásia; fora dela, compra exige confiança alta
+
+- **Regra:** janela J = domingo 23:00 UTC a segunda 23:59 UTC. Fora de J, o Caçador só abre **compra** se |p − 0,5| ≥ 0,12 (faixa em que o
+  vigia mede 67,9%); vendas sem mudança. Dentro de J, compras como hoje (2 compras + 2 vendas). 1 tentativa (limiar 0,12 já é a faixa do
+  vigia, não ajustado).
+- **Por quê no Caçador:** o lado fraco do v4 ao vivo é a compra (52,5% × 58,3%), e os 3 stops de −2% que fazem 74% da perda do Caçador
+  foram **todos compras**. Mercado em sexta semana de queda (CoinDesk, abaixo): comprar com 52% de acerto e stop de 2% é a pior combinação.
+  A janela de segunda é onde uma fonte pública acha deriva positiva de tendência.
+- **Dados:** velas de 15 min da Binance (grátis) e a probabilidade gravada de cada aposta (já existe no vigia).
+- **Evidência:** Concretum Group (Zarattini e coautores), "Seasonality in Bitcoin Intraday Trend Trading" —
+  https://concretumgroup.com/seasonality-in-bitcoin-intraday-trend-trading/ : 2018–2025, conjunto de modelos de tendência de alta
+  frequência com volatilidade-alvo de 20%/ano, Sharpe ≈ 1,6 **bruto de custo** (só comprado ≈ 0,8); retornos "fortemente positivos" de
+  domingo ~19:00 ET por ~24 h, alinhados à abertura de Tóquio, efeito "muito mais pronunciado depois de meados de 2020"; domingo de manhã
+  nos EUA é negativo. Retorno da janela em %: não sei (a página não dá). Não é artigo revisado; custo não incluído.
+- **Teste:** apostas de compra do v4 (ao vivo + laboratório), rota R6, custo 0,12%. Três grupos: compras em J, compras fora de J com
+  confiança ≥ 0,12, compras fora de J abaixo de 0,12. Passa se o terceiro grupo tem média líquida < 0 nos 3 blocos de tempo e o filtro
+  melhora a soma da carteira nos 3 blocos. 1 tentativa (só há ~1 segunda por semana: se J tiver < 10 segundas, a parte "J" fica "não sei",
+  e testa-se só o filtro de confiança da compra).
+
+### O que aprendi hoje sobre o mercado cripto
+
+O BTC está em ~64,5 mil, abaixo da média de 200 semanas (~68 mil, segundo resumo de busca), com o sábado 14/11 tendo ido a ~62 mil e
+novembro −17% — sexta perda semanal seguida (CoinDesk, 16/11:
+https://www.coindesk.com/tech/2026/11/16/live-news-bitcoin-posts-sixth-weekly-loss-as-tech-stocks-and-metals-slide). O pano de fundo é
+macro: treasury de 10 anos a 5,116%, índice do dólar na máxima desde abril/2025, e o mercado precificando 100% de **alta** de juros
+de 25 pb na reunião de dezembro do Fed (presidente Kevin Warsh); a ata do Fed é o próximo evento (data: não sei, a página da GuruFocus
+deu 403). Liquidações acima de US$ 2 bilhões em 24 h no fim de semana aparecem em resumo de busca; número conferido no texto: não sei.
+Sobre o relógio do mercado: Brauneis, Mestel & Theissen (Review of Quantitative Finance and Accounting 64(1), 2025,
+https://ideas.repec.org/a/kap/rqfnac/v64y2025i1d10.1007_s11156-024-01304-1.html), 1.940 pares em 38 corretoras: atividade, volatilidade e
+**iliquidez** têm pico entre **16:00 e 17:00 UTC**, igual em todas as corretoras; Wątorek et al. (arXiv 2306.17095,
+https://arxiv.org/abs/2306.17095, BTC/ETH/DOGE/WIN, 2020–2022, 10 s) acham três fases de atividade (Ásia, Europa, EUA), picos nas horas
+cheias e surtos nos anúncios de payroll, CPI e Fed. Para o Caçador: o único stop de 12–18 UTC (HEMI 14:00) caiu na fase de iliquidez
+americana, mas 1 operação não prova nada.
+
 ## 2026-11-17
 
 **Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/robo_scalper_nuvem.json`, 08:45 UTC):
