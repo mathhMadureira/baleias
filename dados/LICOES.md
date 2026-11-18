@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 01:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 01:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -21,7 +21,7 @@ Carteira **US$ 11.23** · 39 operações fechadas · 4 abertas
 Carteira **US$ 12.04** · 32 operações fechadas · 4 abertas
 
 - **Total:** 26/32 com lucro (81%), resultado +2.20, média +0.069 por operação.
-- **Últimas 24 h:** 14/17 com lucro, +1.45.
+- **Últimas 24 h:** 13/16 com lucro, +1.38.
 - **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.53 · 06–11 UTC: 1 op, 0% certas, -0.04 · 00–05 UTC: 9 op, 78% certas, +0.55 · 18–23 UTC: 21 op, 90% certas, +2.22
 - **Por lado:** venda: 13 op, 77% certas, +0.83 · compra: 19 op, 84% certas, +1.36
 - **Por confiança do v4:** alta (0,08–0,12): 4 op, 75% certas, +0.25 · muito alta (≥0,12): 28 op, 82% certas, +1.95
@@ -58,7 +58,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 10.02** · 7 operações fechadas · 2 abertas
+Carteira **US$ 10.08** · 7 operações fechadas · 2 abertas
 
 - **Total:** 5/7 com lucro (71%), resultado +0.11, média +0.016 por operação.
 - **Últimas 24 h:** 5/7 com lucro, +0.11.
@@ -69,11 +69,11 @@ Carteira **US$ 10.02** · 7 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 78.8% das moedas subindo em 24 h, 78.0% em 4 h · BTC 24 h 0.18%, 4 h 1.1%.
+- **Amplitude:** 78.8% das moedas subindo em 24 h, 78.0% em 4 h · BTC 24 h 0.25%, 4 h 1.24%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.4%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -3.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.8%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 6.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SOL fundo duplo (alta, CONFIRMOU) · AR topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · ETHFI fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · ICP fundo duplo (alta, formado) · NEAR topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** AR topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · ETHFI fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · ICP fundo duplo (alta, formado) · NEAR topo duplo (baixa, formado)
 - 📰 18/11 00:46 UTC · CoinDesk: CFTC nominee questions public benefit of prediction markets as legal fight grows
 - 📰 18/11 00:16 UTC · Cointelegraph: Nvidia board rejects Huang comeback despite record $116B quarter
 - 📰 17/11 23:16 UTC · Decrypt: Why Microsoft Thinks Smaller, Cheaper AI Can Beat Claude and GPT
@@ -113,11 +113,11 @@ Carteira **US$ 10.02** · 7 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 22072 apostas conferidas ao vivo, acerto 55.6%; prevê 92 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 22074 apostas conferidas ao vivo, acerto 55.5%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
