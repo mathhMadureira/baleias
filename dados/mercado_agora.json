@@ -1,21 +1,21 @@
 {
- "t": 1795038671,
- "hora_utc": "2026-11-18 21:51 UTC",
+ "t": 1795038898,
+ "hora_utc": "2026-11-18 21:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 107,
-  "subindo_pct": 56.1,
-  "mediana_pct": 0.07
+  "moedas": 106,
+  "subindo_pct": 56.6,
+  "mediana_pct": 0.09
  },
  "mercado_4h": {
-  "moedas": 107,
-  "subindo_pct": 25.2,
+  "moedas": 106,
+  "subindo_pct": 24.5,
   "mediana_pct": -0.56
  },
  "mercado_24h": {
-  "moedas": 107,
-  "subindo_pct": 24.3,
-  "mediana_pct": -1.76
+  "moedas": 106,
+  "subindo_pct": 24.5,
+  "mediana_pct": -1.77
  },
  "btc": {
   "1h": -0.34,
@@ -142,10 +142,10 @@
    "vol": 1.13
   },
   {
-   "moeda": "ATM",
-   "4h": 1.55,
-   "24h": -1.24,
-   "vol": 0.65
+   "moeda": "MARSCOIN",
+   "4h": 1.52,
+   "24h": 3.41,
+   "vol": 0.75
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.09,
   -0.67,
   -0.19,
-  -0.4
+  -0.49
  ],
  "contexto": {
-  "t": 1795038672,
+  "t": 1795038899,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.1,
+   "media_top20_anual_pct": 2.8,
    "principais_anual_pct": {
-    "BTC": 1.2,
-    "ETH": 1.0,
-    "SOL": -0.2
+    "BTC": 0.8,
+    "ETH": 0.8,
+    "SOL": -0.5
    },
    "leitura": "neutro"
   },
@@ -455,7 +455,7 @@
     "entrada": 0.526,
     "agora": 0.526,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.6,
+    "horas_aberta": 0.7,
     "motivo_de_entrada": "v4 0,392 de subir (confiança 0,108); regime baixa (26,4% sobem em 24 h); repique 4 h +1,94% contra 24 h −4,54%, 1 h +0,00%, volume 4 h 0,55×"
    },
    {
@@ -464,7 +464,7 @@
     "entrada": 0.0441,
     "agora": 0.0442,
     "resultado_pct": -0.23,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "v4 0,402 de subir (confiança 0,098, faixa 0,08–0,12 acerta 59,2% ao vivo em 1.398); regime baixa (25,5% sobem em 24 h); repique 1 h +1,14% com 4 h −0,45%, 24 h "
    }
   ],
@@ -638,7 +638,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.35,
+   "carteira": 8.39,
    "n_abertas": 2,
    "abertas": [
     [
@@ -727,7 +727,7 @@
     "ganho_medio": 0.457,
     "perda_media": -0.416,
     "fator_lucro": 0.37,
-    "carteira": 8.35
+    "carteira": 8.39
    },
    "treinador": {
     "ops": 5,
@@ -767,12 +767,12 @@
   "z_contra_lab": 2.38,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5123,
-    "n": 17647
+    "acerto": 0.5126,
+    "n": 17616
    },
    "segue_maioria_24h": {
-    "acerto": 0.5189,
-    "n": 24473
+    "acerto": 0.5172,
+    "n": 24219
    }
   },
   "referencia_ganha": [],

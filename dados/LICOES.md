@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -17,7 +17,7 @@ Carteira **US$ 8.53** · 18 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.35** · 8 operações fechadas · 2 abertas
+Carteira **US$ 8.39** · 8 operações fechadas · 2 abertas
 
 - **Total:** 2/8 com lucro (25%), resultado -1.58, média -0.198 por operação.
 - **Últimas 24 h:** 2/8 com lucro, -1.58.
@@ -56,9 +56,9 @@ Carteira **US$ 10.51** · 4 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 24.3% das moedas subindo em 24 h, 25.2% em 4 h · BTC 24 h -3.19%, 4 h -1.37%.
+- **Amplitude:** 24.5% das moedas subindo em 24 h, 24.5% em 4 h · BTC 24 h -3.19%, 4 h -1.37%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.1%/ano · {'BTC': 1.2, 'ETH': 1.0, 'SOL': -0.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': 0.8, 'ETH': 0.8, 'SOL': -0.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:46 UTC · Decrypt: ChatGPT, Claude, Gemini and Grok Helped Plan Terror Attacks in Government Tests
@@ -104,7 +104,7 @@ Carteira **US$ 10.51** · 4 operações fechadas · 3 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24736 apostas conferidas ao vivo, acerto 55.8%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24736 apostas conferidas ao vivo, acerto 55.8%; prevê 105 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
