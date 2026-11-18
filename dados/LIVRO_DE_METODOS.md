@@ -4,7 +4,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| rede_neural | comprovado | 52.8% | 2059 | 50.6%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 2060 | 50.7%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 100.0% | 1 | 20.7%–100.0% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 62.5% | 16 | 38.6%–81.5% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
@@ -22,8 +22,8 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | demark_td9_alta | reprovado | 45.8% | 24 | 27.9%–64.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | velez_180_alta | reprovado | 40.0% | 5 | 11.8%–76.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | raschke_sopa_alta | reprovado | 40.0% | 10 | 16.8%–68.7% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
-| raschke_graal_alta | reprovado | 37.5% | 8 | 13.7%–69.4% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | rompimento | reprovado | 36.4% | 33 | 22.2%–53.4% | Tartaruga em 15 min: rompeu a máxima de 55 |
+| raschke_graal_alta | reprovado | 33.3% | 9 | 12.1%–64.6% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | velez_espaco_duplo_alto | reprovado | — | 0 | — | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | velez_espaco_duplo_baixo | reprovado | — | 0 | — | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | velez_elefante | reprovado | 0.0% | 1 | 0.0%–79.3% | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |

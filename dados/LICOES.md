@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 01:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 01:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
 Carteira **US$ 11.36** · 41 operações fechadas · 4 abertas
 
 - **Total:** 30/41 com lucro (73%), resultado +1.77, média +0.043 por operação.
-- **Últimas 24 h:** 8/15 com lucro, +0.18.
+- **Últimas 24 h:** 7/14 com lucro, +0.06.
 - **Por horário:** 12–17 UTC: 2 op, 50% certas, -0.42 · 06–11 UTC: 2 op, 50% certas, +0.05 · 00–05 UTC: 19 op, 74% certas, +0.49 · 18–23 UTC: 18 op, 78% certas, +1.66
 - **Por lado:** venda: 20 op, 70% certas, +0.51 · compra: 21 op, 76% certas, +1.27
 - **Por confiança do v4:** alta (0,08–0,12): 9 op, 67% certas, -0.31 · confiança baixa (<0,05): 3 op, 100% certas, +0.47 · média (0,05–0,08): 4 op, 100% certas, +0.57 · muito alta (≥0,12): 25 op, 68% certas, +1.04
@@ -21,7 +21,7 @@ Carteira **US$ 11.36** · 41 operações fechadas · 4 abertas
 Carteira **US$ 11.81** · 33 operações fechadas · 4 abertas
 
 - **Total:** 27/33 com lucro (82%), resultado +2.48, média +0.075 por operação.
-- **Últimas 24 h:** 14/17 com lucro, +1.66.
+- **Últimas 24 h:** 12/13 com lucro, +1.64.
 - **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.53 · 06–11 UTC: 1 op, 0% certas, -0.04 · 00–05 UTC: 10 op, 80% certas, +0.83 · 18–23 UTC: 21 op, 90% certas, +2.22
 - **Por lado:** venda: 13 op, 77% certas, +0.83 · compra: 20 op, 85% certas, +1.65
 - **Por confiança do v4:** alta (0,08–0,12): 4 op, 75% certas, +0.25 · muito alta (≥0,12): 29 op, 83% certas, +2.23
@@ -32,13 +32,13 @@ Carteira **US$ 11.81** · 33 operações fechadas · 4 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 10.06** · 36 operações fechadas · 4 abertas
+Carteira **US$ 9.54** · 37 operações fechadas · 3 abertas
 
-- **Total:** 20/36 com lucro (56%), resultado +0.06, média +0.002 por operação.
-- **Últimas 24 h:** 13/24 com lucro, -0.46.
-- **Por horário:** 18–23 UTC: 16 op, 56% certas, -0.64 · 06–11 UTC: 5 op, 20% certas, -0.07 · 00–05 UTC: 15 op, 67% certas, +0.77
-- **Por lado:** venda: 20 op, 45% certas, -0.64 · compra: 16 op, 69% certas, +0.70
-- **Por motivo de saída:** guarda do dia: chegou a +0.81 : 3 op, 0% certas, -0.57 · stop de segurança −2.0%: 1 op, 0% certas, -0.55 · meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.53%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.68%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.51%, guard: 2 op, 100% certas, +0.12 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15 · stop móvel (pico +0.62%, guard: 2 op, 100% certas, +0.16 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.17 · stop móvel (pico +0.52%, guard: 3 op, 100% certas, +0.19
+- **Total:** 20/37 com lucro (54%), resultado -0.46, média -0.012 por operação.
+- **Últimas 24 h:** 13/25 com lucro, -0.98.
+- **Por horário:** 18–23 UTC: 16 op, 56% certas, -0.64 · 06–11 UTC: 5 op, 20% certas, -0.07 · 00–05 UTC: 16 op, 62% certas, +0.25
+- **Por lado:** venda: 20 op, 45% certas, -0.64 · compra: 17 op, 65% certas, +0.18
+- **Por motivo de saída:** stop de segurança −2.0%: 2 op, 0% certas, -1.07 · guarda do dia: chegou a +0.81 : 3 op, 0% certas, -0.57 · meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.53%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.68%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.51%, guard: 2 op, 100% certas, +0.12 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15 · stop móvel (pico +0.62%, guard: 2 op, 100% certas, +0.16 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.17 · stop móvel (pico +0.52%, guard: 3 op, 100% certas, +0.19
 - **Moedas que mais perderam (≥ 3 op):** LSK -0.05 (3 op) · CELO +0.02 (6 op) · BMT +0.16 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** BMT +0.16 (3 op) · CELO +0.02 (6 op) · LSK -0.05 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -58,7 +58,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 9.56** · 7 operações fechadas · 2 abertas
+Carteira **US$ 9.56** · 7 operações fechadas · 4 abertas
 
 - **Total:** 5/7 com lucro (71%), resultado +0.11, média +0.016 por operação.
 - **Últimas 24 h:** 5/7 com lucro, +0.11.
@@ -71,7 +71,7 @@ Carteira **US$ 9.56** · 7 operações fechadas · 2 abertas
 
 - **Amplitude:** 58.8% das moedas subindo em 24 h, 48.7% em 4 h · BTC 24 h -0.66%, 4 h 0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 4.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.7%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 4.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AR topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · ETHFI fundo duplo (alta, formado) · ICP fundo duplo (alta, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP topo duplo (baixa, formado)
 - 📰 18/11 00:46 UTC · CoinDesk: CFTC nominee questions public benefit of prediction markets as legal fight grows
@@ -83,12 +83,12 @@ Carteira **US$ 9.56** · 7 operações fechadas · 2 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
 - 18/11 00:08 UTC · **fora do mercado** · Alta de 24 h pela segunda leitura seguida: 81,0% das moedas sobem em 24 h (81,8% na leitura anterior), 93,4% em 4 h (mediana +2,27%) e 89,3% em 1 h; BTC +0,10% 
 - 17/11 13:13 UTC · **RUNE compra, BTC compra, SOL compra, ZEC compra** · Alta de 24 h: 84,5% das moedas sobem em 24 h (eram 79,5%), 70,9% em 4 h; BTC +1,39% em 24 h, +1,13% em 4 h, volume 1,29×. Pano de fundo: BTC abaixo das médias d
 - 17/11 12:12 UTC · **BTC compra, SOL compra, ZEC compra, RUNE compra** · Alta de 24 h: 79,5% das moedas sobem em 24 h (eram 49,1% às 11:13), 68,8% em 4 h e 86,6% em 1 h; BTC +0,85% em 24 h, +1,37% em 1 h, volume 1,48×. Pano de fundo 
-- 17/11 11:10 UTC · **fora do mercado** · Mercado indeciso: 49,1% das moedas sobem em 24 h (eram 68,2% às 10:40), 13,6% em 4 h e 14,5% em 1 h; BTC −0,71% em 24 h, −0,68% em 4 h, volume 1,3×, em 64117, a
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
