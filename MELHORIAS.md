@@ -115,3 +115,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-17 (noite, 23:10 BRT): **H60 alavancagem na carteira — reprovada, nada muda** (pedido do dono: "não passa de 11 dólares, quero
   alavancagem"). Pré-registrada antes de rodar (c5ea773b); contrafactual nas operações reais (`lab/alavancagem.py`): 3,75× e 5× a carteira a 20×
   levam robôs ao piso (antes do zero: os 9 com 5×; desde o zero: o Radar) e alavancar só quem está no lucro com prova perde nos dois conjuntos.
+- 2026-11-18 (tarde): **todos os robôs destravados (decisão do dono)**: guarda do dia (H54) revogada em `executor/guarda_dia.py` (GUARDA_LIGADA =
+  False; travas antigas soltas na rodada seguinte); ficam a meta de US$ 12, o piso de US$ 5 e os stops. Robô LBank: memecoins primeiro e, no regime
+  neutro, a partir de 1% em 24 h (as outras 3%). Regra 12 do AGENTS.md marcada como revogada. 152 testes.

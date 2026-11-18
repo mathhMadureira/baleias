@@ -10,6 +10,8 @@ Medido antes de ligar (16/11, 36 dias-robô da mesa): dias positivos 7 → 11 e 
 import time
 
 GATILHO, DEVOLVE = 0.25, 0.5
+GUARDA_LIGADA = False  # 18/11: H54 REVOGADA pelo dono ("pode destravar todos eles... quero ver eles operando"): o dia positivo não trava mais.
+                       # Fica só a meta de US$ 12 (H57). Travas da guarda já feitas são soltas na rodada seguinte.
 META = 12.0          # H57: meta do dono (17/11: "ninguém conseguiu fazer mais de 10"). A de +0,50 passou no teste mas segurava quem ganhava;
                      # a de 12 não mudou nada nos dados antigos. Quem protege o lucro do dia é a guarda (GATILHO/DEVOLVE).
 
@@ -30,9 +32,11 @@ def checar(e, agora=None):
     e["guarda_dia"] = d
     if d["travado"] and not d.get("por") and res > d["pico"] * DEVOLVE and res < META:   # trava antiga pela meta de 0,50: destrava
         d["travado"] = False
+    if d["travado"] and not GUARDA_LIGADA and d.get("por") != "meta":                    # guarda revogada (18/11): solta a trava
+        d["travado"], d["destravado_em"] = False, int(agora)
     if d["travado"]:
         return "travado"
-    if res >= META or (d["pico"] >= GATILHO and res <= d["pico"] * DEVOLVE):
+    if res >= META or (GUARDA_LIGADA and d["pico"] >= GATILHO and res <= d["pico"] * DEVOLVE):
         d["travado"], d["travado_em"], d["por"] = True, int(agora), "meta" if res >= META else "guarda"
         return "fechar"
     return "normal"

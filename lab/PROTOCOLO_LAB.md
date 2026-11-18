@@ -1196,3 +1196,13 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
 - Leitura: alavancar multiplica o resultado dos dois lados. Antes do zero (mesa perdendo) o 5× levaria os 9 robôs ao piso; desde o zero o Caçador
   iria a 14,26 e o Scalper B a 11,76, mas o Radar cairia abaixo de US$ 5. Alavancar só quem está no lucro com prova (C) perde nos dois conjuntos:
   o lucro não se repete (como o Banco já mediu). O gargalo é a vantagem por operação, não o tamanho. Nada muda.
+
+### H54 REVOGADA e LBank com memecoins primeiro (decisão do dono, 18/11/2026 ~16:45 BRT = 19:45 UTC)
+- **Dono:** "pode destravar todos eles, eu quero ver eles operando igual em wall street, caçando oportunidades e fazendo entradas seja em short ou em
+  long, mesmo que seja scalper. quero ver o lbank operando em memecoins também." A guarda do dia (H54) sai de todos os robôs antes do fim do juiz
+  dela (17–23/11); as travas feitas por ela são soltas. Ficam a meta de US$ 12 (H57), o piso de US$ 5 e os stops. O juiz da H54 não será feito
+  (registrado como não julgado). Regime de 24 h (H44) continua decidindo o lado; no neutro os robôs operam compra e venda.
+- **H53, adendo 2 (LBank):** memecoins (lista em `executor/robo_lbank_nuvem.py`; 11 com volume e velas de 1 min na LBank em 18/11: DOGE, SHIB, PEPE,
+  WIF, FLOKI, FARTCOIN, PENGU, PEOPLE, CHILLGUY, USELESS, PUMP) vão na frente da fila de entradas e, no regime neutro, entram a favor da tendência
+  de 24 h da própria moeda a partir de 1% (as outras seguem pedindo 3%). Não testado no laboratório; o juiz é o do torneio (H50): fator de lucro e
+  soma das próximas 30 operações, comparadas com as 23 anteriores (soma −4,26, fator 0,47).

@@ -32,6 +32,16 @@ def par_spot(perp):
 
 ORCAMENTO, ALAV, CUSTO_LADO, STOP, MAX_POS, CAPITAL, PISO, MAX_HORAS = 25.0, 10.0, 0.0006, 0.02, 4, 10.0, 5.0, 24
 MIN_REGIME, MIN_NEUTRO = 0.01, 0.03
+# 18/11, pedido do dono ("quero ver o lbank operando em memecoins"): memecoins vão na frente da fila e, no regime neutro, entram a favor da
+# própria tendência de 24 h a partir de 1% (as outras moedas continuam pedindo 3%). Não testado no laboratório: o torneio julga ao vivo.
+MEMES = {"DOGE", "SHIB", "PEPE", "WIF", "BONK", "FLOKI", "BRETT", "POPCAT", "FARTCOIN", "PNUT", "PENGU", "TRUMP", "MEME", "NEIRO", "TURBO",
+         "MOODENG", "GOAT", "MOG", "BOME", "SPX", "PEOPLE", "DOGS", "NOT", "MEW", "GIGA", "PONKE", "ACT", "CHILLGUY", "USELESS", "PUMP",
+         "BABYDOGE", "MYRO", "SLERF", "FWOG", "MICHI", "SUNDOG", "HIPPO", "DEGEN", "TOSHI"}
+MIN_NEUTRO_MEME = 0.01
+
+
+def meme(par):
+    return par[:-4].removeprefix("1000") in MEMES
 ARQ, NOME = "robo_lbank.json", "Robô LBank"
 
 
@@ -82,12 +92,12 @@ def velas15(perp):
     return [x for x in k if int(x[0]) + 900 <= time.time()]
 
 
-def lado_desejado(regime, var24):
+def lado_desejado(regime, var24, e_meme=False):
     if regime == "baixa":
         return "venda" if var24 <= -MIN_REGIME else None
     if regime == "alta":
         return "compra" if var24 >= MIN_REGIME else None
-    if abs(var24) >= MIN_NEUTRO:
+    if abs(var24) >= (MIN_NEUTRO_MEME if e_meme else MIN_NEUTRO):
         return "compra" if var24 > 0 else "venda"
     return None
 
@@ -119,7 +129,7 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
         if not mins.get(par) and (preco <= p["entrada"] * (1 - STOP) if p["lado"] == "compra" else preco >= p["entrada"] * (1 + STOP)):
             textos.append(_fechar(e, par, preco, f"stop de segurança −{STOP:.0%} (preço da rodada; moeda sem velas de 1 min)", agora))
             continue
-        quer = lado_ordem or lado_desejado(regime, var)
+        quer = lado_ordem or lado_desejado(regime, var, meme(par))
         if regime and quer and quer != p["lado"]:
             textos.append(_fechar(e, par, preco, f"tendência de 24 h virou para {regime}", agora))
         elif not regime and quer and quer != p["lado"]:
@@ -130,10 +140,10 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
         return textos
     candidatos = []
     for par, (preco, var) in mkt.items():
-        lado = lado_desejado(regime, var)
+        lado = lado_desejado(regime, var, meme(par))
         if lado and (not lado_ordem or lado == lado_ordem) and par not in e["abertas"]:
-            candidatos.append((abs(var), par, lado, preco, var))
-    for _, par, lado, preco, var in sorted(candidatos, reverse=True):
+            candidatos.append((meme(par), abs(var), par, lado, preco, var))         # memecoins primeiro (pedido do dono, 18/11)
+    for _, _, par, lado, preco, var in sorted(candidatos, reverse=True):
         from executor import tamanho as TM
         noc = TM.nocional(e)                                   # H58: proporcional à carteira
         if len(e["abertas"]) >= MAX_POS or not noc:
@@ -142,7 +152,7 @@ def passo(e, mkt, regime, mins, agora, pausado=False, lado_ordem=None):
             continue                                           # (SPACE1 −11% e AIOT −7% com stop de 2%): só entra onde o stop funciona
         e["caixa"] -= noc / ALAV
         e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco, "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc}
-        textos.append(f"🟣 {NOME} ENTROU {'COMPRADO' if lado == 'compra' else 'VENDIDO'} em {par[:-4]} a {preco:.6g} "
+        textos.append(f"🟣 {NOME} ENTROU {'COMPRADO' if lado == 'compra' else 'VENDIDO'} em {par[:-4]}{' (memecoin)' if meme(par) else ''} a {preco:.6g} "
                       f"({var:+.1%} em 24 h; regime {regime or 'neutro'})")
     return textos
 

@@ -1640,24 +1640,31 @@ class Radar(unittest.TestCase):
 class GuardaDia(unittest.TestCase):
     """H54: dia que chegou a +0,25 e devolveu metade fecha tudo e trava até o dia UTC seguinte; dia negativo segue operando."""
 
-    def test_trava_so_no_lucro_e_destrava_no_dia_seguinte(self):
+    def test_guarda_revogada_nao_trava_e_solta_as_travas_dela(self):
         from executor import guarda_dia as GD
-        t0 = 1794787200                                           # 00:00 UTC
-        e = {"patrimonio": 8.0}
+        t0 = 1795000000 - 1795000000 % 86400 + 3600
+        e = {"patrimonio": 10.0}
         self.assertEqual(GD.checar(e, t0), "normal")
-        e["patrimonio"] = 7.0
-        self.assertEqual(GD.checar(e, t0 + 3600), "normal")          # no prejuízo: nunca trava
-        e["patrimonio"] = 8.30
-        self.assertEqual(GD.checar(e, t0 + 7200), "normal")          # pico +0,30
-        e["patrimonio"] = 8.14
-        self.assertEqual(GD.checar(e, t0 + 9000), "fechar")          # voltou a +0,14 (≤ metade): fecha e trava
-        e["patrimonio"] = 9.0
-        self.assertEqual(GD.checar(e, t0 + 20000), "travado")
-        self.assertEqual(GD.checar(e, t0 + 86400 + 60), "normal")    # dia seguinte
+        e["patrimonio"] = 10.40
+        self.assertEqual(GD.checar(e, t0 + 60), "normal")             # pico +0,40
+        e["patrimonio"] = 10.05
+        self.assertEqual(GD.checar(e, t0 + 120), "normal")            # devolveu: antes fechava; agora segue operando (18/11)
+        e2 = {"patrimonio": 10.1, "guarda_dia": {"data": GD._hoje(t0), "inicio": 10.0, "pico": 0.4, "travado": True, "por": "guarda"}}
+        self.assertEqual(GD.checar(e2, t0 + 180), "normal")           # trava antiga da guarda é solta
+        e3 = {"patrimonio": 23.0, "guarda_dia": {"data": GD._hoje(t0), "inicio": 10.0, "pico": 13.0, "travado": True, "por": "meta"}}
+        self.assertEqual(GD.checar(e3, t0 + 240), "travado")          # a meta de US$ 12 continua
 
-
-class MetaETamanho(unittest.TestCase):
-    """H57: dia que chega a +0,50 fecha e trava. H58: nocional = 2,5 × carteira realizada, só se a margem cabe."""
+    def test_lbank_memecoins_primeiro(self):
+        from executor import robo_lbank_nuvem as L
+        self.assertTrue(L.meme("PEPEUSDT") and L.meme("1000SHIBUSDT") and not L.meme("SOLUSDT"))
+        self.assertEqual(L.lado_desejado(None, 0.015, True), "compra")      # memecoin no neutro: 1% basta
+        self.assertIsNone(L.lado_desejado(None, 0.015, False))              # outras moedas: 3%
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": []}
+        with unittest.mock.patch.object(L, "minutos", return_value=[(0, 1, 1)]):
+            L.passo(e, {"SOLUSDT": (100.0, 0.20), "XUSDT": (1.0, 0.15), "AUSDT": (1.0, 0.12), "BUSDT": (1.0, 0.11),
+                        "PEPEUSDT": (1.0, 0.02), "DOGEUSDT": (1.0, -0.05)}, None, {}, 1000.0)
+        self.assertIn("PEPEUSDT", e["abertas"])
+        self.assertEqual(e["abertas"]["DOGEUSDT"]["lado"], "venda")         # short na memecoin que cai
 
     def test_meta_do_dia(self):
         from executor import guarda_dia as GD
@@ -1865,11 +1872,11 @@ class RoboLBank(unittest.TestCase):
         mkt = {"SOLUSDT": (70.0, -0.06), "PEPEUSDT": (1e-5, -0.10), "DOGEUSDT": (0.2, -0.02), "WIFUSDT": (1.0, -0.03),
                "BONKUSDT": (1e-5, -0.04), "HOODUSDT": (75.0, 0.03)}
         L.passo(e, mkt, "baixa", {}, 1000.0)
-        self.assertEqual(set(e["abertas"]), {"PEPEUSDT", "SOLUSDT", "BONKUSDT", "WIFUSDT"})     # as 4 maiores quedas
+        self.assertEqual(set(e["abertas"]), {"PEPEUSDT", "DOGEUSDT", "BONKUSDT", "WIFUSDT"})    # 18/11: memecoins primeiro (SOL fica fora)
         self.assertEqual({p["lado"] for p in e["abertas"].values()}, {"venda"})
-        L.passo(e, {"SOLUSDT": (69.0, 0.02)}, "alta", {}, 2000.0)
-        self.assertEqual(e["fechadas"][0]["moeda"], "SOLUSDT")
-        self.assertGreater(e["fechadas"][0]["resultado_usd"], 0)                                 # vendeu a 70, saiu a 69
+        L.passo(e, {"PEPEUSDT": (0.9e-5, 0.02)}, "alta", {}, 2000.0)
+        self.assertEqual(e["fechadas"][0]["moeda"], "PEPEUSDT")
+        self.assertGreater(e["fechadas"][0]["resultado_usd"], 0)                                 # vendeu a 1e-5, saiu a 0,9e-5
 
 
 class PainelMesa(unittest.TestCase):

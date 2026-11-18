@@ -16,7 +16,7 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 
 ## Comandos
 
-- Testes: `python3 -m unittest tests.test_baleias` (151 testes; têm de passar antes de qualquer commit).
+- Testes: `python3 -m unittest tests.test_baleias` (152 testes; têm de passar antes de qualquer commit).
 - Checagem de saúde: `python3 checar.py`.
 - Nuvem: `gh workflow run cerebro.yml`, `gh run list --workflow cerebro.yml`; para aplicar código novo na hora, cancelar a rodada viva e disparar outra.
 - Painel: `systemctl --user restart baleias-painel` — no máximo **uma vez por hora**.
@@ -36,7 +36,8 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 9. **Tudo é feito para operar com dinheiro real** (16/11): nenhum robô recebe crédito nem empréstimo; cada um opera só o próprio dinheiro.
 10. **Não existe campeão no prejuízo** (16/11): campeão só com carteira acima de US$ 10 e fator de lucro > 1 (`executor/torneio.py`).
 11. **Nenhum robô é pausado no prejuízo ou com operações abertas** (16/11): `baleias/equipe.pausa_proibida` recusa a ordem.
-12. **Nenhum robô deve terminar as 24 h no prejuízo** (16/11): `executor/guarda_dia.py` (H54) — dia que chegou a +0,25 e devolveu metade fecha tudo e trava até 00:00 UTC.
+12. ~~Nenhum robô deve terminar as 24 h no prejuízo (guarda do dia, H54)~~ — **REVOGADA pelo dono em 18/11**: "pode destravar todos eles,
+    quero ver eles operando". Não existe mais trava de dia positivo; só a meta do dia de US$ 12 (H57) e o piso de US$ 5.
 13. **A decisão não é limitada por tempo** (16/11): nada de esperar vela de 15 min nem sair no fim da vela; a rodada da nuvem roda de novo 1 min depois da anterior.
 
 ## Segurança
