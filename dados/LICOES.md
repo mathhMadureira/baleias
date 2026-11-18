@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.74** · 17 operações fechadas · 2 abertas
+Carteira **US$ 8.72** · 17 operações fechadas · 2 abertas
 
 - **Total:** 10/17 com lucro (59%), resultado -1.26, média -0.074 por operação.
 - **Últimas 24 h:** 5/10 com lucro, -1.38.
@@ -28,13 +28,13 @@ Carteira **US$ 8.39** · 8 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.17** · 4 operações fechadas · 1 abertas
+Carteira **US$ 10.14** · 5 operações fechadas · 1 abertas
 
-- **Total:** 2/4 com lucro (50%), resultado +0.18, média +0.046 por operação.
-- **Últimas 24 h:** 2/4 com lucro, +0.18.
-- **Por horário:** 18–23 UTC: 4 op, 50% certas, +0.18
-- **Por lado:** compra: 2 op, 50% certas, -0.02 · venda: 2 op, 50% certas, +0.21
-- **Por motivo de saída:** v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- **Total:** 2/5 com lucro (40%), resultado +0.14, média +0.027 por operação.
+- **Últimas 24 h:** 2/5 com lucro, +0.14.
+- **Por horário:** 18–23 UTC: 5 op, 40% certas, +0.14
+- **Por lado:** compra: 3 op, 33% certas, -0.07 · venda: 2 op, 50% certas, +0.21
+- **Por motivo de saída:** v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.32** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.43** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -56,10 +56,10 @@ Carteira **US$ 10.32** · 4 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 26.2% das moedas subindo em 24 h, 65.4% em 4 h · BTC 24 h -2.14%, 4 h -0.21%.
+- **Amplitude:** 26.2% das moedas subindo em 24 h, 69.2% em 4 h · BTC 24 h -2.14%, 4 h -0.21%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.6%/ano · {'BTC': -1.1, 'ETH': -0.3, 'SOL': 1.5} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -0.5, 'ETH': -0.7, 'SOL': -0.9} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
 - 📰 18/11 20:20 UTC · Cointelegraph: Binance says it obtained $6.5B worldwide freezing order after hack
@@ -104,7 +104,7 @@ Carteira **US$ 10.32** · 4 operações fechadas · 3 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24585 apostas conferidas ao vivo, acerto 55.8%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24622 apostas conferidas ao vivo, acerto 55.8%; prevê 100 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
