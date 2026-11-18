@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 19:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 19:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,21 +71,21 @@ Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 57.9% das moedas subindo em 24 h, 29.9% em 4 h · BTC 24 h -0.95%, 4 h -0.8%.
+- **Amplitude:** 42.1% das moedas subindo em 24 h, 26.2% em 4 h · BTC 24 h -1.6%, 4 h -1.23%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.2%/ano · {'BTC': 5.0, 'ETH': 3.5, 'SOL': 2.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 7.4, 'ETH': 3.9, 'SOL': 3.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CHIP ombro-cabeça-ombro (baixa, formado) · DOT OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · VIRTUAL OCO invertido (alta, formado)
+- 📰 18/11 19:16 UTC · Decrypt: Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?
 - 📰 18/11 18:46 UTC · Decrypt: Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom
 - 📰 18/11 18:27 UTC · Cointelegraph: MARA prices $185M debt offering after $1.1B Bitcoin sale
 - 📰 18/11 18:16 UTC · Decrypt: Fed's Waller Calls for 50-Basis-Point Rate Hike, Says Tokenized Finance Still Needs Traditional Banks
 - 📰 18/11 17:32 UTC · Decrypt: Lucky Trader Banks 66,000% Profit on GTA 6 Meme Coin Ticker Confusion
 - 📰 18/11 17:22 UTC · CoinDesk: A $1.5 billion crypto startup is taking on Hyperliquid with a Wall Street playbook
-- 📰 18/11 17:05 UTC · Cointelegraph: $25M Ethereum MEV acquittal tests criminal enforcement limits
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 17.5 h.
+- ⚠️ **Rotina parada:** sem decisão há 17.6 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
@@ -112,15 +112,15 @@ Carteira **US$ 8.85** · 11 operações fechadas · 0 abertas
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, reversao_queda, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24263 apostas conferidas ao vivo, acerto 55.6%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24295 apostas conferidas ao vivo, acerto 55.6%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
