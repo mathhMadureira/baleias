@@ -1,21 +1,21 @@
 {
- "t": 1794961901,
- "hora_utc": "2026-11-18 00:31 UTC",
+ "t": 1794962164,
+ "hora_utc": "2026-11-18 00:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 120,
-  "subindo_pct": 20.0,
-  "mediana_pct": -0.47
+  "moedas": 119,
+  "subindo_pct": 20.2,
+  "mediana_pct": -0.46
  },
  "mercado_4h": {
-  "moedas": 120,
-  "subindo_pct": 87.5,
+  "moedas": 119,
+  "subindo_pct": 87.4,
   "mediana_pct": 1.31
  },
  "mercado_24h": {
-  "moedas": 120,
-  "subindo_pct": 73.3,
-  "mediana_pct": 1.78
+  "moedas": 119,
+  "subindo_pct": 73.1,
+  "mediana_pct": 1.79
  },
  "btc": {
   "1h": -0.35,
@@ -172,10 +172,10 @@
   0.56,
   0.58,
   0.33,
-  -0.12
+  -0.21
  ],
  "contexto": {
-  "t": 1794961902,
+  "t": 1794962165,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,7 +274,7 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 9.5,
+   "media_top20_anual_pct": 9.7,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -828,27 +828,23 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 6.05,
-   "n_abertas": 4,
+   "carteira": 5.73,
+   "n_abertas": 3,
    "abertas": [
-    [
-     "MMT",
-     "compra"
-    ],
     [
      "BREV",
      "compra"
     ],
     [
-     "CLAUDIA",
+     "PROS",
      "compra"
     ],
     [
-     "PROS",
+     "CLAUDIA",
      "compra"
     ]
    ],
-   "n_fechadas": 18,
+   "n_fechadas": 20,
    "ordem": null
   },
   {
@@ -974,13 +970,13 @@
     "carteira": 0.9
    },
    "lbank": {
-    "ops": 18,
-    "acerto": 0.5,
-    "soma": -3.837,
+    "ops": 20,
+    "acerto": 0.45,
+    "soma": -4.461,
     "ganho_medio": 0.392,
-    "perda_media": -0.818,
-    "fator_lucro": 0.48,
-    "carteira": 6.05
+    "perda_media": -0.726,
+    "fator_lucro": 0.44,
+    "carteira": 5.73
    },
    "radar": {
     "ops": 101,
@@ -1024,12 +1020,12 @@
   "z_contra_lab": 1.87,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.517,
-    "n": 17194
+    "acerto": 0.5172,
+    "n": 17076
    },
    "segue_maioria_24h": {
-    "acerto": 0.5181,
-    "n": 21948
+    "acerto": 0.5192,
+    "n": 21870
    }
   },
   "referencia_ganha": [],
