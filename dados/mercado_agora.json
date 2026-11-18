@@ -1,6 +1,6 @@
 {
- "t": 1795033381,
- "hora_utc": "2026-11-18 20:23 UTC",
+ "t": 1795033554,
+ "hora_utc": "2026-11-18 20:25 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
@@ -172,11 +172,17 @@
   0.56,
   0.09,
   -0.67,
-  -0.21
+  -0.32
  ],
  "contexto": {
-  "t": 1795033382,
+  "t": 1795033555,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795033237,
+    "hora_utc": "18/11 20:20",
+    "titulo": "Binance says it won $6.5B worldwide freezing order after hack"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795032962,
@@ -260,12 +266,6 @@
     "t": 1795016318,
     "hora_utc": "18/11 15:38",
     "titulo": "German judge proposes dropping Movie2k case if operator hands over $2.56 billion in bitcoin"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795015398,
-    "hora_utc": "18/11 15:23",
-    "titulo": "Hong Kong wants banks to use AI to catch crypto crime before money disappears"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.2,
+   "media_top20_anual_pct": 4.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 9.0,
-    "SOL": 1.4
+    "ETH": 8.9,
+    "SOL": 0.5
    },
    "leitura": "neutro"
   },
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.92,
+  "carteira": 8.88,
   "abertas": [
    {
     "moeda": "ERA",
@@ -608,7 +608,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.92,
+   "carteira": 8.88,
    "n_abertas": 1,
    "abertas": [
     [
@@ -650,7 +650,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.88,
+   "carteira": 9.9,
    "n_abertas": 4,
    "abertas": [
     [
@@ -708,7 +708,7 @@
     "ganho_medio": 0.068,
     "perda_media": -0.353,
     "fator_lucro": 0.39,
-    "carteira": 8.92
+    "carteira": 8.88
    },
    "openbot_testnet": {
     "ops": 4,
@@ -726,7 +726,7 @@
     "ganho_medio": null,
     "perda_media": null,
     "fator_lucro": null,
-    "carteira": 9.88
+    "carteira": 9.9
    },
    "laboratorio": {
     "ops": 0,
