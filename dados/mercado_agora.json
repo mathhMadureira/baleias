@@ -1,6 +1,6 @@
 {
- "t": 1795034079,
- "hora_utc": "2026-11-18 20:34 UTC",
+ "t": 1795034434,
+ "hora_utc": "2026-11-18 20:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
@@ -172,11 +172,17 @@
   0.56,
   0.09,
   -0.67,
-  -0.22
+  -0.21
  ],
  "contexto": {
-  "t": 1795034080,
+  "t": 1795034435,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795033926,
+    "hora_utc": "18/11 20:32",
+    "titulo": "Bain Capital Crypto leads $110M Variational round at $1.5B valuation"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795033237,
@@ -260,12 +266,6 @@
     "t": 1795017774,
     "hora_utc": "18/11 16:02",
     "titulo": "Crypto Long & Short: Crypto exchanges shouldn’t double as the vault"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795016318,
-    "hora_utc": "18/11 15:38",
-    "titulo": "German judge proposes dropping Movie2k case if operator hands over $2.56 billion in bitcoin"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 4.7,
    "principais_anual_pct": {
-    "BTC": 11.0,
-    "ETH": 8.4,
-    "SOL": -0.1
+    "BTC": 10.8,
+    "ETH": 7.7,
+    "SOL": -0.4
    },
    "leitura": "neutro"
   },
@@ -462,7 +462,7 @@
     "entrada": 0.13503,
     "agora": 0.135,
     "resultado_pct": 0.02,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "mantém: regime baixa e v4 não aponta contra (p subir 0.5216)"
    }
   ],
@@ -632,8 +632,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.59,
-   "n_abertas": 3,
+   "carteira": 8.55,
+   "n_abertas": 2,
    "abertas": [
     [
      "USTC",
@@ -642,13 +642,9 @@
     [
      "GTC",
      "venda"
-    ],
-    [
-     "ERA",
-     "compra"
     ]
    ],
-   "n_fechadas": 5,
+   "n_fechadas": 6,
    "ordem": null
   },
   {
@@ -657,8 +653,8 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 10.16,
-   "n_abertas": 4,
+   "carteira": 10.09,
+   "n_abertas": 3,
    "abertas": [
     [
      "GTC",
@@ -671,13 +667,9 @@
     [
      "U",
      "venda"
-    ],
-    [
-     "ASTER",
-     "venda"
     ]
    ],
-   "n_fechadas": 0,
+   "n_fechadas": 1,
    "ordem": null
   },
   {
@@ -698,19 +690,15 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.4,
-   "n_abertas": 2,
+   "carteira": 10.3,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "PUMP",
-     "venda"
-    ],
     [
      "SHIB",
      "venda"
     ]
    ],
-   "n_fechadas": 2,
+   "n_fechadas": 3,
    "ordem": null
   }
  ],
@@ -727,22 +715,22 @@
     "carteira": 8.89
    },
    "openbot_testnet": {
-    "ops": 5,
-    "acerto": 0.2,
-    "soma": -2.271,
+    "ops": 6,
+    "acerto": 0.167,
+    "soma": -2.331,
     "ganho_medio": 0.05,
-    "perda_media": -0.58,
+    "perda_media": -0.476,
     "fator_lucro": 0.02,
-    "carteira": 8.59
+    "carteira": 8.55
    },
    "treinador": {
-    "ops": 0,
-    "acerto": null,
-    "soma": 0,
-    "ganho_medio": null,
+    "ops": 1,
+    "acerto": 1.0,
+    "soma": 0.237,
+    "ganho_medio": 0.237,
     "perda_media": null,
-    "fator_lucro": null,
-    "carteira": 10.16
+    "fator_lucro": 99.0,
+    "carteira": 10.09
    },
    "laboratorio": {
     "ops": 0,
@@ -754,13 +742,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 2,
+    "ops": 3,
     "acerto": 1.0,
-    "soma": 0.177,
-    "ganho_medio": 0.088,
+    "soma": 0.305,
+    "ganho_medio": 0.102,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 10.4
+    "carteira": 10.3
    }
   },
   "vereditos": []

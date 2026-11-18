@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 20:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 20:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -17,20 +17,25 @@ Carteira **US$ 8.89** · 16 operações fechadas · 1 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.59** · 5 operações fechadas · 3 abertas
+Carteira **US$ 8.55** · 6 operações fechadas · 2 abertas
 
-- **Total:** 1/5 com lucro (20%), resultado -2.27, média -0.454 por operação.
-- **Últimas 24 h:** 1/5 com lucro, -2.27.
-- **Por horário:** 12–17 UTC: 2 op, 0% certas, -1.42 · 06–11 UTC: 1 op, 0% certas, -0.79 · 18–23 UTC: 2 op, 50% certas, -0.06
-- **Por lado:** compra: 3 op, 0% certas, -2.21 · venda: 2 op, 50% certas, -0.06
-- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05
+- **Total:** 1/6 com lucro (17%), resultado -2.33, média -0.388 por operação.
+- **Últimas 24 h:** 1/6 com lucro, -2.33.
+- **Por horário:** 12–17 UTC: 2 op, 0% certas, -1.42 · 06–11 UTC: 1 op, 0% certas, -0.79 · 18–23 UTC: 3 op, 33% certas, -0.12
+- **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 2 op, 50% certas, -0.06
+- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · fora da lista de posições do c: 1 op, 0% certas, -0.06 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.16** · 0 operações fechadas · 4 abertas
+Carteira **US$ 10.09** · 1 operações fechadas · 3 abertas
 
-Sem operações fechadas ainda.
+- **Total:** 1/1 com lucro (100%), resultado +0.24, média +0.237 por operação.
+- **Últimas 24 h:** 1/1 com lucro, +0.24.
+- **Por horário:** 18–23 UTC: 1 op, 100% certas, +0.24
+- **Por lado:** venda: 1 op, 100% certas, +0.24
+- **Por motivo de saída:** v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
@@ -40,28 +45,28 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.40** · 2 operações fechadas · 2 abertas
+Carteira **US$ 10.30** · 3 operações fechadas · 1 abertas
 
-- **Total:** 2/2 com lucro (100%), resultado +0.18, média +0.088 por operação.
-- **Últimas 24 h:** 2/2 com lucro, +0.18.
-- **Por horário:** 18–23 UTC: 2 op, 100% certas, +0.18
-- **Por lado:** compra: 2 op, 100% certas, +0.18
-- **Por motivo de saída:** lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18
+- **Total:** 3/3 com lucro (100%), resultado +0.30, média +0.102 por operação.
+- **Últimas 24 h:** 3/3 com lucro, +0.30.
+- **Por horário:** 18–23 UTC: 3 op, 100% certas, +0.30
+- **Por lado:** venda: 1 op, 100% certas, +0.13 · compra: 2 op, 100% certas, +0.18
+- **Por motivo de saída:** memecoin lidera o lado venda e: 1 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
 - **Amplitude:** 28.0% das moedas subindo em 24 h, 60.7% em 4 h · BTC 24 h -2.23%, 4 h 0.04%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 11.0, 'ETH': 8.4, 'SOL': -0.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 10.8, 'ETH': 7.7, 'SOL': -0.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DASH fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
+- 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
 - 📰 18/11 20:20 UTC · Cointelegraph: Binance says it won $6.5B worldwide freezing order after hack
 - 📰 18/11 20:16 UTC · Decrypt: Google's Genie 4 Is Here, Letting Ultra Subscribers Build AI Worlds in Real Time
 - 📰 18/11 19:46 UTC · Decrypt: Why CoinShares Just Sold All Its Ethereum and Half Its Solana
 - 📰 18/11 19:16 UTC · Decrypt: Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?
 - 📰 18/11 18:46 UTC · Decrypt: Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom
-- 📰 18/11 18:27 UTC · Cointelegraph: MARA prices $185M debt offering after $1.1B Bitcoin sale
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
