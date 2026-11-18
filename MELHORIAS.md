@@ -133,3 +133,9 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   da Hyperliquid a cada 24 h → 40 contas ativas e lucrativas (filtro fixo da H63); posições delas e preços de meio (API pública, só leitura);
   feed de aberturas e fechamentos; cada abertura é resolvida em 60–75 min (juiz automático, passa com ≥ 300 eventos e t ≥ 2). Agentes recebem a
   tabela das carteiras e o feed na raspagem (`operar.py escolher`, `universo.py`) e decidem o scalper depois dela (rotina r4). 157 testes.
+- 2026-11-18 (noite): **leitura em todos os tempos, de 1 s a 1 dia, e cada agente lendo sozinho (pedidos do dono).** Ferramenta dos agentes
+  (`OpenBot/Shared/baleias/operar/multitempo.py`, fora do repositório): variação e z de 1 s, 5 s, 15 s, 1 min, 5 min e 15 min (velas de 1 s), 1 h, 4 h
+  e 1 dia; preço contra a MM20 em 6 tempos; volume de 1 min; distância da máxima/mínima de 24 h; padrões gráficos de `lab/padroes_graficos.py` em
+  15 min, 1 h e 4 h (a H45 mostrou que nenhum padrão passa sozinho: contexto, não gatilho). Cada agente varre o PRÓPRIO foco e anota num caderno a
+  leitura de cada entrada; `operar.py aprender` cruza com as fechadas e mostra o que funcionou para ele. Manual de treino: `LEITURA_GRAFICOS.md`.
+  Rotinas r5. Primeira rodada ao vivo (18/11 21:58 UTC) vista na tela do Demo Trading: RUNE, ZEC e AAVE vendidas com stop e alvo na corretora.
