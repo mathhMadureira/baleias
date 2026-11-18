@@ -1,21 +1,21 @@
 {
- "t": 1794981840,
- "hora_utc": "2026-11-18 06:04 UTC",
+ "t": 1794982090,
+ "hora_utc": "2026-11-18 06:08 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 80.5,
+  "moedas": 117,
+  "subindo_pct": 80.3,
   "mediana_pct": 0.59
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 70.3,
+  "moedas": 117,
+  "subindo_pct": 70.9,
   "mediana_pct": 0.44
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 51.7,
-  "mediana_pct": 0.1
+  "moedas": 117,
+  "subindo_pct": 52.1,
+  "mediana_pct": 0.13
  },
  "btc": {
   "1h": 0.4,
@@ -172,10 +172,10 @@
   0.21,
   -0.05,
   0.4,
-  -0.05
+  0.05
  ],
  "contexto": {
-  "t": 1794981841,
+  "t": 1794982091,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.3,
+   "media_top20_anual_pct": 7.0,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -10.6
+    "SOL": -8.3
    },
    "leitura": "neutro"
   },
@@ -602,7 +602,7 @@
     "entrada": 1.466,
     "agora": 1.448,
     "resultado_pct": -1.23,
-    "horas_aberta": 5.4,
+    "horas_aberta": 5.5,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -611,7 +611,7 @@
     "entrada": 3.86e-06,
     "agora": 3.86e-06,
     "resultado_pct": 0.0,
-    "horas_aberta": 4.2,
+    "horas_aberta": 4.3,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -821,27 +821,10 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
-   "carteira": 10.27,
-   "n_abertas": 4,
-   "abertas": [
-    [
-     "U",
-     "compra"
-    ],
-    [
-     "CRV",
-     "compra"
-    ],
-    [
-     "LUNA",
-     "venda"
-    ],
-    [
-     "HOME",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 89,
+   "carteira": 10.14,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 93,
    "ordem": null
   },
   {
@@ -898,7 +881,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.7,
+   "carteira": 6.73,
    "n_abertas": 3,
    "abertas": [
     [
@@ -1008,13 +991,13 @@
     "carteira": 11.86
    },
    "scalper_c": {
-    "ops": 89,
-    "acerto": 0.607,
-    "soma": 0.874,
+    "ops": 93,
+    "acerto": 0.581,
+    "soma": 0.141,
     "ganho_medio": 0.088,
-    "perda_media": -0.111,
-    "fator_lucro": 1.23,
-    "carteira": 10.27
+    "perda_media": -0.118,
+    "fator_lucro": 1.03,
+    "carteira": 10.14
    },
    "scalper_d": {
     "ops": 83,
@@ -1059,7 +1042,7 @@
     "ganho_medio": 0.077,
     "perda_media": -0.121,
     "fator_lucro": 0.56,
-    "carteira": 6.7
+    "carteira": 6.73
    },
    "testnet": {
     "ops": 96,
@@ -1087,7 +1070,7 @@
    },
    {
     "desafiante": "scalper_c",
-    "veredito": "GANHOU do campeão: candidato a nova versão"
+    "veredito": "não ganhou do campeão"
    },
    {
     "desafiante": "scalper_d",
@@ -1103,12 +1086,12 @@
   "z_contra_lab": 1.86,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5132,
-    "n": 17652
+    "acerto": 0.5138,
+    "n": 17496
    },
    "segue_maioria_24h": {
-    "acerto": 0.5149,
-    "n": 22742
+    "acerto": 0.5131,
+    "n": 22707
    }
   },
   "referencia_ganha": [],
