@@ -1206,3 +1206,40 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   WIF, FLOKI, FARTCOIN, PENGU, PEOPLE, CHILLGUY, USELESS, PUMP) vão na frente da fila de entradas e, no regime neutro, entram a favor da tendência
   de 24 h da própria moeda a partir de 1% (as outras seguem pedindo 3%). Não testado no laboratório; o juiz é o do torneio (H50): fator de lucro e
   soma das próximas 30 operações, comparadas com as 23 anteriores (soma −4,26, fator 0,47).
+
+## P1 do Treinador: entrada em aposta velha do v4 (julgada em 18/11/2026 ~21:30 UTC; proposta em `Shared/baleias/propostas.md`)
+
+- **Defeito alegado:** `executor/v4_perp_nuvem.passo` (Caçador, Rápido nuvem, Scalpers A–D) escolhe candidatos em `pendentes` do
+  `cerebro_v4.json` sem olhar a idade. Uma moeda que sai da previsão deixa a aposta lá para sempre (`cerebro_v4_nuvem.passo` só apaga
+  quando a moeda volta a ser prevista). A entrada usa `p["px"]` e `p["t"]` da vela antiga.
+- **Conferido no código:** linhas 159–184 (`entrada = p["px"]`, `entrada_t = (p["t"] + 15 min)`, sem teste de idade), e
+  `stop_movel.conferir`/`preparar`, que confere o stop e o stop móvel nas velas de 1 min **a partir de `entrada_t`**, não da rodada que abriu.
+- **Reproduzido** com um método diferente do do Treinador (`lab/atraso_entrada.py`; atraso = hora do evento "ENTROU" da rodada − `entrada_t`,
+  juntando os eventos de todas as revisões do ramo `estado` até 8d0382f2; todas as fechadas casadas):
+
+| robô | todas: n / soma / fator | velhas (> 30 min): n / soma | limpas: n / soma / fator | limpas que saíram ANTES da rodada que abriu |
+|---|---|---|---|---|
+| Caçador | 48 / +1,969 / 1,69 | 7 / −0,055 | 41 / +2,024 / 1,89 | 7 / +0,983 |
+| Rápido nuvem | 45 / +0,711 / 1,23 | 17 / +0,523 | 28 / +0,187 / 1,09 | 3 / +0,384 |
+| Scalper | 83 / +0,619 / 1,19 | 27 / +0,567 | 56 / +0,052 / 1,02 | 1 / −0,030 |
+| Scalper B | 101 / +1,030 / 1,19 | 28 / +1,094 | 73 / −0,065 / 0,99 | 3 / +0,126 |
+| Scalper C | 93 / +0,141 / 1,03 | 13 / +0,260 | 80 / −0,119 / 0,97 | 7 / +0,555 |
+| Scalper D | 83 / +0,619 / 1,19 | 27 / +0,567 | 56 / +0,052 / 1,02 | 1 / −0,030 |
+
+  Caçador e Rápido batem exatamente com os números do Treinador; no Scalper B, uma operação muda de grupo (72/29 dele, 73/28 aqui).
+  Atraso das limpas: mediana de ~5 min, máximo de 13–20 min. Atraso das velhas: de 2,1 a 99,7 h.
+- **Achado a mais (não estava na P1):** mesmo na vela mais nova, a rodada roda de 0 a 20 min depois do fechamento. A entrada fica no preço do
+  fechamento e o stop móvel é conferido nesses minutos, que já passaram. 7 das 41 limpas do Caçador saíram pelo stop móvel antes de o robô
+  "entrar" (+0,983 de +2,024; fator 29). Também não é executável.
+- **Veredito: P1 APROVADA como correção de simulação** (não é estratégia, então não há juiz de lucro). Ela vem com uma emenda pela mesma razão:
+  1. só entra a aposta cuja vela do sinal é a última vela de 15 min fechada (P1);
+  2. a entrada é no preço e na hora da rodada que abre, e o stop/stop móvel só confere minutos a partir dela (emenda do Laboratório).
+- **Verificação ao vivo (substitui o critério b da P1):** nas próximas 30 operações de cada robô afetado, `lab/atraso_entrada.py` tem de dar zero
+  operações com atraso > 30 min e zero com saída antes da rodada que abriu. Se falhar, a correção volta ao Baleias.
+- **Consequência para os juízes ao vivo** (decidida agora, antes de ver qualquer número depois da correção): as operações abertas antes da
+  correção ficam como registro e não servem de prova. H52 (Rápido e Caçador): 30 operações abertas depois da correção (o prazo de 29/11 se
+  estende até elas existirem). H49: as mesmas operações pós-correção (≥ 30) no lugar da janela até 22/11. Torneio H50/H51 e H53 (só no LBank,
+  outro código, não afetado): placares dos robôs do v4 recomeçam na correção. O pedido de "contar só as limpas" não é aceito, porque as limpas
+  também olham até 20 min do passado.
+- **Não conferido:** Robô Claude simulado (entra no "fechamento de 15 min da rodada seguinte", então pode ter o mesmo defeito), Minerador, Radar, LBank.
+  O Chefe OpenBot no testnet usa ordens reais, então não tem esse defeito.
