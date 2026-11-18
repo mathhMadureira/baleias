@@ -1,6 +1,6 @@
 {
- "t": 1795009214,
- "hora_utc": "2026-11-18 13:40 UTC",
+ "t": 1795009502,
+ "hora_utc": "2026-11-18 13:45 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 116,
@@ -172,10 +172,10 @@
   -0.43,
   -0.22,
   -0.22,
-  -0.01
+  -0.1
  ],
  "contexto": {
-  "t": 1795009215,
+  "t": 1795009503,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -185,9 +185,15 @@
    },
    {
     "fonte": "Cointelegraph",
-    "t": 1795008684,
-    "hora_utc": "18/11 13:31",
+    "t": 1795008840,
+    "hora_utc": "18/11 13:34",
     "titulo": "Here’s what happened in crypto today"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795008739,
+    "hora_utc": "18/11 13:32",
+    "titulo": "Sanctions fears loom over Russia’s regulated crypto trading launch"
    },
    {
     "fonte": "Cointelegraph",
@@ -260,12 +266,6 @@
     "t": 1794997880,
     "hora_utc": "18/11 10:31",
     "titulo": "Bitcoin steadies after Nvidia’s earnings beat as $60K bids stand out"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1794997037,
-    "hora_utc": "18/11 10:17",
-    "titulo": "Scattered Spider Hacker Sentenced to 6 Years Over $11.6M in Stolen Crypto"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.6,
+   "media_top20_anual_pct": 5.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -5.9,
-    "SOL": -0.4
+    "ETH": -5.4,
+    "SOL": 0.4
    },
    "leitura": "neutro"
   },
@@ -476,7 +476,7 @@
     "entrada": 3.86e-06,
     "agora": 3.84e-06,
     "resultado_pct": -0.52,
-    "horas_aberta": 11.8,
+    "horas_aberta": 11.9,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -719,7 +719,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.43,
+   "carteira": 6.4,
    "n_abertas": 3,
    "abertas": [
     [
@@ -880,7 +880,7 @@
     "ganho_medio": 0.071,
     "perda_media": -0.108,
     "fator_lucro": 0.57,
-    "carteira": 6.43
+    "carteira": 6.4
    },
    "testnet": {
     "ops": 96,
