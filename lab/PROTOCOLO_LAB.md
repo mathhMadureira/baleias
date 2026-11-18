@@ -1120,3 +1120,32 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   conseguiu fazer mais de 10"). META volta a US$ 12 (meta do dono; no contrafactual, igual a não ter meta); a guarda H54 continua. Travas
   antigas pela meta de 0,50 são soltas. Robô LBank só entra em moeda com velas de 1 min na LBank (SPACE1 −11% e AIOT −7% com stop de 2%:
   sem velas de 1 min o stop só era conferido a cada rodada).
+
+## Hipótese 59: Chefe OpenBot no testnet — as decisões do chefe executadas com ordens reais e stop na corretora (registrada em 17/11/2026 ~22:00 BRT = 18/11 01:00 UTC, antes de ligar)
+
+- **Pedido do dono (17/11):** o chefe da mesa (agente OpenBot, rotina de 30 min) passa a operar a conta de TESTE de futuros da Binance
+  (`testnet.binancefuture.com`, dinheiro fictício) no lugar do robô "v4 Testnet", com ordens de verdade. Nenhum dinheiro real.
+- **Entrada:** as posições da decisão do chefe (`posicoes` do `dados/decisao_claude.json` que ele mesmo gravou, válida por 75 min), as mesmas
+  do Robô Claude simulado: moeda, lado (compra/venda), até 4 ao mesmo tempo. Executa a mercado na rodada da rotina, logo depois de gravar a
+  decisão (o simulado entra no fechamento de 15 min da rodada seguinte da nuvem). Moeda que não existe nos futuros do testnet, ou cujo nocional
+  mínimo passa de 1,5 × o tamanho da posição, não entra (anotado).
+- **Proteção na corretora:** toda entrada sai junto com um STOP_MARKET reduce-only guardado na corretora (máquina dormindo não deixa posição
+  sem stop; 13/11: −1,68 por isso). Stop inicial = o do Robô Claude: 2 × amplitude média de 1 h (24 h de velas de 15 min do testnet), entre 1,5% e 4%.
+  Se o stop não for aceito, a posição é fechada na hora. **Stop móvel:** a cada rodada (30 min), com as velas de 1 min do testnet desde a última
+  conferência: se o pico a favor chegou a +0,5%, o stop da corretora sobe para entrada ± 70% do pico (nunca desce). Diferença declarada para o
+  simulado: o simulado confere o stop móvel minuto a minuto; aqui ele só sobe a cada 30 min (entre rodadas vale o último stop guardado).
+- **Saídas:** stop da corretora (segurança ou móvel); moeda fora da lista de posições da decisão, ou lado invertido (a mercado, reduce-only);
+  24 h sem nova decisão; guarda do dia (H54: chegou a +0,25 no dia UTC e voltou à metade → fecha tudo e trava até 00:00 UTC); meta do dia de
+  US$ 12 (H57). Sem trava de perda diária; sem pausa no prejuízo ou com operação aberta; piso de US$ 5.
+- **Tamanho:** carteira própria de US$ 10 (contabilidade do robô dentro da conta de teste, que tem ~US$ 4.983); nocional = 2,5 × carteira
+  realizada (H58), alavancagem 10×, margem = nocional ÷ 10.
+- **Custo e resultado:** o resultado de cada operação é o da corretora: `realizedPnl` menos `commission` das execuções (`/fapi/v1/userTrades`),
+  inclusive a taxa da entrada. Preços e execuções são os do testnet (o livro do testnet não é o da Binance real; anotado como limite).
+- **Ao voltar de uma pausa da máquina:** antes de qualquer decisão, confere na corretora posições, stops executados e ordens; o que a corretora
+  fechou entra nas fechadas com o resultado dela. Ordem ou posição na conta que o estado não conhece é cancelada/fechada (conta só deste robô).
+- **Estado:** `dados/robo_openbot_testnet.json` no ramo `estado` (gravado só por este robô); na EQUIPE como "Chefe OpenBot (testnet)".
+- **Juiz (uma avaliação, sem ajuste depois de ver):** ao completar 30 operações fechadas OU 7 dias (25/11/2026, o que vier primeiro).
+  1. **Passa** se o resultado líquido somado for > 0 e o fator de lucro > 1.
+  2. **Comparação declarada:** contra as operações do Robô Claude simulado com `decisao_t` no mesmo período (as mesmas decisões): diferença
+     de resultado por operação = custo real de execução (taxas, escorregamento, stop móvel de 30 min). Relatada, não aprova nem reprova.
+  Previsão registrada antes: não sei (o Robô Claude tem 7 operações; amostra pequena).
