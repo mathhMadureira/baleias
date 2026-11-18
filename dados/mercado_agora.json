@@ -1,6 +1,6 @@
 {
- "t": 1795027224,
- "hora_utc": "2026-11-18 18:40 UTC",
+ "t": 1795027448,
+ "hora_utc": "2026-11-18 18:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
@@ -172,10 +172,10 @@
   -0.87,
   -0.57,
   0.56,
-  0.16
+  0.27
  ],
  "contexto": {
-  "t": 1795027224,
+  "t": 1795027449,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.2,
+   "media_top20_anual_pct": 7.7,
    "principais_anual_pct": {
-    "BTC": 9.7,
-    "ETH": 4.5,
-    "SOL": 8.5
+    "BTC": 10.4,
+    "ETH": 5.4,
+    "SOL": 9.3
    },
    "leitura": "neutro"
   },
@@ -711,12 +711,20 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 5.99,
-   "n_abertas": 1,
+   "carteira": 5.96,
+   "n_abertas": 3,
    "abertas": [
     [
      "SUI",
      "venda"
+    ],
+    [
+     "BNB",
+     "venda"
+    ],
+    [
+     "ETH",
+     "compra"
     ]
    ],
    "n_fechadas": 172,
@@ -864,7 +872,7 @@
     "ganho_medio": 0.071,
     "perda_media": -0.109,
     "fator_lucro": 0.59,
-    "carteira": 5.99
+    "carteira": 5.96
    },
    "testnet": {
     "ops": 96,
