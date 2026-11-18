@@ -105,3 +105,10 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   (`testnet.py`) fica na pasta do agente, fora do repositório; a chave continua só no `.env`. Na EQUIPE como ⚓ "Chefe OpenBot (testnet)",
   estado `dados/robo_openbot_testnet.json` (só ele grava); o painel usa o preço do testnet para este robô. Primeira operação 18/11 01:04 UTC:
   compra de ZEC (0,026 a 961,76, stop 925,33) e RENDER (17,1 a 1,462, stop 1,417). 151 testes.
+- 2026-11-17 (noite, 22:45 BRT): **H59, emenda: o chefe escolhe pelo universo inteiro (pedido do dono).** A cada rodada `universo.py` (pasta do agente)
+  lê a probabilidade do v4 das ~120 moedas, o regime de 24 h, movimento e volume de 1 h/4 h/24 h, se a moeda existe nos futuros do testnet, e
+  compara as memecoins com o perpétuo da LBank; entra só com confiança do v4 ≥ 0,08 (H36), no lado do regime, até 4; mantém as abertas enquanto
+  regime e v4 não virarem contra. Primeiras pela regra nova (18/11 01:45 UTC): USTC vendido (v4 0,343; stop 0,004091 na corretora) e SHIB comprado
+  (1000SHIB a 0,003864; v4 0,645; stop 0,003797). A tela do testnet é o Demo Trading da Binance (demo.binance.com), mesma conta da API: posições e
+  stops (Conditional, reduce-only) aparecem lá. **Achado:** a nuvem às vezes calcula o v4 só nas 33 moedas de reserva (exchangeInfo da Binance
+  levou 38 s; 22:30 BRT: 34 moedas); a análise usa então a rodada completa mais nova de até 15 min. Não corrigido em `lab/universo.py` (anotado).
