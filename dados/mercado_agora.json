@@ -1,20 +1,20 @@
 {
- "t": 1794976502,
- "hora_utc": "2026-11-18 04:35 UTC",
+ "t": 1794976757,
+ "hora_utc": "2026-11-18 04:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 119,
-  "subindo_pct": 49.6,
-  "mediana_pct": 0.0
+  "moedas": 118,
+  "subindo_pct": 50.0,
+  "mediana_pct": 0.03
  },
  "mercado_4h": {
-  "moedas": 119,
-  "subindo_pct": 23.5,
+  "moedas": 118,
+  "subindo_pct": 23.7,
   "mediana_pct": -0.84
  },
  "mercado_24h": {
-  "moedas": 119,
-  "subindo_pct": 52.9,
+  "moedas": 118,
+  "subindo_pct": 53.4,
   "mediana_pct": 0.22
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.75,
   0.03,
   0.21,
-  0.06
+  0.02
  ],
  "contexto": {
-  "t": 1794976503,
+  "t": 1794976758,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 3.7,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -17.5
+    "SOL": -17.7
    },
    "leitura": "neutro"
   },
@@ -302,6 +302,13 @@
     "sentido": "alta",
     "confirmado": true,
     "nivel": null
+   },
+   {
+    "moeda": "APT",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.4315
    },
    {
     "moeda": "BONK",
@@ -337,20 +344,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 1751.39
-   },
-   {
-    "moeda": "GALA",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.001341
-   },
-   {
-    "moeda": "GALA",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.001397
    },
    {
     "moeda": "LINK",
@@ -567,7 +560,7 @@
     "entrada": 964.92,
     "agora": 958.16,
     "resultado_pct": -0.7,
-    "horas_aberta": 3.9,
+    "horas_aberta": 4.0,
     "motivo_de_entrada": "a favor da alta de 24 h (73,3% subindo): ZEC 24 h +6,91%, 4 h +4,65% sem esticar, comprada no recuo de 1 h (20,0% das moedas subindo); as 2 compras anteriores d"
    },
    {
@@ -576,7 +569,7 @@
     "entrada": 1.466,
     "agora": 1.452,
     "resultado_pct": -0.95,
-    "horas_aberta": 3.9,
+    "horas_aberta": 4.0,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -585,7 +578,7 @@
     "entrada": 3.86e-06,
     "agora": 3.85e-06,
     "resultado_pct": -0.26,
-    "horas_aberta": 2.7,
+    "horas_aberta": 2.8,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -780,13 +773,9 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas sem o alvo fixo de +0,5% — deixa o stop móvel levar o lucro.",
-   "carteira": 11.98,
+   "carteira": 11.84,
    "n_abertas": 4,
    "abertas": [
-    [
-     "MORPHO",
-     "compra"
-    ],
     [
      "U",
      "compra"
@@ -798,9 +787,13 @@
     [
      "CRV",
      "compra"
+    ],
+    [
+     "CYBER",
+     "compra"
     ]
    ],
-   "n_fechadas": 89,
+   "n_fechadas": 90,
    "ordem": null
   },
   {
@@ -886,7 +879,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.45,
+   "carteira": 6.49,
    "n_abertas": 3,
    "abertas": [
     [
@@ -987,13 +980,13 @@
     "carteira": 10.62
    },
    "scalper_b": {
-    "ops": 89,
-    "acerto": 0.584,
-    "soma": 2.342,
+    "ops": 90,
+    "acerto": 0.578,
+    "soma": 1.915,
     "ganho_medio": 0.111,
-    "perda_media": -0.092,
-    "fator_lucro": 1.69,
-    "carteira": 11.98
+    "perda_media": -0.101,
+    "fator_lucro": 1.5,
+    "carteira": 11.84
    },
    "scalper_c": {
     "ops": 85,
@@ -1047,7 +1040,7 @@
     "ganho_medio": 0.078,
     "perda_media": -0.122,
     "fator_lucro": 0.52,
-    "carteira": 6.45
+    "carteira": 6.49
    },
    "testnet": {
     "ops": 96,
@@ -1091,12 +1084,12 @@
   "z_contra_lab": 1.91,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.514,
-    "n": 17429
+    "acerto": 0.5141,
+    "n": 17340
    },
    "segue_maioria_24h": {
-    "acerto": 0.5165,
-    "n": 22492
+    "acerto": 0.5169,
+    "n": 22627
    }
   },
   "referencia_ganha": [],
