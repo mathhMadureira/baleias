@@ -1,6 +1,6 @@
 {
- "t": 1795003639,
- "hora_utc": "2026-11-18 12:07 UTC",
+ "t": 1795003930,
+ "hora_utc": "2026-11-18 12:12 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   -0.05,
   -0.43,
   -0.22,
-  -0.08
+  0.0
  ],
  "contexto": {
-  "t": 1795003640,
+  "t": 1795003931,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795003827,
+    "hora_utc": "18/11 12:10",
+    "titulo": "AI Will Make the Next 12 Months 'a Slaughterhouse' for Crypto Security: Anchorage Exec"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795002172,
@@ -260,12 +266,6 @@
     "t": 1794979810,
     "hora_utc": "18/11 05:30",
     "titulo": "U.S. judge says Ethereum has ‘no terms of use,’ clears MIT brothers of $25 million fraud"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794976461,
-    "hora_utc": "18/11 04:34",
-    "titulo": "Bitcoin's 12% slide through key support looks scary, but history says give it 3 months."
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.9,
+   "media_top20_anual_pct": 5.7,
    "principais_anual_pct": {
-    "BTC": 5.4,
-    "ETH": -0.5,
+    "BTC": 8.0,
+    "ETH": -0.7,
     "SOL": -12.3
    },
    "leitura": "neutro"
@@ -761,13 +761,9 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.47,
-   "n_abertas": 3,
+   "carteira": 6.5,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "SUI",
-     "compra"
-    ],
     [
      "BTC",
      "compra"
@@ -777,7 +773,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 142,
+   "n_fechadas": 143,
    "ordem": null
   },
   {
@@ -916,13 +912,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 142,
-    "acerto": 0.472,
-    "soma": -3.49,
-    "ganho_medio": 0.072,
+    "ops": 143,
+    "acerto": 0.476,
+    "soma": -3.475,
+    "ganho_medio": 0.071,
     "perda_media": -0.111,
     "fator_lucro": 0.58,
-    "carteira": 6.47
+    "carteira": 6.5
    },
    "testnet": {
     "ops": 96,
