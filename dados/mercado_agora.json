@@ -1,6 +1,6 @@
 {
- "t": 1794998076,
- "hora_utc": "2026-11-18 10:34 UTC",
+ "t": 1794998368,
+ "hora_utc": "2026-11-18 10:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 116,
@@ -172,10 +172,10 @@
   0.43,
   -0.31,
   -0.05,
-  -0.65
+  -0.68
  ],
  "contexto": {
-  "t": 1794998077,
+  "t": 1794998368,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.4,
+   "media_top20_anual_pct": 5.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 8.8,
-    "SOL": -5.8
+    "ETH": 8.3,
+    "SOL": -6.1
    },
    "leitura": "neutro"
   },
@@ -560,7 +560,7 @@
     "entrada": 1.466,
     "agora": 1.427,
     "resultado_pct": -2.66,
-    "horas_aberta": 9.9,
+    "horas_aberta": 10.0,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    },
    {
@@ -569,7 +569,7 @@
     "entrada": 3.86e-06,
     "agora": 3.84e-06,
     "resultado_pct": -0.52,
-    "horas_aberta": 8.7,
+    "horas_aberta": 8.8,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -839,13 +839,9 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.62,
+   "carteira": 6.55,
    "n_abertas": 3,
    "abertas": [
-    [
-     "BNB",
-     "compra"
-    ],
     [
      "LINK",
      "compra"
@@ -853,9 +849,13 @@
     [
      "ETH",
      "compra"
+    ],
+    [
+     "AVAX",
+     "compra"
     ]
    ],
-   "n_fechadas": 137,
+   "n_fechadas": 138,
    "ordem": null
   },
   {
@@ -994,13 +994,13 @@
     "carteira": 5.74
    },
    "radar": {
-    "ops": 137,
-    "acerto": 0.482,
-    "soma": -3.202,
+    "ops": 138,
+    "acerto": 0.478,
+    "soma": -3.32,
     "ganho_medio": 0.073,
     "perda_media": -0.113,
-    "fator_lucro": 0.6,
-    "carteira": 6.62
+    "fator_lucro": 0.59,
+    "carteira": 6.55
    },
    "testnet": {
     "ops": 96,
