@@ -1,16 +1,16 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.53** · 18 operações fechadas · 2 abertas
+Carteira **US$ 8.55** · 19 operações fechadas · 1 abertas
 
-- **Total:** 10/18 com lucro (56%), resultado -1.42, média -0.079 por operação.
-- **Últimas 24 h:** 5/11 com lucro, -1.54.
-- **Por horário:** 18–23 UTC: 8 op, 38% certas, -0.84 · 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
-- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 7 op, 57% certas, -0.18
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
+- **Total:** 11/19 com lucro (58%), resultado -1.41, média -0.074 por operação.
+- **Últimas 24 h:** 6/12 com lucro, -1.52.
+- **Por horário:** 18–23 UTC: 9 op, 44% certas, -0.82 · 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
+- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 8 op, 62% certas, -0.17
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
 - **Moedas que mais perderam (≥ 3 op):** ZEC +0.22 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** ZEC +0.22 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -28,7 +28,7 @@ Carteira **US$ 8.39** · 8 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.14** · 5 operações fechadas · 1 abertas
+Carteira **US$ 10.19** · 5 operações fechadas · 1 abertas
 
 - **Total:** 2/5 com lucro (40%), resultado +0.14, média +0.027 por operação.
 - **Últimas 24 h:** 2/5 com lucro, +0.14.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.51** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.54** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -58,7 +58,7 @@ Carteira **US$ 10.51** · 4 operações fechadas · 3 abertas
 
 - **Amplitude:** 24.5% das moedas subindo em 24 h, 24.5% em 4 h · BTC 24 h -3.19%, 4 h -1.37%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': 0.8, 'ETH': 0.8, 'SOL': -0.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': 0.7, 'ETH': 0.5, 'SOL': -0.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:46 UTC · Decrypt: ChatGPT, Claude, Gemini and Grok Helped Plan Terror Attacks in Government Tests

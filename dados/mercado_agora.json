@@ -1,6 +1,6 @@
 {
- "t": 1795038898,
- "hora_utc": "2026-11-18 21:54 UTC",
+ "t": 1795039124,
+ "hora_utc": "2026-11-18 21:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
@@ -172,10 +172,10 @@
   0.09,
   -0.67,
   -0.19,
-  -0.49
+  -0.42
  ],
  "contexto": {
-  "t": 1795038899,
+  "t": 1795039125,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 2.8,
    "principais_anual_pct": {
-    "BTC": 0.8,
-    "ETH": 0.8,
-    "SOL": -0.5
+    "BTC": 0.7,
+    "ETH": 0.5,
+    "SOL": -0.4
    },
    "leitura": "neutro"
   },
@@ -447,35 +447,19 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.53,
+  "carteira": 8.55,
   "abertas": [
-   {
-    "moeda": "RUNE",
-    "lado": "venda",
-    "entrada": 0.526,
-    "agora": 0.526,
-    "resultado_pct": -0.0,
-    "horas_aberta": 0.7,
-    "motivo_de_entrada": "v4 0,392 de subir (confiança 0,108); regime baixa (26,4% sobem em 24 h); repique 4 h +1,94% contra 24 h −4,54%, 1 h +0,00%, volume 4 h 0,55×"
-   },
    {
     "moeda": "LA",
     "lado": "venda",
     "entrada": 0.0441,
     "agora": 0.0442,
     "resultado_pct": -0.23,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "v4 0,402 de subir (confiança 0,098, faixa 0,08–0,12 acerta 59,2% ao vivo em 1.398); regime baixa (25,5% sobem em 24 h); repique 1 h +1,14% com 4 h −0,45%, 24 h "
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "ZEC",
-    "lado": "compra",
-    "resultado_usd": 0.09,
-    "motivo_saida": "stop móvel (pico +0.67%, guardou +0.47%)",
-    "motivo_de_entrada": "24 h +10,06%, 4 h +3,57% sem esticar, volume 1,15×; a compra de 12:18 saiu +0,071 pelo stop móvel"
-   },
    {
     "moeda": "RUNE",
     "lado": "compra",
@@ -573,6 +557,13 @@
     "resultado_usd": -0.157,
     "motivo_saida": "stop de segurança −0.6%",
     "motivo_de_entrada": "v4 0,426 de subir (confiança 0,074, faixa 0,05–0,08 acerta 59,2% ao vivo em 1.396); regime baixa; 1 h +0,74%, 4 h +1,72%"
+   },
+   {
+    "moeda": "RUNE",
+    "lado": "venda",
+    "resultado_usd": 0.015,
+    "motivo_saida": "prazo da operação (45 min)",
+    "motivo_de_entrada": "v4 0,392 de subir (confiança 0,108); regime baixa (26,4% sobem em 24 h); repique 4 h +1,94% contra 24 h −4,54%, 1 h +0,0"
    }
   ],
   "licoes_anteriores": [
@@ -617,19 +608,15 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.53,
-   "n_abertas": 2,
+   "carteira": 8.55,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "RUNE",
-     "venda"
-    ],
     [
      "LA",
      "venda"
     ]
    ],
-   "n_fechadas": 18,
+   "n_fechadas": 19,
    "ordem": null
   },
   {
@@ -659,7 +646,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 10.14,
+   "carteira": 10.19,
    "n_abertas": 1,
    "abertas": [
     [
@@ -688,7 +675,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.51,
+   "carteira": 10.54,
    "n_abertas": 3,
    "abertas": [
     [
@@ -712,13 +699,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 18,
-    "acerto": 0.556,
-    "soma": -1.421,
-    "ganho_medio": 0.068,
+    "ops": 19,
+    "acerto": 0.579,
+    "soma": -1.406,
+    "ganho_medio": 0.063,
     "perda_media": -0.263,
-    "fator_lucro": 0.32,
-    "carteira": 8.53
+    "fator_lucro": 0.33,
+    "carteira": 8.55
    },
    "openbot_testnet": {
     "ops": 8,
@@ -736,7 +723,7 @@
     "ganho_medio": 0.15,
     "perda_media": -0.054,
     "fator_lucro": 1.84,
-    "carteira": 10.14
+    "carteira": 10.19
    },
    "laboratorio": {
     "ops": 0,
@@ -754,7 +741,7 @@
     "ganho_medio": 0.107,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 10.51
+    "carteira": 10.54
    }
   },
   "vereditos": []
