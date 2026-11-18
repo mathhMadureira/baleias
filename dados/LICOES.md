@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 07:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 07:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,7 +18,7 @@ Carteira **US$ 10.71** · 45 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 11.44** · 35 operações fechadas · 3 abertas
+Carteira **US$ 11.34** · 35 operações fechadas · 4 abertas
 
 - **Total:** 28/35 com lucro (80%), resultado +1.91, média +0.055 por operação.
 - **Últimas 24 h:** 13/15 com lucro, +1.07.
@@ -58,7 +58,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 9.80** · 9 operações fechadas · 2 abertas
+Carteira **US$ 9.72** · 9 operações fechadas · 2 abertas
 
 - **Total:** 7/9 com lucro (78%), resultado +0.24, média +0.026 por operação.
 - **Últimas 24 h:** 7/9 com lucro, +0.24.
@@ -71,21 +71,21 @@ Carteira **US$ 9.80** · 9 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 59.3% das moedas subindo em 24 h, 64.4% em 4 h · BTC 24 h 0.25%, 4 h 0.45%.
+- **Amplitude:** 51.7% das moedas subindo em 24 h, 61.9% em 4 h · BTC 24 h 0.05%, 4 h 0.42%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 0.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -0.8} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KITE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ARB topo duplo (baixa, formado) · BTC topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · ENSO topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LSK fundo duplo (alta, formado) · MEGA fundo duplo (alta, formado)
+- 📰 18/11 07:27 UTC · CoinDesk: Live updates: Bitcoin stuck near $65,000 as popular 'basis trade' returns dry up
 - 📰 18/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 18/11 05:30 UTC · CoinDesk: U.S. judge says Ethereum has ‘no terms of use,’ clears MIT brothers of $25 million fraud
 - 📰 18/11 04:34 UTC · CoinDesk: Bitcoin's 12% slide through key support looks scary, but history says give it 3 months.
 - 📰 18/11 04:28 UTC · CoinDesk: XRP whales moved $270 million during the selloff. The coins didn’t go to exchanges
 - 📰 18/11 02:39 UTC · Cointelegraph: Ledger hardware implant saga reaches Dubai’s Virgin Megastore
-- 📰 18/11 00:46 UTC · CoinDesk: CFTC nominee questions public benefit of prediction markets as legal fight grows
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 5.7 h.
+- ⚠️ **Rotina parada:** sem decisão há 5.8 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
@@ -120,7 +120,7 @@ Carteira **US$ 9.80** · 9 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 23075 apostas conferidas ao vivo, acerto 55.5%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 23113 apostas conferidas ao vivo, acerto 55.5%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
