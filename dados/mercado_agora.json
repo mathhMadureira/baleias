@@ -1,6 +1,6 @@
 {
- "t": 1795006314,
- "hora_utc": "2026-11-18 12:51 UTC",
+ "t": 1795006605,
+ "hora_utc": "2026-11-18 12:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,11 +172,17 @@
   -0.05,
   -0.43,
   -0.22,
-  -0.21
+  -0.18
  ],
  "contexto": {
-  "t": 1795006315,
+  "t": 1795006606,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795006414,
+    "hora_utc": "18/11 12:53",
+    "titulo": "Bitcoin miner MARA raises $185 million in debt after selling $1 billion BTC to repay loans"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795005937,
@@ -260,12 +266,6 @@
     "t": 1794991276,
     "hora_utc": "18/11 08:41",
     "titulo": "SOL comes out of Breakpoint 7% higher as Solana exits beta"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1794989363,
-    "hora_utc": "18/11 08:09",
-    "titulo": "Bitcoin ETFs lose $240M as CryptoQuant flags bearish market phase"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.5,
+   "media_top20_anual_pct": 5.3,
    "principais_anual_pct": {
-    "BTC": 10.4,
-    "ETH": 0.9,
-    "SOL": -5.5
+    "BTC": 9.7,
+    "ETH": 0.0,
+    "SOL": -6.1
    },
    "leitura": "neutro"
   },
@@ -504,7 +504,7 @@
     "entrada": 3.86e-06,
     "agora": 3.81e-06,
     "resultado_pct": -1.3,
-    "horas_aberta": 11.0,
+    "horas_aberta": 11.1,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -747,7 +747,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.23,
+   "carteira": 6.36,
    "n_abertas": 4,
    "abertas": [
     [
@@ -912,7 +912,7 @@
     "ganho_medio": 0.071,
     "perda_media": -0.111,
     "fator_lucro": 0.58,
-    "carteira": 6.23
+    "carteira": 6.36
    },
    "testnet": {
     "ops": 96,
