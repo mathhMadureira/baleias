@@ -1,20 +1,20 @@
 {
- "t": 1795043381,
- "hora_utc": "2026-11-18 23:09 UTC",
+ "t": 1795043559,
+ "hora_utc": "2026-11-18 23:12 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 108,
-  "subindo_pct": 11.1,
-  "mediana_pct": -0.69
+  "moedas": 107,
+  "subindo_pct": 11.2,
+  "mediana_pct": -0.68
  },
  "mercado_4h": {
-  "moedas": 108,
-  "subindo_pct": 8.3,
-  "mediana_pct": -1.94
+  "moedas": 107,
+  "subindo_pct": 8.4,
+  "mediana_pct": -1.99
  },
  "mercado_24h": {
-  "moedas": 108,
-  "subindo_pct": 21.3,
+  "moedas": 107,
+  "subindo_pct": 21.5,
   "mediana_pct": -3.2
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.19,
   -0.44,
   -0.16,
-  0.59
+  0.56
  ],
  "contexto": {
-  "t": 1795043382,
+  "t": 1795043559,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,9 +274,9 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 4.3,
+   "media_top20_anual_pct": 4.7,
    "principais_anual_pct": {
-    "BTC": 2.1,
+    "BTC": 1.8,
     "ETH": 11.0,
     "SOL": 11.0
    },
@@ -646,15 +646,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.77,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "TRUMP",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 11,
+   "carteira": 10.69,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 12,
    "ordem": null
   }
  ],
@@ -698,13 +693,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 11,
-    "acerto": 0.909,
-    "soma": 0.965,
+    "ops": 12,
+    "acerto": 0.833,
+    "soma": 0.688,
     "ganho_medio": 0.106,
-    "perda_media": -0.096,
-    "fator_lucro": 11.03,
-    "carteira": 10.77
+    "perda_media": -0.186,
+    "fator_lucro": 2.85,
+    "carteira": 10.69
    }
   },
   "vereditos": []
@@ -717,12 +712,12 @@
   "z_contra_lab": 2.32,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5146,
-    "n": 17949
+    "acerto": 0.5142,
+    "n": 17773
    },
    "segue_maioria_24h": {
-    "acerto": 0.5204,
-    "n": 24558
+    "acerto": 0.52,
+    "n": 24615
    }
   },
   "referencia_ganha": [],
