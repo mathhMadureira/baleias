@@ -1969,3 +1969,27 @@ class PainelMesa(unittest.TestCase):
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
         for parte in ('id="placar-tab"', 'id="curvas"', 'id="pos-tab"', 'id="lt-tab"', 'id="kpis"', 'id="banco"', "/api/painel-mesa"):
             self.assertIn(parte, html)
+
+
+class ChefeOpenBotTestnet(unittest.TestCase):
+    """H59 (17/11): o chefe OpenBot opera a conta de teste e aparece na equipe com estado próprio."""
+
+    def test_na_equipe_com_arquivo_proprio(self):
+        from baleias import equipe
+        a = equipe.POR_ID["openbot_testnet"]
+        self.assertEqual(a["arquivo"], "robo_openbot_testnet.json")
+        self.assertEqual(len({x["arquivo"] for x in equipe.EQUIPE}), len(equipe.EQUIPE))      # dois robôs nunca no mesmo arquivo
+        self.assertNotIn("openbot_testnet", {"cacador", "rapido", "scalper", "minerador", "lbank"})
+
+    def test_painel_usa_o_preco_do_testnet(self):
+        from baleias import mesa
+        agora = mesa.ZERO_T + 3600
+        e = {"inicio": "2026-11-18 01:04 UTC", "capital_inicial": 10.0, "caixa": 5.0, "patrimonio": 9.92, "fechadas": [],
+             "abertas": {"ZECUSDT": {"moeda": "ZECUSDT", "lado": "compra", "entrada": 961.76, "entrada_t": agora - 60, "nocional": 25.0,
+                                     "gasto": 2.5, "preco_testnet": 961.43}}}
+        d = mesa.montar_painel({"openbot_testnet": e}, {}, None, {"ZECUSDT": 1000.0}, {}, {}, agora)
+        p = d["abertas"][0]
+        self.assertEqual(p["agora"], 961.43)                                   # não o preço da Binance real (1000)
+        self.assertAlmostEqual(p["resultado_usd"], 25.0 * (961.43 / 961.76 - 1), places=4)
+        self.assertEqual(p["fonte_preco"], "testnet (última rodada)")
+        self.assertEqual(d["linhas"][0]["estado"], "operando")

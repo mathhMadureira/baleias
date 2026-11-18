@@ -10,12 +10,13 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 - Robôs de day trade em cripto (perpétuos da Binance) decididos pelo Cérebro v4 (LightGBM), com carteiras de teste de US$ 10 na mesa.
 - Python 3 só com a biblioteca padrão em produção. numpy e lightgbm só no laboratório (`.venv-ml`) e na nuvem (`pip install numpy lightgbm`).
 - Nuvem: GitHub Actions (`.github/workflows/cerebro.yml`, `testnet.yml`, `robo.yml`); estado dos robôs no ramo `estado`, pasta `dados/`.
+  `testnet.yml` DESLIGADO desde 17/11: a conta de teste é do Chefe OpenBot (H59). Nunca religar com ele operando (dois robôs, uma conta).
 - Máquina local: painel em http://127.0.0.1:8787 (serviço `baleias-painel`), que também hospeda o Rápido 1 min e o Scalper. A máquina
   dorme com frequência e o dono não vai mudar isso: nada que decide dinheiro pode depender dela.
 
 ## Comandos
 
-- Testes: `python3 -m unittest tests.test_baleias` (149 testes; têm de passar antes de qualquer commit).
+- Testes: `python3 -m unittest tests.test_baleias` (151 testes; têm de passar antes de qualquer commit).
 - Checagem de saúde: `python3 checar.py`.
 - Nuvem: `gh workflow run cerebro.yml`, `gh run list --workflow cerebro.yml`; para aplicar código novo na hora, cancelar a rodada viva e disparar outra.
 - Painel: `systemctl --user restart baleias-painel` — no máximo **uma vez por hora**.

@@ -51,7 +51,10 @@ EQUIPE = (
     {"id": "radar", "nome": "Radar", "avatar": "📡", "arquivo": "robo_radar.json", "motor": "leitura de 1 s em todos os tempos (H56)",
      "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo."},
     {"id": "testnet", "nome": "v4 Testnet", "avatar": "🧪", "arquivo": "robo_v4_testnet.json", "motor": "Cérebro v4",
-     "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram."},
+     "missao": "Prova na conta de teste da Binance, com ordens reais, o que as simulações mostram. Desligado em 17/11 (a conta passou ao Chefe OpenBot)."},
+    {"id": "openbot_testnet", "nome": "Chefe OpenBot (testnet)", "avatar": "⚓", "arquivo": "robo_openbot_testnet.json",
+     "motor": "chefe da mesa (OpenBot, rotina de 30 min)",
+     "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide para a mesa."},
 )
 POR_ID = {a["id"]: a for a in EQUIPE}
 POR_ARQUIVO = {a["arquivo"]: a for a in EQUIPE}

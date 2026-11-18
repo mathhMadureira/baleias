@@ -95,3 +95,13 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   **Achado (não corrigido aqui, é do `executor/`):** depois do zero de 16/11, Caçador, Rápido nuvem e os 4 Scalpers gravaram 4 a 20
   operações abertas e fechadas ANTES do zero (sinais velhos do v4 reprocessados com o estado vazio); estão na carteira (−0,59 a +0,13).
   O painel mostra a contagem em cada robô.
+- 2026-11-17 (noite): **Chefe OpenBot no testnet (H59, pré-registrada antes de ligar, commit 12e8c002).** O agente OpenBot que já decide a mesa
+  a cada 30 min passa a operar a conta de TESTE de futuros da Binance com ordens de verdade, no lugar do robô "v4 Testnet": `testnet.yml`
+  desligado e a rodada viva cancelada; conta conferida vazia (sem posição, sem ordem normal nem condicional, saldo de teste 4.983,17).
+  Executa as posições da própria decisão do chefe (as mesmas do Robô Claude simulado), a mercado, e **toda entrada sai com STOP_MARKET
+  reduce-only guardado na corretora** (a corretora aceitou pela API de ordens condicionais, `algoOrder`); stop inicial igual ao do Robô Claude,
+  stop móvel subindo na corretora a cada rodada, guarda do dia e meta de 12, 24 h, carteira de US$ 10 a 2,5×/10×. Resultado = o da corretora
+  (realizedPnl − commission). Ao voltar de uma pausa da máquina, confere primeiro a conta (stops executados, órfãos). O operador
+  (`testnet.py`) fica na pasta do agente, fora do repositório; a chave continua só no `.env`. Na EQUIPE como ⚓ "Chefe OpenBot (testnet)",
+  estado `dados/robo_openbot_testnet.json` (só ele grava); o painel usa o preço do testnet para este robô. Primeira operação 18/11 01:04 UTC:
+  compra de ZEC (0,026 a 961,76, stop 925,33) e RENDER (17,1 a 1,462, stop 1,417). 151 testes.

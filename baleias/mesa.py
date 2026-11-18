@@ -565,6 +565,8 @@ def montar_painel(estados, ordens, banco, precos, precos_lbank, idades, agora, r
             par = par if par.endswith("USDT") else par + "USDT"
             ent, lado, noc = float(p.get("entrada") or 0), _lado(p), _nocional_pos(p)
             px_agora = (precos_lbank if a["id"] == "lbank" else precos).get(par)
+            if a["id"] == "openbot_testnet":                 # conta de TESTE: o preço que vale é o do testnet, gravado pelo robô na última rodada
+                px_agora = p.get("preco_testnet")
             res = (1 if lado == "compra" else -1) * noc * (px_agora / ent - 1) if px_agora and ent else None
             t0 = float(p.get("entrada_t") or 0) or None
             n_ab += 1
@@ -572,7 +574,7 @@ def montar_painel(estados, ordens, banco, precos, precos_lbank, idades, agora, r
             abertas.append({"robo": a["id"], "nome": a["nome"], "avatar": a["avatar"], "moeda": par[:-4], "lado": lado, "entrada": ent,
                             "agora": px_agora, "nocional": round(noc, 2), "resultado_usd": None if res is None else round(res, 4),
                             "resultado_pct": None if res is None else round(res / noc * 100, 3), "desde": t0,
-                            "fonte_preco": "LBank" if a["id"] == "lbank" else "Binance à vista", "motivo": str(p.get("motivo") or "")[:160]})
+                            "fonte_preco": "LBank" if a["id"] == "lbank" else "testnet (última rodada)" if a["id"] == "openbot_testnet" else "Binance à vista", "motivo": str(p.get("motivo") or "")[:160]})
             if t0:
                 tempo.append({"t": t0, "tipo": "entrada", "robo": a["id"], "nome": a["nome"], "avatar": a["avatar"], "moeda": par[:-4],
                               "lado": lado, "preco": ent, "motivo": str(p.get("motivo") or "")[:160], "aberta": True})
