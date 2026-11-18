@@ -1,28 +1,28 @@
 {
- "t": 1795005718,
- "hora_utc": "2026-11-18 12:41 UTC",
+ "t": 1795006012,
+ "hora_utc": "2026-11-18 12:46 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
-  "subindo_pct": 49.6,
-  "mediana_pct": 0.0
+  "subindo_pct": 24.8,
+  "mediana_pct": -0.37
  },
  "mercado_4h": {
   "moedas": 117,
-  "subindo_pct": 37.6,
-  "mediana_pct": -0.49
+  "subindo_pct": 27.4,
+  "mediana_pct": -0.76
  },
  "mercado_24h": {
   "moedas": 117,
-  "subindo_pct": 35.0,
-  "mediana_pct": -1.02
+  "subindo_pct": 33.3,
+  "mediana_pct": -1.29
  },
  "btc": {
-  "1h": 0.13,
-  "4h": -0.81,
-  "24h": -1.15,
-  "preco": 64236.65,
-  "vol_4h_vs_media": 0.58
+  "1h": -0.22,
+  "4h": -1.04,
+  "24h": -1.38,
+  "preco": 64062.2,
+  "vol_4h_vs_media": 0.61
  },
  "maiores_quedas_4h": [
   {
@@ -35,117 +35,117 @@
    "moeda": "ZKP",
    "4h": -15.44,
    "24h": 11.65,
-   "vol": 1.35
+   "vol": 1.29
   },
   {
    "moeda": "BREV",
-   "4h": -7.99,
-   "24h": 52.68,
+   "4h": -9.41,
+   "24h": 53.52,
    "vol": 0.37
   },
   {
    "moeda": "GRAM",
-   "4h": -4.02,
-   "24h": -0.19,
-   "vol": 1.13
+   "4h": -4.01,
+   "24h": 0.0,
+   "vol": 1.15
   },
   {
    "moeda": "RARE",
-   "4h": -3.66,
-   "24h": -14.73,
-   "vol": 1.08
-  },
-  {
-   "moeda": "SOPH",
-   "4h": -2.86,
-   "24h": 9.68,
-   "vol": 2.86
+   "4h": -3.48,
+   "24h": -16.18,
+   "vol": 1.15
   },
   {
    "moeda": "STEEM",
-   "4h": -2.59,
-   "24h": -1.99,
-   "vol": 0.49
-  },
-  {
-   "moeda": "ICP",
-   "4h": -2.49,
-   "24h": -7.11,
-   "vol": 1.42
+   "4h": -3.05,
+   "24h": -2.51,
+   "vol": 0.45
   },
   {
    "moeda": "RLC",
-   "4h": -2.1,
-   "24h": 4.35,
-   "vol": 2.42
+   "4h": -2.54,
+   "24h": 3.6,
+   "vol": 2.2
+  },
+  {
+   "moeda": "ICP",
+   "4h": -2.23,
+   "24h": -6.6,
+   "vol": 1.45
+  },
+  {
+   "moeda": "KAVA",
+   "4h": -2.14,
+   "24h": 2.86,
+   "vol": 0.75
   },
   {
    "moeda": "XRP",
-   "4h": -1.95,
-   "24h": 1.25,
-   "vol": 1.01
+   "4h": -2.09,
+   "24h": 0.94,
+   "vol": 1.04
   }
  ],
  "maiores_altas_4h": [
   {
+   "moeda": "HEI",
+   "4h": 8.39,
+   "24h": 13.28,
+   "vol": 4.94
+  },
+  {
    "moeda": "MMT",
-   "4h": 9.81,
-   "24h": 106.3,
-   "vol": 1.14
+   "4h": 6.94,
+   "24h": 112.27,
+   "vol": 1.12
   },
   {
    "moeda": "ZKC",
-   "4h": 7.45,
-   "24h": 28.39,
-   "vol": 4.07
-  },
-  {
-   "moeda": "NIGHT",
-   "4h": 6.85,
-   "24h": -2.6,
-   "vol": 1.5
+   "4h": 6.2,
+   "24h": 22.78,
+   "vol": 3.91
   },
   {
    "moeda": "SHELL",
-   "4h": 5.0,
-   "24h": 7.11,
-   "vol": 1.29
-  },
-  {
-   "moeda": "HEI",
-   "4h": 4.58,
-   "24h": 8.5,
-   "vol": 4.74
-  },
-  {
-   "moeda": "MEGA",
-   "4h": 2.88,
-   "24h": 5.41,
-   "vol": 1.52
-  },
-  {
-   "moeda": "ZBT",
-   "4h": 2.8,
-   "24h": 5.96,
-   "vol": 4.33
-  },
-  {
-   "moeda": "ATM",
-   "4h": 2.34,
-   "24h": 7.51,
-   "vol": 0.58
-  },
-  {
-   "moeda": "LA",
-   "4h": 2.28,
-   "24h": 6.9,
-   "vol": 1.59
+   "4h": 5.94,
+   "24h": 8.3,
+   "vol": 1.42
   },
   {
    "moeda": "ZIL",
-   "4h": 2.2,
-   "24h": 11.33,
-   "vol": 0.92
+   "4h": 4.84,
+   "24h": 13.17,
+   "vol": 0.96
+  },
+  {
+   "moeda": "ZBT",
+   "4h": 2.97,
+   "24h": 6.95,
+   "vol": 4.14
+  },
+  {
+   "moeda": "NIGHT",
+   "4h": 2.42,
+   "24h": -2.98,
+   "vol": 1.14
+  },
+  {
+   "moeda": "LA",
+   "4h": 2.27,
+   "24h": 6.89,
+   "vol": 1.64
+  },
+  {
+   "moeda": "HUMA",
+   "4h": 1.97,
+   "24h": -12.03,
+   "vol": 0.6
+  },
+  {
+   "moeda": "ZRO",
+   "4h": 1.64,
+   "24h": -8.82,
+   "vol": 1.59
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.05,
   -0.43,
   -0.22,
-  -0.35
+  -0.23
  ],
  "contexto": {
-  "t": 1795005718,
+  "t": 1795006013,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795005937,
+    "hora_utc": "18/11 12:45",
+    "titulo": "'Doomed From the Start': President Trump's Meme Coin Hits New Lows After Midterms"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795005669,
@@ -260,12 +266,6 @@
     "t": 1794989363,
     "hora_utc": "18/11 08:09",
     "titulo": "Bitcoin ETFs lose $240M as CryptoQuant flags bearish market phase"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794987479,
-    "hora_utc": "18/11 07:37",
-    "titulo": "Google finds self-running AI hacking tool with Russian comments in its files"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.6,
+   "media_top20_anual_pct": 5.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 1.8,
-    "SOL": -5.9
+    "ETH": 1.6,
+    "SOL": -5.0
    },
    "leitura": "neutro"
   },
@@ -353,13 +353,6 @@
     "nivel": 0.00484
    },
    {
-    "moeda": "NIGHT",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.0439
-   },
-   {
     "moeda": "PLUME",
     "padrao": "topo duplo",
     "sentido": "baixa",
@@ -429,21 +422,25 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 93,
-  "compras": 52,
-  "vendas": 41,
+  "apostas": 136,
+  "compras": 104,
+  "vendas": 32,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
     "prob_subir": 0.362
    },
    {
-    "moeda": "SLP",
-    "prob_subir": 0.376
+    "moeda": "CYBER",
+    "prob_subir": 0.366
    },
    {
-    "moeda": "HOME",
-    "prob_subir": 0.381
+    "moeda": "U",
+    "prob_subir": 0.368
+   },
+   {
+    "moeda": "SLP",
+    "prob_subir": 0.376
    },
    {
     "moeda": "FORM",
@@ -460,13 +457,13 @@
    {
     "moeda": "BB",
     "prob_subir": 0.394
-   },
-   {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
+   {
+    "moeda": "HOME",
+    "prob_subir": 0.694
+   },
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
@@ -480,38 +477,34 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "VET",
-    "prob_subir": 0.591
+    "moeda": "QNT",
+    "prob_subir": 0.598
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.58
+    "moeda": "SPK",
+    "prob_subir": 0.598
    },
    {
-    "moeda": "PARTI",
-    "prob_subir": 0.58
+    "moeda": "PENDLE",
+    "prob_subir": 0.598
    },
    {
-    "moeda": "MORPHO",
-    "prob_subir": 0.572
-   },
-   {
-    "moeda": "COTI",
-    "prob_subir": 0.569
+    "moeda": "STRK",
+    "prob_subir": 0.596
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.22,
+  "carteira": 9.09,
   "abertas": [
    {
     "moeda": "SHIB",
     "lado": "compra",
     "entrada": 3.86e-06,
-    "agora": 3.83e-06,
-    "resultado_pct": -0.78,
-    "horas_aberta": 10.8,
+    "agora": 3.81e-06,
+    "resultado_pct": -1.3,
+    "horas_aberta": 10.9,
     "motivo_de_entrada": "maior confiança de compra: v4 0,645 de subir (confiança 0,145, faixa ≥ 0,12 da H36); 1 h −0,77%, 4 h −0,26%, volume 4 h 0,87×; regime neutro"
    }
   ],
@@ -629,7 +622,7 @@
    "avatar": "🤖",
    "motor": "Claude (rotina de hora em hora)",
    "missao": "Chefe da mesa: lê o mercado, decide as próprias posições, responde ao dono e dá ordens aos outros robôs.",
-   "carteira": 9.22,
+   "carteira": 9.09,
    "n_abertas": 1,
    "abertas": [
     [
@@ -754,7 +747,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.38,
+   "carteira": 6.19,
    "n_abertas": 4,
    "abertas": [
     [
@@ -829,7 +822,7 @@
     "ganho_medio": 0.072,
     "perda_media": -0.362,
     "fator_lucro": 0.46,
-    "carteira": 9.22
+    "carteira": 9.09
    },
    "cacador": {
     "ops": 48,
@@ -919,7 +912,7 @@
     "ganho_medio": 0.071,
     "perda_media": -0.111,
     "fator_lucro": 0.58,
-    "carteira": 6.38
+    "carteira": 6.19
    },
    "testnet": {
     "ops": 96,
@@ -956,34 +949,34 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 23660 apostas (594 velas, 11/11 18:45–18/11 12:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5553,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 23703 apostas (595 velas, 11/11 18:45–18/11 12:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.555,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.94,
+  "z_contra_lab": 1.92,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5118,
-    "n": 18106
+    "acerto": 0.512,
+    "n": 18149
    },
    "segue_maioria_24h": {
-    "acerto": 0.5168,
-    "n": 23660
+    "acerto": 0.5174,
+    "n": 23703
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5845,
-    "n": 2871
+    "acerto": 0.5848,
+    "n": 2878
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.583,
-    "n": 1283
+    "acerto": 0.5829,
+    "n": 1285
    },
    "confianca:<0,05": {
-    "acerto": 0.5839,
-    "n": 6306
+    "acerto": 0.5825,
+    "n": 6340
    },
    "confianca:≥0,12": {
     "acerto": 0.677,
@@ -998,20 +991,20 @@
     "n": 5339
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5512,
-    "n": 4911
+    "acerto": 0.5499,
+    "n": 4954
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5258,
     "n": 7043
    },
    "lado:compra": {
-    "acerto": 0.5252,
-    "n": 10991
+    "acerto": 0.5243,
+    "n": 11017
    },
    "lado:venda": {
-    "acerto": 0.5814,
-    "n": 12669
+    "acerto": 0.5817,
+    "n": 12686
    }
   }
  },
