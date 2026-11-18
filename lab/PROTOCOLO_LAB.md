@@ -1165,3 +1165,22 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   emenda (ZEC e RENDER, 18/11 01:04 UTC) contam no juiz e são relatadas à parte. **Comparação declarada (não decide):** Robô Claude (mesmas posições,
   execução simulada) e Caçador (também escolhe pela confiança do v4) no mesmo período. Previsão: não sei; pelo laboratório (H31/H36), entrar por
   confiança do v4 e sair em 15 min não paga o custo; aqui a saída é pelo stop móvel/24 h (como a R6, H52), o que não foi testado com esta seleção.
+
+## Hipótese 60: alavancagem na carteira — posição de 3,75× ou 5× a carteira, a 20× (registrada em 17/11/2026 ~23:05 BRT = 18/11 02:05 UTC, antes de rodar)
+
+- **Pedido do dono (17/11):** "a mesa se saiu muito mal, não consegue passar de 11 dólares... eu quero alavancagem na carteira". Hoje (H58) cada
+  posição tem nocional = 2,5 × a carteira realizada, a 10× (margem = 25% da carteira; 4 posições = carteira inteira em margem, 10× de exposição).
+- **Braços (3 tentativas, contadas):** A) nocional = 3,75 × carteira; B) nocional = 5 × carteira; C) nocional = 5 × carteira só enquanto o robô está
+  no lucro com prova no momento da entrada (carteira > US$ 10 e fator de lucro > 1 em ≥ 30 operações fechadas até ali), senão 2,5 × (regra decidível
+  ao vivo, sem olhar o futuro). Nos três a alavancagem da corretora sobe para 20× (margem = nocional ÷ 20, para as 4 posições caberem). Com 20×, a
+  liquidação fica a ~5% contra; todos os stops da mesa ficam entre 1% e 4%. Perda de uma operação limitada à margem (liquidação) nos braços.
+- **Dados (dois conjuntos independentes):** (1) operações fechadas da etiqueta `estado-antes-do-zero-2026-11-16`; (2) operações fechadas desde o zero
+  de 16/11 até agora. Robôs que usam o tamanho da H58: Rápido nuvem, Caçador, Scalpers A–D, Minerador, Robô Claude, Robô LBank, Radar (Livre tem
+  tamanho próprio; testnets ficam fora). Resultado de cada operação em % do nocional preservado (já com o custo de 0,12%); entradas e saídas na ordem
+  real; nocional calculado na entrada com a carteira realizada daquele momento; abaixo do piso de US$ 5 o robô não entra mais. Guarda do dia e
+  posições que não caberiam na margem não são simuladas (anotado).
+- **Passa** o braço que, nos DOIS conjuntos: (a) a soma das carteiras finais for maior que a da regra atual (2,5×) e (b) nenhum robô terminar abaixo
+  do piso de US$ 5 sem estar abaixo também na regra atual. Entre os aprovados, vale o de maior soma no conjunto (2). Vale para todos os robôs da lista
+  (não se escolhe robô depois de ver). Se nenhum passar: nada muda e o resultado fica registrado.
+- **Contexto já medido (não decide):** o Banco mediu que o lucro de 30 operações não se repete nas 30 seguintes (correlação −0,14; 16/11), e o Robô
+  Livre (carteira inteira a 20×) quebrou em 1 dia (4 liquidações, carteira 0,90).
