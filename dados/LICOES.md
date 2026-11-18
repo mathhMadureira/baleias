@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 13:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 13:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -61,7 +61,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 
 - **Total:** 7/10 com lucro (70%), resultado -0.58, média -0.058 por operação.
-- **Últimas 24 h:** 2/5 com lucro, -0.96.
+- **Últimas 24 h:** 2/3 com lucro, -0.70.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
 - **Por lado:** compra: 9 op, 67% certas, -0.64 · venda: 1 op, 100% certas, +0.06
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
@@ -73,19 +73,19 @@ Carteira **US$ 9.29** · 10 operações fechadas · 1 abertas
 
 - **Amplitude:** 41.4% das moedas subindo em 24 h, 26.7% em 4 h · BTC 24 h -1.46%, 4 h -0.98%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': 11.0, 'ETH': -5.2, 'SOL': 0.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': 11.0, 'ETH': -5.3, 'SOL': 0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · GRAM topo duplo (baixa, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SHIB OCO invertido (alta, formado) · SPK fundo duplo (alta, formado) · SPK ombro-cabeça-ombro (baixa, formado) · ZK OCO invertido (alta, formado)
+- 📰 18/11 13:42 UTC · Cointelegraph: CoinShares sells all treasury ETH, halves SOL holdings for buybacks
 - 📰 18/11 13:37 UTC · Decrypt: Morning Minute: Nvidia Beats, Board Says ‘No’ on Jensen
 - 📰 18/11 13:34 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 18/11 13:32 UTC · Cointelegraph: Sanctions fears loom over Russia’s regulated crypto trading launch
 - 📰 18/11 13:30 UTC · Cointelegraph: How to preserve wealth and access funds during a national emergency
 - 📰 18/11 12:53 UTC · CoinDesk: Bitcoin miner MARA raises $185 million in debt after selling $1 billion BTC to repay loans
-- 📰 18/11 12:53 UTC · Cointelegraph: Tokenized Nvidia market cap surges 159% amid Jensen Huang’s exit
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 12.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 12.2 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
