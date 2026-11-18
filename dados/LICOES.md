@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 20:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 20:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -28,7 +28,7 @@ Carteira **US$ 8.58** · 4 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.00** · 0 operações fechadas · 4 abertas
+Carteira **US$ 9.88** · 0 operações fechadas · 4 abertas
 
 Sem operações fechadas ainda.
 
@@ -48,7 +48,7 @@ Sem operações fechadas ainda.
 
 - **Amplitude:** 38.7% das moedas subindo em 24 h, 56.6% em 4 h · BTC 24 h -1.63%, 4 h -0.03%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 11.0, 'ETH': 8.9, 'SOL': 1.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': 11.0, 'ETH': 9.0, 'SOL': 1.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · XPL fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 20:16 UTC · Decrypt: Google's Genie 4 Is Here, Letting Ultra Subscribers Build AI Worlds in Real Time
