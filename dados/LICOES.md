@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 20:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 20:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.88** · 15 operações fechadas · 1 abertas
+Carteira **US$ 8.82** · 15 operações fechadas · 1 abertas
 
 - **Total:** 10/15 com lucro (67%), resultado -1.08, média -0.072 por operação.
 - **Últimas 24 h:** 5/8 com lucro, -1.20.
@@ -46,11 +46,11 @@ Sem operações fechadas ainda.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 34.9% das moedas subindo em 24 h, 53.8% em 4 h · BTC 24 h -1.66%, 4 h -0.87%.
+- **Amplitude:** 34.9% das moedas subindo em 24 h, 36.8% em 4 h · BTC 24 h -1.58%, 4 h -0.59%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 8.7, 'SOL': 1.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 5.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · DOT OCO invertido (alta, formado) · FET fundo duplo (alta, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENDLE fundo duplo (alta, formado) · VIRTUAL OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · XPL fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 19:46 UTC · Decrypt: Why CoinShares Just Sold All Its Ethereum and Half Its Solana
 - 📰 18/11 19:16 UTC · Decrypt: Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?
 - 📰 18/11 18:46 UTC · Decrypt: Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom
@@ -94,7 +94,7 @@ Sem operações fechadas ainda.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24377 apostas conferidas ao vivo, acerto 55.7%; prevê 105 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24404 apostas conferidas ao vivo, acerto 55.7%; prevê 105 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
