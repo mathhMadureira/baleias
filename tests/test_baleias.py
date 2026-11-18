@@ -2002,3 +2002,25 @@ class ChefeOpenBotTestnet(unittest.TestCase):
         self.assertAlmostEqual(p["resultado_usd"], 25.0 * (961.43 / 961.76 - 1), places=4)
         self.assertEqual(p["fonte_preco"], "testnet (última rodada)")
         self.assertEqual(d["linhas"][0]["estado"], "operando")
+
+
+class P1EntradaNaRodada(unittest.TestCase):
+    """P1 do Treinador, aprovada pelo Laboratório (18/11): nada de aposta velha nem de entrada no preço/hora de uma vela passada."""
+
+    def test_so_aposta_da_ultima_vela(self):
+        from executor import v4_perp_nuvem as V
+        velas = {"AUSDT": [[1000, 0, 0, 0, 1], [1900, 0, 0, 0, 1]], "BUSDT": [[1900, 0, 0, 0, 1]]}
+        p = {"AUSDT": {"t": 1900, "px": 1.0, "prob": 0.6}, "CUSDT": {"t": 1000, "px": 1.0, "prob": 0.7}}
+        self.assertEqual(set(V.pendentes_frescos(p, velas)), {"AUSDT"})
+
+    def test_robo_dos_agentes_entra_no_preco_da_rodada(self):
+        from executor import robo_claude_nuvem as R
+        agora = 1795000000.0
+        k = [[int(agora * 1000) - 900_000 * (100 - i), "1", "1", "1", "1.0"] for i in range(100)]
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "licoes": []}
+        d = {"t": agora - 10, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "teste"}]}
+        R.passo(e, d, {"AUSDT": k}, agora, vivos={"AUSDT": 1.05})
+        a = e["abertas"]["AUSDT"]
+        self.assertEqual(a["entrada"], 1.05)                       # preço da rodada, não o fechamento de 15 min (1,0)
+        self.assertEqual(a["entrada_t"], agora)
+        self.assertGreaterEqual(a["conferido_ate"], agora * 1000)  # stop de 15 min só em velas depois da entrada

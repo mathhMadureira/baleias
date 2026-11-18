@@ -69,3 +69,19 @@ def preparar(abertas, entrada_ms, agora_ms):
     MINUTOS.clear()
     for par, p in abertas.items():
         MINUTOS[par] = buscar(par, max(entrada_ms(p), int(p.get("movel_ate", 0))), agora_ms)
+
+
+def precos_da_rodada(pares, agora_ms):
+    """P1 do Treinador (lab, 18/11): entrar no preço da rodada, não no fechamento de uma vela de 15 min antiga.
+    {par: fechamento da última vela de 1 min FECHADA até agora_ms}. Moeda sem resposta fica de fora (o chamador usa o preço antigo e anota)."""
+    out = {}
+    for par in dict.fromkeys(pares):
+        try:
+            with urllib.request.urlopen(f"{DADOS}/api/v3/klines?symbol={par}&interval=1m&endTime={int(agora_ms) - 1}&limit=3", timeout=15) as r:
+                k = [x for x in json.load(r) if int(x[6]) < agora_ms]
+            if k:
+                out[par] = float(k[-1][4])
+        except (OSError, ValueError):
+            continue
+    return out
+

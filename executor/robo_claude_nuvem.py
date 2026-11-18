@@ -60,11 +60,12 @@ def fechar(e, par, p, saida, motivo, agora):
     return f"🤖 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
 
 
-def passo(e, decisao, velas, agora):
+def passo(e, decisao, velas, agora, vivos=None):
     """e: estado; decisao: dados/decisao_claude.json (ou {}); velas: {par: velas fechadas de 15 min}. Devolve os textos."""
     textos = []
     ultimo = {par: k[-1] for par, k in velas.items() if k}
     preco = {par: float(v[4]) for par, v in ultimo.items()}
+    preco.update({par: px for par, px in (vivos or {}).items() if par in preco})   # P1 (18/11): preço da rodada (vela de 1 min), não o da vela de 15 min
     # 1) stop de segurança e tempo máximo, nas velas fechadas desde a última conferência
     for par in list(e["abertas"]):
         p = e["abertas"][par]
@@ -127,7 +128,8 @@ def passo(e, decisao, velas, agora):
             sp = stop_da_moeda(velas.get(par, []))
             e["caixa"] -= noc / ALAV
             e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / ALAV, "nocional": noc, "stop_pct": sp,
-                                 "motivo": str(pos.get("motivo", ""))[:300], "decisao_t": decisao["t"], "conferido_ate": ultimo[par][0] + VELA_MS}
+                                 "motivo": str(pos.get("motivo", ""))[:300], "decisao_t": decisao["t"],
+                                 "conferido_ate": -(-int(agora * 1000) // VELA_MS) * VELA_MS}   # P1: só velas de 15 min que começam depois da entrada
             textos.append(f"🤖 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.1%}): {str(pos.get('motivo', ''))[:120]}")
     e["patrimonio"] = e["caixa"] + sum(q["gasto"] + (1 if q["lado"] == "compra" else -1) * q.get("nocional", ORCAMENTO) * (preco.get(q["moeda"], q["entrada"]) / q["entrada"] - 1)
                                        for q in e["abertas"].values())
@@ -176,7 +178,9 @@ def main():
             textos.append(fechar(e, par, e["abertas"][par], float(k[-1][4]) if k else e["abertas"][par]["entrada"], GD.motivo(e), agora))
         textos.append(GD.texto(NOME, e))
     if guarda == "normal":
-        textos += passo(e, decisao, velas, agora)
+        pares = set(e["abertas"]) | {(str(x.get("moeda", "")).upper() if str(x.get("moeda", "")).upper().endswith("USDT") else str(x.get("moeda", "")).upper() + "USDT")
+                                     for x in (decisao.get("posicoes") or []) if isinstance(x, dict)} if decisao else set(e["abertas"])
+        textos += passo(e, decisao, velas, agora, vivos=SM.precos_da_rodada(sorted(pares), agora * 1000))
     else:                                                   # travado: sem posições e sem entradas; a decisão desta hora não vale depois
         e["patrimonio"] = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
         if decisao:

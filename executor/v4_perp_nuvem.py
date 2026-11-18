@@ -110,7 +110,14 @@ def _rota_r6(e, velas, agora_ms, permitido, regime):
     return textos
 
 
-def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=None):
+def pendentes_frescos(pendentes, velas):
+    """P1 do Treinador (lab, 18/11): moeda que sai da previsão deixava a aposta velha em `pendentes` (atrasos de 2 a 100 h). Só vale a aposta cuja
+    vela do sinal é a última vela de 15 min fechada."""
+    ultima = max((k[-1][0] for k in velas.values() if k), default=None)
+    return {par: p for par, p in pendentes.items() if ultima is not None and p.get("t") == ultima}
+
+
+def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=None, vivos=None):
     """e: estado; pendentes: apostas do v4 {par: {t, px, prob, aposta}}; velas: {par: velas fechadas}. Devolve os textos.
     regime ("baixa"/"alta"/None, executor.regime): regra do dono — na baixa só vende, na alta só compra, e SEGURA a posição de uma vela
     para a seguinte enquanto o regime continuar e o v4 apostar no mesmo lado (sem pagar saída e entrada de novo)."""
@@ -180,9 +187,10 @@ def passo(e, pendentes, velas, agora_ms, regime=None, pausado=False, lado_ordem=
             continue
         e["caixa"] -= noc / ALAV
         e["ultimo_sinal"][par] = p["t"]
-        e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": p["px"], "entrada_t": (p["t"] + VELA_MS) / 1000,
+        px_ent, t_ent = (vivos[par], agora_ms / 1000) if vivos and par in vivos else (p["px"], (p["t"] + VELA_MS) / 1000)   # P1 (18/11)
+        e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": px_ent, "entrada_t": t_ent, "movel_ate": int(t_ent * 1000),
                              "vela_saida": p["t"] + VELA_MS, "prob": p["prob"], "gasto": noc / ALAV, "nocional": noc}
-        textos.append(f"🌲 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {p['px']:.6g} "
+        textos.append(f"🌲 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {px_ent:.6g} "
                       f"(v4 {max(p['prob'], 1 - p['prob']):.0%} até o fim da vela)")
     return textos
 
@@ -231,7 +239,9 @@ def main():
             pre.append(_fechar(e, par, float(k[-1][4]) if k else e["abertas"][par]["entrada"], GD.motivo(e), time.time()))
         pre.append(GD.texto(NOME, e))
     pausado = pausado or guarda != "normal"
-    textos = pre + passo(e, pendentes, velas, agora_ms, regime=reg, pausado=pausado, lado_ordem=lado_ord)
+    pendentes = pendentes_frescos(pendentes, velas)                      # P1 (a): só a aposta da última vela de 15 min fechada
+    textos = pre + passo(e, pendentes, velas, agora_ms, regime=reg, pausado=pausado, lado_ordem=lado_ord,
+                         vivos=SM.precos_da_rodada(sorted(pendentes), agora_ms))
     if o:
         textos.insert(0, f"📣 {NOME} cumprindo ordem do chefe: {equipe.ACOES[o['acao']]} ({o.get('motivo', '')[:80]})")
     if reg:

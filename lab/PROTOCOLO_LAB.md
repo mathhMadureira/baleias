@@ -1257,3 +1257,8 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   escreve leitura e lição, não troca moedas por opinião. Decisão a cada 30 min por agente; vale 75 min.
 - **Juiz (torneio H50, ao vivo):** depois de 30 operações de cada agente, fator de lucro > 1 e carteira > US$ 10; campeão entre os aprovados.
   Comparação declarada (não decide): resultado dos robôs aposentados que faziam o mesmo método (Caçador, LBank) até 18/11. Previsão: não sei.
+- **P1 aplicada pelo agente Baleias (18/11 ~20:25 UTC; hora exata = início da rodada da nuvem anotada em MELHORIAS.md):** (b) no executor que hoje roda
+  TODOS os agentes (`executor/robo_claude_nuvem.py`): entradas e saídas por decisão no fechamento da última vela de 1 min fechada na hora da rodada
+  (`stop_movel.precos_da_rodada`), `entrada_t` = hora da rodada, stop de 15 min só em velas que começam depois da entrada. (a)+(b) também em
+  `executor/v4_perp_nuvem.py` (só aposta da última vela fechada; entrada no preço e na hora da rodada), que está parado desde a H61 (robôs aposentados):
+  vale se os robôs voltarem. Testes `P1EntradaNaRodada`.
