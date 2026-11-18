@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 06:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 06:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -35,7 +35,7 @@ Carteira **US$ 11.50** · 34 operações fechadas · 3 abertas
 Carteira **US$ 9.16** · 40 operações fechadas · 0 abertas
 
 - **Total:** 21/40 com lucro (52%), resultado -0.84, média -0.021 por operação.
-- **Últimas 24 h:** 12/23 com lucro, -1.35.
+- **Últimas 24 h:** 11/22 com lucro, -1.50.
 - **Por horário:** 18–23 UTC: 16 op, 56% certas, -0.64 · 00–05 UTC: 19 op, 58% certas, -0.12 · 06–11 UTC: 5 op, 20% certas, -0.07
 - **Por lado:** venda: 20 op, 45% certas, -0.64 · compra: 20 op, 60% certas, -0.20
 - **Por motivo de saída:** stop de segurança −2.0%: 2 op, 0% certas, -1.07 · guarda do dia: chegou a +0.81 : 3 op, 0% certas, -0.57 · guarda do dia: chegou a +0.32 : 3 op, 33% certas, -0.38 · meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.53%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.68%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.51%, guard: 2 op, 100% certas, +0.12 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15 · stop móvel (pico +0.62%, guard: 2 op, 100% certas, +0.16 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.17 · stop móvel (pico +0.52%, guard: 3 op, 100% certas, +0.19
@@ -73,7 +73,7 @@ Carteira **US$ 9.82** · 9 operações fechadas · 2 abertas
 
 - **Amplitude:** 58.5% das moedas subindo em 24 h, 44.9% em 4 h · BTC 24 h 0.14%, 4 h 0.17%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -10.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENSO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BONK OCO invertido (alta, formado) · BTC topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · ENSO topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado)
 - 📰 18/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -85,7 +85,7 @@ Carteira **US$ 9.82** · 9 operações fechadas · 2 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.8 h.
+- ⚠️ **Rotina parada:** sem decisão há 4.9 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
