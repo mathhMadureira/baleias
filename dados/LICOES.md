@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.54** · 18 operações fechadas · 1 abertas
+Carteira **US$ 8.50** · 18 operações fechadas · 1 abertas
 
 - **Total:** 10/18 com lucro (56%), resultado -1.42, média -0.079 por operação.
 - **Últimas 24 h:** 5/11 com lucro, -1.54.
@@ -28,7 +28,7 @@ Carteira **US$ 8.39** · 8 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.09** · 5 operações fechadas · 1 abertas
+Carteira **US$ 10.04** · 5 operações fechadas · 1 abertas
 
 - **Total:** 2/5 com lucro (40%), resultado +0.14, média +0.027 por operação.
 - **Últimas 24 h:** 2/5 com lucro, +0.14.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.10** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.17** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -58,7 +58,7 @@ Carteira **US$ 10.10** · 4 operações fechadas · 3 abertas
 
 - **Amplitude:** 27.1% das moedas subindo em 24 h, 69.2% em 4 h · BTC 24 h -2.51%, 4 h -0.31%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 0.9, 'ETH': 1.1, 'SOL': -1.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 1.2, 'ETH': 1.3, 'SOL': -0.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:16 UTC · Decrypt: Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine
