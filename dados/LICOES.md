@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 11:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 11:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -73,7 +73,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 - **Amplitude:** 45.4% das moedas subindo em 24 h, 27.7% em 4 h · BTC 24 h -0.42%, 4 h -0.9%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': 2.9, 'ETH': 2.8, 'SOL': -18.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 3.5, 'ETH': 2.5, 'SOL': -17.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · BONK topo duplo (baixa, formado) · ENSO topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · NIGHT fundo duplo (alta, formado) · PLUME topo duplo (baixa, formado) · PLUME OCO invertido (alta, formado) · SHIB OCO invertido (alta, formado)
 - 📰 18/11 10:58 UTC · CoinDesk: Bitcoin outpaces gold even as both assets tumble ahead of a likely Fed rate hike
@@ -85,7 +85,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 9.8 h.
+- ⚠️ **Rotina parada:** sem decisão há 9.9 h.
 - 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 - 18/11 01:09 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela quarta leitura seguida e voltando a ganhar força: 78,8% das moedas sobem em 24 h (73,3% na anterior), 78,0% em 4 h e só 11,0% em 1 h (mediana 
 - 18/11 00:36 UTC · **ZEC compra, RENDER compra** · Alta de 24 h pela terceira leitura seguida, mas perdendo força: 73,3% das moedas sobem em 24 h (81,8% e 81,0% nas duas anteriores), 87,5% em 4 h (mediana +1,31%
@@ -114,10 +114,10 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 5 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
 **v4 (o cérebro de todos):** 23482 apostas conferidas ao vivo, acerto 55.6%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
