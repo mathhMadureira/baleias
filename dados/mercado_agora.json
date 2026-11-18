@@ -1,6 +1,6 @@
 {
- "t": 1794967659,
- "hora_utc": "2026-11-18 02:07 UTC",
+ "t": 1794967905,
+ "hora_utc": "2026-11-18 02:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.33,
   -0.24,
   -0.75,
-  -0.03
+  0.27
  ],
  "contexto": {
-  "t": 1794967660,
+  "t": 1794967906,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.2,
+   "media_top20_anual_pct": 8.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.5,
-    "SOL": 0.0
+    "ETH": 6.1,
+    "SOL": 4.6
    },
    "leitura": "neutro"
   },
@@ -770,7 +770,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
-   "carteira": 9.53,
+   "carteira": 9.81,
    "n_abertas": 3,
    "abertas": [
     [
@@ -778,15 +778,15 @@
      "compra"
     ],
     [
-     "TIA",
+     "VET",
      "compra"
     ],
     [
-     "PHA",
+     "CAKE",
      "compra"
     ]
    ],
-   "n_fechadas": 76,
+   "n_fechadas": 78,
    "ordem": null
   },
   {
@@ -928,13 +928,13 @@
     "carteira": 11.67
    },
    "scalper_c": {
-    "ops": 76,
-    "acerto": 0.539,
-    "soma": -0.38,
-    "ganho_medio": 0.085,
+    "ops": 78,
+    "acerto": 0.551,
+    "soma": -0.19,
+    "ganho_medio": 0.086,
     "perda_media": -0.111,
-    "fator_lucro": 0.9,
-    "carteira": 9.53
+    "fator_lucro": 0.95,
+    "carteira": 9.81
    },
    "scalper_d": {
     "ops": 83,
