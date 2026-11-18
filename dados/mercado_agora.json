@@ -1,27 +1,27 @@
 {
- "t": 1795002164,
- "hora_utc": "2026-11-18 11:42 UTC",
+ "t": 1795002456,
+ "hora_utc": "2026-11-18 11:47 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
   "subindo_pct": 34.2,
-  "mediana_pct": -0.19
+  "mediana_pct": -0.17
  },
  "mercado_4h": {
   "moedas": 120,
-  "subindo_pct": 28.3,
-  "mediana_pct": -0.78
+  "subindo_pct": 37.5,
+  "mediana_pct": -0.4
  },
  "mercado_24h": {
   "moedas": 120,
-  "subindo_pct": 45.8,
-  "mediana_pct": -0.2
+  "subindo_pct": 40.8,
+  "mediana_pct": -0.65
  },
  "btc": {
-  "1h": -0.3,
-  "4h": -0.9,
-  "24h": -0.42,
-  "preco": 64155.95,
+  "1h": -0.17,
+  "4h": -0.6,
+  "24h": -1.06,
+  "preco": 64206.25,
   "vol_4h_vs_media": 0.6
  },
  "maiores_quedas_4h": [
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "BREV",
-   "4h": -12.59,
-   "24h": 58.7,
-   "vol": 0.33
-  },
-  {
-   "moeda": "KAVA",
-   "4h": -8.63,
-   "24h": 11.04,
-   "vol": 0.7
+   "4h": -16.11,
+   "24h": 52.71,
+   "vol": 0.35
   },
   {
    "moeda": "ZKP",
-   "4h": -5.48,
-   "24h": 18.3,
-   "vol": 2.12
-  },
-  {
-   "moeda": "USUAL",
-   "4h": -4.69,
-   "24h": 8.51,
-   "vol": 1.53
-  },
-  {
-   "moeda": "RARE",
-   "4h": -4.12,
-   "24h": -14.96,
-   "vol": 0.94
-  },
-  {
-   "moeda": "GRAM",
-   "4h": -4.0,
-   "24h": 0.78,
-   "vol": 0.99
+   "4h": -7.05,
+   "24h": 15.58,
+   "vol": 2.03
   },
   {
    "moeda": "STEEM",
-   "4h": -3.09,
-   "24h": -0.21,
-   "vol": 1.66
+   "4h": -6.5,
+   "24h": -1.4,
+   "vol": 1.18
   },
   {
-   "moeda": "S",
-   "4h": -2.47,
-   "24h": -5.54,
-   "vol": 1.37
+   "moeda": "KAVA",
+   "4h": -6.06,
+   "24h": 3.52,
+   "vol": 0.67
   },
   {
-   "moeda": "BEAMX",
-   "4h": -2.35,
-   "24h": -1.04,
-   "vol": 0.49
+   "moeda": "GRAM",
+   "4h": -4.54,
+   "24h": -0.19,
+   "vol": 1.03
+  },
+  {
+   "moeda": "USUAL",
+   "4h": -4.26,
+   "24h": 6.61,
+   "vol": 1.33
+  },
+  {
+   "moeda": "RARE",
+   "4h": -3.17,
+   "24h": -15.95,
+   "vol": 0.95
+  },
+  {
+   "moeda": "ICP",
+   "4h": -2.17,
+   "24h": -6.78,
+   "vol": 1.32
+  },
+  {
+   "moeda": "STX",
+   "4h": -2.09,
+   "24h": 1.27,
+   "vol": 0.44
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "ZKC",
-   "4h": 38.55,
-   "24h": 47.44,
-   "vol": 5.03
-  },
-  {
-   "moeda": "MMT",
-   "4h": 9.02,
-   "24h": 117.77,
-   "vol": 1.12
-  },
-  {
-   "moeda": "ZBT",
-   "4h": 4.9,
-   "24h": 6.91,
-   "vol": 4.6
-  },
-  {
-   "moeda": "ENSO",
-   "4h": 4.49,
-   "24h": 11.44,
-   "vol": 3.46
-  },
-  {
-   "moeda": "SPK",
-   "4h": 3.81,
-   "24h": 7.59,
-   "vol": 1.27
-  },
-  {
-   "moeda": "COOKIE",
-   "4h": 3.53,
-   "24h": -1.85,
-   "vol": 0.41
-  },
-  {
-   "moeda": "LA",
-   "4h": 3.22,
-   "24h": 8.45,
-   "vol": 1.52
+   "4h": 33.87,
+   "24h": 40.68,
+   "vol": 5.07
   },
   {
    "moeda": "HEI",
-   "4h": 2.98,
-   "24h": 8.55,
-   "vol": 2.39
+   "4h": 17.33,
+   "24h": 22.18,
+   "vol": 3.92
+  },
+  {
+   "moeda": "MMT",
+   "4h": 8.29,
+   "24h": 102.08,
+   "vol": 1.09
+  },
+  {
+   "moeda": "NIGHT",
+   "4h": 6.25,
+   "24h": -2.75,
+   "vol": 1.53
+  },
+  {
+   "moeda": "SPK",
+   "4h": 3.84,
+   "24h": 5.97,
+   "vol": 1.3
+  },
+  {
+   "moeda": "COOKIE",
+   "4h": 3.79,
+   "24h": -2.08,
+   "vol": 0.38
   },
   {
    "moeda": "GTC",
-   "4h": 2.79,
-   "24h": -4.88,
-   "vol": 0.83
+   "4h": 3.67,
+   "24h": -3.44,
+   "vol": 0.88
+  },
+  {
+   "moeda": "SHELL",
+   "4h": 3.3,
+   "24h": 5.68,
+   "vol": 1.1
   },
   {
    "moeda": "MEGA",
-   "4h": 2.64,
-   "24h": 6.45,
+   "4h": 3.07,
+   "24h": 6.83,
    "vol": 1.23
+  },
+  {
+   "moeda": "MARSCOIN",
+   "4h": 2.69,
+   "24h": 3.63,
+   "vol": 1.02
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.31,
   -0.05,
   -0.43,
-  -0.26
+  -0.27
  ],
  "contexto": {
-  "t": 1795002165,
+  "t": 1795002457,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795002172,
+    "hora_utc": "18/11 11:42",
+    "titulo": "Bitcoin drops as Nvidia earnings report drives stock index futures higher"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1794999516,
@@ -260,12 +266,6 @@
     "t": 1794976461,
     "hora_utc": "18/11 04:34",
     "titulo": "Bitcoin's 12% slide through key support looks scary, but history says give it 3 months."
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794976117,
-    "hora_utc": "18/11 04:28",
-    "titulo": "XRP whales moved $270 million during the selloff. The coins didn’t go to exchanges"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 4.7,
    "principais_anual_pct": {
-    "BTC": 3.9,
-    "ETH": 2.1,
-    "SOL": -17.5
+    "BTC": 4.0,
+    "ETH": 1.8,
+    "SOL": -17.4
    },
    "leitura": "neutro"
   },
@@ -456,34 +456,30 @@
   }
  },
  "v4": {
-  "vela": "11:30 UTC",
-  "apostas": 110,
-  "compras": 26,
-  "vendas": 84,
+  "vela": "05:30 UTC",
+  "apostas": 91,
+  "compras": 31,
+  "vendas": 60,
   "mais_confiantes_venda": [
-   {
-    "moeda": "BONK",
-    "prob_subir": 0.344
-   },
    {
     "moeda": "ETC",
     "prob_subir": 0.362
-   },
-   {
-    "moeda": "W",
-    "prob_subir": 0.366
    },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.377
+    "moeda": "LSK",
+    "prob_subir": 0.38
    },
    {
     "moeda": "FORM",
     "prob_subir": 0.382
+   },
+   {
+    "moeda": "TRUMP",
+    "prob_subir": 0.385
    },
    {
     "moeda": "PEOPLE",
@@ -492,12 +488,24 @@
    {
     "moeda": "BABAB",
     "prob_subir": 0.386
+   },
+   {
+    "moeda": "BB",
+    "prob_subir": 0.394
    }
   ],
   "mais_confiantes_compra": [
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "CYBER",
+    "prob_subir": 0.639
+   },
+   {
+    "moeda": "ERA",
+    "prob_subir": 0.627
    },
    {
     "moeda": "KAIA",
@@ -518,14 +526,6 @@
    {
     "moeda": "MORPHO",
     "prob_subir": 0.572
-   },
-   {
-    "moeda": "COTI",
-    "prob_subir": 0.569
-   },
-   {
-    "moeda": "SKL",
-    "prob_subir": 0.564
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -782,7 +782,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 6.58,
+   "carteira": 6.56,
    "n_abertas": 2,
    "abertas": [
     [
@@ -939,7 +939,7 @@
     "ganho_medio": 0.072,
     "perda_media": -0.112,
     "fator_lucro": 0.58,
-    "carteira": 6.58
+    "carteira": 6.56
    },
    "testnet": {
     "ops": 96,
@@ -976,46 +976,46 @@
   ]
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.6% em 23482 apostas (590 velas, 11/11 18:45–18/11 11:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.556,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 23541 apostas (591 velas, 11/11 18:45–18/11 11:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5554,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.99,
+  "z_contra_lab": 1.94,
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5124,
-    "n": 18151
+    "n": 18210
    },
    "segue_maioria_24h": {
-    "acerto": 0.5134,
-    "n": 23433
+    "acerto": 0.5139,
+    "n": 23492
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5851,
-    "n": 2825
+    "acerto": 0.5839,
+    "n": 2836
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5825,
-    "n": 1272
+    "acerto": 0.5824,
+    "n": 1274
    },
    "confianca:<0,05": {
-    "acerto": 0.5868,
-    "n": 6189
+    "acerto": 0.585,
+    "n": 6233
    },
    "confianca:≥0,12": {
-    "acerto": 0.6787,
-    "n": 417
+    "acerto": 0.6778,
+    "n": 419
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5846,
     "n": 6367
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5667,
-    "n": 5204
+    "acerto": 0.5639,
+    "n": 5263
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5507,
@@ -1026,12 +1026,12 @@
     "n": 7043
    },
    "lado:compra": {
-    "acerto": 0.5252,
-    "n": 10964
+    "acerto": 0.5253,
+    "n": 10967
    },
    "lado:venda": {
-    "acerto": 0.5829,
-    "n": 12518
+    "acerto": 0.5816,
+    "n": 12574
    }
   }
  },

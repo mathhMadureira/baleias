@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 11:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 11:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -71,17 +71,17 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 45.8% das moedas subindo em 24 h, 28.3% em 4 h · BTC 24 h -0.42%, 4 h -0.9%.
+- **Amplitude:** 40.8% das moedas subindo em 24 h, 37.5% em 4 h · BTC 24 h -1.06%, 4 h -0.6%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 3.9, 'ETH': 2.1, 'SOL': -17.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 4.0, 'ETH': 1.8, 'SOL': -17.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** APT OCO invertido (alta, formado) · BONK topo duplo (baixa, formado) · ENSO topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HEI topo duplo (baixa, formado) · HEI OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · NIGHT fundo duplo (alta, formado) · PLUME topo duplo (baixa, formado)
+- 📰 18/11 11:42 UTC · CoinDesk: Bitcoin drops as Nvidia earnings report drives stock index futures higher
 - 📰 18/11 10:58 UTC · CoinDesk: Bitcoin outpaces gold even as both assets tumble ahead of a likely Fed rate hike
 - 📰 18/11 10:33 UTC · Cointelegraph: Bitwise seeks Texas Stock Exchange listing for Zcash ETF
 - 📰 18/11 10:31 UTC · Cointelegraph: Bitcoin steadies after Nvidia’s earnings beat as $60K bids stand out
 - 📰 18/11 10:17 UTC · Decrypt: Scattered Spider Hacker Sentenced to 6 Years Over $11.6M in Stolen Crypto
 - 📰 18/11 09:31 UTC · CoinDesk: Strategy stock could plunge 76% to $23, chart analyst warns
-- 📰 18/11 09:17 UTC · Cointelegraph: World Bank partners with Circle, Citi to explore stablecoins for payments
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -120,7 +120,7 @@ Carteira **US$ 9.22** · 10 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 23482 apostas conferidas ao vivo, acerto 55.6%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 23541 apostas conferidas ao vivo, acerto 55.5%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
