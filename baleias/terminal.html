@@ -90,7 +90,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 
   <!-- 1. placar + 5. estado de cada robô -->
   <div class="card" style="margin-bottom:12px">
-    <h3>🏆 Placar · todos os robôs · carteira de US$ 10 cada desde o zero de 16/11<span class="dir mut num" id="pl-t"></span></h3>
+    <h3>🏆 Placar · os agentes do OpenBot que operam a mesa · carteira de US$ 10 cada<span class="dir mut num" id="pl-t"></span></h3>
     <div class="rolagem"><table id="placar-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
     <div id="pl-notas" class="mut" style="font-size:11.5px;margin-top:6px"></div>
   </div>
@@ -98,7 +98,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <div class="grade duas" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)">
     <!-- 2. curva da carteira de cada robô -->
     <div class="card">
-      <h3>📈 Carteira de cada robô desde o zero<span class="dir mut" style="font-size:11px">linha tracejada = US$ 10 · vermelha = piso de US$ 5 · cada ponto é uma operação fechada; o último é a carteira agora</span></h3>
+      <h3>📈 Carteira de cada agente<span class="dir mut" style="font-size:11px">linha tracejada = US$ 10 · vermelha = piso de US$ 5 · cada ponto é uma operação fechada; o último é a carteira agora</span></h3>
       <div class="curvas" id="curvas"></div>
     </div>
     <!-- 3. posições abertas -->
@@ -113,7 +113,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
     <!-- 4. linha do tempo -->
     <div class="card">
       <h3>🕒 Últimas entradas e saídas da mesa
-        <span class="dir"><select id="lt-robo"><option value="">todos os robôs</option></select>
+        <span class="dir"><select id="lt-robo"><option value="">todos os agentes</option></select>
         <label class="mut" style="font-size:12px"><input type="checkbox" id="lt-saidas"> só saídas</label></span></h3>
       <div class="rolagem" style="max-height:430px"><table id="lt-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
     </div>
@@ -208,10 +208,10 @@ function desenharKpis() {
     ["Soma das carteiras", t.carteiras == null ? "—" : "US$ " + fmt(t.carteiras), t.robos ? `${t.robos} robôs · entrou US$ ${fmt(t.inicial, 0)}` : "banco sem dados", ""],
     ["Resultado da mesa", sn(t.resultado), `${(t.no_lucro || []).length} de ${t.robos || "?"} no lucro`, cor(t.resultado)],
     ["Exposição total", x.bruta == null ? "—" : "US$ " + fmt(x.bruta, 0), `líquida US$ ${fmt(x.liquida, 0)} · ${x.moedas ?? "?"} moedas`, ""],
-    ["Conflitos", x.conflitos ? String(x.conflitos.length) : "—", x.conflitos && x.conflitos.length ? "lados opostos na mesma moeda" : "nenhum robô contra outro", x.conflitos && x.conflitos.length ? "down" : "up"],
+    ["Conflitos", x.conflitos ? String(x.conflitos.length) : "—", x.conflitos && x.conflitos.length ? "lados opostos na mesma moeda" : "nenhum agente contra outro", x.conflitos && x.conflitos.length ? "down" : "up"],
     ["Em margem / livre", t.em_margem == null ? "—" : fmt(t.em_margem), `livre US$ ${fmt(t.livre)}`, ""],
     ["Posições abertas", String(pm.abertas.length), `aberto agora ${sn(aberto, 3)}`, cor(aberto)],
-    ["Estado dos robôs", `${cont.operando || 0} ▶`, `🔒 ${cont.guarda || 0} · 🎯 ${cont.meta || 0} · ⛔ ${cont.sem_dinheiro || 0}` + (cont.pausado ? ` · ⏸ ${cont.pausado}` : ""), ""],
+    ["Estado dos agentes", `${cont.operando || 0} ▶`, `🔒 ${cont.guarda || 0} · 🎯 ${cont.meta || 0} · ⛔ ${cont.sem_dinheiro || 0}` + (cont.pausado ? ` · ⏸ ${cont.pausado}` : ""), ""],
   ];
   $("kpis").innerHTML = k.map(([r, v, s, c]) => `<div class="kpi"><div class="rot">${esc(r)}</div><div class="val num ${c}">${esc(v)}</div><div class="sub" title="${esc(s)}">${esc(s)}</div></div>`).join("");
   $("faixa").innerHTML = `Mercado: <b style="color:var(--txt)">${esc(regTxt)}</b> (${s24 == null ? "?" : fmt(s24, 1) + "%"} das moedas subindo em 24 h${reg.subindo_4h == null ? "" : `, ${fmt(reg.subindo_4h, 1)}% em 4 h`})` +
@@ -219,7 +219,7 @@ function desenharKpis() {
 }
 
 function desenharPlacar() {
-  const cab = `<tr><th class="e">#</th><th class="e">robô</th><th class="e">estado</th><th>carteira</th><th>hoje</th><th>desde o zero</th><th>operações</th><th>acerto</th>
+  const cab = `<tr><th class="e">#</th><th class="e">agente</th><th class="e">estado</th><th>carteira</th><th>hoje</th><th>desde o zero</th><th>operações</th><th>acerto</th>
     <th title="soma dos ganhos ÷ soma das perdas; acima de 1 ganha mais do que perde">fator de lucro</th><th>abertas</th><th title="hora da última gravação do arquivo do robô no ramo estado">gravou há</th></tr>`;
   const notas = [];
   const linhas = pm.linhas.map((l, i) => {
@@ -286,7 +286,7 @@ function desenharPosicoes() {
   const ps = pm.abertas;
   $("ps-t").textContent = `${ps.length} abertas · preço de ${new Date(pm.t * 1000).toLocaleTimeString("pt-BR", {timeZone: FUSO_BR})}`;
   if (!ps.length) { $("pos-tab").innerHTML = `<tr><td class="vazio">Nenhuma posição aberta agora.</td></tr>`; return; }
-  $("pos-tab").innerHTML = `<tr><th class="e">robô</th><th class="e">moeda</th><th class="e">lado</th><th>entrada</th><th>agora</th><th>resultado aberto</th><th>há</th></tr>` +
+  $("pos-tab").innerHTML = `<tr><th class="e">agente</th><th class="e">moeda</th><th class="e">lado</th><th>entrada</th><th>agora</th><th>resultado aberto</th><th>há</th></tr>` +
     ps.map(p => `<tr data-moeda="${esc(p.moeda)}" title="${esc(p.motivo || "")} · tamanho US$ ${fmt(p.nocional)} · preço ${esc(p.fonte_preco)}">
       <td class="e" style="font-family:system-ui">${p.avatar} ${esc(p.nome)}</td><td class="e"><b>${esc(p.moeda)}</b></td>
       <td class="e ${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ vendido" : "▲ comprado"}</td>
@@ -300,7 +300,7 @@ function desenharTempo() {
   if (sel.options.length < 2) for (const l of pm.linhas) sel.add(new Option(`${l.avatar} ${l.nome}`, l.id));
   const ev = pm.tempo.filter(x => (!sel.value || x.robo === sel.value) && (!$("lt-saidas").checked || x.tipo === "saida"));
   if (!ev.length) { $("lt-tab").innerHTML = `<tr><td class="vazio">Nada nesse filtro.</td></tr>`; return; }
-  $("lt-tab").innerHTML = `<tr><th class="e">hora</th><th class="e">robô</th><th class="e"></th><th class="e">moeda</th><th>preço</th><th>resultado</th><th class="e">motivo</th></tr>` +
+  $("lt-tab").innerHTML = `<tr><th class="e">hora</th><th class="e">agente</th><th class="e"></th><th class="e">moeda</th><th>preço</th><th>resultado</th><th class="e">motivo</th></tr>` +
     ev.map(x => {
       const saida = x.tipo === "saida";
       return `<tr data-moeda="${esc(x.moeda)}"><td class="e mut">${hora(x.t)}</td><td class="e" style="font-family:system-ui">${x.avatar} ${esc(x.nome)}</td>
