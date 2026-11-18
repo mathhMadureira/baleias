@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 06:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 06:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -18,7 +18,7 @@ Carteira **US$ 10.71** · 45 operações fechadas · 0 abertas
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 11.54** · 34 operações fechadas · 3 abertas
+Carteira **US$ 11.45** · 34 operações fechadas · 3 abertas
 
 - **Total:** 27/34 com lucro (79%), resultado +1.83, média +0.054 por operação.
 - **Últimas 24 h:** 12/14 com lucro, +1.00.
@@ -58,7 +58,7 @@ Carteira **US$ 4.96** · 96 operações fechadas · 0 abertas · carteiras anter
 
 ## 🤖 Robô Claude (decide de hora em hora lendo o mercado)
 
-Carteira **US$ 9.93** · 9 operações fechadas · 2 abertas
+Carteira **US$ 9.81** · 9 operações fechadas · 2 abertas
 
 - **Total:** 7/9 com lucro (78%), resultado +0.24, média +0.026 por operação.
 - **Últimas 24 h:** 7/9 com lucro, +0.24.
@@ -71,11 +71,11 @@ Carteira **US$ 9.93** · 9 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 51.7% das moedas subindo em 24 h, 71.2% em 4 h · BTC 24 h -0.21%, 4 h 0.59%.
+- **Amplitude:** 55.1% das moedas subindo em 24 h, 53.4% em 4 h · BTC 24 h -0.06%, 4 h 0.48%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -10.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -10.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BREV estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BONK OCO invertido (alta, formado) · BTC topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · BONK topo duplo (baixa, formado) · BONK OCO invertido (alta, formado) · BTC topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · ENA topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LSK fundo duplo (alta, formado)
 - 📰 18/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 18/11 05:30 UTC · CoinDesk: U.S. judge says Ethereum has ‘no terms of use,’ clears MIT brothers of $25 million fraud
 - 📰 18/11 04:34 UTC · CoinDesk: Bitcoin's 12% slide through key support looks scary, but history says give it 3 months.
@@ -120,7 +120,7 @@ Carteira **US$ 9.93** · 9 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 22901 apostas conferidas ao vivo, acerto 55.5%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 22954 apostas conferidas ao vivo, acerto 55.5%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
