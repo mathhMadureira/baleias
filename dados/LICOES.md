@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 22:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 22:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.75** · 21 operações fechadas · 2 abertas
+Carteira **US$ 8.72** · 21 operações fechadas · 2 abertas
 
 - **Total:** 12/21 com lucro (57%), resultado -1.40, média -0.067 por operação.
 - **Últimas 24 h:** 7/14 com lucro, -1.51.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.79** · 9 operações fechadas · 2 abertas
+Carteira **US$ 10.69** · 9 operações fechadas · 2 abertas
 
 - **Total:** 8/9 com lucro (89%), resultado +0.71, média +0.079 por operação.
 - **Últimas 24 h:** 8/9 com lucro, +0.71.
@@ -58,7 +58,7 @@ Carteira **US$ 10.79** · 9 operações fechadas · 2 abertas
 
 - **Amplitude:** 23.4% das moedas subindo em 24 h, 18.7% em 4 h · BTC 24 h -3.26%, 4 h -0.98%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': 4.9, 'ETH': 0.3, 'SOL': -3.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 5.2, 'ETH': 0.8, 'SOL': -3.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · INIT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
