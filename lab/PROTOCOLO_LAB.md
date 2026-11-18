@@ -1149,3 +1149,19 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   2. **Comparação declarada:** contra as operações do Robô Claude simulado com `decisao_t` no mesmo período (as mesmas decisões): diferença
      de resultado por operação = custo real de execução (taxas, escorregamento, stop móvel de 30 min). Relatada, não aprova nem reprova.
   Previsão registrada antes: não sei (o Robô Claude tem 7 operações; amostra pequena).
+
+### H59 — emenda (18/11/2026 ~22:40 BRT = 01:40 UTC, antes de qualquer ordem pela regra nova): a escolha passa a vir do universo inteiro pelo v4
+- **Pedido do dono (17/11):** "operar no testnet olhando TODAS as moedas"; analisar a cada rodada a probabilidade do v4 de cada moeda, o regime de
+  24 h, volume e movimento de 1 h/4 h/24 h, e escolher as melhores oportunidades nos dois lados.
+- **Muda só como o chefe escolhe as `posicoes`** (que valem para o Robô Claude simulado E para o testnet, como antes). Script `universo.py` do chefe:
+  ordem = confiança do v4 no lado, |p − 0,5| (o único achado robusto, H36). **Entra** só com confiança ≥ 0,08 (faixa de 57,5% e 65,5% de acerto
+  no laboratório), no lado do regime de 24 h (H44; neutro = os dois lados), fora de moeda com |4 h| ≥ 15% (esticada, cartilha), que exista nos
+  futuros do testnet com nocional mínimo ≤ 1,5 × a posição, no máximo uma de BTC/ETH, até 4 posições. **Mantém** a aberta enquanto o regime não
+  virar contra e o v4 não apontar o lado oposto com confiança ≥ 0,03; senão ela sai da lista (fecha). Fonte: `ultima` do `dados/cerebro_v4.json`
+  (se a rodada mais nova da nuvem trouxer < 50 moedas, usa a mais nova com o universo completo de até 15 min). Memecoins: o preço do perpétuo da
+  LBank é lido só para comparação; ordens só no testnet da Binance.
+- **Execução, proteção, tamanho, custo e juiz:** os da H59 (stop STOP_MARKET reduce-only na corretora em toda entrada, guarda do dia, meta 12, 24 h,
+  2,5 × carteira a 10×, resultado da corretora; 30 operações ou 25/11; passa com soma > 0 e fator de lucro > 1). As 2 operações abertas antes da
+  emenda (ZEC e RENDER, 18/11 01:04 UTC) contam no juiz e são relatadas à parte. **Comparação declarada (não decide):** Robô Claude (mesmas posições,
+  execução simulada) e Caçador (também escolhe pela confiança do v4) no mesmo período. Previsão: não sei; pelo laboratório (H31/H36), entrar por
+  confiança do v4 e sair em 15 min não paga o custo; aqui a saída é pelo stop móvel/24 h (como a R6, H52), o que não foi testado com esta seleção.
