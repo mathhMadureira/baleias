@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 21:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.54** · 18 operações fechadas · 1 abertas
+Carteira **US$ 8.58** · 18 operações fechadas · 2 abertas
 
 - **Total:** 10/18 com lucro (56%), resultado -1.42, média -0.079 por operação.
 - **Últimas 24 h:** 5/11 com lucro, -1.54.
@@ -17,7 +17,7 @@ Carteira **US$ 8.54** · 18 operações fechadas · 1 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.39** · 8 operações fechadas · 1 abertas
+Carteira **US$ 8.35** · 8 operações fechadas · 2 abertas
 
 - **Total:** 2/8 com lucro (25%), resultado -1.58, média -0.198 por operação.
 - **Últimas 24 h:** 2/8 com lucro, -1.58.
@@ -28,7 +28,7 @@ Carteira **US$ 8.39** · 8 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.09** · 5 operações fechadas · 1 abertas
+Carteira **US$ 10.14** · 5 operações fechadas · 1 abertas
 
 - **Total:** 2/5 com lucro (40%), resultado +0.14, média +0.027 por operação.
 - **Últimas 24 h:** 2/5 com lucro, +0.14.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.36** · 4 operações fechadas · 3 abertas
+Carteira **US$ 10.42** · 4 operações fechadas · 3 abertas
 
 - **Total:** 4/4 com lucro (100%), resultado +0.43, média +0.107 por operação.
 - **Últimas 24 h:** 4/4 com lucro, +0.43.
@@ -58,7 +58,7 @@ Carteira **US$ 10.36** · 4 operações fechadas · 3 abertas
 
 - **Amplitude:** 25.2% das moedas subindo em 24 h, 20.6% em 4 h · BTC 24 h -3.08%, 4 h -1.43%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': 1.2, 'ETH': 1.8, 'SOL': 0.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.9%/ano · {'BTC': 1.3, 'ETH': 1.8, 'SOL': 0.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 21:16 UTC · Decrypt: Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine
@@ -70,12 +70,12 @@ Carteira **US$ 10.36** · 4 operações fechadas · 3 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 18/11 21:40 UTC · **RUNE venda, LA venda** · Regime de baixa: 25,5% das 106 moedas do universo sobem em 24 h e 20,8% em 4 h; retrato: 25,2% em 24 h, 20,6% em 4 h, 72,0% em 1 h (repique curto); BTC −3,08% e
 - 18/11 21:07 UTC · **RUNE venda, KITE venda** · Regime de baixa: 26,4% das 106 moedas do universo sobem em 24 h, 66,0% em 4 h; retrato: 26,2% em 24 h, 65,4% em 4 h, 54,2% em 1 h; BTC −2,14% em 24 h, −0,21% em
 - 18/11 20:47 UTC · **USTC venda** · Regime de baixa: 28,3% das 106 moedas do universo sobem em 24 h, 76,4% em 4 h; retrato: 28,0% em 24 h, 60,7% em 4 h, 15,0% em 1 h; BTC −2,23% em 24 h, +0,04% em
 - 18/11 20:32 UTC · **USTC venda, GTC venda** · Regime de baixa: 28,3% das moedas do universo (106) sobem em 24 h, 61,3% em 4 h; retrato: 38,3% em 24 h, 56,1% em 4 h, 22,4% em 1 h; BTC −1,63% em 24 h, −0,03% 
 - 18/11 19:37 UTC · **USTC venda, GTC venda, ZKP venda, ERA compra** · Regime neutro: 57,1% das moedas do universo sobem em 24 h (retrato: 56,6% de 106), 40,6% em 4 h e 60,4% em 1 h; BTC −1,39% em 24 h, −1,14% em 4 h, −0,45% em 1 h
 - 18/11 19:16 UTC · **USTC venda, GTC venda, ZKP venda, OP venda** · Regime neutro: 46,2% das 106 moedas do universo sobem em 24 h (retrato: 57,9% de 107), 25,5% em 4 h e 80,4% em 1 h; BTC −0,95% em 24 h, −0,80% em 4 h, +0,09% em
-- 18/11 01:45 UTC · **ZEC compra, RENDER compra, USTC venda, SHIB compra** · Indeciso no 24 h: 67,8% das moedas sobem em 24 h (eram 73,3% às 00:36), 40,7% em 4 h e 16,8% em 1 h; BTC −0,01% em 24 h, −0,26% em 1 h, volume 0,57×, medo 11. R
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
