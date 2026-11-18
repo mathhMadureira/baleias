@@ -13,8 +13,8 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | tres_soldados | promissor | 56.0% | 234 | 49.6%–62.2% | H6: três soldados → desce (efeito pequeno) |
 | williams_wr_alta | promissor | 55.2% | 29 | 37.5%–71.6% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 52.5% | 61 | 40.2%–64.5% | H14: queda anormal de 1 h → sobe |
-| williams_volb_baixa | promissor | 51.0% | 96 | 41.2%–60.8% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
-| tres_corvos | promissor | 50.4% | 353 | 45.2%–55.6% | H6: três corvos → sobe (efeito pequeno) |
+| tres_corvos | promissor | 50.6% | 354 | 45.4%–55.7% | H6: três corvos → sobe (efeito pequeno) |
+| williams_volb_baixa | promissor | 50.5% | 97 | 40.7%–60.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | reprovado | 50.0% | 6 | 18.8%–81.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | vortice_invertido | reprovado | 49.4% | 391 | 44.4%–54.3% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | williams_volb_alta | reprovado | 47.4% | 76 | 36.5%–58.4% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
