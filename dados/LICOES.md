@@ -1,24 +1,24 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 00:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 00:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
-Carteira **US$ 11.12** · 37 operações fechadas · 4 abertas
+Carteira **US$ 11.27** · 39 operações fechadas · 4 abertas
 
-- **Total:** 26/37 com lucro (70%), resultado +1.12, média +0.030 por operação.
-- **Últimas 24 h:** 8/15 com lucro, +0.03.
-- **Por horário:** 12–17 UTC: 2 op, 50% certas, -0.42 · 00–05 UTC: 16 op, 69% certas, +0.02 · 06–11 UTC: 2 op, 50% certas, +0.05 · 18–23 UTC: 17 op, 76% certas, +1.47
-- **Por lado:** venda: 19 op, 68% certas, +0.39 · compra: 18 op, 72% certas, +0.74
-- **Por confiança do v4:** alta (0,08–0,12): 9 op, 67% certas, -0.31 · confiança baixa (<0,05): 1 op, 100% certas, +0.21 · média (0,05–0,08): 4 op, 100% certas, +0.57 · muito alta (≥0,12): 23 op, 65% certas, +0.65
-- **Por motivo de saída:** stop de segurança −2.0%: 2 op, 0% certas, -1.11 · meta do dia: +0.65 (meta +0.50: 4 op, 0% certas, -0.65 · guarda do dia: chegou a +0.94 : 3 op, 0% certas, -0.24 · tempo máximo (24 h): 1 op, 0% certas, -0.03 · tendência de 24 h virou para b: 1 op, 0% certas, -0.03 · stop móvel (pico +0.50%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.60%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.62%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.69%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.80%, guard: 1 op, 100% certas, +0.11 · stop móvel (pico +0.84%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.89%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.94%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.58%, guard: 2 op, 100% certas, +0.15 · stop móvel (pico +0.68%, guard: 2 op, 100% certas, +0.18 · stop móvel (pico +1.15%, guard: 1 op, 100% certas, +0.19 · stop móvel (pico +1.23%, guard: 1 op, 100% certas, +0.19 · stop móvel (pico +1.27%, guard: 1 op, 100% certas, +0.21 · stop móvel (pico +1.37%, guard: 1 op, 100% certas, +0.21 · stop móvel (pico +0.64%, guard: 3 op, 100% certas, +0.25 · stop móvel (pico +0.90%, guard: 2 op, 100% certas, +0.26 · stop móvel (pico +1.64%, guard: 1 op, 100% certas, +0.27
+- **Total:** 28/39 com lucro (72%), resultado +1.39, média +0.036 por operação.
+- **Últimas 24 h:** 9/16 com lucro, +0.10.
+- **Por horário:** 12–17 UTC: 2 op, 50% certas, -0.42 · 06–11 UTC: 2 op, 50% certas, +0.05 · 00–05 UTC: 17 op, 71% certas, +0.10 · 18–23 UTC: 18 op, 78% certas, +1.66
+- **Por lado:** venda: 19 op, 68% certas, +0.39 · compra: 20 op, 75% certas, +1.00
+- **Por confiança do v4:** alta (0,08–0,12): 9 op, 67% certas, -0.31 · confiança baixa (<0,05): 3 op, 100% certas, +0.47 · média (0,05–0,08): 4 op, 100% certas, +0.57 · muito alta (≥0,12): 23 op, 65% certas, +0.65
+- **Por motivo de saída:** stop de segurança −2.0%: 2 op, 0% certas, -1.11 · meta do dia: +0.65 (meta +0.50: 4 op, 0% certas, -0.65 · guarda do dia: chegou a +0.94 : 3 op, 0% certas, -0.24 · tempo máximo (24 h): 1 op, 0% certas, -0.03 · tendência de 24 h virou para b: 1 op, 0% certas, -0.03 · stop móvel (pico +0.50%, guard: 1 op, 100% certas, +0.06 · stop móvel (pico +0.60%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.57%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.62%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.69%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.80%, guard: 1 op, 100% certas, +0.11 · stop móvel (pico +0.84%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.89%, guard: 1 op, 100% certas, +0.13 · stop móvel (pico +0.94%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.58%, guard: 2 op, 100% certas, +0.15 · stop móvel (pico +0.68%, guard: 2 op, 100% certas, +0.18 · stop móvel (pico +1.15%, guard: 1 op, 100% certas, +0.19 · stop móvel (pico +1.23%, guard: 1 op, 100% certas, +0.19 · stop móvel (pico +1.14%, guard: 1 op, 100% certas, +0.19 · stop móvel (pico +1.27%, guard: 1 op, 100% certas, +0.21 · stop móvel (pico +1.37%, guard: 1 op, 100% certas, +0.21 · stop móvel (pico +0.64%, guard: 3 op, 100% certas, +0.25 · stop móvel (pico +0.90%, guard: 2 op, 100% certas, +0.26 · stop móvel (pico +1.64%, guard: 1 op, 100% certas, +0.27
 - **Moedas que mais perderam (≥ 3 op):** U -0.09 (3 op) · CYBER +0.25 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** CYBER +0.25 (4 op) · U -0.09 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Caçador (2 compras + 2 vendas por vela)
 
-Carteira **US$ 12.19** · 32 operações fechadas · 1 abertas
+Carteira **US$ 12.19** · 32 operações fechadas · 3 abertas
 
 - **Total:** 26/32 com lucro (81%), resultado +2.20, média +0.069 por operação.
 - **Últimas 24 h:** 14/17 com lucro, +1.45.
@@ -32,10 +32,10 @@ Carteira **US$ 12.19** · 32 operações fechadas · 1 abertas
 
 ## ⛏ Minerador (reversão sem volume)
 
-Carteira **US$ 9.80** · 32 operações fechadas · 0 abertas
+Carteira **US$ 9.80** · 32 operações fechadas · 4 abertas
 
 - **Total:** 16/32 com lucro (50%), resultado -0.20, média -0.006 por operação.
-- **Últimas 24 h:** 11/24 com lucro, -0.58.
+- **Últimas 24 h:** 10/23 com lucro, -0.66.
 - **Por horário:** 18–23 UTC: 16 op, 56% certas, -0.64 · 06–11 UTC: 5 op, 20% certas, -0.07 · 00–05 UTC: 11 op, 55% certas, +0.51
 - **Por lado:** venda: 20 op, 45% certas, -0.64 · compra: 12 op, 58% certas, +0.44
 - **Por motivo de saída:** guarda do dia: chegou a +0.81 : 3 op, 0% certas, -0.57 · stop de segurança −2.0%: 1 op, 0% certas, -0.55 · meta do dia: +0.60 (meta +0.50: 4 op, 0% certas, -0.22 · fim da vela seguinte: 11 op, 27% certas, -0.13 · stop móvel (pico +0.52%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +0.62%, guard: 1 op, 100% certas, +0.08 · stop móvel (pico +0.68%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.71%, guard: 1 op, 100% certas, +0.09 · stop móvel (pico +0.70%, guard: 1 op, 100% certas, +0.10 · stop móvel (pico +0.51%, guard: 2 op, 100% certas, +0.12 · stop móvel (pico +0.85%, guard: 1 op, 100% certas, +0.12 · stop móvel (pico +0.95%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +1.00%, guard: 1 op, 100% certas, +0.14 · stop móvel (pico +0.96%, guard: 1 op, 100% certas, +0.15 · stop móvel (pico +0.64%, guard: 2 op, 100% certas, +0.17
@@ -69,11 +69,11 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 81.0% das moedas subindo em 24 h, 93.4% em 4 h · BTC 24 h 0.1%, 4 h 1.87%.
+- **Amplitude:** 75.8% das moedas subindo em 24 h, 90.8% em 4 h · BTC 24 h 0.27%, 4 h 1.62%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SOL fundo duplo (alta, CONFIRMOU) · XLM fundo duplo (alta, CONFIRMOU) · AR topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · GALA fundo duplo (alta, formado) · ICP fundo duplo (alta, formado) · NEAR topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** SOL fundo duplo (alta, CONFIRMOU) · XLM fundo duplo (alta, CONFIRMOU) · AR topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · ATM fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · ETHFI fundo duplo (alta, formado) · GALA fundo duplo (alta, formado)
 - 📰 17/11 23:16 UTC · Decrypt: Why Microsoft Thinks Smaller, Cheaper AI Can Beat Claude and GPT
 - 📰 17/11 22:39 UTC · Decrypt: Nvidia Board Shuts Down Jensen Huang Comeback, Launches Search for New CEO
 - 📰 17/11 22:37 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -117,7 +117,7 @@ Carteira **US$ 10.11** · 7 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 21870 apostas conferidas ao vivo, acerto 55.5%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 21949 apostas conferidas ao vivo, acerto 55.6%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
