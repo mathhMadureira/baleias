@@ -1,6 +1,6 @@
 {
- "t": 1794961139,
- "hora_utc": "2026-11-18 00:18 UTC",
+ "t": 1794961391,
+ "hora_utc": "2026-11-18 00:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,11 +172,17 @@
   0.56,
   0.58,
   0.33,
-  -0.12
+  -0.18
  ],
  "contexto": {
-  "t": 1794961140,
+  "t": 1794961391,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1794961003,
+    "hora_utc": "18/11 00:16",
+    "titulo": "Nvidia board rejects Huang comeback despite record $116B quarter"
+   },
    {
     "fonte": "Decrypt",
     "t": 1794957363,
@@ -260,12 +266,6 @@
     "t": 1794943562,
     "hora_utc": "17/11 19:26",
     "titulo": "Ethereum Devs Weigh a Scaling Upgrade That Could Break 15,000 Apps"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1794942960,
-    "hora_utc": "17/11 19:16",
-    "titulo": "Predictions platform Kalshi complies with order to halt Trump mention contracts"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 8.6,
+   "media_top20_anual_pct": 8.8,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -736,7 +736,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
-   "carteira": 10.16,
+   "carteira": 10.26,
    "n_abertas": 4,
    "abertas": [
     [
@@ -752,11 +752,11 @@
      "compra"
     ],
     [
-     "TRUMP",
+     "GALA",
      "compra"
     ]
    ],
-   "n_fechadas": 71,
+   "n_fechadas": 72,
    "ordem": null
   },
   {
@@ -835,11 +835,15 @@
    "avatar": "🟣",
    "motor": "tendência 24 h + stop móvel (LBank)",
    "missao": "Simulado na LBank (H53): SOL, memecoins e HOOD, a favor da tendência de 24 h, segurando com stop móvel e stop de 2%.",
-   "carteira": 5.7,
+   "carteira": 5.64,
    "n_abertas": 4,
    "abertas": [
     [
      "NES",
+     "compra"
+    ],
+    [
+     "MMT",
      "compra"
     ],
     [
@@ -849,13 +853,9 @@
     [
      "CLAUDIA",
      "compra"
-    ],
-    [
-     "MMT",
-     "compra"
     ]
    ],
-   "n_fechadas": 13,
+   "n_fechadas": 15,
    "ordem": null
   },
   {
@@ -932,13 +932,13 @@
     "carteira": 11.71
    },
    "scalper_c": {
-    "ops": 71,
-    "acerto": 0.535,
-    "soma": 0.164,
+    "ops": 72,
+    "acerto": 0.542,
+    "soma": 0.261,
     "ganho_medio": 0.085,
     "perda_media": -0.092,
-    "fator_lucro": 1.05,
-    "carteira": 10.16
+    "fator_lucro": 1.09,
+    "carteira": 10.26
    },
    "scalper_d": {
     "ops": 78,
@@ -968,13 +968,13 @@
     "carteira": 0.9
    },
    "lbank": {
-    "ops": 13,
-    "acerto": 0.462,
-    "soma": -4.392,
-    "ganho_medio": 0.395,
-    "perda_media": -0.966,
-    "fator_lucro": 0.35,
-    "carteira": 5.7
+    "ops": 15,
+    "acerto": 0.467,
+    "soma": -4.222,
+    "ganho_medio": 0.405,
+    "perda_media": -0.882,
+    "fator_lucro": 0.4,
+    "carteira": 5.64
    },
    "radar": {
     "ops": 101,
