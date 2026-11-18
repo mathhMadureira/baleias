@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos robôs
 
-Atualizado em 18/11/2026 07:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 07:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## 🌲 Rápido nuvem (v4, todas as apostas)
 
@@ -73,7 +73,7 @@ Carteira **US$ 9.72** · 9 operações fechadas · 2 abertas
 
 - **Amplitude:** 51.7% das moedas subindo em 24 h, 61.9% em 4 h · BTC 24 h 0.05%, 4 h 0.42%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -0.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -2.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KITE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ARB topo duplo (baixa, formado) · BTC topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · ENSO topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LSK fundo duplo (alta, formado) · MEGA fundo duplo (alta, formado)
 - 📰 18/11 07:27 UTC · CoinDesk: Live updates: Bitcoin stuck near $65,000 as popular 'basis trade' returns dry up
