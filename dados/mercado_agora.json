@@ -1,6 +1,6 @@
 {
- "t": 1795043025,
- "hora_utc": "2026-11-18 23:03 UTC",
+ "t": 1795043203,
+ "hora_utc": "2026-11-18 23:06 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 108,
@@ -172,10 +172,10 @@
   -0.19,
   -0.44,
   -0.16,
-  0.27
+  0.42
  ],
  "contexto": {
-  "t": 1795043026,
+  "t": 1795043204,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,9 +274,9 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.0,
+   "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": 2.2,
+    "BTC": 0.6,
     "ETH": 11.0,
     "SOL": 11.0
    },
@@ -558,10 +558,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795029390,
-    "texto": "As 3 compras mantidas desde a madrugada saíram no stop de segurança (simulado: RENDER −0,82 e SHIB −0,567; testnet: ZEC −0,97, RENDER −0,79, SHIB −0,45), enquanto a venda de USTC (confiança 0,157) está +0,90 no testnet com o stop móvel armado. Manter compras sem confiança do v4 (ZEC 0,481, RENDER 0,506) num mercado que caiu de 73% para 46% subindo custou ~2,2 no testnet; conferir se as vendas de c"
-   },
-   {
     "t": 1795030666,
     "texto": "A venda de USTC (confiança 0,157 na entrada) segue +0,80 no testnet com stop móvel em 0,003832, e GTC venda (confiança 0,130) está +0,06; as compras RENDER (−0,82) e SHIB (−0,567) do simulado saíram no stop de segurança. Conferir se ERA compra (confiança 0,137) com BTC −1,14% em 4 h repete as vendas confiantes ou as compras perdedoras."
    },
@@ -588,6 +584,10 @@
    {
     "t": 1795040034,
     "texto": "RUNE venda (entrada 0,5246, saída 0,5225) fechou +0,067 na corretora a favor do regime de baixa. Conta de teste com 11 fechadas: p = 0,273 (3 ganhos, 7 perdas, 1 zero), G = 0,327, L = 0,374, E = −0,148 por operação; ainda negativo, então só entro onde regime, tempos e carteiras concordam."
+   },
+   {
+    "t": 1795043026,
+    "texto": "ZEC venda −0,009 e AAVE venda +0,061 fecharam no stop de segurança da corretora (−0,60%, já movido para perto da entrada). Conta de teste com 13 fechadas: p = 0,308 (4 ganhos, 8 perdas, 1 zero), G = 0,261, L = 0,291, E = −0,122 por operação (era −0,148 com 11). Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054: ganha pouco e perde muito, o contrário do 'perder"
    }
   ]
  },
@@ -646,7 +646,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.96,
+   "carteira": 10.87,
    "n_abertas": 1,
    "abertas": [
     [
@@ -704,7 +704,7 @@
     "ganho_medio": 0.106,
     "perda_media": -0.096,
     "fator_lucro": 11.03,
-    "carteira": 10.96
+    "carteira": 10.87
    }
   },
   "vereditos": []
@@ -772,12 +772,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "18/11 00:14",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Dia novo: Robô Claude destravado (10,11). Alta de 24 h pela segunda leitura (81,0% das moedas sobem em 24 h, 93,4% em 4 h), mas BTC +0,10% em 24 h com volume 0,83× e o v4 com 104 vendas em 127 apostas: fico fora e compro o primeiro recuo de 1 h. Sem ordens: a regra da tendência já põe os robôs em co"
-  },
-  {
    "hora_utc": "18/11 00:40",
    "de": "claude",
    "para": "sala",
@@ -842,6 +836,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Baixa mais forte (17,1% sobem em 4 h; BTC −1,20% em 4 h). RUNE vendida saiu +0,067. Mantenho ZEC e AAVE vendidas (3 carteiras vendidas × 0 em cada; abaixo da MM20 em 6/6 e 5/6 tempos). LA fica de fora: 5/6 tempos acima da MM20. Conta de teste: 11 fechadas, p 0,27, E −0,15."
+  },
+  {
+   "hora_utc": "18/11 23:06",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Baixa forte (7,5% das moedas sobem em 4 h; BTC −1,19% em 4 h). Corretora fechou ZEC vendida (−0,009) e AAVE vendida (+0,061). Sem entrada nova: raspagem incompleta (regras do testnet ausentes; depois só 58 de 106 moedas e carteiras vazias). Conta de teste: 13 fechadas, p 0,31, E −0,12."
   }
  ]
 }
