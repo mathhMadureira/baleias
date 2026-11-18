@@ -1,6 +1,6 @@
 {
- "t": 1794964933,
- "hora_utc": "2026-11-18 01:22 UTC",
+ "t": 1794965183,
+ "hora_utc": "2026-11-18 01:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   0.58,
   0.33,
   -0.24,
-  -0.31
+  -0.4
  ],
  "contexto": {
-  "t": 1794964934,
+  "t": 1794965183,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -278,7 +278,7 @@
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": 7.6
+    "SOL": 6.4
    },
    "leitura": "neutro"
   },
@@ -511,7 +511,7 @@
     "entrada": 964.92,
     "agora": 957.33,
     "resultado_pct": -0.79,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "a favor da alta de 24 h (73,3% subindo): ZEC 24 h +6,91%, 4 h +4,65% sem esticar, comprada no recuo de 1 h (20,0% das moedas subindo); as 2 compras anteriores d"
    },
    {
@@ -520,7 +520,7 @@
     "entrada": 1.466,
     "agora": 1.458,
     "resultado_pct": -0.55,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "lidera as altas de 4 h com volume: 4 h +6,39%, 24 h +7,09%, volume 2,81× (abaixo de 15% em 4 h); comprada no recuo de 1 h dentro da alta de 24 h (73,3% subindo)"
    }
   ],
@@ -696,7 +696,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Entradas do v4 com lucro realizado rápido e stop de 1,5%.",
-   "carteira": 10.89,
+   "carteira": 10.9,
    "n_abertas": 4,
    "abertas": [
     [
@@ -708,15 +708,15 @@
      "compra"
     ],
     [
-     "HAEDAL",
+     "BCH",
      "compra"
     ],
     [
-     "BCH",
+     "TIA",
      "compra"
     ]
    ],
-   "n_fechadas": 78,
+   "n_fechadas": 79,
    "ordem": null
   },
   {
@@ -754,13 +754,9 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H50): igual a ele, mas só nas apostas do v4 com confiança ≥ 0,08 (o único achado robusto da H36).",
-   "carteira": 9.99,
+   "carteira": 10.0,
    "n_abertas": 4,
    "abertas": [
-    [
-     "HAEDAL",
-     "compra"
-    ],
     [
      "U",
      "compra"
@@ -772,9 +768,13 @@
     [
      "GALA",
      "compra"
+    ],
+    [
+     "TIA",
+     "compra"
     ]
    ],
-   "n_fechadas": 72,
+   "n_fechadas": 73,
    "ordem": null
   },
   {
@@ -783,7 +783,7 @@
    "avatar": "✂",
    "motor": "Cérebro v4",
    "missao": "Desafiante do Scalper (H51): igual a ele, mas evita os segmentos (lado, horário, confiança) em que o Scalper perde com prova.",
-   "carteira": 10.89,
+   "carteira": 10.9,
    "n_abertas": 4,
    "abertas": [
     [
@@ -795,15 +795,15 @@
      "compra"
     ],
     [
-     "HAEDAL",
+     "BCH",
      "compra"
     ],
     [
-     "BCH",
+     "TIA",
      "compra"
     ]
    ],
-   "n_fechadas": 78,
+   "n_fechadas": 79,
    "ordem": null
   },
   {
@@ -928,13 +928,13 @@
     "carteira": 11.03
    },
    "scalper": {
-    "ops": 78,
-    "acerto": 0.577,
-    "soma": 1.248,
+    "ops": 79,
+    "acerto": 0.582,
+    "soma": 1.355,
     "ganho_medio": 0.085,
     "perda_media": -0.078,
-    "fator_lucro": 1.49,
-    "carteira": 10.89
+    "fator_lucro": 1.53,
+    "carteira": 10.9
    },
    "scalper_b": {
     "ops": 82,
@@ -946,22 +946,22 @@
     "carteira": 11.47
    },
    "scalper_c": {
-    "ops": 72,
-    "acerto": 0.542,
-    "soma": 0.261,
+    "ops": 73,
+    "acerto": 0.548,
+    "soma": 0.357,
     "ganho_medio": 0.085,
     "perda_media": -0.092,
-    "fator_lucro": 1.09,
-    "carteira": 9.99
+    "fator_lucro": 1.12,
+    "carteira": 10.0
    },
    "scalper_d": {
-    "ops": 78,
-    "acerto": 0.577,
-    "soma": 1.248,
+    "ops": 79,
+    "acerto": 0.582,
+    "soma": 1.355,
     "ganho_medio": 0.085,
     "perda_media": -0.078,
-    "fator_lucro": 1.49,
-    "carteira": 10.89
+    "fator_lucro": 1.53,
+    "carteira": 10.9
    },
    "minerador": {
     "ops": 36,
