@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 20:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 21:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -28,7 +28,7 @@ Carteira **US$ 8.48** · 7 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.18** · 4 operações fechadas · 1 abertas
+Carteira **US$ 10.17** · 4 operações fechadas · 1 abertas
 
 - **Total:** 2/4 com lucro (50%), resultado +0.18, média +0.046 por operação.
 - **Últimas 24 h:** 2/4 com lucro, +0.18.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.24** · 3 operações fechadas · 1 abertas
+Carteira **US$ 10.24** · 3 operações fechadas · 4 abertas
 
 - **Total:** 3/3 com lucro (100%), resultado +0.30, média +0.102 por operação.
 - **Últimas 24 h:** 3/3 com lucro, +0.30.
@@ -56,11 +56,11 @@ Carteira **US$ 10.24** · 3 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 28.0% das moedas subindo em 24 h, 75.7% em 4 h · BTC 24 h -2.29%, 4 h 0.19%.
+- **Amplitude:** 26.2% das moedas subindo em 24 h, 65.4% em 4 h · BTC 24 h -2.14%, 4 h -0.21%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 7.5, 'ETH': 6.5, 'SOL': -1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': -3.6, 'ETH': 1.6, 'SOL': 3.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** PROM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SENT fundo duplo (alta, CONFIRMOU) · BLUR fundo duplo (alta, formado) · BLUR ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · FF fundo duplo (alta, formado) · FF ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 20:32 UTC · Cointelegraph: Bain Capital Crypto leads $110M Variational round at $1.5B valuation
 - 📰 18/11 20:20 UTC · Cointelegraph: Binance says it obtained $6.5B worldwide freezing order after hack
 - 📰 18/11 20:16 UTC · Decrypt: Google's Genie 4 Is Here, Letting Ultra Subscribers Build AI Worlds in Real Time
@@ -104,7 +104,7 @@ Carteira **US$ 10.24** · 3 operações fechadas · 1 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24540 apostas conferidas ao vivo, acerto 55.8%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 24585 apostas conferidas ao vivo, acerto 55.8%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
