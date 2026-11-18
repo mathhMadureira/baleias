@@ -1,28 +1,28 @@
 {
- "t": 1795043737,
- "hora_utc": "2026-11-18 23:15 UTC",
+ "t": 1795043914,
+ "hora_utc": "2026-11-18 23:18 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
-  "subindo_pct": 29.0,
-  "mediana_pct": -0.37
+  "subindo_pct": 56.1,
+  "mediana_pct": 0.11
  },
  "mercado_4h": {
   "moedas": 107,
-  "subindo_pct": 17.8,
-  "mediana_pct": -1.27
+  "subindo_pct": 24.3,
+  "mediana_pct": -0.63
  },
  "mercado_24h": {
   "moedas": 107,
-  "subindo_pct": 19.6,
-  "mediana_pct": -3.21
+  "subindo_pct": 18.7,
+  "mediana_pct": -3.59
  },
  "btc": {
-  "1h": -0.16,
-  "4h": -1.45,
-  "24h": -3.83,
-  "preco": 62254.71,
-  "vol_4h_vs_media": 0.97
+  "1h": 0.35,
+  "4h": -0.39,
+  "24h": -3.92,
+  "preco": 62605.52,
+  "vol_4h_vs_media": 0.95
  },
  "maiores_quedas_4h": [
   {
@@ -38,52 +38,52 @@
    "vol": 2.07
   },
   {
-   "moeda": "ZIL",
-   "4h": -7.03,
-   "24h": 5.6,
-   "vol": 0.48
+   "moeda": "MMT",
+   "4h": -7.53,
+   "24h": 58.96,
+   "vol": 0.19
   },
   {
-   "moeda": "MMT",
-   "4h": -6.9,
-   "24h": 64.32,
-   "vol": 0.2
+   "moeda": "ZIL",
+   "4h": -7.14,
+   "24h": 4.86,
+   "vol": 0.47
   },
   {
    "moeda": "BREV",
-   "4h": -6.86,
-   "24h": -25.8,
+   "4h": -5.11,
+   "24h": -25.05,
    "vol": 0.23
   },
   {
+   "moeda": "KAVA",
+   "4h": -3.95,
+   "24h": 1.32,
+   "vol": 0.45
+  },
+  {
    "moeda": "ZKC",
-   "4h": -3.83,
-   "24h": 25.42,
+   "4h": -3.48,
+   "24h": 25.51,
    "vol": 0.39
   },
   {
-   "moeda": "ZK",
-   "4h": -3.63,
-   "24h": -1.91,
-   "vol": 0.56
-  },
-  {
-   "moeda": "ZKP",
-   "4h": -3.18,
-   "24h": 6.35,
-   "vol": 0.27
+   "moeda": "RARE",
+   "4h": -2.94,
+   "24h": -9.89,
+   "vol": 0.64
   },
   {
    "moeda": "ASTER",
-   "4h": -3.17,
-   "24h": -9.48,
-   "vol": 0.87
+   "4h": -2.42,
+   "24h": -9.9,
+   "vol": 0.8
   },
   {
    "moeda": "FIL",
-   "4h": -3.14,
-   "24h": -6.8,
-   "vol": 0.89
+   "4h": -2.09,
+   "24h": -7.34,
+   "vol": 0.92
   }
  ],
  "maiores_altas_4h": [
@@ -94,28 +94,34 @@
    "vol": 1.25
   },
   {
+   "moeda": "SENT",
+   "4h": 4.05,
+   "24h": 9.79,
+   "vol": 1.22
+  },
+  {
+   "moeda": "MEGA",
+   "4h": 3.99,
+   "24h": 7.98,
+   "vol": 1.04
+  },
+  {
    "moeda": "PENDLE",
    "4h": 3.59,
    "24h": -1.23,
    "vol": 3.77
   },
   {
-   "moeda": "MEGA",
-   "4h": 2.82,
-   "24h": 8.1,
-   "vol": 1.02
+   "moeda": "ZRO",
+   "4h": 3.47,
+   "24h": -4.33,
+   "vol": 0.51
   },
   {
    "moeda": "JUP",
    "4h": 2.19,
    "24h": -1.87,
    "vol": 0.99
-  },
-  {
-   "moeda": "SENT",
-   "4h": 1.86,
-   "24h": 9.51,
-   "vol": 1.25
   },
   {
    "moeda": "USUAL",
@@ -130,22 +136,16 @@
    "vol": 0.09
   },
   {
-   "moeda": "SOPH",
-   "4h": 0.98,
-   "24h": 17.05,
-   "vol": 0.87
+   "moeda": "AAVE",
+   "4h": 1.08,
+   "24h": -4.3,
+   "vol": 0.74
   },
   {
-   "moeda": "ZRO",
-   "4h": 0.82,
-   "24h": -4.73,
-   "vol": 0.49
-  },
-  {
-   "moeda": "ETHFI",
-   "4h": 0.57,
-   "24h": -1.69,
-   "vol": 1.04
+   "moeda": "SHELL",
+   "4h": 0.91,
+   "24h": -5.38,
+   "vol": 0.26
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.19,
   -0.44,
   -0.16,
-  0.55
+  0.58
  ],
  "contexto": {
-  "t": 1795043738,
+  "t": 1795043915,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,10 +274,10 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.4,
+   "media_top20_anual_pct": 5.7,
    "principais_anual_pct": {
-    "BTC": 1.2,
-    "ETH": 10.8,
+    "BTC": -0.1,
+    "ETH": 10.6,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -373,17 +373,25 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 121,
-  "compras": 64,
-  "vendas": 57,
+  "apostas": 119,
+  "compras": 33,
+  "vendas": 86,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
     "prob_subir": 0.362
    },
    {
-    "moeda": "ZBT",
+    "moeda": "WLFI",
     "prob_subir": 0.366
+   },
+   {
+    "moeda": "ZBT",
+    "prob_subir": 0.37
+   },
+   {
+    "moeda": "RUNE",
+    "prob_subir": 0.373
    },
    {
     "moeda": "SLP",
@@ -394,20 +402,12 @@
     "prob_subir": 0.382
    },
    {
+    "moeda": "LA",
+    "prob_subir": 0.385
+   },
+   {
     "moeda": "PEOPLE",
     "prob_subir": 0.386
-   },
-   {
-    "moeda": "LA",
-    "prob_subir": 0.386
-   },
-   {
-    "moeda": "BABAB",
-    "prob_subir": 0.386
-   },
-   {
-    "moeda": "BONK",
-    "prob_subir": 0.391
    }
   ],
   "mais_confiantes_compra": [
@@ -424,10 +424,6 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.609
-   },
-   {
     "moeda": "COOKIE",
     "prob_subir": 0.593
    },
@@ -438,6 +434,10 @@
    {
     "moeda": "PARTI",
     "prob_subir": 0.58
+   },
+   {
+    "moeda": "SOPH",
+    "prob_subir": 0.579
    },
    {
     "moeda": "MORPHO",
@@ -558,10 +558,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795030666,
-    "texto": "A venda de USTC (confiança 0,157 na entrada) segue +0,80 no testnet com stop móvel em 0,003832, e GTC venda (confiança 0,130) está +0,06; as compras RENDER (−0,82) e SHIB (−0,567) do simulado saíram no stop de segurança. Conferir se ERA compra (confiança 0,137) com BTC −1,14% em 4 h repete as vendas confiantes ou as compras perdedoras."
-   },
-   {
     "t": 1795033959,
     "texto": "ZKP venda saiu pelo stop móvel com resultados opostos: +0,064 no simulado e −0,1058 no testnet (pico +0,62%, guardou +0,43%, mas o preço já tinha passado do nível). Conferir se as próximas saídas por stop móvel no testnet também ficam abaixo do simulado."
    },
@@ -588,6 +584,10 @@
    {
     "t": 1795043026,
     "texto": "ZEC venda −0,009 e AAVE venda +0,061 fecharam no stop de segurança da corretora (−0,60%, já movido para perto da entrada). Conta de teste com 13 fechadas: p = 0,308 (4 ganhos, 8 perdas, 1 zero), G = 0,261, L = 0,291, E = −0,122 por operação (era −0,148 com 11). Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054: ganha pouco e perde muito, o contrário do 'perder"
+   },
+   {
+    "t": 1795043644,
+    "texto": "Sem operação nova nesta rodada. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, soma −1,58, E = −0,122 por operação. Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054. As últimas vendas (ZEC −0,009, AAVE +0,061) entraram com o mercado já perto da mínima de 24 h e saíram no stop movido. Por isso não vendo BTC a +0,84% da mínima, com o v4 contra. C"
    }
   ]
  },
@@ -705,34 +705,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.9% em 24682 apostas (604 velas, 11/11 23:30–18/11 22:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5589,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.9% em 24718 apostas (604 velas, 11/11 23:30–18/11 22:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5594,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.36,
+  "z_contra_lab": 2.42,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5135,
-    "n": 17802
+    "acerto": 0.5126,
+    "n": 17838
    },
    "segue_maioria_24h": {
-    "acerto": 0.5194,
-    "n": 24644
+    "acerto": 0.5187,
+    "n": 24680
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5803,
-    "n": 3252
+    "acerto": 0.5802,
+    "n": 3254
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5886,
-    "n": 1417
+    "acerto": 0.5889,
+    "n": 1418
    },
    "confianca:<0,05": {
-    "acerto": 0.5818,
-    "n": 7087
+    "acerto": 0.5836,
+    "n": 7120
    },
    "confianca:≥0,12": {
     "acerto": 0.6799,
@@ -751,27 +751,21 @@
     "n": 5374
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5378,
-    "n": 7602
+    "acerto": 0.5397,
+    "n": 7638
    },
    "lado:compra": {
-    "acerto": 0.5286,
-    "n": 11577
+    "acerto": 0.5299,
+    "n": 11612
    },
    "lado:venda": {
     "acerto": 0.5856,
-    "n": 13105
+    "n": 13106
    }
   }
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "18/11 00:40",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Recuo dentro da alta: 73,3% das moedas sobem em 24 h, 87,5% em 4 h, só 20,0% em 1 h; BTC −0,35% em 1 h, volume 0,82×. Robô Claude compra ZEC (24 h +6,91%) e RENDER (4 h +6,39%, volume 2,81×), só 2 posições por falta de volume no BTC. O v4 acerta menos nas compras (52,4%) que nas vendas (58,4%): não "
-  },
   {
    "hora_utc": "18/11 01:13",
    "de": "claude",
@@ -837,6 +831,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Baixa forte (7,5% das moedas sobem em 4 h; BTC −1,19% em 4 h). Corretora fechou ZEC vendida (−0,009) e AAVE vendida (+0,061). Sem entrada nova: raspagem incompleta (regras do testnet ausentes; depois só 58 de 106 moedas e carteiras vazias). Conta de teste: 13 fechadas, p 0,31, E −0,12."
+  },
+  {
+   "hora_utc": "18/11 23:18",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Baixa (8,4% das 107 moedas sobem em 4 h; BTC −1,45% em 4 h, a +0,84% da mínima de 24 h). Carteiras vendidas (BTC 1×17), mas o v4 dá 62 compras e 1 venda (BTC 0,546, ZEC 0,545). Leitura dividida: sem entrada. Conta de teste: 13 fechadas, p 0,31, E −0,12."
   }
  ]
 }

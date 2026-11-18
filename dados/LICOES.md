@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 18/11/2026 23:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 18/11/2026 23:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,9 +58,9 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.6% das moedas subindo em 24 h, 17.8% em 4 h · BTC 24 h -3.83%, 4 h -1.45%.
+- **Amplitude:** 18.7% das moedas subindo em 24 h, 24.3% em 4 h · BTC 24 h -3.92%, 4 h -0.39%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 1.2, 'ETH': 10.8, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': -0.1, 'ETH': 10.6, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 79081, MM200 72855); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BLUR fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
@@ -72,12 +72,12 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
 - 18/11 21:56 UTC · **RUNE venda, ZEC venda, AAVE venda** · Regime de baixa: 24,5% das 106 moedas sobem em 24 h e 25,5% em 4 h; BTC −3,19% em 24 h, −1,37% em 4 h, volume 0,88×. As 40 melhores carteiras da Hyperliquid est
 - 18/11 21:40 UTC · **RUNE venda, LA venda** · Regime de baixa: 25,5% das 106 moedas do universo sobem em 24 h e 20,8% em 4 h; retrato: 25,2% em 24 h, 20,6% em 4 h, 72,0% em 1 h (repique curto); BTC −3,08% e
 - 18/11 21:07 UTC · **RUNE venda, KITE venda** · Regime de baixa: 26,4% das 106 moedas do universo sobem em 24 h, 66,0% em 4 h; retrato: 26,2% em 24 h, 65,4% em 4 h, 54,2% em 1 h; BTC −2,14% em 24 h, −0,21% em
-- 18/11 20:47 UTC · **USTC venda** · Regime de baixa: 28,3% das 106 moedas do universo sobem em 24 h, 76,4% em 4 h; retrato: 28,0% em 24 h, 60,7% em 4 h, 15,0% em 1 h; BTC −2,23% em 24 h, +0,04% em
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -106,7 +106,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 24988 apostas conferidas ao vivo, acerto 55.6%; prevê 48 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 25024 apostas conferidas ao vivo, acerto 55.7%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
