@@ -1293,3 +1293,26 @@ Regras do Sistema 2 das Tartarugas (Dennis/Eckhardt), adaptadas para cripto diá
   **Passa** com ≥ 300 eventos resolvidos: média > 0, t ≥ 2 com erro-padrão por hora de abertura (aberturas da mesma hora andam juntas) e média > 0 em
   2 dos 3 blocos de tempo. Leitura extra, não decide: o mesmo para eventos em que 2+ das 40 abriram o mesmo lado na mesma moeda em 1 hora.
   Uma tentativa só; o filtro das 40 não muda depois de ver.
+
+## Hipótese 64: "perder de colher e ganhar de balde" — entrada que cresce com o ganho e saída com stop pequeno e lucro grande (registrada em 18/11/2026 19:35 BRT = 22:35 UTC, antes de rodar)
+- **Pedido do dono (18/11):** "com os ganhos, faça eles aumentarem a porcentagem de valor de entrada. O tema central é: perder de colher e ganhar de
+  balde — perder pouco e ganhar muito." E: "o que eu quero é melhorar a autonomia dos agentes, fazendo eles ganharem muito mais dinheiro."
+- **Medido antes (não decide):** desde a H61 o chefe ganha em média US$ 0,053 e perde 0,103 por operação (o contrário do tema); as decisões dele
+  usam stop 0,6% e alvo 0,5%. Na H52 a única rota aprovada (R6) ganha de colher (G 0,78%) e perde de balde (L 1,85%) com acerto de 83,5%; a rota
+  2 para 1 (R5) deu −0,067%. Na H60, crescer a posição só no lucro com prova (braço C) perdeu nos dois conjuntos.
+- **Parte T — tamanho (1 tentativa):** fator = 2,5 × carteira realizada ÷ US$ 10, limitado a [1,25; 5]; nocional = fator × carteira realizada
+  (com US$ 12 → 3,0×; com US$ 8 → 2,0×: cresce no ganho, encolhe na perda). Alavancagem da corretora 10× com fator ≤ 2,5 e 20× acima (as 4 margens
+  cabem; perda limitada à margem). Contrafactual igual ao da H60 (`lab/alavancagem.py`): conjunto 1 = etiqueta `estado-antes-do-zero-2026-11-16`;
+  conjunto 2 = robôs da H60 e os 3 agentes desde o zero de 16/11 até agora. **Passa** se, nos DOIS conjuntos, a soma das carteiras finais for maior
+  que a da regra atual (2,5×) e nenhum robô terminar abaixo do piso de US$ 5 sem estar abaixo também na regra atual.
+- **Parte S — saída (4 tentativas, contadas):** todas as apostas do v4 conferidas ao vivo (`dados/cerebro_v4.json`) A FAVOR do regime de 24 h
+  (≤ 30% das moedas subindo = só vendas; ≥ 70% = só compras; o regime é contado nas próprias moedas dos dados), velas de 15 min da Binance, entrada
+  no fechamento da vela do sinal, custo 0,12%, stop conta primeiro dentro da vela, pico do stop móvel só a partir da vela seguinte, máximo 24 h:
+  S1 stop 0,5% e alvo 1,5% · S2 stop 0,5% + stop móvel (arma +0,5%, guarda 70%), sem alvo · S3 stop 1% + stop móvel, sem alvo · S4 stop 1% e alvo 3%.
+  Referência (não conta): R6 recalculada nos mesmos dados. **Passa** a rota com média líquida > 0, z ≥ 2,24 (Bonferroni para 4, 5% unilateral,
+  erro-padrão por vela de entrada), média > 0 nos 3 blocos de tempo e ganho médio ≥ 2 × perda média (a definição do tema). Entre as aprovadas vale a
+  de maior média.
+- **O que entra:** parte T aprovada → o tamanho novo vale para os agentes da nuvem e para a conta de teste. Rota S aprovada → vira a forma obrigatória
+  das posições dos agentes (stop até o da rota; alvo ≥ 3 × stop ou sem alvo, deixando o stop móvel levar o lucro); o `operar.py` e o `gravar.py`
+  recusam decisão fora dela. O que não passar não entra e fica registrado; o dono recebe os números.
+- **Juiz ao vivo do que entrar (até 02/12):** por agente, em 30+ operações: ganho médio ≥ 2 × perda média e carteira > US$ 10.
