@@ -1,21 +1,21 @@
 {
- "t": 1795030445,
- "hora_utc": "2026-11-18 19:34 UTC",
+ "t": 1795030673,
+ "hora_utc": "2026-11-18 19:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 106,
-  "subindo_pct": 60.4,
+  "moedas": 107,
+  "subindo_pct": 59.8,
   "mediana_pct": 0.27
  },
  "mercado_4h": {
-  "moedas": 106,
-  "subindo_pct": 40.6,
-  "mediana_pct": -0.36
+  "moedas": 107,
+  "subindo_pct": 40.2,
+  "mediana_pct": -0.37
  },
  "mercado_24h": {
-  "moedas": 106,
-  "subindo_pct": 56.6,
-  "mediana_pct": 0.22
+  "moedas": 107,
+  "subindo_pct": 56.1,
+  "mediana_pct": 0.21
  },
  "btc": {
   "1h": -0.45,
@@ -172,10 +172,10 @@
   -0.57,
   0.56,
   0.09,
-  -0.6
+  -0.71
  ],
  "contexto": {
-  "t": 1795030446,
+  "t": 1795030674,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 8.1,
+   "media_top20_anual_pct": 7.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 8.5,
-    "SOL": 5.0
+    "ETH": 8.8,
+    "SOL": 3.9
    },
    "leitura": "neutro"
   },
@@ -462,7 +462,7 @@
     "entrada": 0.1358,
     "agora": 0.13576,
     "resultado_pct": 0.03,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "v4 0.370 de subir (confiança 0.130, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h -0.38%, 4 h -1.71%, 24 h -0.13%, volume 4 h 0."
    },
    {
@@ -471,7 +471,7 @@
     "entrada": 0.0341,
     "agora": 0.0341,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "v4 0.403 de subir (confiança 0.097, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h +0.00%, 4 h +1.79%, 24 h +9.65%, volume 4 h 0."
    },
    {
@@ -480,7 +480,7 @@
     "entrada": 0.0765,
     "agora": 0.0768,
     "resultado_pct": -0.39,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "v4 0.413 de subir (confiança 0.087, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h +0.53%, 4 h -0.65%, 24 h +0.13%, volume 4 h 1."
    }
   ],
@@ -738,7 +738,7 @@
    "avatar": "📡",
    "motor": "leitura de 1 s em todos os tempos (H56)",
    "missao": "Contínuo: lê o mercado a cada 2 s a partir das velas de 1 s, de 5 s a 4 h; entra contra movimento forte sem volume. Reprovado no laboratório: comparação ao vivo.",
-   "carteira": 5.91,
+   "carteira": 5.86,
    "n_abertas": 3,
    "abertas": [
     [
@@ -895,7 +895,7 @@
     "ganho_medio": 0.071,
     "perda_media": -0.11,
     "fator_lucro": 0.59,
-    "carteira": 5.91
+    "carteira": 5.86
    },
    "testnet": {
     "ops": 96,
@@ -939,12 +939,12 @@
   "z_contra_lab": 2.06,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5131,
-    "n": 17239
+    "acerto": 0.5127,
+    "n": 17354
    },
    "segue_maioria_24h": {
-    "acerto": 0.519,
-    "n": 24175
+    "acerto": 0.5178,
+    "n": 24137
    }
   },
   "referencia_ganha": [],
