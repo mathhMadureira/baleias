@@ -1,6 +1,6 @@
 {
- "t": 1795083840,
- "hora_utc": "2026-11-19 10:24 UTC",
+ "t": 1795084011,
+ "hora_utc": "2026-11-19 10:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,23 @@
   -0.02,
   -0.0,
   0.19,
-  0.0
+  -0.03
  ],
  "contexto": {
-  "t": 1795083841,
+  "t": 1795084011,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795083905,
+    "hora_utc": "19/11 10:25",
+    "titulo": "Bitcoin Struggles to Hold $64,000 as ETF Outflows Hit $2.9B in November"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795083732,
+    "hora_utc": "19/11 10:22",
+    "titulo": "Roundhill scraps Solana and XRP income ETFs as rival funds indicate low demand"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795078498,
@@ -254,18 +266,6 @@
     "t": 1795052733,
     "hora_utc": "19/11 01:45",
     "titulo": "Trump administration unveils new center to choke off scam payments"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795048549,
-    "hora_utc": "19/11 00:35",
-    "titulo": "Fed officials saw October rate hold as a ‘close call,’ minutes show"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795048426,
-    "hora_utc": "19/11 00:33",
-    "titulo": "Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 9.4,
    "principais_anual_pct": {
-    "BTC": -1.9,
-    "ETH": 6.3,
-    "SOL": 7.0
+    "BTC": -2.3,
+    "ETH": 5.8,
+    "SOL": 7.4
    },
    "leitura": "neutro"
   },

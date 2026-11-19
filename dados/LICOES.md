@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 10:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 10:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,15 +60,15 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 31.8% das moedas subindo em 24 h, 59.1% em 4 h · BTC 24 h -1.24%, 4 h 0.51%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.4%/ano · {'BTC': -1.9, 'ETH': 6.3, 'SOL': 7.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.4%/ano · {'BTC': -2.3, 'ETH': 5.8, 'SOL': 7.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA fundo duplo (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · BNB triângulo descendente (baixa, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 19/11 10:25 UTC · Decrypt: Bitcoin Struggles to Hold $64,000 as ETF Outflows Hit $2.9B in November
+- 📰 19/11 10:22 UTC · CoinDesk: Roundhill scraps Solana and XRP income ETFs as rival funds indicate low demand
 - 📰 19/11 08:54 UTC · Cointelegraph: Singapore settles $77.5M tokenized bill sale with wholesale CBDC
 - 📰 19/11 08:26 UTC · Cointelegraph: Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B
 - 📰 19/11 08:04 UTC · Cointelegraph: BTCPay Server issues emergency update for 5 security flaws
 - 📰 19/11 07:55 UTC · Cointelegraph: Bitcoin retests $62K as Nasdaq futures rise ahead of Anthropic debut
-- 📰 19/11 06:23 UTC · CoinDesk: Fed's rate hike push may be a mistake. Here's why
-- 📰 19/11 06:00 UTC · Cointelegraph: Bitcoin carry trades could beat Treasury bills in 2027, Sygnum predicts
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
