@@ -1,6 +1,6 @@
 {
- "t": 1795101964,
- "hora_utc": "2026-11-19 15:26 UTC",
+ "t": 1795102185,
+ "hora_utc": "2026-11-19 15:29 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,10 +172,10 @@
   -0.11,
   0.25,
   -0.75,
-  -0.29
+  -0.24
  ],
  "contexto": {
-  "t": 1795101965,
+  "t": 1795102185,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.0,
+   "media_top20_anual_pct": 7.5,
    "principais_anual_pct": {
-    "BTC": 6.8,
-    "ETH": 5.1,
-    "SOL": 1.9
+    "BTC": 8.3,
+    "ETH": 6.2,
+    "SOL": 1.0
    },
    "leitura": "neutro"
   },
@@ -600,10 +600,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795040034,
-    "texto": "RUNE venda (entrada 0,5246, saída 0,5225) fechou +0,067 na corretora a favor do regime de baixa. Conta de teste com 11 fechadas: p = 0,273 (3 ganhos, 7 perdas, 1 zero), G = 0,327, L = 0,374, E = −0,148 por operação; ainda negativo, então só entro onde regime, tempos e carteiras concordam."
-   },
-   {
     "t": 1795043026,
     "texto": "ZEC venda −0,009 e AAVE venda +0,061 fecharam no stop de segurança da corretora (−0,60%, já movido para perto da entrada). Conta de teste com 13 fechadas: p = 0,308 (4 ganhos, 8 perdas, 1 zero), G = 0,261, L = 0,291, E = −0,122 por operação (era −0,148 com 11). Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054: ganha pouco e perde muito, o contrário do 'perder"
    },
@@ -630,6 +626,10 @@
    {
     "t": 1795100888,
     "texto": "MORPHO venda: +0,1264 USDT na conta de teste (entrou 1,6884, saiu 1,6755 pelo stop móvel, 6 de 6 tempos abaixo da MM20 na última leitura). Conta de teste: 14 fechadas, p 0,36, G +0,234, L −0,292, E −0,104, soma −1,454. Caderno: 2 operações com leitura anotada (MORPHO, ambas ganharam, 4–5 e 6 de 6 tempos a favor, carteiras a favor) — poucas, não sei ainda."
+   },
+   {
+    "t": 1795101785,
+    "texto": "Sem operação nova. Conta de teste: 14 fechadas, US$ 8,546, 0 abertas; a última, MORPHO venda, saiu +0,1264 USDT pelo stop móvel. Caderno: 3 operações com leitura anotada (todas MORPHO venda, 100% de acerto, +0,181 US$; 2 com 6 de 6 e 1 com 4–5 de 6 tempos a favor, carteiras a favor) — poucas, não sei ainda."
    }
   ]
  },
@@ -809,12 +809,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "18/11 20:51",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Regime de baixa (28,3% das 106 moedas sobem em 24 h, 76,4% em 4 h; BTC −2,23% em 24 h, volume 1,09×). Chefe e testnet: USTC vendida fica (+0,92 no testnet); GTC venda fecha porque o v4 virou para 0,551 de subir (−0,07 no testnet). Sem venda nova: só LSK com confiança 0,032."
-  },
-  {
    "hora_utc": "18/11 21:12",
    "de": "claude",
    "para": "sala",
@@ -879,6 +873,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Neutro (59,6% das 109 moedas sobem em 24 h; só 15,5% na última hora; BTC −0,75% em 1 h). MORPHO vendida saiu pelo stop móvel a 1,6755: +0,126 USDT. Sem entrada nova: BONK tem 2 de 6 tempos a favor e topo duplo contra; KITE tem topo duplo de 4 h contra. Conta de teste: 14 fechadas, p 0,36, E −0,10."
+  },
+  {
+   "hora_utc": "19/11 15:29",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Neutro (56,9% das 109 moedas sobem em 24 h; só 13,8% na última hora; BTC −0,62% em 1 h). Sem entrada: ARB e ASTER vendidas em 6 de 6 tempos, mas coladas na mínima de 24 h e o v4 dá compra; BONK tem fundo duplo de 4 h contra e volume 0,17×. Conta de teste: 14 fechadas, US$ 8,55, nada aberto."
   }
  ]
 }
