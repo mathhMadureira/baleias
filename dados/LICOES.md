@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 14:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 14:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 64.2% das moedas subindo em 24 h, 62.4% em 4 h · BTC 24 h 0.02%, 4 h 0.23%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': -2.5, 'ETH': 4.1, 'SOL': 6.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': -3.4, 'ETH': 3.4, 'SOL': 5.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · STRK fundo duplo (alta, formado) · TAO fundo duplo (alta, formado) · UNI triângulo ascendente (alta, formado)
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
