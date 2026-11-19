@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 17:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 17:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -39,7 +39,7 @@ Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.25** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.37** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
@@ -58,9 +58,9 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 38.9% das moedas subindo em 24 h, 14.2% em 4 h · BTC 24 h -0.4%, 4 h -2.15%.
+- **Amplitude:** 38.1% das moedas subindo em 24 h, 14.2% em 4 h · BTC 24 h -0.51%, 4 h -1.06%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.8%/ano · {'BTC': 11.0, 'ETH': 5.9, 'SOL': -1.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.6%/ano · {'BTC': 11.0, 'ETH': 6.1, 'SOL': -1.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LTC topo duplo (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 17:28 UTC · Decrypt: What Are Perpetual Futures? How Crypto's Most Popular Derivative Works
@@ -106,7 +106,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28274 apostas conferidas ao vivo, acerto 55.3%; prevê 94 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28291 apostas conferidas ao vivo, acerto 55.4%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
