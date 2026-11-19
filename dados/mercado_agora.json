@@ -1,21 +1,21 @@
 {
- "t": 1795069295,
- "hora_utc": "2026-11-19 06:21 UTC",
+ "t": 1795069514,
+ "hora_utc": "2026-11-19 06:25 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 114,
-  "subindo_pct": 53.5,
+  "moedas": 113,
+  "subindo_pct": 54.0,
   "mediana_pct": 0.14
  },
  "mercado_4h": {
-  "moedas": 114,
-  "subindo_pct": 57.9,
-  "mediana_pct": 0.63
+  "moedas": 113,
+  "subindo_pct": 58.4,
+  "mediana_pct": 0.64
  },
  "mercado_24h": {
-  "moedas": 114,
-  "subindo_pct": 25.4,
-  "mediana_pct": -1.12
+  "moedas": 113,
+  "subindo_pct": 25.7,
+  "mediana_pct": -1.03
  },
  "btc": {
   "1h": 0.03,
@@ -80,10 +80,10 @@
    "vol": 0.4
   },
   {
-   "moeda": "BEAMX",
-   "4h": -3.1,
-   "24h": -9.54,
-   "vol": 1.05
+   "moeda": "DODO",
+   "4h": -3.03,
+   "24h": -2.81,
+   "vol": 1.65
   }
  ],
  "maiores_altas_4h": [
@@ -172,11 +172,17 @@
   0.97,
   0.6,
   -0.35,
-  0.23
+  0.25
  ],
  "contexto": {
-  "t": 1795069296,
+  "t": 1795069515,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795069399,
+    "hora_utc": "19/11 06:23",
+    "titulo": "Fed's push for more rate hikes leans on backward-looking data as gas prices slide, experts argue"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795068000,
@@ -260,12 +266,6 @@
     "t": 1795038363,
     "hora_utc": "18/11 21:46",
     "titulo": "ChatGPT, Claude, Gemini and Grok Helped Plan Terror Attacks in Government Tests"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795036562,
-    "hora_utc": "18/11 21:16",
-    "titulo": "Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 10.5,
+   "media_top20_anual_pct": 10.3,
    "principais_anual_pct": {
-    "BTC": -0.1,
-    "ETH": 10.7,
+    "BTC": 0.0,
+    "ETH": 10.5,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 17.5,
+   "amplitude_acima_mm50_pct": 15.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -740,12 +740,12 @@
   "z_contra_lab": 1.99,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5089,
-    "n": 19652
+    "acerto": 0.5094,
+    "n": 19452
    },
    "segue_maioria_24h": {
-    "acerto": 0.5112,
-    "n": 25592
+    "acerto": 0.5138,
+    "n": 25821
    }
   },
   "referencia_ganha": [],
