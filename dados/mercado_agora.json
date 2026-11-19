@@ -1,21 +1,21 @@
 {
- "t": 1795068407,
- "hora_utc": "2026-11-19 06:06 UTC",
+ "t": 1795068632,
+ "hora_utc": "2026-11-19 06:10 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 113,
-  "subindo_pct": 30.1,
-  "mediana_pct": -0.23
+  "moedas": 114,
+  "subindo_pct": 30.7,
+  "mediana_pct": -0.22
  },
  "mercado_4h": {
-  "moedas": 113,
-  "subindo_pct": 57.5,
-  "mediana_pct": 0.3
+  "moedas": 114,
+  "subindo_pct": 57.9,
+  "mediana_pct": 0.31
  },
  "mercado_24h": {
-  "moedas": 113,
-  "subindo_pct": 25.7,
-  "mediana_pct": -1.17
+  "moedas": 114,
+  "subindo_pct": 26.3,
+  "mediana_pct": -1.16
  },
  "btc": {
   "1h": -0.35,
@@ -94,6 +94,12 @@
    "vol": 3.12
   },
   {
+   "moeda": "LUNA",
+   "4h": 6.89,
+   "24h": 8.84,
+   "vol": 4.24
+  },
+  {
    "moeda": "ETHFI",
    "4h": 3.58,
    "24h": 7.94,
@@ -140,12 +146,6 @@
    "4h": 2.33,
    "24h": -0.59,
    "vol": 1.28
-  },
-  {
-   "moeda": "PYTH",
-   "4h": 2.26,
-   "24h": 3.47,
-   "vol": 1.1
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.97,
   0.6,
   -0.35,
-  0.21
+  0.17
  ],
  "contexto": {
-  "t": 1795068408,
+  "t": 1795068633,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 10.9,
+   "media_top20_anual_pct": 10.5,
    "principais_anual_pct": {
-    "BTC": 2.8,
-    "ETH": 8.7,
+    "BTC": 0.7,
+    "ETH": 9.2,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -394,9 +394,9 @@
  },
  "v4": {
   "vela": "06:00 UTC",
-  "apostas": 81,
+  "apostas": 82,
   "compras": 43,
-  "vendas": 38,
+  "vendas": 39,
   "mais_confiantes_venda": [
    {
     "moeda": "BONK",
@@ -733,12 +733,12 @@
   "z_contra_lab": 2.0,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5091,
-    "n": 19613
+    "acerto": 0.509,
+    "n": 19627
    },
    "segue_maioria_24h": {
-    "acerto": 0.5131,
-    "n": 25588
+    "acerto": 0.5113,
+    "n": 25566
    }
   },
   "referencia_ganha": [],
