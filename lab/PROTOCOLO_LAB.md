@@ -1553,3 +1553,12 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   `dados/oportunidades.json`) e um aviso do Caçador faz a rotina rodar na hora. Stop, alvo, revisor e postura são os da r10.
 - **r9, r10 e r11 contam juntas** como "postura ativa" contra a r8. O controle de lado sorteado usa o mesmo instante, então a mudança de horário
   pelo aviso também sai do excesso. Relatado à parte (não decide): as entradas em moeda avisada pelo Caçador na última hora antes da decisão, contra as outras.
+
+### H69, adendo 4 (19/11 ~20:45 UTC, antes de medir qualquer operação r9–r12): rotina r12
+- O Engenheiro, a pedido do dono ("o v4 está barrando as entradas do Caçador; reestruture"), passou ferramenta e prompt para a r12: o v4 só pesa com
+  confiança ≥ 0,12 (`operar.py`, `chefe/universo.py` 0,08/0,03 → 0,12). A carteira do Laboratório mantém o método fixo, inclusive o "contra" de 0,03 que fecha
+  posição. **A r12 conta junto com r9–r11** como "postura ativa"; o controle de lado sorteado não muda.
+- **Medição do veto do v4 (Engenheiro, `lab/veto_v4.py`, fe1ca5fa; só descritiva, não é pré-registro):** no replay de 2 dias (3.970 explosões do Caçador) e
+  ao vivo (226 sinais em 19/11), o v4 fraco contra ou a favor não tem efeito de sinal consistente (troca de sinal entre replay e ao vivo). Não vira
+  hipótese de filtro: a evidência não sustenta, e testar a mesma ideia de novo nesses dados seria ajustar ao que já foi visto. As explosões perderam
+  mais que o sorteio no replay (−0,180% × −0,124% em 15 min). Isso é para o juiz da H68, que já está pré-registrado e não muda.
