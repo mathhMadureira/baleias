@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 10:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 10:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,9 +58,9 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 31.2% das moedas subindo em 24 h, 59.6% em 4 h · BTC 24 h -1.24%, 4 h 0.51%.
+- **Amplitude:** 35.8% das moedas subindo em 24 h, 56.9% em 4 h · BTC 24 h -0.81%, 4 h 0.47%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.3%/ano · {'BTC': -2.5, 'ETH': 5.3, 'SOL': 7.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.2%/ano · {'BTC': -2.9, 'ETH': 4.9, 'SOL': 7.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA fundo duplo (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · BNB triângulo descendente (baixa, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 19/11 10:25 UTC · Decrypt: Bitcoin Struggles to Hold $64,000 as ETF Outflows Hit $2.9B in November
@@ -91,12 +91,12 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r1 ≥ 1.5, aposta desce. Começa em observação.
   (v3: 7 sinapses votando, 22 em observação, 0 podadas)
 **v2:**
-- 😴 Sono: reencenei 1536 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 5 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1632 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- 😴 Sono: reencenei 1728 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
@@ -107,7 +107,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 27008 apostas conferidas ao vivo, acerto 55.3%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 27043 apostas conferidas ao vivo, acerto 55.3%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
