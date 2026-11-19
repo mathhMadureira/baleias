@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 10:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 10:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,15 +60,15 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 40.9% das moedas subindo em 24 h, 53.6% em 4 h · BTC 24 h -0.67%, 4 h 0.55%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.4%/ano · {'BTC': -3.5, 'ETH': 3.8, 'SOL': 4.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': -3.7, 'ETH': 3.5, 'SOL': 3.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA fundo duplo (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · BNB triângulo descendente (baixa, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 19/11 10:55 UTC · CoinDesk: ‘Highly advanced’ quantum computers could crack financial encryption in five years
 - 📰 19/11 10:48 UTC · CoinDesk: Live updates: Bitcoin nears $64,000 as Anthropic’s record IPO lifts tech
 - 📰 19/11 10:39 UTC · CoinDesk: Singapore settles $77.5 million tokenized bill sale in local CBDC
 - 📰 19/11 10:32 UTC · Cointelegraph: IOSCO warns quantum upgrades could slow blockchains, leave security gaps
 - 📰 19/11 10:25 UTC · Decrypt: Bitcoin Struggles to Hold $64,000 as ETF Outflows Hit $2.9B in November
 - 📰 19/11 10:22 UTC · CoinDesk: Roundhill scraps Solana and XRP income ETFs as rival funds indicate low demand
-- 📰 19/11 08:54 UTC · Cointelegraph: Singapore settles $77.5M tokenized bill sale with wholesale CBDC
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

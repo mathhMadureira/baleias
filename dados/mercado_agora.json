@@ -1,6 +1,6 @@
 {
- "t": 1795085734,
- "hora_utc": "2026-11-19 10:55 UTC",
+ "t": 1795085904,
+ "hora_utc": "2026-11-19 10:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   -0.02,
   -0.0,
   0.19,
-  0.02
+  -0.05
  ],
  "contexto": {
-  "t": 1795085734,
+  "t": 1795085905,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795085729,
+    "hora_utc": "19/11 10:55",
+    "titulo": "‘Highly advanced’ quantum computers could crack financial encryption in five years"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795085306,
@@ -260,12 +266,6 @@
     "t": 1795066065,
     "hora_utc": "19/11 05:27",
     "titulo": "Senators warn GENIUS Act rules could push stablecoin firms toward federal oversight"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795064985,
-    "hora_utc": "19/11 05:09",
-    "titulo": "Binance hackers stole 192 tokens across 11 networks, court docs show"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.4,
+   "media_top20_anual_pct": 8.2,
    "principais_anual_pct": {
-    "BTC": -3.5,
-    "ETH": 3.8,
-    "SOL": 4.0
+    "BTC": -3.7,
+    "ETH": 3.5,
+    "SOL": 3.7
    },
    "leitura": "neutro"
   },
