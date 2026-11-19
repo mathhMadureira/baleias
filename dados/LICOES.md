@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 02:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 02:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 36.7% das moedas subindo em 24 h, 66.1% em 4 h · BTC 24 h -2.25%, 4 h 0.8%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 11.0, 'ETH': 5.2, 'SOL': 8.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 6.3, 'SOL': 8.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · HUMA bandeira de alta (alta, CONFIRMOU) · INJ estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CYBER fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · FIL fundo duplo (alta, formado) · MIRA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 19/11 01:45 UTC · Cointelegraph: Trump administration unveils new center to choke off scam payments
