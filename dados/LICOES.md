@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 03:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 03:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,19 +60,19 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 29.1% das moedas subindo em 24 h, 64.5% em 4 h · BTC 24 h -2.36%, 4 h 0.26%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 10.4, 'SOL': 7.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 7.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ONDO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CYBER fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · KAVA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MIRA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PEPE fundo duplo (alta, formado)
+- 📰 19/11 03:40 UTC · CoinDesk: CZ says tokenized Anthropic is coming to BNB Chain on IPO day
 - 📰 19/11 01:45 UTC · Cointelegraph: Trump administration unveils new center to choke off scam payments
 - 📰 19/11 00:35 UTC · Cointelegraph: Fed officials saw October rate hold as a ‘close call,’ minutes show
 - 📰 19/11 00:33 UTC · CoinDesk: Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
 - 📰 18/11 22:16 UTC · Decrypt: Ledger Confirms Tampered Bitcoin Wallets in Berlin as Spy Implant Probe Spreads Beyond Asia
-- 📰 18/11 22:09 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.4 h.
+- ⚠️ **Rotina parada:** sem decisão há 4.5 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
