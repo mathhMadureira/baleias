@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 15:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 15:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.94** · 26 operações fechadas · 2 abertas
+Carteira **US$ 8.92** · 26 operações fechadas · 2 abertas
 
 - **Total:** 17/26 com lucro (65%), resultado -1.06, média -0.041 por operação.
 - **Últimas 24 h:** 10/16 com lucro, -0.47.
@@ -17,7 +17,7 @@ Carteira **US$ 8.94** · 26 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.55** · 14 operações fechadas · 0 abertas
+Carteira **US$ 8.49** · 14 operações fechadas · 2 abertas
 
 - **Total:** 5/14 com lucro (36%), resultado -1.45, média -0.104 por operação.
 - **Últimas 24 h:** 5/11 com lucro, +0.76.
@@ -28,7 +28,7 @@ Carteira **US$ 8.55** · 14 operações fechadas · 0 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.20** · 7 operações fechadas · 0 abertas
+Carteira **US$ 10.20** · 7 operações fechadas · 2 abertas
 
 - **Total:** 3/7 com lucro (43%), resultado +0.20, média +0.028 por operação.
 - **Últimas 24 h:** 3/7 com lucro, +0.20.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.88** · 13 operações fechadas · 0 abertas
+Carteira **US$ 10.88** · 13 operações fechadas · 2 abertas
 
 - **Total:** 11/13 com lucro (85%), resultado +0.88, média +0.068 por operação.
 - **Últimas 24 h:** 11/13 com lucro, +0.88.
@@ -58,10 +58,10 @@ Carteira **US$ 10.88** · 13 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 47.7% das moedas subindo em 24 h, 21.6% em 4 h · BTC 24 h -0.3%, 4 h -0.78%.
+- **Amplitude:** 44.1% das moedas subindo em 24 h, 16.2% em 4 h · BTC 24 h -0.64%, 4 h -1.7%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.0%/ano · {'BTC': 7.6, 'ETH': 3.1, 'SOL': -3.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 9.7, 'ETH': 3.1, 'SOL': -2.2} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LDO topo duplo (baixa, CONFIRMOU) · UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
@@ -106,7 +106,7 @@ Carteira **US$ 10.88** · 13 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28019 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28050 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
