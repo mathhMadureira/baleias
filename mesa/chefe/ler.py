@@ -4,6 +4,7 @@ Uso: python3 -I ler.py            → imprime o resumo (JSON) e grava rodadas/<h
 Só lê. Também confere se a decisão anterior do chefe foi aplicada pela nuvem e completa o recibo dela.
 """
 import json
+import os
 import subprocess
 import sys
 import time
@@ -11,6 +12,7 @@ from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
 EST = AQUI / "estado"
+REMOTO = "https://github.com/mathhMadureira/baleias.git"
 RODADAS = AQUI / "rodadas"
 RECIBOS = AQUI / "recibos.jsonl"
 AGENTES_ORDENS = ("cacador", "rapido", "scalper", "minerador", "lbank")      # cartilha seção 6: os que obedecem
@@ -31,9 +33,42 @@ def ler(nome, padrao=None):
         return padrao
 
 
+def clone_ok():
+    """True se o clone responde a comandos só locais (sem rede). Falha de rede no fetch NÃO é clone quebrado."""
+    if not (EST / ".git").exists():
+        return False
+    try:
+        for a in (("rev-parse", "--verify", "-q", "HEAD"), ("status", "--porcelain", "-uno")):
+            if subprocess.run(["git", "-C", str(EST), *a], capture_output=True, text=True, timeout=60).returncode:
+                return False
+        topo = subprocess.run(["git", "-C", str(EST), "rev-parse", "--show-toplevel"], capture_output=True, text=True, timeout=60).stdout.strip()
+    except subprocess.SubprocessError:
+        return False
+    return bool(topo) and Path(topo).resolve() == EST.resolve()      # .git quebrado não pode cair num repositório acima
+
+
+def refazer_clone():
+    """Auditoria 19/11 (A5): depois de um desligamento o clone ficou corrompido (corrompidos/estado-20261119) e toda rodada do chefe
+    falhava. O clone é só uma cópia do ramo `estado`: guarda o quebrado de lado (não apaga) e clona de novo."""
+    if EST.exists():
+        os.replace(EST, EST.with_name(f"{EST.name}.corrompido-{int(time.time())}"))
+    r = subprocess.run(["git", "clone", "-q", "--single-branch", "--branch", "estado", "--depth", "20", REMOTO, str(EST)],
+                       capture_output=True, text=True, timeout=300)
+    if r.returncode:
+        raise RuntimeError(f"git clone: {r.stderr.strip()[:300]}")
+
+
 def atualizar():
-    git("fetch", "-q", "--depth", "20", "origin", "estado")
-    git("reset", "-q", "--hard", "origin/estado")
+    if not clone_ok():
+        refazer_clone()
+    try:
+        git("fetch", "-q", "--depth", "20", "origin", "estado")
+        git("reset", "-q", "--hard", "origin/estado")
+    except RuntimeError:
+        if clone_ok():                     # o clone está bom: é rede ou o GitHub; a rodada para com o erro, sem mexer no clone
+            raise
+        refazer_clone()
+        git("reset", "-q", "--hard", "origin/estado")
     git("clean", "-qfd")
     return git("rev-parse", "--short", "HEAD").strip(), int(git("log", "-1", "--format=%ct").strip())
 

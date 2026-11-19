@@ -2306,3 +2306,49 @@ class UniversoComPrazo(unittest.TestCase):
         self.assertEqual((v, estourou), ([], True))
         self.assertEqual(U.com_prazo(lambda: "ok", 2, None), ("ok", False))
         self.assertEqual(U.PRAZO_S, 360.0)
+
+
+class CloneDoChefeQuebrado(unittest.TestCase):
+    """Auditoria 19/11 (A5): o clone do ramo `estado` do chefe ficou corrompido depois de um desligamento e toda rodada falhava.
+    mesa/chefe/ler.py guarda o clone quebrado de lado e clona de novo; com o clone bom e sem rede, só para com o erro."""
+
+    def _mod(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("ler_chefe", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "chefe" / "ler.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def setUp(self):
+        import subprocess
+        import tempfile
+        self.d = pathlib.Path(tempfile.mkdtemp())
+        run = lambda *a, c=None: subprocess.run(["git", *(["-C", str(c)] if c else []), *a], check=True, capture_output=True)
+        org = self.d / "org"
+        run("init", "-q", "-b", "estado", str(org))
+        (org / "dados").mkdir()
+        (org / "dados" / "x.json").write_text("{}")
+        run("add", ".", c=org)
+        run("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-q", "-m", "x", c=org)
+        self.remoto = str(org)
+
+    def test_clone_corrompido_e_refeito_e_o_quebrado_fica_guardado(self):
+        U = self._mod()
+        U.EST, U.REMOTO = self.d / "estado", "file://" + self.remoto
+        (U.EST / ".git").mkdir(parents=True)
+        (U.EST / ".git" / "HEAD").write_text("")                       # cortado pelo desligamento
+        rev, _ = U.atualizar()
+        self.assertTrue(rev)
+        self.assertTrue((U.EST / "dados" / "x.json").exists())
+        self.assertTrue(any(p.name.startswith("estado.corrompido-") for p in self.d.iterdir()))
+
+    def test_sem_rede_com_clone_bom_nao_mexe_no_clone(self):
+        import subprocess
+        U = self._mod()
+        U.EST = self.d / "estado"
+        subprocess.run(["git", "clone", "-q", "--branch", "estado", "file://" + self.remoto, str(U.EST)], check=True, capture_output=True)
+        subprocess.run(["git", "-C", str(U.EST), "remote", "set-url", "origin", str(self.d / "nao-existe")], check=True)
+        with self.assertRaises(RuntimeError):
+            U.atualizar()
+        self.assertTrue((U.EST / "dados" / "x.json").exists())
+        self.assertFalse(any(p.name.startswith("estado.corrompido-") for p in self.d.iterdir()))
