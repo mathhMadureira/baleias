@@ -1,6 +1,6 @@
 {
- "t": 1795075492,
- "hora_utc": "2026-11-19 08:04 UTC",
+ "t": 1795075713,
+ "hora_utc": "2026-11-19 08:08 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
@@ -172,11 +172,17 @@
   -0.35,
   0.62,
   -0.02,
-  -0.16
+  0.02
  ],
  "contexto": {
-  "t": 1795075492,
+  "t": 1795075714,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795074956,
+    "hora_utc": "19/11 07:55",
+    "titulo": "Bitcoin retests $62K as Nasdaq futures rise ahead of Anthropic debut"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795069399,
@@ -260,12 +266,6 @@
     "t": 1795039055,
     "hora_utc": "18/11 21:57",
     "titulo": "Tether invokes The Big Short in swipe at S&P over USDT reserve risks"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795038363,
-    "hora_utc": "18/11 21:46",
-    "titulo": "ChatGPT, Claude, Gemini and Grok Helped Plan Terror Attacks in Government Tests"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.6,
+   "media_top20_anual_pct": 10.7,
    "principais_anual_pct": {
-    "BTC": 1.9,
-    "ETH": 8.3,
+    "BTC": 4.6,
+    "ETH": 9.3,
     "SOL": 11.0
    },
    "leitura": "neutro"
