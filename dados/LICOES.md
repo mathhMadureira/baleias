@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 20:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 20:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,10 +30,10 @@ Carteira **US$ 9.03** · 21 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.49** · 15 operações fechadas · 4 abertas
+Carteira **US$ 9.29** · 15 operações fechadas · 4 abertas
 
 - **Total:** 5/15 com lucro (33%), resultado -0.68, média -0.045 por operação.
-- **Últimas 24 h:** 5/15 com lucro, -0.68.
+- **Últimas 24 h:** 4/14 com lucro, -0.91.
 - **Por horário:** 12–17 UTC: 7 op, 29% certas, -0.50 · 18–23 UTC: 8 op, 38% certas, -0.18
 - **Por lado:** venda: 12 op, 33% certas, -0.61 · compra: 3 op, 33% certas, -0.07
 - **Por motivo de saída:** fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
@@ -41,33 +41,33 @@ Carteira **US$ 9.49** · 15 operações fechadas · 4 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 11.21** · 3 operações fechadas · 2 abertas
+Carteira **US$ 11.12** · 4 operações fechadas · 2 abertas
 
-- **Total:** 3/3 com lucro (100%), resultado +1.18, média +0.393 por operação.
-- **Últimas 24 h:** 3/3 com lucro, +1.18.
-- **Por horário:** 18–23 UTC: 3 op, 100% certas, +1.18
-- **Por lado:** compra: 1 op, 100% certas, +0.49 · venda: 2 op, 100% certas, +0.69
-- **Por motivo de saída:** método fixo do Laboratório (H6: 3 op, 100% certas, +1.18
+- **Total:** 4/4 com lucro (100%), resultado +1.19, média +0.297 por operação.
+- **Últimas 24 h:** 4/4 com lucro, +1.19.
+- **Por horário:** 18–23 UTC: 4 op, 100% certas, +1.19
+- **Por lado:** compra: 1 op, 100% certas, +0.49 · venda: 3 op, 100% certas, +0.69
+- **Por motivo de saída:** mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · método fixo do Laboratório (H6: 3 op, 100% certas, +1.18
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.07** · 25 operações fechadas · 1 abertas
+Carteira **US$ 10.00** · 26 operações fechadas · 0 abertas
 
-- **Total:** 15/25 com lucro (60%), resultado -0.15, média -0.006 por operação.
-- **Últimas 24 h:** 13/23 com lucro, -0.33.
-- **Por horário:** 18–23 UTC: 18 op, 61% certas, -0.26 · 12–17 UTC: 7 op, 57% certas, +0.11
-- **Por lado:** compra: 6 op, 33% certas, -0.71 · venda: 19 op, 68% certas, +0.56
-- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27
+- **Total:** 16/26 com lucro (62%), resultado -0.00, média -0.000 por operação.
+- **Últimas 24 h:** 13/23 com lucro, -0.31.
+- **Por horário:** 18–23 UTC: 19 op, 63% certas, -0.11 · 12–17 UTC: 7 op, 57% certas, +0.11
+- **Por lado:** compra: 7 op, 43% certas, -0.56 · venda: 19 op, 68% certas, +0.56
+- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · aviso do Caçador (explosão 5 m: 1 op, 100% certas, +0.15 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27
 - **Moedas que mais perderam (≥ 3 op):** TRUMP -0.20 (5 op) · PENGU -0.04 (4 op) · PUMP +0.63 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** PUMP +0.63 (4 op) · PENGU -0.04 (4 op) · TRUMP -0.20 (5 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 36.8% das moedas subindo em 24 h, 20.2% em 4 h · BTC 24 h -1.08%, 4 h -1.9%.
+- **Amplitude:** 37.4% das moedas subindo em 24 h, 20.0% em 4 h · BTC 24 h -1.08%, 4 h -1.9%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': -5.9, 'ETH': 5.7, 'SOL': -7.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': -6.7, 'ETH': 5.9, 'SOL': -7.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 20:33 UTC · Cointelegraph: Hyperliquid Anthropic futures priced within 1% of Nasdaq opening price
@@ -113,7 +113,7 @@ Carteira **US$ 10.07** · 25 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28815 apostas conferidas ao vivo, acerto 55.1%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28815 apostas conferidas ao vivo, acerto 55.1%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

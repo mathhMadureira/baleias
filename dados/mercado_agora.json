@@ -1,21 +1,21 @@
 {
- "t": 1795120657,
- "hora_utc": "2026-11-19 20:37 UTC",
+ "t": 1795120899,
+ "hora_utc": "2026-11-19 20:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 114,
+  "moedas": 115,
   "subindo_pct": 6.1,
-  "mediana_pct": -1.36
+  "mediana_pct": -1.35
  },
  "mercado_4h": {
-  "moedas": 114,
-  "subindo_pct": 20.2,
-  "mediana_pct": -1.07
+  "moedas": 115,
+  "subindo_pct": 20.0,
+  "mediana_pct": -1.06
  },
  "mercado_24h": {
-  "moedas": 114,
-  "subindo_pct": 36.8,
-  "mediana_pct": -0.66
+  "moedas": 115,
+  "subindo_pct": 37.4,
+  "mediana_pct": -0.64
  },
  "btc": {
   "1h": -1.48,
@@ -172,10 +172,10 @@
   -0.05,
   0.22,
   -0.82,
-  -0.37
+  -0.44
  ],
  "contexto": {
-  "t": 1795120658,
+  "t": 1795120900,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -276,8 +276,8 @@
   "funding": {
    "media_top20_anual_pct": 4.2,
    "principais_anual_pct": {
-    "BTC": -5.9,
-    "ETH": 5.7,
+    "BTC": -6.7,
+    "ETH": 5.9,
     "SOL": -7.8
    },
    "leitura": "neutro"
@@ -627,7 +627,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.49,
+   "carteira": 9.29,
    "n_abertas": 4,
    "abertas": [
     [
@@ -656,7 +656,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 11.21,
+   "carteira": 11.12,
    "n_abertas": 2,
    "abertas": [
     [
@@ -664,11 +664,11 @@
      "compra"
     ],
     [
-     "DOT",
-     "venda"
+     "HBAR",
+     "compra"
     ]
    ],
-   "n_fechadas": 3,
+   "n_fechadas": 4,
    "ordem": null
   },
   {
@@ -677,15 +677,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.07,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "MEGA",
-     "compra"
-    ]
-   ],
-   "n_fechadas": 25,
+   "carteira": 10.0,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 26,
    "ordem": null
   }
  ],
@@ -717,25 +712,25 @@
     "ganho_medio": 0.127,
     "perda_media": -0.131,
     "fator_lucro": 0.49,
-    "carteira": 9.49
+    "carteira": 9.29
    },
    "laboratorio": {
-    "ops": 3,
+    "ops": 4,
     "acerto": 1.0,
-    "soma": 1.18,
-    "ganho_medio": 0.393,
+    "soma": 1.187,
+    "ganho_medio": 0.297,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 11.21
+    "carteira": 11.12
    },
    "guardiao": {
-    "ops": 25,
-    "acerto": 0.6,
-    "soma": -0.151,
-    "ganho_medio": 0.137,
+    "ops": 26,
+    "acerto": 0.615,
+    "soma": -0.002,
+    "ganho_medio": 0.138,
     "perda_media": -0.221,
-    "fator_lucro": 0.93,
-    "carteira": 10.07
+    "fator_lucro": 1.0,
+    "carteira": 10.0
    }
   },
   "vereditos": []
@@ -748,12 +743,12 @@
   "z_contra_lab": 1.83,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5083,
-    "n": 20860
+    "acerto": 0.508,
+    "n": 20941
    },
    "segue_maioria_24h": {
-    "acerto": 0.504,
-    "n": 27608
+    "acerto": 0.5038,
+    "n": 27600
    }
   },
   "referencia_ganha": [],
