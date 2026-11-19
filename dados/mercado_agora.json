@@ -1,20 +1,20 @@
 {
- "t": 1795102726,
- "hora_utc": "2026-11-19 15:38 UTC",
+ "t": 1795102896,
+ "hora_utc": "2026-11-19 15:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
-  "subindo_pct": 10.7,
-  "mediana_pct": -1.12
+  "moedas": 111,
+  "subindo_pct": 10.8,
+  "mediana_pct": -1.13
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 21.4,
+  "moedas": 111,
+  "subindo_pct": 21.6,
   "mediana_pct": -1.12
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 47.3,
+  "moedas": 111,
+  "subindo_pct": 47.7,
   "mediana_pct": 0.0
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.11,
   0.25,
   -0.75,
-  -0.89
+  -1.13
  ],
  "contexto": {
-  "t": 1795102727,
+  "t": 1795102897,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.2,
+   "media_top20_anual_pct": 6.0,
    "principais_anual_pct": {
-    "BTC": 7.7,
-    "ETH": 3.0,
-    "SOL": -2.6
+    "BTC": 7.6,
+    "ETH": 3.1,
+    "SOL": -3.0
    },
    "leitura": "neutro"
   },
@@ -490,7 +490,26 @@
  },
  "robo_claude": {
   "carteira": 8.94,
-  "abertas": [],
+  "abertas": [
+   {
+    "moeda": "AAVE",
+    "lado": "venda",
+    "entrada": 104.67,
+    "agora": 106.31,
+    "resultado_pct": -1.57,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 1 h −3,82%, 4 h −4,51%, 24 h −2,75%; volume de 1 min 2,92× (queda com volume); topo duplo de 4 h (não con"
+   },
+   {
+    "moeda": "CAKE",
+    "lado": "venda",
+    "entrada": 1.587,
+    "agora": 1.599,
+    "resultado_pct": -0.76,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; 15 min −0,69%, 1 h −1,61%, 4 h −1,85%; a +2,45% da mínima de 24 h (espaço até ela); mercado com 10,8% subindo na hora e B"
+   }
+  ],
   "ultimas_fechadas": [
    {
     "moeda": "ZKP",
@@ -600,10 +619,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795043026,
-    "texto": "ZEC venda −0,009 e AAVE venda +0,061 fecharam no stop de segurança da corretora (−0,60%, já movido para perto da entrada). Conta de teste com 13 fechadas: p = 0,308 (4 ganhos, 8 perdas, 1 zero), G = 0,261, L = 0,291, E = −0,122 por operação (era −0,148 com 11). Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054: ganha pouco e perde muito, o contrário do 'perder"
-   },
-   {
     "t": 1795043644,
     "texto": "Sem operação nova nesta rodada. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, soma −1,58, E = −0,122 por operação. Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054. As últimas vendas (ZEC −0,009, AAVE +0,061) entraram com o mercado já perto da mínima de 24 h e saíram no stop movido. Por isso não vendo BTC a +0,84% da mínima, com o v4 contra. C"
    },
@@ -630,6 +645,10 @@
    {
     "t": 1795101785,
     "texto": "Sem operação nova. Conta de teste: 14 fechadas, US$ 8,546, 0 abertas; a última, MORPHO venda, saiu +0,1264 USDT pelo stop móvel. Caderno: 3 operações com leitura anotada (todas MORPHO venda, 100% de acerto, +0,181 US$; 2 com 6 de 6 e 1 com 4–5 de 6 tempos a favor, carteiras a favor) — poucas, não sei ainda."
+   },
+   {
+    "t": 1795102711,
+    "texto": "Entradas novas: AAVE venda e CAKE venda, as duas com 6 de 6 tempos a favor e contra o v4. Conta de teste: 14 fechadas, US$ 8,546, 0 abertas antes desta rodada; a última, MORPHO venda, saiu +0,1264 USDT pelo stop móvel. Caderno: 3 operações com leitura anotada (todas MORPHO venda, 100% de acerto, +0,181 US$; 2 com 6 de 6 e 1 com 4–5 de 6 tempos a favor; carteiras a favor). São poucas, não sei ainda"
    }
   ]
  },
@@ -641,8 +660,17 @@
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
    "carteira": 8.94,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "AAVE",
+     "venda"
+    ],
+    [
+     "CAKE",
+     "venda"
+    ]
+   ],
    "n_fechadas": 26,
    "ordem": null
   },
@@ -754,12 +782,12 @@
   "z_contra_lab": 2.03,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5091,
-    "n": 20464
+    "acerto": 0.5096,
+    "n": 20253
    },
    "segue_maioria_24h": {
-    "acerto": 0.5039,
-    "n": 26980
+    "acerto": 0.5043,
+    "n": 27002
    }
   },
   "referencia_ganha": [],
@@ -808,12 +836,6 @@
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "18/11 21:12",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Regime de baixa (26,4% das 106 moedas sobem em 24 h, 66,0% em 4 h; BTC −2,14% em 24 h). Chefe e testnet no estilo scalper: realizo USTC venda (+0,88 no testnet) e vendo RUNE (v4 0,392; stop 0,6%, alvo 0,5%, 45 min) e KITE (v4 0,426; stop 0,6%, alvo 0,4%, 30 min) no repique de 4 h."
-  },
   {
    "hora_utc": "18/11 21:43",
    "de": "claude",
@@ -879,6 +901,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Neutro (56,9% das 109 moedas sobem em 24 h; só 13,8% na última hora; BTC −0,62% em 1 h). Sem entrada: ARB e ASTER vendidas em 6 de 6 tempos, mas coladas na mínima de 24 h e o v4 dá compra; BONK tem fundo duplo de 4 h contra e volume 0,17×. Conta de teste: 14 fechadas, US$ 8,55, nada aberto."
+  },
+  {
+   "hora_utc": "19/11 15:41",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Queda na hora: só 10,8% das 109 moedas sobem em 1 h; BTC −0,85% em 1 h. Chefe e testnet vendem AAVE (6 de 6 tempos abaixo da MM20, volume 2,92×; stop 0,9%, alvo 0,6%, 60 min) e CAKE (6 de 6; stop 0,5%, alvo 0,4%, 60 min); o v4 dá compra nas duas. Conta de teste: 14 fechadas, US$ 8,55."
   }
  ]
 }
