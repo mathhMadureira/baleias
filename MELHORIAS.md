@@ -148,4 +148,4 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   momento semanal comprado/vendido, alavancagem pela volatilidade): reprovada. H66 (`lab/busca_dobrar.py`, numpy, treino/validação/reserva):
   reprovada na reserva (−0,246%/op). **Erro achado pelo controle aleatório:** o stop móvel simulado saía num preço que já tinha passado (entradas
   ao acaso davam +0,21%). Corrigido em `executor/stop_movel.py` (velas de 1 min com fechamento) e nos simuladores do lab; com a correção a R6
-  (H52) cai para −0,021%. 161 testes.
+  (H52) cai para −0,021%. 160 testes.
