@@ -1533,7 +1533,7 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 ### Decisão do dono (19/11/2026 ~16:30 BRT = 19:30 UTC): alvos de ganho maiores para todos os agentes
 - **Dono:** "aumente os alvos de ganhos, repasse isso para todos os agentes, os alvos maiores."
 - **Execução:** `executor/robo_claude_nuvem.parametros` (nuvem) e `chefe/testnet.py` (conta de teste, mesma função): alvo ≥ 3 × o stop e ≥ 1%
-  (limite de cima 5%); alvo menor é subido sozinho; com stop e sem alvo, o alvo passa a ser 3 × o stop. Rotina dos agentes r9 e manual seção 5.
+  (limite de cima 5%); alvo menor é subido sozinho; com stop e sem alvo, o alvo passa a ser 3 × o stop. Com alvo, o stop móvel só arma na metade do caminho até ele (`stop_movel.armar_em`; antes +0,5% cortava quase tudo: com alvo 1,2% só 3% chegavam, medido pelo Engenheiro). Rotina r10 e manual seção 5.
 - **O que o laboratório já sabe (não decide):** na H64, "stop 1% e alvo 3%" foi a melhor saída medida (+0,309%/aposta corrigido, ganho ÷ perda
   2,58), mas perdeu no bloco mais recente (−0,472%). Alvo maior = acerto menor (36%). **Juiz ao vivo (até 03/12):** por agente, em 30+ operações
   com a regra: ganho médio ≥ 2 × perda média e média por operação > 0.

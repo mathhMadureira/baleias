@@ -2076,6 +2076,18 @@ class StopMovelSemOlharFuturo(unittest.TestCase):
         self.assertAlmostEqual(SM.conferir(p, m, 0.03, 10**9, 0)[0], 101.4)   # fechamento acima do nível: sai no nível
 
 
+class AlvoMaior(unittest.TestCase):
+    """Dono (19/11): alvos maiores; com alvo, o stop móvel só arma na metade do caminho até ele."""
+
+    def test_movel_nao_corta_antes_da_metade_do_alvo(self):
+        from executor import stop_movel as SM
+        self.assertEqual((SM.armar_em(None), SM.armar_em(0.006), SM.armar_em(0.03)), (0.005, 0.005, 0.015))
+        p = {"entrada": 100.0, "lado": "compra"}
+        m = [(0, 101.0, 100.0, 100.9), (60_000, 100.9, 100.6, 100.7)]          # pico +1% e devolve: sem alvo, o móvel fecha
+        self.assertIsNotNone(SM.conferir(dict(p), m, 0.01, 10**9, 0))
+        self.assertIsNone(SM.conferir(dict(p), m, 0.01, 10**9, 0, alvo_pct=0.03))   # alvo 3%: o móvel só arma a +1,5%
+
+
 class GatilhosH67(unittest.TestCase):
     """H67 (19/11): o agente arma níveis; a nuvem entra no minuto em que o preço cruza, sem esperar a próxima rodada do agente."""
 
