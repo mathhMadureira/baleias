@@ -1,28 +1,28 @@
 {
- "t": 1795093098,
- "hora_utc": "2026-11-19 12:58 UTC",
+ "t": 1795093272,
+ "hora_utc": "2026-11-19 13:01 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
-  "subindo_pct": 9.1,
-  "mediana_pct": -0.93
+  "subindo_pct": 56.4,
+  "mediana_pct": 0.09
  },
  "mercado_4h": {
   "moedas": 110,
-  "subindo_pct": 42.7,
-  "mediana_pct": -0.22
+  "subindo_pct": 53.6,
+  "mediana_pct": 0.14
  },
  "mercado_24h": {
   "moedas": 110,
-  "subindo_pct": 50.9,
-  "mediana_pct": 0.03
+  "subindo_pct": 60.0,
+  "mediana_pct": 0.53
  },
  "btc": {
-  "1h": -0.27,
-  "4h": 0.32,
-  "24h": -0.42,
-  "preco": 63795.43,
-  "vol_4h_vs_media": 0.81
+  "1h": -0.11,
+  "4h": 0.22,
+  "24h": -0.33,
+  "preco": 63878.21,
+  "vol_4h_vs_media": 0.83
  },
  "maiores_quedas_4h": [
   {
@@ -33,123 +33,122 @@
   },
   {
    "moeda": "INIT",
-   "4h": -12.26,
-   "24h": 6.03,
-   "vol": 1.96
+   "4h": -12.27,
+   "24h": 6.33,
+   "vol": 1.88
   },
   {
    "moeda": "STRK",
-   "4h": -6.23,
-   "24h": -0.68,
-   "vol": 1.74
+   "4h": -5.27,
+   "24h": 0.77,
+   "vol": 1.71
   },
   {
    "moeda": "SKY",
-   "4h": -6.2,
-   "24h": -15.59,
-   "vol": 3.27
-  },
-  {
-   "moeda": "ONE",
-   "4h": -5.13,
-   "24h": -5.74,
-   "vol": 1.02
-  },
-  {
-   "moeda": "DODO",
-   "4h": -5.01,
-   "24h": -10.58,
-   "vol": 0.82
-  },
-  {
-   "moeda": "OPG",
-   "4h": -4.32,
-   "24h": -9.86,
-   "vol": 1.46
+   "4h": -5.14,
+   "24h": -15.42,
+   "vol": 3.35
   },
   {
    "moeda": "SOPH",
-   "4h": -3.74,
-   "24h": 1.98,
-   "vol": 1.43
+   "4h": -4.67,
+   "24h": 2.0,
+   "vol": 1.19
+  },
+  {
+   "moeda": "ONE",
+   "4h": -3.76,
+   "24h": -5.08,
+   "vol": 0.95
+  },
+  {
+   "moeda": "SENT",
+   "4h": -3.33,
+   "24h": 12.5,
+   "vol": 0.95
+  },
+  {
+   "moeda": "OPG",
+   "4h": -3.13,
+   "24h": -9.23,
+   "vol": 1.54
   },
   {
    "moeda": "SHELL",
-   "4h": -3.33,
-   "24h": -16.58,
-   "vol": 0.66
+   "4h": -2.8,
+   "24h": -16.59,
+   "vol": 0.65
   },
   {
-   "moeda": "KAVA",
-   "4h": -2.77,
-   "24h": 1.08,
-   "vol": 0.95
+   "moeda": "DODO",
+   "4h": -2.55,
+   "24h": -9.44,
+   "vol": 0.79
   }
  ],
  "maiores_altas_4h": [
   {
+   "moeda": "HEI",
+   "4h": 6.03,
+   "24h": -4.35,
+   "vol": 0.55
+  },
+  {
+   "moeda": "CHIP",
+   "4h": 5.93,
+   "24h": 16.04,
+   "vol": 2.21
+  },
+  {
    "moeda": "MMT",
-   "4h": 6.07,
-   "24h": -17.7,
+   "4h": 5.56,
+   "24h": -15.81,
    "vol": 0.57
   },
   {
    "moeda": "PEPE",
-   "4h": 5.79,
-   "24h": 7.77,
-   "vol": 2.47
+   "4h": 5.24,
+   "24h": 7.2,
+   "vol": 2.62
   },
   {
-   "moeda": "CHIP",
-   "4h": 5.48,
-   "24h": 13.59,
-   "vol": 1.95
-  },
-  {
-   "moeda": "HEI",
-   "4h": 4.47,
-   "24h": -4.31,
-   "vol": 0.48
+   "moeda": "BREV",
+   "4h": 4.88,
+   "24h": -10.82,
+   "vol": 0.68
   },
   {
    "moeda": "MEGA",
-   "4h": 2.61,
-   "24h": 7.87,
-   "vol": 1.66
+   "4h": 3.6,
+   "24h": 8.32,
+   "vol": 1.77
   },
   {
    "moeda": "QNT",
-   "4h": 2.07,
-   "24h": 0.22,
-   "vol": 0.75
+   "4h": 2.8,
+   "24h": 1.32,
+   "vol": 0.9
+  },
+  {
+   "moeda": "BMT",
+   "4h": 2.29,
+   "24h": 2.24,
+   "vol": 3.73
   },
   {
    "moeda": "FF",
-   "4h": 1.84,
-   "24h": -0.41,
-   "vol": 0.45
+   "4h": 2.25,
+   "24h": -0.05,
+   "vol": 0.47
   },
   {
    "moeda": "SHIB",
-   "4h": 1.82,
-   "24h": 2.62,
-   "vol": 0.87
-  },
-  {
-   "moeda": "BONK",
-   "4h": 1.69,
-   "24h": 2.13,
-   "vol": 0.96
-  },
-  {
-   "moeda": "ZKC",
-   "4h": 1.53,
-   "24h": -8.59,
-   "vol": 0.48
+   "4h": 1.56,
+   "24h": 1.83,
+   "vol": 0.91
   }
  ],
  "btc_1h_ultimas_24": [
-  -0.23,
   -0.42,
   -0.87,
   -0.57,
@@ -172,11 +171,18 @@
   0.19,
   -0.1,
   0.24,
-  -0.07
+  -0.11,
+  0.03
  ],
  "contexto": {
-  "t": 1795093098,
+  "t": 1795093273,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795093154,
+    "hora_utc": "19/11 12:59",
+    "titulo": "Binance Wins $6.5B Freezing Order Over Hack That Can Be Served via the Blockchain"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795092246,
@@ -260,12 +266,6 @@
     "t": 1795083905,
     "hora_utc": "19/11 10:25",
     "titulo": "Bitcoin Struggles to Hold $64,000 as ETF Outflows Hit $2.9B in November"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795083732,
-    "hora_utc": "19/11 10:22",
-    "titulo": "Roundhill scraps Solana and XRP income ETFs as rival funds indicate low demand"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.1,
+   "media_top20_anual_pct": 7.3,
    "principais_anual_pct": {
-    "BTC": 1.6,
-    "ETH": 3.3,
-    "SOL": 0.4
+    "BTC": 4.1,
+    "ETH": 5.8,
+    "SOL": -7.6
    },
    "leitura": "neutro"
   },
@@ -297,11 +297,18 @@
   },
   "padroes_1h": [
    {
-    "moeda": "JUP",
-    "padrao": "bandeira de alta",
+    "moeda": "STRK",
+    "padrao": "estrutura de alta (topos e fundos ascendentes)",
     "sentido": "alta",
     "confirmado": true,
-    "nivel": 0.2696
+    "nivel": null
+   },
+   {
+    "moeda": "UNI",
+    "padrao": "estrutura de alta (topos e fundos ascendentes)",
+    "sentido": "alta",
+    "confirmado": true,
+    "nivel": null
    },
    {
     "moeda": "BMT",
@@ -353,13 +360,6 @@
     "nivel": 0.01156
    },
    {
-    "moeda": "SPK",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.01438
-   },
-   {
     "moeda": "STRK",
     "padrao": "fundo duplo",
     "sentido": "alta",
@@ -372,6 +372,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 194.7
+   },
+   {
+    "moeda": "UNI",
+    "padrao": "triângulo ascendente",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": null
    },
    {
     "moeda": "XRP",
@@ -400,42 +407,42 @@
   }
  },
  "v4": {
-  "vela": "12:45 UTC",
-  "apostas": 117,
-  "compras": 63,
-  "vendas": 54,
+  "vela": "13:00 UTC",
+  "apostas": 146,
+  "compras": 30,
+  "vendas": 116,
   "mais_confiantes_venda": [
    {
-    "moeda": "SHIB",
-    "prob_subir": 0.373
+    "moeda": "CELO",
+    "prob_subir": 0.321
    },
    {
-    "moeda": "CAKE",
-    "prob_subir": 0.375
+    "moeda": "U",
+    "prob_subir": 0.332
+   },
+   {
+    "moeda": "WLFI",
+    "prob_subir": 0.353
+   },
+   {
+    "moeda": "ZKP",
+    "prob_subir": 0.359
+   },
+   {
+    "moeda": "W",
+    "prob_subir": 0.365
+   },
+   {
+    "moeda": "RUNE",
+    "prob_subir": 0.365
+   },
+   {
+    "moeda": "MORPHO",
+    "prob_subir": 0.373
    },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
-   },
-   {
-    "moeda": "FORM",
-    "prob_subir": 0.382
-   },
-   {
-    "moeda": "PEOPLE",
-    "prob_subir": 0.386
-   },
-   {
-    "moeda": "BABAB",
-    "prob_subir": 0.386
-   },
-   {
-    "moeda": "BB",
-    "prob_subir": 0.394
-   },
-   {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
@@ -444,20 +451,8 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "BEAMX",
-    "prob_subir": 0.645
-   },
-   {
-    "moeda": "ERA",
-    "prob_subir": 0.629
-   },
-   {
     "moeda": "KAIA",
     "prob_subir": 0.616
-   },
-   {
-    "moeda": "ONE",
-    "prob_subir": 0.615
    },
    {
     "moeda": "RWUSD",
@@ -470,6 +465,18 @@
    {
     "moeda": "VET",
     "prob_subir": 0.591
+   },
+   {
+    "moeda": "PARTI",
+    "prob_subir": 0.58
+   },
+   {
+    "moeda": "RARE",
+    "prob_subir": 0.575
+   },
+   {
+    "moeda": "COTI",
+    "prob_subir": 0.569
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -733,38 +740,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 26612 apostas (611 velas, 12/11 13:00–19/11 12:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5553,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 26656 apostas (611 velas, 12/11 13:15–19/11 12:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.555,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.06,
+  "z_contra_lab": 2.04,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5103,
-    "n": 19839
+    "acerto": 0.5101,
+    "n": 19882
    },
    "segue_maioria_24h": {
-    "acerto": 0.5058,
-    "n": 26503
+    "acerto": 0.5051,
+    "n": 26547
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5613,
-    "n": 4185
+    "acerto": 0.5614,
+    "n": 4213
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5911,
-    "n": 1641
+    "acerto": 0.5921,
+    "n": 1645
    },
    "confianca:<0,05": {
-    "acerto": 0.5734,
-    "n": 8403
+    "acerto": 0.5729,
+    "n": 8429
    },
    "confianca:≥0,12": {
-    "acerto": 0.674,
-    "n": 549
+    "acerto": 0.6745,
+    "n": 553
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5727,
@@ -775,20 +782,20 @@
     "n": 5998
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5543,
-    "n": 5443
+    "acerto": 0.5529,
+    "n": 5487
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5335,
     "n": 7886
    },
    "lado:compra": {
-    "acerto": 0.5315,
-    "n": 12245
+    "acerto": 0.532,
+    "n": 12262
    },
    "lado:venda": {
-    "acerto": 0.5756,
-    "n": 14367
+    "acerto": 0.5747,
+    "n": 14394
    }
   }
  },
