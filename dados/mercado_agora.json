@@ -1,28 +1,28 @@
 {
- "t": 1795131907,
- "hora_utc": "2026-11-19 23:45 UTC",
+ "t": 1795132090,
+ "hora_utc": "2026-11-19 23:48 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 115,
   "subindo_pct": 39.1,
-  "mediana_pct": -0.1
+  "mediana_pct": -0.01
  },
  "mercado_4h": {
   "moedas": 115,
-  "subindo_pct": 14.8,
-  "mediana_pct": -0.95
+  "subindo_pct": 17.4,
+  "mediana_pct": -0.72
  },
  "mercado_24h": {
   "moedas": 115,
-  "subindo_pct": 37.4,
-  "mediana_pct": -0.79
+  "subindo_pct": 27.0,
+  "mediana_pct": -1.29
  },
  "btc": {
-  "1h": -0.32,
-  "4h": -1.37,
-  "24h": -1.29,
-  "preco": 61968.01,
-  "vol_4h_vs_media": 1.51
+  "1h": -0.3,
+  "4h": -0.88,
+  "24h": -1.63,
+  "preco": 62048.0,
+  "vol_4h_vs_media": 1.56
  },
  "maiores_quedas_4h": [
   {
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
+   "moeda": "YB",
+   "4h": -8.9,
+   "24h": 8.94,
+   "vol": 0.87
+  },
+  {
    "moeda": "MMT",
-   "4h": -12.84,
-   "24h": 18.01,
+   "4h": -8.64,
+   "24h": 16.12,
    "vol": 0.45
   },
   {
-   "moeda": "YB",
-   "4h": -8.2,
-   "24h": 9.81,
-   "vol": 0.84
-  },
-  {
-   "moeda": "BREV",
-   "4h": -5.51,
-   "24h": -6.91,
-   "vol": 0.99
-  },
-  {
-   "moeda": "DODO",
-   "4h": -4.09,
-   "24h": -12.87,
-   "vol": 0.83
+   "moeda": "BEB",
+   "4h": -3.67,
+   "24h": -4.81,
+   "vol": 1.11
   },
   {
    "moeda": "ZRO",
-   "4h": -3.66,
-   "24h": -4.22,
-   "vol": 0.98
+   "4h": -3.3,
+   "24h": -5.79,
+   "vol": 1.05
   },
   {
-   "moeda": "BEB",
-   "4h": -3.63,
-   "24h": -4.41,
-   "vol": 1.1
+   "moeda": "ETHFI",
+   "4h": -3.21,
+   "24h": -0.47,
+   "vol": 0.52
   },
   {
-   "moeda": "WLD",
-   "4h": -3.17,
-   "24h": -2.57,
-   "vol": 1.21
+   "moeda": "DODO",
+   "4h": -3.21,
+   "24h": -12.86,
+   "vol": 0.83
+  },
+  {
+   "moeda": "SYRUP",
+   "4h": -3.14,
+   "24h": -0.31,
+   "vol": 1.81
   },
   {
    "moeda": "CHIP",
-   "4h": -3.01,
-   "24h": -2.12,
+   "4h": -3.11,
+   "24h": -2.13,
    "vol": 0.36
   },
   {
-   "moeda": "NEAR",
-   "4h": -2.55,
-   "24h": -2.2,
-   "vol": 1.11
+   "moeda": "WLD",
+   "4h": -2.76,
+   "24h": -3.24,
+   "vol": 1.24
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "RARE",
-   "4h": 13.99,
-   "24h": 18.78,
-   "vol": 4.78
+   "4h": 17.15,
+   "24h": 21.1,
+   "vol": 4.77
   },
   {
    "moeda": "HUMA",
-   "4h": 10.37,
-   "24h": 10.5,
-   "vol": 0.73
-  },
-  {
-   "moeda": "SKY",
-   "4h": 6.66,
-   "24h": -6.91,
-   "vol": 1.63
+   "4h": 7.08,
+   "24h": 9.96,
+   "vol": 0.82
   },
   {
    "moeda": "ZIL",
-   "4h": 5.24,
-   "24h": -1.79,
-   "vol": 0.83
+   "4h": 4.43,
+   "24h": -2.08,
+   "vol": 0.73
   },
   {
-   "moeda": "ZKC",
-   "4h": 1.15,
-   "24h": -14.24,
-   "vol": 0.47
+   "moeda": "SAPIEN",
+   "4h": 1.39,
+   "24h": 6.17,
+   "vol": 1.3
+  },
+  {
+   "moeda": "SKY",
+   "4h": 1.14,
+   "24h": -7.37,
+   "vol": 1.38
   },
   {
    "moeda": "SOPH",
    "4h": 1.01,
    "24h": -1.96,
-   "vol": 0.35
+   "vol": 0.32
   },
   {
-   "moeda": "ONE",
-   "4h": 0.94,
-   "24h": 0.17,
-   "vol": 1.01
+   "moeda": "NIGHT",
+   "4h": 0.92,
+   "24h": -1.01,
+   "vol": 0.46
   },
   {
-   "moeda": "BLUR",
-   "4h": 0.9,
-   "24h": 1.82,
-   "vol": 0.51
+   "moeda": "ZKC",
+   "4h": 0.76,
+   "24h": -13.07,
+   "vol": 0.48
+  },
+  {
+   "moeda": "SPK",
+   "4h": 0.72,
+   "24h": -6.85,
+   "vol": 0.72
   },
   {
    "moeda": "JTO",
-   "4h": 0.64,
-   "24h": -1.02,
-   "vol": 0.68
-  },
-  {
-   "moeda": "GTC",
-   "4h": 0.57,
-   "24h": 5.69,
-   "vol": 0.28
+   "4h": 0.72,
+   "24h": -1.75,
+   "vol": 0.77
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.39,
   -0.94,
   1.03,
-  -0.21
+  -0.39
  ],
  "contexto": {
-  "t": 1795131908,
+  "t": 1795132091,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795131842,
+    "hora_utc": "19/11 23:44",
+    "titulo": "Ledger CTO Charles Guillemet to leave after nine years at company"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795127762,
@@ -260,12 +266,6 @@
     "t": 1795111772,
     "hora_utc": "19/11 18:09",
     "titulo": "Why higher rates could slow Bitcoin buying at treasury firms"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795111610,
-    "hora_utc": "19/11 18:06",
-    "titulo": "Bitcoin price ignores Anthropic debut as ANT share price dips below $100"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.7,
+   "media_top20_anual_pct": 6.5,
    "principais_anual_pct": {
-    "BTC": 7.5,
-    "ETH": 5.2,
-    "SOL": 0.9
+    "BTC": 7.4,
+    "ETH": 4.6,
+    "SOL": 0.6
    },
    "leitura": "neutro"
   },
@@ -381,6 +381,13 @@
     "nivel": 4e-06
    },
    {
+    "moeda": "SUI",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.7342
+   },
+   {
     "moeda": "TIA",
     "padrao": "fundo duplo",
     "sentido": "alta",
@@ -414,19 +421,11 @@
   }
  },
  "v4": {
-  "vela": "23:30 UTC",
-  "apostas": 114,
-  "compras": 30,
-  "vendas": 84,
+  "vela": "20:00 UTC",
+  "apostas": 83,
+  "compras": 28,
+  "vendas": 55,
   "mais_confiantes_venda": [
-   {
-    "moeda": "U",
-    "prob_subir": 0.358
-   },
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.365
-   },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
@@ -434,10 +433,6 @@
    {
     "moeda": "FORM",
     "prob_subir": 0.382
-   },
-   {
-    "moeda": "ETC",
-    "prob_subir": 0.384
    },
    {
     "moeda": "PEOPLE",
@@ -448,8 +443,20 @@
     "prob_subir": 0.386
    },
    {
+    "moeda": "CYBER",
+    "prob_subir": 0.391
+   },
+   {
     "moeda": "BB",
     "prob_subir": 0.394
+   },
+   {
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
+   },
+   {
+    "moeda": "APE",
+    "prob_subir": 0.419
    }
   ],
   "mais_confiantes_compra": [
@@ -470,10 +477,6 @@
     "prob_subir": 0.593
    },
    {
-    "moeda": "WLFI",
-    "prob_subir": 0.592
-   },
-   {
     "moeda": "VET",
     "prob_subir": 0.591
    },
@@ -482,8 +485,12 @@
     "prob_subir": 0.58
    },
    {
-    "moeda": "USTC",
-    "prob_subir": 0.57
+    "moeda": "COTI",
+    "prob_subir": 0.569
+   },
+   {
+    "moeda": "SKL",
+    "prob_subir": 0.564
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -760,34 +767,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.0% em 28271 apostas (623 velas, 12/11 23:45–19/11 23:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.0% em 28302 apostas (623 velas, 13/11 00:00–19/11 23:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5501,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
   "z_contra_lab": 1.58,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5092,
-    "n": 21481
+    "acerto": 0.5089,
+    "n": 21512
    },
    "segue_maioria_24h": {
     "acerto": 0.5077,
-    "n": 28153
+    "n": 28184
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.554,
-    "n": 4904
+    "acerto": 0.555,
+    "n": 4915
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.6048,
-    "n": 1852
+    "acerto": 0.6053,
+    "n": 1857
    },
    "confianca:<0,05": {
-    "acerto": 0.5568,
-    "n": 9441
+    "acerto": 0.5564,
+    "n": 9476
    },
    "confianca:≥0,12": {
     "acerto": 0.6717,
@@ -806,16 +813,16 @@
     "n": 6229
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5221,
-    "n": 8759
+    "acerto": 0.5222,
+    "n": 8790
    },
    "lado:compra": {
-    "acerto": 0.5222,
-    "n": 13332
+    "acerto": 0.5223,
+    "n": 13334
    },
    "lado:venda": {
-    "acerto": 0.5751,
-    "n": 14939
+    "acerto": 0.575,
+    "n": 14968
    }
   }
  },
