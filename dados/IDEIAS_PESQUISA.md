@@ -3,6 +3,83 @@
 Cada seção é escrita pela rotina diária de pesquisa. Nada aqui é resultado: é candidato a pré-registro em `lab/PROTOCOLO_LAB.md`.
 Fontes da internet são dados de terceiros; números entre aspas são os que a fonte dá, e "não sei" onde ela não dá.
 
+## 2026-11-19
+
+**Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/agente_guardiao.json`, 10:18 UTC):
+
+| | |
+|---|---|
+| Campeão do torneio | **nenhum** (`campeao: null`; mínimo 30 operações, ninguém chegou) |
+| Melhor fator de lucro | **Guardião** 2,85 (12 op, acerto 83,3%, soma +0,69, carteira 10,69) · Treinador 2,59 (6 op) · Robô Claude 0,43 (23) · conta de teste 0,40 (13) |
+| Onde o Guardião perde | 2 perdas, **as duas em venda de memecoin**: TRUMP −0,277 (stop de segurança −0,8%, posição de US$ 30 a 20×, entrada com 1 h −1,38% e 4 h −2,41%) e SHIB −0,096 (prazo de 90 min). Todas as 12 op foram de 18–23 UTC. Ganho médio 0,106 × perda média 0,186: o alvo fixo de +0,6% limita o ganho abaixo do stop de 0,8% |
+| Segmento fraco do vigia | compras 53,0% (12.164) × vendas 57,7% (14.066); 18–24 h UTC 53,4% (7.886). Acerto ao vivo 55,5% contra 53,5% do laboratório, z +2,01 |
+
+**Mercado hoje** (`dados/mercado_agora.json`): BTC 63.797, −1,24% em 24 h, +0,51% em 4 h, volume de 4 h 0,69× a média; 31,8% das 110 moedas
+sobem em 24 h (fronteira do regime de baixa) e 59,1% em 4 h (repique sem volume). Medo e ganância 10. Funding médio das 20 maiores na
+Hyperliquid +8,9%/ano (BTC −1,4%). Só 5,0% das moedas acima da MM50 diária.
+
+**Já testado ou proposto (fora desta lista):** H55 (não perseguir a vela de 15 min), H39 (entrar esticado), H64 (saída colher/balde, S1–S4), H52/R6,
+H46 (18–24 UTC), stop por ATR (16/11), OI × prêmio (16/11), compras só com confiança ≥ 0,12 (18/11), piso de movimento (18/11).
+
+### Ideia 1 — Guardião: não vender memecoin depois de queda de 1 h esticada (reversão de 1 a 4 h)
+
+- **Regra:** para a memecoin candidata à venda, z1 = retorno da última hora ÷ mediana do |retorno de 1 h| das 24 h anteriores (velas de 1 h
+  fechadas, Binance). Veto da venda se z1 ≤ −2,5. Espelho na compra: veto se z1 ≥ +2,5. Parâmetro fixo, 1 tentativa (2,5 não é ajustado:
+  é escolhido antes de olhar).
+- **Por quê no Guardião:** é o único robô com fator de lucro > 1 e as perdas dele são vendas de memecoin. A pior (TRUMP, −0,277 = 1,15 R) entrou
+  com −1,38% em 1 h e −2,41% em 4 h, e pegou o repique. A H55 só olha a média de 20 velas de 15 min. Esta regra olha o tamanho da última hora
+  em relação à volatilidade da própria moeda. Com alvo de 0,6% e stop de 0,8%, um repique de 1 h basta para tirar a operação.
+- **Dados:** velas de 1 h e de 5 min da Binance (grátis).
+- **Evidência:** De Nicola, "On the Intraday Behavior of Bitcoin", *Ledger* 6 (2021), pp. 58–80 (https://epub.ub.uni-muenchen.de/97651/):
+  "significant negative first-order autocorrelation" dos retornos de 1, 2 e 4 h, e "larger price movements lead to stronger reversals".
+  Coeficientes: não sei (texto completo fechado). Contra: Caporale & Plastun (2020, https://link.springer.com/10.1007/s11408-020-00357-1;
+  BTC, ETH, LTC, 2015–2019) acham **continuação** na hora dentro de dias anormais. Só BTC/ETH/LTC; para memecoin: não sei.
+- **Teste:** reconstruir as entradas tipo Guardião (venda de memecoin a favor do regime de 24 h ≤ 30%; compra no ≥ 70%) em todas as memecoins do
+  universo desde o início dos dados de 15 min, saída igual à de hoje (stop 0,8%, alvo 0,6%, stop móvel, 90 min), custo 0,12% ida e volta,
+  3 blocos de tempo. Passa se a média líquida por operação com o veto for maior nos 3 blocos e as operações barradas tiverem média < 0
+  (z ≥ 1,65 unilateral, erro-padrão por hora de entrada). Se forem barradas menos de 30 operações, o veredito é "não sei". 1 tentativa.
+
+### Ideia 2 — Guardião: realização parcial em +0,6% e o resto com stop no zero (custo incluído)
+
+- **Regra:** metade da posição sai em +0,6% (como hoje). No mesmo instante, o stop da outra metade vai para a entrada + 0,12% (custo pago).
+  O alvo dessa metade fica em +1,8% (3 × o stop de 0,6% medido da entrada) ou ela sai no prazo de 90 min, o que vier primeiro. Stop inicial de
+  0,8% sem mudança. 1 tentativa.
+- **Por quê no Guardião:** a razão ganho ÷ perda dele é 0,57 (0,106 ÷ 0,186). 5 das 10 vitórias pararam no alvo fixo de +0,6%, e picos de até
+  +1,26% foram deixados (PUMP vendida, pico +1,26%). Na H64 o stop móvel cortou o ganho em ~0,6% e o alvo de 3% (S4) foi a melhor rota, mas
+  perdeu no bloco recente. A parcial guarda o acerto de hoje e abre espaço para o "balde".
+- **Dados:** velas de 1 min / 5 min da Binance (para saber o que veio primeiro dentro da vela).
+- **Evidência (fraca e CONTRA):** o único backtest público achado (Enlightened Stocktrading, RealTest, sistema de tendência em ações,
+  https://enlightenedstocktrading.com/trend-following-profit-targets-do-they-work) diz que "every instance of partial profit taking reduced the
+  overall rate of return" e que o retorno ajustado ao risco não melhora de forma estável. Números da tabela: não sei. A favor, só um argumento
+  sem backtest (NexusFi, https://nexusfi.com/showthread.php?p=58918): a parcial reduz a sequência de perdas. Não é cripto nem horizonte de 90 min:
+  por isso o teste decide.
+- **Teste:** mesmas entradas reconstruídas da Ideia 1 (sem o veto), saída de hoje × saída parcial, custo 0,12% em cada metade, 3 blocos. Passa se
+  a média líquida for maior nos 3 blocos, z ≥ 1,65, e o ganho médio ÷ perda médio subir. 1 tentativa. Ideias 1 e 2 juntas = 2 tentativas (Bonferroni: z ≥ 1,96).
+
+### Não proposta (anotado para não repetir)
+
+- **Funding como sinal de direção em horas:** a nota da Presto Research (https://prestolabs.io/research/can-funding-rate-predict-price-change; BTC
+  perpétuo da Binance desde 2021) dá R² = 12,5% entre a variação do funding e a do preço **na mesma** semana, e **R² ≈ 0 para a semana seguinte**.
+  O sinal entre moedas não inclui custo e tem giro "extremely high". He, Manela, Ross & von Wachter ("Fundamentals of Perpetual Futures",
+  https://arxiv.org/abs/2212.06888) acham que o retorno passado prevê o desvio do perpétuo em relação ao preço justo (demanda extrapolativa),
+  não o retorno futuro. Não vale uma tentativa agora.
+
+### O que aprendi hoje sobre o mercado cripto
+
+O BTC está entre 63 e 64 mil, com cerca de −14% em uma semana. O dado de hoje às 10:18 UTC é 63.797 (`mercado_agora.json`), com 62 mil de suporte
+testado de novo hoje cedo (manchete da Cointelegraph no retrato: "Bitcoin retests $62K"). O motor é macro: a ata do Fed mostrou "nearly all
+participants" a favor de mais altas de juros, e a chance de alta de 25 pb em dezembro aparece como 90% numa fonte e 97,4% em outra (resumo de
+busca: https://www.altcoinbuzz.io/bitcoin-below-63000-fed-rate-hike-december, https://www.coingabbar.com/en/bitcoin-price-forecast-btc-struggles-near-63k-fed-hike-odds-rise;
+número oficial: não sei). Os ETFs à vista de BTC tiveram saída líquida de US$ 239,9 milhões em 17/11 e US$ 306,42 milhões em 18/11, com o IBIT
+em −148,66 milhões no dia 18, segundo resumo de busca (https://bitcoinworld.co.in/bitcoin-weekly-selloff-etf-outflows/). Esses números não foram
+conferidos na Farside. A Cointelegraph de hoje diz que a saída líquida de 2026 passa de US$ 2,5 bilhões. As liquidações divergem entre fontes
+(US$ 178,86 milhões em 24 h numa e ~US$ 2 bilhões no fim de semana em outra; não sei qual está certa), com maioria de comprados.
+
+Sobre o relógio: a reversão de 1 a 4 h no BTC (De Nicola 2021) convive com a continuação dentro de dias de choque (Caporale & Plastun 2020).
+O que decide é o tamanho do movimento em relação à volatilidade, que é o que a Ideia 1 mede. Com medo e ganância em 10, só 5% das moedas acima da MM50
+e o funding das grandes perto de zero (BTC −1,4%/ano), não há comprados lotados para liquidar. A venda de hoje é de fluxo (ETF e macro), não
+de alavancagem. Repiques curtos sem volume (4 h com 59% subindo e volume 0,69×) seguem sendo ponto de venda pela cartilha.
+
 ## 2026-11-18
 
 **Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/robo_v4_cacador.json`, 10:19 UTC):
