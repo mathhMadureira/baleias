@@ -1,23 +1,23 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 14:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 14:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.82** · 24 operações fechadas · 1 abertas
+Carteira **US$ 8.86** · 25 operações fechadas · 1 abertas
 
-- **Total:** 15/24 com lucro (62%), resultado -1.19, média -0.050 por operação.
-- **Últimas 24 h:** 8/14 com lucro, -0.60.
-- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 13 op, 54% certas, -0.65 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 8 op, 75% certas, +0.16
-- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 13 op, 69% certas, +0.05
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
+- **Total:** 16/25 com lucro (64%), resultado -1.14, média -0.046 por operação.
+- **Últimas 24 h:** 9/15 com lucro, -0.56.
+- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 13 op, 54% certas, -0.65 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 9 op, 78% certas, +0.21
+- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 14 op, 71% certas, +0.10
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · mantém: 6 de 6 tempos abaixo d: 1 op, 100% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
 - **Moedas que mais perderam (≥ 3 op):** RUNE +0.16 (3 op) · ZEC +0.30 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** ZEC +0.30 (4 op) · RUNE +0.16 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.55** · 13 operações fechadas · 1 abertas
+Carteira **US$ 8.59** · 13 operações fechadas · 1 abertas
 
 - **Total:** 4/13 com lucro (31%), resultado -1.58, média -0.122 por operação.
 - **Últimas 24 h:** 4/11 com lucro, +0.18.
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 64.5% das moedas subindo em 24 h, 57.3% em 4 h · BTC 24 h 1.0%, 4 h 0.11%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.9%/ano · {'BTC': 1.4, 'ETH': 0.7, 'SOL': 6.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.6%/ano · {'BTC': 1.7, 'ETH': 0.8, 'SOL': 6.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT OCO invertido (alta, formado) · BONK topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · SYRUP fundo duplo (alta, formado)
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
@@ -72,12 +72,12 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 19/11 14:53 UTC · **MORPHO venda** · Regime neutro: 65,1% das 109 moedas sobem em 24 h e 57,8% em 4 h; só 39,1% das 110 subiram na última hora (mediana −0,10%). BTC +0,35% em 1 h, +0,11% em 4 h, +1
 - 19/11 14:42 UTC · **MORPHO venda** · Regime neutro: 56,5% das 108 moedas sobem em 24 h e 56,5% em 4 h; só 30,3% das 109 subiram na última hora (mediana −0,16%). BTC +0,36% em 1 h, +0,17% em 4 h, −0
 - 19/11 13:43 UTC · **MORPHO venda** · Regime neutro: 53,2% das 109 moedas sobem em 24 h e 64,2% em 4 h; 85,5% das 110 subiram na última hora (mediana +0,67%). BTC −0,05% em 1 h, +0,02% em 4 h, −0,58
 - 19/11 13:22 UTC · **MORPHO venda** · Regime neutro: 52,3% das 109 moedas sobem em 24 h e 62,4% em 4 h; BTC −0,04% em 1 h, +0,02% em 4 h, −0,48% em 24 h, a 63.786,73; medo e ganância 10. Raspagem co
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
-- 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
