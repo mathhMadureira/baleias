@@ -149,3 +149,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   reprovada na reserva (−0,246%/op). **Erro achado pelo controle aleatório:** o stop móvel simulado saía num preço que já tinha passado (entradas
   ao acaso davam +0,21%). Corrigido em `executor/stop_movel.py` (velas de 1 min com fechamento) e nos simuladores do lab; com a correção a R6
   (H52) cai para −0,021%. 160 testes.
+- 2026-11-19: **H67 — gatilhos armados no executor** (`validar_gatilhos`, `armar`, `disparou`, `conferir_gatilhos` em
+  `executor/robo_claude_nuvem.py`; níveis conferidos a cada ~3 min nas velas de 1 min, sem olhar o futuro). O dono não quer agente esperando
+  rompimento: a capacidade fica no executor, mas a rotina dos agentes (r8) manda entrar JÁ, a mercado, quando a leitura dá. 162 testes.
+- 2026-11-19: **agente Engenheiro criado** (pedido do dono): audita código, dados e prompts a cada 6 h, conserta bugs com teste e manda mudança
+  de estratégia ao Laboratório; relatórios em `OpenBot/Shared/baleias/auditorias/`.
