@@ -1,28 +1,28 @@
 {
- "t": 1795077048,
- "hora_utc": "2026-11-19 08:30 UTC",
+ "t": 1795077268,
+ "hora_utc": "2026-11-19 08:34 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
-  "subindo_pct": 39.3,
-  "mediana_pct": -0.01
+  "moedas": 111,
+  "subindo_pct": 34.2,
+  "mediana_pct": -0.15
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 43.8,
-  "mediana_pct": -0.16
+  "moedas": 111,
+  "subindo_pct": 40.5,
+  "mediana_pct": -0.12
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 35.7,
-  "mediana_pct": -0.53
+  "moedas": 111,
+  "subindo_pct": 32.4,
+  "mediana_pct": -0.81
  },
  "btc": {
-  "1h": 0.27,
-  "4h": 0.7,
-  "24h": -1.27,
-  "preco": 63794.88,
-  "vol_4h_vs_media": 0.64
+  "1h": 0.18,
+  "4h": 0.55,
+  "24h": -1.64,
+  "preco": 63696.34,
+  "vol_4h_vs_media": 0.63
  },
  "maiores_quedas_4h": [
   {
@@ -33,27 +33,27 @@
   },
   {
    "moeda": "MMT",
-   "4h": -13.97,
-   "24h": -17.52,
-   "vol": 0.9
-  },
-  {
-   "moeda": "HUMA",
-   "4h": -6.11,
-   "24h": 16.41,
-   "vol": 0.99
+   "4h": -14.71,
+   "24h": -17.76,
+   "vol": 0.87
   },
   {
    "moeda": "ZKC",
-   "4h": -5.42,
-   "24h": -3.32,
-   "vol": 0.29
+   "4h": -6.47,
+   "24h": -7.8,
+   "vol": 0.31
   },
   {
-   "moeda": "CFG",
-   "4h": -4.89,
-   "24h": -14.97,
-   "vol": 0.94
+   "moeda": "BREV",
+   "4h": -5.12,
+   "24h": -21.33,
+   "vol": 0.59
+  },
+  {
+   "moeda": "HUMA",
+   "4h": -5.03,
+   "24h": 16.57,
+   "vol": 0.98
   },
   {
    "moeda": "SKY",
@@ -62,54 +62,60 @@
    "vol": 2.8
   },
   {
-   "moeda": "BREV",
-   "4h": -4.54,
-   "24h": -22.59,
-   "vol": 0.58
-  },
-  {
-   "moeda": "ZKP",
-   "4h": -3.74,
-   "24h": -27.97,
-   "vol": 0.58
+   "moeda": "CFG",
+   "4h": -4.75,
+   "24h": -16.1,
+   "vol": 0.75
   },
   {
    "moeda": "ZIL",
-   "4h": -3.41,
-   "24h": -3.21,
+   "4h": -4.09,
+   "24h": -3.8,
    "vol": 0.37
   },
   {
-   "moeda": "ENSO",
-   "4h": -3.37,
-   "24h": -1.95,
-   "vol": 1.19
+   "moeda": "ZKP",
+   "4h": -3.42,
+   "24h": -23.77,
+   "vol": 0.62
+  },
+  {
+   "moeda": "HEI",
+   "4h": -3.04,
+   "24h": -0.24,
+   "vol": 0.38
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "INIT",
-   "4h": 19.84,
-   "24h": 21.58,
-   "vol": 3.44
+   "4h": 16.66,
+   "24h": 18.23,
+   "vol": 3.67
   },
   {
    "moeda": "BMT",
-   "4h": 6.0,
-   "24h": 1.47,
-   "vol": 2.87
+   "4h": 7.15,
+   "24h": 1.61,
+   "vol": 3.06
   },
   {
    "moeda": "STRK",
-   "4h": 3.86,
-   "24h": 2.66,
-   "vol": 3.78
+   "4h": 5.32,
+   "24h": 3.58,
+   "vol": 3.8
+  },
+  {
+   "moeda": "KAVA",
+   "4h": 3.61,
+   "24h": 1.69,
+   "vol": 1.33
   },
   {
    "moeda": "INJ",
-   "4h": 3.65,
-   "24h": -1.62,
-   "vol": 1.67
+   "4h": 3.6,
+   "24h": -1.74,
+   "vol": 1.65
   },
   {
    "moeda": "ONE",
@@ -124,28 +130,22 @@
    "vol": 3.66
   },
   {
-   "moeda": "KAVA",
-   "4h": 2.77,
-   "24h": 0.17,
-   "vol": 1.43
-  },
-  {
    "moeda": "ZAMA",
    "4h": 2.47,
    "24h": -2.23,
    "vol": 1.2
   },
   {
-   "moeda": "XPL",
-   "4h": 2.11,
-   "24h": 4.05,
-   "vol": 0.55
-  },
-  {
    "moeda": "SHELL",
    "4h": 2.05,
    "24h": -7.45,
    "vol": 0.49
+  },
+  {
+   "moeda": "PUMP",
+   "4h": 1.86,
+   "24h": 1.02,
+   "vol": 0.77
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.35,
   0.62,
   -0.02,
-  -0.03
+  -0.07
  ],
  "contexto": {
-  "t": 1795077049,
+  "t": 1795077269,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795076779,
+    "hora_utc": "19/11 08:26",
+    "titulo": "Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795075477,
@@ -260,12 +266,6 @@
     "t": 1795041000,
     "hora_utc": "18/11 22:30",
     "titulo": "Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795040162,
-    "hora_utc": "18/11 22:16",
-    "titulo": "Ledger Confirms Tampered Bitcoin Wallets in Berlin as Spy Implant Probe Spreads Beyond Asia"
    }
   ],
   "medo_ganancia": {
@@ -276,8 +276,8 @@
   "funding": {
    "media_top20_anual_pct": 10.3,
    "principais_anual_pct": {
-    "BTC": 5.1,
-    "ETH": 7.5,
+    "BTC": 4.5,
+    "ETH": 8.0,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -436,8 +436,8 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 88,
-  "compras": 40,
+  "apostas": 86,
+  "compras": 38,
   "vendas": 48,
   "mais_confiantes_venda": [
    {
@@ -479,24 +479,20 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "KAIA",
-    "prob_subir": 0.616
+    "moeda": "BONK",
+    "prob_subir": 0.627
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.611
+    "moeda": "KAIA",
+    "prob_subir": 0.616
    },
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
    },
    {
-    "moeda": "ARB",
-    "prob_subir": 0.603
-   },
-   {
     "moeda": "FF",
-    "prob_subir": 0.593
+    "prob_subir": 0.597
    },
    {
     "moeda": "COOKIE",
@@ -505,6 +501,10 @@
    {
     "moeda": "VET",
     "prob_subir": 0.591
+   },
+   {
+    "moeda": "PARTI",
+    "prob_subir": 0.58
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -768,34 +768,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 26098 apostas (611 velas, 12/11 08:45–19/11 08:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 26116 apostas (611 velas, 12/11 08:45–19/11 08:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5545,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
   "z_contra_lab": 1.96,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5097,
-    "n": 19644
+    "acerto": 0.5101,
+    "n": 19550
    },
    "segue_maioria_24h": {
-    "acerto": 0.51,
-    "n": 26002
+    "acerto": 0.5093,
+    "n": 25830
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
     "acerto": 0.5593,
-    "n": 3894
+    "n": 3896
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5925,
-    "n": 1546
+    "acerto": 0.5921,
+    "n": 1547
    },
    "confianca:<0,05": {
     "acerto": 0.574,
-    "n": 8004
+    "n": 8019
    },
    "confianca:≥0,12": {
     "acerto": 0.6718,
@@ -806,8 +806,8 @@
     "n": 7285
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.561,
-    "n": 5553
+    "acerto": 0.5609,
+    "n": 5571
    },
    "horario_utc:12–18 h": {
     "acerto": 0.554,
@@ -819,11 +819,11 @@
    },
    "lado:compra": {
     "acerto": 0.5301,
-    "n": 12133
+    "n": 12138
    },
    "lado:venda": {
     "acerto": 0.5757,
-    "n": 13965
+    "n": 13978
    }
   }
  },

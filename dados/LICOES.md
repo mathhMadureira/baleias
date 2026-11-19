@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 08:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 08:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,17 +58,17 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 35.7% das moedas subindo em 24 h, 43.8% em 4 h · BTC 24 h -1.27%, 4 h 0.7%.
+- **Amplitude:** 32.4% das moedas subindo em 24 h, 40.5% em 4 h · BTC 24 h -1.64%, 4 h 0.55%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.3%/ano · {'BTC': 5.1, 'ETH': 7.5, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.3%/ano · {'BTC': 4.5, 'ETH': 8.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CRV estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · INIT triângulo descendente (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BNB triângulo descendente (baixa, formado) · DASH fundo duplo (alta, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ETH OCO invertido (alta, formado) · ETHFI topo duplo (baixa, formado)
+- 📰 19/11 08:26 UTC · Cointelegraph: Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B
 - 📰 19/11 08:04 UTC · Cointelegraph: BTCPay Server issues emergency update for 5 security flaws
 - 📰 19/11 07:55 UTC · Cointelegraph: Bitcoin retests $62K as Nasdaq futures rise ahead of Anthropic debut
 - 📰 19/11 06:23 UTC · CoinDesk: Fed's rate hike push may be a mistake. Here's why
 - 📰 19/11 06:00 UTC · Cointelegraph: Bitcoin carry trades could beat Treasury bills in 2027, Sygnum predicts
 - 📰 19/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
-- 📰 19/11 05:39 UTC · CoinDesk: Ethereum block builders received the most in a $3.4 million vault hack, data shows
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -83,13 +83,13 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando corpo ≤ -0.6, aposta desce. Começa em observação.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido, tres_soldados. Rede neural corrigida.
-  (v3: 7 sinapses votando, 20 em observação, 0 podadas)
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando vol ≤ -1, aposta desce. Começa em observação.
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r1 ≥ 1.5, aposta desce. Começa em observação.
+  (v3: 7 sinapses votando, 22 em observação, 0 podadas)
 **v2:**
 - 😴 Sono: reencenei 1536 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
@@ -107,7 +107,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 26741 apostas conferidas ao vivo, acerto 55.3%; prevê 49 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 26759 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
