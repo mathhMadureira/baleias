@@ -1,6 +1,6 @@
 {
- "t": 1795110904,
- "hora_utc": "2026-11-19 17:55 UTC",
+ "t": 1795111136,
+ "hora_utc": "2026-11-19 17:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
@@ -172,11 +172,17 @@
   -0.75,
   -0.72,
   -0.52,
-  0.13
+  -0.03
  ],
  "contexto": {
-  "t": 1795110905,
+  "t": 1795111137,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795110938,
+    "hora_utc": "19/11 17:55",
+    "titulo": "Protesters Arrested Outside Nasdaq as Activists Oppose Anthropic IPO Over AI Bubble Risks"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795109283,
@@ -260,12 +266,6 @@
     "t": 1795093154,
     "hora_utc": "19/11 12:59",
     "titulo": "Binance Wins $6.5B Freezing Order Over Hack That Can Be Served via the Blockchain"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795092246,
-    "hora_utc": "19/11 12:44",
-    "titulo": "Hong Kong adds Hyperliquid to list of ‘suspicious’ crypto platforms"
    }
   ],
   "medo_ganancia": {
@@ -277,8 +277,8 @@
    "media_top20_anual_pct": 5.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 6.6,
-    "SOL": -2.7
+    "ETH": 6.4,
+    "SOL": -3.6
    },
    "leitura": "neutro"
   },
