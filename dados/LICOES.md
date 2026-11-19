@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 19:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 19:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.34** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.40** · 34 operações fechadas · 1 abertas
 
 - **Total:** 21/34 com lucro (62%), resultado -0.69, média -0.020 por operação.
 - **Últimas 24 h:** 14/23 com lucro, +0.46.
@@ -20,7 +20,7 @@ Carteira **US$ 9.34** · 34 operações fechadas · 1 abertas
 Carteira **US$ 9.26** · 19 operações fechadas · 3 abertas
 
 - **Total:** 8/19 com lucro (42%), resultado -0.59, média -0.031 por operação.
-- **Últimas 24 h:** 8/16 com lucro, +1.62.
+- **Últimas 24 h:** 7/15 com lucro, +1.57.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.79 · 12–17 UTC: 8 op, 50% certas, -0.43 · 18–23 UTC: 10 op, 40% certas, +0.63
 - **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 15 op, 53% certas, +1.68
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −0.80% na co: 1 op, 0% certas, -0.18 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · fora da lista de posições do c: 4 op, 25% certas, +0.69 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -39,7 +39,7 @@ Carteira **US$ 9.32** · 15 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.74** · 1 operações fechadas · 2 abertas
+Carteira **US$ 10.85** · 1 operações fechadas · 2 abertas
 
 - **Total:** 1/1 com lucro (100%), resultado +0.49, média +0.492 por operação.
 - **Últimas 24 h:** 1/1 com lucro, +0.49.
@@ -50,7 +50,7 @@ Carteira **US$ 10.74** · 1 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.41** · 20 operações fechadas · 1 abertas
+Carteira **US$ 10.35** · 20 operações fechadas · 1 abertas
 
 - **Total:** 14/20 com lucro (70%), resultado +0.47, média +0.024 por operação.
 - **Últimas 24 h:** 14/20 com lucro, +0.47.
@@ -63,11 +63,11 @@ Carteira **US$ 10.41** · 20 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 44.7% das moedas subindo em 24 h, 33.3% em 4 h · BTC 24 h -0.05%, 4 h -0.89%.
+- **Amplitude:** 44.2% das moedas subindo em 24 h, 33.6% em 4 h · BTC 24 h -0.05%, 4 h -0.89%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 11.0, 'ETH': 6.9, 'SOL': 1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.4%/ano · {'BTC': 11.0, 'ETH': 6.4, 'SOL': 1.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** VANA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BCH topo duplo (baixa, formado) · BEB topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · BEB topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
 - 📰 19/11 19:08 UTC · Decrypt: Bitcoin Enters Death Cross as Anthropic IPO Fails to Lift Wall Street
 - 📰 19/11 18:20 UTC · Cointelegraph: Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns
 - 📰 19/11 18:15 UTC · CoinDesk: Trump's Democratic SEC pick suggests tokenization policy deserves full rule process
@@ -111,7 +111,7 @@ Carteira **US$ 10.41** · 20 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28678 apostas conferidas ao vivo, acerto 55.3%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28678 apostas conferidas ao vivo, acerto 55.3%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
