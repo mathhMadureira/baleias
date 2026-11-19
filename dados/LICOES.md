@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 22:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 22:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.92** · 36 operações fechadas · 3 abertas
+Carteira **US$ 9.83** · 36 operações fechadas · 3 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado -0.27, média -0.008 por operação.
 - **Últimas 24 h:** 12/16 com lucro, +1.21.
@@ -30,7 +30,7 @@ Carteira **US$ 9.13** · 22 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.60** · 19 operações fechadas · 3 abertas
+Carteira **US$ 9.52** · 19 operações fechadas · 3 abertas
 
 - **Total:** 8/19 com lucro (42%), resultado -0.32, média -0.017 por operação.
 - **Últimas 24 h:** 5/13 com lucro, -0.58.
@@ -52,7 +52,7 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.32** · 31 operações fechadas · 2 abertas
+Carteira **US$ 10.31** · 31 operações fechadas · 2 abertas
 
 - **Total:** 20/31 com lucro (65%), resultado +0.35, média +0.011 por operação.
 - **Últimas 24 h:** 15/25 com lucro, -0.10.
@@ -67,7 +67,7 @@ Carteira **US$ 10.32** · 31 operações fechadas · 2 abertas
 
 - **Amplitude:** 27.4% das moedas subindo em 24 h, 15.4% em 4 h · BTC 24 h -1.3%, 4 h -1.92%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.5%/ano · {'BTC': -9.5, 'ETH': -3.0, 'SOL': -3.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': -5.2, 'ETH': -3.1, 'SOL': -6.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** HYPE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · WLFI estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RARE topo duplo (baixa, formado) · SAPIEN fundo duplo (alta, formado)
 - 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
