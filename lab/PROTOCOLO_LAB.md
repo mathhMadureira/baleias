@@ -1382,3 +1382,23 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - Leitura: no fluxo, seguir e ir contra perdem quase exatamente o custo (0,12%): antes do custo o sinal vale ~0,01%, nada. O momento semanal tem
   média positiva só por causa de um bloco; queda máxima −48%. A parte L (alavancagem pela volatilidade) não roda porque nada passou; como informação,
   no momento semanal ela PIOROU (Sharpe 0,004 → −0,023; queda −48% → −51%). Nada entra na mesa.
+
+## Hipótese 66: busca computacional em milhares de variações, com reserva intocada (registrada em 19/11/2026 ~11:40 BRT = 14:40 UTC, antes de baixar os dados)
+- **Pedido do dono (19/11):** "crie um método onde a gente consiga dobrar esse capital; comece fazendo variações de testes, cálculos computacionais."
+- **Risco conhecido:** testar milhares de regras sempre acha alguma que "deu certo" por sorte. Defesa pré-registrada: três trechos de tempo em ordem,
+  e a reserva final só é usada UMA vez, pela regra escolhida pelo programa (sem eu olhar a reserva antes).
+- **Dados:** velas de 1 h dos perpétuos USDT da Binance, as mesmas 60 moedas fixas da H65 (`dados/lab/h65_cache.json`), últimos 365 dias.
+  Treino = primeiros 60% do tempo; validação = 20% seguintes; reserva = últimos 20% (~73 dias). Custo 0,12% ida e volta. Sem funding (anotado).
+- **Variações (4.896 = 34 sinais × 2 filtros × 72 saídas):**
+  sinais (entrada no fechamento da vela do sinal; "segue" ou "contra"): rompimento da máxima/mínima de N velas (N 12, 24, 48, 168);
+  retorno de L velas com z ≥ k contra o desvio de 30 dias (L 1, 4, 24; k 2, 3); cruzamento da média de M velas (M 20, 50, 200);
+  IFR de 14 nos extremos (20/80, 30/70); volume ≥ k × a mediana de 48 velas (k 3, 5) no lado da vela.
+  Filtros: nenhum, ou só a favor do regime de 24 h (≤ 30% das 60 moedas subindo = só vendas; ≥ 70% = só compras).
+  Saídas: stop 0,5/1/2/3%; alvo nenhum, 2× ou 3× o stop; stop móvel (arma +0,5%, guarda 70%) sim ou não; prazo 6, 24 ou 72 h.
+  Dentro da vela, stop conta antes do alvo; o pico do stop móvel só vale da vela seguinte.
+- **Escolha (automática):** no treino, as variações com ≥ 200 entradas, ordenadas pelo t (erro-padrão agrupado pela hora de entrada) da média
+  líquida; as 20 melhores vão para a validação; fica a de maior t na validação entre as que tiverem média > 0 e t ≥ 2. Nenhuma = para aqui.
+- **Juiz na reserva (1 tentativa):** média líquida > 0, t ≥ 2 e média > 0 nas duas metades da reserva. Também a carteira simulada de US$ 10 com o
+  tamanho da H64 (até 4 posições) na reserva e um sorteio de Monte Carlo (10.000 ordens das operações da reserva) da chance de dobrar antes de
+  cair ao piso de US$ 5 — informação, não decide.
+- **Se passar:** vira robô na mesa simulada e na conta de teste, com juiz ao vivo de 30 operações; dinheiro real continua sendo decisão do dono.
