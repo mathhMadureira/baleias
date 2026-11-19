@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 20:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 20:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.52** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.66** · 34 operações fechadas · 1 abertas
 
 - **Total:** 21/34 com lucro (62%), resultado -0.69, média -0.020 por operação.
 - **Últimas 24 h:** 11/19 com lucro, +0.40.
@@ -20,7 +20,7 @@ Carteira **US$ 9.52** · 34 operações fechadas · 1 abertas
 Carteira **US$ 9.03** · 21 operações fechadas · 1 abertas
 
 - **Total:** 8/21 com lucro (38%), resultado -1.23, média -0.059 por operação.
-- **Últimas 24 h:** 7/17 com lucro, +0.93.
+- **Últimas 24 h:** 7/15 com lucro, +1.10.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.79 · 12–17 UTC: 8 op, 50% certas, -0.43 · 18–23 UTC: 12 op, 33% certas, -0.01
 - **Por lado:** compra: 5 op, 0% certas, -2.46 · venda: 16 op, 50% certas, +1.23
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.80% na co: 1 op, 0% certas, -0.18 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · fora da lista de posições do c: 4 op, 25% certas, +0.69 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -30,7 +30,7 @@ Carteira **US$ 9.03** · 21 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.32** · 15 operações fechadas · 2 abertas
+Carteira **US$ 9.49** · 15 operações fechadas · 4 abertas
 
 - **Total:** 5/15 com lucro (33%), resultado -0.68, média -0.045 por operação.
 - **Últimas 24 h:** 5/15 com lucro, -0.68.
@@ -41,7 +41,7 @@ Carteira **US$ 9.32** · 15 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 11.11** · 2 operações fechadas · 2 abertas
+Carteira **US$ 11.14** · 2 operações fechadas · 2 abertas
 
 - **Total:** 2/2 com lucro (100%), resultado +0.84, média +0.420 por operação.
 - **Últimas 24 h:** 2/2 com lucro, +0.84.
@@ -52,22 +52,22 @@ Carteira **US$ 11.11** · 2 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.23** · 21 operações fechadas · 2 abertas
+Carteira **US$ 10.17** · 23 operações fechadas · 3 abertas
 
-- **Total:** 14/21 com lucro (67%), resultado +0.23, média +0.011 por operação.
-- **Últimas 24 h:** 14/21 com lucro, +0.23.
-- **Por horário:** 12–17 UTC: 7 op, 57% certas, +0.11 · 18–23 UTC: 14 op, 71% certas, +0.12
-- **Por lado:** compra: 4 op, 50% certas, -0.39 · venda: 17 op, 71% certas, +0.62
-- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27
-- **Moedas que mais perderam (≥ 3 op):** TRUMP -0.20 (5 op) · PUMP +0.63 (4 op)
-- **Moedas que mais ganharam (≥ 3 op):** PUMP +0.63 (4 op) · TRUMP -0.20 (5 op)
+- **Total:** 15/23 com lucro (65%), resultado +0.17, média +0.007 por operação.
+- **Últimas 24 h:** 15/23 com lucro, +0.17.
+- **Por horário:** 18–23 UTC: 16 op, 69% certas, +0.06 · 12–17 UTC: 7 op, 57% certas, +0.11
+- **Por lado:** compra: 5 op, 40% certas, -0.55 · venda: 18 op, 72% certas, +0.72
+- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · oportunidade confirmada do Caç: 1 op, 0% certas, -0.16 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin com 24 h -1,30% (tend: 1 op, 100% certas, +0.10 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27
+- **Moedas que mais perderam (≥ 3 op):** TRUMP -0.20 (5 op) · PENGU +0.12 (3 op) · PUMP +0.63 (4 op)
+- **Moedas que mais ganharam (≥ 3 op):** PUMP +0.63 (4 op) · PENGU +0.12 (3 op) · TRUMP -0.20 (5 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 40.4% das moedas subindo em 24 h, 28.9% em 4 h · BTC 24 h -0.87%, 4 h -1.46%.
+- **Amplitude:** 36.8% das moedas subindo em 24 h, 20.2% em 4 h · BTC 24 h -1.08%, 4 h -1.9%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -5.5, 'ETH': 4.2, 'SOL': -6.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': -6.0, 'ETH': 5.3, 'SOL': -7.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 20:15 UTC · Decrypt: Hackers Leak Visa, Mastercard and JPMorgan Customer Data
@@ -89,13 +89,13 @@ Carteira **US$ 10.23** · 21 operações fechadas · 2 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido, tres_soldados. Rede neural corrigida.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando vol ≤ -1, aposta desce. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r1 ≥ 1.5, aposta desce. Começa em observação.
-  (v3: 7 sinapses votando, 22 em observação, 0 podadas)
+- ❌ Errou (sobe). Peso reduzido de: tres_corvos. Rede neural corrigida.
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r1 ≥ 1.5, aposta sobe. Começa em observação.
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r4 ≤ -3, aposta desce. Começa em observação.
+  (v3: 7 sinapses votando, 24 em observação, 0 podadas)
 **v2:**
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
@@ -113,7 +113,7 @@ Carteira **US$ 10.23** · 21 operações fechadas · 2 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28741 apostas conferidas ao vivo, acerto 55.3%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28815 apostas conferidas ao vivo, acerto 55.1%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
