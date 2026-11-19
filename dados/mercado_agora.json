@@ -1,6 +1,6 @@
 {
- "t": 1795128408,
- "hora_utc": "2026-11-19 22:46 UTC",
+ "t": 1795128591,
+ "hora_utc": "2026-11-19 22:49 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 116,
@@ -172,10 +172,10 @@
   -0.82,
   -0.39,
   -0.94,
-  1.22
+  1.2
  ],
  "contexto": {
-  "t": 1795128409,
+  "t": 1795128592,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.7,
+   "media_top20_anual_pct": 8.0,
    "principais_anual_pct": {
-    "BTC": 4.5,
-    "ETH": 1.1,
-    "SOL": 3.1
+    "BTC": 4.8,
+    "ETH": 1.2,
+    "SOL": 3.4
    },
    "leitura": "neutro"
   },
@@ -489,26 +489,9 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.35,
-  "abertas": [
-   {
-    "moeda": "MEGA",
-    "lado": "compra",
-    "entrada": 0.05981,
-    "agora": 0.05979,
-    "resultado_pct": -0.03,
-    "horas_aberta": 2.0,
-    "motivo_de_entrada": "Aviso de compra do Caçador (5 min +1,33%, volume 3,4×, válido até 20:56 UTC); 6 de 6 tempos acima da MM20; estrutura de alta em 15 min e 1 h e fundo duplo de 15"
-   }
-  ],
+  "carteira": 9.42,
+  "abertas": [],
   "ultimas_fechadas": [
-   {
-    "moeda": "MORPHO",
-    "lado": "venda",
-    "resultado_usd": 0.049,
-    "motivo_saida": "stop móvel (pico +0.53%, guardou +0.37%)",
-    "motivo_de_entrada": "v4 0,385 de subir (confiança 0,115, a maior do universo); 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 dia); 4 h −0"
-   },
    {
     "moeda": "MORPHO",
     "lado": "venda",
@@ -606,6 +589,13 @@
     "resultado_usd": -0.241,
     "motivo_saida": "stop de segurança −0.9%",
     "motivo_de_entrada": "Nova, a mercado: bandeira de baixa CONFIRMADA em 1 h (radar 21:32, invalidação 42,94) e topo duplo de 4 h a favor; 5 de "
+   },
+   {
+    "moeda": "MEGA",
+    "lado": "compra",
+    "resultado_usd": 0.122,
+    "motivo_saida": "prazo da operação (120 min)",
+    "motivo_de_entrada": "Aviso de compra do Caçador (5 min +1,33%, volume 3,4×, válido até 20:56 UTC); 6 de 6 tempos acima da MM20; estrutura de "
    }
   ],
   "licoes_anteriores": [
@@ -650,15 +640,10 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.35,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "MEGA",
-     "compra"
-    ]
-   ],
-   "n_fechadas": 38,
+   "carteira": 9.42,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 39,
    "ordem": null
   },
   {
@@ -727,13 +712,13 @@
   "campeao": "guardiao",
   "placar": {
    "claude": {
-    "ops": 38,
-    "acerto": 0.605,
-    "soma": -0.702,
-    "ganho_medio": 0.109,
+    "ops": 39,
+    "acerto": 0.615,
+    "soma": -0.58,
+    "ganho_medio": 0.11,
     "perda_media": -0.214,
-    "fator_lucro": 0.78,
-    "carteira": 9.35
+    "fator_lucro": 0.82,
+    "carteira": 9.42
    },
    "openbot_testnet": {
     "ops": 22,
