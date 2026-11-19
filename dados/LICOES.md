@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 08:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 08:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,21 +58,21 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 36.3% das moedas subindo em 24 h, 53.1% em 4 h · BTC 24 h -1.77%, 4 h 0.84%.
+- **Amplitude:** 38.6% das moedas subindo em 24 h, 46.5% em 4 h · BTC 24 h -1.27%, 4 h 0.7%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.8%/ano · {'BTC': 5.8, 'ETH': 7.3, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.1%/ano · {'BTC': 6.2, 'ETH': 6.3, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CRV estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · INIT triângulo descendente (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BNB triângulo descendente (baixa, formado) · DASH fundo duplo (alta, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ETH OCO invertido (alta, formado) · ETHFI topo duplo (baixa, formado)
+- 📰 19/11 08:04 UTC · Cointelegraph: BTCPay Server issues emergency update for 5 security flaws
 - 📰 19/11 07:55 UTC · Cointelegraph: Bitcoin retests $62K as Nasdaq futures rise ahead of Anthropic debut
 - 📰 19/11 06:23 UTC · CoinDesk: Fed's rate hike push may be a mistake. Here's why
 - 📰 19/11 06:00 UTC · Cointelegraph: Bitcoin carry trades could beat Treasury bills in 2027, Sygnum predicts
 - 📰 19/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 19/11 05:39 UTC · CoinDesk: Ethereum block builders received the most in a $3.4 million vault hack, data shows
-- 📰 19/11 05:27 UTC · Cointelegraph: Senators warn GENIUS Act rules could push stablecoin firms toward federal oversight
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 9.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 9.1 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
@@ -107,7 +107,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 26718 apostas conferidas ao vivo, acerto 55.3%; prevê 60 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 26721 apostas conferidas ao vivo, acerto 55.3%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
