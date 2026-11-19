@@ -1,20 +1,20 @@
 {
- "t": 1795072170,
- "hora_utc": "2026-11-19 07:09 UTC",
+ "t": 1795072394,
+ "hora_utc": "2026-11-19 07:13 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 114,
-  "subindo_pct": 67.5,
+  "moedas": 115,
+  "subindo_pct": 67.8,
   "mediana_pct": 0.38
  },
  "mercado_4h": {
-  "moedas": 114,
-  "subindo_pct": 71.1,
-  "mediana_pct": 1.23
+  "moedas": 115,
+  "subindo_pct": 70.4,
+  "mediana_pct": 1.2
  },
  "mercado_24h": {
-  "moedas": 114,
-  "subindo_pct": 36.8,
+  "moedas": 115,
+  "subindo_pct": 37.4,
   "mediana_pct": -0.34
  },
  "btc": {
@@ -172,10 +172,10 @@
   0.6,
   -0.35,
   0.62,
-  0.07
+  -0.19
  ],
  "contexto": {
-  "t": 1795072171,
+  "t": 1795072395,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 10.1,
+   "media_top20_anual_pct": 10.5,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 10.0,
+   "amplitude_acima_mm50_pct": 7.5,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -416,8 +416,8 @@
  "v4": {
   "vela": "05:30 UTC",
   "apostas": 114,
-  "compras": 57,
-  "vendas": 57,
+  "compras": 58,
+  "vendas": 56,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
@@ -478,12 +478,12 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "COOKIE",
-    "prob_subir": 0.593
+    "moeda": "KAT",
+    "prob_subir": 0.608
    },
    {
-    "moeda": "VET",
-    "prob_subir": 0.591
+    "moeda": "COOKIE",
+    "prob_subir": 0.593
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -754,12 +754,12 @@
   "z_contra_lab": 1.97,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5093,
-    "n": 19665
+    "acerto": 0.5091,
+    "n": 19682
    },
    "segue_maioria_24h": {
-    "acerto": 0.5093,
-    "n": 25835
+    "acerto": 0.5085,
+    "n": 25912
    }
   },
   "referencia_ganha": [],
