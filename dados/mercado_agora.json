@@ -1,28 +1,28 @@
 {
- "t": 1795113796,
- "hora_utc": "2026-11-19 18:43 UTC",
+ "t": 1795114036,
+ "hora_utc": "2026-11-19 18:47 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
-  "subindo_pct": 79.8,
-  "mediana_pct": 0.57
+  "subindo_pct": 77.2,
+  "mediana_pct": 0.44
  },
  "mercado_4h": {
   "moedas": 114,
-  "subindo_pct": 17.5,
-  "mediana_pct": -1.32
+  "subindo_pct": 18.4,
+  "mediana_pct": -1.45
  },
  "mercado_24h": {
   "moedas": 114,
-  "subindo_pct": 57.9,
-  "mediana_pct": 0.38
+  "subindo_pct": 45.6,
+  "mediana_pct": -0.14
  },
  "btc": {
-  "1h": 0.39,
-  "4h": -1.03,
-  "24h": 0.21,
-  "preco": 63275.64,
-  "vol_4h_vs_media": 1.64
+  "1h": 0.19,
+  "4h": -1.44,
+  "24h": -0.36,
+  "preco": 63035.84,
+  "vol_4h_vs_media": 1.61
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "SKY",
-   "4h": -7.63,
-   "24h": -22.44,
-   "vol": 3.15
-  },
-  {
-   "moeda": "HUMA",
-   "4h": -6.38,
-   "24h": -4.6,
-   "vol": 1.04
+   "4h": -7.69,
+   "24h": -22.56,
+   "vol": 3.14
   },
   {
    "moeda": "BEB",
-   "4h": -5.33,
-   "24h": -0.52,
-   "vol": 4.37
-  },
-  {
-   "moeda": "CHIP",
-   "4h": -5.12,
-   "24h": 3.63,
-   "vol": 1.09
-  },
-  {
-   "moeda": "MUBARAK",
-   "4h": -5.0,
-   "24h": -8.54,
-   "vol": 2.1
-  },
-  {
-   "moeda": "CFG",
-   "4h": -4.6,
-   "24h": -14.33,
-   "vol": 0.68
+   "4h": -6.26,
+   "24h": -1.09,
+   "vol": 4.17
   },
   {
    "moeda": "SYRUP",
-   "4h": -4.14,
-   "24h": 4.62,
-   "vol": 3.25
+   "4h": -5.95,
+   "24h": 3.86,
+   "vol": 2.96
+  },
+  {
+   "moeda": "CFG",
+   "4h": -5.81,
+   "24h": -15.96,
+   "vol": 0.66
+  },
+  {
+   "moeda": "SOPH",
+   "4h": -4.85,
+   "24h": -3.92,
+   "vol": 1.62
+  },
+  {
+   "moeda": "BREV",
+   "4h": -4.55,
+   "24h": -11.48,
+   "vol": 0.76
+  },
+  {
+   "moeda": "HUMA",
+   "4h": -4.48,
+   "24h": -4.26,
+   "vol": 0.94
   },
   {
    "moeda": "ZRO",
-   "4h": -4.12,
-   "24h": 4.09,
-   "vol": 0.95
+   "4h": -3.97,
+   "24h": 3.38,
+   "vol": 1.02
   },
   {
-   "moeda": "PYTH",
-   "4h": -3.71,
-   "24h": 3.21,
-   "vol": 2.39
+   "moeda": "PEPE",
+   "4h": -3.82,
+   "24h": 0.8,
+   "vol": 1.52
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "MMT",
-   "4h": 30.03,
-   "24h": 20.2,
-   "vol": 2.64
+   "4h": 31.71,
+   "24h": 26.63,
+   "vol": 2.58
   },
   {
    "moeda": "YB",
-   "4h": 12.85,
-   "24h": 21.12,
-   "vol": 4.95
-  },
-  {
-   "moeda": "SAPIEN",
-   "4h": 7.08,
-   "24h": 9.39,
-   "vol": 4.99
+   "4h": 12.2,
+   "24h": 19.87,
+   "vol": 4.91
   },
   {
    "moeda": "ZKP",
-   "4h": 3.41,
-   "24h": -2.62,
-   "vol": 0.77
+   "4h": 4.72,
+   "24h": -2.92,
+   "vol": 0.68
+  },
+  {
+   "moeda": "SAPIEN",
+   "4h": 4.2,
+   "24h": 6.36,
+   "vol": 5.21
+  },
+  {
+   "moeda": "MEGA",
+   "4h": 2.53,
+   "24h": 10.19,
+   "vol": 0.94
   },
   {
    "moeda": "KAT",
    "4h": 1.92,
-   "24h": 1.92,
-   "vol": 2.38
+   "24h": 0.63,
+   "vol": 2.34
   },
   {
-   "moeda": "HYPE",
-   "4h": 1.84,
-   "24h": 3.75,
-   "vol": 2.72
-  },
-  {
-   "moeda": "THE",
-   "4h": 1.7,
-   "24h": 1.01,
-   "vol": 5.22
+   "moeda": "LUNC",
+   "4h": 1.77,
+   "24h": 20.19,
+   "vol": 0.66
   },
   {
    "moeda": "ENSO",
-   "4h": 1.48,
-   "24h": 3.26,
+   "4h": 1.23,
+   "24h": 2.99,
    "vol": 0.59
   },
   {
-   "moeda": "ERA",
-   "4h": 1.23,
-   "24h": 3.94,
-   "vol": 1.81
+   "moeda": "THE",
+   "4h": 1.02,
+   "24h": 0.0,
+   "vol": 5.22
   },
   {
-   "moeda": "MEGA",
-   "4h": 1.17,
-   "24h": 10.2,
-   "vol": 0.95
+   "moeda": "SHELL",
+   "4h": 0.99,
+   "24h": -4.17,
+   "vol": 0.89
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.72,
   -0.52,
   -0.05,
-  0.54
+  0.41
  ],
  "contexto": {
-  "t": 1795113797,
+  "t": 1795114037,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.0,
+   "media_top20_anual_pct": 7.1,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
-    "SOL": -1.2
+    "SOL": -1.3
    },
    "leitura": "neutro"
   },
@@ -339,11 +339,11 @@
     "nivel": 43.1
    },
    {
-    "moeda": "MUBARAK",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
+    "moeda": "NFP",
+    "padrao": "ombro-cabeça-ombro",
+    "sentido": "baixa",
     "confirmado": false,
-    "nivel": 0.02678
+    "nivel": 0.00484
    },
    {
     "moeda": "YB",
@@ -379,42 +379,42 @@
   }
  },
  "v4": {
-  "vela": "18:30 UTC",
-  "apostas": 157,
-  "compras": 34,
-  "vendas": 123,
+  "vela": "20:00 UTC",
+  "apostas": 76,
+  "compras": 38,
+  "vendas": 38,
   "mais_confiantes_venda": [
    {
+    "moeda": "SLP",
+    "prob_subir": 0.376
+   },
+   {
+    "moeda": "FORM",
+    "prob_subir": 0.382
+   },
+   {
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
+   },
+   {
+    "moeda": "BABAB",
+    "prob_subir": 0.386
+   },
+   {
     "moeda": "F",
-    "prob_subir": 0.313
+    "prob_subir": 0.388
    },
    {
-    "moeda": "KITE",
-    "prob_subir": 0.334
+    "moeda": "BB",
+    "prob_subir": 0.394
    },
    {
-    "moeda": "DOT",
-    "prob_subir": 0.345
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
    },
    {
-    "moeda": "KAT",
-    "prob_subir": 0.347
-   },
-   {
-    "moeda": "OP",
-    "prob_subir": 0.352
-   },
-   {
-    "moeda": "ARB",
-    "prob_subir": 0.354
-   },
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.357
-   },
-   {
-    "moeda": "ZK",
-    "prob_subir": 0.358
+    "moeda": "APE",
+    "prob_subir": 0.419
    }
   ],
   "mais_confiantes_compra": [
@@ -431,31 +431,59 @@
     "prob_subir": 0.61
    },
    {
+    "moeda": "U",
+    "prob_subir": 0.602
+   },
+   {
+    "moeda": "SOPH",
+    "prob_subir": 0.599
+   },
+   {
+    "moeda": "BONK",
+    "prob_subir": 0.594
+   },
+   {
     "moeda": "COOKIE",
     "prob_subir": 0.593
    },
    {
     "moeda": "VET",
     "prob_subir": 0.591
-   },
-   {
-    "moeda": "PARTI",
-    "prob_subir": 0.58
-   },
-   {
-    "moeda": "RARE",
-    "prob_subir": 0.575
-   },
-   {
-    "moeda": "COTI",
-    "prob_subir": 0.569
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
   "carteira": 9.21,
-  "abertas": [],
+  "abertas": [
+   {
+    "moeda": "SKY",
+    "lado": "venda",
+    "entrada": 0.03976,
+    "agora": 0.03998,
+    "resultado_pct": -0.55,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Varredura: 5 de 6 tempos abaixo da MM20 (só 5 min acima); estrutura de baixa em 15 min, 1 h e 4 h; 4 h −7,63%, 24 h −22,44%; a +8,28% da mínima de 24 h, sobra e"
+   },
+   {
+    "moeda": "DOT",
+    "lado": "venda",
+    "entrada": 0.722,
+    "agora": 0.723,
+    "resultado_pct": -0.14,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "v4 0,345 de subir (confiança 0,155, faixa ≥ 0,12 que acerta 67%); topo duplo de 4 h CONFIRMADO para baixo; volume de 4 h 2,14×; carteiras vendidas em BTC 1×17. "
+   },
+   {
+    "moeda": "SNX",
+    "lado": "compra",
+    "entrada": 0.1687,
+    "agora": null,
+    "resultado_pct": null,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Aviso do Caçador 18:40 UTC (explosão de 1 min, força 100): 1 min +0,72% (z +3,0), volume 21,7× o normal; 6 de 6 tempos acima da MM20; fundo duplo e estrutura de"
+   }
+  ],
   "ultimas_fechadas": [
    {
     "moeda": "KITE",
@@ -565,10 +593,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795095805,
-    "texto": "MORPHO venda (entrada 1,6884 às 13:23 UTC): após 18 min, −0,02 USDT no testnet; nem stop (1,6986) nem alvo (1,6681) tocados. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, E = −0,12 por operação. Caderno: 23 fechadas na carteira e 0 com leitura anotada, então ainda não sei o que funciona para mim. Revisor cortou as 3 candidatas com confiança ≥ 0,08: nenhuma tinha 4 de 6 tempos a fav"
-   },
-   {
     "t": 1795099360,
     "texto": "MORPHO venda (entrada 1,6884 às 13:23 UTC): após 77 min, +0,105 USDT no testnet; stop móvel armou e subiu de 1,6986 para 1,6805 (pico +0,68%); alvo 1,6681 não tocado. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, E = −0,12 por operação. Carteira simulada: 24 fechadas, p = 0,625, G = 0,066, L = 0,242, E = −0,05. Caderno: 1 operação com leitura anotada (MORPHO venda +0,049, 4–5 de 6 "
    },
@@ -595,6 +619,10 @@
    {
     "t": 1795104517,
     "texto": "Conta de teste: 14 fechadas, p 0,357, G +0,234, L −0,328, E ≈ −0,127 US$ por operação (sem fechamento novo nesta rodada). Abertas: SKY venda +0,31 (6 de 6 a favor, contra o v4) e AAVE −0,02, CAKE −0,04, UNI −0,11. Caderno: 4 operações com leitura, 75% de acerto, 6 de 6 a favor com 3 operações (67%), poucas. Verificável: se SKY sair no lucro pelo stop móvel e UNI (5 de 6) sair no stop, conta mais u"
+   },
+   {
+    "t": 1795113831,
+    "texto": "Conta de teste agora 19 fechadas: SKY venda +0,482 e AAVE venda +0,061 saíram pelo stop móvel; CAKE venda −0,115 e UNI venda −0,176 pelo stop de segurança (0,5% e 0,8% foram curtos no repique de 79,8% das moedas na hora). Caderno: 6 de 6 tempos a favor = 5 operações, 80% de acerto, +0,443 (poucas: não sei ainda). O v4 sem confiança (0,035) mandava fechar SKY às 16:20; segurar pelo stop móvel deu +"
    }
   ]
  },
@@ -606,8 +634,21 @@
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
    "carteira": 9.21,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 3,
+   "abertas": [
+    [
+     "SKY",
+     "venda"
+    ],
+    [
+     "DOT",
+     "venda"
+    ],
+    [
+     "SNX",
+     "compra"
+    ]
+   ],
    "n_fechadas": 32,
    "ordem": null
   },
@@ -617,9 +658,22 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 9.41,
-   "n_abertas": 0,
-   "abertas": [],
+   "carteira": 9.26,
+   "n_abertas": 3,
+   "abertas": [
+    [
+     "SKY",
+     "venda"
+    ],
+    [
+     "DOT",
+     "venda"
+    ],
+    [
+     "SNX",
+     "compra"
+    ]
+   ],
    "n_fechadas": 19,
    "ordem": null
   },
@@ -641,15 +695,19 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.62,
-   "n_abertas": 1,
+   "carteira": 10.49,
+   "n_abertas": 2,
    "abertas": [
     [
-     "CYBER",
-     "compra"
+     "F",
+     "venda"
+    ],
+    [
+     "DOT",
+     "venda"
     ]
    ],
-   "n_fechadas": 0,
+   "n_fechadas": 1,
    "ordem": null
   },
   {
@@ -684,7 +742,7 @@
     "ganho_medio": 0.291,
     "perda_media": -0.291,
     "fator_lucro": 0.8,
-    "carteira": 9.41
+    "carteira": 9.26
    },
    "treinador": {
     "ops": 13,
@@ -696,13 +754,13 @@
     "carteira": 9.76
    },
    "laboratorio": {
-    "ops": 0,
-    "acerto": null,
-    "soma": 0,
-    "ganho_medio": null,
+    "ops": 1,
+    "acerto": 1.0,
+    "soma": 0.492,
+    "ganho_medio": 0.492,
     "perda_media": null,
-    "fator_lucro": null,
-    "carteira": 10.62
+    "fator_lucro": 99.0,
+    "carteira": 10.49
    },
    "guardiao": {
     "ops": 19,
@@ -717,38 +775,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 27404 apostas (623 velas, 12/11 18:45–19/11 18:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5546,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 27481 apostas (623 velas, 12/11 19:00–19/11 18:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5549,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.03,
+  "z_contra_lab": 2.06,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5097,
-    "n": 20661
+    "acerto": 0.5096,
+    "n": 20737
    },
    "segue_maioria_24h": {
-    "acerto": 0.5032,
-    "n": 27341
+    "acerto": 0.5038,
+    "n": 27418
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5647,
-    "n": 4516
+    "acerto": 0.5639,
+    "n": 4540
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5944,
-    "n": 1711
+    "acerto": 0.5998,
+    "n": 1759
    },
    "confianca:<0,05": {
-    "acerto": 0.5674,
-    "n": 8932
+    "acerto": 0.5672,
+    "n": 8941
    },
    "confianca:≥0,12": {
-    "acerto": 0.6702,
-    "n": 567
+    "acerto": 0.6713,
+    "n": 581
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5727,
@@ -763,27 +821,21 @@
     "n": 6229
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5346,
-    "n": 7892
+    "acerto": 0.5358,
+    "n": 7969
    },
    "lado:compra": {
-    "acerto": 0.5298,
-    "n": 12604
+    "acerto": 0.5297,
+    "n": 12608
    },
    "lado:venda": {
-    "acerto": 0.5757,
-    "n": 14800
+    "acerto": 0.5763,
+    "n": 14873
    }
   }
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "18/11 22:17",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Baixa mais forte (17,1% sobem em 4 h; BTC −1,20% em 4 h). RUNE vendida saiu +0,067. Mantenho ZEC e AAVE vendidas (3 carteiras vendidas × 0 em cada; abaixo da MM20 em 6/6 e 5/6 tempos). LA fica de fora: 5/6 tempos acima da MM20. Conta de teste: 11 fechadas, p 0,27, E −0,15."
-  },
   {
    "hora_utc": "18/11 23:06",
    "de": "claude",
@@ -849,6 +901,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Repique: 60,4% das 106 moedas sobem em 1 h; BTC −0,45% em 1 h. Chefe e testnet mantêm as 4 vendas: SKY +0,31 com stop móvel em 0,0413, AAVE −0,02, CAKE −0,04, UNI −0,11. Sem caixa para entrada nova (US$ 0,75). Conta de teste: 14 fechadas, US$ 8,68."
+  },
+  {
+   "hora_utc": "19/11 18:47",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Neutro (58,4% das 113 moedas sobem em 24 h; 79,8% na última hora, 17,5% em 4 h). Stops na corretora fecharam as 4 vendas: SKY +0,48, AAVE +0,06, CAKE −0,12, UNI −0,18. Entro: SKY venda (5 de 6 tempos abaixo), DOT venda (v4 0,155, topo duplo de 4 h confirmado) e SNX compra (aviso do Caçador, 6 de 6 t"
   }
  ]
 }
