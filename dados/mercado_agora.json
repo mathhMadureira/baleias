@@ -1,6 +1,6 @@
 {
- "t": 1795119939,
- "hora_utc": "2026-11-19 20:25 UTC",
+ "t": 1795120180,
+ "hora_utc": "2026-11-19 20:29 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
@@ -172,10 +172,10 @@
   -0.05,
   0.22,
   -0.82,
-  -0.05
+  -0.45
  ],
  "contexto": {
-  "t": 1795119941,
+  "t": 1795120181,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.3,
+   "media_top20_anual_pct": 4.0,
    "principais_anual_pct": {
-    "BTC": -6.6,
-    "ETH": 3.7,
-    "SOL": -5.2
+    "BTC": -5.5,
+    "ETH": 4.2,
+    "SOL": -6.6
    },
    "leitura": "neutro"
   },
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.49,
+  "carteira": 9.52,
   "abertas": [
    {
     "moeda": "DOT",
@@ -455,7 +455,7 @@
     "entrada": 0.722,
     "agora": 0.716,
     "resultado_pct": 0.83,
-    "horas_aberta": 1.6,
+    "horas_aberta": 1.7,
     "motivo_de_entrada": "v4 0,345 de subir (confiança 0,155, faixa ≥ 0,12 que acerta 67%); topo duplo de 4 h CONFIRMADO para baixo; volume de 4 h 2,14×; carteiras vendidas em BTC 1×17. "
    }
   ],
@@ -568,10 +568,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795099360,
-    "texto": "MORPHO venda (entrada 1,6884 às 13:23 UTC): após 77 min, +0,105 USDT no testnet; stop móvel armou e subiu de 1,6986 para 1,6805 (pico +0,68%); alvo 1,6681 não tocado. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, E = −0,12 por operação. Carteira simulada: 24 fechadas, p = 0,625, G = 0,066, L = 0,242, E = −0,05. Caderno: 1 operação com leitura anotada (MORPHO venda +0,049, 4–5 de 6 "
-   },
-   {
     "t": 1795100021,
     "texto": "MORPHO venda segue a favor: +0,132 USDT na corretora com 6 de 6 tempos abaixo da MM20. Carteira simulada: 24 fechadas, p 0,625, G +0,066, L −0,242, E −0,050 por operação (soma −1,189): perdas médias 3,7× os ganhos, por isso alvo maior que o stop. Caderno: só 1 operação com leitura anotada (4–5 de 6, sem padrão, carteiras a favor, +0,049): não sei ainda."
    },
@@ -598,6 +594,10 @@
    {
     "t": 1795113831,
     "texto": "Conta de teste agora 19 fechadas: SKY venda +0,482 e AAVE venda +0,061 saíram pelo stop móvel; CAKE venda −0,115 e UNI venda −0,176 pelo stop de segurança (0,5% e 0,8% foram curtos no repique de 79,8% das moedas na hora). Caderno: 6 de 6 tempos a favor = 5 operações, 80% de acerto, +0,443 (poucas: não sei ainda). O v4 sem confiança (0,035) mandava fechar SKY às 16:20; segurar pelo stop móvel deu +"
+   },
+   {
+    "t": 1795119964,
+    "texto": "SKY venda −0,454 (stop de segurança −1,2%): vendi depois de −22% em 24 h e a moeda repicou +18% em 4 h; vender colado num repique de moeda já esticada para baixo deu perda. SNX compra −0,188 (stop −0,72%): aviso de explosão de 1 min do Caçador não seguiu. Conta de teste, 21 fechadas: p 0,38, G +0,291, L −0,274, E −0,059. Caderno (11 com leitura): padrão gráfico a favor 4 de 4 com lucro (+0,970); s"
    }
   ]
  },
@@ -608,7 +608,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.49,
+   "carteira": 9.52,
    "n_abertas": 1,
    "abertas": [
     [
@@ -625,7 +625,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 9.07,
+   "carteira": 9.03,
    "n_abertas": 1,
    "abertas": [
     [
@@ -643,8 +643,17 @@
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
    "carteira": 9.32,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "ORDI",
+     "venda"
+    ],
+    [
+     "WIF",
+     "venda"
+    ]
+   ],
    "n_fechadas": 15,
    "ordem": null
   },
@@ -654,19 +663,19 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 11.2,
+   "carteira": 11.11,
    "n_abertas": 2,
    "abertas": [
     [
-     "F",
+     "DOT",
      "venda"
     ],
     [
-     "DOT",
-     "venda"
+     "F",
+     "compra"
     ]
    ],
-   "n_fechadas": 1,
+   "n_fechadas": 2,
    "ordem": null
   },
   {
@@ -676,8 +685,17 @@
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
    "carteira": 10.23,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "PENGU",
+     "venda"
+    ],
+    [
+     "ENSO",
+     "compra"
+    ]
+   ],
    "n_fechadas": 21,
    "ordem": null
   }
@@ -692,7 +710,7 @@
     "ganho_medio": 0.1,
     "perda_media": -0.214,
     "fator_lucro": 0.75,
-    "carteira": 9.49
+    "carteira": 9.52
    },
    "openbot_testnet": {
     "ops": 21,
@@ -701,7 +719,7 @@
     "ganho_medio": 0.291,
     "perda_media": -0.296,
     "fator_lucro": 0.65,
-    "carteira": 9.07
+    "carteira": 9.03
    },
    "treinador": {
     "ops": 15,
@@ -713,13 +731,13 @@
     "carteira": 9.32
    },
    "laboratorio": {
-    "ops": 1,
+    "ops": 2,
     "acerto": 1.0,
-    "soma": 0.492,
-    "ganho_medio": 0.492,
+    "soma": 0.84,
+    "ganho_medio": 0.42,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 11.2
+    "carteira": 11.11
    },
    "guardiao": {
     "ops": 21,
@@ -796,12 +814,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "18/11 23:06",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Baixa forte (7,5% das moedas sobem em 4 h; BTC −1,19% em 4 h). Corretora fechou ZEC vendida (−0,009) e AAVE vendida (+0,061). Sem entrada nova: raspagem incompleta (regras do testnet ausentes; depois só 58 de 106 moedas e carteiras vazias). Conta de teste: 13 fechadas, p 0,31, E −0,12."
-  },
-  {
    "hora_utc": "18/11 23:18",
    "de": "claude",
    "para": "sala",
@@ -866,6 +878,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Neutro (58,4% das 113 moedas sobem em 24 h; 79,8% na última hora, 17,5% em 4 h). Stops na corretora fecharam as 4 vendas: SKY +0,48, AAVE +0,06, CAKE −0,12, UNI −0,18. Entro: SKY venda (5 de 6 tempos abaixo), DOT venda (v4 0,155, topo duplo de 4 h confirmado) e SNX compra (aviso do Caçador, 6 de 6 t"
+  },
+  {
+   "hora_utc": "19/11 20:29",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Queda: 17,5% das 114 moedas sobem em 1 h; BTC −0,79% em 1 h, −1,46% em 4 h. Stops fecharam SKY venda −0,45 e SNX compra −0,19. Mantenho DOT vendida +0,31 (5 de 6 tempos abaixo; stop móvel 0,7168). Sem entrada nova: RARE +21,5% em 4 h, ORDI a 1,2% da mínima de 24 h com fundo duplo. Conta de teste: 21"
   }
  ]
 }

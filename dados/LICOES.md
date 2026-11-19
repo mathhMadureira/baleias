@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 20:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 20:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.49** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.52** · 34 operações fechadas · 1 abertas
 
 - **Total:** 21/34 com lucro (62%), resultado -0.69, média -0.020 por operação.
 - **Últimas 24 h:** 11/19 com lucro, +0.40.
@@ -17,7 +17,7 @@ Carteira **US$ 9.49** · 34 operações fechadas · 1 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 9.07** · 21 operações fechadas · 1 abertas
+Carteira **US$ 9.03** · 21 operações fechadas · 1 abertas
 
 - **Total:** 8/21 com lucro (38%), resultado -1.23, média -0.059 por operação.
 - **Últimas 24 h:** 7/17 com lucro, +0.93.
@@ -30,7 +30,7 @@ Carteira **US$ 9.07** · 21 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.32** · 15 operações fechadas · 0 abertas
+Carteira **US$ 9.32** · 15 operações fechadas · 2 abertas
 
 - **Total:** 5/15 com lucro (33%), resultado -0.68, média -0.045 por operação.
 - **Últimas 24 h:** 5/15 com lucro, -0.68.
@@ -41,18 +41,18 @@ Carteira **US$ 9.32** · 15 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 11.20** · 1 operações fechadas · 2 abertas
+Carteira **US$ 11.11** · 2 operações fechadas · 2 abertas
 
-- **Total:** 1/1 com lucro (100%), resultado +0.49, média +0.492 por operação.
-- **Últimas 24 h:** 1/1 com lucro, +0.49.
-- **Por horário:** 18–23 UTC: 1 op, 100% certas, +0.49
-- **Por lado:** compra: 1 op, 100% certas, +0.49
-- **Por motivo de saída:** método fixo do Laboratório (H6: 1 op, 100% certas, +0.49
+- **Total:** 2/2 com lucro (100%), resultado +0.84, média +0.420 por operação.
+- **Últimas 24 h:** 2/2 com lucro, +0.84.
+- **Por horário:** 18–23 UTC: 2 op, 100% certas, +0.84
+- **Por lado:** venda: 1 op, 100% certas, +0.35 · compra: 1 op, 100% certas, +0.49
+- **Por motivo de saída:** método fixo do Laboratório (H6: 2 op, 100% certas, +0.84
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.23** · 21 operações fechadas · 0 abertas
+Carteira **US$ 10.23** · 21 operações fechadas · 2 abertas
 
 - **Total:** 14/21 com lucro (67%), resultado +0.23, média +0.011 por operação.
 - **Últimas 24 h:** 14/21 com lucro, +0.23.
@@ -67,7 +67,7 @@ Carteira **US$ 10.23** · 21 operações fechadas · 0 abertas
 
 - **Amplitude:** 40.4% das moedas subindo em 24 h, 28.9% em 4 h · BTC 24 h -0.87%, 4 h -1.46%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': -6.6, 'ETH': 3.7, 'SOL': -5.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -5.5, 'ETH': 4.2, 'SOL': -6.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 20:15 UTC · Decrypt: Hackers Leak Visa, Mastercard and JPMorgan Customer Data
@@ -79,12 +79,12 @@ Carteira **US$ 10.23** · 21 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 19/11 20:26 UTC · **DOT venda** · Queda: só 17,5% das 114 moedas sobem em 1 h (mediana −0,63%), 28,9% em 4 h, 40,4% em 24 h. BTC −0,79% em 1 h, −1,46% em 4 h, a 62.225,41 (volume 4 h 1,33×). Uni
 - 19/11 18:43 UTC · **SKY venda, DOT venda, SNX compra** · Repique na hora dentro da queda: 79,8% das 114 moedas sobem em 1 h (mediana +0,57%), só 17,5% em 4 h (mediana −1,32%), 57,9% em 24 h. Universo do v4 (113 moedas
 - 19/11 16:08 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Repique na hora depois da queda: 60,4% das 106 moedas sobem em 1 h (mediana +0,27%), 40,6% em 4 h (mediana −0,36%), 56,6% em 24 h; universo do v4 (110 moedas, v
 - 19/11 15:53 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Queda forte agora: só 9,0% das 111 moedas sobem em 1 h (mediana −2,22%) e 16,2% em 4 h (mediana −2,53%); 24 h neutro (44,1%). BTC −1,68% em 1 h, −1,70% em 4 h, 
 - 19/11 15:38 UTC · **AAVE venda, CAKE venda** · Regime neutro em 24 h (48,6% das 109 moedas sobem), mas queda agora: só 10,8% sobem na última hora e 21,6% em 4 h (mediana −1,11% e −1,12%). BTC −0,85% em 1 h, 
 - 19/11 15:23 UTC · **fora do mercado** · Regime neutro: 56,9% das 109 moedas sobem em 24 h, 37,6% em 4 h e só 13,8% na última hora (mediana −0,84%). BTC −0,62% em 1 h, −0,35% em 4 h, −0,14% em 24 h, a 
-- 19/11 15:08 UTC · **fora do mercado** · Regime neutro: 59,6% das 109 moedas sobem em 24 h e 42,2% em 4 h; só 15,5% das 110 subiram na última hora (mediana −0,77%). BTC −0,75% em 1 h, −0,37% em 4 h, −0
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
