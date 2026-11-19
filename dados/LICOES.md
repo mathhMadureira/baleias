@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 18:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 18:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -39,7 +39,7 @@ Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.12** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.25** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
@@ -60,15 +60,15 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 - **Amplitude:** 40.7% das moedas subindo em 24 h, 11.5% em 4 h · BTC 24 h -0.69%, 4 h -1.91%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 4.6, 'ETH': 11.0, 'SOL': -4.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': 8.3, 'ETH': 11.0, 'SOL': -1.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AVAX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 18:15 UTC · CoinDesk: Trump's Democratic SEC pick suggests tokenization policy deserves full rule process
+- 📰 19/11 18:09 UTC · Cointelegraph: Why higher rates could slow Bitcoin buying at treasury firms
 - 📰 19/11 18:06 UTC · Cointelegraph: Bitcoin price ignores Anthropic debut as ANT share price dips below $100
 - 📰 19/11 17:55 UTC · Decrypt: Protesters Arrested Outside Nasdaq as Activists Oppose Anthropic IPO Over AI Bubble Risks
 - 📰 19/11 17:28 UTC · Decrypt: What Are Perpetual Futures? How Crypto's Most Popular Derivative Works
 - 📰 19/11 17:01 UTC · CoinDesk: Anthropic opens for trade at $111.50, up 34% from IPO price
-- 📰 19/11 16:55 UTC · Decrypt: Anthropic Stock Opens 33% Above IPO Price as AI Stocks Rally
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

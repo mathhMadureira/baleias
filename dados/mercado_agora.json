@@ -1,6 +1,6 @@
 {
- "t": 1795112354,
- "hora_utc": "2026-11-19 18:19 UTC",
+ "t": 1795112601,
+ "hora_utc": "2026-11-19 18:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
@@ -172,16 +172,22 @@
   -0.72,
   -0.52,
   -0.05,
-  0.16
+  0.35
  ],
  "contexto": {
-  "t": 1795112355,
+  "t": 1795112602,
   "noticias": [
    {
     "fonte": "CoinDesk",
     "t": 1795112156,
     "hora_utc": "19/11 18:15",
     "titulo": "Trump's Democratic SEC pick suggests tokenization policy deserves full rule process"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795111772,
+    "hora_utc": "19/11 18:09",
+    "titulo": "Why higher rates could slow Bitcoin buying at treasury firms"
    },
    {
     "fonte": "Cointelegraph",
@@ -260,12 +266,6 @@
     "t": 1795095000,
     "hora_utc": "19/11 13:30",
     "titulo": "Ethereum’s new DeFi security tool raises questions over censorship"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795093891,
-    "hora_utc": "19/11 13:11",
-    "titulo": "Crypto traders vs. Wall Street: OKX’s Anthropic markets put IPO pricing to the test"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.8,
+   "media_top20_anual_pct": 6.1,
    "principais_anual_pct": {
-    "BTC": 4.6,
+    "BTC": 8.3,
     "ETH": 11.0,
-    "SOL": -4.2
+    "SOL": -1.9
    },
    "leitura": "neutro"
   },
@@ -658,7 +658,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.12,
+   "carteira": 10.25,
    "n_abertas": 1,
    "abertas": [
     [
@@ -719,7 +719,7 @@
     "ganho_medio": null,
     "perda_media": null,
     "fator_lucro": null,
-    "carteira": 10.12
+    "carteira": 10.25
    },
    "guardiao": {
     "ops": 19,
