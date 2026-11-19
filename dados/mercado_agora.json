@@ -1,21 +1,21 @@
 {
- "t": 1795122346,
- "hora_utc": "2026-11-19 21:05 UTC",
+ "t": 1795122590,
+ "hora_utc": "2026-11-19 21:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 115,
-  "subindo_pct": 14.8,
+  "moedas": 116,
+  "subindo_pct": 14.7,
   "mediana_pct": -0.77
  },
  "mercado_4h": {
-  "moedas": 115,
-  "subindo_pct": 40.0,
-  "mediana_pct": -0.43
+  "moedas": 116,
+  "subindo_pct": 39.7,
+  "mediana_pct": -0.42
  },
  "mercado_24h": {
-  "moedas": 115,
-  "subindo_pct": 37.4,
-  "mediana_pct": -0.8
+  "moedas": 116,
+  "subindo_pct": 37.1,
+  "mediana_pct": -0.83
  },
  "btc": {
   "1h": -0.39,
@@ -172,11 +172,17 @@
   0.22,
   -0.82,
   -0.39,
-  -0.34
+  -0.24
  ],
  "contexto": {
-  "t": 1795122347,
+  "t": 1795122591,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795122102,
+    "hora_utc": "19/11 21:01",
+    "titulo": "MoonPay seeks US bank charter for stablecoin, custody services"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795121162,
@@ -260,12 +266,6 @@
     "t": 1795107310,
     "hora_utc": "19/11 16:55",
     "titulo": "Anthropic Stock Opens 33% Above IPO Price as AI Stocks Rally"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795104568,
-    "hora_utc": "19/11 16:09",
-    "titulo": "Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.1,
+   "media_top20_anual_pct": 2.8,
    "principais_anual_pct": {
-    "BTC": -8.3,
-    "ETH": 5.8,
-    "SOL": -0.4
+    "BTC": -8.5,
+    "ETH": 7.1,
+    "SOL": 0.9
    },
    "leitura": "neutro"
   },
@@ -309,13 +309,6 @@
     "sentido": "baixa",
     "confirmado": true,
     "nivel": 0.0747
-   },
-   {
-    "moeda": "AR",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 2.56
    },
    {
     "moeda": "BCH",
@@ -415,8 +408,8 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 140,
-  "compras": 115,
+  "apostas": 141,
+  "compras": 116,
   "vendas": 25,
   "mais_confiantes_venda": [
    {
@@ -489,7 +482,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.57,
+  "carteira": 9.45,
   "abertas": [
    {
     "moeda": "BTC",
@@ -659,7 +652,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.57,
+   "carteira": 9.45,
    "n_abertas": 2,
    "abertas": [
     [
@@ -680,7 +673,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 9.07,
+   "carteira": 9.0,
    "n_abertas": 1,
    "abertas": [
     [
@@ -697,7 +690,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.79,
+   "carteira": 9.54,
    "n_abertas": 3,
    "abertas": [
     [
@@ -722,7 +715,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.74,
+   "carteira": 10.78,
    "n_abertas": 2,
    "abertas": [
     [
@@ -743,7 +736,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.0,
+   "carteira": 9.89,
    "n_abertas": 2,
    "abertas": [
     [
@@ -769,7 +762,7 @@
     "ganho_medio": 0.107,
     "perda_media": -0.214,
     "fator_lucro": 0.85,
-    "carteira": 9.57
+    "carteira": 9.45
    },
    "openbot_testnet": {
     "ops": 22,
@@ -778,7 +771,7 @@
     "ganho_medio": 0.289,
     "perda_media": -0.296,
     "fator_lucro": 0.73,
-    "carteira": 9.07
+    "carteira": 9.0
    },
    "treinador": {
     "ops": 16,
@@ -787,7 +780,7 @@
     "ganho_medio": 0.151,
     "perda_media": -0.131,
     "fator_lucro": 0.69,
-    "carteira": 9.79
+    "carteira": 9.54
    },
    "laboratorio": {
     "ops": 5,
@@ -796,7 +789,7 @@
     "ganho_medio": 0.297,
     "perda_media": -0.145,
     "fator_lucro": 8.18,
-    "carteira": 10.74
+    "carteira": 10.78
    },
    "guardiao": {
     "ops": 29,
@@ -805,7 +798,7 @@
     "ganho_medio": 0.131,
     "perda_media": -0.215,
     "fator_lucro": 1.0,
-    "carteira": 10.0
+    "carteira": 9.89
    }
   },
   "vereditos": []
@@ -818,12 +811,12 @@
   "z_contra_lab": 1.9,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5086,
-    "n": 21071
+    "acerto": 0.5081,
+    "n": 21141
    },
    "segue_maioria_24h": {
-    "acerto": 0.502,
-    "n": 27657
+    "acerto": 0.5047,
+    "n": 27606
    }
   },
   "referencia_ganha": [],
