@@ -1,21 +1,21 @@
 {
- "t": 1795065760,
- "hora_utc": "2026-11-19 05:22 UTC",
+ "t": 1795065979,
+ "hora_utc": "2026-11-19 05:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
-  "subindo_pct": 30.4,
-  "mediana_pct": -0.32
+  "moedas": 111,
+  "subindo_pct": 29.7,
+  "mediana_pct": -0.33
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 53.6,
-  "mediana_pct": 0.16
+  "moedas": 111,
+  "subindo_pct": 53.2,
+  "mediana_pct": 0.15
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 35.7,
-  "mediana_pct": -0.9
+  "moedas": 111,
+  "subindo_pct": 36.0,
+  "mediana_pct": -0.79
  },
  "btc": {
   "1h": 0.16,
@@ -100,12 +100,6 @@
    "vol": 2.63
   },
   {
-   "moeda": "TLM",
-   "4h": 4.0,
-   "24h": -3.14,
-   "vol": 1.14
-  },
-  {
    "moeda": "ETHFI",
    "4h": 3.74,
    "24h": 8.74,
@@ -146,6 +140,12 @@
    "4h": 2.04,
    "24h": -7.25,
    "vol": 0.4
+  },
+  {
+   "moeda": "RAY",
+   "4h": 2.03,
+   "24h": -1.46,
+   "vol": 1.5
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.41,
   0.97,
   0.6,
-  -0.27
+  -0.1
  ],
  "contexto": {
-  "t": 1795065761,
+  "t": 1795065980,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -227,12 +227,6 @@
    },
    {
     "fonte": "Cointelegraph",
-    "t": 1795039755,
-    "hora_utc": "18/11 22:09",
-    "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Cointelegraph",
     "t": 1795039055,
     "hora_utc": "18/11 21:57",
     "titulo": "Tether invokes The Big Short in swipe at S&P over USDT reserve risks"
@@ -266,6 +260,12 @@
     "t": 1795033237,
     "hora_utc": "18/11 20:20",
     "titulo": "Binance says it obtained $6.5B worldwide freezing order after hack"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795032962,
+    "hora_utc": "18/11 20:16",
+    "titulo": "Google's Genie 4 Is Here, Letting Ultra Subscribers Build AI Worlds in Real Time"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.5,
+   "media_top20_anual_pct": 6.2,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -733,12 +733,12 @@
   "z_contra_lab": 2.02,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5093,
-    "n": 19301
+    "acerto": 0.5096,
+    "n": 19220
    },
    "segue_maioria_24h": {
-    "acerto": 0.5145,
-    "n": 25617
+    "acerto": 0.514,
+    "n": 25775
    }
   },
   "referencia_ganha": [],
