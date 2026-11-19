@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 08:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 08:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 38.6% das moedas subindo em 24 h, 46.5% em 4 h · BTC 24 h -1.27%, 4 h 0.7%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.1%/ano · {'BTC': 6.2, 'ETH': 6.3, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.8%/ano · {'BTC': 6.5, 'ETH': 6.7, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CRV estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · INIT triângulo descendente (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BNB triângulo descendente (baixa, formado) · DASH fundo duplo (alta, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ETH OCO invertido (alta, formado) · ETHFI topo duplo (baixa, formado)
 - 📰 19/11 08:04 UTC · Cointelegraph: BTCPay Server issues emergency update for 5 security flaws
@@ -72,7 +72,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 9.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 9.2 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
