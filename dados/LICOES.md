@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 16:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 16:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.80** · 27 operações fechadas · 4 abertas
+Carteira **US$ 8.81** · 27 operações fechadas · 4 abertas
 
 - **Total:** 17/27 com lucro (63%), resultado -1.18, média -0.044 por operação.
 - **Últimas 24 h:** 10/17 com lucro, -0.60.
@@ -28,7 +28,7 @@ Carteira **US$ 8.44** · 14 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.85** · 9 operações fechadas · 0 abertas
+Carteira **US$ 9.85** · 9 operações fechadas · 3 abertas
 
 - **Total:** 3/9 com lucro (33%), resultado -0.15, média -0.017 por operação.
 - **Últimas 24 h:** 3/9 com lucro, -0.15.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.53** · 14 operações fechadas · 1 abertas
+Carteira **US$ 10.47** · 14 operações fechadas · 3 abertas
 
 - **Total:** 11/14 com lucro (79%), resultado +0.64, média +0.046 por operação.
 - **Últimas 24 h:** 11/14 com lucro, +0.64.
@@ -58,11 +58,11 @@ Carteira **US$ 10.53** · 14 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 44.1% das moedas subindo em 24 h, 16.2% em 4 h · BTC 24 h -0.64%, 4 h -1.7%.
+- **Amplitude:** 46.8% das moedas subindo em 24 h, 18.0% em 4 h · BTC 24 h -0.03%, 4 h -1.32%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 3.1, 'SOL': 4.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': 11.0, 'ETH': 4.0, 'SOL': -5.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** LDO topo duplo (baixa, CONFIRMOU) · UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** BONK estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BNB triângulo descendente (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 15:54 UTC · Decrypt: Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
@@ -106,7 +106,7 @@ Carteira **US$ 10.53** · 14 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28050 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28060 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
