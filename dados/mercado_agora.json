@@ -1,21 +1,21 @@
 {
- "t": 1795065979,
- "hora_utc": "2026-11-19 05:26 UTC",
+ "t": 1795066201,
+ "hora_utc": "2026-11-19 05:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 111,
-  "subindo_pct": 29.7,
-  "mediana_pct": -0.33
+  "moedas": 112,
+  "subindo_pct": 29.5,
+  "mediana_pct": -0.34
  },
  "mercado_4h": {
-  "moedas": 111,
-  "subindo_pct": 53.2,
-  "mediana_pct": 0.15
+  "moedas": 112,
+  "subindo_pct": 52.7,
+  "mediana_pct": 0.14
  },
  "mercado_24h": {
-  "moedas": 111,
-  "subindo_pct": 36.0,
-  "mediana_pct": -0.79
+  "moedas": 112,
+  "subindo_pct": 35.7,
+  "mediana_pct": -0.9
  },
  "btc": {
   "1h": 0.16,
@@ -56,6 +56,12 @@
    "vol": 1.68
   },
   {
+   "moeda": "BEAMX",
+   "4h": -3.33,
+   "24h": -10.4,
+   "vol": 1.08
+  },
+  {
    "moeda": "BREV",
    "4h": -3.14,
    "24h": -29.25,
@@ -78,12 +84,6 @@
    "4h": -2.64,
    "24h": -6.75,
    "vol": 0.53
-  },
-  {
-   "moeda": "ZIL",
-   "4h": -2.47,
-   "24h": -3.14,
-   "vol": 0.36
   }
  ],
  "maiores_altas_4h": [
@@ -172,10 +172,10 @@
   -0.41,
   0.97,
   0.6,
-  -0.1
+  -0.28
  ],
  "contexto": {
-  "t": 1795065980,
+  "t": 1795066202,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.2,
+   "media_top20_anual_pct": 6.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 11.0,
+    "ETH": 10.9,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 15.0,
+   "amplitude_acima_mm50_pct": 17.5,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -733,12 +733,12 @@
   "z_contra_lab": 2.02,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5096,
-    "n": 19220
+    "acerto": 0.5091,
+    "n": 19420
    },
    "segue_maioria_24h": {
-    "acerto": 0.514,
-    "n": 25775
+    "acerto": 0.5129,
+    "n": 25652
    }
   },
   "referencia_ganha": [],
