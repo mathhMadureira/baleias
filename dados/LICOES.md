@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 15:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 15:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.90** · 25 operações fechadas · 1 abertas
+Carteira **US$ 8.86** · 25 operações fechadas · 1 abertas
 
 - **Total:** 16/25 com lucro (64%), resultado -1.14, média -0.046 por operação.
 - **Últimas 24 h:** 9/15 com lucro, -0.56.
@@ -58,9 +58,9 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 59.1% das moedas subindo em 24 h, 41.8% em 4 h · BTC 24 h -0.18%, 4 h -0.37%.
+- **Amplitude:** 59.6% das moedas subindo em 24 h, 42.2% em 4 h · BTC 24 h -0.18%, 4 h -0.37%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.3%/ano · {'BTC': 4.7, 'ETH': 6.4, 'SOL': 6.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 4.9, 'ETH': 6.0, 'SOL': 6.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
@@ -72,12 +72,12 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 19/11 15:08 UTC · **fora do mercado** · Regime neutro: 59,6% das 109 moedas sobem em 24 h e 42,2% em 4 h; só 15,5% das 110 subiram na última hora (mediana −0,77%). BTC −0,75% em 1 h, −0,37% em 4 h, −0
 - 19/11 14:53 UTC · **MORPHO venda** · Regime neutro: 65,1% das 109 moedas sobem em 24 h e 57,8% em 4 h; só 39,1% das 110 subiram na última hora (mediana −0,10%). BTC +0,35% em 1 h, +0,11% em 4 h, +1
 - 19/11 14:42 UTC · **MORPHO venda** · Regime neutro: 56,5% das 108 moedas sobem em 24 h e 56,5% em 4 h; só 30,3% das 109 subiram na última hora (mediana −0,16%). BTC +0,36% em 1 h, +0,17% em 4 h, −0
 - 19/11 13:43 UTC · **MORPHO venda** · Regime neutro: 53,2% das 109 moedas sobem em 24 h e 64,2% em 4 h; 85,5% das 110 subiram na última hora (mediana +0,67%). BTC −0,05% em 1 h, +0,02% em 4 h, −0,58
 - 19/11 13:22 UTC · **MORPHO venda** · Regime neutro: 52,3% das 109 moedas sobem em 24 h e 62,4% em 4 h; BTC −0,04% em 1 h, +0,02% em 4 h, −0,48% em 24 h, a 63.786,73; medo e ganância 10. Raspagem co
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
-- 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -106,7 +106,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 27958 apostas conferidas ao vivo, acerto 55.4%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 27958 apostas conferidas ao vivo, acerto 55.4%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

@@ -1,21 +1,21 @@
 {
- "t": 1795101091,
- "hora_utc": "2026-11-19 15:11 UTC",
+ "t": 1795101300,
+ "hora_utc": "2026-11-19 15:15 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 110,
-  "subindo_pct": 15.5,
-  "mediana_pct": -0.77
+  "moedas": 109,
+  "subindo_pct": 15.6,
+  "mediana_pct": -0.75
  },
  "mercado_4h": {
-  "moedas": 110,
-  "subindo_pct": 41.8,
-  "mediana_pct": -0.18
+  "moedas": 109,
+  "subindo_pct": 42.2,
+  "mediana_pct": -0.17
  },
  "mercado_24h": {
-  "moedas": 110,
-  "subindo_pct": 59.1,
-  "mediana_pct": 0.27
+  "moedas": 109,
+  "subindo_pct": 59.6,
+  "mediana_pct": 0.28
  },
  "btc": {
   "1h": -0.75,
@@ -172,10 +172,10 @@
   -0.11,
   0.25,
   -0.75,
-  0.08
+  -0.02
  ],
  "contexto": {
-  "t": 1795101092,
+  "t": 1795101301,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.3,
+   "media_top20_anual_pct": 7.5,
    "principais_anual_pct": {
-    "BTC": 4.7,
-    "ETH": 6.4,
-    "SOL": 6.7
+    "BTC": 4.9,
+    "ETH": 6.0,
+    "SOL": 6.3
    },
    "leitura": "neutro"
   },
@@ -489,15 +489,15 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.9,
+  "carteira": 8.86,
   "abertas": [
    {
     "moeda": "MORPHO",
     "lado": "venda",
     "entrada": 1.672,
-    "agora": 1.671,
-    "resultado_pct": 0.06,
-    "horas_aberta": 0.2,
+    "agora": null,
+    "resultado_pct": null,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "mantém: 6 de 6 tempos abaixo da MM20; 15 min −0,53%, 1 h −0,83%, 4 h −0,65%, 1 dia −2,10%; v4 0,530 (confiança 0,030, neutro); sem padrão contra; a −3,34% da má"
    }
   ],
@@ -610,10 +610,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795039019,
-    "texto": "A venda de LA (aberta às 21:35 UTC, regime neutro) fica em +0,02 na conta de teste e sai porque o v4 virou para alta (0,533); RUNE vendida segue em −0,05. Com o regime virando para baixa (24,5%), entro só onde moedas, tempos gráficos e carteiras concordam (ZEC, AAVE) e deixo SOL de fora porque o v4 aponta alta (0,546)."
-   },
-   {
     "t": 1795040034,
     "texto": "RUNE venda (entrada 0,5246, saída 0,5225) fechou +0,067 na corretora a favor do regime de baixa. Conta de teste com 11 fechadas: p = 0,273 (3 ganhos, 7 perdas, 1 zero), G = 0,327, L = 0,374, E = −0,148 por operação; ainda negativo, então só entro onde regime, tempos e carteiras concordam."
    },
@@ -640,6 +636,10 @@
    {
     "t": 1795100021,
     "texto": "MORPHO venda segue a favor: +0,132 USDT na corretora com 6 de 6 tempos abaixo da MM20. Carteira simulada: 24 fechadas, p 0,625, G +0,066, L −0,242, E −0,050 por operação (soma −1,189): perdas médias 3,7× os ganhos, por isso alvo maior que o stop. Caderno: só 1 operação com leitura anotada (4–5 de 6, sem padrão, carteiras a favor, +0,049): não sei ainda."
+   },
+   {
+    "t": 1795100888,
+    "texto": "MORPHO venda: +0,1264 USDT na conta de teste (entrou 1,6884, saiu 1,6755 pelo stop móvel, 6 de 6 tempos abaixo da MM20 na última leitura). Conta de teste: 14 fechadas, p 0,36, G +0,234, L −0,292, E −0,104, soma −1,454. Caderno: 2 operações com leitura anotada (MORPHO, ambas ganharam, 4–5 e 6 de 6 tempos a favor, carteiras a favor) — poucas, não sei ainda."
    }
   ]
  },
@@ -650,7 +650,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.9,
+   "carteira": 8.86,
    "n_abertas": 1,
    "abertas": [
     [
@@ -720,7 +720,7 @@
     "ganho_medio": 0.065,
     "perda_media": -0.242,
     "fator_lucro": 0.48,
-    "carteira": 8.9
+    "carteira": 8.86
    },
    "openbot_testnet": {
     "ops": 14,
@@ -769,12 +769,12 @@
   "z_contra_lab": 2.08,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5092,
-    "n": 20097
+    "acerto": 0.5086,
+    "n": 19985
    },
    "segue_maioria_24h": {
-    "acerto": 0.504,
-    "n": 26937
+    "acerto": 0.5037,
+    "n": 26919
    }
   },
   "referencia_ganha": [],
@@ -823,12 +823,6 @@
  },
  "caixa_dono": [],
  "sala_recente": [
-  {
-   "hora_utc": "18/11 20:34",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Regime de baixa (28,3% das 106 moedas sobem em 24 h, 61,3% em 4 h; BTC −1,63% em 24 h, volume 1,29×). Chefe e testnet: ficam vendidos em USTC (+0,92 no testnet) e GTC; ERA compra fecha pela virada do regime. ZKP venda saiu no stop móvel: +0,064 no simulado, −0,106 no testnet. Banco: conflito em GTC "
-  },
   {
    "hora_utc": "18/11 20:51",
    "de": "claude",
@@ -894,6 +888,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Regime neutro (65,1% sobem em 24 h, 39,1% na última hora; BTC +0,35% em 1 h). Mantenho MORPHO venda (+0,13 USDT, 6/6 tempos abaixo da MM20, stop móvel 1,6779). CYBER e ERA cortadas: 2 e 0 de 6 tempos a favor."
+  },
+  {
+   "hora_utc": "19/11 15:14",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Neutro (59,6% das 109 moedas sobem em 24 h; só 15,5% na última hora; BTC −0,75% em 1 h). MORPHO vendida saiu pelo stop móvel a 1,6755: +0,126 USDT. Sem entrada nova: BONK tem 2 de 6 tempos a favor e topo duplo contra; KITE tem topo duplo de 4 h contra. Conta de teste: 14 fechadas, p 0,36, E −0,10."
   }
  ]
 }
