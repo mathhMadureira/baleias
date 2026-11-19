@@ -10,11 +10,12 @@ Regra de escolha (pré-registrada na emenda da H59, lab/PROTOCOLO_LAB.md):
   mantém as abertas enquanto o regime não virar contra e o v4 não apontar o lado oposto com confiança ≥ 0,12 (19/11; antes 0,03); completa até 4. Abaixo de 0,12: "sem confiança", nunca motivo de descarte.
 """
 import json
+import os
 import subprocess
 import sys
 import time
 import urllib.request
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, wait
 from pathlib import Path
 
 REPO = Path("/home/servidor-de-producao/baleias")
@@ -31,6 +32,41 @@ CONF_ENTRA, CONF_CONTRA, ESTICADA, MAX_POS, MAX_NOC = 0.12, 0.12, 15.0, 4, 1.5
 GRUPOS = [{"BTCUSDT", "ETHUSDT"}]
 MEMES = ["DOGE", "SHIB", "PEPE", "WIF", "BONK", "FLOKI", "BRETT", "POPCAT", "FARTCOIN", "PNUT", "PENGU", "TRUMP", "MEME", "NEIRO", "TURBO"]
 ALIAS = {f"{m}USDT": f"1000{m}USDT" for m in ("PEPE", "SHIB", "BONK", "FLOKI", "LUNC", "XEC", "SATS", "RATS", "CAT", "WHY", "CHEEMS", "X")}
+
+
+# Auditoria 19/11 (A16): a rodada do chefe das 16:20 UTC passou 27 min só aqui. Prazo TOTAL do script (cada chamada já tinha timeout, a soma não):
+# estourou = segue com o que já leu, marcado como PARCIAL (as moedas lidas por inteiro valem, rotina r12; menos de 50 = ERRO, como antes).
+PRAZO_S = float(os.environ.get("UNIVERSO_PRAZO_S", "360"))
+INICIO = time.time()
+
+
+def resta():
+    return PRAZO_S - (time.time() - INICIO)
+
+
+def ler_com_prazo(func, itens, prazo_s, n=8):
+    """func(item) → (chave, valor) em paralelo, até prazo_s segundos no total. Devolve ({chave: valor} dos que terminaram, [itens que faltaram]).
+    Os que não terminaram são abandonados (não seguram o resto da rodada)."""
+    ex = ThreadPoolExecutor(n)
+    fut = {ex.submit(func, i): i for i in itens}
+    feitos, _ = wait(fut, timeout=max(0.0, prazo_s))
+    ex.shutdown(wait=False, cancel_futures=True)
+    out = {}
+    for f in feitos:
+        try:
+            k, v = f.result()
+            out[k] = v
+        except Exception:
+            continue
+    return out, [fut[f] for f in fut if f not in feitos]
+
+
+def com_prazo(func, prazo_s, padrao):
+    """func() com prazo; estourou ou falhou = (padrao, True)."""
+    if prazo_s <= 0:
+        return padrao, True
+    r, faltou = ler_com_prazo(lambda _: ("x", func()), [0], prazo_s, n=1)
+    return (r["x"], False) if "x" in r else (padrao, True)
 
 
 def _get(url, t=30):
@@ -80,14 +116,17 @@ def main():
                 break
     vela_t = max((x["t"] for x in ult.values()), default=0)
     pares = sorted(ult)
-    with ThreadPoolExecutor(8) as ex:
-        k = dict(ex.map(velas, pares))
+    parcial = []
+    k, faltaram = ler_com_prazo(velas, pares, resta() - 150)        # deixa ~2,5 min para o resto (corretora, carteiras, varredura)
+    if faltaram:
+        parcial.append(f"velas de 15 min: {len(faltaram)} de {len(pares)} moedas sem leitura no prazo")
     reg, s24, s4 = RG.de_velas(k)
     lado_reg = RG.lado_permitido(reg)
     try:
-        tn = {s["symbol"]: s for s in _get(f"{TESTNET}/fapi/v1/exchangeInfo")["symbols"] if s.get("status") == "TRADING"}
+        tn = {s["symbol"]: s for s in _get(f"{TESTNET}/fapi/v1/exchangeInfo", t=max(5, min(30, resta() - 90)))["symbols"] if s.get("status") == "TRADING"}
     except (OSError, ValueError):
         tn = {}
+        parcial.append("regras do testnet não lidas (moedas aparecem como fora do testnet)")
     eu = estado("robo_openbot_testnet.json")
     caixa_real = float(eu.get("caixa", 10)) + sum(float(p.get("gasto", 0)) for p in (eu.get("abertas") or {}).values())
     noc = 2.5 * caixa_real
@@ -154,7 +193,9 @@ def main():
         usados.add(c["par"])
     try:
         from executor import robo_lbank_nuvem as L
-        lb = L.mercado()
+        lb, faltou = com_prazo(L.mercado, min(30, resta() - 90), {})   # só comparação: nunca segura a rodada
+        if faltou:
+            parcial.append("LBank fora do prazo (comparação de memecoins = não sei)")
     except Exception as ex:                       # LBank fora do ar: a comparação fica "não sei"
         lb, erro_lb = {}, str(ex)[:80]
     memes = []
@@ -198,13 +239,34 @@ def main():
     sys.path.insert(0, "/home/servidor-de-producao/OpenBot/Shared/baleias/operar")
     import multitempo as MT                                   # 18/11: leitura em todos os tempos gráficos, de 1 s a 1 dia
     alvos = list(abertas) + [c["par"] for c in compras[:4]] + [c["par"] for c in vendas[:4]] + [l["par"] for l in sorted(linhas, key=lambda l: -abs(l["1h"]))[:4]]
-    vt = MT.varrer(alvos)
+    vt, faltou = com_prazo(lambda: MT.varrer(alvos), resta() - 10, [])
+    if faltou:
+        parcial.append("varredura de 1 s a 1 dia fora do prazo (sem leitura dos tempos nesta rodada)")
     print(f"\nVARREDURA EM TODOS OS TEMPOS (1 s → 1 dia), {len(vt)} moedas")
     print(MT.tabela(vt))
     (AQUI / "rodadas" / f"{time.strftime('%Y%m%d-%H%M%S', time.gmtime())}-chefe-varredura.json").write_text(json.dumps(vt, ensure_ascii=False))
     print("\nAbertas:", json.dumps(motivos, ensure_ascii=False))
     print("Escolha:", json.dumps(escolha, ensure_ascii=False, indent=1))
+    gasto = round(time.time() - INICIO)
+    if parcial:
+        print(f"\n⚠️ PARCIAL (prazo de {PRAZO_S:.0f} s; levou {gasto} s): " + "; ".join(parcial)
+              + ". Decida só com as moedas lidas por inteiro (rotina r12); o que faltou não entra.")
+    else:
+        print(f"\n(universo completo em {gasto} s, prazo {PRAZO_S:.0f} s)")
 
 
 if __name__ == "__main__":
-    main()
+    codigo = 0
+    try:
+        main()
+    except SystemExit as fim:                     # "ERRO: só N moedas..." tem de aparecer (antes do os._exit)
+        if fim.code not in (None, 0):
+            print(fim.code if isinstance(fim.code, str) else f"saída {fim.code}", file=sys.stderr)
+            codigo = 1
+    except BaseException:
+        import traceback
+        traceback.print_exc()
+        codigo = 1
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(codigo)                              # leituras abandonadas pelo prazo não seguram o fim do processo (os arquivos já foram gravados)

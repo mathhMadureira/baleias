@@ -2278,3 +2278,31 @@ class CacadorH68(unittest.TestCase):
         d = {"t": 1795000000.0 - 5, "posicoes": [{"moeda": "NOVAUSDT", "lado": "compra", "motivo": "aviso do Caçador", "stop_pct": 0.01}]}
         R.passo(e, d, {}, 1795000000.0, vivos={"NOVAUSDT": 2.5})
         self.assertEqual(e["abertas"]["NOVAUSDT"]["entrada"], 2.5)
+
+
+class UniversoComPrazo(unittest.TestCase):
+    """Auditoria 19/11 (A16): a raspagem do chefe (mesa/chefe/universo.py) levou 27 min; agora tem prazo total e devolve o que leu como parcial."""
+
+    def _mod(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("universo_chefe", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "chefe" / "universo.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def test_leitura_para_no_prazo_e_devolve_o_que_terminou(self):
+        import time
+        U = self._mod()
+
+        def ler(par):
+            time.sleep(3 if par == "LENTAUSDT" else 0.01)
+            return par, [1]
+        t0 = time.time()
+        k, faltaram = U.ler_com_prazo(ler, ["AUSDT", "BUSDT", "LENTAUSDT"], 0.5)
+        self.assertLess(time.time() - t0, 1.5)                              # não espera a lenta
+        self.assertEqual(sorted(k), ["AUSDT", "BUSDT"])
+        self.assertEqual(faltaram, ["LENTAUSDT"])
+        v, estourou = U.com_prazo(lambda: time.sleep(3) or "x", 0.3, [])
+        self.assertEqual((v, estourou), ([], True))
+        self.assertEqual(U.com_prazo(lambda: "ok", 2, None), ("ok", False))
+        self.assertEqual(U.PRAZO_S, 360.0)

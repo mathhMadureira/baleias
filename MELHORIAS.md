@@ -190,3 +190,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   abaixo de 0,12), `chefe/universo.py` (entrada e manutenção 0,08/0,03 → 0,12), ROTINA r12, rotina do chefe r12, rotina do Treinador e
   LEITURA_GRAFICOS.md seção 4. A carteira do Laboratório mantém o método fixo (H69). Livros aplicados ao v4 em `Shared/baleias/LIVROS.md` seção 8.
   Modelo do v4 sem mudança (retreino ou regra nova = pré-registro no Laboratório).
+- 2026-11-19 (noite): **prazo total na raspagem do chefe** (achado A16 da auditoria: a rodada das 16:20 UTC passou 27 min só no `universo.py`). `mesa/chefe/universo.py`
+  (e a cópia viva na pasta do chefe) tem prazo de 360 s no total (`UNIVERSO_PRAZO_S`): as velas de 15 min param ~150 s antes do fim, e a corretora de teste, a LBank e a
+  varredura de 1 s a 1 dia param no que couber. Estourou = a saída diz "⚠️ PARCIAL" com o que faltou; vale só o que foi lido por inteiro (rotina r12); menos de 50 moedas
+  continua ERRO. O processo sai sem esperar leituras abandonadas. Teste `UniversoComPrazo`; conferido com prazo de 200 s: 105 de 114 moedas, 144 s, 59 MB. 171 testes.
