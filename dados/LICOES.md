@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 01:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 01:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,11 +58,11 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 24.8% das moedas subindo em 24 h, 41.3% em 4 h · BTC 24 h -2.97%, 4 h 0.37%.
+- **Amplitude:** 25.5% das moedas subindo em 24 h, 41.8% em 4 h · BTC 24 h -2.97%, 4 h 0.37%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** CYBER fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · MIRA fundo duplo (alta, formado) · MIRA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · UNI topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · MIRA fundo duplo (alta, formado) · MIRA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · UNI topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
 - 📰 19/11 00:35 UTC · Cointelegraph: Fed officials saw October rate hold as a ‘close call,’ minutes show
 - 📰 19/11 00:33 UTC · CoinDesk: Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
@@ -72,7 +72,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.3 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.4 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
@@ -107,7 +107,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 25555 apostas conferidas ao vivo, acerto 55.5%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 25555 apostas conferidas ao vivo, acerto 55.5%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
