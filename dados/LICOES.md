@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 07:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 07:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 36.8% das moedas subindo em 24 h, 71.1% em 4 h · BTC 24 h -1.32%, 4 h 1.85%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** EIGEN fundo duplo (alta, CONFIRMOU) · KAVA fundo duplo (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BNB triângulo descendente (baixa, formado) · DASH fundo duplo (alta, formado) · ENSO ombro-cabeça-ombro (baixa, formado) · ETH OCO invertido (alta, formado) · ETHFI topo duplo (baixa, formado) · F fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 19/11 06:23 UTC · CoinDesk: Fed's rate hike push may be a mistake. Here's why
