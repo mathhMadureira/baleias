@@ -181,3 +181,12 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   da rodada. Agente **Caçador** no OpenBot (rotina de 5 min: `Shared/baleias/cacador/cacar.py`, confere de 1 s a 1 dia, publica em
   `Shared/baleias/oportunidades_cacador.jsonl` e avisa Treinador, Laboratório, Guardião e o chefe; estudo diário às 06:00). `operar.py escolher`
   mostra as oportunidades do Caçador primeiro e põe essas moedas na varredura do agente; ROTINA r11: aviso do Caçador = rodar a rotina na hora. 170 testes.
+- 2026-11-19 (noite): **papel do v4 reestruturado (dono: "o v4 está barrando as entradas do Caçador; o engenheiro deve reestruturá-lo").** Medido antes
+  (`lab/veto_v4.py`, descritivo; tabelas em `Shared/baleias/auditorias/veto_v4_*.json`): acerto ao vivo do v4 na vela de 15 min quase igual de < 0,05 a
+  0,12 de confiança (56,9% · 56,1% · 59,3%) e só separado em ≥ 0,12 (67,0%, n 566; vigia, 7 dias). Replay de 2 dias das explosões de vela do Caçador
+  (3.970 sinais, controle aleatório −0,124%): v4 fraco contra −0,112% × fraco a favor −0,241% em 15 min; ao vivo em 19/11 (226 sinais) o contrário
+  (−0,327% × −0,012%). O veto fraco não tem efeito consistente e nenhum grupo paga o custo; as explosões perdem MAIS que o sorteio (−0,180% × −0,124%).
+  **Mudou (ferramenta e prompt):** o v4 só pesa com confiança ≥ 0,12 em `operar.py` (rótulo "v4 sem confiança"; não fecha posição nem sugere entrada
+  abaixo de 0,12), `chefe/universo.py` (entrada e manutenção 0,08/0,03 → 0,12), ROTINA r12, rotina do chefe r12, rotina do Treinador e
+  LEITURA_GRAFICOS.md seção 4. A carteira do Laboratório mantém o método fixo (H69). Livros aplicados ao v4 em `Shared/baleias/LIVROS.md` seção 8.
+  Modelo do v4 sem mudança (retreino ou regra nova = pré-registro no Laboratório).
