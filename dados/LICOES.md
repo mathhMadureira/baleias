@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 14:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 14:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.81** · 24 operações fechadas · 0 abertas
+Carteira **US$ 8.81** · 24 operações fechadas · 1 abertas
 
 - **Total:** 15/24 com lucro (62%), resultado -1.19, média -0.050 por operação.
 - **Últimas 24 h:** 8/14 com lucro, -0.60.
@@ -17,7 +17,7 @@ Carteira **US$ 8.81** · 24 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.52** · 13 operações fechadas · 1 abertas
+Carteira **US$ 8.54** · 13 operações fechadas · 1 abertas
 
 - **Total:** 4/13 com lucro (31%), resultado -1.58, média -0.122 por operação.
 - **Últimas 24 h:** 4/11 com lucro, +0.18.
@@ -58,11 +58,11 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 56.0% das moedas subindo em 24 h, 56.0% em 4 h · BTC 24 h -0.1%, 4 h 0.17%.
+- **Amplitude:** 64.5% das moedas subindo em 24 h, 57.3% em 4 h · BTC 24 h 1.0%, 4 h 0.11%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.4%/ano · {'BTC': -1.7, 'ETH': 0.3, 'SOL': 6.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.8%/ano · {'BTC': -0.4, 'ETH': 0.7, 'SOL': 7.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · TAO fundo duplo (alta, formado) · UNI triângulo ascendente (alta, formado) · WLD fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BMT OCO invertido (alta, formado) · BONK topo duplo (baixa, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · SYRUP fundo duplo (alta, formado)
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
 - 📰 19/11 13:48 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 19/11 13:47 UTC · Decrypt: Quantum Upgrade Could Be 'Particularly Challenging' for Blockchains: IOSCO
@@ -72,12 +72,12 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 19/11 14:42 UTC · **MORPHO venda** · Regime neutro: 56,5% das 108 moedas sobem em 24 h e 56,5% em 4 h; só 30,3% das 109 subiram na última hora (mediana −0,16%). BTC +0,36% em 1 h, +0,17% em 4 h, −0
 - 19/11 13:43 UTC · **MORPHO venda** · Regime neutro: 53,2% das 109 moedas sobem em 24 h e 64,2% em 4 h; 85,5% das 110 subiram na última hora (mediana +0,67%). BTC −0,05% em 1 h, +0,02% em 4 h, −0,58
 - 19/11 13:22 UTC · **MORPHO venda** · Regime neutro: 52,3% das 109 moedas sobem em 24 h e 62,4% em 4 h; BTC −0,04% em 1 h, +0,02% em 4 h, −0,48% em 24 h, a 63.786,73; medo e ganância 10. Raspagem co
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
-- 18/11 21:56 UTC · **RUNE venda, ZEC venda, AAVE venda** · Regime de baixa: 24,5% das 106 moedas sobem em 24 h e 25,5% em 4 h; BTC −3,19% em 24 h, −1,37% em 4 h, volume 0,88×. As 40 melhores carteiras da Hyperliquid est
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -106,7 +106,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 27928 apostas conferidas ao vivo, acerto 55.3%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 27944 apostas conferidas ao vivo, acerto 55.4%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
