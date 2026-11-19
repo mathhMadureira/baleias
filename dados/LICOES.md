@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 21:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 21:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.83** · 36 operações fechadas · 3 abertas
+Carteira **US$ 9.93** · 36 operações fechadas · 3 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado -0.27, média -0.008 por operação.
 - **Últimas 24 h:** 13/18 com lucro, +1.15.
@@ -30,7 +30,7 @@ Carteira **US$ 9.12** · 22 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.91** · 18 operações fechadas · 2 abertas
+Carteira **US$ 9.88** · 18 operações fechadas · 4 abertas
 
 - **Total:** 8/18 com lucro (44%), resultado -0.04, média -0.002 por operação.
 - **Últimas 24 h:** 6/13 com lucro, -0.18.
@@ -41,7 +41,7 @@ Carteira **US$ 9.91** · 18 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.04** · 8 operações fechadas · 2 abertas
+Carteira **US$ 10.26** · 8 operações fechadas · 2 abertas
 
 - **Total:** 4/8 com lucro (50%), resultado +0.06, média +0.008 por operação.
 - **Últimas 24 h:** 4/8 com lucro, +0.06.
@@ -52,7 +52,7 @@ Carteira **US$ 10.04** · 8 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.34** · 31 operações fechadas · 2 abertas
+Carteira **US$ 10.39** · 31 operações fechadas · 2 abertas
 
 - **Total:** 20/31 com lucro (65%), resultado +0.35, média +0.011 por operação.
 - **Últimas 24 h:** 16/27 com lucro, -0.07.
@@ -65,17 +65,17 @@ Carteira **US$ 10.34** · 31 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 28.2% das moedas subindo em 24 h, 14.5% em 4 h · BTC 24 h -1.46%, 4 h -2.38%.
+- **Amplitude:** 29.1% das moedas subindo em 24 h, 12.0% em 4 h · BTC 24 h -1.05%, 4 h -1.96%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.9%/ano · {'BTC': -14.3, 'ETH': 3.8, 'SOL': -3.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.7%/ano · {'BTC': -14.3, 'ETH': 3.4, 'SOL': -4.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** LTC bandeira de baixa (baixa, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · BEB topo duplo (baixa, formado) · BEB fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** LTC bandeira de baixa (baixa, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · SHIB estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SAPIEN fundo duplo (alta, formado)
+- 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 19/11 21:12 UTC · Decrypt: Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price
 - 📰 19/11 21:01 UTC · Cointelegraph: MoonPay seeks US bank charter for stablecoin, custody services
 - 📰 19/11 20:46 UTC · Decrypt: Meet SHRINCS: Bitcoin's Emerging Frontrunner for a Post-Quantum Signature
 - 📰 19/11 20:33 UTC · Cointelegraph: Hyperliquid Anthropic futures priced within 1% of Nasdaq opening price
 - 📰 19/11 20:15 UTC · Decrypt: Hackers Leak Visa, Mastercard and JPMorgan Customer Data
-- 📰 19/11 20:06 UTC · Cointelegraph: Trump’s SEC nominee Johnson backs formal rulemaking for tokenized stock trading
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 10.34** · 31 operações fechadas · 2 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 29121 apostas conferidas ao vivo, acerto 55.0%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 29210 apostas conferidas ao vivo, acerto 54.9%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
