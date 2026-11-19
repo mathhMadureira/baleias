@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 17:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 17:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.14** · 31 operações fechadas · 1 abertas
+Carteira **US$ 9.20** · 31 operações fechadas · 1 abertas
 
 - **Total:** 19/31 com lucro (61%), resultado -1.05, média -0.034 por operação.
 - **Últimas 24 h:** 12/21 com lucro, -0.46.
@@ -60,7 +60,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 - **Amplitude:** 55.8% das moedas subindo em 24 h, 10.6% em 4 h · BTC 24 h 0.03%, 4 h -1.72%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.1%/ano · {'BTC': 11.0, 'ETH': 2.4, 'SOL': -8.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.0%/ano · {'BTC': 11.0, 'ETH': 3.3, 'SOL': -5.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 17:01 UTC · CoinDesk: Anthropic opens for trade at $111.50, up 34% from IPO price

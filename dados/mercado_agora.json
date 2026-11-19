@@ -1,6 +1,6 @@
 {
- "t": 1795108253,
- "hora_utc": "2026-11-19 17:10 UTC",
+ "t": 1795108496,
+ "hora_utc": "2026-11-19 17:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
@@ -172,10 +172,10 @@
   -0.75,
   -0.72,
   -0.52,
-  -0.54
+  -0.57
  ],
  "contexto": {
-  "t": 1795108254,
+  "t": 1795108497,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 0.1,
+   "media_top20_anual_pct": -0.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.4,
-    "SOL": -8.2
+    "ETH": 3.3,
+    "SOL": -5.3
    },
    "leitura": "neutro"
   },
@@ -433,7 +433,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.14,
+  "carteira": 9.2,
   "abertas": [
    {
     "moeda": "AAVE",
@@ -441,7 +441,7 @@
     "entrada": 104.67,
     "agora": 104.04,
     "resultado_pct": 0.6,
-    "horas_aberta": 1.5,
+    "horas_aberta": 1.6,
     "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 1 h −3,82%, 4 h −4,51%, 24 h −2,75%; volume de 1 min 2,92× (queda com volume); topo duplo de 4 h (não con"
    }
   ],
@@ -594,7 +594,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.14,
+   "carteira": 9.2,
    "n_abertas": 1,
    "abertas": [
     [
@@ -686,7 +686,7 @@
     "ganho_medio": 0.082,
     "perda_media": -0.217,
     "fator_lucro": 0.6,
-    "carteira": 9.14
+    "carteira": 9.2
    },
    "openbot_testnet": {
     "ops": 15,
