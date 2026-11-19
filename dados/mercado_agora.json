@@ -1,6 +1,6 @@
 {
- "t": 1795087277,
- "hora_utc": "2026-11-19 11:21 UTC",
+ "t": 1795087446,
+ "hora_utc": "2026-11-19 11:24 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 108,
@@ -172,11 +172,17 @@
   -0.0,
   0.19,
   -0.1,
-  -0.07
+  -0.0
  ],
  "contexto": {
-  "t": 1795087278,
+  "t": 1795087447,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795087198,
+    "hora_utc": "19/11 11:19",
+    "titulo": "Sweden’s H100 could tap Bitcoin trading pool to fund share buybacks"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795086908,
@@ -187,7 +193,7 @@
     "fonte": "CoinDesk",
     "t": 1795086373,
     "hora_utc": "19/11 11:06",
-    "titulo": "Anthropic’s $107 billion raise set to surpass Spacex’s IPO haul"
+    "titulo": "Anthropic’s $107 billion raise set to top SpaceX’s IPO as tokenized stocks gain traction"
    },
    {
     "fonte": "CoinDesk",
@@ -260,12 +266,6 @@
     "t": 1795068000,
     "hora_utc": "19/11 06:00",
     "titulo": "Bitcoin carry trades could beat Treasury bills in 2027, Sygnum predicts"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795068000,
-    "hora_utc": "19/11 06:00",
-    "titulo": "Here’s what happened in crypto today"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.7,
+   "media_top20_anual_pct": 8.9,
    "principais_anual_pct": {
-    "BTC": -6.2,
-    "ETH": 2.5,
-    "SOL": -3.7
+    "BTC": -5.6,
+    "ETH": 2.6,
+    "SOL": -3.0
    },
    "leitura": "neutro"
   },
