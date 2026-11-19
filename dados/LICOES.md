@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 15:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 15:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.92** · 26 operações fechadas · 2 abertas
+Carteira **US$ 8.89** · 26 operações fechadas · 2 abertas
 
 - **Total:** 17/26 com lucro (65%), resultado -1.06, média -0.041 por operação.
 - **Últimas 24 h:** 10/16 com lucro, -0.47.
@@ -28,7 +28,7 @@ Carteira **US$ 8.49** · 14 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.20** · 7 operações fechadas · 2 abertas
+Carteira **US$ 10.11** · 7 operações fechadas · 2 abertas
 
 - **Total:** 3/7 com lucro (43%), resultado +0.20, média +0.028 por operação.
 - **Últimas 24 h:** 3/7 com lucro, +0.20.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.88** · 13 operações fechadas · 2 abertas
+Carteira **US$ 10.85** · 13 operações fechadas · 2 abertas
 
 - **Total:** 11/13 com lucro (85%), resultado +0.88, média +0.068 por operação.
 - **Últimas 24 h:** 11/13 com lucro, +0.88.
@@ -60,7 +60,7 @@ Carteira **US$ 10.88** · 13 operações fechadas · 2 abertas
 
 - **Amplitude:** 44.1% das moedas subindo em 24 h, 16.2% em 4 h · BTC 24 h -0.64%, 4 h -1.7%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 9.7, 'ETH': 3.1, 'SOL': -2.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 10.2, 'ETH': 2.8, 'SOL': -2.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LDO topo duplo (baixa, CONFIRMOU) · UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
