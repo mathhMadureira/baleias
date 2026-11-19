@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 18:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 18:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.21** · 32 operações fechadas · 3 abertas
+Carteira **US$ 9.50** · 32 operações fechadas · 3 abertas
 
 - **Total:** 20/32 com lucro (62%), resultado -0.79, média -0.025 por operação.
 - **Últimas 24 h:** 13/21 com lucro, +0.36.
@@ -28,7 +28,7 @@ Carteira **US$ 9.26** · 19 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
+Carteira **US$ 9.76** · 13 operações fechadas · 2 abertas
 
 - **Total:** 5/13 com lucro (38%), resultado -0.24, média -0.018 por operação.
 - **Últimas 24 h:** 5/13 com lucro, -0.24.
@@ -39,7 +39,7 @@ Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.49** · 1 operações fechadas · 2 abertas
+Carteira **US$ 10.75** · 1 operações fechadas · 2 abertas
 
 - **Total:** 1/1 com lucro (100%), resultado +0.49, média +0.492 por operação.
 - **Últimas 24 h:** 1/1 com lucro, +0.49.
@@ -50,7 +50,7 @@ Carteira **US$ 10.49** · 1 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
+Carteira **US$ 10.80** · 19 operações fechadas · 2 abertas
 
 - **Total:** 14/19 com lucro (74%), resultado +0.80, média +0.042 por operação.
 - **Últimas 24 h:** 14/19 com lucro, +0.80.
@@ -65,7 +65,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 - **Amplitude:** 45.6% das moedas subindo em 24 h, 18.4% em 4 h · BTC 24 h -0.36%, 4 h -1.44%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -1.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -2.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AVAX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
 - 📰 19/11 18:20 UTC · Cointelegraph: Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns
