@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 04:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 04:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -72,7 +72,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 5.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 5.2 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
