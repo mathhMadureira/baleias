@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 03:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 03:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 30.6% das moedas subindo em 24 h, 40.5% em 4 h · BTC 24 h -2.34%, 4 h -0.1%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 7.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 8.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ONDO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CYBER fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · KAVA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MIRA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PEPE fundo duplo (alta, formado)
 - 📰 19/11 03:40 UTC · CoinDesk: CZ says tokenized Anthropic is coming to BNB Chain on IPO day
@@ -72,7 +72,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 4.7 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
