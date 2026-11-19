@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 23:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 23:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 - **Amplitude:** 52.2% das moedas subindo em 24 h, 17.4% em 4 h · BTC 24 h -0.13%, 4 h -1.13%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 7.1, 'ETH': 6.8, 'SOL': -0.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 7.2, 'ETH': 6.7, 'SOL': -0.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SAPIEN fundo duplo (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RARE topo duplo (baixa, formado) · RENDER OCO invertido (alta, formado) · SHIB fundo duplo (alta, formado)
 - 📰 19/11 22:36 UTC · Decrypt: Citi Says Customers Are Responsible When AI Banking Agents Go Rogue—Even After a Hack
