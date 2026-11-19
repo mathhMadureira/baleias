@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 16:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 16:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.00** · 31 operações fechadas · 1 abertas
+Carteira **US$ 9.14** · 31 operações fechadas · 1 abertas
 
 - **Total:** 19/31 com lucro (61%), resultado -1.05, média -0.034 por operação.
 - **Últimas 24 h:** 12/21 com lucro, -0.46.
@@ -28,7 +28,7 @@ Carteira **US$ 9.70** · 15 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.50** · 11 operações fechadas · 2 abertas
+Carteira **US$ 9.84** · 11 operações fechadas · 2 abertas
 
 - **Total:** 3/11 com lucro (27%), resultado -0.45, média -0.041 por operação.
 - **Últimas 24 h:** 3/11 com lucro, -0.45.
@@ -39,13 +39,13 @@ Carteira **US$ 9.50** · 11 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.25** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.00** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.04** · 16 operações fechadas · 3 abertas
+Carteira **US$ 10.73** · 16 operações fechadas · 3 abertas
 
 - **Total:** 11/16 com lucro (69%), resultado +0.09, média +0.006 por operação.
 - **Últimas 24 h:** 11/16 com lucro, +0.09.
@@ -60,7 +60,7 @@ Carteira **US$ 10.04** · 16 operações fechadas · 3 abertas
 
 - **Amplitude:** 64.0% das moedas subindo em 24 h, 18.9% em 4 h · BTC 24 h 1.21%, 4 h -0.96%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 11.0, 'ETH': 5.2, 'SOL': 1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': 11.0, 'ETH': 4.6, 'SOL': 0.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 16:09 UTC · CoinDesk: Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure
