@@ -1424,3 +1424,15 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   A aprovação da R6 (H52) e a do stop móvel (H49, também simulada em velas fechadas) estavam infladas por este erro. O stop móvel continua ligado
   (é proteção, não fonte de lucro), mas `executor/stop_movel.py` passa a sair no fechamento anterior quando ele já passou do nível (velas de 1 min
   agora trazem o fechamento). Lucro "pelo stop móvel" nas carteiras simuladas dos agentes até hoje (8 saídas, +0,80) pode estar inflado.
+
+## Hipótese 67: gatilhos armados — os agentes deixam níveis de entrada que a nuvem confere minuto a minuto (decisão do dono, registrada em 19/11/2026 ~13:00 BRT = 16:00 UTC, antes de ligar)
+- **Dono (19/11):** "os agentes estão demorando muito para operar… preciso de mais agilidade, operações constantes, varredura contínua; no tempo em
+  que um agente está parado, várias oportunidades aparecem e passam despercebidas."
+- **Execução (`executor/robo_claude_nuvem.py`):** além de "posicoes", cada decisão pode ter até 6 "gatilhos" {moeda, lado, acima OU abaixo, stop_pct,
+  alvo_pct, max_min, validade_min 5–240 (padrão 120), motivo}. A cada rodada da nuvem (~3 min) cada gatilho é conferido nas velas de 1 min desde que
+  foi armado; no primeiro minuto em que o preço cruza o nível, a posição abre no nível (ou no fechamento do minuto anterior se ele já tinha passado:
+  sem olhar o futuro), com o tamanho da H64, até 4 posições. Nível que o preço já passou na hora de armar não é armado. Decisão nova substitui os
+  gatilhos. Vale para as carteiras simuladas dos 4 agentes; a conta de teste do chefe continua entrando só nas rodadas dele (o stop tem de nascer
+  junto com a entrada na corretora, H59).
+- **O que o laboratório já sabe (não decide; o dono decidiu):** rompimentos de 5 min e de 1 h não pagaram o custo como regra fixa (H25, H66).
+- **Juiz (até 03/12):** por agente, operações abertas por gatilho × abertas na rodada, em 30+ de cada: média por operação e fator de lucro.

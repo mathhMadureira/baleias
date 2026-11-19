@@ -2061,6 +2061,45 @@ class StopMovelSemOlharFuturo(unittest.TestCase):
         self.assertAlmostEqual(SM.conferir(p, m, 0.03, 10**9, 0)[0], 101.4)   # fechamento acima do nível: sai no nível
 
 
+class GatilhosH67(unittest.TestCase):
+    """H67 (19/11): o agente arma níveis; a nuvem entra no minuto em que o preço cruza, sem esperar a próxima rodada do agente."""
+
+    def _base(self):
+        agora = 1795000000.0
+        k = [[int(agora * 1000) - 900_000 * (100 - i), "1", "1", "1", "1.0"] for i in range(100)]
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "licoes": []}
+        d = {"t": agora - 5, "posicoes": [], "gatilhos": [
+            {"moeda": "AUSDT", "lado": "compra", "acima": 1.02, "stop_pct": 0.01, "alvo_pct": 0.03, "motivo": "rompimento"},
+            {"moeda": "AUSDT", "lado": "venda", "abaixo": 1.05, "motivo": "já passou"}]}
+        return agora, k, e, d
+
+    def test_arma_dispara_no_nivel_e_valida(self):
+        from executor import robo_claude_nuvem as R
+        agora, k, e, d = self._base()
+        R.passo(e, d, {"AUSDT": k}, agora, vivos={"AUSDT": 1.0})
+        self.assertEqual([g["tipo"] for g in e["gatilhos"]], ["acima"])           # o "abaixo de 1,05" já tinha passado: não arma
+        t0 = int((agora - 5) * 1000)
+        mins = {"AUSDT": [(t0 + 60_000, 1.01, 0.99, 1.005), (t0 + 120_000, 1.03, 1.00, 1.025)]}
+        R.passo(e, d, {"AUSDT": k}, agora + 180, vivos={"AUSDT": 1.025}, minutos_gatilho=mins)
+        a = e["abertas"]["AUSDT"]
+        self.assertAlmostEqual(a["entrada"], 1.02)
+        self.assertEqual((a["stop_pct"], a["alvo_pct"]), (0.01, 0.03))
+        self.assertEqual(e["gatilhos"], [])
+        self.assertEqual(R.validar_gatilhos([{"moeda": "AUSDT", "lado": "compra", "motivo": "x"}]),
+                         ["AUSDT: o gatilho precisa de UM nível, 'acima' ou 'abaixo', com preço > 0"])
+        self.assertTrue(R.validar_gatilhos([{"moeda": "AUSDT", "lado": "compra", "acima": 1, "motivo": "x", "validade_min": 999}]))
+
+    def test_sem_olhar_futuro_e_vencimento(self):
+        from executor import robo_claude_nuvem as R
+        g = {"tipo": "acima", "nivel": 1.02, "desde_ms": 1000}
+        self.assertEqual(R.disparou(g, [(1000, 1.01, 1.0, 1.04), (61_000, 1.05, 1.03, 1.04)]), (1.04, 61_000))   # o fechamento anterior já passou: entra nele
+        agora, k, e, d = self._base()
+        R.passo(e, d, {"AUSDT": k}, agora, vivos={"AUSDT": 1.0})
+        R.passo(e, d, {"AUSDT": k}, agora + 3 * 3600, vivos={"AUSDT": 1.0}, minutos_gatilho={})
+        self.assertEqual(e["gatilhos"], [])                                       # validade padrão de 120 min
+        self.assertEqual(e["abertas"], {})
+
+
 class TamanhoH64(unittest.TestCase):
     """H64 (18/11, aprovada no lab/colher_balde.py): a fatia de cada entrada cresce com o ganho e encolhe na perda."""
 

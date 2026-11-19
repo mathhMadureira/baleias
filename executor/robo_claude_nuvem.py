@@ -87,7 +87,115 @@ def parametros(pos):
     return out
 
 
-def passo(e, decisao, velas, agora, vivos=None):
+MAX_GATILHOS, GATILHO_MIN = 6, (5, 240)
+
+
+def validar_gatilhos(gs):
+    """H67 (dono, 19/11: "operações constantes, varredura contínua"): o agente deixa níveis armados entre as rodadas dele.
+    Cada gatilho: moeda, lado (compra/venda), "acima" OU "abaixo" (preço > 0), motivo; opcionais stop_pct, alvo_pct, max_min, validade_min (5–240).
+    Devolve a lista de erros (vazia = válido)."""
+    erros = []
+    if gs is None:
+        return erros
+    if not isinstance(gs, list) or len(gs) > MAX_GATILHOS:
+        return [f"gatilhos: lista de 0 a {MAX_GATILHOS}"]
+    for g in gs:
+        m = str((g or {}).get("moeda", "")).upper()
+        if not isinstance(g, dict) or not m.endswith("USDT") or g.get("lado") not in ("compra", "venda") or not str(g.get("motivo", "")).strip():
+            erros.append(f"gatilho inválido (moeda, lado, motivo): {g}")
+            continue
+        niveis = [k for k in ("acima", "abaixo") if k in g]
+        if len(niveis) != 1 or not isinstance(g[niveis[0]], (int, float)) or g[niveis[0]] <= 0:
+            erros.append(f"{m}: o gatilho precisa de UM nível, 'acima' ou 'abaixo', com preço > 0")
+        for k, (lo, hi) in {**LIMITES, "validade_min": GATILHO_MIN}.items():
+            if k in g and not (isinstance(g[k], (int, float)) and lo <= g[k] <= hi):
+                erros.append(f"{m}: {k} = {g[k]!r} fora de {lo}–{hi}")
+    return erros
+
+
+def armar(e, decisao, preco):
+    """Decisão nova: os gatilhos dela substituem os anteriores. Nível que o preço já passou não é armado."""
+    textos, armados = [], []
+    for g in (decisao.get("gatilhos") or []) if not validar_gatilhos(decisao.get("gatilhos")) else []:
+        par = str(g["moeda"]).upper()
+        par = par if par.endswith("USDT") else par + "USDT"
+        tipo = "acima" if "acima" in g else "abaixo"
+        nivel, px = float(g[tipo]), preco.get(par)
+        if px is not None and ((px >= nivel) if tipo == "acima" else (px <= nivel)):
+            textos.append(f"🎯 {NOME}: gatilho de {par[:-4]} {tipo} de {nivel:.6g} não armado — o preço ({px:.6g}) já passou")
+            continue
+        armados.append({"moeda": par, "lado": g["lado"], "tipo": tipo, "nivel": nivel, "motivo": str(g.get("motivo", ""))[:300],
+                        "desde_ms": int(decisao["t"] * 1000), "ate": decisao["t"] + 60 * float(g.get("validade_min", 120)), "decisao_t": decisao["t"],
+                        **parametros(g)})
+    e["gatilhos"] = armados
+    if armados:
+        textos.append(f"🎯 {NOME} armou {len(armados)} gatilho(s): " + "; ".join(
+            f"{'compra' if a['lado'] == 'compra' else 'venda'} {a['moeda'][:-4]} {a['tipo']} de {a['nivel']:.6g}" for a in armados))
+    return textos
+
+
+def disparou(g, minutos):
+    """Primeiro minuto (desde g['desde_ms']) em que o preço cruzou o nível. Devolve (preço de entrada, t_ms) ou None.
+    Sem olhar o futuro: se o fechamento do minuto anterior já tinha passado do nível, entra nesse fechamento (a abertura), não no nível."""
+    ant = None
+    for m in minutos or []:
+        t, h, l = m[0], m[1], m[2]
+        if t < g["desde_ms"]:
+            if len(m) > 3:
+                ant = m[3]
+            continue
+        if (h >= g["nivel"]) if g["tipo"] == "acima" else (l <= g["nivel"]):
+            px = g["nivel"]
+            if ant is not None and ((ant > px) if g["tipo"] == "acima" else (ant < px)):
+                px = ant
+            return px, t
+        if len(m) > 3:
+            ant = m[3]
+    return None
+
+
+def abrir(e, par, lado, entrada, entrada_t, prm, velas, motivo, decisao_t):
+    """Abre a posição se couber (piso, 4 posições, caixa). Devolve o texto ou None."""
+    patrimonio = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
+    if patrimonio < PISO or par in e["abertas"] or len(e["abertas"]) >= MAX_POS:
+        return None
+    noc, alav = tamanho(patrimonio)                              # H64 (antes H58: 2,5 × a carteira a 10×)
+    if 0.95 * noc / alav <= e["caixa"] < noc / alav:             # a 4ª posição: centavos de menos pelo arredondamento
+        noc = e["caixa"] * alav
+    if e["caixa"] < noc / alav - 1e-9:
+        return None
+    prm = dict(prm)
+    sp = prm.pop("stop_pct", None) or stop_da_moeda(velas.get(par, []))
+    e["caixa"] -= noc / alav
+    e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": entrada, "entrada_t": entrada_t, "gasto": noc / alav, "nocional": noc, "alav": alav, "stop_pct": sp,
+                         "motivo": str(motivo)[:300], "decisao_t": decisao_t,
+                         "conferido_ate": -(-int(entrada_t * 1000) // VELA_MS) * VELA_MS, **prm}   # P1: só velas de 15 min depois da entrada
+    return (f"🤖 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {entrada:.6g} (US$ {noc:.0f}, stop {sp:.2%}"
+            + (f", alvo {prm['alvo_pct']:.2%}" if prm.get("alvo_pct") else "") + (f", prazo {prm['max_min']:.0f} min" if prm.get("max_min") else "")
+            + f"): {str(motivo)[:120]}")
+
+
+def conferir_gatilhos(e, velas, agora, minutos):
+    """A cada rodada da nuvem (~3 min): cada gatilho armado é conferido nas velas de 1 min desde que foi armado."""
+    textos, ficam = [], []
+    for g in e.get("gatilhos", []):
+        if agora > g["ate"]:
+            textos.append(f"⌛ {NOME}: gatilho de {g['moeda'][:-4]} {g['tipo']} de {g['nivel']:.6g} venceu sem disparar")
+            continue
+        r = disparou(g, minutos.get(g["moeda"]))
+        if not r:
+            ficam.append(g)
+            continue
+        px, t = r
+        prm = {k: g[k] for k in LIMITES if k in g}
+        txt = abrir(e, g["moeda"], g["lado"], px, (t + 60_000) / 1000, prm, velas,
+                    f"🎯 gatilho {g['tipo']} de {g['nivel']:.6g}: {g['motivo']}", g["decisao_t"])
+        textos.append(txt or f"🎯 {NOME}: gatilho de {g['moeda'][:-4]} disparou a {px:.6g}, mas não coube (4 posições, caixa ou moeda já aberta)")
+    e["gatilhos"] = ficam
+    return textos
+
+
+def passo(e, decisao, velas, agora, vivos=None, minutos_gatilho=None):
     """e: estado; decisao: dados/decisao_claude.json (ou {}); velas: {par: velas fechadas de 15 min}. Devolve os textos."""
     textos = []
     ultimo = {par: k[-1] for par, k in velas.items() if k}
@@ -148,23 +256,17 @@ def passo(e, decisao, velas, agora, vivos=None):
                 else:
                     e["abertas"][par].update(parametros(pos))                         # H62: o agente pode apertar stop, alvo e prazo
                     continue
-            patrimonio = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
-            if patrimonio < PISO:
+            if e["caixa"] + sum(q["gasto"] for q in e["abertas"].values()) < PISO:
                 break
-            noc, alav = tamanho(patrimonio)                              # H64 (antes H58: 2,5 × a carteira a 10×)
-            if 0.95 * noc / alav <= e["caixa"] < noc / alav:             # a 4ª posição: centavos de menos pelo arredondamento
-                noc = e["caixa"] * alav
-            if par not in preco or len(e["abertas"]) >= MAX_POS or e["caixa"] < noc / alav - 1e-9:
+            if par not in preco:
                 continue
-            prm = parametros(pos)
-            sp = prm.pop("stop_pct", None) or stop_da_moeda(velas.get(par, []))
-            e["caixa"] -= noc / alav
-            e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": preco[par], "entrada_t": agora, "gasto": noc / alav, "nocional": noc, "alav": alav, "stop_pct": sp,
-                                 "motivo": str(pos.get("motivo", ""))[:300], "decisao_t": decisao["t"],
-                                 "conferido_ate": -(-int(agora * 1000) // VELA_MS) * VELA_MS, **prm}   # P1: só velas de 15 min depois da entrada
-            textos.append(f"🤖 {NOME} ENTROU {'VENDIDO' if lado == 'venda' else 'COMPRADO'} em {par[:-4]} a {preco[par]:.6g} (US$ {noc:.0f}, stop {sp:.2%}"
-                          + (f", alvo {prm['alvo_pct']:.2%}" if prm.get("alvo_pct") else "") + (f", prazo {prm['max_min']:.0f} min" if prm.get("max_min") else "")
-                          + f"): {str(pos.get('motivo', ''))[:120]}")
+            txt = abrir(e, par, lado, preco[par], agora, parametros(pos), velas, pos.get("motivo", ""), decisao["t"])
+            if txt:
+                textos.append(txt)
+        textos += armar(e, decisao, preco)                                          # H67: níveis armados até a próxima rodada do agente
+    # 3) H67: gatilhos armados, conferidos minuto a minuto desde que foram armados
+    if e.get("gatilhos") and not e.get("eliminado"):
+        textos += conferir_gatilhos(e, velas, agora, minutos_gatilho or {})
     e["patrimonio"] = e["caixa"] + sum(q["gasto"] + (1 if q["lado"] == "compra" else -1) * q.get("nocional", ORCAMENTO) * (preco.get(q["moeda"], q["entrada"]) / q["entrada"] - 1)
                                        for q in e["abertas"].values())
     if e["patrimonio"] < PISO and not e.get("eliminado"):
@@ -214,7 +316,13 @@ def main():
     if guarda == "normal":
         pares = set(e["abertas"]) | {(str(x.get("moeda", "")).upper() if str(x.get("moeda", "")).upper().endswith("USDT") else str(x.get("moeda", "")).upper() + "USDT")
                                      for x in (decisao.get("posicoes") or []) if isinstance(x, dict)} if decisao else set(e["abertas"])
-        textos += passo(e, decisao, velas, agora, vivos=SM.precos_da_rodada(sorted(pares), agora * 1000))
+        pg = {str(g.get("moeda", "")).upper() for g in e.get("gatilhos", [])}
+        if decisao and decisao.get("t") != e.get("ultima_decisao_t"):
+            pg |= {str(g.get("moeda", "")).upper() for g in (decisao.get("gatilhos") or []) if isinstance(g, dict)}
+        pg = {p if p.endswith("USDT") else p + "USDT" for p in pg if p}
+        desde = min([int(g["desde_ms"]) for g in e.get("gatilhos", [])] + [int((decisao or {}).get("t", agora) * 1000)]) - 120_000
+        mins_g = {p: SM.buscar(p, max(desde, int(agora * 1000) - 6 * 3_600_000), int(agora * 1000)) for p in sorted(pg)}
+        textos += passo(e, decisao, velas, agora, vivos=SM.precos_da_rodada(sorted(pares | pg), agora * 1000), minutos_gatilho=mins_g)
     else:                                                   # travado: sem posições e sem entradas; a decisão desta hora não vale depois
         e["patrimonio"] = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
         if decisao:
