@@ -1,21 +1,21 @@
 {
- "t": 1795091552,
- "hora_utc": "2026-11-19 12:32 UTC",
+ "t": 1795091727,
+ "hora_utc": "2026-11-19 12:35 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 109,
-  "subindo_pct": 13.8,
+  "moedas": 110,
+  "subindo_pct": 13.6,
   "mediana_pct": -0.54
  },
  "mercado_4h": {
-  "moedas": 109,
-  "subindo_pct": 42.2,
-  "mediana_pct": -0.1
+  "moedas": 110,
+  "subindo_pct": 41.8,
+  "mediana_pct": -0.13
  },
  "mercado_24h": {
-  "moedas": 109,
-  "subindo_pct": 41.3,
-  "mediana_pct": -0.21
+  "moedas": 110,
+  "subindo_pct": 40.9,
+  "mediana_pct": -0.33
  },
  "btc": {
   "1h": -0.24,
@@ -172,10 +172,10 @@
   0.19,
   -0.1,
   0.24,
-  -0.24
+  -0.33
  ],
  "contexto": {
-  "t": 1795091553,
+  "t": 1795091728,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.8,
+   "media_top20_anual_pct": 7.6,
    "principais_anual_pct": {
-    "BTC": 4.7,
-    "ETH": 2.0,
-    "SOL": 4.9
+    "BTC": 3.8,
+    "ETH": 2.2,
+    "SOL": 4.2
    },
    "leitura": "neutro"
   },
@@ -402,8 +402,8 @@
  "v4": {
   "vela": "20:00 UTC",
   "apostas": 153,
-  "compras": 122,
-  "vendas": 31,
+  "compras": 123,
+  "vendas": 30,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -448,6 +448,10 @@
     "prob_subir": 0.645
    },
    {
+    "moeda": "KAT",
+    "prob_subir": 0.64
+   },
+   {
     "moeda": "KAIA",
     "prob_subir": 0.616
    },
@@ -466,10 +470,6 @@
    {
     "moeda": "GRAM",
     "prob_subir": 0.61
-   },
-   {
-    "moeda": "MUBARAK",
-    "prob_subir": 0.608
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -740,12 +740,12 @@
   "z_contra_lab": 2.04,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.511,
-    "n": 19747
+    "acerto": 0.5109,
+    "n": 19765
    },
    "segue_maioria_24h": {
-    "acerto": 0.5057,
-    "n": 26361
+    "acerto": 0.5061,
+    "n": 26429
    }
   },
   "referencia_ganha": [],
