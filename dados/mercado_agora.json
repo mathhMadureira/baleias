@@ -1,6 +1,6 @@
 {
- "t": 1795126742,
- "hora_utc": "2026-11-19 22:19 UTC",
+ "t": 1795126930,
+ "hora_utc": "2026-11-19 22:22 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   -0.82,
   -0.39,
   -0.94,
-  0.48
+  0.67
  ],
  "contexto": {
-  "t": 1795126743,
+  "t": 1795126930,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.9,
+   "media_top20_anual_pct": 4.8,
    "principais_anual_pct": {
-    "BTC": -2.3,
+    "BTC": -1.6,
     "ETH": -3.5,
-    "SOL": -3.9
+    "SOL": -2.0
    },
    "leitura": "neutro"
   },
@@ -482,7 +482,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.79,
+  "carteira": 9.69,
   "abertas": [
    {
     "moeda": "MEGA",
@@ -499,7 +499,7 @@
     "entrada": 1750.34,
     "agora": 1748.66,
     "resultado_pct": 0.1,
-    "horas_aberta": 0.8,
+    "horas_aberta": 0.9,
     "motivo_de_entrada": "Nova, a mercado: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 15 min −0,44%, 1 h −0,68%, 4 h −1,23%, 1 dia −1,61%; vela de 5 min da queda com volume ≈ 5× as vi"
    },
    {
@@ -661,7 +661,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.79,
+   "carteira": 9.69,
    "n_abertas": 3,
    "abertas": [
     [
@@ -711,15 +711,11 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.4,
-   "n_abertas": 3,
+   "carteira": 9.26,
+   "n_abertas": 2,
    "abertas": [
     [
      "MARSCOIN",
-     "venda"
-    ],
-    [
-     "BABY",
      "venda"
     ],
     [
@@ -727,7 +723,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 19,
+   "n_fechadas": 20,
    "ordem": null
   },
   {
@@ -748,7 +744,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.39,
+   "carteira": 10.34,
    "n_abertas": 2,
    "abertas": [
     [
@@ -774,7 +770,7 @@
     "ganho_medio": 0.109,
     "perda_media": -0.214,
     "fator_lucro": 0.9,
-    "carteira": 9.79
+    "carteira": 9.69
    },
    "openbot_testnet": {
     "ops": 22,
@@ -786,13 +782,13 @@
     "carteira": 9.08
    },
    "treinador": {
-    "ops": 19,
-    "acerto": 0.421,
-    "soma": -0.322,
+    "ops": 20,
+    "acerto": 0.4,
+    "soma": -0.579,
     "ganho_medio": 0.159,
-    "perda_media": -0.145,
-    "fator_lucro": 0.8,
-    "carteira": 9.4
+    "perda_media": -0.154,
+    "fator_lucro": 0.69,
+    "carteira": 9.26
    },
    "laboratorio": {
     "ops": 10,
@@ -810,7 +806,7 @@
     "ganho_medio": 0.136,
     "perda_media": -0.215,
     "fator_lucro": 1.15,
-    "carteira": 10.39
+    "carteira": 10.34
    }
   },
   "vereditos": []
