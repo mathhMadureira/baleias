@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 18:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 18:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -17,13 +17,13 @@ Carteira **US$ 9.21** · 32 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 9.70** · 15 operações fechadas · 4 abertas
+Carteira **US$ 9.41** · 19 operações fechadas · 0 abertas
 
-- **Total:** 6/15 com lucro (40%), resultado -0.84, média -0.056 por operação.
-- **Últimas 24 h:** 6/12 com lucro, +1.37.
-- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.79 · 12–17 UTC: 4 op, 50% certas, -0.68 · 18–23 UTC: 10 op, 40% certas, +0.63
-- **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 11 op, 55% certas, +1.43
-- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · fora da lista de posições do c: 4 op, 25% certas, +0.69 · stop móvel na corretora (pico : 2 op, 100% certas, +0.74
+- **Total:** 8/19 com lucro (42%), resultado -0.59, média -0.031 por operação.
+- **Últimas 24 h:** 8/16 com lucro, +1.62.
+- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.79 · 12–17 UTC: 8 op, 50% certas, -0.43 · 18–23 UTC: 10 op, 40% certas, +0.63
+- **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 15 op, 53% certas, +1.68
+- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −0.80% na co: 1 op, 0% certas, -0.18 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · fora da lista de posições do c: 4 op, 25% certas, +0.69 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
@@ -60,7 +60,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 - **Amplitude:** 57.9% das moedas subindo em 24 h, 17.5% em 4 h · BTC 24 h 0.21%, 4 h -1.03%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -0.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -1.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AVAX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · YB fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
 - 📰 19/11 18:20 UTC · Cointelegraph: Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns
@@ -72,7 +72,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.5 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.6 h.
 - 19/11 16:08 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Repique na hora depois da queda: 60,4% das 106 moedas sobem em 1 h (mediana +0,27%), 40,6% em 4 h (mediana −0,36%), 56,6% em 24 h; universo do v4 (110 moedas, v
 - 19/11 15:53 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Queda forte agora: só 9,0% das 111 moedas sobem em 1 h (mediana −2,22%) e 16,2% em 4 h (mediana −2,53%); 24 h neutro (44,1%). BTC −1,68% em 1 h, −1,70% em 4 h, 
 - 19/11 15:38 UTC · **AAVE venda, CAKE venda** · Regime neutro em 24 h (48,6% das 109 moedas sobem), mas queda agora: só 10,8% sobem na última hora e 21,6% em 4 h (mediana −1,11% e −1,12%). BTC −0,85% em 1 h, 
