@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 12:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 12:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 52.3% das moedas subindo em 24 h, 57.0% em 4 h · BTC 24 h -0.44%, 4 h 0.33%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.0%/ano · {'BTC': 5.4, 'ETH': 6.8, 'SOL': 5.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.8%/ano · {'BTC': 8.7, 'ETH': 5.3, 'SOL': 9.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado) · POL topo duplo (baixa, formado) · PYTH fundo duplo (alta, formado)
 - 📰 19/11 11:30 UTC · CoinDesk: North Korean hackers used Sky's stablecoin system, putting billions at freeze risk
