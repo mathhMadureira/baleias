@@ -1,6 +1,6 @@
 {
- "t": 1795100851,
- "hora_utc": "2026-11-19 15:07 UTC",
+ "t": 1795101091,
+ "hora_utc": "2026-11-19 15:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,10 +172,10 @@
   -0.11,
   0.25,
   -0.75,
-  0.44
+  0.08
  ],
  "contexto": {
-  "t": 1795100852,
+  "t": 1795101092,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.3,
+   "media_top20_anual_pct": 8.3,
    "principais_anual_pct": {
-    "BTC": 8.0,
-    "ETH": 11.0,
-    "SOL": 8.7
+    "BTC": 4.7,
+    "ETH": 6.4,
+    "SOL": 6.7
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.79,
+  "carteira": 8.9,
   "abertas": [
    {
     "moeda": "MORPHO",
@@ -650,7 +650,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.79,
+   "carteira": 8.9,
    "n_abertas": 1,
    "abertas": [
     [
@@ -667,15 +667,10 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.59,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "MORPHO",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 13,
+   "carteira": 8.55,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 14,
    "ordem": null
   },
   {
@@ -725,16 +720,16 @@
     "ganho_medio": 0.065,
     "perda_media": -0.242,
     "fator_lucro": 0.48,
-    "carteira": 8.79
+    "carteira": 8.9
    },
    "openbot_testnet": {
-    "ops": 13,
-    "acerto": 0.308,
-    "soma": -1.58,
-    "ganho_medio": 0.261,
+    "ops": 14,
+    "acerto": 0.357,
+    "soma": -1.454,
+    "ganho_medio": 0.234,
     "perda_media": -0.328,
-    "fator_lucro": 0.4,
-    "carteira": 8.59
+    "fator_lucro": 0.45,
+    "carteira": 8.55
    },
    "treinador": {
     "ops": 7,
