@@ -1,6 +1,6 @@
 {
- "t": 1795119704,
- "hora_utc": "2026-11-19 20:21 UTC",
+ "t": 1795119939,
+ "hora_utc": "2026-11-19 20:25 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
@@ -172,10 +172,10 @@
   -0.05,
   0.22,
   -0.82,
-  -0.2
+  -0.05
  ],
  "contexto": {
-  "t": 1795119705,
+  "t": 1795119941,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.4,
+   "media_top20_anual_pct": 4.3,
    "principais_anual_pct": {
-    "BTC": -9.1,
-    "ETH": 1.9,
-    "SOL": -5.6
+    "BTC": -6.6,
+    "ETH": 3.7,
+    "SOL": -5.2
    },
    "leitura": "neutro"
   },
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.52,
+  "carteira": 9.49,
   "abertas": [
    {
     "moeda": "DOT",
@@ -608,7 +608,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.52,
+   "carteira": 9.49,
    "n_abertas": 1,
    "abertas": [
     [
@@ -625,23 +625,15 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 9.26,
-   "n_abertas": 3,
+   "carteira": 9.07,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "SKY",
-     "venda"
-    ],
     [
      "DOT",
      "venda"
-    ],
-    [
-     "SNX",
-     "compra"
     ]
    ],
-   "n_fechadas": 19,
+   "n_fechadas": 21,
    "ordem": null
   },
   {
@@ -662,7 +654,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 11.19,
+   "carteira": 11.2,
    "n_abertas": 2,
    "abertas": [
     [
@@ -700,16 +692,16 @@
     "ganho_medio": 0.1,
     "perda_media": -0.214,
     "fator_lucro": 0.75,
-    "carteira": 9.52
+    "carteira": 9.49
    },
    "openbot_testnet": {
-    "ops": 19,
-    "acerto": 0.421,
-    "soma": -0.59,
+    "ops": 21,
+    "acerto": 0.381,
+    "soma": -1.232,
     "ganho_medio": 0.291,
-    "perda_media": -0.291,
-    "fator_lucro": 0.8,
-    "carteira": 9.26
+    "perda_media": -0.296,
+    "fator_lucro": 0.65,
+    "carteira": 9.07
    },
    "treinador": {
     "ops": 15,
@@ -727,7 +719,7 @@
     "ganho_medio": 0.492,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 11.19
+    "carteira": 11.2
    },
    "guardiao": {
     "ops": 21,
