@@ -11,14 +11,14 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | raschke_sopa_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 66.7% | 18 | 43.7%–83.7% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
-| raschke_graal_baixa | promissor | 57.9% | 57 | 45.0%–69.8% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
+| raschke_graal_baixa | promissor | 58.6% | 58 | 45.8%–70.4% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
+| williams_volb_baixa | promissor | 51.9% | 129 | 43.4%–60.4% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | reversao_queda | promissor | 51.6% | 64 | 39.6%–63.4% | H14: queda anormal de 1 h → sobe |
-| williams_volb_baixa | promissor | 51.6% | 128 | 43.0%–60.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_wr_alta | promissor | 51.3% | 39 | 36.2%–66.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | tres_corvos | promissor | 50.4% | 371 | 45.3%–55.5% | H6: três corvos → sobe (efeito pequeno) |
 | vortice_invertido | reprovado | 49.0% | 406 | 44.2%–53.9% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| velez_180_baixa | reprovado | 48.9% | 45 | 35.0%–63.0% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | demark_td9_alta | reprovado | 47.8% | 46 | 34.1%–61.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
-| velez_180_baixa | reprovado | 47.7% | 44 | 33.8%–62.1% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | williams_volb_alta | reprovado | 45.1% | 102 | 35.8%–54.8% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | raschke_graal_alta | reprovado | 41.2% | 17 | 21.6%–64.0% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | velez_180_alta | reprovado | 40.0% | 5 | 11.8%–76.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
