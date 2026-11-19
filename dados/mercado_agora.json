@@ -1,6 +1,6 @@
 {
- "t": 1795125213,
- "hora_utc": "2026-11-19 21:53 UTC",
+ "t": 1795125404,
+ "hora_utc": "2026-11-19 21:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   0.22,
   -0.82,
   -0.39,
-  -0.84
+  -0.87
  ],
  "contexto": {
-  "t": 1795125214,
+  "t": 1795125404,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 1.7,
+   "media_top20_anual_pct": 1.8,
    "principais_anual_pct": {
-    "BTC": -14.3,
-    "ETH": 2.9,
+    "BTC": -13.9,
+    "ETH": 2.6,
     "SOL": -5.0
    },
    "leitura": "neutro"
@@ -482,7 +482,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.7,
+  "carteira": 9.84,
   "abertas": [
    {
     "moeda": "MEGA",
@@ -661,7 +661,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.7,
+   "carteira": 9.84,
    "n_abertas": 3,
    "abertas": [
     [
@@ -711,7 +711,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.59,
+   "carteira": 9.82,
    "n_abertas": 4,
    "abertas": [
     [
@@ -752,7 +752,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.21,
+   "carteira": 10.44,
    "n_abertas": 2,
    "abertas": [
     [
@@ -778,7 +778,7 @@
     "ganho_medio": 0.109,
     "perda_media": -0.214,
     "fator_lucro": 0.9,
-    "carteira": 9.7
+    "carteira": 9.84
    },
    "openbot_testnet": {
     "ops": 22,
@@ -796,7 +796,7 @@
     "ganho_medio": 0.159,
     "perda_media": -0.131,
     "fator_lucro": 0.97,
-    "carteira": 9.59
+    "carteira": 9.82
    },
    "laboratorio": {
     "ops": 10,
@@ -814,7 +814,7 @@
     "ganho_medio": 0.136,
     "perda_media": -0.215,
     "fator_lucro": 1.15,
-    "carteira": 10.21
+    "carteira": 10.44
    }
   },
   "vereditos": []
