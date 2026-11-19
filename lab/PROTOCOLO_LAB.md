@@ -1483,5 +1483,11 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   (cópia do Engenheiro em `backup-2026-11-19/ROTINA.md`). Também se relatam, sem decidir, média por operação, fator de lucro, operações por dia e a carteira de cada agente.
 - **Prazo:** quando o total dos 4 agentes tiver 30 operações r9 fechadas ou até 03/12, o que vier primeiro. Se faltar r8, a comparação fica com o controle:
   a r9 precisa de excesso médio > 0 com t ≥ 2, com erro-padrão agrupado pela rodada de decisão.
+- **Adendo (19/11 ~19:20 UTC, antes de medir qualquer operação r9): a carteira do Laboratório fica de fora da r9, por escolha do Laboratório, não da rotina.**
+  Ela continua com o método fixo da H61: só v4 com confiança ≥ 0,12, no lado do regime. Por isso a decisão das 15:34 UTC cortou BONK venda
+  (6 de 6 tempos a favor, confiança < 0,12). Motivo: é a única carteira de regra fixa, sem leitura discricionária, e serve de braço de comparação
+  para a H69. Ela não entra no total dos 4 do juiz da r9 (o total passa a ser dos outros 3 agentes) e é relatada à parte. Custo dessa escolha, medido:
+  0 operações desde 18/11 (a confiança ≥ 0,12 no lado do regime quase não aparece). Se em 03/12 ela ainda tiver menos de 10 operações, o braço
+  não mediu nada e o Laboratório passa a seguir a r9 como os outros (fica registrado aqui, sem ajuste depois de ver).
 - **Previsão registrada:** mais operações por dia. Por operação, perto do controle (≈ −0,12%), a não ser que a leitura dos agentes tenha vantagem;
   nenhum teste do laboratório mostrou vantagem em leitura discricionária até aqui (H43, H62: não sei).
