@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 11:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 11:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
 Carteira **US$ 8.76** · 23 operações fechadas · 0 abertas
 
 - **Total:** 14/23 com lucro (61%), resultado -1.24, média -0.054 por operação.
-- **Últimas 24 h:** 7/14 com lucro, -1.47.
+- **Últimas 24 h:** 7/13 com lucro, -0.65.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 13 op, 54% certas, -0.65 · 12–17 UTC: 7 op, 71% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.12
 - **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 12 op, 67% certas, -0.00
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09
@@ -20,7 +20,7 @@ Carteira **US$ 8.76** · 23 operações fechadas · 0 abertas
 Carteira **US$ 8.42** · 13 operações fechadas · 0 abertas
 
 - **Total:** 4/13 com lucro (31%), resultado -1.58, média -0.122 por operação.
-- **Últimas 24 h:** 4/13 com lucro, -1.58.
+- **Últimas 24 h:** 4/12 com lucro, -0.79.
 - **Por horário:** 12–17 UTC: 2 op, 0% certas, -1.42 · 06–11 UTC: 1 op, 0% certas, -0.79 · 18–23 UTC: 10 op, 40% certas, +0.63
 - **Por lado:** compra: 4 op, 0% certas, -2.27 · venda: 9 op, 44% certas, +0.69
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · fora da lista de posições do c: 4 op, 25% certas, +0.69
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 44.0% das moedas subindo em 24 h, 42.2% em 4 h · BTC 24 h -0.9%, 4 h 0.07%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.9%/ano · {'BTC': -8.8, 'ETH': 0.6, 'SOL': -2.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.6%/ano · {'BTC': -8.0, 'ETH': 1.0, 'SOL': -2.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · KAVA fundo duplo (alta, formado) · KAVA ombro-cabeça-ombro (baixa, formado)
 - 📰 19/11 11:06 UTC · CoinDesk: Anthropic’s $107 billion raise set to surpass Spacex’s IPO haul
