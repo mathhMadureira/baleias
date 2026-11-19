@@ -1,16 +1,16 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 17:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 17:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.32** · 31 operações fechadas · 1 abertas
+Carteira **US$ 9.21** · 32 operações fechadas · 0 abertas
 
-- **Total:** 19/31 com lucro (61%), resultado -1.05, média -0.034 por operação.
-- **Últimas 24 h:** 12/21 com lucro, -0.46.
-- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 13 op, 54% certas, -0.65 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 15 op, 67% certas, +0.31
-- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 20 op, 65% certas, +0.19
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · A favor: 6 de 6 tempos abaixo : 2 op, 50% certas, +0.14
+- **Total:** 20/32 com lucro (62%), resultado -0.79, média -0.025 por operação.
+- **Últimas 24 h:** 13/22 com lucro, -0.21.
+- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 13 op, 54% certas, -0.65 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 16 op, 69% certas, +0.56
+- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 21 op, 67% certas, +0.44
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39
 - **Moedas que mais perderam (≥ 3 op):** RUNE +0.16 (3 op) · MORPHO +0.18 (3 op) · ZEC +0.30 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** ZEC +0.30 (4 op) · MORPHO +0.18 (3 op) · RUNE +0.16 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -39,7 +39,7 @@ Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.88** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.00** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 - **Amplitude:** 41.6% das moedas subindo em 24 h, 8.8% em 4 h · BTC 24 h -0.4%, 4 h -2.15%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.1%/ano · {'BTC': 11.0, 'ETH': 3.1, 'SOL': -4.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.1%/ano · {'BTC': 11.0, 'ETH': 5.6, 'SOL': -1.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LTC topo duplo (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 17:01 UTC · CoinDesk: Anthropic opens for trade at $111.50, up 34% from IPO price
