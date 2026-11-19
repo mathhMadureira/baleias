@@ -1,6 +1,6 @@
 {
- "t": 1795084361,
- "hora_utc": "2026-11-19 10:32 UTC",
+ "t": 1795084532,
+ "hora_utc": "2026-11-19 10:35 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 109,
@@ -172,11 +172,17 @@
   -0.02,
   -0.0,
   0.19,
-  -0.04
+  -0.05
  ],
  "contexto": {
-  "t": 1795084362,
+  "t": 1795084533,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795084325,
+    "hora_utc": "19/11 10:32",
+    "titulo": "IOSCO warns quantum upgrades could slow blockchains, leave security gaps"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795083905,
@@ -260,12 +266,6 @@
     "t": 1795059648,
     "hora_utc": "19/11 03:40",
     "titulo": "CZ says tokenized Anthropic is coming to BNB Chain on IPO day"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795052733,
-    "hora_utc": "19/11 01:45",
-    "titulo": "Trump administration unveils new center to choke off scam payments"
    }
   ],
   "medo_ganancia": {
@@ -276,8 +276,8 @@
   "funding": {
    "media_top20_anual_pct": 9.2,
    "principais_anual_pct": {
-    "BTC": -2.9,
-    "ETH": 4.9,
+    "BTC": -3.2,
+    "ETH": 4.8,
     "SOL": 7.2
    },
    "leitura": "neutro"
