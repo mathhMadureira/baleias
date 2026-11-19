@@ -1,6 +1,6 @@
 {
- "t": 1795106310,
- "hora_utc": "2026-11-19 16:38 UTC",
+ "t": 1795106550,
+ "hora_utc": "2026-11-19 16:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -172,10 +172,10 @@
   0.25,
   -0.75,
   -0.72,
-  0.17
+  0.29
  ],
  "contexto": {
-  "t": 1795106311,
+  "t": 1795106551,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -187,7 +187,7 @@
     "fonte": "Cointelegraph",
     "t": 1795104471,
     "hora_utc": "19/11 16:07",
-    "titulo": "Anthropic shares expected to open 26.5% above $83 IPO price"
+    "titulo": "Anthropic shares expected to open at $105, 26.5% above $83 IPO price"
    },
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.1,
+   "media_top20_anual_pct": 4.4,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 4.9,
-    "SOL": 0.3
+    "SOL": 0.5
    },
    "leitura": "neutro"
   },
@@ -454,7 +454,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.16,
+  "carteira": 8.93,
   "abertas": [
    {
     "moeda": "AAVE",
@@ -462,43 +462,11 @@
     "entrada": 104.67,
     "agora": 104.52,
     "resultado_pct": 0.14,
-    "horas_aberta": 0.9,
+    "horas_aberta": 1.0,
     "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 1 h −3,82%, 4 h −4,51%, 24 h −2,75%; volume de 1 min 2,92× (queda com volume); topo duplo de 4 h (não con"
-   },
-   {
-    "moeda": "CAKE",
-    "lado": "venda",
-    "entrada": 1.59,
-    "agora": 1.589,
-    "resultado_pct": 0.06,
-    "horas_aberta": 0.6,
-    "motivo_de_entrada": "Mantém: 6 de 6 tempos abaixo da MM20; 15 min −0,38%, 1 h −1,55%, 4 h −2,04%; volume de 1 min 1,42×; v4 0,485 (leve venda). Alvo novo 1,5% (3 × stop 0,5%), prazo"
-   },
-   {
-    "moeda": "UNI",
-    "lado": "venda",
-    "entrada": 4.946,
-    "agora": 4.966,
-    "resultado_pct": -0.4,
-    "horas_aberta": 0.6,
-    "motivo_de_entrada": "A favor: 5 de 6 tempos abaixo da MM20 (só 1 min acima); triângulo de 1 h confirmado para baixo; 1 h −2,39%, 4 h −5,00%, 24 h −3,17%; volume 4 h 2,69×; v4 venda "
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "GTC",
-    "lado": "venda",
-    "resultado_usd": 0.052,
-    "motivo_saida": "stop móvel (pico +0.51%, guardou +0.36%)",
-    "motivo_de_entrada": "v4 0.370 de subir (confiança 0.130, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h -0.38%"
-   },
-   {
-    "moeda": "ERA",
-    "lado": "compra",
-    "resultado_usd": -0.026,
-    "motivo_saida": "fora da lista de posições do Claude",
-    "motivo_de_entrada": "v4 0.637 de subir (confiança 0.137, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (57.1% subindo); 1 h -1.27%"
-   },
    {
     "moeda": "GTC",
     "lado": "venda",
@@ -589,6 +557,20 @@
     "resultado_usd": 0.171,
     "motivo_saida": "stop móvel (pico +2.25%, guardou +0.95%)",
     "motivo_de_entrada": "Mantém: 6 de 6 tempos abaixo da MM20; estrutura para baixo em 15 min, 1 h e 4 h; 15 min −2,67%, 1 h −4,80%, 4 h −6,99%; "
+   },
+   {
+    "moeda": "CAKE",
+    "lado": "venda",
+    "resultado_usd": -0.121,
+    "motivo_saida": "stop de segurança −0.5%",
+    "motivo_de_entrada": "Mantém: 6 de 6 tempos abaixo da MM20; 15 min −0,38%, 1 h −1,55%, 4 h −2,04%; volume de 1 min 1,42×; v4 0,485 (leve venda"
+   },
+   {
+    "moeda": "UNI",
+    "lado": "venda",
+    "resultado_usd": -0.179,
+    "motivo_saida": "stop de segurança −0.8%",
+    "motivo_de_entrada": "A favor: 5 de 6 tempos abaixo da MM20 (só 1 min acima); triângulo de 1 h confirmado para baixo; 1 h −2,39%, 4 h −5,00%, "
    }
   ],
   "licoes_anteriores": [
@@ -633,23 +615,15 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.16,
-   "n_abertas": 3,
+   "carteira": 8.93,
+   "n_abertas": 1,
    "abertas": [
     [
      "AAVE",
      "venda"
-    ],
-    [
-     "CAKE",
-     "venda"
-    ],
-    [
-     "UNI",
-     "venda"
     ]
    ],
-   "n_fechadas": 29,
+   "n_fechadas": 31,
    "ordem": null
   },
   {
@@ -687,8 +661,8 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.7,
-   "n_abertas": 3,
+   "carteira": 9.43,
+   "n_abertas": 2,
    "abertas": [
     [
      "PUMP",
@@ -697,13 +671,9 @@
     [
      "CAKE",
      "venda"
-    ],
-    [
-     "UNI",
-     "venda"
     ]
    ],
-   "n_fechadas": 10,
+   "n_fechadas": 11,
    "ordem": null
   },
   {
@@ -712,7 +682,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.25,
+   "carteira": 10.37,
    "n_abertas": 1,
    "abertas": [
     [
@@ -729,7 +699,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.15,
+   "carteira": 9.92,
    "n_abertas": 3,
    "abertas": [
     [
@@ -753,13 +723,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 29,
-    "acerto": 0.655,
-    "soma": -0.746,
+    "ops": 31,
+    "acerto": 0.613,
+    "soma": -1.045,
     "ganho_medio": 0.082,
-    "perda_media": -0.23,
-    "fator_lucro": 0.68,
-    "carteira": 9.16
+    "perda_media": -0.217,
+    "fator_lucro": 0.6,
+    "carteira": 8.93
    },
    "openbot_testnet": {
     "ops": 15,
@@ -771,13 +741,13 @@
     "carteira": 9.7
    },
    "treinador": {
-    "ops": 10,
-    "acerto": 0.3,
-    "soma": -0.278,
+    "ops": 11,
+    "acerto": 0.273,
+    "soma": -0.453,
     "ganho_medio": 0.141,
-    "perda_media": -0.1,
-    "fator_lucro": 0.6,
-    "carteira": 9.7
+    "perda_media": -0.109,
+    "fator_lucro": 0.48,
+    "carteira": 9.43
    },
    "laboratorio": {
     "ops": 0,
@@ -786,7 +756,7 @@
     "ganho_medio": null,
     "perda_media": null,
     "fator_lucro": null,
-    "carteira": 10.25
+    "carteira": 10.37
    },
    "guardiao": {
     "ops": 16,
@@ -795,7 +765,7 @@
     "ganho_medio": 0.114,
     "perda_media": -0.232,
     "fator_lucro": 1.08,
-    "carteira": 10.15
+    "carteira": 9.92
    }
   },
   "vereditos": []
