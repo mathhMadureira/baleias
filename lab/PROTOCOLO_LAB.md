@@ -1537,3 +1537,13 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **O que o laboratório já sabe (não decide):** na H64, "stop 1% e alvo 3%" foi a melhor saída medida (+0,309%/aposta corrigido, ganho ÷ perda
   2,58), mas perdeu no bloco mais recente (−0,472%). Alvo maior = acerto menor (36%). **Juiz ao vivo (até 03/12):** por agente, em 30+ operações
   com a regra: ganho médio ≥ 2 × perda média e média por operação > 0.
+
+### H68 e H69, adendo (19/11 ~20:00 UTC, antes de rodar a H68 e de medir qualquer operação r9/r10): alvos maiores por decisão do dono
+- **Dono (19/11):** "aumente os alvos de ganhos, repasse isso para todos os agentes, os alvos maiores." O agente Baleias ligou (commits 3b51fc4d e
+  1de5b148): alvo ≥ 3 × o stop, nunca abaixo de 1% (teto de 5%). Com alvo, o stop móvel só arma na metade do caminho até ele (`stop_movel.armar_em`).
+  Rotina r10. É, na prática, a forma **A2** da H68, ligada **antes** do teste, por decisão do dono.
+- **H68 continua como está, sem mudar critério nem tentativas.** Passa a medir a regra que já está ligada. Se a A2 for reprovada (diferença contra a A0 sem
+  z ≥ 2,24 ou negativa em algum bloco), o Laboratório não desliga: o resultado vai ao dono, que decidiu. Se a A1 (sem móvel) passar e a A2 não, isso também vai ao dono.
+- **H69:** a r10 muda a saída, não a postura de entrada. O controle já usa, em cada operação, o mesmo stop, alvo e prazo e a regra de saída em vigor
+  naquele momento. Assim o efeito da saída sai do excesso. **r9 e r10 contam juntas** como "postura ativa" contra a r8, e a r10 é relatada também à parte.
+  Juiz, prazo e a exclusão da carteira do Laboratório (adendo anterior): iguais.
