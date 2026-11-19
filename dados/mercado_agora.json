@@ -1,6 +1,6 @@
 {
- "t": 1795115240,
- "hora_utc": "2026-11-19 19:07 UTC",
+ "t": 1795115474,
+ "hora_utc": "2026-11-19 19:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
@@ -172,11 +172,17 @@
   -0.52,
   -0.05,
   0.22,
-  -0.28
+  -0.23
  ],
  "contexto": {
-  "t": 1795115241,
+  "t": 1795115475,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795115304,
+    "hora_utc": "19/11 19:08",
+    "titulo": "Bitcoin Enters Death Cross as Anthropic IPO Fails to Lift Wall Street"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795112449,
@@ -260,12 +266,6 @@
     "t": 1795096094,
     "hora_utc": "19/11 13:48",
     "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795096020,
-    "hora_utc": "19/11 13:47",
-    "titulo": "Quantum Upgrade Could Be 'Particularly Challenging' for Blockchains: IOSCO"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.1,
+   "media_top20_anual_pct": 5.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.7,
-    "SOL": -2.7
+    "ETH": 5.7,
+    "SOL": -1.0
    },
    "leitura": "neutro"
   },
@@ -454,7 +454,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.43,
+  "carteira": 9.34,
   "abertas": [
    {
     "moeda": "DOT",
@@ -462,7 +462,7 @@
     "entrada": 0.722,
     "agora": 0.721,
     "resultado_pct": 0.14,
-    "horas_aberta": 0.3,
+    "horas_aberta": 0.4,
     "motivo_de_entrada": "v4 0,345 de subir (confiança 0,155, faixa ≥ 0,12 que acerta 67%); topo duplo de 4 h CONFIRMADO para baixo; volume de 4 h 2,14×; carteiras vendidas em BTC 1×17. "
    }
   ],
@@ -615,7 +615,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.43,
+   "carteira": 9.34,
    "n_abertas": 1,
    "abertas": [
     [
@@ -669,7 +669,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.88,
+   "carteira": 10.7,
    "n_abertas": 2,
    "abertas": [
     [
@@ -690,7 +690,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.44,
+   "carteira": 10.5,
    "n_abertas": 1,
    "abertas": [
     [
@@ -712,7 +712,7 @@
     "ganho_medio": 0.1,
     "perda_media": -0.214,
     "fator_lucro": 0.75,
-    "carteira": 9.43
+    "carteira": 9.34
    },
    "openbot_testnet": {
     "ops": 19,
@@ -739,7 +739,7 @@
     "ganho_medio": 0.492,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 10.88
+    "carteira": 10.7
    },
    "guardiao": {
     "ops": 20,
@@ -748,7 +748,7 @@
     "ganho_medio": 0.14,
     "perda_media": -0.248,
     "fator_lucro": 1.32,
-    "carteira": 10.44
+    "carteira": 10.5
    }
   },
   "vereditos": []
