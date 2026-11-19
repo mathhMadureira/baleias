@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 22:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 22:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.56** · 38 operações fechadas · 1 abertas
+Carteira **US$ 9.60** · 38 operações fechadas · 1 abertas
 
 - **Total:** 23/38 com lucro (61%), resultado -0.70, média -0.018 por operação.
 - **Últimas 24 h:** 11/17 com lucro, +0.70.
@@ -67,15 +67,15 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 - **Amplitude:** 43.1% das moedas subindo em 24 h, 15.5% em 4 h · BTC 24 h -0.56%, 4 h -1.75%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 2.0, 'ETH': -1.0, 'SOL': 1.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.0%/ano · {'BTC': 2.7, 'ETH': -0.4, 'SOL': 2.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** HYPE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · WLFI estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RARE topo duplo (baixa, formado) · RENDER OCO invertido (alta, formado)
+- 📰 19/11 22:36 UTC · Decrypt: Citi Says Customers Are Responsible When AI Banking Agents Go Rogue—Even After a Hack
 - 📰 19/11 22:25 UTC · Cointelegraph: Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express
 - 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 19/11 21:12 UTC · Decrypt: Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price
 - 📰 19/11 21:01 UTC · Cointelegraph: MoonPay seeks US bank charter for stablecoin, custody services
 - 📰 19/11 20:46 UTC · Decrypt: Meet SHRINCS: Bitcoin's Emerging Frontrunner for a Post-Quantum Signature
-- 📰 19/11 20:33 UTC · Cointelegraph: Hyperliquid Anthropic futures priced within 1% of Nasdaq opening price
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
