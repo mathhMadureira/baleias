@@ -1,20 +1,20 @@
 {
- "t": 1795107259,
- "hora_utc": "2026-11-19 16:54 UTC",
+ "t": 1795107503,
+ "hora_utc": "2026-11-19 16:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 111,
-  "subindo_pct": 67.6,
+  "moedas": 113,
+  "subindo_pct": 66.4,
   "mediana_pct": 0.3
  },
  "mercado_4h": {
-  "moedas": 111,
-  "subindo_pct": 18.9,
+  "moedas": 113,
+  "subindo_pct": 18.6,
   "mediana_pct": -1.13
  },
  "mercado_24h": {
-  "moedas": 111,
-  "subindo_pct": 64.0,
+  "moedas": 113,
+  "subindo_pct": 63.7,
   "mediana_pct": 1.12
  },
  "btc": {
@@ -172,11 +172,17 @@
   0.25,
   -0.75,
   -0.72,
-  -0.49
+  -0.46
  ],
  "contexto": {
-  "t": 1795107260,
+  "t": 1795107504,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795107310,
+    "hora_utc": "19/11 16:55",
+    "titulo": "Anthropic Stock Indicated to Open 33% Above IPO Price as AI Stocks Rally"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795104568,
@@ -260,12 +266,6 @@
     "t": 1795091626,
     "hora_utc": "19/11 12:33",
     "titulo": "GTA VI publisher racks up nearly 3x Nvidia’s tokenized stock volume"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795090839,
-    "hora_utc": "19/11 12:20",
-    "titulo": "Bitcoin ETF outflows show waning crypto appetite ahead of Anthropic's Nasdaq debut"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.3,
+   "media_top20_anual_pct": 4.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.6,
+    "ETH": 4.9,
     "SOL": 0.6
    },
    "leitura": "neutro"
@@ -462,7 +462,7 @@
     "entrada": 104.67,
     "agora": 104.32,
     "resultado_pct": 0.33,
-    "horas_aberta": 1.2,
+    "horas_aberta": 1.3,
     "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 1 h −3,82%, 4 h −4,51%, 24 h −2,75%; volume de 1 min 2,92× (queda com volume); topo duplo de 4 h (não con"
    }
   ],
@@ -661,19 +661,10 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.84,
-   "n_abertas": 2,
-   "abertas": [
-    [
-     "PUMP",
-     "venda"
-    ],
-    [
-     "CAKE",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 11,
+   "carteira": 9.76,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 13,
    "ordem": null
   },
   {
@@ -682,7 +673,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.0,
+   "carteira": 10.12,
    "n_abertas": 1,
    "abertas": [
     [
@@ -699,8 +690,8 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.73,
-   "n_abertas": 3,
+   "carteira": 10.55,
+   "n_abertas": 2,
    "abertas": [
     [
      "DOGE",
@@ -709,13 +700,9 @@
     [
      "PUMP",
      "venda"
-    ],
-    [
-     "PENGU",
-     "venda"
     ]
    ],
-   "n_fechadas": 16,
+   "n_fechadas": 17,
    "ordem": null
   }
  ],
@@ -741,13 +728,13 @@
     "carteira": 9.7
    },
    "treinador": {
-    "ops": 11,
-    "acerto": 0.273,
-    "soma": -0.453,
-    "ganho_medio": 0.141,
+    "ops": 13,
+    "acerto": 0.385,
+    "soma": -0.238,
+    "ganho_medio": 0.127,
     "perda_media": -0.109,
-    "fator_lucro": 0.48,
-    "carteira": 9.84
+    "fator_lucro": 0.73,
+    "carteira": 9.76
    },
    "laboratorio": {
     "ops": 0,
@@ -756,16 +743,16 @@
     "ganho_medio": null,
     "perda_media": null,
     "fator_lucro": null,
-    "carteira": 10.0
+    "carteira": 10.12
    },
    "guardiao": {
-    "ops": 16,
-    "acerto": 0.688,
-    "soma": 0.094,
-    "ganho_medio": 0.114,
+    "ops": 17,
+    "acerto": 0.706,
+    "soma": 0.361,
+    "ganho_medio": 0.127,
     "perda_media": -0.232,
-    "fator_lucro": 1.08,
-    "carteira": 10.73
+    "fator_lucro": 1.31,
+    "carteira": 10.55
    }
   },
   "vereditos": []
@@ -778,12 +765,12 @@
   "z_contra_lab": 1.99,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5085,
-    "n": 20295
+    "acerto": 0.5093,
+    "n": 20478
    },
    "segue_maioria_24h": {
-    "acerto": 0.5046,
-    "n": 27015
+    "acerto": 0.5036,
+    "n": 27042
    }
   },
   "referencia_ganha": [],

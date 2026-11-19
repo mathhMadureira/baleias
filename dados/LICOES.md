@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 16:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 16:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -28,47 +28,47 @@ Carteira **US$ 9.70** · 15 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.84** · 11 operações fechadas · 2 abertas
+Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
 
-- **Total:** 3/11 com lucro (27%), resultado -0.45, média -0.041 por operação.
-- **Últimas 24 h:** 3/11 com lucro, -0.45.
-- **Por horário:** 12–17 UTC: 5 op, 0% certas, -0.71 · 18–23 UTC: 6 op, 50% certas, +0.26
-- **Por lado:** venda: 8 op, 25% certas, -0.38 · compra: 3 op, 33% certas, -0.07
-- **Por motivo de saída:** 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- **Total:** 5/13 com lucro (38%), resultado -0.24, média -0.018 por operação.
+- **Últimas 24 h:** 5/13 com lucro, -0.24.
+- **Por horário:** 12–17 UTC: 7 op, 29% certas, -0.50 · 18–23 UTC: 6 op, 50% certas, +0.26
+- **Por lado:** venda: 10 op, 40% certas, -0.17 · compra: 3 op, 33% certas, -0.07
+- **Por motivo de saída:** 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.00** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.12** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.73** · 16 operações fechadas · 3 abertas
+Carteira **US$ 10.55** · 17 operações fechadas · 2 abertas
 
-- **Total:** 11/16 com lucro (69%), resultado +0.09, média +0.006 por operação.
-- **Últimas 24 h:** 11/16 com lucro, +0.09.
-- **Por horário:** 12–17 UTC: 4 op, 25% certas, -0.59 · 18–23 UTC: 12 op, 83% certas, +0.69
-- **Por lado:** venda: 14 op, 64% certas, -0.08 · compra: 2 op, 100% certas, +0.18
-- **Por motivo de saída:** 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19
+- **Total:** 12/17 com lucro (71%), resultado +0.36, média +0.021 por operação.
+- **Últimas 24 h:** 12/17 com lucro, +0.36.
+- **Por horário:** 12–17 UTC: 5 op, 40% certas, -0.33 · 18–23 UTC: 12 op, 83% certas, +0.69
+- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 15 op, 67% certas, +0.18
+- **Por motivo de saída:** 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27
 - **Moedas que mais perderam (≥ 3 op):** TRUMP +0.04 (4 op) · PUMP +0.38 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** PUMP +0.38 (3 op) · TRUMP +0.04 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 64.0% das moedas subindo em 24 h, 18.9% em 4 h · BTC 24 h 1.21%, 4 h -0.96%.
+- **Amplitude:** 63.7% das moedas subindo em 24 h, 18.6% em 4 h · BTC 24 h 1.21%, 4 h -0.96%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': 11.0, 'ETH': 4.6, 'SOL': 0.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 11.0, 'ETH': 4.9, 'SOL': 0.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · YB fundo duplo (alta, formado)
+- 📰 19/11 16:55 UTC · Decrypt: Anthropic Stock Indicated to Open 33% Above IPO Price as AI Stocks Rally
 - 📰 19/11 16:09 UTC · CoinDesk: Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure
 - 📰 19/11 16:07 UTC · Cointelegraph: Anthropic shares expected to open at $110, 32.5% above $83 IPO price
 - 📰 19/11 15:54 UTC · Decrypt: Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
-- 📰 19/11 13:48 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -106,7 +106,7 @@ Carteira **US$ 10.73** · 16 operações fechadas · 3 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28113 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28113 apostas conferidas ao vivo, acerto 55.3%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
