@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 12:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 12:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,21 +58,21 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 52.8% das moedas subindo em 24 h, 65.7% em 4 h · BTC 24 h -0.7%, 4 h 0.02%.
+- **Amplitude:** 52.3% das moedas subindo em 24 h, 65.1% em 4 h · BTC 24 h -0.7%, 4 h 0.02%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.0%/ano · {'BTC': 6.1, 'ETH': 1.6, 'SOL': 7.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.7%/ano · {'BTC': 6.1, 'ETH': 1.7, 'SOL': 7.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado) · PYTH fundo duplo (alta, formado) · SPK topo duplo (baixa, formado)
+- 📰 19/11 12:20 UTC · CoinDesk: Bitcoin ETF outflows show waning crypto appetite ahead of Anthropic's Nasdaq debut
 - 📰 19/11 12:08 UTC · CoinDesk: Bitcoin holds above $63,750 but Fed rate-hike threats loom large
 - 📰 19/11 11:30 UTC · CoinDesk: North Korean hackers used Sky's stablecoin system, putting billions at freeze risk
 - 📰 19/11 11:19 UTC · Cointelegraph: Sweden’s H100 could tap Bitcoin trading pool to fund share buybacks
 - 📰 19/11 11:15 UTC · Decrypt: GameStop CEO Says Digital-Only Games Have ‘Hurt Consumers’ as GTA 6 Skips Discs
 - 📰 19/11 11:06 UTC · CoinDesk: Anthropic’s $107 billion sale set to top SpaceX’s IPO as tokenized stocks gain traction
-- 📰 19/11 10:55 UTC · CoinDesk: Financial firms must act now as quantum computers grow ‘highly advanced,’ IOSCO warns
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 13.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 13.2 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
@@ -107,7 +107,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 27409 apostas conferidas ao vivo, acerto 55.3%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 27409 apostas conferidas ao vivo, acerto 55.3%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

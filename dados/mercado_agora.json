@@ -1,21 +1,21 @@
 {
- "t": 1795090863,
- "hora_utc": "2026-11-19 12:21 UTC",
+ "t": 1795091038,
+ "hora_utc": "2026-11-19 12:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 108,
-  "subindo_pct": 72.2,
-  "mediana_pct": 0.27
+  "moedas": 109,
+  "subindo_pct": 71.6,
+  "mediana_pct": 0.26
  },
  "mercado_4h": {
-  "moedas": 108,
-  "subindo_pct": 65.7,
-  "mediana_pct": 0.43
+  "moedas": 109,
+  "subindo_pct": 65.1,
+  "mediana_pct": 0.42
  },
  "mercado_24h": {
-  "moedas": 108,
-  "subindo_pct": 52.8,
-  "mediana_pct": 0.15
+  "moedas": 109,
+  "subindo_pct": 52.3,
+  "mediana_pct": 0.13
  },
  "btc": {
   "1h": 0.07,
@@ -172,11 +172,17 @@
   0.19,
   -0.1,
   0.24,
-  -0.29
+  -0.08
  ],
  "contexto": {
-  "t": 1795090864,
+  "t": 1795091038,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795090839,
+    "hora_utc": "19/11 12:20",
+    "titulo": "Bitcoin ETF outflows show waning crypto appetite ahead of Anthropic's Nasdaq debut"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795090086,
@@ -260,12 +266,6 @@
     "t": 1795075477,
     "hora_utc": "19/11 08:04",
     "titulo": "BTCPay Server issues emergency update for 5 security flaws"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795074956,
-    "hora_utc": "19/11 07:55",
-    "titulo": "Bitcoin retests $62K as Nasdaq futures rise ahead of Anthropic debut"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.0,
+   "media_top20_anual_pct": 8.7,
    "principais_anual_pct": {
     "BTC": 6.1,
-    "ETH": 1.6,
-    "SOL": 7.9
+    "ETH": 1.7,
+    "SOL": 7.7
    },
    "leitura": "neutro"
   },
@@ -401,8 +401,8 @@
  },
  "v4": {
   "vela": "12:15 UTC",
-  "apostas": 113,
-  "compras": 39,
+  "apostas": 112,
+  "compras": 38,
   "vendas": 74,
   "mais_confiantes_venda": [
    {
@@ -740,12 +740,12 @@
   "z_contra_lab": 2.01,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5107,
-    "n": 19604
+    "acerto": 0.5113,
+    "n": 19712
    },
    "segue_maioria_24h": {
-    "acerto": 0.5056,
-    "n": 26414
+    "acerto": 0.507,
+    "n": 26326
    }
   },
   "referencia_ganha": [],
