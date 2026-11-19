@@ -1,6 +1,6 @@
 {
- "t": 1795104493,
- "hora_utc": "2026-11-19 16:08 UTC",
+ "t": 1795104740,
+ "hora_utc": "2026-11-19 16:12 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -172,11 +172,23 @@
   0.25,
   -0.75,
   -0.72,
-  -0.09
+  0.13
  ],
  "contexto": {
-  "t": 1795104494,
+  "t": 1795104741,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795104568,
+    "hora_utc": "19/11 16:09",
+    "titulo": "Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795104471,
+    "hora_utc": "19/11 16:07",
+    "titulo": "Anthropic shares expected to open 26.5% above $83 IPO price"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795103643,
@@ -254,18 +266,6 @@
     "t": 1795090839,
     "hora_utc": "19/11 12:20",
     "titulo": "Bitcoin ETF outflows show waning crypto appetite ahead of Anthropic's Nasdaq debut"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795090086,
-    "hora_utc": "19/11 12:08",
-    "titulo": "Bitcoin holds above $63,750 but Fed rate-hike threats loom large"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795087800,
-    "hora_utc": "19/11 11:30",
-    "titulo": "North Korean hackers used Sky's stablecoin system, putting billions at freeze risk"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.1,
+   "media_top20_anual_pct": 3.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 1.8,
-    "SOL": -5.9
+    "ETH": 3.6,
+    "SOL": -3.6
    },
    "leitura": "neutro"
   },
@@ -461,7 +461,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.93,
+  "carteira": 8.99,
   "abertas": [
    {
     "moeda": "AAVE",
@@ -469,7 +469,7 @@
     "entrada": 104.67,
     "agora": 104.78,
     "resultado_pct": -0.11,
-    "horas_aberta": 0.4,
+    "horas_aberta": 0.5,
     "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 1 h −3,82%, 4 h −4,51%, 24 h −2,75%; volume de 1 min 2,92× (queda com volume); topo duplo de 4 h (não con"
    },
    {
@@ -478,7 +478,7 @@
     "entrada": 1.59,
     "agora": 1.59,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "Mantém: 6 de 6 tempos abaixo da MM20; 15 min −0,38%, 1 h −1,55%, 4 h −2,04%; volume de 1 min 1,42×; v4 0,485 (leve venda). Alvo novo 1,5% (3 × stop 0,5%), prazo"
    },
    {
@@ -487,27 +487,20 @@
     "entrada": 4.946,
     "agora": 4.946,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "A favor: 5 de 6 tempos abaixo da MM20 (só 1 min acima); triângulo de 1 h confirmado para baixo; 1 h −2,39%, 4 h −5,00%, 24 h −3,17%; volume 4 h 2,69×; v4 venda "
    },
    {
     "moeda": "SKY",
     "lado": "venda",
-    "entrada": 0.04148,
+    "entrada": 0.03996,
     "agora": 0.04148,
-    "resultado_pct": -0.0,
-    "horas_aberta": 0.1,
-    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; estrutura de topos e fundos para baixo em 15 min, 1 h e 4 h; 1 min −1,11% fora do normal; 1 h −2,44%, 4 h −6,68%, 24 h −1"
+    "resultado_pct": -3.8,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Mantém: 6 de 6 tempos abaixo da MM20; estrutura para baixo em 15 min, 1 h e 4 h; 15 min −2,67%, 1 h −4,80%, 4 h −6,99%; volume de 1 min 6,01×. Contra: v4 compra"
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "OP",
-    "lado": "venda",
-    "resultado_usd": -0.113,
-    "motivo_saida": "fora da lista de posições do Claude",
-    "motivo_de_entrada": "v4 0.413 de subir (confiança 0.087, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h +0.53%"
-   },
    {
     "moeda": "ZKP",
     "lado": "venda",
@@ -605,13 +598,16 @@
     "resultado_usd": -0.124,
     "motivo_saida": "stop de segurança −0.5%",
     "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; 15 min −0,69%, 1 h −1,61%, 4 h −1,85%; a +2,45% da mínima de 24 h (espaço até ela"
+   },
+   {
+    "moeda": "SKY",
+    "lado": "venda",
+    "resultado_usd": 0.263,
+    "motivo_saida": "stop móvel (pico +3.13%, guardou +1.47%)",
+    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; estrutura de topos e fundos para baixo em 15 min, 1 h e 4 h; 1 min −1,11% fora do"
    }
   ],
   "licoes_anteriores": [
-   {
-    "t": 1795094573,
-    "texto": "Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, soma −1,58, E = −0,12 por operação. Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054. Na simulada acerto muito, mas o ganho médio é 3,6 vezes menor que a perda. Por isso agora uso alvo de 2× o stop (MORPHO venda: stop 0,6%, alvo 1,2%). A conferir: se a venda de MORPHO toca o alvo antes do stop em 1"
-   },
    {
     "t": 1795095805,
     "texto": "MORPHO venda (entrada 1,6884 às 13:23 UTC): após 18 min, −0,02 USDT no testnet; nem stop (1,6986) nem alvo (1,6681) tocados. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, E = −0,12 por operação. Caderno: 23 fechadas na carteira e 0 com leitura anotada, então ainda não sei o que funciona para mim. Revisor cortou as 3 candidatas com confiança ≥ 0,08: nenhuma tinha 4 de 6 tempos a fav"
@@ -639,6 +635,10 @@
    {
     "t": 1795103583,
     "texto": "Conta de teste: 14 fechadas, p 0,357, G +0,234, L −0,328, E = 0,357×0,234 − 0,643×0,328 ≈ −0,127 US$ por operação; ganho médio menor que a perda média, por isso o alvo 3 × stop. Caderno: 3 operações com leitura anotada (MORPHO venda, 100% de acerto, +0,181 US$), poucas. Verificável: AAVE e CAKE (6 de 6, contra o v4 na entrada) e as novas UNI e SKY vendidas: se 3 de 4 fecharem no lucro, o 6 de 6 a "
+   },
+   {
+    "t": 1795104517,
+    "texto": "Conta de teste: 14 fechadas, p 0,357, G +0,234, L −0,328, E ≈ −0,127 US$ por operação (sem fechamento novo nesta rodada). Abertas: SKY venda +0,31 (6 de 6 a favor, contra o v4) e AAVE −0,02, CAKE −0,04, UNI −0,11. Caderno: 4 operações com leitura, 75% de acerto, 6 de 6 a favor com 3 operações (67%), poucas. Verificável: se SKY sair no lucro pelo stop móvel e UNI (5 de 6) sair no stop, conta mais u"
    }
   ]
  },
@@ -649,7 +649,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.93,
+   "carteira": 8.99,
    "n_abertas": 4,
    "abertas": [
     [
@@ -669,7 +669,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 27,
+   "n_fechadas": 28,
    "ordem": null
   },
   {
@@ -678,7 +678,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.44,
+   "carteira": 8.68,
    "n_abertas": 4,
    "abertas": [
     [
@@ -744,13 +744,9 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.61,
-   "n_abertas": 3,
+   "carteira": 10.39,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "PENGU",
-     "venda"
-    ],
     [
      "DOGE",
      "venda"
@@ -760,7 +756,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 14,
+   "n_fechadas": 15,
    "ordem": null
   }
  ],
@@ -768,13 +764,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 27,
-    "acerto": 0.63,
-    "soma": -1.18,
-    "ganho_medio": 0.066,
+    "ops": 28,
+    "acerto": 0.643,
+    "soma": -0.917,
+    "ganho_medio": 0.077,
     "perda_media": -0.23,
-    "fator_lucro": 0.49,
-    "carteira": 8.93
+    "fator_lucro": 0.6,
+    "carteira": 8.99
    },
    "openbot_testnet": {
     "ops": 14,
@@ -783,7 +779,7 @@
     "ganho_medio": 0.234,
     "perda_media": -0.328,
     "fator_lucro": 0.45,
-    "carteira": 8.44
+    "carteira": 8.68
    },
    "treinador": {
     "ops": 9,
@@ -804,13 +800,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 14,
-    "acerto": 0.786,
-    "soma": 0.639,
+    "ops": 15,
+    "acerto": 0.733,
+    "soma": 0.397,
     "ganho_medio": 0.114,
-    "perda_media": -0.205,
-    "fator_lucro": 2.04,
-    "carteira": 10.61
+    "perda_media": -0.215,
+    "fator_lucro": 1.46,
+    "carteira": 10.39
    }
   },
   "vereditos": []
@@ -878,12 +874,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "18/11 22:02",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Regime de baixa (24,5% sobem em 24 h). Varredura de 1 s a 1 dia + melhores carteiras: vendo ZEC e AAVE (6/6 tempos abaixo da MM20; 3 carteiras vendidas em cada), mantenho RUNE, fecho LA (v4 virou para alta). Scalper: stop 0,6%, alvo 0,5%, prazo 45 min."
-  },
-  {
    "hora_utc": "18/11 22:17",
    "de": "claude",
    "para": "sala",
@@ -948,6 +938,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Queda: só 9% das 111 moedas sobem em 1 h; BTC −1,68% em 1 h. Chefe e testnet mantêm AAVE e CAKE vendidas (alvos novos 2,7% e 1,5%) e vendem UNI (5 de 6 tempos, triângulo de 1 h ↓; stop 0,8%, alvo 2,4%) e SKY (6 de 6, 4 h −6,68%; stop 1,2%, alvo 3,6%). Conta de teste: 14 fechadas, p 0,36, E −0,13."
+  },
+  {
+   "hora_utc": "19/11 16:12",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Repique: 60,4% das 106 moedas sobem em 1 h; BTC −0,45% em 1 h. Chefe e testnet mantêm as 4 vendas: SKY +0,31 com stop móvel em 0,0413, AAVE −0,02, CAKE −0,04, UNI −0,11. Sem caixa para entrada nova (US$ 0,75). Conta de teste: 14 fechadas, US$ 8,68."
   }
  ]
 }
