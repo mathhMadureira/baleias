@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 13:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 13:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.72** · 23 operações fechadas · 1 abertas
+Carteira **US$ 8.69** · 23 operações fechadas · 1 abertas
 
 - **Total:** 14/23 com lucro (61%), resultado -1.24, média -0.054 por operação.
 - **Últimas 24 h:** 7/13 com lucro, -0.65.
@@ -28,7 +28,7 @@ Carteira **US$ 8.42** · 13 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.21** · 6 operações fechadas · 1 abertas
+Carteira **US$ 10.18** · 6 operações fechadas · 1 abertas
 
 - **Total:** 3/6 com lucro (50%), resultado +0.26, média +0.043 por operação.
 - **Últimas 24 h:** 3/6 com lucro, +0.26.
@@ -60,15 +60,15 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 52.7% das moedas subindo em 24 h, 63.6% em 4 h · BTC 24 h -0.58%, 4 h 0.02%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.7%/ano · {'BTC': -1.8, 'ETH': -0.4, 'SOL': -4.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.4%/ano · {'BTC': -2.2, 'ETH': -0.6, 'SOL': -4.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** STRK estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · UNI estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado)
+- 📰 19/11 13:30 UTC · Cointelegraph: Ethereum’s new DeFi security tool raises questions over censorship
 - 📰 19/11 13:11 UTC · CoinDesk: Crypto traders vs. Wall Street: OKX’s Anthropic markets put IPO pricing to the test
 - 📰 19/11 13:05 UTC · Decrypt: Morning Minute: Google’s Newest AI Model Tops Benchmarks Ahead of Anthropic IPO
 - 📰 19/11 12:59 UTC · Decrypt: Binance Wins $6.5B Freezing Order Over Hack That Can Be Served via the Blockchain
 - 📰 19/11 12:44 UTC · Cointelegraph: Hong Kong adds Hyperliquid to list of ‘suspicious’ crypto platforms
 - 📰 19/11 12:40 UTC · CoinDesk: Trump Media wants to clear $884 million of debt without selling its bitcoin
-- 📰 19/11 12:33 UTC · Cointelegraph: GTA VI publisher racks up nearly 3x Nvidia’s tokenized stock volume
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
