@@ -1,23 +1,23 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 15:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 16:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.88** · 26 operações fechadas · 2 abertas
+Carteira **US$ 8.80** · 27 operações fechadas · 4 abertas
 
-- **Total:** 17/26 com lucro (65%), resultado -1.06, média -0.041 por operação.
-- **Últimas 24 h:** 10/16 com lucro, -0.47.
-- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 13 op, 54% certas, -0.65 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 10 op, 80% certas, +0.30
-- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 15 op, 73% certas, +0.18
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13
+- **Total:** 17/27 com lucro (63%), resultado -1.18, média -0.044 por operação.
+- **Últimas 24 h:** 10/17 com lucro, -0.60.
+- **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 13 op, 54% certas, -0.65 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 11 op, 73% certas, +0.17
+- **Por lado:** compra: 11 op, 55% certas, -1.24 · venda: 16 op, 69% certas, +0.06
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · A favor: 6 de 6 tempos abaixo : 1 op, 0% certas, -0.12 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13
 - **Moedas que mais perderam (≥ 3 op):** RUNE +0.16 (3 op) · MORPHO +0.18 (3 op) · ZEC +0.30 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** ZEC +0.30 (4 op) · MORPHO +0.18 (3 op) · RUNE +0.16 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.47** · 14 operações fechadas · 2 abertas
+Carteira **US$ 8.44** · 14 operações fechadas · 4 abertas
 
 - **Total:** 5/14 com lucro (36%), resultado -1.45, média -0.104 por operação.
 - **Últimas 24 h:** 5/11 com lucro, +0.76.
@@ -28,13 +28,13 @@ Carteira **US$ 8.47** · 14 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.94** · 8 operações fechadas · 1 abertas
+Carteira **US$ 9.85** · 9 operações fechadas · 0 abertas
 
-- **Total:** 3/8 com lucro (38%), resultado +0.01, média +0.001 por operação.
-- **Últimas 24 h:** 3/8 com lucro, +0.01.
-- **Por horário:** 12–17 UTC: 2 op, 0% certas, -0.25 · 18–23 UTC: 6 op, 50% certas, +0.26
-- **Por lado:** compra: 3 op, 33% certas, -0.07 · venda: 5 op, 40% certas, +0.08
-- **Por motivo de saída:** 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- **Total:** 3/9 com lucro (33%), resultado -0.15, média -0.017 por operação.
+- **Últimas 24 h:** 3/9 com lucro, -0.15.
+- **Por horário:** 12–17 UTC: 3 op, 0% certas, -0.41 · 18–23 UTC: 6 op, 50% certas, +0.26
+- **Por lado:** venda: 6 op, 33% certas, -0.08 · compra: 3 op, 33% certas, -0.07
+- **Por motivo de saída:** 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
@@ -45,13 +45,13 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.69** · 13 operações fechadas · 2 abertas
+Carteira **US$ 10.53** · 14 operações fechadas · 1 abertas
 
-- **Total:** 11/13 com lucro (85%), resultado +0.88, média +0.068 por operação.
-- **Últimas 24 h:** 11/13 com lucro, +0.88.
-- **Por horário:** 12–17 UTC: 1 op, 100% certas, +0.19 · 18–23 UTC: 12 op, 83% certas, +0.69
-- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 11 op, 82% certas, +0.71
-- **Por motivo de saída:** entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19
+- **Total:** 11/14 com lucro (79%), resultado +0.64, média +0.046 por operação.
+- **Últimas 24 h:** 11/14 com lucro, +0.64.
+- **Por horário:** 12–17 UTC: 2 op, 50% certas, -0.05 · 18–23 UTC: 12 op, 83% certas, +0.69
+- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 12 op, 75% certas, +0.46
+- **Por motivo de saída:** memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19
 - **Moedas que mais perderam (≥ 3 op):** TRUMP +0.04 (4 op) · PUMP +0.38 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** PUMP +0.38 (3 op) · TRUMP +0.04 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 13 operações fechadas · 2 abertas
 
 - **Amplitude:** 44.1% das moedas subindo em 24 h, 16.2% em 4 h · BTC 24 h -0.64%, 4 h -1.7%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 10.8, 'ETH': 2.8, 'SOL': -1.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 3.1, 'SOL': 4.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LDO topo duplo (baixa, CONFIRMOU) · UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
 - 📰 19/11 15:54 UTC · Decrypt: Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went
@@ -72,12 +72,12 @@ Carteira **US$ 10.69** · 13 operações fechadas · 2 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 19/11 15:53 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Queda forte agora: só 9,0% das 111 moedas sobem em 1 h (mediana −2,22%) e 16,2% em 4 h (mediana −2,53%); 24 h neutro (44,1%). BTC −1,68% em 1 h, −1,70% em 4 h, 
 - 19/11 15:38 UTC · **AAVE venda, CAKE venda** · Regime neutro em 24 h (48,6% das 109 moedas sobem), mas queda agora: só 10,8% sobem na última hora e 21,6% em 4 h (mediana −1,11% e −1,12%). BTC −0,85% em 1 h, 
 - 19/11 15:23 UTC · **fora do mercado** · Regime neutro: 56,9% das 109 moedas sobem em 24 h, 37,6% em 4 h e só 13,8% na última hora (mediana −0,84%). BTC −0,62% em 1 h, −0,35% em 4 h, −0,14% em 24 h, a 
 - 19/11 15:08 UTC · **fora do mercado** · Regime neutro: 59,6% das 109 moedas sobem em 24 h e 42,2% em 4 h; só 15,5% das 110 subiram na última hora (mediana −0,77%). BTC −0,75% em 1 h, −0,37% em 4 h, −0
 - 19/11 14:53 UTC · **MORPHO venda** · Regime neutro: 65,1% das 109 moedas sobem em 24 h e 57,8% em 4 h; só 39,1% das 110 subiram na última hora (mediana −0,10%). BTC +0,35% em 1 h, +0,11% em 4 h, +1
 - 19/11 14:42 UTC · **MORPHO venda** · Regime neutro: 56,5% das 108 moedas sobem em 24 h e 56,5% em 4 h; só 30,3% das 109 subiram na última hora (mediana −0,16%). BTC +0,36% em 1 h, +0,17% em 4 h, −0
-- 19/11 13:43 UTC · **MORPHO venda** · Regime neutro: 53,2% das 109 moedas sobem em 24 h e 64,2% em 4 h; 85,5% das 110 subiram na última hora (mediana +0,67%). BTC −0,05% em 1 h, +0,02% em 4 h, −0,58
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 

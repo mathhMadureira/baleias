@@ -1,6 +1,6 @@
 {
- "t": 1795103784,
- "hora_utc": "2026-11-19 15:56 UTC",
+ "t": 1795104016,
+ "hora_utc": "2026-11-19 16:00 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -149,7 +149,6 @@
   }
  ],
  "btc_1h_ultimas_24": [
-  -0.57,
   0.56,
   0.09,
   -0.67,
@@ -172,10 +171,11 @@
   -0.11,
   0.25,
   -0.75,
-  -0.85
+  -0.72,
+  0.02
  ],
  "contexto": {
-  "t": 1795103785,
+  "t": 1795104017,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.5,
+   "media_top20_anual_pct": 6.8,
    "principais_anual_pct": {
-    "BTC": 10.8,
-    "ETH": 2.8,
-    "SOL": -1.4
+    "BTC": 11.0,
+    "ETH": 3.1,
+    "SOL": 4.6
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.88,
+  "carteira": 8.8,
   "abertas": [
    {
     "moeda": "AAVE",
@@ -497,27 +497,38 @@
     "entrada": 104.67,
     "agora": 104.48,
     "resultado_pct": 0.18,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 1 h −3,82%, 4 h −4,51%, 24 h −2,75%; volume de 1 min 2,92× (queda com volume); topo duplo de 4 h (não con"
    },
    {
     "moeda": "CAKE",
     "lado": "venda",
-    "entrada": 1.587,
+    "entrada": 1.59,
     "agora": 1.587,
-    "resultado_pct": -0.0,
-    "horas_aberta": 0.2,
-    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; 15 min −0,69%, 1 h −1,61%, 4 h −1,85%; a +2,45% da mínima de 24 h (espaço até ela); mercado com 10,8% subindo na hora e B"
+    "resultado_pct": 0.19,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Mantém: 6 de 6 tempos abaixo da MM20; 15 min −0,38%, 1 h −1,55%, 4 h −2,04%; volume de 1 min 1,42×; v4 0,485 (leve venda). Alvo novo 1,5% (3 × stop 0,5%), prazo"
+   },
+   {
+    "moeda": "UNI",
+    "lado": "venda",
+    "entrada": 4.946,
+    "agora": 4.922,
+    "resultado_pct": 0.49,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "A favor: 5 de 6 tempos abaixo da MM20 (só 1 min acima); triângulo de 1 h confirmado para baixo; 1 h −2,39%, 4 h −5,00%, 24 h −3,17%; volume 4 h 2,69×; v4 venda "
+   },
+   {
+    "moeda": "SKY",
+    "lado": "venda",
+    "entrada": 0.04148,
+    "agora": 0.04229,
+    "resultado_pct": -1.95,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; estrutura de topos e fundos para baixo em 15 min, 1 h e 4 h; 1 min −1,11% fora do normal; 1 h −2,44%, 4 h −6,68%, 24 h −1"
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "ZKP",
-    "lado": "venda",
-    "resultado_usd": 0.064,
-    "motivo_saida": "stop móvel (pico +0.59%, guardou +0.41%)",
-    "motivo_de_entrada": "v4 0.403 de subir (confiança 0.097, faixa ≥ 0,08 da H36); regime neutro, os dois lados valem (46.2% subindo); 1 h +0.00%"
-   },
    {
     "moeda": "OP",
     "lado": "venda",
@@ -615,13 +626,16 @@
     "resultado_usd": 0.083,
     "motivo_saida": "stop móvel (pico +0.78%, guardou +0.54%)",
     "motivo_de_entrada": "mantém: 6 de 6 tempos abaixo da MM20; 15 min −0,53%, 1 h −0,83%, 4 h −0,65%, 1 dia −2,10%; v4 0,530 (confiança 0,030, ne"
+   },
+   {
+    "moeda": "CAKE",
+    "lado": "venda",
+    "resultado_usd": -0.124,
+    "motivo_saida": "stop de segurança −0.5%",
+    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; 15 min −0,69%, 1 h −1,61%, 4 h −1,85%; a +2,45% da mínima de 24 h (espaço até ela"
    }
   ],
   "licoes_anteriores": [
-   {
-    "t": 1795043644,
-    "texto": "Sem operação nova nesta rodada. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, soma −1,58, E = −0,122 por operação. Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054. As últimas vendas (ZEC −0,009, AAVE +0,061) entraram com o mercado já perto da mínima de 24 h e saíram no stop movido. Por isso não vendo BTC a +0,84% da mínima, com o v4 contra. C"
-   },
    {
     "t": 1795094573,
     "texto": "Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, soma −1,58, E = −0,12 por operação. Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054. Na simulada acerto muito, mas o ganho médio é 3,6 vezes menor que a perda. Por isso agora uso alvo de 2× o stop (MORPHO venda: stop 0,6%, alvo 1,2%). A conferir: se a venda de MORPHO toca o alvo antes do stop em 1"
@@ -649,6 +663,10 @@
    {
     "t": 1795102711,
     "texto": "Entradas novas: AAVE venda e CAKE venda, as duas com 6 de 6 tempos a favor e contra o v4. Conta de teste: 14 fechadas, US$ 8,546, 0 abertas antes desta rodada; a última, MORPHO venda, saiu +0,1264 USDT pelo stop móvel. Caderno: 3 operações com leitura anotada (todas MORPHO venda, 100% de acerto, +0,181 US$; 2 com 6 de 6 e 1 com 4–5 de 6 tempos a favor; carteiras a favor). São poucas, não sei ainda"
+   },
+   {
+    "t": 1795103583,
+    "texto": "Conta de teste: 14 fechadas, p 0,357, G +0,234, L −0,328, E = 0,357×0,234 − 0,643×0,328 ≈ −0,127 US$ por operação; ganho médio menor que a perda média, por isso o alvo 3 × stop. Caderno: 3 operações com leitura anotada (MORPHO venda, 100% de acerto, +0,181 US$), poucas. Verificável: AAVE e CAKE (6 de 6, contra o v4 na entrada) e as novas UNI e SKY vendidas: se 3 de 4 fecharem no lucro, o 6 de 6 a "
    }
   ]
  },
@@ -659,8 +677,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.88,
-   "n_abertas": 2,
+   "carteira": 8.8,
+   "n_abertas": 4,
    "abertas": [
     [
      "AAVE",
@@ -669,9 +687,17 @@
     [
      "CAKE",
      "venda"
+    ],
+    [
+     "UNI",
+     "venda"
+    ],
+    [
+     "SKY",
+     "venda"
     ]
    ],
-   "n_fechadas": 26,
+   "n_fechadas": 27,
    "ordem": null
   },
   {
@@ -680,8 +706,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.47,
-   "n_abertas": 2,
+   "carteira": 8.44,
+   "n_abertas": 4,
    "abertas": [
     [
      "AAVE",
@@ -689,6 +715,14 @@
     ],
     [
      "CAKE",
+     "venda"
+    ],
+    [
+     "UNI",
+     "venda"
+    ],
+    [
+     "SKY",
      "venda"
     ]
    ],
@@ -701,15 +735,10 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.94,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "CAKE",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 8,
+   "carteira": 9.85,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 9,
    "ordem": null
   },
   {
@@ -730,19 +759,15 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.69,
-   "n_abertas": 2,
+   "carteira": 10.53,
+   "n_abertas": 1,
    "abertas": [
     [
      "PENGU",
      "venda"
-    ],
-    [
-     "DOGE",
-     "venda"
     ]
    ],
-   "n_fechadas": 13,
+   "n_fechadas": 14,
    "ordem": null
   }
  ],
@@ -750,13 +775,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 26,
-    "acerto": 0.654,
-    "soma": -1.056,
+    "ops": 27,
+    "acerto": 0.63,
+    "soma": -1.18,
     "ganho_medio": 0.066,
-    "perda_media": -0.242,
-    "fator_lucro": 0.51,
-    "carteira": 8.88
+    "perda_media": -0.23,
+    "fator_lucro": 0.49,
+    "carteira": 8.8
    },
    "openbot_testnet": {
     "ops": 14,
@@ -765,16 +790,16 @@
     "ganho_medio": 0.234,
     "perda_media": -0.328,
     "fator_lucro": 0.45,
-    "carteira": 8.47
+    "carteira": 8.44
    },
    "treinador": {
-    "ops": 8,
-    "acerto": 0.375,
-    "soma": 0.009,
+    "ops": 9,
+    "acerto": 0.333,
+    "soma": -0.152,
     "ganho_medio": 0.141,
-    "perda_media": -0.083,
-    "fator_lucro": 1.02,
-    "carteira": 9.94
+    "perda_media": -0.096,
+    "fator_lucro": 0.73,
+    "carteira": 9.85
    },
    "laboratorio": {
     "ops": 0,
@@ -786,13 +811,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 13,
-    "acerto": 0.846,
-    "soma": 0.882,
+    "ops": 14,
+    "acerto": 0.786,
+    "soma": 0.639,
     "ganho_medio": 0.114,
-    "perda_media": -0.186,
-    "fator_lucro": 3.37,
-    "carteira": 10.69
+    "perda_media": -0.205,
+    "fator_lucro": 2.04,
+    "carteira": 10.53
    }
   },
   "vereditos": []
@@ -860,12 +885,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "18/11 21:43",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Regime de baixa (25,5% das 106 moedas sobem em 24 h, 20,8% em 4 h; BTC −3,08% em 24 h). Melhores carteiras da Hyperliquid vendidas: BTC 0×18, ETH 0×9. Chefe e testnet: mantêm RUNE venda e vendem LA (v4 0,402; stop 0,8%, alvo 0,5%, 45 min). KITE saiu no stop no simulado (−0,157)."
-  },
-  {
    "hora_utc": "18/11 22:02",
    "de": "claude",
    "para": "sala",
@@ -930,6 +949,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Queda na hora: só 10,8% das 109 moedas sobem em 1 h; BTC −0,85% em 1 h. Chefe e testnet vendem AAVE (6 de 6 tempos abaixo da MM20, volume 2,92×; stop 0,9%, alvo 0,6%, 60 min) e CAKE (6 de 6; stop 0,5%, alvo 0,4%, 60 min); o v4 dá compra nas duas. Conta de teste: 14 fechadas, US$ 8,55."
+  },
+  {
+   "hora_utc": "19/11 16:00",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Queda: só 9% das 111 moedas sobem em 1 h; BTC −1,68% em 1 h. Chefe e testnet mantêm AAVE e CAKE vendidas (alvos novos 2,7% e 1,5%) e vendem UNI (5 de 6 tempos, triângulo de 1 h ↓; stop 0,8%, alvo 2,4%) e SKY (6 de 6, 4 h −6,68%; stop 1,2%, alvo 3,6%). Conta de teste: 14 fechadas, p 0,36, E −0,13."
   }
  ]
 }
