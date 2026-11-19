@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 14:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 14:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -17,7 +17,7 @@ Carteira **US$ 8.81** · 24 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.42** · 13 operações fechadas · 1 abertas
+Carteira **US$ 8.52** · 13 operações fechadas · 1 abertas
 
 - **Total:** 4/13 com lucro (31%), resultado -1.58, média -0.122 por operação.
 - **Últimas 24 h:** 4/11 com lucro, +0.18.
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 56.0% das moedas subindo em 24 h, 56.0% em 4 h · BTC 24 h -0.1%, 4 h 0.17%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.0%/ano · {'BTC': -2.8, 'ETH': 0.4, 'SOL': 6.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.4%/ano · {'BTC': -1.7, 'ETH': 0.3, 'SOL': 6.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · TAO fundo duplo (alta, formado) · UNI triângulo ascendente (alta, formado) · WLD fundo duplo (alta, formado)
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'

@@ -1,6 +1,6 @@
 {
- "t": 1795099186,
- "hora_utc": "2026-11-19 14:39 UTC",
+ "t": 1795099392,
+ "hora_utc": "2026-11-19 14:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 109,
@@ -172,10 +172,10 @@
   0.24,
   -0.11,
   0.25,
-  -0.12
+  -0.14
  ],
  "contexto": {
-  "t": 1795099187,
+  "t": 1795099393,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 11.0,
+   "media_top20_anual_pct": 11.4,
    "principais_anual_pct": {
-    "BTC": -2.8,
-    "ETH": 0.4,
-    "SOL": 6.0
+    "BTC": -1.7,
+    "ETH": 0.3,
+    "SOL": 6.4
    },
    "leitura": "neutro"
   },
@@ -645,7 +645,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.42,
+   "carteira": 8.52,
    "n_abertas": 1,
    "abertas": [
     [
@@ -712,7 +712,7 @@
     "ganho_medio": 0.261,
     "perda_media": -0.328,
     "fator_lucro": 0.4,
-    "carteira": 8.42
+    "carteira": 8.52
    },
    "treinador": {
     "ops": 7,
