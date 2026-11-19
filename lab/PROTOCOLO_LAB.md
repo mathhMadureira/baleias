@@ -1436,3 +1436,52 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   junto com a entrada na corretora, H59).
 - **O que o laboratório já sabe (não decide; o dono decidiu):** rompimentos de 5 min e de 1 h não pagaram o custo como regra fixa (H25, H66).
 - **Juiz (até 03/12):** por agente, operações abertas por gatilho × abertas na rodada, em 30+ de cada: média por operação e fator de lucro.
+
+## Hipótese 68: saída das posições com alvo do agente — o stop móvel não pode fechar antes do alvo (registrada em 19/11/2026 ~16:00 BRT = 19:00 UTC, antes de rodar; pedido do agente Engenheiro, auditoria de 19/11)
+- **Medido antes (não decide):** controle de 4.000 entradas SORTEADAS no código da nuvem (`executor/stop_movel.conferir`, 10 moedas, 3 dias de velas
+  de 1 min; script do Engenheiro `medir/controle_aleatorio.py`). Com stop 0,6% e alvo 1,2% em 120 min (o que o chefe usa), a média foi −0,117% (≈ o custo:
+  o simulador está limpo). As saídas foram 1.896 pelo stop móvel, 1.638 pelo stop, 339 pelo prazo e **127 pelo alvo (3%)**. O stop móvel (arma +0,5%,
+  guarda 70%) fecha antes de qualquer alvo acima de 0,5%. Na H64 já se via que G ≈ 0,6% com o móvel. A rota sem móvel (S4 stop 1% alvo 3%) foi a
+  melhor, mas perdeu no último bloco.
+- **Entradas (reais):** todas as apostas do v4 conferidas ao vivo (`dados/cerebro_v4.json`, `ops` com prob) com confiança |p − 0,5| ≥ 0,08, nos dois
+  lados, de 16/11 21:53 UTC até a hora de rodar. Entrada como a nuvem faz depois da P1: fechamento da vela de 1 min que fecha 5 min depois do fim da vela
+  do sinal (atraso mediano medido na P1). Velas de 1 min do perpétuo da Binance (à vista quando o perpétuo não tem o símbolo). Custo 0,12%.
+- **Saídas (simuladas pelo próprio `stop_movel.conferir` da nuvem, nas velas de 1 min):** duas geometrias × três formas:
+  - geometria G1: stop 0,6%, alvo 1,2%, prazo 120 min (a do chefe); G2: stop 1%, alvo 3%, prazo 24 h (a S4 da H64);
+  - A0 (referência, a regra de hoje): stop móvel armando a +0,5% e guardando 70%, junto com o alvo;
+  - A1: sem stop móvel quando a posição tem alvo;
+  - A2: o stop móvel só arma quando o lucro chega à metade do alvo (G1 a +0,6%, G2 a +1,5%), guardando 70%.
+  São **4 tentativas** (A1 e A2 nas duas geometrias), contadas.
+- **Controle obrigatório (antes de olhar o resultado das entradas reais):** as mesmas 6 combinações com entradas sorteadas (mesmas moedas, mesmos
+  instantes, lado sorteado). Cada combinação tem de dar média = −0,12% ± 3 erros-padrão. Se alguma sair disso, o simulador está errado: a rodada é
+  inválida e nada é julgado.
+- **Juiz (por tentativa):** diferença pareada (Ax − A0, mesma entrada) com média > 0, z ≥ 2,24 (Bonferroni para 4, 5% unilateral; erro-padrão
+  agrupado pela vela de 15 min do sinal) e diferença > 0 nos 3 blocos de tempo iguais. Também é relatada a média absoluta de cada forma, mas ela não decide.
+  Entre as aprovadas da mesma geometria vale a de maior diferença.
+- **Se passar:** a forma aprovada vira a regra da nuvem para posições COM `alvo_pct` maior que 0,5% (`executor/robo_claude_nuvem.py`/`stop_movel.py`,
+  quem aplica é o Baleias). Posições sem alvo, ou com alvo até 0,5%, seguem com o móvel de hoje. Juiz ao vivo: 30 operações com alvo > 0,5% depois de ligada,
+  com a soma pela regra nova maior que a soma das mesmas operações pela A0 (recalculada). **Se não passar:** nada muda, e a ROTINA (r9, passo 3)
+  continua avisando que com alvo acima de 0,5% quem fecha é o stop móvel.
+- **Previsão registrada:** não sei. Com entradas sem vantagem a saída não muda a média, como mostrou o controle (−0,117% / −0,100% / −0,117%). Só muda se
+  as apostas do v4 tiverem continuação além de +0,5%.
+
+## Hipótese 69: rotina r9 (postura ativa, só cortes duros) × r8 — juiz ao vivo (registrada em 19/11/2026 ~16:00 BRT = 19:00 UTC, antes de qualquer operação r9 ser medida)
+- **O que mudou (Engenheiro, auditoria de 19/11, a pedido do dono: "agilidade, operações constantes"):** `Shared/baleias/operar/ROTINA.md` r8 → r9.
+  O REVISOR deixa de cortar por "menos de 4 dos 6 tempos a favor", "v4 abaixo de 0,12", "carteiras contra" e "dúvida". Ficam só os cortes duros
+  (alvo < 0,24%, |4 h| ≥ 15%, dado faltando, padrão CONFIRMADO contra no tempo do prazo). Com carteira vazia, o agente entra a mercado na leitura mais forte.
+  Medido antes pelo Engenheiro (12:51–15:17 UTC): 31 decisões, 5 com posição; 58% dos descartes por tempos, 27% pelo v4 < 0,12.
+- **Veredito do Laboratório sobre a natureza:** é mudança de **prompt**, não de regra de estratégia. Desde a H62 os agentes decidem livres, e o REVISOR
+  nunca foi pré-registrado nem testado. O único teste parecido (H55) mediu que exigir todos os tempos a favor PIORAVA, e o v4 ≥ 0,12 não tinha passado no
+  perpétuo (H31/H36; só no 1º bloco). Então não volta para a r8. O que a r9 muda é a quantidade de entradas, e isso é medido aqui.
+- **Versão de cada operação:** `versao_rotina` da decisão cujo `t` = `decisao_t` da operação (histórico do ramo `estado`, `dados/decisao_*.json`).
+  Decisão sem o campo = "antes da r8". Operação aberta por gatilho (H67) conta na versão da decisão que armou o gatilho.
+- **Controle (o mesmo para as duas versões):** para cada operação real, a mesma moeda, o mesmo instante de entrada, o mesmo stop/alvo/prazo e o lado
+  SORTEADO (média dos dois lados), simulado em `stop_movel.conferir` nas velas de 1 min. Excesso da operação = resultado real em % do nocional − controle.
+  O controle tira o efeito do mercado do período: r8 e r9 são de dias diferentes.
+- **Juiz (por agente e no total dos 4; 1 tentativa):** com ≥ 30 operações r9 e ≥ 30 r8 (r6/r8 juntas se a r8 sozinha não chegar a 30):
+  a r9 **fica** se o excesso médio da r9 for ≥ o da r8 (no total dos 4) **e** o fator de lucro da r9 for > 1. Se não, o REVISOR volta à r8
+  (cópia do Engenheiro em `backup-2026-11-19/ROTINA.md`). Também se relatam, sem decidir, média por operação, fator de lucro, operações por dia e a carteira de cada agente.
+- **Prazo:** quando o total dos 4 agentes tiver 30 operações r9 fechadas ou até 03/12, o que vier primeiro. Se faltar r8, a comparação fica com o controle:
+  a r9 precisa de excesso médio > 0 com t ≥ 2, com erro-padrão agrupado pela rodada de decisão.
+- **Previsão registrada:** mais operações por dia. Por operação, perto do controle (≈ −0,12%), a não ser que a leitura dos agentes tenha vantagem;
+  nenhum teste do laboratório mostrou vantagem em leitura discricionária até aqui (H43, H62: não sei).
