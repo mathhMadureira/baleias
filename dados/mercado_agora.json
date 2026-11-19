@@ -1,6 +1,6 @@
 {
- "t": 1795096047,
- "hora_utc": "2026-11-19 13:47 UTC",
+ "t": 1795096219,
+ "hora_utc": "2026-11-19 13:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 109,
@@ -172,11 +172,23 @@
   -0.1,
   0.24,
   -0.11,
-  -0.17
+  -0.13
  ],
  "contexto": {
-  "t": 1795096048,
+  "t": 1795096220,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795096094,
+    "hora_utc": "19/11 13:48",
+    "titulo": "Here’s what happened in crypto today"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795096020,
+    "hora_utc": "19/11 13:47",
+    "titulo": "Quantum Upgrade Could Be 'Particularly Challenging' for Blockchains: IOSCO"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795095000,
@@ -254,18 +266,6 @@
     "t": 1795086373,
     "hora_utc": "19/11 11:06",
     "titulo": "Anthropic’s $107 billion sale set to top SpaceX’s IPO as tokenized stocks gain traction"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795085729,
-    "hora_utc": "19/11 10:55",
-    "titulo": "Financial firms must act now as quantum computers grow ‘highly advanced,’ IOSCO warns"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795085306,
-    "hora_utc": "19/11 10:48",
-    "titulo": "Live updates: Bitcoin nears $64,000 as Anthropic’s record IPO lifts tech"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 9.6,
    "principais_anual_pct": {
-    "BTC": -1.9,
-    "ETH": 0.5,
-    "SOL": -2.8
+    "BTC": -1.7,
+    "ETH": 0.9,
+    "SOL": -2.3
    },
    "leitura": "neutro"
   },
@@ -511,7 +511,7 @@
     "entrada": 1.687,
     "agora": 1.692,
     "resultado_pct": -0.3,
-    "horas_aberta": 0.3,
+    "horas_aberta": 0.4,
     "motivo_de_entrada": "v4 0,385 de subir (confiança 0,115, a maior do universo); 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 dia); 4 h −0,29%, 1 dia −2,14%, 24 h −2,70%; sem pad"
    }
   ],
