@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 10:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 10:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 31.8% das moedas subindo em 24 h, 59.1% em 4 h · BTC 24 h -1.24%, 4 h 0.51%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.9%/ano · {'BTC': -1.4, 'ETH': 7.3, 'SOL': 5.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.4%/ano · {'BTC': -1.7, 'ETH': 6.7, 'SOL': 6.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA fundo duplo (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · BNB triângulo descendente (baixa, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 19/11 08:54 UTC · Cointelegraph: Singapore settles $77.5M tokenized bill sale with wholesale CBDC
