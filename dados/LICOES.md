@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 20:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 20:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.46** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.52** · 34 operações fechadas · 1 abertas
 
 - **Total:** 21/34 com lucro (62%), resultado -0.69, média -0.020 por operação.
 - **Últimas 24 h:** 11/19 com lucro, +0.40.
@@ -39,7 +39,7 @@ Carteira **US$ 9.32** · 15 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 11.09** · 1 operações fechadas · 2 abertas
+Carteira **US$ 11.19** · 1 operações fechadas · 2 abertas
 
 - **Total:** 1/1 com lucro (100%), resultado +0.49, média +0.492 por operação.
 - **Últimas 24 h:** 1/1 com lucro, +0.49.
@@ -63,9 +63,9 @@ Carteira **US$ 10.23** · 21 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 40.7% das moedas subindo em 24 h, 29.2% em 4 h · BTC 24 h -0.87%, 4 h -1.46%.
+- **Amplitude:** 40.4% das moedas subindo em 24 h, 28.9% em 4 h · BTC 24 h -0.87%, 4 h -1.46%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': -11.9, 'ETH': 0.9, 'SOL': -5.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': -9.1, 'ETH': 1.9, 'SOL': -5.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 20:15 UTC · Decrypt: Hackers Leak Visa, Mastercard and JPMorgan Customer Data
@@ -111,7 +111,7 @@ Carteira **US$ 10.23** · 21 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28741 apostas conferidas ao vivo, acerto 55.3%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28741 apostas conferidas ao vivo, acerto 55.3%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

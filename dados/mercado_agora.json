@@ -1,21 +1,21 @@
 {
- "t": 1795119467,
- "hora_utc": "2026-11-19 20:17 UTC",
+ "t": 1795119704,
+ "hora_utc": "2026-11-19 20:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 113,
-  "subindo_pct": 17.7,
+  "moedas": 114,
+  "subindo_pct": 17.5,
   "mediana_pct": -0.63
  },
  "mercado_4h": {
-  "moedas": 113,
-  "subindo_pct": 29.2,
-  "mediana_pct": -0.52
+  "moedas": 114,
+  "subindo_pct": 28.9,
+  "mediana_pct": -0.54
  },
  "mercado_24h": {
-  "moedas": 113,
-  "subindo_pct": 40.7,
-  "mediana_pct": -0.63
+  "moedas": 114,
+  "subindo_pct": 40.4,
+  "mediana_pct": -0.66
  },
  "btc": {
   "1h": -0.79,
@@ -172,10 +172,10 @@
   -0.05,
   0.22,
   -0.82,
-  0.01
+  -0.2
  ],
  "contexto": {
-  "t": 1795119468,
+  "t": 1795119705,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.5,
+   "media_top20_anual_pct": 3.4,
    "principais_anual_pct": {
-    "BTC": -11.9,
-    "ETH": 0.9,
-    "SOL": -5.2
+    "BTC": -9.1,
+    "ETH": 1.9,
+    "SOL": -5.6
    },
    "leitura": "neutro"
   },
@@ -373,8 +373,8 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 127,
-  "compras": 100,
+  "apostas": 128,
+  "compras": 101,
   "vendas": 27,
   "mais_confiantes_venda": [
    {
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.46,
+  "carteira": 9.52,
   "abertas": [
    {
     "moeda": "DOT",
@@ -455,7 +455,7 @@
     "entrada": 0.722,
     "agora": 0.716,
     "resultado_pct": 0.83,
-    "horas_aberta": 1.5,
+    "horas_aberta": 1.6,
     "motivo_de_entrada": "v4 0,345 de subir (confiança 0,155, faixa ≥ 0,12 que acerta 67%); topo duplo de 4 h CONFIRMADO para baixo; volume de 4 h 2,14×; carteiras vendidas em BTC 1×17. "
    }
   ],
@@ -608,7 +608,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.46,
+   "carteira": 9.52,
    "n_abertas": 1,
    "abertas": [
     [
@@ -662,7 +662,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 11.09,
+   "carteira": 11.19,
    "n_abertas": 2,
    "abertas": [
     [
@@ -700,7 +700,7 @@
     "ganho_medio": 0.1,
     "perda_media": -0.214,
     "fator_lucro": 0.75,
-    "carteira": 9.46
+    "carteira": 9.52
    },
    "openbot_testnet": {
     "ops": 19,
@@ -727,7 +727,7 @@
     "ganho_medio": 0.492,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 11.09
+    "carteira": 11.19
    },
    "guardiao": {
     "ops": 21,
@@ -749,12 +749,12 @@
   "z_contra_lab": 1.98,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5083,
-    "n": 20733
+    "acerto": 0.5086,
+    "n": 20808
    },
    "segue_maioria_24h": {
-    "acerto": 0.5061,
-    "n": 27482
+    "acerto": 0.5054,
+    "n": 27553
    }
   },
   "referencia_ganha": [],
