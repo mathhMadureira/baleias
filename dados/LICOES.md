@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 11:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 11:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,11 +58,11 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 54.2% das moedas subindo em 24 h, 63.6% em 4 h · BTC 24 h -0.41%, 4 h 0.49%.
+- **Amplitude:** 57.0% das moedas subindo em 24 h, 73.8% em 4 h · BTC 24 h -0.37%, 4 h 0.54%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.5%/ano · {'BTC': -4.1, 'ETH': 3.4, 'SOL': 1.4} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BNB triângulo descendente (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · KAVA fundo duplo (alta, formado) · KAVA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PLUME topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': -3.9, 'ETH': 3.6, 'SOL': 1.7} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BNB triângulo descendente (alta, CONFIRMOU) · PEPE triângulo ascendente (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · KAVA fundo duplo (alta, formado) · KAVA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado)
 - 📰 19/11 11:30 UTC · CoinDesk: North Korean hackers used Sky's stablecoin system, putting billions at freeze risk
 - 📰 19/11 11:19 UTC · Cointelegraph: Sweden’s H100 could tap Bitcoin trading pool to fund share buybacks
 - 📰 19/11 11:15 UTC · Decrypt: GameStop CEO Says Digital-Only Games Have ‘Hurt Consumers’ as GTA 6 Skips Discs
@@ -107,7 +107,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 27232 apostas conferidas ao vivo, acerto 55.3%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 27300 apostas conferidas ao vivo, acerto 55.2%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
