@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 20:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 20:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.43** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.46** · 34 operações fechadas · 1 abertas
 
 - **Total:** 21/34 com lucro (62%), resultado -0.69, média -0.020 por operação.
 - **Últimas 24 h:** 11/19 com lucro, +0.40.
@@ -39,7 +39,7 @@ Carteira **US$ 9.32** · 15 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 11.04** · 1 operações fechadas · 2 abertas
+Carteira **US$ 11.14** · 1 operações fechadas · 2 abertas
 
 - **Total:** 1/1 com lucro (100%), resultado +0.49, média +0.492 por operação.
 - **Últimas 24 h:** 1/1 com lucro, +0.49.
@@ -63,11 +63,11 @@ Carteira **US$ 10.23** · 21 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 47.8% das moedas subindo em 24 h, 46.9% em 4 h · BTC 24 h -0.6%, 4 h -1.16%.
+- **Amplitude:** 48.2% das moedas subindo em 24 h, 47.4% em 4 h · BTC 24 h -0.6%, 4 h -1.16%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -23.2, 'ETH': -7.6, 'SOL': 4.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': -16.2, 'ETH': -5.3, 'SOL': -4.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · BEB topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BCH topo duplo (baixa, formado) · BEB topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 19:53 UTC · CoinDesk: Sky's USDS stablecoin shrinks 35% as $1.5 billion exits reserves after illicit-finance report
 - 📰 19/11 19:08 UTC · Decrypt: Bitcoin Enters Death Cross as Anthropic IPO Fails to Lift Wall Street
 - 📰 19/11 18:20 UTC · Cointelegraph: Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns
@@ -111,7 +111,7 @@ Carteira **US$ 10.23** · 21 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28719 apostas conferidas ao vivo, acerto 55.3%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28719 apostas conferidas ao vivo, acerto 55.3%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
