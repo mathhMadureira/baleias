@@ -183,6 +183,10 @@ def main():
     vs = sorted(glob.glob(str(RODADAS / "*-chefe-varredura.json")))
     if vs and agora - Path(vs[-1]).stat().st_mtime <= 900 and ler_json_ok(vs[-1]) is not None:
         d["varredura"] = ler_json_ok(vs[-1])                            # leitura de 1 s a 1 dia que embasou a decisão
+    sys.path.insert(0, "/home/servidor-de-producao/OpenBot/Shared/baleias")
+    import regras as RG_                                                 # REGRAS.md (fonte única, 19/11): campos obrigatórios e cortes duros C2/C3
+    erros += RG_.conferir_decisao(d.get("posicoes"), (lei.get("robo_claude") or {}).get("abertas") or {}, d.get("varredura"))
+    d["versao_regras"] = RG_.VERSAO
     if erros:
         print("DECISÃO INVÁLIDA (nada publicado):\n- " + "\n- ".join(erros))
         return 3

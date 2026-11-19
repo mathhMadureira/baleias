@@ -389,7 +389,7 @@ def cmd_escolher(agente):
             print(f"| {l['moeda']} | {v4_rotulo(l['prob'])} | {l['1h']:+.2f}% | {l['4h']:+.2f}% | {l['24h']:+.2f}% | {l['vol4h']}× | {'✓' if l['meme'] else ''} |")
     n_conf = sum(abs(l["prob"] - 0.5) >= CONF_V4 for l in linhas)
     print(f"\nV4: {n_conf} de {len(linhas)} moedas com confiança ≥ 0,12 agora. Abaixo disso o v4 está SEM CONFIANÇA: não é motivo de descarte, "
-          "de corte no REVISOR nem de fechar posição (medido em 19/11: o veto fraco não protegeu; ver LEITURA_GRAFICOS.md seção 4).")
+          "de corte no REVISOR nem de fechar posição (medido em 19/11: o veto fraco não teve efeito consistente — ver LEITURA_GRAFICOS.md seção 4).")
     tab("v4: maior chance de SUBIR", sorted(linhas, key=lambda l: -l["prob"])[:10])
     tab("v4: maior chance de CAIR", sorted(linhas, key=lambda l: l["prob"])[:10])
     tab("mais movimento em 1 h (scalper)", sorted(linhas, key=lambda l: -abs(l["1h"]))[:10])
@@ -453,6 +453,12 @@ def cmd_gravar(agente, arq):
     if vs and time.time() - Path(vs[-1]).stat().st_mtime <= 900 and ler_json_arq(vs[-1]) is not None:
         d["varredura"] = ler_json_arq(vs[-1])                          # o painel mostra a leitura de 1 s a 1 dia que embasou a decisão
     c = clone(agente)
+    sys.path.insert(0, str(AQUI.parent))
+    import regras as RG_                                                 # REGRAS.md (fonte única, 19/11): campos obrigatórios e cortes duros C2/C3
+    erros_r = RG_.conferir_decisao(d.get("posicoes"), carteira(c, agente).get("abertas") or {}, d.get("varredura"))
+    if erros_r:
+        raise SystemExit("DECISÃO INVÁLIDA (nada publicado; REGRAS.md):\n- " + "\n- ".join(erros_r))
+    d["versao_regras"] = RG_.VERSAO
     alvo = f"dados/decisao_{agente}.json"
     ultimo = ""
     for k in range(1, 6):

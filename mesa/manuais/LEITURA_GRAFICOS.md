@@ -29,24 +29,23 @@ custo: movimento forte SEM volume reverte, H26). Volume 0× = moeda parada: o st
 | BAND | bandeira | continuação do mastro | 45,2%: não passou |
 | EST | estrutura (topos e fundos) | a tendência curta | 47,7%, negativo nos 3 blocos |
 * = confirmado (rompeu na última vela). **Nenhum padrão passou como regra sozinha.** Use como contexto: padrão a favor + tempos alinhados + volume +
-carteiras a favor = leitura forte; padrão sozinho = leitura fraca. Padrão contra a operação é motivo para o REVISOR cortar.
+carteiras a favor = leitura forte; padrão sozinho = leitura fraca. Padrão CONFIRMADO contra o lado, no tempo do prazo, é o corte C3 (REGRAS.md §3); padrão não confirmado vai no motivo.
 Velas isoladas (martelo, engolfo, estrela) não previram nada (H6: 0 de 57): não use.
 
 ## 4. Melhores carteiras e cérebro v4 (outras opiniões)
 - Carteiras (H63): confirmação ou alerta, não ordem. Muitas vendidas numa moeda em queda confirmam venda; contra elas, só com motivo forte.
 - v4: acerta mais quanto mais confiante (65–68% na confiança ≥ 0,12); abaixo de 0,03 de confiança não aposta (neutro).
-- **Papel do v4 desde 19/11 (dono; Engenheiro): só pesa com confiança ≥ 0,12.** Abaixo disso é "sem confiança": não descarta moeda, não corta no
-  REVISOR, não fecha posição. Por quê (números do vigia, 7 dias até 19/11 15:45 UTC, direção da vela de 15 min): acerto 56,9% (< 0,05; n 8.697),
+- **Papel do v4: REGRAS.md §4** (só pesa com confiança ≥ 0,12; abaixo é "sem confiança"). Por quê (números do vigia, 7 dias até 19/11 15:45 UTC, direção da vela de 15 min): acerto 56,9% (< 0,05; n 8.697),
   56,1% (0,05–0,08; n 4.353), 59,3% (0,08–0,12; n 1.669), 67,0% (≥ 0,12; n 566). Acerto de 56% numa vela de 15 min não diz nada sobre uma operação
-  de 1–4 h com alvo ≥ 1% e custo de 0,12% (o v4 prevê outra coisa: "validade de construto", Hall et al. cap. 3). E o veto fraco não protegeu:
-  ver `dados/lab/veto_v4_resultado.json` e `veto_v4_replay.json` (19/11).
+  de 1–4 h com alvo ≥ 1% e custo de 0,12% (o v4 prevê outra coisa: "validade de construto", Hall et al. cap. 3). E o veto fraco não teve efeito
+  consistente (19/11, `lab/veto_v4.py`; resultados em `Shared/baleias/auditorias/veto_v4_*.json`): no replay de 2 dias das explosões de vela do Caçador
+  (3.970 sinais; controle aleatório −0,124% em 15 min, ≈ o custo) o v4 fraco CONTRA deu −0,112% em 15 min e o fraco A FAVOR −0,241%; ao vivo em 19/11
+  (226 sinais do Caçador) foi o contrário (−0,327% × −0,012%). Nenhum grupo pagou o custo; v4 ≥ 0,12 apareceu em só 27 sinais (não sei ainda).
 
 ## 5. Stop, alvo e prazo (scalper)
-- **Alvo ≥ 3 × o stop e ≥ 1% (dono, 19/11: "aumente os alvos de ganho"; a execução impõe). Com alvo, o stop móvel arma na metade do caminho até ele.** Stop do tamanho da volatilidade da moeda (a varredura mostra o quanto ela anda em 5 e 15 min); prazo compatível com o alvo.
-- Prazo curto (15–90 min) quando a leitura é de minutos; não vale segurar um scalper por horas "esperando voltar".
-- Antes de gravar: o REVISOR tenta derrubar cada entrada (ROTINA.md, passo 3b).
-- **Tamanho (H64, aprovado):** a nuvem decide sozinha. Fatia = 2,5 × carteira ÷ US$ 10 (de 1,25× a 5×) vezes a carteira: com US$ 12 a posição é
-  3,0 × 12 = US$ 36; com US$ 8 é 2,0 × 8 = US$ 16. Ganhar faz a próxima entrada crescer; perder faz encolher ("perder de colher").
+- **As regras de stop, alvo, prazo, tamanho e cortes estão SÓ em `REGRAS.md` (§3, §5 e §6; fonte única desde 19/11).** Aqui fica o como ler:
+  stop do tamanho da volatilidade da moeda (a varredura mostra o quanto ela anda em 5 e 15 min); não vale segurar uma operação além do prazo
+  "esperando voltar".
 - **Formato da saída (H64, medido, NÃO é regra):** nas 5.842 apostas do v4 a favor do regime (11–18/11, 15 min, custo 0,12%):
   | saída | média/aposta | ganho médio ÷ perda média | bloco mais recente |
   |---|---|---|---|

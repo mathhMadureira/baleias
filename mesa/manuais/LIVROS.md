@@ -74,7 +74,8 @@ Lido de novo, com foco no papel de um modelo que decide dinheiro. Cada lição: 
   da direção de 15 min não é a probabilidade de a operação chegar ao alvo. O v4 só pode ser lido como contexto, e só onde foi medido (≥ 0,12).
 - **Modelo de referência** (cap. 3, "Benchmark Models", p. 110: sem uma referência reproduzível "não sabemos se as mudanças ajudaram ou pioraram").
   → O veto do v4 tem de ganhar da referência "sem veto" no mesmo período e do controle aleatório. Medido em 19/11 (`lab/veto_v4.py`): o veto fraco
-  não ganhou (tabela em `dados/lab/veto_v4_resultado.json` e `veto_v4_replay.json`).
+  não ganhou de forma consistente (replay de 2 dias, 3.970 sinais: fraco contra −0,112% × fraco a favor −0,241% em 15 min; ao vivo no dia, 226
+  sinais: o contrário, −0,327% × −0,012%); controle aleatório ≈ −0,12%. Tabelas em `Shared/baleias/auditorias/veto_v4_*.json`.
 - **Recurso, correção humana e saída** (cap. 1, "Appeal, override, and opt out", p. 23: forçar automaticamente decisões erradas é um dos erros mais
   claros de um sistema de ML). → Um operador ou o aviso do Caçador pode passar por cima do v4. O v4 não decide sozinho o que fica de fora.
 - **Complacência com a automação** (prefácio, tabela de riscos: "We should be careful not to let them unintentionally make decisions for us").

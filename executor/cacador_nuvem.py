@@ -157,7 +157,7 @@ def sugestao(px, lado, invalidacao, tempo):
     dist = abs(px / invalidacao - 1) if invalidacao else 0.015
     stop = round(min(0.04, max(0.003, dist)), 4)
     alvo = round(min(0.05, max(3 * stop, 0.01)), 4)
-    prazo = 60 if tempo in ("1m", "5m") else 120 if tempo in ("15m", "15m/1h/4h") else 240
+    prazo = 60 if alvo <= 0.015 else 120 if alvo <= 0.03 else 240      # REGRAS.md §5 (19/11): prazo pelo alvo, igual para operadores e Caçador
     return {"stop_pct": stop, "alvo_pct": alvo, "max_min": prazo}
 
 

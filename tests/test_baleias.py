@@ -2216,7 +2216,8 @@ class CacadorH68(unittest.TestCase):
         self.assertEqual((r["lado"], r["invalidacao"]), ("compra", 1.01))
         sg = C.sugestao(1.02, "compra", 1.01, "24h")
         self.assertGreaterEqual(sg["alvo_pct"] + 1e-9, max(0.01, 3 * sg["stop_pct"]))
-        self.assertEqual(sg["max_min"], 240)
+        self.assertEqual(sg["max_min"], 120)                                 # REGRAS §5: alvo de 2,94% → 120 min
+        self.assertEqual(C.sugestao(1.0, "compra", 0.997, "1m")["max_min"], 60)   # stop 0,3% → alvo 1% → 60 min
 
     def test_juiz_resolve_no_minuto_certo_com_controle_e_sem_repetir(self):
         import random as rnd
@@ -2352,3 +2353,42 @@ class CloneDoChefeQuebrado(unittest.TestCase):
             U.atualizar()
         self.assertTrue((U.EST / "dados" / "x.json").exists())
         self.assertFalse(any(p.name.startswith("estado.corrompido-") for p in self.d.iterdir()))
+
+
+class RegrasFonteUnica(unittest.TestCase):
+    """REGRAS.md (19/11, pedido do dono: "conflitos de regras"): o texto único bate com o que a execução impõe, e gravar corta igual."""
+
+    def _regras(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("regras_mesa", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "regras.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def test_texto_bate_com_o_codigo(self):
+        from executor import robo_claude_nuvem as R, stop_movel as SM
+        txt = (pathlib.Path(__file__).resolve().parent.parent / "mesa" / "REGRAS.md").read_text()
+        self.assertEqual(R.LIMITES["stop_pct"], (0.003, 0.04))
+        self.assertIn("stop: 0,3% a 4%", txt)
+        self.assertEqual((R.ALVO_X_STOP, R.ALVO_MIN, R.LIMITES["alvo_pct"][1]), (3.0, 0.01, 0.05))
+        self.assertIn("alvo efetivo = mín(5%, máx(alvo pedido, 3 × stop, 1%))", txt)
+        self.assertEqual((SM.armar_em(0.03), SM.armar_em(None), SM.GUARDA), (0.015, 0.005, 0.70))
+        self.assertIn("máx(0,5%, alvo ÷ 2)", txt)
+        self.assertEqual(R.parametros({"stop_pct": 0.02, "alvo_pct": 0.01})["alvo_pct"], 0.05)       # stop > 1,67%: alvo no teto
+        G = self._regras()
+        self.assertEqual(G.ESTICADA_4H, 15.0)
+        self.assertIn("15% ou mais em 4 h", txt)
+
+    def test_cortes_duros_so_em_entrada_nova(self):
+        G = self._regras()
+        var = [{"par": "AUSDT", "var": {"4h": -16.0}, "padroes": []},
+               {"par": "BUSDT", "var": {"4h": 1.0}, "padroes": [{"tempo": "1h", "padrao": "topo duplo", "sentido": "baixa", "confirmado": True}]}]
+        pos = [{"moeda": "AUSDT", "lado": "venda", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 120},
+               {"moeda": "BUSDT", "lado": "compra", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 120},
+               {"moeda": "DUSDT", "lado": "compra", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 30}]
+        erros = G.conferir_decisao(pos, {}, var)
+        self.assertTrue(any("AUSDT" in e and "C2" in e for e in erros))
+        self.assertTrue(any("BUSDT" in e and "C3" in e for e in erros))                  # prazo 120 min → padrão de 1 h
+        self.assertFalse(any("DUSDT" in e for e in erros))                              # fora da varredura: C1 é conduta
+        self.assertEqual(G.conferir_decisao(pos[:1], {"AUSDT": {}}, var), [])           # já aberta: não corta
+        self.assertEqual([G.prazo_sugerido(a) for a in (0.01, 0.02, 0.04)], [60, 120, 240])

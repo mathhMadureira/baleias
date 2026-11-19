@@ -21,6 +21,15 @@ SAIDA = AQUI.parent / "oportunidades_cacador.jsonl"
 REMOTO = "https://github.com/mathhMadureira/baleias.git"
 REPETE_S, MAX_AVISOS = 30 * 60, 3
 sys.path.insert(0, str(AQUI.parent / "operar"))
+sys.path.insert(0, str(AQUI.parent))
+import regras as RG  # noqa: E402  (REGRAS.md, fonte única: as mesmas regras dos operadores)
+
+
+def efetivos(stop, alvo, prazo=None):
+    """Stop, alvo e prazo como a EXECUÇÃO os aplica (REGRAS.md §5); prazo ausente = o sugerido pelo alvo."""
+    prm = RG.parametros({"stop_pct": stop, "alvo_pct": alvo, **({"max_min": prazo} if prazo else {})})
+    prm.setdefault("max_min", RG.prazo_sugerido(prm["alvo_pct"]))
+    return prm
 
 
 def git(*a, check=True):
@@ -74,7 +83,8 @@ def cmd_ler():
     print("\n| # | moeda | lado | sinal | força | gatilho | invalidação | sugestão stop/alvo/prazo | MM20 a favor (15m 1h 4h) | 1 h | 24 h | meme | nova |")
     print("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for i, o in enumerate(ops[:15], 1):
-        s = o.get("sugestao") or {}
+        s0 = o.get("sugestao") or {}
+        s = efetivos(s0.get("stop_pct", 0.015), s0.get("alvo_pct", 0.01)) if s0 else {}      # já como a execução aplica (REGRAS §5)
         print(f"| {i} | {o['moeda']} | {o['lado']} | {o['tipo']} | {o['forca']} | {o['gatilho']} | {o.get('invalidacao'):.6g} | "
               f"{s.get('stop_pct', 0):.2%} / {s.get('alvo_pct', 0):.2%} / {s.get('max_min')} min | {o.get('tempos_mm20_a_favor')} | {o.get('var_1h')}% | "
               f"{o.get('var_24h')}% | {'✓' if o.get('meme') else ''} | {'✓' if o.get('nova_listagem') else ''} |")
@@ -97,25 +107,45 @@ def cmd_ler():
                                                                                                                 "varredura": vt}, ensure_ascii=False))
 
 
-def validar(c):
+def ultima_leitura(max_s=900):
+    """Leitura de 1 s a 1 dia da última `cacar.py ler` (até 15 min): {par: leitura}."""
+    for arq in sorted((AQUI / "rodadas").glob("*-leitura.json"), reverse=True):
+        try:
+            d = json.loads(arq.read_text())
+        except (OSError, ValueError):
+            continue
+        if time.time() - d.get("t", 0) <= max_s:
+            return {x.get("par"): x for x in d.get("varredura") or []}
+        return {}
+    return {}
+
+
+def validar(c, leituras=None):
+    """REGRAS.md: o Caçador só avisa o que passa nas MESMAS regras dos operadores. Ajusta stop/alvo/prazo como a execução (§5) e corta pelos
+    cortes duros C1–C3 (§3) na leitura de 1 s a 1 dia. Muda c no lugar; devolve a lista de erros."""
     erros = []
     m = str(c.get("moeda", "")).upper()
     if not m.endswith("USDT") or c.get("lado") not in ("compra", "venda") or not str(c.get("motivo", "")).strip():
         return [f"inválida (moeda, lado, motivo): {c}"]
-    for k, lo, hi in (("stop_pct", 0.003, 0.04), ("alvo_pct", 0.01, 0.05), ("max_min", 5, 1440), ("validade_min", 5, 240), ("forca", 0, 100)):
+    for k, lo, hi in (("validade_min", 5, 240), ("forca", 0, 100)):
         if not isinstance(c.get(k), (int, float)) or not lo <= c[k] <= hi:
             erros.append(f"{m}: {k} = {c.get(k)!r} fora de {lo}–{hi}")
-    if isinstance(c.get("stop_pct"), (int, float)) and isinstance(c.get("alvo_pct"), (int, float)) and c["alvo_pct"] + 1e-9 < 3 * c["stop_pct"]:
-        erros.append(f"{m}: alvo {c['alvo_pct']} menor que 3 × o stop {c['stop_pct']} (regra do dono, 19/11)")
+    if not isinstance(c.get("stop_pct"), (int, float)):
+        erros.append(f"{m}: falta stop_pct (REGRAS §5)")
+    else:
+        c.update(efetivos(c["stop_pct"], c.get("alvo_pct") or 0, c.get("max_min")))
     if not isinstance(c.get("entrada"), (int, float)) or c["entrada"] <= 0:
         erros.append(f"{m}: falta o preço de entrada")
+    if leituras is not None:
+        erros += [f"{m}: {x} — os operadores cortariam (REGRAS §3); não avise" for x in RG.cortes_duros(c.get("lado"), c.get("max_min"), leituras.get(m))]
     return erros
 
 
 def cmd_publicar(arq):
     d = json.loads(Path(arq).read_text())
     cs = d.get("confirmadas") or []
-    erros = [x for c in cs for x in validar(c)]
+    leituras = ultima_leitura()
+    erros = [x for c in cs for x in validar(c, leituras)]
     if erros:
         raise SystemExit("PROPOSTA INVÁLIDA (nada publicado):\n- " + "\n- ".join(erros))
     agora = int(time.time())
