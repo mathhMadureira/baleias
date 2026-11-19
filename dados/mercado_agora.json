@@ -1,21 +1,21 @@
 {
- "t": 1795066641,
- "hora_utc": "2026-11-19 05:37 UTC",
+ "t": 1795066864,
+ "hora_utc": "2026-11-19 05:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
-  "subindo_pct": 30.4,
-  "mediana_pct": -0.27
+  "moedas": 113,
+  "subindo_pct": 30.1,
+  "mediana_pct": -0.3
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 69.6,
-  "mediana_pct": 0.78
+  "moedas": 113,
+  "subindo_pct": 69.9,
+  "mediana_pct": 0.79
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 27.7,
-  "mediana_pct": -1.13
+  "moedas": 113,
+  "subindo_pct": 28.3,
+  "mediana_pct": -1.12
  },
  "btc": {
   "1h": 0.1,
@@ -172,11 +172,17 @@
   -0.41,
   0.97,
   0.6,
-  -0.23
+  -0.34
  ],
  "contexto": {
-  "t": 1795066642,
+  "t": 1795066865,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795066746,
+    "hora_utc": "19/11 05:39",
+    "titulo": "Ethereum block builders received the most in a $3.4 million vault hack, data shows"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795066065,
@@ -260,12 +266,6 @@
     "t": 1795033926,
     "hora_utc": "18/11 20:32",
     "titulo": "Bain Capital Crypto leads $110M Variational round at $1.5B valuation"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795033237,
-    "hora_utc": "18/11 20:20",
-    "titulo": "Binance says it obtained $6.5B worldwide freezing order after hack"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.5,
+   "media_top20_anual_pct": 6.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 10.6,
+    "ETH": 10.5,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -733,12 +733,12 @@
   "z_contra_lab": 2.01,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5088,
-    "n": 19448
+    "acerto": 0.5089,
+    "n": 19560
    },
    "segue_maioria_24h": {
-    "acerto": 0.5127,
-    "n": 25681
+    "acerto": 0.513,
+    "n": 25534
    }
   },
   "referencia_ganha": [],
