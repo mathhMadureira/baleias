@@ -1547,3 +1547,9 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **H69:** a r10 muda a saída, não a postura de entrada. O controle já usa, em cada operação, o mesmo stop, alvo e prazo e a regra de saída em vigor
   naquele momento. Assim o efeito da saída sai do excesso. **r9 e r10 contam juntas** como "postura ativa" contra a r8, e a r10 é relatada também à parte.
   Juiz, prazo e a exclusão da carteira do Laboratório (adendo anterior): iguais.
+
+### H69, adendo 3 (19/11, antes de medir qualquer operação r9/r10/r11): rotina r11
+- O Engenheiro passou a ROTINA para a r11. Ela muda só a informação de entrada: o passo 2 mostra primeiro as oportunidades do Caçador (H68,
+  `dados/oportunidades.json`) e um aviso do Caçador faz a rotina rodar na hora. Stop, alvo, revisor e postura são os da r10.
+- **r9, r10 e r11 contam juntas** como "postura ativa" contra a r8. O controle de lado sorteado usa o mesmo instante, então a mudança de horário
+  pelo aviso também sai do excesso. Relatado à parte (não decide): as entradas em moeda avisada pelo Caçador na última hora antes da decisão, contra as outras.
