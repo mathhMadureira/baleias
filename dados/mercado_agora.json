@@ -1,6 +1,6 @@
 {
- "t": 1795085220,
- "hora_utc": "2026-11-19 10:47 UTC",
+ "t": 1795085390,
+ "hora_utc": "2026-11-19 10:49 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 109,
@@ -172,11 +172,17 @@
   -0.02,
   -0.0,
   0.19,
-  0.06
+  0.09
  ],
  "contexto": {
-  "t": 1795085221,
+  "t": 1795085390,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795085306,
+    "hora_utc": "19/11 10:48",
+    "titulo": "Live updates: Bitcoin nears $64,000 as Anthropic’s record IPO lifts tech"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795084776,
@@ -260,12 +266,6 @@
     "t": 1795064985,
     "hora_utc": "19/11 05:09",
     "titulo": "Binance hackers stole 192 tokens across 11 networks, court docs show"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795063570,
-    "hora_utc": "19/11 04:46",
-    "titulo": "Bitcoin miner that sold its last BTC warns it may run short of cash for $1.2 billion AI deal"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.7,
+   "media_top20_anual_pct": 8.6,
    "principais_anual_pct": {
     "BTC": -3.3,
-    "ETH": 4.0,
-    "SOL": 5.2
+    "ETH": 3.9,
+    "SOL": 4.7
    },
    "leitura": "neutro"
   },
