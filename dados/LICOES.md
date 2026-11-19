@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 21:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 21:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.66** · 35 operações fechadas · 2 abertas
+Carteira **US$ 9.76** · 35 operações fechadas · 3 abertas
 
 - **Total:** 22/35 com lucro (63%), resultado -0.43, média -0.012 por operação.
 - **Últimas 24 h:** 12/17 com lucro, +1.00.
@@ -30,7 +30,7 @@ Carteira **US$ 8.95** · 22 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.72** · 17 operações fechadas · 3 abertas
+Carteira **US$ 9.67** · 17 operações fechadas · 3 abertas
 
 - **Total:** 7/17 com lucro (41%), resultado -0.22, média -0.013 por operação.
 - **Últimas 24 h:** 5/12 com lucro, -0.35.
@@ -41,7 +41,7 @@ Carteira **US$ 9.72** · 17 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.36** · 7 operações fechadas · 3 abertas
+Carteira **US$ 10.42** · 7 operações fechadas · 3 abertas
 
 - **Total:** 4/7 com lucro (57%), resultado +0.36, média +0.052 por operação.
 - **Últimas 24 h:** 4/7 com lucro, +0.36.
@@ -67,7 +67,7 @@ Carteira **US$ 10.35** · 31 operações fechadas · 0 abertas
 
 - **Amplitude:** 30.8% das moedas subindo em 24 h, 47.0% em 4 h · BTC 24 h -0.76%, 4 h -0.67%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': -13.6, 'ETH': 5.1, 'SOL': 0.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.2%/ano · {'BTC': -14.5, 'ETH': 4.3, 'SOL': -1.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LTC bandeira de baixa (baixa, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · BEB topo duplo (baixa, formado) · BEB fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SAPIEN fundo duplo (alta, formado)
 - 📰 19/11 21:12 UTC · Decrypt: Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price
@@ -79,12 +79,12 @@ Carteira **US$ 10.35** · 31 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 19/11 21:26 UTC · **BTC venda, MEGA compra, ETH venda** · Retrato 21:18 UTC: 20,5% das 117 moedas sobem em 1 h (mediana −0,51%), 47,0% em 4 h, 30,8% em 24 h; medo e ganância 10. Leitura 21:25 (velas da Binance): BTC 61
 - 19/11 21:10 UTC · **BTC venda, MEGA compra** · Retrato 21:01 UTC: 14,8% das 115 moedas sobem em 1 h (mediana −0,77%), 40,0% em 4 h, 37,4% em 24 h; medo e ganância 10. Varredura 21:08: BTC 15 min −0,51%, 1 h 
 - 19/11 20:55 UTC · **BTC venda, MEGA compra** · Queda: só 10,4% das 115 moedas sobem em 1 h (mediana −0,84%), 25,2% em 4 h, 41,7% em 24 h. BTC −0,76% em 1 h, −1,68% em 4 h, a 62.124 (volume 4 h 1,56×). Univer
 - 19/11 20:45 UTC · **BTC venda, MEGA compra** · Queda forte: só 6,1% das 114 moedas sobem em 1 h (mediana −1,36%), 20,2% em 4 h, 36,8% em 24 h. BTC −1,48% em 1 h, −1,90% em 4 h, a 61.897,91 (volume 4 h 1,46×)
 - 19/11 20:26 UTC · **DOT venda** · Queda: só 17,5% das 114 moedas sobem em 1 h (mediana −0,63%), 28,9% em 4 h, 40,4% em 24 h. BTC −0,79% em 1 h, −1,46% em 4 h, a 62.225,41 (volume 4 h 1,33×). Uni
 - 19/11 18:43 UTC · **SKY venda, DOT venda, SNX compra** · Repique na hora dentro da queda: 79,8% das 114 moedas sobem em 1 h (mediana +0,57%), só 17,5% em 4 h (mediana −1,32%), 57,9% em 24 h. Universo do v4 (113 moedas
-- 19/11 16:08 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Repique na hora depois da queda: 60,4% das 106 moedas sobem em 1 h (mediana +0,27%), 40,6% em 4 h (mediana −0,36%), 56,6% em 24 h; universo do v4 (110 moedas, v
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 

@@ -1,6 +1,6 @@
 {
- "t": 1795123562,
- "hora_utc": "2026-11-19 21:26 UTC",
+ "t": 1795123807,
+ "hora_utc": "2026-11-19 21:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   0.22,
   -0.82,
   -0.39,
-  -0.78
+  -0.95
  ],
  "contexto": {
-  "t": 1795123563,
+  "t": 1795123808,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.8,
+   "media_top20_anual_pct": 2.2,
    "principais_anual_pct": {
-    "BTC": -13.6,
-    "ETH": 5.1,
-    "SOL": 0.0
+    "BTC": -14.5,
+    "ETH": 4.3,
+    "SOL": -1.8
    },
    "leitura": "neutro"
   },
@@ -475,7 +475,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.66,
+  "carteira": 9.76,
   "abertas": [
    {
     "moeda": "BTC",
@@ -483,7 +483,7 @@
     "entrada": 62128.0,
     "agora": 61997.35,
     "resultado_pct": 0.21,
-    "horas_aberta": 0.6,
+    "horas_aberta": 0.7,
     "motivo_de_entrada": "Aviso de venda do Caçador (5 min −0,69%, z −4,3, volume 10,2×); agora 5 de 6 tempos abaixo da MM20 (só 1 min acima); 1 h −0,73%, 4 h −1,02%; topo duplo e estrut"
    },
    {
@@ -492,8 +492,17 @@
     "entrada": 0.05981,
     "agora": 0.05925,
     "resultado_pct": -0.94,
-    "horas_aberta": 0.6,
+    "horas_aberta": 0.7,
     "motivo_de_entrada": "Aviso de compra do Caçador (5 min +1,33%, volume 3,4×, válido até 20:56 UTC); 6 de 6 tempos acima da MM20; estrutura de alta em 15 min e 1 h e fundo duplo de 15"
+   },
+   {
+    "moeda": "ETH",
+    "lado": "venda",
+    "entrada": 1750.34,
+    "agora": 1756.72,
+    "resultado_pct": -0.36,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Nova, a mercado: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 15 min −0,44%, 1 h −0,68%, 4 h −1,23%, 1 dia −1,61%; vela de 5 min da queda com volume ≈ 5× as vi"
    }
   ],
   "ultimas_fechadas": [
@@ -605,10 +614,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795102711,
-    "texto": "Entradas novas: AAVE venda e CAKE venda, as duas com 6 de 6 tempos a favor e contra o v4. Conta de teste: 14 fechadas, US$ 8,546, 0 abertas antes desta rodada; a última, MORPHO venda, saiu +0,1264 USDT pelo stop móvel. Caderno: 3 operações com leitura anotada (todas MORPHO venda, 100% de acerto, +0,181 US$; 2 com 6 de 6 e 1 com 4–5 de 6 tempos a favor; carteiras a favor). São poucas, não sei ainda"
-   },
-   {
     "t": 1795103583,
     "texto": "Conta de teste: 14 fechadas, p 0,357, G +0,234, L −0,328, E = 0,357×0,234 − 0,643×0,328 ≈ −0,127 US$ por operação; ganho médio menor que a perda média, por isso o alvo 3 × stop. Caderno: 3 operações com leitura anotada (MORPHO venda, 100% de acerto, +0,181 US$), poucas. Verificável: AAVE e CAKE (6 de 6, contra o v4 na entrada) e as novas UNI e SKY vendidas: se 3 de 4 fecharem no lucro, o 6 de 6 a "
    },
@@ -635,6 +640,10 @@
    {
     "t": 1795122618,
     "texto": "Caderno do chefe (robo_claude): 35 fechadas, p 0,629, G 0,107, L 0,214, E = 0,629 × 0,107 − 0,371 × 0,214 = −0,012 por operação (fator 0,85): acerto alto, perda média o dobro do ganho. Últimas: UNI venda −0,179, AAVE venda +0,252, SKY venda +0,284, SNX compra −0,178, DOT venda +0,262. Caderno: 6 de 6 tempos 71% em 7 (poucas); padrão a favor 4 de 4 (poucas). Por isso alvo ≥ 3 × o stop nas duas aber"
+   },
+   {
+    "t": 1795123568,
+    "texto": "Caderno do chefe (robo_claude): 35 fechadas, p 0,629, G 0,107, L 0,214, E = 0,629 × 0,107 − 0,371 × 0,214 = −0,012 por operação (fator 0,85). Últimas: UNI venda −0,179, AAVE venda +0,252, SKY venda +0,284, SNX compra −0,178, DOT venda +0,262. Caderno: 6 de 6 tempos 71% em 7 (poucas, não sei ainda); padrão a favor 4 de 4 (poucas). As três posições são 6 de 6 a favor; alvo 3 × o stop."
    }
   ]
  },
@@ -645,8 +654,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.66,
-   "n_abertas": 2,
+   "carteira": 9.76,
+   "n_abertas": 3,
    "abertas": [
     [
      "BTC",
@@ -655,6 +664,10 @@
     [
      "MEGA",
      "compra"
+    ],
+    [
+     "ETH",
+     "venda"
     ]
    ],
    "n_fechadas": 35,
@@ -683,7 +696,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.72,
+   "carteira": 9.67,
    "n_abertas": 3,
    "abertas": [
     [
@@ -708,7 +721,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.36,
+   "carteira": 10.42,
    "n_abertas": 3,
    "abertas": [
     [
@@ -750,7 +763,7 @@
     "ganho_medio": 0.107,
     "perda_media": -0.214,
     "fator_lucro": 0.85,
-    "carteira": 9.66
+    "carteira": 9.76
    },
    "openbot_testnet": {
     "ops": 22,
@@ -768,7 +781,7 @@
     "ganho_medio": 0.157,
     "perda_media": -0.131,
     "fator_lucro": 0.84,
-    "carteira": 9.72
+    "carteira": 9.67
    },
    "laboratorio": {
     "ops": 7,
@@ -777,7 +790,7 @@
     "ganho_medio": 0.297,
     "perda_media": -0.275,
     "fator_lucro": 1.44,
-    "carteira": 10.36
+    "carteira": 10.42
    },
    "guardiao": {
     "ops": 31,
@@ -854,12 +867,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 14:46",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Neutro (56,5% das 108 moedas sobem em 24 h; só 30,3% subiram na última hora). MORPHO vendida fica (6 de 6 tempos abaixo da MM20; +0,105 no testnet, stop móvel em 1,6805). Sem entrada nova: CYBER tem só 2 de 6 tempos a favor; MMT +18,8% em 4 h. Conta de teste: 13 fechadas, p 0,31, E −0,12."
-  },
-  {
    "hora_utc": "19/11 14:57",
    "de": "claude",
    "para": "sala",
@@ -924,6 +931,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Queda: 14,8% das 115 moedas sobem em 1 h; BTC 6 de 6 tempos abaixo da MM20, 4 h −1,18%. Mantenho BTC vendido (carteiras 0×15 vendidas) e MEGA comprada (5 de 6 acima, 1 dia +9,10%). Sem entrada nova: CYBER (1 de 6 a favor) e SOPH (OCO de 1 h contra) descartadas. Conta de teste: MEGA −0,05, US$ 9,00."
+  },
+  {
+   "hora_utc": "19/11 21:29",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Queda: 20,5% das 117 moedas sobem em 1 h; BTC 1 h −0,96%, 6 de 6 tempos abaixo. Mantenho BTC vendido (+0,96% a favor; carteiras 0×15 vendidas) e MEGA comprada (6 de 6 acima). Entro vendido em ETH (6 de 6 abaixo, carteiras 0×9; stop 0,7%, alvo 2,1%, 120 min). Descartadas CYBER e HBAR (0 de 6 a favor)"
   }
  ]
 }
