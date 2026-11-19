@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 18:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 18:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -39,7 +39,7 @@ Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.37** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.50** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
@@ -58,9 +58,9 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 41.2% das moedas subindo em 24 h, 12.3% em 4 h · BTC 24 h -0.69%, 4 h -1.91%.
+- **Amplitude:** 53.5% das moedas subindo em 24 h, 17.5% em 4 h · BTC 24 h -0.69%, 4 h -1.91%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 10.8, 'ETH': 11.0, 'SOL': -1.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -1.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AVAX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 18:20 UTC · Cointelegraph: Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns
@@ -72,7 +72,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.3 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.4 h.
 - 19/11 16:08 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Repique na hora depois da queda: 60,4% das 106 moedas sobem em 1 h (mediana +0,27%), 40,6% em 4 h (mediana −0,36%), 56,6% em 24 h; universo do v4 (110 moedas, v
 - 19/11 15:53 UTC · **AAVE venda, CAKE venda, UNI venda, SKY venda** · Queda forte agora: só 9,0% das 111 moedas sobem em 1 h (mediana −2,22%) e 16,2% em 4 h (mediana −2,53%); 24 h neutro (44,1%). BTC −1,68% em 1 h, −1,70% em 4 h, 
 - 19/11 15:38 UTC · **AAVE venda, CAKE venda** · Regime neutro em 24 h (48,6% das 109 moedas sobem), mas queda agora: só 10,8% sobem na última hora e 21,6% em 4 h (mediana −1,11% e −1,12%). BTC −0,85% em 1 h, 
@@ -107,7 +107,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28458 apostas conferidas ao vivo, acerto 55.3%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28499 apostas conferidas ao vivo, acerto 55.3%; prevê 91 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
