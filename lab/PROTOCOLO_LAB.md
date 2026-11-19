@@ -1372,3 +1372,13 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   Sharpe maior E queda máxima menor que a exposição fixa. Kelly e ½ Kelly calculados como informação.
 - **O que entra:** método aprovado vira robô/regra na mesa simulada e na conta de teste, com o tamanho H64; alavancagem só pela L aprovada. Nada
   aprovado = registrado e o dono recebe os números.
+
+### Resultado da H65 (19/11 ~14:20 UTC, `lab/metodos_fora.py` → `dados/lab/metodos_fora_resultado.json`): reprovada nas 3 tentativas
+| tentativa | eventos | média líquida | t | blocos | acerto |
+|---|---|---|---|---|---|
+| F1 segue o fluxo agressor (15 min, 1 h) | 4.828 | −0,132% | −5,66 | −0,100 −0,166 −0,127 | 40,9% |
+| F2 contra o fluxo agressor | 4.828 | −0,108% | −4,66 | −0,140 −0,074 −0,113 | 40,4% |
+| M momento semanal comprado e vendido | 100 semanas | +0,241%/semana | +0,34 | −0,085 +0,900 −0,082 | 54,0% |
+- Leitura: no fluxo, seguir e ir contra perdem quase exatamente o custo (0,12%): antes do custo o sinal vale ~0,01%, nada. O momento semanal tem
+  média positiva só por causa de um bloco; queda máxima −48%. A parte L (alavancagem pela volatilidade) não roda porque nada passou; como informação,
+  no momento semanal ela PIOROU (Sharpe 0,004 → −0,023; queda −48% → −51%). Nada entra na mesa.
