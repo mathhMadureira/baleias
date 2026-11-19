@@ -26,6 +26,7 @@ ROTAS = {"S1 stop 0,5% alvo 1,5%": (0.005, 0.015, False), "S2 stop 0,5% + móvel
          "S3 stop 1% + móvel": (0.01, None, True), "S4 stop 1% alvo 3%": (0.01, 0.03, False)}
 REFERENCIA = {"R6 (referência) stop 2% + móvel": (0.02, None, True)}
 Z_MIN = 2.24
+CORRIGIDO = True
 
 
 # ---------- Parte T ----------
@@ -138,7 +139,7 @@ def sair(d, t0, venda, stop, alvo, movel):
     c0 = d.get(t0)
     if not c0:
         return None
-    e, pico = c0[2], 0.0
+    e, pico, ant = c0[2], 0.0, 0.0
     for j in range(1, MAX_VELAS + 1):
         v = d.get(t0 + j * PASSO)
         if not v:
@@ -147,12 +148,13 @@ def sair(d, t0, venda, stop, alvo, movel):
         fav = (1 - l / e) if venda else (h / e - 1)
         adv = (1 - h / e) if venda else (l / e - 1)
         if movel and pico >= ARMA and adv <= GUARDA * pico:
-            return GUARDA * pico
+            return min(GUARDA * pico, ant) if CORRIGIDO else GUARDA * pico      # 19/11 (H66): não sair num preço que já passou
         if adv <= -stop:
             return -stop
         if alvo and fav >= alvo:
             return alvo
         pico = max(pico, fav)
+        ant = (1 - c / e) if venda else (c / e - 1)
         if j == MAX_VELAS:
             return (1 - c / e) if venda else (c / e - 1)
     return None
@@ -218,6 +220,10 @@ def parte_s():
 
 
 def main():
+    import sys
+    if "--so-s" in sys.argv:
+        parte_s()
+        return
     t = parte_t()
     s = parte_s()
     SAIDA.parent.mkdir(parents=True, exist_ok=True)

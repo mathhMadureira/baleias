@@ -2047,6 +2047,20 @@ class OperarLivre(unittest.TestCase):
         self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04})
 
 
+class StopMovelSemOlharFuturo(unittest.TestCase):
+    """19/11 (H66): o stop móvel não pode sair num preço que já tinha passado — sai na abertura se o minuto anterior fechou abaixo do nível."""
+
+    def test_sai_na_abertura_quando_o_fechamento_ja_passou(self):
+        from executor import stop_movel as SM
+        p = {"entrada": 100.0, "lado": "compra"}
+        m = [(0, 102.0, 100.0, 100.4), (60_000, 100.5, 100.2, 100.3)]     # pico +2% (nível +1,4%), mas fechou a +0,4%
+        r = SM.conferir(p, m, 0.03, 10**9, 0)
+        self.assertAlmostEqual(r[0], 100.4)                              # sai no fechamento anterior, não a 101,4
+        p = {"entrada": 100.0, "lado": "compra"}
+        m = [(0, 102.0, 100.0, 101.9), (60_000, 101.9, 101.0, 101.2)]
+        self.assertAlmostEqual(SM.conferir(p, m, 0.03, 10**9, 0)[0], 101.4)   # fechamento acima do nível: sai no nível
+
+
 class TamanhoH64(unittest.TestCase):
     """H64 (18/11, aprovada no lab/colher_balde.py): a fatia de cada entrada cresce com o ganho e encolhe na perda."""
 

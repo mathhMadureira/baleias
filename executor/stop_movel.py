@@ -25,7 +25,7 @@ def buscar(par, desde_ms, ate_ms):
                 k = json.load(r)
             if not k:
                 break
-            saida += [(int(x[0]), float(x[2]), float(x[3])) for x in k if int(x[6]) < ate_ms]
+            saida += [(int(x[0]), float(x[2]), float(x[3]), float(x[4])) for x in k if int(x[6]) < ate_ms]   # (t, máxima, mínima, fechamento)
             t = int(k[-1][0]) + 60_000
             if len(k) < 1000:
                 break
@@ -42,16 +42,20 @@ def conferir(p, minutos, stop_pct, ate_ms, desde_ms, alvo_pct=None):
     e = p["entrada"]
     venda = p["lado"] in ("venda", "SELL")
     pico = p.get("pico", 0.0)
+    ant = p.get("fecho_ant")                                    # resultado a favor no fechamento do minuto anterior
     inicio = max(int(desde_ms), int(p.get("movel_ate", 0)))
-    for t, h, l in minutos:
+    for m in minutos:
+        t, h, l = m[0], m[1], m[2]
         if t < inicio or t >= ate_ms:
             continue
         favoravel = (1 - l / e) if venda else (h / e - 1)
         adverso = (1 - h / e) if venda else (l / e - 1)
         if pico >= ARMA and adverso <= GUARDA * pico:          # devolveu até 70% do pico: realiza
             g = GUARDA * pico
+            if ant is not None and ant < g:                     # correção 19/11 (H66): o minuto anterior já fechou abaixo do nível → sai na abertura
+                g = ant
             p["pico"], p["movel_ate"] = pico, t + 60_000
-            return e * (1 - g if venda else 1 + g), f"stop móvel (pico +{pico:.2%}, guardou +{g:.2%})", t
+            return e * (1 - g if venda else 1 + g), f"stop móvel (pico +{pico:.2%}, guardou {g:+.2%})", t
         if adverso <= -stop_pct:
             p["pico"], p["movel_ate"] = pico, t + 60_000
             return e * (1 + stop_pct if venda else 1 - stop_pct), f"stop de segurança −{stop_pct:.1%}", t
@@ -59,6 +63,8 @@ def conferir(p, minutos, stop_pct, ate_ms, desde_ms, alvo_pct=None):
             p["pico"], p["movel_ate"] = max(pico, favoravel), t + 60_000
             return e * (1 - alvo_pct if venda else 1 + alvo_pct), f"lucro realizado +{alvo_pct:.1%}", t
         pico = max(pico, favoravel)                            # o pico do minuto só arma a partir do minuto seguinte (não sabemos a ordem)
+        if len(m) > 3:
+            ant = p["fecho_ant"] = (1 - m[3] / e) if venda else (m[3] / e - 1)
         p["movel_ate"] = t + 60_000
     p["pico"] = pico
     return None

@@ -1402,3 +1402,25 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   tamanho da H64 (até 4 posições) na reserva e um sorteio de Monte Carlo (10.000 ordens das operações da reserva) da chance de dobrar antes de
   cair ao piso de US$ 5 — informação, não decide.
 - **Se passar:** vira robô na mesa simulada e na conta de teste, com juiz ao vivo de 30 operações; dinheiro real continua sendo decisão do dono.
+
+### Resultado da H66 (19/11 ~15:30 UTC, `lab/busca_dobrar.py` → `dados/lab/busca_dobrar_resultado.json`): reprovada na reserva — e um erro de simulação achado
+- **1ª rodada INVÁLIDA (erro do simulador):** as 20 melhores eram todas "stop 3% + stop móvel" e a reserva deu +0,386%/op, t 8,4. Controle feito
+  antes de aceitar: entradas SORTEADAS ao acaso com a mesma saída davam +0,21% (comprando +0,19%, vendendo +0,20%) — impossível. Causa: quando a
+  vela anterior já tinha FECHADO abaixo do nível do stop móvel, o simulador saía no nível (um preço que já tinha passado). Corrigido: sai no
+  fechamento anterior (a abertura). Depois da correção o controle aleatório dá −0,108% (≈ o custo), como deve.
+- **2ª rodada (simulador corrigido; mesma regra, mesma reserva — a reserva tinha sido usada uma vez com o simulador errado; a escolha é automática):**
+  as 20 melhores do treino são quase todas "retorno de 24 h com z ≥ 2 a favor (segue), stop 3%, prazo 72 h, sem stop móvel". Escolhida pela
+  validação: ret24h z ≥ 3, segue, filtro de regime, stop 3%, alvo 9%, 72 h (validação +2,9%/op, t 6,9).
+  **Reserva: 1.304 entradas, média −0,246%, t −1,26, metades +0,133% e −0,485% → REPROVADA.** Monte Carlo: 10% de chance de dobrar antes do piso.
+  Leitura: o que brilha na validação era a tendência daquele trecho; não se repetiu. O t agrupado por hora fica inflado com posições de 72 h que se
+  sobrepõem (anotado).
+- **Consequência do erro para as aprovações antigas (re-medido com a correção, `lab/colher_balde.py --so-s`, 27.910 apostas do v4):**
+  | rota | antes (com o erro) | corrigido |
+  |---|---|---|
+  | R6 stop 2% + móvel, a favor do regime | +0,134%/aposta (H64) · +0,225% (H52, aprovada) | **−0,021%**, blocos +0,208 −0,099 −0,168 |
+  | S3 stop 1% + móvel | +0,084% | −0,037% |
+  | S2 stop 0,5% + móvel | +0,017% | −0,060% |
+  | S4 stop 1% alvo 3% (sem móvel; não muda) | +0,362% | +0,309%, último bloco −0,472% |
+  A aprovação da R6 (H52) e a do stop móvel (H49, também simulada em velas fechadas) estavam infladas por este erro. O stop móvel continua ligado
+  (é proteção, não fonte de lucro), mas `executor/stop_movel.py` passa a sair no fechamento anterior quando ele já passou do nível (velas de 1 min
+  agora trazem o fechamento). Lucro "pelo stop móvel" nas carteiras simuladas dos agentes até hoje (8 saídas, +0,80) pode estar inflado.
