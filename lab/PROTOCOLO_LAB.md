@@ -1347,3 +1347,28 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - Limite inferior 48,6% < 51%: reprovada. O acerto fica acima do equilíbrio do contrato (51%), mas sem prova.
 - Blocos de tempo (só informação, não fazem parte do critério): 166 apostas 54,8% · 185 apostas 47,6% · 212 apostas 55,7%.
 - O que muda: nada (o v1 roda só no binário simulado; não decide nenhuma carteira). H21 (v2 × v1) segue: v2 com 266 de 300 apostas.
+
+## Hipótese 65: métodos de fora com evidência publicada — fluxo agressor (scalper de 15 min), momento semanal comprado e vendido, e alavancagem pela volatilidade (registrada em 19/11/2026 ~11:00 BRT = 14:00 UTC, antes de baixar os dados)
+- **Pedido do dono (19/11):** "vá atrás de um método lucrativo de scalper e de alavancagem (GitHub, Hugging Face, livros, YouTube, artigos); os robôs
+  precisam acumular lucro, eu preciso dobrar o capital."
+- **Pesquisa (19/11):** nenhum scalper público com lucro líquido verificável depois do custo (repositórios freqtrade e testes independentes de
+  estratégias do YouTube ficam perto de 40–50% de acerto). O que tem evidência publicada e AINDA NÃO foi testado aqui:
+  (1) desequilíbrio do fluxo agressor (volume comprador × vendedor) prevendo o retorno curto em cripto: sinal fraco e curto (Bieganowski & Ślepaczuk,
+  arXiv 2602.00776; arXiv 2608.21888 acha reversão com AUC 0,54); (2) momento entre moedas COMPRADO E VENDIDO de 1–4 semanas (Liu, Tsyvinski & Wu,
+  Journal of Finance 2022: ~3%/semana bruto, mais forte nas moedas grandes; a H15 testou só compra e top 5); (3) alavancagem inversa à volatilidade
+  (Moreira & Muir, NBER w22208; Harvey et al., volatilidade-alvo em 60+ ativos reduz os extremos) e Kelly fracionado (½ Kelly).
+- **Dados:** perpétuos USDT da Binance, velas com o volume agressor comprador (coluna "taker buy" das klines). Universo FIXO = as 60 moedas de maior
+  volume em US$ nas últimas 24 h na hora de rodar (viés de sobrevivência anotado). Custo 0,12% ida e volta. Sem funding (anotado).
+- **F — fluxo de 15 min (2 tentativas):** I = 2 × volume comprador ÷ volume − 1 da vela; z = (I − média) ÷ desvio das 96 velas anteriores da mesma
+  moeda. Sinal com |z| ≥ 2,5. F1 segue o fluxo, F2 vai contra; entra no fechamento da vela do sinal, sai no fechamento 4 velas (1 h) depois.
+  Últimos 60 dias.
+- **M — momento semanal comprado e vendido (1 tentativa):** toda segunda 00:00 UTC, ordena as moedas com 21+ dias de histórico pelo retorno dos 21
+  dias anteriores; compra os 20% de cima e vende os 20% de baixo, pesos iguais, segura 7 dias; custo 0,12% por perna por semana (giro inteiro,
+  conservador). Velas diárias, últimos 730 dias.
+- **Juiz (F1, F2, M; 3 tentativas):** média líquida > 0, t ≥ 2,13 (Bonferroni para 3, 5% unilateral; erro-padrão agrupado pela vela de entrada em F,
+  pela semana em M) e média > 0 nos 3 blocos de tempo.
+- **L — alavancagem pela volatilidade (só se F ou M passar; não conta tentativa):** exposição = 1 × (volatilidade-alvo ÷ volatilidade das 4 semanas
+  anteriores da própria estratégia), limitada a 3×, alvo = a volatilidade média do treino (primeira metade). Passa se, na segunda metade, tiver
+  Sharpe maior E queda máxima menor que a exposição fixa. Kelly e ½ Kelly calculados como informação.
+- **O que entra:** método aprovado vira robô/regra na mesa simulada e na conta de teste, com o tamanho H64; alavancagem só pela L aprovada. Nada
+  aprovado = registrado e o dono recebe os números.
