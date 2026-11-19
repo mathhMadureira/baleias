@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 22:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 22:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.68** · 36 operações fechadas · 3 abertas
+Carteira **US$ 9.62** · 36 operações fechadas · 3 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado -0.27, média -0.008 por operação.
 - **Últimas 24 h:** 11/15 com lucro, +1.13.
@@ -30,13 +30,13 @@ Carteira **US$ 9.08** · 22 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.05** · 20 operações fechadas · 2 abertas
+Carteira **US$ 8.95** · 22 operações fechadas · 0 abertas
 
-- **Total:** 8/20 com lucro (40%), resultado -0.58, média -0.029 por operação.
-- **Últimas 24 h:** 5/14 com lucro, -0.84.
-- **Por horário:** 12–17 UTC: 7 op, 29% certas, -0.50 · 18–23 UTC: 13 op, 46% certas, -0.08
-- **Por lado:** venda: 16 op, 38% certas, -0.78 · compra: 4 op, 50% certas, +0.20
-- **Por motivo de saída:** nova: 6 de 6 tempos abaixo da : 1 op, 0% certas, -0.28 · nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24 · nova (aviso do Caçador, explos: 2 op, 100% certas, +0.46
+- **Total:** 8/22 com lucro (36%), resultado -1.05, média -0.048 por operação.
+- **Últimas 24 h:** 5/16 com lucro, -1.31.
+- **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 7 op, 29% certas, -0.50
+- **Por lado:** venda: 18 op, 33% certas, -1.25 · compra: 4 op, 50% certas, +0.20
+- **Por motivo de saída:** nova: 6 de 6 tempos abaixo da : 2 op, 0% certas, -0.51 · nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
@@ -52,30 +52,30 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.17** · 32 operações fechadas · 1 abertas
+Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
-- **Total:** 20/32 com lucro (62%), resultado +0.22, média +0.007 por operação.
-- **Últimas 24 h:** 12/23 com lucro, -0.50.
-- **Por horário:** 18–23 UTC: 25 op, 64% certas, +0.10 · 12–17 UTC: 7 op, 57% certas, +0.11
-- **Por lado:** compra: 8 op, 50% certas, -0.49 · venda: 24 op, 67% certas, +0.71
-- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin, tendência de 24 h de: 1 op, 0% certas, -0.14 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
-- **Moedas que mais perderam (≥ 3 op):** TRUMP -0.20 (5 op) · DOGE -0.20 (3 op) · PENGU +0.32 (6 op) · PUMP +0.63 (4 op)
-- **Moedas que mais ganharam (≥ 3 op):** PUMP +0.63 (4 op) · PENGU +0.32 (6 op) · DOGE -0.20 (3 op) · TRUMP -0.20 (5 op)
+- **Total:** 20/33 com lucro (61%), resultado +0.08, média +0.002 por operação.
+- **Últimas 24 h:** 12/24 com lucro, -0.63.
+- **Por horário:** 18–23 UTC: 26 op, 62% certas, -0.03 · 12–17 UTC: 7 op, 57% certas, +0.11
+- **Por lado:** compra: 8 op, 50% certas, -0.49 · venda: 25 op, 64% certas, +0.57
+- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin, tendência de 24 h de: 2 op, 0% certas, -0.28 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
+- **Moedas que mais perderam (≥ 3 op):** TRUMP -0.20 (5 op) · DOGE -0.20 (3 op) · PENGU +0.18 (7 op) · PUMP +0.63 (4 op)
+- **Moedas que mais ganharam (≥ 3 op):** PUMP +0.63 (4 op) · PENGU +0.18 (7 op) · DOGE -0.20 (3 op) · TRUMP -0.20 (5 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
 - **Amplitude:** 28.2% das moedas subindo em 24 h, 17.1% em 4 h · BTC 24 h -0.87%, 4 h -1.41%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 0.4, 'ETH': -2.9, 'SOL': -0.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.0%/ano · {'BTC': 1.6, 'ETH': -2.2, 'SOL': 0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** HYPE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · WLFI estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RARE topo duplo (baixa, formado) · SAPIEN fundo duplo (alta, formado)
+- 📰 19/11 22:25 UTC · Cointelegraph: Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express
 - 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 19/11 21:12 UTC · Decrypt: Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price
 - 📰 19/11 21:01 UTC · Cointelegraph: MoonPay seeks US bank charter for stablecoin, custody services
 - 📰 19/11 20:46 UTC · Decrypt: Meet SHRINCS: Bitcoin's Emerging Frontrunner for a Post-Quantum Signature
 - 📰 19/11 20:33 UTC · Cointelegraph: Hyperliquid Anthropic futures priced within 1% of Nasdaq opening price
-- 📰 19/11 20:15 UTC · Decrypt: Hackers Leak Visa, Mastercard and JPMorgan Customer Data
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
