@@ -1,6 +1,6 @@
 {
- "t": 1795116178,
- "hora_utc": "2026-11-19 19:22 UTC",
+ "t": 1795116415,
+ "hora_utc": "2026-11-19 19:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
@@ -172,10 +172,10 @@
   -0.52,
   -0.05,
   0.22,
-  -0.12
+  -0.07
  ],
  "contexto": {
-  "t": 1795116179,
+  "t": 1795116416,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.1,
+   "media_top20_anual_pct": 7.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 6.7,
-    "SOL": -1.8
+    "ETH": 7.1,
+    "SOL": -0.4
    },
    "leitura": "neutro"
   },
@@ -462,7 +462,7 @@
     "entrada": 0.722,
     "agora": 0.721,
     "resultado_pct": 0.14,
-    "horas_aberta": 0.6,
+    "horas_aberta": 0.7,
     "motivo_de_entrada": "v4 0,345 de subir (confiança 0,155, faixa ≥ 0,12 que acerta 67%); topo duplo de 4 h CONFIRMADO para baixo; volume de 4 h 2,14×; carteiras vendidas em BTC 1×17. "
    }
   ],
@@ -690,7 +690,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.41,
+   "carteira": 10.44,
    "n_abertas": 1,
    "abertas": [
     [
@@ -748,7 +748,7 @@
     "ganho_medio": 0.14,
     "perda_media": -0.248,
     "fator_lucro": 1.32,
-    "carteira": 10.41
+    "carteira": 10.44
    }
   },
   "vereditos": []
