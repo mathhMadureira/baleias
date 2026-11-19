@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 22:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 22:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.94** · 36 operações fechadas · 3 abertas
+Carteira **US$ 9.93** · 36 operações fechadas · 3 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado -0.27, média -0.008 por operação.
-- **Últimas 24 h:** 12/16 com lucro, +1.21.
+- **Últimas 24 h:** 11/15 com lucro, +1.13.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 17 op, 59% certas, -0.13 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 16 op, 69% certas, +0.56
 - **Por lado:** compra: 12 op, 50% certas, -1.42 · venda: 24 op, 71% certas, +1.14
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39
@@ -30,7 +30,7 @@ Carteira **US$ 9.08** · 22 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.64** · 19 operações fechadas · 3 abertas
+Carteira **US$ 9.66** · 19 operações fechadas · 3 abertas
 
 - **Total:** 8/19 com lucro (42%), resultado -0.32, média -0.017 por operação.
 - **Últimas 24 h:** 5/13 com lucro, -0.58.
@@ -52,10 +52,10 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.43** · 31 operações fechadas · 2 abertas
+Carteira **US$ 10.41** · 31 operações fechadas · 2 abertas
 
 - **Total:** 20/31 com lucro (65%), resultado +0.35, média +0.011 por operação.
-- **Últimas 24 h:** 15/25 com lucro, -0.10.
+- **Últimas 24 h:** 14/24 com lucro, -0.23.
 - **Por horário:** 12–17 UTC: 7 op, 57% certas, +0.11 · 18–23 UTC: 24 op, 67% certas, +0.24
 - **Por lado:** compra: 8 op, 50% certas, -0.49 · venda: 23 op, 70% certas, +0.85
 - **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
@@ -67,7 +67,7 @@ Carteira **US$ 10.43** · 31 operações fechadas · 2 abertas
 
 - **Amplitude:** 27.4% das moedas subindo em 24 h, 15.4% em 4 h · BTC 24 h -1.3%, 4 h -1.92%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.0%/ano · {'BTC': -4.1, 'ETH': -1.4, 'SOL': -5.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': -2.8, 'ETH': -2.0, 'SOL': -6.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** HYPE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · WLFI estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RARE topo duplo (baixa, formado) · SAPIEN fundo duplo (alta, formado)
 - 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
