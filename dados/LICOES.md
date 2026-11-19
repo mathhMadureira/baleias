@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 16:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 16:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.93** · 31 operações fechadas · 1 abertas
+Carteira **US$ 9.02** · 31 operações fechadas · 1 abertas
 
 - **Total:** 19/31 com lucro (61%), resultado -1.05, média -0.034 por operação.
 - **Últimas 24 h:** 12/21 com lucro, -0.46.
@@ -28,7 +28,7 @@ Carteira **US$ 9.70** · 15 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.43** · 11 operações fechadas · 2 abertas
+Carteira **US$ 9.59** · 11 operações fechadas · 2 abertas
 
 - **Total:** 3/11 com lucro (27%), resultado -0.45, média -0.041 por operação.
 - **Últimas 24 h:** 3/11 com lucro, -0.45.
@@ -39,13 +39,13 @@ Carteira **US$ 9.43** · 11 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.37** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.25** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 9.92** · 16 operações fechadas · 3 abertas
+Carteira **US$ 10.15** · 16 operações fechadas · 3 abertas
 
 - **Total:** 11/16 com lucro (69%), resultado +0.09, média +0.006 por operação.
 - **Últimas 24 h:** 11/16 com lucro, +0.09.
@@ -58,13 +58,13 @@ Carteira **US$ 9.92** · 16 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 60.4% das moedas subindo em 24 h, 18.0% em 4 h · BTC 24 h 0.87%, 4 h -1.01%.
+- **Amplitude:** 63.1% das moedas subindo em 24 h, 18.9% em 4 h · BTC 24 h 0.87%, 4 h -1.01%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 11.0, 'ETH': 4.9, 'SOL': 0.5} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.5%/ano · {'BTC': 11.0, 'ETH': 5.0, 'SOL': 0.8} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 16:09 UTC · CoinDesk: Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure
-- 📰 19/11 16:07 UTC · Cointelegraph: Anthropic shares expected to open at $105, 26.5% above $83 IPO price
+- 📰 19/11 16:07 UTC · Cointelegraph: Anthropic shares expected to open at $110, 32.5% above $83 IPO price
 - 📰 19/11 15:54 UTC · Decrypt: Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
@@ -106,7 +106,7 @@ Carteira **US$ 9.92** · 16 operações fechadas · 3 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28092 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28112 apostas conferidas ao vivo, acerto 55.3%; prevê 91 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
