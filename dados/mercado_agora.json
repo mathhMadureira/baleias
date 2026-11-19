@@ -1,20 +1,20 @@
 {
- "t": 1795102423,
- "hora_utc": "2026-11-19 15:33 UTC",
+ "t": 1795102726,
+ "hora_utc": "2026-11-19 15:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 111,
-  "subindo_pct": 10.8,
-  "mediana_pct": -1.11
+  "moedas": 112,
+  "subindo_pct": 10.7,
+  "mediana_pct": -1.12
  },
  "mercado_4h": {
-  "moedas": 111,
-  "subindo_pct": 21.6,
+  "moedas": 112,
+  "subindo_pct": 21.4,
   "mediana_pct": -1.12
  },
  "mercado_24h": {
-  "moedas": 111,
-  "subindo_pct": 47.7,
+  "moedas": 112,
+  "subindo_pct": 47.3,
   "mediana_pct": 0.0
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.11,
   0.25,
   -0.75,
-  -0.61
+  -0.89
  ],
  "contexto": {
-  "t": 1795102424,
+  "t": 1795102727,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.9,
+   "media_top20_anual_pct": 6.2,
    "principais_anual_pct": {
-    "BTC": 8.1,
-    "ETH": 5.0,
-    "SOL": -0.8
+    "BTC": 7.7,
+    "ETH": 3.0,
+    "SOL": -2.6
    },
    "leitura": "neutro"
   },
@@ -296,6 +296,13 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "LDO",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": true,
+    "nivel": 0.2649
+   },
    {
     "moeda": "UNI",
     "padrao": "triângulo ascendente",
@@ -337,13 +344,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.00832
-   },
-   {
-    "moeda": "LTC",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 43.1
    },
    {
     "moeda": "MUBARAK",
@@ -688,15 +688,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.69,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "SKY",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 12,
+   "carteira": 10.88,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 13,
    "ordem": null
   }
  ],
@@ -740,13 +735,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 12,
-    "acerto": 0.833,
-    "soma": 0.688,
-    "ganho_medio": 0.106,
+    "ops": 13,
+    "acerto": 0.846,
+    "soma": 0.882,
+    "ganho_medio": 0.114,
     "perda_media": -0.186,
-    "fator_lucro": 2.85,
-    "carteira": 10.69
+    "fator_lucro": 3.37,
+    "carteira": 10.88
    }
   },
   "vereditos": []
@@ -759,12 +754,12 @@
   "z_contra_lab": 2.03,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5095,
-    "n": 20331
+    "acerto": 0.5091,
+    "n": 20464
    },
    "segue_maioria_24h": {
-    "acerto": 0.504,
-    "n": 27043
+    "acerto": 0.5039,
+    "n": 26980
    }
   },
   "referencia_ganha": [],

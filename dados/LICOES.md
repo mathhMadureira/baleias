@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 15:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 15:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -45,24 +45,24 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.69** · 12 operações fechadas · 1 abertas
+Carteira **US$ 10.88** · 13 operações fechadas · 0 abertas
 
-- **Total:** 10/12 com lucro (83%), resultado +0.69, média +0.057 por operação.
-- **Últimas 24 h:** 10/12 com lucro, +0.69.
-- **Por horário:** 18–23 UTC: 12 op, 83% certas, +0.69
-- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 10 op, 80% certas, +0.51
-- **Por motivo de saída:** entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18
+- **Total:** 11/13 com lucro (85%), resultado +0.88, média +0.068 por operação.
+- **Últimas 24 h:** 11/13 com lucro, +0.88.
+- **Por horário:** 12–17 UTC: 1 op, 100% certas, +0.19 · 18–23 UTC: 12 op, 83% certas, +0.69
+- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 11 op, 82% certas, +0.71
+- **Por motivo de saída:** entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19
 - **Moedas que mais perderam (≥ 3 op):** TRUMP +0.04 (4 op) · PUMP +0.38 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** PUMP +0.38 (3 op) · TRUMP +0.04 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 47.7% das moedas subindo em 24 h, 21.6% em 4 h · BTC 24 h -0.3%, 4 h -0.78%.
+- **Amplitude:** 47.3% das moedas subindo em 24 h, 21.4% em 4 h · BTC 24 h -0.3%, 4 h -0.78%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 8.1, 'ETH': 5.0, 'SOL': -0.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 7.7, 'ETH': 3.0, 'SOL': -2.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** LDO topo duplo (baixa, CONFIRMOU) · UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
 - 📰 19/11 13:48 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -106,7 +106,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28019 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28019 apostas conferidas ao vivo, acerto 55.3%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
