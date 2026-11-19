@@ -1,6 +1,6 @@
 {
- "t": 1795091900,
- "hora_utc": "2026-11-19 12:38 UTC",
+ "t": 1795092071,
+ "hora_utc": "2026-11-19 12:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   0.19,
   -0.1,
   0.24,
-  -0.22
+  -0.25
  ],
  "contexto": {
-  "t": 1795091901,
+  "t": 1795092072,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795092012,
+    "hora_utc": "19/11 12:40",
+    "titulo": "Trump Media wants to clear $884 million of debt without selling its bitcoin"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795091626,
@@ -260,12 +266,6 @@
     "t": 1795078498,
     "hora_utc": "19/11 08:54",
     "titulo": "Singapore settles $77.5M tokenized bill sale with wholesale CBDC"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795076779,
-    "hora_utc": "19/11 08:26",
-    "titulo": "Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.7,
+   "media_top20_anual_pct": 7.6,
    "principais_anual_pct": {
-    "BTC": 3.7,
-    "ETH": 2.7,
-    "SOL": 3.6
+    "BTC": 3.6,
+    "ETH": 2.9,
+    "SOL": 3.2
    },
    "leitura": "neutro"
   },
