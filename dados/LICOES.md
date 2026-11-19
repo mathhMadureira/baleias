@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 11:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 11:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,13 +60,13 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 54.2% das moedas subindo em 24 h, 63.6% em 4 h · BTC 24 h -0.41%, 4 h 0.49%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.5%/ano · {'BTC': -4.0, 'ETH': 3.1, 'SOL': 1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.5%/ano · {'BTC': -4.1, 'ETH': 3.4, 'SOL': 1.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · KAVA fundo duplo (alta, formado) · KAVA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PLUME topo duplo (baixa, formado)
 - 📰 19/11 11:30 UTC · CoinDesk: North Korean hackers used Sky's stablecoin system, putting billions at freeze risk
 - 📰 19/11 11:19 UTC · Cointelegraph: Sweden’s H100 could tap Bitcoin trading pool to fund share buybacks
 - 📰 19/11 11:15 UTC · Decrypt: GameStop CEO Says Digital-Only Games Have ‘Hurt Consumers’ as GTA 6 Skips Discs
-- 📰 19/11 11:06 UTC · CoinDesk: Anthropic’s $107 billion raise set to top SpaceX’s IPO as tokenized stocks gain traction
+- 📰 19/11 11:06 UTC · CoinDesk: Anthropic’s $107 billion sale set to top SpaceX’s IPO as tokenized stocks gain traction
 - 📰 19/11 10:55 UTC · CoinDesk: ‘Highly advanced’ quantum computers could crack financial encryption in five years
 - 📰 19/11 10:48 UTC · CoinDesk: Live updates: Bitcoin nears $64,000 as Anthropic’s record IPO lifts tech
 

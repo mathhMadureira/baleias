@@ -1,6 +1,6 @@
 {
- "t": 1795088466,
- "hora_utc": "2026-11-19 11:41 UTC",
+ "t": 1795088634,
+ "hora_utc": "2026-11-19 11:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
@@ -172,10 +172,10 @@
   -0.0,
   0.19,
   -0.1,
-  0.23
+  0.24
  ],
  "contexto": {
-  "t": 1795088467,
+  "t": 1795088635,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -199,7 +199,7 @@
     "fonte": "CoinDesk",
     "t": 1795086373,
     "hora_utc": "19/11 11:06",
-    "titulo": "Anthropic’s $107 billion raise set to top SpaceX’s IPO as tokenized stocks gain traction"
+    "titulo": "Anthropic’s $107 billion sale set to top SpaceX’s IPO as tokenized stocks gain traction"
    },
    {
     "fonte": "CoinDesk",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 9.5,
    "principais_anual_pct": {
-    "BTC": -4.0,
-    "ETH": 3.1,
-    "SOL": 1.2
+    "BTC": -4.1,
+    "ETH": 3.4,
+    "SOL": 1.4
    },
    "leitura": "neutro"
   },
