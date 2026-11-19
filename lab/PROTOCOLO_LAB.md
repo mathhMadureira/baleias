@@ -1491,3 +1491,41 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   não mediu nada e o Laboratório passa a seguir a r9 como os outros (fica registrado aqui, sem ajuste depois de ver).
 - **Previsão registrada:** mais operações por dia. Por operação, perto do controle (≈ −0,12%), a não ser que a leitura dos agentes tenha vantagem;
   nenhum teste do laboratório mostrou vantagem em leitura discricionária até aqui (H43, H62: não sei).
+
+## Hipótese 68: o Caçador — varredura contínua de oportunidades na nuvem, com juiz automático (registrada em 19/11/2026 ~13:10 BRT = 16:10 UTC, antes de ligar)
+- **Dono (19/11):** "quero um agente caçador… ele não opera, apenas caça as oportunidades e avisa os agentes que operam… leitura e análises 24 h,
+  constantemente… criptos e memecoins… na Binance a todo momento uma vela explode para cima ou para baixo, tendências se formam." Desenho aprovado
+  pelo chefe (Baleias); engenharia do Engenheiro.
+- **Onde roda:** `executor/cacador_nuvem.py`, a cada rodada do laço de `cerebro.yml` (~3 min), grava só `dados/oportunidades.json`. O agente
+  Caçador do OpenBot lê esse arquivo, confere o gráfico e avisa os operadores; não opera.
+- **Universo (limite declarado):** a nuvem do GitHub não alcança a API de futuros da Binance (bloqueio regional; não será contornado). Varre TODOS
+  os pares USDT à vista em negociação da Binance (`data-api.binance.vision`, os mesmos preços que a execução da nuvem usa), com volume de 24 h
+  ≥ US$ 500 mil, sem estáveis, fiduciárias, ações tokenizadas e alavancados (filtros de `lab/universo.py`). Memecoins primeiro na ordem.
+  Listagem nova = par USDT que aparece no `exchangeInfo` (relido a cada 60 min) e não estava na lista anterior. Memecoins de DEX (DexScreener
+  token-profiles + tokens, GeckoTerminal new_pools da Solana; APIs públicas sem chave) = só informação, sem juiz (filtros: liquidez ≥ US$ 50 mil,
+  idade ≥ 30 min, ≥ 10 compras e ≥ 10 vendas em 1 h, volume de 1 h ≥ US$ 25 mil; maiores detentores: não disponível nessas APIs → "não sei").
+- **Sinais (fixos; entrada = fechamento do último minuto fechado; lado sugerido; nível de invalidação):**
+  E1/E5/E15 explosão de vela: retorno da janela de 1, 5 ou 15 min com |z| ≥ 3 (z = log-retorno ÷ (desvio dos retornos de 1 min dos 120 min
+  anteriores à janela × √minutos)) E volume da janela ≥ 3 × o volume médio por minuto da base × minutos; lado = o do movimento (segue);
+  invalidação = o preço de antes da janela.
+  T tendência se formando: fechamento acima (abaixo) da MM20 em 15 min, 1 h e 4 h (4 h agregado de velas de 1 h) e a vela de 15 min anterior do
+  outro lado da MM20 dela (acabou de cruzar); invalidação = MM20 de 15 min.
+  R rompimento de 24 h: preço acima da máxima (abaixo da mínima) das 96 velas de 15 min anteriores, com a última vela de 15 min fechada ainda
+  dentro; invalidação = a máxima/mínima rompida.
+  P15/P60 padrão gráfico CONFIRMADO de `lab/padroes_graficos.detectar` em 15 min / 1 h (alta = compra); invalidação = mínima (máxima) da última vela.
+  T, R e P são lidos nas candidatas da rodada (todas com sinal de 1 min, memecoins, as 20 de maior |24 h|, as 20 de maior |1 h|, as perto da
+  máxima/mínima de 24 h; até 80). Força 0–100 = mín(100, 12·|z| maior + 15·tempos da MM20 a favor (0–3) + 8·mín(5, volume relativo) + 10 se memecoin).
+  O mesmo (moeda, sinal, lado) não vira evento novo antes de 30 min. Até 25 eventos por rodada (os de maior força).
+- **Juiz automático (uma avaliação por sinal e horizonte; 7 sinais × 2 horizontes = 14 tentativas, contadas):** cada evento é resolvido pelo
+  fechamento do minuto 15 e do minuto 60 depois da entrada (velas históricas de 1 min; rodada atrasada não perde evento): retorno no lado sugerido
+  − 0,12%. **Controle de entradas aleatórias obrigatório:** para cada evento real, um evento de controle no mesmo instante, moeda sorteada entre as
+  lidas e lado sorteado, resolvido igual. **Passa** o par (sinal, horizonte) com ≥ 300 eventos, média > 0, t ≥ 2,69 (≥ 2 pedido pelo chefe e
+  Bonferroni para 14, 5% unilateral; erro-padrão agrupado pela hora da entrada) e média > 0 em 2 dos 3 blocos de tempo (horas em ordem, terços).
+  **Validade:** o juiz só vale se o controle do mesmo horizonte der média dentro de −0,12% ± 2 erros-padrão (senão há erro de simulação e nada passa).
+  Placar no próprio `dados/oportunidades.json` (`juiz_h68`).
+- **O que entra:** nada muda nas regras dos operadores por esta hipótese: eles recebem os avisos e decidem livres (H62). Sinal aprovado → o
+  Caçador passa a marcá-lo como "aprovado no juiz" nos avisos; sinal reprovado ou sem prova → "sem prova" (informação).
+- **Execução (mudança de encanamento, não de estratégia):** a nuvem passa a abrir posição de agente em moeda fora das velas do v4 quando tem o
+  preço de 1 min da rodada (antes a entrada era recusada), para que as oportunidades fora das 108 moedas do v4 possam ser operadas.
+- Previsão registrada antes: não sei. O laboratório já viu rompimentos de 5 min e de 1 h, regras de 1 s e fluxo agressor perderem para o custo
+  (H25, H56, H65, H66): a previsão mais provável é média perto de −0,12%.
