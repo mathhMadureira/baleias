@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 05:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 05:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,17 +58,17 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 35.7% das moedas subindo em 24 h, 52.7% em 4 h · BTC 24 h -1.79%, 4 h 0.48%.
+- **Amplitude:** 27.7% das moedas subindo em 24 h, 69.6% em 4 h · BTC 24 h -2.02%, 4 h 1.17%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 11.0, 'ETH': 10.9, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 11.0, 'ETH': 10.8, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CYBER fundo duplo (alta, formado) · DASH fundo duplo (alta, formado) · ENSO ombro-cabeça-ombro (baixa, formado) · ETHFI topo duplo (baixa, formado) · KAVA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PEPE fundo duplo (alta, formado) · SPK topo duplo (baixa, formado)
+- 📰 19/11 05:27 UTC · Cointelegraph: Senators warn GENIUS Act rules could push stablecoin firms toward federal oversight
 - 📰 19/11 05:09 UTC · Cointelegraph: Binance hackers stole 192 tokens across 11 networks, court docs show
 - 📰 19/11 04:46 UTC · CoinDesk: Bitcoin miner that sold its last BTC warns it may run short of cash for $1.2 billion AI deal
 - 📰 19/11 03:40 UTC · CoinDesk: CZ says tokenized Anthropic is coming to BNB Chain on IPO day
 - 📰 19/11 01:45 UTC · Cointelegraph: Trump administration unveils new center to choke off scam payments
 - 📰 19/11 00:35 UTC · Cointelegraph: Fed officials saw October rate hold as a ‘close call,’ minutes show
-- 📰 19/11 00:33 UTC · CoinDesk: Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -101,13 +101,13 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 26347 apostas conferidas ao vivo, acerto 55.3%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 26382 apostas conferidas ao vivo, acerto 55.3%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
