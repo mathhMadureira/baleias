@@ -1,28 +1,28 @@
 {
- "t": 1795112104,
- "hora_utc": "2026-11-19 18:15 UTC",
+ "t": 1795112354,
+ "hora_utc": "2026-11-19 18:19 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
-  "subindo_pct": 64.6,
-  "mediana_pct": 0.17
+  "subindo_pct": 82.3,
+  "mediana_pct": 0.69
  },
  "mercado_4h": {
   "moedas": 113,
-  "subindo_pct": 14.2,
-  "mediana_pct": -2.53
+  "subindo_pct": 11.5,
+  "mediana_pct": -2.56
  },
  "mercado_24h": {
   "moedas": 113,
   "subindo_pct": 40.7,
-  "mediana_pct": -0.6
+  "mediana_pct": -0.57
  },
  "btc": {
-  "1h": -0.05,
-  "4h": -2.01,
-  "24h": -0.57,
-  "preco": 62748.96,
-  "vol_4h_vs_media": 1.6
+  "1h": 0.49,
+  "4h": -1.91,
+  "24h": -0.69,
+  "preco": 62724.4,
+  "vol_4h_vs_media": 1.62
  },
  "maiores_quedas_4h": [
   {
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
-   "moeda": "SKY",
-   "4h": -8.09,
-   "24h": -22.05,
-   "vol": 2.98
+   "moeda": "BEB",
+   "4h": -7.11,
+   "24h": -1.04,
+   "vol": 4.44
   },
   {
    "moeda": "CHIP",
-   "4h": -7.8,
-   "24h": 2.51,
-   "vol": 1.39
+   "4h": -6.73,
+   "24h": 1.51,
+   "vol": 1.27
   },
   {
-   "moeda": "BEB",
-   "4h": -6.49,
-   "24h": -1.37,
-   "vol": 4.46
-  },
-  {
-   "moeda": "MUBARAK",
-   "4h": -6.24,
-   "24h": -9.16,
-   "vol": 2.36
-  },
-  {
-   "moeda": "BREV",
-   "4h": -5.96,
-   "24h": -9.65,
-   "vol": 0.71
+   "moeda": "SKY",
+   "4h": -6.37,
+   "24h": -20.55,
+   "vol": 3.11
   },
   {
    "moeda": "CFG",
-   "4h": -5.65,
-   "24h": -15.34,
-   "vol": 0.68
+   "4h": -6.25,
+   "24h": -15.41,
+   "vol": 0.7
   },
   {
-   "moeda": "AAVE",
-   "4h": -5.17,
-   "24h": -4.03,
-   "vol": 2.34
+   "moeda": "BREV",
+   "4h": -6.19,
+   "24h": -10.61,
+   "vol": 0.73
   },
   {
-   "moeda": "PENDLE",
-   "4h": -4.97,
-   "24h": -1.36,
-   "vol": 1.15
+   "moeda": "MUBARAK",
+   "4h": -6.06,
+   "24h": -9.6,
+   "vol": 2.27
   },
   {
    "moeda": "MARSCOIN",
-   "4h": -4.94,
-   "24h": -0.61,
-   "vol": 1.2
+   "4h": -5.25,
+   "24h": -1.22,
+   "vol": 1.22
+  },
+  {
+   "moeda": "PYTH",
+   "4h": -5.0,
+   "24h": 1.52,
+   "vol": 2.49
+  },
+  {
+   "moeda": "HUMA",
+   "4h": -4.89,
+   "24h": -3.17,
+   "vol": 1.12
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "MMT",
-   "4h": 28.99,
-   "24h": 14.74,
-   "vol": 2.84
+   "4h": 28.88,
+   "24h": 18.67,
+   "vol": 2.68
   },
   {
    "moeda": "YB",
-   "4h": 20.59,
-   "24h": 32.68,
-   "vol": 5.33
+   "4h": 21.86,
+   "24h": 30.3,
+   "vol": 4.97
   },
   {
    "moeda": "ZKP",
-   "4h": 1.87,
-   "24h": -4.4,
-   "vol": 0.85
+   "4h": 2.17,
+   "24h": -3.23,
+   "vol": 0.81
   },
   {
-   "moeda": "KAT",
-   "4h": 1.6,
-   "24h": 0.96,
-   "vol": 2.37
+   "moeda": "BMT",
+   "4h": 1.74,
+   "24h": 6.66,
+   "vol": 0.75
   },
   {
-   "moeda": "MEGA",
-   "4h": 1.37,
-   "24h": 9.56,
-   "vol": 1.02
-  },
-  {
-   "moeda": "SHELL",
-   "4h": 1.31,
-   "24h": -4.98,
-   "vol": 0.84
+   "moeda": "THE",
+   "4h": 1.35,
+   "24h": 2.03,
+   "vol": 5.34
   },
   {
    "moeda": "ERA",
    "4h": 1.1,
-   "24h": 3.81,
-   "vol": 1.82
+   "24h": 3.38,
+   "vol": 1.83
   },
   {
-   "moeda": "JST",
-   "4h": 0.69,
-   "24h": 0.45,
-   "vol": 1.32
+   "moeda": "SOPH",
+   "4h": 0.97,
+   "24h": 4.0,
+   "vol": 1.28
   },
   {
    "moeda": "LUNC",
-   "4h": 0.65,
-   "24h": 20.02,
-   "vol": 0.77
+   "4h": 0.52,
+   "24h": 20.57,
+   "vol": 0.73
   },
   {
-   "moeda": "BMT",
-   "4h": 0.39,
-   "24h": 6.59,
-   "vol": 0.78
+   "moeda": "HYPE",
+   "4h": 0.48,
+   "24h": 2.88,
+   "vol": 2.53
+  },
+  {
+   "moeda": "JST",
+   "4h": 0.45,
+   "24h": 0.54,
+   "vol": 1.23
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.72,
   -0.52,
   -0.05,
-  -0.08
+  0.16
  ],
  "contexto": {
-  "t": 1795112105,
+  "t": 1795112355,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795112156,
+    "hora_utc": "19/11 18:15",
+    "titulo": "Trump's Democratic SEC pick suggests tokenization policy deserves full rule process"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795111610,
@@ -260,12 +266,6 @@
     "t": 1795093891,
     "hora_utc": "19/11 13:11",
     "titulo": "Crypto traders vs. Wall Street: OKX’s Anthropic markets put IPO pricing to the test"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795093528,
-    "hora_utc": "19/11 13:05",
-    "titulo": "Morning Minute: Google’s Newest AI Model Tops Benchmarks Ahead of Anthropic IPO"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.5,
+   "media_top20_anual_pct": 4.8,
    "principais_anual_pct": {
-    "BTC": 1.8,
+    "BTC": 4.6,
     "ETH": 11.0,
-    "SOL": -4.9
+    "SOL": -4.2
    },
    "leitura": "neutro"
   },
@@ -380,9 +380,9 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 109,
-  "compras": 75,
-  "vendas": 34,
+  "apostas": 100,
+  "compras": 51,
+  "vendas": 49,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -401,20 +401,20 @@
     "prob_subir": 0.386
    },
    {
+    "moeda": "SKY",
+    "prob_subir": 0.387
+   },
+   {
+    "moeda": "U",
+    "prob_subir": 0.391
+   },
+   {
     "moeda": "BB",
     "prob_subir": 0.394
    },
    {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
-   },
-   {
-    "moeda": "APE",
-    "prob_subir": 0.419
-   },
-   {
-    "moeda": "STEEM",
-    "prob_subir": 0.424
+    "moeda": "ZKP",
+    "prob_subir": 0.395
    }
   ],
   "mais_confiantes_compra": [
@@ -431,24 +431,24 @@
     "prob_subir": 0.61
    },
    {
+    "moeda": "F",
+    "prob_subir": 0.606
+   },
+   {
+    "moeda": "ONE",
+    "prob_subir": 0.604
+   },
+   {
+    "moeda": "PEPE",
+    "prob_subir": 0.6
+   },
+   {
     "moeda": "COOKIE",
     "prob_subir": 0.593
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.592
-   },
-   {
     "moeda": "VET",
     "prob_subir": 0.591
-   },
-   {
-    "moeda": "ICP",
-    "prob_subir": 0.587
-   },
-   {
-    "moeda": "PARTI",
-    "prob_subir": 0.58
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -658,7 +658,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.25,
+   "carteira": 10.12,
    "n_abertas": 1,
    "abertas": [
     [
@@ -719,7 +719,7 @@
     "ganho_medio": null,
     "perda_media": null,
     "fator_lucro": null,
-    "carteira": 10.25
+    "carteira": 10.12
    },
    "guardiao": {
     "ops": 19,
@@ -734,34 +734,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 27319 apostas (623 velas, 12/11 18:15–19/11 17:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5554,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 27359 apostas (623 velas, 12/11 18:30–19/11 17:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5546,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.1,
+  "z_contra_lab": 2.03,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5098,
-    "n": 20577
+    "acerto": 0.51,
+    "n": 20616
    },
    "segue_maioria_24h": {
-    "acerto": 0.5048,
-    "n": 27169
+    "acerto": 0.5052,
+    "n": 27209
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5663,
-    "n": 4485
+    "acerto": 0.5652,
+    "n": 4499
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5952,
-    "n": 1697
+    "acerto": 0.5951,
+    "n": 1699
    },
    "confianca:<0,05": {
-    "acerto": 0.5687,
-    "n": 8876
+    "acerto": 0.5671,
+    "n": 8914
    },
    "confianca:≥0,12": {
     "acerto": 0.6702,
@@ -776,20 +776,20 @@
     "n": 5998
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.553,
-    "n": 6175
+    "acerto": 0.55,
+    "n": 6229
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5347,
-    "n": 7861
+    "acerto": 0.5345,
+    "n": 7847
    },
    "lado:compra": {
-    "acerto": 0.5304,
-    "n": 12539
+    "acerto": 0.5291,
+    "n": 12584
    },
    "lado:venda": {
-    "acerto": 0.5765,
-    "n": 14780
+    "acerto": 0.5764,
+    "n": 14775
    }
   }
  },
