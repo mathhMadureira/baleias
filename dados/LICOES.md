@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 13:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 13:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.71** · 23 operações fechadas · 1 abertas
+Carteira **US$ 8.73** · 23 operações fechadas · 1 abertas
 
 - **Total:** 14/23 com lucro (61%), resultado -1.24, média -0.054 por operação.
 - **Últimas 24 h:** 7/13 com lucro, -0.65.
@@ -17,7 +17,7 @@ Carteira **US$ 8.71** · 23 operações fechadas · 1 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.42** · 13 operações fechadas · 1 abertas
+Carteira **US$ 8.40** · 13 operações fechadas · 1 abertas
 
 - **Total:** 4/13 com lucro (31%), resultado -1.58, média -0.122 por operação.
 - **Últimas 24 h:** 4/12 com lucro, -0.79.
@@ -28,13 +28,13 @@ Carteira **US$ 8.42** · 13 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.20** · 6 operações fechadas · 1 abertas
+Carteira **US$ 10.20** · 7 operações fechadas · 0 abertas
 
-- **Total:** 3/6 com lucro (50%), resultado +0.26, média +0.043 por operação.
-- **Últimas 24 h:** 3/6 com lucro, +0.26.
-- **Por horário:** 18–23 UTC: 6 op, 50% certas, +0.26
-- **Por lado:** compra: 3 op, 33% certas, -0.07 · venda: 3 op, 67% certas, +0.33
-- **Por motivo de saída:** v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- **Total:** 3/7 com lucro (43%), resultado +0.20, média +0.028 por operação.
+- **Últimas 24 h:** 3/7 com lucro, +0.20.
+- **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.06 · 18–23 UTC: 6 op, 50% certas, +0.26
+- **Por lado:** compra: 3 op, 33% certas, -0.07 · venda: 4 op, 50% certas, +0.27
+- **Por motivo de saída:** v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
@@ -58,9 +58,9 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 52.7% das moedas subindo em 24 h, 63.6% em 4 h · BTC 24 h -0.58%, 4 h 0.02%.
+- **Amplitude:** 53.2% das moedas subindo em 24 h, 63.3% em 4 h · BTC 24 h -0.58%, 4 h 0.02%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.5%/ano · {'BTC': -2.3, 'ETH': -0.3, 'SOL': -3.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': -2.0, 'ETH': 0.1, 'SOL': -3.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** STRK estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · UNI estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado)
 - 📰 19/11 13:30 UTC · Cointelegraph: Ethereum’s new DeFi security tool raises questions over censorship
@@ -106,7 +106,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 27744 apostas conferidas ao vivo, acerto 55.4%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 27744 apostas conferidas ao vivo, acerto 55.4%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

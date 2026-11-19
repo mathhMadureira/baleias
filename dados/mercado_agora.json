@@ -1,20 +1,20 @@
 {
- "t": 1795095704,
- "hora_utc": "2026-11-19 13:41 UTC",
+ "t": 1795095876,
+ "hora_utc": "2026-11-19 13:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 110,
-  "subindo_pct": 85.5,
-  "mediana_pct": 0.67
+  "moedas": 109,
+  "subindo_pct": 86.2,
+  "mediana_pct": 0.68
  },
  "mercado_4h": {
-  "moedas": 110,
-  "subindo_pct": 63.6,
+  "moedas": 109,
+  "subindo_pct": 63.3,
   "mediana_pct": 0.39
  },
  "mercado_24h": {
-  "moedas": 110,
-  "subindo_pct": 52.7,
+  "moedas": 109,
+  "subindo_pct": 53.2,
   "mediana_pct": 0.15
  },
  "btc": {
@@ -142,10 +142,10 @@
    "vol": 0.49
   },
   {
-   "moeda": "FF",
-   "4h": 2.27,
-   "24h": -1.88,
-   "vol": 0.54
+   "moeda": "SOPH",
+   "4h": 1.96,
+   "24h": 5.05,
+   "vol": 0.38
   }
  ],
  "btc_1h_ultimas_24": [
@@ -175,7 +175,7 @@
   -0.21
  ],
  "contexto": {
-  "t": 1795095704,
+  "t": 1795095877,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.5,
+   "media_top20_anual_pct": 9.6,
    "principais_anual_pct": {
-    "BTC": -2.3,
-    "ETH": -0.3,
-    "SOL": -3.6
+    "BTC": -2.0,
+    "ETH": 0.1,
+    "SOL": -3.2
    },
    "leitura": "neutro"
   },
@@ -503,7 +503,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.71,
+  "carteira": 8.73,
   "abertas": [
    {
     "moeda": "MORPHO",
@@ -511,7 +511,7 @@
     "entrada": 1.687,
     "agora": 1.688,
     "resultado_pct": -0.06,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "v4 0,385 de subir (confiança 0,115, a maior do universo); 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 dia); 4 h −0,29%, 1 dia −2,14%, 24 h −2,70%; sem pad"
    }
   ],
@@ -664,7 +664,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.71,
+   "carteira": 8.73,
    "n_abertas": 1,
    "abertas": [
     [
@@ -681,7 +681,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.42,
+   "carteira": 8.4,
    "n_abertas": 1,
    "abertas": [
     [
@@ -699,14 +699,9 @@
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
    "carteira": 10.2,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "MORPHO",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 6,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 7,
    "ordem": null
   },
   {
@@ -744,7 +739,7 @@
     "ganho_medio": 0.067,
     "perda_media": -0.242,
     "fator_lucro": 0.43,
-    "carteira": 8.71
+    "carteira": 8.73
    },
    "openbot_testnet": {
     "ops": 13,
@@ -753,15 +748,15 @@
     "ganho_medio": 0.261,
     "perda_media": -0.328,
     "fator_lucro": 0.4,
-    "carteira": 8.42
+    "carteira": 8.4
    },
    "treinador": {
-    "ops": 6,
-    "acerto": 0.5,
-    "soma": 0.259,
+    "ops": 7,
+    "acerto": 0.429,
+    "soma": 0.196,
     "ganho_medio": 0.141,
-    "perda_media": -0.054,
-    "fator_lucro": 2.59,
+    "perda_media": -0.056,
+    "fator_lucro": 1.87,
     "carteira": 10.2
    },
    "laboratorio": {
@@ -793,12 +788,12 @@
   "z_contra_lab": 2.07,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5098,
-    "n": 19994
+    "acerto": 0.5099,
+    "n": 19793
    },
    "segue_maioria_24h": {
-    "acerto": 0.5049,
-    "n": 26659
+    "acerto": 0.5061,
+    "n": 26689
    }
   },
   "referencia_ganha": [],
