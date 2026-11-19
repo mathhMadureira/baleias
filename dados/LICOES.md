@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 21:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 22:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.84** · 36 operações fechadas · 3 abertas
+Carteira **US$ 9.92** · 36 operações fechadas · 3 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado -0.27, média -0.008 por operação.
-- **Últimas 24 h:** 13/18 com lucro, +1.15.
+- **Últimas 24 h:** 12/17 com lucro, +1.13.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 17 op, 59% certas, -0.13 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 16 op, 69% certas, +0.56
 - **Por lado:** compra: 12 op, 50% certas, -1.42 · venda: 24 op, 71% certas, +1.14
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39
@@ -20,7 +20,7 @@ Carteira **US$ 9.84** · 36 operações fechadas · 3 abertas
 Carteira **US$ 9.13** · 22 operações fechadas · 3 abertas
 
 - **Total:** 9/22 com lucro (41%), resultado -0.95, média -0.043 por operação.
-- **Últimas 24 h:** 7/14 com lucro, +0.63.
+- **Últimas 24 h:** 7/12 com lucro, +0.75.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.79 · 12–17 UTC: 8 op, 50% certas, -0.43 · 18–23 UTC: 13 op, 38% certas, +0.27
 - **Por lado:** compra: 5 op, 0% certas, -2.46 · venda: 17 op, 53% certas, +1.51
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.80% na co: 1 op, 0% certas, -0.18 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · fora da lista de posições do c: 4 op, 25% certas, +0.69 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -30,7 +30,7 @@ Carteira **US$ 9.13** · 22 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.82** · 18 operações fechadas · 4 abertas
+Carteira **US$ 9.83** · 18 operações fechadas · 4 abertas
 
 - **Total:** 8/18 com lucro (44%), resultado -0.04, média -0.002 por operação.
 - **Últimas 24 h:** 6/13 com lucro, -0.18.
@@ -52,7 +52,7 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.44** · 31 operações fechadas · 2 abertas
+Carteira **US$ 10.47** · 31 operações fechadas · 2 abertas
 
 - **Total:** 20/31 com lucro (65%), resultado +0.35, média +0.011 por operação.
 - **Últimas 24 h:** 16/27 com lucro, -0.07.
@@ -67,7 +67,7 @@ Carteira **US$ 10.44** · 31 operações fechadas · 2 abertas
 
 - **Amplitude:** 29.1% das moedas subindo em 24 h, 12.0% em 4 h · BTC 24 h -1.05%, 4 h -1.96%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': -13.9, 'ETH': 2.6, 'SOL': -5.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.6%/ano · {'BTC': -14.0, 'ETH': 1.9, 'SOL': -5.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LTC bandeira de baixa (baixa, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · SHIB estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado) · SAPIEN fundo duplo (alta, formado)
 - 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
