@@ -1,6 +1,6 @@
 {
- "t": 1795106016,
- "hora_utc": "2026-11-19 16:33 UTC",
+ "t": 1795106310,
+ "hora_utc": "2026-11-19 16:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -172,10 +172,10 @@
   0.25,
   -0.75,
   -0.72,
-  -0.08
+  0.17
  ],
  "contexto": {
-  "t": 1795106017,
+  "t": 1795106311,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.5,
+   "media_top20_anual_pct": 4.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.1,
-    "SOL": -1.4
+    "ETH": 4.9,
+    "SOL": 0.3
    },
    "leitura": "neutro"
   },
@@ -454,7 +454,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.23,
+  "carteira": 9.16,
   "abertas": [
    {
     "moeda": "AAVE",
@@ -633,7 +633,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.23,
+   "carteira": 9.16,
    "n_abertas": 3,
    "abertas": [
     [
@@ -687,7 +687,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.87,
+   "carteira": 9.7,
    "n_abertas": 3,
    "abertas": [
     [
@@ -712,7 +712,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.12,
+   "carteira": 10.25,
    "n_abertas": 1,
    "abertas": [
     [
@@ -729,7 +729,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.25,
+   "carteira": 10.15,
    "n_abertas": 3,
    "abertas": [
     [
@@ -759,7 +759,7 @@
     "ganho_medio": 0.082,
     "perda_media": -0.23,
     "fator_lucro": 0.68,
-    "carteira": 9.23
+    "carteira": 9.16
    },
    "openbot_testnet": {
     "ops": 15,
@@ -777,7 +777,7 @@
     "ganho_medio": 0.141,
     "perda_media": -0.1,
     "fator_lucro": 0.6,
-    "carteira": 9.87
+    "carteira": 9.7
    },
    "laboratorio": {
     "ops": 0,
@@ -786,7 +786,7 @@
     "ganho_medio": null,
     "perda_media": null,
     "fator_lucro": null,
-    "carteira": 10.12
+    "carteira": 10.25
    },
    "guardiao": {
     "ops": 16,
@@ -795,7 +795,7 @@
     "ganho_medio": 0.114,
     "perda_media": -0.232,
     "fator_lucro": 1.08,
-    "carteira": 10.25
+    "carteira": 10.15
    }
   },
   "vereditos": []
