@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 17:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 17:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.17** · 31 operações fechadas · 1 abertas
+Carteira **US$ 9.14** · 31 operações fechadas · 1 abertas
 
 - **Total:** 19/31 com lucro (61%), resultado -1.05, média -0.034 por operação.
 - **Últimas 24 h:** 12/21 com lucro, -0.46.
@@ -45,24 +45,24 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.92** · 18 operações fechadas · 1 abertas
+Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
-- **Total:** 13/18 com lucro (72%), resultado +0.61, média +0.034 por operação.
-- **Últimas 24 h:** 13/18 com lucro, +0.61.
-- **Por horário:** 12–17 UTC: 6 op, 50% certas, -0.08 · 18–23 UTC: 12 op, 83% certas, +0.69
-- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 16 op, 69% certas, +0.44
-- **Por motivo de saída:** 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27
+- **Total:** 14/19 com lucro (74%), resultado +0.80, média +0.042 por operação.
+- **Últimas 24 h:** 14/19 com lucro, +0.80.
+- **Por horário:** 12–17 UTC: 7 op, 57% certas, +0.11 · 18–23 UTC: 12 op, 83% certas, +0.69
+- **Por lado:** compra: 2 op, 100% certas, +0.18 · venda: 17 op, 71% certas, +0.62
+- **Por motivo de saída:** 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27
 - **Moedas que mais perderam (≥ 3 op):** TRUMP +0.04 (4 op) · PUMP +0.63 (4 op)
 - **Moedas que mais ganharam (≥ 3 op):** PUMP +0.63 (4 op) · TRUMP +0.04 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 55.4% das moedas subindo em 24 h, 9.8% em 4 h · BTC 24 h 0.03%, 4 h -1.72%.
+- **Amplitude:** 55.8% das moedas subindo em 24 h, 10.6% em 4 h · BTC 24 h 0.03%, 4 h -1.72%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.2%/ano · {'BTC': 11.0, 'ETH': 3.9, 'SOL': -9.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.1%/ano · {'BTC': 11.0, 'ETH': 2.4, 'SOL': -8.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** LTC topo duplo (baixa, CONFIRMOU) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 17:01 UTC · CoinDesk: Anthropic opens for trade at $111.50, up 34% from IPO price
 - 📰 19/11 16:55 UTC · Decrypt: Anthropic Stock Opens 33% Above IPO Price as AI Stocks Rally
 - 📰 19/11 16:09 UTC · CoinDesk: Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure
@@ -106,7 +106,7 @@ Carteira **US$ 10.92** · 18 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28153 apostas conferidas ao vivo, acerto 55.3%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28153 apostas conferidas ao vivo, acerto 55.3%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

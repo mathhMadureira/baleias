@@ -1,21 +1,21 @@
 {
- "t": 1795108008,
- "hora_utc": "2026-11-19 17:06 UTC",
+ "t": 1795108253,
+ "hora_utc": "2026-11-19 17:10 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
-  "subindo_pct": 15.2,
-  "mediana_pct": -0.48
+  "moedas": 113,
+  "subindo_pct": 15.9,
+  "mediana_pct": -0.46
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 9.8,
-  "mediana_pct": -2.47
+  "moedas": 113,
+  "subindo_pct": 10.6,
+  "mediana_pct": -2.44
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 55.4,
-  "mediana_pct": 0.23
+  "moedas": 113,
+  "subindo_pct": 55.8,
+  "mediana_pct": 0.3
  },
  "btc": {
   "1h": -0.52,
@@ -100,6 +100,12 @@
    "vol": 5.65
   },
   {
+   "moeda": "THE",
+   "4h": 4.04,
+   "24h": 5.46,
+   "vol": 4.87
+  },
+  {
    "moeda": "LUNC",
    "4h": 3.32,
    "24h": 20.74,
@@ -140,12 +146,6 @@
    "4h": 0.24,
    "24h": 11.64,
    "vol": 1.36
-  },
-  {
-   "moeda": "INIT",
-   "4h": 0.09,
-   "24h": 5.88,
-   "vol": 1.25
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.75,
   -0.72,
   -0.52,
-  -0.7
+  -0.54
  ],
  "contexto": {
-  "t": 1795108009,
+  "t": 1795108254,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.2,
+   "media_top20_anual_pct": 0.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.9,
-    "SOL": -9.9
+    "ETH": 2.4,
+    "SOL": -8.2
    },
    "leitura": "neutro"
   },
@@ -296,13 +296,6 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
-   {
-    "moeda": "LTC",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": true,
-    "nivel": 43.1
-   },
    {
     "moeda": "ETH",
     "padrao": "OCO invertido",
@@ -366,9 +359,9 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 94,
+  "apostas": 95,
   "compras": 64,
-  "vendas": 30,
+  "vendas": 31,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -440,7 +433,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.17,
+  "carteira": 9.14,
   "abertas": [
    {
     "moeda": "AAVE",
@@ -448,7 +441,7 @@
     "entrada": 104.67,
     "agora": 104.04,
     "resultado_pct": 0.6,
-    "horas_aberta": 1.4,
+    "horas_aberta": 1.5,
     "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 1 h −3,82%, 4 h −4,51%, 24 h −2,75%; volume de 1 min 2,92× (queda com volume); topo duplo de 4 h (não con"
    }
   ],
@@ -601,7 +594,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.17,
+   "carteira": 9.14,
    "n_abertas": 1,
    "abertas": [
     [
@@ -676,15 +669,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.92,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "DOGE",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 18,
+   "carteira": 10.8,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 19,
    "ordem": null
   }
  ],
@@ -698,7 +686,7 @@
     "ganho_medio": 0.082,
     "perda_media": -0.217,
     "fator_lucro": 0.6,
-    "carteira": 9.17
+    "carteira": 9.14
    },
    "openbot_testnet": {
     "ops": 15,
@@ -728,13 +716,13 @@
     "carteira": 10.0
    },
    "guardiao": {
-    "ops": 18,
-    "acerto": 0.722,
-    "soma": 0.613,
-    "ganho_medio": 0.136,
+    "ops": 19,
+    "acerto": 0.737,
+    "soma": 0.798,
+    "ganho_medio": 0.14,
     "perda_media": -0.232,
-    "fator_lucro": 1.53,
-    "carteira": 10.92
+    "fator_lucro": 1.69,
+    "carteira": 10.8
    }
   },
   "vereditos": []
@@ -751,8 +739,8 @@
     "n": 20405
    },
    "segue_maioria_24h": {
-    "acerto": 0.504,
-    "n": 26961
+    "acerto": 0.5029,
+    "n": 26996
    }
   },
   "referencia_ganha": [],
