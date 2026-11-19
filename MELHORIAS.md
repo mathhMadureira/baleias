@@ -169,3 +169,15 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   mais forte; ficar de fora só com corte duro escrito), REVISOR só com cortes duros (alvo < 0,24%, |4 h| ≥ 15%, dado faltando, padrão confirmado
   contra). **Controle aleatório** do código da nuvem (4.000 entradas sorteadas em velas reais de 1 min): −0,117%, −0,100%, −0,117% e gatilhos −0,118%
   (≈ custo): sem olhar o futuro. Achado de estratégia mandado ao Laboratório: com alvo de 1,2% o stop móvel fecha 47% e só 3% chegam no alvo. 163 testes.
+- 2026-11-19 (tarde): **H68 — o Caçador (pedido do dono: "um agente caçador… não opera, apenas caça as oportunidades e avisa os agentes que operam;
+  leitura 24 h; criptos e memecoins").** Pré-registrada antes de ligar (7458b955). Na nuvem, `executor/cacador_nuvem.py` roda a cada rodada do
+  `cerebro.yml`, em paralelo às outras etapas (limite de 150 s; 22,7 s na 1ª rodada), e grava só `dados/oportunidades.json`: todos os pares USDT à vista
+  da Binance com volume ≥ US$ 500 mil (157 de 525 negociando; a API de futuros não responde na região da nuvem e não foi contornada), explosão de vela
+  de 1/5/15 min (z do retorno ≥ 3 e volume ≥ 3×), tendência se formando (MM20 de 15 min, 1 h e 4 h), rompimento de 24 h, padrões confirmados de 15 min
+  e 1 h, listagens novas, memecoins primeiro; memecoins de DEX (DexScreener, GeckoTerminal) só como informação, com filtros de segurança. Cada
+  oportunidade traz lado, gatilho com números, invalidação, força 0–100 e sugestão de stop/alvo/prazo (alvo ≥ 3 × stop e ≥ 1%). **Juiz automático:**
+  cada sinal é resolvido 15 e 60 min depois (−0,12%), com um evento de CONTROLE aleatório no mesmo instante; passa com ≥ 300, t ≥ 2,69 por hora,
+  2 de 3 blocos e só se o controle der ≈ −0,12%. A nuvem passa a abrir posição de agente em moeda fora das velas do v4 quando tem o preço de 1 min
+  da rodada. Agente **Caçador** no OpenBot (rotina de 5 min: `Shared/baleias/cacador/cacar.py`, confere de 1 s a 1 dia, publica em
+  `Shared/baleias/oportunidades_cacador.jsonl` e avisa Treinador, Laboratório, Guardião e o chefe; estudo diário às 06:00). `operar.py escolher`
+  mostra as oportunidades do Caçador primeiro e põe essas moedas na varredura do agente; ROTINA r11: aviso do Caçador = rodar a rotina na hora. 170 testes.
