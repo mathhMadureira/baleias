@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 12:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 12:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,15 +60,15 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 40.9% das moedas subindo em 24 h, 41.8% em 4 h · BTC 24 h -0.78%, 4 h 0.07%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.6%/ano · {'BTC': 3.8, 'ETH': 2.2, 'SOL': 4.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.7%/ano · {'BTC': 3.7, 'ETH': 2.7, 'SOL': 3.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JUP bandeira de alta (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado) · PYTH fundo duplo (alta, formado) · STRK fundo duplo (alta, formado)
+- 📰 19/11 12:33 UTC · Cointelegraph: GTA VI publisher racks up nearly 3x Nvidia’s tokenized stock volume
 - 📰 19/11 12:20 UTC · CoinDesk: Bitcoin ETF outflows show waning crypto appetite ahead of Anthropic's Nasdaq debut
 - 📰 19/11 12:08 UTC · CoinDesk: Bitcoin holds above $63,750 but Fed rate-hike threats loom large
 - 📰 19/11 11:30 UTC · CoinDesk: North Korean hackers used Sky's stablecoin system, putting billions at freeze risk
 - 📰 19/11 11:19 UTC · Cointelegraph: Sweden’s H100 could tap Bitcoin trading pool to fund share buybacks
 - 📰 19/11 11:15 UTC · Decrypt: GameStop CEO Says Digital-Only Games Have ‘Hurt Consumers’ as GTA 6 Skips Discs
-- 📰 19/11 11:06 UTC · CoinDesk: Anthropic’s $107 billion sale set to top SpaceX’s IPO as tokenized stocks gain traction
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

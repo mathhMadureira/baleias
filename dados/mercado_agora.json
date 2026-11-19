@@ -1,6 +1,6 @@
 {
- "t": 1795091727,
- "hora_utc": "2026-11-19 12:35 UTC",
+ "t": 1795091900,
+ "hora_utc": "2026-11-19 12:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   0.19,
   -0.1,
   0.24,
-  -0.33
+  -0.22
  ],
  "contexto": {
-  "t": 1795091728,
+  "t": 1795091901,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795091626,
+    "hora_utc": "19/11 12:33",
+    "titulo": "GTA VI publisher racks up nearly 3x Nvidia’s tokenized stock volume"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795090839,
@@ -260,12 +266,6 @@
     "t": 1795076779,
     "hora_utc": "19/11 08:26",
     "titulo": "Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795075477,
-    "hora_utc": "19/11 08:04",
-    "titulo": "BTCPay Server issues emergency update for 5 security flaws"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.6,
+   "media_top20_anual_pct": 7.7,
    "principais_anual_pct": {
-    "BTC": 3.8,
-    "ETH": 2.2,
-    "SOL": 4.2
+    "BTC": 3.7,
+    "ETH": 2.7,
+    "SOL": 3.6
    },
    "leitura": "neutro"
   },
