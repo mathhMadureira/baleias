@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 16:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 16:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.36** · 29 operações fechadas · 3 abertas
+Carteira **US$ 9.37** · 29 operações fechadas · 3 abertas
 
 - **Total:** 19/29 com lucro (66%), resultado -0.75, média -0.026 por operação.
 - **Últimas 24 h:** 12/19 com lucro, -0.16.
@@ -28,7 +28,7 @@ Carteira **US$ 8.99** · 15 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.16** · 9 operações fechadas · 4 abertas
+Carteira **US$ 10.04** · 9 operações fechadas · 4 abertas
 
 - **Total:** 3/9 com lucro (33%), resultado -0.15, média -0.017 por operação.
 - **Últimas 24 h:** 3/9 com lucro, -0.15.
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.55** · 15 operações fechadas · 2 abertas
+Carteira **US$ 10.47** · 15 operações fechadas · 4 abertas
 
 - **Total:** 11/15 com lucro (73%), resultado +0.40, média +0.026 por operação.
 - **Últimas 24 h:** 11/15 com lucro, +0.40.
@@ -58,11 +58,11 @@ Carteira **US$ 10.55** · 15 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 53.6% das moedas subindo em 24 h, 12.5% em 4 h · BTC 24 h -0.03%, 4 h -1.32%.
+- **Amplitude:** 56.2% das moedas subindo em 24 h, 12.5% em 4 h · BTC 24 h 0.57%, 4 h -1.04%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.3%/ano · {'BTC': 11.0, 'ETH': 3.4, 'SOL': -4.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.0%/ano · {'BTC': 11.0, 'ETH': 3.3, 'SOL': -5.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BONK estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BNB triângulo descendente (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · YB fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · YB fundo duplo (alta, formado)
 - 📰 19/11 16:09 UTC · CoinDesk: Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure
 - 📰 19/11 16:07 UTC · Cointelegraph: Anthropic shares expected to open 26.5% above $83 IPO price
 - 📰 19/11 15:54 UTC · Decrypt: Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went
@@ -106,7 +106,7 @@ Carteira **US$ 10.55** · 15 operações fechadas · 2 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28064 apostas conferidas ao vivo, acerto 55.3%; prevê 77 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28067 apostas conferidas ao vivo, acerto 55.3%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
