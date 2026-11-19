@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 21:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 21:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.83** · 36 operações fechadas · 2 abertas
+Carteira **US$ 9.87** · 36 operações fechadas · 2 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado -0.27, média -0.008 por operação.
 - **Últimas 24 h:** 13/18 com lucro, +1.15.
@@ -30,7 +30,7 @@ Carteira **US$ 9.10** · 22 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.91** · 18 operações fechadas · 2 abertas
+Carteira **US$ 9.94** · 18 operações fechadas · 2 abertas
 
 - **Total:** 8/18 com lucro (44%), resultado -0.04, média -0.002 por operação.
 - **Últimas 24 h:** 6/13 com lucro, -0.18.
@@ -41,7 +41,7 @@ Carteira **US$ 9.91** · 18 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.13** · 8 operações fechadas · 2 abertas
+Carteira **US$ 10.08** · 8 operações fechadas · 2 abertas
 
 - **Total:** 4/8 com lucro (50%), resultado +0.06, média +0.008 por operação.
 - **Últimas 24 h:** 4/8 com lucro, +0.06.
@@ -52,7 +52,7 @@ Carteira **US$ 10.13** · 8 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.35** · 31 operações fechadas · 2 abertas
+Carteira **US$ 10.45** · 31 operações fechadas · 2 abertas
 
 - **Total:** 20/31 com lucro (65%), resultado +0.35, média +0.011 por operação.
 - **Últimas 24 h:** 16/27 com lucro, -0.07.
@@ -67,7 +67,7 @@ Carteira **US$ 10.35** · 31 operações fechadas · 2 abertas
 
 - **Amplitude:** 28.2% das moedas subindo em 24 h, 14.5% em 4 h · BTC 24 h -1.46%, 4 h -2.38%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.9%/ano · {'BTC': -14.4, 'ETH': 4.3, 'SOL': -2.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.7%/ano · {'BTC': -14.6, 'ETH': 3.7, 'SOL': -2.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LTC bandeira de baixa (baixa, CONFIRMOU) · OP topo duplo (baixa, CONFIRMOU) · BEB topo duplo (baixa, formado) · BEB fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE topo duplo (baixa, formado)
 - 📰 19/11 21:12 UTC · Decrypt: Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price
