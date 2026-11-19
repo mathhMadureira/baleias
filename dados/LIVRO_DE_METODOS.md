@@ -14,7 +14,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | raschke_graal_baixa | promissor | 57.9% | 57 | 45.0%–69.8% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | reversao_queda | promissor | 51.6% | 64 | 39.6%–63.4% | H14: queda anormal de 1 h → sobe |
 | williams_wr_alta | promissor | 51.3% | 39 | 36.2%–66.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
-| williams_volb_baixa | promissor | 51.2% | 123 | 42.5%–59.9% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
+| williams_volb_baixa | promissor | 50.8% | 124 | 42.1%–59.4% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | tres_corvos | promissor | 50.3% | 370 | 45.2%–55.3% | H6: três corvos → sobe (efeito pequeno) |
 | vortice_invertido | reprovado | 49.0% | 406 | 44.2%–53.9% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | demark_td9_alta | reprovado | 47.8% | 46 | 34.1%–61.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
