@@ -1,11 +1,11 @@
 {
- "t": 1795074385,
- "hora_utc": "2026-11-19 07:46 UTC",
+ "t": 1795074604,
+ "hora_utc": "2026-11-19 07:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 112,
-  "subindo_pct": 38.4,
-  "mediana_pct": -0.05
+  "subindo_pct": 37.5,
+  "mediana_pct": -0.07
  },
  "mercado_4h": {
   "moedas": 112,
@@ -15,14 +15,14 @@
  "mercado_24h": {
   "moedas": 112,
   "subindo_pct": 39.3,
-  "mediana_pct": -0.59
+  "mediana_pct": -0.53
  },
  "btc": {
-  "1h": 0.09,
-  "4h": 1.01,
-  "24h": -1.79,
-  "preco": 63581.29,
-  "vol_4h_vs_media": 0.72
+  "1h": 0.14,
+  "4h": 0.97,
+  "24h": -1.5,
+  "preco": 63621.26,
+  "vol_4h_vs_media": 0.68
  },
  "maiores_quedas_4h": [
   {
@@ -172,10 +172,10 @@
   0.6,
   -0.35,
   0.62,
-  -0.18
+  -0.16
  ],
  "contexto": {
-  "t": 1795074386,
+  "t": 1795074605,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,9 +274,9 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 13.1,
+   "media_top20_anual_pct": 12.9,
    "principais_anual_pct": {
-    "BTC": 9.3,
+    "BTC": 8.8,
     "ETH": 11.0,
     "SOL": 11.0
    },
@@ -422,13 +422,13 @@
  },
  "v4": {
   "vela": "07:45 UTC",
-  "apostas": 66,
-  "compras": 35,
-  "vendas": 31,
+  "apostas": 74,
+  "compras": 36,
+  "vendas": 38,
   "mais_confiantes_venda": [
    {
     "moeda": "U",
-    "prob_subir": 0.347
+    "prob_subir": 0.341
    },
    {
     "moeda": "ETC",
@@ -456,7 +456,7 @@
    },
    {
     "moeda": "WLFI",
-    "prob_subir": 0.403
+    "prob_subir": 0.401
    }
   ],
   "mais_confiantes_compra": [
@@ -473,8 +473,12 @@
     "prob_subir": 0.61
    },
    {
+    "moeda": "DODO",
+    "prob_subir": 0.608
+   },
+   {
     "moeda": "CELO",
-    "prob_subir": 0.605
+    "prob_subir": 0.606
    },
    {
     "moeda": "COOKIE",
@@ -486,11 +490,7 @@
    },
    {
     "moeda": "BONK",
-    "prob_subir": 0.59
-   },
-   {
-    "moeda": "DODO",
-    "prob_subir": 0.589
+    "prob_subir": 0.587
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"

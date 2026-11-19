@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.7% | 245 | 50.5%–62.8% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.0% | 2156 | 50.9%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 2157 | 50.9%–55.1% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 100.0% | 6 | 61.0%–100.0% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | connors_8020_alta | promissor | 71.4% | 7 | 35.9%–91.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | demark_td9_baixa | promissor | 66.7% | 18 | 43.7%–83.7% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
