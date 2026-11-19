@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 23:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 23:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 37.4% das moedas subindo em 24 h, 14.8% em 4 h · BTC 24 h -1.29%, 4 h -1.37%.
+- **Amplitude:** 37.1% das moedas subindo em 24 h, 14.7% em 4 h · BTC 24 h -1.29%, 4 h -1.37%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.6%/ano · {'BTC': 7.2, 'ETH': 5.9, 'SOL': -1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.3%/ano · {'BTC': 7.3, 'ETH': 5.9, 'SOL': -0.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SAPIEN fundo duplo (alta, CONFIRMOU) · ADA topo duplo (baixa, formado) · DOGE topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RARE topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** SAPIEN fundo duplo (alta, CONFIRMOU) · ADA topo duplo (baixa, formado) · AR fundo duplo (alta, formado) · DOGE topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado)
 - 📰 19/11 22:36 UTC · Decrypt: Citi Says Customers Are Responsible When AI Banking Agents Go Rogue—Even After a Hack
 - 📰 19/11 22:25 UTC · Cointelegraph: Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express
 - 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -113,7 +113,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 29576 apostas conferidas ao vivo, acerto 54.9%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 29576 apostas conferidas ao vivo, acerto 54.9%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
