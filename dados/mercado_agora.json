@@ -1,6 +1,6 @@
 {
- "t": 1795048373,
- "hora_utc": "2026-11-19 00:32 UTC",
+ "t": 1795048552,
+ "hora_utc": "2026-11-19 00:35 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 108,
@@ -172,11 +172,17 @@
   -0.44,
   -0.16,
   1.31,
-  -0.24
+  -0.02
  ],
  "contexto": {
-  "t": 1795048373,
+  "t": 1795048553,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795048426,
+    "hora_utc": "19/11 00:33",
+    "titulo": "Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795041000,
@@ -260,12 +266,6 @@
     "t": 1795026472,
     "hora_utc": "18/11 18:27",
     "titulo": "MARA prices $185M debt offering after $1.1B Bitcoin sale"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795025762,
-    "hora_utc": "18/11 18:16",
-    "titulo": "Fed's Waller Calls for 50-Basis-Point Rate Hike, Says Tokenized Finance Still Needs Traditional Banks"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.7,
+   "media_top20_anual_pct": 5.0,
    "principais_anual_pct": {
-    "BTC": 5.9,
+    "BTC": 7.1,
     "ETH": 11.0,
-    "SOL": 9.2
+    "SOL": 9.6
    },
    "leitura": "neutro"
   },

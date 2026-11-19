@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 00:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 00:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,15 +60,15 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 27.8% das moedas subindo em 24 h, 66.7% em 4 h · BTC 24 h -2.9%, 4 h 0.5%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 5.9, 'ETH': 11.0, 'SOL': 9.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': 7.1, 'ETH': 11.0, 'SOL': 9.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DASH fundo duplo (alta, formado) · ETHFI topo duplo (baixa, formado) · INIT fundo duplo (alta, formado) · MIRA fundo duplo (alta, formado) · MIRA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SENT topo duplo (baixa, formado) · XRP fundo duplo (alta, formado)
+- 📰 19/11 00:33 UTC · CoinDesk: Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds
 - 📰 18/11 22:30 UTC · CoinDesk: Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe
 - 📰 18/11 22:16 UTC · Decrypt: Ledger Confirms Tampered Bitcoin Wallets in Berlin as Spy Implant Probe Spreads Beyond Asia
 - 📰 18/11 22:09 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 18/11 21:57 UTC · Cointelegraph: Tether invokes The Big Short in swipe at S&P over USDT reserve risks
 - 📰 18/11 21:46 UTC · Decrypt: ChatGPT, Claude, Gemini and Grok Helped Plan Terror Attacks in Government Tests
-- 📰 18/11 21:16 UTC · Decrypt: Palmer Luckey Says He’s Building an Offshore Haven for Industry—And 'Illegal' Medicine
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
