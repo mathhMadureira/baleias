@@ -154,6 +154,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   rompimento: a capacidade fica no executor, mas a rotina dos agentes (r8) manda entrar JÁ, a mercado, quando a leitura dá. 162 testes.
 - 2026-11-19: **agente Engenheiro criado** (pedido do dono): audita código, dados e prompts a cada 6 h, conserta bugs com teste e manda mudança
   de estratégia ao Laboratório; relatórios em `OpenBot/Shared/baleias/auditorias/`.
+- 2026-11-19: **alvos maiores (dono):** alvo ≥ 3 × o stop e ≥ 1% imposto em `parametros()` da nuvem e na conta de teste; rotina r9 e manual.
 - 2026-11-19 (tarde): **1ª auditoria do Engenheiro (pedido do dono: "agentes passivos e demorando; quero agilidade, operações constantes").**
   Relatório: `OpenBot/Shared/baleias/auditorias/2026-11-19.md`. Medido no ramo `estado` de 12:51 a 15:17 UTC: 31 decisões dos 4 agentes, só 5 com
   posição (todas MORPHO vendida), 0 gatilhos (H67); dos 155 descartes, 91 (58%) por "menos de 4 dos 6 tempos a favor" do REVISOR e 43 (27%) por

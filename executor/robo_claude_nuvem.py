@@ -71,6 +71,7 @@ def fechar(e, par, p, saida, motivo, agora):
     return f"🤖 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
 
 
+ALVO_X_STOP, ALVO_MIN = 3.0, 0.01
 LIMITES = {"stop_pct": (0.003, 0.04), "alvo_pct": (0.002, 0.05), "max_min": (5, MAX_HORAS * 60)}
 
 
@@ -84,6 +85,10 @@ def parametros(pos):
         except (TypeError, ValueError):
             continue
         out[k] = min(hi, max(lo, v))
+    if "stop_pct" in out:                                    # dono (19/11): "aumente os alvos de ganho" — alvo ≥ 3 × o stop e ≥ 1%
+        out["alvo_pct"] = min(LIMITES["alvo_pct"][1], max(out.get("alvo_pct", 0.0), ALVO_X_STOP * out["stop_pct"], ALVO_MIN))
+    elif "alvo_pct" in out:
+        out["alvo_pct"] = min(LIMITES["alvo_pct"][1], max(out["alvo_pct"], ALVO_MIN))
     return out
 
 

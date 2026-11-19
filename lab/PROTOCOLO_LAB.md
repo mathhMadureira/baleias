@@ -1529,3 +1529,11 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   preço de 1 min da rodada (antes a entrada era recusada), para que as oportunidades fora das 108 moedas do v4 possam ser operadas.
 - Previsão registrada antes: não sei. O laboratório já viu rompimentos de 5 min e de 1 h, regras de 1 s e fluxo agressor perderem para o custo
   (H25, H56, H65, H66): a previsão mais provável é média perto de −0,12%.
+
+### Decisão do dono (19/11/2026 ~16:30 BRT = 19:30 UTC): alvos de ganho maiores para todos os agentes
+- **Dono:** "aumente os alvos de ganhos, repasse isso para todos os agentes, os alvos maiores."
+- **Execução:** `executor/robo_claude_nuvem.parametros` (nuvem) e `chefe/testnet.py` (conta de teste, mesma função): alvo ≥ 3 × o stop e ≥ 1%
+  (limite de cima 5%); alvo menor é subido sozinho; com stop e sem alvo, o alvo passa a ser 3 × o stop. Rotina dos agentes r9 e manual seção 5.
+- **O que o laboratório já sabe (não decide):** na H64, "stop 1% e alvo 3%" foi a melhor saída medida (+0,309%/aposta corrigido, ganho ÷ perda
+  2,58), mas perdeu no bloco mais recente (−0,472%). Alvo maior = acerto menor (36%). **Juiz ao vivo (até 03/12):** por agente, em 30+ operações
+  com a regra: ganho médio ≥ 2 × perda média e média por operação > 0.

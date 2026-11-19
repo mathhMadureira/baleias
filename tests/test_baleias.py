@@ -2050,14 +2050,16 @@ class OperarLivre(unittest.TestCase):
         d = {"t": agora - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "scalper", "stop_pct": 0.004, "alvo_pct": 0.006, "max_min": 2}]}
         R.passo(e, d, {"AUSDT": k}, agora, vivos={"AUSDT": 1.0})
         a = e["abertas"]["AUSDT"]
-        self.assertEqual((a["stop_pct"], a["alvo_pct"], a["max_min"]), (0.004, 0.006, 5))     # prazo encostado no mínimo de 5 min
-        SM.MINUTOS["AUSDT"] = [(int(agora * 1000) + 60_000, 1.007, 0.999)]                   # tocou +0,7%: realiza no alvo de +0,6%
-        R.passo(e, d, {"AUSDT": k}, agora + 180, vivos={"AUSDT": 1.007})
+        self.assertEqual((a["stop_pct"], a["alvo_pct"], a["max_min"]), (0.004, 0.012, 5))     # alvo 0,6% sobe para 3 × o stop (dono, 19/11)
+        SM.MINUTOS["AUSDT"] = [(int(agora * 1000) + 60_000, 1.013, 0.999)]                   # tocou +1,3%: realiza no alvo de +1,2%
+        R.passo(e, d, {"AUSDT": k}, agora + 180, vivos={"AUSDT": 1.013})
         SM.MINUTOS.clear()
         f = e["fechadas"][-1]
-        self.assertAlmostEqual(f["saida"], 1.006)
+        self.assertAlmostEqual(f["saida"], 1.012)
         self.assertIn("lucro realizado", f["motivo_saida"])
-        self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04})
+        self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04, "alvo_pct": 0.05})
+        self.assertEqual(R.parametros({"alvo_pct": 0.004}), {"alvo_pct": 0.01})                # alvo nunca abaixo de 1%
+        self.assertEqual(R.parametros({"stop_pct": 0.005, "alvo_pct": 0.03}), {"stop_pct": 0.005, "alvo_pct": 0.03})
 
 
 class StopMovelSemOlharFuturo(unittest.TestCase):
