@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 19:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 19:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -50,7 +50,7 @@ Carteira **US$ 10.70** · 1 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.50** · 20 operações fechadas · 1 abertas
+Carteira **US$ 10.47** · 20 operações fechadas · 1 abertas
 
 - **Total:** 14/20 com lucro (70%), resultado +0.47, média +0.024 por operação.
 - **Últimas 24 h:** 14/20 com lucro, +0.47.
@@ -65,7 +65,7 @@ Carteira **US$ 10.50** · 20 operações fechadas · 1 abertas
 
 - **Amplitude:** 39.5% das moedas subindo em 24 h, 15.8% em 4 h · BTC 24 h -0.45%, 4 h -1.06%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.9%/ano · {'BTC': 11.0, 'ETH': 5.7, 'SOL': -1.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 11.0, 'ETH': 5.9, 'SOL': -2.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** VANA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
 - 📰 19/11 19:08 UTC · Decrypt: Bitcoin Enters Death Cross as Anthropic IPO Fails to Lift Wall Street
