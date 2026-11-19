@@ -1,6 +1,6 @@
 {
- "t": 1795117822,
- "hora_utc": "2026-11-19 19:50 UTC",
+ "t": 1795118057,
+ "hora_utc": "2026-11-19 19:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
@@ -172,11 +172,17 @@
   -0.52,
   -0.05,
   0.22,
-  -0.58
+  -0.73
  ],
  "contexto": {
-  "t": 1795117823,
+  "t": 1795118058,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795118022,
+    "hora_utc": "19/11 19:53",
+    "titulo": "Sky's USDS stablecoin shrinks 35% as $1.5 billion exits reserves after illicit-finance report"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795115304,
@@ -260,12 +266,6 @@
     "t": 1795096862,
     "hora_utc": "19/11 14:01",
     "titulo": "Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795096094,
-    "hora_utc": "19/11 13:48",
-    "titulo": "Here’s what happened in crypto today"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.0,
+   "media_top20_anual_pct": 6.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.7,
-    "SOL": 0.5
+    "ETH": 4.1,
+    "SOL": 0.2
    },
    "leitura": "neutro"
   },
@@ -454,7 +454,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.34,
+  "carteira": 9.4,
   "abertas": [
    {
     "moeda": "DOT",
@@ -615,7 +615,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.34,
+   "carteira": 9.4,
    "n_abertas": 1,
    "abertas": [
     [
@@ -669,7 +669,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.81,
+   "carteira": 10.96,
    "n_abertas": 2,
    "abertas": [
     [
@@ -690,15 +690,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.35,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "TRUMP",
-     "compra"
-    ]
-   ],
-   "n_fechadas": 20,
+   "carteira": 10.23,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 21,
    "ordem": null
   }
  ],
@@ -712,7 +707,7 @@
     "ganho_medio": 0.1,
     "perda_media": -0.214,
     "fator_lucro": 0.75,
-    "carteira": 9.34
+    "carteira": 9.4
    },
    "openbot_testnet": {
     "ops": 19,
@@ -739,16 +734,16 @@
     "ganho_medio": 0.492,
     "perda_media": null,
     "fator_lucro": 99.0,
-    "carteira": 10.81
+    "carteira": 10.96
    },
    "guardiao": {
-    "ops": 20,
-    "acerto": 0.7,
-    "soma": 0.472,
+    "ops": 21,
+    "acerto": 0.667,
+    "soma": 0.233,
     "ganho_medio": 0.14,
-    "perda_media": -0.248,
-    "fator_lucro": 1.32,
-    "carteira": 10.35
+    "perda_media": -0.247,
+    "fator_lucro": 1.13,
+    "carteira": 10.23
    }
   },
   "vereditos": []
