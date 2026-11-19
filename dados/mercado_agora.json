@@ -1,6 +1,6 @@
 {
- "t": 1795123083,
- "hora_utc": "2026-11-19 21:18 UTC",
+ "t": 1795123323,
+ "hora_utc": "2026-11-19 21:22 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   0.22,
   -0.82,
   -0.39,
-  -0.75
+  -0.72
  ],
  "contexto": {
-  "t": 1795123084,
+  "t": 1795123324,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 3.4,
    "principais_anual_pct": {
-    "BTC": -11.1,
-    "ETH": 7.4,
-    "SOL": 2.9
+    "BTC": -12.3,
+    "ETH": 6.5,
+    "SOL": 2.2
    },
    "leitura": "neutro"
   },
@@ -683,8 +683,8 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 10.1,
-   "n_abertas": 3,
+   "carteira": 9.99,
+   "n_abertas": 4,
    "abertas": [
     [
      "ORDI",
@@ -696,6 +696,10 @@
     ],
     [
      "MARSCOIN",
+     "venda"
+    ],
+    [
+     "BABY",
      "venda"
     ]
    ],
@@ -721,23 +725,19 @@
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
    "carteira": 10.36,
-   "n_abertas": 2,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "PENGU",
-     "venda"
-    ],
     [
      "BTC",
      "venda"
     ]
    ],
-   "n_fechadas": 29,
+   "n_fechadas": 30,
    "ordem": null
   }
  ],
  "torneio": {
-  "campeao": null,
+  "campeao": "guardiao",
   "placar": {
    "claude": {
     "ops": 35,
@@ -764,7 +764,7 @@
     "ganho_medio": 0.151,
     "perda_media": -0.131,
     "fator_lucro": 0.69,
-    "carteira": 10.1
+    "carteira": 9.99
    },
    "laboratorio": {
     "ops": 7,
@@ -776,12 +776,12 @@
     "carteira": 10.36
    },
    "guardiao": {
-    "ops": 29,
-    "acerto": 0.621,
-    "soma": -0.001,
-    "ganho_medio": 0.131,
+    "ops": 30,
+    "acerto": 0.633,
+    "soma": 0.269,
+    "ganho_medio": 0.139,
     "perda_media": -0.215,
-    "fator_lucro": 1.0,
+    "fator_lucro": 1.11,
     "carteira": 10.36
    }
   },
