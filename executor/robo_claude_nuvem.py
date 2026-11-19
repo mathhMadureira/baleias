@@ -205,7 +205,7 @@ def passo(e, decisao, velas, agora, vivos=None, minutos_gatilho=None):
     textos = []
     ultimo = {par: k[-1] for par, k in velas.items() if k}
     preco = {par: float(v[4]) for par, v in ultimo.items()}
-    preco.update({par: px for par, px in (vivos or {}).items() if par in preco})   # P1 (18/11): preço da rodada (vela de 1 min), não o da vela de 15 min
+    preco.update(vivos or {})       # P1 (18/11): preço da rodada (vela de 1 min); H68 (19/11): também moeda fora das velas do v4 (oportunidade do Caçador)
     # 1) stop de segurança e tempo máximo, nas velas fechadas desde a última conferência
     for par in list(e["abertas"]):
         p = e["abertas"][par]

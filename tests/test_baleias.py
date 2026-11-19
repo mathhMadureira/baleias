@@ -2182,3 +2182,99 @@ class CarteirasTopH63(unittest.TestCase):
         ev2 = C.resolver([{"t": 0, "tipo": "abriu", "coin": "X", "lado": "compra", "px": 1.0}], {"X": "1"}, 5000)
         self.assertTrue(ev2[0].get("descartado"))                                                              # janela perdida
         self.assertEqual(C.avaliar(ev)["n"], 1)
+
+
+class CacadorH68(unittest.TestCase):
+    """H68 (19/11): o Caçador varre o universo na nuvem; juiz 15/60 min com controle aleatório; nada olha o futuro."""
+
+    @staticmethod
+    def _k1m(n=160, explode=0.0, vol_fim=1.0, t0=1_795_000_000_000):
+        k, px = [], 100.0
+        for i in range(n):
+            px *= 1 + (0.0005 if i % 2 else -0.0005)
+            if i == n - 1:
+                px *= 1 + explode
+            v = 1000.0 * (vol_fim if i == n - 1 else 1.0)
+            k.append([t0 + 60_000 * i, px, px * 1.001, px * 0.999, px, 0, t0 + 60_000 * i + 59_999, v])
+        return k
+
+    def test_explosao_de_1_min_com_volume(self):
+        from executor import cacador_nuvem as C
+        s, zmax, _ = C.sinais_1m(self._k1m(explode=0.01, vol_fim=10))
+        e1 = [x for x in s if x["tipo"] == "explosao_1m"]
+        self.assertEqual(len(e1), 1)
+        self.assertEqual(e1[0]["lado"], "compra")
+        self.assertGreater(zmax, 3)
+        self.assertEqual(C.sinais_1m(self._k1m(explode=0.01, vol_fim=1))[0], [])          # sem volume não é explosão
+        self.assertEqual(C.sinais_1m(self._k1m())[0], [])                                 # ruído normal: nada
+
+    def test_rompimento_de_24h_e_sugestao_com_alvo_3x_stop(self):
+        from executor import cacador_nuvem as C
+        k15 = [[i, 1.0, 1.01, 0.99, 1.0, 0, i, 1] for i in range(100)]
+        s, _ = C.sinais_grafico(1.02, k15, k15)
+        r = [x for x in s if x["tipo"] == "rompimento_24h"][0]
+        self.assertEqual((r["lado"], r["invalidacao"]), ("compra", 1.01))
+        sg = C.sugestao(1.02, "compra", 1.01, "24h")
+        self.assertGreaterEqual(sg["alvo_pct"] + 1e-9, max(0.01, 3 * sg["stop_pct"]))
+        self.assertEqual(sg["max_min"], 240)
+
+    def test_juiz_resolve_no_minuto_certo_com_controle_e_sem_repetir(self):
+        import random as rnd
+        from executor import cacador_nuvem as C
+        tm = 1_795_000_020_000 - 1_795_000_020_000 % 60_000
+        lidas = {"AUSDT": (1.0, tm), "BUSDT": (2.0, tm)}
+        e = {}
+        op = {"par": "AUSDT", "tipo": "explosao_1m", "lado": "compra", "forca": 90}
+        C.registrar(e, [op], tm / 1000, lidas, rnd.Random(1))
+        self.assertEqual([x["tipo"] for x in e["pendentes"]], ["explosao_1m", "controle"])
+        C.registrar(e, [op], tm / 1000 + 600, lidas, rnd.Random(1))
+        self.assertEqual(len(e["pendentes"]), 2)                                          # mesmo sinal em 30 min não repete
+        pedidos = []
+
+        def preco_em(par, t):
+            pedidos.append((par, t))
+            return 1.01 if par == "AUSDT" else 2.0
+        C.resolver(e, preco_em, tm + 10 * 60_000)
+        self.assertEqual(pedidos, [])                                                     # 15 min ainda não fecharam: nada resolvido
+        C.resolver(e, preco_em, tm + 15 * 60_000)
+        self.assertIn(("AUSDT", tm + 14 * 60_000), pedidos)                               # o minuto que FECHA 15 min depois da entrada
+        a = [x for x in e["pendentes"] if x["tipo"] == "explosao_1m"][0]
+        self.assertAlmostEqual(a["r15"], 0.01 - 0.0012)
+        self.assertNotIn("r60", a)
+        C.resolver(e, preco_em, tm + 60 * 60_000)
+        self.assertEqual(e["pendentes"], [])
+        self.assertEqual(e["placar"]["explosao_1m"]["15"][str(tm // 3_600_000)][0], 1)
+
+    def test_avaliar_controle_aleatorio_da_o_custo_e_valida_o_juiz(self):
+        """Controle: entradas sorteadas num passeio aleatório têm de dar ≈ −0,12%; o juiz só vale assim."""
+        import random as rnd
+        from executor import cacador_nuvem as C
+        r = rnd.Random(7)
+        placar = {}
+        for i in range(3000):
+            tm = (i // 10) * 3_600_000
+            C.somar(placar, "controle", 15, tm, r.gauss(0, 0.004) - C.CUSTO)
+            C.somar(placar, "explosao_1m", 15, tm, r.gauss(0, 0.004) - C.CUSTO)
+        j = C.avaliar(placar)
+        self.assertTrue(j["controle"]["15"]["controle_ok"])
+        self.assertAlmostEqual(j["controle"]["15"]["media_pct"], -0.12, delta=3 * j["controle"]["15"]["ep_pct"])
+        self.assertFalse(j["explosao_1m"]["15"]["passa"])                                 # sem vantagem não passa
+        placar["controle"]["15"] = {"0": [400, 0.4, 300]}                                  # controle com +0,1%: simulador errado
+        self.assertFalse(C.avaliar(placar)["explosao_1m"]["15"]["controle_ok"])
+
+    def test_universo_dex_e_listagem(self):
+        from executor import cacador_nuvem as C
+        tk = [{"symbol": s, "quoteVolume": v} for s, v in (("PEPEUSDT", 9e6), ("BTCUSDT", 1e9), ("USDCUSDT", 1e9), ("XUSDT", 1e3), ("NVDABUSDT", 9e6))]
+        self.assertEqual(C.filtrar([x["symbol"] for x in tk], tk), ["PEPEUSDT", "BTCUSDT"])   # memecoin primeiro; sem estável, morta e ação
+        self.assertEqual(C.novas_listagens([], ["AUSDT"], 0, []), [])                       # 1ª leitura só guarda a lista
+        self.assertEqual([x["par"] for x in C.novas_listagens(["AUSDT"], ["AUSDT", "NOVAUSDT"], 10, [])], ["NOVAUSDT"])
+        ag = 10 ** 12
+        bom = {"liquidez": 80_000, "criado_ms": ag - 3_600_000, "compras_1h": 50, "vendas_1h": 40, "volume_1h": 90_000}
+        self.assertEqual(len(C.dex_filtrar([bom, {**bom, "vendas_1h": 0}, {**bom, "criado_ms": ag - 60_000}], ag)), 1)   # sem venda / nova demais: fora
+
+    def test_agente_entra_em_moeda_fora_das_velas_com_preco_da_rodada(self):
+        from executor import robo_claude_nuvem as R
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "licoes": []}
+        d = {"t": 1795000000.0 - 5, "posicoes": [{"moeda": "NOVAUSDT", "lado": "compra", "motivo": "aviso do Caçador", "stop_pct": 0.01}]}
+        R.passo(e, d, {}, 1795000000.0, vivos={"NOVAUSDT": 2.5})
+        self.assertEqual(e["abertas"]["NOVAUSDT"]["entrada"], 2.5)
