@@ -1,6 +1,6 @@
 {
- "t": 1795094669,
- "hora_utc": "2026-11-19 13:24 UTC",
+ "t": 1795094839,
+ "hora_utc": "2026-11-19 13:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,10 +172,10 @@
   -0.1,
   0.24,
   -0.11,
-  -0.18
+  -0.28
  ],
  "contexto": {
-  "t": 1795094669,
+  "t": 1795094840,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.1,
+   "media_top20_anual_pct": 7.3,
    "principais_anual_pct": {
-    "BTC": -1.5,
-    "ETH": -0.2,
+    "BTC": -1.9,
+    "ETH": -0.6,
     "SOL": -5.4
    },
    "leitura": "neutro"
@@ -497,7 +497,17 @@
  },
  "robo_claude": {
   "carteira": 8.76,
-  "abertas": [],
+  "abertas": [
+   {
+    "moeda": "MORPHO",
+    "lado": "venda",
+    "entrada": 1.687,
+    "agora": 1.692,
+    "resultado_pct": -0.3,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "v4 0,385 de subir (confiança 0,115, a maior do universo); 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 dia); 4 h −0,29%, 1 dia −2,14%, 24 h −2,70%; sem pad"
+   }
+  ],
   "ultimas_fechadas": [
    {
     "moeda": "ZEC",
@@ -607,10 +617,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795033959,
-    "texto": "ZKP venda saiu pelo stop móvel com resultados opostos: +0,064 no simulado e −0,1058 no testnet (pico +0,62%, guardou +0,43%, mas o preço já tinha passado do nível). Conferir se as próximas saídas por stop móvel no testnet também ficam abaixo do simulado."
-   },
-   {
     "t": 1795034823,
     "texto": "GTC venda aberta às 19:22 UTC com v4 0,370 de subir: 1h20 depois o v4 virou para 0,551 e o testnet está em −0,073 (0,1347 → 0,1352), o simulado em 0,13503 → 0,1352. A aposta de 15 min do v4 não segurou a venda por mais de uma hora; conferir se as próximas vendas mantidas sem o v4 a favor também viram contra."
    },
@@ -637,6 +643,10 @@
    {
     "t": 1795043644,
     "texto": "Sem operação nova nesta rodada. Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, soma −1,58, E = −0,122 por operação. Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054. As últimas vendas (ZEC −0,009, AAVE +0,061) entraram com o mercado já perto da mínima de 24 h e saíram no stop movido. Por isso não vendo BTC a +0,84% da mínima, com o v4 contra. C"
+   },
+   {
+    "t": 1795094573,
+    "texto": "Conta de teste: 13 fechadas, p = 0,308, G = 0,261, L = 0,328, soma −1,58, E = −0,12 por operação. Carteira simulada robo_claude: 23 fechadas, p = 0,609, G = 0,067, L = 0,242, E = −0,054. Na simulada acerto muito, mas o ganho médio é 3,6 vezes menor que a perda. Por isso agora uso alvo de 2× o stop (MORPHO venda: stop 0,6%, alvo 1,2%). A conferir: se a venda de MORPHO toca o alvo antes do stop em 1"
    }
   ]
  },
@@ -648,8 +658,13 @@
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
    "carteira": 8.76,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 1,
+   "abertas": [
+    [
+     "MORPHO",
+     "venda"
+    ]
+   ],
    "n_fechadas": 23,
    "ordem": null
   },
@@ -660,8 +675,13 @@
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
    "carteira": 8.42,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 1,
+   "abertas": [
+    [
+     "MORPHO",
+     "venda"
+    ]
+   ],
    "n_fechadas": 13,
    "ordem": null
   },
@@ -816,12 +836,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "18/11 01:13",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Alta de 24 h firme: 78,8% das moedas sobem em 24 h, 78,0% em 4 h e só 11,0% em 1 h; BTC −0,24% em 1 h, volume 0,56×. Robô Claude mantém as compras de ZEC e RENDER e não abre mais nada por falta de volume. Sem ordens: a regra da tendência já põe os robôs em compras e o banco não tem conflitos."
-  },
-  {
    "hora_utc": "18/11 01:51",
    "de": "claude",
    "para": "sala",
@@ -886,6 +900,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Baixa (8,4% das 107 moedas sobem em 4 h; BTC −1,45% em 4 h, a +0,84% da mínima de 24 h). Carteiras vendidas (BTC 1×17), mas o v4 dá 62 compras e 1 venda (BTC 0,546, ZEC 0,545). Leitura dividida: sem entrada. Conta de teste: 13 fechadas, p 0,31, E −0,12."
+  },
+  {
+   "hora_utc": "19/11 13:27",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Neutro (52,3% das 109 moedas sobem em 24 h; BTC −0,48% em 24 h). Chefe e testnet vendem MORPHO (v4 0,385, confiança 0,115; 4 de 6 tempos abaixo da MM20; stop 0,6%, alvo 1,2%, 120 min). Conta de teste: 13 fechadas, p 0,31, E −0,12."
   }
  ]
 }
