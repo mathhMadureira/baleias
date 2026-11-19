@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 12:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 12:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 52.8% das moedas subindo em 24 h, 65.7% em 4 h · BTC 24 h -0.7%, 4 h 0.02%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.7%/ano · {'BTC': 7.0, 'ETH': 2.0, 'SOL': 8.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.0%/ano · {'BTC': 6.1, 'ETH': 1.6, 'SOL': 7.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PLUME topo duplo (baixa, formado) · PYTH fundo duplo (alta, formado) · SPK topo duplo (baixa, formado)
 - 📰 19/11 12:08 UTC · CoinDesk: Bitcoin holds above $63,750 but Fed rate-hike threats loom large
@@ -68,7 +68,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 📰 19/11 11:19 UTC · Cointelegraph: Sweden’s H100 could tap Bitcoin trading pool to fund share buybacks
 - 📰 19/11 11:15 UTC · Decrypt: GameStop CEO Says Digital-Only Games Have ‘Hurt Consumers’ as GTA 6 Skips Discs
 - 📰 19/11 11:06 UTC · CoinDesk: Anthropic’s $107 billion sale set to top SpaceX’s IPO as tokenized stocks gain traction
-- 📰 19/11 10:55 UTC · CoinDesk: ‘Highly advanced’ quantum computers could crack financial encryption in five years
+- 📰 19/11 10:55 UTC · CoinDesk: Financial firms must act now as quantum computers grow ‘highly advanced,’ IOSCO warns
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
