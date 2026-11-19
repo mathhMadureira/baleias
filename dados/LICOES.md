@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 18:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 18:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -39,7 +39,7 @@ Carteira **US$ 9.76** · 13 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.50** · 0 operações fechadas · 1 abertas
+Carteira **US$ 10.75** · 0 operações fechadas · 1 abertas
 
 Sem operações fechadas ainda.
 
@@ -58,11 +58,11 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 53.5% das moedas subindo em 24 h, 17.5% em 4 h · BTC 24 h -0.69%, 4 h -1.91%.
+- **Amplitude:** 57.9% das moedas subindo em 24 h, 17.5% em 4 h · BTC 24 h 0.21%, 4 h -1.03%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -1.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': -1.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AVAX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** AVAX estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · YB fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
 - 📰 19/11 18:20 UTC · Cointelegraph: Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns
 - 📰 19/11 18:15 UTC · CoinDesk: Trump's Democratic SEC pick suggests tokenization policy deserves full rule process
 - 📰 19/11 18:09 UTC · Cointelegraph: Why higher rates could slow Bitcoin buying at treasury firms
@@ -107,7 +107,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28499 apostas conferidas ao vivo, acerto 55.3%; prevê 91 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28505 apostas conferidas ao vivo, acerto 55.3%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
