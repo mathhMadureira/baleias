@@ -1,20 +1,20 @@
 {
- "t": 1795052160,
- "hora_utc": "2026-11-19 01:36 UTC",
+ "t": 1795052337,
+ "hora_utc": "2026-11-19 01:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 110,
-  "subindo_pct": 22.7,
-  "mediana_pct": -0.37
+  "moedas": 108,
+  "subindo_pct": 22.2,
+  "mediana_pct": -0.38
  },
  "mercado_4h": {
-  "moedas": 110,
-  "subindo_pct": 41.8,
+  "moedas": 108,
+  "subindo_pct": 40.7,
   "mediana_pct": -0.19
  },
  "mercado_24h": {
-  "moedas": 110,
-  "subindo_pct": 25.5,
+  "moedas": 108,
+  "subindo_pct": 25.0,
   "mediana_pct": -1.89
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.16,
   1.31,
   0.19,
-  -1.18
+  -1.17
  ],
  "contexto": {
-  "t": 1795052161,
+  "t": 1795052338,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.7,
+   "media_top20_anual_pct": 6.8,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -296,6 +296,13 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "CYBER",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.218
+   },
    {
     "moeda": "DASH",
     "padrao": "fundo duplo",
@@ -719,12 +726,12 @@
   "z_contra_lab": 2.2,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5129,
-    "n": 18325
+    "acerto": 0.5128,
+    "n": 18142
    },
    "segue_maioria_24h": {
-    "acerto": 0.518,
-    "n": 25045
+    "acerto": 0.5181,
+    "n": 24924
    }
   },
   "referencia_ganha": [],
