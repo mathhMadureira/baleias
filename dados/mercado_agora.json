@@ -1,6 +1,6 @@
 {
- "t": 1795092411,
- "hora_utc": "2026-11-19 12:46 UTC",
+ "t": 1795092581,
+ "hora_utc": "2026-11-19 12:49 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   0.19,
   -0.1,
   0.24,
-  -0.11
+  -0.01
  ],
  "contexto": {
-  "t": 1795092412,
+  "t": 1795092582,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795092246,
+    "hora_utc": "19/11 12:44",
+    "titulo": "Hong Kong adds Hyperliquid to list of ‘suspicious’ crypto platforms"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795092012,
@@ -260,12 +266,6 @@
     "t": 1795083732,
     "hora_utc": "19/11 10:22",
     "titulo": "Roundhill scraps Solana and XRP income ETFs as rival funds indicate low demand"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795078498,
-    "hora_utc": "19/11 08:54",
-    "titulo": "Singapore settles $77.5M tokenized bill sale with wholesale CBDC"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.4,
+   "media_top20_anual_pct": 7.5,
    "principais_anual_pct": {
-    "BTC": 3.0,
-    "ETH": 3.4,
-    "SOL": 2.4
+    "BTC": 2.7,
+    "ETH": 3.9,
+    "SOL": 2.2
    },
    "leitura": "neutro"
   },
