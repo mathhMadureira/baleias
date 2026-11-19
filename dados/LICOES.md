@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 15:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 15:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
+Carteira **US$ 10.69** · 12 operações fechadas · 1 abertas
 
 - **Total:** 10/12 com lucro (83%), resultado +0.69, média +0.057 por operação.
 - **Últimas 24 h:** 10/12 com lucro, +0.69.
@@ -58,11 +58,11 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 56.4% das moedas subindo em 24 h, 37.3% em 4 h · BTC 24 h -0.14%, 4 h -0.35%.
+- **Amplitude:** 47.7% das moedas subindo em 24 h, 21.6% em 4 h · BTC 24 h -0.3%, 4 h -0.78%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 8.3, 'ETH': 6.2, 'SOL': 1.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · KAT fundo duplo (alta, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 8.1, 'ETH': 5.0, 'SOL': -0.8} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
 - 📰 19/11 13:48 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -106,7 +106,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28006 apostas conferidas ao vivo, acerto 55.3%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28019 apostas conferidas ao vivo, acerto 55.3%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
