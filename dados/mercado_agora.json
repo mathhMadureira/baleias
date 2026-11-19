@@ -1,6 +1,6 @@
 {
- "t": 1795093443,
- "hora_utc": "2026-11-19 13:04 UTC",
+ "t": 1795093617,
+ "hora_utc": "2026-11-19 13:06 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   -0.1,
   0.24,
   -0.11,
-  -0.06
+  -0.03
  ],
  "contexto": {
-  "t": 1795093444,
+  "t": 1795093618,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795093528,
+    "hora_utc": "19/11 13:05",
+    "titulo": "Morning Minute: Google’s Newest AI Model Tops Benchmarks Ahead of Anthropic IPO"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795093154,
@@ -260,12 +266,6 @@
     "t": 1795084325,
     "hora_utc": "19/11 10:32",
     "titulo": "IOSCO warns quantum upgrades could slow blockchains, leave security gaps"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795083905,
-    "hora_utc": "19/11 10:25",
-    "titulo": "Bitcoin Struggles to Hold $64,000 as ETF Outflows Hit $2.9B in November"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 6.6,
    "principais_anual_pct": {
-    "BTC": -0.9,
-    "ETH": 1.8,
-    "SOL": -10.8
+    "BTC": -0.5,
+    "ETH": 1.0,
+    "SOL": -9.4
    },
    "leitura": "neutro"
   },
