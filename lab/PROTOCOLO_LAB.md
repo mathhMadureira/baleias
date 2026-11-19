@@ -1337,3 +1337,13 @@ moedas por erro de rede e símbolo; refeita com nova tentativa e velas do à vis
 | R6 (referência) stop 2% + móvel | +0,134% | +1,94 | +0,336 +0,070 +0,006 | 80,4% | 0,61% | 1,80% | 0,34 |
 - S4 é a melhor e é "colher/balde" (ganha 2,6 × o que perde), mas perdeu no bloco mais recente (−0,359%): não passa. O stop móvel corta o ganho
   em ~0,6% (G 0,60–0,61% em S2, S3 e R6): com ele não há balde. Nada vira obrigação; os números vão para o manual dos agentes como informação.
+
+### Resultado da H20 (juízo diário, 19/11/2026 09:00 BRT = 12:00 UTC; `lab/juizo_h20.py`, `origin/estado` 12850e8c): REPROVADA
+Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite inferior de Wilson (95%) do acerto > 51%. Medido sem ajuste em
+`dados/cerebro.json` (`operacoes` com `t` ≥ `inicio_ao_vivo` = 10/11 03:30 UTC; apostas de 10/11 13:45 a 19/11 05:45 UTC). 1 tentativa.
+| apostas ao vivo | acertos | acerto | Wilson 95% | capital simulado |
+|---|---|---|---|---|
+| 563 | 297 | 52,8% | [48,6%; 56,8%] | 960,54 → 1269,65 |
+- Limite inferior 48,6% < 51%: reprovada. O acerto fica acima do equilíbrio do contrato (51%), mas sem prova.
+- Blocos de tempo (só informação, não fazem parte do critério): 166 apostas 54,8% · 185 apostas 47,6% · 212 apostas 55,7%.
+- O que muda: nada (o v1 roda só no binário simulado; não decide nenhuma carteira). H21 (v2 × v1) segue: v2 com 266 de 300 apostas.
