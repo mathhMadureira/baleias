@@ -1,6 +1,6 @@
 {
- "t": 1795124455,
- "hora_utc": "2026-11-19 21:40 UTC",
+ "t": 1795124644,
+ "hora_utc": "2026-11-19 21:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   0.22,
   -0.82,
   -0.39,
-  -0.96
+  -0.81
  ],
  "contexto": {
-  "t": 1795124456,
+  "t": 1795124644,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 1.7,
+   "media_top20_anual_pct": 1.9,
    "principais_anual_pct": {
-    "BTC": -14.6,
-    "ETH": 3.7,
-    "SOL": -2.9
+    "BTC": -14.3,
+    "ETH": 3.8,
+    "SOL": -3.6
    },
    "leitura": "neutro"
   },
@@ -475,7 +475,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.87,
+  "carteira": 9.83,
   "abertas": [
    {
     "moeda": "MEGA",
@@ -494,6 +494,15 @@
     "resultado_pct": 0.28,
     "horas_aberta": 0.2,
     "motivo_de_entrada": "Nova, a mercado: 6 de 6 tempos abaixo da MM20 (1 min a 1 dia); 15 min −0,44%, 1 h −0,68%, 4 h −1,23%, 1 dia −1,61%; vela de 5 min da queda com volume ≈ 5× as vi"
+   },
+   {
+    "moeda": "LTC",
+    "lado": "venda",
+    "entrada": 42.0,
+    "agora": 41.9,
+    "resultado_pct": 0.24,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Nova, a mercado: bandeira de baixa CONFIRMADA em 1 h (radar 21:32, invalidação 42,94) e topo duplo de 4 h a favor; 5 de 6 tempos abaixo da MM20 (só 1 min acima)"
    }
   ],
   "ultimas_fechadas": [
@@ -605,10 +614,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795103583,
-    "texto": "Conta de teste: 14 fechadas, p 0,357, G +0,234, L −0,328, E = 0,357×0,234 − 0,643×0,328 ≈ −0,127 US$ por operação; ganho médio menor que a perda média, por isso o alvo 3 × stop. Caderno: 3 operações com leitura anotada (MORPHO venda, 100% de acerto, +0,181 US$), poucas. Verificável: AAVE e CAKE (6 de 6, contra o v4 na entrada) e as novas UNI e SKY vendidas: se 3 de 4 fecharem no lucro, o 6 de 6 a "
-   },
-   {
     "t": 1795104517,
     "texto": "Conta de teste: 14 fechadas, p 0,357, G +0,234, L −0,328, E ≈ −0,127 US$ por operação (sem fechamento novo nesta rodada). Abertas: SKY venda +0,31 (6 de 6 a favor, contra o v4) e AAVE −0,02, CAKE −0,04, UNI −0,11. Caderno: 4 operações com leitura, 75% de acerto, 6 de 6 a favor com 3 operações (67%), poucas. Verificável: se SKY sair no lucro pelo stop móvel e UNI (5 de 6) sair no stop, conta mais u"
    },
@@ -635,6 +640,10 @@
    {
     "t": 1795123568,
     "texto": "Caderno do chefe (robo_claude): 35 fechadas, p 0,629, G 0,107, L 0,214, E = 0,629 × 0,107 − 0,371 × 0,214 = −0,012 por operação (fator 0,85). Últimas: UNI venda −0,179, AAVE venda +0,252, SKY venda +0,284, SNX compra −0,178, DOT venda +0,262. Caderno: 6 de 6 tempos 71% em 7 (poucas, não sei ainda); padrão a favor 4 de 4 (poucas). As três posições são 6 de 6 a favor; alvo 3 × o stop."
+   },
+   {
+    "t": 1795124391,
+    "texto": "BTC venda +0,153: saiu pelo stop móvel (pico +1,13%, guardou +0,79%); aviso do Caçador + 5 de 6 tempos abaixo + carteiras 0×15 deram certo, mas o alvo de 2,1% não chegou. Carteira simulada, 36 fechadas: p 0,639, G 0,109, L 0,214, E = 0,639 × 0,109 − 0,361 × 0,214 = −0,008 por operação (fator 0,90; era −0,012). Caderno (12 com leitura): padrão a favor 4 de 4 (+0,970), 6 de 6 tempos 71% em 7 — pouca"
    }
   ]
  },
@@ -645,8 +654,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.87,
-   "n_abertas": 2,
+   "carteira": 9.83,
+   "n_abertas": 3,
    "abertas": [
     [
      "MEGA",
@@ -654,6 +663,10 @@
     ],
     [
      "ETH",
+     "venda"
+    ],
+    [
+     "LTC",
      "venda"
     ]
    ],
@@ -666,8 +679,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 9.1,
-   "n_abertas": 2,
+   "carteira": 9.12,
+   "n_abertas": 3,
    "abertas": [
     [
      "MEGA",
@@ -675,6 +688,10 @@
     ],
     [
      "ETH",
+     "venda"
+    ],
+    [
+     "LTC",
      "venda"
     ]
    ],
@@ -687,7 +704,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.94,
+   "carteira": 9.91,
    "n_abertas": 2,
    "abertas": [
     [
@@ -708,7 +725,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.08,
+   "carteira": 10.04,
    "n_abertas": 2,
    "abertas": [
     [
@@ -729,7 +746,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.45,
+   "carteira": 10.34,
    "n_abertas": 2,
    "abertas": [
     [
@@ -755,7 +772,7 @@
     "ganho_medio": 0.109,
     "perda_media": -0.214,
     "fator_lucro": 0.9,
-    "carteira": 9.87
+    "carteira": 9.83
    },
    "openbot_testnet": {
     "ops": 22,
@@ -764,7 +781,7 @@
     "ganho_medio": 0.289,
     "perda_media": -0.296,
     "fator_lucro": 0.73,
-    "carteira": 9.1
+    "carteira": 9.12
    },
    "treinador": {
     "ops": 18,
@@ -773,7 +790,7 @@
     "ganho_medio": 0.159,
     "perda_media": -0.131,
     "fator_lucro": 0.97,
-    "carteira": 9.94
+    "carteira": 9.91
    },
    "laboratorio": {
     "ops": 8,
@@ -782,7 +799,7 @@
     "ganho_medio": 0.297,
     "perda_media": -0.281,
     "fator_lucro": 1.05,
-    "carteira": 10.08
+    "carteira": 10.04
    },
    "guardiao": {
     "ops": 31,
@@ -791,7 +808,7 @@
     "ganho_medio": 0.136,
     "perda_media": -0.215,
     "fator_lucro": 1.15,
-    "carteira": 10.45
+    "carteira": 10.34
    }
   },
   "vereditos": []
@@ -859,12 +876,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 14:57",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Regime neutro (65,1% sobem em 24 h, 39,1% na última hora; BTC +0,35% em 1 h). Mantenho MORPHO venda (+0,13 USDT, 6/6 tempos abaixo da MM20, stop móvel 1,6779). CYBER e ERA cortadas: 2 e 0 de 6 tempos a favor."
-  },
-  {
    "hora_utc": "19/11 15:14",
    "de": "claude",
    "para": "sala",
@@ -929,6 +940,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Queda: 20,5% das 117 moedas sobem em 1 h; BTC 1 h −0,96%, 6 de 6 tempos abaixo. Mantenho BTC vendido (+0,96% a favor; carteiras 0×15 vendidas) e MEGA comprada (6 de 6 acima). Entro vendido em ETH (6 de 6 abaixo, carteiras 0×9; stop 0,7%, alvo 2,1%, 120 min). Descartadas CYBER e HBAR (0 de 6 a favor)"
+  },
+  {
+   "hora_utc": "19/11 21:43",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Baixa: 14,5% das 117 moedas sobem em 4 h; BTC 4 h −2,38%. BTC vendido saiu pelo stop móvel: +0,15. Mantenho MEGA comprada (6 de 6 acima) e ETH vendida (6 de 6 abaixo, carteiras 0×9). Entro vendido em LTC (bandeira de baixa confirmada em 1 h, 5 de 6 abaixo; stop 0,9%, alvo 2,7%, 120 min). Conta de te"
   }
  ]
 }
