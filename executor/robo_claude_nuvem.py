@@ -258,7 +258,10 @@ def passo(e, decisao, velas, agora, vivos=None, minutos_gatilho=None):
                     continue
             if e["caixa"] + sum(q["gasto"] for q in e["abertas"].values()) < PISO:
                 break
-            if par not in preco:
+            if par not in preco or (vivos is not None and par not in vivos):
+                # auditoria 19/11: sem o preço da rodada (vela de 1 min) a entrada sairia no fechamento de uma vela de 15 min que já
+                # passou (até 15 min atrás: preço conhecido depois do fato). Não entra e avisa, em vez de pular calado.
+                textos.append(f"⚠️ {NOME}: {par[:-4]} não entrou — sem o preço da rodada" + ("" if par in preco else " (moeda fora das velas da nuvem)"))
                 continue
             txt = abrir(e, par, lado, preco[par], agora, parametros(pos), velas, pos.get("motivo", ""), decisao["t"])
             if txt:

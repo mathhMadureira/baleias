@@ -2025,6 +2025,19 @@ class P1EntradaNaRodada(unittest.TestCase):
         self.assertEqual(a["entrada_t"], agora)
         self.assertGreaterEqual(a["conferido_ate"], agora * 1000)  # stop de 15 min só em velas depois da entrada
 
+    def test_sem_preco_da_rodada_nao_entra_no_fechamento_velho(self):
+        """Auditoria 19/11: a Binance não respondeu o preço de 1 min de uma moeda → antes entrava no fechamento de 15 min (preço passado)."""
+        from executor import robo_claude_nuvem as R
+        agora = 1795000000.0
+        k = [[int(agora * 1000) - 900_000 * (100 - i), "1", "1", "1", "1.0"] for i in range(100)]
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "licoes": []}
+        d = {"t": agora - 10, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "teste"},
+                                           {"moeda": "ZZZUSDT", "lado": "venda", "motivo": "fora das velas"}]}
+        textos = R.passo(e, d, {"AUSDT": k}, agora, vivos={})
+        self.assertEqual(e["abertas"], {})                                  # antes: abria AUSDT a 1,0 (fechamento de 15 min)
+        self.assertTrue(any(t.find("A não entrou — sem o preço da rodada") >= 0 for t in textos))
+        self.assertTrue(any("ZZZ" in t and "fora das velas" in t for t in textos))   # antes: pulava calado
+
 
 class OperarLivre(unittest.TestCase):
     """H62 (18/11): o agente escolhe stop, alvo e prazo de cada posição; a nuvem confere minuto a minuto."""

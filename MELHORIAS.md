@@ -154,3 +154,17 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   rompimento: a capacidade fica no executor, mas a rotina dos agentes (r8) manda entrar JÁ, a mercado, quando a leitura dá. 162 testes.
 - 2026-11-19: **agente Engenheiro criado** (pedido do dono): audita código, dados e prompts a cada 6 h, conserta bugs com teste e manda mudança
   de estratégia ao Laboratório; relatórios em `OpenBot/Shared/baleias/auditorias/`.
+- 2026-11-19 (tarde): **1ª auditoria do Engenheiro (pedido do dono: "agentes passivos e demorando; quero agilidade, operações constantes").**
+  Relatório: `OpenBot/Shared/baleias/auditorias/2026-11-19.md`. Medido no ramo `estado` de 12:51 a 15:17 UTC: 31 decisões dos 4 agentes, só 5 com
+  posição (todas MORPHO vendida), 0 gatilhos (H67); dos 155 descartes, 91 (58%) por "menos de 4 dos 6 tempos a favor" do REVISOR e 43 (27%) por
+  confiança do v4 < 0,12. Atrasos: fila do OpenBot ("provider-cli-replaced") deixou TODOS os agentes 40 min sem rodar (14:01–14:41 UTC; o chefe 59 min);
+  máquina desligada 18/11 23:12 → 19/11 12:51 UTC; da decisão à entrada na nuvem 2,8–4,4 min (rodada mediana de 173 s).
+  **Corrigido:** (1) `executor/robo_claude_nuvem.py`: sem o preço da rodada (vela de 1 min) a entrada saía no fechamento de 15 min que já tinha passado;
+  agora não entra e avisa; moeda fora das velas também avisa (antes pulava calada). Teste `test_sem_preco_da_rodada_nao_entra_no_fechamento_velho`.
+  (2) Fora do repositório (pasta do chefe e `operar/`): decisão gravada pela metade no desligamento (`corrompidos/20261118-231404-decisao.json`, 0 byte)
+  derrubava a rodada inteira do `testnet.py`; agora gravação atômica com fsync em `gravar.py`/`testnet.py`, leitura tolerante de decisão, leitura e
+  recibo cortados, estado local corrompido recuperado da cópia do ramo, clone corrompido guardado de lado e refeito (`operar.py`); 4 testes novos
+  na pasta do Engenheiro (`testes/test_ferramentas.py`). (3) ROTINA dos agentes r9 e rotina do chefe r9: postura ativa (entra a mercado na leitura
+  mais forte; ficar de fora só com corte duro escrito), REVISOR só com cortes duros (alvo < 0,24%, |4 h| ≥ 15%, dado faltando, padrão confirmado
+  contra). **Controle aleatório** do código da nuvem (4.000 entradas sorteadas em velas reais de 1 min): −0,117%, −0,100%, −0,117% e gatilhos −0,118%
+  (≈ custo): sem olhar o futuro. Achado de estratégia mandado ao Laboratório: com alvo de 1,2% o stop móvel fecha 47% e só 3% chegam no alvo. 163 testes.
