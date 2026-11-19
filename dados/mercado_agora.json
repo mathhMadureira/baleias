@@ -1,11 +1,11 @@
 {
- "t": 1795065100,
- "hora_utc": "2026-11-19 05:11 UTC",
+ "t": 1795065321,
+ "hora_utc": "2026-11-19 05:15 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 112,
   "subindo_pct": 44.6,
-  "mediana_pct": -0.05
+  "mediana_pct": -0.07
  },
  "mercado_4h": {
   "moedas": 112,
@@ -172,10 +172,10 @@
   -0.41,
   0.97,
   0.6,
-  -0.06
+  -0.2
  ],
  "contexto": {
-  "t": 1795065101,
+  "t": 1795065322,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 5.0,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -394,9 +394,9 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 121,
-  "compras": 74,
-  "vendas": 47,
+  "apostas": 118,
+  "compras": 72,
+  "vendas": 46,
   "mais_confiantes_venda": [
    {
     "moeda": "ETC",
@@ -427,8 +427,8 @@
     "prob_subir": 0.405
    },
    {
-    "moeda": "CELO",
-    "prob_subir": 0.411
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
@@ -726,42 +726,42 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.6% em 25723 apostas (604 velas, 12/11 05:15–19/11 04:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5557,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 25715 apostas (604 velas, 12/11 05:30–19/11 04:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5555,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.06,
+  "z_contra_lab": 2.04,
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.509,
-    "n": 19249
+    "n": 19241
    },
    "segue_maioria_24h": {
     "acerto": 0.5137,
-    "n": 25565
+    "n": 25557
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5605,
-    "n": 3770
+    "acerto": 0.5603,
+    "n": 3771
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5905,
-    "n": 1514
+    "acerto": 0.5908,
+    "n": 1515
    },
    "confianca:<0,05": {
-    "acerto": 0.5776,
-    "n": 7715
+    "acerto": 0.5774,
+    "n": 7717
    },
    "confianca:≥0,12": {
     "acerto": 0.6733,
     "n": 505
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5758,
-    "n": 7124
+    "acerto": 0.5753,
+    "n": 7116
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5632,
@@ -776,12 +776,12 @@
     "n": 7886
    },
    "lado:compra": {
-    "acerto": 0.5307,
-    "n": 11927
+    "acerto": 0.5306,
+    "n": 11928
    },
    "lado:venda": {
-    "acerto": 0.5772,
-    "n": 13796
+    "acerto": 0.5771,
+    "n": 13787
    }
   }
  },
