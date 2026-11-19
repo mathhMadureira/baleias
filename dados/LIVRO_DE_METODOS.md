@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.9% | 246 | 50.7%–62.9% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.0% | 2175 | 50.9%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.9% | 2176 | 50.8%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 100.0% | 6 | 61.0%–100.0% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | connors_8020_alta | promissor | 71.4% | 7 | 35.9%–91.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | raschke_sopa_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
@@ -21,9 +21,9 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_180_baixa | reprovado | 47.7% | 44 | 33.8%–62.1% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | williams_volb_alta | reprovado | 46.0% | 100 | 36.6%–55.7% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | velez_180_alta | reprovado | 40.0% | 5 | 11.8%–76.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
+| raschke_graal_alta | reprovado | 38.5% | 13 | 17.7%–64.5% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | rompimento | reprovado | 36.4% | 33 | 22.2%–53.4% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | raschke_sopa_alta | reprovado | 36.4% | 11 | 15.2%–64.6% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
-| raschke_graal_alta | reprovado | 33.3% | 12 | 13.8%–60.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | velez_espaco_duplo_alto | reprovado | — | 0 | — | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | velez_espaco_duplo_baixo | reprovado | — | 0 | — | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | velez_elefante | reprovado | 0.0% | 1 | 0.0%–79.3% | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
