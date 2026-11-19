@@ -1,6 +1,6 @@
 {
- "t": 1795078381,
- "hora_utc": "2026-11-19 08:53 UTC",
+ "t": 1795078604,
+ "hora_utc": "2026-11-19 08:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
@@ -172,11 +172,17 @@
   -0.35,
   0.62,
   -0.02,
-  -0.17
+  0.07
  ],
  "contexto": {
-  "t": 1795078382,
+  "t": 1795078605,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795078498,
+    "hora_utc": "19/11 08:54",
+    "titulo": "Singapore settles $77.5M tokenized bill sale with wholesale CBDC"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795076779,
@@ -260,12 +266,6 @@
     "t": 1795048426,
     "hora_utc": "19/11 00:33",
     "titulo": "Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795041000,
-    "hora_utc": "18/11 22:30",
-    "titulo": "Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 9.0,
    "principais_anual_pct": {
-    "BTC": 1.0,
-    "ETH": 8.1,
-    "SOL": 9.6
+    "BTC": 0.6,
+    "ETH": 8.3,
+    "SOL": 9.9
    },
    "leitura": "neutro"
   },
