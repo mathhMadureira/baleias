@@ -1,6 +1,6 @@
 {
- "t": 1795052880,
- "hora_utc": "2026-11-19 01:48 UTC",
+ "t": 1795053062,
+ "hora_utc": "2026-11-19 01:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 109,
@@ -175,8 +175,14 @@
   -0.72
  ],
  "contexto": {
-  "t": 1795052881,
+  "t": 1795053062,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795052733,
+    "hora_utc": "19/11 01:45",
+    "titulo": "Trump administration unveils new center to choke off scam payments"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795048549,
@@ -260,12 +266,6 @@
     "t": 1795029362,
     "hora_utc": "18/11 19:16",
     "titulo": "Bitcoin Tanks Ahead of Anthropic’s IPO. Should We Really Blame AI?"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795027563,
-    "hora_utc": "18/11 18:46",
-    "titulo": "Bitcoin Miners Are Selling Their Stacks to Fund the AI Boom"
    }
   ],
   "medo_ganancia": {
