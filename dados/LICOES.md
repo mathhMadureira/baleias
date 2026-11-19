@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 22:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 22:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.29** · 38 operações fechadas · 1 abertas
+Carteira **US$ 9.35** · 38 operações fechadas · 1 abertas
 
 - **Total:** 23/38 com lucro (61%), resultado -0.70, média -0.018 por operação.
-- **Últimas 24 h:** 11/17 com lucro, +0.70.
+- **Últimas 24 h:** 10/16 com lucro, +0.62.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 19 op, 53% certas, -0.56 · 00–05 UTC: 2 op, 100% certas, +0.12 · 12–17 UTC: 16 op, 69% certas, +0.56
 - **Por lado:** compra: 12 op, 50% certas, -1.42 · venda: 26 op, 65% certas, +0.71
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · Nova, a mercado: bandeira de b: 1 op, 0% certas, -0.24 · Nova, a mercado: 6 de 6 tempos: 1 op, 0% certas, -0.19 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39
@@ -65,9 +65,9 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 43.1% das moedas subindo em 24 h, 15.5% em 4 h · BTC 24 h -0.56%, 4 h -1.75%.
+- **Amplitude:** 45.7% das moedas subindo em 24 h, 13.8% em 4 h · BTC 24 h -0.44%, 4 h -1.27%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.4%/ano · {'BTC': 4.1, 'ETH': 0.5, 'SOL': 2.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.7%/ano · {'BTC': 4.5, 'ETH': 1.1, 'SOL': 3.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** HYPE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · WLFI estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RARE topo duplo (baixa, formado) · RENDER OCO invertido (alta, formado)
 - 📰 19/11 22:36 UTC · Decrypt: Citi Says Customers Are Responsible When AI Banking Agents Go Rogue—Even After a Hack
@@ -113,7 +113,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 29436 apostas conferidas ao vivo, acerto 54.9%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 29459 apostas conferidas ao vivo, acerto 54.9%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
