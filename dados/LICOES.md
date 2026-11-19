@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 10:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 11:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,11 +58,11 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 40.9% das moedas subindo em 24 h, 53.6% em 4 h · BTC 24 h -0.67%, 4 h 0.55%.
+- **Amplitude:** 43.6% das moedas subindo em 24 h, 41.8% em 4 h · BTC 24 h -0.9%, 4 h 0.07%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': -3.7, 'ETH': 3.5, 'SOL': 3.7} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** KAVA fundo duplo (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · BNB triângulo descendente (baixa, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.1%/ano · {'BTC': -5.2, 'ETH': 1.0, 'SOL': -0.6} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BNB triângulo descendente (alta, CONFIRMOU) · BMT ombro-cabeça-ombro (baixa, formado) · BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ERA ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado) · ETH OCO invertido (alta, formado) · F fundo duplo (alta, formado) · KAVA fundo duplo (alta, formado) · KAVA ombro-cabeça-ombro (baixa, formado)
 - 📰 19/11 10:55 UTC · CoinDesk: ‘Highly advanced’ quantum computers could crack financial encryption in five years
 - 📰 19/11 10:48 UTC · CoinDesk: Live updates: Bitcoin nears $64,000 as Anthropic’s record IPO lifts tech
 - 📰 19/11 10:39 UTC · CoinDesk: Singapore settles $77.5 million tokenized bill sale in local CBDC
@@ -72,7 +72,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 11.7 h.
+- ⚠️ **Rotina parada:** sem decisão há 11.8 h.
 - 18/11 23:14 UTC · **fora do mercado** · Regime de baixa: 21,5% das 107 moedas sobem em 24 h e 8,4% em 4 h; BTC −0,16% em 1 h, −1,45% em 4 h, −3,83% em 24 h, a 62.254,71; medo e ganância 11. Raspagem c
 - 18/11 23:03 UTC · **fora do mercado** · Regime de baixa mais forte: 21,7% das 106 moedas sobem em 24 h e 7,5% em 4 h; BTC +0,28% em 1 h, −1,19% em 4 h, −3,56% em 24 h; medo e ganância 11. Corretora: Z
 - 18/11 22:13 UTC · **ZEC venda, AAVE venda** · Regime de baixa mais forte: 25,7% das moedas sobem em 24 h, 17,1% em 4 h e 18,9% em 1 h; BTC −0,44% em 1 h, −1,20% em 4 h, −3,12% em 24 h. Melhores carteiras da
@@ -107,7 +107,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 27083 apostas conferidas ao vivo, acerto 55.3%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 27138 apostas conferidas ao vivo, acerto 55.3%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
