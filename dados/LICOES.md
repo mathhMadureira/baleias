@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 15:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 15:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.89** · 26 operações fechadas · 2 abertas
+Carteira **US$ 8.88** · 26 operações fechadas · 2 abertas
 
 - **Total:** 17/26 com lucro (65%), resultado -1.06, média -0.041 por operação.
 - **Últimas 24 h:** 10/16 com lucro, -0.47.
@@ -17,7 +17,7 @@ Carteira **US$ 8.89** · 26 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.49** · 14 operações fechadas · 2 abertas
+Carteira **US$ 8.47** · 14 operações fechadas · 2 abertas
 
 - **Total:** 5/14 com lucro (36%), resultado -1.45, média -0.104 por operação.
 - **Últimas 24 h:** 5/11 com lucro, +0.76.
@@ -28,13 +28,13 @@ Carteira **US$ 8.49** · 14 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.11** · 7 operações fechadas · 2 abertas
+Carteira **US$ 9.94** · 8 operações fechadas · 1 abertas
 
-- **Total:** 3/7 com lucro (43%), resultado +0.20, média +0.028 por operação.
-- **Últimas 24 h:** 3/7 com lucro, +0.20.
-- **Por horário:** 12–17 UTC: 1 op, 0% certas, -0.06 · 18–23 UTC: 6 op, 50% certas, +0.26
-- **Por lado:** compra: 3 op, 33% certas, -0.07 · venda: 4 op, 50% certas, +0.27
-- **Por motivo de saída:** v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- **Total:** 3/8 com lucro (38%), resultado +0.01, média +0.001 por operação.
+- **Últimas 24 h:** 3/8 com lucro, +0.01.
+- **Por horário:** 12–17 UTC: 2 op, 0% certas, -0.25 · 18–23 UTC: 6 op, 50% certas, +0.26
+- **Por lado:** compra: 3 op, 33% certas, -0.07 · venda: 5 op, 40% certas, +0.08
+- **Por motivo de saída:** 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
@@ -45,7 +45,7 @@ Sem operações fechadas ainda.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.85** · 13 operações fechadas · 2 abertas
+Carteira **US$ 10.69** · 13 operações fechadas · 2 abertas
 
 - **Total:** 11/13 com lucro (85%), resultado +0.88, média +0.068 por operação.
 - **Últimas 24 h:** 11/13 com lucro, +0.88.
@@ -60,15 +60,15 @@ Carteira **US$ 10.85** · 13 operações fechadas · 2 abertas
 
 - **Amplitude:** 44.1% das moedas subindo em 24 h, 16.2% em 4 h · BTC 24 h -0.64%, 4 h -1.7%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 10.2, 'ETH': 2.8, 'SOL': -2.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 10.8, 'ETH': 2.8, 'SOL': -1.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LDO topo duplo (baixa, CONFIRMOU) · UNI triângulo ascendente (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BONK topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado)
+- 📰 19/11 15:54 UTC · Decrypt: Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went
 - 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
 - 📰 19/11 13:48 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 19/11 13:47 UTC · Decrypt: Quantum Upgrade Could Be 'Particularly Challenging' for Blockchains: IOSCO
 - 📰 19/11 13:30 UTC · Cointelegraph: Ethereum’s new DeFi security tool raises questions over censorship
-- 📰 19/11 13:11 UTC · CoinDesk: Crypto traders vs. Wall Street: OKX’s Anthropic markets put IPO pricing to the test
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

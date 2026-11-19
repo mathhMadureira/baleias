@@ -1,6 +1,6 @@
 {
- "t": 1795103545,
- "hora_utc": "2026-11-19 15:52 UTC",
+ "t": 1795103784,
+ "hora_utc": "2026-11-19 15:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 111,
@@ -172,11 +172,17 @@
   -0.11,
   0.25,
   -0.75,
-  -1.1
+  -0.85
  ],
  "contexto": {
-  "t": 1795103545,
+  "t": 1795103785,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795103643,
+    "hora_utc": "19/11 15:54",
+    "titulo": "Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795101638,
@@ -260,12 +266,6 @@
     "t": 1795087800,
     "hora_utc": "19/11 11:30",
     "titulo": "North Korean hackers used Sky's stablecoin system, putting billions at freeze risk"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795087198,
-    "hora_utc": "19/11 11:19",
-    "titulo": "Sweden’s H100 could tap Bitcoin trading pool to fund share buybacks"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 6.5,
    "principais_anual_pct": {
-    "BTC": 10.2,
+    "BTC": 10.8,
     "ETH": 2.8,
-    "SOL": -2.1
+    "SOL": -1.4
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.89,
+  "carteira": 8.88,
   "abertas": [
    {
     "moeda": "AAVE",
@@ -659,7 +659,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.89,
+   "carteira": 8.88,
    "n_abertas": 2,
    "abertas": [
     [
@@ -680,7 +680,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.49,
+   "carteira": 8.47,
    "n_abertas": 2,
    "abertas": [
     [
@@ -701,19 +701,15 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 10.11,
-   "n_abertas": 2,
+   "carteira": 9.94,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "PUMP",
-     "venda"
-    ],
     [
      "CAKE",
      "venda"
     ]
    ],
-   "n_fechadas": 7,
+   "n_fechadas": 8,
    "ordem": null
   },
   {
@@ -734,7 +730,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.85,
+   "carteira": 10.69,
    "n_abertas": 2,
    "abertas": [
     [
@@ -760,7 +756,7 @@
     "ganho_medio": 0.066,
     "perda_media": -0.242,
     "fator_lucro": 0.51,
-    "carteira": 8.89
+    "carteira": 8.88
    },
    "openbot_testnet": {
     "ops": 14,
@@ -769,16 +765,16 @@
     "ganho_medio": 0.234,
     "perda_media": -0.328,
     "fator_lucro": 0.45,
-    "carteira": 8.49
+    "carteira": 8.47
    },
    "treinador": {
-    "ops": 7,
-    "acerto": 0.429,
-    "soma": 0.196,
+    "ops": 8,
+    "acerto": 0.375,
+    "soma": 0.009,
     "ganho_medio": 0.141,
-    "perda_media": -0.056,
-    "fator_lucro": 1.87,
-    "carteira": 10.11
+    "perda_media": -0.083,
+    "fator_lucro": 1.02,
+    "carteira": 9.94
    },
    "laboratorio": {
     "ops": 0,
@@ -796,7 +792,7 @@
     "ganho_medio": 0.114,
     "perda_media": -0.186,
     "fator_lucro": 3.37,
-    "carteira": 10.85
+    "carteira": 10.69
    }
   },
   "vereditos": []
