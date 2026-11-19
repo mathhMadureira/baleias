@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 14:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 14:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,7 +60,7 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 - **Amplitude:** 56.0% das moedas subindo em 24 h, 56.0% em 4 h · BTC 24 h -0.1%, 4 h 0.17%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.6%/ano · {'BTC': -3.6, 'ETH': 0.8, 'SOL': 6.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.0%/ano · {'BTC': -2.8, 'ETH': 0.4, 'SOL': 6.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT OCO invertido (alta, formado) · EIGEN fundo duplo (alta, formado) · ETH OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · TAO fundo duplo (alta, formado) · UNI triângulo ascendente (alta, formado) · WLD fundo duplo (alta, formado)
 - 📰 19/11 14:01 UTC · Decrypt: Gen Z Embraces Crypto While Most Americans Call It a 'Side Quest'
@@ -110,10 +110,10 @@ Carteira **US$ 10.69** · 12 operações fechadas · 0 abertas
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H41 (2026-11-14 15:40 BRT): PASSOU — v4.1 substitui o v4
-- Resultado da H42 (2026-11-14 16:00 BRT): reprovada nos três braços
-- Resultado da H45 (2026-11-15 17:10 BRT): reprovada nas 14 tentativas
 - Resultado da H52 (2026-11-15 20:40 BRT): R6 aprovada no juiz pré-registrado; robustez fraca
 - Resultado da H60 (18/11 02:10 UTC, `lab/alavancagem.py` → `dados/lab/alavancagem_resultado.json`): reprovada nos três braços
 - Resultado da H64 (18/11 22:50 UTC, `lab/colher_balde.py` → `dados/lab/colher_balde_resultado.json`): parte T aprovada; parte S reprovada
+- Resultado da H20 (juízo diário, 19/11/2026 09:00 BRT = 12:00 UTC; `lab/juizo_h20.py`, `origin/estado` 12850e8c): REPROVADA
+- Resultado da H65 (19/11 ~14:20 UTC, `lab/metodos_fora.py` → `dados/lab/metodos_fora_resultado.json`): reprovada nas 3 tentativas
+- Resultado da H66 (19/11 ~15:30 UTC, `lab/busca_dobrar.py` → `dados/lab/busca_dobrar_resultado.json`): reprovada na reserva — e um erro de simulação achado
 
