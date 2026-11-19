@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 19/11/2026 17:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 19/11/2026 17:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -58,17 +58,17 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 41.6% das moedas subindo em 24 h, 8.8% em 4 h · BTC 24 h -0.4%, 4 h -2.15%.
+- **Amplitude:** 38.9% das moedas subindo em 24 h, 14.2% em 4 h · BTC 24 h -0.4%, 4 h -2.15%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.7%/ano · {'BTC': 11.0, 'ETH': 6.6, 'SOL': -1.1} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 2.5% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.8%/ano · {'BTC': 11.0, 'ETH': 5.9, 'SOL': -1.8} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78669, MM200 72777); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LTC topo duplo (baixa, CONFIRMOU) · BCH topo duplo (baixa, formado) · ETH OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado)
+- 📰 19/11 17:28 UTC · Decrypt: What Are Perpetual Futures? How Crypto's Most Popular Derivative Works
 - 📰 19/11 17:01 UTC · CoinDesk: Anthropic opens for trade at $111.50, up 34% from IPO price
 - 📰 19/11 16:55 UTC · Decrypt: Anthropic Stock Opens 33% Above IPO Price as AI Stocks Rally
 - 📰 19/11 16:09 UTC · CoinDesk: Crypto for Advisors: Falling prices drove October’s 10% drop in institutional crypto exposure
 - 📰 19/11 16:07 UTC · Cointelegraph: Anthropic shares open at $111.50, 34.3% above $83 IPO price
 - 📰 19/11 15:54 UTC · Decrypt: Anthropic Tops SpaceX's Initial IPO With $81 Billion Deal: Where the Money Went
-- 📰 19/11 15:20 UTC · CoinDesk: Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -106,7 +106,7 @@ Carteira **US$ 10.80** · 19 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 28193 apostas conferidas ao vivo, acerto 55.2%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 28274 apostas conferidas ao vivo, acerto 55.3%; prevê 94 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
