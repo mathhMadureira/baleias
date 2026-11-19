@@ -1,6 +1,6 @@
 {
- "t": 1795111862,
- "hora_utc": "2026-11-19 18:11 UTC",
+ "t": 1795112104,
+ "hora_utc": "2026-11-19 18:15 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
@@ -172,11 +172,17 @@
   -0.72,
   -0.52,
   -0.05,
-  -0.03
+  -0.08
  ],
  "contexto": {
-  "t": 1795111863,
+  "t": 1795112105,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795111610,
+    "hora_utc": "19/11 18:06",
+    "titulo": "Bitcoin price ignores Anthropic debut as ANT share price dips below $100"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795110938,
@@ -260,12 +266,6 @@
     "t": 1795093528,
     "hora_utc": "19/11 13:05",
     "titulo": "Morning Minute: Google’s Newest AI Model Tops Benchmarks Ahead of Anthropic IPO"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795093154,
-    "hora_utc": "19/11 12:59",
-    "titulo": "Binance Wins $6.5B Freezing Order Over Hack That Can Be Served via the Blockchain"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.1,
+   "media_top20_anual_pct": 4.5,
    "principais_anual_pct": {
-    "BTC": 1.6,
+    "BTC": 1.8,
     "ETH": 11.0,
-    "SOL": -5.3
+    "SOL": -4.9
    },
    "leitura": "neutro"
   },
@@ -658,7 +658,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.12,
+   "carteira": 10.25,
    "n_abertas": 1,
    "abertas": [
     [
@@ -719,7 +719,7 @@
     "ganho_medio": null,
     "perda_media": null,
     "fator_lucro": null,
-    "carteira": 10.12
+    "carteira": 10.25
    },
    "guardiao": {
     "ops": 19,
