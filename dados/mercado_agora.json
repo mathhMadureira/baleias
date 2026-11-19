@@ -1,6 +1,6 @@
 {
- "t": 1795123323,
- "hora_utc": "2026-11-19 21:22 UTC",
+ "t": 1795123562,
+ "hora_utc": "2026-11-19 21:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   0.22,
   -0.82,
   -0.39,
-  -0.72
+  -0.78
  ],
  "contexto": {
-  "t": 1795123324,
+  "t": 1795123563,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.4,
+   "media_top20_anual_pct": 2.8,
    "principais_anual_pct": {
-    "BTC": -12.3,
-    "ETH": 6.5,
-    "SOL": 2.2
+    "BTC": -13.6,
+    "ETH": 5.1,
+    "SOL": 0.0
    },
    "leitura": "neutro"
   },
@@ -475,7 +475,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.54,
+  "carteira": 9.66,
   "abertas": [
    {
     "moeda": "BTC",
@@ -483,7 +483,7 @@
     "entrada": 62128.0,
     "agora": 61997.35,
     "resultado_pct": 0.21,
-    "horas_aberta": 0.5,
+    "horas_aberta": 0.6,
     "motivo_de_entrada": "Aviso de venda do Caçador (5 min −0,69%, z −4,3, volume 10,2×); agora 5 de 6 tempos abaixo da MM20 (só 1 min acima); 1 h −0,73%, 4 h −1,02%; topo duplo e estrut"
    },
    {
@@ -492,7 +492,7 @@
     "entrada": 0.05981,
     "agora": 0.05925,
     "resultado_pct": -0.94,
-    "horas_aberta": 0.5,
+    "horas_aberta": 0.6,
     "motivo_de_entrada": "Aviso de compra do Caçador (5 min +1,33%, volume 3,4×, válido até 20:56 UTC); 6 de 6 tempos acima da MM20; estrutura de alta em 15 min e 1 h e fundo duplo de 15"
    }
   ],
@@ -645,7 +645,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.54,
+   "carteira": 9.66,
    "n_abertas": 2,
    "abertas": [
     [
@@ -666,7 +666,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.97,
+   "carteira": 8.95,
    "n_abertas": 1,
    "abertas": [
     [
@@ -683,13 +683,9 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.99,
-   "n_abertas": 4,
+   "carteira": 9.72,
+   "n_abertas": 3,
    "abertas": [
-    [
-     "ORDI",
-     "venda"
-    ],
     [
      "WIF",
      "venda"
@@ -703,7 +699,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 16,
+   "n_fechadas": 17,
    "ordem": null
   },
   {
@@ -713,8 +709,21 @@
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
    "carteira": 10.36,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 3,
+   "abertas": [
+    [
+     "HBAR",
+     "compra"
+    ],
+    [
+     "CYBER",
+     "compra"
+    ],
+    [
+     "SOPH",
+     "compra"
+    ]
+   ],
    "n_fechadas": 7,
    "ordem": null
   },
@@ -724,15 +733,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.36,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "BTC",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 30,
+   "carteira": 10.35,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 31,
    "ordem": null
   }
  ],
@@ -746,7 +750,7 @@
     "ganho_medio": 0.107,
     "perda_media": -0.214,
     "fator_lucro": 0.85,
-    "carteira": 9.54
+    "carteira": 9.66
    },
    "openbot_testnet": {
     "ops": 22,
@@ -755,16 +759,16 @@
     "ganho_medio": 0.289,
     "perda_media": -0.296,
     "fator_lucro": 0.73,
-    "carteira": 8.97
+    "carteira": 8.95
    },
    "treinador": {
-    "ops": 16,
-    "acerto": 0.375,
-    "soma": -0.407,
-    "ganho_medio": 0.151,
+    "ops": 17,
+    "acerto": 0.412,
+    "soma": -0.215,
+    "ganho_medio": 0.157,
     "perda_media": -0.131,
-    "fator_lucro": 0.69,
-    "carteira": 9.99
+    "fator_lucro": 0.84,
+    "carteira": 9.72
    },
    "laboratorio": {
     "ops": 7,
@@ -776,13 +780,13 @@
     "carteira": 10.36
    },
    "guardiao": {
-    "ops": 30,
-    "acerto": 0.633,
-    "soma": 0.269,
-    "ganho_medio": 0.139,
+    "ops": 31,
+    "acerto": 0.645,
+    "soma": 0.355,
+    "ganho_medio": 0.136,
     "perda_media": -0.215,
-    "fator_lucro": 1.11,
-    "carteira": 10.36
+    "fator_lucro": 1.15,
+    "carteira": 10.35
    }
   },
   "vereditos": []
