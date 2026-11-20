@@ -1,28 +1,28 @@
 {
- "t": 1795193092,
- "hora_utc": "2026-11-20 16:44 UTC",
+ "t": 1795193290,
+ "hora_utc": "2026-11-20 16:48 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 137,
-  "subindo_pct": 6.6,
-  "mediana_pct": -1.06
+  "subindo_pct": 67.9,
+  "mediana_pct": 0.43
  },
  "mercado_4h": {
   "moedas": 137,
-  "subindo_pct": 7.3,
-  "mediana_pct": -4.42
+  "subindo_pct": 8.0,
+  "mediana_pct": -3.76
  },
  "mercado_24h": {
   "moedas": 137,
-  "subindo_pct": 10.9,
-  "mediana_pct": -7.86
+  "subindo_pct": 11.7,
+  "mediana_pct": -7.65
  },
  "btc": {
-  "1h": -1.96,
-  "4h": -3.98,
-  "24h": -6.15,
-  "preco": 59213.0,
-  "vol_4h_vs_media": 2.13
+  "1h": -0.7,
+  "4h": -3.42,
+  "24h": -5.83,
+  "preco": 59500.0,
+  "vol_4h_vs_media": 2.19
  },
  "maiores_quedas_4h": [
   {
@@ -33,118 +33,118 @@
   },
   {
    "moeda": "MANTRA",
-   "4h": -12.02,
+   "4h": -11.17,
    "24h": -15.28,
    "vol": 4.86
   },
   {
+   "moeda": "PROM",
+   "4h": -10.89,
+   "24h": -9.8,
+   "vol": 5.49
+  },
+  {
    "moeda": "KERNEL",
-   "4h": -10.47,
-   "24h": 25.89,
-   "vol": 2.21
+   "4h": -9.76,
+   "24h": 26.01,
+   "vol": 2.08
+  },
+  {
+   "moeda": "SENT",
+   "4h": -7.12,
+   "24h": -5.36,
+   "vol": 1.12
   },
   {
    "moeda": "ZIL",
-   "4h": -7.75,
-   "24h": -10.53,
-   "vol": 0.9
+   "4h": -6.47,
+   "24h": -9.88,
+   "vol": 0.92
+  },
+  {
+   "moeda": "BEB",
+   "4h": -6.2,
+   "24h": -17.49,
+   "vol": 1.89
   },
   {
    "moeda": "MARSCOIN",
-   "4h": -7.74,
-   "24h": -13.6,
-   "vol": 1.76
-  },
-  {
-   "moeda": "GIGGLE",
-   "4h": -6.92,
-   "24h": -10.46,
-   "vol": 2.49
-  },
-  {
-   "moeda": "TRUMP",
-   "4h": -6.82,
-   "24h": -12.76,
-   "vol": 2.99
+   "4h": -6.19,
+   "24h": -13.25,
+   "vol": 1.85
   },
   {
    "moeda": "RAY",
-   "4h": -6.68,
-   "24h": -7.04,
-   "vol": 3.17
+   "4h": -6.14,
+   "24h": -6.67,
+   "vol": 3.19
   },
   {
    "moeda": "MUBARAK",
-   "4h": -6.5,
-   "24h": -11.86,
-   "vol": 1.94
-  },
-  {
-   "moeda": "FIL",
-   "4h": -6.45,
-   "24h": -7.93,
-   "vol": 1.85
+   "4h": -6.02,
+   "24h": -11.03,
+   "vol": 1.98
   }
  ],
  "maiores_altas_4h": [
   {
-   "moeda": "BLUR",
-   "4h": 7.4,
-   "24h": 14.39,
-   "vol": 3.66
-  },
-  {
-   "moeda": "HUMA",
-   "4h": 7.29,
-   "24h": 23.75,
-   "vol": 2.21
-  },
-  {
    "moeda": "RARE",
-   "4h": 6.24,
-   "24h": 17.55,
-   "vol": 1.59
+   "4h": 6.71,
+   "24h": 15.5,
+   "vol": 1.6
+  },
+  {
+   "moeda": "BLUR",
+   "4h": 5.56,
+   "24h": 11.61,
+   "vol": 3.81
   },
   {
    "moeda": "DODO",
-   "4h": 5.36,
-   "24h": 3.77,
-   "vol": 3.56
+   "4h": 5.29,
+   "24h": 3.93,
+   "vol": 3.58
+  },
+  {
+   "moeda": "HUMA",
+   "4h": 5.2,
+   "24h": 20.24,
+   "vol": 2.22
   },
   {
    "moeda": "SOPH",
-   "4h": 3.92,
-   "24h": -1.85,
-   "vol": 1.66
+   "4h": 2.91,
+   "24h": 3.92,
+   "vol": 1.75
   },
   {
    "moeda": "ENSO",
-   "4h": 3.07,
-   "24h": 9.0,
-   "vol": 2.01
+   "4h": 2.84,
+   "24h": 8.23,
+   "vol": 2.03
   },
   {
    "moeda": "AIGENSYN",
-   "4h": 2.86,
-   "24h": 3.33,
-   "vol": 0.63
+   "4h": 2.56,
+   "24h": 2.87,
+   "vol": 0.65
   },
   {
    "moeda": "PARTI",
-   "4h": 1.8,
-   "24h": -2.58,
-   "vol": 4.68
+   "4h": 2.11,
+   "24h": -3.43,
+   "vol": 4.7
   },
   {
    "moeda": "KITE",
-   "4h": 0.22,
-   "24h": -0.07,
-   "vol": 1.48
+   "4h": 1.56,
+   "24h": 1.26,
+   "vol": 1.53
   },
   {
    "moeda": "MMT",
-   "4h": 0.04,
-   "24h": -13.83,
+   "4h": 0.9,
+   "24h": -12.54,
    "vol": 0.72
   }
  ],
@@ -172,10 +172,10 @@
   0.51,
   -0.18,
   -3.71,
-  0.04
+  -0.12
  ],
  "contexto": {
-  "t": 1795193093,
+  "t": 1795193291,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -1.2,
+   "media_top20_anual_pct": -1.4,
    "principais_anual_pct": {
-    "BTC": -5.5,
-    "ETH": -17.1,
-    "SOL": -6.0
+    "BTC": -5.4,
+    "ETH": -16.7,
+    "SOL": -6.2
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 5.0,
+   "amplitude_acima_mm50_pct": 7.5,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -372,11 +372,15 @@
   }
  },
  "v4": {
-  "vela": "20:00 UTC",
-  "apostas": 104,
-  "compras": 85,
-  "vendas": 19,
+  "vela": "16:45 UTC",
+  "apostas": 92,
+  "compras": 31,
+  "vendas": 61,
   "mais_confiantes_venda": [
+   {
+    "moeda": "KITE",
+    "prob_subir": 0.355
+   },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
@@ -390,6 +394,10 @@
     "prob_subir": 0.386
    },
    {
+    "moeda": "U",
+    "prob_subir": 0.386
+   },
+   {
     "moeda": "BABAB",
     "prob_subir": 0.386
    },
@@ -398,16 +406,8 @@
     "prob_subir": 0.394
    },
    {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
-   },
-   {
-    "moeda": "SAHARA",
-    "prob_subir": 0.428
-   },
-   {
-    "moeda": "WIN",
-    "prob_subir": 0.448
+    "moeda": "PEPE",
+    "prob_subir": 0.402
    }
   ],
   "mais_confiantes_compra": [
@@ -428,20 +428,20 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.607
-   },
-   {
-    "moeda": "ZIL",
-    "prob_subir": 0.606
-   },
-   {
     "moeda": "F",
     "prob_subir": 0.604
    },
    {
     "moeda": "RUNE",
     "prob_subir": 0.595
+   },
+   {
+    "moeda": "COOKIE",
+    "prob_subir": 0.593
+   },
+   {
+    "moeda": "VET",
+    "prob_subir": 0.591
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -718,34 +718,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.4% em 30864 apostas (624 velas, 13/11 16:45–20/11 16:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5538,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 30909 apostas (624 velas, 13/11 17:00–20/11 16:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5545,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.03,
+  "z_contra_lab": 2.09,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5191,
-    "n": 25759
+    "acerto": 0.5184,
+    "n": 25804
    },
    "segue_maioria_24h": {
-    "acerto": 0.5194,
-    "n": 30778
+    "acerto": 0.5187,
+    "n": 30823
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5636,
-    "n": 5979
+    "acerto": 0.5642,
+    "n": 5993
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.61,
-    "n": 2272
+    "acerto": 0.6107,
+    "n": 2276
    },
    "confianca:<0,05": {
-    "acerto": 0.5562,
-    "n": 11389
+    "acerto": 0.5574,
+    "n": 11430
    },
    "confianca:≥0,12": {
     "acerto": 0.6643,
@@ -760,20 +760,20 @@
     "n": 6766
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.559,
-    "n": 6941
+    "acerto": 0.5618,
+    "n": 6986
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5227,
     "n": 8850
    },
    "lado:compra": {
-    "acerto": 0.5185,
-    "n": 14675
+    "acerto": 0.5199,
+    "n": 14731
    },
    "lado:venda": {
-    "acerto": 0.5859,
-    "n": 16189
+    "acerto": 0.586,
+    "n": 16178
    }
   }
  },
