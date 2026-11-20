@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 03:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 03:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.54** · 39 operações fechadas · 2 abertas
+Carteira **US$ 9.75** · 39 operações fechadas · 2 abertas
 
 - **Total:** 24/39 com lucro (62%), resultado -0.58, média -0.015 por operação.
 - **Últimas 24 h:** 10/16 com lucro, +0.66.
@@ -30,7 +30,7 @@ Carteira **US$ 8.42** · 25 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.04** · 22 operações fechadas · 2 abertas
+Carteira **US$ 9.14** · 22 operações fechadas · 2 abertas
 
 - **Total:** 8/22 com lucro (36%), resultado -1.05, média -0.048 por operação.
 - **Últimas 24 h:** 5/16 com lucro, -1.31.
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.5% das moedas subindo em 24 h, 13.3% em 4 h · BTC 24 h -0.81%, 4 h -0.11%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 11.0, 'ETH': 2.2, 'SOL': -4.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.0%/ano · {'BTC': 11.0, 'ETH': 3.2, 'SOL': -4.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ADA topo duplo (baixa, formado) · ADA fundo duplo (alta, formado) · DOGE topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · QNT fundo duplo (alta, formado) · QNT ombro-cabeça-ombro (baixa, formado) · SAPIEN fundo duplo (alta, formado) · SOL fundo duplo (alta, formado) · WLD fundo duplo (alta, formado)
 - 📰 19/11 23:44 UTC · Cointelegraph: Ledger CTO Charles Guillemet to leave after nine years at company
