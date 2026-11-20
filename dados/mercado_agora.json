@@ -1,6 +1,6 @@
 {
- "t": 1795154935,
- "hora_utc": "2026-11-20 06:08 UTC",
+ "t": 1795155161,
+ "hora_utc": "2026-11-20 06:12 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -175,8 +175,14 @@
   -0.03
  ],
  "contexto": {
-  "t": 1795154936,
+  "t": 1795155161,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795154908,
+    "hora_utc": "20/11 06:08",
+    "titulo": "Could Anthropic prices drop at Friday's open? Crypto traders are betting yes"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795154400,
@@ -260,25 +266,15 @@
     "t": 1795120404,
     "hora_utc": "19/11 20:33",
     "titulo": "Hyperliquid Anthropic futures priced within 1% of Nasdaq opening price"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795119332,
-    "hora_utc": "19/11 20:15",
-    "titulo": "Hackers Leak Visa, Mastercard and JPMorgan Customer Data"
    }
   ],
-  "medo_ganancia": {
-   "valor": 12,
-   "classe": "Extreme Fear",
-   "ontem": 10
-  },
+  "medo_ganancia": null,
   "funding": {
-   "media_top20_anual_pct": 6.4,
+   "media_top20_anual_pct": 6.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 5.6,
-    "SOL": -1.3
+    "ETH": 5.8,
+    "SOL": -1.2
    },
    "leitura": "neutro"
   },
