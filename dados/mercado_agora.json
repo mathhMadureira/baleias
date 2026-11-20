@@ -1,6 +1,6 @@
 {
- "t": 1795147433,
- "hora_utc": "2026-11-20 04:03 UTC",
+ "t": 1795147658,
+ "hora_utc": "2026-11-20 04:07 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,10 +172,10 @@
   -0.92,
   1.12,
   -0.18,
-  -0.34
+  -0.52
  ],
  "contexto": {
-  "t": 1795147434,
+  "t": 1795147659,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 2.4,
+   "media_top20_anual_pct": 1.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.4,
-    "SOL": -4.4
+    "ETH": 5.5,
+    "SOL": -7.2
    },
    "leitura": "neutro"
   },
@@ -496,7 +496,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.81,
+  "carteira": 9.87,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -666,7 +666,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.81,
+   "carteira": 9.87,
    "n_abertas": 2,
    "abertas": [
     [
@@ -708,7 +708,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.24,
+   "carteira": 9.26,
    "n_abertas": 1,
    "abertas": [
     [
@@ -754,7 +754,7 @@
     "ganho_medio": 0.11,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 9.81
+    "carteira": 9.87
    },
    "openbot_testnet": {
     "ops": 25,
@@ -772,7 +772,7 @@
     "ganho_medio": 0.164,
     "perda_media": -0.166,
     "fator_lucro": 0.64,
-    "carteira": 9.24
+    "carteira": 9.26
    },
    "laboratorio": {
     "ops": 10,
