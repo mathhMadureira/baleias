@@ -1,6 +1,6 @@
 {
- "t": 1795181801,
- "hora_utc": "2026-11-20 13:36 UTC",
+ "t": 1795182010,
+ "hora_utc": "2026-11-20 13:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 123,
@@ -172,16 +172,28 @@
   0.66,
   -0.39,
   -0.39,
-  -0.26
+  -0.18
  ],
  "contexto": {
-  "t": 1795181802,
+  "t": 1795182011,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795181733,
+    "hora_utc": "20/11 13:35",
+    "titulo": "Live news: Bitcoin hovers just above $61,000 as Anthropic slides 13% after Nasdaq debut"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795181422,
     "hora_utc": "20/11 13:30",
     "titulo": "Bitcoin bots pounced within seconds when researchers exposed their wallet keys"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795181398,
+    "hora_utc": "20/11 13:29",
+    "titulo": "Here’s what happened in crypto today"
    },
    {
     "fonte": "Decrypt",
@@ -254,18 +266,6 @@
     "t": 1795170550,
     "hora_utc": "20/11 10:29",
     "titulo": "Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795169266,
-    "hora_utc": "20/11 10:07",
-    "titulo": "CryptoUK Urges FCA Not to Treat DeFi Devs as Regulated by Default"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795168923,
-    "hora_utc": "20/11 10:02",
-    "titulo": "No special rules for Hyperliquid or other onchain trading platforms, CFTC says"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.2,
+   "media_top20_anual_pct": 4.7,
    "principais_anual_pct": {
     "BTC": -6.4,
-    "ETH": 8.7,
-    "SOL": -1.6
+    "ETH": 8.8,
+    "SOL": -1.5
    },
    "leitura": "neutro"
   },
@@ -454,7 +454,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.97,
+  "carteira": 9.8,
   "abertas": [
    {
     "moeda": "KAVA",
@@ -624,7 +624,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.97,
+   "carteira": 9.8,
    "n_abertas": 2,
    "abertas": [
     [
@@ -645,7 +645,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.63,
+   "carteira": 8.55,
    "n_abertas": 2,
    "abertas": [
     [
@@ -666,7 +666,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.55,
+   "carteira": 9.48,
    "n_abertas": 2,
    "abertas": [
     [
@@ -699,7 +699,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.42,
+   "carteira": 10.43,
    "n_abertas": 1,
    "abertas": [
     [
@@ -721,7 +721,7 @@
     "ganho_medio": 0.124,
     "perda_media": -0.214,
     "fator_lucro": 1.0,
-    "carteira": 9.97
+    "carteira": 9.8
    },
    "openbot_testnet": {
     "ops": 27,
@@ -730,7 +730,7 @@
     "ganho_medio": 0.293,
     "perda_media": -0.267,
     "fator_lucro": 0.69,
-    "carteira": 8.63
+    "carteira": 8.55
    },
    "treinador": {
     "ops": 24,
@@ -739,7 +739,7 @@
     "ganho_medio": 0.168,
     "perda_media": -0.166,
     "fator_lucro": 0.72,
-    "carteira": 9.55
+    "carteira": 9.48
    },
    "laboratorio": {
     "ops": 10,
@@ -757,7 +757,7 @@
     "ganho_medio": 0.133,
     "perda_media": -0.203,
     "fator_lucro": 1.15,
-    "carteira": 10.42
+    "carteira": 10.43
    }
   },
   "vereditos": []
