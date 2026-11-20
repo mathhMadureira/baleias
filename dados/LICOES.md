@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 12:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 12:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 14.6% das moedas subindo em 24 h, 22.8% em 4 h · BTC 24 h -3.41%, 4 h 0.07%.
+- **Amplitude:** 14.8% das moedas subindo em 24 h, 20.5% em 4 h · BTC 24 h -3.35%, 4 h -0.08%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': 5.8, 'ETH': 11.0, 'SOL': 6.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.2%/ano · {'BTC': -0.0, 'ETH': 11.0, 'SOL': -1.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · EIGEN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · LSK topo duplo (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** ARB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · EIGEN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · LSK topo duplo (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 11:50 UTC · Decrypt: Bitcoin ETFs Shed $582M in a Day as BTC Drops Below $62K
 - 📰 20/11 11:42 UTC · CoinDesk: Bitcoin drops for third straight day as Asian tech shares slide
 - 📰 20/11 11:31 UTC · Cointelegraph: Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32075 apostas conferidas ao vivo, acerto 55.2%; prevê 57 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32114 apostas conferidas ao vivo, acerto 55.2%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
