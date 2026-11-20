@@ -1,20 +1,20 @@
 {
- "t": 1795189039,
- "hora_utc": "2026-11-20 15:37 UTC",
+ "t": 1795189248,
+ "hora_utc": "2026-11-20 15:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 129,
-  "subindo_pct": 3.9,
+  "moedas": 131,
+  "subindo_pct": 4.6,
   "mediana_pct": -3.13
  },
  "mercado_4h": {
-  "moedas": 129,
-  "subindo_pct": 8.5,
-  "mediana_pct": -4.11
+  "moedas": 131,
+  "subindo_pct": 9.2,
+  "mediana_pct": -4.14
  },
  "mercado_24h": {
-  "moedas": 129,
-  "subindo_pct": 12.4,
+  "moedas": 131,
+  "subindo_pct": 12.2,
   "mediana_pct": -7.19
  },
  "btc": {
@@ -136,16 +136,16 @@
    "vol": 5.41
   },
   {
+   "moeda": "PARTI",
+   "4h": 2.37,
+   "24h": -1.14,
+   "vol": 4.49
+  },
+  {
    "moeda": "AIGENSYN",
    "4h": 1.44,
    "24h": -0.15,
    "vol": 0.52
-  },
-  {
-   "moeda": "HMSTR",
-   "4h": 0.67,
-   "24h": 6.29,
-   "vol": 1.1
   }
  ],
  "btc_1h_ultimas_24": [
@@ -175,7 +175,7 @@
   -2.61
  ],
  "contexto": {
-  "t": 1795189040,
+  "t": 1795189248,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -199,7 +199,7 @@
     "fonte": "CoinDesk",
     "t": 1795181733,
     "hora_utc": "20/11 13:35",
-    "titulo": "Live news: Bitcoin hovers just above $61,000 as Anthropic slides after Nasdaq debut"
+    "titulo": "Live news: Bitcoin slips to fresh lows near $60,000 as Anthropic slides after Nasdaq debut"
    },
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -7.7,
+   "media_top20_anual_pct": -7.3,
    "principais_anual_pct": {
-    "BTC": -9.3,
-    "ETH": -12.5,
-    "SOL": -5.5
+    "BTC": -8.8,
+    "ETH": -12.4,
+    "SOL": -5.6
    },
    "leitura": "neutro"
   },
@@ -387,9 +387,9 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 69,
-  "compras": 30,
-  "vendas": 39,
+  "apostas": 67,
+  "compras": 29,
+  "vendas": 38,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -739,12 +739,12 @@
   "z_contra_lab": 1.88,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.518,
-    "n": 24900
+    "acerto": 0.5174,
+    "n": 24944
    },
    "segue_maioria_24h": {
-    "acerto": 0.5186,
-    "n": 30573
+    "acerto": 0.5189,
+    "n": 30599
    }
   },
   "referencia_ganha": [],
