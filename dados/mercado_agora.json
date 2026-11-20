@@ -1,6 +1,6 @@
 {
- "t": 1795146979,
- "hora_utc": "2026-11-20 03:56 UTC",
+ "t": 1795147208,
+ "hora_utc": "2026-11-20 04:00 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -149,7 +149,6 @@
   }
  ],
  "btc_1h_ultimas_24": [
-  0.6,
   -0.35,
   0.62,
   -0.02,
@@ -172,10 +171,11 @@
   0.26,
   -0.92,
   1.12,
-  -0.16
+  -0.18,
+  -0.04
  ],
  "contexto": {
-  "t": 1795146980,
+  "t": 1795147209,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.8,
+   "media_top20_anual_pct": -1.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 6.9,
-    "SOL": -3.4
+    "ETH": 4.6,
+    "SOL": -8.2
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.62,
+  "carteira": 9.65,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -497,7 +497,7 @@
     "entrada": 0.05775,
     "agora": 0.05759,
     "resultado_pct": 0.28,
-    "horas_aberta": 0.9,
+    "horas_aberta": 1.0,
     "motivo_de_entrada": "Topo duplo CONFIRMADO em 1 h e topo duplo em 4 h (a favor); 5 de 6 tempos abaixo da MM20 (só 1 min acima); 4 h −1,72%, 1 dia −2,05%; volume 1 min 1,97×; aviso d"
    },
    {
@@ -506,7 +506,7 @@
     "entrada": 0.02394,
     "agora": 0.02386,
     "resultado_pct": 0.33,
-    "horas_aberta": 0.9,
+    "horas_aberta": 1.0,
     "motivo_de_entrada": "Bandeira de baixa CONFIRMADA em 1 h; 5 de 6 tempos abaixo da MM20; 4 h −2,82%, 1 dia −9,94%; aviso do Caçador MUBARAK venda força 85; regime de baixa. v4 sem co"
    }
   ],
@@ -659,7 +659,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.62,
+   "carteira": 9.65,
    "n_abertas": 2,
    "abertas": [
     [
@@ -701,7 +701,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.11,
+   "carteira": 9.18,
    "n_abertas": 1,
    "abertas": [
     [
@@ -747,7 +747,7 @@
     "ganho_medio": 0.11,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 9.62
+    "carteira": 9.65
    },
    "openbot_testnet": {
     "ops": 25,
@@ -765,7 +765,7 @@
     "ganho_medio": 0.164,
     "perda_media": -0.166,
     "fator_lucro": 0.64,
-    "carteira": 9.11
+    "carteira": 9.18
    },
    "laboratorio": {
     "ops": 10,
