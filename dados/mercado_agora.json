@@ -1,6 +1,6 @@
 {
- "t": 1795215112,
- "hora_utc": "2026-11-20 22:51 UTC",
+ "t": 1795215365,
+ "hora_utc": "2026-11-20 22:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 144,
@@ -172,11 +172,17 @@
   0.24,
   -0.16,
   0.93,
-  0.11
+  0.29
  ],
  "contexto": {
-  "t": 1795215113,
+  "t": 1795215366,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795215074,
+    "hora_utc": "20/11 22:51",
+    "titulo": "Kalshi races to get ahead of New York order that could shut down exchange"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795212331,
@@ -260,12 +266,6 @@
     "t": 1795189926,
     "hora_utc": "20/11 15:52",
     "titulo": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795189371,
-    "hora_utc": "20/11 15:42",
-    "titulo": "Senate Passes Bill Banning Prediction Market Bets on War, Terrorism and Death"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.1,
+   "media_top20_anual_pct": 3.9,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": -27.5,
-    "SOL": -14.6
+    "SOL": -14.0
    },
    "leitura": "neutro"
   },
