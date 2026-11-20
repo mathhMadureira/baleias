@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 15:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 15:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.55** · 49 operações fechadas · 1 abertas
+Carteira **US$ 9.58** · 49 operações fechadas · 1 abertas
 
 - **Total:** 29/49 com lucro (59%), resultado -0.47, média -0.010 por operação.
 - **Últimas 24 h:** 13/24 com lucro, +0.67.
@@ -41,7 +41,7 @@ Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.86** · 13 operações fechadas · 2 abertas
+Carteira **US$ 10.18** · 13 operações fechadas · 2 abertas
 
 - **Total:** 5/13 com lucro (38%), resultado -0.53, média -0.041 por operação.
 - **Últimas 24 h:** 5/13 com lucro, -0.53.
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 16.0% das moedas subindo em 24 h, 16.0% em 4 h · BTC 24 h -2.81%, 4 h -0.45%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.4%/ano · {'BTC': 3.5, 'ETH': -6.1, 'SOL': 5.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -4.3%/ano · {'BTC': 0.6, 'ETH': -6.6, 'SOL': 1.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENSO fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · TIA fundo duplo (alta, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 14:38 UTC · CoinDesk: Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians
