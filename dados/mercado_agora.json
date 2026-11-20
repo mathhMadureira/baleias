@@ -1,6 +1,6 @@
 {
- "t": 1795174415,
- "hora_utc": "2026-11-20 11:33 UTC",
+ "t": 1795174617,
+ "hora_utc": "2026-11-20 11:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 123,
@@ -172,11 +172,17 @@
   -0.04,
   -0.31,
   0.66,
-  -0.45
+  -0.38
  ],
  "contexto": {
-  "t": 1795174416,
+  "t": 1795174618,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795174301,
+    "hora_utc": "20/11 11:31",
+    "titulo": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795173780,
@@ -260,12 +266,6 @@
     "t": 1795154400,
     "hora_utc": "20/11 06:00",
     "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795152745,
-    "hora_utc": "20/11 05:32",
-    "titulo": "This Bitcoin miner sold 267 BTC to clear $22 million debt. It still may not survive"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.1,
+   "media_top20_anual_pct": 4.0,
    "principais_anual_pct": {
-    "BTC": -4.1,
+    "BTC": -3.5,
     "ETH": 11.0,
-    "SOL": 5.7
+    "SOL": 5.6
    },
    "leitura": "neutro"
   },
