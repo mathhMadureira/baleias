@@ -1,21 +1,21 @@
 {
- "t": 1795194087,
- "hora_utc": "2026-11-20 17:01 UTC",
+ "t": 1795194292,
+ "hora_utc": "2026-11-20 17:04 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 136,
-  "subindo_pct": 64.0,
+  "moedas": 137,
+  "subindo_pct": 64.2,
   "mediana_pct": 0.27
  },
  "mercado_4h": {
-  "moedas": 136,
+  "moedas": 137,
   "subindo_pct": 8.8,
-  "mediana_pct": -4.03
+  "mediana_pct": -4.04
  },
  "mercado_24h": {
-  "moedas": 136,
-  "subindo_pct": 14.0,
-  "mediana_pct": -7.09
+  "moedas": 137,
+  "subindo_pct": 13.9,
+  "mediana_pct": -7.08
  },
  "btc": {
   "1h": 0.12,
@@ -172,11 +172,17 @@
   -0.18,
   -3.71,
   0.12,
-  -0.28
+  -0.57
  ],
  "contexto": {
-  "t": 1795194088,
+  "t": 1795194293,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795193751,
+    "hora_utc": "20/11 16:55",
+    "titulo": "Bitcoin falls below $60K for first time since July amid broader market selloff"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795192559,
@@ -260,12 +266,6 @@
     "t": 1795180309,
     "hora_utc": "20/11 13:11",
     "titulo": "ECB’s Lagarde warns Europe could lose control of growing tokenized asset market"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795176908,
-    "hora_utc": "20/11 12:15",
-    "titulo": "Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging"
    }
   ],
   "medo_ganancia": {
@@ -274,13 +274,13 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -11.1,
+   "media_top20_anual_pct": -8.3,
    "principais_anual_pct": {
-    "BTC": -3.5,
-    "ETH": -25.2,
-    "SOL": -21.4
+    "BTC": -0.3,
+    "ETH": -23.9,
+    "SOL": -18.8
    },
-   "leitura": "vendidos pagando (risco de alta forçada)"
+   "leitura": "neutro"
   },
   "tendencia_diaria": {
    "btc": {
@@ -296,6 +296,13 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "CHZ",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.00944
+   },
    {
     "moeda": "DODO",
     "padrao": "fundo duplo",
@@ -373,9 +380,9 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 71,
+  "apostas": 70,
   "compras": 52,
-  "vendas": 19,
+  "vendas": 18,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -725,12 +732,12 @@
   "z_contra_lab": 2.1,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.519,
-    "n": 25809
+    "acerto": 0.5192,
+    "n": 25849
    },
    "segue_maioria_24h": {
-    "acerto": 0.5194,
-    "n": 30735
+    "acerto": 0.5192,
+    "n": 30892
    }
   },
   "referencia_ganha": [],
