@@ -1,6 +1,6 @@
 {
- "t": 1795168026,
- "hora_utc": "2026-11-20 09:47 UTC",
+ "t": 1795168232,
+ "hora_utc": "2026-11-20 09:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,11 +172,17 @@
   0.23,
   -0.32,
   -0.04,
-  -0.3
+  -0.15
  ],
  "contexto": {
-  "t": 1795168027,
+  "t": 1795168233,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795168132,
+    "hora_utc": "20/11 09:48",
+    "titulo": "Cathie Wood's Ark Invest piled into Anthropic IPO, buying $90 million worth of shares"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795162722,
@@ -260,12 +266,6 @@
     "t": 1795131842,
     "hora_utc": "19/11 23:44",
     "titulo": "Ledger CTO Charles Guillemet to leave after nine years at company"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795127762,
-    "hora_utc": "19/11 22:36",
-    "titulo": "Citi Says Customers Are Responsible When AI Banking Agents Go Rogue—Even After a Hack"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": -11.5,
-    "ETH": 2.2,
-    "SOL": 9.6
+    "BTC": -10.9,
+    "ETH": 2.4,
+    "SOL": 9.9
    },
    "leitura": "neutro"
   },
