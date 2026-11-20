@@ -1,6 +1,6 @@
 {
- "t": 1795180122,
- "hora_utc": "2026-11-20 13:08 UTC",
+ "t": 1795180328,
+ "hora_utc": "2026-11-20 13:12 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 123,
@@ -172,11 +172,17 @@
   0.66,
   -0.39,
   -0.39,
-  0.12
+  -0.04
  ],
  "contexto": {
-  "t": 1795180123,
+  "t": 1795180329,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795180309,
+    "hora_utc": "20/11 13:11",
+    "titulo": "ECB’s Largarde warns Europe could lose control of growing tokenized asset market"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795176908,
@@ -260,12 +266,6 @@
     "t": 1795161880,
     "hora_utc": "20/11 08:04",
     "titulo": "Wrapped Monero token plunges 99% as issuer-linked wallet sells $13.5 million"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795161814,
-    "hora_utc": "20/11 08:03",
-    "titulo": "SEC charges eight firms over fake crypto platforms tied to $37M fraud"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.0,
+   "media_top20_anual_pct": 2.9,
    "principais_anual_pct": {
-    "BTC": -5.1,
-    "ETH": 11.0,
-    "SOL": -4.1
+    "BTC": -5.7,
+    "ETH": 10.6,
+    "SOL": -6.0
    },
    "leitura": "neutro"
   },
