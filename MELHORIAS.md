@@ -209,3 +209,11 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   `velas()` de `mesa/chefe/universo.py` engolia qualquer erro de rede e devolvia lista vazia, sem nova tentativa, e o ERRO saía antes do aviso de PARCIAL.
   Agora: até 3 tentativas por moeda (para logo em HTTP 418/429, limite da Binance), motivo de cada falha contado no ERRO e no PARCIAL ("N × TimeoutError,
   N × HTTP 429, N × prazo da rodada"), e as velas têm sempre pelo menos 2 min do prazo. Teste `UniversoSemErroEngolido`. 176 testes.
+- 2026-11-20 (madrugada): **H71 — uma conta de demonstração por operador (dono: "vamos dar uma carteira para cada um").** Pré-registrada antes de qualquer
+  ordem (27cb4907). `mesa/operar/corretora.py` (cópia viva em `Shared/baleias/operar/`): o mesmo motor do testnet do chefe (concilia a conta, ordem a
+  mercado, stop e alvo como gatilhos reduce-only guardados na corretora, stop recusado = fecha na hora, stop móvel por rodada, prazo, posição/ordem
+  desconhecida fechada, trava de arquivo, carteira própria de US$ 10 com o tamanho H64 e as regras do REGRAS.md §5), grava só `dados/corretora_<agente>.json`.
+  Laboratório → Gate Futures TestNet (`api-testnet.gateapi.io`; leitura validada: 1.000 USDT de demonstração, sem posição). Treinador → Bybit Demo e
+  Guardião → BingX VST ficam TRAVADOS (a chave salva da Bybit é da conta real e é inválida na demo; a BingX recusa o IP); a ferramenta só fala com o
+  endereço de demonstração e PARA em qualquer outro. Chaves só no cofre do OpenBot, lidas na hora, nunca impressas. ROTINA r14 (passo 5) e REGRAS §6.
+  Testes `CorretoraDemoH71` com corretora falsa. 180 testes.

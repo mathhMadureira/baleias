@@ -2426,3 +2426,133 @@ class UniversoSemErroEngolido(unittest.TestCase):
         self.assertEqual(U.FALHAS["BUSDT"], "HTTP 429")
         self.assertEqual(U.resumo_falhas(["CUSDT"], ["BUSDT", "CUSDT"]), "1 × HTTP 429, 1 × prazo da rodada")   # a causa aparece no ERRO
         self.assertGreaterEqual(U.VELAS_MIN_S, 120)
+
+
+class CorretoraDemoH71(unittest.TestCase):
+    """H71 (20/11): cada operador na própria conta de demonstração. Corretora falsa: nada sai da máquina."""
+
+    def _mod(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("corretora_mesa", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "corretora.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def _falsa(self, M, recusa_stop=False):
+        class Falsa:
+            NOME, BASE, VALIDADO = "falsa", "x", True
+
+            def __init__(s):
+                s.px, s.pos, s.gat, s.ex, s.n = {"AUSDT": 100.0, "BUSDT": 50.0}, {}, {}, [], 0
+
+            def _id(s):
+                s.n += 1
+                return str(s.n)
+
+            def contrato(s, par):
+                return {"mult": 0.01, "minimo": 1, "tick": 0.01, "alav_max": 50, "preco": s.px[par]} if par in s.px else None
+
+            def preco(s, par):
+                return s.px[par]
+
+            def alavancagem(s, par, n):
+                pass
+
+            def mercado(s, par, lado, q, reduzir=False):
+                sinal = 1 if lado == "compra" else -1
+                atual = s.pos.get(par, {"contratos": 0})["contratos"] + sinal * q
+                s.pos[par] = {"contratos": atual, "entrada": s.px[par], "marca": s.px[par], "pnl": 0.0}
+                if not atual:
+                    del s.pos[par]
+                s.ex.append({"par": par, "t_ms": __import__("time").time() * 1000, "contratos": sinal * q, "preco": s.px[par], "taxa": 0.001})
+                return {"id": s._id(), "preco": s.px[par], "contratos": q}
+
+            def gatilho(s, par, lado_pos, q, preco, tipo):
+                if recusa_stop and tipo == "stop":
+                    raise M.ErroCorretora("recusado")
+                i = s._id()
+                s.gat[i] = (par, tipo, preco)
+                return {"id": i, "preco": round(preco, 2)}
+
+            def cancelar(s, i, par=None):
+                s.gat.pop(i, None)
+
+            def gatilhos_abertos(s):
+                return {i: g[0] for i, g in s.gat.items()}
+
+            def posicoes(s):
+                return dict(s.pos)
+
+            def execucoes(s, par, desde_ms):
+                return [x for x in s.ex if x["par"] == par and x["t_ms"] >= desde_ms - 2000]
+
+            def velas_1m(s, par, desde_ms):
+                return []
+        return Falsa()
+
+    def _conta(self, M, falsa):
+        import tempfile
+        return M.Conta("laboratorio", falsa, arquivo=pathlib.Path(tempfile.mkdtemp()) / "c.json")
+
+    def test_entra_com_stop_e_alvo_na_corretora_e_fecha_fora_da_lista(self):
+        import time
+        M = self._mod()
+        f = self._falsa(M)
+        c = self._conta(M, f)
+        d = {"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "teste", "stop_pct": 0.01, "alvo_pct": 0.012, "max_min": 120}]}
+        c.rodada(d)
+        a = c.e["abertas"]["AUSDT"]
+        self.assertEqual(a["alvo_pct"], 0.03)                                    # REGRAS §5: alvo efetivo 3 × o stop
+        self.assertEqual(sorted((g[1], g[2]) for g in f.gat.values()), [("alvo", 103.0), ("stop", 99.0)])
+        self.assertAlmostEqual(a["nocional"], a["contratos"] * 100 * 0.01)
+        self.assertLessEqual(a["nocional"], M.MAX_NOC * M.tamanho(10.0)[0])
+        c.rodada({"t": time.time(), "posicoes": []})                              # decisão nova sem a moeda: fecha a mercado
+        self.assertEqual(c.e["abertas"], {})
+        self.assertEqual(f.gat, {})                                             # stop e alvo cancelados
+        self.assertAlmostEqual(c.e["fechadas"][-1]["resultado_usd"], -0.002)     # preço igual: só as taxas da corretora
+
+    def test_stop_recusado_fecha_na_hora(self):
+        import time
+        M = self._mod()
+        f = self._falsa(M, recusa_stop=True)
+        c = self._conta(M, f)
+        c.rodada({"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "venda", "motivo": "t", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 60}]})
+        self.assertEqual((c.e["abertas"], f.pos), ({}, {}))
+        self.assertIn("stop recusado", c.e["fechadas"][-1]["motivo_saida"])
+
+    def test_concilia_stop_executado_enquanto_a_maquina_dormia(self):
+        import time
+        M = self._mod()
+        f = self._falsa(M)
+        c = self._conta(M, f)
+        c.rodada({"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "t", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 120}]})
+        q = c.e["abertas"]["AUSDT"]["contratos"]
+        stop_id = c.e["abertas"]["AUSDT"]["stop"]["id"]
+        f.px["AUSDT"] = 99.0                                                    # a corretora executou o stop
+        f.gat.pop(stop_id)
+        del f.pos["AUSDT"]
+        f.ex.append({"par": "AUSDT", "t_ms": time.time() * 1000, "contratos": -q, "preco": 99.0, "taxa": 0.001})
+        f.gat["99"] = ("BUSDT", "stop", 1.0)                                    # gatilho desconhecido na conta
+        c.conciliar()
+        fe = c.e["fechadas"][-1]
+        self.assertIn("stop", fe["motivo_saida"])
+        self.assertAlmostEqual(fe["resultado_usd"], -1.0 * q * 0.01 - 0.002)
+        self.assertNotIn("99", f.gat)                                           # cancelado
+        self.assertEqual(f.gat, {})                                             # o alvo da posição fechada também
+
+    def test_prazo_e_seguranca_do_endereco(self):
+        import time
+        M = self._mod()
+        f = self._falsa(M)
+        c = self._conta(M, f)
+        d = {"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "t", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 5}]}
+        c.rodada(d)
+        c.rodada(d, agora=time.time() + 6 * 60)
+        self.assertIn("prazo", c.e["fechadas"][-1]["motivo_saida"])
+        with self.assertRaises(SystemExit):
+            M.conectar("treinador")                                             # Bybit travada até validar
+        with self.assertRaises(SystemExit):
+            M.conectar("caçador")
+        with unittest.mock.patch.object(M.Gate, "BASE", "https://api.gateio.ws"):
+            with self.assertRaises(SystemExit):
+                M.conectar("laboratorio")                                       # endereço que não é o de demonstração: PARA

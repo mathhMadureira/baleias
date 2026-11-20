@@ -51,6 +51,11 @@ Posição já aberta não é cortada por C1–C3 (sai por stop, alvo, prazo ou p
   senão a conta de teste não entra (a carteira simulada do chefe entra). [conduta] O chefe escolhe, de preferência, moedas marcadas ✓ testnet
   no `universo.py`, para as duas carteiras andarem juntas.
 
+- Contas de demonstração dos operadores (H71) [código: `operar/corretora.py`]: cada agente executa a PRÓPRIA decisão na própria conta (Laboratório →
+  Gate Futures TestNet; Treinador → Bybit Demo; Guardião → BingX VST), com a carteira própria de US$ 10 e as mesmas regras desta página (stop e alvo
+  guardados na corretora; stop recusado = fecha na hora; lote mínimo > 1,5 × a posição = não entra). A ferramenta só fala com o endereço de
+  demonstração e PARA em qualquer outro; corretora não validada fica travada (hoje: Bybit e BingX).
+
 ## 7. Caçador [ferramenta: `cacar.py publicar`]
 - Publica só o que tem leitura de 1 s a 1 dia (C1) e passa em C2 e C3, com stop, alvo e prazo já ajustados pela seção 5.
 - Avisa os operadores só com força ≥ 70 ou com o sinal aprovado no juiz H68; validade de 15 a 60 min; a mesma moeda e lado no máximo 1 vez em 30 min.

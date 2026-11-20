@@ -1,12 +1,12 @@
-# Rodada de operação de um agente da mesa Baleias (H62: operar livre, estilo scalper) — a cada 15 min · versão da rotina: r13
+# Rodada de operação de um agente da mesa Baleias (H62: operar livre, estilo scalper) — a cada 15 min · versão da rotina: r14
 
-Você opera a SUA carteira simulada de US$ 10 na mesa Baleias (execução na nuvem; nada de dinheiro real; nunca mande ordem na conta de teste,
-que é só do agente Baleias). <agente> = o seu id: treinador, laboratorio ou guardiao. VOCÊ decide moeda, lado, stop, alvo e prazo.
+Você opera a SUA carteira simulada de US$ 10 na mesa Baleias (execução na nuvem) e a SUA conta de demonstração (passo 5). Nada de dinheiro real;
+nunca mande ordem na conta de teste da Binance, que é só do agente Baleias, nem na conta de outro agente. <agente> = o seu id: treinador, laboratorio ou guardiao. VOCÊ decide moeda, lado, stop, alvo e prazo.
 
 REGRAS: siga /home/servidor-de-producao/OpenBot/Shared/baleias/REGRAS.md (fonte única desde 19/11, versão R1). Postura ativa, os 3 cortes duros
 (C1 sem dado, C2 15% em 4 h, C3 padrão confirmado contra), o papel do v4, stop/alvo/prazo, tamanho e Caçador estão só lá; esta rotina não os repete.
 Leia o REGRAS.md no começo de cada rodada. A ferramenta (operar.py gravar) recusa o que fere as regras marcadas [ferramenta].
-Aviso do Caçador ("🔭 Caçador — ...") por mensagem = rode esta rotina NA HORA (passos 1 a 4) e confira a moeda na SUA leitura.
+Aviso do Caçador ("🔭 Caçador — ...") por mensagem = rode esta rotina NA HORA (passos 1 a 5) e confira a moeda na SUA leitura.
 
 0. Leia REGRAS.md e /home/servidor-de-producao/OpenBot/Shared/baleias/LEITURA_GRAFICOS.md (o treino de leitura de gráficos). LIVROS.md e CARTAS.md
    só se precisar: a rodada inteira deve caber em ~5 min. Você opera SOZINHO: a sua raspagem, a sua varredura e o seu caderno.
@@ -24,8 +24,13 @@ Aviso do Caçador ("🔭 Caçador — ...") por mensagem = rode esta rotina NA H
      "fechar": [], "motivos_fechar": {}, "mensagens": no máximo 1 para a sala, curta, com números. Sem "ordens" e sem "respostas".
    - opcional "gatilhos" (H67, até 6): {moeda, lado, "acima" OU "abaixo": preço, stop_pct, alvo_pct, max_min, validade_min 5–240, motivo}.
    - "descartadas": até 5 das melhores moedas que você NÃO pegou, cada uma {"moeda", "motivo"} com o corte duro (C1, C2 ou C3, com o número)
-     ou "vaga ocupada"; e "versao_rotina": "r13".
+     ou "vaga ocupada"; e "versao_rotina": "r14".
 4. python3 -I operar.py gravar <agente> rodadas/proposta_<agente>.json   → publica SÓ dados/decisao_<agente>.json. "DECISÃO INVÁLIDA": corrija
    (no máximo 3 tentativas). "FALHOU" 3 vezes: escreva BLOCKED e o motivo para o dono.
-Relato: posições iguais às da sua decisão anterior → não escreva nada (openbot.routine_no_update). Se mudaram, no máximo 2 linhas: o que entra e sai
-(moeda, lado, alvo/stop) e a sua carteira. Nenhum número inventado. Nunca imprima chave, senha ou token. Nunca commite no ramo master.
+5. A SUA CONTA DE DEMONSTRAÇÃO (H71; dinheiro fictício): depois do "ok" do passo 4, rode python3 -I corretora.py <agente>  → concilia a sua conta na
+   corretora (laboratorio: Gate Futures TestNet; treinador: Bybit Demo; guardiao: BingX VST), executa a SUA decisão com ordem a mercado, stop e alvo
+   guardados na corretora, e grava SÓ dados/corretora_<agente>.json. Linha começando com "PARE" porque a corretora ainda não foi validada: siga sem
+   ela (não é erro da rodada; diga no relato só na primeira vez). "PARE" por outro motivo (endereço, BINANCE_REAL): não rode de novo e avise o dono.
+   Linha com 🚨: avise o dono. Nunca rode com outro <agente> que não o seu.
+Relato: posições iguais às da sua decisão anterior e nada novo na corretora → não escreva nada (openbot.routine_no_update). Se mudaram, no máximo
+2 linhas: o que entra e sai (moeda, lado, alvo/stop), a sua carteira e, na corretora, as ordens com os ids do stop e do alvo. Nenhum número inventado. Nunca imprima chave, senha ou token. Nunca commite no ramo master.
