@@ -1,6 +1,6 @@
 {
- "t": 1795184801,
- "hora_utc": "2026-11-20 14:26 UTC",
+ "t": 1795185016,
+ "hora_utc": "2026-11-20 14:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   -0.39,
   -0.39,
   0.51,
-  0.3
+  0.27
  ],
  "contexto": {
-  "t": 1795184801,
+  "t": 1795185017,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 10.0,
+   "media_top20_anual_pct": 9.8,
    "principais_anual_pct": {
-    "BTC": 0.8,
+    "BTC": 0.9,
     "ETH": 11.0,
-    "SOL": 6.9
+    "SOL": 6.7
    },
    "leitura": "neutro"
   },
@@ -454,7 +454,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.84,
+  "carteira": 8.83,
   "abertas": [
    {
     "moeda": "BCH",
@@ -462,7 +462,7 @@
     "entrada": 201.0,
     "agora": 201.0,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Entrada nova: estrutura de baixa CONFIRMADA em 15 min e topo duplo CONFIRMADO em 4 h (a favor); v4 0,378 de subir (confiança 0,122, a favor); 4 h −0,89%, 1 d −3"
    },
    {
@@ -471,7 +471,7 @@
     "entrada": 0.1553,
     "agora": 0.1553,
     "resultado_pct": -0.0,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Entrada nova: 5 de 6 tempos abaixo da MM20 (5 min a 1 d); estrutura de baixa em 15 min e topo duplo em 1 h (não confirmados, a favor); 1 h −0,51%, 4 h −1,34%, 1"
    },
    {
@@ -480,7 +480,7 @@
     "entrada": 0.1326,
     "agora": 0.1319,
     "resultado_pct": 0.53,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "Mantém: 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 d); 4 h −0,90%, 1 d −3,44%. Contra: 1 min e 5 min acima, 1 h +0,76%, aviso do Caçador de explosão de c"
    },
    {
@@ -489,7 +489,7 @@
     "entrada": 3.007,
     "agora": 2.978,
     "resultado_pct": 0.96,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "Mantém: 3 de 6 tempos abaixo (1 h, 4 h, 1 d); topo duplo em 4 h; 1 d −10,75%; carteiras H63 0×2 vendidas. Contra: 1 h +1,35% de repique, vol 1 min 1,55×, aviso "
    }
   ],
@@ -642,7 +642,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.84,
+   "carteira": 8.83,
    "n_abertas": 4,
    "abertas": [
     [
@@ -700,7 +700,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.35,
+   "carteira": 9.45,
    "n_abertas": 3,
    "abertas": [
     [
@@ -725,7 +725,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.73,
+   "carteira": 9.72,
    "n_abertas": 4,
    "abertas": [
     [
@@ -771,7 +771,7 @@
     "ganho_medio": 0.124,
     "perda_media": -0.213,
     "fator_lucro": 0.76,
-    "carteira": 8.84
+    "carteira": 8.83
    },
    "openbot_testnet": {
     "ops": 33,
@@ -789,7 +789,7 @@
     "ganho_medio": 0.168,
     "perda_media": -0.166,
     "fator_lucro": 0.72,
-    "carteira": 9.35
+    "carteira": 9.45
    },
    "laboratorio": {
     "ops": 11,
@@ -798,7 +798,7 @@
     "ganho_medio": 0.245,
     "perda_media": -0.198,
     "fator_lucro": 1.03,
-    "carteira": 9.73
+    "carteira": 9.72
    },
    "guardiao": {
     "ops": 41,
