@@ -1,21 +1,21 @@
 {
- "t": 1795212345,
- "hora_utc": "2026-11-20 22:05 UTC",
+ "t": 1795212599,
+ "hora_utc": "2026-11-20 22:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 143,
-  "subindo_pct": 92.3,
+  "moedas": 144,
+  "subindo_pct": 92.4,
   "mediana_pct": 1.87
  },
  "mercado_4h": {
-  "moedas": 143,
-  "subindo_pct": 71.3,
+  "moedas": 144,
+  "subindo_pct": 71.5,
   "mediana_pct": 0.67
  },
  "mercado_24h": {
-  "moedas": 143,
-  "subindo_pct": 10.5,
-  "mediana_pct": -5.58
+  "moedas": 144,
+  "subindo_pct": 11.1,
+  "mediana_pct": -5.57
  },
  "btc": {
   "1h": 0.93,
@@ -88,6 +88,12 @@
  ],
  "maiores_altas_4h": [
   {
+   "moeda": "HOT",
+   "4h": 8.01,
+   "24h": 4.33,
+   "vol": 3.12
+  },
+  {
    "moeda": "USUAL",
    "4h": 7.12,
    "24h": 5.27,
@@ -140,12 +146,6 @@
    "4h": 3.08,
    "24h": -9.82,
    "vol": 0.77
-  },
-  {
-   "moeda": "INJ",
-   "4h": 2.88,
-   "24h": -9.68,
-   "vol": 0.99
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.24,
   -0.16,
   0.93,
-  0.17
+  0.14
  ],
  "contexto": {
-  "t": 1795212347,
+  "t": 1795212600,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.6,
+   "media_top20_anual_pct": 4.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -30.0,
-    "SOL": -24.8
+    "ETH": -26.5,
+    "SOL": -21.5
    },
    "leitura": "neutro"
   },
@@ -309,20 +309,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.1858
-   },
-   {
-    "moeda": "DODO",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.02965
-   },
-   {
-    "moeda": "DODO",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.03082
    },
    {
     "moeda": "NEXO",
@@ -729,8 +715,8 @@
     "n": 26191
    },
    "segue_maioria_24h": {
-    "acerto": 0.5192,
-    "n": 30920
+    "acerto": 0.5188,
+    "n": 30979
    }
   },
   "referencia_ganha": [],
