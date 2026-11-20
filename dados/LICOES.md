@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 13:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 13:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.01** · 41 operações fechadas · 2 abertas
+Carteira **US$ 9.97** · 41 operações fechadas · 2 abertas
 
 - **Total:** 26/41 com lucro (63%), resultado +0.01, média +0.000 por operação.
 - **Últimas 24 h:** 12/18 com lucro, +1.24.
@@ -30,7 +30,7 @@ Carteira **US$ 8.63** · 27 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.49** · 24 operações fechadas · 2 abertas
+Carteira **US$ 9.55** · 24 operações fechadas · 2 abertas
 
 - **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
 - **Últimas 24 h:** 7/18 com lucro, -0.90.
@@ -52,7 +52,7 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.43** · 36 operações fechadas · 1 abertas
+Carteira **US$ 10.42** · 36 operações fechadas · 1 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado +0.41, média +0.011 por operação.
 - **Últimas 24 h:** 13/24 com lucro, -0.28.
@@ -67,10 +67,10 @@ Carteira **US$ 10.43** · 36 operações fechadas · 1 abertas
 
 - **Amplitude:** 15.4% das moedas subindo em 24 h, 13.8% em 4 h · BTC 24 h -3.46%, 4 h -0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -6.1, 'ETH': 9.3, 'SOL': -1.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': -6.4, 'ETH': 8.7, 'SOL': -1.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · INJ ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
-- 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their keys
+- 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their wallet keys
 - 📰 20/11 13:23 UTC · Decrypt: Morning Minute: Anthropic IPO Pops, Sinks Markets
 - 📰 20/11 13:21 UTC · Cointelegraph: Lagarde warns Europe could miss chance to unify tokenized markets
 - 📰 20/11 13:11 UTC · CoinDesk: ECB’s Largarde warns Europe could lose control of growing tokenized asset market
