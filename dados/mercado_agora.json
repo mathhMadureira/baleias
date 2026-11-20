@@ -1,21 +1,21 @@
 {
- "t": 1795203541,
- "hora_utc": "2026-11-20 19:39 UTC",
+ "t": 1795203747,
+ "hora_utc": "2026-11-20 19:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 144,
-  "subindo_pct": 5.6,
+  "moedas": 145,
+  "subindo_pct": 5.5,
   "mediana_pct": -1.58
  },
  "mercado_4h": {
-  "moedas": 144,
-  "subindo_pct": 11.1,
-  "mediana_pct": -2.24
+  "moedas": 145,
+  "subindo_pct": 11.0,
+  "mediana_pct": -2.32
  },
  "mercado_24h": {
-  "moedas": 144,
-  "subindo_pct": 10.4,
-  "mediana_pct": -9.03
+  "moedas": 145,
+  "subindo_pct": 10.3,
+  "mediana_pct": -9.01
  },
  "btc": {
   "1h": -1.41,
@@ -172,11 +172,17 @@
   0.12,
   -0.64,
   -1.26,
-  0.11
+  0.34
  ],
  "contexto": {
-  "t": 1795203542,
+  "t": 1795203748,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795203447,
+    "hora_utc": "20/11 19:37",
+    "titulo": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795203363,
@@ -260,12 +266,6 @@
     "t": 1795185510,
     "hora_utc": "20/11 14:38",
     "titulo": "Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795184757,
-    "hora_utc": "20/11 14:25",
-    "titulo": "U.S. Senate passes bill to ban prediction market bets on war and death"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 1.2,
+   "media_top20_anual_pct": 2.1,
    "principais_anual_pct": {
-    "BTC": -3.5,
-    "ETH": -19.9,
-    "SOL": -1.7
+    "BTC": -0.9,
+    "ETH": -18.2,
+    "SOL": -0.7
    },
    "leitura": "neutro"
   },
@@ -402,8 +402,8 @@
  "v4": {
   "vela": "20:00 UTC",
   "apostas": 75,
-  "compras": 43,
-  "vendas": 32,
+  "compras": 42,
+  "vendas": 33,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -754,11 +754,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5197,
-    "n": 26456
+    "n": 26532
    },
    "segue_maioria_24h": {
-    "acerto": 0.5196,
-    "n": 31348
+    "acerto": 0.519,
+    "n": 31325
    }
   },
   "referencia_ganha": [],
