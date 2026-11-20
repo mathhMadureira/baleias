@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.9% | 255 | 50.7%–62.8% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.9% | 2245 | 50.8%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.9% | 2246 | 50.9%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 85.7% | 7 | 48.7%–97.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 72.7% | 11 | 43.4%–90.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 66.7% | 18 | 43.7%–83.7% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
@@ -15,7 +15,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | williams_volb_baixa | promissor | 52.7% | 148 | 44.7%–60.6% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | reversao_queda | promissor | 52.3% | 65 | 40.4%–64.0% | H14: queda anormal de 1 h → sobe |
 | williams_wr_alta | promissor | 51.3% | 39 | 36.2%–66.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
-| tres_corvos | promissor | 50.3% | 390 | 45.3%–55.2% | H6: três corvos → sobe (efeito pequeno) |
+| tres_corvos | promissor | 50.1% | 391 | 45.2%–55.1% | H6: três corvos → sobe (efeito pequeno) |
 | vortice_invertido | reprovado | 49.1% | 409 | 44.3%–54.0% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | demark_td9_alta | reprovado | 49.0% | 51 | 35.9%–62.3% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | velez_180_baixa | reprovado | 48.0% | 50 | 34.8%–61.5% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |

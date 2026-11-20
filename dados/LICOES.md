@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 13:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 13:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.88** · 41 operações fechadas · 3 abertas
+Carteira **US$ 9.91** · 41 operações fechadas · 3 abertas
 
 - **Total:** 26/41 com lucro (63%), resultado +0.01, média +0.000 por operação.
 - **Últimas 24 h:** 12/18 com lucro, +1.24.
@@ -30,10 +30,10 @@ Carteira **US$ 8.42** · 27 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.57** · 24 operações fechadas · 2 abertas
+Carteira **US$ 9.41** · 24 operações fechadas · 2 abertas
 
 - **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
-- **Últimas 24 h:** 7/18 com lucro, -0.90.
+- **Últimas 24 h:** 7/17 com lucro, -0.84.
 - **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 7 op, 29% certas, -0.50 · 00–05 UTC: 2 op, 100% certas, +0.41
 - **Por lado:** venda: 19 op, 37% certas, -1.05 · compra: 5 op, 60% certas, +0.41
 - **Por motivo de saída:** nova: 6 de 6 tempos abaixo da : 2 op, 0% certas, -0.51 · nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
@@ -52,7 +52,7 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.41** · 36 operações fechadas · 1 abertas
+Carteira **US$ 10.33** · 36 operações fechadas · 1 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado +0.41, média +0.011 por operação.
 - **Últimas 24 h:** 13/24 com lucro, -0.28.
@@ -65,11 +65,11 @@ Carteira **US$ 10.41** · 36 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 15.4% das moedas subindo em 24 h, 13.8% em 4 h · BTC 24 h -3.46%, 4 h -0.3%.
+- **Amplitude:** 13.0% das moedas subindo em 24 h, 13.8% em 4 h · BTC 24 h -3.53%, 4 h -0.27%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.9%/ano · {'BTC': -6.6, 'ETH': 8.6, 'SOL': -1.8} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · INJ ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': -6.3, 'ETH': 8.9, 'SOL': -1.7} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · INJ ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin hovers just above $61,000 as Anthropic slides 13% after Nasdaq debut
 - 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their wallet keys
 - 📰 20/11 13:29 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -113,7 +113,7 @@ Carteira **US$ 10.41** · 36 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32497 apostas conferidas ao vivo, acerto 55.1%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32571 apostas conferidas ao vivo, acerto 55.1%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
