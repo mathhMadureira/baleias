@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 14:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 14:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.83** · 46 operações fechadas · 4 abertas
+Carteira **US$ 9.16** · 46 operações fechadas · 4 abertas
 
 - **Total:** 26/46 com lucro (57%), resultado -1.04, média -0.023 por operação.
 - **Últimas 24 h:** 11/22 com lucro, +0.15.
@@ -30,7 +30,7 @@ Carteira **US$ 7.76** · 33 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.45** · 24 operações fechadas · 3 abertas
+Carteira **US$ 9.63** · 24 operações fechadas · 3 abertas
 
 - **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
 - **Últimas 24 h:** 7/17 com lucro, -0.84.
@@ -41,7 +41,7 @@ Carteira **US$ 9.45** · 24 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.72** · 11 operações fechadas · 4 abertas
+Carteira **US$ 10.30** · 11 operações fechadas · 4 abertas
 
 - **Total:** 5/11 com lucro (45%), resultado +0.04, média +0.003 por operação.
 - **Últimas 24 h:** 5/11 com lucro, +0.04.
@@ -65,11 +65,11 @@ Carteira **US$ 9.95** · 41 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 16.8% das moedas subindo em 24 h, 16.8% em 4 h · BTC 24 h -3.16%, 4 h 0.19%.
+- **Amplitude:** 16.8% das moedas subindo em 24 h, 24.0% em 4 h · BTC 24 h -2.86%, 4 h 0.24%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.8%/ano · {'BTC': 0.9, 'ETH': 11.0, 'SOL': 6.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.2%/ano · {'BTC': 0.2, 'ETH': 11.0, 'SOL': 6.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · TIA fundo duplo (alta, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ENSO fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · TIA fundo duplo (alta, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 14:25 UTC · CoinDesk: U.S. Senate passes bill to ban prediction market bets on war and death
 - 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin hovers just above $61,000 as Anthropic slides after Nasdaq debut
 - 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their wallet keys
@@ -113,7 +113,7 @@ Carteira **US$ 9.95** · 41 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32708 apostas conferidas ao vivo, acerto 55.1%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32741 apostas conferidas ao vivo, acerto 55.1%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
