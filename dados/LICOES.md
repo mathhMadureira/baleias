@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 21:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 22:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 11.2% das moedas subindo em 24 h, 81.1% em 4 h · BTC 24 h -3.79%, 4 h 0.5%.
+- **Amplitude:** 11.2% das moedas subindo em 24 h, 77.6% em 4 h · BTC 24 h -3.79%, 4 h 0.5%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 11.0, 'ETH': -30.4, 'SOL': -5.9} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** XRP bandeira de baixa (baixa, CONFIRMOU) · ZEC bandeira de baixa (baixa, CONFIRMOU) · CHZ topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · DODO topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · NEXO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP ombro-cabeça-ombro (baixa, formado) · RARE fundo duplo (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': 11.0, 'ETH': -37.9, 'SOL': -26.5} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** XRP bandeira de baixa (baixa, CONFIRMOU) · ZEC bandeira de baixa (baixa, CONFIRMOU) · CHZ topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · NEXO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP ombro-cabeça-ombro (baixa, formado) · RARE fundo duplo (alta, formado) · SOPH fundo duplo (alta, formado)
 - 📰 20/11 21:36 UTC · Decrypt: Claude Claims Historic Math Breakthrough One Day After Anthropic IPO
 - 📰 20/11 20:36 UTC · Decrypt: Nvidia Shares Sink to 52-Week Low After Report SEC Is Probing Accounting
 - 📰 20/11 19:37 UTC · Cointelegraph: Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 4 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 34113 apostas conferidas ao vivo, acerto 55.6%; prevê 142 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 34127 apostas conferidas ao vivo, acerto 55.6%; prevê 102 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
