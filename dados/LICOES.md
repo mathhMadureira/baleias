@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 03:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 03:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.71** · 39 operações fechadas · 2 abertas
+Carteira **US$ 9.57** · 39 operações fechadas · 2 abertas
 
 - **Total:** 24/39 com lucro (62%), resultado -0.58, média -0.015 por operação.
 - **Últimas 24 h:** 10/16 com lucro, +0.66.
@@ -30,7 +30,7 @@ Carteira **US$ 8.42** · 25 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.20** · 23 operações fechadas · 1 abertas
+Carteira **US$ 9.11** · 23 operações fechadas · 1 abertas
 
 - **Total:** 9/23 com lucro (39%), resultado -0.84, média -0.037 por operação.
 - **Últimas 24 h:** 6/17 com lucro, -1.10.
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.0% das moedas subindo em 24 h, 15.8% em 4 h · BTC 24 h -1.33%, 4 h 0.23%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': 11.0, 'ETH': 5.0, 'SOL': -3.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': 11.0, 'ETH': 5.0, 'SOL': -3.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DOGE topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · QNT fundo duplo (alta, formado) · QNT ombro-cabeça-ombro (baixa, formado) · SAPIEN fundo duplo (alta, formado) · SOL fundo duplo (alta, formado) · TRUMP fundo duplo (alta, formado) · WLD fundo duplo (alta, formado) · XRP fundo duplo (alta, formado)
 - 📰 20/11 03:33 UTC · Cointelegraph: Institutional Bitcoin ETF holdings clock record quarter after selling streak
@@ -75,7 +75,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 📰 19/11 23:44 UTC · Cointelegraph: Ledger CTO Charles Guillemet to leave after nine years at company
 - 📰 19/11 22:36 UTC · Decrypt: Citi Says Customers Are Responsible When AI Banking Agents Go Rogue—Even After a Hack
 - 📰 19/11 22:25 UTC · Cointelegraph: Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express
-- 📰 19/11 21:42 UTC · Cointelegraph: Here’s what happened in crypto today
+- 📰 19/11 21:12 UTC · Decrypt: Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
