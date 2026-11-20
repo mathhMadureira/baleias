@@ -2392,3 +2392,37 @@ class RegrasFonteUnica(unittest.TestCase):
         self.assertFalse(any("DUSDT" in e for e in erros))                              # fora da varredura: C1 é conduta
         self.assertEqual(G.conferir_decisao(pos[:1], {"AUSDT": {}}, var), [])           # já aberta: não corta
         self.assertEqual([G.prazo_sugerido(a) for a in (0.01, 0.02, 0.04)], [60, 120, 240])
+
+
+class UniversoSemErroEngolido(unittest.TestCase):
+    """19/11 ~21:50 UTC: a raspagem do chefe deu "0 de 116 moedas" sem causa (velas() engolia o erro). Agora tenta de novo e diz o motivo."""
+
+    def _mod(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("universo_chefe2", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "chefe" / "universo.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def test_tenta_de_novo_e_registra_o_motivo(self):
+        import urllib.error
+        U = self._mod()
+        chamadas = {"n": 0}
+
+        def falha_uma_vez(url, t=30):
+            chamadas["n"] += 1
+            if chamadas["n"] == 1:
+                raise TimeoutError("rede lenta")
+            return [[0, 1, 1, 1, 1, 0, 0]] * 98
+        with unittest.mock.patch.object(U, "_get", falha_uma_vez), unittest.mock.patch.object(U.time, "sleep", lambda s: None):
+            par, k = U.velas("AUSDT")
+        self.assertEqual((par, len(k), chamadas["n"]), ("AUSDT", 98, 2))       # a 2ª tentativa leu
+        self.assertNotIn("AUSDT", U.FALHAS)
+
+        def limite(url, t=30):
+            raise urllib.error.HTTPError(url, 429, "Too Many Requests", {}, None)
+        with unittest.mock.patch.object(U, "_get", limite), unittest.mock.patch.object(U.time, "sleep", lambda s: None):
+            self.assertEqual(U.velas("BUSDT")[1], [])
+        self.assertEqual(U.FALHAS["BUSDT"], "HTTP 429")
+        self.assertEqual(U.resumo_falhas(["CUSDT"], ["BUSDT", "CUSDT"]), "1 × HTTP 429, 1 × prazo da rodada")   # a causa aparece no ERRO
+        self.assertGreaterEqual(U.VELAS_MIN_S, 120)

@@ -205,3 +205,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   operadores, Caçador exigindo "maioria dos 6 tempos". ROTINA r13 e rotinas do chefe, Treinador, Laboratório, Guardião e Caçador dizem "siga REGRAS.md".
   Placar desde 18/11 (fechadas): chefe simulado 28 op −0,540; conta de teste 22 op −0,953; Treinador 17 op −0,215; Laboratório 7 op +0,362; Guardião
   31 op +0,355 (soma −0,991). Nenhuma regra de estratégia mudou. 175 testes.
+- 2026-11-20 (madrugada): **raspagem do chefe dizia "0 de 116 moedas" sem causa** (19/11 ~21:50 UTC, 3 rodadas seguidas; não reproduziu depois: 118/118).
+  `velas()` de `mesa/chefe/universo.py` engolia qualquer erro de rede e devolvia lista vazia, sem nova tentativa, e o ERRO saía antes do aviso de PARCIAL.
+  Agora: até 3 tentativas por moeda (para logo em HTTP 418/429, limite da Binance), motivo de cada falha contado no ERRO e no PARCIAL ("N × TimeoutError,
+  N × HTTP 429, N × prazo da rodada"), e as velas têm sempre pelo menos 2 min do prazo. Teste `UniversoSemErroEngolido`. 176 testes.

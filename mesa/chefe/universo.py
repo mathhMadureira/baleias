@@ -11,6 +11,7 @@ Regra de escolha (pré-registrada na emenda da H59, lab/PROTOCOLO_LAB.md):
 """
 import json
 import os
+import urllib.error
 import subprocess
 import sys
 import time
@@ -80,11 +81,34 @@ def estado(nome):
     return json.loads(r.stdout) if r.returncode == 0 and r.stdout else {}
 
 
-def velas(par):
-    try:
-        return par, [x for x in _get(f"{DADOS}/api/v3/klines?symbol={par}&interval=15m&limit=98") if x[6] < time.time() * 1000]
-    except (OSError, ValueError):
-        return par, []
+FALHAS = {}                                   # {par: motivo da última falha} — antes o erro era engolido e virava "0 moedas" sem causa
+VELAS_MIN_S = 120                             # as velas são a parte essencial: têm pelo menos 2 min, mesmo se o começo da rodada demorou
+
+
+def velas(par, tentativas=3):
+    """Velas de 15 min fechadas. Rede falhou = tenta de novo (até 3 vezes, com pausa curta) e guarda o motivo em FALHAS[par]."""
+    for i in range(tentativas):
+        try:
+            k = [x for x in _get(f"{DADOS}/api/v3/klines?symbol={par}&interval=15m&limit=98", t=20) if x[6] < time.time() * 1000]
+            FALHAS.pop(par, None)
+            return par, k
+        except urllib.error.HTTPError as ex:
+            FALHAS[par] = f"HTTP {ex.code}"
+            if ex.code in (418, 429):                 # limite de peso da Binance: não insiste nesta rodada
+                break
+        except (OSError, ValueError) as ex:
+            FALHAS[par] = type(ex).__name__
+        time.sleep(1 + 2 * i)
+    return par, []
+
+
+def resumo_falhas(faltaram, pares):
+    """Texto com a causa: quantas moedas por motivo (rede, HTTP, prazo)."""
+    from collections import Counter
+    c = Counter(FALHAS.get(p, "?") for p in pares if p in FALHAS)
+    if faltaram:
+        c["prazo da rodada"] += len(faltaram)
+    return ", ".join(f"{n} × {m}" for m, n in c.most_common()) or "nenhuma falha de rede registrada"
 
 
 def medir(k):
@@ -117,9 +141,10 @@ def main():
     vela_t = max((x["t"] for x in ult.values()), default=0)
     pares = sorted(ult)
     parcial = []
-    k, faltaram = ler_com_prazo(velas, pares, resta() - 150)        # deixa ~2,5 min para o resto (corretora, carteiras, varredura)
-    if faltaram:
-        parcial.append(f"velas de 15 min: {len(faltaram)} de {len(pares)} moedas sem leitura no prazo")
+    k, faltaram = ler_com_prazo(velas, pares, max(VELAS_MIN_S, resta() - 150))   # deixa ~2,5 min para o resto; nunca menos de 2 min para as velas
+    sem = [p for p in pares if p not in faltaram and len(k.get(p) or []) < 97]
+    if faltaram or sem:
+        parcial.append(f"velas de 15 min: {len(faltaram) + len(sem)} de {len(pares)} moedas sem leitura ({resumo_falhas(faltaram, pares)})")
     reg, s24, s4 = RG.de_velas(k)
     lado_reg = RG.lado_permitido(reg)
     try:
@@ -144,7 +169,8 @@ def main():
             minimo = float(f.get("MIN_NOTIONAL", {}).get("notional", 5))
         linhas.append({"moeda": par[:-4], "par": par, "prob": round(p, 4), **m, "testnet": bool(regras), "min_nocional": minimo})
     if len(linhas) < 50:                          # sem o universo lido não há escolha: mantém tudo como está e avisa
-        raise SystemExit(f"ERRO: só {len(linhas)} moedas com velas lidas (de {len(pares)}); sem análise, sem escolha nesta rodada")
+        raise SystemExit(f"ERRO: só {len(linhas)} moedas com velas lidas (de {len(pares)}; causa: {resumo_falhas(faltaram, pares)}; "
+                         f"{round(time.time() - INICIO)} s); sem análise, sem escolha nesta rodada")
     abertas = (eu.get("abertas") or {})
     manter, motivos = [], {}
     for par, a in abertas.items():
