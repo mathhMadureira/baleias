@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 13:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 13:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.32** · 44 operações fechadas · 0 abertas
+Carteira **US$ 9.32** · 44 operações fechadas · 2 abertas
 
 - **Total:** 26/44 com lucro (59%), resultado -0.68, média -0.016 por operação.
 - **Últimas 24 h:** 12/21 com lucro, +0.55.
@@ -17,20 +17,20 @@ Carteira **US$ 9.32** · 44 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.32** · 27 operações fechadas · 3 abertas
+Carteira **US$ 8.13** · 32 operações fechadas · 2 abertas
 
-- **Total:** 10/27 com lucro (37%), resultado -1.33, média -0.049 por operação.
-- **Últimas 24 h:** 6/14 com lucro, +0.25.
-- **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 18–23 UTC: 16 op, 31% certas, -0.23 · 12–17 UTC: 9 op, 56% certas, -0.10
-- **Por lado:** compra: 6 op, 0% certas, -2.62 · venda: 21 op, 48% certas, +1.28
-- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.90% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.80% na co: 1 op, 0% certas, -0.18 · stop de segurança −0.70% na co: 1 op, 0% certas, -0.16 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop de segurança −0.60% na co: 3 op, 67% certas, +0.12 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · fora da lista de posições do c: 4 op, 25% certas, +0.69 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
-- **Moedas que mais perderam (≥ 3 op):** SKY +0.64 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** SKY +0.64 (3 op)
+- **Total:** 10/32 com lucro (31%), resultado -1.88, média -0.059 por operação.
+- **Últimas 24 h:** 6/19 com lucro, -0.30.
+- **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 12–17 UTC: 14 op, 36% certas, -0.65 · 18–23 UTC: 16 op, 31% certas, -0.23
+- **Por lado:** compra: 6 op, 0% certas, -2.62 · venda: 26 op, 38% certas, +0.74
+- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.80% na co: 1 op, 0% certas, -0.18 · stop de segurança −0.70% na co: 1 op, 0% certas, -0.16 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.60% na co: 4 op, 50% certas, -0.01 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · fora da lista de posições do c: 6 op, 17% certas, +0.64 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
+- **Moedas que mais perderam (≥ 3 op):** MUBARAK -0.43 (3 op) · SKY +0.64 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** SKY +0.64 (3 op) · MUBARAK -0.43 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.25** · 24 operações fechadas · 2 abertas
+Carteira **US$ 9.24** · 24 operações fechadas · 2 abertas
 
 - **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
 - **Últimas 24 h:** 7/17 com lucro, -0.84.
@@ -41,7 +41,7 @@ Carteira **US$ 9.25** · 24 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.82** · 10 operações fechadas · 1 abertas
+Carteira **US$ 10.07** · 10 operações fechadas · 1 abertas
 
 - **Total:** 5/10 com lucro (50%), resultado +0.07, média +0.007 por operação.
 - **Últimas 24 h:** 5/10 com lucro, +0.07.
@@ -67,10 +67,10 @@ Carteira **US$ 10.27** · 37 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.6% das moedas subindo em 24 h, 14.4% em 4 h · BTC 24 h -3.53%, 4 h -0.27%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.9%/ano · {'BTC': -5.1, 'ETH': 9.7, 'SOL': -0.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': -4.7, 'ETH': 10.2, 'SOL': -0.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · INJ ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
-- 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin hovers just above $61,000 as Anthropic slides 13% after Nasdaq debut
+- 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin hovers just above $61,000 as Anthropic slides after Nasdaq debut
 - 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their wallet keys
 - 📰 20/11 13:29 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 20/11 13:23 UTC · Decrypt: Morning Minute: Anthropic IPO Pops, Sinks Markets
@@ -79,12 +79,12 @@ Carteira **US$ 10.27** · 37 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c
 - 20/11 13:40 UTC · **KAVA venda, MUBARAK venda, XLM venda** · Baixa: 10,6% das 123 moedas sobem em 1 h (mediana −0,95%), 13,8% em 4 h (mediana −1,90%), 15,4% em 24 h (mediana −5,62%); BTC 61.504, 1 h −0,26%, 4 h −0,30%, 24
 - 20/11 13:27 UTC · **KAVA venda, MUBARAK venda** · Baixa: 21,1% das 123 moedas sobem em 1 h (mediana −0,45%), 16,3% em 4 h (mediana −1,71%), 13,8% em 24 h (mediana −5,49%); BTC 61.543, 1 h +0,20%, 4 h −0,38%, 24
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
-- 19/11 21:26 UTC · **BTC venda, MEGA compra, ETH venda** · Retrato 21:18 UTC: 20,5% das 117 moedas sobem em 1 h (mediana −0,51%), 47,0% em 4 h, 30,8% em 24 h; medo e ganância 10. Leitura 21:25 (velas da Binance): BTC 61
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
