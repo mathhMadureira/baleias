@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 13:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 13:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 14.6% das moedas subindo em 24 h, 17.9% em 4 h · BTC 24 h -3.62%, 4 h -0.43%.
+- **Amplitude:** 14.6% das moedas subindo em 24 h, 18.7% em 4 h · BTC 24 h -3.62%, 4 h -0.43%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.9%/ano · {'BTC': -5.7, 'ETH': 10.6, 'SOL': -6.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': -6.0, 'ETH': 11.0, 'SOL': -4.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 13:11 UTC · CoinDesk: ECB’s Largarde warns Europe could lose control of growing tokenized asset market
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32393 apostas conferidas ao vivo, acerto 55.2%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32401 apostas conferidas ao vivo, acerto 55.2%; prevê 23 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
