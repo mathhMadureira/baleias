@@ -1,20 +1,20 @@
 {
- "t": 1795157421,
- "hora_utc": "2026-11-20 06:50 UTC",
+ "t": 1795157649,
+ "hora_utc": "2026-11-20 06:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 119,
-  "subindo_pct": 68.9,
+  "moedas": 120,
+  "subindo_pct": 69.2,
   "mediana_pct": 0.35
  },
  "mercado_4h": {
-  "moedas": 119,
-  "subindo_pct": 57.1,
-  "mediana_pct": 0.2
+  "moedas": 120,
+  "subindo_pct": 57.5,
+  "mediana_pct": 0.21
  },
  "mercado_24h": {
-  "moedas": 119,
-  "subindo_pct": 13.4,
+  "moedas": 120,
+  "subindo_pct": 13.3,
   "mediana_pct": -4.17
  },
  "btc": {
@@ -136,16 +136,16 @@
    "vol": 1.38
   },
   {
+   "moeda": "AT",
+   "4h": 3.59,
+   "24h": -2.3,
+   "vol": 1.51
+  },
+  {
    "moeda": "DODO",
    "4h": 3.56,
    "24h": -9.49,
    "vol": 0.61
-  },
-  {
-   "moeda": "CRV",
-   "4h": 2.12,
-   "24h": -2.53,
-   "vol": 0.72
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.18,
   -1.03,
   0.65,
-  0.08
+  0.14
  ],
  "contexto": {
-  "t": 1795157422,
+  "t": 1795157650,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 6.1,
+   "media_top20_anual_pct": 6.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 8.7,
-    "SOL": 4.7
+    "ETH": 8.4,
+    "SOL": 5.0
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 15.0,
+   "amplitude_acima_mm50_pct": 12.5,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -353,13 +353,6 @@
     "nivel": 0.00484
    },
    {
-    "moeda": "OP",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.0747
-   },
-   {
     "moeda": "XRP",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -387,8 +380,8 @@
  },
  "v4": {
   "vela": "06:45 UTC",
-  "apostas": 85,
-  "compras": 52,
+  "apostas": 84,
+  "compras": 51,
   "vendas": 33,
   "mais_confiantes_venda": [
    {
@@ -735,12 +728,12 @@
   "z_contra_lab": 1.58,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5127,
-    "n": 22765
+    "acerto": 0.5125,
+    "n": 22815
    },
    "segue_maioria_24h": {
-    "acerto": 0.5118,
-    "n": 29155
+    "acerto": 0.5115,
+    "n": 29334
    }
   },
   "referencia_ganha": [],
