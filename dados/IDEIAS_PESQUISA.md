@@ -3,6 +3,82 @@
 Cada seção é escrita pela rotina diária de pesquisa. Nada aqui é resultado: é candidato a pré-registro em `lab/PROTOCOLO_LAB.md`.
 Fontes da internet são dados de terceiros; números entre aspas são os que a fonte dá, e "não sei" onde ela não dá.
 
+## 2026-11-20
+
+**Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/LICOES.md`, 10:18 UTC):
+
+| | |
+|---|---|
+| Campeão do torneio | **Guardião** (35 op, acerto 62,9%, soma +0,29, fator de lucro 1,11, carteira 10,29) · Laboratório 1,06 (10 op) · Robô Claude 1,00 (41) · Treinador 0,72 (24) · conta de teste 0,64 (25) |
+| Onde o Guardião perde | **compras**: 8 op, 50% certas, −0,49 (vendas: 27 op, 67%, +0,78). Perda média 0,203 × ganho média 0,133. 26 das 35 op em 18–23 UTC (−0,03); últimas 24 h −0,40 (12/23). Moedas: TRUMP −0,20 (5 op), DOGE −0,10 (4) |
+| Segmento fraco do vigia | compras 52,0% (14.002) × vendas 57,9% (15.689); 18–24 h UTC 52,3% (8.850). Ao vivo 55,1% × laboratório 53,5% (z +1,71), "dentro do esperado" |
+
+**Mercado hoje** (`dados/mercado_agora.json`): BTC 61.805, −3,12% em 24 h, −0,09% em 4 h, volume de 4 h 0,78× a média; só 14,8% das 122
+moedas sobem em 24 h (mediana −4,08%). BTC abaixo da MM50 (78.236) e da MM200 (72.694); 12,5% das moedas acima da MM50. Medo e ganância 12.
+Funding na Hyperliquid: BTC −6,3%/ano, média das 20 maiores +3,6%/ano.
+
+**Já testado ou proposto (fora desta lista):** H55, H39, H64 (S1–S4), H52/R6, H46, H65 (fluxo agressor, momento semanal, vol), stop por ATR (16/11),
+OI × prêmio (16/11), janela FOMC/CPI (17/11), compras só com confiança ≥ 0,12 (18/11), piso de movimento (18/11), veto de queda de 1 h esticada (19/11),
+parcial em +0,6% (19/11), funding como direção (19/11, não proposta).
+
+### Ideia 1 — Guardião: compra de memecoin só com o BTC subindo na última hora e nas últimas 4 h
+
+- **Regra:** a compra de memecoin do Guardião só é aceita se r1(BTC) > 0 **e** r4(BTC) > 0 (retorno do BTC perpétuo nas últimas 1 h e 4 h,
+  velas de 5 min fechadas). Vendas sem mudança (são onde ele ganha). Sem parâmetro a ajustar: o limiar é zero. 1 tentativa.
+- **Por quê no Guardião:** as compras são o lado que perde (8 op, −0,49) e o vigia do v4 mostra o mesmo (compras 52,0% × vendas 57,9%).
+  Memecoin é moeda pequena e o BTC transmite o movimento para ela, sobretudo nas quedas: comprar memecoin com o BTC caindo é comprar
+  contra quem dá o preço.
+- **Dados:** velas de 5 min do BTCUSDT e das memecoins no perpétuo da Binance (grátis).
+- **Evidência:** Kurihara & Matsumoto, "Price Transmission from Bitcoin to Altcoins: High-Frequency Evidence and Implications for Trading Strategy",
+  *Asia-Pacific Financial Markets* (2026), https://doi.org/10.1007/s10690-026-09589-z — velas de 1 min da Binance; causalidade de Granger
+  **só do BTC para as altcoins**; moedas pequenas e de pouca liquidez reagem com atraso de vários minutos; com 2 min de atraso "almost none"
+  dos efeitos é significativo. A estratégia deles usa taxa de 0,02% por operação (bem abaixo dos nossos 0,12%): **o ganho deles não vale para nós**;
+  só o sentido (BTC conduz) é usado aqui, como filtro e não como gatilho. Santos, Sebastião & Silva, "Bitcoin and Main Altcoins: Causality and
+  Trading Strategies", *Notas Económicas* 59 (2025), pp. 7–33 (https://ideas.repec.org/a/gmf/journl/y2025i59p733.html): a causalidade
+  BTC → altcoins "more evident in the left tail" (quedas); em alta o BTC é mais receptor. Coeficientes: não sei. Para horizonte de 1 a 4 h: não sei.
+- **Teste:** reconstruir as compras tipo Guardião (memecoin, regime de 24 h e regras de entrada de hoje) em todo o histórico de 5 min das memecoins
+  do universo; saída igual à de hoje; custo 0,12% ida e volta; 3 blocos de tempo iguais. Passa se, nos 3 blocos, as compras barradas tiverem média
+  líquida < 0 e as aceitas tiverem média maior que o conjunto todo, com z ≥ 1,65 (erro-padrão por hora de entrada). Menos de 30 compras barradas
+  por bloco → "não sei". 1 tentativa.
+
+### Ideia 2 — Guardião no fim do dia (18–24 UTC): só o lado do BTC desde a abertura de Nova York
+
+- **Regra:** de 19:30 a 24:00 UTC, uma entrada nova do Guardião só é aceita no sentido de rNY = retorno do BTC perpétuo de 13:30 UTC até a vela de
+  5 min anterior à entrada (rNY > 0 → só compra; rNY < 0 → só venda; |rNY| < 0,12% → sem filtro). Fora dessa janela, nada muda. Fins de semana
+  ficam fora (sem pregão nos EUA). 1 tentativa, limiar = o custo, fixado antes.
+- **Por quê no Guardião:** 26 das 35 operações dele são de 18–23 UTC e ali o resultado é −0,03; é também o segmento mais fraco do v4 ao vivo
+  (52,3%). É a versão cripto do "a primeira meia hora prevê a última": o fim do pregão americano segue o começo.
+- **Dados:** velas de 5 min do BTCUSDT perpétuo (grátis).
+- **Evidência:** Shen, Urquhart & Wang, "Bitcoin intraday time-series momentum", *Financial Review* (2022), https://centaur.reading.ac.uk/100181 —
+  o retorno da primeira meia hora prevê positivamente o da última; as sessões de maior volume ou volatilidade dão a maior previsibilidade; o motor é
+  provisão de liquidez. Coeficientes, R² e custo: não sei (o PDF não abriu neste ambiente). Baur, Cahill, Godfrey & Liu (via Quantpedia,
+  https://quantpedia.com/are-there-any-simple-calendar-effects-in-bitcoin-market/): mais atividade quando a bolsa americana está aberta, mas
+  efeitos de hora do dia **sem padrão persistente** — evidência contra; por isso 1 tentativa e o veredito pelos 3 blocos.
+- **Teste:** reconstruir as entradas do Guardião (memecoins e líderes de 24 h) com hora de entrada de 19:30–24:00 UTC, em dias úteis, em todo o
+  histórico de 5 min; saída de hoje; custo 0,12%; 3 blocos. Passa se as entradas contra rNY tiverem média líquida < 0 e as a favor > as contra,
+  nos 3 blocos, z ≥ 1,65. Ideias 1 e 2 juntas = 2 tentativas (Bonferroni: z ≥ 1,96).
+
+### Não proposta (anotado para não repetir)
+
+- **BTC como gatilho de 1 min para altcoins (lead-lag):** o atraso é de 1–2 min e a estratégia de Kurihara & Matsumoto foi feita com taxa de 0,02%;
+  com 0,12% ida e volta, não paga. Fica só como filtro (Ideia 1).
+- **Saída por tempo sem progresso ("time stop"):** não achei estudo revisado; os backtests públicos são de blog e se contradizem (um relata fator de
+  lucro de 1,03 para 1,27 ao **remover** a saída de 24 h, em 13 dias: https://dev.to/trendrider/13-days-48-trades-breakeven-then-i-fixed-one-thing-1d6j).
+- **Queda de juros em aberto / cascata de liquidação como sinal de repique:** o artigo mais sério achado (arXiv 2607.27070, 7 cascatas do BTCUSDT,
+  juros em aberto de 5 min) diz que não observa liquidações diretamente e usa aproximações; resultados de previsão: não sei. Sem base para uma tentativa.
+
+### O que aprendi hoje sobre o mercado cripto
+
+O mercado segue em regime de baixa com medo extremo (índice 12; 14,8% das moedas subindo em 24 h; BTC 61.805, abaixo das médias de 50 e 200 dias;
+`dados/mercado_agora.json`). O funding do BTC na Hyperliquid está negativo (−6,3%/ano): os vendidos pagam, sem euforia de compra. Do lado do fluxo,
+os ETFs à vista de BTC nos EUA tiveram ~US$ 2,35 bi de saídas líquidas em duas semanas (Crypto Briefing, 18/11/2026,
+https://cryptobriefing.com/bitcoin-etf-outflows-anthropic-ipo/); a sequência de saídas começou em 05/11, antes de a Anthropic fixar a faixa de preço do
+IPO, e o próprio artigo cita um gestor dizendo que as saídas não vêm do IPO. A manchete da Cointelegraph de 20/11 ("IBIT loses record $541M") não pude
+confirmar na busca: número não verificado. A CoinDesk liga o tombo do ouro à fraqueza do BTC (manchete de 20/11; números: não sei). Sobre como o preço se
+forma em minutos: o BTC conduz as altcoins e não o contrário (Granger unidirecional, Kurihara & Matsumoto 2026), as moedas pequenas reagem com atraso
+de minutos e essa transmissão é mais forte nas quedas (Santos et al. 2025) — o que casa com o Guardião ganhando nas vendas e perdendo nas compras num
+mercado que cai.
+
 ## 2026-11-19
 
 **Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/agente_guardiao.json`, 10:18 UTC):
