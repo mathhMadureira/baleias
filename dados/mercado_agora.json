@@ -1,6 +1,6 @@
 {
- "t": 1795198313,
- "hora_utc": "2026-11-20 18:11 UTC",
+ "t": 1795198512,
+ "hora_utc": "2026-11-20 18:15 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 141,
@@ -172,11 +172,17 @@
   -3.71,
   0.12,
   -0.64,
-  -0.49
+  -0.46
  ],
  "contexto": {
-  "t": 1795198313,
+  "t": 1795198512,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795198432,
+    "hora_utc": "20/11 18:13",
+    "titulo": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795196505,
@@ -260,12 +266,6 @@
     "t": 1795180981,
     "hora_utc": "20/11 13:23",
     "titulo": "Morning Minute: Anthropic IPO Pops, Sinks Markets"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795180899,
-    "hora_utc": "20/11 13:21",
-    "titulo": "Lagarde warns Europe could miss chance to unify tokenized markets"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.8,
+   "media_top20_anual_pct": 3.7,
    "principais_anual_pct": {
-    "BTC": 9.2,
-    "ETH": -5.7,
-    "SOL": -5.8
+    "BTC": 7.6,
+    "ETH": -5.9,
+    "SOL": -6.2
    },
    "leitura": "neutro"
   },
