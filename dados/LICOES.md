@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 15:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 15:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 12.4% das moedas subindo em 24 h, 8.5% em 4 h · BTC 24 h -4.72%, 4 h -2.38%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.5%/ano · {'BTC': -9.5, 'ETH': -12.0, 'SOL': -4.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.7%/ano · {'BTC': -9.3, 'ETH': -12.5, 'SOL': -5.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DODO fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · WCT fundo duplo (alta, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 15:32 UTC · Cointelegraph: DBS bets it can lose the deposit and keep the client
 - 📰 20/11 14:38 UTC · CoinDesk: Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians
 - 📰 20/11 14:25 UTC · CoinDesk: U.S. Senate passes bill to ban prediction market bets on war and death
 - 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin hovers just above $61,000 as Anthropic slides after Nasdaq debut
 - 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their wallet keys
 - 📰 20/11 13:29 UTC · Cointelegraph: Here’s what happened in crypto today
-- 📰 20/11 13:23 UTC · Decrypt: Morning Minute: Anthropic IPO Pops, Sinks Markets
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

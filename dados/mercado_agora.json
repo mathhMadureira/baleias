@@ -1,6 +1,6 @@
 {
- "t": 1795188845,
- "hora_utc": "2026-11-20 15:34 UTC",
+ "t": 1795189039,
+ "hora_utc": "2026-11-20 15:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 129,
@@ -172,11 +172,17 @@
   -0.39,
   0.51,
   -0.18,
-  -2.58
+  -2.61
  ],
  "contexto": {
-  "t": 1795188846,
+  "t": 1795189040,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795188750,
+    "hora_utc": "20/11 15:32",
+    "titulo": "DBS bets it can lose the deposit and keep the client"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795185510,
@@ -260,12 +266,6 @@
     "t": 1795173780,
     "hora_utc": "20/11 11:23",
     "titulo": "Coinbase Targets In-House Prediction Markets by First Half of 2027: Report"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795172078,
-    "hora_utc": "20/11 10:54",
-    "titulo": "VanEck to end Gemini ETF custody deals, keeps Coinbase"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -7.5,
+   "media_top20_anual_pct": -7.7,
    "principais_anual_pct": {
-    "BTC": -9.5,
-    "ETH": -12.0,
-    "SOL": -4.6
+    "BTC": -9.3,
+    "ETH": -12.5,
+    "SOL": -5.5
    },
    "leitura": "neutro"
   },
