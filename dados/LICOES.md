@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 11:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 11:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,19 +67,19 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.0% das moedas subindo em 24 h, 23.6% em 4 h · BTC 24 h -3.41%, 4 h 0.07%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': -1.3, 'ETH': 11.0, 'SOL': 4.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': -1.2, 'ETH': 11.0, 'SOL': 4.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENSO fundo duplo (alta, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · LSK topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · THETA topo duplo (baixa, formado)
+- 📰 20/11 11:50 UTC · Decrypt: Bitcoin ETFs Shed $582M in a Day as BTC Drops Below $62K
 - 📰 20/11 11:42 UTC · CoinDesk: Bitcoin drops for third straight day as Asian tech shares slide
 - 📰 20/11 11:31 UTC · Cointelegraph: Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip
 - 📰 20/11 11:23 UTC · Decrypt: Coinbase Targets In-House Prediction Markets by First Half of 2027: Report
 - 📰 20/11 10:54 UTC · Cointelegraph: VanEck to end Gemini ETF custody deals, keeps Coinbase
 - 📰 20/11 10:48 UTC · CoinDesk: Coinbase targets first-half 2027 for its own prediction market contracts
-- 📰 20/11 10:29 UTC · Cointelegraph: Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 8.9 h.
+- ⚠️ **Rotina parada:** sem decisão há 9.0 h.
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
