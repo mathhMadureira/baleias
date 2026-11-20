@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 00:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 00:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 33.9% das moedas subindo em 24 h, 39.1% em 4 h · BTC 24 h -1.22%, 4 h -0.29%.
+- **Amplitude:** 29.6% das moedas subindo em 24 h, 50.4% em 4 h · BTC 24 h -1.22%, 4 h -0.29%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 11.0, 'ETH': 3.6, 'SOL': 0.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 11.0, 'ETH': 3.5, 'SOL': -0.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZRO bandeira de baixa (baixa, CONFIRMOU) · ADA topo duplo (baixa, formado) · DOGE topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ETH fundo duplo (alta, formado) · LINK fundo duplo (alta, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · RENDER OCO invertido (alta, formado)
 - 📰 19/11 23:44 UTC · Cointelegraph: Ledger CTO Charles Guillemet to leave after nine years at company
@@ -79,7 +79,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.5 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.6 h.
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
 - 19/11 21:26 UTC · **BTC venda, MEGA compra, ETH venda** · Retrato 21:18 UTC: 20,5% das 117 moedas sobem em 1 h (mediana −0,51%), 47,0% em 4 h, 30,8% em 24 h; medo e ganância 10. Leitura 21:25 (velas da Binance): BTC 61
@@ -114,7 +114,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 29687 apostas conferidas ao vivo, acerto 54.9%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 29740 apostas conferidas ao vivo, acerto 55.0%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
