@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 04:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 04:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.18** · 39 operações fechadas · 2 abertas
+Carteira **US$ 10.07** · 39 operações fechadas · 2 abertas
 
 - **Total:** 24/39 com lucro (62%), resultado -0.58, média -0.015 por operação.
 - **Últimas 24 h:** 10/16 com lucro, +0.66.
@@ -30,13 +30,13 @@ Carteira **US$ 8.42** · 25 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.44** · 23 operações fechadas · 1 abertas
+Carteira **US$ 9.36** · 24 operações fechadas · 0 abertas
 
-- **Total:** 9/23 com lucro (39%), resultado -0.84, média -0.037 por operação.
-- **Últimas 24 h:** 6/17 com lucro, -1.10.
-- **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 7 op, 29% certas, -0.50 · 00–05 UTC: 1 op, 100% certas, +0.21
-- **Por lado:** venda: 18 op, 33% certas, -1.25 · compra: 5 op, 60% certas, +0.41
-- **Por motivo de saída:** nova: 6 de 6 tempos abaixo da : 2 op, 0% certas, -0.51 · nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
+- **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
+- **Últimas 24 h:** 7/18 com lucro, -0.90.
+- **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 7 op, 29% certas, -0.50 · 00–05 UTC: 2 op, 100% certas, +0.41
+- **Por lado:** venda: 19 op, 37% certas, -1.05 · compra: 5 op, 60% certas, +0.41
+- **Por motivo de saída:** nova: 6 de 6 tempos abaixo da : 2 op, 0% certas, -0.51 · nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.3% das moedas subindo em 24 h, 7.5% em 4 h · BTC 24 h -2.71%, 4 h -0.72%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.2%/ano · {'BTC': 11.0, 'ETH': 7.6, 'SOL': -8.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.2%/ano · {'BTC': 11.0, 'ETH': 7.6, 'SOL': -8.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MEGA topo duplo (baixa, CONFIRMOU) · NIGHT fundo duplo (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · QNT fundo duplo (alta, formado) · QNT ombro-cabeça-ombro (baixa, formado) · SAPIEN fundo duplo (alta, formado) · SOL fundo duplo (alta, formado) · TRUMP fundo duplo (alta, formado)
 - 📰 20/11 04:28 UTC · CoinDesk: VanEck drops Gemini as custodian of its bitcoin, ether and SOL ETFs

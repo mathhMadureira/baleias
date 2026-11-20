@@ -1,6 +1,6 @@
 {
- "t": 1795149521,
- "hora_utc": "2026-11-20 04:38 UTC",
+ "t": 1795149751,
+ "hora_utc": "2026-11-20 04:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,10 +172,10 @@
   -0.92,
   1.12,
   -0.18,
-  -1.04
+  -0.95
  ],
  "contexto": {
-  "t": 1795149522,
+  "t": 1795149752,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -278,7 +278,7 @@
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 7.6,
-    "SOL": -8.6
+    "SOL": -8.3
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.18,
+  "carteira": 10.07,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -497,7 +497,7 @@
     "entrada": 0.05775,
     "agora": 0.05704,
     "resultado_pct": 1.23,
-    "horas_aberta": 1.6,
+    "horas_aberta": 1.7,
     "motivo_de_entrada": "Topo duplo CONFIRMADO em 1 h e topo duplo em 4 h (a favor); 5 de 6 tempos abaixo da MM20 (só 1 min acima); 4 h −1,72%, 1 dia −2,05%; volume 1 min 1,97×; aviso d"
    },
    {
@@ -506,7 +506,7 @@
     "entrada": 0.02394,
     "agora": 0.02355,
     "resultado_pct": 1.63,
-    "horas_aberta": 1.6,
+    "horas_aberta": 1.7,
     "motivo_de_entrada": "Bandeira de baixa CONFIRMADA em 1 h; 5 de 6 tempos abaixo da MM20; 4 h −2,82%, 1 dia −9,94%; aviso do Caçador MUBARAK venda força 85; regime de baixa. v4 sem co"
    }
   ],
@@ -659,7 +659,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 10.18,
+   "carteira": 10.07,
    "n_abertas": 2,
    "abertas": [
     [
@@ -701,15 +701,10 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.44,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "TRUMP",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 23,
+   "carteira": 9.36,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 24,
    "ordem": null
   },
   {
@@ -747,7 +742,7 @@
     "ganho_medio": 0.11,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 10.18
+    "carteira": 10.07
    },
    "openbot_testnet": {
     "ops": 25,
@@ -759,13 +754,13 @@
     "carteira": 8.42
    },
    "treinador": {
-    "ops": 23,
-    "acerto": 0.391,
-    "soma": -0.845,
-    "ganho_medio": 0.164,
+    "ops": 24,
+    "acerto": 0.417,
+    "soma": -0.643,
+    "ganho_medio": 0.168,
     "perda_media": -0.166,
-    "fator_lucro": 0.64,
-    "carteira": 9.44
+    "fator_lucro": 0.72,
+    "carteira": 9.36
    },
    "laboratorio": {
     "ops": 10,
