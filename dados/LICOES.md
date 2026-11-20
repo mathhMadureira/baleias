@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 09:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 09:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 14.9% das moedas subindo em 24 h, 70.2% em 4 h · BTC 24 h -3.13%, 4 h 0.22%.
+- **Amplitude:** 14.9% das moedas subindo em 24 h, 69.4% em 4 h · BTC 24 h -3.13%, 4 h 0.22%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': -12.3, 'ETH': 1.8, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -12.1, 'ETH': 1.8, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ZKP fundo duplo (alta, formado)
 - 📰 20/11 08:18 UTC · Cointelegraph: BlackRock’s IBIT loses record $541M amid Anthropic market debut
