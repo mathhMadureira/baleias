@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 16:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 16:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 9.96** · 50 operações fechadas · 0 abertas
 Carteira **US$ 7.95** · 34 operações fechadas · 3 abertas
 
 - **Total:** 10/34 com lucro (29%), resultado -2.15, média -0.063 por operação.
-- **Últimas 24 h:** 5/20 com lucro, -0.70.
+- **Últimas 24 h:** 4/19 com lucro, -1.31.
 - **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 12–17 UTC: 16 op, 31% certas, -0.92 · 18–23 UTC: 16 op, 31% certas, -0.23
 - **Por lado:** compra: 6 op, 0% certas, -2.62 · venda: 28 op, 36% certas, +0.47
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −0.80% na co: 2 op, 0% certas, -0.33 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.70% na co: 1 op, 0% certas, -0.16 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · fora da lista de posições do c: 6 op, 17% certas, +0.64 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -65,17 +65,17 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 10.4% das moedas subindo em 24 h, 7.4% em 4 h · BTC 24 h -5.75%, 4 h -3.77%.
+- **Amplitude:** 10.3% das moedas subindo em 24 h, 7.4% em 4 h · BTC 24 h -5.75%, 4 h -3.77%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -11.8%/ano · {'BTC': -24.1, 'ETH': -45.2, 'SOL': -13.8} · vendidos pagando (risco de alta forçada).
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.7%/ano · {'BTC': -10.7, 'ETH': -30.3, 'SOL': -4.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FIL topo duplo (baixa, CONFIRMOU) · DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 15:55 UTC · Cointelegraph: US Senate advances prediction market restrictions with DEATH BETS Act
 - 📰 20/11 15:52 UTC · Cointelegraph: Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off
 - 📰 20/11 15:42 UTC · Decrypt: Senate Passes Bill Banning Prediction Market Bets on War, Terrorism and Death
 - 📰 20/11 15:32 UTC · Cointelegraph: DBS bets it can lose the deposit and keep the client
+- 📰 20/11 14:54 UTC · CoinDesk: Former Point72 head of proprietary research says AI could turn data into a new asset class for Wall Street
 - 📰 20/11 14:38 UTC · CoinDesk: Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians
-- 📰 20/11 14:25 UTC · CoinDesk: U.S. Senate passes bill to ban prediction market bets on war and death
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32997 apostas conferidas ao vivo, acerto 55.1%; prevê 134 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32997 apostas conferidas ao vivo, acerto 55.1%; prevê 135 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

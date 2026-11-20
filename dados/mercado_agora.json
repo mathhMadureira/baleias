@@ -1,21 +1,21 @@
 {
- "t": 1795190670,
- "hora_utc": "2026-11-20 16:04 UTC",
+ "t": 1795190873,
+ "hora_utc": "2026-11-20 16:07 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 135,
+  "moedas": 136,
   "subindo_pct": 3.7,
   "mediana_pct": -4.13
  },
  "mercado_4h": {
-  "moedas": 135,
+  "moedas": 136,
   "subindo_pct": 7.4,
-  "mediana_pct": -4.92
+  "mediana_pct": -4.86
  },
  "mercado_24h": {
-  "moedas": 135,
-  "subindo_pct": 10.4,
-  "mediana_pct": -7.72
+  "moedas": 136,
+  "subindo_pct": 10.3,
+  "mediana_pct": -7.68
  },
  "btc": {
   "1h": -3.71,
@@ -172,10 +172,10 @@
   0.51,
   -0.18,
   -3.71,
-  -1.19
+  0.11
  ],
  "contexto": {
-  "t": 1795190671,
+  "t": 1795190874,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -200,6 +200,12 @@
     "t": 1795188750,
     "hora_utc": "20/11 15:32",
     "titulo": "DBS bets it can lose the deposit and keep the client"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795186470,
+    "hora_utc": "20/11 14:54",
+    "titulo": "Former Point72 head of proprietary research says AI could turn data into a new asset class for Wall Street"
    },
    {
     "fonte": "CoinDesk",
@@ -260,12 +266,6 @@
     "t": 1795176614,
     "hora_utc": "20/11 12:10",
     "titulo": "MoonPay Applies for National Trust Bank Charter to Grow Custody and Stablecoin Business"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795175451,
-    "hora_utc": "20/11 11:50",
-    "titulo": "Bitcoin ETFs Shed $582M in a Day as BTC Drops Below $62K"
    }
   ],
   "medo_ganancia": {
@@ -274,13 +274,13 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -11.8,
+   "media_top20_anual_pct": -3.7,
    "principais_anual_pct": {
-    "BTC": -24.1,
-    "ETH": -45.2,
-    "SOL": -13.8
+    "BTC": -10.7,
+    "ETH": -30.3,
+    "SOL": -4.1
    },
-   "leitura": "vendidos pagando (risco de alta forçada)"
+   "leitura": "neutro"
   },
   "tendencia_diaria": {
    "btc": {
@@ -373,9 +373,9 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 55,
+  "apostas": 56,
   "compras": 30,
-  "vendas": 25,
+  "vendas": 26,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -725,12 +725,12 @@
   "z_contra_lab": 1.9,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5175,
-    "n": 25396
+    "acerto": 0.5174,
+    "n": 25451
    },
    "segue_maioria_24h": {
-    "acerto": 0.5196,
-    "n": 30722
+    "acerto": 0.5195,
+    "n": 30659
    }
   },
   "referencia_ganha": [],
