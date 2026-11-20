@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 15:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 15:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -41,13 +41,13 @@ Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.80** · 13 operações fechadas · 2 abertas
+Carteira **US$ 10.63** · 15 operações fechadas · 0 abertas
 
-- **Total:** 5/13 com lucro (38%), resultado -0.53, média -0.041 por operação.
-- **Últimas 24 h:** 5/13 com lucro, -0.53.
-- **Por horário:** 12–17 UTC: 3 op, 0% certas, -0.60 · 18–23 UTC: 10 op, 50% certas, +0.07
-- **Por lado:** compra: 7 op, 29% certas, -0.63 · venda: 6 op, 50% certas, +0.10
-- **Por motivo de saída:** Método fixo H69: v4 cair (p su: 3 op, 0% certas, -0.60 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36
+- **Total:** 7/15 com lucro (47%), resultado +0.63, média +0.042 por operação.
+- **Últimas 24 h:** 7/15 com lucro, +0.63.
+- **Por horário:** 18–23 UTC: 10 op, 50% certas, +0.07 · 12–17 UTC: 5 op, 40% certas, +0.56
+- **Por lado:** compra: 7 op, 29% certas, -0.63 · venda: 8 op, 62% certas, +1.25
+- **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 14.2% das moedas subindo em 24 h, 10.2% em 4 h · BTC 24 h -4.13%, 4 h -1.45%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -8.1%/ano · {'BTC': -9.4, 'ETH': -12.9, 'SOL': -4.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -8.7%/ano · {'BTC': -10.4, 'ETH': -13.6, 'SOL': -4.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DODO fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RENDER topo duplo (baixa, formado) · TIA fundo duplo (alta, formado) · TREE fundo duplo (alta, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 14:38 UTC · CoinDesk: Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians
