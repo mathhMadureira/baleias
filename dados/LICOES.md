@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 07:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 07:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 13.3% das moedas subindo em 24 h, 36.7% em 4 h · BTC 24 h -2.96%, 4 h -0.68%.
+- **Amplitude:** 13.4% das moedas subindo em 24 h, 36.1% em 4 h · BTC 24 h -2.96%, 4 h -0.68%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 0.3, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.9%/ano · {'BTC': -1.4, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** NIGHT topo duplo (baixa, CONFIRMOU) · ERA topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · XRP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** NIGHT topo duplo (baixa, CONFIRMOU) · CAKE fundo duplo (alta, formado) · ERA topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · XRP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 06:24 UTC · Cointelegraph: Anthropic’s $81B IPO draws half the net retail buying of SpaceX’s
 - 📰 20/11 06:12 UTC · CoinDesk: Here's what's crashing gold and likely weighing on bitcoin too
 - 📰 20/11 06:08 UTC · CoinDesk: Anthropic shares may fall 5% at Friday’s open, crypto futures suggest
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 31201 apostas conferidas ao vivo, acerto 55.0%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 31201 apostas conferidas ao vivo, acerto 55.0%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
