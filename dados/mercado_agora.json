@@ -1,21 +1,21 @@
 {
- "t": 1795190043,
- "hora_utc": "2026-11-20 15:54 UTC",
+ "t": 1795190240,
+ "hora_utc": "2026-11-20 15:57 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 134,
+  "moedas": 135,
   "subindo_pct": 3.7,
   "mediana_pct": -3.49
  },
  "mercado_4h": {
-  "moedas": 134,
-  "subindo_pct": 7.5,
-  "mediana_pct": -4.85
+  "moedas": 135,
+  "subindo_pct": 7.4,
+  "mediana_pct": -4.88
  },
  "mercado_24h": {
-  "moedas": 134,
+  "moedas": 135,
   "subindo_pct": 10.4,
-  "mediana_pct": -7.49
+  "mediana_pct": -7.52
  },
  "btc": {
   "1h": -2.51,
@@ -30,6 +30,12 @@
    "4h": -40.46,
    "24h": -66.1,
    "vol": 2.08
+  },
+  {
+   "moeda": "MANTRA",
+   "4h": -14.76,
+   "24h": -17.13,
+   "vol": 4.8
   },
   {
    "moeda": "TRUMP",
@@ -78,12 +84,6 @@
    "4h": -7.32,
    "24h": -9.65,
    "vol": 2.06
-  },
-  {
-   "moeda": "KERNEL",
-   "4h": -7.16,
-   "24h": 33.08,
-   "vol": 3.28
   }
  ],
  "maiores_altas_4h": [
@@ -172,11 +172,17 @@
   -0.39,
   0.51,
   -0.18,
-  -3.5
+  -3.55
  ],
  "contexto": {
-  "t": 1795190043,
+  "t": 1795190241,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795189926,
+    "hora_utc": "20/11 15:52",
+    "titulo": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795189371,
@@ -260,12 +266,6 @@
     "t": 1795174922,
     "hora_utc": "20/11 11:42",
     "titulo": "Bitcoin drops for third straight day as Asian tech shares slide"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795174301,
-    "hora_utc": "20/11 11:31",
-    "titulo": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -7.0,
+   "media_top20_anual_pct": -6.9,
    "principais_anual_pct": {
-    "BTC": -9.3,
-    "ETH": -14.1,
-    "SOL": -6.6
+    "BTC": -8.9,
+    "ETH": -14.8,
+    "SOL": -6.7
    },
    "leitura": "neutro"
   },
@@ -380,9 +380,9 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 97,
+  "apostas": 96,
   "compras": 77,
-  "vendas": 20,
+  "vendas": 19,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -732,12 +732,12 @@
   "z_contra_lab": 1.9,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5174,
-    "n": 25349
+    "acerto": 0.5175,
+    "n": 25364
    },
    "segue_maioria_24h": {
-    "acerto": 0.5199,
-    "n": 30698
+    "acerto": 0.5196,
+    "n": 30690
    }
   },
   "referencia_ganha": [],

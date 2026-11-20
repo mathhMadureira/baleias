@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 15:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 15:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -33,7 +33,7 @@ Carteira **US$ 7.95** · 34 operações fechadas · 3 abertas
 Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
 
 - **Total:** 13/27 com lucro (48%), resultado +0.09, média +0.003 por operação.
-- **Últimas 24 h:** 10/20 com lucro, -0.10.
+- **Últimas 24 h:** 10/19 com lucro, +0.08.
 - **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 10 op, 50% certas, +0.24 · 00–05 UTC: 2 op, 100% certas, +0.41
 - **Por lado:** venda: 22 op, 45% certas, -0.31 · compra: 5 op, 60% certas, +0.41
 - **Por motivo de saída:** nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · nova: 6 de 6 tempos abaixo da : 4 op, 50% certas, -0.01 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24 · entra: 6 de 6 tempos abaixo da: 1 op, 100% certas, +0.24
@@ -65,17 +65,17 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 10.4% das moedas subindo em 24 h, 7.5% em 4 h · BTC 24 h -4.71%, 4 h -3.02%.
+- **Amplitude:** 10.4% das moedas subindo em 24 h, 7.4% em 4 h · BTC 24 h -4.71%, 4 h -3.02%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.0%/ano · {'BTC': -9.3, 'ETH': -14.1, 'SOL': -6.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -6.9%/ano · {'BTC': -8.9, 'ETH': -14.8, 'SOL': -6.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** W topo duplo (baixa, CONFIRMOU) · DODO fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · WCT fundo duplo (alta, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 15:52 UTC · Cointelegraph: Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off
 - 📰 20/11 15:42 UTC · Decrypt: Senate Passes Bill Banning Prediction Market Bets on War, Terrorism and Death
 - 📰 20/11 15:32 UTC · Cointelegraph: DBS bets it can lose the deposit and keep the client
 - 📰 20/11 14:38 UTC · CoinDesk: Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians
 - 📰 20/11 14:25 UTC · CoinDesk: U.S. Senate passes bill to ban prediction market bets on war and death
 - 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin slips to fresh lows near $60,000 as Anthropic slides after Nasdaq debut
-- 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their wallet keys
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32949 apostas conferidas ao vivo, acerto 55.1%; prevê 133 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32949 apostas conferidas ao vivo, acerto 55.1%; prevê 134 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
