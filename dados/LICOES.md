@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 10:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 10:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,19 +67,19 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.4% das moedas subindo em 24 h, 59.3% em 4 h · BTC 24 h -2.52%, 4 h 0.77%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': -2.3, 'ETH': 9.2, 'SOL': 9.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': -2.0, 'ETH': 9.6, 'SOL': 9.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AIGENSYN fundo duplo (alta, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · BLUR topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · THETA topo duplo (baixa, formado)
+- 📰 20/11 10:54 UTC · Cointelegraph: VanEck to end Gemini ETF custody deals, keeps Coinbase
 - 📰 20/11 10:48 UTC · CoinDesk: Coinbase targets first-half 2027 for its own prediction market contracts
 - 📰 20/11 10:29 UTC · Cointelegraph: Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest
 - 📰 20/11 10:07 UTC · Decrypt: CryptoUK Urges FCA Not to Treat DeFi Devs as Regulated by Default
 - 📰 20/11 10:02 UTC · CoinDesk: No special rules for Hyperliquid or other onchain trading platforms, CFTC says
 - 📰 20/11 09:48 UTC · CoinDesk: Cathie Wood's Ark Invest piled into Anthropic IPO, buying $90 million worth of shares
-- 📰 20/11 08:18 UTC · Cointelegraph: BlackRock’s IBIT loses record $541M amid Anthropic market debut
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 8.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 8.1 h.
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
