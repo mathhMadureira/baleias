@@ -1562,3 +1562,25 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   ao vivo (226 sinais em 19/11), o v4 fraco contra ou a favor não tem efeito de sinal consistente (troca de sinal entre replay e ao vivo). Não vira
   hipótese de filtro: a evidência não sustenta, e testar a mesma ideia de novo nesses dados seria ajustar ao que já foi visto. As explosões perderam
   mais que o sorteio no replay (−0,180% × −0,124% em 15 min). Isso é para o juiz da H68, que já está pré-registrado e não muda.
+
+## Hipótese 71: uma conta de demonstração por operador — as decisões de cada agente executadas com ordens reais numa corretora de teste (registrada em 20/11/2026 ~00:10 BRT = 03:10 UTC, antes da primeira ordem)
+- **Dono (19/11):** "vamos dar uma carteira para cada um". Cada operador passa a executar a PRÓPRIA decisão (`dados/decisao_<agente>.json`) numa conta de
+  demonstração de uma corretora (dinheiro fictício), como o chefe faz na Binance testnet (H59). Nunca dinheiro real; duas contas nunca no mesmo robô.
+  Mapa: Laboratório → Gate Futures TestNet (`api-testnet.gateapi.io`); Treinador → Bybit Demo Trading (`api-demo.bybit.com`); Guardião → BingX VST
+  (`open-api-vst.bingx.com`). A ferramenta fala só com esses endereços e PARA em qualquer outro. Chaves só no cofre do OpenBot, nunca no repositório.
+  Bybit e BingX ficam travadas até uma validação só de leitura passar (a chave salva da Bybit é da conta real e não é usada; a BingX recusa o IP).
+- **Execução (`OpenBot/Shared/baleias/operar/corretora.py <agente>`, máquina local, no fim da rotina de operar):** segue as `posicoes` da decisão do
+  agente (válida 75 min, a mesma da carteira simulada): moeda fora da lista ou de lado invertido fecha a mercado; moeda nova abre a mercado com stop
+  (gatilho reduce-only) e alvo (gatilho reduce-only) guardados na corretora, nos valores efetivos de REGRAS.md §5 (`robo_claude_nuvem.parametros`).
+  Stop recusado = fecha na hora. Stop móvel: a cada rodada, com o pico desde a entrada (velas de 1 min da própria corretora), arma em máx(0,5%, alvo ÷ 2)
+  e sobe o stop para entrada ± 70% do pico (nunca desce). Prazo (`max_min`) e 24 h conferidos a cada rodada. Cada moeda entra no máximo uma vez por
+  decisão. Moeda que não existe na corretora, ou cujo lote mínimo passa de 1,5 × a posição, não entra (anotado). Antes de tudo, concilia a conta
+  (posições e gatilhos executados enquanto a máquina dormia; ordem ou posição desconhecida é cancelada/fechada: a conta é só daquele agente).
+- **Tamanho:** carteira própria de US$ 10 dentro da conta de demonstração (contabilidade do robô, como na H59), nocional pela H64 sobre a carteira
+  realizada, alavancagem 10× até 2,5× e 20× acima (rebaixada se a corretora recusar). A conta tem mais dinheiro (ex.: Gate 1.000 USDT), mas o robô usa só
+  a própria carteira, para comparar com a carteira simulada do mesmo agente.
+- **Resultado:** o da corretora (execuções da entrada e da saída menos as taxas cobradas). Estado em `dados/corretora_<agente>.json` no ramo `estado`
+  (só a ferramenta grava). Os preços são os da corretora de teste (livro diferente do mercado real: limite anotado).
+- **Juiz (comparação, não aprova estratégia):** por agente, ao completar 30 operações fechadas na corretora ou em 7 dias (27/11): diferença por
+  operação entre a conta de demonstração e a carteira simulada do mesmo agente nas mesmas decisões (`decisao_t`) = custo real de execução (taxa,
+  escorregamento, stop móvel por rodada). Relatada ao dono. Previsão: não sei.
