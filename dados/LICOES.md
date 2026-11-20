@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 17:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 17:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
 Carteira **US$ 9.96** · 50 operações fechadas · 0 abertas
 
 - **Total:** 30/50 com lucro (60%), resultado -0.04, média -0.001 por operação.
-- **Últimas 24 h:** 11/19 com lucro, +1.00.
+- **Últimas 24 h:** 10/18 com lucro, +0.75.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 20 op, 55% certas, -0.44 · 12–17 UTC: 25 op, 60% certas, +0.51 · 00–05 UTC: 4 op, 100% certas, +0.71
 - **Por lado:** compra: 13 op, 54% certas, -1.29 · venda: 37 op, 62% certas, +1.25
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · Topo duplo CONFIRMADO em 1 h (: 1 op, 0% certas, -0.26 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.26 · Nova, a mercado: bandeira de b: 1 op, 0% certas, -0.24 · Entrada nova: bandeira de baix: 1 op, 0% certas, -0.20 · Nova, a mercado: 6 de 6 tempos: 1 op, 0% certas, -0.19 · Entrada nova: 6 de 6 tempos ab: 1 op, 0% certas, -0.18 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · Mantém: 4 de 6 tempos abaixo d: 2 op, 50% certas, -0.00 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · Aviso de compra do Caçador (5 : 1 op, 100% certas, +0.12 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · Entrada nova: estrutura de bai: 1 op, 100% certas, +0.16 · Mantém: 3 de 6 tempos abaixo (: 1 op, 100% certas, +0.25 · Topo duplo CONFIRMADO em 1 h e: 1 op, 100% certas, +0.26 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · Bandeira de baixa CONFIRMADA e: 1 op, 100% certas, +0.33 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39 · Entrada nova: 5 de 6 tempos ab: 1 op, 100% certas, +0.43
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 12.5% das moedas subindo em 24 h, 5.9% em 4 h · BTC 24 h -5.07%, 4 h -3.72%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.8%/ano · {'BTC': 10.6, 'ETH': -10.1, 'SOL': -12.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.2%/ano · {'BTC': 11.0, 'ETH': -9.8, 'SOL': -11.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CHZ topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 16:55 UTC · Cointelegraph: Bitcoin falls below $60K for first time since July amid broader market selloff
