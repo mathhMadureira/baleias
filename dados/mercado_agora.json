@@ -1,6 +1,6 @@
 {
- "t": 1795200116,
- "hora_utc": "2026-11-20 18:41 UTC",
+ "t": 1795200318,
+ "hora_utc": "2026-11-20 18:45 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 142,
@@ -172,11 +172,17 @@
   -3.71,
   0.12,
   -0.64,
-  -0.56
+  -0.86
  ],
  "contexto": {
-  "t": 1795200117,
+  "t": 1795200319,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795199830,
+    "hora_utc": "20/11 18:37",
+    "titulo": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795198562,
@@ -260,12 +266,6 @@
     "t": 1795181422,
     "hora_utc": "20/11 13:30",
     "titulo": "Bitcoin bots pounced within seconds when researchers exposed their wallet keys"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795181398,
-    "hora_utc": "20/11 13:29",
-    "titulo": "Here’s what happened in crypto today"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.9,
+   "media_top20_anual_pct": 4.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -4.2,
-    "SOL": -5.4
+    "ETH": -4.7,
+    "SOL": -5.2
    },
    "leitura": "neutro"
   },
