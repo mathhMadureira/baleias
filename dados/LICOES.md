@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 16:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 16:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 10.4% das moedas subindo em 24 h, 6.7% em 4 h · BTC 24 h -4.71%, 4 h -3.02%.
+- **Amplitude:** 10.4% das moedas subindo em 24 h, 7.4% em 4 h · BTC 24 h -5.75%, 4 h -3.77%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -4.8%/ano · {'BTC': -13.2, 'ETH': -29.8, 'SOL': -5.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -11.8%/ano · {'BTC': -24.1, 'ETH': -45.2, 'SOL': -13.8} · vendidos pagando (risco de alta forçada).
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · WCT fundo duplo (alta, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** FIL topo duplo (baixa, CONFIRMOU) · DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 15:55 UTC · Cointelegraph: US Senate advances prediction market restrictions with DEATH BETS Act
 - 📰 20/11 15:52 UTC · Cointelegraph: Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off
 - 📰 20/11 15:42 UTC · Decrypt: Senate Passes Bill Banning Prediction Market Bets on War, Terrorism and Death
 - 📰 20/11 15:32 UTC · Cointelegraph: DBS bets it can lose the deposit and keep the client
 - 📰 20/11 14:38 UTC · CoinDesk: Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians
 - 📰 20/11 14:25 UTC · CoinDesk: U.S. Senate passes bill to ban prediction market bets on war and death
-- 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin slips to fresh lows near $60,000 as Anthropic slides after Nasdaq debut
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32969 apostas conferidas ao vivo, acerto 55.1%; prevê 54 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32997 apostas conferidas ao vivo, acerto 55.1%; prevê 134 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
