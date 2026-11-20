@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 02:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 02:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 - **Amplitude:** 12.7% das moedas subindo em 24 h, 16.1% em 4 h · BTC 24 h -2.14%, 4 h -0.48%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': 6.6, 'ETH': -3.0, 'SOL': -12.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.9%/ano · {'BTC': 7.6, 'ETH': -2.8, 'SOL': -11.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DOGE topo duplo (baixa, CONFIRMOU) · MEGA topo duplo (baixa, CONFIRMOU) · PENDLE bandeira de baixa (baixa, CONFIRMOU) · ADA topo duplo (baixa, formado) · ADA fundo duplo (alta, formado) · CAKE fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · QNT fundo duplo (alta, formado) · SOL fundo duplo (alta, formado)
 - 📰 19/11 23:44 UTC · Cointelegraph: Ledger CTO Charles Guillemet to leave after nine years at company
