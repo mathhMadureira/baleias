@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 02:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 02:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 - **Amplitude:** 12.7% das moedas subindo em 24 h, 16.1% em 4 h · BTC 24 h -2.14%, 4 h -0.48%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.6%/ano · {'BTC': 3.4, 'ETH': -2.6, 'SOL': -13.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.0%/ano · {'BTC': 6.0, 'ETH': -1.9, 'SOL': -12.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DOGE topo duplo (baixa, CONFIRMOU) · MEGA topo duplo (baixa, CONFIRMOU) · PENDLE bandeira de baixa (baixa, CONFIRMOU) · ADA topo duplo (baixa, formado) · ADA fundo duplo (alta, formado) · CAKE fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · QNT fundo duplo (alta, formado) · SOL fundo duplo (alta, formado)
 - 📰 19/11 23:44 UTC · Cointelegraph: Ledger CTO Charles Guillemet to leave after nine years at company
@@ -106,12 +106,12 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 - 😴 Sono: reencenei 1728 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - 🛑 Teto de perda do dia (US$ -119.80): sem apostas até 00:00 UTC.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
 **v4 (o cérebro de todos):** 30043 apostas conferidas ao vivo, acerto 55.0%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
