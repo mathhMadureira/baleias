@@ -1,6 +1,6 @@
 {
- "t": 1795180950,
- "hora_utc": "2026-11-20 13:22 UTC",
+ "t": 1795181168,
+ "hora_utc": "2026-11-20 13:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 123,
@@ -172,11 +172,17 @@
   0.66,
   -0.39,
   -0.39,
-  -0.07
+  -0.15
  ],
  "contexto": {
-  "t": 1795180951,
+  "t": 1795181168,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795180981,
+    "hora_utc": "20/11 13:23",
+    "titulo": "Morning Minute: Anthropic IPO Pops, Sinks Markets"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795180309,
@@ -260,12 +266,6 @@
     "t": 1795162722,
     "hora_utc": "20/11 08:18",
     "titulo": "BlackRock’s IBIT loses record $541M amid Anthropic market debut"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795161880,
-    "hora_utc": "20/11 08:04",
-    "titulo": "Wrapped Monero token plunges 99% as issuer-linked wallet sells $13.5 million"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.5,
+   "media_top20_anual_pct": 3.6,
    "principais_anual_pct": {
-    "BTC": -5.5,
-    "ETH": 10.8,
-    "SOL": -3.4
+    "BTC": -6.1,
+    "ETH": 9.8,
+    "SOL": -2.8
    },
    "leitura": "neutro"
   },
