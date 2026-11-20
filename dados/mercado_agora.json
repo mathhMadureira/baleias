@@ -1,21 +1,21 @@
 {
- "t": 1795161712,
- "hora_utc": "2026-11-20 08:01 UTC",
+ "t": 1795161937,
+ "hora_utc": "2026-11-20 08:05 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 40.7,
-  "mediana_pct": -0.09
+  "moedas": 117,
+  "subindo_pct": 40.2,
+  "mediana_pct": -0.1
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 55.1,
-  "mediana_pct": 0.19
+  "moedas": 117,
+  "subindo_pct": 54.7,
+  "mediana_pct": 0.18
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 14.4,
-  "mediana_pct": -3.84
+  "moedas": 117,
+  "subindo_pct": 14.5,
+  "mediana_pct": -3.87
  },
  "btc": {
   "1h": -0.32,
@@ -172,11 +172,17 @@
   0.65,
   0.23,
   -0.32,
-  -0.08
+  -0.1
  ],
  "contexto": {
-  "t": 1795161713,
+  "t": 1795161938,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795161880,
+    "hora_utc": "20/11 08:04",
+    "titulo": "Wrapped Monero token plunges 99% as issuer-linked wallet sells $13.5 million"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795155881,
@@ -260,12 +266,6 @@
     "t": 1795122726,
     "hora_utc": "19/11 21:12",
     "titulo": "Nvidia, AMD, Micron Sink as Anthropic Closes 17% Above IPO Price"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795122102,
-    "hora_utc": "19/11 21:01",
-    "titulo": "MoonPay seeks US bank charter for stablecoin, custody services"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 2.5,
+   "media_top20_anual_pct": 4.6,
    "principais_anual_pct": {
-    "BTC": -25.6,
-    "ETH": -3.2,
-    "SOL": -6.2
+    "BTC": -17.9,
+    "ETH": 5.8,
+    "SOL": 1.6
    },
    "leitura": "neutro"
   },
@@ -728,12 +728,12 @@
   "z_contra_lab": 1.59,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.512,
-    "n": 22802
+    "acerto": 0.5118,
+    "n": 22741
    },
    "segue_maioria_24h": {
-    "acerto": 0.5118,
-    "n": 29434
+    "acerto": 0.5127,
+    "n": 29243
    }
   },
   "referencia_ganha": [],

@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 08:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 08:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,21 +65,21 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 14.4% das moedas subindo em 24 h, 55.1% em 4 h · BTC 24 h -2.95%, 4 h -0.48%.
+- **Amplitude:** 14.5% das moedas subindo em 24 h, 54.7% em 4 h · BTC 24 h -2.95%, 4 h -0.48%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.5%/ano · {'BTC': -25.6, 'ETH': -3.2, 'SOL': -6.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': -17.9, 'ETH': 5.8, 'SOL': 1.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JUP bandeira de baixa (baixa, CONFIRMOU) · CAKE fundo duplo (alta, formado) · ERA topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · NIGHT fundo duplo (alta, formado) · XRP ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 08:04 UTC · CoinDesk: Wrapped Monero token plunges 99% as issuer-linked wallet sells $13.5 million
 - 📰 20/11 06:24 UTC · Cointelegraph: Anthropic’s $81B IPO draws half the net retail buying of SpaceX’s
 - 📰 20/11 06:12 UTC · CoinDesk: Here's what's crashing gold and likely weighing on bitcoin too
 - 📰 20/11 06:08 UTC · CoinDesk: Anthropic shares may fall 5% at Friday’s open, crypto futures suggest
 - 📰 20/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 20/11 05:32 UTC · CoinDesk: This Bitcoin miner sold 267 BTC to clear $22 million debt. It still may not survive
-- 📰 20/11 05:20 UTC · CoinDesk: Big money bought a net $4 billion of bitcoin funds in Q3, ending 9 months of selling
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 5.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 5.2 h.
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 31251 apostas conferidas ao vivo, acerto 55.0%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 31251 apostas conferidas ao vivo, acerto 55.0%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
