@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 17:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 17:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 13.9% das moedas subindo em 24 h, 8.8% em 4 h · BTC 24 h -5.15%, 4 h -3.28%.
+- **Amplitude:** 12.4% das moedas subindo em 24 h, 5.8% em 4 h · BTC 24 h -5.07%, 4 h -3.72%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.7%/ano · {'BTC': 9.0, 'ETH': -13.2, 'SOL': -14.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** CHZ topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TIA fundo duplo (alta, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.6%/ano · {'BTC': 9.4, 'ETH': -11.5, 'SOL': -12.8} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** CHZ topo duplo (baixa, formado) · DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 16:55 UTC · Cointelegraph: Bitcoin falls below $60K for first time since July amid broader market selloff
 - 📰 20/11 16:35 UTC · Decrypt: Bitcoin Breaks Below $60K as Crypto Fear Index Hits Worst Level Since February
 - 📰 20/11 15:55 UTC · Cointelegraph: US Senate advances prediction market restrictions with DEATH BETS Act
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 33212 apostas conferidas ao vivo, acerto 55.4%; prevê 136 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 33238 apostas conferidas ao vivo, acerto 55.3%; prevê 136 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
