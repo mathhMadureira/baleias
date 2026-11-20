@@ -1,6 +1,6 @@
 {
- "t": 1795184589,
- "hora_utc": "2026-11-20 14:23 UTC",
+ "t": 1795184801,
+ "hora_utc": "2026-11-20 14:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.39,
   -0.39,
   0.51,
-  0.12
+  0.3
  ],
  "contexto": {
-  "t": 1795184590,
+  "t": 1795184801,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795184757,
+    "hora_utc": "20/11 14:25",
+    "titulo": "U.S. Senate passes bill to ban prediction market bets on war and death"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795181733,
@@ -260,12 +266,6 @@
     "t": 1795171684,
     "hora_utc": "20/11 10:48",
     "titulo": "Coinbase targets first-half 2027 for its own prediction market contracts"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795170550,
-    "hora_utc": "20/11 10:29",
-    "titulo": "Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 10.2,
+   "media_top20_anual_pct": 10.0,
    "principais_anual_pct": {
-    "BTC": 0.2,
+    "BTC": 0.8,
     "ETH": 11.0,
-    "SOL": 6.1
+    "SOL": 6.9
    },
    "leitura": "neutro"
   },
@@ -454,17 +454,8 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.02,
+  "carteira": 8.84,
   "abertas": [
-   {
-    "moeda": "XLM",
-    "lado": "venda",
-    "entrada": 0.1316,
-    "agora": 0.1319,
-    "resultado_pct": -0.23,
-    "horas_aberta": 0.4,
-    "motivo_de_entrada": "Mantém: 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 d); 4 h −0,75%, 1 d −4,84%. Contra: 5 min +1,00% fora do normal, a 0,69% da mínima de 24 h, sem padrão"
-   },
    {
     "moeda": "BCH",
     "lado": "venda",
@@ -482,16 +473,27 @@
     "resultado_pct": -0.0,
     "horas_aberta": 0.2,
     "motivo_de_entrada": "Entrada nova: 5 de 6 tempos abaixo da MM20 (5 min a 1 d); estrutura de baixa em 15 min e topo duplo em 1 h (não confirmados, a favor); 1 h −0,51%, 4 h −1,34%, 1"
+   },
+   {
+    "moeda": "XLM",
+    "lado": "venda",
+    "entrada": 0.1326,
+    "agora": 0.1319,
+    "resultado_pct": 0.53,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Mantém: 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 d); 4 h −0,90%, 1 d −3,44%. Contra: 1 min e 5 min acima, 1 h +0,76%, aviso do Caçador de explosão de c"
+   },
+   {
+    "moeda": "NEAR",
+    "lado": "venda",
+    "entrada": 3.007,
+    "agora": 2.978,
+    "resultado_pct": 0.96,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Mantém: 3 de 6 tempos abaixo (1 h, 4 h, 1 d); topo duplo em 4 h; 1 d −10,75%; carteiras H63 0×2 vendidas. Contra: 1 h +1,35% de repique, vol 1 min 1,55×, aviso "
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "UNI",
-    "lado": "venda",
-    "resultado_usd": -0.179,
-    "motivo_saida": "stop de segurança −0.8%",
-    "motivo_de_entrada": "A favor: 5 de 6 tempos abaixo da MM20 (só 1 min acima); triângulo de 1 h confirmado para baixo; 1 h −2,39%, 4 h −5,00%, "
-   },
    {
     "moeda": "AAVE",
     "lado": "venda",
@@ -589,13 +591,16 @@
     "resultado_usd": -0.2,
     "motivo_saida": "stop de segurança −0.8%",
     "motivo_de_entrada": "Entrada nova: bandeira de baixa CONFIRMADA em 15 min e em 1 h (a favor); topo duplo em 4 h; 4 de 6 tempos abaixo da MM20"
+   },
+   {
+    "moeda": "XLM",
+    "lado": "venda",
+    "resultado_usd": -0.156,
+    "motivo_saida": "stop de segurança −0.6%",
+    "motivo_de_entrada": "Mantém: 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 d); 4 h −0,75%, 1 d −4,84%. Contra: 5 min +1,00% fora do norma"
    }
   ],
   "licoes_anteriores": [
-   {
-    "t": 1795123568,
-    "texto": "Caderno do chefe (robo_claude): 35 fechadas, p 0,629, G 0,107, L 0,214, E = 0,629 × 0,107 − 0,371 × 0,214 = −0,012 por operação (fator 0,85). Últimas: UNI venda −0,179, AAVE venda +0,252, SKY venda +0,284, SNX compra −0,178, DOT venda +0,262. Caderno: 6 de 6 tempos 71% em 7 (poucas, não sei ainda); padrão a favor 4 de 4 (poucas). As três posições são 6 de 6 a favor; alvo 3 × o stop."
-   },
    {
     "t": 1795124391,
     "texto": "BTC venda +0,153: saiu pelo stop móvel (pico +1,13%, guardou +0,79%); aviso do Caçador + 5 de 6 tempos abaixo + carteiras 0×15 deram certo, mas o alvo de 2,1% não chegou. Carteira simulada, 36 fechadas: p 0,639, G 0,109, L 0,214, E = 0,639 × 0,109 − 0,361 × 0,214 = −0,008 por operação (fator 0,90; era −0,012). Caderno (12 com leitura): padrão a favor 4 de 4 (+0,970), 6 de 6 tempos 71% em 7 — pouca"
@@ -623,6 +628,10 @@
    {
     "t": 1795183745,
     "texto": "Caderno com 21 fechadas com leitura: padrão a favor 7 ops, 71% de acerto, +0,860; sem padrão 9 ops, 56%, −0,154; misto 5 ops, 40%, −0,152. Últimas: DOGE venda +0,261, MUBARAK venda +0,326, XLM venda −0,180, KAVA venda −0,255, MUBARAK venda −0,255. Por isso BCH entra com dois padrões confirmados a favor; SNX entra pela maioria dos tempos (5 de 6), com padrões não confirmados."
+   },
+   {
+    "t": 1795184615,
+    "texto": "Conta de teste, 32 fechadas: p 31,3% de acerto, ganho médio G +0,293, perda média L −0,219, E −0,059 por operação (soma −1,88). Com G/L 1,34 seria preciso acertar ~43% para empatar. Caderno (21 com leitura): padrão a favor 7 ops, 71%, +0,860; sem padrão 9 ops, 56%, −0,154; misto 5 ops, 40%, −0,152 (poucas: não sei ainda). Últimas: KAVA venda −0,255 e MUBARAK venda −0,255 (stop no repique). Nesta r"
    }
   ]
  },
@@ -633,13 +642,9 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.02,
-   "n_abertas": 3,
+   "carteira": 8.84,
+   "n_abertas": 4,
    "abertas": [
-    [
-     "XLM",
-     "venda"
-    ],
     [
      "BCH",
      "venda"
@@ -647,9 +652,17 @@
     [
      "SNX",
      "venda"
+    ],
+    [
+     "XLM",
+     "venda"
+    ],
+    [
+     "NEAR",
+     "venda"
     ]
    ],
-   "n_fechadas": 45,
+   "n_fechadas": 46,
    "ordem": null
   },
   {
@@ -658,15 +671,11 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 7.86,
+   "carteira": 7.76,
    "n_abertas": 4,
    "abertas": [
     [
      "XLM",
-     "venda"
-    ],
-    [
-     "NEAR",
      "venda"
     ],
     [
@@ -676,9 +685,13 @@
     [
      "SNX",
      "venda"
+    ],
+    [
+     "NEAR",
+     "venda"
     ]
    ],
-   "n_fechadas": 32,
+   "n_fechadas": 33,
    "ordem": null
   },
   {
@@ -687,7 +700,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.42,
+   "carteira": 9.35,
    "n_abertas": 3,
    "abertas": [
     [
@@ -712,7 +725,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.04,
+   "carteira": 9.73,
    "n_abertas": 4,
    "abertas": [
     [
@@ -741,38 +754,33 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.06,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "TRUMP",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 40,
+   "carteira": 9.95,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 41,
    "ordem": null
   }
  ],
  "torneio": {
-  "campeao": "guardiao",
+  "campeao": null,
   "placar": {
    "claude": {
-    "ops": 45,
-    "acerto": 0.578,
-    "soma": -0.884,
+    "ops": 46,
+    "acerto": 0.565,
+    "soma": -1.04,
     "ganho_medio": 0.124,
-    "perda_media": -0.216,
-    "fator_lucro": 0.78,
-    "carteira": 9.02
+    "perda_media": -0.213,
+    "fator_lucro": 0.76,
+    "carteira": 8.84
    },
    "openbot_testnet": {
-    "ops": 32,
-    "acerto": 0.312,
-    "soma": -1.879,
+    "ops": 33,
+    "acerto": 0.303,
+    "soma": -2.037,
     "ganho_medio": 0.293,
-    "perda_media": -0.229,
-    "fator_lucro": 0.61,
-    "carteira": 7.86
+    "perda_media": -0.226,
+    "fator_lucro": 0.59,
+    "carteira": 7.76
    },
    "treinador": {
     "ops": 24,
@@ -781,7 +789,7 @@
     "ganho_medio": 0.168,
     "perda_media": -0.166,
     "fator_lucro": 0.72,
-    "carteira": 9.42
+    "carteira": 9.35
    },
    "laboratorio": {
     "ops": 11,
@@ -790,16 +798,16 @@
     "ganho_medio": 0.245,
     "perda_media": -0.198,
     "fator_lucro": 1.03,
-    "carteira": 10.04
+    "carteira": 9.73
    },
    "guardiao": {
-    "ops": 40,
-    "acerto": 0.6,
-    "soma": 0.087,
+    "ops": 41,
+    "acerto": 0.585,
+    "soma": -0.049,
     "ganho_medio": 0.131,
-    "perda_media": -0.191,
-    "fator_lucro": 1.03,
-    "carteira": 10.06
+    "perda_media": -0.188,
+    "fator_lucro": 0.98,
+    "carteira": 9.95
    }
   },
   "vereditos": []
@@ -867,12 +875,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 20:29",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Queda: 17,5% das 114 moedas sobem em 1 h; BTC −0,79% em 1 h, −1,46% em 4 h. Stops fecharam SKY venda −0,45 e SNX compra −0,19. Mantenho DOT vendida +0,31 (5 de 6 tempos abaixo; stop móvel 0,7168). Sem entrada nova: RARE +21,5% em 4 h, ORDI a 1,2% da mínima de 24 h com fundo duplo. Conta de teste: 21"
-  },
-  {
    "hora_utc": "19/11 20:49",
    "de": "claude",
    "para": "sala",
@@ -937,6 +939,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Baixa: 15,3% das 124 moedas sobem em 24 h; repique de 1 h (BTC +0,51%). Mantenho XLM e NEAR vendidas. Entro vendido em BCH (estrutura 15 min e topo duplo 4 h confirmados, v4 0,122; stop 0,8%, alvo 2,4%, 120 min) e SNX (5 de 6 abaixo; stop 0,7%, alvo 2,1%, 120 min). PUMP (Caçador 76) fica fora: SETTL"
+  },
+  {
+   "hora_utc": "20/11 14:26",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Baixa: 16,9% das 124 moedas sobem em 4 h; nenhum v4 com confiança ≥ 0,12. Repique de 1 h (BCH +2,45%, NEAR +1,35%). Mantenho as 4 vendas na conta de teste: XLM −0,06, NEAR −0,10, BCH −0,04, SNX −0,06; US$ 7,86. Sem vaga: INJ (OCO 4 h confirmado) e LSK (topo duplo 4 h confirmado) ficam de fora."
   }
  ]
 }
