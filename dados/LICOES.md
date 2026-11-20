@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 13:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 13:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.80** · 41 operações fechadas · 2 abertas
+Carteira **US$ 9.88** · 41 operações fechadas · 3 abertas
 
 - **Total:** 26/41 com lucro (63%), resultado +0.01, média +0.000 por operação.
 - **Últimas 24 h:** 12/18 com lucro, +1.24.
@@ -17,7 +17,7 @@ Carteira **US$ 9.80** · 41 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.55** · 27 operações fechadas · 2 abertas
+Carteira **US$ 8.42** · 27 operações fechadas · 3 abertas
 
 - **Total:** 10/27 com lucro (37%), resultado -1.33, média -0.049 por operação.
 - **Últimas 24 h:** 6/14 com lucro, +0.25.
@@ -30,7 +30,7 @@ Carteira **US$ 8.55** · 27 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.48** · 24 operações fechadas · 2 abertas
+Carteira **US$ 9.57** · 24 operações fechadas · 2 abertas
 
 - **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
 - **Últimas 24 h:** 7/18 com lucro, -0.90.
@@ -52,7 +52,7 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.43** · 36 operações fechadas · 1 abertas
+Carteira **US$ 10.41** · 36 operações fechadas · 1 abertas
 
 - **Total:** 23/36 com lucro (64%), resultado +0.41, média +0.011 por operação.
 - **Últimas 24 h:** 13/24 com lucro, -0.28.
@@ -67,7 +67,7 @@ Carteira **US$ 10.43** · 36 operações fechadas · 1 abertas
 
 - **Amplitude:** 15.4% das moedas subindo em 24 h, 13.8% em 4 h · BTC 24 h -3.46%, 4 h -0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': -6.4, 'ETH': 8.8, 'SOL': -1.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.9%/ano · {'BTC': -6.6, 'ETH': 8.6, 'SOL': -1.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · INJ ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin hovers just above $61,000 as Anthropic slides 13% after Nasdaq debut
@@ -79,12 +79,12 @@ Carteira **US$ 10.43** · 36 operações fechadas · 1 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 20/11 13:40 UTC · **KAVA venda, MUBARAK venda, XLM venda** · Baixa: 10,6% das 123 moedas sobem em 1 h (mediana −0,95%), 13,8% em 4 h (mediana −1,90%), 15,4% em 24 h (mediana −5,62%); BTC 61.504, 1 h −0,26%, 4 h −0,30%, 24
 - 20/11 13:27 UTC · **KAVA venda, MUBARAK venda** · Baixa: 21,1% das 123 moedas sobem em 1 h (mediana −0,45%), 16,3% em 4 h (mediana −1,71%), 13,8% em 24 h (mediana −5,49%); BTC 61.543, 1 h +0,20%, 4 h −0,38%, 24
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
 - 19/11 21:26 UTC · **BTC venda, MEGA compra, ETH venda** · Retrato 21:18 UTC: 20,5% das 117 moedas sobem em 1 h (mediana −0,51%), 47,0% em 4 h, 30,8% em 24 h; medo e ganância 10. Leitura 21:25 (velas da Binance): BTC 61
-- 19/11 21:10 UTC · **BTC venda, MEGA compra** · Retrato 21:01 UTC: 14,8% das 115 moedas sobem em 1 h (mediana −0,77%), 40,0% em 4 h, 37,4% em 24 h; medo e ganância 10. Varredura 21:08: BTC 15 min −0,51%, 1 h 
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 

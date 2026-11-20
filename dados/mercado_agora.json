@@ -1,6 +1,6 @@
 {
- "t": 1795182010,
- "hora_utc": "2026-11-20 13:40 UTC",
+ "t": 1795182217,
+ "hora_utc": "2026-11-20 13:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 123,
@@ -172,10 +172,10 @@
   0.66,
   -0.39,
   -0.39,
-  -0.18
+  -0.19
  ],
  "contexto": {
-  "t": 1795182011,
+  "t": 1795182218,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.7,
+   "media_top20_anual_pct": 4.9,
    "principais_anual_pct": {
-    "BTC": -6.4,
-    "ETH": 8.8,
-    "SOL": -1.5
+    "BTC": -6.6,
+    "ETH": 8.6,
+    "SOL": -1.8
    },
    "leitura": "neutro"
   },
@@ -454,7 +454,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.8,
+  "carteira": 9.88,
   "abertas": [
    {
     "moeda": "KAVA",
@@ -462,7 +462,7 @@
     "entrada": 0.02802,
     "agora": 0.02803,
     "resultado_pct": -0.04,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "Topo duplo CONFIRMADO em 1 h (a favor); 5 de 6 tempos abaixo da MM20 (só 1 min acima); 1 h −3,42%, 4 h −4,96%, 1 dia −3,62%; regime de baixa (16,3% sobem em 4 h"
    },
    {
@@ -471,8 +471,17 @@
     "entrada": 0.0229,
     "agora": 0.02288,
     "resultado_pct": 0.09,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "6 de 6 tempos abaixo da MM20; topo duplo e estrutura de baixa em 1 h (não confirmados na varredura; o Caçador viu a estrutura de baixa confirmada em 1 h, aviso "
+   },
+   {
+    "moeda": "XLM",
+    "lado": "venda",
+    "entrada": 0.1303,
+    "agora": 0.1306,
+    "resultado_pct": -0.23,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada nova: 6 de 6 tempos abaixo da MM20; bandeira de baixa CONFIRMADA em 15 min (a favor); 15 min −0,76%, 1 h −0,91%, 4 h −1,73%, 1 dia −5,78%; regime de bai"
    }
   ],
   "ultimas_fechadas": [
@@ -584,10 +593,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795121153,
-    "texto": "DOT venda +0,279: saiu pelo stop móvel (pico +1,96%, guardou +1,37%); 5 de 6 tempos abaixo e topo duplo de 4 h deram certo, mas o alvo de 2,4% não chegou em 180 min. Conta de teste, 22 fechadas: p 0,41, G +0,289, L −0,274, E −0,043 (melhorou de −0,059). Caderno (12 com leitura): padrão gráfico a favor 4 de 4 com lucro (+0,970); 6 de 6 tempos 71% (+0,574); movimento de 1 min fora do normal 3 de 3 ("
-   },
-   {
     "t": 1795121732,
     "texto": "Nada fechou desde 17:45. MEGA compra +0,25% na carteira simulada (0,05981 → 0,05988 na conta de teste) com 6 de 6 tempos e volume 2,77×; BTC venda empatada (62.128 → 62.124). Conta de teste, 22 fechadas: p 0,41, G +0,289, L −0,274, E −0,043. Caderno (12 com leitura): padrão a favor 4 de 4 (+0,970), 6 de 6 tempos 71% (7 ops, +0,574) — poucas, não sei ainda."
    },
@@ -614,6 +619,10 @@
    {
     "t": 1795181268,
     "texto": "Conta de teste: DOGE venda +0,329 (prazo 120 min) e MUBARAK venda −0,203 (stop −1% da corretora); na carteira simulada as duas ganharam (DOGE +0,261 pelo stop móvel, MUBARAK +0,326 pelo prazo). Carteira simulada, 15 últimas fechadas: p 0,60, G 0,233, L 0,172, E = 0,60 × 0,233 − 0,40 × 0,172 = +0,071 por operação. Caderno: padrão a favor 5 de 5 certas (+1,295), sem padrão 56% (−0,154), poucas para "
+   },
+   {
+    "t": 1795182000,
+    "texto": "Últimas fechadas: MUBARAK venda +0,326, DOGE venda +0,261, MEGA compra +0,122, LTC venda −0,241, ETH venda −0,188. Carteira simulada em 41 fechadas: p 63,4%, G +0,124, L −0,214, E ≈ +0,0002 por operação (fator de lucro 1,0). O caderno mostra padrão gráfico a favor 5 de 5 ganhas (+1,295) contra 9 sem padrão em 56% (−0,154): por isso a entrada nova vai com padrão confirmado a favor."
    }
   ]
  },
@@ -624,8 +633,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.8,
-   "n_abertas": 2,
+   "carteira": 9.88,
+   "n_abertas": 3,
    "abertas": [
     [
      "KAVA",
@@ -633,6 +642,10 @@
     ],
     [
      "MUBARAK",
+     "venda"
+    ],
+    [
+     "XLM",
      "venda"
     ]
    ],
@@ -645,8 +658,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.55,
-   "n_abertas": 2,
+   "carteira": 8.42,
+   "n_abertas": 3,
    "abertas": [
     [
      "KAVA",
@@ -654,6 +667,10 @@
     ],
     [
      "MUBARAK",
+     "venda"
+    ],
+    [
+     "XLM",
      "venda"
     ]
    ],
@@ -666,7 +683,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.48,
+   "carteira": 9.57,
    "n_abertas": 2,
    "abertas": [
     [
@@ -699,7 +716,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.43,
+   "carteira": 10.41,
    "n_abertas": 1,
    "abertas": [
     [
@@ -721,7 +738,7 @@
     "ganho_medio": 0.124,
     "perda_media": -0.214,
     "fator_lucro": 1.0,
-    "carteira": 9.8
+    "carteira": 9.88
    },
    "openbot_testnet": {
     "ops": 27,
@@ -730,7 +747,7 @@
     "ganho_medio": 0.293,
     "perda_media": -0.267,
     "fator_lucro": 0.69,
-    "carteira": 8.55
+    "carteira": 8.42
    },
    "treinador": {
     "ops": 24,
@@ -739,7 +756,7 @@
     "ganho_medio": 0.168,
     "perda_media": -0.166,
     "fator_lucro": 0.72,
-    "carteira": 9.48
+    "carteira": 9.57
    },
    "laboratorio": {
     "ops": 10,
@@ -757,7 +774,7 @@
     "ganho_medio": 0.133,
     "perda_media": -0.203,
     "fator_lucro": 1.15,
-    "carteira": 10.43
+    "carteira": 10.41
    }
   },
   "vereditos": []
@@ -825,12 +842,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 16:00",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Queda: só 9% das 111 moedas sobem em 1 h; BTC −1,68% em 1 h. Chefe e testnet mantêm AAVE e CAKE vendidas (alvos novos 2,7% e 1,5%) e vendem UNI (5 de 6 tempos, triângulo de 1 h ↓; stop 0,8%, alvo 2,4%) e SKY (6 de 6, 4 h −6,68%; stop 1,2%, alvo 3,6%). Conta de teste: 14 fechadas, p 0,36, E −0,13."
-  },
-  {
    "hora_utc": "19/11 16:12",
    "de": "claude",
    "para": "sala",
@@ -895,6 +906,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Baixa: 16,3% das 123 moedas sobem em 4 h; BTC 24 h −3,52%. Conta de teste: DOGE venda +0,33 (prazo) e MUBARAK venda −0,20 (stop); US$ 8,67. Entro vendido em KAVA (topo duplo confirmado em 1 h, 5 de 6 abaixo; stop 0,9%, alvo 2,7%, 120 min) e MUBARAK (6 de 6 abaixo, aviso do Caçador força 89; stop 0,9"
+  },
+  {
+   "hora_utc": "20/11 13:43",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Baixa: 10,6% das 123 moedas sobem em 1 h; BTC 1 h −0,26%, 24 h −3,46%. Mantenho KAVA vendida (topo duplo 1 h confirmado) e MUBARAK vendida (6 de 6 tempos abaixo). Entro vendido em XLM (6 de 6 abaixo, bandeira de baixa 15 min confirmada; stop 0,6%, alvo 1,8%, 120 min). KERNEL (+51% em 4 h) e NFP (−40"
   }
  ]
 }
