@@ -1,6 +1,6 @@
 {
- "t": 1795145605,
- "hora_utc": "2026-11-20 03:33 UTC",
+ "t": 1795145829,
+ "hora_utc": "2026-11-20 03:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,11 +172,17 @@
   0.26,
   -0.92,
   1.12,
-  -0.35
+  -0.31
  ],
  "contexto": {
-  "t": 1795145606,
+  "t": 1795145830,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795145602,
+    "hora_utc": "20/11 03:33",
+    "titulo": "Institutional Bitcoin ETF holdings clock record quarter after selling streak"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795145550,
@@ -260,12 +266,6 @@
     "t": 1795112449,
     "hora_utc": "19/11 18:20",
     "titulo": "Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795112156,
-    "hora_utc": "19/11 18:15",
-    "titulo": "Trump's Democratic SEC pick suggests tokenization policy deserves full rule process"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 3.0,
+   "media_top20_anual_pct": 3.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.3,
-    "SOL": -4.4
+    "ETH": 5.2,
+    "SOL": -3.5
    },
    "leitura": "neutro"
   },
@@ -475,7 +475,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.7,
+  "carteira": 9.75,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -645,7 +645,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.7,
+   "carteira": 9.75,
    "n_abertas": 2,
    "abertas": [
     [
@@ -733,7 +733,7 @@
     "ganho_medio": 0.11,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 9.7
+    "carteira": 9.75
    },
    "openbot_testnet": {
     "ops": 25,
