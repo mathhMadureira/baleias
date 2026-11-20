@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 14:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 14:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.34** · 44 operações fechadas · 2 abertas
+Carteira **US$ 9.22** · 44 operações fechadas · 2 abertas
 
 - **Total:** 26/44 com lucro (59%), resultado -0.68, média -0.016 por operação.
 - **Últimas 24 h:** 12/21 com lucro, +0.55.
@@ -17,7 +17,7 @@ Carteira **US$ 9.34** · 44 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.13** · 32 operações fechadas · 2 abertas
+Carteira **US$ 8.09** · 32 operações fechadas · 2 abertas
 
 - **Total:** 10/32 com lucro (31%), resultado -1.88, média -0.059 por operação.
 - **Últimas 24 h:** 6/19 com lucro, -0.30.
@@ -30,7 +30,7 @@ Carteira **US$ 8.13** · 32 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.27** · 24 operações fechadas · 2 abertas
+Carteira **US$ 9.30** · 24 operações fechadas · 2 abertas
 
 - **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
 - **Últimas 24 h:** 7/17 com lucro, -0.84.
@@ -41,7 +41,7 @@ Carteira **US$ 9.27** · 24 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.31** · 10 operações fechadas · 2 abertas
+Carteira **US$ 9.82** · 10 operações fechadas · 2 abertas
 
 - **Total:** 5/10 com lucro (50%), resultado +0.07, média +0.007 por operação.
 - **Últimas 24 h:** 5/10 com lucro, +0.07.
@@ -52,7 +52,7 @@ Carteira **US$ 10.31** · 10 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.27** · 37 operações fechadas · 2 abertas
+Carteira **US$ 10.30** · 37 operações fechadas · 2 abertas
 
 - **Total:** 23/37 com lucro (62%), resultado +0.27, média +0.007 por operação.
 - **Últimas 24 h:** 13/25 com lucro, -0.42.
@@ -67,7 +67,7 @@ Carteira **US$ 10.27** · 37 operações fechadas · 2 abertas
 
 - **Amplitude:** 15.2% das moedas subindo em 24 h, 20.0% em 4 h · BTC 24 h -3.37%, 4 h 0.39%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.1%/ano · {'BTC': 1.2, 'ETH': 11.0, 'SOL': 2.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.0%/ano · {'BTC': 1.3, 'ETH': 11.0, 'SOL': 2.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · TIA fundo duplo (alta, formado)
 - 📰 20/11 13:35 UTC · CoinDesk: Live news: Bitcoin hovers just above $61,000 as Anthropic slides after Nasdaq debut
@@ -75,7 +75,7 @@ Carteira **US$ 10.27** · 37 operações fechadas · 2 abertas
 - 📰 20/11 13:29 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 20/11 13:23 UTC · Decrypt: Morning Minute: Anthropic IPO Pops, Sinks Markets
 - 📰 20/11 13:21 UTC · Cointelegraph: Lagarde warns Europe could miss chance to unify tokenized markets
-- 📰 20/11 13:11 UTC · CoinDesk: ECB’s Largarde warns Europe could lose control of growing tokenized asset market
+- 📰 20/11 13:11 UTC · CoinDesk: ECB’s Lagarde warns Europe could lose control of growing tokenized asset market
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
