@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 07:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 07:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.6% das moedas subindo em 24 h, 36.4% em 4 h · BTC 24 h -2.96%, 4 h -0.68%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': -2.8, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.7%/ano · {'BTC': -3.9, 'ETH': 11.0, 'SOL': 10.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** NIGHT topo duplo (baixa, CONFIRMOU) · CAKE fundo duplo (alta, formado) · ERA topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · XRP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 06:24 UTC · Cointelegraph: Anthropic’s $81B IPO draws half the net retail buying of SpaceX’s
