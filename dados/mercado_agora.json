@@ -1,21 +1,21 @@
 {
- "t": 1795176491,
- "hora_utc": "2026-11-20 12:08 UTC",
+ "t": 1795176743,
+ "hora_utc": "2026-11-20 12:12 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 122,
-  "subindo_pct": 12.3,
-  "mediana_pct": -0.79
+  "moedas": 123,
+  "subindo_pct": 12.2,
+  "mediana_pct": -0.78
  },
  "mercado_4h": {
-  "moedas": 122,
-  "subindo_pct": 20.5,
-  "mediana_pct": -1.17
+  "moedas": 123,
+  "subindo_pct": 20.3,
+  "mediana_pct": -1.16
  },
  "mercado_24h": {
-  "moedas": 122,
-  "subindo_pct": 14.8,
-  "mediana_pct": -4.62
+  "moedas": 123,
+  "subindo_pct": 14.6,
+  "mediana_pct": -4.63
  },
  "btc": {
   "1h": -0.39,
@@ -172,11 +172,17 @@
   -0.31,
   0.66,
   -0.39,
-  -0.79
+  -0.61
  ],
  "contexto": {
-  "t": 1795176492,
+  "t": 1795176744,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795176614,
+    "hora_utc": "20/11 12:10",
+    "titulo": "MoonPay Applies for National Trust Bank Charter to Grow Custody and Stablecoin Business"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795175451,
@@ -260,12 +266,6 @@
     "t": 1795155881,
     "hora_utc": "20/11 06:24",
     "titulo": "Anthropic’s $81B IPO draws half the net retail buying of SpaceX’s"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795155135,
-    "hora_utc": "20/11 06:12",
-    "titulo": "Here's what's crashing gold and likely weighing on bitcoin too"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -4.6,
+   "media_top20_anual_pct": -1.2,
    "principais_anual_pct": {
-    "BTC": -5.2,
-    "ETH": 6.7,
-    "SOL": -7.9
+    "BTC": -5.1,
+    "ETH": 9.3,
+    "SOL": -6.6
    },
    "leitura": "neutro"
   },
@@ -735,12 +735,12 @@
   "z_contra_lab": 1.84,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5143,
-    "n": 23318
+    "acerto": 0.5146,
+    "n": 23438
    },
    "segue_maioria_24h": {
-    "acerto": 0.5132,
-    "n": 30051
+    "acerto": 0.5146,
+    "n": 29711
    }
   },
   "referencia_ganha": [],
