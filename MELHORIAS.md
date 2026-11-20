@@ -227,3 +227,7 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   de uma entrada perdia a posição). Agora a posição entra no estado assim que a ordem executa (taxa de entrada não lida = lida na saída, não zero),
   a consulta da ordem tenta de novo e, sem confirmação, avisa com 🚨, e a rodada salva o estado mesmo quando cai. Testes `CorretoraDemoH71` (+2) e
   `MotorDoChefeComRedeFalhando` (3); os 5 falham na versão antiga. 185 testes.
+- 2026-11-20: **Bybit Demo (Treinador) libera as ordens sozinha quando o saldo de demonstração for > 0** (chave da Demo Trading trocada pelo dono; leitura OK em
+  `api-demo.bybit.com`). Com saldo 0 ou sem conseguir ler o saldo, `corretora.py treinador` PARA sem enviar nada; endereço que não é o da demo PARA.
+  A ordem a mercado espera a execução no histórico (até 5 consultas). Relógio acertado pelo horário da Bybit (estava 0,6 s adiantado; um pedido deu
+  "10002 server timestamp"), janela de 20 s e nova tentativa no 10002. BingX segue travada (IP). Testes `BybitLiberaComSaldo`. 188 testes.

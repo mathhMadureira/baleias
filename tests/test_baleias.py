@@ -2589,8 +2589,9 @@ class CorretoraDemoH71(unittest.TestCase):
         c.rodada(d)
         c.rodada(d, agora=time.time() + 6 * 60)
         self.assertIn("prazo", c.e["fechadas"][-1]["motivo_saida"])
-        with self.assertRaises(SystemExit):
-            M.conectar("treinador")                                             # Bybit travada até validar
+        with unittest.mock.patch.object(M, "_chave", lambda n: "x"), unittest.mock.patch.object(M.Bybit, "saldo", lambda self: (0.0, 0.0)):
+            with self.assertRaises(SystemExit):
+                M.conectar("treinador")                                         # Bybit sem saldo de demonstração: PARA sem enviar nada
         with self.assertRaises(SystemExit):
             M.conectar("caçador")
         with unittest.mock.patch.object(M.Gate, "BASE", "https://api.gateio.ws"):
@@ -2672,3 +2673,60 @@ class MotorDoChefeComRedeFalhando(unittest.TestCase):
             with self.assertRaises(T.ErroFuturos):
                 T.rodada()
         self.assertEqual(salvos[-1]["caixa"], 9.5)                                 # antes: nada salvo
+
+
+class BybitLiberaComSaldo(unittest.TestCase):
+    """20/11: a Bybit Demo libera as ordens sozinha quando o saldo de demonstração for > 0; só api-demo.bybit.com."""
+
+    def _mod(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("corretora_bybit", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "corretora.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def test_libera_so_com_saldo_e_so_no_endereco_da_demo(self):
+        M = self._mod()
+        with unittest.mock.patch.object(M, "_chave", lambda n: "x"):
+            with unittest.mock.patch.object(M.Bybit, "saldo", lambda self: (500.0, 500.0)):
+                self.assertIsInstance(M.conectar("treinador"), M.Bybit)
+                with unittest.mock.patch.object(M.Bybit, "BASE", "https://api.bybit.com"):
+                    with self.assertRaises(SystemExit):
+                        M.conectar("treinador")                                 # conta real: PARA
+            def falha(self):
+                raise M.ErroCorretora("10003 API key is invalid")
+            with unittest.mock.patch.object(M.Bybit, "saldo", falha):
+                with self.assertRaises(SystemExit):
+                    M.conectar("treinador")                                     # sem conseguir ler o saldo: PARA
+            self.assertIsInstance(M.conectar("treinador", permitir_travada=True), M.Bybit)   # --validar só lê
+        self.assertEqual(M.BingX.VALIDADO, False)                               # BingX segue travada (IP)
+
+    def test_ordem_a_mercado_espera_a_execucao(self):
+        M = self._mod()
+        respostas = [{"orderId": "7"}, {"list": [{"orderStatus": "New", "cumExecQty": "0"}]},
+                     {"list": [{"orderStatus": "Filled", "cumExecQty": "0.003", "avgPrice": "62000"}]}]
+        with unittest.mock.patch.object(M, "_chave", lambda n: "x"):
+            b = M.Bybit()
+        with unittest.mock.patch.object(b, "_pedir", lambda *a, **k: respostas.pop(0)), \
+                unittest.mock.patch.object(b, "contrato", lambda par: {"mult": 0.001}), unittest.mock.patch.object(M.time, "sleep", lambda s: None):
+            o = b.mercado("BTCUSDT", "compra", 3)
+        self.assertEqual((o["id"], o["preco"], o["contratos"]), ("7", 62000.0, 3))
+
+    def test_horario_fora_da_janela_tenta_de_novo(self):
+        import io
+        M = self._mod()
+        with unittest.mock.patch.object(M, "_chave", lambda n: "x"):
+            b = M.Bybit()
+        b.desvio_ms = 0
+        corpos = [b'{"retCode": 10002, "retMsg": "invalid request, please check your server timestamp"}', b'{"retCode": 0, "result": {"ok": 1}}']
+
+        class R(io.BytesIO):
+            def __enter__(s):
+                return s
+
+            def __exit__(s, *a):
+                return False
+        with unittest.mock.patch.object(M.urllib.request, "urlopen", lambda *a, **k: R(corpos.pop(0))), \
+                unittest.mock.patch.object(b, "_relogio", lambda: 1):
+            self.assertEqual(b._pedir("GET", "/v5/x"), {"ok": 1})
+        self.assertEqual(corpos, [])

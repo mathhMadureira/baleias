@@ -150,17 +150,29 @@ class Gate:
 
 
 class Bybit:
-    """Bybit Demo Trading (v5, linear). TRAVADA (VALIDADO = False) até `--validar` passar com uma chave criada DENTRO do modo Demo
-    (a chave salva em 19/11 é da conta real: não é usada). Escrita pela documentação v5; nenhuma ordem foi testada."""
-    NOME, BASE, VALIDADO = "Bybit Demo Trading", "https://api-demo.bybit.com", False
+    """Bybit Demo Trading (v5, linear, modo de posição única). Chave da Demo Trading trocada em 20/11 (leitura OK em api-demo.bybit.com).
+    VALIDADO = "saldo": as ordens se liberam sozinhas quando o saldo de demonstração for > 0 (o dono põe o saldo fictício pela tela);
+    com saldo 0 a ferramenta PARA sem enviar nada. Escrita pela documentação v5: a 1ª ordem real é a validação (stop recusado = fecha na hora)."""
+    NOME, BASE, VALIDADO = "Bybit Demo Trading", "https://api-demo.bybit.com", "saldo"
 
     def __init__(self, chave=None, segredo=None):
         self.chave = chave if chave is not None else _chave("BYBIT_DEMO_API_KEY")
         self.segredo = segredo if segredo is not None else _chave("BYBIT_DEMO_API_SECRET")
 
-    def _pedir(self, metodo, caminho, params=None, assinado=True):
+    desvio_ms = None                                                     # relógio da Bybit − relógio daqui (como o desvio do testnet.py)
+
+    def _relogio(self):
+        if self.desvio_ms is None:
+            try:
+                with urllib.request.urlopen(f"{self.BASE}/v5/market/time", timeout=15) as r:
+                    self.desvio_ms = int(json.load(r)["result"]["timeNano"]) // 1_000_000 - int(time.time() * 1000)
+            except (OSError, ValueError, KeyError):
+                self.desvio_ms = 0
+        return int(time.time() * 1000) + self.desvio_ms
+
+    def _pedir(self, metodo, caminho, params=None, assinado=True, _de_novo=True):
         params = {k: v for k, v in (params or {}).items() if v is not None}
-        ts, janela = str(int(time.time() * 1000)), "10000"
+        ts, janela = str(self._relogio()), "20000"   # 20/11: "10002 ... server timestamp or recv_window" com a rede lenta daqui
         if metodo == "GET":
             q, corpo = urllib.parse.urlencode(params), b""
             carga = q
@@ -177,6 +189,9 @@ class Bybit:
                 d = json.load(r)
         except (OSError, ValueError) as ex:
             raise ErroCorretora(f"Bybit {caminho}: {type(ex).__name__}") from None
+        if d.get("retCode") == 10002 and _de_novo:                       # horário fora da janela: acerta o relógio e tenta uma vez de novo
+            self.desvio_ms = None
+            return self._pedir(metodo, caminho, params, assinado, _de_novo=False)
         if d.get("retCode") != 0:
             raise ErroCorretora(f"Bybit {caminho}: {d.get('retCode')} {str(d.get('retMsg'))[:150]}")
         return d.get("result") or {}
@@ -209,8 +224,12 @@ class Bybit:
     def mercado(self, par, lado, contratos, reduzir=False):
         o = self._pedir("POST", "/v5/order/create", {"category": "linear", "symbol": par, "side": "Buy" if lado == "compra" else "Sell",
                                                       "orderType": "Market", "qty": self._qtd(par, contratos), "reduceOnly": reduzir, "positionIdx": 0})
-        time.sleep(1)
-        h = (self._pedir("GET", "/v5/order/history", {"category": "linear", "orderId": o["orderId"]}).get("list") or [{}])[0]
+        h = {}
+        for i in range(5):                                               # a execução pode demorar a aparecer no histórico
+            time.sleep(1 + i)
+            h = (self._pedir("GET", "/v5/order/history", {"category": "linear", "orderId": o["orderId"]}).get("list") or [{}])[0]
+            if h.get("orderStatus") in ("Filled", "Cancelled", "Rejected", "PartiallyFilledCanceled") and float(h.get("cumExecQty") or 0) >= 0:
+                break
         mult = self.contrato(par)["mult"]
         return {"id": o["orderId"], "preco": float(h.get("avgPrice") or 0), "contratos": round(float(h.get("cumExecQty") or 0) / mult)}
 
@@ -372,7 +391,15 @@ def conectar(agente, permitir_travada=False):
         raise SystemExit(f"PARE: o endereço de {cls.NOME} ({cls.BASE}) não é o de demonstração. Nada foi feito.")
     if not cls.VALIDADO and not permitir_travada:
         raise SystemExit(f"PARE: {cls.NOME} ainda não foi validada (rode --validar com a chave de demonstração; a ferramenta não envia ordem). Nada foi feito.")
-    return cls()
+    c = cls()
+    if cls.VALIDADO == "saldo" and not permitir_travada:            # libera sozinha quando a conta de demonstração tiver saldo fictício
+        try:
+            total = c.saldo()[0]
+        except (ErroCorretora, KeyError, IndexError, TypeError, ValueError) as ex:
+            raise SystemExit(f"PARE: {cls.NOME}: não consegui ler o saldo de demonstração ({str(ex)[:120]}). Nada foi feito.") from None
+        if total <= 0:
+            raise SystemExit(f"PARE: {cls.NOME} ainda sem saldo de demonstração (0); o dono põe o saldo fictício pela tela. Nada foi feito.")
+    return c
 
 
 # ======================= motor (o mesmo para as três) =======================
@@ -669,7 +696,7 @@ def main():
             total, livre = c.saldo()
             ctr = c.contrato("BTCUSDT")
             print(f"{c.NOME} ({c.BASE}): leitura OK · saldo de demonstração {total:.2f} (livre {livre:.2f}) · BTCUSDT "
-                  f"{'existe' if ctr else 'não encontrado'}{' · já VALIDADA para ordens' if c.VALIDADO else ' · ordens continuam TRAVADAS até a liberação no código'}")
+                  f"{'existe' if ctr else 'não encontrado'}{' · já VALIDADA para ordens' if c.VALIDADO is True else ' · ordens liberam sozinhas quando o saldo for > 0' if c.VALIDADO == 'saldo' else ' · ordens continuam TRAVADAS até a liberação no código'}")
         except (ErroCorretora, KeyError, IndexError, TypeError) as ex:
             print(f"{c.NOME}: validação FALHOU ({str(ex)[:200]}); nada foi feito")
             raise SystemExit(1)
