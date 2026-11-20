@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 12:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 12:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.6% das moedas subindo em 24 h, 17.2% em 4 h · BTC 24 h -3.25%, 4 h -0.52%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.6%/ano · {'BTC': -6.4, 'ETH': 9.5, 'SOL': -5.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.5%/ano · {'BTC': -6.7, 'ETH': 9.3, 'SOL': -5.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ARB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · DASH estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 12:15 UTC · CoinDesk: Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging
