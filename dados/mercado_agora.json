@@ -1,6 +1,6 @@
 {
- "t": 1795189248,
- "hora_utc": "2026-11-20 15:40 UTC",
+ "t": 1795189442,
+ "hora_utc": "2026-11-20 15:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 131,
@@ -172,11 +172,17 @@
   -0.39,
   0.51,
   -0.18,
-  -2.61
+  -2.96
  ],
  "contexto": {
-  "t": 1795189248,
+  "t": 1795189443,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795189371,
+    "hora_utc": "20/11 15:42",
+    "titulo": "Senate Passes Bill Banning Prediction Market Bets on War, Terrorism and Death"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795188750,
@@ -260,12 +266,6 @@
     "t": 1795174301,
     "hora_utc": "20/11 11:31",
     "titulo": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795173780,
-    "hora_utc": "20/11 11:23",
-    "titulo": "Coinbase Targets In-House Prediction Markets by First Half of 2027: Report"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -7.3,
+   "media_top20_anual_pct": -7.8,
    "principais_anual_pct": {
-    "BTC": -8.8,
-    "ETH": -12.4,
-    "SOL": -5.6
+    "BTC": -9.4,
+    "ETH": -12.9,
+    "SOL": -6.2
    },
    "leitura": "neutro"
   },
