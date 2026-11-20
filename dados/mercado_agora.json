@@ -1,21 +1,21 @@
 {
- "t": 1795213098,
- "hora_utc": "2026-11-20 22:18 UTC",
+ "t": 1795213351,
+ "hora_utc": "2026-11-20 22:22 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 143,
+  "moedas": 144,
   "subindo_pct": 94.4,
   "mediana_pct": 2.61
  },
  "mercado_4h": {
-  "moedas": 143,
-  "subindo_pct": 81.1,
-  "mediana_pct": 1.28
+  "moedas": 144,
+  "subindo_pct": 81.2,
+  "mediana_pct": 1.27
  },
  "mercado_24h": {
-  "moedas": 143,
-  "subindo_pct": 11.9,
-  "mediana_pct": -5.4
+  "moedas": 144,
+  "subindo_pct": 11.8,
+  "mediana_pct": -5.41
  },
  "btc": {
   "1h": 1.46,
@@ -172,10 +172,10 @@
   0.24,
   -0.16,
   0.93,
-  0.28
+  0.38
  ],
  "contexto": {
-  "t": 1795213099,
+  "t": 1795213352,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 4.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -25.4,
-    "SOL": -15.8
+    "ETH": -25.8,
+    "SOL": -14.9
    },
    "leitura": "neutro"
   },
@@ -309,6 +309,20 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.1858
+   },
+   {
+    "moeda": "GLMR",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.00652
+   },
+   {
+    "moeda": "GLMR",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.006744
    },
    {
     "moeda": "NEXO",
@@ -705,11 +719,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5168,
-    "n": 26179
+    "n": 26256
    },
    "segue_maioria_24h": {
-    "acerto": 0.5177,
-    "n": 31013
+    "acerto": 0.5181,
+    "n": 30975
    }
   },
   "referencia_ganha": [],
