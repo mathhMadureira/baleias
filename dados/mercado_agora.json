@@ -1,6 +1,6 @@
 {
- "t": 1795150431,
- "hora_utc": "2026-11-20 04:53 UTC",
+ "t": 1795150656,
+ "hora_utc": "2026-11-20 04:57 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,10 +172,10 @@
   -0.92,
   1.12,
   -0.18,
-  -1.11
+  -0.97
  ],
  "contexto": {
-  "t": 1795150432,
+  "t": 1795150657,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 2.0,
+   "media_top20_anual_pct": 2.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.7,
-    "SOL": -7.9
+    "ETH": 8.1,
+    "SOL": -7.7
    },
    "leitura": "neutro"
   },
@@ -475,7 +475,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.16,
+  "carteira": 10.1,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -483,7 +483,7 @@
     "entrada": 0.05775,
     "agora": 0.05691,
     "resultado_pct": 1.45,
-    "horas_aberta": 1.9,
+    "horas_aberta": 2.0,
     "motivo_de_entrada": "Topo duplo CONFIRMADO em 1 h e topo duplo em 4 h (a favor); 5 de 6 tempos abaixo da MM20 (só 1 min acima); 4 h −1,72%, 1 dia −2,05%; volume 1 min 1,97×; aviso d"
    },
    {
@@ -492,7 +492,7 @@
     "entrada": 0.02394,
     "agora": 0.02355,
     "resultado_pct": 1.63,
-    "horas_aberta": 1.9,
+    "horas_aberta": 2.0,
     "motivo_de_entrada": "Bandeira de baixa CONFIRMADA em 1 h; 5 de 6 tempos abaixo da MM20; 4 h −2,82%, 1 dia −9,94%; aviso do Caçador MUBARAK venda força 85; regime de baixa. v4 sem co"
    }
   ],
@@ -645,7 +645,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 10.16,
+   "carteira": 10.1,
    "n_abertas": 2,
    "abertas": [
     [
@@ -728,7 +728,7 @@
     "ganho_medio": 0.11,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 10.16
+    "carteira": 10.1
    },
    "openbot_testnet": {
     "ops": 25,
