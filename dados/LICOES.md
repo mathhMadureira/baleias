@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 16:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 16:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 11.7% das moedas subindo em 24 h, 8.0% em 4 h · BTC 24 h -5.45%, 4 h -2.79%.
+- **Amplitude:** 10.9% das moedas subindo em 24 h, 7.3% em 4 h · BTC 24 h -6.15%, 4 h -3.98%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -4.2%/ano · {'BTC': -7.7, 'ETH': -22.0, 'SOL': -6.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.5%/ano · {'BTC': -7.3, 'ETH': -20.3, 'SOL': -6.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TIA fundo duplo (alta, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 15:55 UTC · Cointelegraph: US Senate advances prediction market restrictions with DEATH BETS Act
 - 📰 20/11 15:52 UTC · Cointelegraph: Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off
 - 📰 20/11 15:42 UTC · Decrypt: Senate Passes Bill Banning Prediction Market Bets on War, Terrorism and Death
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 33010 apostas conferidas ao vivo, acerto 55.1%; prevê 136 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 33110 apostas conferidas ao vivo, acerto 55.3%; prevê 136 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
