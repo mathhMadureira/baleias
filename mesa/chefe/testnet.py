@@ -183,8 +183,21 @@ def fechar(f, e, par, motivo):
     anotar(e, f"⚠️ {par}: fechei a mercado mas a corretora ainda não mostra a execução; confiro na próxima rodada")
 
 
+def faltam(pos):
+    """REGRAS §5: entrada nova só com stop_pct, alvo_pct e max_min escritos na decisão (nada de stop padrão)."""
+    return [k for k in ("stop_pct", "alvo_pct", "max_min") if not isinstance((pos or {}).get(k), (int, float))]
+
+
+def saidas_desde(e, decisao_t):
+    """20/11: moedas que saíram (stop, alvo, prazo) DEPOIS desta decisão não reentram até uma decisão nova. Antes a lista de 'já entrou' era tirada
+    das abertas depois da conciliação: o stop executado tirava a moeda da lista e ela voltava na mesma rodada, com stop padrão e sem alvo nem prazo."""
+    return {f.get("moeda") for f in e.get("fechadas") or [] if float(f.get("saida_t") or 0) >= float(decisao_t)
+            and "inverteu o lado" not in str(f.get("motivo") or "")}
+
+
 def abrir(f, e, par, lado, motivo, decisao_t, prm=None):
-    prm = prm or {}
+    if not prm or faltam(prm):
+        return anotar(e, f"{par[:-4]}: a decisão não traz stop_pct, alvo_pct e max_min; não entra (REGRAS §5)")
     noc, alav = tamanho(realizado(e))                         # H64: a fatia cresce com o ganho e encolhe na perda (10× até 2,5×, 20× acima)
     try:
         f.regras(par)
@@ -213,7 +226,7 @@ def abrir(f, e, par, lado, motivo, decisao_t, prm=None):
     qtd = f.quantidade(par, noc, px)
     if qtd * px > MAX_NOC * noc:
         return anotar(e, f"{par[:-4]}: nocional mínimo da corretora ({qtd * px:.2f}) passa de {MAX_NOC} × a posição ({noc:.2f}); não entra (H59)")
-    sp = prm.get("stop_pct") or stop_da_moeda(velas(f, par, "15m", 120))      # H62: stop escolhido pelo chefe, se veio na decisão
+    sp = prm["stop_pct"]                                                        # REGRAS §5: o stop da decisão (sem stop padrão)
     d = f.ordem_mercado(par, "BUY" if lado == "compra" else "SELL", qtd)
     st = {"executada": 0.0}
     for _ in range(6):
@@ -413,14 +426,14 @@ def rodada():
             querer = {}
             for x in d.get("posicoes") or []:
                 par = str(x.get("moeda", "")).upper()
-                prm = parametros(x)                          # os mesmos limites da nuvem (H62) e o alvo maior do dono (19/11: alvo ≥ 3 × stop e ≥ 1%)
+                prm = parametros(x) if not faltam(x) else None   # REGRAS §5: sem stop, alvo e prazo na decisão = não entra (abrir anota)
                 querer[par if par.endswith("USDT") else par + "USDT"] = (x.get("lado"), x.get("motivo", ""), prm)
             for par in (list(e["abertas"]) if nova else []):
                 if par not in querer:
                     fechar(f, e, par, "fora da lista de posições do chefe")
                 elif querer[par][0] != e["abertas"][par]["lado"]:
                     fechar(f, e, par, "o chefe inverteu o lado")
-            ja = set(e.get("decisao_entradas", {}).get("pares", []))
+            ja = set(e.get("decisao_entradas", {}).get("pares", [])) | saidas_desde(e, d["t"])   # 20/11: saiu pelo stop/alvo/prazo = não reentra
             if guarda == "normal" and patrimonio(f, e) >= PISO:
                 for par, (lado, motivo, prm) in querer.items():
                     if par not in e["abertas"] and par not in ja and len(e["abertas"]) < MAX_POS and lado in ("compra", "venda"):

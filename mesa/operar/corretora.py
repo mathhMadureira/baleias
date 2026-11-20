@@ -37,6 +37,19 @@ class ErroCorretora(Exception):
     pass
 
 
+def faltam(pos):
+    """REGRAS §5: entrada nova só com stop_pct, alvo_pct e max_min escritos na decisão (nada de stop padrão)."""
+    return [k for k in ("stop_pct", "alvo_pct", "max_min") if not isinstance((pos or {}).get(k), (int, float))]
+
+
+def saidas_desde(e, decisao_t):
+    """20/11: moedas que saíram (stop, alvo, prazo) DEPOIS desta decisão: não reentram até uma decisão nova.
+    Antes a lista de 'já entrou' era tirada das abertas depois da conciliação, e a moeda que o stop fechara voltava na mesma rodada.
+    A inversão de lado pedida pela própria decisão não bloqueia."""
+    return {f.get("moeda") for f in e.get("fechadas") or [] if float(f.get("saida_t") or 0) >= float(decisao_t)
+            and "inverteu o lado" not in str(f.get("motivo_saida") or f.get("motivo") or "")}
+
+
 def _chave(nome):
     return (COFRE / nome).read_text().strip()
 
@@ -56,7 +69,7 @@ class Gate:
         b = json.dumps(corpo) if corpo is not None else ""
         h = {"Accept": "application/json", "Content-Type": "application/json"}
         if assinado:
-            ts = str(int(time.time()))
+            ts = str(int(time.time() + self.desvio_s()))                   # 20/11: relógio do servidor (o NTP desta máquina está desligado)
             texto = "\n".join([metodo, self.PRE + caminho, q, hashlib.sha512(b.encode()).hexdigest(), ts])
             h.update({"KEY": self.chave, "Timestamp": ts, "SIGN": hmac.new(self.segredo.encode(), texto.encode(), hashlib.sha512).hexdigest()})
         url = self.BASE + self.PRE + caminho + ("?" + q if q else "")
@@ -68,6 +81,17 @@ class Gate:
             raise ErroCorretora(f"Gate {metodo} {caminho}: HTTP {ex.code} {ex.read()[:200].decode(errors='ignore')}") from None
         except (OSError, ValueError) as ex:
             raise ErroCorretora(f"Gate {metodo} {caminho}: {type(ex).__name__}") from None
+
+    _desvio = None
+
+    def desvio_s(self):
+        if self._desvio is None:
+            try:
+                with urllib.request.urlopen(self.BASE + self.PRE + "/spot/time", timeout=15) as r:
+                    self._desvio = json.load(r)["server_time"] / 1000 - time.time()
+            except (OSError, ValueError, KeyError, TypeError):
+                self._desvio = 0.0
+        return self._desvio
 
     @staticmethod
     def simbolo(par):
@@ -278,7 +302,7 @@ class Bybit:
 class BingX:
     """BingX VST (futuros perpétuos de demonstração, open-api-vst.bingx.com). TRAVADA (VALIDADO = False) até `--validar` passar
     (19/11: a chave recusou o IP desta máquina; a mesma chave vale na conta real, então o endereço é conferido antes de tudo)."""
-    NOME, BASE, VALIDADO = "BingX VST", "https://open-api-vst.bingx.com", False
+    NOME, BASE, VALIDADO = "BingX VST", "https://open-api-vst.bingx.com", "saldo"   # 20/11: IP liberado e leitura OK (100.000 VST)
 
     def __init__(self, chave=None, segredo=None):
         self.chave = chave if chave is not None else _chave("BINGX_VST_API_KEY")
@@ -288,10 +312,22 @@ class BingX:
     def simbolo(par):
         return par[:-4] + "-USDT"
 
-    def _pedir(self, metodo, caminho, params=None, assinado=True):
+    desvio_ms = None                                                     # 20/11: relógio daqui 3,85 s atrás do da BingX ("109400 timestamp is invalid")
+
+    def _relogio(self):
+        if self.desvio_ms is None:
+            try:
+                with urllib.request.urlopen(f"{self.BASE}/openApi/swap/v2/server/time", timeout=15) as r:
+                    self.desvio_ms = int(json.load(r)["data"]["serverTime"]) - int(time.time() * 1000)
+            except (OSError, ValueError, KeyError, TypeError):
+                self.desvio_ms = 0
+        return int(time.time() * 1000) + self.desvio_ms
+
+    def _pedir(self, metodo, caminho, params=None, assinado=True, _de_novo=True):
         params = {k: v for k, v in (params or {}).items() if v is not None}
         if assinado:
-            params["timestamp"] = str(int(time.time() * 1000))
+            params["timestamp"] = str(self._relogio())
+            params["recvWindow"] = "20000"
         q = "&".join(f"{k}={params[k]}" for k in sorted(params))
         if assinado:
             q += "&signature=" + hmac.new(self.segredo.encode(), q.encode(), hashlib.sha256).hexdigest()
@@ -301,6 +337,9 @@ class BingX:
                 d = json.load(r)
         except (OSError, ValueError) as ex:
             raise ErroCorretora(f"BingX {caminho}: {type(ex).__name__}") from None
+        if d.get("code") == 109400 and _de_novo and assinado:             # horário fora da janela: mede o relógio de novo e tenta uma vez
+            self.desvio_ms = None
+            return self._pedir(metodo, caminho, {k: v for k, v in params.items() if k not in ("timestamp", "recvWindow")}, assinado, _de_novo=False)
         if d.get("code") not in (0, None):
             raise ErroCorretora(f"BingX {caminho}: {d.get('code')} {str(d.get('msg'))[:150]}")
         return d.get("data")
@@ -482,9 +521,10 @@ class Conta:
         self.anotar(f"⚠️ {par}: fechei a mercado mas a corretora ainda não mostra a saída; confiro na próxima rodada")
 
     def abrir(self, par, lado, motivo, decisao_t, prm):
+        falta = faltam(prm)
+        if falta:
+            return self.anotar(f"{par[:-4]}: a decisão não traz {', '.join(falta)}; não entra (REGRAS §5)")
         prm = parametros(prm)                                              # REGRAS.md §5: os valores que a execução aplica
-        if "stop_pct" not in prm:
-            return self.anotar(f"{par[:-4]}: sem stop_pct na decisão; não entra (REGRAS §5)")
         ctr = self.c.contrato(par)
         if not ctr:
             return self.anotar(f"{par[:-4]}: não existe em {self.c.NOME}; não entra (H71)")
@@ -639,7 +679,7 @@ class Conta:
                     self.fechar(par, "fora da lista de posições do agente")
                 elif querer[par][0] != self.e["abertas"][par]["lado"]:
                     self.fechar(par, "o agente inverteu o lado")
-            ja = set(self.e.get("decisao_entradas", {}).get("pares", []))
+            ja = set(self.e.get("decisao_entradas", {}).get("pares", [])) | saidas_desde(self.e, d["t"])
             if self.patrimonio() >= PISO:
                 for par, (lado, motivo, x) in querer.items():
                     if par not in self.e["abertas"] and par not in ja and len(self.e["abertas"]) < MAX_POS and lado in ("compra", "venda"):

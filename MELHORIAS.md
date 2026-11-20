@@ -231,3 +231,10 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   `api-demo.bybit.com`). Com saldo 0 ou sem conseguir ler o saldo, `corretora.py treinador` PARA sem enviar nada; endereço que não é o da demo PARA.
   A ordem a mercado espera a execução no histórico (até 5 consultas). Relógio acertado pelo horário da Bybit (estava 0,6 s adiantado; um pedido deu
   "10002 server timestamp"), janela de 20 s e nova tentativa no 10002. BingX segue travada (IP). Testes `BybitLiberaComSaldo`. 188 testes.
+- 2026-11-20: **conta de teste do chefe reabria a moeda que o stop acabara de fechar** (achado da rotina do chefe). A lista "já entrou nesta decisão" era tirada
+  das abertas DEPOIS da conciliação; com o stop executado, a moeda sumia dela e voltava na mesma rodada, com stop padrão de −3,3% e sem alvo nem prazo.
+  Agora, em `mesa/chefe/testnet.py` e em `mesa/operar/corretora.py`: moeda que saiu por stop, alvo ou prazo depois da decisão não reentra até uma decisão
+  nova (a inversão de lado pedida pela decisão continua valendo), e entrada sem `stop_pct`, `alvo_pct` e `max_min` na decisão não acontece (REGRAS §5;
+  o stop padrão saiu). **Relógio:** BingX VST recusava por horário ("109400"; máquina 3,85 s atrás, NTP desligado): BingX e Gate passam a usar o horário
+  do servidor delas (BingX com recvWindow de 20 s e nova tentativa no 109400); a Binance já usava. BingX validada (leitura OK, 100.000 VST) e liberada
+  com a mesma regra da Bybit (ordens só com saldo de demonstração > 0). Testes `SemReentradaESemParametroPadrao` (falham no código antigo). 191 testes.

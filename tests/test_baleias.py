@@ -2656,7 +2656,7 @@ class MotorDoChefeComRedeFalhando(unittest.TestCase):
         T = self._mod()
         e, f = self._e(), self._falsa(T, falhas=99)
         with mock.patch.object(T.time, "sleep", lambda s: None):
-            T.abrir(f, e, "AUSDT", "venda", "t", 1, {"stop_pct": 0.01})
+            T.abrir(f, e, "AUSDT", "venda", "t", 1, {"stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 60})
         self.assertEqual((e["abertas"], e["caixa"]), ({}, 10.0))
         self.assertIn("🚨", e["eventos"][0]["texto"])
 
@@ -2699,7 +2699,7 @@ class BybitLiberaComSaldo(unittest.TestCase):
                 with self.assertRaises(SystemExit):
                     M.conectar("treinador")                                     # sem conseguir ler o saldo: PARA
             self.assertIsInstance(M.conectar("treinador", permitir_travada=True), M.Bybit)   # --validar só lê
-        self.assertEqual(M.BingX.VALIDADO, False)                               # BingX segue travada (IP)
+        self.assertEqual(M.BingX.VALIDADO, "saldo")                             # BingX: IP liberado em 20/11, mesma regra de saldo
 
     def test_ordem_a_mercado_espera_a_execucao(self):
         M = self._mod()
@@ -2730,3 +2730,69 @@ class BybitLiberaComSaldo(unittest.TestCase):
                 unittest.mock.patch.object(b, "_relogio", lambda: 1):
             self.assertEqual(b._pedir("GET", "/v5/x"), {"ok": 1})
         self.assertEqual(corpos, [])
+
+
+class SemReentradaESemParametroPadrao(unittest.TestCase):
+    """20/11 (rotina do chefe): o stop executou, a moeda seguia na decisão e o testnet.py a REABRIA na mesma rodada, com stop padrão de −3,3% e sem
+    alvo nem prazo. Agora: saiu por stop/alvo/prazo depois da decisão = não reentra até decisão nova; sem stop, alvo e prazo na decisão = não entra."""
+
+    def _mod(self, rel, nome):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(nome, pathlib.Path(__file__).resolve().parent.parent / "mesa" / rel)
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def test_chefe_nao_reabre_depois_do_stop(self):
+        import time
+        from unittest import mock
+        T = self._mod("chefe/testnet.py", "testnet_reentrada")
+        agora = time.time()
+        pos = {"moeda": "AUSDT", "lado": "venda", "motivo": "t", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 120}
+        d = {"t": agora - 600, "posicoes": [pos]}
+        e = {"caixa": 10.0, "patrimonio": 9.9, "abertas": {"AUSDT": {"moeda": "AUSDT", "lado": "venda", "entrada_t": agora - 500, "gasto": 2.5}}, "fechadas": [], "eventos": []}
+
+        def conciliar(f, e_):                                                    # a corretora executou o stop enquanto a rodada não olhava
+            if "AUSDT" not in e_["abertas"]:
+                return
+            p = e_["abertas"].pop("AUSDT")
+            e_["fechadas"].append({**p, "saida_t": agora - 60, "motivo": "stop de segurança −1,00% na corretora"})
+            e_["caixa"] += 2.4
+        abertos = []
+        with mock.patch.object(T, "conectar", lambda: None), mock.patch.object(T, "carregar", lambda: e), mock.patch.object(T, "conciliar", conciliar), \
+                mock.patch.object(T, "mover_stops", lambda f, e_: None), mock.patch.object(T, "patrimonio", lambda f, e_: 9.9), \
+                mock.patch.object(T.GD, "checar", lambda e_, a: "normal"), mock.patch.object(T, "decisao_do_chefe", lambda: d), \
+                mock.patch.object(T, "abrir", lambda *a: abertos.append(a[2])), mock.patch.object(T, "salvar", lambda e_: None), \
+                mock.patch.object(T, "publicar", lambda: "x"):
+            T.rodada()
+            self.assertEqual(abertos, [])                                         # antes: ["AUSDT"]
+            d2 = {"t": agora - 5, "posicoes": [pos]}                              # decisão NOVA depois da saída: pode entrar
+            with mock.patch.object(T, "decisao_do_chefe", lambda: d2):
+                T.rodada()
+            self.assertEqual(abertos, ["AUSDT"])
+
+    def test_chefe_nao_abre_sem_parametros_da_decisao(self):
+        T = self._mod("chefe/testnet.py", "testnet_param")
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "eventos": []}
+        T.abrir(None, e, "AUSDT", "compra", "t", 1, {"stop_pct": 0.01})           # sem alvo e prazo: nem fala com a corretora
+        self.assertEqual(e["abertas"], {})
+        self.assertIn("não entra", e["eventos"][0]["texto"])
+        self.assertEqual(T.faltam({"stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 60}), [])
+
+    def test_operador_nao_reabre_e_nao_entra_sem_parametros(self):
+        import time
+        M = self._mod("operar/corretora.py", "corretora_reentrada")
+        f = CorretoraDemoH71._falsa(None, M)
+        c = CorretoraDemoH71._conta(None, M, f)
+        pos = {"moeda": "AUSDT", "lado": "compra", "motivo": "t", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 120}
+        d = {"t": time.time() - 30, "posicoes": [pos]}
+        c.rodada(d)
+        q = c.e["abertas"]["AUSDT"]["contratos"]
+        f.gat.pop(c.e["abertas"]["AUSDT"]["stop"]["id"])                         # o stop executou na corretora
+        del f.pos["AUSDT"]
+        f.ex.append({"par": "AUSDT", "t_ms": time.time() * 1000, "contratos": -q, "preco": 99.0, "taxa": 0.001})
+        c.rodada(d)
+        self.assertEqual(c.e["abertas"], {})                                      # a mesma decisão não reabre
+        c.rodada({"t": time.time() + 1, "posicoes": [{"moeda": "BUSDT", "lado": "venda", "motivo": "t", "stop_pct": 0.01}]})
+        self.assertEqual(c.e["abertas"], {})                                      # sem alvo e prazo: não entra
+        self.assertIn("não entra", c.e["eventos"][0]["texto"])
