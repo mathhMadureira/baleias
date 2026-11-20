@@ -1,21 +1,21 @@
 {
- "t": 1795196506,
- "hora_utc": "2026-11-20 17:41 UTC",
+ "t": 1795196709,
+ "hora_utc": "2026-11-20 17:45 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 137,
-  "subindo_pct": 19.0,
+  "moedas": 138,
+  "subindo_pct": 18.8,
   "mediana_pct": -0.55
  },
  "mercado_4h": {
-  "moedas": 137,
-  "subindo_pct": 6.6,
-  "mediana_pct": -3.96
+  "moedas": 138,
+  "subindo_pct": 6.5,
+  "mediana_pct": -3.97
  },
  "mercado_24h": {
-  "moedas": 137,
+  "moedas": 138,
   "subindo_pct": 10.9,
-  "mediana_pct": -8.45
+  "mediana_pct": -8.4
  },
  "btc": {
   "1h": 0.1,
@@ -172,11 +172,17 @@
   -0.18,
   -3.71,
   0.12,
-  -0.77
+  -0.87
  ],
  "contexto": {
-  "t": 1795196507,
+  "t": 1795196710,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795196505,
+    "hora_utc": "20/11 17:41",
+    "titulo": "Wrapped Monero Token Collapses 99% After $13 Million Hack Blamed on Web Host"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795193751,
@@ -260,12 +266,6 @@
     "t": 1795180899,
     "hora_utc": "20/11 13:21",
     "titulo": "Lagarde warns Europe could miss chance to unify tokenized markets"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795180309,
-    "hora_utc": "20/11 13:11",
-    "titulo": "ECB’s Lagarde warns Europe could lose control of growing tokenized asset market"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 1.2,
+   "media_top20_anual_pct": 0.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -7.7,
-    "SOL": -9.3
+    "ETH": -7.8,
+    "SOL": -9.8
    },
    "leitura": "neutro"
   },
@@ -373,8 +373,8 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 146,
-  "compras": 123,
+  "apostas": 147,
+  "compras": 124,
   "vendas": 23,
   "mais_confiantes_venda": [
    {
@@ -726,11 +726,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5179,
-    "n": 25775
+    "n": 25864
    },
    "segue_maioria_24h": {
-    "acerto": 0.5178,
-    "n": 31025
+    "acerto": 0.518,
+    "n": 30989
    }
   },
   "referencia_ganha": [],
