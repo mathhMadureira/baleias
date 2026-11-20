@@ -1,6 +1,6 @@
 {
- "t": 1795151999,
- "hora_utc": "2026-11-20 05:19 UTC",
+ "t": 1795152223,
+ "hora_utc": "2026-11-20 05:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 118,
@@ -172,11 +172,17 @@
   1.12,
   -0.18,
   -1.03,
-  0.05
+  0.16
  ],
  "contexto": {
-  "t": 1795152000,
+  "t": 1795152224,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795152051,
+    "hora_utc": "20/11 05:20",
+    "titulo": "Big money bought a net $4 billion of bitcoin funds in Q3, ending 9 months of selling"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795150688,
@@ -260,12 +266,6 @@
     "t": 1795118022,
     "hora_utc": "19/11 19:53",
     "titulo": "Sky's USDS stablecoin shrinks 35% as $1.5 billion exits reserves after illicit-finance report"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795115304,
-    "hora_utc": "19/11 19:08",
-    "titulo": "Bitcoin Enters Death Cross as Anthropic IPO Fails to Lift Wall Street"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -2.7,
+   "media_top20_anual_pct": -2.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 6.0,
-    "SOL": -6.6
+    "ETH": 6.5,
+    "SOL": -6.5
    },
    "leitura": "neutro"
   },
