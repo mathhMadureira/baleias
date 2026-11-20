@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 06:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 07:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 13.4% das moedas subindo em 24 h, 57.1% em 4 h · BTC 24 h -2.73%, 4 h 0.16%.
+- **Amplitude:** 15.0% das moedas subindo em 24 h, 35.0% em 4 h · BTC 24 h -2.66%, 4 h -0.35%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.4%/ano · {'BTC': 11.0, 'ETH': 8.6, 'SOL': 5.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 10.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · SAPIEN fundo duplo (alta, CONFIRMOU) · SAPIEN estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ALT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · XRP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** NIGHT topo duplo (baixa, CONFIRMOU) · ERA topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · XRP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 06:24 UTC · Cointelegraph: Anthropic’s $81B IPO draws half the net retail buying of SpaceX’s
 - 📰 20/11 06:12 UTC · CoinDesk: Here's what's crashing gold and likely weighing on bitcoin too
 - 📰 20/11 06:08 UTC · CoinDesk: Anthropic shares may fall 5% at Friday’s open, crypto futures suggest
@@ -79,7 +79,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 4.1 h.
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 31084 apostas conferidas ao vivo, acerto 55.0%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 31118 apostas conferidas ao vivo, acerto 55.0%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
