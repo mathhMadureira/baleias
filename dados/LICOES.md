@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 01:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 01:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 25.0% das moedas subindo em 24 h, 54.3% em 4 h · BTC 24 h -1.27%, 4 h 0.56%.
+- **Amplitude:** 24.8% das moedas subindo em 24 h, 54.7% em 4 h · BTC 24 h -1.27%, 4 h 0.56%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.9%/ano · {'BTC': 11.0, 'ETH': 4.4, 'SOL': -8.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 11.0, 'ETH': 4.9, 'SOL': -9.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETH estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ADA topo duplo (baixa, formado) · ADA fundo duplo (alta, formado) · CAKE fundo duplo (alta, formado) · DOGE topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY fundo duplo (alta, formado) · SOL fundo duplo (alta, formado)
 - 📰 19/11 23:44 UTC · Cointelegraph: Ledger CTO Charles Guillemet to leave after nine years at company
@@ -114,7 +114,7 @@ Carteira **US$ 10.08** · 33 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 29875 apostas conferidas ao vivo, acerto 55.0%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 29875 apostas conferidas ao vivo, acerto 55.0%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
