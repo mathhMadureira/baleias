@@ -1,21 +1,21 @@
 {
- "t": 1795163073,
- "hora_utc": "2026-11-20 08:24 UTC",
+ "t": 1795163300,
+ "hora_utc": "2026-11-20 08:28 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 46.6,
-  "mediana_pct": -0.01
+  "moedas": 119,
+  "subindo_pct": 47.1,
+  "mediana_pct": 0.0
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 67.8,
-  "mediana_pct": 0.48
+  "moedas": 119,
+  "subindo_pct": 68.1,
+  "mediana_pct": 0.51
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 14.4,
-  "mediana_pct": -3.85
+  "moedas": 119,
+  "subindo_pct": 14.3,
+  "mediana_pct": -3.83
  },
  "btc": {
   "1h": -0.18,
@@ -172,11 +172,17 @@
   0.65,
   0.23,
   -0.32,
-  0.01
+  0.22
  ],
  "contexto": {
-  "t": 1795163074,
+  "t": 1795163301,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795162722,
+    "hora_utc": "20/11 08:18",
+    "titulo": "BlackRock’s IBIT loses record $541M amid Anthropic market debut"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795161880,
@@ -260,12 +266,6 @@
     "t": 1795127762,
     "hora_utc": "19/11 22:36",
     "titulo": "Citi Says Customers Are Responsible When AI Banking Agents Go Rogue—Even After a Hack"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795127118,
-    "hora_utc": "19/11 22:25",
-    "titulo": "Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express"
    }
   ],
   "medo_ganancia": {
@@ -274,9 +274,9 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 6.6,
+   "media_top20_anual_pct": 7.1,
    "principais_anual_pct": {
-    "BTC": -12.4,
+    "BTC": -11.6,
     "ETH": 11.0,
     "SOL": 11.0
    },
@@ -728,12 +728,12 @@
   "z_contra_lab": 1.59,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5116,
-    "n": 22825
+    "acerto": 0.5118,
+    "n": 22887
    },
    "segue_maioria_24h": {
-    "acerto": 0.5106,
-    "n": 29407
+    "acerto": 0.5116,
+    "n": 29215
    }
   },
   "referencia_ganha": [],
