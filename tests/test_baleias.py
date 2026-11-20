@@ -2766,7 +2766,7 @@ class SemReentradaESemParametroPadrao(unittest.TestCase):
                 mock.patch.object(T, "publicar", lambda: "x"):
             T.rodada()
             self.assertEqual(abertos, [])                                         # antes: ["AUSDT"]
-            d2 = {"t": agora - 5, "posicoes": [pos]}                              # decisão NOVA depois da saída: pode entrar
+            d2 = {"t": agora - 5, "leitura_t": agora - 30, "posicoes": [pos]}    # decisão NOVA, lida depois da saída: pode entrar
             with mock.patch.object(T, "decisao_do_chefe", lambda: d2):
                 T.rodada()
             self.assertEqual(abertos, ["AUSDT"])
@@ -2796,3 +2796,15 @@ class SemReentradaESemParametroPadrao(unittest.TestCase):
         c.rodada({"t": time.time() + 1, "posicoes": [{"moeda": "BUSDT", "lado": "venda", "motivo": "t", "stop_pct": 0.01}]})
         self.assertEqual(c.e["abertas"], {})                                      # sem alvo e prazo: não entra
         self.assertIn("não entra", c.e["eventos"][0]["texto"])
+
+    def test_stop_entre_a_leitura_e_a_decisao_nao_reabre(self):
+        """20/11 14:21 UTC: o stop de NEAR executou às 14:21:26, depois da leitura (14:20) e antes da decisão (14:23:35); NEAR reabriu."""
+        T = self._mod("chefe/testnet.py", "testnet_janela")
+        M = self._mod("operar/corretora.py", "corretora_janela")
+        e = {"fechadas": [{"moeda": "NEARUSDT", "saida_t": 1795184486, "motivo": "stop de segurança na corretora"},
+                          {"moeda": "AUSDT", "saida_t": 1795184486, "motivo": "o chefe inverteu o lado"}]}
+        d = {"t": 1795184615, "leitura_t": 1795184400}
+        for mod in (T, M):
+            self.assertEqual(mod.saidas_desde(e, d), {"NEARUSDT"})            # antes: comparava com t (publicação) e deixava NEAR reabrir
+            self.assertEqual(mod.saidas_desde(e, {"t": 1795184615}), {"NEARUSDT"})   # sem leitura_t: decisão − 15 min
+            self.assertEqual(mod.saidas_desde(e, {"t": 1795184615 + 1000, "leitura_t": 1795184615 + 900}), set())   # decisão nova: pode entrar

@@ -188,11 +188,14 @@ def faltam(pos):
     return [k for k in ("stop_pct", "alvo_pct", "max_min") if not isinstance((pos or {}).get(k), (int, float))]
 
 
-def saidas_desde(e, decisao_t):
-    """20/11: moedas que saíram (stop, alvo, prazo) DEPOIS desta decisão não reentram até uma decisão nova. Antes a lista de 'já entrou' era tirada
-    das abertas depois da conciliação: o stop executado tirava a moeda da lista e ela voltava na mesma rodada, com stop padrão e sem alvo nem prazo."""
-    return {f.get("moeda") for f in e.get("fechadas") or [] if float(f.get("saida_t") or 0) >= float(decisao_t)
-            and "inverteu o lado" not in str(f.get("motivo") or "")}
+def saidas_desde(e, d):
+    """20/11: moedas que saíram (stop, alvo, prazo) depois da LEITURA em que a decisão se baseou não reentram até uma decisão nova.
+    (1ª versão comparava com a hora da publicação: o stop de NEAR executou às 14:21:26, entre a leitura das 14:20 e a decisão das 14:23:35, e a moeda
+    reabriu.) Sem leitura_t na decisão, vale a decisão − 15 min. A inversão de lado pedida pela decisão não bloqueia."""
+    d = d if isinstance(d, dict) else {"t": d}
+    corte = float(d.get("leitura_t") or float(d.get("t") or 0) - 900)
+    return {f.get("moeda") for f in e.get("fechadas") or [] if float(f.get("saida_t") or 0) >= corte
+            and "inverteu o lado" not in str(f.get("motivo_saida") or f.get("motivo") or "")}
 
 
 def abrir(f, e, par, lado, motivo, decisao_t, prm=None):
@@ -433,7 +436,7 @@ def rodada():
                     fechar(f, e, par, "fora da lista de posições do chefe")
                 elif querer[par][0] != e["abertas"][par]["lado"]:
                     fechar(f, e, par, "o chefe inverteu o lado")
-            ja = set(e.get("decisao_entradas", {}).get("pares", [])) | saidas_desde(e, d["t"])   # 20/11: saiu pelo stop/alvo/prazo = não reentra
+            ja = set(e.get("decisao_entradas", {}).get("pares", [])) | saidas_desde(e, d)   # 20/11: saiu pelo stop/alvo/prazo = não reentra
             if guarda == "normal" and patrimonio(f, e) >= PISO:
                 for par, (lado, motivo, prm) in querer.items():
                     if par not in e["abertas"] and par not in ja and len(e["abertas"]) < MAX_POS and lado in ("compra", "venda"):

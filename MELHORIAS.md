@@ -238,3 +238,6 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   o stop padrão saiu). **Relógio:** BingX VST recusava por horário ("109400"; máquina 3,85 s atrás, NTP desligado): BingX e Gate passam a usar o horário
   do servidor delas (BingX com recvWindow de 20 s e nova tentativa no 109400); a Binance já usava. BingX validada (leitura OK, 100.000 VST) e liberada
   com a mesma regra da Bybit (ordens só com saldo de demonstração > 0). Testes `SemReentradaESemParametroPadrao` (falham no código antigo). 191 testes.
+- 2026-11-20: **brecha no conserto de c8b4c2f5** (achado do chefe): o stop de NEAR executou às 14:21:26 UTC, entre a leitura (14:20) e a publicação da decisão
+  (14:23:35); a regra comparava com a hora da publicação e NEAR reabriu. Agora `chefe/gravar.py` e `operar.py gravar` gravam `leitura_t` (hora da leitura/raspagem)
+  na decisão, e `testnet.py`/`corretora.py` não reabrem moeda que saiu por stop, alvo ou prazo depois dela (sem `leitura_t`: decisão − 15 min). 192 testes.

@@ -427,6 +427,9 @@ def cmd_escolher(agente):
 def cmd_gravar(agente, arq):
     d = json.loads(Path(arq).read_text())
     d = {"t": int(time.time()), **{k: v for k, v in d.items() if k != "t"}}
+    esc = sorted(glob.glob(str(AQUI / "rodadas" / f"*-{agente}-escolha.json")))
+    lt = (ler_json_arq(esc[-1]) or {}).get("t") if esc else None
+    d["leitura_t"] = int(lt) if lt and d["t"] - lt <= 900 else d["t"] - 900   # 20/11: o stop pode executar entre a leitura e a publicação
     erros = []
     if not str(d.get("leitura", "")).strip():
         erros.append("falta a leitura")

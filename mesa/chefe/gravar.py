@@ -177,6 +177,7 @@ def main():
         return 2
     d = json.loads(Path(sys.argv[1]).read_text())
     d = {"t": int(agora), **{k: v for k, v in d.items() if k != "t"}}
+    d["leitura_t"] = int(float(lei.get("t") or agora))          # 20/11: hora da leitura (o stop pode executar entre a leitura e a publicação)
     for k, padrao in (("fechar", []), ("motivos_fechar", {}), ("respostas", []), ("mensagens", []), ("ordens", [])):
         d.setdefault(k, padrao)
     erros = validar(d, lei.get("pendentes_do_dono") or [])
