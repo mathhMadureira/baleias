@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 16:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 16:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 10.3% das moedas subindo em 24 h, 7.4% em 4 h · BTC 24 h -5.75%, 4 h -3.77%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.7%/ano · {'BTC': -10.7, 'ETH': -30.3, 'SOL': -4.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.9%/ano · {'BTC': -7.7, 'ETH': -24.9, 'SOL': -3.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FIL topo duplo (baixa, CONFIRMOU) · DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 15:55 UTC · Cointelegraph: US Senate advances prediction market restrictions with DEATH BETS Act
