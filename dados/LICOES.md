@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 13:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 13:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.01** · 41 operações fechadas · 0 abertas
+Carteira **US$ 10.01** · 41 operações fechadas · 2 abertas
 
 - **Total:** 26/41 com lucro (63%), resultado +0.01, média +0.000 por operação.
 - **Últimas 24 h:** 12/18 com lucro, +1.24.
@@ -17,7 +17,7 @@ Carteira **US$ 10.01** · 41 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.67** · 27 operações fechadas · 0 abertas
+Carteira **US$ 8.63** · 27 operações fechadas · 2 abertas
 
 - **Total:** 10/27 com lucro (37%), resultado -1.33, média -0.049 por operação.
 - **Últimas 24 h:** 6/14 com lucro, +0.25.
@@ -30,7 +30,7 @@ Carteira **US$ 8.67** · 27 operações fechadas · 0 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.36** · 24 operações fechadas · 2 abertas
+Carteira **US$ 9.49** · 24 operações fechadas · 2 abertas
 
 - **Total:** 10/24 com lucro (42%), resultado -0.64, média -0.027 por operação.
 - **Últimas 24 h:** 7/18 com lucro, -0.90.
@@ -52,40 +52,39 @@ Carteira **US$ 10.07** · 10 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.29** · 35 operações fechadas · 2 abertas
+Carteira **US$ 10.43** · 36 operações fechadas · 1 abertas
 
-- **Total:** 22/35 com lucro (63%), resultado +0.29, média +0.008 por operação.
-- **Últimas 24 h:** 12/23 com lucro, -0.40.
-- **Por horário:** 18–23 UTC: 26 op, 62% certas, -0.03 · 12–17 UTC: 7 op, 57% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.22
-- **Por lado:** compra: 8 op, 50% certas, -0.49 · venda: 27 op, 67% certas, +0.78
-- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin, tendência de 24 h de: 2 op, 0% certas, -0.28 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin; 24 h -1,61%, 4 h -1,: 1 op, 100% certas, +0.10 · memecoin; 4 h -3,89%, 24 h -1,: 1 op, 100% certas, +0.12 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
-- **Moedas que mais perderam (≥ 3 op):** TRUMP -0.20 (5 op) · DOGE -0.10 (4 op) · PENGU +0.18 (7 op) · PUMP +0.75 (5 op)
-- **Moedas que mais ganharam (≥ 3 op):** PUMP +0.75 (5 op) · PENGU +0.18 (7 op) · DOGE -0.10 (4 op) · TRUMP -0.20 (5 op)
+- **Total:** 23/36 com lucro (64%), resultado +0.41, média +0.011 por operação.
+- **Últimas 24 h:** 13/24 com lucro, -0.28.
+- **Por horário:** 18–23 UTC: 26 op, 62% certas, -0.03 · 00–05 UTC: 2 op, 100% certas, +0.22 · 12–17 UTC: 8 op, 62% certas, +0.23
+- **Por lado:** compra: 8 op, 50% certas, -0.49 · venda: 28 op, 68% certas, +0.90
+- **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin, tendência de 24 h de: 2 op, 0% certas, -0.28 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin; 24 h -1,61%, 4 h -1,: 1 op, 100% certas, +0.10 · memecoin; 4 h -3,89%, 24 h -1,: 1 op, 100% certas, +0.12 · memecoin; 24 h -10,38%, 4 h -4: 1 op, 100% certas, +0.12 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
+- **Moedas que mais perderam (≥ 3 op):** DOGE -0.10 (4 op) · TRUMP -0.08 (6 op) · PENGU +0.18 (7 op) · PUMP +0.75 (5 op)
+- **Moedas que mais ganharam (≥ 3 op):** PUMP +0.75 (5 op) · PENGU +0.18 (7 op) · TRUMP -0.08 (6 op) · DOGE -0.10 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 13.8% das moedas subindo em 24 h, 16.3% em 4 h · BTC 24 h -3.52%, 4 h -0.38%.
+- **Amplitude:** 15.4% das moedas subindo em 24 h, 13.8% em 4 h · BTC 24 h -3.46%, 4 h -0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -6.4, 'ETH': 9.2, 'SOL': -2.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -6.1, 'ETH': 9.3, 'SOL': -1.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ONDO ombro-cabeça-ombro (baixa, CONFIRMOU) · ZEN ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · INJ ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 13:30 UTC · CoinDesk: Bitcoin bots pounced within seconds when researchers exposed their keys
 - 📰 20/11 13:23 UTC · Decrypt: Morning Minute: Anthropic IPO Pops, Sinks Markets
 - 📰 20/11 13:21 UTC · Cointelegraph: Lagarde warns Europe could miss chance to unify tokenized markets
 - 📰 20/11 13:11 UTC · CoinDesk: ECB’s Largarde warns Europe could lose control of growing tokenized asset market
 - 📰 20/11 12:15 UTC · CoinDesk: Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging
 - 📰 20/11 12:10 UTC · Decrypt: MoonPay Applies for National Trust Bank Charter to Grow Custody and Stablecoin Business
-- 📰 20/11 11:50 UTC · Decrypt: Bitcoin ETFs Shed $582M in a Day as BTC Drops Below $62K
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 10.6 h.
+- 20/11 13:27 UTC · **KAVA venda, MUBARAK venda** · Baixa: 21,1% das 123 moedas sobem em 1 h (mediana −0,45%), 16,3% em 4 h (mediana −1,71%), 13,8% em 24 h (mediana −5,49%); BTC 61.543, 1 h +0,20%, 4 h −0,38%, 24
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
 - 19/11 21:26 UTC · **BTC venda, MEGA compra, ETH venda** · Retrato 21:18 UTC: 20,5% das 117 moedas sobem em 1 h (mediana −0,51%), 47,0% em 4 h, 30,8% em 24 h; medo e ganância 10. Leitura 21:25 (velas da Binance): BTC 61
 - 19/11 21:10 UTC · **BTC venda, MEGA compra** · Retrato 21:01 UTC: 14,8% das 115 moedas sobem em 1 h (mediana −0,77%), 40,0% em 4 h, 37,4% em 24 h; medo e ganância 10. Varredura 21:08: BTC 15 min −0,51%, 1 h 
-- 19/11 20:55 UTC · **BTC venda, MEGA compra** · Queda: só 10,4% das 115 moedas sobem em 1 h (mediana −0,84%), 25,2% em 4 h, 41,7% em 24 h. BTC −0,76% em 1 h, −1,68% em 4 h, a 62.124 (volume 4 h 1,56×). Univer
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -114,7 +113,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 2 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32431 apostas conferidas ao vivo, acerto 55.2%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32497 apostas conferidas ao vivo, acerto 55.1%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
