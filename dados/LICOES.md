@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 10:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 10:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 14.0% das moedas subindo em 24 h, 40.5% em 4 h · BTC 24 h -3.47%, 4 h -0.08%.
+- **Amplitude:** 13.2% das moedas subindo em 24 h, 24.0% em 4 h · BTC 24 h -3.47%, 4 h -0.44%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.9%/ano · {'BTC': -13.9, 'ETH': -1.5, 'SOL': 5.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': -5.8, 'ETH': 5.1, 'SOL': 8.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AIGENSYN fundo duplo (alta, CONFIRMOU) · LSK topo duplo (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** AIGENSYN fundo duplo (alta, CONFIRMOU) · INIT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · LSK topo duplo (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 10:02 UTC · CoinDesk: No special rules for Hyperliquid or other onchain trading platforms, CFTC says
 - 📰 20/11 09:48 UTC · CoinDesk: Cathie Wood's Ark Invest piled into Anthropic IPO, buying $90 million worth of shares
 - 📰 20/11 08:18 UTC · Cointelegraph: BlackRock’s IBIT loses record $541M amid Anthropic market debut
 - 📰 20/11 08:04 UTC · CoinDesk: Wrapped Monero token plunges 99% as issuer-linked wallet sells $13.5 million
 - 📰 20/11 08:03 UTC · Cointelegraph: SEC charges eight firms over fake crypto platforms tied to $37M fraud
 - 📰 20/11 06:24 UTC · Cointelegraph: Anthropic’s $81B IPO draws half the net retail buying of SpaceX’s
-- 📰 20/11 06:12 UTC · CoinDesk: Here's what's crashing gold and likely weighing on bitcoin too
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 31548 apostas conferidas ao vivo, acerto 55.1%; prevê 52 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 31566 apostas conferidas ao vivo, acerto 55.1%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
