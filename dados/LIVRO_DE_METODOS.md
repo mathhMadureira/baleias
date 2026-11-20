@@ -12,12 +12,12 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | demark_td9_baixa | promissor | 66.7% | 18 | 43.7%–83.7% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
 | raschke_graal_baixa | promissor | 59.4% | 64 | 47.1%–70.5% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
-| connors_8020_alta | promissor | 54.5% | 11 | 28.0%–78.7% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | williams_volb_baixa | promissor | 52.9% | 153 | 45.1%–60.7% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
-| reversao_queda | promissor | 51.5% | 68 | 39.8%–62.9% | H14: queda anormal de 1 h → sobe |
 | williams_wr_alta | promissor | 51.3% | 39 | 36.2%–66.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
+| reversao_queda | promissor | 50.7% | 69 | 39.2%–62.2% | H14: queda anormal de 1 h → sobe |
 | tres_corvos | promissor | 50.3% | 394 | 45.3%–55.2% | H6: três corvos → sobe (efeito pequeno) |
-| vortice_invertido | reprovado | 49.1% | 411 | 44.3%–54.0% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| connors_8020_alta | reprovado | 50.0% | 12 | 25.4%–74.6% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
+| vortice_invertido | reprovado | 49.0% | 412 | 44.2%–53.8% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 49.0% | 51 | 35.9%–62.3% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | demark_td9_alta | reprovado | 49.0% | 51 | 35.9%–62.3% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | williams_volb_alta | reprovado | 44.5% | 119 | 35.9%–53.5% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
