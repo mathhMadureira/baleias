@@ -1,6 +1,6 @@
 {
- "t": 1795210563,
- "hora_utc": "2026-11-20 21:36 UTC",
+ "t": 1795210813,
+ "hora_utc": "2026-11-20 21:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 142,
@@ -172,11 +172,17 @@
   -1.26,
   0.24,
   -0.16,
-  0.67
+  0.87
  ],
  "contexto": {
-  "t": 1795210564,
+  "t": 1795210814,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795210562,
+    "hora_utc": "20/11 21:36",
+    "titulo": "Claude Claims Historic Math Breakthrough One Day After Anthropic IPO"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795207014,
@@ -260,12 +266,6 @@
     "t": 1795188750,
     "hora_utc": "20/11 15:32",
     "titulo": "DBS bets it can lose the deposit and keep the client"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795186470,
-    "hora_utc": "20/11 14:54",
-    "titulo": "Former Point72 head of proprietary research says AI could turn data into a new asset class for Wall Street"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 0.5,
+   "media_top20_anual_pct": 1.0,
    "principais_anual_pct": {
-    "BTC": 9.3,
-    "ETH": -36.0,
-    "SOL": -4.6
+    "BTC": 10.2,
+    "ETH": -33.8,
+    "SOL": -3.6
    },
    "leitura": "neutro"
   },

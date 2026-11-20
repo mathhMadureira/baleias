@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 21:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 21:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
 Carteira **US$ 9.96** · 50 operações fechadas · 0 abertas
 
 - **Total:** 30/50 com lucro (60%), resultado -0.04, média -0.001 por operação.
-- **Últimas 24 h:** 8/15 com lucro, +0.38.
+- **Últimas 24 h:** 7/14 com lucro, +0.23.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 20 op, 55% certas, -0.44 · 12–17 UTC: 25 op, 60% certas, +0.51 · 00–05 UTC: 4 op, 100% certas, +0.71
 - **Por lado:** compra: 13 op, 54% certas, -1.29 · venda: 37 op, 62% certas, +1.25
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · Topo duplo CONFIRMADO em 1 h (: 1 op, 0% certas, -0.26 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.26 · Nova, a mercado: bandeira de b: 1 op, 0% certas, -0.24 · Entrada nova: bandeira de baix: 1 op, 0% certas, -0.20 · Nova, a mercado: 6 de 6 tempos: 1 op, 0% certas, -0.19 · Entrada nova: 6 de 6 tempos ab: 1 op, 0% certas, -0.18 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · Mantém: 4 de 6 tempos abaixo d: 2 op, 50% certas, -0.00 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · Aviso de compra do Caçador (5 : 1 op, 100% certas, +0.12 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · Entrada nova: estrutura de bai: 1 op, 100% certas, +0.16 · Mantém: 3 de 6 tempos abaixo (: 1 op, 100% certas, +0.25 · Topo duplo CONFIRMADO em 1 h e: 1 op, 100% certas, +0.26 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · Bandeira de baixa CONFIRMADA e: 1 op, 100% certas, +0.33 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39 · Entrada nova: 5 de 6 tempos ab: 1 op, 100% certas, +0.43
@@ -33,7 +33,7 @@ Carteira **US$ 7.95** · 34 operações fechadas · 3 abertas
 Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
 
 - **Total:** 13/27 com lucro (48%), resultado +0.09, média +0.003 por operação.
-- **Últimas 24 h:** 6/10 com lucro, +0.31.
+- **Últimas 24 h:** 5/9 com lucro, +0.14.
 - **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 10 op, 50% certas, +0.24 · 00–05 UTC: 2 op, 100% certas, +0.41
 - **Por lado:** venda: 22 op, 45% certas, -0.31 · compra: 5 op, 60% certas, +0.41
 - **Por motivo de saída:** nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · nova: 6 de 6 tempos abaixo da : 4 op, 50% certas, -0.01 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24 · entra: 6 de 6 tempos abaixo da: 1 op, 100% certas, +0.24
@@ -44,7 +44,7 @@ Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
 Carteira **US$ 10.63** · 15 operações fechadas · 0 abertas
 
 - **Total:** 7/15 com lucro (47%), resultado +0.63, média +0.042 por operação.
-- **Últimas 24 h:** 3/8 com lucro, +0.26.
+- **Últimas 24 h:** 3/7 com lucro, +0.57.
 - **Por horário:** 18–23 UTC: 10 op, 50% certas, +0.07 · 12–17 UTC: 5 op, 40% certas, +0.56
 - **Por lado:** compra: 7 op, 29% certas, -0.63 · venda: 8 op, 62% certas, +1.25
 - **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
@@ -67,19 +67,19 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 11.3% das moedas subindo em 24 h, 40.8% em 4 h · BTC 24 h -4.64%, 4 h -1.01%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 9.3, 'ETH': -36.0, 'SOL': -4.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.0%/ano · {'BTC': 10.2, 'ETH': -33.8, 'SOL': -3.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** XRP bandeira de baixa (baixa, CONFIRMOU) · ZEC bandeira de baixa (baixa, CONFIRMOU) · ALGO topo duplo (baixa, formado) · BEAMX topo duplo (baixa, formado) · CHZ topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · NEXO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PUMP ombro-cabeça-ombro (baixa, formado) · RARE fundo duplo (alta, formado)
+- 📰 20/11 21:36 UTC · Decrypt: Claude Claims Historic Math Breakthrough One Day After Anthropic IPO
 - 📰 20/11 20:36 UTC · Decrypt: Nvidia Shares Sink to 52-Week Low After Report SEC Is Probing Accounting
 - 📰 20/11 19:37 UTC · Cointelegraph: Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit
 - 📰 20/11 19:36 UTC · Decrypt: SBF’s 'The Altruists' Plot Twist: FTX’s Anthropic Shares Would Be Worth $43 Billion
 - 📰 20/11 18:46 UTC · Decrypt: Cathie Wood Bets $91M on Anthropic IPO While Paring Crypto Exposure
 - 📰 20/11 18:37 UTC · Cointelegraph: Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims
-- 📰 20/11 18:16 UTC · Decrypt: Google Gives Gemini Control of Mac Apps, But Its New AI Agent Comes With Risks
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 7.2 h.
+- ⚠️ **Rotina parada:** sem decisão há 7.3 h.
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
 - 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 - 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c
