@@ -1,6 +1,6 @@
 {
- "t": 1795192483,
- "hora_utc": "2026-11-20 16:34 UTC",
+ "t": 1795192684,
+ "hora_utc": "2026-11-20 16:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 137,
@@ -172,11 +172,17 @@
   0.51,
   -0.18,
   -3.71,
-  -0.39
+  0.02
  ],
  "contexto": {
-  "t": 1795192484,
+  "t": 1795192685,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795192559,
+    "hora_utc": "20/11 16:35",
+    "titulo": "Bitcoin Breaks Below $60K as Crypto Fear Index Hits Worst Level Since February"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795190122,
@@ -260,12 +266,6 @@
     "t": 1795176908,
     "hora_utc": "20/11 12:15",
     "titulo": "Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795176614,
-    "hora_utc": "20/11 12:10",
-    "titulo": "MoonPay Applies for National Trust Bank Charter to Grow Custody and Stablecoin Business"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -2.9,
+   "media_top20_anual_pct": -2.0,
    "principais_anual_pct": {
-    "BTC": -7.3,
-    "ETH": -19.5,
-    "SOL": -7.0
+    "BTC": -6.2,
+    "ETH": -18.4,
+    "SOL": -6.5
    },
    "leitura": "neutro"
   },

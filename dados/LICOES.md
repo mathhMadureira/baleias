@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 16:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 16:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 10.9% das moedas subindo em 24 h, 7.3% em 4 h · BTC 24 h -6.15%, 4 h -3.98%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.9%/ano · {'BTC': -7.3, 'ETH': -19.5, 'SOL': -7.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.0%/ano · {'BTC': -6.2, 'ETH': -18.4, 'SOL': -6.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DODO fundo duplo (alta, formado) · RAY topo duplo (baixa, formado) · RAY fundo duplo (alta, formado) · RENDER topo duplo (baixa, formado) · TIA fundo duplo (alta, formado) · TREE fundo duplo (alta, formado) · W topo duplo (baixa, formado) · ZEN ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 16:35 UTC · Decrypt: Bitcoin Breaks Below $60K as Crypto Fear Index Hits Worst Level Since February
 - 📰 20/11 15:55 UTC · Cointelegraph: US Senate advances prediction market restrictions with DEATH BETS Act
 - 📰 20/11 15:52 UTC · Cointelegraph: Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off
 - 📰 20/11 15:42 UTC · Decrypt: Senate Passes Bill Banning Prediction Market Bets on War, Terrorism and Death
 - 📰 20/11 15:32 UTC · Cointelegraph: DBS bets it can lose the deposit and keep the client
 - 📰 20/11 14:54 UTC · CoinDesk: Former Point72 head of proprietary research says AI could turn data into a new asset class for Wall Street
-- 📰 20/11 14:38 UTC · CoinDesk: Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
