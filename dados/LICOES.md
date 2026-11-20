@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 04:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 04:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.89** · 39 operações fechadas · 2 abertas
+Carteira **US$ 9.92** · 39 operações fechadas · 2 abertas
 
 - **Total:** 24/39 com lucro (62%), resultado -0.58, média -0.015 por operação.
 - **Últimas 24 h:** 10/16 com lucro, +0.66.
@@ -30,7 +30,7 @@ Carteira **US$ 8.42** · 25 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.26** · 23 operações fechadas · 1 abertas
+Carteira **US$ 9.31** · 23 operações fechadas · 1 abertas
 
 - **Total:** 9/23 com lucro (39%), resultado -0.84, média -0.037 por operação.
 - **Últimas 24 h:** 6/17 com lucro, -1.10.
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 14.3% das moedas subindo em 24 h, 10.1% em 4 h · BTC 24 h -2.39%, 4 h -0.34%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 11.0, 'ETH': 6.2, 'SOL': -7.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 11.0, 'ETH': 6.8, 'SOL': -7.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MEGA topo duplo (baixa, CONFIRMOU) · NIGHT fundo duplo (alta, CONFIRMOU) · SHIB ombro-cabeça-ombro (baixa, CONFIRMOU) · ETH topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · QNT fundo duplo (alta, formado) · QNT ombro-cabeça-ombro (baixa, formado) · SAPIEN fundo duplo (alta, formado) · SOL fundo duplo (alta, formado)
 - 📰 20/11 03:33 UTC · Cointelegraph: Institutions pile back into US Bitcoin ETFs in Q3 after selling streak
