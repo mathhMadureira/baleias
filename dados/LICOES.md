@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 23:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 23:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 11.0% das moedas subindo em 24 h, 84.1% em 4 h · BTC 24 h -4.83%, 4 h 1.29%.
+- **Amplitude:** 12.4% das moedas subindo em 24 h, 90.3% em 4 h · BTC 24 h -4.66%, 4 h 1.75%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.1%/ano · {'BTC': 6.8, 'ETH': -24.7, 'SOL': -16.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.7%/ano · {'BTC': 5.7, 'ETH': -25.4, 'SOL': -18.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** OPEN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CHZ topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · GLMR topo duplo (baixa, formado) · NEXO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** AAVE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · OPEN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CHZ topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · GLMR topo duplo (baixa, formado) · NEXO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE fundo duplo (alta, formado)
 - 📰 20/11 22:51 UTC · CoinDesk: Kalshi races to get ahead of New York order that could shut down exchange
 - 📰 20/11 22:05 UTC · CoinDesk: Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment
 - 📰 20/11 21:36 UTC · Decrypt: Claude Claims Historic Math Breakthrough One Day After Anthropic IPO
@@ -79,7 +79,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 8.8 h.
+- ⚠️ **Rotina parada:** sem decisão há 8.9 h.
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
 - 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 - 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 4 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 34371 apostas conferidas ao vivo, acerto 55.6%; prevê 144 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 34451 apostas conferidas ao vivo, acerto 55.6%; prevê 144 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
