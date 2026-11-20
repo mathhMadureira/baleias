@@ -1,16 +1,16 @@
 {
- "t": 1795148810,
- "hora_utc": "2026-11-20 04:26 UTC",
+ "t": 1795149041,
+ "hora_utc": "2026-11-20 04:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
-  "subindo_pct": 14.3,
-  "mediana_pct": -0.4
+  "subindo_pct": 15.1,
+  "mediana_pct": -0.48
  },
  "mercado_4h": {
   "moedas": 119,
-  "subindo_pct": 10.1,
-  "mediana_pct": -2.27
+  "subindo_pct": 9.2,
+  "mediana_pct": -2.32
  },
  "mercado_24h": {
   "moedas": 119,
@@ -33,9 +33,9 @@
   },
   {
    "moeda": "FTT",
-   "4h": -17.59,
+   "4h": -16.74,
    "24h": -15.09,
-   "vol": 2.58
+   "vol": 2.64
   },
   {
    "moeda": "MEGA",
@@ -130,12 +130,6 @@
    "vol": 0.52
   },
   {
-   "moeda": "CYBER",
-   "4h": 0.98,
-   "24h": 1.48,
-   "vol": 1.25
-  },
-  {
    "moeda": "GRAM",
    "4h": 0.49,
    "24h": -0.88,
@@ -143,9 +137,15 @@
   },
   {
    "moeda": "JST",
-   "4h": 0.18,
-   "24h": 1.47,
-   "vol": 1.36
+   "4h": 0.16,
+   "24h": 1.61,
+   "vol": 1.39
+  },
+  {
+   "moeda": "SYRUP",
+   "4h": 0.1,
+   "24h": 1.24,
+   "vol": 1.62
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.92,
   1.12,
   -0.18,
-  -0.8
+  -0.86
  ],
  "contexto": {
-  "t": 1795148811,
+  "t": 1795149042,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795148932,
+    "hora_utc": "20/11 04:28",
+    "titulo": "VanEck drops Gemini as custodian of its bitcoin, ether and SOL ETFs"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795145602,
@@ -260,12 +266,6 @@
     "t": 1795112449,
     "hora_utc": "19/11 18:20",
     "titulo": "Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795112156,
-    "hora_utc": "19/11 18:15",
-    "titulo": "Trump's Democratic SEC pick suggests tokenization policy deserves full rule process"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 2.4,
+   "media_top20_anual_pct": 2.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.1,
-    "SOL": -8.2
+    "ETH": 7.5,
+    "SOL": -8.4
    },
    "leitura": "neutro"
   },
@@ -415,9 +415,9 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 117,
-  "compras": 87,
-  "vendas": 30,
+  "apostas": 116,
+  "compras": 85,
+  "vendas": 31,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
@@ -444,18 +444,22 @@
     "prob_subir": 0.396
    },
    {
-    "moeda": "SOXSB",
-    "prob_subir": 0.418
+    "moeda": "CYBER",
+    "prob_subir": 0.397
    },
    {
-    "moeda": "APE",
-    "prob_subir": 0.419
+    "moeda": "SOXSB",
+    "prob_subir": 0.418
    }
   ],
   "mais_confiantes_compra": [
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "RUNE",
+    "prob_subir": 0.617
    },
    {
     "moeda": "KAIA",
@@ -466,30 +470,26 @@
     "prob_subir": 0.61
    },
    {
+    "moeda": "JTO",
+    "prob_subir": 0.608
+   },
+   {
     "moeda": "F",
     "prob_subir": 0.604
    },
    {
-    "moeda": "ZKP",
-    "prob_subir": 0.602
-   },
-   {
-    "moeda": "PENDLE",
+    "moeda": "W",
     "prob_subir": 0.599
    },
    {
     "moeda": "EIGEN",
-    "prob_subir": 0.593
-   },
-   {
-    "moeda": "COOKIE",
     "prob_subir": 0.593
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.95,
+  "carteira": 10.05,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -497,16 +497,16 @@
     "entrada": 0.05775,
     "agora": 0.05729,
     "resultado_pct": 0.8,
-    "horas_aberta": 1.4,
+    "horas_aberta": 1.5,
     "motivo_de_entrada": "Topo duplo CONFIRMADO em 1 h e topo duplo em 4 h (a favor); 5 de 6 tempos abaixo da MM20 (só 1 min acima); 4 h −1,72%, 1 dia −2,05%; volume 1 min 1,97×; aviso d"
    },
    {
     "moeda": "MUBARAK",
     "lado": "venda",
     "entrada": 0.02394,
-    "agora": 0.02366,
-    "resultado_pct": 1.17,
-    "horas_aberta": 1.4,
+    "agora": 0.02355,
+    "resultado_pct": 1.63,
+    "horas_aberta": 1.5,
     "motivo_de_entrada": "Bandeira de baixa CONFIRMADA em 1 h; 5 de 6 tempos abaixo da MM20; 4 h −2,82%, 1 dia −9,94%; aviso do Caçador MUBARAK venda força 85; regime de baixa. v4 sem co"
    }
   ],
@@ -659,7 +659,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.95,
+   "carteira": 10.05,
    "n_abertas": 2,
    "abertas": [
     [
@@ -701,7 +701,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.33,
+   "carteira": 9.39,
    "n_abertas": 1,
    "abertas": [
     [
@@ -747,7 +747,7 @@
     "ganho_medio": 0.11,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 9.95
+    "carteira": 10.05
    },
    "openbot_testnet": {
     "ops": 25,
@@ -765,7 +765,7 @@
     "ganho_medio": 0.164,
     "perda_media": -0.166,
     "fator_lucro": 0.64,
-    "carteira": 9.33
+    "carteira": 9.39
    },
    "laboratorio": {
     "ops": 10,
@@ -789,42 +789,42 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.2% em 29023 apostas (623 velas, 13/11 04:30–20/11 03:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5523,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.2% em 29020 apostas (623 velas, 13/11 04:45–20/11 04:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5518,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.82,
+  "z_contra_lab": 1.77,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.511,
-    "n": 22437
+    "acerto": 0.5117,
+    "n": 22434
    },
    "segue_maioria_24h": {
-    "acerto": 0.5064,
-    "n": 29023
+    "acerto": 0.5069,
+    "n": 29020
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.563,
-    "n": 5293
+    "acerto": 0.5629,
+    "n": 5296
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.6077,
-    "n": 1945
+    "acerto": 0.6068,
+    "n": 1948
    },
    "confianca:<0,05": {
-    "acerto": 0.5572,
-    "n": 9917
+    "acerto": 0.5565,
+    "n": 9931
    },
    "confianca:≥0,12": {
     "acerto": 0.6704,
     "n": 619
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5783,
-    "n": 7946
+    "acerto": 0.5765,
+    "n": 7943
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5639,
@@ -839,8 +839,8 @@
     "n": 8850
    },
    "lado:compra": {
-    "acerto": 0.5239,
-    "n": 13688
+    "acerto": 0.5228,
+    "n": 13685
    },
    "lado:venda": {
     "acerto": 0.5776,
