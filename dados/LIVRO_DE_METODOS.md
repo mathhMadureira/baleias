@@ -5,12 +5,12 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.9% | 255 | 50.7%–62.8% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.8% | 2240 | 50.7%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 2241 | 50.8%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 85.7% | 7 | 48.7%–97.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 72.7% | 11 | 43.4%–90.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 66.7% | 18 | 43.7%–83.7% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
-| connors_8020_alta | promissor | 66.7% | 9 | 35.4%–87.9% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
+| connors_8020_alta | promissor | 60.0% | 10 | 31.3%–83.2% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | raschke_graal_baixa | promissor | 59.4% | 64 | 47.1%–70.5% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | williams_volb_baixa | promissor | 53.1% | 147 | 45.0%–60.9% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | reversao_queda | promissor | 52.3% | 65 | 40.4%–64.0% | H14: queda anormal de 1 h → sobe |
