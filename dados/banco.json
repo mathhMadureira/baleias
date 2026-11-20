@@ -1,1 +1,1 @@
-{"t": 1795183940, "tesouro": {"robos": 5, "inicial": 50.0, "carteiras": 46.7, "resultado": -3.3, "em_margem": 23.67, "livre": 23.03, "no_lucro": ["guardiao", "laboratorio"]}, "exposicao": {"bruta": 275.21, "liquida": 275.21, "moedas": 8, "conflitos": []}, "persistencia": {"janelas": 0}}
+{"t": 1795184161, "tesouro": {"robos": 5, "inicial": 50.0, "carteiras": 46.87, "resultado": -3.13, "em_margem": 24.54, "livre": 22.33, "no_lucro": ["guardiao", "laboratorio"]}, "exposicao": {"bruta": 270.72, "liquida": 270.72, "moedas": 9, "conflitos": []}, "persistencia": {"janelas": 0}}
