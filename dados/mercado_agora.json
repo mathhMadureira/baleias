@@ -1,6 +1,6 @@
 {
- "t": 1795187842,
- "hora_utc": "2026-11-20 15:17 UTC",
+ "t": 1795188041,
+ "hora_utc": "2026-11-20 15:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 127,
@@ -172,10 +172,10 @@
   -0.39,
   0.51,
   -0.18,
-  -1.92
+  -2.15
  ],
  "contexto": {
-  "t": 1795187842,
+  "t": 1795188042,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": -7.7,
+   "media_top20_anual_pct": -8.1,
    "principais_anual_pct": {
-    "BTC": -7.0,
-    "ETH": -10.8,
-    "SOL": -4.4
+    "BTC": -9.4,
+    "ETH": -12.9,
+    "SOL": -4.6
    },
    "leitura": "neutro"
   },
@@ -454,26 +454,9 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.79,
-  "abertas": [
-   {
-    "moeda": "SNX",
-    "lado": "venda",
-    "entrada": 0.1553,
-    "agora": null,
-    "resultado_pct": null,
-    "horas_aberta": 1.1,
-    "motivo_de_entrada": "Entrada nova: 5 de 6 tempos abaixo da MM20 (5 min a 1 d); estrutura de baixa em 15 min e topo duplo em 1 h (não confirmados, a favor); 1 h −0,51%, 4 h −1,34%, 1"
-   }
-  ],
+  "carteira": 9.96,
+  "abertas": [],
   "ultimas_fechadas": [
-   {
-    "moeda": "DOT",
-    "lado": "venda",
-    "resultado_usd": 0.262,
-    "motivo_saida": "stop móvel (pico +1.94%, guardou +1.36%)",
-    "motivo_de_entrada": "v4 0,345 de subir (confiança 0,155, faixa ≥ 0,12 que acerta 67%); topo duplo de 4 h CONFIRMADO para baixo; volume de 4 h"
-   },
    {
     "moeda": "BTC",
     "lado": "venda",
@@ -571,6 +554,13 @@
     "resultado_usd": 0.163,
     "motivo_saida": "stop móvel (pico +1.24%, guardou +0.87%)",
     "motivo_de_entrada": "Entrada nova: estrutura de baixa CONFIRMADA em 15 min e topo duplo CONFIRMADO em 4 h (a favor); v4 0,378 de subir (confi"
+   },
+   {
+    "moeda": "SNX",
+    "lado": "venda",
+    "resultado_usd": 0.43,
+    "motivo_saida": "lucro realizado +2.1%",
+    "motivo_de_entrada": "Entrada nova: 5 de 6 tempos abaixo da MM20 (5 min a 1 d); estrutura de baixa em 15 min e topo duplo em 1 h (não confirma"
    }
   ],
   "licoes_anteriores": [
@@ -615,15 +605,10 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.79,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "SNX",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 49,
+   "carteira": 9.96,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 50,
    "ordem": null
   },
   {
@@ -669,7 +654,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.54,
+   "carteira": 10.8,
    "n_abertas": 2,
    "abertas": [
     [
@@ -701,13 +686,13 @@
   "campeao": "guardiao",
   "placar": {
    "claude": {
-    "ops": 49,
-    "acerto": 0.592,
-    "soma": -0.474,
-    "ganho_medio": 0.13,
+    "ops": 50,
+    "acerto": 0.6,
+    "soma": -0.044,
+    "ganho_medio": 0.14,
     "perda_media": -0.213,
-    "fator_lucro": 0.89,
-    "carteira": 9.79
+    "fator_lucro": 0.99,
+    "carteira": 9.96
    },
    "openbot_testnet": {
     "ops": 34,
@@ -734,7 +719,7 @@
     "ganho_medio": 0.245,
     "perda_media": -0.219,
     "fator_lucro": 0.7,
-    "carteira": 10.54
+    "carteira": 10.8
    },
    "guardiao": {
     "ops": 43,
