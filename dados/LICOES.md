@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 06:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 06:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,21 +65,21 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 16.7% das moedas subindo em 24 h, 46.7% em 4 h · BTC 24 h -2.6%, 4 h -0.53%.
+- **Amplitude:** 16.7% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h -2.28%, 4 h 0.55%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': 11.0, 'ETH': -0.0, 'SOL': -3.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.3%/ano · {'BTC': 11.0, 'ETH': 4.0, 'SOL': -1.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · LINK ombro-cabeça-ombro (baixa, CONFIRMOU) · SAPIEN fundo duplo (alta, CONFIRMOU) · SAPIEN estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · U estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ADA fundo duplo (alta, formado) · ALT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · SAPIEN fundo duplo (alta, CONFIRMOU) · SAPIEN estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ALT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · NIGHT fundo duplo (alta, formado)
+- 📰 20/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 20/11 05:32 UTC · CoinDesk: This Bitcoin miner sold 267 BTC to clear $22 million debt. It still may not survive
 - 📰 20/11 05:20 UTC · CoinDesk: Big money bought a net $4 billion of bitcoin funds in Q3, ending 9 months of selling
 - 📰 20/11 04:58 UTC · CoinDesk: Ethereum’s next big upgrade is pushed into 2027 by apps it would break
 - 📰 20/11 04:28 UTC · CoinDesk: VanEck drops Gemini as custodian of its bitcoin, ether and SOL ETFs
 - 📰 20/11 03:33 UTC · Cointelegraph: Institutions pile back into US Bitcoin ETFs in Q3 after selling streak
-- 📰 20/11 03:32 UTC · CoinDesk: Bitcoin hits four-month low after Anthropic's IPO as tech stocks wilt
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 3.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 3.2 h.
 - 20/11 02:55 UTC · **DOGE venda, MUBARAK venda** · Baixa: 8,4% das 119 moedas sobem em 1 h (mediana −1,29%), 11,8% em 4 h (mediana −2,17%), 14,3% em 24 h; BTC 61.702, 1 h −0,53%, 4 h −0,86%. v4: 0 moedas com con
 - 19/11 21:55 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:50 UTC: 11,1% das 117 moedas sobem em 1 h (mediana −0,78%), 12,0% em 4 h (mediana −1,58%); BTC 61.682, 1 h −0,71%, 4 h −1,96%. universo.py com ERRO n
 - 19/11 21:39 UTC · **MEGA compra, ETH venda, LTC venda** · Retrato 21:37 UTC: 23,9% das 117 moedas sobem em 1 h (mediana −0,35%), 14,5% em 4 h (mediana −1,40%), 28,2% em 24 h; BTC 61.529, 1 h −0,60%, 4 h −2,38%. Univers
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 30919 apostas conferidas ao vivo, acerto 54.9%; prevê 92 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 30929 apostas conferidas ao vivo, acerto 54.9%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
