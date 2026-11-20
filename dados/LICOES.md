@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 04:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 04:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.14** · 39 operações fechadas · 2 abertas
+Carteira **US$ 10.18** · 39 operações fechadas · 2 abertas
 
 - **Total:** 24/39 com lucro (62%), resultado -0.58, média -0.015 por operação.
 - **Últimas 24 h:** 10/16 com lucro, +0.66.
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.3% das moedas subindo em 24 h, 7.5% em 4 h · BTC 24 h -2.71%, 4 h -0.72%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.2%/ano · {'BTC': 11.0, 'ETH': 7.7, 'SOL': -8.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.2%/ano · {'BTC': 11.0, 'ETH': 7.6, 'SOL': -8.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MEGA topo duplo (baixa, CONFIRMOU) · NIGHT fundo duplo (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · QNT fundo duplo (alta, formado) · QNT ombro-cabeça-ombro (baixa, formado) · SAPIEN fundo duplo (alta, formado) · SOL fundo duplo (alta, formado) · TRUMP fundo duplo (alta, formado)
 - 📰 20/11 04:28 UTC · CoinDesk: VanEck drops Gemini as custodian of its bitcoin, ether and SOL ETFs
