@@ -1,21 +1,21 @@
 {
- "t": 1795205164,
- "hora_utc": "2026-11-20 20:06 UTC",
+ "t": 1795205367,
+ "hora_utc": "2026-11-20 20:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 143,
-  "subindo_pct": 16.8,
-  "mediana_pct": -0.74
+  "moedas": 144,
+  "subindo_pct": 17.4,
+  "mediana_pct": -0.73
  },
  "mercado_4h": {
-  "moedas": 143,
-  "subindo_pct": 25.2,
+  "moedas": 144,
+  "subindo_pct": 25.7,
   "mediana_pct": -0.56
  },
  "mercado_24h": {
-  "moedas": 143,
-  "subindo_pct": 10.5,
-  "mediana_pct": -8.3
+  "moedas": 144,
+  "subindo_pct": 11.1,
+  "mediana_pct": -8.29
  },
  "btc": {
   "1h": 0.24,
@@ -118,6 +118,12 @@
    "vol": 2.31
   },
   {
+   "moeda": "USUAL",
+   "4h": 3.19,
+   "24h": 1.23,
+   "vol": 1.49
+  },
+  {
    "moeda": "NIGHT",
    "4h": 2.28,
    "24h": -6.45,
@@ -140,12 +146,6 @@
    "4h": 2.05,
    "24h": -11.24,
    "vol": 1.81
-  },
-  {
-   "moeda": "AIGENSYN",
-   "4h": 2.01,
-   "24h": 4.18,
-   "vol": 1.32
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.64,
   -1.26,
   0.24,
-  0.04
+  -0.13
  ],
  "contexto": {
-  "t": 1795205165,
+  "t": 1795205368,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 6.1,
+   "media_top20_anual_pct": 4.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -4.2,
-    "SOL": -0.6
+    "ETH": -5.6,
+    "SOL": -3.2
    },
    "leitura": "neutro"
   },
@@ -747,11 +747,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5204,
-    "n": 26385
+    "n": 26455
    },
    "segue_maioria_24h": {
-    "acerto": 0.5204,
-    "n": 31291
+    "acerto": 0.5205,
+    "n": 31252
    }
   },
   "referencia_ganha": [],
