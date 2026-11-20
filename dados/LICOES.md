@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 11:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 11:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 13.1% das moedas subindo em 24 h, 32.0% em 4 h · BTC 24 h -3.06%, 4 h -0.26%.
+- **Amplitude:** 13.8% das moedas subindo em 24 h, 32.5% em 4 h · BTC 24 h -3.06%, 4 h -0.26%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': -5.0, 'ETH': 11.0, 'SOL': 6.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': -4.3, 'ETH': 11.0, 'SOL': 6.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENSO fundo duplo (alta, CONFIRMOU) · PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · LSK topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · THETA topo duplo (baixa, formado)
+- 📰 20/11 11:23 UTC · Decrypt: Coinbase Targets In-House Prediction Markets by First Half of 2027: Report
 - 📰 20/11 10:54 UTC · Cointelegraph: VanEck to end Gemini ETF custody deals, keeps Coinbase
 - 📰 20/11 10:48 UTC · CoinDesk: Coinbase targets first-half 2027 for its own prediction market contracts
 - 📰 20/11 10:29 UTC · Cointelegraph: Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest
 - 📰 20/11 10:07 UTC · Decrypt: CryptoUK Urges FCA Not to Treat DeFi Devs as Regulated by Default
 - 📰 20/11 10:02 UTC · CoinDesk: No special rules for Hyperliquid or other onchain trading platforms, CFTC says
-- 📰 20/11 09:48 UTC · CoinDesk: Cathie Wood's Ark Invest piled into Anthropic IPO, buying $90 million worth of shares
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 31920 apostas conferidas ao vivo, acerto 55.1%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 31920 apostas conferidas ao vivo, acerto 55.1%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

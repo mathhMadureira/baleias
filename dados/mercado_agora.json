@@ -1,21 +1,21 @@
 {
- "t": 1795173796,
- "hora_utc": "2026-11-20 11:23 UTC",
+ "t": 1795174003,
+ "hora_utc": "2026-11-20 11:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 122,
-  "subindo_pct": 26.2,
-  "mediana_pct": -0.27
+  "moedas": 123,
+  "subindo_pct": 26.0,
+  "mediana_pct": -0.28
  },
  "mercado_4h": {
-  "moedas": 122,
-  "subindo_pct": 32.0,
-  "mediana_pct": -0.56
+  "moedas": 123,
+  "subindo_pct": 32.5,
+  "mediana_pct": -0.53
  },
  "mercado_24h": {
-  "moedas": 122,
-  "subindo_pct": 13.1,
-  "mediana_pct": -4.14
+  "moedas": 123,
+  "subindo_pct": 13.8,
+  "mediana_pct": -4.12
  },
  "btc": {
   "1h": 0.02,
@@ -172,11 +172,17 @@
   -0.04,
   -0.31,
   0.66,
-  -0.48
+  -0.35
  ],
  "contexto": {
-  "t": 1795173797,
+  "t": 1795174004,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795173780,
+    "hora_utc": "20/11 11:23",
+    "titulo": "Coinbase Targets In-House Prediction Markets by First Half of 2027: Report"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795172078,
@@ -260,12 +266,6 @@
     "t": 1795152745,
     "hora_utc": "20/11 05:32",
     "titulo": "This Bitcoin miner sold 267 BTC to clear $22 million debt. It still may not survive"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795152051,
-    "hora_utc": "20/11 05:20",
-    "titulo": "Big money bought a net $4 billion of bitcoin funds in Q3, ending 9 months of selling"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 5.1,
    "principais_anual_pct": {
-    "BTC": -5.0,
+    "BTC": -4.3,
     "ETH": 11.0,
-    "SOL": 6.6
+    "SOL": 6.9
    },
    "leitura": "neutro"
   },
@@ -728,12 +728,12 @@
   "z_contra_lab": 1.75,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5154,
-    "n": 23091
+    "acerto": 0.5149,
+    "n": 23294
    },
    "segue_maioria_24h": {
-    "acerto": 0.514,
-    "n": 29781
+    "acerto": 0.5145,
+    "n": 29567
    }
   },
   "referencia_ganha": [],
