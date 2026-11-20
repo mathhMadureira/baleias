@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 11:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 11:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 14.6% das moedas subindo em 24 h, 45.5% em 4 h · BTC 24 h -3.16%, 4 h 0.35%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -3.5, 'ETH': 11.0, 'SOL': 5.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -2.7, 'ETH': 11.0, 'SOL': 5.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENSO fundo duplo (alta, CONFIRMOU) · PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · THETA topo duplo (baixa, formado)
 - 📰 20/11 11:31 UTC · Cointelegraph: Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip
