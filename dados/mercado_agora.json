@@ -1,21 +1,21 @@
 {
- "t": 1795182642,
- "hora_utc": "2026-11-20 13:50 UTC",
+ "t": 1795182860,
+ "hora_utc": "2026-11-20 13:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 124,
-  "subindo_pct": 13.7,
-  "mediana_pct": -0.81
+  "moedas": 125,
+  "subindo_pct": 13.6,
+  "mediana_pct": -0.82
  },
  "mercado_4h": {
-  "moedas": 124,
-  "subindo_pct": 14.5,
-  "mediana_pct": -2.04
+  "moedas": 125,
+  "subindo_pct": 14.4,
+  "mediana_pct": -2.06
  },
  "mercado_24h": {
-  "moedas": 124,
-  "subindo_pct": 13.7,
-  "mediana_pct": -5.69
+  "moedas": 125,
+  "subindo_pct": 13.6,
+  "mediana_pct": -5.71
  },
  "btc": {
   "1h": -0.2,
@@ -172,10 +172,10 @@
   0.66,
   -0.39,
   -0.39,
-  0.51
+  0.43
  ],
  "contexto": {
-  "t": 1795182643,
+  "t": 1795182861,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 5.9,
    "principais_anual_pct": {
-    "BTC": -5.3,
-    "ETH": 9.9,
-    "SOL": -0.9
+    "BTC": -5.1,
+    "ETH": 9.7,
+    "SOL": -0.8
    },
    "leitura": "neutro"
   },
@@ -447,42 +447,9 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.66,
-  "abertas": [
-   {
-    "moeda": "KAVA",
-    "lado": "venda",
-    "entrada": 0.02802,
-    "agora": 0.02809,
-    "resultado_pct": -0.25,
-    "horas_aberta": 0.3,
-    "motivo_de_entrada": "Topo duplo CONFIRMADO em 1 h (a favor); 5 de 6 tempos abaixo da MM20 (só 1 min acima); 1 h −3,42%, 4 h −4,96%, 1 dia −3,62%; regime de baixa (16,3% sobem em 4 h"
-   },
-   {
-    "moeda": "MUBARAK",
-    "lado": "venda",
-    "entrada": 0.0229,
-    "agora": 0.02291,
-    "resultado_pct": -0.04,
-    "horas_aberta": 0.3,
-    "motivo_de_entrada": "6 de 6 tempos abaixo da MM20; topo duplo e estrutura de baixa em 1 h (não confirmados na varredura; o Caçador viu a estrutura de baixa confirmada em 1 h, aviso "
-   }
-  ],
+  "carteira": 9.32,
+  "abertas": [],
   "ultimas_fechadas": [
-   {
-    "moeda": "SKY",
-    "lado": "venda",
-    "resultado_usd": 0.263,
-    "motivo_saida": "stop móvel (pico +3.13%, guardou +1.47%)",
-    "motivo_de_entrada": "A favor: 6 de 6 tempos abaixo da MM20; estrutura de topos e fundos para baixo em 15 min, 1 h e 4 h; 1 min −1,11% fora do"
-   },
-   {
-    "moeda": "SKY",
-    "lado": "venda",
-    "resultado_usd": 0.171,
-    "motivo_saida": "stop móvel (pico +2.25%, guardou +0.95%)",
-    "motivo_de_entrada": "Mantém: 6 de 6 tempos abaixo da MM20; estrutura para baixo em 15 min, 1 h e 4 h; 15 min −2,67%, 1 h −4,80%, 4 h −6,99%; "
-   },
    {
     "moeda": "CAKE",
     "lado": "venda",
@@ -573,6 +540,20 @@
     "resultado_usd": -0.18,
     "motivo_saida": "stop de segurança −0.6%",
     "motivo_de_entrada": "Entrada nova: 6 de 6 tempos abaixo da MM20; bandeira de baixa CONFIRMADA em 15 min (a favor); 15 min −0,76%, 1 h −0,91%,"
+   },
+   {
+    "moeda": "KAVA",
+    "lado": "venda",
+    "resultado_usd": -0.255,
+    "motivo_saida": "stop de segurança −0.9%",
+    "motivo_de_entrada": "Topo duplo CONFIRMADO em 1 h (a favor); 5 de 6 tempos abaixo da MM20 (só 1 min acima); 1 h −3,42%, 4 h −4,96%, 1 dia −3,"
+   },
+   {
+    "moeda": "MUBARAK",
+    "lado": "venda",
+    "resultado_usd": -0.255,
+    "motivo_saida": "stop de segurança −0.9%",
+    "motivo_de_entrada": "6 de 6 tempos abaixo da MM20; topo duplo e estrutura de baixa em 1 h (não confirmados na varredura; o Caçador viu a estr"
    }
   ],
   "licoes_anteriores": [
@@ -617,19 +598,10 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.66,
-   "n_abertas": 2,
-   "abertas": [
-    [
-     "KAVA",
-     "venda"
-    ],
-    [
-     "MUBARAK",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 42,
+   "carteira": 9.32,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 44,
    "ordem": null
   },
   {
@@ -638,7 +610,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.42,
+   "carteira": 8.32,
    "n_abertas": 3,
    "abertas": [
     [
@@ -663,7 +635,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.24,
+   "carteira": 9.25,
    "n_abertas": 2,
    "abertas": [
     [
@@ -684,7 +656,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.07,
+   "carteira": 9.82,
    "n_abertas": 1,
    "abertas": [
     [
@@ -712,13 +684,13 @@
   "campeao": "guardiao",
   "placar": {
    "claude": {
-    "ops": 42,
-    "acerto": 0.619,
-    "soma": -0.173,
+    "ops": 44,
+    "acerto": 0.591,
+    "soma": -0.684,
     "ganho_medio": 0.124,
-    "perda_media": -0.212,
-    "fator_lucro": 0.95,
-    "carteira": 9.66
+    "perda_media": -0.217,
+    "fator_lucro": 0.82,
+    "carteira": 9.32
    },
    "openbot_testnet": {
     "ops": 27,
@@ -727,7 +699,7 @@
     "ganho_medio": 0.293,
     "perda_media": -0.267,
     "fator_lucro": 0.69,
-    "carteira": 8.42
+    "carteira": 8.32
    },
    "treinador": {
     "ops": 24,
@@ -736,7 +708,7 @@
     "ganho_medio": 0.168,
     "perda_media": -0.166,
     "fator_lucro": 0.72,
-    "carteira": 9.24
+    "carteira": 9.25
    },
    "laboratorio": {
     "ops": 10,
@@ -745,7 +717,7 @@
     "ganho_medio": 0.245,
     "perda_media": -0.231,
     "fator_lucro": 1.06,
-    "carteira": 10.07
+    "carteira": 9.82
    },
    "guardiao": {
     "ops": 37,
@@ -767,12 +739,12 @@
   "z_contra_lab": 1.75,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5158,
-    "n": 23985
+    "acerto": 0.516,
+    "n": 24153
    },
    "segue_maioria_24h": {
-    "acerto": 0.518,
-    "n": 30352
+    "acerto": 0.5151,
+    "n": 30202
    }
   },
   "referencia_ganha": [],
