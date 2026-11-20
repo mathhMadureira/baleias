@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 11:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 11:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 15.6% das moedas subindo em 24 h, 36.9% em 4 h · BTC 24 h -2.73%, 4 h -0.01%.
+- **Amplitude:** 13.1% das moedas subindo em 24 h, 32.0% em 4 h · BTC 24 h -2.73%, 4 h -0.01%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': -4.7, 'ETH': 11.0, 'SOL': 6.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': -4.8, 'ETH': 11.0, 'SOL': 6.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ENSO fundo duplo (alta, CONFIRMOU) · PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · THETA topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ENSO fundo duplo (alta, CONFIRMOU) · PLUME estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ERA fundo duplo (alta, formado) · LSK topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · THETA topo duplo (baixa, formado)
 - 📰 20/11 10:54 UTC · Cointelegraph: VanEck to end Gemini ETF custody deals, keeps Coinbase
 - 📰 20/11 10:48 UTC · CoinDesk: Coinbase targets first-half 2027 for its own prediction market contracts
 - 📰 20/11 10:29 UTC · Cointelegraph: Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 31838 apostas conferidas ao vivo, acerto 55.2%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 31919 apostas conferidas ao vivo, acerto 55.1%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
