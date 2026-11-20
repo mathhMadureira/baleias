@@ -1,6 +1,6 @@
 {
- "t": 1795185450,
- "hora_utc": "2026-11-20 14:37 UTC",
+ "t": 1795185676,
+ "hora_utc": "2026-11-20 14:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,11 +172,17 @@
   -0.39,
   -0.39,
   0.51,
-  0.08
+  -0.4
  ],
  "contexto": {
-  "t": 1795185450,
+  "t": 1795185677,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795185510,
+    "hora_utc": "20/11 14:38",
+    "titulo": "Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795184757,
@@ -260,12 +266,6 @@
     "t": 1795172078,
     "hora_utc": "20/11 10:54",
     "titulo": "VanEck to end Gemini ETF custody deals, keeps Coinbase"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795171684,
-    "hora_utc": "20/11 10:48",
-    "titulo": "Coinbase targets first-half 2027 for its own prediction market contracts"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.8,
+   "media_top20_anual_pct": 8.0,
    "principais_anual_pct": {
-    "BTC": -0.2,
+    "BTC": -1.0,
     "ETH": 11.0,
-    "SOL": 5.9
+    "SOL": 5.1
    },
    "leitura": "neutro"
   },
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.29,
+  "carteira": 9.77,
   "abertas": [
    {
     "moeda": "BCH",
@@ -455,7 +455,7 @@
     "entrada": 201.0,
     "agora": 201.1,
     "resultado_pct": -0.05,
-    "horas_aberta": 0.4,
+    "horas_aberta": 0.5,
     "motivo_de_entrada": "Entrada nova: estrutura de baixa CONFIRMADA em 15 min e topo duplo CONFIRMADO em 4 h (a favor); v4 0,378 de subir (confiança 0,122, a favor); 4 h −0,89%, 1 d −3"
    },
    {
@@ -464,7 +464,7 @@
     "entrada": 0.1553,
     "agora": 0.1562,
     "resultado_pct": -0.58,
-    "horas_aberta": 0.4,
+    "horas_aberta": 0.5,
     "motivo_de_entrada": "Entrada nova: 5 de 6 tempos abaixo da MM20 (5 min a 1 d); estrutura de baixa em 15 min e topo duplo em 1 h (não confirmados, a favor); 1 h −0,51%, 4 h −1,34%, 1"
    },
    {
@@ -635,7 +635,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.29,
+   "carteira": 9.77,
    "n_abertas": 4,
    "abertas": [
     [
@@ -664,13 +664,9 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 7.76,
-   "n_abertas": 4,
+   "carteira": 7.95,
+   "n_abertas": 3,
    "abertas": [
-    [
-     "XLM",
-     "venda"
-    ],
     [
      "BCH",
      "venda"
@@ -684,7 +680,7 @@
      "venda"
     ]
    ],
-   "n_fechadas": 33,
+   "n_fechadas": 34,
    "ordem": null
   },
   {
@@ -693,7 +689,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.85,
+   "carteira": 10.24,
    "n_abertas": 3,
    "abertas": [
     [
@@ -718,7 +714,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.12,
+   "carteira": 10.04,
    "n_abertas": 4,
    "abertas": [
     [
@@ -747,7 +743,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 9.95,
+   "carteira": 10.37,
    "n_abertas": 2,
    "abertas": [
     [
@@ -773,16 +769,16 @@
     "ganho_medio": 0.124,
     "perda_media": -0.213,
     "fator_lucro": 0.76,
-    "carteira": 9.29
+    "carteira": 9.77
    },
    "openbot_testnet": {
-    "ops": 33,
-    "acerto": 0.303,
-    "soma": -2.037,
+    "ops": 34,
+    "acerto": 0.294,
+    "soma": -2.151,
     "ganho_medio": 0.293,
-    "perda_media": -0.226,
-    "fator_lucro": 0.59,
-    "carteira": 7.76
+    "perda_media": -0.221,
+    "fator_lucro": 0.58,
+    "carteira": 7.95
    },
    "treinador": {
     "ops": 24,
@@ -791,7 +787,7 @@
     "ganho_medio": 0.168,
     "perda_media": -0.166,
     "fator_lucro": 0.72,
-    "carteira": 9.85
+    "carteira": 10.24
    },
    "laboratorio": {
     "ops": 11,
@@ -800,7 +796,7 @@
     "ganho_medio": 0.245,
     "perda_media": -0.198,
     "fator_lucro": 1.03,
-    "carteira": 10.12
+    "carteira": 10.04
    },
    "guardiao": {
     "ops": 41,
@@ -809,7 +805,7 @@
     "ganho_medio": 0.131,
     "perda_media": -0.188,
     "fator_lucro": 0.98,
-    "carteira": 9.95
+    "carteira": 10.37
    }
   },
   "vereditos": []
