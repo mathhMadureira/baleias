@@ -418,7 +418,10 @@ class Conta:
         sinal = 1 if p["lado"] == "compra" else -1
         q_s = sum(abs(x["contratos"]) for x in saidas)
         saida = sum(abs(x["contratos"]) * x["preco"] for x in saidas) / q_s
-        taxas = p.get("taxa_entrada", 0.0) + sum(x["taxa"] for x in saidas)
+        taxa_ent = p.get("taxa_entrada")
+        if taxa_ent is None:                                               # não lida na entrada (rede): as execuções de entrada, desde a ordem
+            taxa_ent = sum(x["taxa"] for x in ex if (x["contratos"] > 0) == (p["lado"] == "compra") and x["t_ms"] >= p["entrada_ms"])
+        taxas = taxa_ent + sum(x["taxa"] for x in saidas)
         res = sinal * (saida - p["entrada"]) * p["contratos"] * mult - taxas
         self.e["caixa"] = float(self.e["caixa"]) + p["gasto"] + res
         for k in ("stop", "alvo"):
@@ -483,13 +486,18 @@ class Conta:
             return self.anotar(f"{par[:-4]}: ordem a mercado {o['id']} não executou")
         ent, q = o["preco"], o["contratos"]
         time.sleep(1)
-        ex = [x for x in self.c.execucoes(par, t0) if (x["contratos"] > 0) == (lado == "compra")]
+        try:                                                               # auditoria 20/11: erro de rede aqui não pode deixar a posição fora do estado e sem stop
+            taxa_ent = sum(x["taxa"] for x in self.c.execucoes(par, t0) if (x["contratos"] > 0) == (lado == "compra"))
+        except ErroCorretora as ex_:
+            taxa_ent = None                                                # não é zero: registrar_fechada lê a taxa de entrada na saída
+            self.anotar(f"⚠️ {par[:-4]}: taxa de entrada não lida agora ({str(ex_)[:80]}); leio na saída")
         gasto = q * ent * ctr["mult"] / usada
         self.e["caixa"] = float(self.e["caixa"]) - gasto
         self.e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": ent, "entrada_t": t0 / 1000, "entrada_ms": t0,
                                   "contratos": q, "mult": ctr["mult"], "nocional": q * ent * ctr["mult"], "gasto": gasto, "alav": usada, "motivo": str(motivo)[:300],
                                   "decisao_t": decisao_t, "entrada_id": o["id"], "pico": 0.0, "stop_tipo": "segurança",
-                                  "taxa_entrada": sum(x["taxa"] for x in ex), **prm}
+                                  "taxa_entrada": taxa_ent, **prm}
+        self.salvar()                                                      # a posição existe na corretora: fica no estado antes do próximo passo
         sp, ap = prm["stop_pct"], prm.get("alvo_pct")
         try:
             self.e["abertas"][par]["stop"] = self.c.gatilho(par, lado, q, ent * (1 - sp if lado == "compra" else 1 + sp), "stop")
@@ -576,6 +584,13 @@ class Conta:
         return total
 
     def rodada(self, d, agora=None):
+        try:
+            self._rodada(d, agora)
+        finally:                                                           # auditoria 20/11: erro no meio não perde o que a rodada já fez na corretora
+            self.e["atualizado"] = time.time()
+            self.salvar()
+
+    def _rodada(self, d, agora=None):
         agora = agora or time.time()
         self.conciliar()
         self.mover_stops()
@@ -608,8 +623,6 @@ class Conta:
                         except ErroCorretora as ex:
                             self.anotar(f"⚠️ {par[:-4]}: entrada falhou ({str(ex)[:150]})")
         self.patrimonio()
-        self.e["atualizado"] = time.time()
-        self.salvar()
 
 
 # ======================= ramo estado =======================

@@ -218,9 +218,16 @@ def abrir(f, e, par, lado, motivo, decisao_t, prm=None):
     st = {"executada": 0.0}
     for _ in range(6):
         time.sleep(1)
-        st = f.consultar(par, d["orderId"])
+        try:                                              # auditoria 20/11: a ordem já foi; erro de rede na consulta não pode largar a posição sem stop
+            st = f.consultar(par, d["orderId"])
+        except ErroFuturos as ex:
+            st = {"executada": 0.0, "status": f"consulta falhou: {str(ex)[:80]}"}
+            continue
         if st["status"] == "FILLED":
             break
+    if st.get("executada", 0) <= 0 and str(st.get("status", "")).startswith("consulta falhou"):
+        return anotar(e, f"🚨 {par[:-4]}: ordem a mercado {d['orderId']} enviada e não confirmada ({st['status']}); "
+                         "a conciliação da próxima rodada fecha a posição que aparecer sem estado")
     q, ent = st["executada"], st["preco_medio"]
     if q <= 0:
         return anotar(e, f"{par[:-4]}: ordem a mercado {d['orderId']} não executou ({st.get('status')})")
@@ -381,51 +388,54 @@ def publicar():
 def rodada():
     f = conectar()
     e = carregar()
-    agora = time.time()
-    conciliar(f, e)                                      # 1) o que a corretora fez enquanto a máquina dormia
-    mover_stops(f, e)                                    # 2) stop móvel (H49), guardado na corretora
-    patrimonio(f, e)
-    guarda = GD.checar(e, agora)                         # 3) guarda do dia (H54) e meta de US$ 12 (H57)
-    if guarda == "fechar":
-        for par in list(e["abertas"]):
-            fechar(f, e, par, GD.motivo(e))
-        anotar(e, GD.texto("Chefe OpenBot (testnet)", e))
-    for par in list(e["abertas"]):                       # 4) tempo máximo
-        mm = e["abertas"][par].get("max_min")
-        if agora - e["abertas"][par]["entrada_t"] > (mm or MAX_HORAS * 60) * 60:
-            fechar(f, e, par, f"prazo da operação ({mm:.0f} min)" if mm else f"tempo máximo ({MAX_HORAS} h)")
-    d = decisao_do_chefe()                               # 5) a decisão do chefe, se ainda vale
-    fresca = d and agora - d["t"] <= VALIDADE_S
-    if fresca:
-        nova = d["t"] != e.get("decisao_seguida_t")
-        e["decisao_seguida_t"] = d["t"]
-        if nova:                                         # cada moeda entra no máximo uma vez por decisão (a que saiu no stop não reentra)
-            e["decisao_entradas"] = {"t": d["t"], "pares": list(e["abertas"])}
-        querer = {}
-        for x in d.get("posicoes") or []:
-            par = str(x.get("moeda", "")).upper()
-            prm = parametros(x)                          # os mesmos limites da nuvem (H62) e o alvo maior do dono (19/11: alvo ≥ 3 × stop e ≥ 1%)
-            querer[par if par.endswith("USDT") else par + "USDT"] = (x.get("lado"), x.get("motivo", ""), prm)
-        for par in (list(e["abertas"]) if nova else []):
-            if par not in querer:
-                fechar(f, e, par, "fora da lista de posições do chefe")
-            elif querer[par][0] != e["abertas"][par]["lado"]:
-                fechar(f, e, par, "o chefe inverteu o lado")
-        ja = set(e.get("decisao_entradas", {}).get("pares", []))
-        if guarda == "normal" and patrimonio(f, e) >= PISO:
-            for par, (lado, motivo, prm) in querer.items():
-                if par not in e["abertas"] and par not in ja and len(e["abertas"]) < MAX_POS and lado in ("compra", "venda"):
-                    try:
-                        abrir(f, e, par, lado, motivo, d["t"], prm)
-                        if par in e["abertas"]:
-                            e.setdefault("decisao_entradas", {"t": d["t"], "pares": []})["pares"].append(par)
-                    except ErroFuturos as ex:
-                        anotar(e, f"⚠️ {par[:-4]}: entrada falhou ({str(ex)[:150]})")
-        elif guarda != "normal":
-            anotar(e, "travado pela guarda do dia: a decisão não abre posição até 00:00 UTC")
-    patrimonio(f, e)
-    e["atualizado"] = time.time()
-    salvar(e)
+    guarda = "?"
+    try:                                                 # auditoria 20/11: erro no meio da rodada não perde o que já foi feito na corretora
+        agora = time.time()
+        conciliar(f, e)                                      # 1) o que a corretora fez enquanto a máquina dormia
+        mover_stops(f, e)                                    # 2) stop móvel (H49), guardado na corretora
+        patrimonio(f, e)
+        guarda = GD.checar(e, agora)                         # 3) guarda do dia (H54) e meta de US$ 12 (H57)
+        if guarda == "fechar":
+            for par in list(e["abertas"]):
+                fechar(f, e, par, GD.motivo(e))
+            anotar(e, GD.texto("Chefe OpenBot (testnet)", e))
+        for par in list(e["abertas"]):                       # 4) tempo máximo
+            mm = e["abertas"][par].get("max_min")
+            if agora - e["abertas"][par]["entrada_t"] > (mm or MAX_HORAS * 60) * 60:
+                fechar(f, e, par, f"prazo da operação ({mm:.0f} min)" if mm else f"tempo máximo ({MAX_HORAS} h)")
+        d = decisao_do_chefe()                               # 5) a decisão do chefe, se ainda vale
+        fresca = d and agora - d["t"] <= VALIDADE_S
+        if fresca:
+            nova = d["t"] != e.get("decisao_seguida_t")
+            e["decisao_seguida_t"] = d["t"]
+            if nova:                                         # cada moeda entra no máximo uma vez por decisão (a que saiu no stop não reentra)
+                e["decisao_entradas"] = {"t": d["t"], "pares": list(e["abertas"])}
+            querer = {}
+            for x in d.get("posicoes") or []:
+                par = str(x.get("moeda", "")).upper()
+                prm = parametros(x)                          # os mesmos limites da nuvem (H62) e o alvo maior do dono (19/11: alvo ≥ 3 × stop e ≥ 1%)
+                querer[par if par.endswith("USDT") else par + "USDT"] = (x.get("lado"), x.get("motivo", ""), prm)
+            for par in (list(e["abertas"]) if nova else []):
+                if par not in querer:
+                    fechar(f, e, par, "fora da lista de posições do chefe")
+                elif querer[par][0] != e["abertas"][par]["lado"]:
+                    fechar(f, e, par, "o chefe inverteu o lado")
+            ja = set(e.get("decisao_entradas", {}).get("pares", []))
+            if guarda == "normal" and patrimonio(f, e) >= PISO:
+                for par, (lado, motivo, prm) in querer.items():
+                    if par not in e["abertas"] and par not in ja and len(e["abertas"]) < MAX_POS and lado in ("compra", "venda"):
+                        try:
+                            abrir(f, e, par, lado, motivo, d["t"], prm)
+                            if par in e["abertas"]:
+                                e.setdefault("decisao_entradas", {"t": d["t"], "pares": []})["pares"].append(par)
+                        except ErroFuturos as ex:
+                            anotar(e, f"⚠️ {par[:-4]}: entrada falhou ({str(ex)[:150]})")
+            elif guarda != "normal":
+                anotar(e, "travado pela guarda do dia: a decisão não abre posição até 00:00 UTC")
+        patrimonio(f, e)
+    finally:
+        e["atualizado"] = time.time()
+        salvar(e)
     commit = publicar()
     print(f"⚓ Chefe OpenBot (testnet): patrimônio US$ {e['patrimonio']:.4f} · caixa {e['caixa']:.4f} · {len(e['abertas'])} abertas · "
           f"{len(e['fechadas'])} fechadas · guarda {guarda} · estado {commit}")

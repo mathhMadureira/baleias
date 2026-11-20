@@ -217,3 +217,13 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   Guardião → BingX VST ficam TRAVADOS (a chave salva da Bybit é da conta real e é inválida na demo; a BingX recusa o IP); a ferramenta só fala com o
   endereço de demonstração e PARA em qualquer outro. Chaves só no cofre do OpenBot, lidas na hora, nunca impressas. ROTINA r14 (passo 5) e REGRAS §6.
   Testes `CorretoraDemoH71` com corretora falsa. 180 testes.
+- 2026-11-20 (13 UTC): **3ª auditoria do Engenheiro (rotina de 6 h; rodada das 03:00 atrasada pela máquina suspensa).** Relatório:
+  `OpenBot/Shared/baleias/auditorias/2026-11-20-13.md`. De 19/11 21:00 a 20/11 13:30 UTC a máquina ficou suspensa 22:53 → 02:48 e 03:17 → 13:14 UTC
+  (~14 h); antes disso, o **limite de uso** da conta do provedor parou os 4 agentes e o chefe às 22:02 UTC (A17 de novo). 17 decisões, 19 entradas novas
+  nas carteiras simuladas. Primeira rodada da Gate (H71) às 13:26 UTC: conciliou, nada a abrir (decisão do Laboratório sem posição), publicou.
+  **Corrigido (A22):** nos dois motores de corretora (`mesa/operar/corretora.py` e `mesa/chefe/testnet.py`, com as cópias vivas), erro de rede logo
+  depois da ordem a mercado executar (leitura das taxas na Gate, consulta da ordem na Binance) escapava como "entrada falhou": a posição ficava na
+  corretora fora do estado e SEM stop até a próxima rodada, que a fechava como desconhecida; e o estado só era salvo no fim da rodada (um erro depois
+  de uma entrada perdia a posição). Agora a posição entra no estado assim que a ordem executa (taxa de entrada não lida = lida na saída, não zero),
+  a consulta da ordem tenta de novo e, sem confirmação, avisa com 🚨, e a rodada salva o estado mesmo quando cai. Testes `CorretoraDemoH71` (+2) e
+  `MotorDoChefeComRedeFalhando` (3); os 5 falham na versão antiga. 185 testes.

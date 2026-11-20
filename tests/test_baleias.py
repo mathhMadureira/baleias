@@ -2520,6 +2520,46 @@ class CorretoraDemoH71(unittest.TestCase):
         self.assertEqual((c.e["abertas"], f.pos), ({}, {}))
         self.assertIn("stop recusado", c.e["fechadas"][-1]["motivo_saida"])
 
+    def test_rede_falha_depois_da_ordem_nao_larga_posicao_sem_stop(self):
+        """Auditoria 20/11: a ordem a mercado executou e a leitura das taxas falhou → antes a posição ficava na corretora fora do estado e sem stop."""
+        import time
+        M = self._mod()
+        f = self._falsa(M)
+        orig, n = f.execucoes, [0]
+
+        def execucoes(par, desde_ms):
+            n[0] += 1
+            if n[0] == 1:
+                raise M.ErroCorretora("Gate GET /trades: TimeoutError")
+            return orig(par, desde_ms)
+        f.execucoes = execucoes
+        c = self._conta(M, f)
+        c.rodada({"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "t", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 60}]})
+        self.assertIn("AUSDT", c.e["abertas"])                                   # antes: {} com a posição viva na corretora
+        self.assertIn(("AUSDT", "stop", 99.0), f.gat.values())
+        self.assertIsNone(c.e["abertas"]["AUSDT"]["taxa_entrada"])               # não lida ≠ zero
+        c.rodada({"t": time.time(), "posicoes": []})
+        self.assertAlmostEqual(c.e["fechadas"][-1]["resultado_usd"], -0.002)     # a taxa de entrada entra na saída
+
+    def test_erro_no_fim_da_rodada_salva_o_estado(self):
+        """Auditoria 20/11: o estado só era salvo no fim; erro de rede depois de uma entrada perdia a posição (a próxima rodada a fechava como desconhecida)."""
+        import time
+        M = self._mod()
+        f = self._falsa(M)
+        orig, n = f.posicoes, [0]
+
+        def posicoes():
+            n[0] += 1
+            if n[0] >= 3:                                                        # 1ª conciliar, 2ª piso; a 3ª é a do patrimônio final
+                raise M.ErroCorretora("Gate GET /positions: TimeoutError")
+            return orig()
+        f.posicoes = posicoes
+        c = self._conta(M, f)
+        with self.assertRaises(M.ErroCorretora):
+            c.rodada({"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "venda", "motivo": "t", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 60}]})
+        self.assertIn("AUSDT", M.Conta("laboratorio", f, arquivo=c.arq).e["abertas"])   # antes: arquivo nem existia
+
+
     def test_concilia_stop_executado_enquanto_a_maquina_dormia(self):
         import time
         M = self._mod()
@@ -2556,3 +2596,79 @@ class CorretoraDemoH71(unittest.TestCase):
         with unittest.mock.patch.object(M.Gate, "BASE", "https://api.gateio.ws"):
             with self.assertRaises(SystemExit):
                 M.conectar("laboratorio")                                       # endereço que não é o de demonstração: PARA
+
+
+class MotorDoChefeComRedeFalhando(unittest.TestCase):
+    """Auditoria 20/11: mesmos dois defeitos no motor da conta de teste do chefe (mesa/chefe/testnet.py). Corretora falsa: nada sai da máquina."""
+
+    def _mod(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("testnet_chefe_mesa", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "chefe" / "testnet.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def _falsa(self, T, falhas):
+        class Falsa:
+            desvio_ms = 0
+
+            def __init__(s):
+                s.n = 0
+
+            def regras(s, par):
+                return {}
+
+            def alavancagem(s, par, a):
+                pass
+
+            def livro(s, par):
+                return 100.0, 100.0
+
+            def quantidade(s, par, noc, px):
+                return round(noc / px, 3)
+
+            def ordem_mercado(s, par, lado, q, reduce_only=False):
+                s.q = q
+                return {"orderId": 7}
+
+            def consultar(s, par, oid):
+                s.n += 1
+                if s.n <= falhas:
+                    raise T.ErroFuturos("GET /fapi/v1/order: TimeoutError")
+                return {"status": "FILLED", "executada": s.q, "preco_medio": 100.0}
+        return Falsa()
+
+    def _e(self):
+        return {"caixa": 10.0, "abertas": {}, "fechadas": [], "eventos": []}
+
+    def test_consulta_falha_uma_vez_e_a_posicao_entra_com_stop(self):
+        from unittest import mock
+        T = self._mod()
+        e, f = self._e(), self._falsa(T, falhas=1)
+        with mock.patch.object(T.time, "sleep", lambda s: None), \
+                mock.patch.object(T, "colocar_stop", lambda f_, par, lado, q, preco, tipo="STOP_MARKET": {"id": tipo, "via": "algo", "preco": round(preco, 2)}):
+            T.abrir(f, e, "AUSDT", "compra", "t", 1, {"stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 60})   # antes: ErroFuturos escapava
+        self.assertEqual(e["abertas"]["AUSDT"]["stop"]["preco"], 99.0)
+
+    def test_consulta_nunca_responde_avisa_sem_quebrar(self):
+        from unittest import mock
+        T = self._mod()
+        e, f = self._e(), self._falsa(T, falhas=99)
+        with mock.patch.object(T.time, "sleep", lambda s: None):
+            T.abrir(f, e, "AUSDT", "venda", "t", 1, {"stop_pct": 0.01})
+        self.assertEqual((e["abertas"], e["caixa"]), ({}, 10.0))
+        self.assertIn("🚨", e["eventos"][0]["texto"])
+
+    def test_erro_no_meio_da_rodada_salva_o_estado(self):
+        from unittest import mock
+        T = self._mod()
+        e, salvos = self._e(), []
+
+        def conciliar(f, e_):
+            e_["caixa"] = 9.5                                                      # algo que a rodada já registrou
+            raise T.ErroFuturos("GET /fapi/v2/positionRisk: TimeoutError")
+        with mock.patch.object(T, "conectar", lambda: None), mock.patch.object(T, "carregar", lambda: e), \
+                mock.patch.object(T, "conciliar", conciliar), mock.patch.object(T, "salvar", lambda e_: salvos.append(dict(e_))):
+            with self.assertRaises(T.ErroFuturos):
+                T.rodada()
+        self.assertEqual(salvos[-1]["caixa"], 9.5)                                 # antes: nada salvo
