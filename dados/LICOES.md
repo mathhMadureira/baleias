@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 06:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 06:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,16 +65,17 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 16.7% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h -2.28%, 4 h 0.55%.
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 5.8, 'SOL': -1.2} · neutro.
+- **Amplitude:** 15.8% das moedas subindo em 24 h, 46.7% em 4 h · BTC 24 h -2.28%, 4 h 0.55%.
+- **Medo e ganância:** 12 (Extreme Fear; ontem 10).
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 11.0, 'ETH': 6.1, 'SOL': -0.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · SAPIEN fundo duplo (alta, CONFIRMOU) · SAPIEN estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ALT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · NIGHT fundo duplo (alta, formado)
-- 📰 20/11 06:08 UTC · CoinDesk: Could Anthropic prices drop at Friday's open? Crypto traders are betting yes
+- **Padrões gráficos em 1 h:** ERA fundo duplo (alta, CONFIRMOU) · SAPIEN fundo duplo (alta, CONFIRMOU) · SAPIEN estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ALT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · FIL topo duplo (baixa, formado) · MEGA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · XRP ombro-cabeça-ombro (baixa, formado)
+- 📰 20/11 06:12 UTC · CoinDesk: Here's what's crashing gold and likely weighing on bitcoin too
+- 📰 20/11 06:08 UTC · CoinDesk: Anthropic shares may fall 5% at Friday’s open, crypto futures suggest
 - 📰 20/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 20/11 05:32 UTC · CoinDesk: This Bitcoin miner sold 267 BTC to clear $22 million debt. It still may not survive
 - 📰 20/11 05:20 UTC · CoinDesk: Big money bought a net $4 billion of bitcoin funds in Q3, ending 9 months of selling
 - 📰 20/11 04:58 UTC · CoinDesk: Ethereum’s next big upgrade is pushed into 2027 by apps it would break
-- 📰 20/11 04:28 UTC · CoinDesk: VanEck drops Gemini as custodian of its bitcoin, ether and SOL ETFs
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 30929 apostas conferidas ao vivo, acerto 54.9%; prevê 119 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 31010 apostas conferidas ao vivo, acerto 55.0%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
