@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 12:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 12:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 13.0% das moedas subindo em 24 h, 17.9% em 4 h · BTC 24 h -3.74%, 4 h -0.73%.
+- **Amplitude:** 13.1% das moedas subindo em 24 h, 18.0% em 4 h · BTC 24 h -3.74%, 4 h -0.73%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.1%/ano · {'BTC': -5.2, 'ETH': 9.1, 'SOL': -7.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.6%/ano · {'BTC': -5.3, 'ETH': 9.4, 'SOL': -7.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ARB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · LSK topo duplo (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BLUR topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 12:15 UTC · CoinDesk: Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -101.30): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 32160 apostas conferidas ao vivo, acerto 55.1%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 32160 apostas conferidas ao vivo, acerto 55.1%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
