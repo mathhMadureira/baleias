@@ -1,6 +1,6 @@
 {
- "t": 1795185676,
- "hora_utc": "2026-11-20 14:41 UTC",
+ "t": 1795185874,
+ "hora_utc": "2026-11-20 14:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   -0.39,
   -0.39,
   0.51,
-  -0.4
+  -0.7
  ],
  "contexto": {
-  "t": 1795185677,
+  "t": 1795185875,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 10
   },
   "funding": {
-   "media_top20_anual_pct": 8.0,
+   "media_top20_anual_pct": 7.5,
    "principais_anual_pct": {
-    "BTC": -1.0,
+    "BTC": -1.4,
     "ETH": 11.0,
-    "SOL": 5.1
+    "SOL": 5.3
    },
    "leitura": "neutro"
   },
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.77,
+  "carteira": 9.83,
   "abertas": [
    {
     "moeda": "BCH",
@@ -473,7 +473,7 @@
     "entrada": 0.1326,
     "agora": 0.1327,
     "resultado_pct": -0.08,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Mantém: 4 de 6 tempos abaixo da MM20 (15 min, 1 h, 4 h, 1 d); 4 h −0,90%, 1 d −3,44%. Contra: 1 min e 5 min acima, 1 h +0,76%, aviso do Caçador de explosão de c"
    },
    {
@@ -482,7 +482,7 @@
     "entrada": 3.007,
     "agora": 3.004,
     "resultado_pct": 0.1,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Mantém: 3 de 6 tempos abaixo (1 h, 4 h, 1 d); topo duplo em 4 h; 1 d −10,75%; carteiras H63 0×2 vendidas. Contra: 1 h +1,35% de repique, vol 1 min 1,55×, aviso "
    }
   ],
@@ -635,7 +635,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.77,
+   "carteira": 9.83,
    "n_abertas": 4,
    "abertas": [
     [
@@ -714,13 +714,9 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.04,
-   "n_abertas": 4,
+   "carteira": 9.91,
+   "n_abertas": 2,
    "abertas": [
-    [
-     "SOPH",
-     "venda"
-    ],
     [
      "XAI",
      "venda"
@@ -728,13 +724,9 @@
     [
      "AT",
      "venda"
-    ],
-    [
-     "TLM",
-     "venda"
     ]
    ],
-   "n_fechadas": 11,
+   "n_fechadas": 13,
    "ordem": null
   },
   {
@@ -743,24 +735,20 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 10.37,
-   "n_abertas": 2,
+   "carteira": 10.34,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "TRUMP",
-     "venda"
-    ],
     [
      "INJ",
      "venda"
     ]
    ],
-   "n_fechadas": 41,
+   "n_fechadas": 42,
    "ordem": null
   }
  ],
  "torneio": {
-  "campeao": null,
+  "campeao": "guardiao",
   "placar": {
    "claude": {
     "ops": 46,
@@ -769,7 +757,7 @@
     "ganho_medio": 0.124,
     "perda_media": -0.213,
     "fator_lucro": 0.76,
-    "carteira": 9.77
+    "carteira": 9.83
    },
    "openbot_testnet": {
     "ops": 34,
@@ -790,22 +778,22 @@
     "carteira": 10.24
    },
    "laboratorio": {
-    "ops": 11,
-    "acerto": 0.455,
-    "soma": 0.037,
+    "ops": 13,
+    "acerto": 0.385,
+    "soma": -0.529,
     "ganho_medio": 0.245,
-    "perda_media": -0.198,
-    "fator_lucro": 1.03,
-    "carteira": 10.04
+    "perda_media": -0.219,
+    "fator_lucro": 0.7,
+    "carteira": 9.91
    },
    "guardiao": {
-    "ops": 41,
-    "acerto": 0.585,
-    "soma": -0.049,
-    "ganho_medio": 0.131,
+    "ops": 42,
+    "acerto": 0.595,
+    "soma": 0.139,
+    "ganho_medio": 0.133,
     "perda_media": -0.188,
-    "fator_lucro": 0.98,
-    "carteira": 10.37
+    "fator_lucro": 1.04,
+    "carteira": 10.34
    }
   },
   "vereditos": []
