@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 20/11/2026 10:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 20/11/2026 10:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 35 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.4% das moedas subindo em 24 h, 59.3% em 4 h · BTC 24 h -2.52%, 4 h 0.77%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 10).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': -2.4, 'ETH': 8.1, 'SOL': 10.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': -2.5, 'ETH': 8.6, 'SOL': 9.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 78236, MM200 72694); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AIGENSYN fundo duplo (alta, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · BLUR topo duplo (baixa, formado) · ENSO fundo duplo (alta, formado) · ERA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · THETA topo duplo (baixa, formado)
 - 📰 20/11 10:48 UTC · CoinDesk: Coinbase targets first-half 2027 for its own prediction market contracts
