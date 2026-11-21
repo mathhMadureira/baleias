@@ -1,6 +1,6 @@
 {
- "t": 1795224159,
- "hora_utc": "2026-11-21 01:22 UTC",
+ "t": 1795224408,
+ "hora_utc": "2026-11-21 01:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 143,
@@ -172,10 +172,10 @@
   0.27,
   -0.37,
   0.14,
-  0.18
+  0.09
  ],
  "contexto": {
-  "t": 1795224160,
+  "t": 1795224409,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.2,
+   "media_top20_anual_pct": 3.0,
    "principais_anual_pct": {
-    "BTC": 1.1,
-    "ETH": -18.6,
-    "SOL": -9.6
+    "BTC": 1.2,
+    "ETH": -17.7,
+    "SOL": -11.2
    },
    "leitura": "neutro"
   },
