@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 57.1% | 266 | 51.1%–62.9% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.5% | 2340 | 50.5%–54.5% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.5% | 2341 | 50.5%–54.6% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 85.7% | 7 | 48.7%–97.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 72.7% | 11 | 43.4%–90.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.6% | 33 | 43.7%–75.3% | física: alta anormal de 1 h → devolve |
@@ -22,7 +22,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | connors_8020_alta | reprovado | 46.2% | 13 | 23.2%–70.9% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | williams_volb_alta | reprovado | 45.4% | 141 | 37.4%–53.6% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | rompimento | reprovado | 41.7% | 36 | 27.1%–57.8% | Tartaruga em 15 min: rompeu a máxima de 55 |
-| raschke_graal_alta | reprovado | 40.0% | 20 | 21.9%–61.3% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
+| raschke_graal_alta | reprovado | 38.1% | 21 | 20.8%–59.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | raschke_sopa_alta | reprovado | 35.7% | 14 | 16.3%–61.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
 | velez_180_alta | reprovado | 25.0% | 8 | 7.1%–59.1% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | velez_espaco_duplo_alto | reprovado | — | 0 | — | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
