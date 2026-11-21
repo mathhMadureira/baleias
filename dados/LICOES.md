@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 18:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 18:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -62,7 +62,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 65.2% das moedas subindo em 24 h, 30.5% em 4 h · BTC 24 h 1.55%, 4 h -0.79%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.7%/ano · {'BTC': -5.2, 'ETH': -6.7, 'SOL': -19.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': -3.9, 'ETH': -6.6, 'SOL': -18.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CYBER fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · MET topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · SYRUP topo duplo (baixa, formado) · USUAL OCO invertido (alta, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
