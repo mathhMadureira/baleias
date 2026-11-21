@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 07:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 07:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 13.6% das moedas subindo em 24 h, 49.4% em 4 h · BTC 24 h -5.68%, 4 h -0.17%.
+- **Amplitude:** 13.6% das moedas subindo em 24 h, 84.6% em 4 h · BTC 24 h -5.89%, 4 h 2.33%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.1%/ano · {'BTC': -2.6, 'ETH': 5.6, 'SOL': -30.6} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ZKP fundo duplo (alta, CONFIRMOU) · BONK fundo duplo (alta, formado) · ENA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SIGN fundo duplo (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.4%/ano · {'BTC': -3.5, 'ETH': 5.1, 'SOL': -31.5} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 2.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ZKP fundo duplo (alta, CONFIRMOU) · ENA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SIGN fundo duplo (alta, formado)
 - 📰 21/11 06:16 UTC · CoinDesk: Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug
 - 📰 21/11 05:59 UTC · CoinDesk: XRP falls 10% as long bets unwind and ETF assets slip below $1 billion
 - 📰 21/11 05:40 UTC · Cointelegraph: Hong Kong pushes to bring crypto custodians, advisers under licensing rules
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -118.41): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 36243 apostas conferidas ao vivo, acerto 55.1%; prevê 64 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 36327 apostas conferidas ao vivo, acerto 55.0%; prevê 161 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
