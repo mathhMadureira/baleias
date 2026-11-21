@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 06:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 06:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 10.7% das moedas subindo em 24 h, 12.6% em 4 h · BTC 24 h -7.45%, 4 h -2.43%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.7%/ano · {'BTC': 5.5, 'ETH': -11.8, 'SOL': -25.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': 5.0, 'ETH': -11.6, 'SOL': -25.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** OPN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BREV fundo duplo (alta, formado) · ENA fundo duplo (alta, formado) · SIGN fundo duplo (alta, formado)
 - 📰 21/11 06:16 UTC · CoinDesk: Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug
