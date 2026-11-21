@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 01:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 01:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 11.9% das moedas subindo em 24 h, 37.8% em 4 h · BTC 24 h -4.9%, 4 h -0.6%.
+- **Amplitude:** 12.0% das moedas subindo em 24 h, 38.0% em 4 h · BTC 24 h -4.9%, 4 h -0.6%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 1.9, 'ETH': -13.2, 'SOL': -13.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 1.7, 'ETH': -12.8, 'SOL': -13.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BREV fundo duplo (alta, formado) · GLMR topo duplo (baixa, formado) · HMSTR topo duplo (baixa, formado) · HMSTR fundo duplo (alta, formado) · HMSTR triângulo descendente (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 22:51 UTC · CoinDesk: Kalshi races to get ahead of New York order that could shut down exchange
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 34752 apostas conferidas ao vivo, acerto 55.6%; prevê 142 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 34752 apostas conferidas ao vivo, acerto 55.6%; prevê 141 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
