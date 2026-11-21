@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 23:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 23:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.01** · 52 operações fechadas · 3 abertas
+Carteira **US$ 10.02** · 52 operações fechadas · 3 abertas
 
 - **Total:** 31/52 com lucro (60%), resultado -0.25, média -0.005 por operação.
 - **Últimas 24 h:** 1/2 com lucro, -0.20.
@@ -30,7 +30,7 @@ Carteira **US$ 8.69** · 38 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.10** · 27 operações fechadas · 3 abertas
+Carteira **US$ 10.11** · 27 operações fechadas · 3 abertas
 
 - **Total:** 13/27 com lucro (48%), resultado +0.09, média +0.003 por operação.
 - **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 10 op, 50% certas, +0.24 · 00–05 UTC: 2 op, 100% certas, +0.41
@@ -40,12 +40,15 @@ Carteira **US$ 10.10** · 27 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.66** · 15 operações fechadas · 3 abertas
+Carteira **US$ 10.60** · 17 operações fechadas · 2 abertas
 
-- **Total:** 7/15 com lucro (47%), resultado +0.63, média +0.042 por operação.
-- **Por horário:** 18–23 UTC: 10 op, 50% certas, +0.07 · 12–17 UTC: 5 op, 40% certas, +0.56
-- **Por lado:** compra: 7 op, 29% certas, -0.63 · venda: 8 op, 62% certas, +1.25
-- **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
+- **Total:** 7/17 com lucro (41%), resultado +0.51, média +0.030 por operação.
+- **Últimas 24 h:** 0/2 com lucro, -0.12.
+- **Por horário:** 18–23 UTC: 12 op, 42% certas, -0.05 · 12–17 UTC: 5 op, 40% certas, +0.56
+- **Por lado:** compra: 9 op, 22% certas, -0.74 · venda: 8 op, 62% certas, +1.25
+- **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
+- **Moedas que mais perderam (≥ 3 op):** SOPH -0.62 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** SOPH -0.62 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
@@ -65,7 +68,7 @@ Carteira **US$ 9.84** · 48 operações fechadas · 2 abertas
 
 - **Amplitude:** 50.0% das moedas subindo em 24 h, 42.9% em 4 h · BTC 24 h 2.1%, 4 h -0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': -3.2, 'ETH': -11.6, 'SOL': -2.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': -3.7, 'ETH': -11.1, 'SOL': -2.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LSK bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BREV fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · INIT OCO invertido (alta, formado) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
