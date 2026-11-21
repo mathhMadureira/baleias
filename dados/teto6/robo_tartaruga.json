@@ -7,227 +7,227 @@
  "radar": [
   {
    "moeda": "TRX",
-   "preco": 0.3023,
+   "preco": 0.303,
    "rompimento": 0.3654,
-   "falta_pct": 20.87330466424082,
-   "stop_pct": -3.9546571855461377
+   "falta_pct": 20.59405940594059,
+   "stop_pct": -3.9455210138303554
   },
   {
    "moeda": "BTC",
-   "preco": 57988.9,
+   "preco": 57862.05,
    "rompimento": 87220.0,
-   "falta_pct": 50.408095342384485,
-   "stop_pct": -9.157969695074101
-  },
-  {
-   "moeda": "INJ",
-   "preco": 6.15,
-   "rompimento": 9.417,
-   "falta_pct": 53.12195121951218,
-   "stop_pct": -23.656968496719553
+   "falta_pct": 50.73783248260302,
+   "stop_pct": -9.17804655816174
   },
   {
    "moeda": "BNB",
-   "preco": 526.45,
+   "preco": 521.97,
    "rompimento": 809.99,
-   "falta_pct": 53.858865989172756,
-   "stop_pct": -9.809626178384105
+   "falta_pct": 55.179416441557926,
+   "stop_pct": -9.893820912332725
+  },
+  {
+   "moeda": "INJ",
+   "preco": 6.018,
+   "rompimento": 9.417,
+   "falta_pct": 56.48055832502492,
+   "stop_pct": -24.175865113796156
   },
   {
    "moeda": "ETH",
-   "preco": 1639.97,
+   "preco": 1627.18,
    "rompimento": 2777.33,
-   "falta_pct": 69.35248815527113,
-   "stop_pct": -12.847272385741885
+   "falta_pct": 70.68363672119861,
+   "stop_pct": -12.948254830101844
   },
   {
    "moeda": "PEPE",
-   "preco": 3.34e-06,
+   "preco": 3.27e-06,
    "rompimento": 5.68e-06,
-   "falta_pct": 70.05988023952095,
-   "stop_pct": -25.327419088014057
+   "falta_pct": 73.70030581039755,
+   "stop_pct": -25.869596255035766
   },
   {
    "moeda": "XRP",
-   "preco": 0.9002,
+   "preco": 0.8868,
    "rompimento": 1.5617,
-   "falta_pct": 73.4836702954899,
-   "stop_pct": -13.483071479271327
+   "falta_pct": 76.10509697789807,
+   "stop_pct": -13.68680756161485
   },
   {
    "moeda": "SOL",
-   "preco": 68.31,
+   "preco": 67.26,
    "rompimento": 124.95,
-   "falta_pct": 82.9161176987264,
-   "stop_pct": -13.724153193108673
+   "falta_pct": 85.771632471008,
+   "stop_pct": -13.938401793357919
   },
   {
    "moeda": "BCH",
-   "preco": 189.3,
+   "preco": 186.7,
    "rompimento": 347.7,
-   "falta_pct": 83.6767036450079,
-   "stop_pct": -15.734715296875661
-  },
-  {
-   "moeda": "DOGE",
-   "preco": 0.05369,
-   "rompimento": 0.09893,
-   "falta_pct": 84.26150121065375,
-   "stop_pct": -14.50164714533628
+   "falta_pct": 86.23460096411355,
+   "stop_pct": -15.95383827369343
   },
   {
    "moeda": "LTC",
-   "preco": 39.14,
+   "preco": 38.76,
    "rompimento": 72.59,
-   "falta_pct": 85.46244251405213,
-   "stop_pct": -14.375013691494726
+   "falta_pct": 87.28070175438599,
+   "stop_pct": -14.515945198274085
+  },
+  {
+   "moeda": "DOGE",
+   "preco": 0.05276,
+   "rompimento": 0.09893,
+   "falta_pct": 87.50947687642154,
+   "stop_pct": -14.757267536639592
   },
   {
    "moeda": "LINK",
-   "preco": 8.403,
+   "preco": 8.307,
    "rompimento": 15.777,
-   "falta_pct": 87.75437343805781,
-   "stop_pct": -15.651569628789025
+   "falta_pct": 89.92416034669554,
+   "stop_pct": -15.832447284304102
   },
   {
    "moeda": "AVAX",
-   "preco": 6.344,
+   "preco": 6.279,
    "rompimento": 12.008,
-   "falta_pct": 89.281210592686,
-   "stop_pct": -17.8469431864969
+   "falta_pct": 91.24064341455644,
+   "stop_pct": -18.03169415116043
   },
   {
    "moeda": "XLM",
-   "preco": 0.1251,
+   "preco": 0.123,
    "rompimento": 0.2371,
-   "falta_pct": 89.5283772981615,
-   "stop_pct": -14.483823204412861
+   "falta_pct": 92.76422764227644,
+   "stop_pct": -14.731107990829662
   },
   {
    "moeda": "CYBER",
-   "preco": 0.221,
+   "preco": 0.217,
    "rompimento": 0.42,
-   "falta_pct": 90.04524886877827,
-   "stop_pct": -31.358633419634636
+   "falta_pct": 93.54838709677418,
+   "stop_pct": -31.936672745342186
   },
   {
    "moeda": "TAO",
-   "preco": 176.6,
+   "preco": 173.7,
    "rompimento": 337.1,
-   "falta_pct": 90.88335220838053,
-   "stop_pct": -18.19024822501257
+   "falta_pct": 94.07023603914799,
+   "stop_pct": -18.493942639822798
   },
   {
    "moeda": "AAVE",
-   "preco": 95.82,
+   "preco": 95.05,
    "rompimento": 187.59,
-   "falta_pct": 95.77332498434568,
-   "stop_pct": -19.338057828085226
+   "falta_pct": 97.35928458705945,
+   "stop_pct": -19.494715424377972
   },
   {
    "moeda": "ADA",
-   "preco": 0.1403,
+   "preco": 0.1376,
    "rompimento": 0.2824,
-   "falta_pct": 101.28296507483961,
-   "stop_pct": -16.66833781064907
+   "falta_pct": 105.23255813953489,
+   "stop_pct": -16.995405485712677
   },
   {
    "moeda": "SUI",
-   "preco": 0.6252,
+   "preco": 0.6133,
    "rompimento": 1.2947,
-   "falta_pct": 107.08573256557901,
-   "stop_pct": -19.138535329662982
+   "falta_pct": 111.1038643404533,
+   "stop_pct": -19.50988470260117
   },
   {
    "moeda": "ARB",
-   "preco": 0.1092,
+   "preco": 0.1057,
    "rompimento": 0.2367,
-   "falta_pct": 116.75824175824174,
-   "stop_pct": -24.697975935689882
+   "falta_pct": 123.93566698202459,
+   "stop_pct": -25.51578970839484
   },
   {
    "moeda": "NEAR",
-   "preco": 2.713,
+   "preco": 2.67,
    "rompimento": 6.0,
-   "falta_pct": 121.15739034279396,
-   "stop_pct": -28.033145247918352
+   "falta_pct": 124.71910112359552,
+   "stop_pct": -28.484615377379214
   },
   {
    "moeda": "CELO",
-   "preco": 0.0536,
+   "preco": 0.05244,
    "rompimento": 0.11993,
-   "falta_pct": 123.74999999999999,
-   "stop_pct": -18.710071399187132
+   "falta_pct": 128.69946605644546,
+   "stop_pct": -19.123947883227125
   },
   {
    "moeda": "ZEC",
-   "preco": 735.78,
+   "preco": 723.53,
    "rompimento": 1680.0,
-   "falta_pct": 128.3291201174264,
-   "stop_pct": -30.675932862359147
+   "falta_pct": 132.1949331748511,
+   "stop_pct": -31.1953034172275
   },
   {
    "moeda": "UNI",
-   "preco": 4.445,
+   "preco": 4.318,
    "rompimento": 10.2,
-   "falta_pct": 129.47131608548926,
-   "stop_pct": -24.8491871687092
+   "falta_pct": 136.22047244094492,
+   "stop_pct": -25.58004561484771
   },
   {
    "moeda": "FET",
-   "preco": 0.1096,
+   "preco": 0.1072,
    "rompimento": 0.2723,
-   "falta_pct": 148.44890510948906,
-   "stop_pct": -23.407199404125212
-  },
-  {
-   "moeda": "HBAR",
-   "preco": 0.05037,
-   "rompimento": 0.13096,
-   "falta_pct": 159.996029382569,
-   "stop_pct": -16.56339519846387
+   "falta_pct": 154.0111940298507,
+   "stop_pct": -23.931241181829506
   },
   {
    "moeda": "LSK",
-   "preco": 0.1301,
+   "preco": 0.1297,
    "rompimento": 0.3427,
-   "falta_pct": 163.412759415834,
-   "stop_pct": -41.86189275984723
+   "falta_pct": 164.225134926754,
+   "stop_pct": -41.990996515467415
   },
   {
-   "moeda": "WLD",
-   "preco": 0.2209,
-   "rompimento": 0.6192,
-   "falta_pct": 180.30783159800814,
-   "stop_pct": -29.69253911958316
+   "moeda": "HBAR",
+   "preco": 0.04947,
+   "rompimento": 0.13096,
+   "falta_pct": 164.7260966242167,
+   "stop_pct": -16.864730465870732
   },
   {
    "moeda": "QNT",
-   "preco": 132.65,
+   "preco": 130.23,
    "rompimento": 373.0,
-   "falta_pct": 181.1911044101018,
-   "stop_pct": -25.59169667120148
+   "falta_pct": 186.41634032097062,
+   "stop_pct": -26.0672545760184
+  },
+  {
+   "moeda": "WLD",
+   "preco": 0.2148,
+   "rompimento": 0.6192,
+   "falta_pct": 188.26815642458098,
+   "stop_pct": -30.535762995884173
   },
   {
    "moeda": "ONE",
-   "preco": 0.001034,
+   "preco": 0.001009,
    "rompimento": 0.002963,
-   "falta_pct": 186.55705996131528,
-   "stop_pct": -49.7268506793716
+   "falta_pct": 193.65708622398415,
+   "stop_pct": -50.9589332036375
   },
   {
    "moeda": "GTC",
-   "preco": 0.13223,
+   "preco": 0.1285,
    "rompimento": 0.393,
-   "falta_pct": 197.20940784995844,
-   "stop_pct": -44.683124918056876
+   "falta_pct": 205.8365758754864,
+   "stop_pct": -45.98015259077556
   },
   {
    "moeda": "ENA",
-   "preco": 0.095,
+   "preco": 0.0929,
    "rompimento": 0.2946,
-   "falta_pct": 210.1052631578947,
-   "stop_pct": -33.859791488679605
+   "falta_pct": 217.1151776103337,
+   "stop_pct": -34.62519043514061
   },
   {
    "moeda": "NFP",
@@ -238,7 +238,7 @@
   }
  ],
  "patrimonio": 700.0,
- "atualizado": 1795244312.4247608,
+ "atualizado": 1795250830.3509698,
  "curva": [
   [
    1794266993,
@@ -414,6 +414,10 @@
   ],
   [
    1795244312,
+   700.0
+  ],
+  [
+   1795250830,
    700.0
   ]
  ]
