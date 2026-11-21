@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 20:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 20:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -60,11 +60,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 72.2% das moedas subindo em 24 h, 45.1% em 4 h · BTC 24 h 3.3%, 4 h 0.74%.
+- **Amplitude:** 70.5% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h 2.91%, 4 h 0.71%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': -8.0, 'ETH': -17.9, 'SOL': -11.2} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 17.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BARD estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BNB bandeira de alta (alta, CONFIRMOU) · JST bandeira de alta (alta, CONFIRMOU) · KAVA topo duplo (baixa, CONFIRMOU) · XRP bandeira de alta (alta, CONFIRMOU) · CELO topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · PUMP topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': -7.4, 'ETH': -17.5, 'SOL': -10.7} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BARD estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BNB bandeira de alta (alta, CONFIRMOU) · JST bandeira de alta (alta, CONFIRMOU) · KAVA topo duplo (baixa, CONFIRMOU) · XRP bandeira de alta (alta, CONFIRMOU) · CELO topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
@@ -85,13 +85,13 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando corpo ≤ -0.6, aposta sobe. Começa em observação.
-- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando vol ≤ -1.5, aposta sobe. Começa em observação.
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (desce). Peso reduzido de: vortice_invertido. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: vortice_invertido. Rede neural corrigida.
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
-  (v3: 7 sinapses votando, 28 em observação, 0 podadas)
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r32 ≤ -1, aposta sobe. Começa em observação.
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r16 ≤ -1.5, aposta sobe. Começa em observação.
+  (v3: 7 sinapses votando, 30 em observação, 0 podadas)
 **v2:**
 - 😴 Sono: reencenei 1728 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 1824 episódios guardados e renormalizei os pesos das sinapses.
@@ -109,7 +109,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 38470 apostas conferidas ao vivo, acerto 54.6%; prevê 132 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 38502 apostas conferidas ao vivo, acerto 54.6%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
