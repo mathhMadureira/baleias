@@ -1,21 +1,21 @@
 {
- "t": 1795235572,
- "hora_utc": "2026-11-21 04:32 UTC",
+ "t": 1795235789,
+ "hora_utc": "2026-11-21 04:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 152,
-  "subindo_pct": 3.3,
-  "mediana_pct": -3.78
+  "moedas": 154,
+  "subindo_pct": 3.2,
+  "mediana_pct": -3.77
  },
  "mercado_4h": {
-  "moedas": 152,
-  "subindo_pct": 3.3,
-  "mediana_pct": -5.38
+  "moedas": 154,
+  "subindo_pct": 3.2,
+  "mediana_pct": -5.37
  },
  "mercado_24h": {
-  "moedas": 152,
-  "subindo_pct": 7.9,
-  "mediana_pct": -9.78
+  "moedas": 154,
+  "subindo_pct": 7.8,
+  "mediana_pct": -9.74
  },
  "btc": {
   "1h": -4.28,
@@ -172,10 +172,10 @@
   -0.01,
   -0.75,
   -3.16,
-  -1.19
+  -1.01
  ],
  "contexto": {
-  "t": 1795235572,
+  "t": 1795235790,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,13 +274,13 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -10.4,
+   "media_top20_anual_pct": -9.0,
    "principais_anual_pct": {
-    "BTC": -12.1,
-    "ETH": -34.9,
-    "SOL": -23.7
+    "BTC": -10.7,
+    "ETH": -33.8,
+    "SOL": -22.6
    },
-   "leitura": "vendidos pagando (risco de alta forçada)"
+   "leitura": "neutro"
   },
   "tendencia_diaria": {
    "btc": {
@@ -445,10 +445,6 @@
     "prob_subir": 0.634
    },
    {
-    "moeda": "KAIA",
-    "prob_subir": 0.616
-   },
-   {
     "moeda": "TNSR",
     "prob_subir": 0.614
    },
@@ -463,6 +459,10 @@
    {
     "moeda": "F",
     "prob_subir": 0.604
+   },
+   {
+    "moeda": "INIT",
+    "prob_subir": 0.6
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -746,12 +746,12 @@
   "z_contra_lab": 2.25,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5205,
-    "n": 26967
+    "acerto": 0.5204,
+    "n": 26996
    },
    "segue_maioria_24h": {
-    "acerto": 0.5248,
-    "n": 30873
+    "acerto": 0.523,
+    "n": 30971
    }
   },
   "referencia_ganha": [],
