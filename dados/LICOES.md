@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 13:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 13:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 9.96** · 50 operações fechadas · 0 abertas
 Carteira **US$ 7.95** · 34 operações fechadas · 3 abertas
 
 - **Total:** 10/34 com lucro (29%), resultado -2.15, média -0.063 por operação.
-- **Últimas 24 h:** 1/8 com lucro, -0.49.
+- **Últimas 24 h:** 0/7 com lucro, -0.82.
 - **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 12–17 UTC: 16 op, 31% certas, -0.92 · 18–23 UTC: 16 op, 31% certas, -0.23
 - **Por lado:** compra: 6 op, 0% certas, -2.62 · venda: 28 op, 36% certas, +0.47
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −0.80% na co: 2 op, 0% certas, -0.33 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.70% na co: 1 op, 0% certas, -0.16 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · fora da lista de posições do c: 6 op, 17% certas, +0.64 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.2% das moedas subindo em 24 h, 91.1% em 4 h · BTC 24 h -3.66%, 4 h 2.4%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 6.7, 'SOL': -21.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.3%/ano · {'BTC': 11.0, 'ETH': 7.0, 'SOL': -19.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE ombro-cabeça-ombro (baixa, formado) · ZKP fundo duplo (alta, formado)
 - 📰 21/11 12:30 UTC · CoinDesk: Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated
