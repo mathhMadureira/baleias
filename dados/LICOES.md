@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 06:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 06:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 7.0% das moedas subindo em 24 h, 5.7% em 4 h · BTC 24 h -9.22%, 4 h -4.75%.
+- **Amplitude:** 10.8% das moedas subindo em 24 h, 12.7% em 4 h · BTC 24 h -7.45%, 4 h -2.43%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.8%/ano · {'BTC': 6.1, 'ETH': -13.8, 'SOL': -25.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.1%/ano · {'BTC': 5.9, 'ETH': -12.4, 'SOL': -25.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** OPN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BREV fundo duplo (alta, formado) · SIGN fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** OPN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BREV fundo duplo (alta, formado) · ENA fundo duplo (alta, formado) · SIGN fundo duplo (alta, formado)
 - 📰 21/11 06:16 UTC · CoinDesk: Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug
 - 📰 21/11 05:59 UTC · CoinDesk: XRP falls 10% as long bets unwind and ETF assets slip below $1 billion
 - 📰 21/11 05:40 UTC · Cointelegraph: Hong Kong pushes to bring crypto custodians, advisers under licensing rules
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -118.41): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 35814 apostas conferidas ao vivo, acerto 55.3%; prevê 17 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 35915 apostas conferidas ao vivo, acerto 55.4%; prevê 157 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
