@@ -1,6 +1,6 @@
 {
- "t": 1795301393,
- "hora_utc": "2026-11-21 22:49 UTC",
+ "t": 1795301615,
+ "hora_utc": "2026-11-21 22:53 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,10 +172,10 @@
   0.33,
   0.16,
   0.03,
-  -0.52
+  -0.47
  ],
  "contexto": {
-  "t": 1795301395,
+  "t": 1795301616,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -260,12 +260,6 @@
     "t": 1795234207,
     "hora_utc": "21/11 04:10",
     "titulo": "Bitcoin tanks below $57,000 for the first time in two years, and its not alone"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795215074,
-    "hora_utc": "20/11 22:51",
-    "titulo": "Kalshi races to get ahead of New York order that could shut down exchange"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.7,
+   "media_top20_anual_pct": 3.6,
    "principais_anual_pct": {
-    "BTC": -9.7,
-    "ETH": -16.3,
-    "SOL": -7.4
+    "BTC": -9.9,
+    "ETH": -16.6,
+    "SOL": -7.1
    },
    "leitura": "neutro"
   },
@@ -638,7 +632,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.73,
+   "carteira": 8.74,
    "n_abertas": 2,
    "abertas": [
     [
@@ -709,7 +703,7 @@
     "ganho_medio": 0.293,
     "perda_media": -0.221,
     "fator_lucro": 0.75,
-    "carteira": 8.73
+    "carteira": 8.74
    },
    "treinador": {
     "ops": 27,

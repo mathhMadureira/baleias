@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 22:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 22:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -16,7 +16,7 @@ Carteira **US$ 10.01** · 50 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.73** · 37 operações fechadas · 2 abertas
+Carteira **US$ 8.74** · 37 operações fechadas · 2 abertas
 
 - **Total:** 13/37 com lucro (35%), resultado -1.28, média -0.035 por operação.
 - **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 18–23 UTC: 16 op, 31% certas, -0.23 · 12–17 UTC: 19 op, 42% certas, -0.05
@@ -62,7 +62,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 45.3% das moedas subindo em 24 h, 24.2% em 4 h · BTC 24 h 1.64%, 4 h 0.04%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -9.7, 'ETH': -16.3, 'SOL': -7.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.6%/ano · {'BTC': -9.9, 'ETH': -16.6, 'SOL': -7.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JST bandeira de alta (alta, CONFIRMOU) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · PUMP topo duplo (baixa, formado) · USUAL OCO invertido (alta, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
