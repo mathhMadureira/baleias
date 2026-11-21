@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 01:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 01:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 11.9% das moedas subindo em 24 h, 88.1% em 4 h · BTC 24 h -5.01%, 4 h 0.97%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.9%/ano · {'BTC': 3.5, 'ETH': -23.1, 'SOL': -4.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 2.9, 'ETH': -21.6, 'SOL': -6.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AUDIO fundo duplo (alta, formado) · CHZ topo duplo (baixa, formado) · GLMR topo duplo (baixa, formado) · HMSTR topo duplo (baixa, formado) · HMSTR fundo duplo (alta, formado) · HMSTR triângulo descendente (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 20/11 22:51 UTC · CoinDesk: Kalshi races to get ahead of New York order that could shut down exchange
