@@ -17,7 +17,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | tres_corvos | reprovado | 49.8% | 410 | 44.9%–54.6% | H6: três corvos → sobe (efeito pequeno) |
 | reversao_queda | reprovado | 49.3% | 73 | 38.2%–60.5% | H14: queda anormal de 1 h → sobe |
 | demark_td9_alta | reprovado | 49.2% | 59 | 36.8%–61.6% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
-| vortice_invertido | reprovado | 49.0% | 455 | 44.4%–53.6% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| vortice_invertido | reprovado | 49.1% | 456 | 44.6%–53.7% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | williams_volb_alta | reprovado | 46.7% | 135 | 38.5%–55.1% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | velez_180_baixa | reprovado | 46.4% | 56 | 34.0%–59.3% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | connors_8020_alta | reprovado | 46.2% | 13 | 23.2%–70.9% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
