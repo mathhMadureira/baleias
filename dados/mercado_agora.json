@@ -1,21 +1,21 @@
 {
- "t": 1795247781,
- "hora_utc": "2026-11-21 07:56 UTC",
+ "t": 1795247994,
+ "hora_utc": "2026-11-21 07:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 162,
-  "subindo_pct": 58.0,
+  "moedas": 163,
+  "subindo_pct": 57.7,
   "mediana_pct": 0.21
  },
  "mercado_4h": {
-  "moedas": 162,
-  "subindo_pct": 84.6,
-  "mediana_pct": 1.45
+  "moedas": 163,
+  "subindo_pct": 84.7,
+  "mediana_pct": 1.44
  },
  "mercado_24h": {
-  "moedas": 162,
-  "subindo_pct": 13.6,
-  "mediana_pct": -7.98
+  "moedas": 163,
+  "subindo_pct": 13.5,
+  "mediana_pct": -7.92
  },
  "btc": {
   "1h": 1.58,
@@ -172,11 +172,17 @@
   -0.77,
   -0.9,
   4.08,
-  -0.07
+  -0.11
  ],
  "contexto": {
-  "t": 1795247782,
+  "t": 1795247995,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795247507,
+    "hora_utc": "21/11 07:51",
+    "titulo": "US lawmakers propose up to 30% rewards for prediction market whistleblowers"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795241802,
@@ -260,12 +266,6 @@
     "t": 1795198432,
     "hora_utc": "20/11 18:13",
     "titulo": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795196505,
-    "hora_utc": "20/11 17:41",
-    "titulo": "Wrapped Monero Token Collapses 99% After $13 Million Hack Blamed on Web Host"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -2.4,
+   "media_top20_anual_pct": -2.5,
    "principais_anual_pct": {
-    "BTC": -4.4,
+    "BTC": -5.0,
     "ETH": 4.8,
-    "SOL": -32.3
+    "SOL": -32.6
    },
    "leitura": "neutro"
   },
@@ -697,12 +697,12 @@
   "z_contra_lab": 2.07,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5179,
-    "n": 28084
+    "acerto": 0.5178,
+    "n": 28268
    },
    "segue_maioria_24h": {
     "acerto": 0.5196,
-    "n": 31690
+    "n": 31604
    }
   },
   "referencia_ganha": [],
