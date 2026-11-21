@@ -1,6 +1,6 @@
 {
- "t": 1795301615,
- "hora_utc": "2026-11-21 22:53 UTC",
+ "t": 1795301835,
+ "hora_utc": "2026-11-21 22:57 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,10 +172,10 @@
   0.33,
   0.16,
   0.03,
-  -0.47
+  -0.54
  ],
  "contexto": {
-  "t": 1795301616,
+  "t": 1795301836,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -268,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.6,
+   "media_top20_anual_pct": 3.3,
    "principais_anual_pct": {
-    "BTC": -9.9,
-    "ETH": -16.6,
-    "SOL": -7.1
+    "BTC": -10.1,
+    "ETH": -17.0,
+    "SOL": -6.7
    },
    "leitura": "neutro"
   },
@@ -441,35 +441,28 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.01,
+  "carteira": 9.98,
   "abertas": [
-   {
-    "moeda": "SIGN",
-    "lado": "compra",
-    "entrada": 0.00871,
-    "agora": 0.00873,
-    "resultado_pct": 0.23,
-    "horas_aberta": 0.4,
-    "motivo_de_entrada": "Entrada: varredura completa; 4 de 6 tempos acima da MM20 (1 min, 1 h, 4 h, 1 dia); 24 h +4,19%; v4 p=0,642, confiança 0,142 a favor. Padrões 15 min EST↓ e 1 h T"
-   },
    {
     "moeda": "HYPER",
     "lado": "compra",
     "entrada": 0.0419,
     "agora": 0.0419,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.4,
+    "horas_aberta": 0.5,
     "motivo_de_entrada": "Entrada: varredura completa; 3 de 6 tempos acima da MM20 (1 min, 15 min, 1 h); v4 p=0,637, confiança 0,138 a favor. 1 h TD↓ e 4 h OCO↓ não confirmados; 4 h 0,00"
+   },
+   {
+    "moeda": "SHIB",
+    "lado": "venda",
+    "entrada": 3.61e-06,
+    "agora": 3.62e-06,
+    "resultado_pct": -0.28,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: v4 p=0,347, confiança 0,153 a favor; varredura completa, 5 de 6 tempos abaixo da MM20 (1 min, 5 min, 15 min, 4 h, 1 dia); 4 h -0,55%, 24 h +0,28%, abai"
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "BTC",
-    "lado": "venda",
-    "resultado_usd": 0.153,
-    "motivo_saida": "stop móvel (pico +1.13%, guardou +0.79%)",
-    "motivo_de_entrada": "Aviso de venda do Caçador (5 min −0,69%, z −4,3, volume 10,2×); agora 5 de 6 tempos abaixo da MM20 (só 1 min acima); 1 h"
-   },
    {
     "moeda": "ETH",
     "lado": "venda",
@@ -567,13 +560,16 @@
     "resultado_usd": 0.43,
     "motivo_saida": "lucro realizado +2.1%",
     "motivo_de_entrada": "Entrada nova: 5 de 6 tempos abaixo da MM20 (5 min a 1 d); estrutura de baixa em 15 min e topo duplo em 1 h (não confirma"
+   },
+   {
+    "moeda": "SIGN",
+    "lado": "compra",
+    "resultado_usd": 0.027,
+    "motivo_saida": "o Claude mandou fechar: ",
+    "motivo_de_entrada": "Entrada: varredura completa; 4 de 6 tempos acima da MM20 (1 min, 1 h, 4 h, 1 dia); 24 h +4,19%; v4 p=0,642, confiança 0,"
    }
   ],
   "licoes_anteriores": [
-   {
-    "t": 1795125312,
-    "texto": "Sem operação fechada desde a rodada das 21:40 (última: BTC venda +0,153 pelo stop móvel). Carteira simulada, 36 fechadas: p 0,639, G 0,109, L 0,214, E −0,008 por operação. Rodada sem universo (0 de 116 moedas lidas): a regra C1 vale para todas as moedas novas; as abertas seguem com stop e alvo."
-   },
    {
     "t": 1795143341,
     "texto": "Conta de teste: MEGA compra −0,154, ETH venda −0,159 e LTC venda −0,193, os 3 pelo stop da corretora (o repique de BTC 1 h +0,56% pegou as vendas). Carteira simulada, 15 últimas fechadas: p 0,60, G 0,182, L 0,172, E +0,041 por operação. Caderno: padrão a favor 4 de 4 certas (+0,970), sem padrão 56% (−0,154), poucas para concluir; por isso as duas entradas de hoje têm padrão confirmado a favor em 1"
@@ -601,6 +597,10 @@
    {
     "t": 1795299768,
     "texto": "Carteira simulada: 50 fechadas, acerto 60%, soma -US$ 0,044, ganho médio US$ 0,14, perda média -US$ 0,213, fator de lucro 0,99, carteira US$ 9,96. Caderno Claude: 50 fechadas, 27 com leitura; 6 de 6 tempos: 10 operações, 60%, soma +US$ 0,568, média +US$ 0,0568; padrão a favor: 10 operações, 70%, soma +US$ 1,337, média +US$ 0,1337. Carteira de teste: 37 fechadas, resultado -US$ 1,28, fator de lucro"
+   },
+   {
+    "t": 1795301627,
+    "texto": "Caderno Claude: 50 fechadas, 27 com leitura; 6/6 tempos: 10 operações, 60%, +US$ 0,568 (+US$ 0,0568 média); padrão a favor: 10, 70%, +US$ 1,337 (+US$ 0,1337 média). Histórico testnet: 37 fechadas, 35,1% acerto, soma -US$ 1,28, fator de lucro 0,75, patrimônio US$ 8,7354. Ainda não há amostra suficiente para alterar método."
    }
   ]
  },
@@ -611,19 +611,19 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 10.01,
+   "carteira": 9.98,
    "n_abertas": 2,
    "abertas": [
     [
-     "SIGN",
+     "HYPER",
      "compra"
     ],
     [
-     "HYPER",
-     "compra"
+     "SHIB",
+     "venda"
     ]
    ],
-   "n_fechadas": 50,
+   "n_fechadas": 51,
    "ordem": null
   },
   {
@@ -632,19 +632,19 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.74,
+   "carteira": 8.66,
    "n_abertas": 2,
    "abertas": [
     [
-     "SIGN",
+     "HYPER",
      "compra"
     ],
     [
-     "HYPER",
-     "compra"
+     "SHIB",
+     "venda"
     ]
    ],
-   "n_fechadas": 37,
+   "n_fechadas": 38,
    "ordem": null
   },
   {
@@ -688,22 +688,22 @@
   "campeao": "guardiao",
   "placar": {
    "claude": {
-    "ops": 50,
-    "acerto": 0.6,
-    "soma": -0.044,
-    "ganho_medio": 0.14,
+    "ops": 51,
+    "acerto": 0.608,
+    "soma": -0.017,
+    "ganho_medio": 0.137,
     "perda_media": -0.213,
-    "fator_lucro": 0.99,
-    "carteira": 10.01
+    "fator_lucro": 1.0,
+    "carteira": 9.98
    },
    "openbot_testnet": {
-    "ops": 37,
-    "acerto": 0.351,
-    "soma": -1.28,
+    "ops": 38,
+    "acerto": 0.342,
+    "soma": -1.312,
     "ganho_medio": 0.293,
-    "perda_media": -0.221,
-    "fator_lucro": 0.75,
-    "carteira": 8.74
+    "perda_media": -0.213,
+    "fator_lucro": 0.74,
+    "carteira": 8.66
    },
    "treinador": {
     "ops": 27,
@@ -798,12 +798,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 21:01",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Queda: 10,4% das 115 moedas sobem em 1 h; BTC −0,76% em 1 h, −1,68% em 4 h. Mantenho BTC vendido (5 de 6 tempos abaixo, carteiras 0×15 vendidas) e MEGA comprada (6 de 6 acima, 1 h +2,71%, volume 2,77×). Sem entrada nova: REQ e SUPER sem força. Conta de teste: MEGA +0,03, BTC fora (nocional mínimo da"
-  },
-  {
    "hora_utc": "19/11 21:13",
    "de": "claude",
    "para": "sala",
@@ -868,6 +862,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Rodada neutra: 128 moedas lidas; v4 confiante em 3 compras e 2 vendas. Testnet zerado, patrimônio US$ 8,7197. Proponho SIGN e HYPER compradas (v4 confiança 0,142/0,138; ruído de volume 0,0× na varredura)."
+  },
+  {
+   "hora_utc": "21/11 22:57",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Universo 127; regime neutro (45,7% alta em 24 h, 24,4% em 4 h). Testnet: US$ 8,7354, SIGN e HYPER abertas. Proponho fechar SIGN (v4 venda, confiança 0,148), manter HYPER e vender SHIB (5/6 tempos abaixo, v4 confiança 0,153; volume 1 min 2,32×). H63 não confirma SHIB; nenhum aviso do Caçador verifica"
   }
  ]
 }
