@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 57.2% | 257 | 51.1%–63.1% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.9% | 2280 | 50.8%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.9% | 2281 | 50.8%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | velez_espaco_duplo_baixo | promissor | 100.0% | 2 | 34.2%–100.0% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | connors_8020_baixa | promissor | 85.7% | 7 | 48.7%–97.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 72.7% | 11 | 43.4%–90.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
@@ -15,7 +15,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | williams_volb_baixa | promissor | 52.8% | 163 | 45.1%–60.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_wr_alta | promissor | 51.3% | 39 | 36.2%–66.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 50.7% | 69 | 39.2%–62.2% | H14: queda anormal de 1 h → sobe |
-| tres_corvos | promissor | 50.5% | 398 | 45.6%–55.4% | H6: três corvos → sobe (efeito pequeno) |
+| tres_corvos | promissor | 50.4% | 399 | 45.5%–55.3% | H6: três corvos → sobe (efeito pequeno) |
 | demark_td9_alta | reprovado | 50.0% | 52 | 36.9%–63.1% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | connors_8020_alta | reprovado | 50.0% | 12 | 25.4%–74.6% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | vortice_invertido | reprovado | 49.2% | 421 | 44.4%–53.9% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
