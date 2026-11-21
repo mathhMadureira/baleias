@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 13:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 13:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -55,7 +55,7 @@ Carteira **US$ 10.63** · 15 operações fechadas · 0 abertas
 Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Total:** 26/43 com lucro (60%), resultado +0.29, média +0.007 por operação.
-- **Últimas 24 h:** 4/8 com lucro, -0.00.
+- **Últimas 24 h:** 3/7 com lucro, -0.12.
 - **Por horário:** 18–23 UTC: 26 op, 62% certas, -0.03 · 12–17 UTC: 15 op, 53% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.22
 - **Por lado:** compra: 8 op, 50% certas, -0.49 · venda: 35 op, 63% certas, +0.78
 - **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin, tendência de 24 h de: 2 op, 0% certas, -0.28 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin; 24 h -10,43%, 4 h -3: 1 op, 0% certas, -0.14 · memecoin; 24 h -9,62% (1d), 4 : 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -7,66%, 4: 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -9,64%, 4: 1 op, 0% certas, -0.14 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin; 24 h -10,38% (1d), 4: 1 op, 100% certas, +0.09 · memecoin; 24 h -1,61%, 4 h -1,: 1 op, 100% certas, +0.10 · memecoin; 4 h -3,89%, 24 h -1,: 1 op, 100% certas, +0.12 · memecoin; 24 h -10,38%, 4 h -4: 1 op, 100% certas, +0.12 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · 1d -12,61%, 4h -4,97%, 24 h -1: 1 op, 100% certas, +0.15 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · memecoin líder da venda em 24 : 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 15.7% das moedas subindo em 24 h, 91.2% em 4 h · BTC 24 h -3.66%, 4 h 2.4%.
+- **Amplitude:** 17.6% das moedas subindo em 24 h, 87.4% em 4 h · BTC 24 h -3.08%, 4 h 2.71%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 11.0, 'ETH': 7.2, 'SOL': -19.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 11.0, 'ETH': 7.0, 'SOL': -20.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE ombro-cabeça-ombro (baixa, formado) · SC ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE ombro-cabeça-ombro (baixa, formado) · SC ombro-cabeça-ombro (baixa, formado) · USUAL OCO invertido (alta, formado)
 - 📰 21/11 12:30 UTC · CoinDesk: Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated
 - 📰 21/11 11:18 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 21/11 09:48 UTC · Cointelegraph: ECB seeks industry partners for tokenized deposits, securities experiments
@@ -79,7 +79,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 23.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 23.2 h.
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
 - 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 - 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c
@@ -90,12 +90,12 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando vol ≤ -1.5, aposta desce. Começa em observação.
 - ⏸ Revivi 4 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (sobe). Peso reduzido de: vortice_invertido, tres_corvos. Rede neural corrigida.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando corpo ≤ -0.6, aposta sobe. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando vol ≤ -1.5, aposta sobe. Começa em observação.
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (desce). Peso reduzido de: vortice_invertido. Rede neural corrigida.
   (v3: 7 sinapses votando, 28 em observação, 0 podadas)
 **v2:**
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 37283 apostas conferidas ao vivo, acerto 55.0%; prevê 158 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 37418 apostas conferidas ao vivo, acerto 54.9%; prevê 158 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
