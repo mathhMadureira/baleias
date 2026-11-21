@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 03:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 03:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 12.0% das moedas subindo em 24 h, 7.0% em 4 h · BTC 24 h -6.2%, 4 h -1.24%.
+- **Amplitude:** 11.6% das moedas subindo em 24 h, 6.8% em 4 h · BTC 24 h -6.2%, 4 h -1.24%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -4.6%/ano · {'BTC': 4.0, 'ETH': -22.7, 'SOL': -7.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -6.4%/ano · {'BTC': 3.0, 'ETH': -24.4, 'SOL': -9.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JTO bandeira de baixa (baixa, CONFIRMOU) · MARSCOIN estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SOL estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ZEC bandeira de baixa (baixa, CONFIRMOU) · ZEC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BREV fundo duplo (alta, formado) · LUNC topo duplo (baixa, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI topo duplo (baixa, formado)
 - 📰 20/11 22:51 UTC · CoinDesk: Kalshi races to get ahead of New York order that could shut down exchange
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 35106 apostas conferidas ao vivo, acerto 55.5%; prevê 141 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 35106 apostas conferidas ao vivo, acerto 55.5%; prevê 146 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
