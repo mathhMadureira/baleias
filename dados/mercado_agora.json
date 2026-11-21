@@ -1,21 +1,21 @@
 {
- "t": 1795303162,
- "hora_utc": "2026-11-21 23:19 UTC",
+ "t": 1795303383,
+ "hora_utc": "2026-11-21 23:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 127,
-  "subindo_pct": 75.6,
-  "mediana_pct": 0.37
+  "moedas": 126,
+  "subindo_pct": 76.2,
+  "mediana_pct": 0.38
  },
  "mercado_4h": {
-  "moedas": 127,
-  "subindo_pct": 33.1,
-  "mediana_pct": -0.31
+  "moedas": 126,
+  "subindo_pct": 33.3,
+  "mediana_pct": -0.3
  },
  "mercado_24h": {
-  "moedas": 127,
-  "subindo_pct": 44.9,
-  "mediana_pct": -0.3
+  "moedas": 126,
+  "subindo_pct": 45.2,
+  "mediana_pct": -0.28
  },
  "btc": {
   "1h": -0.04,
@@ -172,10 +172,10 @@
   0.16,
   0.03,
   -0.54,
-  0.2
+  0.15
  ],
  "contexto": {
-  "t": 1795303163,
+  "t": 1795303383,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -268,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 2.8,
+   "media_top20_anual_pct": 3.3,
    "principais_anual_pct": {
-    "BTC": -4.2,
-    "ETH": -16.0,
-    "SOL": 0.3
+    "BTC": -3.5,
+    "ETH": -15.1,
+    "SOL": 0.5
    },
    "leitura": "neutro"
   },
@@ -462,7 +462,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.26,
+  "carteira": 10.19,
   "abertas": [
    {
     "moeda": "HYPER",
@@ -488,7 +488,7 @@
     "entrada": 0.13297,
     "agora": 0.13299,
     "resultado_pct": 0.02,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "Entrada: 4/6 tempos acima da MM20 (1m, 5m, 15m, 1h); 1h +0,37%, 4h +0,57%, 24h -1,91%; OCOi de alta em 1h não confirmado; v4 p=0,639, confiança 0,139 a favor; H"
    },
    {
@@ -497,7 +497,7 @@
     "entrada": 0.003459,
     "agora": 0.003452,
     "resultado_pct": 0.2,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "Entrada: 2/6 tempos abaixo da MM20 (15m, 4h) e 4 acima; 1h -0,17%, 4h -1,28%, 24h +4,69%; sem padrão gráfico na varredura; v4 p=0,339, confiança 0,161 a favor; "
    }
   ],
@@ -650,7 +650,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 10.26,
+   "carteira": 10.19,
    "n_abertas": 4,
    "abertas": [
     [
@@ -709,10 +709,14 @@
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
    "carteira": 10.14,
-   "n_abertas": 1,
+   "n_abertas": 2,
    "abertas": [
     [
      "GTC",
+     "compra"
+    ],
+    [
+     "PNUT",
      "compra"
     ]
    ],
@@ -725,12 +729,16 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.69,
-   "n_abertas": 1,
+   "carteira": 10.7,
+   "n_abertas": 2,
    "abertas": [
     [
      "BEAMX",
      "venda"
+    ],
+    [
+     "GTC",
+     "compra"
     ]
    ],
    "n_fechadas": 15,
@@ -743,11 +751,15 @@
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
    "carteira": 10.15,
-   "n_abertas": 1,
+   "n_abertas": 2,
    "abertas": [
     [
      "BONK",
      "venda"
+    ],
+    [
+     "TRUMP",
+     "compra"
     ]
    ],
    "n_fechadas": 45,
@@ -764,7 +776,7 @@
     "ganho_medio": 0.137,
     "perda_media": -0.213,
     "fator_lucro": 1.0,
-    "carteira": 10.26
+    "carteira": 10.19
    },
    "openbot_testnet": {
     "ops": 38,
@@ -791,7 +803,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.219,
     "fator_lucro": 1.36,
-    "carteira": 10.69
+    "carteira": 10.7
    },
    "guardiao": {
     "ops": 45,
@@ -813,12 +825,12 @@
   "z_contra_lab": 2.7,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4999,
-    "n": 24752
+    "acerto": 0.5,
+    "n": 24670
    },
    "segue_maioria_24h": {
-    "acerto": 0.4973,
-    "n": 30694
+    "acerto": 0.4986,
+    "n": 30563
    }
   },
   "referencia_ganha": [],
