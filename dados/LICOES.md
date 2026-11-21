@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 08:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 08:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 11.0% das moedas subindo em 24 h, 70.6% em 4 h · BTC 24 h -6.24%, 4 h 2.21%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -5.0%/ano · {'BTC': -14.7, 'ETH': -1.0, 'SOL': -41.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.0%/ano · {'BTC': -12.3, 'ETH': 1.1, 'SOL': -36.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** RESOLV estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ENA fundo duplo (alta, formado) · HYPER topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RESOLV fundo duplo (alta, formado) · SIGN topo duplo (baixa, formado) · XPL fundo duplo (alta, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
 - 📰 21/11 07:51 UTC · Cointelegraph: US lawmakers propose up to 30% rewards for prediction market whistleblowers
