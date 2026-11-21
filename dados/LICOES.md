@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 04:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 04:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 8.7% das moedas subindo em 24 h, 6.0% em 4 h · BTC 24 h -8.71%, 4 h -3.75%.
+- **Amplitude:** 7.3% das moedas subindo em 24 h, 4.0% em 4 h · BTC 24 h -9.54%, 4 h -5.21%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -15.0%/ano · {'BTC': -19.2, 'ETH': -36.6, 'SOL': -25.8} · vendidos pagando (risco de alta forçada).
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BNB bandeira de baixa (baixa, CONFIRMOU) · BTC bandeira de baixa (baixa, CONFIRMOU) · ETH bandeira de baixa (baixa, CONFIRMOU) · GIGGLE bandeira de baixa (baixa, CONFIRMOU) · LDO bandeira de baixa (baixa, CONFIRMOU) · ZEN bandeira de baixa (baixa, CONFIRMOU) · BREV fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI topo duplo (baixa, formado) · SIGN fundo duplo (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -13.6%/ano · {'BTC': -17.3, 'ETH': -36.0, 'SOL': -25.4} · vendidos pagando (risco de alta forçada).
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BNB bandeira de baixa (baixa, CONFIRMOU) · BTC bandeira de baixa (baixa, CONFIRMOU) · ETH bandeira de baixa (baixa, CONFIRMOU) · GIGGLE bandeira de baixa (baixa, CONFIRMOU) · LDO bandeira de baixa (baixa, CONFIRMOU) · ZEN bandeira de baixa (baixa, CONFIRMOU) · BONK fundo duplo (alta, formado) · BREV fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI topo duplo (baixa, formado)
 - 📰 21/11 04:10 UTC · CoinDesk: Bitcoin tanks below $57,000 for the first time in two years, and its not alone
 - 📰 20/11 22:51 UTC · CoinDesk: Kalshi races to get ahead of New York order that could shut down exchange
 - 📰 20/11 22:05 UTC · CoinDesk: Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 35253 apostas conferidas ao vivo, acerto 55.4%; prevê 8 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 35306 apostas conferidas ao vivo, acerto 55.3%; prevê 150 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
