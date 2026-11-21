@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 17:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 17:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -62,7 +62,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 70.9% das moedas subindo em 24 h, 47.5% em 4 h · BTC 24 h 1.84%, 4 h -0.48%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': 3.3, 'ETH': -0.1, 'SOL': -12.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 2.5, 'ETH': -0.6, 'SOL': -12.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CYBER bandeira de baixa (baixa, CONFIRMOU) · BTC topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · USUAL OCO invertido (alta, formado)
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
