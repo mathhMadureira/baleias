@@ -1,6 +1,6 @@
 {
- "t": 1795291357,
- "hora_utc": "2026-11-21 20:02 UTC",
+ "t": 1795291581,
+ "hora_utc": "2026-11-21 20:06 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 134,
@@ -172,10 +172,10 @@
   0.04,
   0.14,
   0.33,
-  -0.02
+  0.0
  ],
  "contexto": {
-  "t": 1795291358,
+  "t": 1795291582,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -187,7 +187,7 @@
     "fonte": "CoinDesk",
     "t": 1795283400,
     "hora_utc": "21/11 17:50",
-    "titulo": "Bitcoin bounces 9% from two-year low to retake $60,000 as traders eye Monday’s stock open"
+    "titulo": "Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave"
    },
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.5,
+   "media_top20_anual_pct": -0.4,
    "principais_anual_pct": {
-    "BTC": -10.8,
-    "ETH": -20.2,
-    "SOL": -8.0
+    "BTC": -11.2,
+    "ETH": -20.9,
+    "SOL": -8.2
    },
    "leitura": "neutro"
   },
