@@ -1,6 +1,6 @@
 {
- "t": 1795240579,
- "hora_utc": "2026-11-21 05:56 UTC",
+ "t": 1795240786,
+ "hora_utc": "2026-11-21 05:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 155,
@@ -172,11 +172,17 @@
   -0.75,
   -3.16,
   -0.77,
-  -0.88
+  -0.93
  ],
  "contexto": {
-  "t": 1795240580,
+  "t": 1795240787,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795240759,
+    "hora_utc": "21/11 05:59",
+    "titulo": "XRP falls 10% as long bets unwind and ETF assets slip below $1 billion"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795239635,
@@ -260,12 +266,6 @@
     "t": 1795193751,
     "hora_utc": "20/11 16:55",
     "titulo": "Bitcoin falls below $60K for first time since July amid broader market selloff"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795192559,
-    "hora_utc": "20/11 16:35",
-    "titulo": "Bitcoin Breaks Below $60K as Crypto Fear Index Hits Worst Level Since February"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.4,
+   "media_top20_anual_pct": -1.5,
    "principais_anual_pct": {
-    "BTC": 0.0,
-    "ETH": -23.9,
-    "SOL": -12.4
+    "BTC": 0.3,
+    "ETH": -23.8,
+    "SOL": -13.0
    },
    "leitura": "neutro"
   },
