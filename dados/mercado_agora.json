@@ -1,21 +1,21 @@
 {
- "t": 1795260139,
- "hora_utc": "2026-11-21 11:22 UTC",
+ "t": 1795260392,
+ "hora_utc": "2026-11-21 11:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 159,
-  "subindo_pct": 52.2,
-  "mediana_pct": 0.08
+  "moedas": 158,
+  "subindo_pct": 52.5,
+  "mediana_pct": 0.09
  },
  "mercado_4h": {
-  "moedas": 159,
-  "subindo_pct": 41.5,
+  "moedas": 158,
+  "subindo_pct": 41.8,
   "mediana_pct": -0.21
  },
  "mercado_24h": {
-  "moedas": 159,
-  "subindo_pct": 8.8,
-  "mediana_pct": -7.33
+  "moedas": 158,
+  "subindo_pct": 8.9,
+  "mediana_pct": -7.39
  },
  "btc": {
   "1h": -0.01,
@@ -172,11 +172,17 @@
   -0.33,
   0.39,
   -0.17,
-  -0.03
+  -0.04
  ],
  "contexto": {
-  "t": 1795260140,
+  "t": 1795260392,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795259932,
+    "hora_utc": "21/11 11:18",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795254536,
@@ -260,12 +266,6 @@
     "t": 1795199830,
     "hora_utc": "20/11 18:37",
     "titulo": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795198562,
-    "hora_utc": "20/11 18:16",
-    "titulo": "Google Gives Gemini Control of Mac Apps, But Its New AI Agent Comes With Risks"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 10.4,
    "principais_anual_pct": {
-    "BTC": 7.7,
-    "ETH": 2.1,
-    "SOL": -23.5
+    "BTC": 7.4,
+    "ETH": 2.0,
+    "SOL": -22.4
    },
    "leitura": "neutro"
   },
@@ -733,11 +733,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5178,
-    "n": 27687
+    "n": 27655
    },
    "segue_maioria_24h": {
-    "acerto": 0.5185,
-    "n": 31218
+    "acerto": 0.5184,
+    "n": 31287
    }
   },
   "referencia_ganha": [],

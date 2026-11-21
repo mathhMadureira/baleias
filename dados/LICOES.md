@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 11:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 11:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 8.8% das moedas subindo em 24 h, 41.5% em 4 h · BTC 24 h -6.24%, 4 h -0.37%.
+- **Amplitude:** 8.9% das moedas subindo em 24 h, 41.8% em 4 h · BTC 24 h -6.24%, 4 h -0.37%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.4%/ano · {'BTC': 7.7, 'ETH': 2.1, 'SOL': -23.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.4%/ano · {'BTC': 7.4, 'ETH': 2.0, 'SOL': -22.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** HYPE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · USUAL OCO invertido (alta, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
+- 📰 21/11 11:18 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 21/11 09:48 UTC · Cointelegraph: ECB seeks industry partners for tokenized deposits, securities experiments
 - 📰 21/11 07:51 UTC · Cointelegraph: US lawmakers propose up to 30% rewards for prediction market whistleblowers
 - 📰 21/11 06:16 UTC · CoinDesk: Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug
 - 📰 21/11 05:59 UTC · CoinDesk: XRP falls 10% as long bets unwind and ETF assets slip below $1 billion
 - 📰 21/11 05:40 UTC · Cointelegraph: Hong Kong pushes to bring crypto custodians, advisers under licensing rules
-- 📰 21/11 04:10 UTC · CoinDesk: Bitcoin tanks below $57,000 for the first time in two years, and its not alone
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 36660 apostas conferidas ao vivo, acerto 55.1%; prevê 158 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 36660 apostas conferidas ao vivo, acerto 55.1%; prevê 157 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
