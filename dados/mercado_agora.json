@@ -1,28 +1,28 @@
 {
- "t": 1795264152,
- "hora_utc": "2026-11-21 12:29 UTC",
+ "t": 1795264390,
+ "hora_utc": "2026-11-21 12:33 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 159,
-  "subindo_pct": 79.2,
-  "mediana_pct": 0.63
+  "subindo_pct": 81.1,
+  "mediana_pct": 0.79
  },
  "mercado_4h": {
   "moedas": 159,
-  "subindo_pct": 78.6,
-  "mediana_pct": 1.05
+  "subindo_pct": 87.4,
+  "mediana_pct": 1.91
  },
  "mercado_24h": {
   "moedas": 159,
-  "subindo_pct": 10.1,
-  "mediana_pct": -6.0
+  "subindo_pct": 10.7,
+  "mediana_pct": -6.18
  },
  "btc": {
-  "1h": 0.57,
-  "4h": 0.85,
-  "24h": -5.1,
-  "preco": 58288.8,
-  "vol_4h_vs_media": 0.58
+  "1h": 0.89,
+  "4h": 1.35,
+  "24h": -5.18,
+  "preco": 58470.0,
+  "vol_4h_vs_media": 0.56
  },
  "maiores_quedas_4h": [
   {
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
-   "moeda": "YB",
-   "4h": -10.84,
-   "24h": 6.05,
-   "vol": 1.75
+   "moeda": "BLUR",
+   "4h": -3.75,
+   "24h": -1.42,
+   "vol": 0.28
   },
   {
-   "moeda": "BLUR",
-   "4h": -5.9,
-   "24h": -0.72,
-   "vol": 0.29
+   "moeda": "YB",
+   "4h": -3.57,
+   "24h": 7.34,
+   "vol": 1.5
   },
   {
    "moeda": "MMT",
-   "4h": -4.87,
-   "24h": -8.39,
-   "vol": 0.57
+   "4h": -3.25,
+   "24h": -8.27,
+   "vol": 0.58
   },
   {
    "moeda": "RESOLV",
-   "4h": -2.93,
-   "24h": -2.31,
-   "vol": 0.49
+   "4h": -2.59,
+   "24h": -3.15,
+   "vol": 0.43
   },
   {
    "moeda": "ONE",
-   "4h": -2.47,
-   "24h": -13.36,
+   "4h": -2.58,
+   "24h": -13.57,
    "vol": 1.08
   },
   {
    "moeda": "ZKP",
-   "4h": -1.88,
-   "24h": 1.95,
-   "vol": 2.08
+   "4h": -2.21,
+   "24h": 0.32,
+   "vol": 2.06
   },
   {
-   "moeda": "KAT",
-   "4h": -1.34,
-   "24h": -2.97,
-   "vol": 0.64
+   "moeda": "LUNC",
+   "4h": -1.28,
+   "24h": -9.13,
+   "vol": 0.37
   },
   {
-   "moeda": "BANK",
-   "4h": -1.26,
-   "24h": -10.29,
-   "vol": 0.65
+   "moeda": "SOPH",
+   "4h": -1.06,
+   "24h": -8.82,
+   "vol": 0.81
   },
   {
-   "moeda": "INIT",
-   "4h": -1.1,
-   "24h": -13.58,
-   "vol": 0.86
+   "moeda": "SHELL",
+   "4h": -0.91,
+   "24h": -8.46,
+   "vol": 0.45
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "DODO",
-   "4h": 17.67,
-   "24h": 34.89,
-   "vol": 3.1
+   "4h": 15.06,
+   "24h": 37.88,
+   "vol": 2.94
+  },
+  {
+   "moeda": "HOT",
+   "4h": 8.86,
+   "24h": 9.55,
+   "vol": 1.67
   },
   {
    "moeda": "VANA",
-   "4h": 8.66,
-   "24h": -7.23,
+   "4h": 8.71,
+   "24h": -7.87,
    "vol": 0.83
   },
   {
    "moeda": "RARE",
-   "4h": 8.32,
-   "24h": 24.01,
-   "vol": 1.26
+   "4h": 7.14,
+   "24h": 24.57,
+   "vol": 1.28
   },
   {
    "moeda": "TWT",
-   "4h": 7.29,
-   "24h": -8.89,
-   "vol": 1.17
-  },
-  {
-   "moeda": "HOT",
-   "4h": 6.31,
-   "24h": 7.32,
-   "vol": 1.49
+   "4h": 7.08,
+   "24h": -9.46,
+   "vol": 1.19
   },
   {
    "moeda": "ZEC",
-   "4h": 5.72,
-   "24h": -6.24,
-   "vol": 0.58
-  },
-  {
-   "moeda": "USUAL",
-   "4h": 5.42,
-   "24h": 6.44,
-   "vol": 1.16
+   "4h": 6.22,
+   "24h": -6.39,
+   "vol": 0.61
   },
   {
    "moeda": "AAVE",
-   "4h": 4.96,
-   "24h": -1.93,
-   "vol": 0.64
-  },
-  {
-   "moeda": "NEAR",
-   "4h": 3.65,
-   "24h": -5.95,
+   "4h": 5.43,
+   "24h": -2.24,
    "vol": 0.65
   },
   {
+   "moeda": "TAO",
+   "4h": 4.96,
+   "24h": -1.73,
+   "vol": 1.25
+  },
+  {
    "moeda": "PUMP",
-   "4h": 3.61,
-   "24h": -5.65,
-   "vol": 0.57
+   "4h": 4.76,
+   "24h": -5.92,
+   "vol": 0.66
+  },
+  {
+   "moeda": "UNI",
+   "4h": 4.07,
+   "24h": -5.54,
+   "vol": 0.66
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.39,
   -0.17,
   0.47,
-  0.48
+  0.58
  ],
  "contexto": {
-  "t": 1795264153,
+  "t": 1795264391,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795264200,
+    "hora_utc": "21/11 12:30",
+    "titulo": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795259932,
@@ -260,12 +266,6 @@
     "t": 1795200363,
     "hora_utc": "20/11 18:46",
     "titulo": "Cathie Wood Bets $91M on Anthropic IPO While Paring Crypto Exposure"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795199830,
-    "hora_utc": "20/11 18:37",
-    "titulo": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 14.6,
+   "media_top20_anual_pct": 14.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -4.3,
-    "SOL": -10.7
+    "ETH": -4.2,
+    "SOL": -11.5
    },
    "leitura": "neutro"
   },
@@ -296,6 +296,13 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "JST",
+    "padrao": "bandeira de baixa",
+    "sentido": "baixa",
+    "confirmado": true,
+    "nivel": 0.13977
+   },
    {
     "moeda": "BTC",
     "padrao": "topo duplo",
@@ -358,26 +365,26 @@
   }
  },
  "v4": {
-  "vela": "12:15 UTC",
-  "apostas": 160,
-  "compras": 25,
-  "vendas": 135,
+  "vela": "12:30 UTC",
+  "apostas": 148,
+  "compras": 39,
+  "vendas": 109,
   "mais_confiantes_venda": [
    {
-    "moeda": "TREE",
-    "prob_subir": 0.342
+    "moeda": "PHA",
+    "prob_subir": 0.338
    },
    {
-    "moeda": "THETA",
-    "prob_subir": 0.35
+    "moeda": "OPN",
+    "prob_subir": 0.358
    },
    {
     "moeda": "W",
-    "prob_subir": 0.36
+    "prob_subir": 0.363
    },
    {
-    "moeda": "TNSR",
-    "prob_subir": 0.373
+    "moeda": "AIGENSYN",
+    "prob_subir": 0.365
    },
    {
     "moeda": "SLP",
@@ -388,12 +395,12 @@
     "prob_subir": 0.382
    },
    {
-    "moeda": "PUMP",
-    "prob_subir": 0.384
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    },
    {
-    "moeda": "KAIA",
-    "prob_subir": 0.384
+    "moeda": "BABAB",
+    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
@@ -422,12 +429,12 @@
     "prob_subir": 0.583
    },
    {
-    "moeda": "BEB",
-    "prob_subir": 0.571
+    "moeda": "ONE",
+    "prob_subir": 0.578
    },
    {
-    "moeda": "COTI",
-    "prob_subir": 0.569
+    "moeda": "BEB",
+    "prob_subir": 0.571
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -704,38 +711,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 31421 apostas (618 velas, 14/11 12:30–21/11 11:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5548,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 31451 apostas (618 velas, 14/11 13:30–21/11 12:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5546,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.11,
+  "z_contra_lab": 2.1,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5163,
-    "n": 27759
+    "acerto": 0.5145,
+    "n": 27797
    },
    "segue_maioria_24h": {
-    "acerto": 0.5184,
-    "n": 31329
+    "acerto": 0.5168,
+    "n": 31359
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5711,
-    "n": 7039
+    "acerto": 0.5696,
+    "n": 7081
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.6016,
-    "n": 2681
+    "acerto": 0.5994,
+    "n": 2711
    },
    "confianca:<0,05": {
-    "acerto": 0.5457,
-    "n": 13621
+    "acerto": 0.5447,
+    "n": 13660
    },
    "confianca:≥0,12": {
-    "acerto": 0.6631,
-    "n": 757
+    "acerto": 0.6605,
+    "n": 760
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5538,
@@ -746,20 +753,20 @@
     "n": 7089
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5637,
-    "n": 7178
+    "acerto": 0.5631,
+    "n": 7208
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5428,
     "n": 8692
    },
    "lado:compra": {
-    "acerto": 0.5208,
-    "n": 15024
+    "acerto": 0.5224,
+    "n": 14949
    },
    "lado:venda": {
-    "acerto": 0.5859,
-    "n": 16397
+    "acerto": 0.5838,
+    "n": 16502
    }
   }
  },
