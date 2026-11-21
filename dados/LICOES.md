@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 22:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 22:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.96** · 50 operações fechadas · 2 abertas
+Carteira **US$ 10.01** · 50 operações fechadas · 2 abertas
 
 - **Total:** 30/50 com lucro (60%), resultado -0.04, média -0.001 por operação.
 - **Por horário:** 06–11 UTC: 1 op, 0% certas, -0.82 · 18–23 UTC: 20 op, 55% certas, -0.44 · 12–17 UTC: 25 op, 60% certas, +0.51 · 00–05 UTC: 4 op, 100% certas, +0.71
@@ -60,9 +60,9 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 50.8% das moedas subindo em 24 h, 28.1% em 4 h · BTC 24 h 1.87%, 4 h 0.37%.
+- **Amplitude:** 53.1% das moedas subindo em 24 h, 26.6% em 4 h · BTC 24 h 2.04%, 4 h 0.2%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': -8.6, 'ETH': -15.3, 'SOL': -8.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': -8.7, 'ETH': -15.5, 'SOL': -7.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JST bandeira de alta (alta, CONFIRMOU) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · LTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · PUMP topo duplo (baixa, formado) · USUAL OCO invertido (alta, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
@@ -108,7 +108,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 38866 apostas conferidas ao vivo, acerto 54.6%; prevê 98 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 38870 apostas conferidas ao vivo, acerto 54.6%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
