@@ -1,6 +1,6 @@
 {
- "t": 1795283440,
- "hora_utc": "2026-11-21 17:50 UTC",
+ "t": 1795283666,
+ "hora_utc": "2026-11-21 17:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 141,
@@ -172,11 +172,17 @@
   -0.36,
   -0.66,
   0.2,
-  -0.1
+  -0.03
  ],
  "contexto": {
-  "t": 1795283441,
+  "t": 1795283667,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795283400,
+    "hora_utc": "21/11 17:50",
+    "titulo": "Bitcoin bounces 9% from two-year low to retake $60,000 as traders eye Monday’s stock open"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795280462,
@@ -260,12 +266,6 @@
     "t": 1795212331,
     "hora_utc": "20/11 22:05",
     "titulo": "Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795210562,
-    "hora_utc": "20/11 21:36",
-    "titulo": "Claude Claims Historic Math Breakthrough One Day After Anthropic IPO"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 4.8,
    "principais_anual_pct": {
-    "BTC": 2.5,
-    "ETH": -0.6,
-    "SOL": -12.5
+    "BTC": 1.9,
+    "ETH": -0.8,
+    "SOL": -13.5
    },
    "leitura": "neutro"
   },
