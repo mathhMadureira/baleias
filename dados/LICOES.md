@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 05:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 05:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 7.1% das moedas subindo em 24 h, 5.2% em 4 h · BTC 24 h -9.5%, 4 h -5.34%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.2%/ano · {'BTC': 0.1, 'ETH': -23.7, 'SOL': -11.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.4%/ano · {'BTC': 0.0, 'ETH': -23.9, 'SOL': -12.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BREV fundo duplo (alta, formado) · HYPER topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI topo duplo (baixa, formado) · SIGN fundo duplo (alta, formado)
 - 📰 21/11 05:40 UTC · Cointelegraph: Hong Kong pushes to bring crypto custodians, advisers under licensing rules
