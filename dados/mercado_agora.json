@@ -1,28 +1,28 @@
 {
- "t": 1795269498,
- "hora_utc": "2026-11-21 13:58 UTC",
+ "t": 1795269749,
+ "hora_utc": "2026-11-21 14:02 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 159,
-  "subindo_pct": 92.5,
-  "mediana_pct": 1.74
+  "subindo_pct": 96.2,
+  "mediana_pct": 2.36
  },
  "mercado_4h": {
   "moedas": 159,
-  "subindo_pct": 90.6,
-  "mediana_pct": 2.86
+  "subindo_pct": 94.3,
+  "mediana_pct": 3.33
  },
  "mercado_24h": {
   "moedas": 159,
-  "subindo_pct": 20.8,
-  "mediana_pct": -2.42
+  "subindo_pct": 18.9,
+  "mediana_pct": -2.65
  },
  "btc": {
-  "1h": 2.46,
-  "4h": 4.19,
-  "24h": -1.73,
-  "preco": 60421.65,
-  "vol_4h_vs_media": 0.79
+  "1h": 2.88,
+  "4h": 4.36,
+  "24h": -2.14,
+  "preco": 60558.41,
+  "vol_4h_vs_media": 0.82
  },
  "maiores_quedas_4h": [
   {
@@ -33,123 +33,122 @@
   },
   {
    "moeda": "MMT",
-   "4h": -4.85,
-   "24h": -6.65,
-   "vol": 0.54
-  },
-  {
-   "moeda": "SAPIEN",
-   "4h": -3.17,
-   "24h": 2.57,
-   "vol": 1.99
-  },
-  {
-   "moeda": "DODO",
-   "4h": -2.58,
-   "24h": 23.48,
-   "vol": 2.08
+   "4h": -4.24,
+   "24h": -6.44,
+   "vol": 0.55
   },
   {
    "moeda": "ZKP",
-   "4h": -2.2,
-   "24h": 2.3,
-   "vol": 0.81
+   "4h": -3.42,
+   "24h": 2.64,
+   "vol": 0.77
+  },
+  {
+   "moeda": "SAPIEN",
+   "4h": -2.79,
+   "24h": 4.56,
+   "vol": 2.03
   },
   {
    "moeda": "RESOLV",
-   "4h": -1.3,
-   "24h": -1.66,
-   "vol": 0.41
-  },
-  {
-   "moeda": "PARTI",
-   "4h": -1.04,
-   "24h": 16.98,
-   "vol": 1.3
-  },
-  {
-   "moeda": "BREV",
-   "4h": -1.02,
-   "24h": -3.15,
-   "vol": 0.24
+   "4h": -1.31,
+   "24h": -0.73,
+   "vol": 0.46
   },
   {
    "moeda": "HMSTR",
    "4h": -0.94,
-   "24h": -1.8,
-   "vol": 0.23
+   "24h": -3.04,
+   "vol": 0.24
   },
   {
-   "moeda": "YB",
-   "4h": -0.36,
-   "24h": 11.11,
-   "vol": 0.99
+   "moeda": "DODO",
+   "4h": -0.85,
+   "24h": 22.46,
+   "vol": 1.97
+  },
+  {
+   "moeda": "U",
+   "4h": 0.0,
+   "24h": 0.04,
+   "vol": 0.54
+  },
+  {
+   "moeda": "PARTI",
+   "4h": 0.0,
+   "24h": 17.59,
+   "vol": 1.26
+  },
+  {
+   "moeda": "LUNC",
+   "4h": 0.29,
+   "24h": -5.35,
+   "vol": 0.53
   }
  ],
  "maiores_altas_4h": [
   {
-   "moeda": "HUMA",
-   "4h": 8.57,
-   "24h": -4.3,
-   "vol": 0.53
-  },
-  {
    "moeda": "ORCA",
-   "4h": 8.36,
-   "24h": 10.45,
-   "vol": 3.26
-  },
-  {
-   "moeda": "SC",
-   "4h": 7.65,
-   "24h": 9.56,
-   "vol": 2.56
-  },
-  {
-   "moeda": "ZEC",
-   "4h": 7.56,
-   "24h": -1.31,
-   "vol": 0.58
-  },
-  {
-   "moeda": "ETHFI",
-   "4h": 7.4,
-   "24h": 1.37,
-   "vol": 1.88
-  },
-  {
-   "moeda": "UNI",
-   "4h": 7.28,
-   "24h": 0.4,
-   "vol": 1.2
+   "4h": 12.4,
+   "24h": 14.04,
+   "vol": 3.79
   },
   {
    "moeda": "RARE",
-   "4h": 6.84,
-   "24h": 26.14,
-   "vol": 1.47
+   "4h": 8.73,
+   "24h": 26.19,
+   "vol": 1.43
   },
   {
-   "moeda": "NEAR",
-   "4h": 6.8,
-   "24h": -0.95,
-   "vol": 0.71
+   "moeda": "ETHFI",
+   "4h": 7.86,
+   "24h": 0.63,
+   "vol": 1.95
+  },
+  {
+   "moeda": "HUMA",
+   "4h": 7.81,
+   "24h": -5.6,
+   "vol": 0.53
+  },
+  {
+   "moeda": "ZEC",
+   "4h": 7.8,
+   "24h": -1.85,
+   "vol": 0.6
   },
   {
    "moeda": "VANA",
-   "4h": 6.43,
-   "24h": -2.93,
-   "vol": 0.74
+   "4h": 7.71,
+   "24h": -2.44,
+   "vol": 0.78
   },
   {
-   "moeda": "USUAL",
-   "4h": 6.33,
-   "24h": 7.85,
-   "vol": 1.24
+   "moeda": "UNI",
+   "4h": 7.27,
+   "24h": -0.4,
+   "vol": 1.2
+  },
+  {
+   "moeda": "SC",
+   "4h": 7.19,
+   "24h": 7.57,
+   "vol": 2.6
+  },
+  {
+   "moeda": "NEAR",
+   "4h": 6.92,
+   "24h": -1.82,
+   "vol": 0.75
+  },
+  {
+   "moeda": "RAY",
+   "4h": 6.86,
+   "24h": -2.68,
+   "vol": 0.58
   }
  ],
  "btc_1h_ultimas_24": [
-  -0.18,
   -3.71,
   0.12,
   -0.64,
@@ -172,11 +171,18 @@
   -0.17,
   0.47,
   1.13,
-  2.88
+  2.88,
+  0.35
  ],
  "contexto": {
-  "t": 1795269499,
+  "t": 1795269750,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795269666,
+    "hora_utc": "21/11 14:01",
+    "titulo": "Is the AI Bubble Finally Popping? Nvidia Crashes 48% as Wall Street Experts Sound the Alarm"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795264200,
@@ -260,12 +266,6 @@
     "t": 1795203363,
     "hora_utc": "20/11 19:36",
     "titulo": "SBF’s 'The Altruists' Plot Twist: FTX’s Anthropic Shares Would Be Worth $43 Billion"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795200363,
-    "hora_utc": "20/11 18:46",
-    "titulo": "Cathie Wood Bets $91M on Anthropic IPO While Paring Crypto Exposure"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 7.7,
+   "media_top20_anual_pct": 4.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 5.4,
-    "SOL": -19.8
+    "ETH": 10.7,
+    "SOL": -24.7
    },
    "leitura": "neutro"
   },
@@ -292,10 +292,17 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 12.5,
+   "amplitude_acima_mm50_pct": 10.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "TRX",
+    "padrao": "bandeira de alta",
+    "sentido": "alta",
+    "confirmado": true,
+    "nivel": 0.3042
+   },
    {
     "moeda": "BTC",
     "padrao": "topo duplo",
@@ -358,42 +365,42 @@
   }
  },
  "v4": {
-  "vela": "13:45 UTC",
-  "apostas": 191,
-  "compras": 25,
-  "vendas": 166,
+  "vela": "14:00 UTC",
+  "apostas": 153,
+  "compras": 24,
+  "vendas": 129,
   "mais_confiantes_venda": [
    {
-    "moeda": "U",
-    "prob_subir": 0.363
-   },
-   {
-    "moeda": "KAIA",
-    "prob_subir": 0.37
+    "moeda": "BREV",
+    "prob_subir": 0.371
    },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
    },
    {
-    "moeda": "MET",
-    "prob_subir": 0.377
+    "moeda": "MEGA",
+    "prob_subir": 0.379
    },
    {
-    "moeda": "MUBARAK",
+    "moeda": "ALT",
     "prob_subir": 0.381
-   },
-   {
-    "moeda": "DASH",
-    "prob_subir": 0.382
    },
    {
     "moeda": "FORM",
     "prob_subir": 0.382
    },
    {
-    "moeda": "APT",
+    "moeda": "ZKC",
     "prob_subir": 0.383
+   },
+   {
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
+   },
+   {
+    "moeda": "BABAB",
+    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
@@ -704,38 +711,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.1% em 31906 apostas (621 velas, 14/11 14:00–21/11 13:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5515,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.0% em 31990 apostas (621 velas, 14/11 14:15–21/11 13:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5504,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.77,
+  "z_contra_lab": 1.66,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5088,
-    "n": 27862
+    "acerto": 0.5064,
+    "n": 27953
    },
    "segue_maioria_24h": {
-    "acerto": 0.5085,
-    "n": 31719
+    "acerto": 0.5059,
+    "n": 31803
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5648,
-    "n": 7319
+    "acerto": 0.5635,
+    "n": 7342
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5716,
-    "n": 2913
+    "acerto": 0.5537,
+    "n": 3025
    },
    "confianca:<0,05": {
-    "acerto": 0.5437,
-    "n": 13775
+    "acerto": 0.5435,
+    "n": 13782
    },
    "confianca:≥0,12": {
-    "acerto": 0.6594,
-    "n": 778
+    "acerto": 0.659,
+    "n": 780
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5538,
@@ -746,20 +753,20 @@
     "n": 7089
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5497,
-    "n": 7663
+    "acerto": 0.545,
+    "n": 7747
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5428,
     "n": 8692
    },
    "lado:compra": {
-    "acerto": 0.5255,
-    "n": 14940
+    "acerto": 0.5272,
+    "n": 14887
    },
    "lado:venda": {
-    "acerto": 0.5744,
-    "n": 16966
+    "acerto": 0.5705,
+    "n": 17103
    }
   }
  },
