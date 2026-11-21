@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 20:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 20:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -16,12 +16,12 @@ Carteira **US$ 9.96** · 50 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 7.95** · 34 operações fechadas · 3 abertas
+Carteira **US$ 8.72** · 37 operações fechadas · 0 abertas
 
-- **Total:** 10/34 com lucro (29%), resultado -2.15, média -0.063 por operação.
-- **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 12–17 UTC: 16 op, 31% certas, -0.92 · 18–23 UTC: 16 op, 31% certas, -0.23
-- **Por lado:** compra: 6 op, 0% certas, -2.62 · venda: 28 op, 36% certas, +0.47
-- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −0.80% na co: 2 op, 0% certas, -0.33 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −0.70% na co: 1 op, 0% certas, -0.16 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · fora da lista de posições do c: 6 op, 17% certas, +0.64 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
+- **Total:** 13/37 com lucro (35%), resultado -1.28, média -0.035 por operação.
+- **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 18–23 UTC: 16 op, 31% certas, -0.23 · 12–17 UTC: 19 op, 42% certas, -0.05
+- **Por lado:** compra: 6 op, 0% certas, -2.62 · venda: 31 op, 42% certas, +1.34
+- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.80% na co: 3 op, 33% certas, -0.03 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 1 op, 100% certas, +0.41 · fora da lista de posições do c: 6 op, 17% certas, +0.64 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
 - **Moedas que mais perderam (≥ 3 op):** MUBARAK -0.43 (3 op) · SKY +0.64 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** SKY +0.64 (3 op) · MUBARAK -0.43 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -62,7 +62,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 70.5% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h 2.91%, 4 h 0.71%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.1%/ano · {'BTC': -7.5, 'ETH': -17.3, 'SOL': -9.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': -7.5, 'ETH': -17.2, 'SOL': -9.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BARD estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BNB bandeira de alta (alta, CONFIRMOU) · JST bandeira de alta (alta, CONFIRMOU) · KAVA topo duplo (baixa, CONFIRMOU) · XRP bandeira de alta (alta, CONFIRMOU) · CELO topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
@@ -74,7 +74,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 30.2 h.
+- ⚠️ **Rotina parada:** sem decisão há 30.3 h.
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
 - 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 - 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c
