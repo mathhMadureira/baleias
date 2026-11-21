@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 23:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 23:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 8.69** · 38 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.22** · 27 operações fechadas · 2 abertas
+Carteira **US$ 10.19** · 27 operações fechadas · 3 abertas
 
 - **Total:** 13/27 com lucro (48%), resultado +0.09, média +0.003 por operação.
 - **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 10 op, 50% certas, +0.24 · 00–05 UTC: 2 op, 100% certas, +0.41
@@ -50,7 +50,7 @@ Carteira **US$ 10.66** · 15 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 9.99** · 46 operações fechadas · 1 abertas
+Carteira **US$ 10.12** · 46 operações fechadas · 3 abertas
 
 - **Total:** 26/46 com lucro (57%), resultado -0.01, média -0.000 por operação.
 - **Últimas 24 h:** 0/3 com lucro, -0.30.
@@ -63,9 +63,9 @@ Carteira **US$ 9.99** · 46 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 50.0% das moedas subindo em 24 h, 46.8% em 4 h · BTC 24 h 2.13%, 4 h -0.12%.
+- **Amplitude:** 50.0% das moedas subindo em 24 h, 42.9% em 4 h · BTC 24 h 2.1%, 4 h -0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.9%/ano · {'BTC': -3.3, 'ETH': -12.5, 'SOL': -2.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.1%/ano · {'BTC': -3.1, 'ETH': -12.0, 'SOL': -2.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LSK bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BREV fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · INIT OCO invertido (alta, formado) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
@@ -111,7 +111,7 @@ Carteira **US$ 9.99** · 46 operações fechadas · 1 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 39059 apostas conferidas ao vivo, acerto 54.6%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 39113 apostas conferidas ao vivo, acerto 54.6%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
