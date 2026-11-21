@@ -1,21 +1,21 @@
 {
- "t": 1795300729,
- "hora_utc": "2026-11-21 22:38 UTC",
+ "t": 1795300951,
+ "hora_utc": "2026-11-21 22:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 127,
-  "subindo_pct": 30.7,
+  "moedas": 128,
+  "subindo_pct": 30.5,
   "mediana_pct": -0.16
  },
  "mercado_4h": {
-  "moedas": 127,
-  "subindo_pct": 26.8,
-  "mediana_pct": -0.34
+  "moedas": 128,
+  "subindo_pct": 26.6,
+  "mediana_pct": -0.35
  },
  "mercado_24h": {
-  "moedas": 127,
-  "subindo_pct": 53.5,
-  "mediana_pct": 0.36
+  "moedas": 128,
+  "subindo_pct": 53.1,
+  "mediana_pct": 0.32
  },
  "btc": {
   "1h": -0.21,
@@ -172,10 +172,10 @@
   0.33,
   0.16,
   0.03,
-  -0.47
+  -0.5
  ],
  "contexto": {
-  "t": 1795300730,
+  "t": 1795300952,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.4,
+   "media_top20_anual_pct": 3.9,
    "principais_anual_pct": {
     "BTC": -9.0,
-    "ETH": -15.7,
-    "SOL": -7.0
+    "ETH": -15.9,
+    "SOL": -6.8
    },
    "leitura": "neutro"
   },
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.01,
+  "carteira": 9.96,
   "abertas": [
    {
     "moeda": "SIGN",
@@ -455,7 +455,7 @@
     "entrada": 0.00871,
     "agora": 0.00871,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Entrada: varredura completa; 4 de 6 tempos acima da MM20 (1 min, 1 h, 4 h, 1 dia); 24 h +4,19%; v4 p=0,642, confiança 0,142 a favor. Padrões 15 min EST↓ e 1 h T"
    },
    {
@@ -464,7 +464,7 @@
     "entrada": 0.0419,
     "agora": 0.0419,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Entrada: varredura completa; 3 de 6 tempos acima da MM20 (1 min, 15 min, 1 h); v4 p=0,637, confiança 0,138 a favor. 1 h TD↓ e 4 h OCO↓ não confirmados; 4 h 0,00"
    }
   ],
@@ -617,7 +617,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 10.01,
+   "carteira": 9.96,
    "n_abertas": 2,
    "abertas": [
     [
@@ -700,7 +700,7 @@
     "ganho_medio": 0.14,
     "perda_media": -0.213,
     "fator_lucro": 0.99,
-    "carteira": 10.01
+    "carteira": 9.96
    },
    "openbot_testnet": {
     "ops": 37,
@@ -749,12 +749,12 @@
   "z_contra_lab": 2.75,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4989,
-    "n": 24701
+    "acerto": 0.4991,
+    "n": 24764
    },
    "segue_maioria_24h": {
-    "acerto": 0.4963,
-    "n": 30688
+    "acerto": 0.4982,
+    "n": 30514
    }
   },
   "referencia_ganha": [],
