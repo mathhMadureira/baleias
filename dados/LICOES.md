@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 12:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 12:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 10.7% das moedas subindo em 24 h, 87.4% em 4 h · BTC 24 h -5.18%, 4 h 1.35%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.8%/ano · {'BTC': 11.0, 'ETH': -4.2, 'SOL': -11.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.7%/ano · {'BTC': 11.0, 'ETH': -4.3, 'SOL': -12.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JST bandeira de baixa (baixa, CONFIRMOU) · BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE ombro-cabeça-ombro (baixa, formado) · USUAL OCO invertido (alta, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
 - 📰 21/11 12:30 UTC · CoinDesk: Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated
