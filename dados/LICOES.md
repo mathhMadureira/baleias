@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 18:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 18:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -62,19 +62,19 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 65.2% das moedas subindo em 24 h, 30.5% em 4 h · BTC 24 h 1.55%, 4 h -0.79%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.0%/ano · {'BTC': -9.5, 'ETH': -6.0, 'SOL': -21.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.1%/ano · {'BTC': -6.6, 'ETH': -5.2, 'SOL': -21.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CYBER fundo duplo (alta, formado) · INJ topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · MET topo duplo (baixa, formado) · NEAR topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · SYRUP topo duplo (baixa, formado) · USUAL OCO invertido (alta, formado)
+- 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin bounces 9% from two-year low to retake $60,000 as traders eye Monday’s stock open
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
 - 📰 21/11 16:41 UTC · CoinDesk: Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain
 - 📰 21/11 16:01 UTC · Decrypt: Signal Calls OS-Level AI an 'Existential Threat' and Blocks Screenshots to Fight It
 - 📰 21/11 14:01 UTC · Decrypt: Is the AI Bubble Finally Popping? Nvidia Crashes 48% as Wall Street Experts Sound the Alarm
-- 📰 21/11 12:30 UTC · CoinDesk: Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 27.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 27.7 h.
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
 - 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 - 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c

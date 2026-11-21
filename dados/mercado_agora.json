@@ -1,6 +1,6 @@
 {
- "t": 1795284123,
- "hora_utc": "2026-11-21 18:02 UTC",
+ "t": 1795284351,
+ "hora_utc": "2026-11-21 18:05 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 141,
@@ -172,11 +172,17 @@
   -0.66,
   0.2,
   0.04,
-  0.03
+  0.11
  ],
  "contexto": {
-  "t": 1795284124,
+  "t": 1795284352,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795284062,
+    "hora_utc": "21/11 18:01",
+    "titulo": "GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795283400,
@@ -260,12 +266,6 @@
     "t": 1795215074,
     "hora_utc": "20/11 22:51",
     "titulo": "Kalshi races to get ahead of New York order that could shut down exchange"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795212331,
-    "hora_utc": "20/11 22:05",
-    "titulo": "Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 0.0,
+   "media_top20_anual_pct": 1.1,
    "principais_anual_pct": {
-    "BTC": -9.5,
-    "ETH": -6.0,
-    "SOL": -21.1
+    "BTC": -6.6,
+    "ETH": -5.2,
+    "SOL": -21.8
    },
    "leitura": "neutro"
   },
