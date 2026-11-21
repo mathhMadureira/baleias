@@ -5,13 +5,13 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 57.2% | 257 | 51.1%–63.1% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.9% | 2273 | 50.9%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.9% | 2274 | 50.8%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | velez_espaco_duplo_baixo | promissor | 100.0% | 2 | 34.2%–100.0% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | connors_8020_baixa | promissor | 85.7% | 7 | 48.7%–97.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 72.7% | 11 | 43.4%–90.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 66.7% | 18 | 43.7%–83.7% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.0% | 30 | 42.3%–75.4% | física: alta anormal de 1 h → devolve |
-| raschke_graal_baixa | promissor | 60.0% | 70 | 48.3%–70.7% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
+| raschke_graal_baixa | promissor | 59.2% | 71 | 47.5%–69.8% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | williams_volb_baixa | promissor | 52.5% | 160 | 44.8%–60.1% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_wr_alta | promissor | 51.3% | 39 | 36.2%–66.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | reversao_queda | promissor | 50.7% | 69 | 39.2%–62.2% | H14: queda anormal de 1 h → sobe |
