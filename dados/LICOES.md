@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 08:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 10:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,21 +65,21 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 10.4% das moedas subindo em 24 h, 76.7% em 4 h · BTC 24 h -6.93%, 4 h 3.45%.
+- **Amplitude:** 9.9% das moedas subindo em 24 h, 93.2% em 4 h · BTC 24 h -6.21%, 4 h 4.02%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.6%/ano · {'BTC': -6.3, 'ETH': 2.6, 'SOL': -40.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 7.8, 'ETH': 5.0, 'SOL': -34.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** RESOLV estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ENA fundo duplo (alta, formado) · HYPER topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RESOLV fundo duplo (alta, formado) · XPL fundo duplo (alta, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** NEXO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · RAY estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · NFP ombro-cabeça-ombro (baixa, formado) · RAY topo duplo (baixa, formado) · RESOLV fundo duplo (alta, formado) · SOPH fundo duplo (alta, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
+- 📰 21/11 09:48 UTC · Cointelegraph: ECB seeks industry partners for tokenized deposits, securities experiments
 - 📰 21/11 07:51 UTC · Cointelegraph: US lawmakers propose up to 30% rewards for prediction market whistleblowers
 - 📰 21/11 06:16 UTC · CoinDesk: Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug
 - 📰 21/11 05:59 UTC · CoinDesk: XRP falls 10% as long bets unwind and ETF assets slip below $1 billion
 - 📰 21/11 05:40 UTC · Cointelegraph: Hong Kong pushes to bring crypto custodians, advisers under licensing rules
 - 📰 21/11 04:10 UTC · CoinDesk: Bitcoin tanks below $57,000 for the first time in two years, and its not alone
-- 📰 20/11 22:51 UTC · CoinDesk: Kalshi races to get ahead of New York order that could shut down exchange
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 18.4 h.
+- ⚠️ **Rotina parada:** sem decisão há 19.9 h.
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
 - 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 - 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c
@@ -90,31 +90,31 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r8 ≥ 2, aposta desce. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando vol ≤ -1.5, aposta desce. Começa em observação.
 - ⏸ Revivi 4 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ❌ Errou (sobe). Peso reduzido de: vortice_invertido, tres_corvos. Rede neural corrigida.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando corpo ≤ -0.6, aposta sobe. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando vol ≤ -1.5, aposta sobe. Começa em observação.
+- ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 28 em observação, 0 podadas)
 **v2:**
-- ⏸ Revivi 5 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1632 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1728 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 1824 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 4 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 18 em observação, 0 podadas)
 **v1:**
-- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido, tres_corvos. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - 🛑 Teto de perda do dia (US$ -118.41): sem apostas até 00:00 UTC.
+- ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 36452 apostas conferidas ao vivo, acerto 55.1%; prevê 62 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 36452 apostas conferidas ao vivo, acerto 55.1%; prevê 160 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
