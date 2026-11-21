@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 10:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 10:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 11.8% das moedas subindo em 24 h, 90.7% em 4 h · BTC 24 h -6.23%, 4 h 3.54%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': 7.1, 'ETH': 5.2, 'SOL': -34.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 7.4, 'ETH': 5.7, 'SOL': -33.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** NEXO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · RAY estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · NFP ombro-cabeça-ombro (baixa, formado) · RAY topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
 - 📰 21/11 09:48 UTC · Cointelegraph: ECB seeks industry partners for tokenized deposits, securities experiments
