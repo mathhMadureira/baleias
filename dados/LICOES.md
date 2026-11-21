@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 05:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 05:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 7.8% das moedas subindo em 24 h, 5.2% em 4 h · BTC 24 h -8.48%, 4 h -4.63%.
+- **Amplitude:** 8.4% das moedas subindo em 24 h, 4.5% em 4 h · BTC 24 h -8.63%, 4 h -4.83%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.9%/ano · {'BTC': 0.0, 'ETH': -15.9, 'SOL': -6.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.3%/ano · {'BTC': -0.4, 'ETH': -18.2, 'SOL': -6.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BREV fundo duplo (alta, formado) · HYPER topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI topo duplo (baixa, formado) · SIGN fundo duplo (alta, formado)
 - 📰 21/11 04:10 UTC · CoinDesk: Bitcoin tanks below $57,000 for the first time in two years, and its not alone
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -118.41): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 35544 apostas conferidas ao vivo, acerto 55.3%; prevê 153 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 35603 apostas conferidas ao vivo, acerto 55.2%; prevê 153 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
