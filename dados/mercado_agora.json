@@ -1,6 +1,6 @@
 {
- "t": 1795299835,
- "hora_utc": "2026-11-21 22:23 UTC",
+ "t": 1795300055,
+ "hora_utc": "2026-11-21 22:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 129,
@@ -172,10 +172,10 @@
   0.33,
   0.16,
   0.03,
-  -0.26
+  -0.37
  ],
  "contexto": {
-  "t": 1795299836,
+  "t": 1795300055,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 2.9,
+   "media_top20_anual_pct": 2.6,
    "principais_anual_pct": {
-    "BTC": -7.7,
-    "ETH": -13.5,
-    "SOL": -8.7
+    "BTC": -8.2,
+    "ETH": -14.9,
+    "SOL": -8.3
    },
    "leitura": "neutro"
   },
@@ -455,7 +455,26 @@
  },
  "robo_claude": {
   "carteira": 9.96,
-  "abertas": [],
+  "abertas": [
+   {
+    "moeda": "SIGN",
+    "lado": "compra",
+    "entrada": 0.00871,
+    "agora": 0.00868,
+    "resultado_pct": -0.34,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: varredura completa; 4 de 6 tempos acima da MM20 (1 min, 1 h, 4 h, 1 dia); 24 h +4,19%; v4 p=0,642, confiança 0,142 a favor. Padrões 15 min EST↓ e 1 h T"
+   },
+   {
+    "moeda": "HYPER",
+    "lado": "compra",
+    "entrada": 0.0419,
+    "agora": 0.0418,
+    "resultado_pct": -0.24,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: varredura completa; 3 de 6 tempos acima da MM20 (1 min, 15 min, 1 h); v4 p=0,637, confiança 0,138 a favor. 1 h TD↓ e 4 h OCO↓ não confirmados; 4 h 0,00"
+   }
+  ],
   "ultimas_fechadas": [
    {
     "moeda": "BTC",
@@ -565,10 +584,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795124391,
-    "texto": "BTC venda +0,153: saiu pelo stop móvel (pico +1,13%, guardou +0,79%); aviso do Caçador + 5 de 6 tempos abaixo + carteiras 0×15 deram certo, mas o alvo de 2,1% não chegou. Carteira simulada, 36 fechadas: p 0,639, G 0,109, L 0,214, E = 0,639 × 0,109 − 0,361 × 0,214 = −0,008 por operação (fator 0,90; era −0,012). Caderno (12 com leitura): padrão a favor 4 de 4 (+0,970), 6 de 6 tempos 71% em 7 — pouca"
-   },
-   {
     "t": 1795125312,
     "texto": "Sem operação fechada desde a rodada das 21:40 (última: BTC venda +0,153 pelo stop móvel). Carteira simulada, 36 fechadas: p 0,639, G 0,109, L 0,214, E −0,008 por operação. Rodada sem universo (0 de 116 moedas lidas): a regra C1 vale para todas as moedas novas; as abertas seguem com stop e alvo."
    },
@@ -595,6 +610,10 @@
    {
     "t": 1795184615,
     "texto": "Conta de teste, 32 fechadas: p 31,3% de acerto, ganho médio G +0,293, perda média L −0,219, E −0,059 por operação (soma −1,88). Com G/L 1,34 seria preciso acertar ~43% para empatar. Caderno (21 com leitura): padrão a favor 7 ops, 71%, +0,860; sem padrão 9 ops, 56%, −0,154; misto 5 ops, 40%, −0,152 (poucas: não sei ainda). Últimas: KAVA venda −0,255 e MUBARAK venda −0,255 (stop no repique). Nesta r"
+   },
+   {
+    "t": 1795299768,
+    "texto": "Carteira simulada: 50 fechadas, acerto 60%, soma -US$ 0,044, ganho médio US$ 0,14, perda média -US$ 0,213, fator de lucro 0,99, carteira US$ 9,96. Caderno Claude: 50 fechadas, 27 com leitura; 6 de 6 tempos: 10 operações, 60%, soma +US$ 0,568, média +US$ 0,0568; padrão a favor: 10 operações, 70%, soma +US$ 1,337, média +US$ 0,1337. Carteira de teste: 37 fechadas, resultado -US$ 1,28, fator de lucro"
    }
   ]
  },
@@ -606,8 +625,17 @@
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
    "carteira": 9.96,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "SIGN",
+     "compra"
+    ],
+    [
+     "HYPER",
+     "compra"
+    ]
+   ],
    "n_fechadas": 50,
    "ordem": null
   },
@@ -617,9 +645,18 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.72,
-   "n_abertas": 0,
-   "abertas": [],
+   "carteira": 8.73,
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "SIGN",
+     "compra"
+    ],
+    [
+     "HYPER",
+     "compra"
+    ]
+   ],
    "n_fechadas": 37,
    "ordem": null
   },
@@ -679,7 +716,7 @@
     "ganho_medio": 0.293,
     "perda_media": -0.221,
     "fator_lucro": 0.75,
-    "carteira": 8.72
+    "carteira": 8.73
    },
    "treinador": {
     "ops": 27,
@@ -774,12 +811,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 20:49",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Queda forte: 6,1% das 114 moedas sobem em 1 h; BTC −1,48% em 1 h. DOT vendida saiu pelo stop móvel a 0,7144: +0,28. Chefe e testnet vendem BTC (5 de 6 tempos abaixo, carteiras 1×15 vendidas; stop 0,7%, alvo 2,1%) e compram MEGA (6 de 6 acima, aviso do Caçador; stop 1,3%, alvo 3,9%). Conta de teste: "
-  },
-  {
    "hora_utc": "19/11 21:01",
    "de": "claude",
    "para": "sala",
@@ -844,6 +875,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Baixa: 16,9% das 124 moedas sobem em 4 h; nenhum v4 com confiança ≥ 0,12. Repique de 1 h (BCH +2,45%, NEAR +1,35%). Mantenho as 4 vendas na conta de teste: XLM −0,06, NEAR −0,10, BCH −0,04, SNX −0,06; US$ 7,86. Sem vaga: INJ (OCO 4 h confirmado) e LSK (topo duplo 4 h confirmado) ficam de fora."
+  },
+  {
+   "hora_utc": "21/11 22:27",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Rodada neutra: 128 moedas lidas; v4 confiante em 3 compras e 2 vendas. Testnet zerado, patrimônio US$ 8,7197. Proponho SIGN e HYPER compradas (v4 confiança 0,142/0,138; ruído de volume 0,0× na varredura)."
   }
  ]
 }
