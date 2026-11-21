@@ -1,6 +1,6 @@
 {
- "t": 1795261613,
- "hora_utc": "2026-11-21 11:46 UTC",
+ "t": 1795261851,
+ "hora_utc": "2026-11-21 11:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 159,
@@ -172,10 +172,10 @@
   -0.33,
   0.39,
   -0.17,
-  0.44
+  0.5
  ],
  "contexto": {
-  "t": 1795261613,
+  "t": 1795261852,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -232,40 +232,40 @@
     "titulo": "Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment"
    },
    {
-    "fonte": "Decrypt",
-    "t": 1795210562,
-    "hora_utc": "20/11 21:36",
-    "titulo": "Claude Claims Historic Math Breakthrough One Day After Anthropic IPO"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795207014,
-    "hora_utc": "20/11 20:36",
-    "titulo": "Nvidia Shares Sink to 52-Week Low After Report SEC Is Probing Accounting"
-   },
-   {
     "fonte": "Cointelegraph",
     "t": 1795203447,
     "hora_utc": "20/11 19:37",
     "titulo": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit"
    },
    {
-    "fonte": "Decrypt",
-    "t": 1795203363,
-    "hora_utc": "20/11 19:36",
-    "titulo": "SBF’s 'The Altruists' Plot Twist: FTX’s Anthropic Shares Would Be Worth $43 Billion"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795200363,
-    "hora_utc": "20/11 18:46",
-    "titulo": "Cathie Wood Bets $91M on Anthropic IPO While Paring Crypto Exposure"
-   },
-   {
     "fonte": "Cointelegraph",
     "t": 1795199830,
     "hora_utc": "20/11 18:37",
     "titulo": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795198432,
+    "hora_utc": "20/11 18:13",
+    "titulo": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795193751,
+    "hora_utc": "20/11 16:55",
+    "titulo": "Bitcoin falls below $60K for first time since July amid broader market selloff"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795190122,
+    "hora_utc": "20/11 15:55",
+    "titulo": "US Senate advances prediction market restrictions with DEATH BETS Act"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795189926,
+    "hora_utc": "20/11 15:52",
+    "titulo": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 11.8,
+   "media_top20_anual_pct": 12.0,
    "principais_anual_pct": {
-    "BTC": 9.7,
-    "ETH": 1.6,
-    "SOL": -20.3
+    "BTC": 10.3,
+    "ETH": 0.9,
+    "SOL": -20.1
    },
    "leitura": "neutro"
   },
