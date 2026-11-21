@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 11:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 11:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 8.2% das moedas subindo em 24 h, 50.9% em 4 h · BTC 24 h -6.33%, 4 h -0.34%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.6%/ano · {'BTC': 9.1, 'ETH': 1.6, 'SOL': -20.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.8%/ano · {'BTC': 9.6, 'ETH': 2.0, 'SOL': -20.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** HYPE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE ombro-cabeça-ombro (baixa, formado) · RAY topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · USUAL OCO invertido (alta, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
 - 📰 21/11 11:18 UTC · Cointelegraph: Here’s what happened in crypto today
