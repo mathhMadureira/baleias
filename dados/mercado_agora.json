@@ -1,28 +1,28 @@
 {
- "t": 1795262349,
- "hora_utc": "2026-11-21 11:59 UTC",
+ "t": 1795262610,
+ "hora_utc": "2026-11-21 12:03 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 159,
-  "subindo_pct": 74.2,
-  "mediana_pct": 0.5
+  "subindo_pct": 79.2,
+  "mediana_pct": 0.71
  },
  "mercado_4h": {
   "moedas": 159,
-  "subindo_pct": 71.7,
-  "mediana_pct": 0.6
+  "subindo_pct": 79.9,
+  "mediana_pct": 0.91
  },
  "mercado_24h": {
   "moedas": 159,
-  "subindo_pct": 9.4,
-  "mediana_pct": -6.9
+  "subindo_pct": 10.1,
+  "mediana_pct": -6.78
  },
  "btc": {
   "1h": 0.47,
-  "4h": 0.1,
-  "24h": -5.87,
-  "preco": 58158.01,
-  "vol_4h_vs_media": 0.67
+  "4h": 0.36,
+  "24h": -5.83,
+  "preco": 58206.1,
+  "vol_4h_vs_media": 0.63
  },
  "maiores_quedas_4h": [
   {
@@ -33,123 +33,122 @@
   },
   {
    "moeda": "YB",
-   "4h": -11.87,
-   "24h": 1.74,
-   "vol": 2.13
+   "4h": -8.16,
+   "24h": 4.96,
+   "vol": 1.95
   },
   {
    "moeda": "BLUR",
-   "4h": -6.82,
-   "24h": -1.59,
-   "vol": 0.32
+   "4h": -6.16,
+   "24h": -1.15,
+   "vol": 0.33
   },
   {
    "moeda": "MMT",
-   "4h": -5.87,
-   "24h": -7.83,
+   "4h": -4.22,
+   "24h": -9.11,
    "vol": 0.57
   },
   {
-   "moeda": "ONE",
-   "4h": -3.63,
-   "24h": -14.37,
-   "vol": 1.04
+   "moeda": "RESOLV",
+   "4h": -2.93,
+   "24h": -2.16,
+   "vol": 0.57
   },
   {
    "moeda": "ZKP",
-   "4h": -3.12,
-   "24h": -0.32,
-   "vol": 2.19
+   "4h": -2.81,
+   "24h": 0.32,
+   "vol": 2.13
   },
   {
-   "moeda": "RESOLV",
-   "4h": -2.78,
-   "24h": -2.01,
-   "vol": 0.64
+   "moeda": "ONE",
+   "4h": -2.76,
+   "24h": -13.86,
+   "vol": 1.06
+  },
+  {
+   "moeda": "SOPH",
+   "4h": -2.08,
+   "24h": -6.93,
+   "vol": 0.84
   },
   {
    "moeda": "LUNC",
-   "4h": -1.96,
-   "24h": -9.54,
-   "vol": 0.35
+   "4h": -1.88,
+   "24h": -8.5,
+   "vol": 0.36
   },
   {
-   "moeda": "SHELL",
-   "4h": -1.92,
-   "24h": -7.34,
-   "vol": 0.47
-  },
-  {
-   "moeda": "TNSR",
-   "4h": -1.59,
-   "24h": -14.29,
+   "moeda": "BANK",
+   "4h": -1.88,
+   "24h": -10.29,
    "vol": 0.63
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "DODO",
-   "4h": 14.3,
-   "24h": 28.95,
-   "vol": 2.96
+   "4h": 17.55,
+   "24h": 32.18,
+   "vol": 3.01
   },
   {
    "moeda": "VANA",
-   "4h": 8.8,
-   "24h": -7.48,
-   "vol": 0.88
-  },
-  {
-   "moeda": "RARE",
-   "4h": 7.65,
-   "24h": 24.67,
-   "vol": 1.2
+   "4h": 8.43,
+   "24h": -7.51,
+   "vol": 0.85
   },
   {
    "moeda": "TWT",
-   "4h": 6.52,
-   "24h": -8.98,
-   "vol": 1.17
+   "4h": 7.36,
+   "24h": -8.75,
+   "vol": 1.18
   },
   {
-   "moeda": "AAVE",
-   "4h": 3.99,
-   "24h": -3.03,
-   "vol": 0.66
-  },
-  {
-   "moeda": "ZEC",
-   "4h": 3.86,
-   "24h": -7.22,
-   "vol": 0.61
-  },
-  {
-   "moeda": "TAO",
-   "4h": 3.78,
-   "24h": -2.79,
+   "moeda": "RARE",
+   "4h": 5.73,
+   "24h": 22.47,
    "vol": 1.23
   },
   {
    "moeda": "USUAL",
-   "4h": 3.76,
-   "24h": 6.05,
-   "vol": 1.1
+   "4h": 5.6,
+   "24h": 6.82,
+   "vol": 1.11
+  },
+  {
+   "moeda": "ZEC",
+   "4h": 5.07,
+   "24h": -7.36,
+   "vol": 0.58
+  },
+  {
+   "moeda": "AAVE",
+   "4h": 4.89,
+   "24h": -2.77,
+   "vol": 0.65
+  },
+  {
+   "moeda": "HOT",
+   "4h": 4.37,
+   "24h": 5.36,
+   "vol": 1.51
   },
   {
    "moeda": "NEAR",
-   "4h": 3.73,
-   "24h": -6.87,
-   "vol": 0.73
+   "4h": 4.18,
+   "24h": -6.09,
+   "vol": 0.67
   },
   {
-   "moeda": "OSMO",
-   "4h": 3.27,
-   "24h": 6.76,
-   "vol": 0.64
+   "moeda": "TAO",
+   "4h": 3.9,
+   "24h": -2.89,
+   "vol": 1.25
   }
  ],
  "btc_1h_ultimas_24": [
-  -0.39,
   0.51,
   -0.18,
   -3.71,
@@ -172,10 +171,11 @@
   -0.33,
   0.39,
   -0.17,
-  0.48
+  0.47,
+  -0.07
  ],
  "contexto": {
-  "t": 1795262350,
+  "t": 1795262611,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -232,40 +232,40 @@
     "titulo": "Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment"
    },
    {
+    "fonte": "Decrypt",
+    "t": 1795210562,
+    "hora_utc": "20/11 21:36",
+    "titulo": "Claude Claims Historic Math Breakthrough One Day After Anthropic IPO"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795207014,
+    "hora_utc": "20/11 20:36",
+    "titulo": "Nvidia Shares Sink to 52-Week Low After Report SEC Is Probing Accounting"
+   },
+   {
     "fonte": "Cointelegraph",
     "t": 1795203447,
     "hora_utc": "20/11 19:37",
     "titulo": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit"
    },
    {
+    "fonte": "Decrypt",
+    "t": 1795203363,
+    "hora_utc": "20/11 19:36",
+    "titulo": "SBF’s 'The Altruists' Plot Twist: FTX’s Anthropic Shares Would Be Worth $43 Billion"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795200363,
+    "hora_utc": "20/11 18:46",
+    "titulo": "Cathie Wood Bets $91M on Anthropic IPO While Paring Crypto Exposure"
+   },
+   {
     "fonte": "Cointelegraph",
     "t": 1795199830,
     "hora_utc": "20/11 18:37",
     "titulo": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795198432,
-    "hora_utc": "20/11 18:13",
-    "titulo": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795193751,
-    "hora_utc": "20/11 16:55",
-    "titulo": "Bitcoin falls below $60K for first time since July amid broader market selloff"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795190122,
-    "hora_utc": "20/11 15:55",
-    "titulo": "US Senate advances prediction market restrictions with DEATH BETS Act"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795189926,
-    "hora_utc": "20/11 15:52",
-    "titulo": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 12.4,
+   "media_top20_anual_pct": 15.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 0.4,
-    "SOL": -19.5
+    "ETH": -2.3,
+    "SOL": -10.2
    },
    "leitura": "neutro"
   },
@@ -292,24 +292,10 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 15.0,
+   "amplitude_acima_mm50_pct": 12.5,
    "moedas_medidas": 40
   },
   "padroes_1h": [
-   {
-    "moeda": "HYPE",
-    "padrao": "estrutura de baixa (topos e fundos descendentes)",
-    "sentido": "baixa",
-    "confirmado": true,
-    "nivel": null
-   },
-   {
-    "moeda": "XRP",
-    "padrao": "estrutura de baixa (topos e fundos descendentes)",
-    "sentido": "baixa",
-    "confirmado": true,
-    "nivel": null
-   },
    {
     "moeda": "BTC",
     "padrao": "topo duplo",
@@ -373,13 +359,17 @@
  },
  "v4": {
   "vela": "20:00 UTC",
-  "apostas": 134,
-  "compras": 34,
-  "vendas": 100,
+  "apostas": 93,
+  "compras": 38,
+  "vendas": 55,
   "mais_confiantes_venda": [
    {
     "moeda": "SLP",
     "prob_subir": 0.376
+   },
+   {
+    "moeda": "XLM",
+    "prob_subir": 0.377
    },
    {
     "moeda": "FORM",
@@ -394,30 +384,26 @@
     "prob_subir": 0.386
    },
    {
+    "moeda": "PEPE",
+    "prob_subir": 0.388
+   },
+   {
     "moeda": "CFG",
     "prob_subir": 0.394
    },
    {
     "moeda": "BB",
     "prob_subir": 0.394
-   },
-   {
-    "moeda": "TWT",
-    "prob_subir": 0.397
-   },
-   {
-    "moeda": "BNB",
-    "prob_subir": 0.404
    }
   ],
   "mais_confiantes_compra": [
    {
-    "moeda": "HEMI",
-    "prob_subir": 0.645
+    "moeda": "RESOLV",
+    "prob_subir": 0.678
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.618
+    "moeda": "HEMI",
+    "prob_subir": 0.645
    },
    {
     "moeda": "AT",
@@ -432,16 +418,16 @@
     "prob_subir": 0.604
    },
    {
+    "moeda": "SOPH",
+    "prob_subir": 0.603
+   },
+   {
     "moeda": "COOKIE",
     "prob_subir": 0.593
    },
    {
-    "moeda": "HEI",
-    "prob_subir": 0.583
-   },
-   {
-    "moeda": "MMT",
-    "prob_subir": 0.572
+    "moeda": "KAIA",
+    "prob_subir": 0.591
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -718,34 +704,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.4% em 31409 apostas (618 velas, 14/11 12:00–21/11 11:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5543,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 55.5% em 31435 apostas (618 velas, 14/11 12:15–21/11 11:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.555,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 2.07,
+  "z_contra_lab": 2.14,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5169,
-    "n": 27731
+    "acerto": 0.5173,
+    "n": 27766
    },
    "segue_maioria_24h": {
-    "acerto": 0.5189,
-    "n": 31317
+    "acerto": 0.5192,
+    "n": 31343
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5706,
-    "n": 7002
+    "acerto": 0.5711,
+    "n": 7034
    },
    "confianca:0,08–0,12": {
     "acerto": 0.6016,
-    "n": 2648
+    "n": 2676
    },
    "confianca:<0,05": {
-    "acerto": 0.5458,
-    "n": 13566
+    "acerto": 0.5461,
+    "n": 13590
    },
    "confianca:≥0,12": {
     "acerto": 0.6631,
@@ -756,24 +742,24 @@
     "n": 8462
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5612,
-    "n": 6964
+    "acerto": 0.5623,
+    "n": 7048
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5621,
-    "n": 7291
+    "acerto": 0.5638,
+    "n": 7233
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5428,
     "n": 8692
    },
    "lado:compra": {
-    "acerto": 0.5197,
-    "n": 15067
+    "acerto": 0.5201,
+    "n": 15039
    },
    "lado:venda": {
-    "acerto": 0.5862,
-    "n": 16342
+    "acerto": 0.5869,
+    "n": 16396
    }
   }
  },
