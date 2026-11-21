@@ -1,6 +1,6 @@
 {
- "t": 1795239540,
- "hora_utc": "2026-11-21 05:39 UTC",
+ "t": 1795239747,
+ "hora_utc": "2026-11-21 05:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 155,
@@ -172,11 +172,17 @@
   -0.75,
   -3.16,
   -0.77,
-  -0.61
+  -0.91
  ],
  "contexto": {
-  "t": 1795239541,
+  "t": 1795239748,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795239635,
+    "hora_utc": "21/11 05:40",
+    "titulo": "Hong Kong pushes to bring crypto custodians, advisers under licensing rules"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795234207,
@@ -260,12 +266,6 @@
     "t": 1795192559,
     "hora_utc": "20/11 16:35",
     "titulo": "Bitcoin Breaks Below $60K as Crypto Fear Index Hits Worst Level Since February"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795190122,
-    "hora_utc": "20/11 15:55",
-    "titulo": "US Senate advances prediction market restrictions with DEATH BETS Act"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.5,
+   "media_top20_anual_pct": -1.6,
    "principais_anual_pct": {
-    "BTC": -1.5,
-    "ETH": -24.1,
-    "SOL": -9.8
+    "BTC": -1.6,
+    "ETH": -24.0,
+    "SOL": -10.2
    },
    "leitura": "neutro"
   },

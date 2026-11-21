@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 05:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 05:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 8.4% das moedas subindo em 24 h, 6.5% em 4 h · BTC 24 h -8.98%, 4 h -4.82%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.5%/ano · {'BTC': -1.5, 'ETH': -24.1, 'SOL': -9.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.6%/ano · {'BTC': -1.6, 'ETH': -24.0, 'SOL': -10.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BREV fundo duplo (alta, formado) · HYPER topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI topo duplo (baixa, formado) · SIGN fundo duplo (alta, formado)
+- 📰 21/11 05:40 UTC · Cointelegraph: Hong Kong pushes to bring crypto custodians, advisers under licensing rules
 - 📰 21/11 04:10 UTC · CoinDesk: Bitcoin tanks below $57,000 for the first time in two years, and its not alone
 - 📰 20/11 22:51 UTC · CoinDesk: Kalshi races to get ahead of New York order that could shut down exchange
 - 📰 20/11 22:05 UTC · CoinDesk: Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment
 - 📰 20/11 21:36 UTC · Decrypt: Claude Claims Historic Math Breakthrough One Day After Anthropic IPO
 - 📰 20/11 20:36 UTC · Decrypt: Nvidia Shares Sink to 52-Week Low After Report SEC Is Probing Accounting
-- 📰 20/11 19:37 UTC · Cointelegraph: Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
