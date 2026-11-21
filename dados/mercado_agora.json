@@ -1,28 +1,28 @@
 {
- "t": 1795227406,
- "hora_utc": "2026-11-21 02:16 UTC",
+ "t": 1795227657,
+ "hora_utc": "2026-11-21 02:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 141,
-  "subindo_pct": 38.3,
-  "mediana_pct": -0.09
+  "subindo_pct": 37.6,
+  "mediana_pct": -0.13
  },
  "mercado_4h": {
   "moedas": 141,
-  "subindo_pct": 26.2,
-  "mediana_pct": -0.46
+  "subindo_pct": 23.4,
+  "mediana_pct": -0.56
  },
  "mercado_24h": {
   "moedas": 141,
   "subindo_pct": 14.2,
-  "mediana_pct": -4.73
+  "mediana_pct": -4.68
  },
  "btc": {
-  "1h": -0.01,
-  "4h": 0.03,
-  "24h": -4.14,
-  "preco": 59030.85,
-  "vol_4h_vs_media": 0.73
+  "1h": -0.27,
+  "4h": -0.31,
+  "24h": -4.09,
+  "preco": 59021.62,
+  "vol_4h_vs_media": 0.66
  },
  "maiores_quedas_4h": [
   {
@@ -56,6 +56,12 @@
    "vol": 0.65
   },
   {
+   "moeda": "NEAR",
+   "4h": -3.34,
+   "24h": -9.09,
+   "vol": 0.54
+  },
+  {
    "moeda": "ICP",
    "4h": -3.03,
    "24h": -7.37,
@@ -78,12 +84,6 @@
    "4h": -2.86,
    "24h": -9.27,
    "vol": 0.78
-  },
-  {
-   "moeda": "GRAM",
-   "4h": -2.73,
-   "24h": -5.23,
-   "vol": 0.5
   }
  ],
  "maiores_altas_4h": [
@@ -172,10 +172,10 @@
   -0.37,
   0.14,
   -0.01,
-  -0.08
+  -0.13
  ],
  "contexto": {
-  "t": 1795227407,
+  "t": 1795227658,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 4.1,
+   "media_top20_anual_pct": 4.2,
    "principais_anual_pct": {
-    "BTC": 4.8,
-    "ETH": -6.8,
-    "SOL": -6.5
+    "BTC": 4.6,
+    "ETH": -7.4,
+    "SOL": -5.3
    },
    "leitura": "neutro"
   },
@@ -366,17 +366,25 @@
  },
  "v4": {
   "vela": "02:15 UTC",
-  "apostas": 71,
-  "compras": 40,
-  "vendas": 31,
+  "apostas": 95,
+  "compras": 42,
+  "vendas": 53,
   "mais_confiantes_venda": [
    {
     "moeda": "KAT",
-    "prob_subir": 0.327
+    "prob_subir": 0.321
    },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
+   },
+   {
+    "moeda": "AUDIO",
+    "prob_subir": 0.38
+   },
+   {
+    "moeda": "ZKC",
+    "prob_subir": 0.381
    },
    {
     "moeda": "FORM",
@@ -391,15 +399,7 @@
     "prob_subir": 0.386
    },
    {
-    "moeda": "AUDIO",
-    "prob_subir": 0.393
-   },
-   {
     "moeda": "BB",
-    "prob_subir": 0.394
-   },
-   {
-    "moeda": "ZKC",
     "prob_subir": 0.394
    }
   ],
@@ -421,12 +421,12 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "MARSCOIN",
-    "prob_subir": 0.605
-   },
-   {
     "moeda": "F",
     "prob_subir": 0.604
+   },
+   {
+    "moeda": "MARSCOIN",
+    "prob_subir": 0.603
    },
    {
     "moeda": "RUNE",
