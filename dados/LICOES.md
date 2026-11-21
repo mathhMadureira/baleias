@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 14:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 14:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.0% das moedas subindo em 24 h, 92.5% em 4 h · BTC 24 h -2.84%, 4 h 3.87%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 7.9, 'ETH': 2.5, 'SOL': -29.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': 8.4, 'ETH': 1.7, 'SOL': -28.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** TRX bandeira de alta (alta, CONFIRMOU) · BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE ombro-cabeça-ombro (baixa, formado) · SC ombro-cabeça-ombro (baixa, formado) · UNI topo duplo (baixa, formado) · USUAL OCO invertido (alta, formado)
 - 📰 21/11 14:01 UTC · Decrypt: Is the AI Bubble Finally Popping? Nvidia Crashes 48% as Wall Street Experts Sound the Alarm
