@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 15:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 15:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -41,7 +41,6 @@ Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
 Carteira **US$ 10.63** · 15 operações fechadas · 0 abertas
 
 - **Total:** 7/15 com lucro (47%), resultado +0.63, média +0.042 por operação.
-- **Últimas 24 h:** 2/2 com lucro, +1.16.
 - **Por horário:** 18–23 UTC: 10 op, 50% certas, +0.07 · 12–17 UTC: 5 op, 40% certas, +0.56
 - **Por lado:** compra: 7 op, 29% certas, -0.63 · venda: 8 op, 62% certas, +1.25
 - **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
@@ -61,9 +60,9 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 39.1% das moedas subindo em 24 h, 91.0% em 4 h · BTC 24 h -0.97%, 4 h 4.09%.
+- **Amplitude:** 39.6% das moedas subindo em 24 h, 90.9% em 4 h · BTC 24 h -0.97%, 4 h 4.09%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': 7.9, 'ETH': -6.6, 'SOL': -23.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 7.4, 'ETH': -6.5, 'SOL': -23.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** USUAL OCO invertido (alta, CONFIRMOU) · BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RARE ombro-cabeça-ombro (baixa, formado) · SC ombro-cabeça-ombro (baixa, formado) · UNI topo duplo (baixa, formado)
 - 📰 21/11 14:01 UTC · Decrypt: Is the AI Bubble Finally Popping? Nvidia Crashes 48% as Wall Street Experts Sound the Alarm
@@ -110,7 +109,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 38039 apostas conferidas ao vivo, acerto 54.5%; prevê 155 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 38039 apostas conferidas ao vivo, acerto 54.5%; prevê 153 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
