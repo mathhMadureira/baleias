@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 23:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 23:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.03** · 51 operações fechadas · 2 abertas
+Carteira **US$ 10.03** · 51 operações fechadas · 4 abertas
 
 - **Total:** 31/51 com lucro (61%), resultado -0.02, média -0.000 por operação.
 - **Últimas 24 h:** 1/1 com lucro, +0.03.
@@ -17,7 +17,7 @@ Carteira **US$ 10.03** · 51 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.66** · 38 operações fechadas · 2 abertas
+Carteira **US$ 8.68** · 38 operações fechadas · 2 abertas
 
 - **Total:** 13/38 com lucro (34%), resultado -1.31, média -0.035 por operação.
 - **Últimas 24 h:** 0/1 com lucro, -0.03.
@@ -30,7 +30,7 @@ Carteira **US$ 8.66** · 38 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
+Carteira **US$ 10.09** · 27 operações fechadas · 1 abertas
 
 - **Total:** 13/27 com lucro (48%), resultado +0.09, média +0.003 por operação.
 - **Por horário:** 18–23 UTC: 15 op, 40% certas, -0.55 · 12–17 UTC: 10 op, 50% certas, +0.24 · 00–05 UTC: 2 op, 100% certas, +0.41
@@ -40,7 +40,7 @@ Carteira **US$ 10.09** · 27 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.63** · 15 operações fechadas · 0 abertas
+Carteira **US$ 10.63** · 15 operações fechadas · 1 abertas
 
 - **Total:** 7/15 com lucro (47%), resultado +0.63, média +0.042 por operação.
 - **Por horário:** 18–23 UTC: 10 op, 50% certas, +0.07 · 12–17 UTC: 5 op, 40% certas, +0.56
@@ -50,7 +50,7 @@ Carteira **US$ 10.63** · 15 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
+Carteira **US$ 10.29** · 43 operações fechadas · 2 abertas
 
 - **Total:** 26/43 com lucro (60%), resultado +0.29, média +0.007 por operação.
 - **Por horário:** 18–23 UTC: 26 op, 62% certas, -0.03 · 12–17 UTC: 15 op, 53% certas, +0.11 · 00–05 UTC: 2 op, 100% certas, +0.22
@@ -64,7 +64,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 43.8% das moedas subindo em 24 h, 28.9% em 4 h · BTC 24 h 1.65%, 4 h -0.03%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': -7.9, 'ETH': -17.2, 'SOL': 2.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': -6.7, 'ETH': -17.4, 'SOL': 1.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LSK bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · HOT triângulo simétrico (?, formado) · INIT OCO invertido (alta, formado) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
@@ -76,12 +76,12 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 21/11 23:09 UTC · **HYPER compra, SHIB venda, GTC compra, BEAMX venda** · {'universo': '127 moedas; varredura completa de 12; regime neutro (44,1% subindo em 24h, 29,1% em 4h); BTC 1h -0,54%, 4h -0,03%, 24h +1,65%. Testnet patrimônio 
 - 21/11 22:53 UTC · **HYPER compra, SHIB venda** · {'universo': '127 moedas; regime neutro (45,7% subindo em 24 h, 24,4% em 4 h); varredura completa de 12 moedas; conta testnet estava com 2 posições e patrimônio
 - 21/11 22:22 UTC · **SIGN compra, HYPER compra** · {'universo': '128 moedas lidas integralmente; mercado neutro: 46,9% alta 24h e 25,0% 4h; varredura multitempo completa em 12 moedas.', 'testnet': 'patrimônio US
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
 - 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 - 20/11 13:55 UTC · **XLM venda, NEAR venda** · Baixa: 13,9% das 122 moedas sobem em 4 h e 13,1% em 24 h. Carteiras H63: BTC 0×16 e ETH 1×7 vendidas, NEAR 0×2. v4 com confiança ≥ 0,12: só DOT compra (0,144, c
-- 20/11 13:40 UTC · **KAVA venda, MUBARAK venda, XLM venda** · Baixa: 10,6% das 123 moedas sobem em 1 h (mediana −0,95%), 13,8% em 4 h (mediana −1,90%), 15,4% em 24 h (mediana −5,62%); BTC 61.504, 1 h −0,26%, 4 h −0,30%, 24
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 

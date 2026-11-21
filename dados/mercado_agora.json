@@ -1,6 +1,6 @@
 {
- "t": 1795302499,
- "hora_utc": "2026-11-21 23:08 UTC",
+ "t": 1795302718,
+ "hora_utc": "2026-11-21 23:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,10 +172,10 @@
   0.16,
   0.03,
   -0.54,
-  0.04
+  0.21
  ],
  "contexto": {
-  "t": 1795302500,
+  "t": 1795302719,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -270,9 +270,9 @@
   "funding": {
    "media_top20_anual_pct": 2.6,
    "principais_anual_pct": {
-    "BTC": -7.9,
-    "ETH": -17.2,
-    "SOL": 2.1
+    "BTC": -6.7,
+    "ETH": -17.4,
+    "SOL": 1.6
    },
    "leitura": "neutro"
   },
@@ -481,6 +481,24 @@
     "resultado_pct": -0.0,
     "horas_aberta": 0.2,
     "motivo_de_entrada": "Entrada: v4 p=0,347, confiança 0,153 a favor; varredura completa, 5 de 6 tempos abaixo da MM20 (1 min, 5 min, 15 min, 4 h, 1 dia); 4 h -0,55%, 24 h +0,28%, abai"
+   },
+   {
+    "moeda": "GTC",
+    "lado": "compra",
+    "entrada": 0.13297,
+    "agora": 0.13274,
+    "resultado_pct": -0.17,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: 4/6 tempos acima da MM20 (1m, 5m, 15m, 1h); 1h +0,37%, 4h +0,57%, 24h -1,91%; OCOi de alta em 1h não confirmado; v4 p=0,639, confiança 0,139 a favor; H"
+   },
+   {
+    "moeda": "BEAMX",
+    "lado": "venda",
+    "entrada": 0.003459,
+    "agora": 0.003458,
+    "resultado_pct": 0.03,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: 2/6 tempos abaixo da MM20 (15m, 4h) e 4 acima; 1h -0,17%, 4h -1,28%, 24h +4,69%; sem padrão gráfico na varredura; v4 p=0,339, confiança 0,161 a favor; "
    }
   ],
   "ultimas_fechadas": [
@@ -592,10 +610,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795143341,
-    "texto": "Conta de teste: MEGA compra −0,154, ETH venda −0,159 e LTC venda −0,193, os 3 pelo stop da corretora (o repique de BTC 1 h +0,56% pegou as vendas). Carteira simulada, 15 últimas fechadas: p 0,60, G 0,182, L 0,172, E +0,041 por operação. Caderno: padrão a favor 4 de 4 certas (+0,970), sem padrão 56% (−0,154), poucas para concluir; por isso as duas entradas de hoje têm padrão confirmado a favor em 1"
-   },
-   {
     "t": 1795181268,
     "texto": "Conta de teste: DOGE venda +0,329 (prazo 120 min) e MUBARAK venda −0,203 (stop −1% da corretora); na carteira simulada as duas ganharam (DOGE +0,261 pelo stop móvel, MUBARAK +0,326 pelo prazo). Carteira simulada, 15 últimas fechadas: p 0,60, G 0,233, L 0,172, E = 0,60 × 0,233 − 0,40 × 0,172 = +0,071 por operação. Caderno: padrão a favor 5 de 5 certas (+1,295), sem padrão 56% (−0,154), poucas para "
    },
@@ -622,6 +636,10 @@
    {
     "t": 1795301627,
     "texto": "Caderno Claude: 50 fechadas, 27 com leitura; 6/6 tempos: 10 operações, 60%, +US$ 0,568 (+US$ 0,0568 média); padrão a favor: 10, 70%, +US$ 1,337 (+US$ 0,1337 média). Histórico testnet: 37 fechadas, 35,1% acerto, soma -US$ 1,28, fator de lucro 0,75, patrimônio US$ 8,7354. Ainda não há amostra suficiente para alterar método."
+   },
+   {
+    "t": 1795302554,
+    "texto": "Caderno Claude: 51 fechadas; 6/6 tempos: 10 operações, 60%, +US$ 0,568 (+US$ 0,0568 média); padrões a favor: 10, 70%, +US$ 1,337 (+US$ 0,1337 média); carteiras a favor: 11, 64%, +US$ 0,286 (+US$ 0,0260 média). Testnet: 38 fechadas, 34,2% acerto, soma -US$ 1,312, fator 0,74, patrimônio US$ 8,6849; resultado abaixo do inicial, sem base para mudar método."
    }
   ]
  },
@@ -633,7 +651,7 @@
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
    "carteira": 10.03,
-   "n_abertas": 2,
+   "n_abertas": 4,
    "abertas": [
     [
      "HYPER",
@@ -641,6 +659,14 @@
     ],
     [
      "SHIB",
+     "venda"
+    ],
+    [
+     "GTC",
+     "compra"
+    ],
+    [
+     "BEAMX",
      "venda"
     ]
    ],
@@ -653,7 +679,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 8.66,
+   "carteira": 8.68,
    "n_abertas": 2,
    "abertas": [
     [
@@ -675,8 +701,13 @@
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
    "carteira": 10.09,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 1,
+   "abertas": [
+    [
+     "GTC",
+     "compra"
+    ]
+   ],
    "n_fechadas": 27,
    "ordem": null
   },
@@ -687,8 +718,13 @@
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
    "carteira": 10.63,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 1,
+   "abertas": [
+    [
+     "BEAMX",
+     "venda"
+    ]
+   ],
    "n_fechadas": 15,
    "ordem": null
   },
@@ -699,8 +735,17 @@
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
    "carteira": 10.29,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "TRUMP",
+     "venda"
+    ],
+    [
+     "INJ",
+     "venda"
+    ]
+   ],
    "n_fechadas": 43,
    "ordem": null
   }
@@ -724,7 +769,7 @@
     "ganho_medio": 0.293,
     "perda_media": -0.213,
     "fator_lucro": 0.74,
-    "carteira": 8.66
+    "carteira": 8.68
    },
    "treinador": {
     "ops": 27,
@@ -819,12 +864,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 21:13",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Queda: 14,8% das 115 moedas sobem em 1 h; BTC 6 de 6 tempos abaixo da MM20, 4 h −1,18%. Mantenho BTC vendido (carteiras 0×15 vendidas) e MEGA comprada (5 de 6 acima, 1 dia +9,10%). Sem entrada nova: CYBER (1 de 6 a favor) e SOPH (OCO de 1 h contra) descartadas. Conta de teste: MEGA −0,05, US$ 9,00."
-  },
-  {
    "hora_utc": "19/11 21:29",
    "de": "claude",
    "para": "sala",
@@ -889,6 +928,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Universo 127; regime neutro (45,7% alta em 24 h, 24,4% em 4 h). Testnet: US$ 8,7354, SIGN e HYPER abertas. Proponho fechar SIGN (v4 venda, confiança 0,148), manter HYPER e vender SHIB (5/6 tempos abaixo, v4 confiança 0,153; volume 1 min 2,32×). H63 não confirma SHIB; nenhum aviso do Caçador verifica"
+  },
+  {
+   "hora_utc": "21/11 23:11",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Universo 127; regime neutro (44,1% alta em 24h, 29,1% em 4h); BTC 1h -0,54%. Testnet US$ 8,6849: HYPER compra e SHIB venda mantidas. Proponho GTC compra (4/6 tempos, v4 confiança 0,139; volume 1m 288,48×, risco de pico) e BEAMX venda (v4 confiança 0,161; só 2/6 tempos favorecem e 24h +4,69%). H63 nã"
   }
  ]
 }
