@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 10:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 11:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 9.4% das moedas subindo em 24 h, 58.1% em 4 h · BTC 24 h -7.05%, 4 h 1.2%.
+- **Amplitude:** 9.4% das moedas subindo em 24 h, 24.4% em 4 h · BTC 24 h -6.64%, 4 h -0.23%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.6%/ano · {'BTC': 7.5, 'ETH': 4.1, 'SOL': -32.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.5%/ano · {'BTC': 1.8, 'ETH': 2.3, 'SOL': -29.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** NEXO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · RAY estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · NFP ombro-cabeça-ombro (baixa, formado) · RAY topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** HYPE estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · RAY topo duplo (baixa, formado) · SOPH ombro-cabeça-ombro (baixa, formado) · USUAL OCO invertido (alta, formado) · YB fundo duplo (alta, formado) · ZKP fundo duplo (alta, formado)
 - 📰 21/11 09:48 UTC · Cointelegraph: ECB seeks industry partners for tokenized deposits, securities experiments
 - 📰 21/11 07:51 UTC · Cointelegraph: US lawmakers propose up to 30% rewards for prediction market whistleblowers
 - 📰 21/11 06:16 UTC · CoinDesk: Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug
@@ -114,7 +114,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 36577 apostas conferidas ao vivo, acerto 55.1%; prevê 159 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 36620 apostas conferidas ao vivo, acerto 55.1%; prevê 159 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
