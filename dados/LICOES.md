@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 21/11/2026 04:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 21/11/2026 04:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 
 - **Amplitude:** 7.8% das moedas subindo em 24 h, 3.9% em 4 h · BTC 24 h -9.06%, 4 h -5.28%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.2%/ano · {'BTC': -8.6, 'ETH': -31.9, 'SOL': -22.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -6.3%/ano · {'BTC': -7.8, 'ETH': -31.1, 'SOL': -21.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77718, MM200 72589); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB bandeira de baixa (baixa, CONFIRMOU) · BTC bandeira de baixa (baixa, CONFIRMOU) · ETH bandeira de baixa (baixa, CONFIRMOU) · GIGGLE bandeira de baixa (baixa, CONFIRMOU) · LDO bandeira de baixa (baixa, CONFIRMOU) · OPEN bandeira de baixa (baixa, CONFIRMOU) · ZEN bandeira de baixa (baixa, CONFIRMOU) · BREV fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI topo duplo (baixa, formado)
 - 📰 21/11 04:10 UTC · CoinDesk: Bitcoin tanks below $57,000 for the first time in two years, and its not alone
@@ -108,10 +108,10 @@ Carteira **US$ 10.29** · 43 operações fechadas · 0 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido, tres_corvos. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
 **v4 (o cérebro de todos):** 35506 apostas conferidas ao vivo, acerto 55.3%; prevê 153 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
