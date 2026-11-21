@@ -14,6 +14,9 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 
 ## Em andamento / próximos
 
+0. **[H72 — feito: reprovada no portão do fio; nada mudou]** Escala de capital e alavancagem (pedido do dono: "não quero centavos, quero lucros significantes"). Nas 136 operações fechadas dos 4 agentes o fio é +0,0547% do nocional (t 0,72) e na conta de teste −0,1327% (t −0,53): sem prova de vantagem, escala só multiplica ruído. Números para a decisão do dono: US$ 10/dia exige carteira de ~US$ 239 com o fio de hoje; US$ 100/dia, ~US$ 2.390; na carteira de US$ 10 são 7.313 operações para +US$ 100. Com a regra H64 a queda máxima simulada sobe de 17,9% (US$ 10) para 35,7% (US$ 50+). `lab/escala_capital.py`, H72 no protocolo.
+
+
 1. **[H12 — feito, não passou; falta 15 min]** Custo em R nas velas curtas. Em 1 h o stop 2N fica a ~0,3% do preço e o custo de ida e volta é 0,2% (≈0,67R por operação). Testar um filtro derivado da matemática, não dos dados: só entrar se custo ≤ 0,1R, ou seja, 2N/preço ≥ 2%. Medir em 4 h, 1 h e 15 min, em 2024 e em 2025–hoje.
 2. **Robô rápido ao vivo:** depois do H12, escolher o intervalo e o filtro pelo resultado, sem achismo.
 3. **[H13 — feito: não passou por 0,01 de Calmar; candidato a teste ao vivo em paralelo]** Risco total máximo: as 33 moedas andam juntas, então 10 posições valem quase uma aposta só. Testar um teto de risco aberto (ex.: 6R) para reduzir a queda máxima de −42%.
@@ -28,6 +31,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 10. **Alerta de falha da nuvem:** se o `robo-diario` falhar, avisar no Telegram (o GitHub também manda e-mail).
 
 ## Feito (recente)
+
+- 2026-11-21: painel da Mesa ao vivo ganhou cartões de atividade por agente, com situação, carteira, posições e última entrada/saída observada; sem inventar etapas internas que a nuvem não transmite.
 
 - 2026-11-10: **mesa proprietária** (aba 🏦): cada robô em teste tem conta de US$ 10; violação se perder > US$ 1 num dia; eliminado abaixo de US$ 5; aprovado para fase 2 (US$ 50) com ≥ 30 operações, ≥ US$ 11, sem violações, queda < 30%. Robô rápido virou conta nativa de US$ 10 (US$ 5 por operação, máx. 1 h, para no dia com −US$ 1). Cérebro v2 (biologia) competindo com v1.
 

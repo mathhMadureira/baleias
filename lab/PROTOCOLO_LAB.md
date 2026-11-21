@@ -1584,3 +1584,35 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Juiz (comparação, não aprova estratégia):** por agente, ao completar 30 operações fechadas na corretora ou em 7 dias (27/11): diferença por
   operação entre a conta de demonstração e a carteira simulada do mesmo agente nas mesmas decisões (`decisao_t`) = custo real de execução (taxa,
   escorregamento, stop móvel por rodada). Relatada ao dono. Previsão: não sei.
+
+## Hipótese 72: escala — o que "lucros maiores" custa em risco (registrada em 21/11/2026 ~23:20 UTC, antes de rodar)
+- **Dono (21/11):** "todos os agentes estão operando em busca de pequenos lucros, por centavos de dólar; eu não quero centavos, quero lucros significantes e maiores."
+- **Dados:** as operações FECHADAS reais no ramo `estado` na hora de rodar, sem baixar dado novo: a carteira simulada dos 4 agentes (`robo_claude.json`,
+  `agente_laboratorio.json`, `agente_treinador.json`, `agente_guardiao.json`) e a conta de teste do chefe (`robo_openbot_testnet.json`). O retorno de cada
+  operação é o realizado em % do nocional (`resultado_usd / nocional`), que já inclui taxas e custo. O tamanho muda; o fio por operação, não.
+- **Duas alavancas, medidas separadas:**
+  - **A — capital:** carteira por agente de US$ 10 → 50, 100, 500 e 1.000, com a regra de tamanho da H64 inalterada (fator 2,5 × carteira ÷ 10 em [1,25; 5],
+    10× até fator 2,5 e 20× acima) e o piso em 50% da carteira inicial.
+  - **B — alavancagem:** carteira de US$ 10 e 100 com 20× e 50× fixos; perda de uma posição para na margem (`pct ≥ −1 ÷ alavancagem`, como no código).
+- **Medida:** sequência real de fechamento, carteira realizada; final, mínima, queda máxima em % da carteira, liquidações. Monte Carlo de 10.000 ordens
+  sorteadas das operações (com reposição) por braço: mediana do final, chance de dobrar antes de cair ao piso.
+- **Critério (1 tentativa, sem ajustar depois):**
+  1. **Portão do fio:** se a média por operação em % do nocional não for > 0 com t ≥ 2 em NENHUM dos dois conjuntos, a escala NÃO entra: alavanca não
+     multiplica fio que não existe. O resultado vai ao dono com o capital necessário para o lucro que ele pediu, dado o fio atual.
+  2. Se o fio passar: **A** passa se o resultado em US$ crescer ~proporcional à carteira e a queda máxima em % não piorar mais de 1 ponto percentual;
+     **B** passa se o resultado em US$ dobrar com queda máxima ≤ 1,5× a atual e liquidação em ≤ 2% das operações.
+  3. Relatado sem decidir: operações e dias para +US$ 100 e o capital necessário para US$ 1 e US$ 10 por dia com o fio de hoje.
+- **Se reprovar:** nada muda nas carteiras nem na alavancagem; o dono recebe o número e decide sobre capital (dinheiro fictício das contas de demonstração
+  é decisão dele, não da rotina).
+- **Previsão registrada:** o fio deve ficar perto de zero (a H64 já mostrou +0,55 na soma com a escala; a conta de teste está negativa) e o teste deve
+  reprovar no portão. Escala maior deve aumentar o tamanho dos dois lados (ganho e perda), não a proporção.
+
+### Resultado da H72 (21/11/2026 ~23:30 UTC, `lab/escala_capital.py` → `dados/lab/escala_capital_resultado.json`): REPROVADA no portão do fio
+| conjunto | operações | fio por operação | t |
+|---|---|---|---|
+| carteira simulada (4 agentes) | 136 | +0,0547% do nocional | 0,72 |
+| conta de teste (chefe) | 38 | −0,1327% do nocional | −0,53 |
+- O portão pedia média > 0 com t ≥ 2 em algum conjunto: nenhum. A alavanca (capital ou alavancagem) multiplica o fio; com fio sem prova, multiplica ruído. **Nada muda** nas carteiras nem na alavancagem.
+- Mesmo sem decidir, o número do dono (com o fio de hoje, regra H64, 30,6 operações/dia): US$ 1 por operação exige carteira de **US$ 731**; US$ 10/dia exige **US$ 239**; US$ 100/dia, **US$ 2.390**; na carteira de US$ 10 seriam **7.313 operações** para +US$ 100 (~239 dias).
+- Custo da escala no risco: com a regra H64 o fator satura em 5× já com carteira de US$ 50, e a queda máxima simulada sobe de 17,9% (US$ 10) para 35,7% (US$ 50 ou mais) na carteira simulada, e de 22,6% para 44,9% na conta de teste. Alavancagem de 50× na carteira de US$ 10: +0,54 US$ a mais no total, 2 liquidações na sequência real.
+- Na conta de teste o braço maior termina **abaixo** do capital em todos os tamanhos (8,52 de 10): escalar ali aumentaria a perda em dólares.

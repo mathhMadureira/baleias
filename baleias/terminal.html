@@ -58,6 +58,15 @@ tr[data-moeda] { cursor:pointer; } tr[data-moeda]:hover td { background:#ffffff0
 .tooltip { position:fixed; pointer-events:none; background:#0b1017ee; border:1px solid var(--line2); border-radius:8px; padding:6px 9px; font:12px var(--mono); display:none; z-index:9; white-space:pre; }
 select, input[type=text], input:not([type]) { background:var(--card2); color:var(--txt); border:1px solid var(--line2); border-radius:6px; padding:4px 6px; font:12px system-ui; }
 .placar { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:12px; }
+.atividade { display:grid; grid-template-columns:repeat(auto-fill,minmax(265px,1fr)); gap:9px; }
+.agente-live { background:var(--bg2); border:1px solid var(--line); border-radius:9px; padding:10px 12px; min-width:0; }
+.agente-live-top { display:flex; align-items:center; gap:8px; }
+.agente-live-top strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.pulso { width:8px; height:8px; border-radius:50%; background:var(--dim); flex:none; }
+.pulso.ativo { background:var(--up); box-shadow:0 0 7px var(--up); }
+.pulso.alerta { background:var(--gold); box-shadow:0 0 7px var(--gold); }
+.agente-live .ultima { color:var(--mut); font-size:12px; margin-top:6px; white-space:normal; }
+.agente-live .aberta { margin-top:7px; font:12px var(--mono); }
 .hip { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--dim); border-radius:10px; padding:12px 14px; }
 .hip.aprovada { border-left-color:var(--up); } .hip.reprovada { border-left-color:var(--down); } .hip.andamento { border-left-color:var(--blue); } .hip.parcial { border-left-color:var(--gold); }
 .hip .id { font:700 12px var(--mono); } .hip .p { color:var(--mut); font-size:13px; margin:4px 0 6px; } .hip .r { font-size:13px; font-weight:600; } .hip .n { font:12px var(--mono); color:var(--mut); margin-top:2px; }
@@ -87,6 +96,12 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <!-- 6. Banco + 5. estados (resumo) -->
   <div class="kpis" id="kpis"><div class="kpi"><div class="rot">carregando</div><div class="val">…</div></div></div>
   <div id="faixa" class="num mut" style="font-size:12.5px;margin:-4px 0 10px"></div>
+
+  <div class="card" style="margin-bottom:12px">
+    <h3>⚡ Atividade observada dos agentes<span class="dir mut" id="atividade-t"></span></h3>
+    <div class="atividade" id="atividade"><div class="vazio">carregando atividade…</div></div>
+    <div class="mut" style="font-size:11px;margin-top:8px">Mostra o estado gravado na nuvem, posições e a última entrada ou saída registrada. A varredura interna dos agentes não é transmitida ao painel.</div>
+  </div>
 
   <!-- 1. placar + 5. estado de cada robô -->
   <div class="card" style="margin-bottom:12px">
@@ -243,6 +258,25 @@ function desenharPlacar() {
   $("pl-t").textContent = "atualizado " + new Date().toLocaleTimeString("pt-BR", {timeZone: FUSO_BR});
 }
 
+function desenharAtividade() {
+  const destino = $("atividade");
+  if (!pm || !pm.linhas) return;
+  const ordenados = [...pm.linhas].sort((a,b) => (b.atualizado || 0) - (a.atualizado || 0));
+  const cards = ordenados.map(l => {
+    const pos = pm.abertas.filter(p => p.robo === l.id);
+    const ult = pm.tempo.find(x => x.robo === l.id);
+    const recente = l.atualizado && Date.now()/1000 - l.atualizado < 3600;
+    const alerta = !!l.alerta || l.estado === "sem_dinheiro";
+    let evento = ult ? `${ult.tipo === "saida" ? "Saiu" : "Entrou"} em ${ult.moeda} · ${ult.lado}${ult.tipo === "saida" && ult.resultado_usd != null ? ` · ${sn(ult.resultado_usd,3)} US$` : ""} · ${ha(ult.t)}` : "Sem entrada ou saída registrada";
+    const abertas = pos.length ? pos.map(p => `${p.moeda} ${p.lado} · ${p.resultado_usd == null ? "sem preço" : `${sn(p.resultado_usd,3)} US$`}`).join("<br>") : "Sem posição aberta";
+    return `<article class="agente-live"><div class="agente-live-top"><i class="pulso ${alerta ? "alerta" : recente ? "ativo" : ""}"></i><strong>${esc(l.avatar)} ${esc(l.nome)}</strong><span class="chip ${esc(l.estado)}" style="margin-left:auto">${esc(l.estado_txt)}</span></div>
+      <div class="ultima">Último registro: ${evento}</div><div class="ultima">Carteira ${fmt(l.carteira)} US$ · atualizado ${ha(l.atualizado)}</div>
+      <div class="aberta">${abertas}</div></article>`;
+  });
+  destino.innerHTML = cards.join("") || `<div class="vazio">Sem estado de agente disponível.</div>`;
+  $("atividade-t").textContent = `estado atualizado ${new Date(pm.t*1000).toLocaleTimeString("pt-BR", {timeZone:FUSO_BR})}`;
+}
+
 function svgCurva(l) {
   const p = l.curva, W = 300, H = 92, pad = {l: 2, r: 34, t: 6, b: 12};
   if (!p || p.length < 2) return `<svg viewBox="0 0 ${W} ${H}"><text x="6" y="40" fill="#8aa0a8" font-size="11">sem dados</text></svg>`;
@@ -336,7 +370,7 @@ async function cicloPainel() {
     const d = await j("/api/painel-mesa");
     if (d.erro) throw new Error(d.erro);
     pm = d;
-    desenharKpis(); desenharPlacar(); desenharCurvas(); desenharPosicoes(); desenharTempo(); desenharBanco();
+    desenharKpis(); desenharAtividade(); desenharPlacar(); desenharCurvas(); desenharPosicoes(); desenharTempo(); desenharBanco();
     if (!vgMoeda) { vgMoeda = pm.abertas[0] ? pm.abertas[0].moeda : "BTC"; cicloVelas(); }
   } catch (e) { $("pl-t").textContent = "erro ao ler a mesa: " + e.message; }
   setTimeout(cicloPainel, 10000);
