@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 17:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 17:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 57.4% das moedas subindo em 24 h, 54.5% em 4 h · BTC 24 h 0.93%, 4 h 0.25%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': -4.3, 'ETH': -1.4, 'SOL': 6.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': -4.2, 'ETH': -0.8, 'SOL': 6.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB bandeira de alta (alta, CONFIRMOU) · BTC OCO invertido (alta, CONFIRMOU) · CAKE bandeira de alta (alta, CONFIRMOU) · PUMP bandeira de alta (alta, CONFIRMOU) · AMP fundo duplo (alta, formado) · ATOM topo duplo (baixa, formado) · ATOM fundo duplo (alta, formado) · BCH topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · JUP topo duplo (baixa, formado)
 - 📰 22/11 14:30 UTC · Cointelegraph: The future of onchain FX could start with users, not institutional liquidity
