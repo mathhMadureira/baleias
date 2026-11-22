@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 21:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 21:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.08** · 59 operações fechadas · 2 abertas
+Carteira **US$ 9.09** · 59 operações fechadas · 2 abertas
 
 - **Total:** 34/59 com lucro (58%), resultado -0.86, média -0.015 por operação.
 - **Últimas 24 h:** 4/9 com lucro, -0.82.
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 71.0% das moedas subindo em 24 h, 45.0% em 4 h · BTC 24 h 1.04%, 4 h 0.24%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.0%/ano · {'BTC': 11.0, 'ETH': -2.4, 'SOL': 3.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': 11.0, 'ETH': -2.5, 'SOL': 3.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · HBAR triângulo ascendente (alta, formado) · JUP topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PYTH OCO invertido (alta, formado)
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
