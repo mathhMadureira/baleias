@@ -1,6 +1,6 @@
 {
- "t": 1795385059,
- "hora_utc": "2026-11-22 22:04 UTC",
+ "t": 1795385231,
+ "hora_utc": "2026-11-22 22:07 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,10 +172,10 @@
   -0.04,
   0.3,
   0.06,
-  -0.11
+  -0.06
  ],
  "contexto": {
-  "t": 1795385060,
+  "t": 1795385232,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -232,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.9,
+   "media_top20_anual_pct": 0.2,
    "principais_anual_pct": {
-    "BTC": 2.4,
-    "ETH": -15.1,
-    "SOL": -8.1
+    "BTC": 2.7,
+    "ETH": -12.7,
+    "SOL": -4.9
    },
    "leitura": "neutro"
   },
@@ -412,7 +412,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.88,
+  "carteira": 8.87,
   "abertas": [
    {
     "moeda": "GTC",
@@ -420,7 +420,7 @@
     "entrada": 0.13416,
     "agora": 0.13416,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.3,
+    "horas_aberta": 0.4,
     "motivo_de_entrada": "Entrada: v4 p 0,638 de subir (confianca 0,138, a mais alta da rodada); elegivel no testnet; 1h +0,03%, 24h +1,49%; distancias de 24h: -2,37% da maxima e +2,86% "
    },
    {
@@ -429,7 +429,7 @@
     "entrada": 0.05532,
     "agora": 0.05525,
     "resultado_pct": -0.13,
-    "horas_aberta": 0.3,
+    "horas_aberta": 0.4,
     "motivo_de_entrada": "Entrada: padrao grafico confirmado a favor na varredura (triangulo descendente com rompimento de alta CONFIRMADO em 15m); 3/6 tempos acima da MM20 (5m, 15m, 1h)"
    }
   ],
@@ -582,7 +582,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.88,
+   "carteira": 8.87,
    "n_abertas": 2,
    "abertas": [
     [
@@ -644,7 +644,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.06,
+   "carteira": 10.04,
    "n_abertas": 1,
    "abertas": [
     [
@@ -678,7 +678,7 @@
     "ganho_medio": 0.143,
     "perda_media": -0.228,
     "fator_lucro": 0.85,
-    "carteira": 8.88
+    "carteira": 8.87
    },
    "openbot_testnet": {
     "ops": 43,
@@ -705,7 +705,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.183,
     "fator_lucro": 1.08,
-    "carteira": 10.06
+    "carteira": 10.04
    },
    "guardiao": {
     "ops": 59,
