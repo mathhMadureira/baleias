@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 00:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 00:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.21** · 54 operações fechadas · 3 abertas
+Carteira **US$ 10.16** · 54 operações fechadas · 3 abertas
 
 - **Total:** 33/54 com lucro (61%), resultado +0.25, média +0.005 por operação.
 - **Últimas 24 h:** 3/4 com lucro, +0.30.
@@ -30,7 +30,7 @@ Carteira **US$ 8.51** · 40 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.78** · 32 operações fechadas · 3 abertas
+Carteira **US$ 9.75** · 32 operações fechadas · 3 abertas
 
 - **Total:** 14/32 com lucro (44%), resultado -0.26, média -0.008 por operação.
 - **Últimas 24 h:** 1/5 com lucro, -0.35.
@@ -43,7 +43,7 @@ Carteira **US$ 9.78** · 32 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.64** · 17 operações fechadas · 2 abertas
+Carteira **US$ 10.61** · 17 operações fechadas · 2 abertas
 
 - **Total:** 7/17 com lucro (41%), resultado +0.51, média +0.030 por operação.
 - **Últimas 24 h:** 0/2 com lucro, -0.12.
@@ -71,7 +71,7 @@ Carteira **US$ 9.92** · 57 operações fechadas · 2 abertas
 
 - **Amplitude:** 57.1% das moedas subindo em 24 h, 34.1% em 4 h · BTC 24 h 2.04%, 4 h -0.26%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': -0.0, 'ETH': -8.9, 'SOL': -7.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': -0.8, 'ETH': -9.2, 'SOL': -7.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETHFI bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · INJ topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · VET topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
