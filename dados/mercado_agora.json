@@ -1,6 +1,6 @@
 {
- "t": 1795383657,
- "hora_utc": "2026-11-22 21:40 UTC",
+ "t": 1795383836,
+ "hora_utc": "2026-11-22 21:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -175,7 +175,7 @@
   0.16
  ],
  "contexto": {
-  "t": 1795383657,
+  "t": 1795383836,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -232,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 1.0,
+   "media_top20_anual_pct": 0.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -1.5,
-    "SOL": 4.1
+    "ETH": -1.6,
+    "SOL": 3.9
    },
    "leitura": "neutro"
   },
@@ -441,7 +441,44 @@
  },
  "robo_claude": {
   "carteira": 10.06,
-  "abertas": [],
+  "abertas": [
+   {
+    "moeda": "GTC",
+    "lado": "compra",
+    "entrada": 0.13416,
+    "agora": 0.13416,
+    "resultado_pct": 0.0,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: v4 p 0,638 de subir (confianca 0,138, a mais alta da rodada); elegivel no testnet; 1h +0,03%, 24h +1,49%; distancias de 24h: -2,37% da maxima e +2,86% "
+   },
+   {
+    "moeda": "CYBER",
+    "lado": "compra",
+    "entrada": 0.204,
+    "agora": 0.204,
+    "resultado_pct": 0.0,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: v4 p 0,625 de subir (confianca 0,126, elegivel H36); elegivel no testnet; fundo duplo em 4h; 1m acima da MM20 com volume 1,37x e 5m +0,49%; sem padrao "
+   },
+   {
+    "moeda": "DOGE",
+    "lado": "compra",
+    "entrada": 0.05532,
+    "agora": 0.05538,
+    "resultado_pct": 0.11,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: padrao grafico confirmado a favor na varredura (triangulo descendente com rompimento de alta CONFIRMADO em 15m); 3/6 tempos acima da MM20 (5m, 15m, 1h)"
+   },
+   {
+    "moeda": "SKY",
+    "lado": "venda",
+    "entrada": 0.0418,
+    "agora": 0.04157,
+    "resultado_pct": 0.55,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: aviso do Cacador venda forca 66 confirmado por triangulo descendente CONFIRMADO em 15m na varredura (a favor da venda); 6/6 tempos abaixo da MM20 (1m a"
+   }
+  ],
   "ultimas_fechadas": [
    {
     "moeda": "KAVA",
@@ -551,10 +588,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795182911,
-    "texto": "Caderno com 18 fechadas: padrão a favor 5 de 5 ganhas (+1,295), sem padrão 56% (−0,154). Últimas: MUBARAK venda +0,326, DOGE venda +0,261, MEGA compra +0,122, LTC venda −0,241, ETH venda −0,188. Por isso a entrada nova vem com padrão confirmado a favor (NEAR). Nesta rodada: KAVA, MUBARAK e XLM vendidas saíram pelo stop no repique de 5 min (+0,7% a +1,3%), somando −0,50."
-   },
-   {
     "t": 1795183745,
     "texto": "Caderno com 21 fechadas com leitura: padrão a favor 7 ops, 71% de acerto, +0,860; sem padrão 9 ops, 56%, −0,154; misto 5 ops, 40%, −0,152. Últimas: DOGE venda +0,261, MUBARAK venda +0,326, XLM venda −0,180, KAVA venda −0,255, MUBARAK venda −0,255. Por isso BCH entra com dois padrões confirmados a favor; SNX entra pela maioria dos tempos (5 de 6), com padrões não confirmados."
    },
@@ -581,6 +614,10 @@
    {
     "t": 1795308211,
     "texto": "Testnet 40 fechadas: acerto 35,0%, G +0,277, L -0,202, E -0,0343 por operacao (soma -1,37), fator 0,74 — o fio da conta de teste continua negativo. Caderno: padrao grafico a favor 11 operacoes, 64% de acerto, +1,107 (media +0,1007); 6 de 6 tempos 10 operacoes, 60%, +0,568; 4-5 de 6 tempos 11 operacoes, 45%, -0,185. Ultimas: SHIB venda -0,130 (v4 virou compra, fechei), HYPER compra +0,072 (stop mov"
+   },
+   {
+    "t": 1795383704,
+    "texto": "Testnet 43 fechadas: p 0,326 (14 vitórias, 29 derrotas), G +0,2767, L -0,1982, E -0,0436 por operacao (soma -1,8732 USDT). Ultimas fechadas: GTC compra -0,164, BEAMX venda -0,172 e ETC venda -0,167 todas atingiram o stop de seguranca de 0,80% na corretora devido a volatilidade rapida. Caderno mostra que entradas com padrao grafico a favor tem 64% de acerto (+1,319 USDT), enquanto sem padrao o resu"
    }
   ]
  },
@@ -592,8 +629,25 @@
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
    "carteira": 10.06,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 4,
+   "abertas": [
+    [
+     "GTC",
+     "compra"
+    ],
+    [
+     "CYBER",
+     "compra"
+    ],
+    [
+     "DOGE",
+     "compra"
+    ],
+    [
+     "SKY",
+     "venda"
+    ]
+   ],
    "n_fechadas": 57,
    "ordem": null
   },
@@ -765,12 +819,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "19/11 22:09",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Queda: 11,1% das 117 moedas sobem em 1 h; BTC 1 h −0,71%, 4 h −1,96%. Leitura das moedas falhou (0 de 116), então sem entrada nova. Mantenho MEGA comprada, ETH e LTC vendidas com stop e alvo. Conta de teste: US$ 9,13."
-  },
-  {
    "hora_utc": "20/11 03:00",
    "de": "claude",
    "para": "sala",
@@ -835,6 +883,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Neutro: 125 moedas, 57,6% sobem em 24 h e 36,8% em 4 h; BTC 60.301 abaixo das medias longas. Testnet US$ 8,5144 com GTC compra, BEAMX venda e ETC venda abertas; Cacador confirmou BEAMX venda (forca 100). Entro comprado em ENSO (fundo duplo confirmado em 15 min e em 4 h, 4/6 tempos acima; stop 1,0%, "
+  },
+  {
+   "hora_utc": "22/11 21:43",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Neutro: 99 moedas, 69,7% sobem em 24 h e 47,5% em 4 h; BTC 60.982. Testnet US$ 8,1268 (43 fechadas; GTC, BEAMX e ETC fecharam no stop de -0,8%). Entro comprado em GTC e CYBER (v4 confianca 0,138 e 0,126), comprado em DOGE (triangulo confirmado em 15m a favor) e vendido em SKY (triangulo confirmado e"
   }
  ]
 }
