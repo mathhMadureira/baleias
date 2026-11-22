@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 03:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 03:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 8.54** · 40 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.91** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.89** · 34 operações fechadas · 1 abertas
 
 - **Total:** 15/34 com lucro (44%), resultado -0.23, média -0.007 por operação.
 - **Últimas 24 h:** 2/7 com lucro, -0.33.
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 51.6% das moedas subindo em 24 h, 8.7% em 4 h · BTC 24 h 1.42%, 4 h -1.61%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.7%/ano · {'BTC': -11.6, 'ETH': -3.9, 'SOL': -8.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.5%/ano · {'BTC': -10.8, 'ETH': -3.0, 'SOL': -7.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AAVE bandeira de baixa (baixa, CONFIRMOU) · KAVA topo duplo (baixa, CONFIRMOU) · AAVE ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado) · INIT OCO invertido (alta, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
