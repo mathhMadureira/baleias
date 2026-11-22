@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 23:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 23:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,7 +43,7 @@ Carteira **US$ 9.68** · 35 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.91** · 19 operações fechadas · 1 abertas
+Carteira **US$ 9.86** · 19 operações fechadas · 1 abertas
 
 - **Total:** 7/19 com lucro (37%), resultado +0.18, média +0.010 por operação.
 - **Últimas 24 h:** 0/4 com lucro, -0.44.
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 65.0% das moedas subindo em 24 h, 28.0% em 4 h · BTC 24 h 1.61%, 4 h 0.58%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': 11.0, 'ETH': -1.6, 'SOL': 0.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.5%/ano · {'BTC': 6.7, 'ETH': -4.3, 'SOL': -2.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FET triângulo simétrico (baixa, CONFIRMOU) · NIGHT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL OCO invertido (alta, formado)
 - 📰 22/11 22:47 UTC · Cointelegraph: Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest
