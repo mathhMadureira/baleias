@@ -1,6 +1,6 @@
 {
- "t": 1795315033,
- "hora_utc": "2026-11-22 02:37 UTC",
+ "t": 1795315252,
+ "hora_utc": "2026-11-22 02:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   0.11,
   -0.01,
   -0.16,
-  -0.74
+  -0.75
  ],
  "contexto": {
-  "t": 1795315034,
+  "t": 1795315253,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -270,8 +270,8 @@
   "funding": {
    "media_top20_anual_pct": -2.7,
    "principais_anual_pct": {
-    "BTC": -8.9,
-    "ETH": 1.9,
+    "BTC": -9.2,
+    "ETH": 1.7,
     "SOL": -8.8
    },
    "leitura": "neutro"
@@ -497,26 +497,9 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 10.0,
-  "abertas": [
-   {
-    "moeda": "ETC",
-    "lado": "venda",
-    "entrada": 5.48,
-    "agora": 5.48,
-    "resultado_pct": -0.0,
-    "horas_aberta": 1.9,
-    "motivo_de_entrada": "Entrada: v4 p 0,318 de subir (confianca 0,182, a mais forte do lado venda); 4/6 tempos abaixo da MM20 (5m, 15m, 4h, 1d); 1h +0,00%, 4h -0,36%, 24h +0,37%; TD de"
-   }
-  ],
+  "carteira": 10.06,
+  "abertas": [],
   "ultimas_fechadas": [
-   {
-    "moeda": "XLM",
-    "lado": "venda",
-    "resultado_usd": -0.18,
-    "motivo_saida": "stop de segurança −0.6%",
-    "motivo_de_entrada": "Entrada nova: 6 de 6 tempos abaixo da MM20; bandeira de baixa CONFIRMADA em 15 min (a favor); 15 min −0,76%, 1 h −0,91%,"
-   },
    {
     "moeda": "KAVA",
     "lado": "venda",
@@ -614,6 +597,13 @@
     "resultado_usd": -0.229,
     "motivo_saida": "stop de segurança −0.8%",
     "motivo_de_entrada": "Entrada: 2/6 tempos abaixo da MM20 (15m, 4h) e 4 acima; 1h -0,17%, 4h -1,28%, 24h +4,69%; sem padrão gráfico na varredur"
+   },
+   {
+    "moeda": "ETC",
+    "lado": "venda",
+    "resultado_usd": 0.109,
+    "motivo_saida": "prazo da operação (120 min)",
+    "motivo_de_entrada": "Entrada: v4 p 0,318 de subir (confianca 0,182, a mais forte do lado venda); 4/6 tempos abaixo da MM20 (5m, 15m, 4h, 1d);"
    }
   ],
   "licoes_anteriores": [
@@ -658,15 +648,10 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 10.0,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "ETC",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 56,
+   "carteira": 10.06,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 57,
    "ordem": null
   },
   {
@@ -700,7 +685,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.8,
+   "carteira": 9.84,
    "n_abertas": 1,
    "abertas": [
     [
@@ -737,16 +722,16 @@
   }
  ],
  "torneio": {
-  "campeao": null,
+  "campeao": "claude",
   "placar": {
    "claude": {
-    "ops": 56,
-    "acerto": 0.589,
-    "soma": -0.048,
-    "ganho_medio": 0.144,
+    "ops": 57,
+    "acerto": 0.596,
+    "soma": 0.061,
+    "ganho_medio": 0.143,
     "perda_media": -0.208,
-    "fator_lucro": 0.99,
-    "carteira": 10.0
+    "fator_lucro": 1.01,
+    "carteira": 10.06
    },
    "openbot_testnet": {
     "ops": 40,
@@ -764,7 +749,7 @@
     "ganho_medio": 0.173,
     "perda_media": -0.149,
     "fator_lucro": 0.92,
-    "carteira": 9.8
+    "carteira": 9.84
    },
    "laboratorio": {
     "ops": 19,
