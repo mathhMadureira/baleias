@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 08:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 08:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 80.4% das moedas subindo em 24 h, 48.0% em 4 h · BTC 24 h 2.02%, 4 h -0.32%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.7%/ano · {'BTC': -2.7, 'ETH': 1.7, 'SOL': -0.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.3%/ano · {'BTC': -2.2, 'ETH': 1.7, 'SOL': -0.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KITE triângulo ascendente (alta, CONFIRMOU) · ARB OCO invertido (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · ERA OCO invertido (alta, formado) · INIT fundo duplo (alta, formado) · JUP OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · POL OCO invertido (alta, formado) · WLD OCO invertido (alta, formado)
 - 📰 22/11 07:24 UTC · Cointelegraph: South Korean exchanges halt CYBER transfers amid suspected bridge exploit
