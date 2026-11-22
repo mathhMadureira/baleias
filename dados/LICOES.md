@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 21:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 21:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -17,15 +17,15 @@ Carteira **US$ 10.06** · 57 operações fechadas · 0 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 8.54** · 40 operações fechadas · 3 abertas
+Carteira **US$ 8.13** · 43 operações fechadas · 0 abertas
 
-- **Total:** 14/40 com lucro (35%), resultado -1.37, média -0.034 por operação.
-- **Últimas 24 h:** 1/3 com lucro, -0.09.
-- **Por horário:** 06–11 UTC: 2 op, 0% certas, -1.00 · 18–23 UTC: 17 op, 29% certas, -0.27 · 00–05 UTC: 2 op, 50% certas, -0.06 · 12–17 UTC: 19 op, 42% certas, -0.05
-- **Por lado:** compra: 8 op, 12% certas, -2.58 · venda: 32 op, 41% certas, +1.21
-- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.80% na co: 3 op, 33% certas, -0.03 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 1 op, 100% certas, +0.41 · fora da lista de posições do c: 8 op, 12% certas, +0.48 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
-- **Moedas que mais perderam (≥ 3 op):** MUBARAK -0.43 (3 op) · SKY +0.64 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** SKY +0.64 (3 op) · MUBARAK -0.43 (3 op)
+- **Total:** 14/43 com lucro (33%), resultado -1.87, média -0.044 por operação.
+- **Últimas 24 h:** 1/6 com lucro, -0.59.
+- **Por horário:** 06–11 UTC: 3 op, 0% certas, -1.16 · 00–05 UTC: 4 op, 25% certas, -0.39 · 18–23 UTC: 17 op, 29% certas, -0.27 · 12–17 UTC: 19 op, 42% certas, -0.05
+- **Por lado:** compra: 9 op, 11% certas, -2.74 · venda: 34 op, 38% certas, +0.87
+- **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −0.80% na co: 6 op, 17% certas, -0.54 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 1 op, 100% certas, +0.41 · fora da lista de posições do c: 8 op, 12% certas, +0.48 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
+- **Moedas que mais perderam (≥ 3 op):** MUBARAK -0.43 (3 op) · GTC -0.23 (3 op) · SKY +0.64 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** SKY +0.64 (3 op) · GTC -0.23 (3 op) · MUBARAK -0.43 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
@@ -69,11 +69,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 63.0% das moedas subindo em 24 h, 26.0% em 4 h · BTC 24 h 0.76%, 4 h -0.55%.
+- **Amplitude:** 60.0% das moedas subindo em 24 h, 45.0% em 4 h · BTC 24 h 0.76%, 4 h 0.28%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.8%/ano · {'BTC': 11.0, 'ETH': -0.9, 'SOL': 3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': 11.0, 'ETH': -1.2, 'SOL': 4.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · HBAR triângulo ascendente (alta, formado) · ICP topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · LUNC fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · HBAR triângulo ascendente (alta, formado) · ICP topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
 - 📰 22/11 14:30 UTC · Cointelegraph: The future of onchain FX could start with users, not institutional liquidity
 - 📰 22/11 14:01 UTC · Decrypt: Google's Quantum Chip Beats Classical Limits in 'Impossible' Game
@@ -83,7 +83,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 20.5 h.
+- ⚠️ **Rotina parada:** sem decisão há 20.6 h.
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
 - 21/11 23:09 UTC · **HYPER compra, SHIB venda, GTC compra, BEAMX venda** · {'universo': '127 moedas; varredura completa de 12; regime neutro (44,1% subindo em 24h, 29,1% em 4h); BTC 1h -0,54%, 4h -0,03%, 24h +1,65%. Testnet patrimônio 
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 42391 apostas conferidas ao vivo, acerto 54.7%; prevê 99 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 42420 apostas conferidas ao vivo, acerto 54.7%; prevê 99 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
