@@ -1978,6 +1978,8 @@ class PainelMesa(unittest.TestCase):
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
         for parte in ('id="placar-tab"', 'id="curvas"', 'id="pos-tab"', 'id="lt-tab"', 'id="kpis"', 'id="banco"', "/api/painel-mesa"):
             self.assertIn(parte, html)
+        self.assertIn("${esc(ult.moeda)}", html)
+        self.assertIn("${esc(p.moeda)} ${esc(p.lado)}", html)
 
 
 class ChefeOpenBotTestnet(unittest.TestCase):

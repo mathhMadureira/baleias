@@ -246,3 +246,4 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 - 2026-11-20: **brecha no conserto de c8b4c2f5** (achado do chefe): o stop de NEAR executou às 14:21:26 UTC, entre a leitura (14:20) e a publicação da decisão
   (14:23:35); a regra comparava com a hora da publicação e NEAR reabriu. Agora `chefe/gravar.py` e `operar.py gravar` gravam `leitura_t` (hora da leitura/raspagem)
   na decisão, e `testnet.py`/`corretora.py` não reabrem moeda que saiu por stop, alvo ou prazo depois dela (sem `leitura_t`: decisão − 15 min). 192 testes.
+- 2026-11-22: **painel: escapar dados da nuvem na atividade dos agentes**. Os nomes de moedas e lados em entradas/posições eram inseridos como HTML sem escape; agora usam `esc()`. Teste de regressão na seção de atividade; 192 testes.

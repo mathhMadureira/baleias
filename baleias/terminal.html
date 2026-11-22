@@ -267,8 +267,8 @@ function desenharAtividade() {
     const ult = pm.tempo.find(x => x.robo === l.id);
     const recente = l.atualizado && Date.now()/1000 - l.atualizado < 3600;
     const alerta = !!l.alerta || l.estado === "sem_dinheiro";
-    let evento = ult ? `${ult.tipo === "saida" ? "Saiu" : "Entrou"} em ${ult.moeda} · ${ult.lado}${ult.tipo === "saida" && ult.resultado_usd != null ? ` · ${sn(ult.resultado_usd,3)} US$` : ""} · ${ha(ult.t)}` : "Sem entrada ou saída registrada";
-    const abertas = pos.length ? pos.map(p => `${p.moeda} ${p.lado} · ${p.resultado_usd == null ? "sem preço" : `${sn(p.resultado_usd,3)} US$`}`).join("<br>") : "Sem posição aberta";
+    let evento = ult ? `${ult.tipo === "saida" ? "Saiu" : "Entrou"} em ${esc(ult.moeda)} · ${esc(ult.lado)}${ult.tipo === "saida" && ult.resultado_usd != null ? ` · ${sn(ult.resultado_usd,3)} US$` : ""} · ${ha(ult.t)}` : "Sem entrada ou saída registrada";
+    const abertas = pos.length ? pos.map(p => `${esc(p.moeda)} ${esc(p.lado)} · ${p.resultado_usd == null ? "sem preço" : `${sn(p.resultado_usd,3)} US$`}`).join("<br>") : "Sem posição aberta";
     return `<article class="agente-live"><div class="agente-live-top"><i class="pulso ${alerta ? "alerta" : recente ? "ativo" : ""}"></i><strong>${esc(l.avatar)} ${esc(l.nome)}</strong><span class="chip ${esc(l.estado)}" style="margin-left:auto">${esc(l.estado_txt)}</span></div>
       <div class="ultima">Último registro: ${evento}</div><div class="ultima">Carteira ${fmt(l.carteira)} US$ · atualizado ${ha(l.atualizado)}</div>
       <div class="aberta">${abertas}</div></article>`;
