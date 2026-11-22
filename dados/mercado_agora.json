@@ -1,6 +1,6 @@
 {
- "t": 1795311524,
- "hora_utc": "2026-11-22 01:38 UTC",
+ "t": 1795311743,
+ "hora_utc": "2026-11-22 01:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   -0.54,
   0.11,
   -0.01,
-  -0.28
+  -0.27
  ],
  "contexto": {
-  "t": 1795311525,
+  "t": 1795311744,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -268,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 2.1,
+   "media_top20_anual_pct": 1.9,
    "principais_anual_pct": {
-    "BTC": -5.9,
-    "ETH": 1.5,
-    "SOL": -8.0
+    "BTC": -6.0,
+    "ETH": 2.5,
+    "SOL": -8.3
    },
    "leitura": "neutro"
   },
@@ -700,7 +700,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.95,
+   "carteira": 9.98,
    "n_abertas": 1,
    "abertas": [
     [
@@ -717,7 +717,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.35,
+   "carteira": 10.49,
    "n_abertas": 1,
    "abertas": [
     [
@@ -769,7 +769,7 @@
     "ganho_medio": 0.173,
     "perda_media": -0.149,
     "fator_lucro": 0.92,
-    "carteira": 9.95
+    "carteira": 9.98
    },
    "laboratorio": {
     "ops": 18,
@@ -778,7 +778,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.184,
     "fator_lucro": 1.17,
-    "carteira": 10.35
+    "carteira": 10.49
    },
    "guardiao": {
     "ops": 59,
