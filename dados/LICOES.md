@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 21:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 21:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 69.0% das moedas subindo em 24 h, 47.0% em 4 h · BTC 24 h 0.86%, 4 h 0.19%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.8%/ano · {'BTC': 11.0, 'ETH': -0.9, 'SOL': 4.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.9%/ano · {'BTC': 11.0, 'ETH': -0.9, 'SOL': 4.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA topo duplo (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · HBAR triângulo ascendente (alta, formado) · JUP topo duplo (baixa, formado) · LTC OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
@@ -83,7 +83,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 20.8 h.
+- ⚠️ **Rotina parada:** sem decisão há 20.9 h.
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
 - 21/11 23:09 UTC · **HYPER compra, SHIB venda, GTC compra, BEAMX venda** · {'universo': '127 moedas; varredura completa de 12; regime neutro (44,1% subindo em 24h, 29,1% em 4h); BTC 1h -0,54%, 4h -0,03%, 24h +1,65%. Testnet patrimônio 
