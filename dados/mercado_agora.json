@@ -1,6 +1,6 @@
 {
- "t": 1795333854,
- "hora_utc": "2026-11-22 07:50 UTC",
+ "t": 1795334032,
+ "hora_utc": "2026-11-22 07:53 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 102,
@@ -172,10 +172,10 @@
   -0.08,
   -0.66,
   0.4,
-  -0.02
+  0.0
  ],
  "contexto": {
-  "t": 1795333855,
+  "t": 1795334032,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -242,12 +242,6 @@
     "t": 1795254536,
     "hora_utc": "21/11 09:48",
     "titulo": "ECB seeks industry partners for tokenized deposits, securities experiments"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795247507,
-    "hora_utc": "21/11 07:51",
-    "titulo": "US lawmakers propose up to 30% rewards for prediction market whistleblowers"
    }
   ],
   "medo_ganancia": {
@@ -256,11 +250,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.5,
+   "media_top20_anual_pct": -1.4,
    "principais_anual_pct": {
-    "BTC": -4.6,
+    "BTC": -4.3,
     "ETH": -5.0,
-    "SOL": 0.6
+    "SOL": 0.9
    },
    "leitura": "neutro"
   },
