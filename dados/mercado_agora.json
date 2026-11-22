@@ -1,11 +1,11 @@
 {
- "t": 1795320981,
- "hora_utc": "2026-11-22 04:16 UTC",
+ "t": 1795321197,
+ "hora_utc": "2026-11-22 04:19 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
-  "subindo_pct": 71.4,
-  "mediana_pct": 0.44
+  "subindo_pct": 78.2,
+  "mediana_pct": 0.45
  },
  "mercado_4h": {
   "moedas": 119,
@@ -15,14 +15,14 @@
  "mercado_24h": {
   "moedas": 119,
   "subindo_pct": 91.6,
-  "mediana_pct": 4.63
+  "mediana_pct": 4.81
  },
  "btc": {
-  "1h": -0.23,
+  "1h": 0.23,
   "4h": -1.42,
-  "24h": 4.62,
-  "preco": 59359.98,
-  "vol_4h_vs_media": 0.4
+  "24h": 6.29,
+  "preco": 59452.01,
+  "vol_4h_vs_media": 0.44
  },
  "maiores_quedas_4h": [
   {
@@ -172,10 +172,10 @@
   -0.16,
   -1.02,
   -0.23,
-  0.25
+  0.15
  ],
  "contexto": {
-  "t": 1795320982,
+  "t": 1795321198,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -262,11 +262,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.6,
+   "media_top20_anual_pct": -0.2,
    "principais_anual_pct": {
-    "BTC": 0.6,
-    "ETH": -3.7,
-    "SOL": -5.3
+    "BTC": 0.1,
+    "ETH": -3.9,
+    "SOL": -6.1
    },
    "leitura": "neutro"
   },
@@ -424,17 +424,17 @@
  },
  "v4": {
   "vela": "04:15 UTC",
-  "apostas": 73,
-  "compras": 38,
-  "vendas": 35,
+  "apostas": 89,
+  "compras": 39,
+  "vendas": 50,
   "mais_confiantes_venda": [
    {
     "moeda": "BEAMX",
-    "prob_subir": 0.351
+    "prob_subir": 0.347
    },
    {
     "moeda": "HOT",
-    "prob_subir": 0.365
+    "prob_subir": 0.361
    },
    {
     "moeda": "RESOLV",
@@ -488,7 +488,7 @@
    },
    {
     "moeda": "SOPH",
-    "prob_subir": 0.576
+    "prob_subir": 0.583
    },
    {
     "moeda": "BEB",
@@ -769,7 +769,7 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 56.0% em 29965 apostas (614 velas, 15/11 04:30–22/11 03:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 56.0% em 29966 apostas (614 velas, 15/11 04:30–22/11 03:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5603,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
@@ -777,11 +777,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5015,
-    "n": 23513
+    "n": 23514
    },
    "segue_maioria_24h": {
     "acerto": 0.5007,
-    "n": 29965
+    "n": 29966
    }
   },
   "referencia_ganha": [],
@@ -795,16 +795,16 @@
     "n": 3295
    },
    "confianca:<0,05": {
-    "acerto": 0.5435,
-    "n": 15140
+    "acerto": 0.5434,
+    "n": 15141
    },
    "confianca:≥0,12": {
     "acerto": 0.6689,
     "n": 906
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5473,
-    "n": 7680
+    "acerto": 0.5472,
+    "n": 7681
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5616,
@@ -824,7 +824,7 @@
    },
    "lado:venda": {
     "acerto": 0.5717,
-    "n": 17162
+    "n": 17163
    }
   }
  },
