@@ -1,6 +1,6 @@
 {
- "t": 1795385919,
- "hora_utc": "2026-11-22 22:18 UTC",
+ "t": 1795386089,
+ "hora_utc": "2026-11-22 22:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,10 +172,10 @@
   -0.04,
   0.3,
   0.06,
-  0.01
+  -0.09
  ],
  "contexto": {
-  "t": 1795385919,
+  "t": 1795386090,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -232,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.5,
+   "media_top20_anual_pct": -0.9,
    "principais_anual_pct": {
     "BTC": 5.9,
-    "ETH": -11.1,
-    "SOL": -3.3
+    "ETH": -11.2,
+    "SOL": -3.6
    },
    "leitura": "neutro"
   },
@@ -419,7 +419,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.79,
+  "carteira": 8.61,
   "abertas": [
    {
     "moeda": "GTC",
@@ -589,7 +589,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.79,
+   "carteira": 8.61,
    "n_abertas": 2,
    "abertas": [
     [
@@ -651,7 +651,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.94,
+   "carteira": 9.84,
    "n_abertas": 1,
    "abertas": [
     [
@@ -685,7 +685,7 @@
     "ganho_medio": 0.143,
     "perda_media": -0.228,
     "fator_lucro": 0.85,
-    "carteira": 8.79
+    "carteira": 8.61
    },
    "openbot_testnet": {
     "ops": 43,
@@ -712,7 +712,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.183,
     "fator_lucro": 1.08,
-    "carteira": 9.94
+    "carteira": 9.84
    },
    "guardiao": {
     "ops": 59,
