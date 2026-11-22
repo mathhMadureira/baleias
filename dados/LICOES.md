@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 05:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 05:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 86.1% das moedas subindo em 24 h, 8.7% em 4 h · BTC 24 h 5.1%, 4 h -1.86%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.1%/ano · {'BTC': -11.5, 'ETH': -5.8, 'SOL': -11.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': -11.6, 'ETH': -5.9, 'SOL': -11.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENSO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · LINK estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · TRX estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AAVE ombro-cabeça-ombro (baixa, formado) · BMT topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · CELO OCO invertido (alta, formado) · ERA topo duplo (baixa, formado)
+- 📰 22/11 05:28 UTC · Cointelegraph: Chainflip confirms $12M hack, offers attacker 10% bounty
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
 - 📰 21/11 16:41 UTC · CoinDesk: Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain
 - 📰 21/11 16:01 UTC · Decrypt: Signal Calls OS-Level AI an 'Existential Threat' and Blocks Screenshots to Fight It
-- 📰 21/11 14:01 UTC · Decrypt: Is the AI Bubble Finally Popping? Nvidia Crashes 48% as Wall Street Experts Sound the Alarm
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

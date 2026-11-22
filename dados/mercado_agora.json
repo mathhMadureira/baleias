@@ -1,6 +1,6 @@
 {
- "t": 1795325695,
- "hora_utc": "2026-11-22 05:34 UTC",
+ "t": 1795325909,
+ "hora_utc": "2026-11-22 05:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 115,
@@ -172,11 +172,17 @@
   -1.02,
   -0.23,
   -0.08,
-  -0.65
+  -0.82
  ],
  "contexto": {
-  "t": 1795325696,
+  "t": 1795325910,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795325323,
+    "hora_utc": "22/11 05:28",
+    "titulo": "Chainflip confirms $12M hack, offers attacker 10% bounty"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795284062,
@@ -262,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.1,
+   "media_top20_anual_pct": -0.4,
    "principais_anual_pct": {
-    "BTC": -11.5,
-    "ETH": -5.8,
-    "SOL": -11.5
+    "BTC": -11.6,
+    "ETH": -5.9,
+    "SOL": -11.7
    },
    "leitura": "neutro"
   },
