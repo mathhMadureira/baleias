@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 08:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 08:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,9 +69,9 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 87.4% das moedas subindo em 24 h, 74.8% em 4 h · BTC 24 h 3.6%, 4 h 0.85%.
+- **Amplitude:** 86.5% das moedas subindo em 24 h, 74.0% em 4 h · BTC 24 h 3.6%, 4 h 0.85%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 8.5, 'ETH': 1.9, 'SOL': 1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': 10.4, 'ETH': 1.5, 'SOL': 2.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KITE triângulo ascendente (alta, CONFIRMOU) · ARB OCO invertido (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · ERA OCO invertido (alta, formado) · INIT fundo duplo (alta, formado) · INJ fundo duplo (alta, formado) · KAVA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · POL OCO invertido (alta, formado)
 - 📰 22/11 07:24 UTC · Cointelegraph: South Korean exchanges halt CYBER transfers amid suspected bridge exploit
@@ -94,13 +94,13 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
-- ❌ Errou (desce). Peso reduzido de: vortice_invertido. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: vortice_invertido. Rede neural corrigida.
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r32 ≤ -1, aposta sobe. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r16 ≤ -1.5, aposta sobe. Começa em observação.
-  (v3: 7 sinapses votando, 30 em observação, 0 podadas)
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r16 ≤ -1, aposta desce. Começa em observação.
+- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando corpo ≥ 0.3, aposta sobe. Começa em observação.
+  (v3: 7 sinapses votando, 32 em observação, 0 podadas)
 **v2:**
 - 😴 Sono: reencenei 1728 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 1824 episódios guardados e renormalizei os pesos das sinapses.
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 40419 apostas conferidas ao vivo, acerto 54.7%; prevê 102 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 40419 apostas conferidas ao vivo, acerto 54.7%; prevê 103 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
