@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 07:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 07:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 77.6% das moedas subindo em 24 h, 43.9% em 4 h · BTC 24 h 3.46%, 4 h -0.78%.
+- **Amplitude:** 65.4% das moedas subindo em 24 h, 41.1% em 4 h · BTC 24 h 1.88%, 4 h -0.57%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': -3.1, 'ETH': -3.7, 'SOL': -3.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.8%/ano · {'BTC': -5.4, 'ETH': -7.9, 'SOL': -1.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AAVE ombro-cabeça-ombro (baixa, formado) · ADA topo duplo (baixa, formado) · BMT topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · CELO OCO invertido (alta, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · INIT OCO invertido (alta, formado) · JUP OCO invertido (alta, formado) · KITE triângulo ascendente (alta, formado)
+- **Padrões gráficos em 1 h:** ADA topo duplo (baixa, formado) · ARB OCO invertido (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · INIT fundo duplo (alta, formado) · JUP OCO invertido (alta, formado) · KITE triângulo ascendente (alta, formado)
 - 📰 22/11 05:28 UTC · Cointelegraph: Chainflip confirms $12M hack, offers attacker 10% bounty
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 40215 apostas conferidas ao vivo, acerto 54.8%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 40246 apostas conferidas ao vivo, acerto 54.8%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
