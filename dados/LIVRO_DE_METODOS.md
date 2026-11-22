@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.6% | 274 | 50.6%–62.3% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.6% | 2388 | 50.6%–54.6% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.6% | 2389 | 50.6%–54.6% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 75.0% | 8 | 40.9%–92.9% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 66.7% | 12 | 39.1%–86.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 62.9% | 35 | 46.3%–76.8% | física: alta anormal de 1 h → devolve |
@@ -15,7 +15,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | williams_volb_baixa | promissor | 53.4% | 189 | 46.3%–60.4% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_wr_alta | promissor | 51.3% | 39 | 36.2%–66.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | demark_td9_alta | reprovado | 50.0% | 64 | 38.1%–61.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
-| tres_corvos | reprovado | 49.6% | 419 | 44.9%–54.4% | H6: três corvos → sobe (efeito pequeno) |
+| tres_corvos | reprovado | 49.8% | 420 | 45.0%–54.5% | H6: três corvos → sobe (efeito pequeno) |
 | reversao_queda | reprovado | 49.3% | 73 | 38.2%–60.5% | H14: queda anormal de 1 h → sobe |
 | vortice_invertido | reprovado | 48.7% | 478 | 44.3%–53.2% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | williams_volb_alta | reprovado | 46.0% | 150 | 38.2%–54.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
