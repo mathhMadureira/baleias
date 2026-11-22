@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 07:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 07:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,17 +69,17 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 68.3% das moedas subindo em 24 h, 48.1% em 4 h · BTC 24 h 1.72%, 4 h -0.24%.
+- **Amplitude:** 73.1% das moedas subindo em 24 h, 45.2% em 4 h · BTC 24 h 1.65%, 4 h -0.45%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.5%/ano · {'BTC': -5.1, 'ETH': -6.3, 'SOL': 0.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.2%/ano · {'BTC': -4.6, 'ETH': -5.6, 'SOL': 0.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ADA topo duplo (baixa, formado) · ARB OCO invertido (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · INIT fundo duplo (alta, formado) · JUP OCO invertido (alta, formado) · KITE triângulo ascendente (alta, formado)
+- **Padrões gráficos em 1 h:** ARB OCO invertido (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · INIT fundo duplo (alta, formado) · JUP OCO invertido (alta, formado) · KITE triângulo ascendente (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 22/11 07:24 UTC · Cointelegraph: South Korean exchanges halt CYBER transfers amid suspected bridge exploit
 - 📰 22/11 05:28 UTC · Cointelegraph: Chainflip confirms $12M hack, offers attacker 10% bounty
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
 - 📰 21/11 16:41 UTC · CoinDesk: Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain
-- 📰 21/11 16:01 UTC · Decrypt: Signal Calls OS-Level AI an 'Existential Threat' and Blocks Screenshots to Fight It
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 40293 apostas conferidas ao vivo, acerto 54.7%; prevê 103 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 40302 apostas conferidas ao vivo, acerto 54.7%; prevê 103 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
