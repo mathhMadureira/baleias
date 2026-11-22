@@ -1,6 +1,6 @@
 {
- "t": 1795369628,
- "hora_utc": "2026-11-22 17:47 UTC",
+ "t": 1795369810,
+ "hora_utc": "2026-11-22 17:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 101,
@@ -172,10 +172,10 @@
   0.32,
   -0.07,
   0.59,
-  -0.67
+  -0.66
  ],
  "contexto": {
-  "t": 1795369628,
+  "t": 1795369810,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -224,12 +224,6 @@
     "t": 1795284062,
     "hora_utc": "21/11 18:01",
     "titulo": "GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795283400,
-    "hora_utc": "21/11 17:50",
-    "titulo": "Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave"
    }
   ],
   "medo_ganancia": {
@@ -238,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 3.1,
    "principais_anual_pct": {
-    "BTC": -4.3,
-    "ETH": 0.6,
-    "SOL": 7.4
+    "BTC": -4.4,
+    "ETH": 1.0,
+    "SOL": 7.6
    },
    "leitura": "neutro"
   },
