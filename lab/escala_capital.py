@@ -44,14 +44,14 @@ def fator_h64(carteira):
     return min(5.0, max(1.25, 2.5 * carteira / CAPITAL))
 
 
-def simular(ops, carteira0, alav_fixa=None):
+def simular(ops, carteira0, alav_fixa=None, fator_fixa=None):
     """Sequência real de fechamento. Devolve (final, minima, queda_frac, liquidacoes)."""
     c, minima, liq = carteira0, carteira0, 0
     piso = carteira0 * PISO_FRAC
     for _, pct in ops:
         if c < piso:
             break
-        f = fator_h64(c)
+        f = fator_fixa or fator_h64(c)
         if alav_fixa:
             noc, a = f * c, alav_fixa
             if pct < -1.0 / a:                              # perda para na margem
@@ -64,16 +64,17 @@ def simular(ops, carteira0, alav_fixa=None):
     return c, minima, queda, liq
 
 
-def monte(ops, carteira0, alav_fixa=None, semente=7):
+def monte(ops, carteira0, alav_fixa=None, semente=7, fator_fixa=None):
     rnd = random.Random(semente)
-    n, finais, dobrou = len(ops), [], 0
+    n, finais, dobrou, no_piso = len(ops), [], 0, 0
     for _ in range(MONTE):
         c, piso, alvo = carteira0, carteira0 * PISO_FRAC, carteira0 * 2
-        ok = False
+        ok, bateu = False, False
         for _, pct in (ops[rnd.randrange(n)] for _ in range(n)):
             if c < piso:
+                bateu = True
                 break
-            f = fator_h64(c)
+            f = fator_fixa or fator_h64(c)
             if alav_fixa:
                 p, a = pct, alav_fixa
                 if p < -1.0 / a:
@@ -86,9 +87,10 @@ def monte(ops, carteira0, alav_fixa=None, semente=7):
                 break
         finais.append(c)
         dobrou += ok
+        no_piso += bateu
     finais.sort()
     return {"mediana": round(finais[len(finais) // 2], 2), "p10": round(finais[int(0.10 * len(finais))], 2),
-            "p90": round(finais[int(0.90 * len(finais))], 2), "dobrou_antes_do_piso": round(dobrou / MONTE, 4)}
+            "p90": round(finais[int(0.90 * len(finais))], 2), "dobrou_antes_do_piso": round(dobrou / MONTE, 4), "bateu_no_piso": round(no_piso / MONTE, 4)}
 
 
 def fio(ops):
@@ -129,6 +131,10 @@ def rodar():
             fin, mini, queda, liq = simular(ops, CAPITAL, a)
             braços[f"US$ 10 a {a}x"] = {"final": round(fin, 2), "queda_max_pct": round(100 * queda, 1),
                                         "liquidacoes": liq, **monte(ops, CAPITAL, a)}
+        for fator, a in ((5.0, 20), (10.0, 50)):          # H73: tamanho maior com perda maior (dono, 22/11)
+            fin, mini, queda, liq = simular(ops, CAPITAL, a, fator)
+            braços[f"fator {fator:.0f} a {a}x"] = {"final": round(fin, 2), "queda_max_pct": round(100 * queda, 1),
+                                                   "liquidacoes": liq, **monte(ops, CAPITAL, a, fator_fixa=fator)}
         res["conjuntos"][nome] = {"fio": f, "operacoes_por_dia": por_dia(ops), "bracos": braços}
     # capital necessário com o fio de hoje (regra H64: nocional = fator × carteira)
     f = res["conjuntos"]["simulada 4 agentes"]["fio"]

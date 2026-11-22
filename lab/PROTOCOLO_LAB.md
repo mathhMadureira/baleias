@@ -1616,3 +1616,27 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - Mesmo sem decidir, o número do dono (com o fio de hoje, regra H64, 30,6 operações/dia): US$ 1 por operação exige carteira de **US$ 731**; US$ 10/dia exige **US$ 239**; US$ 100/dia, **US$ 2.390**; na carteira de US$ 10 seriam **7.313 operações** para +US$ 100 (~239 dias).
 - Custo da escala no risco: com a regra H64 o fator satura em 5× já com carteira de US$ 50, e a queda máxima simulada sobe de 17,9% (US$ 10) para 35,7% (US$ 50 ou mais) na carteira simulada, e de 22,6% para 44,9% na conta de teste. Alavancagem de 50× na carteira de US$ 10: +0,54 US$ a mais no total, 2 liquidações na sequência real.
 - Na conta de teste o braço maior termina **abaixo** do capital em todos os tamanhos (8,52 de 10): escalar ali aumentaria a perda em dólares.
+
+## Hipótese 73: tamanho maior com perda maior — autorizado pelo dono (registrada em 22/11/2026 ~00:50 UTC, antes de rodar)
+- **Dono (22/11):** "pode aumentar o tamanho da perda também." Depois de saber que a H72 reprovou a escala por falta de fio provado e que US$ 10/dia exigiria US$ 239 de carteira,
+  o dono autoriza posição maior aceitando perda maior por operação. Dinheiro fictício (carteira simulada e conta de teste); nada de dinheiro real.
+- **Braços na mesma sequência real de fechadas** (136 dos 4 agentes; 38 da conta de teste), carteira de US$ 10, regra H64 mantida como referência:
+  - **atual:** nocional = 2,5 × carteira, 10× (margem 0,25 × carteira por posição; risco ≈ US$ 0,25 por operação com stop de 1%).
+  - **A:** nocional = 5 × carteira, 20× (margem 0,25 × carteira; risco ≈ US$ 0,50).
+  - **B:** nocional = 10 × carteira, 50× (margem 0,20 × carteira; risco ≈ US$ 1,00; 4 posições usam 80% da carteira de margem).
+  - Perda de uma posição para na margem (`pct ≥ −1 ÷ alavancagem`), como no código; liquidação custa a margem inteira.
+- **Juiz (1 tentativa):** o braço maior entra se, na sequência real e no Monte Carlo de 10.000 ordens: (a) o resultado em US$ por operação crescer ao menos proporcionalmente ao tamanho;
+  (b) a chance de bater no piso de US$ 5 ficar ≤ 25%; (c) liquidação em ≤ 5% das operações. Entre os que passarem, vale o de maior resultado em US$.
+- **O que muda se passar:** `tamanho()` em `executor/robo_claude_nuvem.py` (a nuvem dos 4 agentes e a conta de teste usam a mesma função). Testes e commit.
+- **Previsão registrada:** o fio não muda (continua perto de zero); o que muda é o tamanho dos dois lados. Em 50×, qualquer stop acima de 2% vira liquidação da margem; espero que o braço B perca em dólares na conta de teste, que já tem fio negativo.
+
+### Resultado da H73 (22/11/2026 ~01:10 UTC, `lab/escala_capital.py` → `dados/lab/escala_capital_resultado.json`): fator 5 a 20× entra nas carteiras simuladas; 10 a 50× reprovada
+| braço (carteira US$ 10) | simulação real, final | queda máx. | piso (MC) | liquidações | conta de teste, final | piso (MC) |
+|---|---|---|---|---|---|---|
+| atual 2,5× a 10× | 10,29 | 17,9% | 0,01% | 0 | 8,52 | 0,01% |
+| **fator 5 a 20×** | **10,53** | 35,7% | **14,3%** | 0 | 6,96 | 30,1% |
+| fator 10 a 50× | 4,55 | 54,5% | 41,8% | 2 | 4,92 | 57,0% |
+- Critério: resultado maior, piso ≤ 25%, liquidação ≤ 5%. O fator 5 passa na carteira simulada (149 operações; fio +0,0254%, t 0,36) e reprova na
+  conta de teste (fio −0,1327%), onde o braço maior bateria no piso em 30,1%. Por isso: **nuvem dos 4 agentes a 5 × a carteira, 20×; conta de teste
+  na H64 (2,5 ×, 10×)**. O fator 10 termina abaixo do piso na sequência real — reprovado.
+- O fio não mudou (segue perto de zero, t 0,36): o tamanho dobra, a vantagem não. O que dobra é o sobe-e-desce: queda máxima 17,9% → 35,7%.

@@ -22,11 +22,17 @@ MAX_POS, CAPITAL, PISO = 4, 10.0, 5.0
 MAX_HORAS = 24
 
 
-def tamanho(carteira):
+FATOR_H73 = 5.0      # dono (22/11): "pode aumentar o tamanho da perda também" — carteiras simuladas a 5 × a carteira, 20×
+
+
+def tamanho(carteira, fator_fixo=None):
     """H64 (dono, 18/11: "com os ganhos, aumentar a porcentagem de entrada"; aprovada no lab/colher_balde.py): nocional = fator × carteira
     realizada, fator = 2,5 × carteira ÷ US$ 10 em [1,25; 5] — cresce no ganho, encolhe na perda. Alavancagem 10× até 2,5× e 20× acima
-    (as 4 margens cabem). Devolve (nocional, alavancagem)."""
-    fator = min(5.0, max(1.25, 2.5 * carteira / CAPITAL))
+    (as 4 margens cabem). Devolve (nocional, alavancagem).
+    H73 (dono, 22/11; juiz em lab/escala_capital.py): fator_fixo=5 (20×) dobra a posição e a perda por operação nas carteiras simuladas — passou
+    (queda 35,7%, sem liquidação na sequência real, 14,3% de chance de bater no piso). Fator 10 a 50× reprovou (termina abaixo do piso). A conta
+    de teste continua sem fator_fixo: com o fio negativo dela, o braço maior bateria no piso em 30,1% das ordens."""
+    fator = min(5.0, max(1.25, 2.5 * carteira / CAPITAL)) if not fator_fixo else float(fator_fixo)
     return fator * carteira, (10 if fator <= 2.5 else 20)
 
 VALIDADE_S = 75 * 60
@@ -164,7 +170,7 @@ def abrir(e, par, lado, entrada, entrada_t, prm, velas, motivo, decisao_t):
     patrimonio = e["caixa"] + sum(q["gasto"] for q in e["abertas"].values())
     if patrimonio < PISO or par in e["abertas"] or len(e["abertas"]) >= MAX_POS:
         return None
-    noc, alav = tamanho(patrimonio)                              # H64 (antes H58: 2,5 × a carteira a 10×)
+    noc, alav = tamanho(patrimonio, FATOR_H73)                   # H73 (22/11): 5 × a carteira a 20× — o dobro da H64, por decisão do dono
     if 0.95 * noc / alav <= e["caixa"] < noc / alav:             # a 4ª posição: centavos de menos pelo arredondamento
         noc = e["caixa"] * alav
     if e["caixa"] < noc / alav - 1e-9:

@@ -2142,6 +2142,13 @@ class TamanhoH64(unittest.TestCase):
         self.assertEqual(R.tamanho(40.0), (200.0, 20))              # teto 5×
         self.assertAlmostEqual(R.tamanho(4.0)[0], 5.0)              # piso 1,25×
 
+    def test_h73_dobra_a_posicao_das_carteiras_simuladas(self):
+        """H73 (22/11, dono: "pode aumentar o tamanho da perda também"): 5 × a carteira a 20× na nuvem; a conta de teste fica na H64."""
+        from executor import robo_claude_nuvem as R
+        self.assertEqual(R.tamanho(10.0, R.FATOR_H73), (50.0, 20))
+        self.assertEqual(R.tamanho(8.0, R.FATOR_H73), (40.0, 20))
+        self.assertEqual(R.tamanho(10.0), (25.0, 10))               # sem fator_fixo: H64, usado pelo testnet
+
     def test_quatro_margens_cabem_e_perda_para_na_margem(self):
         from executor import robo_claude_nuvem as R
         agora = 1795000000.0
@@ -2151,7 +2158,7 @@ class TamanhoH64(unittest.TestCase):
         R.passo(e, {"t": agora - 5, "posicoes": ps}, {m["moeda"]: k for m in ps}, agora, vivos={m["moeda"]: 1.0 for m in ps})
         self.assertEqual(len(e["abertas"]), 4)
         a = e["abertas"]["AUSDT"]
-        self.assertAlmostEqual(a["nocional"], 2.5 * 1.4 * 14.0)
+        self.assertAlmostEqual(a["nocional"], 5.0 * 14.0)               # H73: 5 × a carteira
         self.assertEqual(a["alav"], 20)
         self.assertGreaterEqual(e["caixa"], -1e-9)
         R.fechar(e, "AUSDT", a, 0.5, "teste", agora + 60)            # −50% a 20×: perde só a margem

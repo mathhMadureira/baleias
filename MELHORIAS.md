@@ -14,6 +14,9 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
 
 ## Em andamento / próximos
 
+0. **[H73 — feito: fator 5 a 20× ligado nas carteiras simuladas]** Tamanho maior com perda maior (dono, 22/11: "pode aumentar o tamanho da perda também"). `lab/escala_capital.py`: fator 5 a 20× (o dobro da H64) passa o juiz na carteira simulada — 10,53 × 10,29 na sequência real, queda 35,7%, sem liquidação, 14,3% de chance de bater no piso; fator 10 a 50× reprovou (termina em 4,55, abaixo do piso). A conta de teste fica na H64 (2,5×) porque com o fio negativo dela o braço maior bateria no piso em 30,1%. O fio por operação não mudou (+0,0254%, t 0,36): o tamanho dobra, a vantagem não. 193 testes.
+
+
 0. **[H72 — feito: reprovada no portão do fio; nada mudou]** Escala de capital e alavancagem (pedido do dono: "não quero centavos, quero lucros significantes"). Nas 136 operações fechadas dos 4 agentes o fio é +0,0547% do nocional (t 0,72) e na conta de teste −0,1327% (t −0,53): sem prova de vantagem, escala só multiplica ruído. Números para a decisão do dono: US$ 10/dia exige carteira de ~US$ 239 com o fio de hoje; US$ 100/dia, ~US$ 2.390; na carteira de US$ 10 são 7.313 operações para +US$ 100. Com a regra H64 a queda máxima simulada sobe de 17,9% (US$ 10) para 35,7% (US$ 50+). `lab/escala_capital.py`, H72 no protocolo.
 
 
