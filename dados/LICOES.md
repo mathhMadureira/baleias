@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 14:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 14:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,10 +69,10 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 51.5% das moedas subindo em 24 h, 37.4% em 4 h · BTC 24 h 0.3%, 4 h -0.62%.
+- **Amplitude:** 53.5% das moedas subindo em 24 h, 36.4% em 4 h · BTC 24 h 0.3%, 4 h -0.62%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.2%/ano · {'BTC': 1.3, 'ETH': 1.8, 'SOL': 4.6} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 10.0% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.2%/ano · {'BTC': 0.7, 'ETH': 2.5, 'SOL': 4.5} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** COOKIE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AAVE ombro-cabeça-ombro (baixa, formado) · ATOM fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ERA fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · JUP topo duplo (baixa, formado) · KAVA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 22/11 14:01 UTC · Decrypt: Google's Quantum Chip Beats Classical Limits in 'Impossible' Game
 - 📰 22/11 14:00 UTC · CoinDesk: Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 41469 apostas conferidas ao vivo, acerto 54.6%; prevê 98 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 41488 apostas conferidas ao vivo, acerto 54.6%; prevê 38 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
