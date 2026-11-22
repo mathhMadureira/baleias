@@ -1,6 +1,6 @@
 {
- "t": 1795382260,
- "hora_utc": "2026-11-22 21:17 UTC",
+ "t": 1795382433,
+ "hora_utc": "2026-11-22 21:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,10 +172,10 @@
   -0.1,
   -0.04,
   0.3,
-  0.03
+  0.05
  ],
  "contexto": {
-  "t": 1795382260,
+  "t": 1795382433,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -232,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.4,
+   "media_top20_anual_pct": -0.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -1.2,
-    "SOL": 4.0
+    "ETH": -1.4,
+    "SOL": 3.8
    },
    "leitura": "neutro"
   },
@@ -635,8 +635,13 @@
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
    "carteira": 10.18,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 1,
+   "abertas": [
+    [
+     "GTC",
+     "compra"
+    ]
+   ],
    "n_fechadas": 19,
    "ordem": null
   },
