@@ -1,6 +1,6 @@
 {
- "t": 1795387835,
- "hora_utc": "2026-11-22 22:50 UTC",
+ "t": 1795388013,
+ "hora_utc": "2026-11-22 22:53 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,11 +172,17 @@
   -0.04,
   0.3,
   0.06,
-  -0.05
+  0.11
  ],
  "contexto": {
-  "t": 1795387835,
+  "t": 1795388014,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795387629,
+    "hora_utc": "22/11 22:47",
+    "titulo": "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795375800,
@@ -232,11 +238,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -2.4,
+   "media_top20_anual_pct": -2.3,
    "principais_anual_pct": {
-    "BTC": 6.2,
-    "ETH": -10.3,
-    "SOL": -0.3
+    "BTC": 6.6,
+    "ETH": -9.9,
+    "SOL": -0.2
    },
    "leitura": "neutro"
   },
