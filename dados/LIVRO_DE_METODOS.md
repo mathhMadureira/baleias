@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.3% | 279 | 50.4%–62.0% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.5% | 2419 | 50.5%–54.5% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.6% | 2420 | 50.6%–54.5% | rede neural 16→12→1, aprende a cada vela |
 | raschke_sopa_baixa | promissor | 66.7% | 12 | 39.1%–86.2% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | connors_8020_baixa | promissor | 66.7% | 9 | 35.4%–87.9% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 62.9% | 35 | 46.3%–76.8% | física: alta anormal de 1 h → devolve |
