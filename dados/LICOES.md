@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 23:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 23:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,13 +43,13 @@ Carteira **US$ 9.68** · 35 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.86** · 19 operações fechadas · 1 abertas
+Carteira **US$ 9.80** · 20 operações fechadas · 0 abertas
 
-- **Total:** 7/19 com lucro (37%), resultado +0.18, média +0.010 por operação.
-- **Últimas 24 h:** 0/4 com lucro, -0.44.
-- **Por horário:** 00–05 UTC: 2 op, 0% certas, -0.33 · 18–23 UTC: 12 op, 42% certas, -0.05 · 12–17 UTC: 5 op, 40% certas, +0.56
-- **Por lado:** compra: 9 op, 22% certas, -0.74 · venda: 10 op, 50% certas, +0.93
-- **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
+- **Total:** 7/20 com lucro (35%), resultado -0.20, média -0.010 por operação.
+- **Últimas 24 h:** 0/5 com lucro, -0.83.
+- **Por horário:** 18–23 UTC: 13 op, 38% certas, -0.44 · 00–05 UTC: 2 op, 0% certas, -0.33 · 12–17 UTC: 5 op, 40% certas, +0.56
+- **Por lado:** compra: 10 op, 20% certas, -1.13 · venda: 10 op, 50% certas, +0.93
+- **Por motivo de saída:** Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
 - **Moedas que mais perderam (≥ 3 op):** SOPH -0.62 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** SOPH -0.62 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 61.0% das moedas subindo em 24 h, 30.0% em 4 h · BTC 24 h 1.18%, 4 h 0.44%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': 1.1, 'ETH': -2.3, 'SOL': 2.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.4%/ano · {'BTC': 0.5, 'ETH': -2.0, 'SOL': 2.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FET triângulo simétrico (baixa, CONFIRMOU) · NIGHT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado) · SOL OCO invertido (alta, formado)
 - 📰 22/11 22:47 UTC · Cointelegraph: Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest
