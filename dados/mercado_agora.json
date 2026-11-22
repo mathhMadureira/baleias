@@ -1,21 +1,21 @@
 {
- "t": 1795318527,
- "hora_utc": "2026-11-22 03:35 UTC",
+ "t": 1795318753,
+ "hora_utc": "2026-11-22 03:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 11.1,
-  "mediana_pct": -0.79
+  "moedas": 124,
+  "subindo_pct": 11.3,
+  "mediana_pct": -0.78
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 9.5,
+  "moedas": 124,
+  "subindo_pct": 9.7,
   "mediana_pct": -1.32
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 61.1,
-  "mediana_pct": 1.14
+  "moedas": 124,
+  "subindo_pct": 62.1,
+  "mediana_pct": 1.21
  },
  "btc": {
   "1h": -0.78,
@@ -80,10 +80,10 @@
    "vol": 0.51
   },
   {
-   "moeda": "JTO",
-   "4h": -2.47,
-   "24h": -1.27,
-   "vol": 0.21
+   "moeda": "OPEN",
+   "4h": -2.4,
+   "24h": 1.58,
+   "vol": 0.24
   }
  ],
  "maiores_altas_4h": [
@@ -172,10 +172,10 @@
   -0.01,
   -0.16,
   -1.02,
-  -0.47
+  -0.45
  ],
  "contexto": {
-  "t": 1795318528,
+  "t": 1795318754,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -268,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.7,
+   "media_top20_anual_pct": -1.9,
    "principais_anual_pct": {
-    "BTC": -7.5,
-    "ETH": -3.4,
-    "SOL": -6.5
+    "BTC": -7.1,
+    "ETH": -3.6,
+    "SOL": -6.6
    },
    "leitura": "neutro"
   },
@@ -678,7 +678,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.82,
+   "carteira": 9.84,
    "n_abertas": 1,
    "abertas": [
     [
@@ -742,7 +742,7 @@
     "ganho_medio": 0.173,
     "perda_media": -0.149,
     "fator_lucro": 0.92,
-    "carteira": 9.82
+    "carteira": 9.84
    },
    "laboratorio": {
     "ops": 19,
@@ -773,12 +773,12 @@
   "z_contra_lab": 2.77,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5005,
-    "n": 24357
+    "acerto": 0.5007,
+    "n": 24065
    },
    "segue_maioria_24h": {
-    "acerto": 0.4998,
-    "n": 29815
+    "acerto": 0.4994,
+    "n": 29839
    }
   },
   "referencia_ganha": [],
