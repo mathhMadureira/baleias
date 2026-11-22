@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 04:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 04:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,13 +30,13 @@ Carteira **US$ 8.54** · 40 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.71** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.68** · 35 operações fechadas · 0 abertas
 
-- **Total:** 15/34 com lucro (44%), resultado -0.23, média -0.007 por operação.
-- **Últimas 24 h:** 2/7 com lucro, -0.33.
-- **Por horário:** 18–23 UTC: 16 op, 38% certas, -0.69 · 00–05 UTC: 8 op, 50% certas, +0.22 · 12–17 UTC: 10 op, 50% certas, +0.24
-- **Por lado:** venda: 22 op, 45% certas, -0.31 · compra: 12 op, 42% certas, +0.08
-- **Por motivo de saída:** nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · Entrada pelo alerta Caçador vá: 1 op, 0% certas, -0.14 · Manter posição aberta: varredu: 1 op, 0% certas, -0.13 · Manter aberta: varredura 00:00: 1 op, 0% certas, -0.13 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · Entrada: v4 0,639 de subir (co: 1 op, 0% certas, -0.07 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · Entrada após alerta Caçador ai: 1 op, 0% certas, -0.03 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · nova: 6 de 6 tempos abaixo da : 4 op, 50% certas, -0.01 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · Entrada após alerta Caçador vá: 1 op, 100% certas, +0.08 · Manter: varredura 00:25 UTC; 3: 1 op, 100% certas, +0.10 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24 · entra: 6 de 6 tempos abaixo da: 1 op, 100% certas, +0.24
+- **Total:** 15/35 com lucro (43%), resultado -0.32, média -0.009 por operação.
+- **Últimas 24 h:** 2/8 com lucro, -0.41.
+- **Por horário:** 18–23 UTC: 16 op, 38% certas, -0.69 · 00–05 UTC: 9 op, 44% certas, +0.14 · 12–17 UTC: 10 op, 50% certas, +0.24
+- **Por lado:** venda: 23 op, 43% certas, -0.40 · compra: 12 op, 42% certas, +0.08
+- **Por motivo de saída:** nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · Entrada pelo alerta Caçador vá: 1 op, 0% certas, -0.14 · Manter posição aberta: varredu: 1 op, 0% certas, -0.13 · Manter aberta: varredura 00:00: 1 op, 0% certas, -0.13 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · Entrada pelo alerta Caçador ai: 1 op, 0% certas, -0.08 · Entrada: v4 0,639 de subir (co: 1 op, 0% certas, -0.07 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · Entrada após alerta Caçador ai: 1 op, 0% certas, -0.03 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · nova: 6 de 6 tempos abaixo da : 4 op, 50% certas, -0.01 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · Entrada após alerta Caçador vá: 1 op, 100% certas, +0.08 · Manter: varredura 00:25 UTC; 3: 1 op, 100% certas, +0.10 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24 · entra: 6 de 6 tempos abaixo da: 1 op, 100% certas, +0.24
 - **Moedas que mais perderam (≥ 3 op):** AIGENSYN -0.40 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** AIGENSYN -0.40 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 88.4% das moedas subindo em 24 h, 10.7% em 4 h · BTC 24 h 4.62%, 4 h -1.42%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -4.1%/ano · {'BTC': 0.6, 'ETH': -7.5, 'SOL': -8.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.3%/ano · {'BTC': 0.8, 'ETH': -5.5, 'SOL': -7.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SC topo duplo (baixa, CONFIRMOU) · SC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AAVE ombro-cabeça-ombro (baixa, formado) · CELO topo duplo (baixa, formado) · CELO OCO invertido (alta, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
