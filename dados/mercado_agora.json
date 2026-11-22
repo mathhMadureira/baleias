@@ -1,21 +1,21 @@
 {
- "t": 1795367808,
- "hora_utc": "2026-11-22 17:16 UTC",
+ "t": 1795367992,
+ "hora_utc": "2026-11-22 17:19 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 100,
-  "subindo_pct": 31.0,
+  "moedas": 101,
+  "subindo_pct": 31.7,
   "mediana_pct": -0.2
  },
  "mercado_4h": {
-  "moedas": 100,
-  "subindo_pct": 39.0,
-  "mediana_pct": -0.14
+  "moedas": 101,
+  "subindo_pct": 39.6,
+  "mediana_pct": -0.11
  },
  "mercado_24h": {
-  "moedas": 100,
-  "subindo_pct": 62.0,
-  "mediana_pct": 0.89
+  "moedas": 101,
+  "subindo_pct": 62.4,
+  "mediana_pct": 0.9
  },
  "btc": {
   "1h": -0.48,
@@ -112,6 +112,12 @@
    "vol": 0.53
   },
   {
+   "moeda": "AERO",
+   "4h": 2.95,
+   "24h": 6.45,
+   "vol": 1.46
+  },
+  {
    "moeda": "DODO",
    "4h": 2.8,
    "24h": -2.15,
@@ -140,12 +146,6 @@
    "4h": 1.73,
    "24h": 6.32,
    "vol": 1.16
-  },
-  {
-   "moeda": "XVG",
-   "4h": 1.69,
-   "24h": 4.01,
-   "vol": 5.67
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.32,
   -0.07,
   0.59,
-  -0.72
+  -0.71
  ],
  "contexto": {
-  "t": 1795367809,
+  "t": 1795367993,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -238,11 +238,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.6,
+   "media_top20_anual_pct": 5.1,
    "principais_anual_pct": {
-    "BTC": 2.7,
-    "ETH": -1.2,
-    "SOL": 5.3
+    "BTC": 1.2,
+    "ETH": -1.5,
+    "SOL": 5.5
    },
    "leitura": "neutro"
   },
@@ -407,9 +407,9 @@
  },
  "v4": {
   "vela": "04:00 UTC",
-  "apostas": 101,
+  "apostas": 100,
   "compras": 61,
-  "vendas": 40,
+  "vendas": 39,
   "mais_confiantes_venda": [
    {
     "moeda": "RESOLV",
@@ -760,11 +760,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.502,
-    "n": 20809
+    "n": 21003
    },
    "segue_maioria_24h": {
-    "acerto": 0.5016,
-    "n": 29261
+    "acerto": 0.5004,
+    "n": 29459
    }
   },
   "referencia_ganha": [],
