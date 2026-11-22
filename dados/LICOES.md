@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 09:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 09:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 77.1% das moedas subindo em 24 h, 86.7% em 4 h · BTC 24 h 3.3%, 4 h 1.6%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': 11.0, 'ETH': -2.5, 'SOL': 4.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': 11.0, 'ETH': -2.6, 'SOL': 4.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ARB OCO invertido (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · DOT triângulo descendente (baixa, formado) · HMSTR fundo duplo (alta, formado) · INIT fundo duplo (alta, formado) · INIT ombro-cabeça-ombro (baixa, formado) · INJ fundo duplo (alta, formado)
+- 📰 22/11 09:33 UTC · Cointelegraph: Bitcoin briefly drops to $17K on Kraken, exchange upholds trades
 - 📰 22/11 07:24 UTC · Cointelegraph: South Korean exchanges halt CYBER transfers amid suspected bridge exploit
 - 📰 22/11 05:28 UTC · Cointelegraph: Chainflip confirms $12M hack, offers attacker 10% bounty
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
-- 📰 21/11 16:41 UTC · CoinDesk: Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
