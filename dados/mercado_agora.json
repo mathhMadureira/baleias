@@ -1,21 +1,21 @@
 {
- "t": 1795312405,
- "hora_utc": "2026-11-22 01:53 UTC",
+ "t": 1795312624,
+ "hora_utc": "2026-11-22 01:57 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 47.6,
+  "moedas": 125,
+  "subindo_pct": 48.0,
   "mediana_pct": 0.0
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 52.4,
-  "mediana_pct": 0.07
+  "moedas": 125,
+  "subindo_pct": 52.0,
+  "mediana_pct": 0.05
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 59.5,
-  "mediana_pct": 0.79
+  "moedas": 125,
+  "subindo_pct": 59.2,
+  "mediana_pct": 0.78
  },
  "btc": {
   "1h": -0.33,
@@ -172,10 +172,10 @@
   -0.54,
   0.11,
   -0.01,
-  -0.05
+  -0.16
  ],
  "contexto": {
-  "t": 1795312406,
+  "t": 1795312624,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -268,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 1.7,
+   "media_top20_anual_pct": 1.3,
    "principais_anual_pct": {
-    "BTC": -5.4,
-    "ETH": 4.2,
-    "SOL": -8.3
+    "BTC": -5.5,
+    "ETH": 4.5,
+    "SOL": -8.6
    },
    "leitura": "neutro"
   },
@@ -512,7 +512,7 @@
     "entrada": 5.48,
     "agora": 5.49,
     "resultado_pct": -0.18,
-    "horas_aberta": 1.2,
+    "horas_aberta": 1.3,
     "motivo_de_entrada": "Entrada: v4 p 0,318 de subir (confianca 0,182, a mais forte do lado venda); 4/6 tempos abaixo da MM20 (5m, 15m, 4h, 1d); 1h +0,00%, 4h -0,36%, 24h +0,37%; TD de"
    }
   ],
@@ -707,7 +707,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.95,
+   "carteira": 9.96,
    "n_abertas": 1,
    "abertas": [
     [
@@ -724,15 +724,10 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.22,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "BONK",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 18,
+   "carteira": 10.18,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 19,
    "ordem": null
   },
   {
@@ -776,16 +771,16 @@
     "ganho_medio": 0.173,
     "perda_media": -0.149,
     "fator_lucro": 0.92,
-    "carteira": 9.95
+    "carteira": 9.96
    },
    "laboratorio": {
-    "ops": 18,
-    "acerto": 0.389,
-    "soma": 0.354,
+    "ops": 19,
+    "acerto": 0.368,
+    "soma": 0.185,
     "ganho_medio": 0.34,
-    "perda_media": -0.184,
-    "fator_lucro": 1.17,
-    "carteira": 10.22
+    "perda_media": -0.183,
+    "fator_lucro": 1.08,
+    "carteira": 10.18
    },
    "guardiao": {
     "ops": 59,
@@ -807,12 +802,12 @@
   "z_contra_lab": 2.94,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4975,
-    "n": 24497
+    "acerto": 0.4976,
+    "n": 24452
    },
    "segue_maioria_24h": {
-    "acerto": 0.4959,
-    "n": 30130
+    "acerto": 0.4958,
+    "n": 30124
    }
   },
   "referencia_ganha": [],

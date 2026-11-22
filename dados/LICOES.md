@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 01:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 01:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 8.54** · 40 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.95** · 34 operações fechadas · 1 abertas
+Carteira **US$ 9.96** · 34 operações fechadas · 1 abertas
 
 - **Total:** 15/34 com lucro (44%), resultado -0.23, média -0.007 por operação.
 - **Últimas 24 h:** 2/7 com lucro, -0.33.
@@ -43,13 +43,13 @@ Carteira **US$ 9.95** · 34 operações fechadas · 1 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.22** · 18 operações fechadas · 1 abertas
+Carteira **US$ 10.18** · 19 operações fechadas · 0 abertas
 
-- **Total:** 7/18 com lucro (39%), resultado +0.35, média +0.020 por operação.
-- **Últimas 24 h:** 0/3 com lucro, -0.27.
-- **Por horário:** 00–05 UTC: 1 op, 0% certas, -0.16 · 18–23 UTC: 12 op, 42% certas, -0.05 · 12–17 UTC: 5 op, 40% certas, +0.56
-- **Por lado:** compra: 9 op, 22% certas, -0.74 · venda: 9 op, 56% certas, +1.10
-- **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
+- **Total:** 7/19 com lucro (37%), resultado +0.18, média +0.010 por operação.
+- **Últimas 24 h:** 0/4 com lucro, -0.44.
+- **Por horário:** 00–05 UTC: 2 op, 0% certas, -0.33 · 18–23 UTC: 12 op, 42% certas, -0.05 · 12–17 UTC: 5 op, 40% certas, +0.56
+- **Por lado:** compra: 9 op, 22% certas, -0.74 · venda: 10 op, 50% certas, +0.93
+- **Por motivo de saída:** método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
 - **Moedas que mais perderam (≥ 3 op):** SOPH -0.62 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** SOPH -0.62 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -69,9 +69,9 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 59.5% das moedas subindo em 24 h, 52.4% em 4 h · BTC 24 h 1.86%, 4 h -0.57%.
+- **Amplitude:** 59.2% das moedas subindo em 24 h, 52.0% em 4 h · BTC 24 h 1.86%, 4 h -0.57%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.7%/ano · {'BTC': -5.4, 'ETH': 4.2, 'SOL': -8.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.3%/ano · {'BTC': -5.5, 'ETH': 4.5, 'SOL': -8.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BREV estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ETHFI bandeira de alta (alta, CONFIRMOU) · GIGGLE bandeira de alta (alta, CONFIRMOU) · BREV fundo duplo (alta, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · GTC OCO invertido (alta, formado) · INIT OCO invertido (alta, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
@@ -117,7 +117,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 39442 apostas conferidas ao vivo, acerto 54.7%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 39442 apostas conferidas ao vivo, acerto 54.7%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
