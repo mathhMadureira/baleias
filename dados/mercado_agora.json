@@ -1,6 +1,6 @@
 {
- "t": 1795346281,
- "hora_utc": "2026-11-22 11:18 UTC",
+ "t": 1795346462,
+ "hora_utc": "2026-11-22 11:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
@@ -172,10 +172,10 @@
   1.06,
   2.21,
   -0.4,
-  0.04
+  0.06
  ],
  "contexto": {
-  "t": 1795346281,
+  "t": 1795346463,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -236,12 +236,6 @@
     "t": 1795264200,
     "hora_utc": "21/11 12:30",
     "titulo": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795259932,
-    "hora_utc": "21/11 11:18",
-    "titulo": "Here’s what happened in crypto today"
    }
   ],
   "medo_ganancia": {
@@ -250,11 +244,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.5,
+   "media_top20_anual_pct": 3.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -6.0,
-    "SOL": 4.3
+    "ETH": -6.2,
+    "SOL": 3.7
    },
    "leitura": "neutro"
   },
