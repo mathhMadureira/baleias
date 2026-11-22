@@ -1,6 +1,6 @@
 {
- "t": 1795384358,
- "hora_utc": "2026-11-22 21:52 UTC",
+ "t": 1795384538,
+ "hora_utc": "2026-11-22 21:55 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,10 +172,10 @@
   -0.1,
   -0.04,
   0.3,
-  0.09
+  0.07
  ],
  "contexto": {
-  "t": 1795384358,
+  "t": 1795384538,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -235,8 +235,8 @@
    "media_top20_anual_pct": 1.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -2.2,
-    "SOL": 3.4
+    "ETH": -2.4,
+    "SOL": 3.3
    },
    "leitura": "neutro"
   },
@@ -433,7 +433,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 9.6,
+  "carteira": 9.08,
   "abertas": [
    {
     "moeda": "GTC",
@@ -441,17 +441,8 @@
     "entrada": 0.13416,
     "agora": 0.13416,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "Entrada: v4 p 0,638 de subir (confianca 0,138, a mais alta da rodada); elegivel no testnet; 1h +0,03%, 24h +1,49%; distancias de 24h: -2,37% da maxima e +2,86% "
-   },
-   {
-    "moeda": "CYBER",
-    "lado": "compra",
-    "entrada": 0.204,
-    "agora": 0.204,
-    "resultado_pct": 0.0,
-    "horas_aberta": 0.1,
-    "motivo_de_entrada": "Entrada: v4 p 0,625 de subir (confianca 0,126, elegivel H36); elegivel no testnet; fundo duplo em 4h; 1m acima da MM20 com volume 1,37x e 5m +0,49%; sem padrao "
    },
    {
     "moeda": "DOGE",
@@ -459,18 +450,11 @@
     "entrada": 0.05532,
     "agora": 0.05532,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "Entrada: padrao grafico confirmado a favor na varredura (triangulo descendente com rompimento de alta CONFIRMADO em 15m); 3/6 tempos acima da MM20 (5m, 15m, 1h)"
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "MUBARAK",
-    "lado": "venda",
-    "resultado_usd": -0.255,
-    "motivo_saida": "stop de segurança −0.9%",
-    "motivo_de_entrada": "6 de 6 tempos abaixo da MM20; topo duplo e estrutura de baixa em 1 h (não confirmados na varredura; o Caçador viu a estr"
-   },
    {
     "moeda": "NEAR",
     "lado": "venda",
@@ -568,6 +552,13 @@
     "resultado_usd": -0.463,
     "motivo_saida": "stop de segurança −0.8%",
     "motivo_de_entrada": "Entrada: aviso do Cacador venda forca 66 confirmado por triangulo descendente CONFIRMADO em 15m na varredura (a favor da"
+   },
+   {
+    "moeda": "CYBER",
+    "lado": "compra",
+    "resultado_usd": -0.463,
+    "motivo_saida": "stop de segurança −0.8%",
+    "motivo_de_entrada": "Entrada: v4 p 0,625 de subir (confianca 0,126, elegivel H36); elegivel no testnet; fundo duplo em 4h; 1m acima da MM20 c"
    }
   ],
   "licoes_anteriores": [
@@ -612,15 +603,11 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 9.6,
-   "n_abertas": 3,
+   "carteira": 9.08,
+   "n_abertas": 2,
    "abertas": [
     [
      "GTC",
-     "compra"
-    ],
-    [
-     "CYBER",
      "compra"
     ],
     [
@@ -628,7 +615,7 @@
      "compra"
     ]
    ],
-   "n_fechadas": 58,
+   "n_fechadas": 59,
    "ordem": null
   },
   {
@@ -706,13 +693,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 58,
-    "acerto": 0.586,
-    "soma": -0.402,
+    "ops": 59,
+    "acerto": 0.576,
+    "soma": -0.865,
     "ganho_medio": 0.143,
-    "perda_media": -0.219,
-    "fator_lucro": 0.92,
-    "carteira": 9.6
+    "perda_media": -0.228,
+    "fator_lucro": 0.85,
+    "carteira": 9.08
    },
    "openbot_testnet": {
     "ops": 43,
