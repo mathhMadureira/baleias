@@ -17,10 +17,10 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | demark_td9_alta | reprovado | 50.0% | 64 | 38.1%–61.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | tres_corvos | reprovado | 49.5% | 418 | 44.8%–54.3% | H6: três corvos → sobe (efeito pequeno) |
 | reversao_queda | reprovado | 49.3% | 73 | 38.2%–60.5% | H14: queda anormal de 1 h → sobe |
-| vortice_invertido | reprovado | 49.0% | 465 | 44.5%–53.6% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
-| connors_8020_alta | reprovado | 46.2% | 13 | 23.2%–70.9% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
+| vortice_invertido | reprovado | 48.9% | 466 | 44.4%–53.5% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 45.6% | 57 | 33.4%–58.4% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | williams_volb_alta | reprovado | 45.1% | 144 | 37.2%–53.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
+| connors_8020_alta | reprovado | 42.9% | 14 | 21.4%–67.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | rompimento | reprovado | 41.7% | 36 | 27.1%–57.8% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | raschke_graal_alta | reprovado | 38.1% | 21 | 20.8%–59.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | raschke_sopa_alta | reprovado | 33.3% | 15 | 15.2%–58.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
