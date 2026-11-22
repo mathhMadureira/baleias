@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 22:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 22:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.87** · 59 operações fechadas · 2 abertas
+Carteira **US$ 8.79** · 59 operações fechadas · 2 abertas
 
 - **Total:** 34/59 com lucro (58%), resultado -0.86, média -0.015 por operação.
 - **Últimas 24 h:** 4/9 com lucro, -0.82.
@@ -43,7 +43,7 @@ Carteira **US$ 9.68** · 35 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.04** · 19 operações fechadas · 1 abertas
+Carteira **US$ 9.94** · 19 operações fechadas · 1 abertas
 
 - **Total:** 7/19 com lucro (37%), resultado +0.18, média +0.010 por operação.
 - **Últimas 24 h:** 0/4 com lucro, -0.44.
@@ -69,11 +69,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 71.0% das moedas subindo em 24 h, 45.0% em 4 h · BTC 24 h 0.79%, 4 h 0.21%.
+- **Amplitude:** 72.0% das moedas subindo em 24 h, 41.0% em 4 h · BTC 24 h 1.01%, 4 h 0.32%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': 5.8, 'ETH': -11.5, 'SOL': -3.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.5%/ano · {'BTC': 5.9, 'ETH': -11.1, 'SOL': -3.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** CYBER estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · FET triângulo simétrico (?, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** CYBER estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · FET triângulo simétrico (?, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · LTC OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL OCO invertido (alta, formado)
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
 - 📰 22/11 14:30 UTC · Cointelegraph: The future of onchain FX could start with users, not institutional liquidity
 - 📰 22/11 14:01 UTC · Decrypt: Google's Quantum Chip Beats Classical Limits in 'Impossible' Game
@@ -117,7 +117,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 42576 apostas conferidas ao vivo, acerto 54.7%; prevê 70 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 42586 apostas conferidas ao vivo, acerto 54.7%; prevê 99 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
