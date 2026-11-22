@@ -1,6 +1,6 @@
 {
- "t": 1795311306,
- "hora_utc": "2026-11-22 01:35 UTC",
+ "t": 1795311524,
+ "hora_utc": "2026-11-22 01:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   -0.54,
   0.11,
   -0.01,
-  -0.22
+  -0.28
  ],
  "contexto": {
-  "t": 1795311307,
+  "t": 1795311525,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -268,10 +268,10 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 2.3,
+   "media_top20_anual_pct": 2.1,
    "principais_anual_pct": {
-    "BTC": -5.8,
-    "ETH": 0.3,
+    "BTC": -5.9,
+    "ETH": 1.5,
     "SOL": -8.0
    },
    "leitura": "neutro"
@@ -505,7 +505,7 @@
     "entrada": 5.48,
     "agora": 5.49,
     "resultado_pct": -0.18,
-    "horas_aberta": 0.9,
+    "horas_aberta": 1.0,
     "motivo_de_entrada": "Entrada: v4 p 0,318 de subir (confianca 0,182, a mais forte do lado venda); 4/6 tempos abaixo da MM20 (5m, 15m, 4h, 1d); 1h +0,00%, 4h -0,36%, 24h +0,37%; TD de"
    }
   ],
@@ -700,7 +700,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.93,
+   "carteira": 9.95,
    "n_abertas": 1,
    "abertas": [
     [
@@ -769,7 +769,7 @@
     "ganho_medio": 0.173,
     "perda_media": -0.149,
     "fator_lucro": 0.92,
-    "carteira": 9.93
+    "carteira": 9.95
    },
    "laboratorio": {
     "ops": 18,
