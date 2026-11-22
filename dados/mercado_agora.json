@@ -1,6 +1,6 @@
 {
- "t": 1795386430,
- "hora_utc": "2026-11-22 22:27 UTC",
+ "t": 1795386609,
+ "hora_utc": "2026-11-22 22:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,10 +172,10 @@
   -0.04,
   0.3,
   0.06,
-  -0.23
+  -0.27
  ],
  "contexto": {
-  "t": 1795386431,
+  "t": 1795386609,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -232,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.8,
+   "media_top20_anual_pct": -2.1,
    "principais_anual_pct": {
-    "BTC": 5.4,
-    "ETH": -11.3,
-    "SOL": -3.2
+    "BTC": 5.0,
+    "ETH": -11.4,
+    "SOL": -2.6
    },
    "leitura": "neutro"
   },
@@ -419,7 +419,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.34,
+  "carteira": 8.32,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -427,7 +427,7 @@
     "entrada": 0.05532,
     "agora": 0.05517,
     "resultado_pct": -0.27,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "Entrada: padrao grafico confirmado a favor na varredura (triangulo descendente com rompimento de alta CONFIRMADO em 15m); 3/6 tempos acima da MM20 (5m, 15m, 1h)"
    }
   ],
@@ -580,7 +580,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.34,
+   "carteira": 8.32,
    "n_abertas": 1,
    "abertas": [
     [
@@ -672,7 +672,7 @@
     "ganho_medio": 0.143,
     "perda_media": -0.237,
     "fator_lucro": 0.78,
-    "carteira": 8.34
+    "carteira": 8.32
    },
    "openbot_testnet": {
     "ops": 43,
