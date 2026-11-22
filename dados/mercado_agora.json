@@ -1,20 +1,20 @@
 {
- "t": 1795372473,
- "hora_utc": "2026-11-22 18:34 UTC",
+ "t": 1795372657,
+ "hora_utc": "2026-11-22 18:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 100,
-  "subindo_pct": 16.0,
-  "mediana_pct": -0.44
+  "moedas": 101,
+  "subindo_pct": 16.8,
+  "mediana_pct": -0.43
  },
  "mercado_4h": {
-  "moedas": 100,
-  "subindo_pct": 43.0,
-  "mediana_pct": -0.05
+  "moedas": 101,
+  "subindo_pct": 43.6,
+  "mediana_pct": -0.04
  },
  "mercado_24h": {
-  "moedas": 100,
-  "subindo_pct": 54.0,
+  "moedas": 101,
+  "subindo_pct": 54.5,
   "mediana_pct": 0.57
  },
  "btc": {
@@ -100,6 +100,12 @@
    "vol": 1.68
   },
   {
+   "moeda": "LISTA",
+   "4h": 3.41,
+   "24h": 7.86,
+   "vol": 2.82
+  },
+  {
    "moeda": "DODO",
    "4h": 3.28,
    "24h": 2.59,
@@ -140,12 +146,6 @@
    "4h": 1.6,
    "24h": 7.3,
    "vol": 2.37
-  },
-  {
-   "moeda": "ALLO",
-   "4h": 1.5,
-   "24h": 4.89,
-   "vol": 5.31
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.07,
   0.59,
   -0.69,
-  -0.22
+  -0.08
  ],
  "contexto": {
-  "t": 1795372474,
+  "t": 1795372658,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -226,11 +226,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 1.3,
+   "media_top20_anual_pct": 1.6,
    "principais_anual_pct": {
-    "BTC": -19.1,
-    "ETH": -2.3,
-    "SOL": 3.4
+    "BTC": -18.8,
+    "ETH": -1.9,
+    "SOL": 3.6
    },
    "leitura": "neutro"
   },
@@ -259,13 +259,6 @@
     "moeda": "KERNEL",
     "padrao": "estrutura de baixa (topos e fundos descendentes)",
     "sentido": "baixa",
-    "confirmado": true,
-    "nivel": null
-   },
-   {
-    "moeda": "NEAR",
-    "padrao": "estrutura de alta (topos e fundos ascendentes)",
-    "sentido": "alta",
     "confirmado": true,
     "nivel": null
    },
@@ -437,9 +430,9 @@
  },
  "v4": {
   "vela": "04:00 UTC",
-  "apostas": 118,
+  "apostas": 119,
   "compras": 83,
-  "vendas": 35,
+  "vendas": 36,
   "mais_confiantes_venda": [
    {
     "moeda": "RESOLV",
@@ -793,8 +786,8 @@
     "n": 20877
    },
    "segue_maioria_24h": {
-    "acerto": 0.5016,
-    "n": 29352
+    "acerto": 0.4992,
+    "n": 29434
    }
   },
   "referencia_ganha": [],
