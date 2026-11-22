@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 16:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 16:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 56.6% das moedas subindo em 24 h, 43.4% em 4 h · BTC 24 h 1.05%, 4 h -0.39%.
+- **Amplitude:** 61.6% das moedas subindo em 24 h, 42.4% em 4 h · BTC 24 h 1.59%, 4 h -0.27%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': -0.6, 'ETH': 3.7, 'SOL': -4.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 1.0, 'ETH': 5.4, 'SOL': 1.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AAVE ombro-cabeça-ombro (baixa, formado) · ATOM fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · JTO fundo duplo (alta, formado) · JUP topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · VANA topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ATOM fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · JTO fundo duplo (alta, formado) · JUP topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · POL topo duplo (baixa, formado) · SOL topo duplo (baixa, formado) · VANA topo duplo (baixa, formado)
 - 📰 22/11 14:30 UTC · Cointelegraph: The future of onchain FX could start with users, not institutional liquidity
 - 📰 22/11 14:01 UTC · Decrypt: Google's Quantum Chip Beats Classical Limits in 'Impossible' Game
 - 📰 22/11 14:00 UTC · CoinDesk: Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 41684 apostas conferidas ao vivo, acerto 54.6%; prevê 60 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 41689 apostas conferidas ao vivo, acerto 54.6%; prevê 98 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
