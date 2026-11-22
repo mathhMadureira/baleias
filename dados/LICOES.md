@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 00:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 00:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 9.86** · 53 operações fechadas · 3 abertas
+Carteira **US$ 9.93** · 53 operações fechadas · 4 abertas
 
 - **Total:** 32/53 com lucro (60%), resultado +0.08, média +0.001 por operação.
 - **Últimas 24 h:** 2/3 com lucro, +0.12.
@@ -30,7 +30,7 @@ Carteira **US$ 8.51** · 40 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.74** · 32 operações fechadas · 3 abertas
+Carteira **US$ 9.65** · 32 operações fechadas · 3 abertas
 
 - **Total:** 14/32 com lucro (44%), resultado -0.26, média -0.008 por operação.
 - **Últimas 24 h:** 1/5 com lucro, -0.35.
@@ -43,7 +43,7 @@ Carteira **US$ 9.74** · 32 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.40** · 17 operações fechadas · 2 abertas
+Carteira **US$ 10.57** · 17 operações fechadas · 2 abertas
 
 - **Total:** 7/17 com lucro (41%), resultado +0.51, média +0.030 por operação.
 - **Últimas 24 h:** 0/2 com lucro, -0.12.
@@ -56,7 +56,7 @@ Carteira **US$ 10.40** · 17 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 9.90** · 57 operações fechadas · 2 abertas
+Carteira **US$ 9.97** · 57 operações fechadas · 2 abertas
 
 - **Total:** 30/57 com lucro (53%), resultado -0.13, média -0.002 por operação.
 - **Últimas 24 h:** 4/14 com lucro, -0.42.
@@ -69,11 +69,11 @@ Carteira **US$ 9.90** · 57 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 57.1% das moedas subindo em 24 h, 36.5% em 4 h · BTC 24 h 2.09%, 4 h -0.28%.
+- **Amplitude:** 57.1% das moedas subindo em 24 h, 34.1% em 4 h · BTC 24 h 2.04%, 4 h -0.26%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': 0.9, 'ETH': -8.2, 'SOL': -6.2} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ETHFI bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · VET topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': 0.4, 'ETH': -8.4, 'SOL': -6.4} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 5.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ETHFI bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · INJ topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · VET topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
@@ -83,12 +83,12 @@ Carteira **US$ 9.90** · 57 operações fechadas · 2 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
 - 21/11 23:09 UTC · **HYPER compra, SHIB venda, GTC compra, BEAMX venda** · {'universo': '127 moedas; varredura completa de 12; regime neutro (44,1% subindo em 24h, 29,1% em 4h); BTC 1h -0,54%, 4h -0,03%, 24h +1,65%. Testnet patrimônio 
 - 21/11 22:53 UTC · **HYPER compra, SHIB venda** · {'universo': '127 moedas; regime neutro (45,7% subindo em 24 h, 24,4% em 4 h); varredura completa de 12 moedas; conta testnet estava com 2 posições e patrimônio
 - 21/11 22:22 UTC · **SIGN compra, HYPER compra** · {'universo': '128 moedas lidas integralmente; mercado neutro: 46,9% alta 24h e 25,0% 4h; varredura multitempo completa em 12 moedas.', 'testnet': 'patrimônio US
 - 20/11 14:23 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 16,9% das 124 moedas sobem em 24 h e 16,9% em 4 h; v4 sem nenhuma moeda com confiança ≥ 0,12 nesta vela (14:15 UTC). Repique de 1 h segue: BCH +2,45%, NE
-- 20/11 14:09 UTC · **XLM venda, NEAR venda, BCH venda, SNX venda** · Baixa: 15,3% das 124 moedas sobem em 24 h e 20,2% em 4 h; 1 h com repique (42,4% sobem, BTC 1 h +0,51%, 24 h −3,37%). Carteiras H63: BTC 0×16, ETH 1×7, NEAR 0×2
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
@@ -117,7 +117,7 @@ Carteira **US$ 9.90** · 57 operações fechadas · 2 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 39254 apostas conferidas ao vivo, acerto 54.6%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 39302 apostas conferidas ao vivo, acerto 54.6%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
