@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 20:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 20:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 59.6% das moedas subindo em 24 h, 24.2% em 4 h · BTC 24 h 0.32%, 4 h -1.15%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.7%/ano · {'BTC': -10.3, 'ETH': -6.1, 'SOL': 3.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.7%/ano · {'BTC': -9.3, 'ETH': -5.8, 'SOL': 3.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · HBAR triângulo ascendente (alta, formado) · ICP topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PARTI fundo duplo (alta, formado)
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
