@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 19:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 19:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 65.0% das moedas subindo em 24 h, 42.0% em 4 h · BTC 24 h 0.78%, 4 h -0.25%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.2%/ano · {'BTC': -14.6, 'ETH': -7.0, 'SOL': 2.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.0%/ano · {'BTC': -14.8, 'ETH': -6.6, 'SOL': 2.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · HBAR triângulo ascendente (alta, formado) · ICP topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
 - 📰 22/11 14:30 UTC · Cointelegraph: The future of onchain FX could start with users, not institutional liquidity
 - 📰 22/11 14:01 UTC · Decrypt: Google's Quantum Chip Beats Classical Limits in 'Impossible' Game
 - 📰 22/11 14:00 UTC · CoinDesk: Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins
 - 📰 22/11 11:25 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 22/11 09:33 UTC · Cointelegraph: Bitcoin briefly drops to $17K on Kraken, exchange upholds trades
-- 📰 22/11 07:24 UTC · Cointelegraph: South Korean exchanges halt CYBER transfers amid suspected bridge exploit
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

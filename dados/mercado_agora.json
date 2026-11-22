@@ -1,6 +1,6 @@
 {
- "t": 1795376181,
- "hora_utc": "2026-11-22 19:36 UTC",
+ "t": 1795376362,
+ "hora_utc": "2026-11-22 19:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,11 +172,17 @@
   0.59,
   -0.69,
   -0.1,
-  -0.09
+  -0.05
  ],
  "contexto": {
-  "t": 1795376181,
+  "t": 1795376362,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795375800,
+    "hora_utc": "22/11 19:30",
+    "titulo": "More on the pending oversight hearings: State of Crypto"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795357800,
@@ -226,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -1.2,
+   "media_top20_anual_pct": -1.0,
    "principais_anual_pct": {
-    "BTC": -14.6,
-    "ETH": -7.0,
-    "SOL": 2.5
+    "BTC": -14.8,
+    "ETH": -6.6,
+    "SOL": 2.9
    },
    "leitura": "neutro"
   },
