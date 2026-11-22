@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 57.1% | 266 | 51.1%–62.9% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.7% | 2370 | 50.6%–54.7% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 2371 | 50.7%–54.7% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 85.7% | 7 | 48.7%–97.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 72.7% | 11 | 43.4%–90.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 60.6% | 33 | 43.7%–75.3% | física: alta anormal de 1 h → devolve |
@@ -18,8 +18,8 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | tres_corvos | reprovado | 49.5% | 418 | 44.8%–54.3% | H6: três corvos → sobe (efeito pequeno) |
 | reversao_queda | reprovado | 49.3% | 73 | 38.2%–60.5% | H14: queda anormal de 1 h → sobe |
 | vortice_invertido | reprovado | 48.9% | 466 | 44.4%–53.5% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
-| williams_volb_alta | reprovado | 45.1% | 144 | 37.2%–53.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | velez_180_baixa | reprovado | 44.8% | 58 | 32.7%–57.5% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
+| williams_volb_alta | reprovado | 44.8% | 145 | 37.0%–53.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | connors_8020_alta | reprovado | 42.9% | 14 | 21.4%–67.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | rompimento | reprovado | 41.7% | 36 | 27.1%–57.8% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | raschke_graal_alta | reprovado | 38.1% | 21 | 20.8%–59.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
