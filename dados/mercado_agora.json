@@ -1,6 +1,6 @@
 {
- "t": 1795386089,
- "hora_utc": "2026-11-22 22:21 UTC",
+ "t": 1795386259,
+ "hora_utc": "2026-11-22 22:24 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 100,
@@ -172,10 +172,10 @@
   -0.04,
   0.3,
   0.06,
-  -0.09
+  -0.22
  ],
  "contexto": {
-  "t": 1795386090,
+  "t": 1795386259,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -232,11 +232,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -0.9,
+   "media_top20_anual_pct": -1.9,
    "principais_anual_pct": {
-    "BTC": 5.9,
-    "ETH": -11.2,
-    "SOL": -3.6
+    "BTC": 5.3,
+    "ETH": -11.7,
+    "SOL": -4.6
    },
    "leitura": "neutro"
   },
@@ -419,35 +419,19 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.61,
+  "carteira": 8.4,
   "abertas": [
-   {
-    "moeda": "GTC",
-    "lado": "compra",
-    "entrada": 0.13416,
-    "agora": 0.13381,
-    "resultado_pct": -0.26,
-    "horas_aberta": 0.6,
-    "motivo_de_entrada": "Entrada: v4 p 0,638 de subir (confianca 0,138, a mais alta da rodada); elegivel no testnet; 1h +0,03%, 24h +1,49%; distancias de 24h: -2,37% da maxima e +2,86% "
-   },
    {
     "moeda": "DOGE",
     "lado": "compra",
     "entrada": 0.05532,
     "agora": 0.05517,
     "resultado_pct": -0.27,
-    "horas_aberta": 0.6,
+    "horas_aberta": 0.7,
     "motivo_de_entrada": "Entrada: padrao grafico confirmado a favor na varredura (triangulo descendente com rompimento de alta CONFIRMADO em 15m); 3/6 tempos acima da MM20 (5m, 15m, 1h)"
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "NEAR",
-    "lado": "venda",
-    "resultado_usd": -0.2,
-    "motivo_saida": "stop de segurança −0.8%",
-    "motivo_de_entrada": "Entrada nova: bandeira de baixa CONFIRMADA em 15 min e em 1 h (a favor); topo duplo em 4 h; 4 de 6 tempos abaixo da MM20"
-   },
    {
     "moeda": "XLM",
     "lado": "venda",
@@ -545,6 +529,13 @@
     "resultado_usd": -0.463,
     "motivo_saida": "stop de segurança −0.8%",
     "motivo_de_entrada": "Entrada: v4 p 0,625 de subir (confianca 0,126, elegivel H36); elegivel no testnet; fundo duplo em 4h; 1m acima da MM20 c"
+   },
+   {
+    "moeda": "GTC",
+    "lado": "compra",
+    "resultado_usd": -0.463,
+    "motivo_saida": "stop de segurança −0.8%",
+    "motivo_de_entrada": "Entrada: v4 p 0,638 de subir (confianca 0,138, a mais alta da rodada); elegivel no testnet; 1h +0,03%, 24h +1,49%; dista"
    }
   ],
   "licoes_anteriores": [
@@ -589,19 +580,15 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.61,
-   "n_abertas": 2,
+   "carteira": 8.4,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "GTC",
-     "compra"
-    ],
     [
      "DOGE",
      "compra"
     ]
    ],
-   "n_fechadas": 59,
+   "n_fechadas": 60,
    "ordem": null
   },
   {
@@ -651,7 +638,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.84,
+   "carteira": 9.74,
    "n_abertas": 1,
    "abertas": [
     [
@@ -679,13 +666,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 59,
-    "acerto": 0.576,
-    "soma": -0.865,
+    "ops": 60,
+    "acerto": 0.567,
+    "soma": -1.328,
     "ganho_medio": 0.143,
-    "perda_media": -0.228,
-    "fator_lucro": 0.85,
-    "carteira": 8.61
+    "perda_media": -0.237,
+    "fator_lucro": 0.78,
+    "carteira": 8.4
    },
    "openbot_testnet": {
     "ops": 43,
@@ -712,7 +699,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.183,
     "fator_lucro": 1.08,
-    "carteira": 9.84
+    "carteira": 9.74
    },
    "guardiao": {
     "ops": 59,
