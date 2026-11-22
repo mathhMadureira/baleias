@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 00:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 00:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 8.69** · 38 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.69** · 31 operações fechadas · 3 abertas
+Carteira **US$ 9.75** · 31 operações fechadas · 4 abertas
 
 - **Total:** 13/31 com lucro (42%), resultado -0.34, média -0.011 por operação.
 - **Últimas 24 h:** 0/4 com lucro, -0.43.
@@ -43,7 +43,7 @@ Carteira **US$ 9.69** · 31 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.45** · 17 operações fechadas · 2 abertas
+Carteira **US$ 10.39** · 17 operações fechadas · 2 abertas
 
 - **Total:** 7/17 com lucro (41%), resultado +0.51, média +0.030 por operação.
 - **Últimas 24 h:** 0/2 com lucro, -0.12.
@@ -56,7 +56,7 @@ Carteira **US$ 10.45** · 17 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 10.01** · 53 operações fechadas · 4 abertas
+Carteira **US$ 10.00** · 53 operações fechadas · 4 abertas
 
 - **Total:** 28/53 com lucro (53%), resultado -0.17, média -0.003 por operação.
 - **Últimas 24 h:** 2/10 com lucro, -0.46.
@@ -69,11 +69,11 @@ Carteira **US$ 10.01** · 53 operações fechadas · 4 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 54.0% das moedas subindo em 24 h, 40.5% em 4 h · BTC 24 h 2.21%, 4 h -0.08%.
+- **Amplitude:** 57.1% das moedas subindo em 24 h, 36.5% em 4 h · BTC 24 h 2.09%, 4 h -0.28%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': 3.4, 'ETH': -6.5, 'SOL': -3.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.6%/ano · {'BTC': 3.6, 'ETH': -6.7, 'SOL': -4.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ETHFI bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · BREV fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · INIT OCO invertido (alta, formado) · INJ topo duplo (baixa, formado) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ETHFI bandeira de alta (alta, CONFIRMOU) · AVAX topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · JTO OCO invertido (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE fundo duplo (alta, formado) · VET topo duplo (baixa, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
 - 📰 21/11 17:50 UTC · CoinDesk: Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave
 - 📰 21/11 17:01 UTC · Decrypt: Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges
@@ -117,7 +117,7 @@ Carteira **US$ 10.01** · 53 operações fechadas · 4 abertas
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 39210 apostas conferidas ao vivo, acerto 54.6%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 39254 apostas conferidas ao vivo, acerto 54.6%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
