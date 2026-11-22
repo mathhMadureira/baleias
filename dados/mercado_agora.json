@@ -1,6 +1,6 @@
 {
- "t": 1795325909,
- "hora_utc": "2026-11-22 05:38 UTC",
+ "t": 1795326123,
+ "hora_utc": "2026-11-22 05:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 115,
@@ -172,10 +172,10 @@
   -1.02,
   -0.23,
   -0.08,
-  -0.82
+  -0.8
  ],
  "contexto": {
-  "t": 1795325910,
+  "t": 1795326123,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -254,12 +254,6 @@
     "t": 1795240759,
     "hora_utc": "21/11 05:59",
     "titulo": "XRP falls 10% as long bets unwind and ETF assets slip below $1 billion"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795239635,
-    "hora_utc": "21/11 05:40",
-    "titulo": "Hong Kong pushes to bring crypto custodians, advisers under licensing rules"
    }
   ],
   "medo_ganancia": {
@@ -270,9 +264,9 @@
   "funding": {
    "media_top20_anual_pct": -0.4,
    "principais_anual_pct": {
-    "BTC": -11.6,
-    "ETH": -5.9,
-    "SOL": -11.7
+    "BTC": -11.5,
+    "ETH": -6.3,
+    "SOL": -11.9
    },
    "leitura": "neutro"
   },
