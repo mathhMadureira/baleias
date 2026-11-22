@@ -1,20 +1,20 @@
 {
- "t": 1795320097,
- "hora_utc": "2026-11-22 04:01 UTC",
+ "t": 1795320313,
+ "hora_utc": "2026-11-22 04:05 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 123,
-  "subindo_pct": 33.3,
+  "moedas": 121,
+  "subindo_pct": 33.9,
   "mediana_pct": -0.16
  },
  "mercado_4h": {
-  "moedas": 123,
-  "subindo_pct": 10.6,
+  "moedas": 121,
+  "subindo_pct": 10.7,
   "mediana_pct": -1.29
  },
  "mercado_24h": {
-  "moedas": 123,
-  "subindo_pct": 87.8,
+  "moedas": 121,
+  "subindo_pct": 88.4,
   "mediana_pct": 3.79
  },
  "btc": {
@@ -56,12 +56,6 @@
    "vol": 0.94
   },
   {
-   "moeda": "BREV",
-   "4h": -3.8,
-   "24h": -13.05,
-   "vol": 0.97
-  },
-  {
    "moeda": "MMT",
    "4h": -3.32,
    "24h": -20.77,
@@ -84,6 +78,12 @@
    "4h": -2.71,
    "24h": 8.1,
    "vol": 0.6
+  },
+  {
+   "moeda": "RAY",
+   "4h": -2.58,
+   "24h": 6.69,
+   "vol": 0.35
   }
  ],
  "maiores_altas_4h": [
@@ -172,10 +172,10 @@
   -0.16,
   -1.02,
   -0.23,
-  0.44
+  0.22
  ],
  "contexto": {
-  "t": 1795320098,
+  "t": 1795320313,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -268,11 +268,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.9,
+   "media_top20_anual_pct": -4.1,
    "principais_anual_pct": {
-    "BTC": 11.0,
-    "ETH": 9.2,
-    "SOL": 4.9
+    "BTC": 0.6,
+    "ETH": -7.5,
+    "SOL": -8.4
    },
    "leitura": "neutro"
   },
@@ -310,13 +310,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 91.09
-   },
-   {
-    "moeda": "BREV",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.0685
    },
    {
     "moeda": "CELO",
@@ -678,7 +671,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.69,
+   "carteira": 9.71,
    "n_abertas": 1,
    "abertas": [
     [
@@ -742,7 +735,7 @@
     "ganho_medio": 0.173,
     "perda_media": -0.149,
     "fator_lucro": 0.92,
-    "carteira": 9.69
+    "carteira": 9.71
    },
    "laboratorio": {
     "ops": 19,
@@ -773,11 +766,11 @@
   "z_contra_lab": 2.91,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5016,
-    "n": 23953
+    "acerto": 0.5013,
+    "n": 23726
    },
    "segue_maioria_24h": {
-    "acerto": 0.501,
+    "acerto": 0.5007,
     "n": 29952
    }
   },
