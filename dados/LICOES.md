@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 22:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 22:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 8.38** · 61 operações fechadas · 0 abertas
 Carteira **US$ 8.08** · 43 operações fechadas · 4 abertas
 
 - **Total:** 14/43 com lucro (33%), resultado -1.87, média -0.044 por operação.
-- **Últimas 24 h:** 1/6 com lucro, -0.59.
+- **Últimas 24 h:** 1/5 com lucro, -0.56.
 - **Por horário:** 06–11 UTC: 3 op, 0% certas, -1.16 · 00–05 UTC: 4 op, 25% certas, -0.39 · 18–23 UTC: 17 op, 29% certas, -0.27 · 12–17 UTC: 19 op, 42% certas, -0.05
 - **Por lado:** compra: 9 op, 11% certas, -2.74 · venda: 34 op, 38% certas, +0.87
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −0.80% na co: 6 op, 17% certas, -0.54 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 1 op, 100% certas, +0.41 · fora da lista de posições do c: 8 op, 12% certas, +0.48 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -43,7 +43,7 @@ Carteira **US$ 9.68** · 35 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.73** · 19 operações fechadas · 1 abertas
+Carteira **US$ 9.74** · 19 operações fechadas · 1 abertas
 
 - **Total:** 7/19 com lucro (37%), resultado +0.18, média +0.010 por operação.
 - **Últimas 24 h:** 0/4 com lucro, -0.44.
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 61.0% das moedas subindo em 24 h, 23.0% em 4 h · BTC 24 h 1.07%, 4 h 0.2%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.3%/ano · {'BTC': 6.6, 'ETH': -9.9, 'SOL': -0.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.2%/ano · {'BTC': 6.7, 'ETH': -9.4, 'SOL': -0.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · CELO topo duplo (baixa, formado) · HBAR topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · LTC OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL OCO invertido (alta, formado) · XLM triângulo ascendente (alta, formado)
 - 📰 22/11 22:47 UTC · Cointelegraph: Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest
