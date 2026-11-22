@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 05:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 05:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 86.1% das moedas subindo em 24 h, 8.7% em 4 h · BTC 24 h 5.1%, 4 h -1.86%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': -11.5, 'ETH': -6.3, 'SOL': -11.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.4%/ano · {'BTC': -11.5, 'ETH': -6.6, 'SOL': -11.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENSO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · LINK estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · TRX estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AAVE ombro-cabeça-ombro (baixa, formado) · BMT topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · CELO OCO invertido (alta, formado) · ERA topo duplo (baixa, formado)
 - 📰 22/11 05:28 UTC · Cointelegraph: Chainflip confirms $12M hack, offers attacker 10% bounty
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 18 em observação, 0 podadas)
 
-**v4 (o cérebro de todos):** 40028 apostas conferidas ao vivo, acerto 54.8%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 40037 apostas conferidas ao vivo, acerto 54.8%; prevê 25 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
