@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 07:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 07:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 66.7% das moedas subindo em 24 h, 41.0% em 4 h · BTC 24 h 1.88%, 4 h -0.57%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.3%/ano · {'BTC': -4.3, 'ETH': -4.8, 'SOL': 0.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.1%/ano · {'BTC': -5.5, 'ETH': -4.7, 'SOL': 1.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ADA topo duplo (baixa, formado) · ARB OCO invertido (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · CELO topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · INIT fundo duplo (alta, formado) · JUP OCO invertido (alta, formado) · KITE triângulo ascendente (alta, formado)
 - 📰 22/11 05:28 UTC · Cointelegraph: Chainflip confirms $12M hack, offers attacker 10% bounty
