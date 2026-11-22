@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 14:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 14:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 58.2% das moedas subindo em 24 h, 41.8% em 4 h · BTC 24 h 0.77%, 4 h -0.45%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 0.3, 'ETH': 2.6, 'SOL': 3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 0.2, 'ETH': 2.9, 'SOL': 3.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** COOKIE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AAVE ombro-cabeça-ombro (baixa, formado) · ATOM fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ERA fundo duplo (alta, formado) · JTO fundo duplo (alta, formado) · JUP topo duplo (baixa, formado) · KAVA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 22/11 14:01 UTC · Decrypt: Google's Quantum Chip Beats Classical Limits in 'Impossible' Game
