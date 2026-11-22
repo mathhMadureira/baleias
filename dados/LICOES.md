@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 22/11/2026 02:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 22/11/2026 02:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 10.00** · 56 operações fechadas · 1 abertas
+Carteira **US$ 9.95** · 56 operações fechadas · 1 abertas
 
 - **Total:** 33/56 com lucro (59%), resultado -0.05, média -0.001 por operação.
 - **Últimas 24 h:** 3/6 com lucro, -0.00.
@@ -71,7 +71,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 56.3% das moedas subindo em 24 h, 64.3% em 4 h · BTC 24 h 1.73%, 4 h -0.45%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.6%/ano · {'BTC': -7.4, 'ETH': 4.1, 'SOL': -6.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.1%/ano · {'BTC': -7.4, 'ETH': 3.7, 'SOL': -6.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 77232, MM200 72486); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ERA OCO invertido (alta, CONFIRMOU) · ETHFI bandeira de alta (alta, CONFIRMOU) · BREV fundo duplo (alta, formado) · ERA topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GIGGLE topo duplo (baixa, formado) · GTC OCO invertido (alta, formado) · HUMA fundo duplo (alta, formado) · INIT OCO invertido (alta, formado) · KERNEL fundo duplo (alta, formado)
 - 📰 21/11 18:01 UTC · Decrypt: GTA 6 Leaker Dangles a PC Port Behind a $15 Million Crypto Pump
