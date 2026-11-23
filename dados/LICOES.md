@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 15:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 15:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,17 +66,17 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 86.3% das moedas subindo em 24 h, 92.3% em 4 h · BTC 24 h 3.57%, 4 h 2.88%.
+- **Amplitude:** 87.2% das moedas subindo em 24 h, 90.6% em 4 h · BTC 24 h 3.57%, 4 h 2.88%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': 5.9, 'ETH': 6.0, 'SOL': 0.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.7%/ano · {'BTC': 6.0, 'ETH': 7.3, 'SOL': -0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** IOST estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SPK OCO invertido (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · MUBARAK fundo duplo (alta, formado) · PENGU ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PEPE OCO invertido (alta, formado) · SPK topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** IOST estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA OCO invertido (alta, formado) · PENGU ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PEPE OCO invertido (alta, formado) · SUI fundo duplo (alta, formado)
+- 📰 23/11 15:29 UTC · CoinDesk: Binance hackers push $247 million through transactions designed to cloud the source
 - 📰 23/11 15:02 UTC · CoinDesk: Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin
 - 📰 23/11 14:47 UTC · Cointelegraph: Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe
 - 📰 23/11 14:43 UTC · CoinDesk: Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed
 - 📰 23/11 14:13 UTC · CoinDesk: Jensen Huang returns as Nvidia CEO as shares jump 27%
 - 📰 23/11 14:07 UTC · Decrypt: Nvidia Reinstates Jensen Huang as CEO Days After Board Ruled Out His Return
-- 📰 23/11 14:06 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido, reversao_alta. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44601 apostas conferidas ao vivo, acerto 54.4%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44623 apostas conferidas ao vivo, acerto 54.4%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
