@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 10:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 10:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 64.4% das moedas subindo em 24 h, 48.1% em 4 h · BTC 24 h 0.61%, 4 h -0.63%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': 11.0, 'ETH': -7.9, 'SOL': -6.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': 11.0, 'ETH': -7.6, 'SOL': -6.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SUI fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · APT topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 09:40 UTC · CoinDesk: U.S. inflation, Thanksgiving trading: Crypto Week Ahead
