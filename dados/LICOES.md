@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 02:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 03:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,11 +68,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 62.4% das moedas subindo em 24 h, 15.8% em 4 h · BTC 24 h 1.54%, 4 h -0.47%.
+- **Amplitude:** 61.4% das moedas subindo em 24 h, 15.8% em 4 h · BTC 24 h 1.88%, 4 h -0.82%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.2%/ano · {'BTC': 9.8, 'ETH': -6.8, 'SOL': 1.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.1%/ano · {'BTC': 11.0, 'ETH': -12.3, 'SOL': 9.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AVAX triângulo simétrico (baixa, CONFIRMOU) · BMT fundo duplo (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · XPL estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · BMT ombro-cabeça-ombro (baixa, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CVX topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ACE topo duplo (baixa, CONFIRMOU) · BERA fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BMT ombro-cabeça-ombro (baixa, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CVX topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · XPL triângulo descendente (baixa, formado)
 - 📰 23/11 00:53 UTC · Cointelegraph: Half of wallets on Trump’s dinner list got tokens from non-US exchanges
 - 📰 22/11 22:47 UTC · Cointelegraph: Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
@@ -117,7 +117,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 43220 apostas conferidas ao vivo, acerto 54.7%; prevê 100 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 43256 apostas conferidas ao vivo, acerto 54.7%; prevê 100 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
