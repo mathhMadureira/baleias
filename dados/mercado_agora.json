@@ -1,6 +1,6 @@
 {
- "t": 1795451937,
- "hora_utc": "2026-11-23 16:38 UTC",
+ "t": 1795452174,
+ "hora_utc": "2026-11-23 16:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
@@ -172,11 +172,17 @@
   4.1,
   -1.48,
   0.01,
-  -0.88
+  -1.25
  ],
  "contexto": {
-  "t": 1795451938,
+  "t": 1795452175,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795451943,
+    "hora_utc": "23/11 16:39",
+    "titulo": "Cathie Wood's ARK Invest pulls the plug on two planned crypto ETFs"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795451524,
@@ -260,12 +266,6 @@
     "t": 1795440853,
     "hora_utc": "23/11 13:34",
     "titulo": "Morning Minute: Crypto Rebounds after NVDA Drives Friday Selloff"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795440661,
-    "hora_utc": "23/11 13:31",
-    "titulo": "Strategy buys 457 Bitcoin, spends $212M on preferred share buybacks"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.1,
+   "media_top20_anual_pct": 2.7,
    "principais_anual_pct": {
-    "BTC": 6.0,
-    "ETH": 10.6,
+    "BTC": 4.0,
+    "ETH": 9.2,
     "SOL": -18.2
    },
    "leitura": "neutro"
