@@ -1,6 +1,6 @@
 {
- "t": 1795444516,
- "hora_utc": "2026-11-23 14:35 UTC",
+ "t": 1795444763,
+ "hora_utc": "2026-11-23 14:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 112,
@@ -172,10 +172,10 @@
   -0.01,
   -0.16,
   4.1,
-  -0.81
+  -0.67
  ],
  "contexto": {
-  "t": 1795444517,
+  "t": 1795444764,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -253,7 +253,7 @@
     "fonte": "CoinDesk",
     "t": 1795438880,
     "hora_utc": "23/11 13:01",
-    "titulo": "Live updates: Bitcoin climbs back to $64,000 as Nasdaq soars 7% on Huang return"
+    "titulo": "Live updates: Bitcoin climbs back to $64,000 as Nasdaq soars 6% on Huang return"
    },
    {
     "fonte": "Decrypt",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.5,
+   "media_top20_anual_pct": 8.3,
    "principais_anual_pct": {
-    "BTC": 7.7,
-    "ETH": 7.4,
+    "BTC": 8.1,
+    "ETH": 8.2,
     "SOL": 11.0
    },
    "leitura": "neutro"
