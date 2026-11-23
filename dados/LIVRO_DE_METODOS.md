@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.4% | 280 | 50.6%–62.1% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.8% | 2472 | 50.9%–54.8% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.8% | 2473 | 50.8%–54.8% | rede neural 16→12→1, aprende a cada vela |
 | williams_wr_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | reversao_alta | promissor | 64.1% | 39 | 48.4%–77.3% | física: alta anormal de 1 h → devolve |
@@ -14,7 +14,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | connors_8020_baixa | promissor | 60.0% | 10 | 31.3%–83.2% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | raschke_graal_baixa | promissor | 58.7% | 75 | 47.4%–69.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
-| williams_volb_baixa | promissor | 52.4% | 210 | 45.6%–59.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
+| williams_volb_baixa | promissor | 52.6% | 211 | 45.9%–59.2% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | demark_td9_alta | reprovado | 50.0% | 64 | 38.1%–61.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | tres_corvos | reprovado | 49.8% | 434 | 45.1%–54.5% | H6: três corvos → sobe (efeito pequeno) |
 | reversao_queda | reprovado | 49.3% | 73 | 38.2%–60.5% | H14: queda anormal de 1 h → sobe |
