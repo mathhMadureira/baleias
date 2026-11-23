@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 23:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 23:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.52** · 67 operações fechadas · 3 abertas
+Carteira **US$ 6.64** · 67 operações fechadas · 3 abertas
 
 - **Total:** 36/67 com lucro (54%), resultado -2.86, média -0.043 por operação.
 - **Últimas 24 h:** 2/6 com lucro, -1.24.
@@ -17,7 +17,7 @@ Carteira **US$ 6.52** · 67 operações fechadas · 3 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 7.20** · 51 operações fechadas · 2 abertas
+Carteira **US$ 7.24** · 51 operações fechadas · 2 abertas
 
 - **Total:** 15/51 com lucro (29%), resultado -2.60, média -0.051 por operação.
 - **Últimas 24 h:** 1/6 com lucro, -0.42.
@@ -30,7 +30,7 @@ Carteira **US$ 7.20** · 51 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.63** · 38 operações fechadas · 3 abertas
+Carteira **US$ 8.85** · 38 operações fechadas · 3 abertas
 
 - **Total:** 16/38 com lucro (42%), resultado -0.79, média -0.021 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.48.
@@ -43,19 +43,20 @@ Carteira **US$ 8.63** · 38 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.42** · 20 operações fechadas · 4 abertas
+Carteira **US$ 10.11** · 21 operações fechadas · 3 abertas
 
-- **Total:** 7/20 com lucro (35%), resultado -0.20, média -0.010 por operação.
-- **Por horário:** 18–23 UTC: 13 op, 38% certas, -0.44 · 00–05 UTC: 2 op, 0% certas, -0.33 · 12–17 UTC: 5 op, 40% certas, +0.56
-- **Por lado:** compra: 10 op, 20% certas, -1.13 · venda: 10 op, 50% certas, +0.93
-- **Por motivo de saída:** Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
+- **Total:** 7/21 com lucro (33%), resultado -0.75, média -0.036 por operação.
+- **Últimas 24 h:** 0/1 com lucro, -0.55.
+- **Por horário:** 18–23 UTC: 14 op, 36% certas, -0.99 · 00–05 UTC: 2 op, 0% certas, -0.33 · 12–17 UTC: 5 op, 40% certas, +0.56
+- **Por lado:** compra: 10 op, 20% certas, -1.13 · venda: 11 op, 45% certas, +0.38
+- **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 1 op, 0% certas, -0.55 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
 - **Moedas que mais perderam (≥ 3 op):** SOPH -0.62 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** SOPH -0.62 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.71** · 68 operações fechadas · 3 abertas
+Carteira **US$ 7.79** · 68 operações fechadas · 3 abertas
 
 - **Total:** 35/68 com lucro (51%), resultado -2.05, média -0.030 por operação.
 - **Últimas 24 h:** 4/9 com lucro, -1.78.
@@ -70,7 +71,7 @@ Carteira **US$ 7.71** · 68 operações fechadas · 3 abertas
 
 - **Amplitude:** 70.4% das moedas subindo em 24 h, 16.8% em 4 h · BTC 24 h 0.83%, 4 h 0.18%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': 11.0, 'ETH': -14.4, 'SOL': -0.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': 11.0, 'ETH': -14.2, 'SOL': -0.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB bandeira de alta (alta, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · MET fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 23:06 UTC · Decrypt: China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size
