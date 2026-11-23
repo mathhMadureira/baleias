@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 22:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 22:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.68** · 63 operações fechadas · 2 abertas
+Carteira **US$ 8.80** · 63 operações fechadas · 2 abertas
 
 - **Total:** 35/63 com lucro (56%), resultado -1.72, média -0.027 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.39.
@@ -30,7 +30,7 @@ Carteira **US$ 7.94** · 47 operações fechadas · 3 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.43** · 36 operações fechadas · 2 abertas
+Carteira **US$ 10.63** · 36 operações fechadas · 2 abertas
 
 - **Total:** 16/36 com lucro (44%), resultado +0.24, média +0.007 por operação.
 - **Últimas 24 h:** 1/1 com lucro, +0.56.
@@ -43,7 +43,7 @@ Carteira **US$ 10.43** · 36 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.80** · 20 operações fechadas · 2 abertas
+Carteira **US$ 10.23** · 20 operações fechadas · 2 abertas
 
 - **Total:** 7/20 com lucro (35%), resultado -0.20, média -0.010 por operação.
 - **Últimas 24 h:** 0/1 com lucro, -0.39.
@@ -71,7 +71,7 @@ Carteira **US$ 9.01** · 64 operações fechadas · 0 abertas
 
 - **Amplitude:** 66.7% das moedas subindo em 24 h, 7.9% em 4 h · BTC 24 h 0.71%, 4 h -0.54%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.9%/ano · {'BTC': 11.0, 'ETH': -9.6, 'SOL': -8.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 11.0, 'ETH': -9.5, 'SOL': -8.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BABY fundo duplo (alta, formado) · EIGEN fundo duplo (alta, formado) · MET fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE OCO invertido (alta, formado) · SAND fundo duplo (alta, formado) · TIA OCO invertido (alta, formado) · USUAL topo duplo (baixa, formado)
 - 📰 23/11 21:46 UTC · Decrypt: OpenAI Will Pay You Up to $8K to Preach the AI Gospel to Small Businesses
