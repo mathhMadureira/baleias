@@ -1,21 +1,21 @@
 {
- "t": 1795472369,
- "hora_utc": "2026-11-23 22:19 UTC",
+ "t": 1795472581,
+ "hora_utc": "2026-11-23 22:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 127,
-  "subindo_pct": 22.8,
+  "moedas": 126,
+  "subindo_pct": 23.0,
   "mediana_pct": -0.46
  },
  "mercado_4h": {
-  "moedas": 127,
-  "subindo_pct": 10.2,
-  "mediana_pct": -2.3
+  "moedas": 126,
+  "subindo_pct": 10.3,
+  "mediana_pct": -2.27
  },
  "mercado_24h": {
-  "moedas": 127,
-  "subindo_pct": 65.4,
-  "mediana_pct": 0.98
+  "moedas": 126,
+  "subindo_pct": 65.9,
+  "mediana_pct": 1.0
  },
  "btc": {
   "1h": -0.2,
@@ -172,10 +172,10 @@
   -0.19,
   -0.03,
   0.16,
-  -0.06
+  -0.01
  ],
  "contexto": {
-  "t": 1795472370,
+  "t": 1795472582,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.7,
+   "media_top20_anual_pct": 6.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -6.1,
-    "SOL": -7.4
+    "ETH": -6.3,
+    "SOL": -8.2
    },
    "leitura": "neutro"
   },
@@ -440,7 +440,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.95,
+  "carteira": 8.91,
   "abertas": [
    {
     "moeda": "NIL",
@@ -448,7 +448,7 @@
     "entrada": 0.04778,
     "agora": 0.04776,
     "resultado_pct": 0.04,
-    "horas_aberta": 0.1,
+    "horas_aberta": 0.2,
     "motivo_de_entrada": "Entrada: 4/6 tempos abaixo da MM20 (5m, 15m, 1h, 1d); 1h -0,48%, 4h -1,81%; 15s e 1m -0,23% fora do normal para baixo; queda ampla do mercado (mediana 4h -3,14%"
    }
   ],
@@ -601,7 +601,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.95,
+   "carteira": 8.91,
    "n_abertas": 1,
    "abertas": [
     [
@@ -663,7 +663,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 8.96,
+   "carteira": 9.19,
    "n_abertas": 1,
    "abertas": [
     [
@@ -685,7 +685,7 @@
     "ganho_medio": 0.152,
     "perda_media": -0.239,
     "fator_lucro": 0.82,
-    "carteira": 8.95
+    "carteira": 8.91
    },
    "openbot_testnet": {
     "ops": 47,
@@ -721,7 +721,7 @@
     "ganho_medio": 0.124,
     "perda_media": -0.16,
     "fator_lucro": 0.82,
-    "carteira": 8.96
+    "carteira": 9.19
    }
   },
   "vereditos": []
@@ -735,11 +735,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.505,
-    "n": 22878
+    "n": 22786
    },
    "segue_maioria_24h": {
-    "acerto": 0.5007,
-    "n": 27246
+    "acerto": 0.5021,
+    "n": 27116
    }
   },
   "referencia_ganha": [],
