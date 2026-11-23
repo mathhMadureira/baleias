@@ -1,6 +1,6 @@
 {
- "t": 1795478124,
- "hora_utc": "2026-11-23 23:55 UTC",
+ "t": 1795478347,
+ "hora_utc": "2026-11-23 23:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   -0.03,
   0.16,
   -0.14,
-  0.1
+  0.03
  ],
  "contexto": {
-  "t": 1795478125,
+  "t": 1795478348,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -277,8 +277,8 @@
    "media_top20_anual_pct": 3.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -13.8,
-    "SOL": 0.2
+    "ETH": -13.7,
+    "SOL": -0.1
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 6.88,
+  "carteira": 6.91,
   "abertas": [
    {
     "moeda": "SENT",
@@ -497,7 +497,7 @@
     "entrada": 0.01986,
     "agora": 0.01986,
     "resultado_pct": 0.0,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Cacador explosao_1m forca 100 a 0.01991 (1 min +0,35%, z +3,3, volume 4,4x); 5 de 6 tempos acima da MM20 (1m 5m 15m 1h 1d); 15m +0,45%, 1h +0,30%, 1d +1,27%; ul"
    }
   ],
@@ -650,7 +650,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 6.88,
+   "carteira": 6.91,
    "n_abertas": 1,
    "abertas": [
     [
@@ -684,7 +684,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 8.61,
+   "carteira": 8.78,
    "n_abertas": 3,
    "abertas": [
     [
@@ -709,7 +709,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.33,
+   "carteira": 9.99,
    "n_abertas": 3,
    "abertas": [
     [
@@ -734,7 +734,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.64,
+   "carteira": 7.78,
    "n_abertas": 3,
    "abertas": [
     [
@@ -764,7 +764,7 @@
     "ganho_medio": 0.157,
     "perda_media": -0.274,
     "fator_lucro": 0.64,
-    "carteira": 6.88
+    "carteira": 6.91
    },
    "openbot_testnet": {
     "ops": 53,
@@ -782,7 +782,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.179,
     "fator_lucro": 0.8,
-    "carteira": 8.61
+    "carteira": 8.78
    },
    "laboratorio": {
     "ops": 21,
@@ -791,7 +791,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.224,
     "fator_lucro": 0.76,
-    "carteira": 9.33
+    "carteira": 9.99
    },
    "guardiao": {
     "ops": 69,
@@ -800,7 +800,7 @@
     "ganho_medio": 0.118,
     "perda_media": -0.186,
     "fator_lucro": 0.65,
-    "carteira": 7.64
+    "carteira": 7.78
    }
   },
   "vereditos": []
