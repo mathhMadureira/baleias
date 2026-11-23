@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 23:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 23:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.79** · 70 operações fechadas · 1 abertas
+Carteira **US$ 6.84** · 70 operações fechadas · 1 abertas
 
 - **Total:** 37/70 com lucro (53%), resultado -3.21, média -0.046 por operação.
 - **Últimas 24 h:** 3/9 com lucro, -1.59.
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.24** · 38 operações fechadas · 3 abertas
+Carteira **US$ 8.93** · 38 operações fechadas · 3 abertas
 
 - **Total:** 16/38 com lucro (42%), resultado -0.79, média -0.021 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.48.
@@ -43,7 +43,7 @@ Carteira **US$ 9.24** · 38 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.11** · 21 operações fechadas · 3 abertas
+Carteira **US$ 10.15** · 21 operações fechadas · 3 abertas
 
 - **Total:** 7/21 com lucro (33%), resultado -0.75, média -0.036 por operação.
 - **Últimas 24 h:** 0/1 com lucro, -0.55.
@@ -56,7 +56,7 @@ Carteira **US$ 10.11** · 21 operações fechadas · 3 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.92** · 69 operações fechadas · 3 abertas
+Carteira **US$ 7.87** · 69 operações fechadas · 3 abertas
 
 - **Total:** 35/69 com lucro (51%), resultado -2.21, média -0.032 por operação.
 - **Últimas 24 h:** 4/10 com lucro, -1.94.
@@ -69,17 +69,17 @@ Carteira **US$ 7.92** · 69 operações fechadas · 3 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 70.4% das moedas subindo em 24 h, 16.8% em 4 h · BTC 24 h 0.83%, 4 h 0.18%.
+- **Amplitude:** 61.6% das moedas subindo em 24 h, 24.0% em 4 h · BTC 24 h -0.2%, 4 h 0.23%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.5%/ano · {'BTC': 11.0, 'ETH': -14.9, 'SOL': -0.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': 11.0, 'ETH': -14.5, 'SOL': -0.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB bandeira de alta (alta, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · MET fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** ATOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB bandeira de alta (alta, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE OCO invertido (alta, formado)
+- 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
 - 📰 23/11 23:06 UTC · Decrypt: China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size
 - 📰 23/11 21:46 UTC · Decrypt: OpenAI Will Pay You Up to $8K to Preach the AI Gospel to Small Businesses
 - 📰 23/11 21:40 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 23/11 21:16 UTC · Decrypt: Why One Math Proof Has AI Experts Warning Humans Might Soon Lose Control
 - 📰 23/11 21:04 UTC · Cointelegraph: US seeks to recover $1.1B in crypto stolen in North Korea-linked Binance hack
-- 📰 23/11 20:38 UTC · Cointelegraph: Kalshi secures temporary win in New York gambling law dispute
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -117,7 +117,7 @@ Carteira **US$ 7.92** · 69 operações fechadas · 3 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 45590 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 45640 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
