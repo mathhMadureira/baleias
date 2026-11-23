@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 22:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 22:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 7.90** · 64 operações fechadas · 3 abertas
+Carteira **US$ 7.93** · 64 operações fechadas · 3 abertas
 
 - **Total:** 35/64 com lucro (55%), resultado -2.13, média -0.033 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.51.
@@ -30,7 +30,7 @@ Carteira **US$ 7.69** · 49 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 10.10** · 36 operações fechadas · 2 abertas
+Carteira **US$ 10.06** · 36 operações fechadas · 2 abertas
 
 - **Total:** 16/36 com lucro (44%), resultado +0.24, média +0.007 por operação.
 - **Últimas 24 h:** 1/1 com lucro, +0.56.
@@ -71,7 +71,7 @@ Carteira **US$ 8.74** · 64 operações fechadas · 2 abertas
 
 - **Amplitude:** 62.7% das moedas subindo em 24 h, 7.9% em 4 h · BTC 24 h 0.51%, 4 h -0.28%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': 11.0, 'ETH': -10.8, 'SOL': -6.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.5%/ano · {'BTC': 11.0, 'ETH': -11.0, 'SOL': -5.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · MET fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE OCO invertido (alta, formado) · RENDER fundo duplo (alta, formado) · SAND fundo duplo (alta, formado) · TIA OCO invertido (alta, formado) · USUAL topo duplo (baixa, formado)
 - 📰 23/11 21:46 UTC · Decrypt: OpenAI Will Pay You Up to $8K to Preach the AI Gospel to Small Businesses
