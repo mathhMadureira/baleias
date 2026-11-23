@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 10:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 10:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 67.0% das moedas subindo em 24 h, 56.3% em 4 h · BTC 24 h 0.84%, 4 h -0.28%.
+- **Amplitude:** 68.0% das moedas subindo em 24 h, 39.8% em 4 h · BTC 24 h 0.93%, 4 h -0.34%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 11.0, 'ETH': -6.7, 'SOL': -7.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': 11.0, 'ETH': -6.3, 'SOL': -7.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SUI fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · APT topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** SUI fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · ARB topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · MMT ombro-cabeça-ombro (baixa, formado) · MUBARAK fundo duplo (alta, formado)
 - 📰 23/11 10:31 UTC · CoinDesk: Bitcoin breaks a record streak of 'lower highs.' Here's what it means
 - 📰 23/11 09:40 UTC · CoinDesk: U.S. inflation, Thanksgiving trading: Crypto Week Ahead
 - 📰 23/11 09:05 UTC · Cointelegraph: ‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones
@@ -80,7 +80,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 13.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 13.1 h.
 - 22/11 21:41 UTC · **GTC compra, CYBER compra, DOGE compra, SKY venda** · Universo 99 moedas (vela do v4 fechada 21:30 UTC); regime neutro: 69,7% subindo em 24 h, 47,5% em 4 h; BTC 60.982 (1h +0,59%, 4h +0,19%, 24h +0,86%), abaixo das
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44461 apostas conferidas ao vivo, acerto 54.5%; prevê 102 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44506 apostas conferidas ao vivo, acerto 54.5%; prevê 102 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
