@@ -1,20 +1,20 @@
 {
- "t": 1795445255,
- "hora_utc": "2026-11-23 14:47 UTC",
+ "t": 1795445503,
+ "hora_utc": "2026-11-23 14:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
+  "moedas": 113,
   "subindo_pct": 93.8,
   "mediana_pct": 5.2
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 90.2,
-  "mediana_pct": 5.17
+  "moedas": 113,
+  "subindo_pct": 90.3,
+  "mediana_pct": 5.2
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 86.6,
+  "moedas": 113,
+  "subindo_pct": 86.7,
   "mediana_pct": 6.11
  },
  "btc": {
@@ -172,11 +172,17 @@
   -0.01,
   -0.16,
   4.1,
-  -1.14
+  -1.61
  ],
  "contexto": {
-  "t": 1795445256,
+  "t": 1795445505,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795445220,
+    "hora_utc": "23/11 14:47",
+    "titulo": "Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795444998,
@@ -260,12 +266,6 @@
     "t": 1795438880,
     "hora_utc": "23/11 13:01",
     "titulo": "Live updates: Bitcoin climbs above $63,000 as Nasdaq soars 6% on Huang return"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795437810,
-    "hora_utc": "23/11 12:43",
-    "titulo": "Solana Meme Coin for Fiona the Hippo Raises $100K for Cincinnati Zoo Charity"
    }
   ],
   "medo_ganancia": {
@@ -276,8 +276,8 @@
   "funding": {
    "media_top20_anual_pct": 8.0,
    "principais_anual_pct": {
-    "BTC": 7.2,
-    "ETH": 6.9,
+    "BTC": 6.1,
+    "ETH": 6.4,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -443,9 +443,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 76,
+  "apostas": 75,
   "compras": 44,
-  "vendas": 32,
+  "vendas": 31,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -799,12 +799,12 @@
   "z_contra_lab": 1.71,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5068,
-    "n": 21774
+    "acerto": 0.507,
+    "n": 21944
    },
    "segue_maioria_24h": {
-    "acerto": 0.5022,
-    "n": 27672
+    "acerto": 0.4995,
+    "n": 27710
    }
   },
   "referencia_ganha": [],
