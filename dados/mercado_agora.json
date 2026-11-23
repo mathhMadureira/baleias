@@ -1,28 +1,28 @@
 {
- "t": 1795452174,
- "hora_utc": "2026-11-23 16:42 UTC",
+ "t": 1795452412,
+ "hora_utc": "2026-11-23 16:46 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
-  "subindo_pct": 23.3,
-  "mediana_pct": -0.59
+  "subindo_pct": 15.0,
+  "mediana_pct": -0.98
  },
  "mercado_4h": {
   "moedas": 120,
-  "subindo_pct": 92.5,
-  "mediana_pct": 3.7
+  "subindo_pct": 90.8,
+  "mediana_pct": 2.66
  },
  "mercado_24h": {
   "moedas": 120,
   "subindo_pct": 85.0,
-  "mediana_pct": 4.72
+  "mediana_pct": 3.51
  },
  "btc": {
-  "1h": -1.05,
-  "4h": 2.24,
-  "24h": 2.46,
-  "preco": 62730.7,
-  "vol_4h_vs_media": 2.94
+  "1h": -1.31,
+  "4h": 1.54,
+  "24h": 1.39,
+  "preco": 62190.0,
+  "vol_4h_vs_media": 2.97
  },
  "maiores_quedas_4h": [
   {
@@ -32,22 +32,28 @@
    "vol": 2.08
   },
   {
+   "moeda": "LSK",
+   "4h": -0.93,
+   "24h": 13.81,
+   "vol": 3.52
+  },
+  {
    "moeda": "MMT",
-   "4h": -2.96,
-   "24h": -14.48,
-   "vol": 2.28
+   "4h": -0.78,
+   "24h": -8.36,
+   "vol": 2.4
   },
   {
-   "moeda": "SKY",
-   "4h": -0.97,
-   "24h": -5.35,
-   "vol": 2.27
+   "moeda": "MEGA",
+   "4h": -0.65,
+   "24h": 1.12,
+   "vol": 2.39
   },
   {
-   "moeda": "BREV",
-   "4h": -0.76,
-   "24h": 4.31,
-   "vol": 0.74
+   "moeda": "RARE",
+   "4h": -0.44,
+   "24h": -2.23,
+   "vol": 0.87
   },
   {
    "moeda": "JST",
@@ -56,96 +62,90 @@
    "vol": 1.74
   },
   {
-   "moeda": "MEGA",
-   "4h": -0.36,
-   "24h": 3.31,
-   "vol": 2.36
-  },
-  {
-   "moeda": "RARE",
-   "4h": -0.29,
-   "24h": -3.42,
-   "vol": 0.88
-  },
-  {
-   "moeda": "U",
-   "4h": -0.03,
-   "24h": -0.05,
-   "vol": 2.64
-  },
-  {
    "moeda": "WLFI",
-   "4h": 0.0,
-   "24h": -1.15,
-   "vol": 1.98
+   "4h": -0.23,
+   "24h": -1.61,
+   "vol": 2.07
   },
   {
    "moeda": "GTC",
-   "4h": 0.55,
-   "24h": -2.77,
-   "vol": 3.77
+   "4h": -0.16,
+   "24h": -3.84,
+   "vol": 3.69
+  },
+  {
+   "moeda": "BREV",
+   "4h": -0.15,
+   "24h": 5.14,
+   "vol": 0.69
+  },
+  {
+   "moeda": "U",
+   "4h": -0.05,
+   "24h": -0.06,
+   "vol": 2.74
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "LISTA",
-   "4h": 15.8,
-   "24h": 26.69,
-   "vol": 1.19
+   "4h": 16.03,
+   "24h": 25.35,
+   "vol": 1.27
   },
   {
    "moeda": "BEB",
-   "4h": 14.29,
-   "24h": 16.56,
-   "vol": 2.48
+   "4h": 13.53,
+   "24h": 14.95,
+   "vol": 2.49
   },
   {
    "moeda": "SAPIEN",
-   "4h": 12.45,
-   "24h": 5.9,
-   "vol": 4.29
-  },
-  {
-   "moeda": "PROM",
-   "4h": 11.99,
-   "24h": 46.0,
-   "vol": 1.85
+   "4h": 11.33,
+   "24h": 5.1,
+   "vol": 4.3
   },
   {
    "moeda": "CHIP",
-   "4h": 9.62,
-   "24h": 9.66,
-   "vol": 3.74
+   "4h": 8.32,
+   "24h": 9.81,
+   "vol": 3.73
   },
   {
    "moeda": "AIGENSYN",
-   "4h": 7.62,
-   "24h": 9.56,
-   "vol": 0.58
-  },
-  {
-   "moeda": "FIL",
-   "4h": 7.33,
-   "24h": 8.71,
-   "vol": 3.48
+   "4h": 7.06,
+   "24h": 8.76,
+   "vol": 0.61
   },
   {
    "moeda": "ATOM",
-   "4h": 7.32,
-   "24h": 7.95,
-   "vol": 3.27
+   "4h": 6.4,
+   "24h": 6.94,
+   "vol": 3.32
   },
   {
    "moeda": "ZEC",
-   "4h": 7.02,
-   "24h": 6.25,
-   "vol": 3.35
+   "4h": 6.18,
+   "24h": 5.08,
+   "vol": 3.41
   },
   {
-   "moeda": "CYBER",
-   "4h": 6.91,
-   "24h": 12.08,
-   "vol": 3.74
+   "moeda": "PENGU",
+   "4h": 5.53,
+   "24h": 7.45,
+   "vol": 3.73
+  },
+  {
+   "moeda": "ALLO",
+   "4h": 5.49,
+   "24h": 0.45,
+   "vol": 0.9
+  },
+  {
+   "moeda": "UNI",
+   "4h": 5.35,
+   "24h": 5.62,
+   "vol": 3.72
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   4.1,
   -1.48,
   0.01,
-  -1.25
+  -1.43
  ],
  "contexto": {
-  "t": 1795452175,
+  "t": 1795452413,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795452363,
+    "hora_utc": "23/11 16:46",
+    "titulo": "Tom Lee Says Ethereum Is as Scarce as Bitcoin—And Bitmine Just Bought More"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795451943,
@@ -229,7 +235,7 @@
     "fonte": "CoinDesk",
     "t": 1795443224,
     "hora_utc": "23/11 14:13",
-    "titulo": "Jensen Huang returns as Nvidia CEO as shares jump 27%"
+    "titulo": "Nvidia soars as Jensen Huang returns to lead company"
    },
    {
     "fonte": "Decrypt",
@@ -260,12 +266,6 @@
     "t": 1795441456,
     "hora_utc": "23/11 13:44",
     "titulo": "Trump-linked American Bitcoin secures $150M credit line from FalconX"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795440853,
-    "hora_utc": "23/11 13:34",
-    "titulo": "Morning Minute: Crypto Rebounds after NVDA Drives Friday Selloff"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.7,
+   "media_top20_anual_pct": 2.4,
    "principais_anual_pct": {
-    "BTC": 4.0,
-    "ETH": 9.2,
-    "SOL": -18.2
+    "BTC": 2.6,
+    "ETH": 8.6,
+    "SOL": -17.8
    },
    "leitura": "neutro"
   },
@@ -359,9 +359,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 80,
-  "compras": 45,
-  "vendas": 35,
+  "apostas": 130,
+  "compras": 99,
+  "vendas": 31,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -402,6 +402,10 @@
     "prob_subir": 0.645
    },
    {
+    "moeda": "U",
+    "prob_subir": 0.643
+   },
+   {
     "moeda": "RWUSD",
     "prob_subir": 0.61
    },
@@ -414,20 +418,16 @@
     "prob_subir": 0.598
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.589
-   },
-   {
     "moeda": "HEI",
     "prob_subir": 0.583
    },
    {
-    "moeda": "COTI",
-    "prob_subir": 0.569
+    "moeda": "BARD",
+    "prob_subir": 0.579
    },
    {
-    "moeda": "SKL",
-    "prob_subir": 0.564
+    "moeda": "ENS",
+    "prob_subir": 0.57
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -708,38 +708,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.8% em 27703 apostas (603 velas, 16/11 16:45–23/11 16:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5477,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.7% em 27631 apostas (603 velas, 16/11 17:00–23/11 16:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5471,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.51,
+  "z_contra_lab": 1.44,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5064,
-    "n": 22530
+    "acerto": 0.5062,
+    "n": 22480
    },
    "segue_maioria_24h": {
-    "acerto": 0.5017,
-    "n": 27595
+    "acerto": 0.5009,
+    "n": 27523
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5571,
-    "n": 7839
+    "acerto": 0.5563,
+    "n": 7800
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5702,
-    "n": 2969
+    "acerto": 0.5699,
+    "n": 2946
    },
    "confianca:<0,05": {
-    "acerto": 0.5326,
-    "n": 16051
+    "acerto": 0.5323,
+    "n": 16056
    },
    "confianca:≥0,12": {
-    "acerto": 0.6682,
-    "n": 844
+    "acerto": 0.6659,
+    "n": 829
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5208,
@@ -750,20 +750,20 @@
     "n": 6274
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.565,
-    "n": 6188
+    "acerto": 0.5625,
+    "n": 6116
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5748,
     "n": 7627
    },
    "lado:compra": {
-    "acerto": 0.5348,
-    "n": 11857
+    "acerto": 0.5344,
+    "n": 11872
    },
    "lado:venda": {
-    "acerto": 0.5573,
-    "n": 15846
+    "acerto": 0.5566,
+    "n": 15759
    }
   }
  },
