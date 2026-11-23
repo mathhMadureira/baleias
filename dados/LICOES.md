@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 02:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 02:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,11 +68,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 54.9% das moedas subindo em 24 h, 15.7% em 4 h · BTC 24 h 1.35%, 4 h -0.12%.
+- **Amplitude:** 56.3% das moedas subindo em 24 h, 24.3% em 4 h · BTC 24 h 1.49%, 4 h -0.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': 11.0, 'ETH': -7.2, 'SOL': 1.1} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AVAX triângulo simétrico (baixa, CONFIRMOU) · BMT fundo duplo (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · XPL estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BMT ombro-cabeça-ombro (baixa, formado) · CAKE OCO invertido (alta, formado) · CVX topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.4%/ano · {'BTC': 11.0, 'ETH': -7.6, 'SOL': 0.9} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** AVAX triângulo simétrico (baixa, CONFIRMOU) · BMT fundo duplo (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · XPL estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · BMT ombro-cabeça-ombro (baixa, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CVX topo duplo (baixa, formado)
 - 📰 23/11 00:53 UTC · Cointelegraph: Half of wallets on Trump’s dinner list got tokens from non-US exchanges
 - 📰 22/11 22:47 UTC · Cointelegraph: Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
@@ -117,7 +117,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 43146 apostas conferidas ao vivo, acerto 54.7%; prevê 101 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 43172 apostas conferidas ao vivo, acerto 54.7%; prevê 102 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
