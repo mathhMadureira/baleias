@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 10:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 10:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,15 +68,15 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 67.6% das moedas subindo em 24 h, 39.2% em 4 h · BTC 24 h 0.93%, 4 h -0.34%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.3%/ano · {'BTC': 11.0, 'ETH': -6.4, 'SOL': -7.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 11.0, 'ETH': -6.5, 'SOL': -7.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SUI fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · ARB topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · MMT ombro-cabeça-ombro (baixa, formado) · MUBARAK fundo duplo (alta, formado)
+- 📰 23/11 10:53 UTC · CoinDesk: South Korea to expand cryptocurrency account freezes and curb illicit transfers abroad
 - 📰 23/11 10:31 UTC · CoinDesk: Bitcoin breaks a record streak of 'lower highs.' Here's what it means
 - 📰 23/11 09:40 UTC · CoinDesk: U.S. inflation, Thanksgiving trading: Crypto Week Ahead
 - 📰 23/11 09:05 UTC · Cointelegraph: ‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones
 - 📰 23/11 08:08 UTC · Cointelegraph: Bitcoin ETFs shed $1.8B in third-largest weekly outflow
 - 📰 23/11 07:45 UTC · CoinDesk: Crypto thieves are using online ads to infect iPhones with a single tap, research finds
-- 📰 23/11 07:18 UTC · CoinDesk: This Swedish bitcoin treasury firm lost 30 BTC trading part of its own stack
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
