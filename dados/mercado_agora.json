@@ -1,28 +1,28 @@
 {
- "t": 1795411880,
- "hora_utc": "2026-11-23 05:31 UTC",
+ "t": 1795412096,
+ "hora_utc": "2026-11-23 05:34 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 106,
-  "subindo_pct": 74.5,
-  "mediana_pct": 0.41
+  "subindo_pct": 77.4,
+  "mediana_pct": 0.42
  },
  "mercado_4h": {
   "moedas": 106,
-  "subindo_pct": 82.1,
-  "mediana_pct": 1.32
+  "subindo_pct": 84.9,
+  "mediana_pct": 1.38
  },
  "mercado_24h": {
   "moedas": 106,
   "subindo_pct": 83.0,
-  "mediana_pct": 3.92
+  "mediana_pct": 4.01
  },
  "btc": {
-  "1h": -0.31,
-  "4h": 0.15,
-  "24h": 3.76,
-  "preco": 61194.01,
-  "vol_4h_vs_media": 1.0
+  "1h": 0.28,
+  "4h": 0.64,
+  "24h": 4.18,
+  "preco": 61476.01,
+  "vol_4h_vs_media": 1.01
  },
  "maiores_quedas_4h": [
   {
@@ -172,10 +172,10 @@
   -0.42,
   1.11,
   -0.07,
-  0.53
+  0.34
  ],
  "contexto": {
-  "t": 1795411881,
+  "t": 1795412097,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -233,12 +233,6 @@
    },
    {
     "fonte": "Cointelegraph",
-    "t": 1795346727,
-    "hora_utc": "22/11 11:25",
-    "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Cointelegraph",
     "t": 1795339986,
     "hora_utc": "22/11 09:33",
     "titulo": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades"
@@ -256,11 +250,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.1,
+   "media_top20_anual_pct": 5.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -3.5,
-    "SOL": 5.8
+    "ETH": -3.7,
+    "SOL": 5.5
    },
    "leitura": "neutro"
   },
@@ -397,13 +391,13 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 130,
-  "compras": 31,
-  "vendas": 99,
+  "apostas": 140,
+  "compras": 32,
+  "vendas": 108,
   "mais_confiantes_venda": [
    {
     "moeda": "SOPH",
-    "prob_subir": 0.319
+    "prob_subir": 0.315
    },
    {
     "moeda": "RESOLV",
@@ -426,11 +420,11 @@
     "prob_subir": 0.382
    },
    {
-    "moeda": "PEOPLE",
-    "prob_subir": 0.386
+    "moeda": "MEGA",
+    "prob_subir": 0.383
    },
    {
-    "moeda": "BABAB",
+    "moeda": "PEOPLE",
     "prob_subir": 0.386
    }
   ],
@@ -746,26 +740,26 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.9% em 28977 apostas (616 velas, 16/11 05:45–23/11 05:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.9% em 28979 apostas (616 velas, 16/11 05:45–23/11 05:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5493,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.69,
+  "z_contra_lab": 1.68,
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5042,
-    "n": 21670
+    "n": 21672
    },
    "segue_maioria_24h": {
     "acerto": 0.5018,
-    "n": 28802
+    "n": 28804
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5551,
-    "n": 8141
+    "acerto": 0.555,
+    "n": 8142
    },
    "confianca:0,08–0,12": {
     "acerto": 0.5603,
@@ -773,15 +767,15 @@
    },
    "confianca:<0,05": {
     "acerto": 0.5376,
-    "n": 16537
+    "n": 16538
    },
    "confianca:≥0,12": {
     "acerto": 0.6649,
     "n": 940
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5222,
-    "n": 7462
+    "acerto": 0.5221,
+    "n": 7464
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5383,
@@ -800,8 +794,8 @@
     "n": 12512
    },
    "lado:venda": {
-    "acerto": 0.5585,
-    "n": 16465
+    "acerto": 0.5584,
+    "n": 16467
    }
   }
  },
