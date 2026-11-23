@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 04:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 04:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,7 +69,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 77.9% das moedas subindo em 24 h, 78.8% em 4 h · BTC 24 h 3.11%, 4 h -0.0%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 11.0, 'ETH': 4.3, 'SOL': 8.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 11.0, 'ETH': 4.1, 'SOL': 8.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BERA fundo duplo (alta, CONFIRMOU) · CAKE OCO invertido (alta, CONFIRMOU) · MITO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · UNI OCO invertido (alta, CONFIRMOU) · XPL triângulo descendente (alta, CONFIRMOU) · AVAX triângulo simétrico (?, formado) · BMT fundo duplo (alta, formado) · BMT ombro-cabeça-ombro (baixa, formado) · BREV topo duplo (baixa, formado) · CELO triângulo descendente (baixa, formado)
 - 📰 23/11 04:45 UTC · CoinDesk: Market rout kills 50 basis points December Fed rate hike bets
