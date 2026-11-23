@@ -1,16 +1,16 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 23:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 23:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.66** · 66 operações fechadas · 3 abertas
+Carteira **US$ 6.40** · 67 operações fechadas · 2 abertas
 
-- **Total:** 36/66 com lucro (55%), resultado -2.40, média -0.036 por operação.
-- **Últimas 24 h:** 2/5 com lucro, -0.79.
-- **Por horário:** 18–23 UTC: 31 op, 45% certas, -3.11 · 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 25 op, 60% certas, +0.51 · 00–05 UTC: 9 op, 78% certas, +1.02
-- **Por lado:** compra: 20 op, 50% certas, -2.05 · venda: 46 op, 57% certas, -0.35
-- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · Entrada: aviso do Caçador 22:2: 1 op, 0% certas, -0.59 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · Entrada: v4 p 0,638 de subir (: 1 op, 0% certas, -0.46 · Entrada: v4 p 0,625 de subir (: 1 op, 0% certas, -0.46 · Entrada: aviso do Cacador vend: 1 op, 0% certas, -0.46 · Mantem: 6/6 tempos abaixo da M: 1 op, 0% certas, -0.41 · Entrada: padrao grafico confir: 1 op, 0% certas, -0.29 · Topo duplo CONFIRMADO em 1 h (: 1 op, 0% certas, -0.26 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.26 · Nova, a mercado: bandeira de b: 1 op, 0% certas, -0.24 · Entrada: 2/6 tempos abaixo da : 1 op, 0% certas, -0.23 · Entrada: v4 p=0,347, confiança: 1 op, 0% certas, -0.23 · Entrada nova: bandeira de baix: 1 op, 0% certas, -0.20 · Nova, a mercado: 6 de 6 tempos: 1 op, 0% certas, -0.19 · Entrada nova: 6 de 6 tempos ab: 1 op, 0% certas, -0.18 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · Entrada: 4/6 tempos acima da M: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · Entrada: 6/6 tempos abaixo da : 2 op, 50% certas, -0.06 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · Mantém: 4 de 6 tempos abaixo d: 2 op, 50% certas, -0.00 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · Entrada: varredura completa; 4: 1 op, 100% certas, +0.03 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · Entrada: v4 p 0,318 de subir (: 1 op, 100% certas, +0.11 · Aviso de compra do Caçador (5 : 1 op, 100% certas, +0.12 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · Entrada nova: estrutura de bai: 1 op, 100% certas, +0.16 · Entrada nova: fundo duplo CONF: 1 op, 100% certas, +0.17 · Mantém: 3 de 6 tempos abaixo (: 1 op, 100% certas, +0.25 · Mantem: 5/6 tempos abaixo da M: 1 op, 100% certas, +0.26 · Topo duplo CONFIRMADO em 1 h e: 1 op, 100% certas, +0.26 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · Entrada: varredura completa; 3: 1 op, 100% certas, +0.33 · Bandeira de baixa CONFIRMADA e: 1 op, 100% certas, +0.33 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39 · Entrada nova: 5 de 6 tempos ab: 1 op, 100% certas, +0.43
+- **Total:** 36/67 com lucro (54%), resultado -2.86, média -0.043 por operação.
+- **Últimas 24 h:** 2/6 com lucro, -1.24.
+- **Por horário:** 18–23 UTC: 32 op, 44% certas, -3.56 · 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 25 op, 60% certas, +0.51 · 00–05 UTC: 9 op, 78% certas, +1.02
+- **Por lado:** compra: 20 op, 50% certas, -2.05 · venda: 47 op, 55% certas, -0.81
+- **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · Entrada: aviso do Caçador 22:2: 1 op, 0% certas, -0.59 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · Entrada: v4 p 0,638 de subir (: 1 op, 0% certas, -0.46 · Entrada: v4 p 0,625 de subir (: 1 op, 0% certas, -0.46 · Entrada: aviso do Cacador vend: 1 op, 0% certas, -0.46 · Entrada: v4 0,369 de subir (co: 1 op, 0% certas, -0.46 · Mantem: 6/6 tempos abaixo da M: 1 op, 0% certas, -0.41 · Entrada: padrao grafico confir: 1 op, 0% certas, -0.29 · Topo duplo CONFIRMADO em 1 h (: 1 op, 0% certas, -0.26 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.26 · Nova, a mercado: bandeira de b: 1 op, 0% certas, -0.24 · Entrada: 2/6 tempos abaixo da : 1 op, 0% certas, -0.23 · Entrada: v4 p=0,347, confiança: 1 op, 0% certas, -0.23 · Entrada nova: bandeira de baix: 1 op, 0% certas, -0.20 · Nova, a mercado: 6 de 6 tempos: 1 op, 0% certas, -0.19 · Entrada nova: 6 de 6 tempos ab: 1 op, 0% certas, -0.18 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · Entrada: 4/6 tempos acima da M: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · Entrada: 6/6 tempos abaixo da : 2 op, 50% certas, -0.06 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · Mantém: 4 de 6 tempos abaixo d: 2 op, 50% certas, -0.00 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · Entrada: varredura completa; 4: 1 op, 100% certas, +0.03 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · Entrada: v4 p 0,318 de subir (: 1 op, 100% certas, +0.11 · Aviso de compra do Caçador (5 : 1 op, 100% certas, +0.12 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · Entrada nova: estrutura de bai: 1 op, 100% certas, +0.16 · Entrada nova: fundo duplo CONF: 1 op, 100% certas, +0.17 · Mantém: 3 de 6 tempos abaixo (: 1 op, 100% certas, +0.25 · Mantem: 5/6 tempos abaixo da M: 1 op, 100% certas, +0.26 · Topo duplo CONFIRMADO em 1 h e: 1 op, 100% certas, +0.26 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · Entrada: varredura completa; 3: 1 op, 100% certas, +0.33 · Bandeira de baixa CONFIRMADA e: 1 op, 100% certas, +0.33 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39 · Entrada nova: 5 de 6 tempos ab: 1 op, 100% certas, +0.43
 - **Moedas que mais perderam (≥ 3 op):** GTC -0.64 (4 op) · XLM -0.18 (3 op) · BTC +0.15 (3 op) · RUNE +0.16 (3 op) · MORPHO +0.18 (3 op)
 - **Moedas que mais ganharam (≥ 3 op):** ACE +0.33 (3 op) · ZEC +0.30 (4 op) · SKY +0.26 (4 op) · MORPHO +0.18 (3 op) · RUNE +0.16 (3 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
@@ -30,7 +30,7 @@ Carteira **US$ 7.39** · 49 operações fechadas · 4 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.77** · 38 operações fechadas · 2 abertas
+Carteira **US$ 8.53** · 38 operações fechadas · 2 abertas
 
 - **Total:** 16/38 com lucro (42%), resultado -0.79, média -0.021 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.48.
@@ -43,7 +43,7 @@ Carteira **US$ 8.77** · 38 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.16** · 20 operações fechadas · 4 abertas
+Carteira **US$ 10.43** · 20 operações fechadas · 4 abertas
 
 - **Total:** 7/20 com lucro (35%), resultado -0.20, média -0.010 por operação.
 - **Por horário:** 18–23 UTC: 13 op, 38% certas, -0.44 · 00–05 UTC: 2 op, 0% certas, -0.33 · 12–17 UTC: 5 op, 40% certas, +0.56
@@ -55,7 +55,7 @@ Carteira **US$ 10.16** · 20 operações fechadas · 4 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.73** · 68 operações fechadas · 2 abertas
+Carteira **US$ 7.53** · 68 operações fechadas · 2 abertas
 
 - **Total:** 35/68 com lucro (51%), resultado -2.05, média -0.030 por operação.
 - **Últimas 24 h:** 4/9 com lucro, -1.78.
@@ -68,11 +68,11 @@ Carteira **US$ 7.73** · 68 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 65.6% das moedas subindo em 24 h, 12.0% em 4 h · BTC 24 h 0.76%, 4 h -0.18%.
+- **Amplitude:** 70.4% das moedas subindo em 24 h, 16.8% em 4 h · BTC 24 h 0.83%, 4 h 0.18%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': 11.0, 'ETH': -15.9, 'SOL': -0.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 11.0, 'ETH': -14.8, 'SOL': -1.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB bandeira de alta (alta, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · MET fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** ATOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB bandeira de alta (alta, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · MET fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 23:06 UTC · Decrypt: China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size
 - 📰 23/11 21:46 UTC · Decrypt: OpenAI Will Pay You Up to $8K to Preach the AI Gospel to Small Businesses
 - 📰 23/11 21:40 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -110,13 +110,13 @@ Carteira **US$ 7.73** · 68 operações fechadas · 2 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 45515 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 45590 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
