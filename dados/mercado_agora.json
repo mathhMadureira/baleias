@@ -1,21 +1,21 @@
 {
- "t": 1795410288,
- "hora_utc": "2026-11-23 05:04 UTC",
+ "t": 1795410473,
+ "hora_utc": "2026-11-23 05:07 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 105,
-  "subindo_pct": 49.5,
-  "mediana_pct": 0.0
+  "moedas": 106,
+  "subindo_pct": 50.0,
+  "mediana_pct": 0.03
  },
  "mercado_4h": {
-  "moedas": 105,
-  "subindo_pct": 76.2,
-  "mediana_pct": 0.61
+  "moedas": 106,
+  "subindo_pct": 76.4,
+  "mediana_pct": 0.62
  },
  "mercado_24h": {
-  "moedas": 105,
-  "subindo_pct": 77.1,
-  "mediana_pct": 3.04
+  "moedas": 106,
+  "subindo_pct": 77.4,
+  "mediana_pct": 3.06
  },
  "btc": {
   "1h": -0.07,
@@ -136,16 +136,16 @@
    "vol": 1.96
   },
   {
+   "moeda": "HMSTR",
+   "4h": 2.69,
+   "24h": 5.01,
+   "vol": 0.85
+  },
+  {
    "moeda": "BMT",
    "4h": 2.3,
    "24h": 5.53,
    "vol": 3.4
-  },
-  {
-   "moeda": "SOPH",
-   "4h": 2.27,
-   "24h": -2.17,
-   "vol": 1.51
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.42,
   1.11,
   -0.07,
-  0.1
+  -0.17
  ],
  "contexto": {
-  "t": 1795410289,
+  "t": 1795410473,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -262,10 +262,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 3.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -4.0,
+    "ETH": -6.3,
     "SOL": 2.6
    },
    "leitura": "neutro"
@@ -411,8 +411,8 @@
  "v4": {
   "vela": "05:00 UTC",
   "apostas": 101,
-  "compras": 37,
-  "vendas": 64,
+  "compras": 36,
+  "vendas": 65,
   "mais_confiantes_venda": [
    {
     "moeda": "HUMA",
@@ -453,10 +453,6 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "HMSTR",
-    "prob_subir": 0.611
-   },
-   {
     "moeda": "RWUSD",
     "prob_subir": 0.61
    },
@@ -479,6 +475,10 @@
    {
     "moeda": "BEB",
     "prob_subir": 0.571
+   },
+   {
+    "moeda": "COTI",
+    "prob_subir": 0.569
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -767,11 +767,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5037,
-    "n": 21610
+    "n": 21676
    },
    "segue_maioria_24h": {
-    "acerto": 0.5033,
-    "n": 28904
+    "acerto": 0.5031,
+    "n": 28826
    }
   },
   "referencia_ganha": [],
