@@ -1,6 +1,6 @@
 {
- "t": 1795456029,
- "hora_utc": "2026-11-23 17:47 UTC",
+ "t": 1795456271,
+ "hora_utc": "2026-11-23 17:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,11 +172,17 @@
   -1.48,
   0.01,
   -1.03,
-  -1.32
+  -0.85
  ],
  "contexto": {
-  "t": 1795456030,
+  "t": 1795456272,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795455738,
+    "hora_utc": "23/11 17:42",
+    "titulo": "Cuomo says rivals urged companies to opt out of OKXICE tokenized stocks"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795455087,
@@ -260,12 +266,6 @@
     "t": 1795442841,
     "hora_utc": "23/11 14:07",
     "titulo": "Nvidia Reinstates Jensen Huang as CEO Days After Board Ruled Out His Return"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795442796,
-    "hora_utc": "23/11 14:06",
-    "titulo": "Here’s what happened in crypto today"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.4,
+   "media_top20_anual_pct": 5.5,
    "principais_anual_pct": {
-    "BTC": 7.5,
-    "ETH": 4.6,
-    "SOL": -9.1
+    "BTC": 8.5,
+    "ETH": 4.7,
+    "SOL": -8.6
    },
    "leitura": "neutro"
   },
