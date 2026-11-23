@@ -1,6 +1,6 @@
 {
- "t": 1795421908,
- "hora_utc": "2026-11-23 08:18 UTC",
+ "t": 1795422142,
+ "hora_utc": "2026-11-23 08:22 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 108,
@@ -172,11 +172,17 @@
   0.73,
   -0.34,
   -0.02,
-  -0.37
+  -0.2
  ],
  "contexto": {
-  "t": 1795421909,
+  "t": 1795422143,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795421332,
+    "hora_utc": "23/11 08:08",
+    "titulo": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795419930,
@@ -260,12 +266,6 @@
     "t": 1795356000,
     "hora_utc": "22/11 14:00",
     "titulo": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795339986,
-    "hora_utc": "22/11 09:33",
-    "titulo": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.5,
+   "media_top20_anual_pct": 6.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -1.8,
-    "SOL": 5.4
+    "ETH": -1.1,
+    "SOL": 6.2
    },
    "leitura": "neutro"
   },
