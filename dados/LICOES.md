@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 14:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 15:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 86.0% das moedas subindo em 24 h, 90.4% em 4 h · BTC 24 h 3.86%, 4 h 3.29%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 5.5, 'ETH': 5.6, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.4%/ano · {'BTC': 5.1, 'ETH': 5.5, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BONK bandeira de alta (alta, CONFIRMOU) · DOT bandeira de alta (alta, CONFIRMOU) · IOST bandeira de alta (alta, CONFIRMOU) · NIL bandeira de alta (alta, CONFIRMOU) · PENDLE bandeira de alta (alta, CONFIRMOU) · PEPE OCO invertido (alta, CONFIRMOU) · SOL bandeira de alta (alta, CONFIRMOU) · SUI fundo duplo (alta, CONFIRMOU) · SUI bandeira de alta (alta, CONFIRMOU) · VIRTUAL bandeira de alta (alta, CONFIRMOU)
 - 📰 23/11 14:47 UTC · Cointelegraph: Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe
@@ -80,7 +80,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 17.2 h.
+- ⚠️ **Rotina parada:** sem decisão há 17.3 h.
 - 22/11 21:41 UTC · **GTC compra, CYBER compra, DOGE compra, SKY venda** · Universo 99 moedas (vela do v4 fechada 21:30 UTC); regime neutro: 69,7% subindo em 24 h, 47,5% em 4 h; BTC 60.982 (1h +0,59%, 4h +0,19%, 24h +0,86%), abaixo das
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
