@@ -1,6 +1,6 @@
 {
- "t": 1795426675,
- "hora_utc": "2026-11-23 09:37 UTC",
+ "t": 1795426903,
+ "hora_utc": "2026-11-23 09:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 107,
@@ -172,11 +172,17 @@
   -0.34,
   -0.02,
   0.09,
-  0.11
+  0.12
  ],
  "contexto": {
-  "t": 1795426676,
+  "t": 1795426904,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795426825,
+    "hora_utc": "23/11 09:40",
+    "titulo": "U.S. inflation, Thanksgiving trading: Crypto Week Ahead"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795424744,
@@ -260,12 +266,6 @@
     "t": 1795357800,
     "hora_utc": "22/11 14:30",
     "titulo": "The future of onchain FX could start with users, not institutional liquidity"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795356062,
-    "hora_utc": "22/11 14:01",
-    "titulo": "Google's Quantum Chip Beats Classical Limits in 'Impossible' Game"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.9,
+   "media_top20_anual_pct": 7.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -2.7,
-    "SOL": 6.5
+    "ETH": -3.1,
+    "SOL": 6.0
    },
    "leitura": "neutro"
   },
