@@ -8,9 +8,9 @@ sys.path.insert(0, "/home/servidor-de-producao/baleias")
 from executor.robo_claude_nuvem import LIMITES, parametros  # noqa: E402,F401
 from executor.stop_movel import GUARDA, armar_em  # noqa: E402,F401
 
-VERSAO = "R1"
-ESTICADA_4H = 15.0                       # C2: |variação de 4 h| ≥ 15% não entra
-CAMPOS = ("stop_pct", "alvo_pct", "max_min")
+VERSAO = "R2"
+ESTICADA_4H = None                       # R2 (dono, 23/11: "mude todas"): C2 e C3 deixam de cortar; só C1 (sem dado)
+CAMPOS = ("stop_pct",)                  # R2: só o stop é obrigatório; alvo e prazo são opcionais (sem prazo: 24 h)
 
 
 def prazo_sugerido(alvo_pct):
@@ -33,6 +33,8 @@ def cortes_duros(lado, max_min, leitura):
     if not leitura:
         return ["C1: sem leitura de 1 s a 1 dia desta moeda"]
     out = []
+    if ESTICADA_4H is None:                                  # R2: C2/C3 viram informação no motivo, não corte
+        return out
     v4h = (leitura.get("var") or {}).get("4h")
     if isinstance(v4h, (int, float)) and abs(v4h) >= ESTICADA_4H:
         out.append(f"C2: andou {v4h:+.1f}% em 4 h (≥ {ESTICADA_4H:.0f}%)")
@@ -56,7 +58,7 @@ def conferir_decisao(posicoes, abertas, varredura):
             continue
         falta = faltam_campos(p)
         if falta:
-            erros.append(f"{par}: posição nova sem {', '.join(falta)} (REGRAS §5: stop, alvo e prazo em toda entrada)")
+            erros.append(f"{par}: posição nova sem {', '.join(falta)} (REGRAS §5: stop em toda entrada)")
         if par in por:
             for c in cortes_duros(p.get("lado"), p.get("max_min"), por[par]):
                 erros.append(f"{par}: {c} (REGRAS §3)")

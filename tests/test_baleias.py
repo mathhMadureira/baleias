@@ -2052,15 +2052,16 @@ class OperarLivre(unittest.TestCase):
         d = {"t": agora - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "scalper", "stop_pct": 0.004, "alvo_pct": 0.006, "max_min": 2}]}
         R.passo(e, d, {"AUSDT": k}, agora, vivos={"AUSDT": 1.0})
         a = e["abertas"]["AUSDT"]
-        self.assertEqual((a["stop_pct"], a["alvo_pct"], a["max_min"]), (0.004, 0.012, 5))     # alvo 0,6% sobe para 3 × o stop (dono, 19/11)
-        SM.MINUTOS["AUSDT"] = [(int(agora * 1000) + 60_000, 1.013, 0.999)]                   # tocou +1,3%: realiza no alvo de +1,2%
+        self.assertEqual((a["stop_pct"], a["alvo_pct"], a["max_min"]), (0.004, 0.006, 5))     # R2 (23/11): o alvo é o do agente
+        SM.MINUTOS["AUSDT"] = [(int(agora * 1000) + 60_000, 1.007, 0.999)]                   # tocou +0,7%: realiza no alvo de +0,6%
         R.passo(e, d, {"AUSDT": k}, agora + 180, vivos={"AUSDT": 1.013})
         SM.MINUTOS.clear()
         f = e["fechadas"][-1]
-        self.assertAlmostEqual(f["saida"], 1.012)
+        self.assertAlmostEqual(f["saida"], 1.006)
         self.assertIn("lucro realizado", f["motivo_saida"])
-        self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04, "alvo_pct": 0.05})
-        self.assertEqual(R.parametros({"alvo_pct": 0.004}), {"alvo_pct": 0.01})                # alvo nunca abaixo de 1%
+        self.assertEqual(R.parametros({"stop_pct": 0.5, "alvo_pct": "x"}), {"stop_pct": 0.04})                # R2: sem alvo forçado
+        self.assertEqual(R.parametros({"alvo_pct": 0.004}), {"alvo_pct": 0.004})              # R2: sem mínimo de 1%
+        self.assertEqual(R.parametros({"stop_pct": 0.01, "alvo_pct": 0.9, "movel": False}), {"stop_pct": 0.01, "alvo_pct": 0.5, "movel": False})
         self.assertEqual(R.parametros({"stop_pct": 0.005, "alvo_pct": 0.03}), {"stop_pct": 0.005, "alvo_pct": 0.03})
 
 
@@ -2158,7 +2159,7 @@ class TamanhoH64(unittest.TestCase):
         R.passo(e, {"t": agora - 5, "posicoes": ps}, {m["moeda"]: k for m in ps}, agora, vivos={m["moeda"]: 1.0 for m in ps})
         self.assertEqual(len(e["abertas"]), 4)
         a = e["abertas"]["AUSDT"]
-        self.assertAlmostEqual(a["nocional"], 5.0 * 14.0)               # H73: 5 × a carteira
+        self.assertAlmostEqual(a["nocional"], 5.0 * 14.0 * R.POR_POS)   # H73: 5 × a carteira; R2: metade por posição (até 8)
         self.assertEqual(a["alav"], 20)
         self.assertGreaterEqual(e["caixa"], -1e-9)
         R.fechar(e, "AUSDT", a, 0.5, "teste", agora + 60)            # −50% a 20×: perde só a margem
@@ -2379,14 +2380,15 @@ class RegrasFonteUnica(unittest.TestCase):
         txt = (pathlib.Path(__file__).resolve().parent.parent / "mesa" / "REGRAS.md").read_text()
         self.assertEqual(R.LIMITES["stop_pct"], (0.003, 0.04))
         self.assertIn("stop: 0,3% a 4%", txt)
-        self.assertEqual((R.ALVO_X_STOP, R.ALVO_MIN, R.LIMITES["alvo_pct"][1]), (3.0, 0.01, 0.05))
-        self.assertIn("alvo efetivo = mín(5%, máx(alvo pedido, 3 × stop, 1%))", txt)
+        self.assertEqual((R.ALVO_X_STOP, R.ALVO_MIN, R.LIMITES["alvo_pct"][1]), (None, None, 0.50))
+        self.assertIn("alvo: opcional, 0,2% a 50%", txt)
         self.assertEqual((SM.armar_em(0.03), SM.armar_em(None), SM.GUARDA), (0.015, 0.005, 0.70))
+        self.assertEqual(SM.armar_em(0.03, False), float("inf"))
         self.assertIn("máx(0,5%, alvo ÷ 2)", txt)
-        self.assertEqual(R.parametros({"stop_pct": 0.02, "alvo_pct": 0.01})["alvo_pct"], 0.05)       # stop > 1,67%: alvo no teto
+        self.assertEqual(R.parametros({"stop_pct": 0.02, "alvo_pct": 0.01})["alvo_pct"], 0.01)       # R2: o alvo pedido vale
         G = self._regras()
-        self.assertEqual(G.ESTICADA_4H, 15.0)
-        self.assertIn("15% ou mais em 4 h", txt)
+        self.assertIsNone(G.ESTICADA_4H)
+        self.assertIn("R2", txt)
 
     def test_cortes_duros_so_em_entrada_nova(self):
         G = self._regras()
@@ -2396,9 +2398,9 @@ class RegrasFonteUnica(unittest.TestCase):
                {"moeda": "BUSDT", "lado": "compra", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 120},
                {"moeda": "DUSDT", "lado": "compra", "stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 30}]
         erros = G.conferir_decisao(pos, {}, var)
-        self.assertTrue(any("AUSDT" in e and "C2" in e for e in erros))
-        self.assertTrue(any("BUSDT" in e and "C3" in e for e in erros))                  # prazo 120 min → padrão de 1 h
-        self.assertFalse(any("DUSDT" in e for e in erros))                              # fora da varredura: C1 é conduta
+        self.assertEqual(erros, [])                                                     # R2 (23/11): C2 e C3 não cortam mais
+        self.assertTrue(G.conferir_decisao([{"moeda": "EUSDT", "lado": "compra"}], {}, var))   # sem stop: recusa
+        self.assertTrue(G.cortes_duros("compra", 60, None))                             # C1 continua
         self.assertEqual(G.conferir_decisao(pos[:1], {"AUSDT": {}}, var), [])           # já aberta: não corta
         self.assertEqual([G.prazo_sugerido(a) for a in (0.01, 0.02, 0.04)], [60, 120, 240])
 
@@ -2511,8 +2513,8 @@ class CorretoraDemoH71(unittest.TestCase):
         d = {"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "teste", "stop_pct": 0.01, "alvo_pct": 0.012, "max_min": 120}]}
         c.rodada(d)
         a = c.e["abertas"]["AUSDT"]
-        self.assertEqual(a["alvo_pct"], 0.03)                                    # REGRAS §5: alvo efetivo 3 × o stop
-        self.assertEqual(sorted((g[1], g[2]) for g in f.gat.values()), [("alvo", 103.0), ("stop", 99.0)])
+        self.assertEqual(a["alvo_pct"], 0.012)                                   # R2: o alvo do agente
+        self.assertEqual(sorted((g[1], g[2]) for g in f.gat.values()), [("alvo", 101.2), ("stop", 99.0)])
         self.assertAlmostEqual(a["nocional"], a["contratos"] * 100 * 0.01)
         self.assertLessEqual(a["nocional"], M.MAX_NOC * M.tamanho(10.0)[0])
         c.rodada({"t": time.time(), "posicoes": []})                              # decisão nova sem a moeda: fecha a mercado
@@ -2783,10 +2785,10 @@ class SemReentradaESemParametroPadrao(unittest.TestCase):
     def test_chefe_nao_abre_sem_parametros_da_decisao(self):
         T = self._mod("chefe/testnet.py", "testnet_param")
         e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "eventos": []}
-        T.abrir(None, e, "AUSDT", "compra", "t", 1, {"stop_pct": 0.01})           # sem alvo e prazo: nem fala com a corretora
+        T.abrir(None, e, "AUSDT", "compra", "t", 1, {"alvo_pct": 0.03})           # sem stop: nem fala com a corretora
         self.assertEqual(e["abertas"], {})
         self.assertIn("não entra", e["eventos"][0]["texto"])
-        self.assertEqual(T.faltam({"stop_pct": 0.01, "alvo_pct": 0.03, "max_min": 60}), [])
+        self.assertEqual(T.faltam({"stop_pct": 0.01}), [])                          # R2: alvo e prazo opcionais
 
     def test_operador_nao_reabre_e_nao_entra_sem_parametros(self):
         import time
@@ -2802,8 +2804,8 @@ class SemReentradaESemParametroPadrao(unittest.TestCase):
         f.ex.append({"par": "AUSDT", "t_ms": time.time() * 1000, "contratos": -q, "preco": 99.0, "taxa": 0.001})
         c.rodada(d)
         self.assertEqual(c.e["abertas"], {})                                      # a mesma decisão não reabre
-        c.rodada({"t": time.time() + 1, "posicoes": [{"moeda": "BUSDT", "lado": "venda", "motivo": "t", "stop_pct": 0.01}]})
-        self.assertEqual(c.e["abertas"], {})                                      # sem alvo e prazo: não entra
+        c.rodada({"t": time.time() + 1, "posicoes": [{"moeda": "BUSDT", "lado": "venda", "motivo": "t", "alvo_pct": 0.03}]})
+        self.assertEqual(c.e["abertas"], {})                                      # R2: sem stop não entra
         self.assertIn("não entra", c.e["eventos"][0]["texto"])
 
     def test_stop_entre_a_leitura_e_a_decisao_nao_reabre(self):

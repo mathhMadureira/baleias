@@ -32,7 +32,7 @@ AQUI = Path(__file__).resolve().parent
 DADOS = "https://data-api.binance.vision"
 REMOTO = "https://github.com/mathhMadureira/baleias.git"
 AGENTES = {"treinador": "Treinador", "laboratorio": "Laboratório", "guardiao": "Guardião"}
-MAX_POS, ESTICADA, CONTRA = 4, 15.0, 0.03
+MAX_POS, ESTICADA, CONTRA = 8, float("inf"), 0.03   # R2 (dono, 23/11): 8 posições, sem corte de 15% em 4 h
 # 19/11 (dono: "o v4 está barrando as entradas do Caçador"): o v4 só pesa com confiança |p − 0,5| ≥ 0,12 (o único corte com prova: 65–68% de
 # acerto ao vivo, vigia_v4). Abaixo disso é "sem confiança": não fecha posição, não descarta moeda, não corta no REVISOR.
 # O Laboratório mantém o método fixo dele (H61/H69: braço de comparação), com o "contra" de 0,03 para manter posição.
@@ -437,11 +437,11 @@ def cmd_gravar(agente, arq):
         erros.append("falta a lição")
     pos = d.get("posicoes")
     if not isinstance(pos, list) or len(pos) > MAX_POS:
-        erros.append("posicoes: lista de 0 a 4")
+        erros.append(f"posicoes: lista de 0 a {MAX_POS}")
     for p in pos or []:
         if not str(p.get("moeda", "")).upper().endswith("USDT") or p.get("lado") not in ("compra", "venda") or not str(p.get("motivo", "")).strip():
             erros.append(f"posição inválida: {p}")
-        for k, (lo, hi) in {"stop_pct": (0.003, 0.04), "alvo_pct": (0.002, 0.05), "max_min": (5, 1440)}.items():   # H62: escolhas do agente
+        for k, (lo, hi) in {"stop_pct": (0.003, 0.04), "alvo_pct": (0.002, 0.50), "max_min": (5, 1440)}.items():   # H62/R2: escolhas do agente
             if k in p and not (isinstance(p[k], (int, float)) and lo <= p[k] <= hi):
                 erros.append(f"{p.get('moeda')}: {k} = {p[k]!r} fora de {lo}–{hi}")
     from executor.robo_claude_nuvem import validar_gatilhos                    # H67: níveis armados entre as rodadas

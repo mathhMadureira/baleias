@@ -41,8 +41,8 @@ def validar(d, pendentes):
     if not str(d.get("licao", "")).strip():
         erros.append("falta a lição (cartilha seção 4)")
     pos = d.get("posicoes")
-    if not isinstance(pos, list) or len(pos) > 4:
-        erros.append("posicoes tem de ser uma lista de 0 a 4")
+    if not isinstance(pos, list) or len(pos) > 8:                       # R2 (dono, 23/11): até 8 posições
+        erros.append("posicoes tem de ser uma lista de 0 a 8")
     else:
         moedas = set()
         for p in pos:

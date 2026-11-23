@@ -18,7 +18,8 @@ from baleias import config
 
 ORCAMENTO, ALAV, CUSTO_LADO = 25.0, 10.0, 0.0006
 STOP_SEG = float(os.environ.get("RC_STOP", "0.015"))
-MAX_POS, CAPITAL, PISO = 4, 10.0, 5.0
+MAX_POS, CAPITAL, PISO = 8, 10.0, 5.0          # R2 (dono, 23/11: "mude todas"): 8 posições; cada uma com 4/8 do tamanho (exposição total igual)
+POR_POS = 4 / MAX_POS
 MAX_HORAS = 24
 
 
@@ -77,8 +78,8 @@ def fechar(e, par, p, saida, motivo, agora):
     return f"🤖 {NOME} SAIU da {'VENDA' if sinal < 0 else 'COMPRA'} em {par[:-4]} ({motivo}) a {saida:.6g}: {resultado:+.3f} USDT"
 
 
-ALVO_X_STOP, ALVO_MIN = 3.0, 0.01
-LIMITES = {"stop_pct": (0.003, 0.04), "alvo_pct": (0.002, 0.05), "max_min": (5, MAX_HORAS * 60)}
+ALVO_X_STOP, ALVO_MIN = None, None                       # R2 (dono, 23/11): o alvo é do agente; nada de 3 × stop nem mínimo de 1%
+LIMITES = {"stop_pct": (0.003, 0.04), "alvo_pct": (0.002, 0.50), "max_min": (5, MAX_HORAS * 60)}
 
 
 def parametros(pos):
@@ -91,10 +92,8 @@ def parametros(pos):
         except (TypeError, ValueError):
             continue
         out[k] = min(hi, max(lo, v))
-    if "stop_pct" in out:                                    # dono (19/11): "aumente os alvos de ganho" — alvo ≥ 3 × o stop e ≥ 1%
-        out["alvo_pct"] = min(LIMITES["alvo_pct"][1], max(out.get("alvo_pct", 0.0), ALVO_X_STOP * out["stop_pct"], ALVO_MIN))
-    elif "alvo_pct" in out:
-        out["alvo_pct"] = min(LIMITES["alvo_pct"][1], max(out["alvo_pct"], ALVO_MIN))
+    if pos.get("movel") is False:                            # R2: o agente pode desligar o stop móvel da posição (padrão: ligado, H49)
+        out["movel"] = False
     return out
 
 
@@ -171,6 +170,7 @@ def abrir(e, par, lado, entrada, entrada_t, prm, velas, motivo, decisao_t):
     if patrimonio < PISO or par in e["abertas"] or len(e["abertas"]) >= MAX_POS:
         return None
     noc, alav = tamanho(patrimonio, FATOR_H73)                   # H73 (22/11): 5 × a carteira a 20× — o dobro da H64, por decisão do dono
+    noc *= POR_POS                                               # R2: até 8 posições, cada uma com metade; a exposição total não muda
     if 0.95 * noc / alav <= e["caixa"] < noc / alav:             # a 4ª posição: centavos de menos pelo arredondamento
         noc = e["caixa"] * alav
     if e["caixa"] < noc / alav - 1e-9:
@@ -222,7 +222,7 @@ def passo(e, decisao, velas, agora, vivos=None, minutos_gatilho=None):
         saiu = None
         motivo_saida = f"stop de segurança −{sp:.1%}"
         from executor import stop_movel as SM                  # H49 (substitui a trava fixa da H48): stop móvel minuto a minuto
-        r = SM.conferir(p, SM.MINUTOS.get(par), sp, int(agora * 1000), int(p["entrada_t"] * 1000), alvo_pct=p.get("alvo_pct"))   # H62: alvo do agente
+        r = SM.conferir(p, SM.MINUTOS.get(par), sp, int(agora * 1000), int(p["entrada_t"] * 1000), alvo_pct=p.get("alvo_pct"), movel=p.get("movel", True))   # H62: alvo do agente
         if r:
             saiu, motivo_saida = r[0], r[1]
             k = []

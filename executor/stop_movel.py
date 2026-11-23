@@ -34,13 +34,15 @@ def buscar(par, desde_ms, ate_ms):
     return saida
 
 
-def armar_em(alvo_pct):
+def armar_em(alvo_pct, movel=True):
     """Dono (19/11): alvos maiores. Com alvo, o stop móvel só arma na METADE do caminho até o alvo (antes armava a +0,5% e fechava quase
     tudo antes de alvos acima de 0,5%: com alvo de 1,2% só 3% chegavam). Sem alvo: +0,5%, como na H49."""
+    if movel is False:                                          # R2 (dono, 23/11): o agente desligou o móvel desta posição
+        return float("inf")
     return max(ARMA, 0.5 * alvo_pct) if alvo_pct else ARMA
 
 
-def conferir(p, minutos, stop_pct, ate_ms, desde_ms, alvo_pct=None):
+def conferir(p, minutos, stop_pct, ate_ms, desde_ms, alvo_pct=None, movel=True):
     """Percorre os minutos de [max(desde_ms, p['movel_ate']), ate_ms). Devolve (preço, motivo, t_ms) se o stop de segurança ou o stop
     móvel foi tocado, ou None. Guarda em p o pico de lucro ('pico') e até onde já conferiu ('movel_ate')."""
     if not minutos:
@@ -50,7 +52,7 @@ def conferir(p, minutos, stop_pct, ate_ms, desde_ms, alvo_pct=None):
     pico = p.get("pico", 0.0)
     ant = p.get("fecho_ant")                                    # resultado a favor no fechamento do minuto anterior
     inicio = max(int(desde_ms), int(p.get("movel_ate", 0)))
-    arma = armar_em(alvo_pct)
+    arma = armar_em(alvo_pct, movel)
     for m in minutos:
         t, h, l = m[0], m[1], m[2]
         if t < inicio or t >= ate_ms:

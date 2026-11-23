@@ -29,7 +29,7 @@ DADOS = "https://data-api.binance.vision"
 TESTNET = "https://testnet.binancefuture.com"
 # 19/11 (dono: "o v4 está barrando as entradas do Caçador"; reestruturado pelo Engenheiro): o v4 só pesa com confiança ≥ 0,12, para entrar E para
 # fechar. Abaixo disso é "sem confiança" na tabela: não é observação que bloqueia, não fecha posição e não é motivo de descarte.
-CONF_ENTRA, CONF_CONTRA, ESTICADA, MAX_POS, MAX_NOC = 0.12, 0.12, 15.0, 4, 1.5
+CONF_ENTRA, CONF_CONTRA, ESTICADA, MAX_POS, MAX_NOC = 0.12, 0.12, float("inf"), 8, 1.5   # R2: sem corte de 15%, 8 posições
 GRUPOS = [{"BTCUSDT", "ETHUSDT"}]
 MEMES = ["DOGE", "SHIB", "PEPE", "WIF", "BONK", "FLOKI", "BRETT", "POPCAT", "FARTCOIN", "PNUT", "PENGU", "TRUMP", "MEME", "NEIRO", "TURBO"]
 ALIAS = {f"{m}USDT": f"1000{m}USDT" for m in ("PEPE", "SHIB", "BONK", "FLOKI", "LUNC", "XEC", "SATS", "RATS", "CAT", "WHY", "CHEEMS", "X")}

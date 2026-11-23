@@ -1,4 +1,9 @@
-# REGRAS da mesa Baleias — fonte única (versão R1, 19/11/2026)
+# REGRAS da mesa Baleias — fonte única (versão R2, 23/11/2026)
+
+**R2 (dono, 23/11: "algumas regras estão limitando a liberdade dos agentes… mude todas"):** C2 e C3 deixam de cortar; alvo e prazo
+viram opcionais (alvo de 0,2% a 50%, sem 3 × stop nem mínimo de 1%); stop móvel ligado por padrão, mas o agente pode desligar (`"movel": false`);
+até 8 posições (cada uma com metade do tamanho: a exposição total não muda). O stop continua obrigatório. Laboratório: H75 (orquestra com freios) reprovou —
+as entradas que os freios cortariam ganharam.
 
 Pedido do dono (19/11): "ainda há muitos conflitos de decisões entre os agentes e o Caçador, conflitos de regras". Este é o ÚNICO lugar das regras
 de entrada, corte, stop, alvo e prazo. Rotinas, ROTINA.md, a rotina do chefe, o Caçador e o manual LEITURA_GRAFICOS.md mandam seguir este arquivo
@@ -20,12 +25,12 @@ Marcas: **[código]** = a execução impõe (escrever outro valor não muda nada
 - Aviso do Caçador = rodar a rotina de operar na hora e conferir na própria leitura.
 - Entre duas moedas que passam nos cortes, fique com a de mais tempos a favor.
 
-## 3. Cortes duros — os ÚNICOS motivos para não entrar em moeda nova
+## 3. Cortes duros — R2: só o C1 corta; C2 e C3 viram informação no motivo
 | corte | regra | quem confere |
 |---|---|---|
 | C1 | falta dado daquela moeda (sem leitura de 1 s a 1 dia / sem preço) | [conduta]; [ferramenta] no Caçador |
-| C2 | a moeda já andou 15% ou mais em 4 h (para cima ou para baixo) | [ferramenta] quando a moeda está na varredura anexada |
-| C3 | padrão gráfico CONFIRMADO (*) contra o lado, no tempo do prazo: 15 min se o prazo é de até 60 min; 1 h acima | [ferramenta] idem |
+| C2 | ~~a moeda já andou 15% ou mais em 4 h~~ — R2: não corta; escreva no motivo | — |
+| C3 | ~~padrão gráfico CONFIRMADO contra o lado, no tempo do prazo~~ — R2: não corta; escreva no motivo | — |
 Nada mais corta: tempos contra, v4 sem confiança, carteiras contra, dúvida ou alvo "pequeno" vão escritos no motivo.
 Posição já aberta não é cortada por C1–C3 (sai por stop, alvo, prazo ou pela decisão do agente).
 
@@ -36,17 +41,20 @@ Posição já aberta não é cortada por C1–C3 (sai por stop, alvo, prazo ou p
   (`auditorias/veto_v4_*.json`).
 
 ## 5. Stop, alvo e prazo [código: `executor/robo_claude_nuvem.parametros`, o mesmo na conta de teste]
-- Toda entrada NOVA traz `stop_pct`, `alvo_pct` e `max_min` [ferramenta].
+- Toda entrada NOVA traz `stop_pct` [ferramenta]. R2: `alvo_pct` e `max_min` são opcionais (sem prazo: 24 h; sem alvo: sai por stop, móvel, prazo ou decisão).
 - stop: 0,3% a 4% (valor fora é encostado no limite).
-- alvo efetivo = mín(5%, máx(alvo pedido, 3 × stop, 1%)). Com stop acima de 1,67% o alvo fica em 5%, que é menos de 3 × o stop.
-- prazo: 5 a 1.440 min. Prazo sugerido pelo alvo efetivo (operadores e Caçador iguais) [conduta; código na sugestão do Caçador]:
+- alvo: opcional, 0,2% a 50%, o valor que o agente pedir (R2: acabou o 3 × stop e o mínimo de 1%).
+- prazo: opcional, 5 a 1.440 min (sem prazo: 24 h). Prazo sugerido, se quiser [conduta]:
   alvo até 1,5% → 60 min · até 3% → 120 min · acima de 3% → 240 min.
-- Stop móvel [código, `executor/stop_movel.armar_em`]: arma quando o lucro chega a máx(0,5%, alvo ÷ 2) e devolve no máximo 30% do pico (guarda 70%).
+- Stop móvel [código, `executor/stop_movel.armar_em`]: arma quando o lucro chega a máx(0,5%, alvo ÷ 2) e devolve no máximo 30% do pico (guarda 70%). R2: o agente pode desligar por posição com `"movel": false`.
 - Custo: 0,06% por lado (0,12% ida e volta) [código].
 
 ## 6. Tamanho e carteira [código]
-- Fatia H64: nocional = (2,5 × carteira ÷ US$ 10, entre 1,25 e 5) × carteira; alavancagem 10× até 2,5× e 20× acima.
-- Até 4 posições, uma por moeda; piso de US$ 5 (abaixo = eliminado); meta do dia US$ 12.
+- Fatia H73 (dono, 22/11: "pode aumentar o tamanho da perda também"): carteira SIMULADA dos agentes = 5 × a carteira, a 20× — o dobro da H64,
+  o dobro da perda por operação. Medido em `lab/escala_capital.py`: queda máxima 35,7% (era 17,9%), sem liquidação na sequência real, 14,3% de chance
+  de bater no piso de US$ 5; fator 10 a 50× reprovou (termina abaixo do piso). A conta de TESTE do chefe fica na H64: nocional = (2,5 × carteira ÷
+  US$ 10, entre 1,25 e 5) × carteira, 10× até 2,5× e 20× acima — com o fio negativo dela, o braço maior bateria no piso em 30,1% das ordens.
+- R2: até 8 posições, uma por moeda, cada uma com 4/8 do tamanho acima (a exposição total da carteira não muda); piso de US$ 5 (abaixo = eliminado); meta do dia US$ 12.
 - Conta de teste (só o chefe): a moeda tem de existir nos futuros do testnet e o nocional mínimo da corretora não pode passar de 1,5 × a posição;
   senão a conta de teste não entra (a carteira simulada do chefe entra). [conduta] O chefe escolhe, de preferência, moedas marcadas ✓ testnet
   no `universo.py`, para as duas carteiras andarem juntas.

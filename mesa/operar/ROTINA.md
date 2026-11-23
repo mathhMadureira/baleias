@@ -4,7 +4,7 @@ Você opera a SUA carteira simulada de US$ 10 na mesa Baleias (execução na nuv
 nunca mande ordem na conta de teste da Binance, que é só do agente Baleias, nem na conta de outro agente. <agente> = o seu id: treinador, laboratorio ou guardiao. VOCÊ decide moeda, lado, stop, alvo e prazo.
 
 REGRAS: siga /home/servidor-de-producao/OpenBot/Shared/baleias/REGRAS.md (fonte única desde 19/11, versão R1). Postura ativa, os 3 cortes duros
-(C1 sem dado, C2 15% em 4 h, C3 padrão confirmado contra), o papel do v4, stop/alvo/prazo, tamanho e Caçador estão só lá; esta rotina não os repete.
+(R2, 23/11: só C1 sem dado corta; C2 e C3 viram informação no motivo), o papel do v4, stop/alvo/prazo, tamanho e Caçador estão só lá; esta rotina não os repete.
 Leia o REGRAS.md no começo de cada rodada. A ferramenta (operar.py gravar) recusa o que fere as regras marcadas [ferramenta].
 Aviso do Caçador ("🔭 Caçador — ...") por mensagem = rode esta rotina NA HORA (passos 1 a 5) e confira a moeda na SUA leitura.
 
@@ -17,13 +17,13 @@ Aviso do Caçador ("🔭 Caçador — ...") por mensagem = rode esta rotina NA H
    memecoins), as MELHORES CARTEIRAS (H63) e a VARREDURA do seu foco de 1 s a 1 dia com padrões gráficos. Leia cada moeda de cima para baixo
    (LEITURA_GRAFICOS.md, seção 1).
 3. Decida e escreva rodadas/proposta_<agente>.json:
-   - "posicoes": de 0 a 4, a lista COMPLETA do que deve ficar aberto (o que não estiver nela fecha). Cada uma: "moeda" (termina em USDT), "lado"
+   - "posicoes": de 0 a 8, a lista COMPLETA do que deve ficar aberto (o que não estiver nela fecha). Cada uma: "moeda" (termina em USDT), "lado"
      (compra/venda), "motivo" (números: tempos a favor, padrão, carteiras, v4 só se confiança ≥ 0,12, aviso do Caçador, e o que está CONTRA),
-     "stop_pct", "alvo_pct" e "max_min" (obrigatórios em entrada nova; valores e prazo sugerido: REGRAS.md §5).
+     "stop_pct" (obrigatório em entrada nova); "alvo_pct" (0,2% a 50%), "max_min" e "movel": false são opcionais (REGRAS.md §5, R2).
    - "leitura" (números do passo 1 e 2), "licao" (verificável: moeda, lado, resultado; com 5+ fechadas, p, G, L e E = p·G − (1−p)·L),
      "fechar": [], "motivos_fechar": {}, "mensagens": no máximo 1 para a sala, curta, com números. Sem "ordens" e sem "respostas".
    - opcional "gatilhos" (H67, até 6): {moeda, lado, "acima" OU "abaixo": preço, stop_pct, alvo_pct, max_min, validade_min 5–240, motivo}.
-   - "descartadas": até 5 das melhores moedas que você NÃO pegou, cada uma {"moeda", "motivo"} com o corte duro (C1, C2 ou C3, com o número)
+   - "descartadas": até 5 das melhores moedas que você NÃO pegou, cada uma {"moeda", "motivo"} com o motivo (C1 com o número, "vaga ocupada" ou a sua leitura)
      ou "vaga ocupada"; e "versao_rotina": "r14".
 4. python3 -I operar.py gravar <agente> rodadas/proposta_<agente>.json   → publica SÓ dados/decisao_<agente>.json. "DECISÃO INVÁLIDA": corrija
    (no máximo 3 tentativas). "FALHOU" 3 vezes: escreva BLOCKED e o motivo para o dono.

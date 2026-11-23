@@ -29,7 +29,7 @@ from executor.stop_movel import GUARDA, armar_em  # noqa: E402
 
 COFRE = Path("/home/servidor-de-producao/.config/OpenBot/agent-api-keys/.vault/agent-85eaa35b-7f9b-407c-839d-fed207b6b72d")
 PASTA = AQUI / "corretoras"
-CAPITAL, PISO, MAX_POS, MAX_NOC, VALIDADE_S, MAX_HORAS = 10.0, 5.0, 4, 1.5, 75 * 60, 24
+CAPITAL, PISO, MAX_POS, MAX_NOC, VALIDADE_S, MAX_HORAS = 10.0, 5.0, 8, 1.5, 75 * 60, 24   # R2: 8 posições
 TRAILER = "Co-authored-by: OpenBot <335604065+openbotgit[bot]@users.noreply.github.com>"
 
 
@@ -38,8 +38,8 @@ class ErroCorretora(Exception):
 
 
 def faltam(pos):
-    """REGRAS §5: entrada nova só com stop_pct, alvo_pct e max_min escritos na decisão (nada de stop padrão)."""
-    return [k for k in ("stop_pct", "alvo_pct", "max_min") if not isinstance((pos or {}).get(k), (int, float))]
+    """REGRAS §5 (R2): entrada nova só com stop_pct escrito na decisão (nada de stop padrão); alvo e prazo são opcionais."""
+    return [k for k in ("stop_pct",) if not isinstance((pos or {}).get(k), (int, float))]
 
 
 def saidas_desde(e, d):
@@ -301,6 +301,17 @@ class Bybit:
         return sorted((int(x[0]), float(x[2]), float(x[3])) for x in k if int(x[0]) + 60_000 <= agora)
 
 
+def _ms(v):
+    """Hora em ms: aceita número (ms) ou texto ISO ('2026-11-23T22:30:44.000Z'), como a BingX VST manda em filledTm."""
+    if v in (None, ""):
+        return 0.0
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        from datetime import datetime
+        return datetime.fromisoformat(str(v).replace("Z", "+00:00")).timestamp() * 1000
+
+
 class BingX:
     """BingX VST (futuros perpétuos de demonstração, open-api-vst.bingx.com). TRAVADA (VALIDADO = False) até `--validar` passar
     (19/11: a chave recusou o IP desta máquina; a mesma chave vale na conta real, então o endereço é conferido antes de tudo)."""
@@ -334,11 +345,15 @@ class BingX:
         if assinado:
             q += "&signature=" + hmac.new(self.segredo.encode(), q.encode(), hashlib.sha256).hexdigest()
         h = {"X-BX-APIKEY": self.chave} if assinado else {}
-        try:
-            with urllib.request.urlopen(urllib.request.Request(f"{self.BASE}{caminho}?{q}", headers=h, method=metodo), timeout=20) as r:
-                d = json.load(r)
-        except (OSError, ValueError) as ex:
-            raise ErroCorretora(f"BingX {caminho}: {type(ex).__name__}") from None
+        for tentativa in range(3 if metodo == "GET" else 1):            # 23/11: rede instável até a VST; só leituras repetem (ordem nunca, para não dobrar)
+            try:
+                with urllib.request.urlopen(urllib.request.Request(f"{self.BASE}{caminho}?{q}", headers=h, method=metodo), timeout=20) as r:
+                    d = json.load(r)
+                break
+            except (OSError, ValueError) as ex:
+                if tentativa == (2 if metodo == "GET" else 0):
+                    raise ErroCorretora(f"BingX {caminho}: {type(ex).__name__}") from None
+                time.sleep(1.5)
         if d.get("code") == 109400 and _de_novo and assinado:             # horário fora da janela: mede o relógio de novo e tenta uma vez
             self.desvio_ms = None
             return self._pedir(metodo, caminho, {k: v for k, v in params.items() if k not in ("timestamp", "recvWindow")}, assinado, _de_novo=False)
@@ -350,8 +365,12 @@ class BingX:
         b = self._pedir("GET", "/openApi/swap/v2/user/balance")["balance"]
         return float(b.get("equity") or 0), float(b.get("availableMargin") or 0)
 
+    _contratos = None                                                    # 23/11: a lista é lida uma vez por rodada (TimeoutError repetido em /quote/contracts)
+
     def contrato(self, par):
-        for c in self._pedir("GET", "/openApi/swap/v2/quote/contracts", assinado=False) or []:
+        if self._contratos is None:
+            self._contratos = self._pedir("GET", "/openApi/swap/v2/quote/contracts", assinado=False) or []
+        for c in self._contratos:
             if c.get("symbol") == self.simbolo(par):
                 passo = 10 ** -int(c.get("quantityPrecision", 0))
                 return {"mult": passo, "minimo": max(1, round(float(c.get("tradeMinQuantity") or passo) / passo)),
@@ -365,20 +384,36 @@ class BingX:
         for lado in ("LONG", "SHORT"):
             self._pedir("POST", "/openApi/swap/v2/trade/leverage", {"symbol": self.simbolo(par), "side": lado, "leverage": int(n)})
 
+    _hedge = None                                                        # 23/11: a VST estava em modo hedge e recusava positionSide BOTH (109400)
+
+    def hedge(self):
+        """True se a conta está em modo hedge (dualSidePosition). Hedge: positionSide LONG/SHORT e sem reduceOnly (a BingX recusa);
+        a ordem de saída (lado oposto no mesmo positionSide) só reduz, nunca inverte. One-way: BOTH + reduceOnly."""
+        if self._hedge is None:
+            d = self._pedir("GET", "/openApi/swap/v1/positionSide/dual") or {}
+            self._hedge = str(d.get("dualSidePosition")).lower() == "true"
+        return self._hedge
+
+    def _lado_pos(self, lado_pos, reduzir):
+        if self.hedge():
+            return {"positionSide": "LONG" if lado_pos == "compra" else "SHORT"}
+        return {"positionSide": "BOTH", "reduceOnly": "true" if reduzir else None}
+
     def mercado(self, par, lado, contratos, reduzir=False):
         mult = self.contrato(par)["mult"]
+        lado_pos = ("venda" if lado == "compra" else "compra") if reduzir else lado
         o = self._pedir("POST", "/openApi/swap/v2/trade/order", {"symbol": self.simbolo(par), "side": "BUY" if lado == "compra" else "SELL",
-                                                                 "positionSide": "BOTH", "type": "MARKET", "quantity": f"{contratos * mult:.10g}",
-                                                                 "reduceOnly": "true" if reduzir else None})["order"]
+                                                                 "type": "MARKET", "quantity": f"{contratos * mult:.10g}",
+                                                                 **self._lado_pos(lado_pos, reduzir)})["order"]
         return {"id": str(o["orderId"]), "preco": float(o.get("avgPrice") or 0), "contratos": round(float(o.get("executedQty") or 0) / mult)}
 
     def gatilho(self, par, lado_pos, contratos, preco, tipo):
         c = self.contrato(par)
         px = round(round(preco / c["tick"]) * c["tick"], 10)
         o = self._pedir("POST", "/openApi/swap/v2/trade/order", {"symbol": self.simbolo(par), "side": "SELL" if lado_pos == "compra" else "BUY",
-                                                                 "positionSide": "BOTH", "type": "STOP_MARKET" if tipo == "stop" else "TAKE_PROFIT_MARKET",
+                                                                 "type": "STOP_MARKET" if tipo == "stop" else "TAKE_PROFIT_MARKET",
                                                                  "quantity": f"{contratos * c['mult']:.10g}", "stopPrice": f"{px:.10g}",
-                                                                 "workingType": "CONTRACT_PRICE", "reduceOnly": "true"})["order"]
+                                                                 "workingType": "CONTRACT_PRICE", **self._lado_pos(lado_pos, True)})["order"]
         return {"id": str(o["orderId"]), "preco": px}
 
     def cancelar(self, id_, par=None):
@@ -398,7 +433,7 @@ class BingX:
             if q:
                 par = p["symbol"].replace("-USDT", "USDT")
                 mult = self.contrato(par)["mult"]
-                out[par] = {"contratos": round(abs(q) / mult) * (1 if p.get("positionSide") == "LONG" or q > 0 else -1),
+                out[par] = {"contratos": round(abs(q) / mult) * (-1 if p.get("positionSide") == "SHORT" or q < 0 else 1),
                             "entrada": float(p["avgPrice"]), "marca": float(p.get("markPrice") or p["avgPrice"]), "pnl": float(p.get("unrealizedProfit") or 0)}
         return out
 
@@ -406,7 +441,7 @@ class BingX:
         mult = self.contrato(par)["mult"]
         d = self._pedir("GET", "/openApi/swap/v2/trade/allFillOrders", {"symbol": self.simbolo(par), "startTs": int(desde_ms - 2000),
                                                                         "endTs": int(time.time() * 1000)}) or {}
-        return [{"t_ms": float(x.get("filledTm") or x.get("time") or 0), "contratos": round(float(x["volume"]) / mult) * (1 if x["side"] == "BUY" else -1),
+        return [{"t_ms": _ms(x.get("filledTm") or x.get("time")), "contratos": round(float(x["volume"]) / mult) * (1 if x["side"] == "BUY" else -1),
                  "preco": float(x["price"]), "taxa": abs(float(x.get("commission") or 0))} for x in d.get("fill_orders", [])]
 
     def velas_1m(self, par, desde_ms):
@@ -531,6 +566,7 @@ class Conta:
         if not ctr:
             return self.anotar(f"{par[:-4]}: não existe em {self.c.NOME}; não entra (H71)")
         noc, alav = tamanho(self.realizado())
+        noc *= 4 / MAX_POS                                                 # R2: até 8 posições, cada uma com metade (exposição total igual)
         usada = None
         for a in [x for x in (alav, 10, 5, 3, 2, 1) if x <= min(alav, ctr["alav_max"])]:
             try:
@@ -557,7 +593,7 @@ class Conta:
         time.sleep(1)
         try:                                                               # auditoria 20/11: erro de rede aqui não pode deixar a posição fora do estado e sem stop
             taxa_ent = sum(x["taxa"] for x in self.c.execucoes(par, t0) if (x["contratos"] > 0) == (lado == "compra"))
-        except ErroCorretora as ex_:
+        except Exception as ex_:                                           # 23/11: ValueError (filledTm em texto) deixou WLFI fora do estado e sem stop
             taxa_ent = None                                                # não é zero: registrar_fechada lê a taxa de entrada na saída
             self.anotar(f"⚠️ {par[:-4]}: taxa de entrada não lida agora ({str(ex_)[:80]}); leio na saída")
         gasto = q * ent * ctr["mult"] / usada
@@ -570,7 +606,7 @@ class Conta:
         sp, ap = prm["stop_pct"], prm.get("alvo_pct")
         try:
             self.e["abertas"][par]["stop"] = self.c.gatilho(par, lado, q, ent * (1 - sp if lado == "compra" else 1 + sp), "stop")
-        except ErroCorretora as ex_:
+        except Exception as ex_:                                           # qualquer falha aqui: nunca deixar a posição sem stop
             self.anotar(f"🚨 {par[:-4]}: a corretora recusou o stop ({str(ex_)[:160]}); fecho a posição agora (nunca sem stop)")
             return self.fechar(par, "stop recusado pela corretora: fechada na hora")
         if ap:
@@ -621,7 +657,7 @@ class Conta:
             for t, h, l in self.c.velas_1m(par, max(p["entrada_ms"], p.get("movel_ate", 0))):
                 p["pico"] = max(p.get("pico", 0.0), (h / p["entrada"] - 1) if compra else (1 - l / p["entrada"]))
                 p["movel_ate"] = t + 60_000
-            if p["pico"] < armar_em(p.get("alvo_pct")):
+            if p["pico"] < armar_em(p.get("alvo_pct"), p.get("movel", True)):
                 continue
             g = GUARDA * p["pico"]
             novo = p["entrada"] * (1 + g if compra else 1 - g)

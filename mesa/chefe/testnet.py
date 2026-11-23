@@ -27,7 +27,7 @@ AQUI = Path(__file__).resolve().parent
 EST = AQUI / "estado"
 LOCAL = AQUI / "robo_openbot_testnet.json"          # fonte da verdade do estado (a máquina pode dormir; o ramo recebe uma cópia)
 ARQ = "dados/robo_openbot_testnet.json"
-CAPITAL, PISO, ALAV, FATOR, MAX_POS, MAX_NOC = 10.0, 5.0, 10, 2.5, 4, 1.5
+CAPITAL, PISO, ALAV, FATOR, MAX_POS, MAX_NOC = 10.0, 5.0, 10, 2.5, 8, 1.5   # R2: 8 posições
 ARMA, GUARDA, VALIDADE_S, MAX_HORAS = 0.005, 0.70, 75 * 60, 24
 AUTOR = ["-c", "user.name=chefe-openbot", "-c", "user.email=chefe-openbot@users.noreply.github.com"]
 TRAILER = "Co-authored-by: OpenBot <335604065+openbotgit[bot]@users.noreply.github.com>"
@@ -184,8 +184,8 @@ def fechar(f, e, par, motivo):
 
 
 def faltam(pos):
-    """REGRAS §5: entrada nova só com stop_pct, alvo_pct e max_min escritos na decisão (nada de stop padrão)."""
-    return [k for k in ("stop_pct", "alvo_pct", "max_min") if not isinstance((pos or {}).get(k), (int, float))]
+    """REGRAS §5 (R2): entrada nova só com stop_pct escrito na decisão (nada de stop padrão); alvo e prazo são opcionais."""
+    return [k for k in ("stop_pct",) if not isinstance((pos or {}).get(k), (int, float))]
 
 
 def saidas_desde(e, d):
@@ -200,8 +200,9 @@ def saidas_desde(e, d):
 
 def abrir(f, e, par, lado, motivo, decisao_t, prm=None):
     if not prm or faltam(prm):
-        return anotar(e, f"{par[:-4]}: a decisão não traz stop_pct, alvo_pct e max_min; não entra (REGRAS §5)")
+        return anotar(e, f"{par[:-4]}: a decisão não traz stop_pct; não entra (REGRAS §5)")
     noc, alav = tamanho(realizado(e))                         # H64: a fatia cresce com o ganho e encolhe na perda (10× até 2,5×, 20× acima)
+    noc *= 4 / MAX_POS                                         # R2: até 8 posições, cada uma com metade (exposição total igual)
     try:
         f.regras(par)
     except ErroFuturos:
@@ -252,7 +253,7 @@ def abrir(f, e, par, lado, motivo, decisao_t, prm=None):
     e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": ent, "entrada_t": time.time(), "qtd": q, "nocional": q * ent, "gasto": gasto, "alav": alav,
                          "stop_pct": sp, "motivo": str(motivo)[:300], "decisao_t": decisao_t, "entrada_id": str(d["orderId"]), "pico": 0.0,
                          "movel_ate": int(time.time() * 1000) + f.desvio_ms, "relogio": "corretora", "stop_tipo": "segurança", "preco_testnet": ent, "resultado_aberto": 0.0,
-                         **{k: v for k, v in prm.items() if k in ("alvo_pct", "max_min")}}
+                         **{k: v for k, v in prm.items() if k in ("alvo_pct", "max_min", "movel")}}
     alvo = ent * (1 - sp) if lado == "compra" else ent * (1 + sp)
     try:
         e["abertas"][par]["stop"] = colocar_stop(f, par, lado, q, alvo)
@@ -318,7 +319,7 @@ def mover_stops(f, e):
             fav = (float(x[2]) / p["entrada"] - 1) if compra else (1 - float(x[3]) / p["entrada"])
             p["pico"] = max(p.get("pico", 0.0), fav)
             p["movel_ate"] = int(x[0]) + 60_000
-        if p["pico"] < SM.armar_em(p.get("alvo_pct")):      # dono (19/11): com alvo, o móvel arma na metade do caminho até ele
+        if p["pico"] < SM.armar_em(p.get("alvo_pct"), p.get("movel", True)):      # dono (19/11): com alvo, o móvel arma na metade do caminho até ele
             continue
         g = GUARDA * p["pico"]
         novo = p["entrada"] * (1 + g) if compra else p["entrada"] * (1 - g)

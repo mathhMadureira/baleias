@@ -1701,3 +1701,41 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 | **compra (juiz a)** | **1.896** | **−0,146%** | 0,082% | **−1,78** | 39,6% | 0,78 | −0,375 / −0,005 / −0,160% |
 - Controle dentro de −0,12% ± 3 EP: rodada válida. A compra no alerta perde nos 3 blocos e fica **abaixo** do lado sorteado: comprar só com o alerta não protege as compras.
   As 13 compras com alerta da P2 (+0,335) foram acaso de amostra pequena. Como previsto. A perda das compras sem alerta continua sem explicação testada (o mercado em queda é a candidata).
+
+## Hipótese 75 (pedido do dono, 23/11): "orquestra" — um maestro coordena as carteiras em vez de cada agente sozinho (H61) (registrada em 23/11/2026 ~23:15 UTC, antes de rodar)
+- **Pedido:** o dono quer os agentes "como uma orquestra sincronizada". Maestro = o chefe (decisão do dono). Proposta: raspagem única e fresca, papéis diferentes
+  (tendência, reversão, memecoins), quadro da rodada (quem pega qual moeda), Guardião como risco do conjunto, rotinas em sequência e placar comum.
+- **O que dá para testar nos dados (a parte que muda decisão):** três regras do maestro, fixadas agora, aplicadas em ordem de entrada às operações fechadas
+  das 4 carteiras simuladas de agente (`robo_claude`, `agente_guardiao`, `agente_laboratorio`, `agente_treinador`; ramo `estado` 3fa38ccf). A conta de teste do
+  chefe fica de fora: copia a decisão do `robo_claude`.
+  - R1 sem duplicar: entrada recusada se outra carteira já tem a mesma moeda no mesmo lado aberta naquele instante (entre as mantidas).
+  - R2 exposição: entrada recusada se a mesa já tem 6 ou mais posições mantidas abertas no mesmo lado.
+  - R3 perda do dia: entrada recusada se a soma das mantidas fechadas antes, no mesmo dia UTC, está em −US$ 1,00 ou pior.
+- **Medida:** resultado_usd por operação. Base = todas; filtro = as mantidas. Controle (placebo): 2.000 sorteios que recusam o MESMO número de operações ao acaso.
+- **Juiz:** (a) média das mantidas acima de 97,5% dos sorteios **e** (b) média das recusadas < 0 **e** (c) média das mantidas ≥ média da base em 2 de 3 blocos de
+  tempo iguais (pela hora de entrada). 1 tentativa, sem trocar os números depois.
+- **Se passar:** a orquestra entra nas rotinas, e o juiz ao vivo são as 60 primeiras operações: as recusadas (gravadas e simuladas) têm de somar < 0. Se não somarem, as regras saem.
+  **Se reprovar:** as regras R1–R3 não entram. Proponho ao dono só a parte de infraestrutura (raspagem única e fresca, rotinas em sequência, placar comum), que não muda decisão.
+- **Previsão registrada:** reprova no placebo. A amostra é pequena (~180 operações) e a perda pode ser só o mercado em queda (H42/H74); R1 e R2 devem recusar poucas.
+
+### Resultado da H75 (23/11/2026 ~23:25 UTC, `lab/juizo_h75.py`, ramo `estado` 3fa38ccf): REPROVADA — R1–R3 não entram
+- 184 operações (17/11 12:18 a 23/11 22:33 UTC); o maestro manteria 118 e recusaria 66 (R1 25, R2 11, R3 30).
+
+| grupo | n | soma US$ | média US$ |
+|---|---|---|---|
+| base (todas) | 184 | −3,078 | −0,0167 |
+| mantidas | 118 | −5,664 | −0,0480 |
+| **recusadas** | 66 | **+2,587** | +0,0392 |
+
+- Placebo: as mantidas ficam acima de só 0,4% dos sorteios (precisava de 97,5%). Blocos: mantidas abaixo da base nos 3 (−0,038/−0,024/−0,087 contra +0,003/+0,009/−0,083).
+- As recusadas ganharam: o freio do dia (R3) corta as operações que recuperam, e as duplicadas (R1) não eram as piores. Previsão (reprova) confirmada, mas pior que o esperado:
+  coordenar por essas regras **piora**. Segue a parte de infraestrutura (raspagem única e fresca, rotinas em sequência, placar comum), que vai ao dono como proposta.
+
+### Decisão do dono (23/11/2026 ~23:40 UTC): REGRAS R2 — soltar as travas ("mude todas")
+- Pedido: "algumas regras estão limitando a liberdade dos agentes operar… as oportunidades passam diante deles" → "mude todas".
+- Muda: C2 e C3 não cortam (só C1); alvo opcional 0,2–50% (sem 3 × stop nem mínimo de 1%); prazo opcional (sem prazo: 24 h); stop móvel desligável por posição
+  (`"movel": false`, padrão ligado); até 8 posições com 4/8 do tamanho cada (exposição total igual). Fica: stop obrigatório (0,3–4%), tamanho H73/H64, piso US$ 5.
+- Sem teste prévio, por decisão do dono. Dados a favor: H75 (as entradas que os freios cortariam somaram +US$ 2,59). Dados contra: H74 (comprar nas explosões
+  que o C2 cortava perdeu −0,146% por operação, 1.896 alertas).
+- **Juiz ao vivo (registrado agora):** as 60 primeiras operações fechadas das 4 carteiras de agente depois da R2 contra as 60 últimas antes dela (resultado_usd
+  por operação). Se a média depois for menor que a de antes **e** a soma depois for < 0, volto ao dono com os números para decidir se a R2 fica.
