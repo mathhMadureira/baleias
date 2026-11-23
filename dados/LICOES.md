@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 01:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 01:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -70,7 +70,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 52.9% das moedas subindo em 24 h, 18.6% em 4 h · BTC 24 h 1.56%, 4 h -0.06%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.9%/ano · {'BTC': 6.9, 'ETH': -10.5, 'SOL': 1.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.7%/ano · {'BTC': 7.0, 'ETH': -10.7, 'SOL': 1.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB bandeira de alta (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · AVAX triângulo simétrico (?, formado) · BMT fundo duplo (alta, formado) · BMT ombro-cabeça-ombro (baixa, formado) · CVX topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 00:53 UTC · Cointelegraph: Half of wallets on Trump’s dinner list got tokens from non-US exchanges
