@@ -1,6 +1,6 @@
 {
- "t": 1795475416,
- "hora_utc": "2026-11-23 23:10 UTC",
+ "t": 1795475637,
+ "hora_utc": "2026-11-23 23:13 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   -0.03,
   0.16,
   -0.14,
-  0.2
+  0.24
  ],
  "contexto": {
-  "t": 1795475417,
+  "t": 1795475638,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 1.9,
+   "media_top20_anual_pct": 0.5,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -18.0,
-    "SOL": 3.8
+    "ETH": -18.9,
+    "SOL": 0.9
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.02,
+  "carteira": 8.1,
   "abertas": [
    {
     "moeda": "NIL",
@@ -508,6 +508,24 @@
     "resultado_pct": 0.14,
     "horas_aberta": 0.4,
     "motivo_de_entrada": "Entrada: aviso do Caçador 22:21 (5m -1,42%, z -4,6, volume 7,6x, vale 30 min); 5/6 tempos abaixo da MM20 (1m,5m,15m,1h,1d); 15m -0,41%, 1h -3,10%, 4h -5,33%; me"
+   },
+   {
+    "moeda": "ZRO",
+    "lado": "venda",
+    "entrada": 1.13,
+    "agora": 1.129,
+    "resultado_pct": 0.09,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: 6/6 tempos abaixo da MM20 (1m a 1d); 1h -2,08%, 4h -3,83%, 24h -5,28%; mercado 9,7% subindo em 4 h; carteiras H63 vendidas em BTC/ETH/SOL; sem padrao c"
+   },
+   {
+    "moeda": "ETHFI",
+    "lado": "venda",
+    "entrada": 0.4857,
+    "agora": 0.4858,
+    "resultado_pct": -0.02,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: v4 0,369 de subir (confianca 0,131 >= 0,12); 4h -0,92%, 24h -2,44%; abaixo da MM20 em 15m, 1h e 1d; mercado 9,7% subindo em 4 h; elegivel no testnet. C"
    }
   ],
   "ultimas_fechadas": [
@@ -619,10 +637,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795301627,
-    "texto": "Caderno Claude: 50 fechadas, 27 com leitura; 6/6 tempos: 10 operações, 60%, +US$ 0,568 (+US$ 0,0568 média); padrão a favor: 10, 70%, +US$ 1,337 (+US$ 0,1337 média). Histórico testnet: 37 fechadas, 35,1% acerto, soma -US$ 1,28, fator de lucro 0,75, patrimônio US$ 8,7354. Ainda não há amostra suficiente para alterar método."
-   },
-   {
     "t": 1795302554,
     "texto": "Caderno Claude: 51 fechadas; 6/6 tempos: 10 operações, 60%, +US$ 0,568 (+US$ 0,0568 média); padrões a favor: 10, 70%, +US$ 1,337 (+US$ 0,1337 média); carteiras a favor: 11, 64%, +US$ 0,286 (+US$ 0,0260 média). Testnet: 38 fechadas, 34,2% acerto, soma -US$ 1,312, fator 0,74, patrimônio US$ 8,6849; resultado abaixo do inicial, sem base para mudar método."
    },
@@ -649,6 +663,10 @@
    {
     "t": 1795473839,
     "texto": "USUALUSDT venda saiu no stop da corretora em 0,01121 (-0,2193 na testnet; -0,585 na carteira simulada) apos 15m EST baixa confirmada: repique de +3,98% em 1 h invalidou. Testnet 48 fechadas: p 0,312, G +0,2828, L -0,1954, E -0,0459. Caderno: 6/6 tempos a favor 58% (+0,586) contra 4-5/6 43% (-0,667); padrao a favor 53% (-0,192)."
+   },
+   {
+    "t": 1795475469,
+    "texto": "USUAL venda saiu no stop (-0,585 na simulada; -0,2193 no testnet) e ACE venda tambem (-0,1475 no testnet). Testnet: 49 fechadas, p 0,306, G +0,283, L -0,200, E = 0,306*0,283 - 0,694*0,200 = -0,052 por operacao. Caderno: entradas com melhores carteiras a favor tiveram 64% de acerto (11 ops, media +0,026) contra 48% sem leitura (31 ops, media -0,030); por isso ZRO entra so no lado das carteiras vend"
    }
   ]
  },
@@ -659,8 +677,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.02,
-   "n_abertas": 2,
+   "carteira": 8.1,
+   "n_abertas": 4,
    "abertas": [
     [
      "NIL",
@@ -668,6 +686,14 @@
     ],
     [
      "INJ",
+     "venda"
+    ],
+    [
+     "ZRO",
+     "venda"
+    ],
+    [
+     "ETHFI",
      "venda"
     ]
    ],
@@ -680,7 +706,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 7.69,
+   "carteira": 7.55,
    "n_abertas": 2,
    "abertas": [
     [
@@ -701,7 +727,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.27,
+   "carteira": 9.68,
    "n_abertas": 3,
    "abertas": [
     [
@@ -726,7 +752,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.27,
+   "carteira": 10.03,
    "n_abertas": 2,
    "abertas": [
     [
@@ -747,7 +773,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 8.08,
+   "carteira": 8.35,
    "n_abertas": 3,
    "abertas": [
     [
@@ -777,7 +803,7 @@
     "ganho_medio": 0.155,
     "perda_media": -0.257,
     "fator_lucro": 0.75,
-    "carteira": 8.02
+    "carteira": 8.1
    },
    "openbot_testnet": {
     "ops": 49,
@@ -786,7 +812,7 @@
     "ganho_medio": 0.283,
     "perda_media": -0.2,
     "fator_lucro": 0.64,
-    "carteira": 7.69
+    "carteira": 7.55
    },
    "treinador": {
     "ops": 37,
@@ -795,7 +821,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.161,
     "fator_lucro": 0.93,
-    "carteira": 9.27
+    "carteira": 9.68
    },
    "laboratorio": {
     "ops": 20,
@@ -804,7 +830,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.199,
     "fator_lucro": 0.92,
-    "carteira": 10.27
+    "carteira": 10.03
    },
    "guardiao": {
     "ops": 67,
@@ -813,7 +839,7 @@
     "ganho_medio": 0.118,
     "perda_media": -0.178,
     "fator_lucro": 0.72,
-    "carteira": 8.08
+    "carteira": 8.35
    }
   },
   "vereditos": []
@@ -881,12 +907,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "20/11 13:57",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Baixa: 13,9% das 122 moedas sobem em 4 h; carteiras H63 BTC 0×16 vendidas. Conta de teste: o repique de 5 min levou os stops de KAVA (−0,18), MUBARAK (−0,19) e XLM (−0,13). Reabri XLM vendida (stop 0,6%, alvo 1,8%) e entrei vendido em NEAR (bandeira de baixa confirmada em 15 min e 1 h; stop 0,8%, al"
-  },
-  {
    "hora_utc": "20/11 14:12",
    "de": "claude",
    "para": "sala",
@@ -951,6 +971,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Chefe: USUAL venda stop 0,01121 (-0,22 testnet). Mantenho ACE e NIL vendidas; entro INJ venda (5/6 abaixo da MM20, 4h -5,33%), stop 1,4%, alvo 4,2%, 240 min. Testnet US$ 7,85."
+  },
+  {
+   "hora_utc": "23/11 23:13",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Queda ampla: 9,7% das 124 moedas sobem em 4 h; BTC 61.252. Testnet US$ 7,5518 com NIL e INJ vendidas. Entro vendido em ZRO (6/6 tempos abaixo, 4h -3,83%; stop 1,2%, alvo 3,6%, 240 min) e ETHFI (v4 0,369, confianca 0,131; stop 1,0%, alvo 2,5%, 120 min)."
   }
  ]
 }

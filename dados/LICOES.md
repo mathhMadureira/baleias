@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 23:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 23:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 8.02** · 65 operações fechadas · 2 abertas
+Carteira **US$ 8.10** · 65 operações fechadas · 4 abertas
 
 - **Total:** 36/65 com lucro (55%), resultado -1.87, média -0.029 por operação.
 - **Últimas 24 h:** 2/4 com lucro, -0.25.
@@ -17,7 +17,7 @@ Carteira **US$ 8.02** · 65 operações fechadas · 2 abertas
 
 ## ⚓ Baleias (conta de teste) (agente OpenBot · ordens reais no testnet)
 
-Carteira **US$ 7.69** · 49 operações fechadas · 2 abertas
+Carteira **US$ 7.55** · 49 operações fechadas · 2 abertas
 
 - **Total:** 15/49 com lucro (31%), resultado -2.35, média -0.048 por operação.
 - **Últimas 24 h:** 1/4 com lucro, -0.18.
@@ -30,7 +30,7 @@ Carteira **US$ 7.69** · 49 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.27** · 37 operações fechadas · 3 abertas
+Carteira **US$ 9.68** · 37 operações fechadas · 3 abertas
 
 - **Total:** 16/37 com lucro (43%), resultado -0.24, média -0.007 por operação.
 - **Últimas 24 h:** 1/2 com lucro, +0.07.
@@ -43,7 +43,7 @@ Carteira **US$ 9.27** · 37 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 10.27** · 20 operações fechadas · 2 abertas
+Carteira **US$ 10.03** · 20 operações fechadas · 2 abertas
 
 - **Total:** 7/20 com lucro (35%), resultado -0.20, média -0.010 por operação.
 - **Últimas 24 h:** 0/1 com lucro, -0.39.
@@ -56,7 +56,7 @@ Carteira **US$ 10.27** · 20 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 8.08** · 67 operações fechadas · 3 abertas
+Carteira **US$ 8.35** · 67 operações fechadas · 3 abertas
 
 - **Total:** 35/67 com lucro (52%), resultado -1.59, média -0.024 por operação.
 - **Últimas 24 h:** 4/8 com lucro, -1.32.
@@ -71,7 +71,7 @@ Carteira **US$ 8.08** · 67 operações fechadas · 3 abertas
 
 - **Amplitude:** 62.4% das moedas subindo em 24 h, 9.6% em 4 h · BTC 24 h 0.22%, 4 h -0.2%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.9%/ano · {'BTC': 11.0, 'ETH': -18.0, 'SOL': 3.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 11.0, 'ETH': -18.9, 'SOL': 0.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB bandeira de alta (alta, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · MET fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE OCO invertido (alta, formado)
 - 📰 23/11 23:06 UTC · Decrypt: China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size
@@ -83,12 +83,12 @@ Carteira **US$ 8.08** · 67 operações fechadas · 3 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
+- 23/11 23:11 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:00 UTC; retrato 23:06 UTC); queda ampla em 4 h: 9,7% subindo (mediana 4h -2,19%), 11,2% em 1 h, 62,9% em 24 h; BTC 61.252 (1h
 - 23/11 22:43 UTC · **ACE venda, NIL venda, INJ venda** · Universo 125 moedas (vela do v4 22:30 UTC; retrato 22:37 UTC); queda ampla: 7,9% subindo em 4 h (mediana 4h -2,48%), 10,3% em 1 h, 66,7% em 24 h; BTC 61.225 (1h
 - 23/11 22:27 UTC · **ACE venda, NIL venda, USUAL venda** · Universo 125 moedas (vela do v4 22:15 UTC; retrato 22:23 UTC); regime neutro com queda ampla: 10,4% subindo em 4 h (mediana 4h -2,27%), 66,4% em 24 h; BTC 61.25
 - 23/11 22:09 UTC · **ACE venda, NIL venda** · Universo 124 moedas (vela do v4 fechada 23/11 20:00 UTC; retrato de 20:03 UTC); regime neutro com queda ampla: 8,9% subindo em 4 h (mediana 4h -3,14%), 66,9% em
 - 22/11 21:41 UTC · **GTC compra, CYBER compra, DOGE compra, SKY venda** · Universo 99 moedas (vela do v4 fechada 21:30 UTC); regime neutro: 69,7% subindo em 24 h, 47,5% em 4 h; BTC 60.982 (1h +0,59%, 4h +0,19%, 24h +0,86%), abaixo das
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
-- 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
 
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
