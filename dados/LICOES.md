@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 10:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 11:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 67.6% das moedas subindo em 24 h, 39.2% em 4 h · BTC 24 h 0.93%, 4 h -0.34%.
+- **Amplitude:** 63.7% das moedas subindo em 24 h, 50.0% em 4 h · BTC 24 h 0.91%, 4 h -0.07%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': 11.0, 'ETH': -6.6, 'SOL': -7.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.9%/ano · {'BTC': 11.0, 'ETH': -3.6, 'SOL': -6.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SUI fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · ARB topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · MMT ombro-cabeça-ombro (baixa, formado) · MUBARAK fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** SKY estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AAVE fundo duplo (alta, formado) · APT topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · DASH topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 10:53 UTC · CoinDesk: South Korea to expand cryptocurrency account freezes and curb illicit transfers abroad
 - 📰 23/11 10:31 UTC · CoinDesk: Bitcoin breaks a record streak of 'lower highs.' Here's what it means
 - 📰 23/11 09:40 UTC · CoinDesk: U.S. inflation, Thanksgiving trading: Crypto Week Ahead
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44506 apostas conferidas ao vivo, acerto 54.5%; prevê 101 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44552 apostas conferidas ao vivo, acerto 54.5%; prevê 101 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
