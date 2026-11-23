@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 18:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 18:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 81.0% das moedas subindo em 24 h, 19.0% em 4 h · BTC 24 h 1.39%, 4 h -3.39%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 11.0, 'ETH': 5.3, 'SOL': -3.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.6%/ano · {'BTC': 11.0, 'ETH': 5.1, 'SOL': -3.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ENA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB fundo duplo (alta, formado) · ONE OCO invertido (alta, formado) · RENDER fundo duplo (alta, formado) · SAND fundo duplo (alta, formado) · UNI fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
 - 📰 23/11 17:42 UTC · Cointelegraph: Cuomo says rivals urged companies to opt out of OKXICE tokenized stocks
