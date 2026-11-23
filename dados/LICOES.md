@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 04:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 04:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,7 +69,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 79.8% das moedas subindo em 24 h, 72.1% em 4 h · BTC 24 h 3.44%, 4 h 0.15%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 11.0, 'ETH': 5.9, 'SOL': 8.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.7%/ano · {'BTC': 11.0, 'ETH': 5.6, 'SOL': 8.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BERA fundo duplo (alta, CONFIRMOU) · CAKE OCO invertido (alta, CONFIRMOU) · MITO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · UNI OCO invertido (alta, CONFIRMOU) · XPL triângulo descendente (alta, CONFIRMOU) · AVAX triângulo simétrico (?, formado) · BMT fundo duplo (alta, formado) · BMT ombro-cabeça-ombro (baixa, formado) · BREV topo duplo (baixa, formado) · JUP topo duplo (baixa, formado)
 - 📰 23/11 03:37 UTC · Cointelegraph: Trump renews call for Nvidia to rehire Jensen Huang as CEO
