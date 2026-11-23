@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.4% | 280 | 50.6%–62.1% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.7% | 2447 | 50.7%–54.6% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 2448 | 50.7%–54.7% | rede neural 16→12→1, aprende a cada vela |
 | williams_wr_baixa | promissor | 83.3% | 6 | 43.6%–97.0% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 62.9% | 35 | 46.3%–76.8% | física: alta anormal de 1 h → devolve |
 | demark_td9_baixa | promissor | 62.1% | 29 | 44.0%–77.3% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
