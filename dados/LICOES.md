@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 17:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 17:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 84.4% das moedas subindo em 24 h, 91.8% em 4 h · BTC 24 h 1.63%, 4 h 1.5%.
+- **Amplitude:** 86.9% das moedas subindo em 24 h, 91.8% em 4 h · BTC 24 h 2.06%, 4 h 1.23%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': -1.6, 'ETH': 7.5, 'SOL': -7.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': 0.9, 'ETH': 7.6, 'SOL': -6.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ALGO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · ARB fundo duplo (alta, formado) · GIGGLE topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · RENDER fundo duplo (alta, formado) · UNI fundo duplo (alta, formado) · ZEC topo duplo (baixa, formado) · ZEC fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ALGO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · ARB fundo duplo (alta, formado) · PEPE topo duplo (baixa, formado) · RENDER fundo duplo (alta, formado) · UNI fundo duplo (alta, formado) · ZEC topo duplo (baixa, formado) · ZEC fundo duplo (alta, formado)
 - 📰 23/11 16:51 UTC · Cointelegraph: Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations
 - 📰 23/11 16:46 UTC · Decrypt: Tom Lee Says Ethereum Is as Scarce as Bitcoin—And Bitmine Just Bought More
 - 📰 23/11 16:39 UTC · CoinDesk: Cathie Wood's ARK Invest pulls the plug on two planned crypto ETFs
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44809 apostas conferidas ao vivo, acerto 54.5%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44821 apostas conferidas ao vivo, acerto 54.5%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

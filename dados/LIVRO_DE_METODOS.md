@@ -23,7 +23,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | williams_volb_alta | reprovado | 46.0% | 150 | 38.2%–54.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | velez_180_baixa | reprovado | 45.8% | 59 | 33.7%–58.3% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | raschke_graal_alta | reprovado | 43.9% | 41 | 29.9%–59.0% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
-| connors_8020_alta | reprovado | 42.9% | 14 | 21.4%–67.4% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
+| connors_8020_alta | reprovado | 40.0% | 15 | 19.8%–64.3% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | rompimento | reprovado | 38.5% | 39 | 24.9%–54.1% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | raschke_sopa_alta | reprovado | 29.4% | 17 | 13.3%–53.1% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
 | velez_elefante | reprovado | 20.0% | 5 | 3.6%–62.4% | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
