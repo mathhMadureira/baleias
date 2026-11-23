@@ -1,20 +1,20 @@
 {
- "t": 1795428242,
- "hora_utc": "2026-11-23 10:04 UTC",
+ "t": 1795428460,
+ "hora_utc": "2026-11-23 10:07 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 107,
-  "subindo_pct": 46.7,
-  "mediana_pct": -0.03
+  "moedas": 105,
+  "subindo_pct": 47.6,
+  "mediana_pct": -0.02
  },
  "mercado_4h": {
-  "moedas": 107,
-  "subindo_pct": 43.9,
-  "mediana_pct": -0.19
+  "moedas": 105,
+  "subindo_pct": 44.8,
+  "mediana_pct": -0.15
  },
  "mercado_24h": {
-  "moedas": 107,
-  "subindo_pct": 63.6,
+  "moedas": 105,
+  "subindo_pct": 63.8,
   "mediana_pct": 0.57
  },
  "btc": {
@@ -175,7 +175,7 @@
   -0.08
  ],
  "contexto": {
-  "t": 1795428243,
+  "t": 1795428461,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 2.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -7.8,
-    "SOL": -2.4
+    "ETH": -7.7,
+    "SOL": -4.1
    },
    "leitura": "neutro"
   },
@@ -296,6 +296,20 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "BMT",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": true,
+    "nivel": 0.02034
+   },
+   {
+    "moeda": "BMT",
+    "padrao": "estrutura de alta (topos e fundos ascendentes)",
+    "sentido": "alta",
+    "confirmado": true,
+    "nivel": null
+   },
    {
     "moeda": "SUI",
     "padrao": "fundo duplo",
@@ -323,6 +337,13 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.113
+   },
+   {
+    "moeda": "BMT",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.021
    },
    {
     "moeda": "CHIP",
@@ -764,12 +785,12 @@
   "z_contra_lab": 1.45,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5053,
-    "n": 22190
+    "acerto": 0.5052,
+    "n": 21941
    },
    "segue_maioria_24h": {
-    "acerto": 0.5035,
-    "n": 28698
+    "acerto": 0.5026,
+    "n": 28674
    }
   },
   "referencia_ganha": [],
