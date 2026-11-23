@@ -1,6 +1,6 @@
 {
- "t": 1795473662,
- "hora_utc": "2026-11-23 22:41 UTC",
+ "t": 1795473876,
+ "hora_utc": "2026-11-23 22:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   -0.19,
   -0.03,
   0.16,
-  -0.22
+  -0.32
  ],
  "contexto": {
-  "t": 1795473663,
+  "t": 1795473877,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.7,
+   "media_top20_anual_pct": 5.1,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": -9.5,
-    "SOL": -8.0
+    "SOL": -8.1
    },
    "leitura": "neutro"
   },
@@ -447,7 +447,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.8,
+  "carteira": 8.14,
   "abertas": [
    {
     "moeda": "NIL",
@@ -457,25 +457,9 @@
     "resultado_pct": 0.36,
     "horas_aberta": 0.5,
     "motivo_de_entrada": "Entrada: 4/6 tempos abaixo da MM20 (5m, 15m, 1h, 1d); 1h -0,48%, 4h -1,81%; 15s e 1m -0,23% fora do normal para baixo; queda ampla do mercado (mediana 4h -3,14%"
-   },
-   {
-    "moeda": "ACE",
-    "lado": "venda",
-    "entrada": 0.0761,
-    "agora": 0.0761,
-    "resultado_pct": -0.0,
-    "horas_aberta": 0.2,
-    "motivo_de_entrada": "Mantem: 6/6 tempos abaixo da MM20; 15m -2,19%, 1h -4,05%, 4h -11,74%; v4 p 0,505 sem confianca. Contra: 15m EST alta nao confirmada, 1m +0,66%, volume 1m 2,78x."
    }
   ],
   "ultimas_fechadas": [
-   {
-    "moeda": "BCH",
-    "lado": "venda",
-    "resultado_usd": 0.163,
-    "motivo_saida": "stop móvel (pico +1.24%, guardou +0.87%)",
-    "motivo_de_entrada": "Entrada nova: estrutura de baixa CONFIRMADA em 15 min e topo duplo CONFIRMADO em 4 h (a favor); v4 0,378 de subir (confi"
-   },
    {
     "moeda": "SNX",
     "lado": "venda",
@@ -573,6 +557,13 @@
     "resultado_usd": -0.585,
     "motivo_saida": "stop de segurança −1.2%",
     "motivo_de_entrada": "Entrada: aviso do Caçador 22:26 (5m -2,30%, z -5,7, volume 9,9x); 15m EST baixa CONFIRMADA (a favor); 4h -4,84%, 15m -0,"
+   },
+   {
+    "moeda": "ACE",
+    "lado": "venda",
+    "resultado_usd": -0.408,
+    "motivo_saida": "stop de segurança −0.8%",
+    "motivo_de_entrada": "Mantem: 6/6 tempos abaixo da MM20; 15m -2,19%, 1h -4,05%, 4h -11,74%; v4 p 0,505 sem confianca. Contra: 15m EST alta nao"
    }
   ],
   "licoes_anteriores": [
@@ -617,19 +608,15 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.8,
-   "n_abertas": 2,
+   "carteira": 8.14,
+   "n_abertas": 1,
    "abertas": [
     [
      "NIL",
      "venda"
-    ],
-    [
-     "ACE",
-     "venda"
     ]
    ],
-   "n_fechadas": 63,
+   "n_fechadas": 64,
    "ordem": null
   },
   {
@@ -638,8 +625,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 7.94,
-   "n_abertas": 3,
+   "carteira": 7.85,
+   "n_abertas": 2,
    "abertas": [
     [
      "ACE",
@@ -648,13 +635,9 @@
     [
      "NIL",
      "venda"
-    ],
-    [
-     "USUAL",
-     "venda"
     ]
    ],
-   "n_fechadas": 47,
+   "n_fechadas": 48,
    "ordem": null
   },
   {
@@ -663,7 +646,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 10.63,
+   "carteira": 10.5,
    "n_abertas": 2,
    "abertas": [
     [
@@ -684,7 +667,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.23,
+   "carteira": 10.35,
    "n_abertas": 2,
    "abertas": [
     [
@@ -716,22 +699,22 @@
   "campeao": "treinador",
   "placar": {
    "claude": {
-    "ops": 63,
-    "acerto": 0.556,
-    "soma": -1.719,
+    "ops": 64,
+    "acerto": 0.547,
+    "soma": -2.127,
     "ganho_medio": 0.152,
-    "perda_media": -0.252,
-    "fator_lucro": 0.76,
-    "carteira": 8.8
+    "perda_media": -0.257,
+    "fator_lucro": 0.71,
+    "carteira": 8.14
    },
    "openbot_testnet": {
-    "ops": 47,
-    "acerto": 0.319,
-    "soma": -1.985,
+    "ops": 48,
+    "acerto": 0.312,
+    "soma": -2.205,
     "ganho_medio": 0.283,
     "perda_media": -0.201,
-    "fator_lucro": 0.68,
-    "carteira": 7.94
+    "fator_lucro": 0.66,
+    "carteira": 7.85
    },
    "treinador": {
     "ops": 36,
@@ -740,7 +723,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.145,
     "fator_lucro": 1.08,
-    "carteira": 10.63
+    "carteira": 10.5
    },
    "laboratorio": {
     "ops": 20,
@@ -749,7 +732,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.199,
     "fator_lucro": 0.92,
-    "carteira": 10.23
+    "carteira": 10.35
    },
    "guardiao": {
     "ops": 64,
