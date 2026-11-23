@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 17:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 17:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 84.4% das moedas subindo em 24 h, 91.8% em 4 h · BTC 24 h 1.63%, 4 h 1.5%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.3%/ano · {'BTC': -9.5, 'ETH': -0.2, 'SOL': -14.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': -10.2, 'ETH': 3.7, 'SOL': -11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ALGO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · ARB fundo duplo (alta, formado) · GIGGLE topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · RENDER fundo duplo (alta, formado) · UNI fundo duplo (alta, formado) · ZEC topo duplo (baixa, formado) · ZEC fundo duplo (alta, formado)
 - 📰 23/11 16:51 UTC · Cointelegraph: Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations
