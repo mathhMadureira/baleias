@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 08:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 08:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,10 +67,10 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 76.9% das moedas subindo em 24 h, 65.7% em 4 h · BTC 24 h 2.55%, 4 h -0.02%.
+- **Amplitude:** 76.6% das moedas subindo em 24 h, 65.4% em 4 h · BTC 24 h 2.55%, 4 h -0.02%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 11.0, 'ETH': -4.8, 'SOL': 6.6} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 2.5% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': 11.0, 'ETH': -6.0, 'SOL': 6.1} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AAVE fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · JUP topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SUI fundo duplo (alta, formado)
 - 📰 23/11 08:08 UTC · Cointelegraph: Bitcoin ETFs shed $1.8B in third-largest weekly outflow
 - 📰 23/11 07:45 UTC · CoinDesk: Crypto thieves are using online ads to infect iPhones with a single tap, research finds
@@ -116,7 +116,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44101 apostas conferidas ao vivo, acerto 54.5%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44101 apostas conferidas ao vivo, acerto 54.5%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
