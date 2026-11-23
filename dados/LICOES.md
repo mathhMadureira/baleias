@@ -1,13 +1,13 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 02:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 02:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
 Carteira **US$ 8.38** · 61 operações fechadas · 0 abertas
 
 - **Total:** 34/61 com lucro (56%), resultado -1.62, média -0.026 por operação.
-- **Últimas 24 h:** 1/5 com lucro, -1.57.
+- **Últimas 24 h:** 0/4 com lucro, -1.68.
 - **Por horário:** 18–23 UTC: 26 op, 46% certas, -2.32 · 06–11 UTC: 1 op, 0% certas, -0.82 · 12–17 UTC: 25 op, 60% certas, +0.51 · 00–05 UTC: 9 op, 78% certas, +1.02
 - **Por lado:** compra: 20 op, 50% certas, -2.05 · venda: 41 op, 59% certas, +0.44
 - **Por motivo de saída:** lidera as altas de 4 h com vol: 1 op, 0% certas, -0.82 · maior confiança de compra: v4 : 1 op, 0% certas, -0.57 · Entrada: v4 p 0,638 de subir (: 1 op, 0% certas, -0.46 · Entrada: v4 p 0,625 de subir (: 1 op, 0% certas, -0.46 · Entrada: aviso do Cacador vend: 1 op, 0% certas, -0.46 · Entrada: padrao grafico confir: 1 op, 0% certas, -0.29 · Topo duplo CONFIRMADO em 1 h (: 1 op, 0% certas, -0.26 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.26 · Nova, a mercado: bandeira de b: 1 op, 0% certas, -0.24 · Entrada: 2/6 tempos abaixo da : 1 op, 0% certas, -0.23 · Entrada: v4 p=0,347, confiança: 1 op, 0% certas, -0.23 · Entrada nova: bandeira de baix: 1 op, 0% certas, -0.20 · Nova, a mercado: 6 de 6 tempos: 1 op, 0% certas, -0.19 · Entrada nova: 6 de 6 tempos ab: 1 op, 0% certas, -0.18 · A favor: 5 de 6 tempos abaixo : 1 op, 0% certas, -0.18 · Aviso do Caçador 18:40 UTC (ex: 1 op, 0% certas, -0.18 · v4 0,426 de subir (confiança 0: 1 op, 0% certas, -0.16 · mantém: regime baixa e v4 não : 1 op, 0% certas, -0.15 · v4 0.413 de subir (confiança 0: 1 op, 0% certas, -0.11 · moeda grande a favor da alta d: 2 op, 50% certas, -0.11 · v4 0,402 de subir (confiança 0: 1 op, 0% certas, -0.07 · Entrada: 4/6 tempos acima da M: 1 op, 0% certas, -0.07 · recompra a favor da alta de 24: 1 op, 0% certas, -0.07 · v4 0.637 de subir (confiança 0: 1 op, 0% certas, -0.03 · Mantém: 4 de 6 tempos abaixo d: 2 op, 50% certas, -0.00 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.02 · Entrada: varredura completa; 4: 1 op, 100% certas, +0.03 · v4 0,385 de subir (confiança 0: 1 op, 100% certas, +0.05 · Mantém: 6 de 6 tempos abaixo d: 2 op, 50% certas, +0.05 · v4 0.370 de subir (confiança 0: 1 op, 100% certas, +0.05 · maior confiança do universo: v: 1 op, 100% certas, +0.06 · a favor da alta de 24 h (73,3%: 1 op, 100% certas, +0.06 · mantém: regime neutro e v4 não: 1 op, 100% certas, +0.06 · v4 0.403 de subir (confiança 0: 1 op, 100% certas, +0.06 · 24 h +8,33%, 4 h +7,29% com vo: 1 op, 100% certas, +0.06 · alta de 24 h com 79,5% subindo: 1 op, 100% certas, +0.07 · 24 h +7,03% (entre +5% e +10%): 1 op, 100% certas, +0.07 · mantida: regime de baixa e v4 : 1 op, 100% certas, +0.08 · regime de baixa (24,5% subindo: 1 op, 100% certas, +0.08 · regime de baixa; 6 de 6 tempos: 1 op, 100% certas, +0.08 · 24 h +10,06%, 4 h +3,57% sem e: 1 op, 100% certas, +0.09 · Entrada: v4 p 0,318 de subir (: 1 op, 100% certas, +0.11 · Aviso de compra do Caçador (5 : 1 op, 100% certas, +0.12 · mantém: 6 de 6 tempos abaixo d: 2 op, 100% certas, +0.13 · Aviso de venda do Caçador (5 m: 1 op, 100% certas, +0.15 · Entrada nova: estrutura de bai: 1 op, 100% certas, +0.16 · Entrada nova: fundo duplo CONF: 1 op, 100% certas, +0.17 · Mantém: 3 de 6 tempos abaixo (: 1 op, 100% certas, +0.25 · Topo duplo CONFIRMADO em 1 h e: 1 op, 100% certas, +0.26 · v4 0,345 de subir (confiança 0: 1 op, 100% certas, +0.26 · Varredura: 5 de 6 tempos abaix: 1 op, 100% certas, +0.28 · Entrada: varredura completa; 3: 1 op, 100% certas, +0.33 · Bandeira de baixa CONFIRMADA e: 1 op, 100% certas, +0.33 · A favor: 6 de 6 tempos abaixo : 3 op, 67% certas, +0.39 · Entrada nova: 5 de 6 tempos ab: 1 op, 100% certas, +0.43
@@ -70,7 +70,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 56.9% das moedas subindo em 24 h, 24.5% em 4 h · BTC 24 h 1.49%, 4 h -0.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 11.0, 'ETH': -7.5, 'SOL': 1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 10.8, 'ETH': -7.4, 'SOL': 1.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AVAX triângulo simétrico (baixa, CONFIRMOU) · BMT fundo duplo (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · XPL estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · BMT ombro-cabeça-ombro (baixa, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CVX topo duplo (baixa, formado)
 - 📰 23/11 00:53 UTC · Cointelegraph: Half of wallets on Trump’s dinner list got tokens from non-US exchanges
@@ -82,7 +82,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.9 h.
+- ⚠️ **Rotina parada:** sem decisão há 5.0 h.
 - 22/11 21:41 UTC · **GTC compra, CYBER compra, DOGE compra, SKY venda** · Universo 99 moedas (vela do v4 fechada 21:30 UTC); regime neutro: 69,7% subindo em 24 h, 47,5% em 4 h; BTC 60.982 (1h +0,59%, 4h +0,19%, 24h +0,86%), abaixo das
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
