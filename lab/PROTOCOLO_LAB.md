@@ -1640,3 +1640,36 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   conta de teste (fio −0,1327%), onde o braço maior bateria no piso em 30,1%. Por isso: **nuvem dos 4 agentes a 5 × a carteira, 20×; conta de teste
   na H64 (2,5 ×, 10×)**. O fator 10 termina abaixo do piso na sequência real — reprovado.
 - O fio não mudou (segue perto de zero, t 0,36): o tamanho dobra, a vantagem não. O que dobra é o sobe-e-desce: queda máxima 17,9% → 35,7%.
+
+## Juízo diário de 23/11/2026 (~22:00 UTC; atrasado: o juízo de 22/11 não rodou). Ramo `estado` 080d2bb6
+
+### Resultado da H46 (`lab/juizo_h46.py`): REPROVADA — nada muda
+| faixa UTC | acerto | apostas | velas | erro-padrão |
+|---|---|---|---|---|
+| 00–06 h | 54,72% | 7.769 | 168 | 1,61% |
+| 06–12 h | 53,83% | 6.792 | 149 | 1,65% |
+| 12–18 h | 56,09% | 7.096 | 139 | 2,02% |
+| **18–24 h** | **57,48%** | 7.627 | 162 | 1,78% |
+| 00–18 h juntas | 54,89% | 21.657 | 456 | 1,01% |
+- 29.284 apostas de 16/11 00:00 a 22/11 24:00 UTC; acerto = líquido > 0 (conta do vigia); erro-padrão por vela. 1 tentativa.
+- 18–24 h acertou **acima** de 50% (z +4,20): a primeira condição falha. As outras ≥ 52%: sim. O achado de 11–15/11 (44,2%) fica registrado como acaso ou deriva passageira; os robôs do v4 não ganham regra de horário.
+
+### H47 (Robô Livre, descritivo, prazo 22/11 21:20 UTC): só registro
+- Estado em `dados/robo_livre.json` (última gravação 18/11 00:01 UTC; robô parado desde que quebrou e aposentado na H61).
+- Carteira com custo **US$ 0,90**; sem custo US$ 1,84 (de US$ 10). 25 operações fechadas, **4 liquidações** (−4,5% a 20×), custo pago US$ 0,93. Quebrou (`quebrou: true`).
+- Leitura: sem regras de decisão e a 20× com a carteira inteira, perdeu 91% em menos de 2 dias; o custo explica só US$ 0,93 dos US$ 9,10 perdidos.
+
+### Resultado da H70 (`lab/juizo_h70.py`, ramo `estado` 4ae07584): REPROVADA nas 4 tentativas — controle válido
+- 3.699 apostas do v4 com confiança ≥ 0,08 desde 16/11 21:53 UTC, 200 moedas (velas: 184 perpétuo, 16 à vista). G1: 3.699 conferidas; G2: 3.491 (208 com prazo aberto).
+- Controle (lado sorteado), todos dentro de −0,12% ± 3 EP: G1 −0,118 / −0,116 / −0,121%; G2 −0,131 / −0,184 / −0,137% (A0/A1/A2).
+
+| tentativa | média da diferença | EP | z | blocos | veredito |
+|---|---|---|---|---|---|
+| G1 A1 − A0 | +0,020% | 0,021% | +0,98 | −0,006 / +0,068 / −0,000% | reprovada |
+| G1 A2 − A0 | +0,004% | 0,005% | +0,88 | +0,002 / +0,005 / +0,006% | reprovada (z < 2,24) |
+| G2 A1 − A0 | −0,054% | 0,073% | −0,74 | −0,142 / +0,114 / −0,133% | reprovada |
+| G2 A2 − A0 | +0,011% | 0,042% | +0,26 | −0,065 / +0,083 / +0,014% | reprovada |
+- Média absoluta (relato): G1 A0 −0,077%, A1 −0,057%, A2 −0,073%; G2 A0 −0,089%, A1 −0,143%, A2 −0,078%. Todas negativas depois do custo.
+- Conforme o adendo de 19/11: a A2 já está ligada por decisão do dono; o Laboratório **não desliga**. O resultado vai ao dono: a forma da saída não muda a
+  média de modo detectável (como previsto); nenhuma forma tem vantagem. A A1 (sem móvel) também não passou.
+- Ajuste no script antes de rodar: o download desiste de uma fonte após 4 falhas de rede (antes era laço infinito); download em paralelo (8), mesmo código de medida.
