@@ -1,6 +1,6 @@
 {
- "t": 1795476764,
- "hora_utc": "2026-11-23 23:32 UTC",
+ "t": 1795476990,
+ "hora_utc": "2026-11-23 23:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   -0.03,
   0.16,
   -0.14,
-  0.37
+  0.32
  ],
  "contexto": {
-  "t": 1795476765,
+  "t": 1795476991,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.1,
+   "media_top20_anual_pct": 2.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -14.8,
-    "SOL": -1.0
+    "ETH": -14.4,
+    "SOL": -0.9
    },
    "leitura": "neutro"
   },
@@ -489,7 +489,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 6.4,
+  "carteira": 6.52,
   "abertas": [
    {
     "moeda": "NIL",
@@ -497,7 +497,7 @@
     "entrada": 0.04778,
     "agora": 0.04805,
     "resultado_pct": -0.57,
-    "horas_aberta": 1.3,
+    "horas_aberta": 1.4,
     "motivo_de_entrada": "Entrada: 4/6 tempos abaixo da MM20 (5m, 15m, 1h, 1d); 1h -0,48%, 4h -1,81%; 15s e 1m -0,23% fora do normal para baixo; queda ampla do mercado (mediana 4h -3,14%"
    },
    {
@@ -506,8 +506,17 @@
     "entrada": 6.238,
     "agora": 6.306,
     "resultado_pct": -1.09,
-    "horas_aberta": 0.7,
+    "horas_aberta": 0.8,
     "motivo_de_entrada": "Entrada: aviso do Caçador 22:21 (5m -1,42%, z -4,6, volume 7,6x, vale 30 min); 5/6 tempos abaixo da MM20 (1m,5m,15m,1h,1d); 15m -0,41%, 1h -3,10%, 4h -5,33%; me"
+   },
+   {
+    "moeda": "ZRO",
+    "lado": "venda",
+    "entrada": 1.148,
+    "agora": 1.149,
+    "resultado_pct": -0.09,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Mantem: 4/6 tempos abaixo da MM20 (15m,1h,4h,1d); 1h -0,26%, 4h -2,47%, 24h -3,94%; carteiras H63 vendidas em BTC/ETH/SOL. Contra: 15m +1,32%, v4 0,507 sem conf"
    }
   ],
   "ultimas_fechadas": [
@@ -619,10 +628,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795302554,
-    "texto": "Caderno Claude: 51 fechadas; 6/6 tempos: 10 operações, 60%, +US$ 0,568 (+US$ 0,0568 média); padrões a favor: 10, 70%, +US$ 1,337 (+US$ 0,1337 média); carteiras a favor: 11, 64%, +US$ 0,286 (+US$ 0,0260 média). Testnet: 38 fechadas, 34,2% acerto, soma -US$ 1,312, fator 0,74, patrimônio US$ 8,6849; resultado abaixo do inicial, sem base para mudar método."
-   },
-   {
     "t": 1795307841,
     "texto": "HYPER compra fechou no stop movel +0,325 e SNX venda +0,430; no caderno 53 fechadas: p 60,4%, G +4,563, L -4,484, E +0,0015 US$/operacao, G/L 1,02. O grupo com os tempos a favor (11 operacoes) rendeu +0,101/operacao contra -0,031 das mistas (5): entrar com 4 ou mais tempos a favor e evitar as mistas."
    },
@@ -649,6 +654,10 @@
    {
     "t": 1795475469,
     "texto": "USUAL venda saiu no stop (-0,585 na simulada; -0,2193 no testnet) e ACE venda tambem (-0,1475 no testnet). Testnet: 49 fechadas, p 0,306, G +0,283, L -0,200, E = 0,306*0,283 - 0,694*0,200 = -0,052 por operacao. Caderno: entradas com melhores carteiras a favor tiveram 64% de acerto (11 ops, media +0,026) contra 48% sem leitura (31 ops, media -0,030); por isso ZRO entra so no lado das carteiras vend"
+   },
+   {
+    "t": 1795476644,
+    "texto": "Sem fechamento novo desde a rodada anterior (testnet 49 fechadas): p 0,306, G +0,283, L -0,200, E = -0,052 por operacao. As 4 vendas abertas (NIL, INJ, ZRO, ETHFI) estao levemente negativas num repique de 15m (+0,27% a +1,32%). Caderno: padrao a favor 53% (17 ops, -0,011 media); carteiras H63 a favor 64% (11 ops, +0,026)."
    }
   ]
  },
@@ -659,29 +668,8 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 6.4,
-   "n_abertas": 2,
-   "abertas": [
-    [
-     "NIL",
-     "venda"
-    ],
-    [
-     "INJ",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 67,
-   "ordem": null
-  },
-  {
-   "id": "openbot_testnet",
-   "nome": "Baleias (conta de teste)",
-   "avatar": "⚓",
-   "motor": "agente OpenBot · ordens reais no testnet",
-   "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
-   "carteira": 7.39,
-   "n_abertas": 4,
+   "carteira": 6.52,
+   "n_abertas": 3,
    "abertas": [
     [
      "NIL",
@@ -694,13 +682,30 @@
     [
      "ZRO",
      "venda"
+    ]
+   ],
+   "n_fechadas": 67,
+   "ordem": null
+  },
+  {
+   "id": "openbot_testnet",
+   "nome": "Baleias (conta de teste)",
+   "avatar": "⚓",
+   "motor": "agente OpenBot · ordens reais no testnet",
+   "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
+   "carteira": 7.2,
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "INJ",
+     "venda"
     ],
     [
      "ETHFI",
      "venda"
     ]
    ],
-   "n_fechadas": 49,
+   "n_fechadas": 51,
    "ordem": null
   },
   {
@@ -709,8 +714,8 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 8.53,
-   "n_abertas": 2,
+   "carteira": 8.63,
+   "n_abertas": 3,
    "abertas": [
     [
      "RESOLV",
@@ -718,6 +723,10 @@
     ],
     [
      "WLFI",
+     "venda"
+    ],
+    [
+     "ZRO",
      "venda"
     ]
    ],
@@ -730,7 +739,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.43,
+   "carteira": 10.42,
    "n_abertas": 4,
    "abertas": [
     [
@@ -759,8 +768,8 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.53,
-   "n_abertas": 2,
+   "carteira": 7.71,
+   "n_abertas": 3,
    "abertas": [
     [
      "WLFI",
@@ -768,6 +777,10 @@
     ],
     [
      "MET",
+     "venda"
+    ],
+    [
+     "ZRO",
      "venda"
     ]
    ],
@@ -785,16 +798,16 @@
     "ganho_medio": 0.155,
     "perda_media": -0.272,
     "fator_lucro": 0.66,
-    "carteira": 6.4
+    "carteira": 6.52
    },
    "openbot_testnet": {
-    "ops": 49,
-    "acerto": 0.306,
-    "soma": -2.352,
+    "ops": 51,
+    "acerto": 0.294,
+    "soma": -2.6,
     "ganho_medio": 0.283,
-    "perda_media": -0.2,
-    "fator_lucro": 0.64,
-    "carteira": 7.39
+    "perda_media": -0.195,
+    "fator_lucro": 0.62,
+    "carteira": 7.2
    },
    "treinador": {
     "ops": 38,
@@ -803,7 +816,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.179,
     "fator_lucro": 0.8,
-    "carteira": 8.53
+    "carteira": 8.63
    },
    "laboratorio": {
     "ops": 20,
@@ -812,7 +825,7 @@
     "ganho_medio": 0.34,
     "perda_media": -0.199,
     "fator_lucro": 0.92,
-    "carteira": 10.43
+    "carteira": 10.42
    },
    "guardiao": {
     "ops": 68,
@@ -821,7 +834,7 @@
     "ganho_medio": 0.118,
     "perda_media": -0.187,
     "fator_lucro": 0.67,
-    "carteira": 7.53
+    "carteira": 7.71
    }
   },
   "vereditos": []
@@ -889,12 +902,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "20/11 14:12",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Baixa: 15,3% das 124 moedas sobem em 24 h; repique de 1 h (BTC +0,51%). Mantenho XLM e NEAR vendidas. Entro vendido em BCH (estrutura 15 min e topo duplo 4 h confirmados, v4 0,122; stop 0,8%, alvo 2,4%, 120 min) e SNX (5 de 6 abaixo; stop 0,7%, alvo 2,1%, 120 min). PUMP (Caçador 76) fica fora: SETTL"
-  },
-  {
    "hora_utc": "20/11 14:26",
    "de": "claude",
    "para": "sala",
@@ -959,6 +966,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Queda ampla: 9,7% das 124 moedas sobem em 4 h; BTC 61.252. Testnet US$ 7,5518 com NIL e INJ vendidas. Entro vendido em ZRO (6/6 tempos abaixo, 4h -3,83%; stop 1,2%, alvo 3,6%, 240 min) e ETHFI (v4 0,369, confianca 0,131; stop 1,0%, alvo 2,5%, 120 min)."
+  },
+  {
+   "hora_utc": "23/11 23:36",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Chefe: repique curto (15m +0,27% a +1,32% nas abertas); 12,1% das 124 moedas sobem em 4 h. Testnet US$ 7,391 com NIL, INJ, ZRO e ETHFI vendidas; sem entrada nova (vendidos do v4 com 1h positivo)."
   }
  ]
 }
