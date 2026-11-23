@@ -1,28 +1,28 @@
 {
- "t": 1795457716,
- "hora_utc": "2026-11-23 18:15 UTC",
+ "t": 1795457956,
+ "hora_utc": "2026-11-23 18:19 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
-  "subindo_pct": 4.8,
-  "mediana_pct": -1.33
+  "subindo_pct": 8.1,
+  "mediana_pct": -1.32
  },
  "mercado_4h": {
   "moedas": 124,
-  "subindo_pct": 18.5,
-  "mediana_pct": -1.58
+  "subindo_pct": 9.7,
+  "mediana_pct": -2.56
  },
  "mercado_24h": {
   "moedas": 124,
-  "subindo_pct": 82.3,
-  "mediana_pct": 2.88
+  "subindo_pct": 83.1,
+  "mediana_pct": 2.54
  },
  "btc": {
-  "1h": -0.93,
-  "4h": -3.39,
-  "24h": 1.39,
-  "preco": 61674.18,
-  "vol_4h_vs_media": 2.54
+  "1h": -0.73,
+  "4h": -3.02,
+  "24h": 1.42,
+  "preco": 61586.33,
+  "vol_4h_vs_media": 2.12
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "PROM",
-   "4h": -12.51,
-   "24h": 15.63,
-   "vol": 2.41
-  },
-  {
-   "moeda": "MMT",
-   "4h": -5.79,
-   "24h": -12.85,
-   "vol": 2.3
+   "4h": -17.42,
+   "24h": 9.78,
+   "vol": 2.46
   },
   {
    "moeda": "ENA",
-   "4h": -5.1,
-   "24h": 2.05,
-   "vol": 3.08
+   "4h": -7.21,
+   "24h": 2.36,
+   "vol": 2.53
+  },
+  {
+   "moeda": "MMT",
+   "4h": -7.01,
+   "24h": -12.57,
+   "vol": 2.17
+  },
+  {
+   "moeda": "LSK",
+   "4h": -6.81,
+   "24h": 10.17,
+   "vol": 2.23
+  },
+  {
+   "moeda": "TRUMP",
+   "4h": -6.79,
+   "24h": 1.12,
+   "vol": 2.18
+  },
+  {
+   "moeda": "CHIP",
+   "4h": -6.76,
+   "24h": 7.77,
+   "vol": 2.95
+  },
+  {
+   "moeda": "NIGHT",
+   "4h": -6.46,
+   "24h": -2.59,
+   "vol": 1.41
+  },
+  {
+   "moeda": "WLD",
+   "4h": -5.53,
+   "24h": 2.54,
+   "vol": 2.47
   },
   {
    "moeda": "ENS",
-   "4h": -4.21,
+   "4h": -5.47,
    "24h": -0.55,
-   "vol": 4.72
-  },
-  {
-   "moeda": "SOL",
-   "4h": -3.8,
-   "24h": 4.72,
-   "vol": 2.83
-  },
-  {
-   "moeda": "ETHFI",
-   "4h": -3.78,
-   "24h": -0.36,
-   "vol": 2.64
-  },
-  {
-   "moeda": "VIRTUAL",
-   "4h": -3.77,
-   "24h": 2.81,
-   "vol": 2.86
-  },
-  {
-   "moeda": "AAVE",
-   "4h": -3.74,
-   "24h": 0.27,
-   "vol": 2.08
-  },
-  {
-   "moeda": "ETH",
-   "4h": -3.7,
-   "24h": 1.67,
-   "vol": 2.89
+   "vol": 4.58
   }
  ],
  "maiores_altas_4h": [
   {
+   "moeda": "ACE",
+   "4h": 15.85,
+   "24h": 48.21,
+   "vol": 0.73
+  },
+  {
    "moeda": "LISTA",
-   "4h": 15.57,
-   "24h": 25.07,
-   "vol": 1.37
+   "4h": 8.9,
+   "24h": 21.88,
+   "vol": 1.38
   },
   {
    "moeda": "ONE",
-   "4h": 13.33,
-   "24h": 14.98,
-   "vol": 3.86
-  },
-  {
-   "moeda": "ACE",
-   "4h": 5.89,
-   "24h": 2.33,
-   "vol": 0.4
-  },
-  {
-   "moeda": "BEB",
-   "4h": 5.81,
-   "24h": 15.14,
-   "vol": 3.88
-  },
-  {
-   "moeda": "SKY",
-   "4h": 2.25,
-   "24h": -1.43,
-   "vol": 1.36
+   "4h": 8.49,
+   "24h": 11.77,
+   "vol": 4.17
   },
   {
    "moeda": "KERNEL",
-   "4h": 2.14,
-   "24h": 5.39,
-   "vol": 0.8
+   "4h": 1.65,
+   "24h": 5.9,
+   "vol": 0.71
+  },
+  {
+   "moeda": "ERA",
+   "4h": 1.58,
+   "24h": 1.18,
+   "vol": 1.38
+  },
+  {
+   "moeda": "BLUR",
+   "4h": 1.53,
+   "24h": 8.76,
+   "vol": 0.74
+  },
+  {
+   "moeda": "DODO",
+   "4h": 1.13,
+   "24h": 0.93,
+   "vol": 0.82
   },
   {
    "moeda": "AIGENSYN",
-   "4h": 1.84,
-   "24h": 8.54,
-   "vol": 0.64
+   "4h": 0.69,
+   "24h": 7.78,
+   "vol": 0.59
   },
   {
-   "moeda": "ATOM",
-   "4h": 1.84,
-   "24h": 8.54,
-   "vol": 2.67
+   "moeda": "TRX",
+   "4h": 0.42,
+   "24h": 2.03,
+   "vol": 2.09
   },
   {
-   "moeda": "ALLO",
-   "4h": 1.76,
-   "24h": -2.64,
-   "vol": 1.64
-  },
-  {
-   "moeda": "MUBARAK",
-   "4h": 1.73,
-   "24h": 22.31,
-   "vol": 1.89
+   "moeda": "INIT",
+   "4h": 0.28,
+   "24h": -0.73,
+   "vol": 2.13
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,23 @@
   0.01,
   -1.03,
   -0.93,
-  -0.22
+  -0.2
  ],
  "contexto": {
-  "t": 1795457717,
+  "t": 1795457957,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795457785,
+    "hora_utc": "23/11 18:16",
+    "titulo": "Solo Bitcoin Miner Scores Again, Hitting $191,000 Jackpot Against the Odds"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795457745,
+    "hora_utc": "23/11 18:15",
+    "titulo": "Perps and Swaps: How to Trade the News on Decrypt"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795457525,
@@ -254,18 +266,6 @@
     "t": 1795445220,
     "hora_utc": "23/11 14:47",
     "titulo": "Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795444998,
-    "hora_utc": "23/11 14:43",
-    "titulo": "Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795443224,
-    "hora_utc": "23/11 14:13",
-    "titulo": "Nvidia soars as Jensen Huang returns to lead company"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.6,
+   "media_top20_anual_pct": 3.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.0,
-    "SOL": -3.8
+    "ETH": 2.1,
+    "SOL": -3.5
    },
    "leitura": "neutro"
   },
@@ -332,6 +332,13 @@
     "nivel": 0.03475
    },
    {
+    "moeda": "TIA",
+    "padrao": "OCO invertido",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.3461
+   },
+   {
     "moeda": "UNI",
     "padrao": "fundo duplo",
     "sentido": "alta",
@@ -366,9 +373,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 78,
-  "compras": 44,
-  "vendas": 34,
+  "apostas": 68,
+  "compras": 30,
+  "vendas": 38,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -413,28 +420,28 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "SOPH",
-    "prob_subir": 0.609
-   },
-   {
     "moeda": "MITO",
     "prob_subir": 0.608
-   },
-   {
-    "moeda": "BLUR",
-    "prob_subir": 0.607
    },
    {
     "moeda": "F",
     "prob_subir": 0.604
    },
    {
-    "moeda": "AIGENSYN",
-    "prob_subir": 0.6
-   },
-   {
     "moeda": "BANK",
     "prob_subir": 0.598
+   },
+   {
+    "moeda": "HEI",
+    "prob_subir": 0.583
+   },
+   {
+    "moeda": "COTI",
+    "prob_subir": 0.569
+   },
+   {
+    "moeda": "SKL",
+    "prob_subir": 0.564
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -715,34 +722,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.7% em 27706 apostas (603 velas, 16/11 18:45–23/11 17:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5469,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.7% em 27725 apostas (604 velas, 16/11 18:45–23/11 17:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5468,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.41,
+  "z_contra_lab": 1.4,
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5062,
-    "n": 22969
+    "n": 22987
    },
    "segue_maioria_24h": {
-    "acerto": 0.505,
-    "n": 27630
+    "acerto": 0.5049,
+    "n": 27649
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
     "acerto": 0.5558,
-    "n": 7825
+    "n": 7829
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5699,
-    "n": 2934
+    "acerto": 0.5693,
+    "n": 2937
    },
    "confianca:<0,05": {
-    "acerto": 0.5323,
-    "n": 16121
+    "acerto": 0.5322,
+    "n": 16133
    },
    "confianca:≥0,12": {
     "acerto": 0.6671,
@@ -757,20 +764,20 @@
     "n": 6274
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5614,
-    "n": 6211
+    "acerto": 0.5608,
+    "n": 6230
    },
    "horario_utc:18–24 h": {
     "acerto": 0.575,
     "n": 7607
    },
    "lado:compra": {
-    "acerto": 0.5353,
-    "n": 12045
+    "acerto": 0.5351,
+    "n": 12059
    },
    "lado:venda": {
     "acerto": 0.5558,
-    "n": 15661
+    "n": 15666
    }
   }
  },

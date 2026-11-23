@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 18:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 18:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,17 +66,17 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 82.3% das moedas subindo em 24 h, 18.5% em 4 h · BTC 24 h 1.39%, 4 h -3.39%.
+- **Amplitude:** 83.1% das moedas subindo em 24 h, 9.7% em 4 h · BTC 24 h 1.42%, 4 h -3.02%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.6%/ano · {'BTC': 11.0, 'ETH': 2.0, 'SOL': -3.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': 11.0, 'ETH': 2.1, 'SOL': -3.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ENA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB fundo duplo (alta, formado) · ONE OCO invertido (alta, formado) · RENDER fundo duplo (alta, formado) · SAND fundo duplo (alta, formado) · UNI fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ENA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB fundo duplo (alta, formado) · ONE OCO invertido (alta, formado) · RENDER fundo duplo (alta, formado) · SAND fundo duplo (alta, formado) · TIA OCO invertido (alta, formado) · UNI fundo duplo (alta, formado) · ZEC fundo duplo (alta, formado)
+- 📰 23/11 18:16 UTC · Decrypt: Solo Bitcoin Miner Scores Again, Hitting $191,000 Jackpot Against the Odds
+- 📰 23/11 18:15 UTC · Decrypt: Perps and Swaps: How to Trade the News on Decrypt
 - 📰 23/11 18:12 UTC · CoinDesk: Nvidia's Jensen Huang faces Senate scrutiny despite Trump-backed return as CEO
 - 📰 23/11 17:42 UTC · Cointelegraph: Cuomo says rivals urged companies to opt out of OKXICE tokenized stocks
 - 📰 23/11 17:31 UTC · CoinDesk: Bitcoin rebound already losing steam as AI trade returns with a bang
 - 📰 23/11 17:28 UTC · Decrypt: Jensen Huang’s Wealth Rises $36 Billion as Nvidia Surge Burns Short Sellers for $12 Billion
-- 📰 23/11 16:51 UTC · Cointelegraph: Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations
-- 📰 23/11 16:46 UTC · Decrypt: Tom Lee Says Ethereum Is as Scarce as Bitcoin—And Bitmine Just Bought More
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 45015 apostas conferidas ao vivo, acerto 54.5%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 45034 apostas conferidas ao vivo, acerto 54.4%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
