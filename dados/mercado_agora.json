@@ -1,6 +1,6 @@
 {
- "t": 1795449323,
- "hora_utc": "2026-11-23 15:55 UTC",
+ "t": 1795449557,
+ "hora_utc": "2026-11-23 15:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,11 +172,17 @@
   -0.16,
   4.1,
   -1.48,
-  -0.08
+  -0.06
  ],
  "contexto": {
-  "t": 1795449324,
+  "t": 1795449558,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795449475,
+    "hora_utc": "23/11 15:57",
+    "titulo": "How market depth shapes the price of a weekend Bitcoin sale"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795447741,
@@ -260,12 +266,6 @@
     "t": 1795440335,
     "hora_utc": "23/11 13:25",
     "titulo": "Strategy Buys $30M in Bitcoin, Moves $1B From USD Reserve to Cash Pot"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795439703,
-    "hora_utc": "23/11 13:15",
-    "titulo": "Critics of Netflix’s FTX drama point to Obama’s producer credit"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.3,
+   "media_top20_anual_pct": 8.2,
    "principais_anual_pct": {
-    "BTC": 2.0,
-    "ETH": 10.8,
-    "SOL": -7.5
+    "BTC": 1.8,
+    "ETH": 11.0,
+    "SOL": -8.3
    },
    "leitura": "neutro"
   },
