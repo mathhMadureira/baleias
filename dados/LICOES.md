@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 00:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 00:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 8.38** · 61 operações fechadas · 0 abertas
 Carteira **US$ 8.08** · 43 operações fechadas · 4 abertas
 
 - **Total:** 14/43 com lucro (33%), resultado -1.87, média -0.044 por operação.
-- **Últimas 24 h:** 1/5 com lucro, -0.56.
+- **Últimas 24 h:** 0/4 com lucro, -0.63.
 - **Por horário:** 06–11 UTC: 3 op, 0% certas, -1.16 · 00–05 UTC: 4 op, 25% certas, -0.39 · 18–23 UTC: 17 op, 29% certas, -0.27 · 12–17 UTC: 19 op, 42% certas, -0.05
 - **Por lado:** compra: 9 op, 11% certas, -2.74 · venda: 34 op, 38% certas, +0.87
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −0.80% na co: 6 op, 17% certas, -0.54 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 1 op, 100% certas, +0.41 · fora da lista de posições do c: 8 op, 12% certas, +0.48 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -33,7 +33,7 @@ Carteira **US$ 8.08** · 43 operações fechadas · 4 abertas
 Carteira **US$ 9.68** · 35 operações fechadas · 0 abertas
 
 - **Total:** 15/35 com lucro (43%), resultado -0.32, média -0.009 por operação.
-- **Últimas 24 h:** 2/4 com lucro, +0.02.
+- **Últimas 24 h:** 1/3 com lucro, -0.06.
 - **Por horário:** 18–23 UTC: 16 op, 38% certas, -0.69 · 00–05 UTC: 9 op, 44% certas, +0.14 · 12–17 UTC: 10 op, 50% certas, +0.24
 - **Por lado:** venda: 23 op, 43% certas, -0.40 · compra: 12 op, 42% certas, +0.08
 - **Por motivo de saída:** nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · Entrada pelo alerta Caçador vá: 1 op, 0% certas, -0.14 · Manter posição aberta: varredu: 1 op, 0% certas, -0.13 · Manter aberta: varredura 00:00: 1 op, 0% certas, -0.13 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · Entrada pelo alerta Caçador ai: 1 op, 0% certas, -0.08 · Entrada: v4 0,639 de subir (co: 1 op, 0% certas, -0.07 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · Entrada após alerta Caçador ai: 1 op, 0% certas, -0.03 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · nova: 6 de 6 tempos abaixo da : 4 op, 50% certas, -0.01 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · Entrada após alerta Caçador vá: 1 op, 100% certas, +0.08 · Manter: varredura 00:25 UTC; 3: 1 op, 100% certas, +0.10 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24 · entra: 6 de 6 tempos abaixo da: 1 op, 100% certas, +0.24
@@ -59,7 +59,7 @@ Carteira **US$ 9.80** · 20 operações fechadas · 0 abertas
 Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Total:** 31/59 com lucro (53%), resultado -0.27, média -0.005 por operação.
-- **Últimas 24 h:** 3/6 com lucro, -0.10.
+- **Últimas 24 h:** 2/4 com lucro, -0.16.
 - **Por horário:** 18–23 UTC: 31 op, 52% certas, -0.48 · 00–05 UTC: 13 op, 54% certas, +0.10 · 12–17 UTC: 15 op, 53% certas, +0.11
 - **Por lado:** compra: 17 op, 35% certas, -1.09 · venda: 42 op, 60% certas, +0.82
 - **Por motivo de saída:** líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin, tendência de 24 h de: 2 op, 0% certas, -0.28 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin líder do lado de alta: 1 op, 0% certas, -0.16 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · manter posição aberta: 1d +1.1: 1 op, 0% certas, -0.15 · manter posição aberta: 1d +4.1: 1 op, 0% certas, -0.15 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin; 24 h -10,43%, 4 h -3: 1 op, 0% certas, -0.14 · memecoin; 24 h -9,62% (1d), 4 : 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -7,66%, 4: 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -9,64%, 4: 1 op, 0% certas, -0.14 · alta própria confirmada em vár: 1 op, 0% certas, -0.12 · entrada por tendência de 24h +: 1 op, 0% certas, -0.06 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · entrada nova por liderança de : 1 op, 0% certas, -0.04 · manter posição aberta: 24h +3.: 1 op, 0% certas, -0.03 · manter: 1d -2.885%, 4h -.98%, : 1 op, 0% certas, -0.03 · memecoin líder de baixa em 24h: 2 op, 50% certas, -0.02 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder de alta em 24h +3.472%, : 1 op, 100% certas, +0.04 · substitui AVA pela melhor tend: 1 op, 100% certas, +0.09 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin; 24 h -10,38% (1d), 4: 1 op, 100% certas, +0.09 · manter: 1d -2.40%, 4h -0.49%; : 1 op, 100% certas, +0.09 · memecoin líder da venda em 24 : 2 op, 50% certas, +0.10 · memecoin; 24 h -1,61%, 4 h -1,: 1 op, 100% certas, +0.10 · 1d -12,61%, 4h -4,97%, 24 h -1: 2 op, 50% certas, +0.10 · memecoin; 4 h -3,89%, 24 h -1,: 1 op, 100% certas, +0.12 · memecoin; 24 h -10,38%, 4 h -4: 1 op, 100% certas, +0.12 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · entrada nova: memecoin com 24h: 1 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
@@ -69,11 +69,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 64.0% das moedas subindo em 24 h, 50.0% em 4 h · BTC 24 h 1.57%, 4 h 0.89%.
+- **Amplitude:** 64.4% das moedas subindo em 24 h, 50.5% em 4 h · BTC 24 h 1.51%, 4 h 0.97%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.8%/ano · {'BTC': 11.0, 'ETH': -1.1, 'SOL': 8.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.1%/ano · {'BTC': 11.0, 'ETH': -0.6, 'SOL': 8.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BNB estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · LUNC fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BNB estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · CVX topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · LUNC fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado)
 - 📰 22/11 22:47 UTC · Cointelegraph: Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest
 - 📰 22/11 19:30 UTC · CoinDesk: More on the pending oversight hearings: State of Crypto
 - 📰 22/11 14:30 UTC · Cointelegraph: The future of onchain FX could start with users, not institutional liquidity
@@ -83,7 +83,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.8 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.9 h.
 - 22/11 21:41 UTC · **GTC compra, CYBER compra, DOGE compra, SKY venda** · Universo 99 moedas (vela do v4 fechada 21:30 UTC); regime neutro: 69,7% subindo em 24 h, 47,5% em 4 h; BTC 60.982 (1h +0,59%, 4h +0,19%, 24h +0,86%), abaixo das
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
@@ -118,7 +118,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 42938 apostas conferidas ao vivo, acerto 54.6%; prevê 94 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 42942 apostas conferidas ao vivo, acerto 54.6%; prevê 100 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
