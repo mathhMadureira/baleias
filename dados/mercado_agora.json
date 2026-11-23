@@ -1,6 +1,6 @@
 {
- "t": 1795458195,
- "hora_utc": "2026-11-23 18:23 UTC",
+ "t": 1795458434,
+ "hora_utc": "2026-11-23 18:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   0.01,
   -1.03,
   -0.93,
-  -0.22
+  -0.01
  ],
  "contexto": {
-  "t": 1795458196,
+  "t": 1795458435,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795458123,
+    "hora_utc": "23/11 18:22",
+    "titulo": "New York judge declines to block Kalshi from operating in the state for now"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795457785,
@@ -260,12 +266,6 @@
     "t": 1795446152,
     "hora_utc": "23/11 15:02",
     "titulo": "Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795445220,
-    "hora_utc": "23/11 14:47",
-    "titulo": "Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.9,
+   "media_top20_anual_pct": 4.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.6,
-    "SOL": -2.2
+    "ETH": 2.4,
+    "SOL": -1.2
    },
    "leitura": "neutro"
   },
