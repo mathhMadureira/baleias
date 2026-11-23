@@ -1,21 +1,21 @@
 {
- "t": 1795402883,
- "hora_utc": "2026-11-23 03:01 UTC",
+ "t": 1795403065,
+ "hora_utc": "2026-11-23 03:04 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 101,
-  "subindo_pct": 16.8,
+  "moedas": 102,
+  "subindo_pct": 16.7,
   "mediana_pct": -0.42
  },
  "mercado_4h": {
-  "moedas": 101,
-  "subindo_pct": 15.8,
-  "mediana_pct": -0.91
+  "moedas": 102,
+  "subindo_pct": 15.7,
+  "mediana_pct": -0.9
  },
  "mercado_24h": {
-  "moedas": 101,
-  "subindo_pct": 61.4,
-  "mediana_pct": 0.99
+  "moedas": 102,
+  "subindo_pct": 61.8,
+  "mediana_pct": 1.01
  },
  "btc": {
   "1h": -0.42,
@@ -172,11 +172,17 @@
   0.13,
   -0.78,
   -0.42,
-  0.09
+  0.27
  ],
  "contexto": {
-  "t": 1795402884,
+  "t": 1795403065,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795402059,
+    "hora_utc": "23/11 02:47",
+    "titulo": "Billionaire Bill Ackman warns Fed will make a rate ‘mistake’ in December"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795395229,
@@ -244,11 +250,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.1,
+   "media_top20_anual_pct": 5.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -12.3,
-    "SOL": 9.5
+    "ETH": -4.5,
+    "SOL": 11.0
    },
    "leitura": "neutro"
   },
@@ -364,9 +370,9 @@
  },
  "v4": {
   "vela": "04:00 UTC",
-  "apostas": 79,
+  "apostas": 80,
   "compras": 35,
-  "vendas": 44,
+  "vendas": 45,
   "mais_confiantes_venda": [
    {
     "moeda": "RESOLV",
@@ -720,12 +726,12 @@
   "z_contra_lab": 2.37,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5035,
-    "n": 21088
+    "acerto": 0.5034,
+    "n": 21127
    },
    "segue_maioria_24h": {
-    "acerto": 0.5005,
-    "n": 28906
+    "acerto": 0.4992,
+    "n": 28703
    }
   },
   "referencia_ganha": [],
