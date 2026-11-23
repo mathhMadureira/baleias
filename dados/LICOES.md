@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 23:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 23:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.97** · 38 operações fechadas · 3 abertas
+Carteira **US$ 8.61** · 38 operações fechadas · 3 abertas
 
 - **Total:** 16/38 com lucro (42%), resultado -0.79, média -0.021 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.48.
@@ -43,7 +43,7 @@ Carteira **US$ 8.97** · 38 operações fechadas · 3 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.29** · 21 operações fechadas · 3 abertas
+Carteira **US$ 9.33** · 21 operações fechadas · 3 abertas
 
 - **Total:** 7/21 com lucro (33%), resultado -0.75, média -0.036 por operação.
 - **Últimas 24 h:** 0/1 com lucro, -0.55.
@@ -56,7 +56,7 @@ Carteira **US$ 9.29** · 21 operações fechadas · 3 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.92** · 69 operações fechadas · 3 abertas
+Carteira **US$ 7.64** · 69 operações fechadas · 3 abertas
 
 - **Total:** 35/69 com lucro (51%), resultado -2.21, média -0.032 por operação.
 - **Últimas 24 h:** 4/10 com lucro, -1.94.
@@ -71,7 +71,7 @@ Carteira **US$ 7.92** · 69 operações fechadas · 3 abertas
 
 - **Amplitude:** 61.6% das moedas subindo em 24 h, 24.0% em 4 h · BTC 24 h -0.2%, 4 h 0.23%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': 11.0, 'ETH': -14.0, 'SOL': 0.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.6%/ano · {'BTC': 11.0, 'ETH': -13.8, 'SOL': 0.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BEB bandeira de alta (alta, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONE OCO invertido (alta, formado)
 - 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
