@@ -16,7 +16,7 @@ Registro de melhorias e decisões: `MELHORIAS.md`. Dono: fala português; respon
 
 ## Comandos
 
-- Testes: `python3 -m unittest tests.test_baleias` (192 testes; têm de passar antes de qualquer commit).
+- Testes: `python3 -m unittest tests.test_baleias` (195 testes; têm de passar antes de qualquer commit).
 - Checagem de saúde: `python3 checar.py`.
 - Nuvem: `gh workflow run cerebro.yml`, `gh run list --workflow cerebro.yml`; para aplicar código novo na hora, cancelar a rodada viva e disparar outra.
 - Painel: `systemctl --user restart baleias-painel` — no máximo **uma vez por hora**.

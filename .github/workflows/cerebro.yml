@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  actions: write        # 23/11: a rodada dispara a seguinte (o agendador do GitHub deixou 3h20 e 2h sem rodada)
 
 concurrency:
   group: cerebro
@@ -96,3 +97,11 @@ jobs:
         with:
           path: cerebros_moedas
           key: cerebros-${{ github.run_id }}
+
+      # 23/11 (auditoria): o agendador grátis do GitHub pulou horas (11:03 → 14:23 UTC e 20:05 → 22:00 UTC sem rodada; decisões sem aplicar).
+      # Cada rodada acorda a próxima; a fila "cerebro" segura só uma pendente, então o agendamento e este disparo não se somam.
+      - name: Acordar a próxima rodada
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run cerebro.yml -R "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" || echo "não consegui disparar a próxima rodada"

@@ -2817,3 +2817,36 @@ class SemReentradaESemParametroPadrao(unittest.TestCase):
             self.assertEqual(mod.saidas_desde(e, d), {"NEARUSDT"})            # antes: comparava com t (publicação) e deixava NEAR reabrir
             self.assertEqual(mod.saidas_desde(e, {"t": 1795184615}), {"NEARUSDT"})   # sem leitura_t: decisão − 15 min
             self.assertEqual(mod.saidas_desde(e, {"t": 1795184615 + 1000, "leitura_t": 1795184615 + 900}), set())   # decisão nova: pode entrar
+
+
+
+class CerebroAcordaAProxima(unittest.TestCase):
+    """23/11 (auditoria): o agendador do GitHub deixou 3h20 e 2h sem rodada do cérebro; a rodada tem de disparar a seguinte."""
+
+    def test_fluxo_dispara_a_propria_rodada_seguinte(self):
+        y = (pathlib.Path(__file__).resolve().parent.parent / ".github/workflows/cerebro.yml").read_text()
+        self.assertIn("actions: write", y)
+        self.assertIn("gh workflow run cerebro.yml", y)
+        self.assertIn("!cancelled()", y)                     # rodada cancelada à mão (código novo) não acorda outra
+        self.assertIn("cancel-in-progress: false", y)        # a fila segura uma pendente, não derruba a viva
+
+
+class JuizoH70SemLacoInfinito(unittest.TestCase):
+    """23/11: erro de rede permanente deixava baixar() do juiz da H70 em laço infinito (só dormia e tentava de novo)."""
+
+    def test_rede_teimosa_desiste_da_fonte(self):
+        import tempfile
+        from lab import juizo_h70 as J
+        chamadas = []
+
+        def falha(*a, **k):
+            chamadas.append(1)
+            if len(chamadas) > 50:
+                raise AssertionError("laço infinito")
+            raise OSError("sem rede")
+
+        with tempfile.TemporaryDirectory() as d, unittest.mock.patch.object(J, "CACHE", pathlib.Path(d)), \
+                unittest.mock.patch.object(J.urllib.request, "urlopen", falha), unittest.mock.patch.object(J.time, "sleep", lambda s: None):
+            r = J.baixar("XUSDT", 0, 60_000)
+        self.assertLessEqual(len(chamadas), 10)
+        self.assertIsNotNone(r)

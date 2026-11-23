@@ -250,3 +250,11 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   (14:23:35); a regra comparava com a hora da publicação e NEAR reabriu. Agora `chefe/gravar.py` e `operar.py gravar` gravam `leitura_t` (hora da leitura/raspagem)
   na decisão, e `testnet.py`/`corretora.py` não reabrem moeda que saiu por stop, alvo ou prazo depois dela (sem `leitura_t`: decisão − 15 min). 192 testes.
 - 2026-11-22: **painel: escapar dados da nuvem na atividade dos agentes**. Os nomes de moedas e lados em entradas/posições eram inseridos como HTML sem escape; agora usam `esc()`. Teste de regressão na seção de atividade; 192 testes.
+- 2026-11-23 (21 UTC): **4ª auditoria do Engenheiro.** Relatório: `OpenBot/Shared/baleias/auditorias/2026-11-23-21.md`. A máquina ficou parada de 23/11 01:00 a
+  21:44 UTC (diário do sistema sem nenhuma linha) e reiniciou às 21:56 UTC: **0 decisões dos 4 agentes nas últimas 6 h**; Treinador e Guardião sem decidir desde
+  22/11 00:38 UTC, Claude desde 21:41 e Laboratório desde 21:18. Conta de teste: as 4 posições de 22/11 21:42 (prazo 60 min) ficaram 24 h abertas, protegidas
+  pelos gatilhos guardados na corretora; na volta, 3 stops (−0,48) e 1 alvo (+0,37). **Corrigido:** (1) o agendador do GitHub deixou o cérebro 3h20
+  (11:03 → 14:23 UTC) e 2 h (20:05 → 22:00 UTC) sem rodada; agora cada rodada dispara a seguinte (`gh workflow run`, `actions: write`, não dispara se
+  cancelada à mão). (2) `lab/juizo_h70.py`: erro de rede permanente deixava `baixar()` em laço infinito; agora desiste da fonte depois de 4 falhas seguidas
+  (a moeda conta como "sem velas", não como zero). O juiz da H70 morreu no reinício (o registro e o cache estavam em /tmp); rodado de novo, mesmo critério,
+  1 tentativa. Testes `CerebroAcordaAProxima` e `JuizoH70SemLacoInfinito` (falham no código antigo). 195 testes.

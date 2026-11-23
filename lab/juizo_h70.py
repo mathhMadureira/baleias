@@ -39,7 +39,7 @@ def baixar(par, desde, ate):
         d = json.loads(f.read_text())
         return d["fonte"], [tuple(x) for x in d["m"]]
     for fonte, url in (("perp", FAPI), ("spot", SPOT)):
-        out, t, falhou = [], desde, False
+        out, t, falhou, tentativas = [], desde, False, 0
         while t < ate:
             try:
                 with urllib.request.urlopen(f"{url}?symbol={par}&interval=1m&startTime={t}&endTime={ate - 1}&limit=1000", timeout=20) as r:
@@ -48,8 +48,13 @@ def baixar(par, desde, ate):
                 falhou = True
                 break
             except (OSError, ValueError):
+                tentativas += 1
+                if tentativas > 3:                          # rede teimosa: desiste desta fonte (antes: laço infinito)
+                    falhou = True
+                    break
                 time.sleep(2)
                 continue
+            tentativas = 0
             time.sleep(0.15)
             if not k:
                 break
