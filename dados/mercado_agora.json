@@ -1,28 +1,28 @@
 {
- "t": 1795463014,
- "hora_utc": "2026-11-23 19:43 UTC",
+ "t": 1795463254,
+ "hora_utc": "2026-11-23 19:47 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
-  "subindo_pct": 12.1,
-  "mediana_pct": -0.76
+  "subindo_pct": 8.1,
+  "mediana_pct": -1.28
  },
  "mercado_4h": {
   "moedas": 124,
   "subindo_pct": 5.6,
-  "mediana_pct": -3.31
+  "mediana_pct": -3.42
  },
  "mercado_24h": {
   "moedas": 124,
-  "subindo_pct": 75.8,
-  "mediana_pct": 2.13
+  "subindo_pct": 69.4,
+  "mediana_pct": 1.42
  },
  "btc": {
-  "1h": -0.18,
-  "4h": -3.07,
-  "24h": 1.1,
-  "preco": 61448.14,
-  "vol_4h_vs_media": 1.03
+  "1h": -0.47,
+  "4h": -3.14,
+  "24h": 0.47,
+  "preco": 61034.66,
+  "vol_4h_vs_media": 1.02
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "PROM",
-   "4h": -28.1,
-   "24h": 7.71,
-   "vol": 1.8
-  },
-  {
-   "moeda": "ENA",
-   "4h": -7.85,
-   "24h": 0.99,
-   "vol": 1.2
+   "4h": -28.29,
+   "24h": 11.54,
+   "vol": 1.79
   },
   {
    "moeda": "ZEC",
-   "4h": -7.0,
-   "24h": 2.44,
-   "vol": 1.36
+   "4h": -7.68,
+   "24h": 1.71,
+   "vol": 1.33
   },
   {
-   "moeda": "PEPE",
-   "4h": -5.95,
-   "24h": 2.35,
-   "vol": 1.19
-  },
-  {
-   "moeda": "LSK",
-   "4h": -5.88,
-   "24h": 10.88,
-   "vol": 0.97
-  },
-  {
-   "moeda": "XVG",
-   "4h": -5.83,
-   "24h": -3.81,
-   "vol": 0.34
-  },
-  {
-   "moeda": "VIRTUAL",
-   "4h": -5.8,
-   "24h": 0.58,
-   "vol": 1.29
+   "moeda": "ENA",
+   "4h": -7.04,
+   "24h": 0.79,
+   "vol": 1.16
   },
   {
    "moeda": "ZRO",
-   "4h": -5.71,
-   "24h": 0.08,
-   "vol": 2.3
+   "4h": -6.29,
+   "24h": -0.93,
+   "vol": 2.48
   },
   {
-   "moeda": "XRP",
-   "4h": -5.62,
-   "24h": 2.11,
-   "vol": 1.22
+   "moeda": "CHIP",
+   "4h": -6.11,
+   "24h": 4.37,
+   "vol": 0.9
+  },
+  {
+   "moeda": "CYBER",
+   "4h": -6.06,
+   "24h": 5.85,
+   "vol": 0.87
+  },
+  {
+   "moeda": "PYTH",
+   "4h": -6.05,
+   "24h": -1.62,
+   "vol": 1.16
+  },
+  {
+   "moeda": "ETHFI",
+   "4h": -5.96,
+   "24h": -2.43,
+   "vol": 1.18
+  },
+  {
+   "moeda": "VIRTUAL",
+   "4h": -5.86,
+   "24h": -0.26,
+   "vol": 1.28
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "ACE",
-   "4h": 9.46,
-   "24h": 18.72,
-   "vol": 1.03
+   "4h": 7.59,
+   "24h": 14.52,
+   "vol": 1.09
   },
   {
    "moeda": "ONE",
-   "4h": 8.28,
-   "24h": 14.21,
-   "vol": 4.24
+   "4h": 6.55,
+   "24h": 13.17,
+   "vol": 4.3
   },
   {
    "moeda": "BABY",
-   "4h": 4.25,
-   "24h": 7.2,
-   "vol": 4.42
+   "4h": 5.15,
+   "24h": 7.17,
+   "vol": 4.46
   },
   {
    "moeda": "SKY",
-   "4h": 3.95,
-   "24h": 0.77,
-   "vol": 0.77
+   "4h": 2.88,
+   "24h": -1.17,
+   "vol": 0.74
+  },
+  {
+   "moeda": "LISTA",
+   "4h": 1.27,
+   "24h": 21.9,
+   "vol": 1.25
   },
   {
    "moeda": "JST",
-   "4h": 0.48,
-   "24h": 0.53,
-   "vol": 0.98
+   "4h": 0.29,
+   "24h": 0.4,
+   "vol": 0.97
   },
   {
-   "moeda": "MUBARAK",
-   "4h": 0.12,
-   "24h": 20.8,
-   "vol": 1.19
-  },
-  {
-   "moeda": "KAVA",
-   "4h": 0.08,
-   "24h": -4.1,
-   "vol": 1.13
+   "moeda": "GTC",
+   "4h": 0.29,
+   "24h": -1.54,
+   "vol": 2.01
   },
   {
    "moeda": "U",
-   "4h": -0.01,
-   "24h": -0.06,
-   "vol": 1.19
+   "4h": -0.02,
+   "24h": -0.07,
+   "vol": 1.11
   },
   {
-   "moeda": "DODO",
-   "4h": -0.15,
-   "24h": -0.65,
-   "vol": 0.81
+   "moeda": "KITE",
+   "4h": -0.07,
+   "24h": -0.5,
+   "vol": 1.18
   },
   {
-   "moeda": "TRX",
-   "4h": -0.16,
-   "24h": 1.6,
-   "vol": 1.57
+   "moeda": "YB",
+   "4h": -0.18,
+   "24h": 7.65,
+   "vol": 0.66
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -1.03,
   -0.93,
   -0.48,
-  -0.82
+  -0.39
  ],
  "contexto": {
-  "t": 1795463015,
+  "t": 1795463255,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795462506,
+    "hora_utc": "23/11 19:35",
+    "titulo": "BTCS offloads $44M in ETH to reduce DeFi debt amid market downturn"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795461406,
@@ -260,12 +266,6 @@
     "t": 1795451017,
     "hora_utc": "23/11 16:23",
     "titulo": "Cross River Bank enters Bitcoin-backed lending with $250K loans"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795449475,
-    "hora_utc": "23/11 15:57",
-    "titulo": "How market depth shapes the price of a weekend Bitcoin sale"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.4,
+   "media_top20_anual_pct": 6.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.2,
-    "SOL": 3.5
+    "ETH": 1.5,
+    "SOL": 3.8
    },
    "leitura": "neutro"
   },
@@ -358,26 +358,14 @@
   }
  },
  "v4": {
-  "vela": "19:30 UTC",
-  "apostas": 74,
-  "compras": 35,
-  "vendas": 39,
+  "vela": "11:00 UTC",
+  "apostas": 139,
+  "compras": 107,
+  "vendas": 32,
   "mais_confiantes_venda": [
-   {
-    "moeda": "U",
-    "prob_subir": 0.309
-   },
-   {
-    "moeda": "SOPH",
-    "prob_subir": 0.314
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
-   },
-   {
-    "moeda": "GTC",
-    "prob_subir": 0.373
    },
    {
     "moeda": "RESOLV",
@@ -394,12 +382,36 @@
    {
     "moeda": "FORM",
     "prob_subir": 0.382
+   },
+   {
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
+   },
+   {
+    "moeda": "BABAB",
+    "prob_subir": 0.386
+   },
+   {
+    "moeda": "CFG",
+    "prob_subir": 0.394
    }
   ],
   "mais_confiantes_compra": [
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "ETC",
+    "prob_subir": 0.634
+   },
+   {
+    "moeda": "ENS",
+    "prob_subir": 0.627
+   },
+   {
+    "moeda": "ALT",
+    "prob_subir": 0.613
    },
    {
     "moeda": "RWUSD",
@@ -410,24 +422,12 @@
     "prob_subir": 0.608
    },
    {
-    "moeda": "IOST",
-    "prob_subir": 0.606
+    "moeda": "MARSCOIN",
+    "prob_subir": 0.604
    },
    {
     "moeda": "F",
     "prob_subir": 0.604
-   },
-   {
-    "moeda": "RUNE",
-    "prob_subir": 0.599
-   },
-   {
-    "moeda": "BANK",
-    "prob_subir": 0.598
-   },
-   {
-    "moeda": "HEI",
-    "prob_subir": 0.583
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -708,38 +708,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.5% em 27651 apostas (605 velas, 16/11 19:45–23/11 19:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5448,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.4% em 27588 apostas (605 velas, 16/11 20:00–23/11 19:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5445,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 1.18,
+  "z_contra_lab": 1.14,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5046,
-    "n": 22872
+    "acerto": 0.5038,
+    "n": 22820
    },
    "segue_maioria_24h": {
-    "acerto": 0.4991,
-    "n": 27456
+    "acerto": 0.4983,
+    "n": 27393
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5542,
-    "n": 7801
+    "acerto": 0.5541,
+    "n": 7797
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5686,
-    "n": 2930
+    "acerto": 0.5688,
+    "n": 2929
    },
    "confianca:<0,05": {
-    "acerto": 0.5298,
-    "n": 16102
+    "acerto": 0.5292,
+    "n": 16045
    },
    "confianca:≥0,12": {
-    "acerto": 0.6663,
-    "n": 818
+    "acerto": 0.6659,
+    "n": 817
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5208,
@@ -754,16 +754,16 @@
     "n": 6230
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.568,
-    "n": 7533
+    "acerto": 0.5669,
+    "n": 7470
    },
    "lado:compra": {
-    "acerto": 0.5319,
-    "n": 12069
+    "acerto": 0.5316,
+    "n": 12073
    },
    "lado:venda": {
-    "acerto": 0.5548,
-    "n": 15582
+    "acerto": 0.5545,
+    "n": 15515
    }
   }
  },
