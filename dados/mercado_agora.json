@@ -1,6 +1,6 @@
 {
- "t": 1795461804,
- "hora_utc": "2026-11-23 19:23 UTC",
+ "t": 1795462045,
+ "hora_utc": "2026-11-23 19:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   -1.03,
   -0.93,
   -0.48,
-  0.24
+  0.17
  ],
  "contexto": {
-  "t": 1795461805,
+  "t": 1795462046,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795461406,
+    "hora_utc": "23/11 19:16",
+    "titulo": "Base makes quantum security a 2027 priority as regulators warn of risks"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795459521,
@@ -260,12 +266,6 @@
     "t": 1795449475,
     "hora_utc": "23/11 15:57",
     "titulo": "How market depth shapes the price of a weekend Bitcoin sale"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795447741,
-    "hora_utc": "23/11 15:29",
-    "titulo": "Binance hackers push $247 million through transactions designed to cloud the source"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 7.5,
+   "media_top20_anual_pct": 7.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 4.2,
-    "SOL": 7.6
+    "ETH": 4.9,
+    "SOL": 6.4
    },
    "leitura": "neutro"
   },
