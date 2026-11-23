@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 14:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 14:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,17 +66,17 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 89.3% das moedas subindo em 24 h, 91.1% em 4 h · BTC 24 h 6.01%, 4 h 4.69%.
+- **Amplitude:** 89.4% das moedas subindo em 24 h, 91.2% em 4 h · BTC 24 h 6.01%, 4 h 4.69%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.3%/ano · {'BTC': 8.1, 'ETH': 8.2, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 8.0, 'ETH': 7.7, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BONK bandeira de alta (alta, CONFIRMOU) · DOT bandeira de alta (alta, CONFIRMOU) · ENA OCO invertido (alta, CONFIRMOU) · NIL bandeira de alta (alta, CONFIRMOU) · PENDLE bandeira de alta (alta, CONFIRMOU) · PEPE OCO invertido (alta, CONFIRMOU) · SOL bandeira de alta (alta, CONFIRMOU) · SUI fundo duplo (alta, CONFIRMOU) · SUI bandeira de alta (alta, CONFIRMOU) · XRP bandeira de alta (alta, CONFIRMOU)
+- **Padrões gráficos em 1 h:** BONK bandeira de alta (alta, CONFIRMOU) · DOT bandeira de alta (alta, CONFIRMOU) · IOST bandeira de alta (alta, CONFIRMOU) · NIL bandeira de alta (alta, CONFIRMOU) · PENDLE bandeira de alta (alta, CONFIRMOU) · PEPE OCO invertido (alta, CONFIRMOU) · SOL bandeira de alta (alta, CONFIRMOU) · SUI fundo duplo (alta, CONFIRMOU) · SUI bandeira de alta (alta, CONFIRMOU) · XRP bandeira de alta (alta, CONFIRMOU)
+- 📰 23/11 14:43 UTC · CoinDesk: Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed
 - 📰 23/11 14:13 UTC · CoinDesk: Jensen Huang returns as Nvidia CEO as shares jump 27%
 - 📰 23/11 14:07 UTC · Decrypt: Nvidia Reinstates Jensen Huang as CEO Days After Board Ruled Out His Return
 - 📰 23/11 14:06 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 23/11 14:00 UTC · Cointelegraph: OKX, ICE launch 113 tokenized assets despite issuer objections
 - 📰 23/11 13:49 UTC · CoinDesk: Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue
-- 📰 23/11 13:44 UTC · Cointelegraph: Trump-linked American Bitcoin secures $150M credit line from FalconX
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido, reversao_alta. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44568 apostas conferidas ao vivo, acerto 54.5%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44568 apostas conferidas ao vivo, acerto 54.5%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

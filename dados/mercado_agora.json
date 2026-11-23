@@ -1,20 +1,20 @@
 {
- "t": 1795444763,
- "hora_utc": "2026-11-23 14:39 UTC",
+ "t": 1795445010,
+ "hora_utc": "2026-11-23 14:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
-  "subindo_pct": 95.5,
-  "mediana_pct": 6.13
+  "moedas": 113,
+  "subindo_pct": 95.6,
+  "mediana_pct": 6.1
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 91.1,
-  "mediana_pct": 6.41
+  "moedas": 113,
+  "subindo_pct": 91.2,
+  "mediana_pct": 6.44
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 89.3,
+  "moedas": 113,
+  "subindo_pct": 89.4,
   "mediana_pct": 7.93
  },
  "btc": {
@@ -172,11 +172,17 @@
   -0.01,
   -0.16,
   4.1,
-  -0.67
+  -0.99
  ],
  "contexto": {
-  "t": 1795444764,
+  "t": 1795445011,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795444998,
+    "hora_utc": "23/11 14:43",
+    "titulo": "Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795443224,
@@ -260,12 +266,6 @@
     "t": 1795437810,
     "hora_utc": "23/11 12:43",
     "titulo": "Solana Meme Coin for Fiona the Hippo Raises $100K for Cincinnati Zoo Charity"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795437025,
-    "hora_utc": "23/11 12:30",
-    "titulo": "Bitcoin's losing streak is second-longest ever, and some observers see more downside"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.3,
+   "media_top20_anual_pct": 8.0,
    "principais_anual_pct": {
-    "BTC": 8.1,
-    "ETH": 8.2,
+    "BTC": 8.0,
+    "ETH": 7.7,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -311,11 +311,11 @@
     "nivel": 0.68
    },
    {
-    "moeda": "ENA",
-    "padrao": "OCO invertido",
+    "moeda": "IOST",
+    "padrao": "bandeira de alta",
     "sentido": "alta",
     "confirmado": true,
-    "nivel": 0.1046
+    "nivel": 0.000593
    },
    {
     "moeda": "NIL",
@@ -803,8 +803,8 @@
     "n": 21958
    },
    "segue_maioria_24h": {
-    "acerto": 0.5035,
-    "n": 27609
+    "acerto": 0.5018,
+    "n": 27809
    }
   },
   "referencia_ganha": [],
