@@ -1,21 +1,21 @@
 {
- "t": 1795457477,
- "hora_utc": "2026-11-23 18:11 UTC",
+ "t": 1795457716,
+ "hora_utc": "2026-11-23 18:15 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
+  "moedas": 124,
   "subindo_pct": 4.8,
   "mediana_pct": -1.33
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 19.0,
+  "moedas": 124,
+  "subindo_pct": 18.5,
   "mediana_pct": -1.58
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 81.0,
-  "mediana_pct": 2.86
+  "moedas": 124,
+  "subindo_pct": 82.3,
+  "mediana_pct": 2.88
  },
  "btc": {
   "1h": -0.93,
@@ -50,12 +50,6 @@
    "vol": 3.08
   },
   {
-   "moeda": "MET",
-   "4h": -4.3,
-   "24h": -2.24,
-   "vol": 2.14
-  },
-  {
    "moeda": "ENS",
    "4h": -4.21,
    "24h": -0.55,
@@ -84,6 +78,12 @@
    "4h": -3.74,
    "24h": 0.27,
    "vol": 2.08
+  },
+  {
+   "moeda": "ETH",
+   "4h": -3.7,
+   "24h": 1.67,
+   "vol": 2.89
   }
  ],
  "maiores_altas_4h": [
@@ -124,12 +124,6 @@
    "vol": 0.8
   },
   {
-   "moeda": "MITO",
-   "4h": 1.93,
-   "24h": -2.46,
-   "vol": 0.72
-  },
-  {
    "moeda": "AIGENSYN",
    "4h": 1.84,
    "24h": 8.54,
@@ -146,6 +140,12 @@
    "4h": 1.76,
    "24h": -2.64,
    "vol": 1.64
+  },
+  {
+   "moeda": "MUBARAK",
+   "4h": 1.73,
+   "24h": 22.31,
+   "vol": 1.89
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.01,
   -1.03,
   -0.93,
-  -0.18
+  -0.22
  ],
  "contexto": {
-  "t": 1795457478,
+  "t": 1795457717,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795457525,
+    "hora_utc": "23/11 18:12",
+    "titulo": "Nvidia's Jensen Huang faces Senate scrutiny despite Trump-backed return as CEO"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795455738,
@@ -260,12 +266,6 @@
     "t": 1795443224,
     "hora_utc": "23/11 14:13",
     "titulo": "Nvidia soars as Jensen Huang returns to lead company"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795442841,
-    "hora_utc": "23/11 14:07",
-    "titulo": "Nvidia Reinstates Jensen Huang as CEO Days After Board Ruled Out His Return"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.4,
+   "media_top20_anual_pct": 3.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.8,
-    "SOL": -4.1
+    "ETH": 2.0,
+    "SOL": -3.8
    },
    "leitura": "neutro"
   },
@@ -723,11 +723,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5062,
-    "n": 23031
+    "n": 22969
    },
    "segue_maioria_24h": {
-    "acerto": 0.5037,
-    "n": 27524
+    "acerto": 0.505,
+    "n": 27630
    }
   },
   "referencia_ganha": [],
