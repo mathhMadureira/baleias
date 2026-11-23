@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 16:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 16:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 87.3% das moedas subindo em 24 h, 93.2% em 4 h · BTC 24 h 3.29%, 4 h 2.4%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.0%/ano · {'BTC': -1.4, 'ETH': 10.6, 'SOL': -15.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 4.2, 'ETH': 11.0, 'SOL': -6.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA OCO invertido (alta, formado) · GIGGLE topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado)
 - 📰 23/11 15:57 UTC · Cointelegraph: How market depth shapes the price of a weekend Bitcoin sale
