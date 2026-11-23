@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 09:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 09:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,7 +69,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 80.4% das moedas subindo em 24 h, 66.4% em 4 h · BTC 24 h 2.88%, 4 h 0.34%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 11.0, 'ETH': -2.3, 'SOL': 7.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.9%/ano · {'BTC': 11.0, 'ETH': -2.7, 'SOL': 6.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ICP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · MUBARAK fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 09:05 UTC · Cointelegraph: ‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones
