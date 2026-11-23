@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 11:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 14:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,21 +66,21 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 63.7% das moedas subindo em 24 h, 50.0% em 4 h · BTC 24 h 0.91%, 4 h -0.07%.
+- **Amplitude:** 84.4% das moedas subindo em 24 h, 87.2% em 4 h · BTC 24 h 4.54%, 4 h 3.44%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.9%/ano · {'BTC': 11.0, 'ETH': -3.6, 'SOL': -6.6} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SKY estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AAVE fundo duplo (alta, formado) · APT topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · DASH topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado)
-- 📰 23/11 10:53 UTC · CoinDesk: South Korea to expand cryptocurrency account freezes and curb illicit transfers abroad
-- 📰 23/11 10:31 UTC · CoinDesk: Bitcoin breaks a record streak of 'lower highs.' Here's what it means
-- 📰 23/11 09:40 UTC · CoinDesk: U.S. inflation, Thanksgiving trading: Crypto Week Ahead
-- 📰 23/11 09:05 UTC · Cointelegraph: ‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones
-- 📰 23/11 08:08 UTC · Cointelegraph: Bitcoin ETFs shed $1.8B in third-largest weekly outflow
-- 📰 23/11 07:45 UTC · CoinDesk: Crypto thieves are using online ads to infect iPhones with a single tap, research finds
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** DOT bandeira de alta (alta, CONFIRMOU) · NIL bandeira de alta (alta, CONFIRMOU) · PENDLE bandeira de alta (alta, CONFIRMOU) · PEPE OCO invertido (alta, CONFIRMOU) · SOL bandeira de alta (alta, CONFIRMOU) · SUI fundo duplo (alta, CONFIRMOU) · SUI bandeira de alta (alta, CONFIRMOU) · VIRTUAL bandeira de alta (alta, CONFIRMOU) · XRP bandeira de alta (alta, CONFIRMOU) · ARB topo duplo (baixa, formado)
+- 📰 23/11 14:13 UTC · CoinDesk: Jensen Huang returns as Nvidia CEO as shares jump 27%
+- 📰 23/11 14:07 UTC · Decrypt: Nvidia Reinstates Jensen Huang as CEO Days After Board Ruled Out His Return
+- 📰 23/11 14:06 UTC · Cointelegraph: Here’s what happened in crypto today
+- 📰 23/11 14:00 UTC · Cointelegraph: OKX, ICE launch 113 tokenized assets despite issuer objections
+- 📰 23/11 13:49 UTC · CoinDesk: Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue
+- 📰 23/11 13:44 UTC · Cointelegraph: Trump-linked American Bitcoin secures $150M credit line from FalconX
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 13.3 h.
+- ⚠️ **Rotina parada:** sem decisão há 16.7 h.
 - 22/11 21:41 UTC · **GTC compra, CYBER compra, DOGE compra, SKY venda** · Universo 99 moedas (vela do v4 fechada 21:30 UTC); regime neutro: 69,7% subindo em 24 h, 47,5% em 4 h; BTC 60.982 (1h +0,59%, 4h +0,19%, 24h +0,86%), abaixo das
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
@@ -91,31 +91,31 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r32 ≤ -1, aposta sobe. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r16 ≤ -1.5, aposta sobe. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando r16 ≤ -1, aposta desce. Começa em observação.
 - 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando corpo ≥ 0.3, aposta sobe. Começa em observação.
 - ❌ Errou (desce). Peso reduzido de: tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: vortice_invertido, tres_soldados. Rede neural corrigida.
+- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 32 em observação, 0 podadas)
 **v2:**
-- ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 1920 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ✂ Sinapse williams_volb_alta PODADA: 69/150 acertos (46.0%).
 - 😴 Sono: reencenei 2016 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 2112 episódios guardados e renormalizei os pesos das sinapses.
+- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44552 apostas conferidas ao vivo, acerto 54.5%; prevê 101 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44552 apostas conferidas ao vivo, acerto 54.5%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
