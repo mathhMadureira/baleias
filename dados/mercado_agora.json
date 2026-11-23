@@ -1,6 +1,6 @@
 {
- "t": 1795463737,
- "hora_utc": "2026-11-23 19:55 UTC",
+ "t": 1795463977,
+ "hora_utc": "2026-11-23 19:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   -1.03,
   -0.93,
   -0.48,
-  -0.16
+  -0.18
  ],
  "contexto": {
-  "t": 1795463738,
+  "t": 1795463978,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795463841,
+    "hora_utc": "23/11 19:57",
+    "titulo": "Why Nvidia Needed Jensen Huang Back—And What His Return Really Changes"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795462506,
@@ -260,12 +266,6 @@
     "t": 1795451524,
     "hora_utc": "23/11 16:32",
     "titulo": "Bitcoin Rallies, Anthropic Sinks as Nvidia Surges 35% on Jensen Huang’s Return"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795451017,
-    "hora_utc": "23/11 16:23",
-    "titulo": "Cross River Bank enters Bitcoin-backed lending with $250K loans"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.3,
+   "media_top20_anual_pct": 6.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 0.3,
+    "ETH": -0.3,
     "SOL": 4.6
    },
    "leitura": "neutro"
