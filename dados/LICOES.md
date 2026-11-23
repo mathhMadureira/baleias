@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 05:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 06:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,11 +67,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 83.2% das moedas subindo em 24 h, 87.9% em 4 h · BTC 24 h 4.93%, 4 h 1.14%.
+- **Amplitude:** 82.4% das moedas subindo em 24 h, 88.9% em 4 h · BTC 24 h 4.93%, 4 h 1.14%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.0%/ano · {'BTC': 11.0, 'ETH': -4.6, 'SOL': 9.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': 11.0, 'ETH': 4.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** LISTA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX triângulo simétrico (?, formado) · BERA fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CELO triângulo descendente (baixa, formado) · JUP topo duplo (baixa, formado) · KITE topo duplo (baixa, formado) · MITO topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** AR fundo duplo (alta, formado) · AVAX triângulo simétrico (?, formado) · BERA fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · JUP topo duplo (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · UNI OCO invertido (alta, formado)
 - 📰 23/11 05:42 UTC · CoinDesk: Bitcoin sold for $17,000 on Kraken's Canadian dollar market, and the trades stand
 - 📰 23/11 04:45 UTC · CoinDesk: Market rout kills 50 basis points December Fed rate hike bets
 - 📰 23/11 03:37 UTC · Cointelegraph: Trump renews call for Nvidia to rehire Jensen Huang as CEO
@@ -116,7 +116,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 43814 apostas conferidas ao vivo, acerto 54.4%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 43840 apostas conferidas ao vivo, acerto 54.4%; prevê 37 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
