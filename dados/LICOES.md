@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 16:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 16:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,17 +66,17 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 86.6% das moedas subindo em 24 h, 92.4% em 4 h · BTC 24 h 2.76%, 4 h 2.31%.
+- **Amplitude:** 85.7% das moedas subindo em 24 h, 92.4% em 4 h · BTC 24 h 2.76%, 4 h 2.31%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': 6.0, 'ETH': 11.0, 'SOL': -13.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': 6.9, 'ETH': 11.0, 'SOL': -14.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA OCO invertido (alta, formado) · GIGGLE topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado)
+- 📰 23/11 16:23 UTC · Cointelegraph: Cross River Bank enters Bitcoin-backed lending with $250K loans
 - 📰 23/11 15:57 UTC · Cointelegraph: How market depth shapes the price of a weekend Bitcoin sale
 - 📰 23/11 15:29 UTC · CoinDesk: Binance hackers push $247 million through transactions designed to cloud the source
 - 📰 23/11 15:02 UTC · CoinDesk: Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin
 - 📰 23/11 14:47 UTC · Cointelegraph: Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe
 - 📰 23/11 14:43 UTC · CoinDesk: Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed
-- 📰 23/11 14:13 UTC · CoinDesk: Jensen Huang returns as Nvidia CEO as shares jump 27%
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44676 apostas conferidas ao vivo, acerto 54.4%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44693 apostas conferidas ao vivo, acerto 54.4%; prevê 54 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
