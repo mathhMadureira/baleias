@@ -1,21 +1,21 @@
 {
- "t": 1795447183,
- "hora_utc": "2026-11-23 15:19 UTC",
+ "t": 1795447422,
+ "hora_utc": "2026-11-23 15:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 116,
-  "subindo_pct": 30.2,
-  "mediana_pct": -0.55
+  "moedas": 117,
+  "subindo_pct": 30.8,
+  "mediana_pct": -0.54
  },
  "mercado_4h": {
-  "moedas": 116,
-  "subindo_pct": 92.2,
-  "mediana_pct": 4.65
+  "moedas": 117,
+  "subindo_pct": 92.3,
+  "mediana_pct": 4.67
  },
  "mercado_24h": {
-  "moedas": 116,
-  "subindo_pct": 86.2,
-  "mediana_pct": 5.5
+  "moedas": 117,
+  "subindo_pct": 86.3,
+  "mediana_pct": 5.52
  },
  "btc": {
   "1h": -0.68,
@@ -94,6 +94,12 @@
    "vol": 3.0
   },
   {
+   "moeda": "BEB",
+   "4h": 12.7,
+   "24h": 16.91,
+   "vol": 2.1
+  },
+  {
    "moeda": "CHIP",
    "4h": 10.35,
    "24h": 13.35,
@@ -140,12 +146,6 @@
    "4h": 7.77,
    "24h": 11.76,
    "vol": 3.15
-  },
-  {
-   "moeda": "QNT",
-   "4h": 7.56,
-   "24h": 14.76,
-   "vol": 3.1
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.16,
   4.1,
   -1.48,
-  0.34
+  0.9
  ],
  "contexto": {
-  "t": 1795447184,
+  "t": 1795447423,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.1,
+   "media_top20_anual_pct": 9.5,
    "principais_anual_pct": {
-    "BTC": 1.8,
-    "ETH": 2.9,
-    "SOL": -3.0
+    "BTC": 4.9,
+    "ETH": 4.5,
+    "SOL": 0.0
    },
    "leitura": "neutro"
   },
@@ -394,8 +394,8 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 84,
-  "compras": 46,
+  "apostas": 83,
+  "compras": 45,
   "vendas": 38,
   "mais_confiantes_venda": [
    {
@@ -453,16 +453,16 @@
     "prob_subir": 0.583
    },
    {
-    "moeda": "BEB",
-    "prob_subir": 0.571
-   },
-   {
     "moeda": "COTI",
     "prob_subir": 0.569
    },
    {
     "moeda": "SKL",
     "prob_subir": 0.564
+   },
+   {
+    "moeda": "RENDER",
+    "prob_subir": 0.56
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -750,12 +750,12 @@
   "z_contra_lab": 1.68,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5066,
-    "n": 22199
+    "acerto": 0.5067,
+    "n": 22283
    },
    "segue_maioria_24h": {
-    "acerto": 0.5036,
-    "n": 27694
+    "acerto": 0.5021,
+    "n": 27703
    }
   },
   "referencia_ganha": [],
