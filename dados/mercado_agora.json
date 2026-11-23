@@ -1,6 +1,6 @@
 {
- "t": 1795472796,
- "hora_utc": "2026-11-23 22:26 UTC",
+ "t": 1795473012,
+ "hora_utc": "2026-11-23 22:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   -0.19,
   -0.03,
   0.16,
-  -0.15
+  -0.17
  ],
  "contexto": {
-  "t": 1795472797,
+  "t": 1795473013,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -277,8 +277,8 @@
    "media_top20_anual_pct": 6.5,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -7.1,
-    "SOL": -8.2
+    "ETH": -8.1,
+    "SOL": -8.0
    },
    "leitura": "neutro"
   },
@@ -440,7 +440,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 8.85,
+  "carteira": 9.02,
   "abertas": [
    {
     "moeda": "NIL",
@@ -448,8 +448,26 @@
     "entrada": 0.04778,
     "agora": 0.04776,
     "resultado_pct": 0.04,
-    "horas_aberta": 0.2,
+    "horas_aberta": 0.3,
     "motivo_de_entrada": "Entrada: 4/6 tempos abaixo da MM20 (5m, 15m, 1h, 1d); 1h -0,48%, 4h -1,81%; 15s e 1m -0,23% fora do normal para baixo; queda ampla do mercado (mediana 4h -3,14%"
+   },
+   {
+    "moeda": "ACE",
+    "lado": "venda",
+    "entrada": 0.0761,
+    "agora": 0.0772,
+    "resultado_pct": -1.45,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Mantem: 6/6 tempos abaixo da MM20; 15m -2,19%, 1h -4,05%, 4h -11,74%; v4 p 0,505 sem confianca. Contra: 15m EST alta nao confirmada, 1m +0,66%, volume 1m 2,78x."
+   },
+   {
+    "moeda": "USUAL",
+    "lado": "venda",
+    "entrada": 0.01121,
+    "agora": 0.01104,
+    "resultado_pct": 1.52,
+    "horas_aberta": 0.0,
+    "motivo_de_entrada": "Entrada: aviso do Caçador 22:26 (5m -2,30%, z -5,7, volume 9,9x); 15m EST baixa CONFIRMADA (a favor); 4h -4,84%, 15m -0,54%, 5m -0,54%; 4/6 tempos abaixo (1m, 1"
    }
   ],
   "ultimas_fechadas": [
@@ -561,10 +579,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795184615,
-    "texto": "Conta de teste, 32 fechadas: p 31,3% de acerto, ganho médio G +0,293, perda média L −0,219, E −0,059 por operação (soma −1,88). Com G/L 1,34 seria preciso acertar ~43% para empatar. Caderno (21 com leitura): padrão a favor 7 ops, 71%, +0,860; sem padrão 9 ops, 56%, −0,154; misto 5 ops, 40%, −0,152 (poucas: não sei ainda). Últimas: KAVA venda −0,255 e MUBARAK venda −0,255 (stop no repique). Nesta r"
-   },
-   {
     "t": 1795299768,
     "texto": "Carteira simulada: 50 fechadas, acerto 60%, soma -US$ 0,044, ganho médio US$ 0,14, perda média -US$ 0,213, fator de lucro 0,99, carteira US$ 9,96. Caderno Claude: 50 fechadas, 27 com leitura; 6 de 6 tempos: 10 operações, 60%, soma +US$ 0,568, média +US$ 0,0568; padrão a favor: 10 operações, 70%, soma +US$ 1,337, média +US$ 0,1337. Carteira de teste: 37 fechadas, resultado -US$ 1,28, fator de lucro"
    },
@@ -591,6 +605,10 @@
    {
     "t": 1795471750,
     "texto": "Ultimas 5 fechadas na carteira simulada: ETC venda +0,109; SKY venda -0,463; CYBER compra -0,463; GTC compra -0,463; DOGE compra -0,288 (p 0,20, G +0,109, L medio -0,419, E -0,314 por operacao). Caderno: padrao a favor 16 ops 56% +0,393; nenhum padrao 15 ops 53% -0,656; 6/6 tempos a favor 55% +0,105. As compras contra a maioria dos tempos perderam; hoje sigo a maioria dos tempos (vendas)."
+   },
+   {
+    "t": 1795472866,
+    "texto": "Carteira simulada: 62 fechadas, p 0,565, G +0,152, L -0,239, E -0,018 por operacao; testnet 47 fechadas, p 0,319, G +0,283, L -0,201, E -0,042. Ultimas: ACE venda +0,481 (alvo, carteira simulada), SKY venda -0,463, CYBER compra -0,463, GTC compra -0,463, DOGE compra -0,288. Caderno: padrao a favor 16 ops 56% +0,393; nenhum padrao 15 ops 53% -0,656; carteiras a favor 11 ops 64% +0,286. Por isso a e"
    }
   ]
  },
@@ -601,11 +619,19 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 8.85,
-   "n_abertas": 1,
+   "carteira": 9.02,
+   "n_abertas": 3,
    "abertas": [
     [
      "NIL",
+     "venda"
+    ],
+    [
+     "ACE",
+     "venda"
+    ],
+    [
+     "USUAL",
      "venda"
     ]
    ],
@@ -640,8 +666,17 @@
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
    "carteira": 10.24,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "RESOLV",
+     "venda"
+    ],
+    [
+     "WLFI",
+     "venda"
+    ]
+   ],
    "n_fechadas": 36,
    "ordem": null
   },
@@ -672,19 +707,15 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 8.96,
-   "n_abertas": 2,
+   "carteira": 8.84,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "BONK",
-     "compra"
-    ],
     [
      "BEB",
      "compra"
     ]
    ],
-   "n_fechadas": 60,
+   "n_fechadas": 61,
    "ordem": null
   }
  ],
@@ -698,7 +729,7 @@
     "ganho_medio": 0.152,
     "perda_media": -0.239,
     "fator_lucro": 0.82,
-    "carteira": 8.85
+    "carteira": 9.02
    },
    "openbot_testnet": {
     "ops": 47,
@@ -728,13 +759,13 @@
     "carteira": 9.8
    },
    "guardiao": {
-    "ops": 60,
-    "acerto": 0.517,
-    "soma": -0.815,
+    "ops": 61,
+    "acerto": 0.508,
+    "soma": -1.165,
     "ganho_medio": 0.124,
-    "perda_media": -0.16,
-    "fator_lucro": 0.82,
-    "carteira": 8.96
+    "perda_media": -0.167,
+    "fator_lucro": 0.77,
+    "carteira": 8.84
    }
   },
   "vereditos": []
@@ -802,12 +833,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "20/11 13:33",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Baixa: 16,3% das 123 moedas sobem em 4 h; BTC 24 h −3,52%. Conta de teste: DOGE venda +0,33 (prazo) e MUBARAK venda −0,20 (stop); US$ 8,67. Entro vendido em KAVA (topo duplo confirmado em 1 h, 5 de 6 abaixo; stop 0,9%, alvo 2,7%, 120 min) e MUBARAK (6 de 6 abaixo, aviso do Caçador força 89; stop 0,9"
-  },
-  {
    "hora_utc": "20/11 13:43",
    "de": "claude",
    "para": "sala",
@@ -872,6 +897,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Queda ampla: 8,9% das 124 moedas sobem em 4 h (mediana -3,14%), BTC 4h -2,61%; carteiras H63 vendidas em BTC/ETH. Testnet US$ 8,0147, 0 abertas. Entro vendido em ACE (6/6 tempos abaixo, 4h -11,05%) e NIL (4/6), stop 0,8%, alvo 2,4%, 120 min."
+  },
+  {
+   "hora_utc": "23/11 22:30",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Queda ampla: 10,4% das 125 moedas sobem em 4 h (mediana -2,27%); carteiras H63 vendidas em BTC/ETH. Testnet US$ 7,98: mantenho ACE e NIL vendidas e entro vendido em USUAL (aviso do Caçador, 15m EST baixa confirmada, 4h -4,84%), stop 1,2%, alvo 3,6%, 240 min."
   }
  ]
 }
