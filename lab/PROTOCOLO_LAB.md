@@ -1690,3 +1690,14 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   gravadas e simuladas do mesmo jeito, a soma tem de ser < 0 com fator < 1 em 2 dos 3 blocos; se não for, a regra sai. **Se (a) falhar:** nada muda.
 - **Previsão registrada:** reprova. O juiz automático da H68 nunca deu prova a nenhum sinal do Caçador, e entrar depois de uma explosão de 1 a 15 min tende a pegar
   o fim do movimento. A perda das compras sem alerta pode ser só o mercado em queda nesses dias (o mesmo da H42).
+
+### Resultado da H74 (23/11/2026 ~23:00 UTC, `lab/juizo_h74.py`, ramo `estado` 3dc14328): REPROVADA — nada muda
+- 1.599 commits de `oportunidades.json`; 3.903 alertas `explosao_*` depois da regra de 30 min (1.905 compra, 1.998 venda); 24 fora (prazo aberto ou sem velas). Velas: 236 perpétuo, 19 à vista.
+
+| grupo | n | média líquida | EP | z | acerto | fator | blocos |
+|---|---|---|---|---|---|---|---|
+| controle (lado sorteado) | 3.879 | −0,096% | 0,023% | −4,07 | 41,2% | 0,84 | −0,134 / −0,097 / −0,053% |
+| venda (relato) | 1.983 | +0,011% | 0,103% | +0,10 | 43,6% | 1,02 | +0,106 / −0,002 / −0,105% |
+| **compra (juiz a)** | **1.896** | **−0,146%** | 0,082% | **−1,78** | 39,6% | 0,78 | −0,375 / −0,005 / −0,160% |
+- Controle dentro de −0,12% ± 3 EP: rodada válida. A compra no alerta perde nos 3 blocos e fica **abaixo** do lado sorteado: comprar só com o alerta não protege as compras.
+  As 13 compras com alerta da P2 (+0,335) foram acaso de amostra pequena. Como previsto. A perda das compras sem alerta continua sem explicação testada (o mercado em queda é a candidata).
