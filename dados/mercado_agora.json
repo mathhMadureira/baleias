@@ -1,20 +1,20 @@
 {
- "t": 1795450035,
- "hora_utc": "2026-11-23 16:07 UTC",
+ "t": 1795450276,
+ "hora_utc": "2026-11-23 16:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 28.8,
-  "mediana_pct": -0.43
+  "moedas": 119,
+  "subindo_pct": 29.4,
+  "mediana_pct": -0.42
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 93.2,
-  "mediana_pct": 3.55
+  "moedas": 119,
+  "subindo_pct": 93.3,
+  "mediana_pct": 3.57
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 87.3,
+  "moedas": 119,
+  "subindo_pct": 87.4,
   "mediana_pct": 5.15
  },
  "btc": {
@@ -172,10 +172,10 @@
   4.1,
   -1.48,
   0.01,
-  -0.2
+  -0.33
  ],
  "contexto": {
-  "t": 1795450036,
+  "t": 1795450277,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.4,
+   "media_top20_anual_pct": 3.4,
    "principais_anual_pct": {
-    "BTC": 4.2,
+    "BTC": 2.8,
     "ETH": 11.0,
-    "SOL": -6.3
+    "SOL": -11.1
    },
    "leitura": "neutro"
   },
@@ -715,12 +715,12 @@
   "z_contra_lab": 1.62,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5065,
-    "n": 22350
+    "acerto": 0.5068,
+    "n": 22453
    },
    "segue_maioria_24h": {
-    "acerto": 0.5022,
-    "n": 27671
+    "acerto": 0.5017,
+    "n": 27736
    }
   },
   "referencia_ganha": [],
