@@ -1,21 +1,21 @@
 {
- "t": 1795404871,
- "hora_utc": "2026-11-23 03:34 UTC",
+ "t": 1795405054,
+ "hora_utc": "2026-11-23 03:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 103,
-  "subindo_pct": 93.2,
-  "mediana_pct": 1.37
+  "moedas": 104,
+  "subindo_pct": 93.3,
+  "mediana_pct": 1.39
  },
  "mercado_4h": {
-  "moedas": 103,
-  "subindo_pct": 66.0,
-  "mediana_pct": 0.32
+  "moedas": 104,
+  "subindo_pct": 66.3,
+  "mediana_pct": 0.33
  },
  "mercado_24h": {
-  "moedas": 103,
-  "subindo_pct": 78.6,
-  "mediana_pct": 2.62
+  "moedas": 104,
+  "subindo_pct": 78.8,
+  "mediana_pct": 2.71
  },
  "btc": {
   "1h": 1.15,
@@ -136,16 +136,16 @@
    "vol": 1.93
   },
   {
+   "moeda": "MITO",
+   "4h": 2.51,
+   "24h": 8.87,
+   "vol": 1.89
+  },
+  {
    "moeda": "ORCA",
    "4h": 2.45,
    "24h": 1.59,
    "vol": 0.7
-  },
-  {
-   "moeda": "SOPH",
-   "4h": 2.27,
-   "24h": -3.23,
-   "vol": 1.48
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.13,
   -0.78,
   -0.42,
-  1.69
+  1.73
  ],
  "contexto": {
-  "t": 1795404872,
+  "t": 1795405055,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -250,11 +250,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.5,
+   "media_top20_anual_pct": 6.6,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.7,
-    "SOL": 10.8
+    "ETH": 3.5,
+    "SOL": 11.0
    },
    "leitura": "neutro"
   },
@@ -327,6 +327,13 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.2176
+   },
+   {
+    "moeda": "MITO",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.0046
    },
    {
     "moeda": "NFP",
@@ -726,12 +733,12 @@
   "z_contra_lab": 2.23,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5037,
-    "n": 21341
+    "acerto": 0.5038,
+    "n": 21366
    },
    "segue_maioria_24h": {
-    "acerto": 0.503,
-    "n": 28698
+    "acerto": 0.5051,
+    "n": 28815
    }
   },
   "referencia_ganha": [],
