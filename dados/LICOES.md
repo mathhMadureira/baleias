@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 05:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 05:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,11 +67,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 80.2% das moedas subindo em 24 h, 76.4% em 4 h · BTC 24 h 3.76%, 4 h 0.15%.
+- **Amplitude:** 83.0% das moedas subindo em 24 h, 82.1% em 4 h · BTC 24 h 3.76%, 4 h 0.15%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 11.0, 'ETH': -3.6, 'SOL': 6.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': 11.0, 'ETH': -3.5, 'SOL': 5.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** LISTA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX triângulo simétrico (?, formado) · BERA fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CELO triângulo descendente (baixa, formado) · JUP topo duplo (baixa, formado) · MITO topo duplo (baixa, formado) · MITO triângulo ascendente (alta, formado)
+- **Padrões gráficos em 1 h:** LISTA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX triângulo simétrico (?, formado) · BERA fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CELO triângulo descendente (baixa, formado) · JUP topo duplo (baixa, formado) · KITE topo duplo (baixa, formado) · MITO topo duplo (baixa, formado)
 - 📰 23/11 04:45 UTC · CoinDesk: Market rout kills 50 basis points December Fed rate hike bets
 - 📰 23/11 03:37 UTC · Cointelegraph: Trump renews call for Nvidia to rehire Jensen Huang as CEO
 - 📰 23/11 02:47 UTC · Cointelegraph: Billionaire Bill Ackman warns Fed will make a rate ‘mistake’ in December
@@ -116,7 +116,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 43697 apostas conferidas ao vivo, acerto 54.6%; prevê 105 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 43735 apostas conferidas ao vivo, acerto 54.5%; prevê 96 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
