@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 15:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 15:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 87.2% das moedas subindo em 24 h, 90.6% em 4 h · BTC 24 h 4.04%, 4 h 3.22%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.4%/ano · {'BTC': 5.0, 'ETH': 9.3, 'SOL': -3.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.1%/ano · {'BTC': 4.1, 'ETH': 9.6, 'SOL': -4.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** IOST estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA OCO invertido (alta, formado) · PENGU ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · PEPE OCO invertido (alta, formado) · SUI fundo duplo (alta, formado)
 - 📰 23/11 15:29 UTC · CoinDesk: Binance hackers push $247 million through transactions designed to cloud the source
