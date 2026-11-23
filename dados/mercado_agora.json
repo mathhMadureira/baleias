@@ -1,6 +1,6 @@
 {
- "t": 1795405235,
- "hora_utc": "2026-11-23 03:40 UTC",
+ "t": 1795405415,
+ "hora_utc": "2026-11-23 03:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 104,
@@ -172,11 +172,17 @@
   0.13,
   -0.78,
   -0.42,
-  1.34
+  1.13
  ],
  "contexto": {
-  "t": 1795405236,
+  "t": 1795405415,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795405040,
+    "hora_utc": "23/11 03:37",
+    "titulo": "Trump renews call for Nvidia to rehire Jensen Huang as CEO"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795402059,
@@ -250,10 +256,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.4,
+   "media_top20_anual_pct": 6.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.0,
+    "ETH": 3.1,
     "SOL": 11.0
    },
    "leitura": "neutro"
