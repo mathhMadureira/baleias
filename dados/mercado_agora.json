@@ -1,6 +1,6 @@
 {
- "t": 1795452655,
- "hora_utc": "2026-11-23 16:50 UTC",
+ "t": 1795452895,
+ "hora_utc": "2026-11-23 16:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 121,
@@ -10,7 +10,7 @@
  "mercado_4h": {
   "moedas": 121,
   "subindo_pct": 90.9,
-  "mediana_pct": 2.64
+  "mediana_pct": 2.68
  },
  "mercado_24h": {
   "moedas": 121,
@@ -172,11 +172,17 @@
   4.1,
   -1.48,
   0.01,
-  -1.2
+  -1.12
  ],
  "contexto": {
-  "t": 1795452656,
+  "t": 1795452896,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795452677,
+    "hora_utc": "23/11 16:51",
+    "titulo": "Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795452363,
@@ -260,12 +266,6 @@
     "t": 1795441784,
     "hora_utc": "23/11 13:49",
     "titulo": "Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795441456,
-    "hora_utc": "23/11 13:44",
-    "titulo": "Trump-linked American Bitcoin secures $150M credit line from FalconX"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.5,
+   "media_top20_anual_pct": 2.7,
    "principais_anual_pct": {
-    "BTC": 1.8,
+    "BTC": 1.5,
     "ETH": 8.1,
-    "SOL": -17.3
+    "SOL": -16.3
    },
    "leitura": "neutro"
   },
@@ -715,12 +715,12 @@
   "z_contra_lab": 1.44,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5062,
-    "n": 22510
+    "acerto": 0.5059,
+    "n": 22610
    },
    "segue_maioria_24h": {
-    "acerto": 0.5004,
-    "n": 27563
+    "acerto": 0.5,
+    "n": 27582
    }
   },
   "referencia_ganha": [],

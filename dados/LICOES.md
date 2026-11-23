@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 16:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 16:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,15 +68,15 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 - **Amplitude:** 85.1% das moedas subindo em 24 h, 90.9% em 4 h · BTC 24 h 1.39%, 4 h 1.54%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.5%/ano · {'BTC': 1.8, 'ETH': 8.1, 'SOL': -17.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 1.5, 'ETH': 8.1, 'SOL': -16.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · CYBER topo duplo (baixa, formado) · CYBER fundo duplo (alta, formado) · ENA OCO invertido (alta, formado) · GIGGLE topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado)
+- 📰 23/11 16:51 UTC · Cointelegraph: Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations
 - 📰 23/11 16:46 UTC · Decrypt: Tom Lee Says Ethereum Is as Scarce as Bitcoin—And Bitmine Just Bought More
 - 📰 23/11 16:39 UTC · CoinDesk: Cathie Wood's ARK Invest pulls the plug on two planned crypto ETFs
 - 📰 23/11 16:32 UTC · Decrypt: Bitcoin Rallies, Anthropic Sinks as Nvidia Surges 35% on Jensen Huang’s Return
 - 📰 23/11 16:23 UTC · Cointelegraph: Cross River Bank enters Bitcoin-backed lending with $250K loans
 - 📰 23/11 15:57 UTC · Cointelegraph: How market depth shapes the price of a weekend Bitcoin sale
-- 📰 23/11 15:29 UTC · CoinDesk: Binance hackers push $247 million through transactions designed to cloud the source
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
