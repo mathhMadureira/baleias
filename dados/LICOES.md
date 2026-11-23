@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 09:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 09:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,9 +67,9 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 80.4% das moedas subindo em 24 h, 66.4% em 4 h · BTC 24 h 2.88%, 4 h 0.34%.
+- **Amplitude:** 80.4% das moedas subindo em 24 h, 65.4% em 4 h · BTC 24 h 2.88%, 4 h 0.34%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 11.0, 'ETH': -3.1, 'SOL': 6.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.6%/ano · {'BTC': 11.0, 'ETH': -3.7, 'SOL': 5.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ICP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · MUBARAK fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · JUP topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 09:40 UTC · CoinDesk: U.S. inflation, Thanksgiving trading: Crypto Week Ahead
@@ -81,7 +81,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 12.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 12.1 h.
 - 22/11 21:41 UTC · **GTC compra, CYBER compra, DOGE compra, SKY venda** · Universo 99 moedas (vela do v4 fechada 21:30 UTC); regime neutro: 69,7% subindo em 24 h, 47,5% em 4 h; BTC 60.982 (1h +0,59%, 4h +0,19%, 24h +0,86%), abaixo das
 - 22/11 00:43 UTC · **GTC compra, BEAMX venda, ETC venda, ENSO compra** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; BTC 60.301 (1h +0,10%, 4h -0,28%, 24h +2,09%), abaixo da
 - 22/11 00:37 UTC · **GTC compra, BEAMX venda, ETC venda** · Universo 125 moedas (vela do v4 fechada 00:30 UTC); regime neutro: 57,6% subindo em 24 h, 36,8% em 4 h; v4 com confiança (>= 0,12): 2 de compra (SOPH 0,150, SHI
@@ -116,7 +116,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44287 apostas conferidas ao vivo, acerto 54.5%; prevê 106 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44290 apostas conferidas ao vivo, acerto 54.5%; prevê 5 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
