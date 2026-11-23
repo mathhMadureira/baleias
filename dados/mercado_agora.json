@@ -1,21 +1,21 @@
 {
- "t": 1795415836,
- "hora_utc": "2026-11-23 06:37 UTC",
+ "t": 1795416054,
+ "hora_utc": "2026-11-23 06:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 108,
-  "subindo_pct": 41.7,
-  "mediana_pct": -0.06
+  "moedas": 107,
+  "subindo_pct": 42.1,
+  "mediana_pct": -0.05
  },
  "mercado_4h": {
-  "moedas": 108,
-  "subindo_pct": 85.2,
+  "moedas": 107,
+  "subindo_pct": 85.0,
   "mediana_pct": 1.85
  },
  "mercado_24h": {
-  "moedas": 108,
-  "subindo_pct": 78.7,
-  "mediana_pct": 2.81
+  "moedas": 107,
+  "subindo_pct": 79.4,
+  "mediana_pct": 2.84
  },
  "btc": {
   "1h": 0.16,
@@ -175,7 +175,7 @@
   -0.36
  ],
  "contexto": {
-  "t": 1795415837,
+  "t": 1795416055,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -268,11 +268,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.8,
+   "media_top20_anual_pct": 5.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -10.6,
-    "SOL": 10.4
+    "ETH": -10.4,
+    "SOL": 10.0
    },
    "leitura": "neutro"
   },
@@ -310,6 +310,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 2.391
+   },
+   {
+    "moeda": "BERA",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.0847
    },
    {
     "moeda": "BMT",
@@ -716,12 +723,12 @@
   "z_contra_lab": 1.58,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5046,
-    "n": 22172
+    "acerto": 0.505,
+    "n": 21991
    },
    "segue_maioria_24h": {
-    "acerto": 0.5001,
-    "n": 28916
+    "acerto": 0.5002,
+    "n": 28895
    }
   },
   "referencia_ganha": [],
