@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 02:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 02:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 8.38** · 61 operações fechadas · 0 abertas
 Carteira **US$ 8.08** · 43 operações fechadas · 4 abertas
 
 - **Total:** 14/43 com lucro (33%), resultado -1.87, média -0.044 por operação.
-- **Últimas 24 h:** 0/2 com lucro, -0.33.
+- **Últimas 24 h:** 0/1 com lucro, -0.17.
 - **Por horário:** 06–11 UTC: 3 op, 0% certas, -1.16 · 00–05 UTC: 4 op, 25% certas, -0.39 · 18–23 UTC: 17 op, 29% certas, -0.27 · 12–17 UTC: 19 op, 42% certas, -0.05
 - **Por lado:** compra: 9 op, 11% certas, -2.74 · venda: 34 op, 38% certas, +0.87
 - **Por motivo de saída:** stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −0.80% na co: 6 op, 17% certas, -0.54 · stop de segurança −1.20% na co: 1 op, 0% certas, -0.45 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 1 op, 100% certas, +0.41 · fora da lista de posições do c: 8 op, 12% certas, +0.48 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -68,9 +68,9 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 56.3% das moedas subindo em 24 h, 24.3% em 4 h · BTC 24 h 1.49%, 4 h -0.09%.
+- **Amplitude:** 56.9% das moedas subindo em 24 h, 24.5% em 4 h · BTC 24 h 1.49%, 4 h -0.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 11.0, 'ETH': -7.4, 'SOL': 1.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 11.0, 'ETH': -7.5, 'SOL': 1.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AVAX triângulo simétrico (baixa, CONFIRMOU) · BMT fundo duplo (alta, CONFIRMOU) · SKY bandeira de baixa (baixa, CONFIRMOU) · XPL estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ACE topo duplo (baixa, formado) · BCH topo duplo (baixa, formado) · BMT ombro-cabeça-ombro (baixa, formado) · BREV topo duplo (baixa, formado) · CAKE OCO invertido (alta, formado) · CVX topo duplo (baixa, formado)
 - 📰 23/11 00:53 UTC · Cointelegraph: Half of wallets on Trump’s dinner list got tokens from non-US exchanges
@@ -117,7 +117,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 43172 apostas conferidas ao vivo, acerto 54.7%; prevê 102 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 43172 apostas conferidas ao vivo, acerto 54.7%; prevê 101 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
