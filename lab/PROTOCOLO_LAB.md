@@ -1673,3 +1673,20 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - Conforme o adendo de 19/11: a A2 já está ligada por decisão do dono; o Laboratório **não desliga**. O resultado vai ao dono: a forma da saída não muda a
   média de modo detectável (como previsto); nenhuma forma tem vantagem. A A1 (sem móvel) também não passou.
 - Ajuste no script antes de rodar: o download desiste de uma fonte após 4 falhas de rede (antes era laço infinito); download em paralelo (8), mesmo código de medida.
+
+## Hipótese 74 (P2 do Treinador): os agentes só compram com alerta `explosao_*` de compra do Caçador ainda válido (registrada em 23/11/2026 ~22:45 UTC, antes de rodar)
+- **Proposta:** `Shared/baleias/propostas.md`, P2. Na amostra do Treinador (225 operações, 17/11–23/11), as compras sem alerta perdem (59 operações, −US$ 8,29, fator 0,19)
+  e as com alerta ganham (13, +0,335, fator 1,47). Esses números saíram dos mesmos dados: **não servem de teste**.
+- **Teste fora da amostra (decide agora; 1 tentativa):** todos os alertas `explosao_*` de COMPRA do Caçador, remontados do histórico de `dados/oportunidades.json`
+  no ramo `estado` (cada commit, de 19/11 16:00 a 23/11 22:23 UTC). O mesmo (moeda, sinal, lado) dentro de 30 min conta uma vez só (a regra de repetição do Caçador).
+  Quase nenhum desses alertas virou operação de agente, então eles não se confundem com as 13 da descoberta.
+  - Entrada: fechamento da primeira vela de 1 min que fecha depois da hora do alerta. Velas de 1 min do perpétuo da Binance, ou do mercado à vista quando o perpétuo não tem a moeda.
+  - Saída: stop, alvo e prazo do próprio alerta (`sugestao`), pelo `executor/stop_movel.conferir` com a regra em vigor (móvel arma em max(+0,5%, alvo/2)). Custo de 0,12%.
+  - Controle de validade: mesmas moedas e instantes, lado sorteado. A média tem de ficar em −0,12% ± 3 erros-padrão; se não ficar, a rodada é inválida.
+  - Relatado, sem decidir: os alertas de VENDA medidos do mesmo jeito.
+- **Juiz (a):** média líquida > 0 com z ≥ 2 (erro-padrão agrupado pela hora do alerta) **e** > 0 em cada um de 3 blocos de tempo iguais. Exijo z além dos 3 blocos
+  que o Treinador pediu, porque com milhares de alertas a média só ser positiva nos 3 blocos pode ser ruído.
+- **Se (a) passar:** a regra vai ao Baleias (o `operar.py` recusa compra sem alerta válido). O juiz ao vivo é o (b) do Treinador: das 30 primeiras compras recusadas,
+  gravadas e simuladas do mesmo jeito, a soma tem de ser < 0 com fator < 1 em 2 dos 3 blocos; se não for, a regra sai. **Se (a) falhar:** nada muda.
+- **Previsão registrada:** reprova. O juiz automático da H68 nunca deu prova a nenhum sinal do Caçador, e entrar depois de uma explosão de 1 a 15 min tende a pegar
+  o fim do movimento. A perda das compras sem alerta pode ser só o mercado em queda nesses dias (o mesmo da H42).
