@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 23/11/2026 10:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 23/11/2026 10:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 63.5% das moedas subindo em 24 h, 45.2% em 4 h · BTC 24 h 0.53%, 4 h -0.39%.
+- **Amplitude:** 64.4% das moedas subindo em 24 h, 48.1% em 4 h · BTC 24 h 0.61%, 4 h -0.63%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': 11.0, 'ETH': -7.6, 'SOL': -7.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': 11.0, 'ETH': -7.4, 'SOL': -6.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76762, MM200 72385); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BMT topo duplo (baixa, CONFIRMOU) · BMT estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SUI fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · APT topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · BMT fundo duplo (alta, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** SUI fundo duplo (alta, CONFIRMOU) · AAVE fundo duplo (alta, formado) · APT topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · CHIP topo duplo (baixa, formado) · CHIP OCO invertido (alta, formado) · CYBER topo duplo (baixa, formado) · LUNC ombro-cabeça-ombro (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 23/11 09:40 UTC · CoinDesk: U.S. inflation, Thanksgiving trading: Crypto Week Ahead
 - 📰 23/11 09:05 UTC · Cointelegraph: ‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones
 - 📰 23/11 08:08 UTC · Cointelegraph: Bitcoin ETFs shed $1.8B in third-largest weekly outflow
@@ -115,7 +115,7 @@ Carteira **US$ 9.73** · 59 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 44393 apostas conferidas ao vivo, acerto 54.5%; prevê 103 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 44417 apostas conferidas ao vivo, acerto 54.5%; prevê 103 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
