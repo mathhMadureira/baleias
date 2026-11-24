@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 04:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 04:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 58.1% das moedas subindo em 24 h, 28.7% em 4 h · BTC 24 h -1.55%, 4 h -1.52%.
+- **Amplitude:** 61.2% das moedas subindo em 24 h, 48.1% em 4 h · BTC 24 h -1.55%, 4 h -1.52%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.0%/ano · {'BTC': 4.4, 'ETH': -7.3, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 5.5, 'ETH': -9.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BREV fundo duplo (alta, CONFIRMOU) · GTC topo duplo (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BREV fundo duplo (alta, CONFIRMOU) · GTC topo duplo (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado)
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
@@ -117,7 +117,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 46552 apostas conferidas ao vivo, acerto 54.4%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 46609 apostas conferidas ao vivo, acerto 54.4%; prevê 88 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
