@@ -1,21 +1,21 @@
 {
- "t": 1795492556,
- "hora_utc": "2026-11-24 03:55 UTC",
+ "t": 1795492799,
+ "hora_utc": "2026-11-24 03:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 127,
-  "subindo_pct": 18.9,
-  "mediana_pct": -0.41
+  "moedas": 128,
+  "subindo_pct": 19.5,
+  "mediana_pct": -0.4
  },
  "mercado_4h": {
-  "moedas": 127,
-  "subindo_pct": 31.5,
-  "mediana_pct": -0.3
+  "moedas": 128,
+  "subindo_pct": 31.2,
+  "mediana_pct": -0.34
  },
  "mercado_24h": {
-  "moedas": 127,
-  "subindo_pct": 53.5,
-  "mediana_pct": 0.54
+  "moedas": 128,
+  "subindo_pct": 53.1,
+  "mediana_pct": 0.48
  },
  "btc": {
   "1h": -0.11,
@@ -149,7 +149,6 @@
   }
  ],
  "btc_1h_ultimas_24": [
-  -0.07,
   0.73,
   -0.34,
   -0.02,
@@ -172,10 +171,11 @@
   0.1,
   -0.4,
   -1.66,
-  0.41
+  0.44,
+  0.0
  ],
  "contexto": {
-  "t": 1795492557,
+  "t": 1795492801,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.5,
+   "media_top20_anual_pct": 4.0,
    "principais_anual_pct": {
-    "BTC": -0.8,
-    "ETH": -12.4,
-    "SOL": 5.2
+    "BTC": -7.0,
+    "ETH": -4.6,
+    "SOL": 1.1
    },
    "leitura": "neutro"
   },
@@ -451,8 +451,8 @@
  "v4": {
   "vela": "11:00 UTC",
   "apostas": 95,
-  "compras": 51,
-  "vendas": 44,
+  "compras": 50,
+  "vendas": 45,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -524,7 +524,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 6.92,
+  "carteira": 6.62,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -694,7 +694,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 6.92,
+   "carteira": 6.62,
    "n_abertas": 2,
    "abertas": [
     [
@@ -736,7 +736,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 8.85,
+   "carteira": 8.48,
    "n_abertas": 2,
    "abertas": [
     [
@@ -786,7 +786,7 @@
     "ganho_medio": 0.158,
     "perda_media": -0.274,
     "fator_lucro": 0.66,
-    "carteira": 6.92
+    "carteira": 6.62
    },
    "openbot_testnet": {
     "ops": 54,
@@ -804,7 +804,7 @@
     "ganho_medio": 0.262,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 8.85
+    "carteira": 8.48
    },
    "laboratorio": {
     "ops": 25,
@@ -835,12 +835,12 @@
   "z_contra_lab": 0.88,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5049,
-    "n": 23010
+    "acerto": 0.5047,
+    "n": 23080
    },
    "segue_maioria_24h": {
-    "acerto": 0.5017,
-    "n": 27467
+    "acerto": 0.5008,
+    "n": 27281
    }
   },
   "referencia_ganha": [],
