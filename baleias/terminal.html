@@ -135,7 +135,7 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 .foco-tag { display:inline-block; font:700 13px var(--mono); padding:4px 10px; border-radius:8px; margin-top:6px; }
 .foco-tag.parado { background:#ed4b6222; color:var(--down); } .foco-tag.ativo { background:#1fc7a022; color:var(--up); }
 .secao { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--mut); margin:6px 0 9px; font-weight:600; display:flex; gap:10px; align-items:baseline; }
-.fluxo { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; margin-bottom:16px; }
+.fluxo { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; margin-bottom:16px; }
 .passo { position:relative; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px; margin-right:22px; min-width:0; transition:border-color .4s, box-shadow .4s; }
 .passo:last-child { margin-right:0; border-color:#a78bfa55; }
 .passo:not(:last-child)::after { content:"➜"; position:absolute; right:-19px; top:42%; color:var(--dim); font-size:15px; }
@@ -280,7 +280,7 @@ function desenhar() {
     return `<div class="passo ${cls}"><div class="p-top"><div class="p-av">${esc(a.avatar)}</div><div style="min-width:0"><div class="p-nome">${esc(a.nome)}</div><div class="p-cargo">${esc(a.cargo)} · ${esc(a.entrega)}</div></div></div>
       ${est}${u ? `<div class="p-txt" title="${esc(u.texto)}">${esc(u.texto)}</div>` : ""}</div>`;
   }).join("");
-  $("rd-t").textContent = vv.rodada_inicio ? `· começou ${hm(vv.rodada_inicio)} (há ${ha(vv.rodada_inicio)}) · a cada 15 min` : "· a primeira rodada ainda não registrou no quadro";
+  $("rd-t").textContent = vv.rodada_inicio ? `· começou ${hm(vv.rodada_inicio)} (há ${ha(vv.rodada_inicio)}) · a cada 10 min` : "· a primeira rodada ainda não registrou no quadro";
   // posição
   $("ps-t").textContent = c.atualizado ? "corretora lida há " + ha(c.atualizado) : "carteira ainda não aberta na corretora";
   $("pos").innerHTML = c.abertas.length ? c.abertas.map(p => `<div data-moeda="${esc(p.moeda)}" style="cursor:pointer">

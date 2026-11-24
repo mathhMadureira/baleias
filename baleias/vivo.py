@@ -14,17 +14,17 @@ RAIZ = Path(os.environ.get("BALEIAS_OPENBOT", "/home/servidor-de-producao/OpenBo
 SHARED = RAIZ / "Shared" / "baleias"
 OPERADOR = "laboratorio"
 CAPITAL, META = 10.0, 20.0
-RODADA_S = 15 * 60
+RODADA_S = 10 * 60
 
-FLUXO = [
-    {"id": "cacador", "nome": "Caçador", "avatar": "🔭", "cargo": "olheiro de criptos", "entrega": "3 entradas em criptos"},
-    {"id": "memecoins", "nome": "Memecoins", "avatar": "🐸", "cargo": "olheiro de memecoins", "entrega": "até 2 memecoins"},
-    {"id": "treinador", "nome": "Treinador", "avatar": "🎯", "cargo": "juiz", "entrega": "nota de 0 a 10"},
-    {"id": "guardiao", "nome": "Guardião", "avatar": "🛡", "cargo": "risco e saída", "entrega": "stop, alvo, prazo e veto"},
-    {"id": "laboratorio", "nome": "Laboratório", "avatar": "🔬", "cargo": "operador", "entrega": "decide e executa"},
+FLUXO = [                                                     # 24/11 (dono: "modelo mais rápido"): olheiro → operador
+    {"id": "cacador", "nome": "Caçador", "avatar": "🔭", "cargo": "olheiro", "entrega": "3 entradas a mercado (criptos e memecoins)"},
+    {"id": "laboratorio", "nome": "Laboratório", "avatar": "🔬", "cargo": "operador", "entrega": "entra a mercado e executa"},
 ]
 APOIO = [
     {"id": "baleias", "nome": "Baleias", "avatar": "⚓", "cargo": "chefe: coordena e fala com o dono"},
+    {"id": "guardiao", "nome": "Guardião", "avatar": "🛡", "cargo": "risco: revisa a posição aberta"},
+    {"id": "treinador", "nome": "Treinador", "avatar": "🎯", "cargo": "juiz: revisa as operações fechadas"},
+    {"id": "memecoins", "nome": "Memecoins", "avatar": "🐸", "cargo": "pesquisa de memecoins"},
     {"id": "engenheiro", "nome": "Engenheiro", "avatar": "🛠", "cargo": "infraestrutura e corretora"},
     {"id": "minerador", "nome": "Minerador", "avatar": "⛏", "cargo": "tesouraria: ganhos grátis"},
 ]

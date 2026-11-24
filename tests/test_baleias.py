@@ -2940,8 +2940,8 @@ class MesaAoVivo(unittest.TestCase):
         self.assertEqual(d["foco"]["foco"], "bingx")
         self.assertAlmostEqual(d["missao"]["progresso"], 0.25)
         f = {a["id"]: a for a in d["fluxo"]}
-        self.assertTrue(f["cacador"]["nesta_rodada"] and f["memecoins"]["nesta_rodada"])
-        self.assertTrue(f["treinador"].get("trabalhando"))                     # a vez é do juiz
+        self.assertTrue(f["cacador"]["nesta_rodada"])
+        self.assertTrue(f["laboratorio"].get("trabalhando"))                   # a vez é do operador
         self.assertEqual(d["carteira"]["abertas"][0]["stop"], 0.98)
         spec = importlib.util.spec_from_file_location("quadro_t", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "quadro.py")
         Q = importlib.util.module_from_spec(spec)
