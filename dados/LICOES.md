@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 03:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 03:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 7.42** · 72 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 76.6% das moedas subindo em 24 h, 68.0% em 4 h · BTC 24 h -0.36%, 4 h -1.33%.
+- **Amplitude:** 68.8% das moedas subindo em 24 h, 51.6% em 4 h · BTC 24 h -0.89%, 4 h -1.92%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.3%/ano · {'BTC': 1.0, 'ETH': -1.7, 'SOL': -7.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.4%/ano · {'BTC': 1.2, 'ETH': -12.1, 'SOL': 0.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BREV fundo duplo (alta, CONFIRMOU) · INIT bandeira de baixa (baixa, CONFIRMOU) · RUNE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** AERO bandeira de baixa (baixa, CONFIRMOU) · BMT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · INIT bandeira de baixa (baixa, CONFIRMOU) · SOPH topo duplo (baixa, CONFIRMOU) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BREV fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado)
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
 - 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
@@ -114,11 +114,11 @@ Carteira **US$ 7.42** · 72 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 46248 apostas conferidas ao vivo, acerto 54.3%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 46281 apostas conferidas ao vivo, acerto 54.3%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
