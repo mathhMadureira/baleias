@@ -1,6 +1,6 @@
 {
- "t": 1795559726,
- "hora_utc": "2026-11-24 22:35 UTC",
+ "t": 1795559960,
+ "hora_utc": "2026-11-24 22:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.33,
   0.17,
   0.19,
-  0.3
+  0.26
  ],
  "contexto": {
-  "t": 1795559727,
+  "t": 1795559961,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795559762,
+    "hora_utc": "24/11 22:36",
+    "titulo": "OpenAI and Anthropic Insiders Fear Their Next AI Models Are Too Dangerous to Release"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795558330,
@@ -260,12 +266,6 @@
     "t": 1795543642,
     "hora_utc": "24/11 18:07",
     "titulo": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795542608,
-    "hora_utc": "24/11 17:50",
-    "titulo": "Utah moves to drop criminal pursuit of Kalshi after the firm halted services there"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.6,
+   "media_top20_anual_pct": 6.9,
    "principais_anual_pct": {
-    "BTC": -2.8,
-    "ETH": 7.7,
-    "SOL": 3.8
+    "BTC": -2.9,
+    "ETH": 7.9,
+    "SOL": 5.3
    },
    "leitura": "neutro"
   },
