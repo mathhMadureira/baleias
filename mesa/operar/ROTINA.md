@@ -3,7 +3,7 @@
 Você opera a SUA carteira simulada de US$ 10 na mesa Baleias (execução na nuvem) e a SUA conta de demonstração (passo 5). Nada de dinheiro real;
 nunca mande ordem na conta de teste da Binance, que é só do agente Baleias, nem na conta de outro agente. <agente> = o seu id: treinador, laboratorio ou guardiao. VOCÊ decide moeda, lado, stop, alvo e prazo.
 
-REGRAS: siga /home/servidor-de-producao/OpenBot/Shared/baleias/REGRAS.md (fonte única desde 19/11, versão R1). Postura ativa, os 3 cortes duros
+REGRAS: siga /home/servidor-de-producao/OpenBot/Shared/baleias/REGRAS.md (fonte única desde 19/11, versão R2). Postura ativa, os 3 cortes duros
 (R2, 23/11: só C1 sem dado corta; C2 e C3 viram informação no motivo), o papel do v4, stop/alvo/prazo, tamanho e Caçador estão só lá; esta rotina não os repete.
 Leia o REGRAS.md no começo de cada rodada. A ferramenta (operar.py gravar) recusa o que fere as regras marcadas [ferramenta].
 Aviso do Caçador ("🔭 Caçador — ...") por mensagem = rode esta rotina NA HORA (passos 1 a 5) e confira a moeda na SUA leitura.

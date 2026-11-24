@@ -2852,3 +2852,15 @@ class JuizoH70SemLacoInfinito(unittest.TestCase):
             r = J.baixar("XUSDT", 0, 60_000)
         self.assertLessEqual(len(chamadas), 10)
         self.assertIsNotNone(r)
+
+
+class RotinaCitaARegraEmVigor(unittest.TestCase):
+    """Auditoria 24/11: depois da R2 a ROTINA.md dos agentes ainda dizia "versão R1"; a rotina tem de citar a versão em vigor do REGRAS.md."""
+
+    def test_rotina_cita_a_versao_atual(self):
+        import re
+        from mesa import regras
+        raiz = pathlib.Path(__file__).resolve().parent.parent
+        rotina = (raiz / "mesa" / "operar" / "ROTINA.md").read_text()
+        self.assertIn(f"versão {regras.VERSAO}", (raiz / "mesa" / "REGRAS.md").read_text().splitlines()[0])
+        self.assertEqual(set(re.findall(r"versão (R\d+)", rotina)), {regras.VERSAO})

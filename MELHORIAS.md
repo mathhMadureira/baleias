@@ -258,3 +258,8 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   cancelada à mão). (2) `lab/juizo_h70.py`: erro de rede permanente deixava `baixar()` em laço infinito; agora desiste da fonte depois de 4 falhas seguidas
   (a moeda conta como "sem velas", não como zero). O juiz da H70 morreu no reinício (o registro e o cache estavam em /tmp); rodado de novo, mesmo critério,
   1 tentativa. Testes `CerebroAcordaAProxima` e `JuizoH70SemLacoInfinito` (falham no código antigo). 195 testes.
+- 2026-11-24 (03 UTC): **5ª auditoria do Engenheiro.** Relatório: `OpenBot/Shared/baleias/auditorias/2026-11-24-03.md`. A máquina parou de novo de 23/11 23:42
+  a 24/11 03:12 UTC (diário sem nenhuma linha, mesmo boot): nesse intervalo nenhum agente decidiu; antes e depois, os 4 decidiram a cada 3–30 min. Conta de
+  teste: 7 saídas (5 stops guardados na corretora, 2 fechadas por saírem da lista), patrimônio US$ 7,85 → 7,16, sem 🚨 nem BLOCKED. Código das regras R2
+  (09a1f1f5) auditado sem bug. **Corrigido:** `mesa/operar/ROTINA.md` (e a cópia viva) ainda dizia "versão R1" das REGRAS; agora R2. Teste
+  `RotinaCitaARegraEmVigor` (a rotina cita só a versão em vigor; falha no texto antigo). 196 testes.
