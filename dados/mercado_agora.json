@@ -1,15 +1,15 @@
 {
- "t": 1795554993,
- "hora_utc": "2026-11-24 21:16 UTC",
+ "t": 1795555230,
+ "hora_utc": "2026-11-24 21:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
-  "subindo_pct": 36.8,
-  "mediana_pct": -0.09
+  "subindo_pct": 33.6,
+  "mediana_pct": -0.1
  },
  "mercado_4h": {
   "moedas": 125,
-  "subindo_pct": 27.2,
+  "subindo_pct": 24.0,
   "mediana_pct": -0.7
  },
  "mercado_24h": {
@@ -18,11 +18,11 @@
   "mediana_pct": -3.36
  },
  "btc": {
-  "1h": 0.17,
-  "4h": 0.61,
-  "24h": -2.38,
-  "preco": 59781.39,
-  "vol_4h_vs_media": 0.74
+  "1h": -0.02,
+  "4h": -0.25,
+  "24h": -2.69,
+  "preco": 59728.29,
+  "vol_4h_vs_media": 0.67
  },
  "maiores_quedas_4h": [
   {
@@ -106,28 +106,28 @@
    "vol": 1.75
   },
   {
-   "moeda": "PEPE",
-   "4h": 2.98,
-   "24h": 0.58,
-   "vol": 0.6
-  },
-  {
    "moeda": "SHELL",
    "4h": 2.36,
    "24h": 10.18,
    "vol": 1.02
   },
   {
-   "moeda": "ZEC",
-   "4h": 2.33,
-   "24h": -8.07,
-   "vol": 0.83
+   "moeda": "PEPE",
+   "4h": 2.36,
+   "24h": 0.58,
+   "vol": 0.57
   },
   {
    "moeda": "GTC",
    "4h": 1.7,
    "24h": -4.88,
    "vol": 0.53
+  },
+  {
+   "moeda": "ZEC",
+   "4h": 1.59,
+   "24h": -8.39,
+   "vol": 0.79
   },
   {
    "moeda": "TRUMP",
@@ -142,10 +142,10 @@
    "vol": 0.52
   },
   {
-   "moeda": "NEAR",
-   "4h": 1.38,
-   "24h": -4.22,
-   "vol": 0.68
+   "moeda": "HMSTR",
+   "4h": 1.33,
+   "24h": -8.22,
+   "vol": 0.27
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.39,
   -0.33,
   0.17,
-  -0.0
+  0.15
  ],
  "contexto": {
-  "t": 1795554994,
+  "t": 1795555231,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795554962,
+    "hora_utc": "24/11 21:16",
+    "titulo": "Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795553307,
@@ -260,12 +266,6 @@
     "t": 1795540151,
     "hora_utc": "24/11 17:09",
     "titulo": "Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795538006,
-    "hora_utc": "24/11 16:33",
-    "titulo": "How South Korea’s proposed 20% cap could change who runs Upbit"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.9,
+   "media_top20_anual_pct": 3.3,
    "principais_anual_pct": {
-    "BTC": -8.8,
+    "BTC": -8.1,
     "ETH": 11.0,
-    "SOL": -3.2
+    "SOL": -2.6
    },
    "leitura": "neutro"
   },
@@ -408,9 +408,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 136,
-  "compras": 106,
-  "vendas": 30,
+  "apostas": 139,
+  "compras": 108,
+  "vendas": 31,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -455,12 +455,16 @@
     "prob_subir": 0.645
    },
    {
+    "moeda": "SHIB",
+    "prob_subir": 0.617
+   },
+   {
     "moeda": "ENS",
     "prob_subir": 0.614
    },
    {
     "moeda": "JUP",
-    "prob_subir": 0.613
+    "prob_subir": 0.612
    },
    {
     "moeda": "RWUSD",
@@ -471,12 +475,8 @@
     "prob_subir": 0.608
    },
    {
-    "moeda": "F",
-    "prob_subir": 0.604
-   },
-   {
-    "moeda": "SEI",
-    "prob_subir": 0.598
+    "moeda": "U",
+    "prob_subir": 0.608
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -686,15 +686,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.09,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "0G",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 73,
+   "carteira": 7.04,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 74,
    "ordem": null
   }
  ],
@@ -738,19 +733,19 @@
     "carteira": 9.36
    },
    "guardiao": {
-    "ops": 73,
-    "acerto": 0.493,
-    "soma": -3.073,
+    "ops": 74,
+    "acerto": 0.5,
+    "soma": -2.964,
     "ganho_medio": 0.117,
     "perda_media": -0.197,
-    "fator_lucro": 0.58,
-    "carteira": 7.09
+    "fator_lucro": 0.59,
+    "carteira": 7.04
    }
   },
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.4% em 28894 apostas (612 velas, 17/11 21:30–24/11 20:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.4% em 28895 apostas (612 velas, 17/11 21:30–24/11 20:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5339,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
@@ -758,11 +753,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5049,
-    "n": 23492
+    "n": 23493
    },
    "segue_maioria_24h": {
-    "acerto": 0.5089,
-    "n": 28813
+    "acerto": 0.5088,
+    "n": 28814
    }
   },
   "referencia_ganha": [],
@@ -777,7 +772,7 @@
    },
    "confianca:<0,05": {
     "acerto": 0.5178,
-    "n": 16600
+    "n": 16601
    },
    "confianca:≥0,12": {
     "acerto": 0.6602,
@@ -797,11 +792,11 @@
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5384,
-    "n": 7194
+    "n": 7195
    },
    "lado:compra": {
-    "acerto": 0.5213,
-    "n": 13042
+    "acerto": 0.5214,
+    "n": 13043
    },
    "lado:venda": {
     "acerto": 0.5442,
