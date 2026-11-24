@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 00:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 00:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.96** · 70 operações fechadas · 1 abertas
+Carteira **US$ 7.05** · 70 operações fechadas · 1 abertas
 
 - **Total:** 37/70 com lucro (53%), resultado -3.21, média -0.046 por operação.
 - **Últimas 24 h:** 3/9 com lucro, -1.59.
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.86** · 39 operações fechadas · 2 abertas
+Carteira **US$ 8.66** · 39 operações fechadas · 2 abertas
 
 - **Total:** 16/39 com lucro (41%), resultado -1.42, média -0.036 por operação.
 - **Últimas 24 h:** 1/4 com lucro, -1.10.
@@ -56,7 +56,7 @@ Carteira **US$ 8.70** · 24 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.73** · 70 operações fechadas · 2 abertas
+Carteira **US$ 7.56** · 70 operações fechadas · 2 abertas
 
 - **Total:** 35/70 com lucro (50%), resultado -2.62, média -0.037 por operação.
 - **Últimas 24 h:** 4/11 com lucro, -2.35.
@@ -71,7 +71,7 @@ Carteira **US$ 7.73** · 70 operações fechadas · 2 abertas
 
 - **Amplitude:** 71.2% das moedas subindo em 24 h, 44.0% em 4 h · BTC 24 h 0.04%, 4 h 0.05%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.1%/ano · {'BTC': 11.0, 'ETH': -17.9, 'SOL': -6.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.4%/ano · {'BTC': 11.0, 'ETH': -17.5, 'SOL': -5.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATOM bandeira de alta (alta, CONFIRMOU) · USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado) · HUMA triângulo simétrico (?, formado) · MET fundo duplo (alta, formado)
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
