@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 15:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 15:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.1% das moedas subindo em 24 h, 33.8% em 4 h · BTC 24 h -3.9%, 4 h 1.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.8%/ano · {'BTC': 3.8, 'ETH': 5.7, 'SOL': -22.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.4%/ano · {'BTC': 3.5, 'ETH': 5.7, 'SOL': -24.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ASR fundo duplo (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · AR fundo duplo (alta, formado) · ARB fundo duplo (alta, formado) · ARB ombro-cabeça-ombro (baixa, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KITE fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 24/11 15:06 UTC · CoinDesk: Anchorage Digital to unveil new asset-management subsidiary
 - 📰 24/11 14:40 UTC · CoinDesk: South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment
 - 📰 24/11 14:13 UTC · Decrypt: Justice Department Moves to Forfeit $1.1B in USDC From North Korea's Binance Hack
 - 📰 24/11 14:10 UTC · Cointelegraph: USDT buyers face 22% VAT when Moscow Exchange opens crypto trading
 - 📰 24/11 13:57 UTC · Cointelegraph: Swiss central bank, UBS and SIX study ledger for tokenized settlement
 - 📰 24/11 13:46 UTC · Decrypt: CertiK Trains Interpol Investigators to Trace and Freeze Stolen Crypto
-- 📰 24/11 13:43 UTC · Cointelegraph: Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

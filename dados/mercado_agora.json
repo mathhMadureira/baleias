@@ -1,6 +1,6 @@
 {
- "t": 1795532719,
- "hora_utc": "2026-11-24 15:05 UTC",
+ "t": 1795532960,
+ "hora_utc": "2026-11-24 15:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 130,
@@ -172,11 +172,17 @@
   0.1,
   -0.78,
   0.71,
-  -0.26
+  -0.49
  ],
  "contexto": {
-  "t": 1795532720,
+  "t": 1795532961,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795532792,
+    "hora_utc": "24/11 15:06",
+    "titulo": "Anchorage Digital to unveil new asset-management subsidiary"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795531253,
@@ -260,12 +266,6 @@
     "t": 1795521879,
     "hora_utc": "24/11 12:04",
     "titulo": "JPMorgan, HSBC and StoneX complete first digital gold trades in London"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795521856,
-    "hora_utc": "24/11 12:04",
-    "titulo": "South Korea proposes bank-led stablecoins, 20% cap on crypto exchange stakes"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.8,
+   "media_top20_anual_pct": 7.4,
    "principais_anual_pct": {
-    "BTC": 3.8,
+    "BTC": 3.5,
     "ETH": 5.7,
-    "SOL": -22.9
+    "SOL": -24.1
    },
    "leitura": "neutro"
   },
