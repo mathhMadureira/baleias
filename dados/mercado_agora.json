@@ -1,20 +1,20 @@
 {
- "t": 1795499546,
- "hora_utc": "2026-11-24 05:52 UTC",
+ "t": 1795499795,
+ "hora_utc": "2026-11-24 05:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 130,
-  "subindo_pct": 89.2,
-  "mediana_pct": 0.91
+  "moedas": 131,
+  "subindo_pct": 89.3,
+  "mediana_pct": 0.92
  },
  "mercado_4h": {
-  "moedas": 130,
-  "subindo_pct": 66.2,
-  "mediana_pct": 0.49
+  "moedas": 131,
+  "subindo_pct": 66.4,
+  "mediana_pct": 0.51
  },
  "mercado_24h": {
-  "moedas": 130,
-  "subindo_pct": 70.0,
+  "moedas": 131,
+  "subindo_pct": 70.2,
   "mediana_pct": 1.65
  },
  "btc": {
@@ -112,6 +112,12 @@
    "vol": 1.73
   },
   {
+   "moeda": "RE",
+   "4h": 6.16,
+   "24h": 9.72,
+   "vol": 2.19
+  },
+  {
    "moeda": "AIGENSYN",
    "4h": 4.82,
    "24h": 1.6,
@@ -140,12 +146,6 @@
    "4h": 2.51,
    "24h": 4.44,
    "vol": 0.52
-  },
-  {
-   "moeda": "IOST",
-   "4h": 2.48,
-   "24h": 7.84,
-   "vol": 0.46
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -1.66,
   0.44,
   0.07,
-  0.46
+  0.34
  ],
  "contexto": {
-  "t": 1795499547,
+  "t": 1795499796,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.0,
+   "media_top20_anual_pct": 8.1,
    "principais_anual_pct": {
-    "BTC": 10.9,
-    "ETH": 0.1,
+    "BTC": 11.0,
+    "ETH": 0.9,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -381,13 +381,6 @@
     "nivel": 0.0765
    },
    {
-    "moeda": "GALA",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.001398
-   },
-   {
     "moeda": "GIGGLE",
     "padrao": "fundo duplo",
     "sentido": "alta",
@@ -435,6 +428,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 2.81
+   },
+   {
+    "moeda": "RE",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.2164
    },
    {
     "moeda": "SOL",
@@ -485,9 +485,9 @@
  },
  "v4": {
   "vela": "05:45 UTC",
-  "apostas": 167,
+  "apostas": 168,
   "compras": 29,
-  "vendas": 138,
+  "vendas": 139,
   "mais_confiantes_venda": [
    {
     "moeda": "ENS",
@@ -837,8 +837,8 @@
     "n": 23695
    },
    "segue_maioria_24h": {
-    "acerto": 0.5086,
-    "n": 27743
+    "acerto": 0.5091,
+    "n": 27816
    }
   },
   "referencia_ganha": [],
