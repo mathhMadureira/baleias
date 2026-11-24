@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 04:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 04:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 63.1% das moedas subindo em 24 h, 43.1% em 4 h · BTC 24 h -1.25%, 4 h -1.14%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.3%/ano · {'BTC': 9.1, 'ETH': -7.1, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': 9.9, 'ETH': -6.2, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BREV fundo duplo (alta, CONFIRMOU) · GTC topo duplo (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado)
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
