@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 11:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 11:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 32.4% das moedas subindo em 24 h, 6.5% em 4 h · BTC 24 h -2.63%, 4 h -1.28%.
+- **Amplitude:** 36.0% das moedas subindo em 24 h, 8.6% em 4 h · BTC 24 h -2.68%, 4 h -1.14%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.7%/ano · {'BTC': -2.4, 'ETH': -4.3, 'SOL': 2.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': -6.5, 'ETH': -7.3, 'SOL': -5.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · DODO topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · HUMA topo duplo (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** XRP ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado) · LUNC fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 10:58 UTC · CoinDesk: U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving
 - 📰 24/11 10:55 UTC · CoinDesk: BTCS sells more than half its ether to repay $43.8 million in Aave debt
 - 📰 24/11 10:29 UTC · CoinDesk: South Korea regulator backs bank-controlled stablecoins after months of dispute
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 47803 apostas conferidas ao vivo, acerto 54.2%; prevê 138 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 47869 apostas conferidas ao vivo, acerto 54.2%; prevê 138 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
