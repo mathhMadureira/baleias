@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 18:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 18:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 16.9% das moedas subindo em 24 h, 39.5% em 4 h · BTC 24 h -2.35%, 4 h -0.32%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': 2.2, 'ETH': 3.6, 'SOL': -1.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': 1.3, 'ETH': 3.8, 'SOL': -1.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM bandeira de alta (alta, CONFIRMOU) · BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · FF OCO invertido (alta, formado) · INIT OCO invertido (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 18:16 UTC · Decrypt: Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?
