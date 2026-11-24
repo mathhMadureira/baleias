@@ -1759,3 +1759,14 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **H49 (stop móvel):** não julgada. Desde a H62 cada agente põe alvo e prazo, e desde a R2 (23/11) o móvel é desligável; a "saída antiga" escrita
   (regra do robô sem o móvel) não existe para essas operações. Fica registrada como não julgável; a pergunta foi respondida nos dados pela H70 (reprovada em 23/11).
 - **R2 (juiz ao vivo):** 12 de 60 operações abertas depois de 23/11 23:40 UTC; não venceu.
+
+## Hipótese 76 (proposta do Caçador, 24/11): "hora_22utc" — comprar BTC às 22:00 UTC e vender às 00:00 UTC (registrada em 24/11/2026 ~21:00 UTC, antes de baixar os dados)
+- **Fonte:** Padyšák e Vojtko, "Seasonality, Trend-following, and Mean reversion in Bitcoin" (SSRN 4081000): Gemini 2015–2021, 33% ao ano, Sharpe 1,58, custo não informado.
+  Conta do Caçador: 33%/365 ≈ 0,09% por dia, abaixo do custo de 0,12%.
+- **Regra:** uma operação por dia, só compra. Entrada na abertura da vela de 1 h das 22:00 UTC; saída na abertura da vela das 00:00 UTC.
+- **Dados (fora da amostra do artigo):** velas de 1 h de BTCUSDT à vista da Binance, de 01/01/2022 a 23/11/2026. Custo de 0,12% por operação.
+- **Controle de validade:** no mesmo dia, uma janela de 2 h que começa numa hora sorteada entre 00 e 21 UTC. A média tem de ficar em −0,12% ± 3 erros-padrão; se não ficar, a rodada é inválida.
+- **Juiz (1 tentativa, só BTC):** n ≥ 300 dias, média líquida > 0, t ≥ 2,69 (o que o Caçador sugeriu) e > 0 em **cada** um de 3 blocos de tempo iguais.
+  Uso a regra dos 3 blocos do laboratório, mais dura que os 2 de 3 propostos. ETHUSDT, na mesma janela, só é relatado.
+- **Se passar:** vai ao Baleias como sinal informativo para os agentes (não ordem automática). **Se falhar:** nada muda.
+- **Previsão registrada:** reprova. A vantagem publicada é menor que o custo.
