@@ -1,6 +1,6 @@
 {
- "t": 1795490549,
- "hora_utc": "2026-11-24 03:22 UTC",
+ "t": 1795490766,
+ "hora_utc": "2026-11-24 03:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 127,
@@ -172,10 +172,10 @@
   0.1,
   -0.4,
   -1.66,
-  -0.35
+  -0.16
  ],
  "contexto": {
-  "t": 1795490550,
+  "t": 1795490767,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 0.7,
+   "media_top20_anual_pct": 1.2,
    "principais_anual_pct": {
-    "BTC": -3.1,
-    "ETH": -14.7,
-    "SOL": 1.4
+    "BTC": -3.3,
+    "ETH": -14.9,
+    "SOL": 2.0
    },
    "leitura": "neutro"
   },
@@ -524,7 +524,7 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 6.95,
+  "carteira": 7.16,
   "abertas": [
    {
     "moeda": "DOGE",
@@ -532,7 +532,7 @@
     "entrada": 0.05581,
     "agora": 0.05551,
     "resultado_pct": 0.54,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "Cacador explosao_5m forca 100 a 0.05559 (5 min -0,80%, z -3,4, volume 5,1x); 5 de 6 tempos abaixo da MM20; 1h -2,13%; preco agora 0.05551; mercado 1h com 6,2% s"
    },
    {
@@ -541,7 +541,7 @@
     "entrada": 0.868,
     "agora": 0.864,
     "resultado_pct": 0.46,
-    "horas_aberta": 0.0,
+    "horas_aberta": 0.1,
     "motivo_de_entrada": "Cacador explosao_5m forca 100 a 0.863 (5 min -0,92%, z -3,0, volume 6,1x); 6 de 6 tempos abaixo da MM20; 1h -2,04%, 4h -2,26%, 24h -2,26%; rompeu a minima de 24"
    }
   ],
@@ -694,7 +694,7 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 6.95,
+   "carteira": 7.16,
    "n_abertas": 2,
    "abertas": [
     [
@@ -716,8 +716,17 @@
    "motor": "agente OpenBot · ordens reais no testnet",
    "missao": "H59: executa na conta de TESTE da Binance, com ordens reais e stop guardado na corretora, as posições que o chefe decide.",
    "carteira": 7.16,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 2,
+   "abertas": [
+    [
+     "DOGE",
+     "venda"
+    ],
+    [
+     "TRUMP",
+     "venda"
+    ]
+   ],
    "n_fechadas": 54,
    "ordem": null
   },
@@ -727,7 +736,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 8.93,
+   "carteira": 8.89,
    "n_abertas": 2,
    "abertas": [
     [
@@ -748,7 +757,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 8.7,
+   "carteira": 9.21,
    "n_abertas": 1,
    "abertas": [
     [
@@ -765,15 +774,10 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.05,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "ENSO",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 72,
+   "carteira": 6.93,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 73,
    "ordem": null
   }
  ],
@@ -787,7 +791,7 @@
     "ganho_medio": 0.158,
     "perda_media": -0.274,
     "fator_lucro": 0.66,
-    "carteira": 6.95
+    "carteira": 7.16
    },
    "openbot_testnet": {
     "ops": 54,
@@ -805,7 +809,7 @@
     "ganho_medio": 0.262,
     "perda_media": -0.214,
     "fator_lucro": 0.82,
-    "carteira": 8.93
+    "carteira": 8.89
    },
    "laboratorio": {
     "ops": 24,
@@ -814,16 +818,16 @@
     "ganho_medio": 0.305,
     "perda_media": -0.234,
     "fator_lucro": 0.65,
-    "carteira": 8.7
+    "carteira": 9.21
    },
    "guardiao": {
-    "ops": 72,
-    "acerto": 0.5,
-    "soma": -2.583,
+    "ops": 73,
+    "acerto": 0.493,
+    "soma": -3.073,
     "ganho_medio": 0.117,
-    "perda_media": -0.189,
-    "fator_lucro": 0.62,
-    "carteira": 7.05
+    "perda_media": -0.197,
+    "fator_lucro": 0.58,
+    "carteira": 6.93
    }
   },
   "vereditos": []
