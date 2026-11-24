@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 09:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 09:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 42.9% das moedas subindo em 24 h, 10.7% em 4 h · BTC 24 h -2.14%, 4 h -0.91%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.6%/ano · {'BTC': -4.2, 'ETH': -9.4, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.5%/ano · {'BTC': -3.7, 'ETH': -9.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** RENDER ombro-cabeça-ombro (baixa, CONFIRMOU) · AERO ombro-cabeça-ombro (baixa, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · DODO topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · HUMA topo duplo (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado)
 - 📰 24/11 09:25 UTC · Cointelegraph: Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s
