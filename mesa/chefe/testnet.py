@@ -198,7 +198,25 @@ def saidas_desde(e, d):
             and "inverteu o lado" not in str(f.get("motivo_saida") or f.get("motivo") or "")}
 
 
+def _foco_pode(corretora):
+    """Chave central da equipe (mesa/foco.py → Shared/baleias/FOCO.json). Sem a chave ou com erro: NÃO abre (seguro)."""
+    import importlib.util
+    for arq in (Path(__file__).resolve().parent.parent / "foco.py", Path("/home/servidor-de-producao/OpenBot/Shared/baleias/foco.py")):
+        if arq.exists():
+            try:
+                spec = importlib.util.spec_from_file_location("foco_equipe", arq)
+                m = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(m)
+                return m.pode_operar(corretora)
+            except Exception as ex:                                    # chave quebrada: não abre
+                return False, f"chave de foco com erro ({type(ex).__name__})"
+    return False, "chave de foco (foco.py) não encontrada"
+
+
 def abrir(f, e, par, lado, motivo, decisao_t, prm=None):
+    pode, porque = _foco_pode("binance")
+    if not pode:
+        return anotar(e, f"{par[:-4]}: {porque}; não entra")
     if not prm or faltam(prm):
         return anotar(e, f"{par[:-4]}: a decisão não traz stop_pct; não entra (REGRAS §5)")
     noc, alav = tamanho(realizado(e))                         # H64: a fatia cresce com o ganho e encolhe na perda (10× até 2,5×, 20× acima)

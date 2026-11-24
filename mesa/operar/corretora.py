@@ -312,6 +312,21 @@ def _ms(v):
         return datetime.fromisoformat(str(v).replace("Z", "+00:00")).timestamp() * 1000
 
 
+def _foco_pode(corretora):
+    """Chave central da equipe (mesa/foco.py → Shared/baleias/FOCO.json). Sem a chave ou com erro: NÃO abre (seguro)."""
+    import importlib.util
+    for arq in (Path(__file__).resolve().parent.parent / "foco.py", Path("/home/servidor-de-producao/OpenBot/Shared/baleias/foco.py")):
+        if arq.exists():
+            try:
+                spec = importlib.util.spec_from_file_location("foco_equipe", arq)
+                m = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(m)
+                return m.pode_operar(corretora)
+            except Exception as ex:                                    # chave quebrada: não abre
+                return False, f"chave de foco com erro ({type(ex).__name__})"
+    return False, "chave de foco (foco.py) não encontrada"
+
+
 class BingX:
     """BingX VST (futuros perpétuos de demonstração, open-api-vst.bingx.com). TRAVADA (VALIDADO = False) até `--validar` passar
     (19/11: a chave recusou o IP desta máquina; a mesma chave vale na conta real, então o endereço é conferido antes de tudo)."""
@@ -558,6 +573,9 @@ class Conta:
         self.anotar(f"⚠️ {par}: fechei a mercado mas a corretora ainda não mostra a saída; confiro na próxima rodada")
 
     def abrir(self, par, lado, motivo, decisao_t, prm):
+        pode, porque = _foco_pode({"Gate": "gate", "Bybit": "bybit", "BingX": "bingx"}.get(type(self.c).__name__, "?"))
+        if not pode:
+            return self.anotar(f"{par[:-4]}: {porque}; não entra")
         falta = faltam(prm)
         if falta:
             return self.anotar(f"{par[:-4]}: a decisão não traz {', '.join(falta)}; não entra (REGRAS §5)")

@@ -4,6 +4,10 @@ import json
 import pathlib
 import random
 import unittest
+import tempfile as _tf, os as _os, json as _js
+_FOCO = _os.path.join(_tf.mkdtemp(), "FOCO.json")
+open(_FOCO, "w").write(_js.dumps({"foco": "todas"}))
+_os.environ["BALEIAS_FOCO"] = _FOCO                 # 24/11: as ferramentas só abrem com a chave de foco liberada
 import unittest.mock
 
 from baleias import aprendizado as A, api, backtest as B, config, selecao, sinais as S
@@ -2980,3 +2984,44 @@ class RoboUnico(unittest.TestCase):
         e4 = R.passo("ma_5x60", agora + 2 * 86400, self._buscar(agora + 2 * 86400, alta))                          # parado: não volta sozinho
         self.assertTrue(e4["parado"])
         self.assertEqual(e4["posicoes"], {})
+
+
+class FocoDaEquipe(unittest.TestCase):
+    """24/11 (dono): uma chave central decide onde a equipe opera; sem chave = parado."""
+
+    def test_chave(self):
+        import importlib.util, json, os, tempfile
+        spec = importlib.util.spec_from_file_location("foco_t", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "foco.py")
+        F = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(F)
+        F.ARQ = pathlib.Path(tempfile.mkdtemp()) / "FOCO.json"
+        self.assertFalse(F.pode_operar("binance")[0])                 # sem arquivo: parado
+        F.definir("binance", "teste")
+        self.assertTrue(F.pode_operar("binance")[0])
+        self.assertFalse(F.pode_operar("bybit")[0])
+        F.definir("todas")
+        self.assertTrue(F.pode_operar("gate")[0])
+        F.definir("parado")
+        self.assertFalse(F.pode_operar("gate")[0])
+        with self.assertRaises(SystemExit):
+            F.definir("binance_real")
+
+    def test_corretora_respeita_o_foco(self):
+        import json, os, time
+        M = CorretoraDemoH71._mod(None) if hasattr(CorretoraDemoH71, "_mod") else None
+        old = os.environ["BALEIAS_FOCO"]
+        try:
+            arq = pathlib.Path(old).with_name("FOCO_parado.json")
+            arq.write_text(json.dumps({"foco": "parado"}))
+            os.environ["BALEIAS_FOCO"] = str(arq)
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("corretora_foco", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "corretora.py")
+            M = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(M)
+            f = CorretoraDemoH71._falsa(None, M)
+            c = CorretoraDemoH71._conta(None, M, f)
+            c.rodada({"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "t", "stop_pct": 0.01}]})
+            self.assertEqual(c.e["abertas"], {})
+            self.assertTrue(any("foco da equipe = parado" in x["texto"] for x in c.e["eventos"]))
+        finally:
+            os.environ["BALEIAS_FOCO"] = old
