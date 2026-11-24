@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 14:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 14:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 12.2% das moedas subindo em 24 h, 16.0% em 4 h · BTC 24 h -5.0%, 4 h 0.54%.
+- **Amplitude:** 14.6% das moedas subindo em 24 h, 24.6% em 4 h · BTC 24 h -5.99%, 4 h 0.9%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': -1.6, 'ETH': 4.1, 'SOL': -21.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -1.9, 'ETH': 3.4, 'SOL': -23.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** LUNC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL ombro-cabeça-ombro (baixa, CONFIRMOU) · VIRTUAL bandeira de baixa (baixa, CONFIRMOU) · APT fundo duplo (alta, formado) · ARB fundo duplo (alta, formado) · ARB ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** LUNC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL ombro-cabeça-ombro (baixa, CONFIRMOU) · VIRTUAL bandeira de baixa (baixa, CONFIRMOU) · APT fundo duplo (alta, formado) · AR fundo duplo (alta, formado) · ARB fundo duplo (alta, formado) · ARB ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 14:13 UTC · Decrypt: Justice Department Moves to Forfeit $1.1B in USDC From North Korea's Binance Hack
 - 📰 24/11 14:10 UTC · Cointelegraph: USDT buyers face 22% VAT when Moscow Exchange opens crypto trading
 - 📰 24/11 13:57 UTC · Cointelegraph: Swiss central bank, UBS and SIX study ledger for tokenized settlement
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 48798 apostas conferidas ao vivo, acerto 54.5%; prevê 130 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 48854 apostas conferidas ao vivo, acerto 54.5%; prevê 129 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
