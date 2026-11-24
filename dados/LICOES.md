@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 06:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 06:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,17 +69,17 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 70.2% das moedas subindo em 24 h, 67.9% em 4 h · BTC 24 h -1.59%, 4 h -1.21%.
+- **Amplitude:** 66.7% das moedas subindo em 24 h, 76.5% em 4 h · BTC 24 h -1.71%, 4 h -0.76%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.9%/ano · {'BTC': 11.0, 'ETH': 6.6, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 5.8, 'ETH': 7.1, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** RE fundo duplo (alta, CONFIRMOU) · AERO ombro-cabeça-ombro (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ERA OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** RE fundo duplo (alta, CONFIRMOU) · 0G fundo duplo (alta, formado) · 0G ombro-cabeça-ombro (baixa, formado) · AERO ombro-cabeça-ombro (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · ALT fundo duplo (alta, formado) · ALT ombro-cabeça-ombro (baixa, formado) · BNB fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC fundo duplo (alta, formado)
+- 📰 24/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 24/11 05:07 UTC · Cointelegraph: Why 42 Macro says it’s waiting to buy the Bitcoin dip
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
 - 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
-- 📰 23/11 23:06 UTC · Decrypt: China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 47120 apostas conferidas ao vivo, acerto 54.1%; prevê 25 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 47202 apostas conferidas ao vivo, acerto 54.2%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
