@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 08:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 08:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 6.28** · 73 operações fechadas · 0 abertas
 Carteira **US$ 7.16** · 54 operações fechadas · 2 abertas
 
 - **Total:** 15/54 com lucro (28%), resultado -2.84, média -0.053 por operação.
-- **Últimas 24 h:** 1/8 com lucro, -0.48.
+- **Últimas 24 h:** 0/7 com lucro, -0.85.
 - **Por horário:** 18–23 UTC: 25 op, 20% certas, -1.39 · 06–11 UTC: 4 op, 25% certas, -0.80 · 00–05 UTC: 6 op, 17% certas, -0.60 · 12–17 UTC: 19 op, 42% certas, -0.05
 - **Por lado:** compra: 13 op, 8% certas, -3.25 · venda: 41 op, 34% certas, +0.41
 - **Por motivo de saída:** stop de segurança −0.80% na co: 11 op, 9% certas, -1.32 · stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.20% na co: 3 op, 0% certas, -0.77 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.50% na co: 2 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · fora da lista de posições do c: 10 op, 10% certas, +0.27 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 2 op, 100% certas, +0.78 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 53.7% das moedas subindo em 24 h, 65.7% em 4 h · BTC 24 h -1.67%, 4 h 0.16%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': -0.1, 'ETH': -1.5, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': -0.5, 'ETH': -1.2, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KITE OCO invertido (alta, CONFIRMOU) · 0G ombro-cabeça-ombro (baixa, formado) · AERO ombro-cabeça-ombro (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · DODO topo duplo (baixa, formado) · HUMA topo duplo (baixa, formado) · LUNC fundo duplo (alta, formado)
 - 📰 24/11 07:41 UTC · Cointelegraph: Bitcoin ETFs keep bleeding as BlackRock’s IBIT shares gain nearly 5%
@@ -83,7 +83,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.8 h.
+- ⚠️ **Rotina parada:** sem decisão há 4.9 h.
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
 - 23/11 23:30 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:15 UTC); regime neutro: 66,1% subindo em 24 h, 12,1% em 4 h; repique curto: as 4 abertas com 15m entre +0,27% e +1,32%. v4 co
