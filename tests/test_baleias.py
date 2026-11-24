@@ -2654,9 +2654,9 @@ class CorretoraDemoH71(unittest.TestCase):
                 M.conectar("treinador")                                         # Bybit sem saldo de demonstração: PARA sem enviar nada
         with self.assertRaises(SystemExit):
             M.conectar("caçador")
-        with unittest.mock.patch.object(M.Gate, "BASE", "https://api.gateio.ws"):
+        with unittest.mock.patch.object(M.BingX, "BASE", "https://open-api.bingx.com"):
             with self.assertRaises(SystemExit):
-                M.conectar("laboratorio")                                       # endereço que não é o de demonstração: PARA
+                M.conectar("laboratorio")                                       # endereço real (não o de demonstração): PARA
 
 
 class MotorDoChefeComRedeFalhando(unittest.TestCase):

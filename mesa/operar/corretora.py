@@ -466,7 +466,7 @@ class BingX:
         return [(int(x["time"]), float(x["high"]), float(x["low"])) for x in k if int(x["time"]) + 60_000 <= agora]
 
 
-CONTAS = {"laboratorio": Gate, "treinador": Bybit, "guardiao": BingX}
+CONTAS = {"laboratorio": BingX, "treinador": Bybit, "guardiao": BingX}   # 24/11 (dono): carteira única de teste na BingX VST; só o Laboratório (operador) opera
 ENDERECOS = {Gate: "https://api-testnet.gateapi.io", Bybit: "https://api-demo.bybit.com", BingX: "https://open-api-vst.bingx.com"}
 
 
