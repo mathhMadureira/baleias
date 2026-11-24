@@ -1,28 +1,28 @@
 {
- "t": 1795556653,
- "hora_utc": "2026-11-24 21:44 UTC",
+ "t": 1795556904,
+ "hora_utc": "2026-11-24 21:48 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
-  "subindo_pct": 85.6,
-  "mediana_pct": 0.57
+  "subindo_pct": 48.0,
+  "mediana_pct": 0.0
  },
  "mercado_4h": {
   "moedas": 125,
-  "subindo_pct": 34.4,
-  "mediana_pct": -0.57
+  "subindo_pct": 21.6,
+  "mediana_pct": -0.99
  },
  "mercado_24h": {
   "moedas": 125,
-  "subindo_pct": 20.8,
-  "mediana_pct": -3.06
+  "subindo_pct": 20.0,
+  "mediana_pct": -3.32
  },
  "btc": {
-  "1h": 0.64,
-  "4h": 0.03,
-  "24h": -2.44,
-  "preco": 59931.54,
-  "vol_4h_vs_media": 0.65
+  "1h": 0.4,
+  "4h": -0.32,
+  "24h": -2.29,
+  "preco": 59857.5,
+  "vol_4h_vs_media": 0.62
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "ATM",
-   "4h": -9.96,
-   "24h": 34.75,
-   "vol": 0.97
+   "4h": -10.43,
+   "24h": 35.99,
+   "vol": 0.86
   },
   {
    "moeda": "ASR",
-   "4h": -5.52,
-   "24h": 4.05,
-   "vol": 1.24
+   "4h": -7.61,
+   "24h": 4.37,
+   "vol": 0.96
   },
   {
-   "moeda": "ENSO",
-   "4h": -4.71,
-   "24h": -5.15,
-   "vol": 0.53
-  },
-  {
-   "moeda": "MMT",
-   "4h": -4.63,
-   "24h": 10.92,
-   "vol": 0.43
-  },
-  {
-   "moeda": "RPL",
-   "4h": -4.32,
-   "24h": 4.17,
-   "vol": 0.15
+   "moeda": "LUNC",
+   "4h": -5.84,
+   "24h": 4.77,
+   "vol": 0.65
   },
   {
    "moeda": "HUMA",
-   "4h": -4.05,
-   "24h": -3.94,
-   "vol": 0.53
+   "4h": -5.44,
+   "24h": -5.33,
+   "vol": 0.57
   },
   {
-   "moeda": "AT",
-   "4h": -3.97,
-   "24h": -20.36,
-   "vol": 1.41
-  },
-  {
-   "moeda": "BMT",
-   "4h": -3.78,
-   "24h": -9.55,
-   "vol": 0.68
+   "moeda": "RPL",
+   "4h": -5.11,
+   "24h": 3.45,
+   "vol": 0.15
   },
   {
    "moeda": "SYRUP",
-   "4h": -3.68,
-   "24h": -15.65,
-   "vol": 0.85
+   "4h": -4.5,
+   "24h": -16.15,
+   "vol": 0.95
+  },
+  {
+   "moeda": "BMT",
+   "4h": -4.11,
+   "24h": -10.19,
+   "vol": 0.67
+  },
+  {
+   "moeda": "ENSO",
+   "4h": -4.05,
+   "24h": -5.4,
+   "vol": 0.56
+  },
+  {
+   "moeda": "0G",
+   "4h": -3.44,
+   "24h": -14.27,
+   "vol": 0.48
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "OPG",
-   "4h": 14.91,
-   "24h": 16.31,
-   "vol": 3.93
-  },
-  {
-   "moeda": "SKY",
-   "4h": 4.88,
-   "24h": -0.32,
-   "vol": 1.28
+   "4h": 13.43,
+   "24h": 16.93,
+   "vol": 3.95
   },
   {
    "moeda": "USUAL",
-   "4h": 4.77,
-   "24h": 7.77,
-   "vol": 1.74
+   "4h": 4.59,
+   "24h": 7.49,
+   "vol": 1.75
   },
   {
-   "moeda": "ZEC",
-   "4h": 2.37,
-   "24h": -7.59,
-   "vol": 0.76
+   "moeda": "SKY",
+   "4h": 2.34,
+   "24h": -0.07,
+   "vol": 0.68
   },
   {
-   "moeda": "PEPE",
-   "4h": 2.35,
-   "24h": 0.29,
-   "vol": 0.57
+   "moeda": "HMSTR",
+   "4h": 1.86,
+   "24h": -7.31,
+   "vol": 0.25
   },
   {
    "moeda": "SHELL",
-   "4h": 2.34,
-   "24h": 11.87,
-   "vol": 0.97
-  },
-  {
-   "moeda": "GTC",
    "4h": 1.81,
-   "24h": -5.07,
-   "vol": 0.5
+   "24h": 11.09,
+   "vol": 0.94
   },
   {
    "moeda": "LISTA",
-   "4h": 1.7,
-   "24h": 27.12,
-   "vol": 0.92
+   "4h": 1.79,
+   "24h": 26.0,
+   "vol": 0.88
+  },
+  {
+   "moeda": "PEPE",
+   "4h": 1.75,
+   "24h": 0.58,
+   "vol": 0.56
+  },
+  {
+   "moeda": "ZEC",
+   "4h": 1.72,
+   "24h": -7.45,
+   "vol": 0.73
   },
   {
    "moeda": "ACE",
-   "4h": 1.65,
-   "24h": -6.94,
-   "vol": 1.15
+   "4h": 1.52,
+   "24h": -6.84,
+   "vol": 1.16
   },
   {
-   "moeda": "STX",
-   "4h": 1.47,
-   "24h": 0.5,
-   "vol": 0.62
+   "moeda": "NIGHT",
+   "4h": 1.13,
+   "24h": 0.06,
+   "vol": 0.69
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.39,
   -0.33,
   0.17,
-  0.1
+  0.22
  ],
  "contexto": {
-  "t": 1795556654,
+  "t": 1795556905,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795556762,
+    "hora_utc": "24/11 21:46",
+    "titulo": "Anthropic’s Claude Ship Lets AI Write, Review and Approve Its Own Code"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795554962,
@@ -260,12 +266,6 @@
     "t": 1795542183,
     "hora_utc": "24/11 17:43",
     "titulo": "Ansem Meme Coin Crashes After $2.57 Million Wallet Drain, Bullpen Confirms Security Breach"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795540151,
-    "hora_utc": "24/11 17:09",
-    "titulo": "Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.5,
+   "media_top20_anual_pct": 2.9,
    "principais_anual_pct": {
-    "BTC": -8.6,
-    "ETH": 10.9,
-    "SOL": -4.0
+    "BTC": -8.7,
+    "ETH": 10.1,
+    "SOL": -3.7
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 10.0,
+   "amplitude_acima_mm50_pct": 12.5,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -346,13 +346,6 @@
     "nivel": 0.08887
    },
    {
-    "moeda": "MEGA",
-    "padrao": "ombro-cabeça-ombro",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.04324
-   },
-   {
     "moeda": "NFP",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -388,6 +381,13 @@
     "nivel": 0.02045
    },
    {
+    "moeda": "STRK",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.03079
+   },
+   {
     "moeda": "XRP",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -414,22 +414,14 @@
   }
  },
  "v4": {
-  "vela": "21:30 UTC",
-  "apostas": 102,
-  "compras": 47,
-  "vendas": 55,
+  "vela": "11:00 UTC",
+  "apostas": 166,
+  "compras": 136,
+  "vendas": 30,
   "mais_confiantes_venda": [
-   {
-    "moeda": "BMT",
-    "prob_subir": 0.359
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
-   },
-   {
-    "moeda": "ASTER",
-    "prob_subir": 0.367
    },
    {
     "moeda": "RESOLV",
@@ -450,40 +442,48 @@
    {
     "moeda": "BABAB",
     "prob_subir": 0.386
+   },
+   {
+    "moeda": "CFG",
+    "prob_subir": 0.394
+   },
+   {
+    "moeda": "BB",
+    "prob_subir": 0.394
    }
   ],
   "mais_confiantes_compra": [
    {
-    "moeda": "HEMI",
-    "prob_subir": 0.645
+    "moeda": "KERNEL",
+    "prob_subir": 0.714
    },
    {
-    "moeda": "SOPH",
-    "prob_subir": 0.645
+    "moeda": "ONG",
+    "prob_subir": 0.706
+   },
+   {
+    "moeda": "CELO",
+    "prob_subir": 0.701
    },
    {
     "moeda": "ETC",
-    "prob_subir": 0.644
+    "prob_subir": 0.7
    },
    {
-    "moeda": "SYRUP",
-    "prob_subir": 0.637
+    "moeda": "BIGTIME",
+    "prob_subir": 0.687
    },
    {
-    "moeda": "AT",
-    "prob_subir": 0.623
+    "moeda": "MUBARAK",
+    "prob_subir": 0.675
    },
    {
-    "moeda": "ENS",
-    "prob_subir": 0.614
+    "moeda": "RAY",
+    "prob_subir": 0.672
    },
    {
-    "moeda": "RWUSD",
-    "prob_subir": 0.61
-   },
-   {
-    "moeda": "MITO",
-    "prob_subir": 0.608
+    "moeda": "CHIP",
+    "prob_subir": 0.658
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -752,38 +752,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.6% em 28897 apostas (612 velas, 17/11 21:45–24/11 21:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5358,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.6% em 28865 apostas (612 velas, 17/11 22:00–24/11 21:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5356,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.14,
+  "z_contra_lab": 0.11,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5042,
-    "n": 23513
+    "acerto": 0.5045,
+    "n": 23495
    },
    "segue_maioria_24h": {
-    "acerto": 0.5085,
-    "n": 28816
+    "acerto": 0.5083,
+    "n": 28784
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5455,
-    "n": 8359
+    "acerto": 0.5449,
+    "n": 8337
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5639,
+    "acerto": 0.5646,
     "n": 3098
    },
    "confianca:<0,05": {
-    "acerto": 0.5196,
-    "n": 16617
+    "acerto": 0.5194,
+    "n": 16606
    },
    "confianca:≥0,12": {
-    "acerto": 0.6598,
-    "n": 823
+    "acerto": 0.659,
+    "n": 824
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5116,
@@ -798,16 +798,16 @@
     "n": 7047
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5462,
-    "n": 7197
+    "acerto": 0.5453,
+    "n": 7165
    },
    "lado:compra": {
-    "acerto": 0.5258,
-    "n": 13050
+    "acerto": 0.5243,
+    "n": 13002
    },
    "lado:venda": {
-    "acerto": 0.5441,
-    "n": 15847
+    "acerto": 0.5449,
+    "n": 15863
    }
   }
  },
