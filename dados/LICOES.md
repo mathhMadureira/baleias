@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 21:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 21:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 20.8% das moedas subindo em 24 h, 24.0% em 4 h · BTC 24 h -2.69%, 4 h -0.25%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': -8.2, 'ETH': 11.0, 'SOL': -3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': -8.8, 'ETH': 11.0, 'SOL': -4.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SYRUP bandeira de baixa (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · ICP topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · PLUME ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 21:16 UTC · Decrypt: Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits
