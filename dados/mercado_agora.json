@@ -1,20 +1,20 @@
 {
- "t": 1795481245,
- "hora_utc": "2026-11-24 00:47 UTC",
+ "t": 1795481471,
+ "hora_utc": "2026-11-24 00:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 125,
-  "subindo_pct": 82.4,
-  "mediana_pct": 0.61
+  "moedas": 126,
+  "subindo_pct": 82.5,
+  "mediana_pct": 0.62
  },
  "mercado_4h": {
-  "moedas": 125,
-  "subindo_pct": 51.2,
-  "mediana_pct": 0.04
+  "moedas": 126,
+  "subindo_pct": 50.8,
+  "mediana_pct": 0.03
  },
  "mercado_24h": {
-  "moedas": 125,
-  "subindo_pct": 73.6,
+  "moedas": 126,
+  "subindo_pct": 73.0,
   "mediana_pct": 1.9
  },
  "btc": {
@@ -175,7 +175,7 @@
   -0.03
  ],
  "contexto": {
-  "t": 1795481246,
+  "t": 1795481472,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 0.9,
+   "media_top20_anual_pct": 1.2,
    "principais_anual_pct": {
-    "BTC": 11.0,
-    "ETH": -16.2,
-    "SOL": -5.8
+    "BTC": 10.9,
+    "ETH": -15.5,
+    "SOL": -5.7
    },
    "leitura": "neutro"
   },
@@ -316,20 +316,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.0856
-   },
-   {
-    "moeda": "BREV",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.0656
-   },
-   {
-    "moeda": "BREV",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.0672
    },
    {
     "moeda": "BTC",
@@ -669,7 +655,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 8.82,
+   "carteira": 8.86,
    "n_abertas": 2,
    "abertas": [
     [
@@ -702,19 +688,15 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.7,
-   "n_abertas": 2,
+   "carteira": 7.5,
+   "n_abertas": 1,
    "abertas": [
-    [
-     "WLFI",
-     "venda"
-    ],
     [
      "ZRO",
      "venda"
     ]
    ],
-   "n_fechadas": 70,
+   "n_fechadas": 71,
    "ordem": null
   }
  ],
@@ -746,7 +728,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.199,
     "fator_lucro": 0.69,
-    "carteira": 8.82
+    "carteira": 8.86
    },
    "laboratorio": {
     "ops": 24,
@@ -758,13 +740,13 @@
     "carteira": 8.7
    },
    "guardiao": {
-    "ops": 70,
-    "acerto": 0.5,
-    "soma": -2.62,
+    "ops": 71,
+    "acerto": 0.493,
+    "soma": -2.674,
     "ganho_medio": 0.118,
-    "perda_media": -0.192,
+    "perda_media": -0.189,
     "fator_lucro": 0.61,
-    "carteira": 7.7
+    "carteira": 7.5
    }
   },
   "vereditos": []
@@ -777,12 +759,12 @@
   "z_contra_lab": 0.8,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5046,
-    "n": 22813
+    "acerto": 0.5044,
+    "n": 22913
    },
    "segue_maioria_24h": {
-    "acerto": 0.4995,
-    "n": 27371
+    "acerto": 0.4991,
+    "n": 27315
    }
   },
   "referencia_ganha": [],

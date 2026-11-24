@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 00:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 00:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.82** · 39 operações fechadas · 2 abertas
+Carteira **US$ 8.86** · 39 operações fechadas · 2 abertas
 
 - **Total:** 16/39 com lucro (41%), resultado -1.42, média -0.036 por operação.
 - **Últimas 24 h:** 1/4 com lucro, -1.10.
@@ -56,24 +56,24 @@ Carteira **US$ 8.70** · 24 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.70** · 70 operações fechadas · 2 abertas
+Carteira **US$ 7.50** · 71 operações fechadas · 1 abertas
 
-- **Total:** 35/70 com lucro (50%), resultado -2.62, média -0.037 por operação.
-- **Últimas 24 h:** 4/11 com lucro, -2.35.
-- **Por horário:** 18–23 UTC: 41 op, 49% certas, -2.42 · 00–05 UTC: 14 op, 50% certas, -0.31 · 12–17 UTC: 15 op, 53% certas, +0.11
-- **Por lado:** compra: 20 op, 35% certas, -1.97 · venda: 50 op, 56% certas, -0.65
-- **Por motivo de saída:** Caçador rompimento_24h (rompeu: 2 op, 0% certas, -0.86 · Caçador padrao_15m (bandeira d: 2 op, 0% certas, -0.59 · 6/6 tempos acima da MM20; 15m : 1 op, 0% certas, -0.54 · memecoin líder em 24h (+6,34%): 1 op, 0% certas, -0.35 · líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin, tendência de 24 h de: 2 op, 0% certas, -0.28 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin; 24h -1,80% (tendênci: 2 op, 50% certas, -0.18 · memecoin líder do lado de alta: 1 op, 0% certas, -0.16 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · manter posição aberta: 1d +1.1: 1 op, 0% certas, -0.15 · manter posição aberta: 1d +4.1: 1 op, 0% certas, -0.15 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin; 24 h -10,43%, 4 h -3: 1 op, 0% certas, -0.14 · memecoin; 24 h -9,62% (1d), 4 : 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -7,66%, 4: 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -9,64%, 4: 1 op, 0% certas, -0.14 · alta própria confirmada em vár: 1 op, 0% certas, -0.12 · entrada por tendência de 24h +: 1 op, 0% certas, -0.06 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · entrada nova por liderança de : 1 op, 0% certas, -0.04 · manter posição aberta: 24h +3.: 1 op, 0% certas, -0.03 · manter: 1d -2.885%, 4h -.98%, : 1 op, 0% certas, -0.03 · memecoin líder de baixa em 24h: 2 op, 50% certas, -0.02 · 5/6 tempos acima da MM20 (1m, : 1 op, 100% certas, +0.01 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder de alta em 24h +3.472%, : 1 op, 100% certas, +0.04 · Caçador explosao_5m venda (5m : 1 op, 100% certas, +0.05 · substitui AVA pela melhor tend: 1 op, 100% certas, +0.09 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin; 24 h -10,38% (1d), 4: 1 op, 100% certas, +0.09 · manter: 1d -2.40%, 4h -0.49%; : 1 op, 100% certas, +0.09 · memecoin líder da venda em 24 : 2 op, 50% certas, +0.10 · memecoin; 24 h -1,61%, 4 h -1,: 1 op, 100% certas, +0.10 · 1d -12,61%, 4h -4,97%, 24 h -1: 2 op, 50% certas, +0.10 · memecoin; 6/6 tempos abaixo da: 1 op, 100% certas, +0.12 · memecoin; 4 h -3,89%, 24 h -1,: 1 op, 100% certas, +0.12 · memecoin; 24 h -10,38%, 4 h -4: 1 op, 100% certas, +0.12 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · entrada nova: memecoin com 24h: 1 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
+- **Total:** 35/71 com lucro (49%), resultado -2.67, média -0.038 por operação.
+- **Últimas 24 h:** 4/12 com lucro, -2.40.
+- **Por horário:** 18–23 UTC: 41 op, 49% certas, -2.42 · 00–05 UTC: 15 op, 47% certas, -0.36 · 12–17 UTC: 15 op, 53% certas, +0.11
+- **Por lado:** compra: 20 op, 35% certas, -1.97 · venda: 51 op, 55% certas, -0.70
+- **Por motivo de saída:** Caçador rompimento_24h (rompeu: 2 op, 0% certas, -0.86 · Caçador padrao_15m (bandeira d: 2 op, 0% certas, -0.59 · 6/6 tempos acima da MM20; 15m : 1 op, 0% certas, -0.54 · memecoin líder em 24h (+6,34%): 1 op, 0% certas, -0.35 · líder da tendência de 24 h (+2: 1 op, 0% certas, -0.33 · oportunidade confirmada do Caç: 2 op, 0% certas, -0.32 · 6 de 6 tempos abaixo da MM20; : 1 op, 0% certas, -0.30 · memecoin, tendência de 24 h de: 2 op, 0% certas, -0.28 · memecoin com 24 h -0,31% (vend: 1 op, 0% certas, -0.24 · memecoin com 24 h -1,33% (tend: 1 op, 0% certas, -0.24 · memecoin com 24 h +2,12% (tend: 1 op, 0% certas, -0.24 · memecoin; 24h -1,80% (tendênci: 2 op, 50% certas, -0.18 · memecoin líder do lado de alta: 1 op, 0% certas, -0.16 · memecoin com 24 h -1,10% (tend: 1 op, 0% certas, -0.16 · manter posição aberta: 1d +1.1: 1 op, 0% certas, -0.15 · manter posição aberta: 1d +4.1: 1 op, 0% certas, -0.15 · entra: memecoin com 6 de 6 tem: 2 op, 50% certas, -0.15 · memecoin; 24 h -10,43%, 4 h -3: 1 op, 0% certas, -0.14 · memecoin; 24 h -9,62% (1d), 4 : 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -7,66%, 4: 1 op, 0% certas, -0.14 · mantém: memecoin; 1d -9,64%, 4: 1 op, 0% certas, -0.14 · alta própria confirmada em vár: 1 op, 0% certas, -0.12 · entrada por tendência de 24h +: 1 op, 0% certas, -0.06 · memecoin com 24 h -1,30% (tend: 2 op, 50% certas, -0.06 · aviso do Caçador (explosao_5m : 1 op, 0% certas, -0.05 · entrada nova por liderança de : 1 op, 0% certas, -0.04 · manter posição aberta: 24h +3.: 1 op, 0% certas, -0.03 · manter: 1d -2.885%, 4h -.98%, : 1 op, 0% certas, -0.03 · memecoin líder de baixa em 24h: 2 op, 50% certas, -0.02 · 5/6 tempos acima da MM20 (1m, : 1 op, 100% certas, +0.01 · memecoin lidera o lado venda e: 2 op, 50% certas, +0.03 · líder de alta em 24h +3.472%, : 1 op, 100% certas, +0.04 · Caçador explosao_5m venda (5m : 1 op, 100% certas, +0.05 · substitui AVA pela melhor tend: 1 op, 100% certas, +0.09 · líder do movimento: 24 h -0,84: 1 op, 100% certas, +0.09 · memecoin com 24 h -1,72% (tend: 1 op, 100% certas, +0.09 · memecoin; 24 h -10,38% (1d), 4: 1 op, 100% certas, +0.09 · manter: 1d -2.40%, 4h -0.49%; : 1 op, 100% certas, +0.09 · memecoin líder da venda em 24 : 2 op, 50% certas, +0.10 · memecoin; 24 h -1,61%, 4 h -1,: 1 op, 100% certas, +0.10 · 1d -12,61%, 4h -4,97%, 24 h -1: 2 op, 50% certas, +0.10 · memecoin; 6/6 tempos abaixo da: 1 op, 100% certas, +0.12 · memecoin; 4 h -3,89%, 24 h -1,: 1 op, 100% certas, +0.12 · memecoin; 24 h -10,38%, 4 h -4: 1 op, 100% certas, +0.12 · memecoin lidera a queda de 24 : 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-1,66%: 1 op, 100% certas, +0.12 · memecoin em queda 24 h (-2,11%: 1 op, 100% certas, +0.12 · entra: memecoin que lidera a q: 1 op, 100% certas, +0.13 · mantém: regime baixa (24,8% su: 2 op, 100% certas, +0.13 · entrada nova: memecoin com 24h: 1 op, 100% certas, +0.13 · lidera o lado compra em 24 h (: 2 op, 100% certas, +0.18 · mantém: memecoin com 24 h -0,1: 1 op, 100% certas, +0.19 · 24 h -15,85% (líder da queda),: 1 op, 100% certas, +0.19 · aviso do Caçador (explosão 5 m: 2 op, 100% certas, +0.22 · memecoin com 1 h -2,45%, 4 h -: 1 op, 100% certas, +0.25 · volta: memecoin com 24 h -1,64: 1 op, 100% certas, +0.27 · mantém: memecoin com 24 h -2,3: 1 op, 100% certas, +0.27
 - **Moedas que mais perderam (≥ 3 op):** BONK -0.47 (7 op) · TRUMP -0.40 (14 op) · DOGE -0.10 (4 op) · PENGU +0.18 (7 op) · PUMP +0.62 (7 op)
 - **Moedas que mais ganharam (≥ 3 op):** PUMP +0.62 (7 op) · PENGU +0.18 (7 op) · DOGE -0.10 (4 op) · TRUMP -0.40 (14 op) · BONK -0.47 (7 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 73.6% das moedas subindo em 24 h, 51.2% em 4 h · BTC 24 h 0.27%, 4 h 0.07%.
+- **Amplitude:** 73.0% das moedas subindo em 24 h, 50.8% em 4 h · BTC 24 h 0.27%, 4 h 0.07%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.9%/ano · {'BTC': 11.0, 'ETH': -16.2, 'SOL': -5.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': 10.9, 'ETH': -15.5, 'SOL': -5.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BREV topo duplo (baixa, formado) · BREV fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado) · HUMA triângulo simétrico (?, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
 - 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
@@ -117,7 +117,7 @@ Carteira **US$ 7.70** · 70 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 45884 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 45884 apostas conferidas ao vivo, acerto 54.3%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
