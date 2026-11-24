@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 20:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 21:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -56,7 +56,7 @@ Carteira **US$ 9.36** · 25 operações fechadas · 1 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 6.98** · 73 operações fechadas · 1 abertas
+Carteira **US$ 7.04** · 73 operações fechadas · 1 abertas
 
 - **Total:** 36/73 com lucro (49%), resultado -3.07, média -0.042 por operação.
 - **Últimas 24 h:** 5/14 com lucro, -2.80.
@@ -69,11 +69,11 @@ Carteira **US$ 6.98** · 73 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.2% das moedas subindo em 24 h, 48.8% em 4 h · BTC 24 h -2.71%, 4 h 0.09%.
+- **Amplitude:** 20.0% das moedas subindo em 24 h, 56.0% em 4 h · BTC 24 h -2.71%, 4 h 0.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': -16.2, 'ETH': 6.7, 'SOL': -6.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.3%/ano · {'BTC': -4.8, 'ETH': 11.0, 'SOL': 3.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ACE ombro-cabeça-ombro (baixa, CONFIRMOU) · BEB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ICP topo duplo (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · RUNE fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ACE ombro-cabeça-ombro (baixa, CONFIRMOU) · BEB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ICP topo duplo (baixa, CONFIRMOU) · SYRUP bandeira de baixa (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado)
 - 📰 24/11 20:48 UTC · Cointelegraph: Utah moves to dismiss criminal charges against Kalshi after trading halt
 - 📰 24/11 20:36 UTC · Decrypt: Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing
 - 📰 24/11 19:44 UTC · Cointelegraph: Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares
@@ -117,14 +117,14 @@ Carteira **US$ 6.98** · 73 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 50158 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 50183 apostas conferidas ao vivo, acerto 54.3%; prevê 47 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H72 (21/11/2026 ~23:30 UTC, `lab/escala_capital.py` → `dados/lab/escala_capital_resultado.json`): REPROVADA no portão do fio
 - Resultado da H73 (22/11/2026 ~01:10 UTC, `lab/escala_capital.py` → `dados/lab/escala_capital_resultado.json`): fator 5 a 20× entra nas carteiras simuladas; 10 a 50× reprovada
 - Resultado da H46 (`lab/juizo_h46.py`): REPROVADA — nada muda
 - Resultado da H70 (`lab/juizo_h70.py`, ramo `estado` 4ae07584): REPROVADA nas 4 tentativas — controle válido
 - Resultado da H74 (23/11/2026 ~23:00 UTC, `lab/juizo_h74.py`, ramo `estado` 3dc14328): REPROVADA — nada muda
 - Resultado da H75 (23/11/2026 ~23:25 UTC, `lab/juizo_h75.py`, ramo `estado` 3fa38ccf): REPROVADA — R1–R3 não entram
+- Resultado da H76 (24/11/2026 ~21:20 UTC, `lab/juizo_h76.py`): REPROVADA — nada muda
 
