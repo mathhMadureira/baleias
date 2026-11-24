@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 02:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 02:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 7.42** · 72 operações fechadas · 0 abertas
 
 - **Amplitude:** 76.6% das moedas subindo em 24 h, 68.0% em 4 h · BTC 24 h -0.36%, 4 h -1.33%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 5.6, 'ETH': -14.7, 'SOL': 0.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.4%/ano · {'BTC': 5.3, 'ETH': -14.8, 'SOL': 0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BREV fundo duplo (alta, CONFIRMOU) · INIT bandeira de baixa (baixa, CONFIRMOU) · RUNE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
