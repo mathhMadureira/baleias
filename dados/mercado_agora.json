@@ -1,6 +1,6 @@
 {
- "t": 1795514764,
- "hora_utc": "2026-11-24 10:06 UTC",
+ "t": 1795515011,
+ "hora_utc": "2026-11-24 10:10 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 140,
@@ -172,11 +172,17 @@
   -0.07,
   -0.3,
   -0.44,
-  0.01
+  0.03
  ],
  "contexto": {
-  "t": 1795514765,
+  "t": 1795515012,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795514918,
+    "hora_utc": "24/11 10:08",
+    "titulo": "Bitcoin falls below $60,000 as rally on Jensen Huang’s Nvidia return fades"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795512345,
@@ -260,12 +266,6 @@
     "t": 1795466162,
     "hora_utc": "23/11 20:36",
     "titulo": "North Korea Moves $247 Million of Binance Hack Loot Through Bitcoin Mixers"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795463841,
-    "hora_utc": "23/11 19:57",
-    "titulo": "Why Nvidia Needed Jensen Huang Back—And What His Return Really Changes"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.8,
+   "media_top20_anual_pct": 1.4,
    "principais_anual_pct": {
-    "BTC": 3.7,
-    "ETH": -3.0,
-    "SOL": 8.6
+    "BTC": 2.8,
+    "ETH": -2.6,
+    "SOL": 7.7
    },
    "leitura": "neutro"
   },

@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 10:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 10:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 37.1% das moedas subindo em 24 h, 10.0% em 4 h · BTC 24 h -2.36%, 4 h -1.05%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.8%/ano · {'BTC': 3.7, 'ETH': -3.0, 'SOL': 8.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.4%/ano · {'BTC': 2.8, 'ETH': -2.6, 'SOL': 7.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · DODO topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · HUMA topo duplo (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado)
+- 📰 24/11 10:08 UTC · CoinDesk: Bitcoin falls below $60,000 as rally on Jensen Huang’s Nvidia return fades
 - 📰 24/11 09:25 UTC · Cointelegraph: Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s
 - 📰 24/11 07:41 UTC · Cointelegraph: Bitcoin ETFs keep bleeding as BlackRock’s IBIT shares gain nearly 5%
 - 📰 24/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 24/11 05:07 UTC · Cointelegraph: Why 42 Macro says it’s waiting to buy the Bitcoin dip
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
-- 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
