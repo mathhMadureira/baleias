@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 01:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 01:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.82** · 39 operações fechadas · 2 abertas
+Carteira **US$ 8.90** · 39 operações fechadas · 2 abertas
 
 - **Total:** 16/39 com lucro (41%), resultado -1.42, média -0.036 por operação.
 - **Últimas 24 h:** 1/4 com lucro, -1.10.
@@ -56,7 +56,7 @@ Carteira **US$ 8.70** · 24 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.43** · 71 operações fechadas · 1 abertas
+Carteira **US$ 7.50** · 71 operações fechadas · 1 abertas
 
 - **Total:** 35/71 com lucro (49%), resultado -2.67, média -0.038 por operação.
 - **Últimas 24 h:** 4/12 com lucro, -2.40.
@@ -71,7 +71,7 @@ Carteira **US$ 7.43** · 71 operações fechadas · 1 abertas
 
 - **Amplitude:** 77.0% das moedas subindo em 24 h, 78.6% em 4 h · BTC 24 h 0.77%, 4 h 0.22%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.3%/ano · {'BTC': 7.2, 'ETH': -0.1, 'SOL': 1.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.4%/ano · {'BTC': 7.2, 'ETH': -0.2, 'SOL': 1.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BARD fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · BREV fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
@@ -114,7 +114,7 @@ Carteira **US$ 7.43** · 71 operações fechadas · 1 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
 **v4 (o cérebro de todos):** 46055 apostas conferidas ao vivo, acerto 54.3%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
