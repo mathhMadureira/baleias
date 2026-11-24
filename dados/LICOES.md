@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 10:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 11:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,19 +71,19 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 32.4% das moedas subindo em 24 h, 6.5% em 4 h · BTC 24 h -2.63%, 4 h -1.28%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.8%/ano · {'BTC': -2.0, 'ETH': -3.8, 'SOL': 3.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.7%/ano · {'BTC': -2.4, 'ETH': -4.3, 'SOL': 2.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · DODO topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · HUMA topo duplo (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado)
+- 📰 24/11 10:58 UTC · CoinDesk: U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving
+- 📰 24/11 10:55 UTC · CoinDesk: BTCS sells more than half its ether to repay $43.8 million in Aave debt
 - 📰 24/11 10:29 UTC · CoinDesk: South Korea regulator backs bank-controlled stablecoins after months of dispute
 - 📰 24/11 10:08 UTC · CoinDesk: Bitcoin falls below $60,000 as rally on Jensen Huang’s Nvidia return fades
 - 📰 24/11 09:25 UTC · Cointelegraph: Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s
 - 📰 24/11 07:41 UTC · Cointelegraph: Bitcoin ETFs keep bleeding as BlackRock’s IBIT shares gain nearly 5%
-- 📰 24/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
-- 📰 24/11 05:07 UTC · Cointelegraph: Why 42 Macro says it’s waiting to buy the Bitcoin dip
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 7.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 7.7 h.
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
 - 23/11 23:30 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:15 UTC); regime neutro: 66,1% subindo em 24 h, 12,1% em 4 h; repique curto: as 4 abertas com 15m entre +0,27% e +1,32%. v4 co

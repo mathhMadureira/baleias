@@ -1,6 +1,6 @@
 {
- "t": 1795517739,
- "hora_utc": "2026-11-24 10:55 UTC",
+ "t": 1795517985,
+ "hora_utc": "2026-11-24 10:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 139,
@@ -172,11 +172,23 @@
   -0.07,
   -0.3,
   -0.44,
-  -0.51
+  -0.38
  ],
  "contexto": {
-  "t": 1795517740,
+  "t": 1795517986,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795517931,
+    "hora_utc": "24/11 10:58",
+    "titulo": "U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795517730,
+    "hora_utc": "24/11 10:55",
+    "titulo": "BTCS sells more than half its ether to repay $43.8 million in Aave debt"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795516154,
@@ -254,18 +266,6 @@
     "t": 1795468563,
     "hora_utc": "23/11 21:16",
     "titulo": "Why One Math Proof Has AI Experts Warning Humans Might Soon Lose Control"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795467843,
-    "hora_utc": "23/11 21:04",
-    "titulo": "US seeks to recover $1.1B in crypto stolen in North Korea-linked Binance hack"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795466323,
-    "hora_utc": "23/11 20:38",
-    "titulo": "Kalshi secures temporary win in New York gambling law dispute"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 0.8,
+   "media_top20_anual_pct": 0.7,
    "principais_anual_pct": {
-    "BTC": -2.0,
-    "ETH": -3.8,
-    "SOL": 3.2
+    "BTC": -2.4,
+    "ETH": -4.3,
+    "SOL": 2.2
    },
    "leitura": "neutro"
   },
