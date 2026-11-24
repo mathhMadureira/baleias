@@ -1,20 +1,20 @@
 {
- "t": 1795527119,
- "hora_utc": "2026-11-24 13:31 UTC",
+ "t": 1795527366,
+ "hora_utc": "2026-11-24 13:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 141,
-  "subindo_pct": 12.1,
+  "moedas": 139,
+  "subindo_pct": 12.2,
   "mediana_pct": -0.92
  },
  "mercado_4h": {
-  "moedas": 141,
-  "subindo_pct": 7.8,
-  "mediana_pct": -1.92
+  "moedas": 139,
+  "subindo_pct": 7.9,
+  "mediana_pct": -1.91
  },
  "mercado_24h": {
-  "moedas": 141,
-  "subindo_pct": 20.6,
+  "moedas": 139,
+  "subindo_pct": 20.9,
   "mediana_pct": -2.56
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.34,
   1.07,
   0.1,
-  -0.64
+  -0.54
  ],
  "contexto": {
-  "t": 1795527120,
+  "t": 1795527367,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -194,6 +194,12 @@
     "t": 1795525290,
     "hora_utc": "24/11 13:01",
     "titulo": "GTA 6 PC Ports ‘Nuked’ Just Days Before Devs Expected It to Be Playable"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795524469,
+    "hora_utc": "24/11 12:47",
+    "titulo": "Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold"
    },
    {
     "fonte": "CoinDesk",
@@ -260,12 +266,6 @@
     "t": 1795517730,
     "hora_utc": "24/11 10:55",
     "titulo": "BTCS sells more than half its ether to repay $43.8 million in Aave debt"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795516154,
-    "hora_utc": "24/11 10:29",
-    "titulo": "South Korea regulator backs bank-controlled stablecoins after months of dispute"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.9,
+   "media_top20_anual_pct": -0.6,
    "principais_anual_pct": {
-    "BTC": -0.7,
-    "ETH": 1.5,
-    "SOL": -18.8
+    "BTC": -1.4,
+    "ETH": 1.3,
+    "SOL": -19.5
    },
    "leitura": "neutro"
   },
@@ -309,6 +309,20 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.3869
+   },
+   {
+    "moeda": "ARB",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.1155
+   },
+   {
+    "moeda": "ARB",
+    "padrao": "ombro-cabeça-ombro",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.1103
    },
    {
     "moeda": "ASR",
@@ -393,13 +407,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.0261
-   },
-   {
-    "moeda": "SAPIEN",
-    "padrao": "OCO invertido",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.03954
    },
    {
     "moeda": "SOL",
@@ -785,11 +792,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5053,
-    "n": 24781
+    "n": 24627
    },
    "segue_maioria_24h": {
-    "acerto": 0.5102,
-    "n": 28244
+    "acerto": 0.5096,
+    "n": 28146
    }
   },
   "referencia_ganha": [],
