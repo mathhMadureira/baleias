@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 00:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 00:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.91** · 70 operações fechadas · 1 abertas
+Carteira **US$ 6.86** · 70 operações fechadas · 1 abertas
 
 - **Total:** 37/70 com lucro (53%), resultado -3.21, média -0.046 por operação.
 - **Últimas 24 h:** 3/9 com lucro, -1.59.
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.26** · 39 operações fechadas · 2 abertas
+Carteira **US$ 8.50** · 39 operações fechadas · 2 abertas
 
 - **Total:** 16/39 com lucro (41%), resultado -1.42, média -0.036 por operação.
 - **Últimas 24 h:** 1/4 com lucro, -1.10.
@@ -43,20 +43,20 @@ Carteira **US$ 8.26** · 39 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 8.70** · 22 operações fechadas · 2 abertas
+Carteira **US$ 8.70** · 24 operações fechadas · 0 abertas
 
-- **Total:** 7/22 com lucro (32%), resultado -1.30, média -0.059 por operação.
-- **Últimas 24 h:** 0/2 com lucro, -1.10.
-- **Por horário:** 18–23 UTC: 14 op, 36% certas, -0.99 · 00–05 UTC: 3 op, 0% certas, -0.87 · 12–17 UTC: 5 op, 40% certas, +0.56
-- **Por lado:** compra: 10 op, 20% certas, -1.13 · venda: 12 op, 42% certas, -0.17
-- **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
-- **Moedas que mais perderam (≥ 3 op):** SOPH -0.62 (3 op)
-- **Moedas que mais ganharam (≥ 3 op):** SOPH -0.62 (3 op)
+- **Total:** 8/24 com lucro (33%), resultado -1.30, média -0.054 por operação.
+- **Últimas 24 h:** 1/4 com lucro, -1.10.
+- **Por horário:** 18–23 UTC: 14 op, 36% certas, -0.99 · 00–05 UTC: 5 op, 20% certas, -0.87 · 12–17 UTC: 5 op, 40% certas, +0.56
+- **Por lado:** compra: 11 op, 27% certas, -1.07 · venda: 13 op, 38% certas, -0.23
+- **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Método fixo, regime neutro (65: 1 op, 0% certas, -0.06 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · Método fixo, regime neutro: v4: 1 op, 100% certas, +0.06 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
+- **Moedas que mais perderam (≥ 3 op):** SOPH -0.68 (4 op)
+- **Moedas que mais ganharam (≥ 3 op):** SOPH -0.68 (4 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.42** · 70 operações fechadas · 2 abertas
+Carteira **US$ 7.41** · 70 operações fechadas · 2 abertas
 
 - **Total:** 35/70 com lucro (50%), resultado -2.62, média -0.037 por operação.
 - **Últimas 24 h:** 4/11 com lucro, -2.35.
@@ -69,11 +69,11 @@ Carteira **US$ 7.42** · 70 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 66.1% das moedas subindo em 24 h, 23.4% em 4 h · BTC 24 h -0.03%, 4 h -0.15%.
+- **Amplitude:** 66.4% das moedas subindo em 24 h, 23.2% em 4 h · BTC 24 h -0.03%, 4 h -0.15%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.3%/ano · {'BTC': 11.0, 'ETH': -19.2, 'SOL': -6.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.2%/ano · {'BTC': 11.0, 'ETH': -18.6, 'SOL': -6.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATOM bandeira de alta (alta, CONFIRMOU) · USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado) · HUMA triângulo simétrico (?, formado)
+- **Padrões gráficos em 1 h:** ATOM bandeira de alta (alta, CONFIRMOU) · USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado) · HUMA triângulo simétrico (?, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
 - 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
 - 📰 23/11 23:06 UTC · Decrypt: China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size
@@ -117,7 +117,7 @@ Carteira **US$ 7.42** · 70 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 45749 apostas conferidas ao vivo, acerto 54.3%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 45749 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
