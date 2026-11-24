@@ -1980,10 +1980,8 @@ class PainelMesa(unittest.TestCase):
         html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
         self.assertNotIn("<script src", html.replace("<script defer src", "<script src"))
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
-        for parte in ('id="agentes"', 'id="pos-tab"', 'id="lt-tab"', 'id="kpis"', 'id="vg"', 'id="sl-form"', "/api/painel-mesa"):   # 23/11: painel enxuto
+        for parte in ('id="fluxo"', 'id="pos"', 'id="feed"', 'id="fe-tab"', 'id="m-barra"', 'id="f-tag"', 'id="vg"', "/api/vivo"):   # 24/11: painel da equipe
             self.assertIn(parte, html)
-        self.assertIn('esc(ult.moeda.replace("USDT", ""))', html)
-        self.assertIn('esc(p.moeda.replace("USDT", ""))', html)
 
 
 class ChefeOpenBotTestnet(unittest.TestCase):
@@ -2916,34 +2914,43 @@ class RotinaCitaARegraEmVigor(unittest.TestCase):
 
 
 class MesaAoVivo(unittest.TestCase):
-    """24/11 (dono: "quero ver os agentes dentro do painel trabalhando"): /api/vivo lê só os rastros locais dos agentes."""
+    """24/11: o painel mostra a missão, o foco, a rodada (quadro.jsonl) e a carteira única do operador."""
 
-    def test_le_rastros_e_marca_quem_trabalha(self):
-        import importlib, json, os, tempfile, time
+    def test_rodada_e_carteira(self):
+        import importlib, importlib.util, json, os, tempfile, time
         raiz = pathlib.Path(tempfile.mkdtemp())
-        op = raiz / "Shared" / "baleias" / "operar"
-        (op / "rodadas").mkdir(parents=True)
-        (op / "corretoras").mkdir()
-        (op / "rodadas" / "20261124-030000-guardiao-varredura.json").write_text("[]")
-        (op / "rodadas" / "proposta_guardiao.json").write_text(json.dumps({"leitura": "mercado em queda", "posicoes": [{"moeda": "ENSOUSDT", "lado": "venda", "motivo": "6/6"}]}))
-        (op / "corretoras" / "guardiao.json").write_text(json.dumps({"patrimonio": 10.5, "capital_inicial": 10, "abertas": {"ENSOUSDT": {"lado": "venda", "entrada": 0.4, "stop": {"id": "1", "preco": 0.41}}},
-                                                                  "fechadas": [], "eventos": [{"t": time.time(), "texto": "ENTROU VENDIDO em ENSO"}], "atualizado": time.time()}))
+        sh = raiz / "Shared" / "baleias"
+        (sh / "operar" / "corretoras").mkdir(parents=True)
+        (sh / "equipe").mkdir()
+        agora = time.time()
+        (sh / "FOCO.json").write_text(json.dumps({"foco": "bingx", "descricao": "equipe na BingX VST"}))
+        (sh / "equipe" / "quadro.jsonl").write_text("\n".join(json.dumps(x) for x in [
+            {"t": agora - 100, "agente": "cacador", "texto": "3 entradas"}, {"t": agora - 50, "agente": "memecoins", "texto": "PEPE"}]) + "\n")
+        (sh / "operar" / "corretoras" / "laboratorio.json").write_text(json.dumps({"corretora": "BingX VST", "patrimonio": 12.5, "capital_inicial": 10,
+            "abertas": {"PEPEUSDT": {"lado": "compra", "entrada": 1.0, "entrada_t": agora, "stop": {"id": "1", "preco": 0.98}, "alvo": {"id": "2", "preco": 1.04}}},
+            "fechadas": [{"moeda": "DOGEUSDT", "lado": "venda", "resultado_usd": 2.5, "saida_t": agora - 500}], "eventos": [], "atualizado": agora}))
         os.environ["BALEIAS_OPENBOT"] = str(raiz)
         try:
             from baleias import vivo as V
             V = importlib.reload(V)
-            d = V.vivo()
+            d = V.vivo(agora)
         finally:
             del os.environ["BALEIAS_OPENBOT"]
             importlib.reload(V)
-        g = [a for a in d["mesa"] if a["id"] == "guardiao"][0]
-        self.assertTrue(g["trabalhando"])
-        self.assertEqual(g["pensamento"], "mercado em queda")
-        self.assertEqual(g["conta"]["abertas"][0]["stop"], 0.41)
-        self.assertTrue(any(f["tipo"] == "ordem" for f in d["feed"]))
-        m = [a for a in d["mesa"] if a["id"] == "memecoins"][0]
-        self.assertFalse(m["trabalhando"])
-
+        self.assertEqual(d["foco"]["foco"], "bingx")
+        self.assertAlmostEqual(d["missao"]["progresso"], 0.25)
+        f = {a["id"]: a for a in d["fluxo"]}
+        self.assertTrue(f["cacador"]["nesta_rodada"] and f["memecoins"]["nesta_rodada"])
+        self.assertTrue(f["treinador"].get("trabalhando"))                     # a vez é do juiz
+        self.assertEqual(d["carteira"]["abertas"][0]["stop"], 0.98)
+        spec = importlib.util.spec_from_file_location("quadro_t", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "quadro.py")
+        Q = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(Q)
+        Q.ARQ = raiz / "q.jsonl"
+        Q.registrar("guardiao", "veto PEPE")
+        self.assertEqual(Q.ler()[-1]["agente"], "guardiao")
+        with self.assertRaises(SystemExit):
+            Q.registrar("intruso", "x")
 
 class RoboUnico(unittest.TestCase):
     """24/11 (auditoria + livro 151): o robô único impõe os limites; a estratégia só devolve pesos."""

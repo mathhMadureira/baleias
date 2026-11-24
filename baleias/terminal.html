@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Baleias · Mesa ao vivo</title>
+<title>Baleias · Equipe ao vivo</title>
 <style>
 :root {
   --bg:#081014; --bg2:#0b161b; --card:#0f1a20; --card2:#14232b; --line:#1b2b33; --line2:#26404a;
@@ -123,13 +123,51 @@ summary h3::before { content:"▸ "; } details[open] summary h3::before { conten
 iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; background:var(--bg); }
 @media (max-width: 1000px) { .duas { grid-template-columns:1fr !important; } }
 @media (max-width: 700px) { .kpis { grid-template-columns:repeat(2, minmax(0,1fr)); } .curvas { grid-template-columns:repeat(2, minmax(0,1fr)); } header { flex-wrap:wrap; } }
+
+.topo { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:12px; margin-bottom:14px; }
+.missao { background:linear-gradient(135deg,#0f2a2a,#0c171c); border:1px solid #1fc7a044; border-radius:14px; padding:14px 16px; }
+.missao .rot, .bloco .rot { font-size:10.5px; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; }
+.missao .val { font:800 30px var(--mono); margin:2px 0; } .missao .meta { font:13px var(--mono); color:var(--mut); }
+.barra { height:10px; background:#16252c; border-radius:6px; overflow:hidden; margin-top:8px; position:relative; }
+.barra i { position:absolute; left:0; top:0; bottom:0; background:linear-gradient(90deg,#1fc7a0,#50e3c2); border-radius:6px; transition:width .6s; }
+.bloco { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+.bloco .val { font:700 22px var(--mono); margin-top:3px; } .bloco .sub { font:12px var(--mono); color:var(--mut); margin-top:2px; }
+.foco-tag { display:inline-block; font:700 13px var(--mono); padding:4px 10px; border-radius:8px; margin-top:6px; }
+.foco-tag.parado { background:#ed4b6222; color:var(--down); } .foco-tag.ativo { background:#1fc7a022; color:var(--up); }
+.secao { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--mut); margin:6px 0 9px; font-weight:600; display:flex; gap:10px; align-items:baseline; }
+.fluxo { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; margin-bottom:16px; }
+.passo { position:relative; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px; margin-right:22px; min-width:0; transition:border-color .4s, box-shadow .4s; }
+.passo:last-child { margin-right:0; border-color:#a78bfa55; }
+.passo:not(:last-child)::after { content:"➜"; position:absolute; right:-19px; top:42%; color:var(--dim); font-size:15px; }
+.passo.feito { border-color:#1fc7a055; } .passo.feito:not(:last-child)::after { color:var(--up); }
+.passo.agora { border-color:var(--gold); box-shadow:0 0 0 1px #f0b90b44, 0 0 22px -6px #f0b90b88; }
+.p-top { display:flex; align-items:center; gap:9px; } .p-av { width:36px; height:36px; border-radius:50%; background:#16303a; display:grid; place-items:center; font-size:18px; flex:none; position:relative; }
+.passo.agora .p-av::after { content:""; position:absolute; inset:-4px; border-radius:50%; border:2px solid var(--gold); animation:pulsar 1.4s ease-out infinite; }
+@keyframes pulsar { 0% { transform:scale(.92); opacity:1 } 100% { transform:scale(1.28); opacity:0 } }
+.p-nome { font-weight:700; font-size:14px; } .p-cargo { font-size:11px; color:var(--mut); }
+.p-est { font:600 11px system-ui; margin-top:8px; } .p-est.ok { color:var(--up); } .p-est.ag { color:var(--gold); } .p-est.esp { color:var(--dim); }
+.p-txt { font-size:12px; color:#c9d8db; line-height:1.4; margin-top:5px; display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; }
+.meio { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:12px; margin-bottom:12px; }
+.pos { display:flex; flex-direction:column; gap:8px; }
+.pos-linha { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; font:13px var(--mono); }
+.pos-linha div span { display:block; font:10px system-ui; color:var(--mut); text-transform:uppercase; letter-spacing:.05em; }
+.feed { max-height:420px; overflow-y:auto; display:flex; flex-direction:column; }
+.fi { display:flex; gap:9px; padding:8px 4px; border-bottom:1px solid #ffffff08; font-size:12.5px; line-height:1.4; }
+.fi .ic { flex:none; width:26px; height:26px; border-radius:50%; background:#16303a; display:grid; place-items:center; font-size:14px; }
+.fi .q { font-size:10.5px; color:var(--mut); } .fi.corretora .tx { color:var(--txt); } .fi .tx { color:#c9d8db; }
+.fi.novo { animation:chegou 2.5s ease-out; } @keyframes chegou { from { background:#1fc7a033 } to { background:transparent } }
+.apoio { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:14px; }
+.ap { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:9px 12px; font-size:12px; }
+.ap b { font-size:13px; } .ap .mut { display:block; margin-top:3px; }
+@media (max-width: 1100px) { .topo { grid-template-columns:1fr 1fr; } .fluxo { grid-template-columns:1fr; } .passo { margin:0 0 18px 0; }
+  .passo:not(:last-child)::after { content:"⬇"; right:auto; left:50%; top:auto; bottom:-19px; } .meio { grid-template-columns:1fr; } .apoio { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
 <header>
   <div class="marca">BALEIAS <b>MESA</b></div>
   <nav>
-    <button data-aba="mesa" class="ativo">🐋 Mesa ao vivo</button>
+    <button data-aba="mesa" class="ativo">🐋 Equipe ao vivo</button>
     <button data-aba="mercado">Mercado ao vivo</button>
     <button data-aba="lab">Laboratório</button>
   </nav>
@@ -143,55 +181,33 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
 
 <main>
 <section class="aba ativa" id="aba-mesa">
-  <div class="kpis" id="kpis"><div class="kpi"><div class="rot">carregando</div><div class="val">…</div></div></div>
-  <div id="faixa" class="faixa"></div>
-
-  <div class="pregao">
-    <div>
-      <h2 class="tit">Mesa ao vivo <span class="mut" id="vv-t"></span></h2>
-      <div class="mesas" id="mesas"><div class="vazio">carregando a mesa…</div></div>
-    </div>
-    <aside class="feed-box">
-      <h2 class="tit">Acontecendo agora</h2>
-      <div class="feed" id="feed"><div class="vazio">carregando…</div></div>
-    </aside>
+  <div class="topo">
+    <div class="missao"><div class="rot">🎯 Missão · dobrar a carteira única</div><div class="val num" id="m-val">US$ —</div>
+      <div class="meta" id="m-meta">de US$ 10 para US$ 20</div><div class="barra"><i id="m-barra" style="width:0%"></i></div></div>
+    <div class="bloco"><div class="rot">Foco da equipe</div><div id="f-tag" class="foco-tag parado">—</div><div class="sub" id="f-sub"></div></div>
+    <div class="bloco"><div class="rot">Operações</div><div class="val num" id="o-val">0</div><div class="sub" id="o-sub"></div></div>
+    <div class="bloco"><div class="rot">Resultado</div><div class="val num" id="r-val">—</div><div class="sub" id="r-sub"></div></div>
   </div>
 
-  <h2 class="tit">Carteiras simuladas <span class="mut" id="ag-t"></span></h2>
-  <div class="agentes" id="agentes"><div class="vazio">carregando…</div></div>
+  <div class="secao">Rodada da equipe <span class="mut" id="rd-t" style="text-transform:none;letter-spacing:0;font-weight:400"></span></div>
+  <div class="fluxo" id="fluxo"></div>
 
-  <div class="grade duas">
+  <div class="meio">
     <div class="card">
-      <h3>Posições abertas<span class="dir mut num" id="ps-t"></span></h3>
-      <div class="rolagem" style="max-height:360px"><table id="pos-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
-      <div class="mut nota">Clique numa linha para ver o gráfico.</div>
+      <h3>🔬 Posição do operador<span class="dir mut num" id="ps-t"></span></h3>
+      <div class="pos" id="pos"></div>
+      <h3 style="margin-top:14px"><span id="vg-titulo">gráfico</span><span class="dir"><select id="vg-iv"><option value="15m">15 min</option><option value="5m">5 min</option><option value="1h">1 h</option><option value="4h">4 h</option></select></span></h3>
+      <div id="vg" style="height:250px"></div><div id="vg-info" class="mut num" style="font-size:11.5px"></div>
     </div>
-    <div class="card">
-      <h3><span id="vg-titulo">gráfico</span><span class="dir"><select id="vg-iv"><option value="15m">15 min</option><option value="1h">1 h</option><option value="5m">5 min</option><option value="4h">4 h</option></select></span></h3>
-      <div id="vg" style="height:250px"></div>
-      <div id="vg-info" class="mut num nota"></div>
-    </div>
+    <div class="card"><h3>Acontecendo agora</h3><div class="feed" id="feed"></div></div>
   </div>
 
-  <div class="card" style="margin-bottom:12px">
-    <h3>Últimas operações
-      <span class="dir"><select id="lt-robo"><option value="">todos</option></select>
-      <label class="mut" style="font-size:12px"><input type="checkbox" id="lt-saidas" checked> só fechadas</label></span></h3>
-    <div class="rolagem" style="max-height:380px"><table id="lt-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
-  </div>
+  <div class="secao">Apoio</div>
+  <div class="apoio" id="apoio"></div>
 
-  <details class="card" id="sec-sala">
-    <summary><h3 style="display:inline-flex;margin:0">Falar com o chefe da mesa<span class="mut num" id="sl-t" style="margin-left:10px;text-transform:none;letter-spacing:0;font-weight:500"></span></h3></summary>
-    <div id="sl-chat" style="max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding:6px;margin-top:8px;background:var(--card2);border-radius:8px"></div>
-    <form id="sl-form" style="display:flex;gap:6px;margin-top:8px">
-      <input type="hidden" id="sl-para" value="claude"><input type="checkbox" id="sl-eventos" hidden>
-      <input id="sl-texto" maxlength="1200" placeholder="Escreva para o chefe (ex.: quero todos vendidos hoje)" style="flex:1;min-width:0;padding:7px">
-      <button type="submit" class="selo" style="cursor:pointer">Enviar</button>
-    </form>
-    <div id="sl-aviso" class="mut nota">O chefe lê na próxima rodada e responde aqui.</div>
-  </details>
+  <div class="card" style="margin-bottom:12px"><h3>Operações fechadas<span class="dir mut num" id="fe-t"></span></h3>
+    <div class="rolagem" style="max-height:360px"><table id="fe-tab"><tr><td class="vazio">nenhuma ainda</td></tr></table></div></div>
 </section>
-
 <section class="aba" id="aba-mercado"><iframe id="frame-mercado" title="Mercado ao vivo"></iframe></section>
 
 <section class="aba" id="aba-lab">
@@ -241,136 +257,79 @@ async function cicloVersao() {
 }
 cicloVersao();
 
-// ---------- a mesa inteira: /api/painel-mesa (ramo estado da nuvem + preço de agora) ----------
-let pm = null;
-const ESTADOS = {operando: "▶ operando", guarda: "🔒 guarda do dia", meta: "🎯 meta batida", sem_dinheiro: "⛔ sem dinheiro", pausado: "⏸ pausado"};
 
-function desenharKpis() {
-  const ls = pm.linhas, reg = pm.regime || {}, s24 = reg.subindo_24h;
-  const soma = ls.reduce((a, l) => a + (l.carteira || 0), 0), cap = ls.reduce((a, l) => a + (l.capital || 10), 0);
-  const hoje = ls.reduce((a, l) => a + (l.hoje || 0), 0);
-  const aberto = pm.abertas.reduce((a, p) => a + (p.resultado_usd || 0), 0);
-  const lucro = ls.filter(l => l.carteira >= l.capital).length;
-  const k = [
-    ["Carteiras somadas", "US$ " + fmt(soma), `${ls.length} carteiras · começaram com US$ ${fmt(cap, 0)}`, cor(soma - cap)],
-    ["Resultado desde o início", sn(soma - cap), `${lucro} de ${ls.length} no lucro`, cor(soma - cap)],
-    ["Hoje (dia UTC)", sn(hoje), "vira às 21:00 de Brasília", cor(hoje)],
-    ["Posições abertas", String(pm.abertas.length), `resultado aberto ${sn(aberto, 2)}`, cor(aberto)],
-  ];
-  $("kpis").innerHTML = k.map(([r, v, s, c]) => `<div class="kpi"><div class="rot">${esc(r)}</div><div class="val num ${c}">${esc(v)}</div><div class="sub" title="${esc(s)}">${esc(s)}</div></div>`).join("");
-  const regTxt = s24 == null ? "sem leitura" : s24 <= 30 ? "📉 em queda" : s24 >= 70 ? "📈 em alta" : "↔ sem direção";
-  $("faixa").innerHTML = `Mercado <b style="color:var(--txt)">${esc(regTxt)}</b>: ${s24 == null ? "?" : fmt(s24, 0) + "%"} das moedas sobem em 24 h` +
-    (reg.subindo_4h == null ? "" : `, ${fmt(reg.subindo_4h, 0)}% em 4 h`) + ` · dados de ${hm(pm.t)}`;
+// ---------- painel da equipe: /api/vivo ----------
+let vv = null, vistos = new Set(), primeira = true, vgMoeda = null, vgTimer = null;
+const ag = (id) => (vv && [...vv.fluxo, ...vv.apoio].find(a => a.id === id)) || {};
+function desenhar() {
+  const m = vv.missao, c = vv.carteira, f = vv.foco || {};
+  const v = m.patrimonio - m.capital;
+  $("m-val").innerHTML = `US$ ${fmt(m.patrimonio)} <span class="${cor(v)}" style="font-size:16px">${sn(v)}</span>`;
+  $("m-meta").textContent = `de US$ ${fmt(m.capital, 0)} para US$ ${fmt(m.meta, 0)} · ${fmt(Math.max(0, Math.min(1, m.progresso)) * 100, 0)}% do caminho` + (c.corretora ? ` · ${c.corretora}` : "");
+  $("m-barra").style.width = Math.max(0, Math.min(100, m.progresso * 100)) + "%";
+  const ativo = f.foco && f.foco !== "parado";
+  $("f-tag").className = "foco-tag " + (ativo ? "ativo" : "parado"); $("f-tag").textContent = ativo ? "▶ " + f.foco.toUpperCase() : "⏸ PARADO";
+  $("f-sub").textContent = (f.descricao || "") + (f.quando ? " · desde " + f.quando : "");
+  $("o-val").textContent = m.operacoes; $("o-sub").textContent = m.operacoes ? `${m.ganhos} com lucro · ${fmt(m.ganhos / m.operacoes * 100, 0)}%` : "nenhuma fechada ainda";
+  $("r-val").textContent = m.operacoes ? sn(m.resultado) : "—"; $("r-val").className = "val num " + cor(m.resultado);
+  $("r-sub").textContent = m.operacoes ? `melhor ${sn(m.melhor)} · pior ${sn(m.pior)}` : "";
+  // fluxo
+  $("fluxo").innerHTML = vv.fluxo.map(a => {
+    const u = a.ultimo, cls = a.trabalhando ? "agora" : a.nesta_rodada ? "feito" : "";
+    const est = a.trabalhando ? `<div class="p-est ag">● trabalhando agora</div>` : a.nesta_rodada ? `<div class="p-est ok">✓ entregou · há ${ha(u.t)}</div>` : `<div class="p-est esp">${u ? "última entrega há " + ha(u.t) : "aguardando a 1ª rodada"}</div>`;
+    return `<div class="passo ${cls}"><div class="p-top"><div class="p-av">${esc(a.avatar)}</div><div style="min-width:0"><div class="p-nome">${esc(a.nome)}</div><div class="p-cargo">${esc(a.cargo)} · ${esc(a.entrega)}</div></div></div>
+      ${est}${u ? `<div class="p-txt" title="${esc(u.texto)}">${esc(u.texto)}</div>` : ""}</div>`;
+  }).join("");
+  $("rd-t").textContent = vv.rodada_inicio ? `· começou ${hm(vv.rodada_inicio)} (há ${ha(vv.rodada_inicio)}) · a cada 15 min` : "· a primeira rodada ainda não registrou no quadro";
+  // posição
+  $("ps-t").textContent = c.atualizado ? "corretora lida há " + ha(c.atualizado) : "carteira ainda não aberta na corretora";
+  $("pos").innerHTML = c.abertas.length ? c.abertas.map(p => `<div data-moeda="${esc(p.moeda)}" style="cursor:pointer">
+      <div style="font-size:15px;font-weight:700"><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ VENDIDO" : "▲ COMPRADO"}</span> ${esc(String(p.moeda).replace("USDT", ""))} <span class="mut" style="font-size:12px;font-weight:400">há ${ha(p.desde)}${p.alav ? " · " + p.alav + "×" : ""}</span></div>
+      <div class="pos-linha" style="margin-top:6px"><div><span>entrada</span>${px(p.entrada)}</div><div><span>stop</span><b class="down">${px(p.stop)}</b></div><div><span>alvo</span><b class="up">${px(p.alvo)}</b></div><div><span>tamanho</span>US$ ${fmt(p.nocional)}</div></div>
+      <div class="mut" style="font-size:12px;margin-top:6px">${esc(p.motivo)}</div></div>`).join("")
+    : `<div class="vazio">Sem posição aberta. ${ativo ? "O operador entra quando a rodada aprovar uma entrada." : "A equipe está parada."}</div>`;
+  if (!vgMoeda && c.abertas[0]) { vgMoeda = c.abertas[0].moeda; cicloVelas(); }
+  // feed
+  $("feed").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k);
+    return `<div class="fi ${esc(x.tipo)} ${novo ? "novo" : ""}"><div class="ic">${esc(x.avatar)}</div><div style="min-width:0"><div class="q">${esc(x.nome)} · ${hm(x.t)} · há ${ha(x.t)}</div><div class="tx">${esc(x.texto)}</div></div></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
+  primeira = false;
+  $("apoio").innerHTML = vv.apoio.map(a => `<div class="ap"><b>${esc(a.avatar)} ${esc(a.nome)}</b> <span class="mut" style="display:inline">· ${esc(a.cargo)}</span><span class="mut">${a.ultimo ? esc(a.ultimo.texto) + " · há " + ha(a.ultimo.t) : "sem registro"}</span></div>`).join("");
+  // fechadas
+  const fe = [...c.fechadas].reverse();
+  $("fe-t").textContent = fe.length ? `${fe.length} fechadas` : "";
+  $("fe-tab").innerHTML = fe.length ? `<tr><th class="e">hora</th><th class="e">moeda</th><th>entrada</th><th>saída</th><th>resultado</th><th class="e">saída por</th></tr>` + fe.map(x =>
+    `<tr data-moeda="${esc(x.moeda)}"><td class="e mut">${x.t ? hora(x.t) : "—"}</td><td class="e"><span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span> <b>${esc(String(x.moeda).replace("USDT", ""))}</b></td>
+      <td>${px(x.entrada)}</td><td>${px(x.saida)}</td><td class="${cor(x.resultado)}">${sn(x.resultado, 3)}</td><td class="e mut" style="font-family:system-ui;font-size:12px">${esc(x.motivo)}</td></tr>`).join("")
+    : `<tr><td class="vazio">Nenhuma operação fechada ainda.</td></tr>`;
 }
+async function ciclo() {
+  try { const d = await j("/api/vivo"); if (!d.erro) { vv = d; desenhar(); } else $("rd-t").textContent = "· erro: " + d.erro; }
+  catch (e) { $("rd-t").textContent = "· sem conexão com o painel"; }
+  setTimeout(ciclo, 5000);
+}
+ciclo();
+setInterval(() => { if (vv) desenhar(); }, 15000);
 
-function desenharAgentes() {
-  const ls = [...pm.linhas].sort((a, b) => (b.carteira - b.capital) - (a.carteira - a.capital));
-  $("agentes").innerHTML = ls.map(l => {
-    const pos = pm.abertas.filter(p => p.robo === l.id);
-    const ult = pm.tempo.find(x => x.robo === l.id && x.tipo === "saida");
-    const velho = l.atualizado && Date.now() / 1000 - l.atualizado > 7200;
-    const v = l.carteira - l.capital;
-    const posTxt = pos.length ? pos.map(p => `<div data-moeda="${esc(p.moeda)}" style="cursor:pointer;display:flex;justify-content:space-between"><span><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</span> ${esc(p.moeda.replace("USDT", ""))}</span><span class="${cor(p.resultado_usd)}">${p.resultado_usd == null ? "—" : sn(p.resultado_usd, 2)}</span></div>`).join("")
-      : `<span class="mut">sem posição aberta</span>`;
-    return `<article class="ag">
-      <div class="ag-top"><strong title="${esc(l.nome)}">${esc(l.avatar)} ${esc(curto(l.nome))}</strong><i class="pulso ${l.estado === "operando" ? "ativo" : "alerta"}" style="margin-left:auto" title="${esc(ESTADOS[l.estado] || l.estado_txt)}"></i></div>
-      <div class="ag-val"><span class="big">US$ ${fmt(l.carteira)}</span><span class="var ${cor(v)}">${sn(v)}</span></div>
-      ${svgCurva(l)}
-      <div class="ag-meta"><div><span>hoje</span><b class="${cor(l.hoje)}">${sn(l.hoje)}</b></div><div><span>operações</span>${l.ops}</div>
-        <div><span>acerto</span>${l.acerto == null ? "—" : fmt(l.acerto * 100, 0) + "%"}</div>
-        <div title="ganhos ÷ perdas; acima de 1 ganha mais do que perde"><span>fator</span><b class="${l.fator_lucro == null ? "" : l.fator_lucro >= 1 ? "up" : "down"}">${l.fator_lucro == null ? "—" : fmt(l.fator_lucro, 2)}</b></div></div>
-      <div class="ag-pos">${posTxt}</div>
-      <div class="ag-ult">${ult ? `última saída: ${esc(ult.moeda.replace("USDT", ""))} ${sn(ult.resultado_usd, 2)} · há ${ha(ult.t)}` : "nenhuma saída ainda"}${velho ? ` · <span class="gold">⚠ sem atualizar há ${ha(l.atualizado)}</span>` : ""}</div>
-    </article>`;
-  }).join("") || `<div class="vazio">Nenhum agente.</div>`;
-  $("ag-t").textContent = "· atualizado " + hm(pm.t);
-}
-
-function svgCurva(l) {
-  const p = l.curva, W = 300, H = 60, pad = {l: 2, r: 2, t: 4, b: 4};
-  if (!p || p.length < 2) return `<svg viewBox="0 0 ${W} ${H}"><text x="6" y="40" fill="#8aa0a8" font-size="11">sem dados</text></svg>`;
-  const t0 = p[0][0], t1 = Math.max(p[p.length - 1][0], t0 + 1);
-  let lo = Math.min(l.capital, ...p.map(q => q[1])), hi = Math.max(l.capital, ...p.map(q => q[1]));
-  if (lo <= l.capital * 0.6) lo = Math.min(lo, 5);
-  const m = Math.max((hi - lo) * 0.08, 0.05); lo -= m; hi += m;
-  const X = (t) => pad.l + (t - t0) / (t1 - t0) * (W - pad.l - pad.r), Y = (v) => pad.t + (1 - (v - lo) / (hi - lo)) * (H - pad.t - pad.b);
-  const ult = p[p.length - 1][1], c = ult >= l.capital ? "#1fc7a0" : "#ed4b62";
-  let d = `M${X(p[0][0]).toFixed(1)},${Y(p[0][1]).toFixed(1)}`;
-  for (let i = 1; i < p.length; i++) d += `H${X(p[i][0]).toFixed(1)}V${Y(p[i][1]).toFixed(1)}`;      // degrau: a carteira muda na saída
-  const area = d + `V${Y(lo).toFixed(1)}H${X(p[0][0]).toFixed(1)}Z`;
-  const piso = 5 > lo && 5 < hi ? `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(5)}" y2="${Y(5)}" stroke="#ed4b62" stroke-dasharray="2 3" stroke-width="1"/>` : "";
-  const dia = (t) => new Date(t * 1000).toLocaleDateString("pt-BR", {timeZone: FUSO_BR, day: "2-digit", month: "2-digit"});
-  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="height:56px;width:100%">
-    <path d="${area}" fill="${c}" fill-opacity=".12"/>
-    <line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(l.capital)}" y2="${Y(l.capital)}" stroke="#5b6878" stroke-dasharray="3 3" stroke-width="1"/>${piso}
-    <path d="${d}" fill="none" stroke="${c}" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
-    <circle cx="${X(p[p.length - 1][0])}" cy="${Y(ult)}" r="2.6" fill="${c}"/>
-    </svg>`;
-}
-function desenharPosicoes() {
-  const ps = pm.abertas;
-  $("ps-t").textContent = `${ps.length} abertas · preço de ${new Date(pm.t * 1000).toLocaleTimeString("pt-BR", {timeZone: FUSO_BR})}`;
-  if (!ps.length) { $("pos-tab").innerHTML = `<tr><td class="vazio">Nenhuma posição aberta agora.</td></tr>`; return; }
-  $("pos-tab").innerHTML = `<tr><th class="e">moeda</th><th class="e">agente</th><th>entrada</th><th>agora</th><th>resultado</th><th>há</th></tr>` +
-    ps.map(p => `<tr data-moeda="${esc(p.moeda)}" title="${esc(p.nome)} · ${esc(p.motivo || "")}">
-      <td class="e"><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</span> <b>${esc(p.moeda.replace("USDT", ""))}</b></td>
-      <td class="e" style="font-family:system-ui">${esc(p.avatar)} <span class="mut" style="font-size:12px">${esc(curto(p.nome))}</span></td>
-      <td>${px(p.entrada)}</td><td>${px(p.agora)}</td>
-      <td class="${cor(p.resultado_usd)}">${p.resultado_usd == null ? "—" : sn(p.resultado_usd, 2)}</td>
-      <td class="mut">${ha(p.desde)}</td></tr>`).join("");
-}
-
-function desenharTempo() {
-  const sel = $("lt-robo");
-  if (sel.options.length < 2) for (const l of pm.linhas) sel.add(new Option(`${l.avatar} ${l.nome}`, l.id));
-  const ev = pm.tempo.filter(x => (!sel.value || x.robo === sel.value) && (!$("lt-saidas").checked || x.tipo === "saida"));
-  if (!ev.length) { $("lt-tab").innerHTML = `<tr><td class="vazio">Nada nesse filtro.</td></tr>`; return; }
-  $("lt-tab").innerHTML = `<tr><th class="e">hora</th><th class="e">agente</th><th class="e"></th><th class="e">moeda</th><th>preço</th><th>resultado</th><th class="e">motivo</th></tr>` +
-    ev.map(x => {
-      const saida = x.tipo === "saida";
-      return `<tr data-moeda="${esc(x.moeda)}"><td class="e mut">${hora(x.t)}</td><td class="e" style="font-family:system-ui">${x.avatar} ${esc(x.nome)}</td>
-        <td class="e" style="font-family:system-ui">${saida ? "⬅ saiu" : x.aberta ? "➡ entrou <span class='mut'>(aberta)</span>" : "➡ entrou"}</td>
-        <td class="e"><b>${esc(x.moeda)}</b> <span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span></td>
-        <td>${px(x.preco)}</td><td class="${saida ? cor(x.resultado_usd) : ""}">${saida ? sn(x.resultado_usd, 3) : ""}</td>
-        <td class="e mut" style="font-family:system-ui;font-size:12px;max-width:420px;overflow:hidden;text-overflow:ellipsis" title="${esc(x.motivo)}">${esc(x.motivo)}</td></tr>`;
-    }).join("");
-}
-$("lt-robo").onchange = () => pm && desenharTempo();
-$("lt-saidas").onchange = () => pm && desenharTempo();
-
-async function cicloPainel() {
-  try {
-    const d = await j("/api/painel-mesa");
-    if (d.erro) throw new Error(d.erro);
-    pm = d;
-    desenharKpis(); desenharAgentes(); desenharPosicoes(); desenharTempo();
-    if (!vgMoeda) { vgMoeda = pm.abertas[0] ? pm.abertas[0].moeda : "BTC"; cicloVelas(); }
-  } catch (e) { $("ag-t").textContent = "· erro ao ler a mesa: " + e.message; }
-  setTimeout(cicloPainel, 10000);
-}
-setInterval(() => { if (pm) { desenharPosicoes(); } }, 5000);   // "há quanto tempo" anda entre as leituras
-cicloPainel();
-
-// ---------- gráfico de velas da moeda (SVG próprio, sem biblioteca externa) ----------
-let vgMoeda = null, vgTimer = null;
+// ---------- gráfico da moeda ----------
 document.addEventListener("click", (ev) => { const a = ev.target.closest("[data-moeda]"); if (a) { vgMoeda = a.dataset.moeda; cicloVelas(); } });
 $("vg-iv").onchange = () => cicloVelas();
 async function cicloVelas() {
   clearTimeout(vgTimer);
+  const m = vgMoeda || "BTCUSDT", iv = $("vg-iv").value;
   try {
-    const iv = $("vg-iv").value, m = vgMoeda || "BTC";
-    const d = await j(`/api/velas-rapidas?m=${encodeURIComponent(m)}&iv=${iv}`);
-    const ps = pm ? pm.abertas.filter(p => p.moeda === m) : [];
-    $("vg-titulo").textContent = `${m.replace("USDT", "")} · ${iv}` + (ps.length ? ` · ${ps.length} posição(ões) aberta(s)` : "");
+    const d = await j(`/api/velas-rapidas?m=${encodeURIComponent(m.replace("USDT", ""))}&iv=${iv}`);
+    const ps = vv ? vv.carteira.abertas.filter(p => p.moeda === m) : [];
+    $("vg-titulo").textContent = `${m.replace("USDT", "")} · ${iv}`;
     desenharVelas(d.velas || [], ps);
   } catch (e) { $("vg").innerHTML = `<div class="vazio">sem velas dessa moeda agora</div>`; }
   vgTimer = setTimeout(cicloVelas, 5000);
 }
+cicloVelas();
 function desenharVelas(v, ps) {
   v = v.slice(-90);
   if (!v.length) { $("vg").innerHTML = `<div class="vazio">sem velas dessa moeda (o motor local lê só as moedas que conhece)</div>`; $("vg-info").textContent = ""; return; }
   const W = Math.max(320, $("vg").clientWidth || 600), H = 250, pad = {l: 4, r: 84, t: 8, b: 16};
-  let lo = Math.min(...v.map(x => x.l), ...ps.map(p => p.entrada)), hi = Math.max(...v.map(x => x.h), ...ps.map(p => p.entrada));
+  const nv = ps.flatMap(p => [p.entrada, p.stop, p.alvo].filter(Boolean)); let lo = Math.min(...v.map(x => x.l), ...nv), hi = Math.max(...v.map(x => x.h), ...nv);
   const m = (hi - lo) * 0.05 || hi * 0.001; lo -= m; hi += m;
   const cw = (W - pad.l - pad.r) / v.length, X = (i) => pad.l + i * cw + cw / 2, Y = (p) => pad.t + (1 - (p - lo) / (hi - lo)) * (H - pad.t - pad.b);
   let s = "";
@@ -380,7 +339,7 @@ function desenharVelas(v, ps) {
     s += `<line x1="${X(i)}" x2="${X(i)}" y1="${Y(x.h)}" y2="${Y(x.l)}" stroke="${c}" opacity="${x.vivo ? .6 : 1}"/><rect x="${X(i) - cw * 0.32}" y="${y1}" width="${Math.max(1, cw * 0.64)}" height="${Math.max(1, y2 - y1)}" fill="${c}" opacity="${x.vivo ? .6 : 1}"/>`;
   });
   const vistos = new Set();
-  for (const p of ps) { if (vistos.has(p.entrada)) continue; vistos.add(p.entrada); s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(p.entrada)}" y2="${Y(p.entrada)}" stroke="#e6f1f2" stroke-dasharray="5 4"/><text x="${pad.l + 4}" y="${Y(p.entrada) - 3}" fill="#e6f1f2" font-size="10">${ps.length === 1 ? "entrada " + px(p.entrada) : ""}</text>`; }
+  for (const p of ps) { for (const [k, cr] of [["stop", "#ed4b62"], ["alvo", "#1fc7a0"]]) if (p[k]) s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(p[k])}" y2="${Y(p[k])}" stroke="${cr}" stroke-dasharray="3 3"/><text x="${pad.l + 4}" y="${Y(p[k]) - 3}" fill="${cr}" font-size="10">${k} ${px(p[k])}</text>`; if (vistos.has(p.entrada)) continue; vistos.add(p.entrada); s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(p.entrada)}" y2="${Y(p.entrada)}" stroke="#e6f1f2" stroke-dasharray="5 4"/><text x="${pad.l + 4}" y="${Y(p.entrada) - 3}" fill="#e6f1f2" font-size="10">${ps.length === 1 ? "entrada " + px(p.entrada) : ""}</text>`; }
   const u = v[v.length - 1];
   s += `<rect x="${W - pad.r + 1}" y="${Y(u.c) - 8}" width="${pad.r - 2}" height="16" fill="#e6f1f2"/><text x="${W - pad.r + 4}" y="${Y(u.c) + 4}" fill="#07090c" font-size="10.5" font-weight="700" font-family="monospace">${px(u.c)}</text>`;
   const rot = (d) => new Date(d.replace(" ", "T") + "Z").toLocaleString("pt-BR", {timeZone: FUSO_BR, day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit"});
@@ -389,53 +348,6 @@ function desenharVelas(v, ps) {
   $("vg-info").textContent = `agora ${px(u.c)} · ${sn((u.c / v[Math.max(0, v.length - 2)].c - 1) * 100, 2)}% na última vela · horário de Brasília`;
 }
 
-
-// ---------- mesa ao vivo: /api/vivo (rastros locais dos agentes) ----------
-let vv = null, vistosFeed = new Set(), primeiraFeed = true;
-const ETAPAS_V = ["raspagem", "leitura", "decisão", "corretora"];
-function desenharMesas() {
-  const agora = Date.now() / 1000;
-  $("mesas").innerHTML = vv.mesa.map(a => {
-    const et = a.etapas || {}, ult = a.ultimo, on = a.trabalhando;
-    const ciclo = ult ? ult - 15 * 60 : 0;
-    const barras = ETAPAS_V.filter(k => k in et).map(k => {
-      const t = et[k], cls = on && a.etapa_atual === k ? "agora" : t && t > ciclo ? "feita" : "";
-      return `<div class="et ${cls}" title="${t ? "há " + ha(t) : "sem registro"}">${k}<br><span class="num">${t ? ha(t) : "—"}</span></div>`;
-    }).join("");
-    const status = on ? `● trabalhando<br><span style="font-weight:500">${esc(a.etapa_atual || "")}</span>` : ult ? `⏸ aguardando<br><span style="font-weight:500">há ${ha(ult)}</span>` : "sem atividade ainda";
-    const dec = (a.posicoes || []).length ? `<div class="m-dec">${a.posicoes.map(p => `<span class="tag ${p.lado === "venda" ? "v" : "c"}" title="${esc(p.motivo)}">${p.lado === "venda" ? "▼" : "▲"} ${esc(String(p.moeda).replace("USDT", ""))}</span>`).join("")}</div>` : "";
-    const c = a.conta;
-    let conta = "";
-    if (c) {
-      const v = (c.patrimonio || 0) - (c.capital || 10);
-      const abs = c.abertas.length ? c.abertas.map(p => `<div style="display:flex;justify-content:space-between"><span><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</span> ${esc(String(p.moeda).replace("USDT", ""))} <span class="mut">a ${px(p.entrada)}</span></span><span class="mut">stop ${px(p.stop)}${p.alvo ? " · alvo " + px(p.alvo) : ""}</span></div>`).join("") : `<span class="mut">sem posição na corretora</span>`;
-      const ev = (c.eventos || [])[0];
-      conta = `<div class="m-conta"><div class="cab"><span>🏦 ${esc(c.nome)} · ${c.fechadas} fechadas</span><span><b>US$ ${fmt(c.patrimonio)}</b> <span class="${cor(v)}">${sn(v)}</span></span></div>${abs}
-        ${ev ? `<div class="m-ordem" title="${esc(ev.texto)}">↳ ${esc(ev.texto)} · há ${ha(ev.t)}</div>` : ""}</div>`;
-    }
-    const pens = a.pensamento ? `<div class="bolha" title="${esc(a.pensamento)}"><span class="q">💭 o que está lendo</span>${esc(a.pensamento)}</div>` : "";
-    return `<article class="mesa ${on ? "on" : ""}"><div class="m-top"><div class="av">${esc(a.avatar)}</div><div style="min-width:0"><div class="m-nome">${esc(a.nome)}</div><div class="m-papel">${esc(a.papel)}</div></div>
-      <div class="m-status ${on ? "on" : "off"}">${status}</div></div>
-      ${barras ? `<div class="etapas">${barras}</div>` : ""}${pens}${dec}${conta}</article>`;
-  }).join("");
-  const n = vv.mesa.filter(a => a.trabalhando).length;
-  $("vv-t").textContent = `· ${n} de ${vv.mesa.length} trabalhando agora`;
-}
-function desenharFeed() {
-  const itens = vv.feed.map(f => {
-    const chave = f.t + f.agente + f.texto, novo = !primeiraFeed && !vistosFeed.has(chave);
-    vistosFeed.add(chave);
-    return `<div class="fi ${esc(f.tipo)} ${novo ? "novo" : ""}"><div class="ic">${esc(f.avatar)}</div><div style="min-width:0"><div class="q">${esc(f.nome)} · ${hm(f.t)} · há ${ha(f.t)}</div><div class="tx">${esc(f.texto)}</div></div></div>`;
-  });
-  $("feed").innerHTML = itens.join("") || `<div class="vazio">Nada registrado ainda.</div>`;
-  primeiraFeed = false;
-}
-async function cicloVivo() {
-  try { const d = await j("/api/vivo"); if (!d.erro) { vv = d; desenharMesas(); desenharFeed(); } else $("vv-t").textContent = "· erro: " + d.erro; }
-  catch (e) { $("vv-t").textContent = "· sem conexão"; }
-  setTimeout(cicloVivo, 5000);
-}
-cicloVivo();
 
 // ---------- fita de preços e fontes da máquina ----------
 async function cicloFontes() {
@@ -463,50 +375,11 @@ async function carregarLab() {
   $("placar").innerHTML = l.map(h => `<div class="hip ${esc(h.status)}"><div class="id">${esc(h.id)}</div><div class="p">${esc(h.pergunta)}</div><div class="r">${esc(h.resultado)}</div><div class="n">${esc(h.numero)}</div></div>`).join("");
 }
 
-// ---------- Sala de operações (baleias/equipe.py) ----------
-let sl = null, slTimer = null;
-function slNome(id) {
-  const fixos = {dono: "👤 Você", sala: "sala", vigia: "🔬 Vigia do v4", torneio: "🏆 Torneio", banco: "🏦 Banco"};
-  if (fixos[id]) return fixos[id];
-  const a = (sl && sl.equipe || []).find(x => x.id === id);
-  return a ? `${a.avatar} ${a.nome}` : id;
-}
-function desenharSala() {
-  const caixa = $("sl-chat");
-  if (!sl || sl.erro) { caixa.innerHTML = `<div class="vazio">${esc(sl && sl.erro || "sem dados")}</div>`; return; }
-  const msgs = sl.sala.filter(m => $("sl-eventos").checked || m.tipo !== "evento").slice(-150).concat((sl.aguardando || []).map(m => ({...m, tipo: "aguardando"})));
-  const noFim = caixa.scrollHeight - caixa.scrollTop - caixa.clientHeight < 40;
-  caixa.innerHTML = msgs.map(m => {
-    const meu = m.de === "dono", ev = m.tipo === "evento";
-    const fundo = meu ? "#1f6feb33" : m.tipo === "ordem" ? "#f5a62322" : m.tipo === "resposta" ? "#50e3c222" : ev ? "transparent" : "var(--card)";
-    const para = m.para && m.para !== "sala" ? ` → ${esc(slNome(m.para))}` : "";
-    const extra = m.tipo === "aguardando" ? ' <i class="mut">(enviada; entra na sala na próxima rodada da nuvem)</i>' : "";
-    return `<div style="align-self:${meu ? "flex-end" : "flex-start"};max-width:85%;background:${fundo};border-radius:8px;padding:${ev ? "2px 8px" : "6px 10px"};font-size:${ev ? 12 : 13}px">
-      <span class="mut" style="font-size:11px">${esc(slNome(m.de))}${para} · ${hora(m.t)}</span><br>${esc(m.texto)}${extra}</div>`;
-  }).join("") || '<div class="vazio">A sala ainda está vazia. Escreva a primeira mensagem para o chefe da mesa.</div>';
-  if (noFim) caixa.scrollTop = caixa.scrollHeight;
-}
-async function cicloSala(forcar) {
-  clearTimeout(slTimer);
-  try { sl = await j("/api/sala" + (forcar ? "?forcar" : "")); $("sl-t").textContent = "atualizado " + hm(Date.now() / 1000); desenharSala(); }
-  catch (e) { $("sl-t").textContent = "erro ao ler a sala"; }
-  slTimer = setTimeout(cicloSala, 60000);
-}
-$("sl-eventos").addEventListener("change", desenharSala);
-$("sl-form").addEventListener("submit", async ev => {
-  ev.preventDefault();
-  const texto = $("sl-texto").value.trim();
-  if (!texto) return;
-  $("sl-aviso").textContent = "enviando…";
-  try {
-    const r = await fetch("/api/sala", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({texto, para: $("sl-para").value})});
-    const d = await r.json();
-    if (d.ok) { $("sl-texto").value = ""; $("sl-aviso").textContent = "✅ enviada para a nuvem. O chefe responde na próxima hora (minuto 8)."; cicloSala(true); }
-    else $("sl-aviso").textContent = "❌ não enviou: " + (d.erro || "erro");
-  } catch (e) { $("sl-aviso").textContent = "❌ não enviou: " + e; }
-});
-cicloSala();
 
+async function carregarLab() {
+  const l = await j("/api/lab");
+  $("placar").innerHTML = l.map(h => `<div class="hip ${esc(h.status)}"><div class="id">${esc(h.id)}</div><div class="p">${esc(h.pergunta)}</div><div class="r">${esc(h.resultado)}</div><div class="n">${esc(h.numero)}</div></div>`).join("");
+}
 </script>
 </body>
 </html>
