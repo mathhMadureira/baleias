@@ -1,21 +1,21 @@
 {
- "t": 1795523655,
- "hora_utc": "2026-11-24 12:34 UTC",
+ "t": 1795523904,
+ "hora_utc": "2026-11-24 12:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 138,
-  "subindo_pct": 56.5,
+  "moedas": 139,
+  "subindo_pct": 56.1,
   "mediana_pct": 0.13
  },
  "mercado_4h": {
-  "moedas": 138,
-  "subindo_pct": 13.0,
-  "mediana_pct": -1.4
+  "moedas": 139,
+  "subindo_pct": 12.9,
+  "mediana_pct": -1.42
  },
  "mercado_24h": {
-  "moedas": 138,
-  "subindo_pct": 26.8,
-  "mediana_pct": -1.59
+  "moedas": 139,
+  "subindo_pct": 27.3,
+  "mediana_pct": -1.49
  },
  "btc": {
   "1h": 0.69,
@@ -172,11 +172,17 @@
   -0.44,
   -0.34,
   1.07,
-  -0.32
+  -0.19
  ],
  "contexto": {
-  "t": 1795523656,
+  "t": 1795523905,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795523788,
+    "hora_utc": "24/11 12:36",
+    "titulo": "Bitcoin drops as November spot ETF outflows increase to record $4.71 billion"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795521879,
@@ -260,12 +266,6 @@
     "t": 1795496850,
     "hora_utc": "24/11 05:07",
     "titulo": "Why 42 Macro says it’s waiting to buy the Bitcoin dip"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795490002,
-    "hora_utc": "24/11 03:13",
-    "titulo": "Google wants to make you the star of your own AI slop movies"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.9,
+   "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": -3.7,
-    "ETH": -2.6,
-    "SOL": -14.2
+    "BTC": -3.1,
+    "ETH": -2.9,
+    "SOL": -14.3
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 12.5,
+   "amplitude_acima_mm50_pct": 15.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -339,18 +339,18 @@
     "nivel": 1669.0
    },
    {
+    "moeda": "FF",
+    "padrao": "OCO invertido",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.10549
+   },
+   {
     "moeda": "JUP",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.2314
-   },
-   {
-    "moeda": "KAVA",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.02383
    },
    {
     "moeda": "KERNEL",
@@ -436,8 +436,8 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 100,
-  "compras": 58,
+  "apostas": 101,
+  "compras": 59,
   "vendas": 42,
   "mais_confiantes_venda": [
    {
@@ -784,12 +784,12 @@
   "z_contra_lab": 0.73,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5052,
-    "n": 24582
+    "acerto": 0.505,
+    "n": 24658
    },
    "segue_maioria_24h": {
-    "acerto": 0.5112,
-    "n": 28079
+    "acerto": 0.5103,
+    "n": 28058
    }
   },
   "referencia_ganha": [],
