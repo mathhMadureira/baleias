@@ -1,6 +1,6 @@
 {
- "t": 1795545507,
- "hora_utc": "2026-11-24 18:38 UTC",
+ "t": 1795545744,
+ "hora_utc": "2026-11-24 18:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,16 +172,22 @@
   -1.19,
   -0.51,
   1.16,
-  0.07
+  -0.17
  ],
  "contexto": {
-  "t": 1795545508,
+  "t": 1795545745,
   "noticias": [
    {
     "fonte": "Decrypt",
     "t": 1795545363,
     "hora_utc": "24/11 18:36",
     "titulo": "South Korea Moves to Lift Its ICO Ban After Nearly a Decade"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795545102,
+    "hora_utc": "24/11 18:31",
+    "titulo": "CFTC sets new prediction market rules as more firms seek US entry"
    },
    {
     "fonte": "Decrypt",
@@ -260,12 +266,6 @@
     "t": 1795529423,
     "hora_utc": "24/11 14:10",
     "titulo": "USDT buyers face 22% VAT when Moscow Exchange opens crypto trading"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795528676,
-    "hora_utc": "24/11 13:57",
-    "titulo": "Swiss central bank, UBS and SIX study ledger for tokenized settlement"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.7,
+   "media_top20_anual_pct": 2.9,
    "principais_anual_pct": {
-    "BTC": -0.8,
-    "ETH": 5.0,
-    "SOL": -0.7
+    "BTC": -1.6,
+    "ETH": 4.3,
+    "SOL": -0.5
    },
    "leitura": "neutro"
   },

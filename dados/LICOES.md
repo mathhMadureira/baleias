@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 18:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 18:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,19 +71,19 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.7% das moedas subindo em 24 h, 23.4% em 4 h · BTC 24 h -2.34%, 4 h -0.52%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': -0.8, 'ETH': 5.0, 'SOL': -0.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.9%/ano · {'BTC': -1.6, 'ETH': 4.3, 'SOL': -0.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AR fundo duplo (alta, formado) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · FF OCO invertido (alta, formado) · GRAM fundo duplo (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 18:36 UTC · Decrypt: South Korea Moves to Lift Its ICO Ban After Nearly a Decade
+- 📰 24/11 18:31 UTC · Cointelegraph: CFTC sets new prediction market rules as more firms seek US entry
 - 📰 24/11 18:16 UTC · Decrypt: Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?
 - 📰 24/11 18:07 UTC · Cointelegraph: BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong
 - 📰 24/11 17:50 UTC · CoinDesk: Utah moves to drop criminal pursuit of Kalshi after the firm halted services there
 - 📰 24/11 17:45 UTC · Decrypt: What Is Pons? The Robinhood Chain Meme Coin Launchpad Explained
-- 📰 24/11 17:43 UTC · Decrypt: Ansem Meme Coin Crashes After $2.57 Million Wallet Drain, Bullpen Confirms Security Breach
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 15.3 h.
+- ⚠️ **Rotina parada:** sem decisão há 15.4 h.
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
 - 23/11 23:30 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:15 UTC); regime neutro: 66,1% subindo em 24 h, 12,1% em 4 h; repique curto: as 4 abertas com 15m entre +0,27% e +1,32%. v4 co
