@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 14:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 14:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,17 +69,17 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 15.8% das moedas subindo em 24 h, 12.0% em 4 h · BTC 24 h -5.99%, 4 h 0.04%.
+- **Amplitude:** 12.9% das moedas subindo em 24 h, 15.9% em 4 h · BTC 24 h -5.0%, 4 h 0.54%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.6%/ano · {'BTC': -1.2, 'ETH': 1.9, 'SOL': -21.6} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.0%/ano · {'BTC': -1.2, 'ETH': 2.2, 'SOL': -21.7} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LUNC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SOL ombro-cabeça-ombro (baixa, CONFIRMOU) · VIRTUAL bandeira de baixa (baixa, CONFIRMOU) · APT fundo duplo (alta, formado) · ARB fundo duplo (alta, formado) · ARB ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado)
+- 📰 24/11 14:13 UTC · Decrypt: Justice Department Moves to Forfeit $1.1B in USDC From North Korea's Binance Hack
+- 📰 24/11 14:10 UTC · Cointelegraph: USDT buyers face 22% VAT when Moscow Exchange opens crypto trading
 - 📰 24/11 13:57 UTC · Cointelegraph: Swiss central bank, UBS and SIX study ledger for tokenized settlement
 - 📰 24/11 13:46 UTC · Decrypt: CertiK Trains Interpol Investigators to Trace and Freeze Stolen Crypto
 - 📰 24/11 13:43 UTC · Cointelegraph: Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals
 - 📰 24/11 13:11 UTC · Cointelegraph: Grayscale calls Bitcoin ‘oversold’ at $62K but warns of AI risks
-- 📰 24/11 13:07 UTC · Decrypt: Morning Minute: Jensen Returns, Markets Soar (Except Crypto)
-- 📰 24/11 13:01 UTC · Decrypt: GTA 6 PC Ports ‘Nuked’ Just Days Before Devs Expected It to Be Playable
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 48711 apostas conferidas ao vivo, acerto 54.4%; prevê 132 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 48798 apostas conferidas ao vivo, acerto 54.5%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
