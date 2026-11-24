@@ -1,6 +1,6 @@
 {
- "t": 1795558783,
- "hora_utc": "2026-11-24 22:19 UTC",
+ "t": 1795559019,
+ "hora_utc": "2026-11-24 22:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.33,
   0.17,
   0.19,
-  0.17
+  0.18
  ],
  "contexto": {
-  "t": 1795558784,
+  "t": 1795559020,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795558330,
+    "hora_utc": "24/11 22:12",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795557025,
@@ -260,12 +266,6 @@
     "t": 1795542608,
     "hora_utc": "24/11 17:50",
     "titulo": "Utah moves to drop criminal pursuit of Kalshi after the firm halted services there"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795542322,
-    "hora_utc": "24/11 17:45",
-    "titulo": "What Is Pons? The Robinhood Chain Meme Coin Launchpad Explained"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.2,
+   "media_top20_anual_pct": 6.1,
    "principais_anual_pct": {
-    "BTC": -2.3,
-    "ETH": 4.3,
-    "SOL": 2.0
+    "BTC": -1.9,
+    "ETH": 5.6,
+    "SOL": 2.4
    },
    "leitura": "neutro"
   },
@@ -641,7 +641,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.24,
+   "carteira": 9.36,
    "n_abertas": 1,
    "abertas": [
     [
@@ -702,7 +702,7 @@
     "ganho_medio": 0.344,
     "perda_media": -0.234,
     "fator_lucro": 0.83,
-    "carteira": 9.24
+    "carteira": 9.36
    },
    "guardiao": {
     "ops": 74,
