@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 05:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 05:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 70.0% das moedas subindo em 24 h, 66.2% em 4 h · BTC 24 h -1.59%, 4 h -1.21%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.9%/ano · {'BTC': 10.8, 'ETH': -0.6, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 10.9, 'ETH': 0.1, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** RPL fundo duplo (alta, CONFIRMOU) · AERO ombro-cabeça-ombro (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · ALT fundo duplo (alta, formado) · ALT ombro-cabeça-ombro (baixa, formado) · BABY fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC fundo duplo (alta, formado)
 - 📰 24/11 05:07 UTC · Cointelegraph: Why 42 Macro says it’s waiting to buy the Bitcoin dip
