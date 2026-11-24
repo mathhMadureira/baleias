@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 11:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 11:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,9 +69,9 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 33.1% das moedas subindo em 24 h, 6.5% em 4 h · BTC 24 h -2.68%, 4 h -1.14%.
+- **Amplitude:** 27.3% das moedas subindo em 24 h, 5.0% em 4 h · BTC 24 h -2.66%, 4 h -1.22%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.3%/ano · {'BTC': -10.1, 'ETH': -12.2, 'SOL': -18.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.0%/ano · {'BTC': -9.6, 'ETH': -10.8, 'SOL': -18.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** XRP ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · APT fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado) · LUNC fundo duplo (alta, formado)
 - 📰 24/11 11:11 UTC · CoinDesk: Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater
@@ -83,7 +83,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 7.9 h.
+- ⚠️ **Rotina parada:** sem decisão há 8.0 h.
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
 - 23/11 23:30 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:15 UTC); regime neutro: 66,1% subindo em 24 h, 12,1% em 4 h; repique curto: as 4 abertas com 15m entre +0,27% e +1,32%. v4 co
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 47893 apostas conferidas ao vivo, acerto 54.2%; prevê 86 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 47907 apostas conferidas ao vivo, acerto 54.2%; prevê 138 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
