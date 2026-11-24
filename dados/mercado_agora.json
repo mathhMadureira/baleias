@@ -1,6 +1,6 @@
 {
- "t": 1795521937,
- "hora_utc": "2026-11-24 12:05 UTC",
+ "t": 1795522180,
+ "hora_utc": "2026-11-24 12:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 136,
@@ -172,16 +172,22 @@
   -0.44,
   -0.34,
   1.07,
-  -0.17
+  -0.18
  ],
  "contexto": {
-  "t": 1795521938,
+  "t": 1795522181,
   "noticias": [
    {
     "fonte": "CoinDesk",
     "t": 1795521879,
     "hora_utc": "24/11 12:04",
     "titulo": "JPMorgan, HSBC and StoneX complete first digital gold trades in London"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795521856,
+    "hora_utc": "24/11 12:04",
+    "titulo": "South Korea proposes bank-led stablecoins, 20% cap on crypto exchange stakes"
    },
    {
     "fonte": "Cointelegraph",
@@ -260,12 +266,6 @@
     "t": 1795490002,
     "hora_utc": "24/11 03:13",
     "titulo": "Google wants to make you the star of your own AI slop movies"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795480586,
-    "hora_utc": "24/11 00:36",
-    "titulo": "Ethereum Foundation doubles protocol security team ahead of overhaul"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.8,
+   "media_top20_anual_pct": 4.4,
    "principais_anual_pct": {
-    "BTC": -3.0,
-    "ETH": 1.1,
-    "SOL": -14.1
+    "BTC": -3.4,
+    "ETH": 1.0,
+    "SOL": -15.1
    },
    "leitura": "neutro"
   },

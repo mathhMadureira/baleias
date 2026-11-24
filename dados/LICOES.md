@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 12:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 12:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 31.6% das moedas subindo em 24 h, 11.0% em 4 h · BTC 24 h -1.63%, 4 h -0.02%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': -3.0, 'ETH': 1.1, 'SOL': -14.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': -3.4, 'ETH': 1.0, 'SOL': -15.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AIGENSYN fundo duplo (alta, formado) · APT fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KAVA topo duplo (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado) · LUNC fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 12:04 UTC · CoinDesk: JPMorgan, HSBC and StoneX complete first digital gold trades in London
+- 📰 24/11 12:04 UTC · Cointelegraph: South Korea proposes bank-led stablecoins, 20% cap on crypto exchange stakes
 - 📰 24/11 11:40 UTC · Cointelegraph: Bitcoin dipped on Huang’s Nvidia exit but jumped 5% on his return
 - 📰 24/11 11:35 UTC · Decrypt: Trump Says He 'Made the Deal' to Reinstate Jensen Huang, Sparking Bipartisan Backlash
 - 📰 24/11 11:31 UTC · CoinDesk: Bitcoin hands back Monday's Nvidia-driven gains, liquidations triple
 - 📰 24/11 11:11 UTC · CoinDesk: Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater
-- 📰 24/11 10:58 UTC · CoinDesk: U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
