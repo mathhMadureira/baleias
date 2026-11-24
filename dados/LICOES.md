@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 20:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 20:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,7 +43,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.24** · 25 operações fechadas · 1 abertas
+Carteira **US$ 9.36** · 25 operações fechadas · 1 abertas
 
 - **Total:** 9/25 com lucro (36%), resultado -0.64, média -0.026 por operação.
 - **Últimas 24 h:** 2/5 com lucro, -0.44.
@@ -56,7 +56,7 @@ Carteira **US$ 9.24** · 25 operações fechadas · 1 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 6.95** · 73 operações fechadas · 1 abertas
+Carteira **US$ 6.98** · 73 operações fechadas · 1 abertas
 
 - **Total:** 36/73 com lucro (49%), resultado -3.07, média -0.042 por operação.
 - **Últimas 24 h:** 5/14 com lucro, -2.80.
@@ -71,15 +71,15 @@ Carteira **US$ 6.95** · 73 operações fechadas · 1 abertas
 
 - **Amplitude:** 19.2% das moedas subindo em 24 h, 48.8% em 4 h · BTC 24 h -2.71%, 4 h 0.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': -16.6, 'ETH': 6.7, 'SOL': -6.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': -16.2, 'ETH': 6.7, 'SOL': -6.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ACE ombro-cabeça-ombro (baixa, CONFIRMOU) · BEB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ICP topo duplo (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · RUNE fundo duplo (alta, formado)
+- 📰 24/11 20:48 UTC · Cointelegraph: Utah moves to dismiss criminal charges against Kalshi after trading halt
 - 📰 24/11 20:36 UTC · Decrypt: Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing
 - 📰 24/11 19:44 UTC · Cointelegraph: Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares
 - 📰 24/11 19:35 UTC · Decrypt: Bitcoin Losses Are the Worst Since FTX. Is the Bottom Near?
 - 📰 24/11 19:04 UTC · Cointelegraph: Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years
 - 📰 24/11 18:55 UTC · Decrypt: What the CFTC’s New Crypto Reserves Guidance Actually Allows—And What It Doesn’t
-- 📰 24/11 18:36 UTC · Decrypt: South Korea Moves to Lift Its ICO Ban After Nearly a Decade
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

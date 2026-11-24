@@ -1,6 +1,6 @@
 {
- "t": 1795553544,
- "hora_utc": "2026-11-24 20:52 UTC",
+ "t": 1795553779,
+ "hora_utc": "2026-11-24 20:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   1.16,
   -0.39,
   -0.33,
-  0.3
+  0.14
  ],
  "contexto": {
-  "t": 1795553545,
+  "t": 1795553780,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795553307,
+    "hora_utc": "24/11 20:48",
+    "titulo": "Utah moves to dismiss criminal charges against Kalshi after trading halt"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795552562,
@@ -260,12 +266,6 @@
     "t": 1795538006,
     "hora_utc": "24/11 16:33",
     "titulo": "How South Korea’s proposed 20% cap could change who runs Upbit"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795536044,
-    "hora_utc": "24/11 16:00",
-    "titulo": "Europol Traces $28M in Crypto Behind Europe's Illegal Streaming Industry"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.2,
+   "media_top20_anual_pct": 3.3,
    "principais_anual_pct": {
-    "BTC": -16.6,
+    "BTC": -16.2,
     "ETH": 6.7,
-    "SOL": -6.8
+    "SOL": -6.7
    },
    "leitura": "neutro"
   },
@@ -662,7 +662,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.24,
+   "carteira": 9.36,
    "n_abertas": 1,
    "abertas": [
     [
@@ -679,7 +679,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 6.95,
+   "carteira": 6.98,
    "n_abertas": 1,
    "abertas": [
     [
@@ -728,7 +728,7 @@
     "ganho_medio": 0.344,
     "perda_media": -0.234,
     "fator_lucro": 0.83,
-    "carteira": 9.24
+    "carteira": 9.36
    },
    "guardiao": {
     "ops": 73,
@@ -737,7 +737,7 @@
     "ganho_medio": 0.117,
     "perda_media": -0.197,
     "fator_lucro": 0.58,
-    "carteira": 6.95
+    "carteira": 6.98
    }
   },
   "vereditos": []
