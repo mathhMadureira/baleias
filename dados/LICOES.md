@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 00:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 00:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.50** · 39 operações fechadas · 2 abertas
+Carteira **US$ 8.74** · 39 operações fechadas · 2 abertas
 
 - **Total:** 16/39 com lucro (41%), resultado -1.42, média -0.036 por operação.
 - **Últimas 24 h:** 1/4 com lucro, -1.10.
@@ -56,7 +56,7 @@ Carteira **US$ 8.70** · 24 operações fechadas · 0 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.41** · 70 operações fechadas · 2 abertas
+Carteira **US$ 7.63** · 70 operações fechadas · 2 abertas
 
 - **Total:** 35/70 com lucro (50%), resultado -2.62, média -0.037 por operação.
 - **Últimas 24 h:** 4/11 com lucro, -2.35.
@@ -69,11 +69,11 @@ Carteira **US$ 7.41** · 70 operações fechadas · 2 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 66.4% das moedas subindo em 24 h, 23.2% em 4 h · BTC 24 h -0.03%, 4 h -0.15%.
+- **Amplitude:** 71.2% das moedas subindo em 24 h, 44.0% em 4 h · BTC 24 h 0.04%, 4 h 0.05%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.2%/ano · {'BTC': 11.0, 'ETH': -18.6, 'SOL': -6.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATOM bandeira de alta (alta, CONFIRMOU) · USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado) · HUMA triângulo simétrico (?, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.1%/ano · {'BTC': 11.0, 'ETH': -18.4, 'SOL': -6.5} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ATOM bandeira de alta (alta, CONFIRMOU) · USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado) · HUMA triângulo simétrico (?, formado) · MET fundo duplo (alta, formado)
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
 - 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
 - 📰 23/11 23:06 UTC · Decrypt: China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size
@@ -117,7 +117,7 @@ Carteira **US$ 7.41** · 70 operações fechadas · 2 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 45749 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 45795 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
