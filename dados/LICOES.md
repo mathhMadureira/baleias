@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 21:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 21:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,7 +43,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.36** · 25 operações fechadas · 1 abertas
+Carteira **US$ 9.47** · 25 operações fechadas · 1 abertas
 
 - **Total:** 9/25 com lucro (36%), resultado -0.64, média -0.026 por operação.
 - **Últimas 24 h:** 2/5 com lucro, -0.44.
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 20.8% das moedas subindo em 24 h, 34.4% em 4 h · BTC 24 h -2.44%, 4 h 0.03%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.3%/ano · {'BTC': -8.3, 'ETH': 10.9, 'SOL': -3.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.5%/ano · {'BTC': -8.1, 'ETH': 11.0, 'SOL': -3.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SYRUP bandeira de baixa (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · ICP topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · MEGA ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado)
 - 📰 24/11 21:16 UTC · Decrypt: Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits
