@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 03:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 03:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 7.16** · 71 operações fechadas · 2 abertas
+Carteira **US$ 6.92** · 71 operações fechadas · 2 abertas
 
 - **Total:** 38/71 com lucro (54%), resultado -3.05, média -0.043 por operação.
 - **Últimas 24 h:** 4/10 com lucro, -1.43.
@@ -30,7 +30,7 @@ Carteira **US$ 7.16** · 54 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.89** · 45 operações fechadas · 2 abertas
+Carteira **US$ 8.88** · 45 operações fechadas · 2 abertas
 
 - **Total:** 18/45 com lucro (40%), resultado -1.07, média -0.024 por operação.
 - **Últimas 24 h:** 3/10 com lucro, -0.75.
@@ -43,7 +43,7 @@ Carteira **US$ 8.89** · 45 operações fechadas · 2 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.21** · 24 operações fechadas · 1 abertas
+Carteira **US$ 9.71** · 24 operações fechadas · 1 abertas
 
 - **Total:** 8/24 com lucro (33%), resultado -1.30, média -0.054 por operação.
 - **Últimas 24 h:** 1/4 com lucro, -1.10.
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 54.3% das moedas subindo em 24 h, 15.0% em 4 h · BTC 24 h -2.5%, 4 h -2.98%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': -3.3, 'ETH': -14.9, 'SOL': 2.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': -2.5, 'ETH': -14.3, 'SOL': 2.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AERO bandeira de baixa (baixa, CONFIRMOU) · BMT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · INIT bandeira de baixa (baixa, CONFIRMOU) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BREV fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado)
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
