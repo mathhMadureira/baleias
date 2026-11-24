@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 19:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 19:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 22.4% das moedas subindo em 24 h, 72.0% em 4 h · BTC 24 h -2.05%, 4 h 0.14%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.9%/ano · {'BTC': -11.4, 'ETH': 6.3, 'SOL': -3.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -11.8, 'ETH': 6.2, 'SOL': -4.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** 2Z topo duplo (baixa, formado) · ACE ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · GRAM fundo duplo (alta, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · TRX triângulo descendente (baixa, formado) · USUAL fundo duplo (alta, formado)
 - 📰 24/11 19:44 UTC · Cointelegraph: Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares
