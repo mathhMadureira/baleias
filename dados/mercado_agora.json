@@ -1,6 +1,6 @@
 {
- "t": 1795479020,
- "hora_utc": "2026-11-24 00:10 UTC",
+ "t": 1795479245,
+ "hora_utc": "2026-11-24 00:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   0.16,
   -0.14,
   0.03,
-  -0.21
+  0.02
  ],
  "contexto": {
-  "t": 1795479021,
+  "t": 1795479246,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.3,
+   "media_top20_anual_pct": 0.1,
    "principais_anual_pct": {
-    "BTC": 10.3,
-    "ETH": -19.6,
-    "SOL": -7.6
+    "BTC": 11.0,
+    "ETH": -18.6,
+    "SOL": -5.2
    },
    "leitura": "neutro"
   },
@@ -511,7 +511,7 @@
     "entrada": 0.01986,
     "agora": 0.01994,
     "resultado_pct": 0.4,
-    "horas_aberta": 0.4,
+    "horas_aberta": 0.5,
     "motivo_de_entrada": "Cacador explosao_1m forca 100 a 0.01991 (1 min +0,35%, z +3,3, volume 4,4x); 5 de 6 tempos acima da MM20 (1m 5m 15m 1h 1d); 15m +0,45%, 1h +0,30%, 1d +1,27%; ul"
    }
   ],
@@ -698,7 +698,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 9.19,
+   "carteira": 9.26,
    "n_abertas": 3,
    "abertas": [
     [
@@ -744,7 +744,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 8.03,
+   "carteira": 7.91,
    "n_abertas": 3,
    "abertas": [
     [
@@ -792,7 +792,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.179,
     "fator_lucro": 0.8,
-    "carteira": 9.19
+    "carteira": 9.26
    },
    "laboratorio": {
     "ops": 22,
@@ -810,7 +810,7 @@
     "ganho_medio": 0.118,
     "perda_media": -0.186,
     "fator_lucro": 0.65,
-    "carteira": 8.03
+    "carteira": 7.91
    }
   },
   "vereditos": []
