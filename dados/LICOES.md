@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 18:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 18:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 16.9% das moedas subindo em 24 h, 38.7% em 4 h · BTC 24 h -2.35%, 4 h -0.32%.
+- **Amplitude:** 17.7% das moedas subindo em 24 h, 23.4% em 4 h · BTC 24 h -2.34%, 4 h -0.52%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': -0.2, 'ETH': 4.6, 'SOL': -1.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': -0.8, 'ETH': 4.7, 'SOL': -1.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATM bandeira de alta (alta, CONFIRMOU) · BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AR fundo duplo (alta, formado) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · FF OCO invertido (alta, formado) · INIT OCO invertido (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AR fundo duplo (alta, formado) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · FF OCO invertido (alta, formado) · GRAM fundo duplo (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 18:16 UTC · Decrypt: Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?
 - 📰 24/11 18:07 UTC · Cointelegraph: BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong
 - 📰 24/11 17:50 UTC · CoinDesk: Utah moves to drop criminal pursuit of Kalshi after the firm halted services there
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 49655 apostas conferidas ao vivo, acerto 54.3%; prevê 25 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 49724 apostas conferidas ao vivo, acerto 54.3%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
