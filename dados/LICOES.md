@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 11:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 11:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 27.3% das moedas subindo em 24 h, 6.5% em 4 h · BTC 24 h -2.56%, 4 h -0.92%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.4%/ano · {'BTC': -7.5, 'ETH': -10.5, 'SOL': -19.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.9%/ano · {'BTC': -6.9, 'ETH': -9.8, 'SOL': -18.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** XRP ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · APT fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado) · LUNC fundo duplo (alta, formado)
 - 📰 24/11 11:35 UTC · Decrypt: Trump Says He 'Made the Deal' to Reinstate Jensen Huang, Sparking Bipartisan Backlash
