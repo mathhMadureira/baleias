@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 23:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 23:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 6.28** · 73 operações fechadas · 0 abertas
 Carteira **US$ 7.04** · 56 operações fechadas · 0 abertas
 
 - **Total:** 15/56 com lucro (27%), resultado -2.96, média -0.053 por operação.
-- **Últimas 24 h:** 0/5 com lucro, -0.36.
+- **Últimas 24 h:** 0/3 com lucro, -0.15.
 - **Por horário:** 18–23 UTC: 25 op, 20% certas, -1.39 · 06–11 UTC: 4 op, 25% certas, -0.80 · 00–05 UTC: 8 op, 12% certas, -0.73 · 12–17 UTC: 19 op, 42% certas, -0.05
 - **Por lado:** compra: 13 op, 8% certas, -3.25 · venda: 43 op, 33% certas, +0.29
 - **Por motivo de saída:** stop de segurança −0.80% na co: 12 op, 8% certas, -1.37 · stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.20% na co: 3 op, 0% certas, -0.77 · stop de segurança −0.90% na co: 4 op, 0% certas, -0.63 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.50% na co: 2 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · fora da lista de posições do c: 10 op, 10% certas, +0.27 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 2 op, 100% certas, +0.78 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -46,7 +46,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 Carteira **US$ 9.22** · 26 operações fechadas · 0 abertas
 
 - **Total:** 9/26 com lucro (35%), resultado -0.78, média -0.030 por operação.
-- **Últimas 24 h:** 2/6 com lucro, -0.58.
+- **Últimas 24 h:** 2/5 com lucro, -0.03.
 - **Por horário:** 18–23 UTC: 15 op, 33% certas, -1.13 · 00–05 UTC: 6 op, 33% certas, -0.22 · 12–17 UTC: 5 op, 40% certas, +0.56
 - **Por lado:** compra: 12 op, 33% certas, -0.42 · venda: 14 op, 36% certas, -0.37
 - **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Método fixo, regime neutro (65: 1 op, 0% certas, -0.06 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · Método fixo, regime neutro: v4: 1 op, 100% certas, +0.06 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo (H69): v4 subir 0,: 2 op, 50% certas, +0.51 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 20.8% das moedas subindo em 24 h, 37.6% em 4 h · BTC 24 h -2.47%, 4 h 0.27%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': -5.9, 'ETH': -4.6, 'SOL': 8.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.5%/ano · {'BTC': -6.3, 'ETH': -4.5, 'SOL': 7.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · CRV fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado) · OPG fundo duplo (alta, formado) · RUNE fundo duplo (alta, formado) · STX fundo duplo (alta, formado)
 - 📰 24/11 22:36 UTC · Decrypt: OpenAI and Anthropic Insiders Fear Their Next AI Models Are Too Dangerous to Release
