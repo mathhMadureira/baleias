@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 22:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 22:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,15 +43,15 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.36** · 25 operações fechadas · 1 abertas
+Carteira **US$ 9.22** · 26 operações fechadas · 0 abertas
 
-- **Total:** 9/25 com lucro (36%), resultado -0.64, média -0.026 por operação.
-- **Últimas 24 h:** 2/5 com lucro, -0.44.
-- **Por horário:** 18–23 UTC: 14 op, 36% certas, -0.99 · 00–05 UTC: 6 op, 33% certas, -0.22 · 12–17 UTC: 5 op, 40% certas, +0.56
-- **Por lado:** compra: 12 op, 33% certas, -0.42 · venda: 13 op, 38% certas, -0.23
-- **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Método fixo, regime neutro (65: 1 op, 0% certas, -0.06 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · Método fixo, regime neutro: v4: 1 op, 100% certas, +0.06 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56 · Método fixo (H69): v4 subir 0,: 1 op, 100% certas, +0.66
-- **Moedas que mais perderam (≥ 3 op):** SOPH -0.02 (5 op)
-- **Moedas que mais ganharam (≥ 3 op):** SOPH -0.02 (5 op)
+- **Total:** 9/26 com lucro (35%), resultado -0.78, média -0.030 por operação.
+- **Últimas 24 h:** 2/6 com lucro, -0.58.
+- **Por horário:** 18–23 UTC: 15 op, 33% certas, -1.13 · 00–05 UTC: 6 op, 33% certas, -0.22 · 12–17 UTC: 5 op, 40% certas, +0.56
+- **Por lado:** compra: 12 op, 33% certas, -0.42 · venda: 14 op, 36% certas, -0.37
+- **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Método fixo, regime neutro (65: 1 op, 0% certas, -0.06 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · Método fixo, regime neutro: v4: 1 op, 100% certas, +0.06 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo (H69): v4 subir 0,: 2 op, 50% certas, +0.51 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
+- **Moedas que mais perderam (≥ 3 op):** SOPH -0.02 (5 op) · CYBER +0.32 (3 op)
+- **Moedas que mais ganharam (≥ 3 op):** CYBER +0.32 (3 op) · SOPH -0.02 (5 op)
 - Lembrete do laboratório (H36): o ranking de moedas não se repete no tempo; serve para olhar, não para filtrar.
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 23.2% das moedas subindo em 24 h, 20.8% em 4 h · BTC 24 h -2.12%, 4 h -0.3%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': -1.9, 'ETH': 5.6, 'SOL': 2.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': -2.2, 'ETH': 6.4, 'SOL': 2.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · PLUME ombro-cabeça-ombro (baixa, formado) · RUNE fundo duplo (alta, formado)
 - 📰 24/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -83,7 +83,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.1 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
