@@ -1,28 +1,28 @@
 {
- "t": 1795544091,
- "hora_utc": "2026-11-24 18:14 UTC",
+ "t": 1795544327,
+ "hora_utc": "2026-11-24 18:18 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
-  "subindo_pct": 84.7,
-  "mediana_pct": 1.26
+  "subindo_pct": 66.9,
+  "mediana_pct": 0.29
  },
  "mercado_4h": {
   "moedas": 124,
-  "subindo_pct": 63.7,
-  "mediana_pct": 0.27
+  "subindo_pct": 39.5,
+  "mediana_pct": -0.16
  },
  "mercado_24h": {
   "moedas": 124,
-  "subindo_pct": 18.5,
-  "mediana_pct": -4.11
+  "subindo_pct": 16.9,
+  "mediana_pct": -4.3
  },
  "btc": {
-  "1h": 1.16,
-  "4h": 0.16,
-  "24h": -2.54,
-  "preco": 60108.01,
-  "vol_4h_vs_media": 1.17
+  "1h": 0.43,
+  "4h": -0.32,
+  "24h": -2.35,
+  "preco": 60136.01,
+  "vol_4h_vs_media": 1.18
  },
  "maiores_quedas_4h": [
   {
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
-   "moeda": "PROM",
-   "4h": -5.57,
-   "24h": -11.7,
-   "vol": 1.0
-  },
-  {
    "moeda": "SYRUP",
-   "4h": -4.66,
-   "24h": -14.62,
-   "vol": 1.79
+   "4h": -5.55,
+   "24h": -14.59,
+   "vol": 1.83
   },
   {
-   "moeda": "AT",
-   "4h": -4.47,
-   "24h": -16.89,
-   "vol": 2.95
-  },
-  {
-   "moeda": "SAHARA",
-   "4h": -4.22,
-   "24h": 11.81,
-   "vol": 0.76
+   "moeda": "PROM",
+   "4h": -5.44,
+   "24h": -8.97,
+   "vol": 1.08
   },
   {
    "moeda": "BEB",
-   "4h": -2.84,
-   "24h": -9.47,
+   "4h": -4.77,
+   "24h": -9.46,
    "vol": 2.06
   },
   {
-   "moeda": "MEGA",
-   "4h": -2.71,
-   "24h": -6.78,
-   "vol": 1.15
+   "moeda": "AT",
+   "4h": -4.37,
+   "24h": -18.84,
+   "vol": 2.92
   },
   {
-   "moeda": "INIT",
-   "4h": -2.69,
-   "24h": 0.22,
-   "vol": 1.86
+   "moeda": "SAHARA",
+   "4h": -3.65,
+   "24h": 14.4,
+   "vol": 0.58
   },
   {
-   "moeda": "HYPE",
-   "4h": -2.28,
-   "24h": -6.99,
-   "vol": 1.31
+   "moeda": "BIGTIME",
+   "4h": -3.3,
+   "24h": 1.74,
+   "vol": 0.8
   },
   {
    "moeda": "0G",
+   "4h": -2.47,
+   "24h": -14.08,
+   "vol": 0.88
+  },
+  {
+   "moeda": "HYPE",
+   "4h": -2.41,
+   "24h": -6.24,
+   "vol": 1.3
+  },
+  {
+   "moeda": "GRAM",
    "4h": -1.96,
-   "24h": -13.71,
-   "vol": 0.87
+   "24h": -5.09,
+   "vol": 1.44
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "ATM",
-   "4h": 17.02,
-   "24h": 50.07,
-   "vol": 1.7
-  },
-  {
-   "moeda": "LISTA",
-   "4h": 7.74,
-   "24h": 25.5,
-   "vol": 1.43
-  },
-  {
-   "moeda": "ASR",
-   "4h": 6.98,
-   "24h": 12.5,
-   "vol": 2.05
-  },
-  {
-   "moeda": "AIGENSYN",
-   "4h": 4.94,
-   "24h": 4.75,
-   "vol": 0.86
+   "4h": 7.71,
+   "24h": 45.88,
+   "vol": 1.53
   },
   {
    "moeda": "SKY",
-   "4h": 4.8,
-   "24h": -4.36,
-   "vol": 1.34
-  },
-  {
-   "moeda": "LUNC",
-   "4h": 3.95,
-   "24h": 8.82,
-   "vol": 1.2
+   "4h": 5.95,
+   "24h": -4.68,
+   "vol": 1.27
   },
   {
    "moeda": "PSG",
-   "4h": 3.83,
-   "24h": 5.86,
-   "vol": 2.0
+   "4h": 5.11,
+   "24h": 7.52,
+   "vol": 2.01
+  },
+  {
+   "moeda": "LISTA",
+   "4h": 5.04,
+   "24h": 27.16,
+   "vol": 1.4
+  },
+  {
+   "moeda": "ASR",
+   "4h": 5.0,
+   "24h": 11.56,
+   "vol": 2.21
+  },
+  {
+   "moeda": "AIGENSYN",
+   "4h": 4.7,
+   "24h": 4.89,
+   "vol": 0.84
   },
   {
    "moeda": "ZRO",
-   "4h": 3.76,
-   "24h": -14.99,
-   "vol": 1.11
+   "4h": 3.05,
+   "24h": -13.9,
+   "vol": 1.13
+  },
+  {
+   "moeda": "MMT",
+   "4h": 2.16,
+   "24h": 19.03,
+   "vol": 0.74
   },
   {
    "moeda": "ONG",
-   "4h": 2.36,
-   "24h": 1.59,
-   "vol": 0.21
+   "4h": 2.02,
+   "24h": 1.66,
+   "vol": 0.16
   },
   {
-   "moeda": "HMSTR",
-   "4h": 2.05,
-   "24h": -9.72,
-   "vol": 0.48
+   "moeda": "ALGO",
+   "4h": 1.64,
+   "24h": -5.5,
+   "vol": 1.18
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -1.19,
   -0.51,
   1.16,
-  0.03
+  -0.04
  ],
  "contexto": {
-  "t": 1795544092,
+  "t": 1795544329,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795544162,
+    "hora_utc": "24/11 18:16",
+    "titulo": "Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795543642,
@@ -260,12 +266,6 @@
     "t": 1795527963,
     "hora_utc": "24/11 13:46",
     "titulo": "CertiK Trains Interpol Investigators to Trace and Freeze Stolen Crypto"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795527826,
-    "hora_utc": "24/11 13:43",
-    "titulo": "Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.0,
+   "media_top20_anual_pct": 2.8,
    "principais_anual_pct": {
-    "BTC": 3.1,
-    "ETH": 2.7,
-    "SOL": -0.9
+    "BTC": 2.2,
+    "ETH": 3.6,
+    "SOL": -1.1
    },
    "leitura": "neutro"
   },
@@ -323,13 +323,6 @@
     "sentido": "baixa",
     "confirmado": true,
     "nivel": null
-   },
-   {
-    "moeda": "AR",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 2.44
    },
    {
     "moeda": "ASR",
@@ -421,15 +414,11 @@
   }
  },
  "v4": {
-  "vela": "18:00 UTC",
-  "apostas": 143,
-  "compras": 47,
-  "vendas": 96,
+  "vela": "11:00 UTC",
+  "apostas": 150,
+  "compras": 68,
+  "vendas": 82,
   "mais_confiantes_venda": [
-   {
-    "moeda": "U",
-    "prob_subir": 0.361
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
@@ -455,6 +444,10 @@
     "prob_subir": 0.386
    },
    {
+    "moeda": "XLM",
+    "prob_subir": 0.392
+   },
+   {
     "moeda": "CFG",
     "prob_subir": 0.394
    }
@@ -469,8 +462,8 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.644
+    "moeda": "ENSO",
+    "prob_subir": 0.615
    },
    {
     "moeda": "ENS",
@@ -481,16 +474,16 @@
     "prob_subir": 0.61
    },
    {
+    "moeda": "ORDI",
+    "prob_subir": 0.609
+   },
+   {
     "moeda": "MITO",
     "prob_subir": 0.608
    },
    {
     "moeda": "F",
     "prob_subir": 0.604
-   },
-   {
-    "moeda": "BANK",
-    "prob_subir": 0.598
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -763,38 +756,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 28893 apostas (612 velas, 17/11 18:15–24/11 17:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5374,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.6% em 28874 apostas (612 velas, 17/11 18:30–24/11 17:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5358,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.32,
+  "z_contra_lab": 0.14,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5042,
-    "n": 23493
+    "acerto": 0.5035,
+    "n": 23490
    },
    "segue_maioria_24h": {
-    "acerto": 0.5067,
-    "n": 28838
+    "acerto": 0.505,
+    "n": 28819
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5459,
-    "n": 8320
+    "acerto": 0.5444,
+    "n": 8330
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5665,
-    "n": 3100
+    "acerto": 0.5589,
+    "n": 3047
    },
    "confianca:<0,05": {
-    "acerto": 0.5216,
-    "n": 16652
+    "acerto": 0.5212,
+    "n": 16682
    },
    "confianca:≥0,12": {
-    "acerto": 0.6638,
-    "n": 821
+    "acerto": 0.6613,
+    "n": 815
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5116,
@@ -805,20 +798,20 @@
     "n": 6549
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5416,
-    "n": 6968
+    "acerto": 0.5407,
+    "n": 7047
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5516,
-    "n": 7272
+    "acerto": 0.5461,
+    "n": 7174
    },
    "lado:compra": {
-    "acerto": 0.5266,
-    "n": 12804
+    "acerto": 0.5265,
+    "n": 12818
    },
    "lado:venda": {
-    "acerto": 0.5461,
-    "n": 16089
+    "acerto": 0.5432,
+    "n": 16056
    }
   }
  },
