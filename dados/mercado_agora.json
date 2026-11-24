@@ -1,6 +1,6 @@
 {
- "t": 1795483023,
- "hora_utc": "2026-11-24 01:17 UTC",
+ "t": 1795483244,
+ "hora_utc": "2026-11-24 01:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   -0.14,
   0.03,
   0.1,
-  0.16
+  0.38
  ],
  "contexto": {
-  "t": 1795483024,
+  "t": 1795483245,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.8,
+   "media_top20_anual_pct": 6.8,
    "principais_anual_pct": {
-    "BTC": 5.7,
-    "ETH": 0.2,
-    "SOL": -2.8
+    "BTC": 7.1,
+    "ETH": 1.2,
+    "SOL": -1.2
    },
    "leitura": "neutro"
   },
@@ -669,7 +669,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 8.82,
+   "carteira": 8.74,
    "n_abertas": 2,
    "abertas": [
     [
@@ -702,7 +702,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.53,
+   "carteira": 7.46,
    "n_abertas": 1,
    "abertas": [
     [
@@ -742,7 +742,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.199,
     "fator_lucro": 0.69,
-    "carteira": 8.82
+    "carteira": 8.74
    },
    "laboratorio": {
     "ops": 24,
@@ -760,7 +760,7 @@
     "ganho_medio": 0.118,
     "perda_media": -0.189,
     "fator_lucro": 0.61,
-    "carteira": 7.53
+    "carteira": 7.46
    }
   },
   "vereditos": []
