@@ -1,21 +1,21 @@
 {
- "t": 1795504633,
- "hora_utc": "2026-11-24 07:17 UTC",
+ "t": 1795504878,
+ "hora_utc": "2026-11-24 07:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 132,
-  "subindo_pct": 18.2,
+  "moedas": 133,
+  "subindo_pct": 18.8,
   "mediana_pct": -0.45
  },
  "mercado_4h": {
-  "moedas": 132,
-  "subindo_pct": 89.4,
-  "mediana_pct": 2.03
+  "moedas": 133,
+  "subindo_pct": 89.5,
+  "mediana_pct": 2.05
  },
  "mercado_24h": {
-  "moedas": 132,
-  "subindo_pct": 59.1,
-  "mediana_pct": 0.62
+  "moedas": 133,
+  "subindo_pct": 59.4,
+  "mediana_pct": 0.63
  },
  "btc": {
   "1h": -0.13,
@@ -94,6 +94,12 @@
    "vol": 2.13
   },
   {
+   "moeda": "ONG",
+   "4h": 8.06,
+   "24h": 7.87,
+   "vol": 4.45
+  },
+  {
    "moeda": "AIGENSYN",
    "4h": 7.84,
    "24h": 5.66,
@@ -140,12 +146,6 @@
    "4h": 5.35,
    "24h": 5.09,
    "vol": 0.93
-  },
-  {
-   "moeda": "NEAR",
-   "4h": 4.65,
-   "24h": 0.56,
-   "vol": 0.59
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.07,
   0.41,
   -0.25,
-  -0.05
+  -0.22
  ],
  "contexto": {
-  "t": 1795504634,
+  "t": 1795504879,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -277,7 +277,7 @@
    "media_top20_anual_pct": 6.4,
    "principais_anual_pct": {
     "BTC": 5.3,
-    "ETH": 2.0,
+    "ETH": 1.5,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -388,13 +388,6 @@
     "nivel": 0.1445
    },
    {
-    "moeda": "LUNC",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 4.3e-05
-   },
-   {
     "moeda": "MARSCOIN",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -407,6 +400,13 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.00484
+   },
+   {
+    "moeda": "ONG",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.0516
    },
    {
     "moeda": "ORCA",
@@ -809,8 +809,8 @@
     "n": 23802
    },
    "segue_maioria_24h": {
-    "acerto": 0.506,
-    "n": 27794
+    "acerto": 0.5051,
+    "n": 27882
    }
   },
   "referencia_ganha": [],
