@@ -1,21 +1,21 @@
 {
- "t": 1795522917,
- "hora_utc": "2026-11-24 12:21 UTC",
+ "t": 1795523166,
+ "hora_utc": "2026-11-24 12:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 137,
-  "subindo_pct": 66.4,
+  "moedas": 138,
+  "subindo_pct": 65.9,
   "mediana_pct": 0.22
  },
  "mercado_4h": {
-  "moedas": 137,
-  "subindo_pct": 7.3,
+  "moedas": 138,
+  "subindo_pct": 7.2,
   "mediana_pct": -1.81
  },
  "mercado_24h": {
-  "moedas": 137,
-  "subindo_pct": 25.5,
-  "mediana_pct": -1.87
+  "moedas": 138,
+  "subindo_pct": 25.4,
+  "mediana_pct": -1.89
  },
  "btc": {
   "1h": 0.95,
@@ -172,10 +172,10 @@
   -0.44,
   -0.34,
   1.07,
-  -0.26
+  -0.23
  ],
  "contexto": {
-  "t": 1795522918,
+  "t": 1795523167,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.8,
+   "media_top20_anual_pct": 4.0,
    "principais_anual_pct": {
     "BTC": -4.6,
-    "ETH": -1.4,
-    "SOL": -15.0
+    "ETH": -1.6,
+    "SOL": -14.3
    },
    "leitura": "neutro"
   },
@@ -430,8 +430,8 @@
  "v4": {
   "vela": "11:00 UTC",
   "apostas": 170,
-  "compras": 134,
-  "vendas": 36,
+  "compras": 135,
+  "vendas": 35,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -444,10 +444,6 @@
    {
     "moeda": "SLP",
     "prob_subir": 0.376
-   },
-   {
-    "moeda": "ZK",
-    "prob_subir": 0.382
    },
    {
     "moeda": "FORM",
@@ -464,12 +460,20 @@
    {
     "moeda": "CFG",
     "prob_subir": 0.394
+   },
+   {
+    "moeda": "BB",
+    "prob_subir": 0.394
    }
   ],
   "mais_confiantes_compra": [
    {
     "moeda": "ENS",
     "prob_subir": 0.702
+   },
+   {
+    "moeda": "ZK",
+    "prob_subir": 0.671
    },
    {
     "moeda": "S",
@@ -493,10 +497,6 @@
    },
    {
     "moeda": "GIGGLE",
-    "prob_subir": 0.615
-   },
-   {
-    "moeda": "RARE",
     "prob_subir": 0.615
    }
   ],
@@ -777,12 +777,12 @@
   "z_contra_lab": 0.69,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5058,
-    "n": 24380
+    "acerto": 0.5056,
+    "n": 24501
    },
    "segue_maioria_24h": {
-    "acerto": 0.5115,
-    "n": 27926
+    "acerto": 0.5117,
+    "n": 28001
    }
   },
   "referencia_ganha": [],
