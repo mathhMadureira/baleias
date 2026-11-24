@@ -1,21 +1,21 @@
 {
- "t": 1795504878,
- "hora_utc": "2026-11-24 07:21 UTC",
+ "t": 1795505124,
+ "hora_utc": "2026-11-24 07:25 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 133,
-  "subindo_pct": 18.8,
+  "moedas": 134,
+  "subindo_pct": 19.4,
   "mediana_pct": -0.45
  },
  "mercado_4h": {
-  "moedas": 133,
-  "subindo_pct": 89.5,
+  "moedas": 134,
+  "subindo_pct": 89.6,
   "mediana_pct": 2.05
  },
  "mercado_24h": {
-  "moedas": 133,
-  "subindo_pct": 59.4,
-  "mediana_pct": 0.63
+  "moedas": 134,
+  "subindo_pct": 59.7,
+  "mediana_pct": 0.67
  },
  "btc": {
   "1h": -0.13,
@@ -94,6 +94,12 @@
    "vol": 2.13
   },
   {
+   "moeda": "ZIL",
+   "4h": 8.07,
+   "24h": 12.69,
+   "vol": 2.32
+  },
+  {
    "moeda": "ONG",
    "4h": 8.06,
    "24h": 7.87,
@@ -140,12 +146,6 @@
    "4h": 5.45,
    "24h": -11.06,
    "vol": 0.88
-  },
-  {
-   "moeda": "SPK",
-   "4h": 5.35,
-   "24h": 5.09,
-   "vol": 0.93
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.07,
   0.41,
   -0.25,
-  -0.22
+  -0.04
  ],
  "contexto": {
-  "t": 1795504879,
+  "t": 1795505125,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.4,
+   "media_top20_anual_pct": 6.6,
    "principais_anual_pct": {
-    "BTC": 5.3,
-    "ETH": 1.5,
+    "BTC": 5.6,
+    "ETH": 2.1,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -344,13 +344,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.4124
-   },
-   {
-    "moeda": "ALLO",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.1332
    },
    {
     "moeda": "BTC",
@@ -805,12 +798,12 @@
   "z_contra_lab": 0.28,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5056,
-    "n": 23802
+    "acerto": 0.5058,
+    "n": 23943
    },
    "segue_maioria_24h": {
-    "acerto": 0.5051,
-    "n": 27882
+    "acerto": 0.5052,
+    "n": 27892
    }
   },
   "referencia_ganha": [],
