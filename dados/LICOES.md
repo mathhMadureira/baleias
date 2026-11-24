@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 13:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 13:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 29.7% das moedas subindo em 24 h, 10.9% em 4 h · BTC 24 h -1.38%, 4 h 0.39%.
+- **Amplitude:** 29.8% das moedas subindo em 24 h, 10.6% em 4 h · BTC 24 h -1.38%, 4 h 0.39%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 7.2, 'ETH': 5.5, 'SOL': -15.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.8%/ano · {'BTC': 3.4, 'ETH': 3.4, 'SOL': -17.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** XRP ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · APT fundo duplo (alta, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CYBER fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** XRP ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · APT fundo duplo (alta, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CHZ fundo duplo (alta, formado) · CYBER fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KERNEL fundo duplo (alta, formado)
 - 📰 24/11 13:07 UTC · Decrypt: Morning Minute: Jensen Returns, Markets Soar (Except Crypto)
 - 📰 24/11 13:01 UTC · Decrypt: GTA 6 PC Ports ‘Nuked’ Just Days Before Devs Expected It to Be Playable
 - 📰 24/11 12:47 UTC · CoinDesk: Live updates: Bitcoin pulls back to $60,000 as stock rally fails to budge crypto
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 48430 apostas conferidas ao vivo, acerto 54.4%; prevê 137 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 48432 apostas conferidas ao vivo, acerto 54.4%; prevê 4 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
