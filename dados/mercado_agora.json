@@ -1,6 +1,6 @@
 {
- "t": 1795551893,
- "hora_utc": "2026-11-24 20:24 UTC",
+ "t": 1795552136,
+ "hora_utc": "2026-11-24 20:28 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   1.16,
   -0.39,
   -0.33,
-  0.07
+  -0.04
  ],
  "contexto": {
-  "t": 1795551894,
+  "t": 1795552137,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.2,
+   "media_top20_anual_pct": 2.4,
    "principais_anual_pct": {
-    "BTC": -16.9,
-    "ETH": 6.1,
-    "SOL": -10.4
+    "BTC": -17.3,
+    "ETH": 6.0,
+    "SOL": -9.5
    },
    "leitura": "neutro"
   },
@@ -586,10 +586,6 @@
   ],
   "licoes_anteriores": [
    {
-    "t": 1795383704,
-    "texto": "Testnet 43 fechadas: p 0,326 (14 vitórias, 29 derrotas), G +0,2767, L -0,1982, E -0,0436 por operacao (soma -1,8732 USDT). Ultimas fechadas: GTC compra -0,164, BEAMX venda -0,172 e ETC venda -0,167 todas atingiram o stop de seguranca de 0,80% na corretora devido a volatilidade rapida. Caderno mostra que entradas com padrao grafico a favor tem 64% de acerto (+1,319 USDT), enquanto sem padrao o resu"
-   },
-   {
     "t": 1795471750,
     "texto": "Ultimas 5 fechadas na carteira simulada: ETC venda +0,109; SKY venda -0,463; CYBER compra -0,463; GTC compra -0,463; DOGE compra -0,288 (p 0,20, G +0,109, L medio -0,419, E -0,314 por operacao). Caderno: padrao a favor 16 ops 56% +0,393; nenhum padrao 15 ops 53% -0,656; 6/6 tempos a favor 55% +0,105. As compras contra a maioria dos tempos perderam; hoje sigo a maioria dos tempos (vendas)."
    },
@@ -616,6 +612,10 @@
    {
     "t": 1795490399,
     "texto": "SENT compra (aviso do Cacador, 5/6 tempos a favor, volume 1 min 0,06x) saiu no stop da corretora a 0,01975: -0,0302 no testnet. Testnet: 54 fechadas, patrimonio US$ 7,1637. Caderno (48 ops): 6 de 6 tempos 15 ops 53% soma -0,098; 4-5 de 6 17 ops 41% soma -1,019; carteiras a favor 13 ops 62% soma -0,013; sem leitura de carteiras 35 ops 46% soma -1,797. Compra com volume de 1 min quase zero falhou de"
+   },
+   {
+    "t": 1795551733,
+    "texto": "DOGE venda saiu no stop da corretora a 0,05616 (-0,0574) e TRUMP venda a 0,871 (-0,0660) no testnet, as duas abertas no aviso do Cacador 03:15 UTC e paradas durante as ~17 h com a maquina desligada. Testnet: 56 fechadas, patrimonio US$ 7,0404. Caderno (50 ops): 6 de 6 tempos 15 ops 53% soma -0,098; carteiras a favor 13 ops 62% soma -0,013; sem leitura de carteiras 37 ops 43% soma -2,471. Vendas de"
    }
   ]
  },
@@ -679,7 +679,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 6.91,
+   "carteira": 6.96,
    "n_abertas": 1,
    "abertas": [
     [
@@ -737,7 +737,7 @@
     "ganho_medio": 0.117,
     "perda_media": -0.197,
     "fator_lucro": 0.58,
-    "carteira": 6.91
+    "carteira": 6.96
    }
   },
   "vereditos": []
@@ -805,12 +805,6 @@
  "caixa_dono": [],
  "sala_recente": [
   {
-   "hora_utc": "21/11 22:57",
-   "de": "claude",
-   "para": "sala",
-   "texto": "Universo 127; regime neutro (45,7% alta em 24 h, 24,4% em 4 h). Testnet: US$ 8,7354, SIGN e HYPER abertas. Proponho fechar SIGN (v4 venda, confiança 0,148), manter HYPER e vender SHIB (5/6 tempos abaixo, v4 confiança 0,153; volume 1 min 2,32×). H63 não confirma SHIB; nenhum aviso do Caçador verifica"
-  },
-  {
    "hora_utc": "21/11 23:11",
    "de": "claude",
    "para": "sala",
@@ -875,6 +869,12 @@
    "de": "claude",
    "para": "sala",
    "texto": "Chefe: virada para queda, 6,2% de 129 moedas sobem em 1 h; BTC 1h -1,66%, carteiras H63 vendidas em BTC 1/9. SENT saiu no stop (-0,03). Testnet US$ 7,16: entro vendido em TRUMP (6/6 abaixo, Cacador) e DOGE (5/6, Cacador), stop 0,9%/0,8%, alvo 3x, 120 min."
+  },
+  {
+   "hora_utc": "24/11 20:28",
+   "de": "claude",
+   "para": "sala",
+   "texto": "Chefe: DOGE e TRUMP vendidas sairam no stop (-0,06 e -0,07). Testnet US$ 7,04, 0 abertas. Raspagem falhou (DNS instavel): nenhuma entrada nesta rodada. Mercado: 16% sobem em 1 h, BTC 1h -0,33%."
   }
  ]
 }
