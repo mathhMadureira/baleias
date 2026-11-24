@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 00:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 00:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.77** · 70 operações fechadas · 1 abertas
+Carteira **US$ 6.79** · 70 operações fechadas · 1 abertas
 
 - **Total:** 37/70 com lucro (53%), resultado -3.21, média -0.046 por operação.
 - **Últimas 24 h:** 3/9 com lucro, -1.59.
@@ -20,7 +20,7 @@ Carteira **US$ 6.77** · 70 operações fechadas · 1 abertas
 Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 - **Total:** 15/53 com lucro (28%), resultado -2.81, média -0.053 por operação.
-- **Últimas 24 h:** 1/8 com lucro, -0.63.
+- **Últimas 24 h:** 1/7 com lucro, -0.45.
 - **Por horário:** 18–23 UTC: 25 op, 20% certas, -1.39 · 06–11 UTC: 4 op, 25% certas, -0.80 · 00–05 UTC: 5 op, 20% certas, -0.57 · 12–17 UTC: 19 op, 42% certas, -0.05
 - **Por lado:** compra: 12 op, 8% certas, -3.22 · venda: 41 op, 34% certas, +0.41
 - **Por motivo de saída:** stop de segurança −0.80% na co: 11 op, 9% certas, -1.32 · stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.20% na co: 3 op, 0% certas, -0.77 · stop de segurança −0.90% na co: 3 op, 0% certas, -0.56 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop de segurança −0.50% na co: 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · fora da lista de posições do c: 10 op, 10% certas, +0.27 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 2 op, 100% certas, +0.78 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -30,7 +30,7 @@ Carteira **US$ 7.19** · 53 operações fechadas · 1 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 9.02** · 38 operações fechadas · 3 abertas
+Carteira **US$ 9.15** · 38 operações fechadas · 3 abertas
 
 - **Total:** 16/38 com lucro (42%), resultado -0.79, média -0.021 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.48.
@@ -56,7 +56,7 @@ Carteira **US$ 9.25** · 22 operações fechadas · 2 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.97** · 69 operações fechadas · 3 abertas
+Carteira **US$ 8.27** · 69 operações fechadas · 3 abertas
 
 - **Total:** 35/69 com lucro (51%), resultado -2.21, média -0.032 por operação.
 - **Últimas 24 h:** 4/10 com lucro, -1.94.
@@ -71,7 +71,7 @@ Carteira **US$ 7.97** · 69 operações fechadas · 3 abertas
 
 - **Amplitude:** 66.4% das moedas subindo em 24 h, 24.8% em 4 h · BTC 24 h -0.0%, 4 h 0.02%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': 11.0, 'ETH': -21.9, 'SOL': -6.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.2%/ano · {'BTC': 11.0, 'ETH': -20.7, 'SOL': -8.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATOM bandeira de alta (alta, CONFIRMOU) · USUAL topo duplo (baixa, CONFIRMOU) · AERO fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BTC fundo duplo (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC topo duplo (baixa, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
 - 📰 23/11 23:43 UTC · Cointelegraph: CFTC staff say exchanges can count Bitcoin toward operating reserves
