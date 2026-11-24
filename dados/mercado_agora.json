@@ -1,21 +1,21 @@
 {
- "t": 1795564416,
- "hora_utc": "2026-11-24 23:53 UTC",
+ "t": 1795564651,
+ "hora_utc": "2026-11-24 23:57 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 15.9,
+  "moedas": 124,
+  "subindo_pct": 14.5,
   "mediana_pct": -0.48
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 40.5,
-  "mediana_pct": -0.16
+  "moedas": 124,
+  "subindo_pct": 39.5,
+  "mediana_pct": -0.21
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 21.4,
-  "mediana_pct": -2.64
+  "moedas": 124,
+  "subindo_pct": 20.2,
+  "mediana_pct": -2.7
  },
  "btc": {
   "1h": -0.38,
@@ -94,12 +94,6 @@
    "vol": 3.81
   },
   {
-   "moeda": "BLUR",
-   "4h": 6.28,
-   "24h": 8.15,
-   "vol": 1.12
-  },
-  {
    "moeda": "ETHFI",
    "4h": 2.74,
    "24h": -3.54,
@@ -116,12 +110,6 @@
    "4h": 2.38,
    "24h": 4.64,
    "vol": 0.43
-  },
-  {
-   "moeda": "USUAL",
-   "4h": 2.17,
-   "24h": 1.81,
-   "vol": 1.16
   },
   {
    "moeda": "ZEC",
@@ -146,6 +134,18 @@
    "4h": 1.48,
    "24h": -1.31,
    "vol": 0.52
+  },
+  {
+   "moeda": "NEAR",
+   "4h": 1.48,
+   "24h": -2.6,
+   "vol": 0.37
+  },
+  {
+   "moeda": "PROM",
+   "4h": 1.4,
+   "24h": -11.47,
+   "vol": 0.59
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.17,
   0.19,
   0.15,
-  -0.23
+  -0.25
  ],
  "contexto": {
-  "t": 1795564417,
+  "t": 1795564652,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795564096,
+    "hora_utc": "24/11 23:48",
+    "titulo": "Hackers breach CIA intelligence network in latest US cyberattack"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795559762,
@@ -260,12 +266,6 @@
     "t": 1795544162,
     "hora_utc": "24/11 18:16",
     "titulo": "Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795543642,
-    "hora_utc": "24/11 18:07",
-    "titulo": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.3,
+   "media_top20_anual_pct": 6.1,
    "principais_anual_pct": {
-    "BTC": -7.0,
-    "ETH": -4.3,
-    "SOL": 7.8
+    "BTC": -7.2,
+    "ETH": -4.1,
+    "SOL": 7.4
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 17.5,
+   "amplitude_acima_mm50_pct": 15.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -719,12 +719,12 @@
   "z_contra_lab": 0.13,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5034,
-    "n": 23807
+    "acerto": 0.5036,
+    "n": 23490
    },
    "segue_maioria_24h": {
-    "acerto": 0.5081,
-    "n": 28743
+    "acerto": 0.5071,
+    "n": 28823
    }
   },
   "referencia_ganha": [],
