@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 16:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 16:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.8% das moedas subindo em 24 h, 13.8% em 4 h · BTC 24 h -4.22%, 4 h -1.62%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -8.1, 'ETH': 2.0, 'SOL': -17.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -7.9, 'ETH': 2.0, 'SOL': -16.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CELO ombro-cabeça-ombro (baixa, CONFIRMOU) · NEAR ombro-cabeça-ombro (baixa, CONFIRMOU) · SOL ombro-cabeça-ombro (baixa, CONFIRMOU) · XPL topo duplo (baixa, CONFIRMOU) · AR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado)
 - 📰 24/11 16:33 UTC · Cointelegraph: How South Korea’s proposed 20% cap could change who runs Upbit
