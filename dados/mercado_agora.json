@@ -1,6 +1,6 @@
 {
- "t": 1795552603,
- "hora_utc": "2026-11-24 20:36 UTC",
+ "t": 1795552838,
+ "hora_utc": "2026-11-24 20:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   1.16,
   -0.39,
   -0.33,
-  -0.31
+  -0.17
  ],
  "contexto": {
-  "t": 1795552604,
+  "t": 1795552839,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795552562,
+    "hora_utc": "24/11 20:36",
+    "titulo": "Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795549463,
@@ -260,12 +266,6 @@
     "t": 1795536044,
     "hora_utc": "24/11 16:00",
     "titulo": "Europol Traces $28M in Crypto Behind Europe's Illegal Streaming Industry"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795536025,
-    "hora_utc": "24/11 16:00",
-    "titulo": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation is another story"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 3.4,
    "principais_anual_pct": {
-    "BTC": -17.4,
-    "ETH": 5.0,
-    "SOL": -9.2
+    "BTC": -17.5,
+    "ETH": 5.5,
+    "SOL": -8.9
    },
    "leitura": "neutro"
   },
@@ -686,7 +686,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.04,
+   "carteira": 7.06,
    "n_abertas": 1,
    "abertas": [
     [
@@ -744,7 +744,7 @@
     "ganho_medio": 0.117,
     "perda_media": -0.197,
     "fator_lucro": 0.58,
-    "carteira": 7.04
+    "carteira": 7.06
    }
   },
   "vereditos": []
