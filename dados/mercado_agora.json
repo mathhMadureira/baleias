@@ -1,6 +1,6 @@
 {
- "t": 1795543857,
- "hora_utc": "2026-11-24 18:10 UTC",
+ "t": 1795544091,
+ "hora_utc": "2026-11-24 18:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   -1.19,
   -0.51,
   1.16,
-  0.09
+  0.03
  ],
  "contexto": {
-  "t": 1795543858,
+  "t": 1795544092,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795543642,
+    "hora_utc": "24/11 18:07",
+    "titulo": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795542608,
@@ -260,12 +266,6 @@
     "t": 1795527826,
     "hora_utc": "24/11 13:43",
     "titulo": "Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795525904,
-    "hora_utc": "24/11 13:11",
-    "titulo": "Grayscale calls Bitcoin ‘oversold’ at $62K but warns of AI risks"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 3.0,
    "principais_anual_pct": {
-    "BTC": 4.2,
-    "ETH": 2.0,
-    "SOL": -2.2
+    "BTC": 3.1,
+    "ETH": 2.7,
+    "SOL": -0.9
    },
    "leitura": "neutro"
   },
