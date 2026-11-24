@@ -1,20 +1,20 @@
 {
- "t": 1795519967,
- "hora_utc": "2026-11-24 11:32 UTC",
+ "t": 1795520216,
+ "hora_utc": "2026-11-24 11:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 138,
-  "subindo_pct": 11.6,
-  "mediana_pct": -0.51
+  "moedas": 139,
+  "subindo_pct": 11.5,
+  "mediana_pct": -0.5
  },
  "mercado_4h": {
-  "moedas": 138,
+  "moedas": 139,
   "subindo_pct": 6.5,
-  "mediana_pct": -2.22
+  "mediana_pct": -2.21
  },
  "mercado_24h": {
-  "moedas": 138,
-  "subindo_pct": 27.5,
+  "moedas": 139,
+  "subindo_pct": 27.3,
   "mediana_pct": -1.48
  },
  "btc": {
@@ -175,8 +175,14 @@
   0.08
  ],
  "contexto": {
-  "t": 1795519968,
+  "t": 1795520217,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795520113,
+    "hora_utc": "24/11 11:35",
+    "titulo": "Trump Says He 'Made the Deal' to Reinstate Jensen Huang, Sparking Bipartisan Backlash"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795519916,
@@ -260,12 +266,6 @@
     "t": 1795477414,
     "hora_utc": "23/11 23:43",
     "titulo": "CFTC staff say exchanges can count Bitcoin toward operating reserves"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795475162,
-    "hora_utc": "23/11 23:06",
-    "titulo": "China's Z.ai Says Its New AI Model Can Think Like One Four Times Its Size"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.1,
+   "media_top20_anual_pct": 0.4,
    "principais_anual_pct": {
-    "BTC": -7.7,
-    "ETH": -10.6,
-    "SOL": -19.3
+    "BTC": -7.5,
+    "ETH": -10.5,
+    "SOL": -19.5
    },
    "leitura": "neutro"
   },
@@ -430,8 +430,8 @@
  "v4": {
   "vela": "11:00 UTC",
   "apostas": 86,
-  "compras": 35,
-  "vendas": 51,
+  "compras": 34,
+  "vendas": 52,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -488,16 +488,16 @@
     "prob_subir": 0.598
    },
    {
-    "moeda": "BARD",
-    "prob_subir": 0.593
-   },
-   {
     "moeda": "HEI",
     "prob_subir": 0.583
    },
    {
     "moeda": "CYBER",
     "prob_subir": 0.582
+   },
+   {
+    "moeda": "COTI",
+    "prob_subir": 0.569
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -770,19 +770,19 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.1% em 28067 apostas (604 velas, 17/11 11:45–24/11 11:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 54.1% em 28068 apostas (604 velas, 17/11 11:45–24/11 11:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5409,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.7,
+  "z_contra_lab": 0.71,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5048,
-    "n": 24497
+    "acerto": 0.505,
+    "n": 24606
    },
    "segue_maioria_24h": {
-    "acerto": 0.5097,
-    "n": 28034
+    "acerto": 0.5103,
+    "n": 28005
    }
   },
   "referencia_ganha": [],
@@ -792,8 +792,8 @@
     "n": 7981
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.566,
-    "n": 3016
+    "acerto": 0.5661,
+    "n": 3017
    },
    "confianca:<0,05": {
     "acerto": 0.5255,
@@ -808,8 +808,8 @@
     "n": 8104
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5438,
-    "n": 6407
+    "acerto": 0.5439,
+    "n": 6408
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5608,
@@ -820,8 +820,8 @@
     "n": 7326
    },
    "lado:compra": {
-    "acerto": 0.5297,
-    "n": 12318
+    "acerto": 0.5298,
+    "n": 12319
    },
    "lado:venda": {
     "acerto": 0.5496,
