@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 16:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 16:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 11.3% das moedas subindo em 24 h, 9.7% em 4 h · BTC 24 h -5.05%, 4 h -1.16%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.7%/ano · {'BTC': -15.4, 'ETH': 0.9, 'SOL': -19.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': -12.7, 'ETH': 3.1, 'SOL': -18.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NEAR ombro-cabeça-ombro (baixa, CONFIRMOU) · SOL ombro-cabeça-ombro (baixa, CONFIRMOU) · ARB fundo duplo (alta, formado) · ARB ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · INIT OCO invertido (alta, formado) · KITE topo duplo (baixa, formado)
 - 📰 24/11 16:00 UTC · Decrypt: Europol Traces $28M in Crypto Behind Europe's Illegal Streaming Industry
