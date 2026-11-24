@@ -1,21 +1,21 @@
 {
- "t": 1795516001,
- "hora_utc": "2026-11-24 10:26 UTC",
+ "t": 1795516250,
+ "hora_utc": "2026-11-24 10:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 140,
-  "subindo_pct": 21.4,
-  "mediana_pct": -0.23
+  "subindo_pct": 19.3,
+  "mediana_pct": -0.32
  },
  "mercado_4h": {
   "moedas": 140,
-  "subindo_pct": 7.9,
-  "mediana_pct": -2.19
+  "subindo_pct": 7.1,
+  "mediana_pct": -2.14
  },
  "mercado_24h": {
   "moedas": 140,
-  "subindo_pct": 37.9,
-  "mediana_pct": -0.82
+  "subindo_pct": 37.1,
+  "mediana_pct": -1.02
  },
  "btc": {
   "1h": 0.21,
@@ -57,9 +57,9 @@
   },
   {
    "moeda": "HMSTR",
-   "4h": -5.95,
-   "24h": -6.84,
-   "vol": 4.65
+   "4h": -6.49,
+   "24h": -7.55,
+   "vol": 4.67
   },
   {
    "moeda": "CHIP",
@@ -81,12 +81,18 @@
   },
   {
    "moeda": "SPK",
-   "4h": -4.34,
-   "24h": 1.7,
-   "vol": 0.95
+   "4h": -4.86,
+   "24h": 2.11,
+   "vol": 0.84
   }
  ],
  "maiores_altas_4h": [
+  {
+   "moeda": "ATM",
+   "4h": 13.09,
+   "24h": 17.7,
+   "vol": 1.7
+  },
   {
    "moeda": "LUNC",
    "4h": 6.36,
@@ -94,22 +100,16 @@
    "vol": 1.9
   },
   {
+   "moeda": "BLUR",
+   "4h": 3.39,
+   "24h": 2.87,
+   "vol": 0.42
+  },
+  {
    "moeda": "DODO",
    "4h": 3.02,
    "24h": 5.18,
    "vol": 1.5
-  },
-  {
-   "moeda": "SOPH",
-   "4h": 2.3,
-   "24h": 0.0,
-   "vol": 1.2
-  },
-  {
-   "moeda": "BLUR",
-   "4h": 2.0,
-   "24h": 0.25,
-   "vol": 0.38
   },
   {
    "moeda": "KAVA",
@@ -124,16 +124,16 @@
    "vol": 0.94
   },
   {
+   "moeda": "SOPH",
+   "4h": 1.14,
+   "24h": 0.0,
+   "vol": 1.24
+  },
+  {
    "moeda": "HUMA",
    "4h": 0.81,
    "24h": 2.94,
    "vol": 1.63
-  },
-  {
-   "moeda": "ATM",
-   "4h": 0.8,
-   "24h": 5.91,
-   "vol": 0.76
   },
   {
    "moeda": "INIT",
@@ -142,10 +142,10 @@
    "vol": 1.1
   },
   {
-   "moeda": "KITE",
-   "4h": 0.42,
-   "24h": 3.1,
-   "vol": 1.59
+   "moeda": "SAPIEN",
+   "4h": 0.31,
+   "24h": 3.08,
+   "vol": 0.29
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.07,
   -0.3,
   -0.44,
-  -0.12
+  -0.28
  ],
  "contexto": {
-  "t": 1795516002,
+  "t": 1795516251,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795516154,
+    "hora_utc": "24/11 10:29",
+    "titulo": "South Korea regulator backs bank-controlled stablecoins after months of dispute"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795514918,
@@ -260,12 +266,6 @@
     "t": 1795466323,
     "hora_utc": "23/11 20:38",
     "titulo": "Kalshi secures temporary win in New York gambling law dispute"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795466162,
-    "hora_utc": "23/11 20:36",
-    "titulo": "North Korea Moves $247 Million of Binance Hack Loot Through Bitcoin Mixers"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 2.1,
    "principais_anual_pct": {
-    "BTC": 0.7,
-    "ETH": -3.9,
-    "SOL": 4.6
+    "BTC": 0.8,
+    "ETH": -3.7,
+    "SOL": 3.9
    },
    "leitura": "neutro"
   },
@@ -443,9 +443,9 @@
  },
  "v4": {
   "vela": "10:15 UTC",
-  "apostas": 98,
-  "compras": 53,
-  "vendas": 45,
+  "apostas": 110,
+  "compras": 68,
+  "vendas": 42,
   "mais_confiantes_venda": [
    {
     "moeda": "ENS",
@@ -490,8 +490,12 @@
     "prob_subir": 0.637
    },
    {
-    "moeda": "SOPH",
-    "prob_subir": 0.631
+    "moeda": "NIL",
+    "prob_subir": 0.629
+   },
+   {
+    "moeda": "BARD",
+    "prob_subir": 0.625
    },
    {
     "moeda": "RWUSD",
@@ -508,10 +512,6 @@
    {
     "moeda": "BANK",
     "prob_subir": 0.598
-   },
-   {
-    "moeda": "TRX",
-    "prob_subir": 0.593
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -784,46 +784,46 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.8% em 28123 apostas (604 velas, 17/11 10:30–24/11 09:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5375,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.8% em 28076 apostas (604 velas, 17/11 10:45–24/11 10:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5379,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.33,
+  "z_contra_lab": 0.37,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5047,
-    "n": 24647
+    "acerto": 0.505,
+    "n": 24606
    },
    "segue_maioria_24h": {
-    "acerto": 0.5087,
-    "n": 28123
+    "acerto": 0.5094,
+    "n": 28076
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5452,
-    "n": 8059
+    "acerto": 0.5458,
+    "n": 8031
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.562,
-    "n": 3034
+    "acerto": 0.5623,
+    "n": 3032
    },
    "confianca:<0,05": {
-    "acerto": 0.5237,
-    "n": 16212
+    "acerto": 0.524,
+    "n": 16196
    },
    "confianca:≥0,12": {
-    "acerto": 0.6455,
-    "n": 818
+    "acerto": 0.6463,
+    "n": 817
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5116,
     "n": 8104
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5292,
-    "n": 6463
+    "acerto": 0.5309,
+    "n": 6416
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5608,
@@ -834,12 +834,12 @@
     "n": 7326
    },
    "lado:compra": {
-    "acerto": 0.5299,
-    "n": 12187
+    "acerto": 0.5311,
+    "n": 12151
    },
    "lado:venda": {
-    "acerto": 0.5434,
-    "n": 15936
+    "acerto": 0.5432,
+    "n": 15925
    }
   }
  },
