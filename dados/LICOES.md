@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 01:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 01:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 7.42** · 72 operações fechadas · 0 abertas
 
 - **Amplitude:** 77.0% das moedas subindo em 24 h, 78.6% em 4 h · BTC 24 h 0.77%, 4 h 0.22%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': 7.1, 'ETH': -0.8, 'SOL': 2.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': 7.3, 'ETH': -0.8, 'SOL': 2.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AERO fundo duplo (alta, formado) · BARD topo duplo (baixa, formado) · BARD fundo duplo (alta, formado) · BREV topo duplo (baixa, formado) · BREV fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
@@ -83,7 +83,7 @@ Carteira **US$ 7.42** · 72 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 2.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 2.1 h.
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
 - 23/11 23:30 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:15 UTC); regime neutro: 66,1% subindo em 24 h, 12,1% em 4 h; repique curto: as 4 abertas com 15m entre +0,27% e +1,32%. v4 co
 - 23/11 23:11 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:00 UTC; retrato 23:06 UTC); queda ampla em 4 h: 9,7% subindo (mediana 4h -2,19%), 11,2% em 1 h, 62,9% em 24 h; BTC 61.252 (1h
