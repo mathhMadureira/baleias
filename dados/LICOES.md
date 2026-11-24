@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 06:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 06:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 68.9% das moedas subindo em 24 h, 72.7% em 4 h · BTC 24 h -2.08%, 4 h -0.83%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 8.6, 'ETH': 4.2, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 8.6, 'ETH': 4.1, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** RE fundo duplo (alta, CONFIRMOU) · 0G fundo duplo (alta, formado) · 0G ombro-cabeça-ombro (baixa, formado) · AERO ombro-cabeça-ombro (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · GALA fundo duplo (alta, formado)
 - 📰 24/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
