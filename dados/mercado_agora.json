@@ -1,6 +1,6 @@
 {
- "t": 1795480804,
- "hora_utc": "2026-11-24 00:40 UTC",
+ "t": 1795481025,
+ "hora_utc": "2026-11-24 00:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   0.16,
   -0.14,
   0.03,
-  -0.08
+  0.16
  ],
  "contexto": {
-  "t": 1795480805,
+  "t": 1795481026,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 0.4,
+   "media_top20_anual_pct": 0.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -17.5,
-    "SOL": -5.7
+    "ETH": -16.5,
+    "SOL": -5.4
    },
    "leitura": "neutro"
   },
@@ -482,26 +482,9 @@
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
  },
  "robo_claude": {
-  "carteira": 7.05,
-  "abertas": [
-   {
-    "moeda": "SENT",
-    "lado": "compra",
-    "entrada": 0.01986,
-    "agora": 0.01991,
-    "resultado_pct": 0.25,
-    "horas_aberta": 0.9,
-    "motivo_de_entrada": "Cacador explosao_1m forca 100 a 0.01991 (1 min +0,35%, z +3,3, volume 4,4x); 5 de 6 tempos acima da MM20 (1m 5m 15m 1h 1d); 15m +0,45%, 1h +0,30%, 1d +1,27%; ul"
-   }
-  ],
+  "carteira": 6.95,
+  "abertas": [],
   "ultimas_fechadas": [
-   {
-    "moeda": "BEAMX",
-    "lado": "venda",
-    "resultado_usd": -0.229,
-    "motivo_saida": "stop de segurança −0.8%",
-    "motivo_de_entrada": "Entrada: 2/6 tempos abaixo da MM20 (15m, 4h) e 4 acima; 1h -0,17%, 4h -1,28%, 24h +4,69%; sem padrão gráfico na varredur"
-   },
    {
     "moeda": "ETC",
     "lado": "venda",
@@ -599,6 +582,13 @@
     "resultado_usd": 0.237,
     "motivo_saida": "fora da lista de posições do Claude",
     "motivo_de_entrada": "Mantem: 4/6 tempos abaixo da MM20 (15m,1h,4h,1d); 1h -0,26%, 4h -2,47%, 24h -3,94%; carteiras H63 vendidas em BTC/ETH/SO"
+   },
+   {
+    "moeda": "SENT",
+    "lado": "compra",
+    "resultado_usd": 0.163,
+    "motivo_saida": "stop móvel (pico +0.86%, guardou +0.60%)",
+    "motivo_de_entrada": "Cacador explosao_1m forca 100 a 0.01991 (1 min +0,35%, z +3,3, volume 4,4x); 5 de 6 tempos acima da MM20 (1m 5m 15m 1h 1"
    }
   ],
   "licoes_anteriores": [
@@ -643,15 +633,10 @@
    "avatar": "⚓",
    "motor": "agente OpenBot · v4 no universo inteiro",
    "missao": "Chefe da mesa: a cada 30 min escolhe no universo inteiro as apostas do v4 com confiança ≥ 0,08 (H59), responde ao dono e fala com a equipe.",
-   "carteira": 7.05,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "SENT",
-     "compra"
-    ]
-   ],
-   "n_fechadas": 70,
+   "carteira": 6.95,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 71,
    "ordem": null
   },
   {
@@ -677,7 +662,7 @@
    "avatar": "🎯",
    "motor": "agente OpenBot · método do Caçador",
    "missao": "Opera o método do campeão Caçador: as 2 compras e as 2 vendas mais confiantes do v4, sempre posicionado, segurando pelo stop móvel.",
-   "carteira": 8.66,
+   "carteira": 8.62,
    "n_abertas": 2,
    "abertas": [
     [
@@ -710,7 +695,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 7.56,
+   "carteira": 7.52,
    "n_abertas": 2,
    "abertas": [
     [
@@ -730,13 +715,13 @@
   "campeao": null,
   "placar": {
    "claude": {
-    "ops": 70,
-    "acerto": 0.529,
-    "soma": -3.21,
-    "ganho_medio": 0.157,
+    "ops": 71,
+    "acerto": 0.535,
+    "soma": -3.047,
+    "ganho_medio": 0.158,
     "perda_media": -0.274,
-    "fator_lucro": 0.64,
-    "carteira": 7.05
+    "fator_lucro": 0.66,
+    "carteira": 6.95
    },
    "openbot_testnet": {
     "ops": 53,
@@ -754,7 +739,7 @@
     "ganho_medio": 0.197,
     "perda_media": -0.199,
     "fator_lucro": 0.69,
-    "carteira": 8.66
+    "carteira": 8.62
    },
    "laboratorio": {
     "ops": 24,
@@ -772,7 +757,7 @@
     "ganho_medio": 0.118,
     "perda_media": -0.192,
     "fator_lucro": 0.61,
-    "carteira": 7.56
+    "carteira": 7.52
    }
   },
   "vereditos": []
