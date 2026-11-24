@@ -1,6 +1,6 @@
 {
- "t": 1795553310,
- "hora_utc": "2026-11-24 20:48 UTC",
+ "t": 1795553544,
+ "hora_utc": "2026-11-24 20:52 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,10 +172,10 @@
   1.16,
   -0.39,
   -0.33,
-  0.05
+  0.3
  ],
  "contexto": {
-  "t": 1795553311,
+  "t": 1795553545,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.9,
+   "media_top20_anual_pct": 3.2,
    "principais_anual_pct": {
-    "BTC": -17.0,
-    "ETH": 6.0,
-    "SOL": -7.4
+    "BTC": -16.6,
+    "ETH": 6.7,
+    "SOL": -6.8
    },
    "leitura": "neutro"
   },
@@ -662,7 +662,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.36,
+   "carteira": 9.24,
    "n_abertas": 1,
    "abertas": [
     [
@@ -679,7 +679,7 @@
    "avatar": "🛡",
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
-   "carteira": 6.96,
+   "carteira": 6.95,
    "n_abertas": 1,
    "abertas": [
     [
@@ -728,7 +728,7 @@
     "ganho_medio": 0.344,
     "perda_media": -0.234,
     "fator_lucro": 0.83,
-    "carteira": 9.36
+    "carteira": 9.24
    },
    "guardiao": {
     "ops": 73,
@@ -737,7 +737,7 @@
     "ganho_medio": 0.117,
     "perda_media": -0.197,
     "fator_lucro": 0.58,
-    "carteira": 6.96
+    "carteira": 6.95
    }
   },
   "vereditos": []
