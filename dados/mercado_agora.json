@@ -1,6 +1,6 @@
 {
- "t": 1795545272,
- "hora_utc": "2026-11-24 18:34 UTC",
+ "t": 1795545507,
+ "hora_utc": "2026-11-24 18:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   -1.19,
   -0.51,
   1.16,
-  -0.09
+  0.07
  ],
  "contexto": {
-  "t": 1795545273,
+  "t": 1795545508,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795545363,
+    "hora_utc": "24/11 18:36",
+    "titulo": "South Korea Moves to Lift Its ICO Ban After Nearly a Decade"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795544162,
@@ -260,12 +266,6 @@
     "t": 1795528676,
     "hora_utc": "24/11 13:57",
     "titulo": "Swiss central bank, UBS and SIX study ledger for tokenized settlement"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795527963,
-    "hora_utc": "24/11 13:46",
-    "titulo": "CertiK Trains Interpol Investigators to Trace and Freeze Stolen Crypto"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.4,
+   "media_top20_anual_pct": 2.7,
    "principais_anual_pct": {
     "BTC": -0.8,
-    "ETH": 4.7,
-    "SOL": -1.1
+    "ETH": 5.0,
+    "SOL": -0.7
    },
    "leitura": "neutro"
   },
