@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.5% | 283 | 50.7%–62.2% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.8% | 2506 | 50.8%–54.7% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.7% | 2507 | 50.8%–54.7% | rede neural 16→12→1, aprende a cada vela |
 | williams_wr_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | reversao_alta | promissor | 64.1% | 39 | 48.4%–77.3% | física: alta anormal de 1 h → devolve |
@@ -18,7 +18,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | demark_td9_alta | reprovado | 50.0% | 74 | 38.9%–61.1% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | tres_corvos | reprovado | 49.7% | 445 | 45.0%–54.3% | H6: três corvos → sobe (efeito pequeno) |
 | reversao_queda | reprovado | 49.3% | 73 | 38.2%–60.5% | H14: queda anormal de 1 h → sobe |
-| vortice_invertido | reprovado | 49.1% | 491 | 44.7%–53.5% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| vortice_invertido | reprovado | 49.2% | 492 | 44.8%–53.6% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | williams_wr_alta | reprovado | 48.9% | 45 | 35.0%–63.0% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | williams_volb_alta | reprovado | 46.0% | 150 | 38.2%–54.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | velez_180_baixa | reprovado | 45.8% | 59 | 33.7%–58.3% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |

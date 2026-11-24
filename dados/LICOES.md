@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 04:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 04:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.62** · 71 operações fechadas · 2 abertas
+Carteira **US$ 6.66** · 71 operações fechadas · 2 abertas
 
 - **Total:** 38/71 com lucro (54%), resultado -3.05, média -0.043 por operação.
 - **Últimas 24 h:** 4/10 com lucro, -1.43.
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 53.1% das moedas subindo em 24 h, 31.2% em 4 h · BTC 24 h -1.68%, 4 h -1.48%.
+- **Amplitude:** 57.8% das moedas subindo em 24 h, 28.9% em 4 h · BTC 24 h -1.55%, 4 h -1.52%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.0%/ano · {'BTC': -7.0, 'ETH': -4.6, 'SOL': 1.1} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AERO bandeira de baixa (baixa, CONFIRMOU) · BMT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · INIT bandeira de baixa (baixa, CONFIRMOU) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BREV fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.9%/ano · {'BTC': -1.2, 'ETH': -8.3, 'SOL': 8.1} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BREV fundo duplo (alta, CONFIRMOU) · GTC topo duplo (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · GTC fundo duplo (alta, formado) · HUMA topo duplo (baixa, formado) · HUMA fundo duplo (alta, formado)
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
 - 📰 24/11 00:36 UTC · Cointelegraph: Ethereum Foundation doubles protocol security team ahead of overhaul
 - 📰 24/11 00:25 UTC · CoinDesk: U.S. CFTC sets policies on event contract data, using crypto to check financial boxes
@@ -117,7 +117,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 46516 apostas conferidas ao vivo, acerto 54.4%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 46552 apostas conferidas ao vivo, acerto 54.4%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
