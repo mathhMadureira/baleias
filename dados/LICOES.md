@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 19:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 19:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,19 +71,19 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 22.4% das moedas subindo em 24 h, 72.0% em 4 h · BTC 24 h -2.05%, 4 h 0.14%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -10.9, 'ETH': 6.1, 'SOL': -3.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.9%/ano · {'BTC': -11.4, 'ETH': 6.3, 'SOL': -3.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** 2Z topo duplo (baixa, formado) · ACE ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · GRAM fundo duplo (alta, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · TRX triângulo descendente (baixa, formado) · USUAL fundo duplo (alta, formado)
+- 📰 24/11 19:44 UTC · Cointelegraph: Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares
 - 📰 24/11 19:35 UTC · Decrypt: Bitcoin Losses Are the Worst Since FTX. Is the Bottom Near?
-- 📰 24/11 19:04 UTC · Cointelegraph: Coldcard reveals how security reviews missed Bitcoin wallet flaw for over 5 years
+- 📰 24/11 19:04 UTC · Cointelegraph: Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years
 - 📰 24/11 18:55 UTC · Decrypt: What the CFTC’s New Crypto Reserves Guidance Actually Allows—And What It Doesn’t
 - 📰 24/11 18:36 UTC · Decrypt: South Korea Moves to Lift Its ICO Ban After Nearly a Decade
 - 📰 24/11 18:31 UTC · Cointelegraph: CFTC sets new prediction market rules as more firms seek US entry
-- 📰 24/11 18:16 UTC · Decrypt: Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 16.5 h.
+- ⚠️ **Rotina parada:** sem decisão há 16.6 h.
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
 - 23/11 23:30 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:15 UTC); regime neutro: 66,1% subindo em 24 h, 12,1% em 4 h; repique curto: as 4 abertas com 15m entre +0,27% e +1,32%. v4 co

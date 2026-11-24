@@ -1,6 +1,6 @@
 {
- "t": 1795549773,
- "hora_utc": "2026-11-24 19:49 UTC",
+ "t": 1795550010,
+ "hora_utc": "2026-11-24 19:53 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.51,
   1.16,
   -0.39,
-  -0.14
+  -0.15
  ],
  "contexto": {
-  "t": 1795549774,
+  "t": 1795550011,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795549463,
+    "hora_utc": "24/11 19:44",
+    "titulo": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795548932,
@@ -187,7 +193,7 @@
     "fonte": "Cointelegraph",
     "t": 1795547066,
     "hora_utc": "24/11 19:04",
-    "titulo": "Coldcard reveals how security reviews missed Bitcoin wallet flaw for over 5 years"
+    "titulo": "Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years"
    },
    {
     "fonte": "Decrypt",
@@ -260,12 +266,6 @@
     "t": 1795536025,
     "hora_utc": "24/11 16:00",
     "titulo": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation is another story"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795532792,
-    "hora_utc": "24/11 15:06",
-    "titulo": "Anchorage Digital to unveil new asset-management subsidiary"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.7,
+   "media_top20_anual_pct": 3.9,
    "principais_anual_pct": {
-    "BTC": -10.9,
-    "ETH": 6.1,
-    "SOL": -3.0
+    "BTC": -11.4,
+    "ETH": 6.3,
+    "SOL": -3.6
    },
    "leitura": "neutro"
   },
