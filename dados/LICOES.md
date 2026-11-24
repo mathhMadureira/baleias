@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 21:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 21:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 20.0% das moedas subindo em 24 h, 21.6% em 4 h · BTC 24 h -2.29%, 4 h -0.32%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.1%/ano · {'BTC': -8.9, 'ETH': 9.5, 'SOL': -3.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.2%/ano · {'BTC': -8.8, 'ETH': 8.9, 'SOL': -3.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SYRUP bandeira de baixa (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · ICP topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · PLUME ombro-cabeça-ombro (baixa, formado)
+- 📰 24/11 21:50 UTC · Cointelegraph: Europol follows $28.5M crypto trail in streaming piracy crackdown
 - 📰 24/11 21:46 UTC · Decrypt: Anthropic’s Claude Ship Lets AI Write, Review and Approve Its Own Code
 - 📰 24/11 21:16 UTC · Decrypt: Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits
 - 📰 24/11 20:48 UTC · Cointelegraph: Utah moves to dismiss criminal charges against Kalshi after trading halt
 - 📰 24/11 20:36 UTC · Decrypt: Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing
 - 📰 24/11 19:44 UTC · Cointelegraph: Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares
-- 📰 24/11 19:35 UTC · Decrypt: Bitcoin Losses Are the Worst Since FTX. Is the Bottom Near?
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

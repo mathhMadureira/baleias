@@ -1,6 +1,6 @@
 {
- "t": 1795557139,
- "hora_utc": "2026-11-24 21:52 UTC",
+ "t": 1795557374,
+ "hora_utc": "2026-11-24 21:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.39,
   -0.33,
   0.17,
-  0.15
+  0.16
  ],
  "contexto": {
-  "t": 1795557140,
+  "t": 1795557375,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795557025,
+    "hora_utc": "24/11 21:50",
+    "titulo": "Europol follows $28.5M crypto trail in streaming piracy crackdown"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795556762,
@@ -260,12 +266,6 @@
     "t": 1795542322,
     "hora_utc": "24/11 17:45",
     "titulo": "What Is Pons? The Robinhood Chain Meme Coin Launchpad Explained"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795542183,
-    "hora_utc": "24/11 17:43",
-    "titulo": "Ansem Meme Coin Crashes After $2.57 Million Wallet Drain, Bullpen Confirms Security Breach"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.1,
+   "media_top20_anual_pct": 3.2,
    "principais_anual_pct": {
-    "BTC": -8.9,
-    "ETH": 9.5,
-    "SOL": -3.8
+    "BTC": -8.8,
+    "ETH": 8.9,
+    "SOL": -3.5
    },
    "leitura": "neutro"
   },
