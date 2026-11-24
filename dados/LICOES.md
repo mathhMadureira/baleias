@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 17:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 17:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 12.1% das moedas subindo em 24 h, 13.7% em 4 h · BTC 24 h -4.55%, 4 h -1.77%.
+- **Amplitude:** 12.9% das moedas subindo em 24 h, 34.7% em 4 h · BTC 24 h -4.55%, 4 h -1.77%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': -3.4, 'ETH': 8.7, 'SOL': -5.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': -4.5, 'ETH': 8.1, 'SOL': -5.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 2.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** STX ombro-cabeça-ombro (baixa, CONFIRMOU) · AR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CELO ombro-cabeça-ombro (baixa, formado) · INIT OCO invertido (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado) · PSG fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CELO ombro-cabeça-ombro (baixa, formado) · INIT OCO invertido (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado) · PSG fundo duplo (alta, formado) · RAY fundo duplo (alta, formado)
 - 📰 24/11 16:33 UTC · Cointelegraph: How South Korea’s proposed 20% cap could change who runs Upbit
 - 📰 24/11 16:00 UTC · Decrypt: Europol Traces $28M in Crypto Behind Europe's Illegal Streaming Industry
 - 📰 24/11 16:00 UTC · CoinDesk: 'AI trade never died': Traders see room for market recovery, but bitcoin's participation is another story
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 49300 apostas conferidas ao vivo, acerto 54.4%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 49314 apostas conferidas ao vivo, acerto 54.4%; prevê 64 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
