@@ -1,6 +1,6 @@
 {
- "t": 1795539381,
- "hora_utc": "2026-11-24 16:56 UTC",
+ "t": 1795539615,
+ "hora_utc": "2026-11-24 17:00 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 123,
@@ -149,7 +149,6 @@
   }
  ],
  "btc_1h_ultimas_24": [
-  -0.93,
   -0.48,
   -0.19,
   -0.03,
@@ -172,10 +171,11 @@
   -0.78,
   0.71,
   -1.19,
-  -0.3
+  -0.51,
+  -0.02
  ],
  "contexto": {
-  "t": 1795539382,
+  "t": 1795539616,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -265,7 +265,7 @@
     "fonte": "CoinDesk",
     "t": 1795524460,
     "hora_utc": "24/11 12:47",
-    "titulo": "Live updates: Bitcoin pulls back to $60,000, stock rally fades, as tariffs re-enter the picture"
+    "titulo": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.7,
+   "media_top20_anual_pct": -1.0,
    "principais_anual_pct": {
-    "BTC": -7.8,
-    "ETH": 2.1,
-    "SOL": -16.2
+    "BTC": -3.1,
+    "ETH": 1.6,
+    "SOL": -2.9
    },
    "leitura": "neutro"
   },
