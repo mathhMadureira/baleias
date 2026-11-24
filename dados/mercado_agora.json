@@ -1,21 +1,21 @@
 {
- "t": 1795512745,
- "hora_utc": "2026-11-24 09:32 UTC",
+ "t": 1795513031,
+ "hora_utc": "2026-11-24 09:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 139,
-  "subindo_pct": 18.0,
+  "moedas": 140,
+  "subindo_pct": 18.6,
   "mediana_pct": -0.4
  },
  "mercado_4h": {
-  "moedas": 139,
-  "subindo_pct": 14.4,
-  "mediana_pct": -1.72
+  "moedas": 140,
+  "subindo_pct": 15.0,
+  "mediana_pct": -1.71
  },
  "mercado_24h": {
-  "moedas": 139,
-  "subindo_pct": 38.1,
-  "mediana_pct": -0.79
+  "moedas": 140,
+  "subindo_pct": 38.6,
+  "mediana_pct": -0.77
  },
  "btc": {
   "1h": -0.24,
@@ -106,6 +106,12 @@
    "vol": 1.08
   },
   {
+   "moeda": "KERNEL",
+   "4h": 3.74,
+   "24h": 4.23,
+   "vol": 1.89
+  },
+  {
    "moeda": "HUMA",
    "4h": 3.58,
    "24h": 6.4,
@@ -140,12 +146,6 @@
    "4h": 1.84,
    "24h": 2.13,
    "vol": 1.47
-  },
-  {
-   "moeda": "KAVA",
-   "4h": 1.5,
-   "24h": 0.45,
-   "vol": 0.81
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.25,
   -0.07,
   -0.3,
-  -0.35
+  -0.38
  ],
  "contexto": {
-  "t": 1795512747,
+  "t": 1795513032,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.1,
+   "media_top20_anual_pct": 1.8,
    "principais_anual_pct": {
-    "BTC": -4.9,
-    "ETH": -9.8,
+    "BTC": -5.3,
+    "ETH": -10.5,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -296,13 +296,6 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
-   {
-    "moeda": "AIGENSYN",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": true,
-    "nivel": 0.0167
-   },
    {
     "moeda": "RENDER",
     "padrao": "ombro-cabeça-ombro",
@@ -358,6 +351,13 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.0083
+   },
+   {
+    "moeda": "KERNEL",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.0434
    },
    {
     "moeda": "KITE",
@@ -436,8 +436,8 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 99,
-  "compras": 40,
+  "apostas": 98,
+  "compras": 39,
   "vendas": 59,
   "mais_confiantes_venda": [
    {
@@ -785,11 +785,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5048,
-    "n": 24429
+    "n": 24521
    },
    "segue_maioria_24h": {
-    "acerto": 0.5081,
-    "n": 27889
+    "acerto": 0.5084,
+    "n": 28003
    }
   },
   "referencia_ganha": [],
