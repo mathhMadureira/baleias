@@ -11,7 +11,7 @@
   --up:#1fc7a0; --down:#ed4b62; --gold:#f0b90b; --blue:#4c9bff; --violet:#a78bfa; --acento:#50e3c2;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
-* { box-sizing:border-box; }
+* { box-sizing:border-box; scrollbar-color:#26404a transparent; scrollbar-width:thin; }
 html, body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 a { color:inherit; }
 .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
@@ -35,10 +35,10 @@ main { padding:14px 18px 40px; max-width:1760px; margin:0 auto; }
 .card h3 { margin:0 0 8px; font-size:12px; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; display:flex; align-items:center; gap:10px; }
 .card h3 .dir { margin-left:auto; text-transform:none; letter-spacing:0; font-weight:500; }
 .grade { display:grid; gap:12px; margin-bottom:12px; }
-.kpis { display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:10px; margin-bottom:12px; }
+.kpis { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:10px; margin-bottom:12px; }
 .kpi { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:9px 12px; min-width:0; }
 .kpi .rot { font-size:10.5px; color:var(--mut); text-transform:uppercase; letter-spacing:.06em; }
-.kpi .val { font:700 21px var(--mono); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.kpi .val { font:700 24px var(--mono); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .kpi .sub { font:11.5px var(--mono); color:var(--mut); margin-top:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 table { width:100%; border-collapse:collapse; font-size:13px; }
 th { text-align:right; color:var(--mut); font-weight:600; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; padding:5px 7px; border-bottom:1px solid var(--line); white-space:nowrap; }
@@ -70,8 +70,58 @@ select, input[type=text], input:not([type]) { background:var(--card2); color:var
 .hip { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--dim); border-radius:10px; padding:12px 14px; }
 .hip.aprovada { border-left-color:var(--up); } .hip.reprovada { border-left-color:var(--down); } .hip.andamento { border-left-color:var(--blue); } .hip.parcial { border-left-color:var(--gold); }
 .hip .id { font:700 12px var(--mono); } .hip .p { color:var(--mut); font-size:13px; margin:4px 0 6px; } .hip .r { font-size:13px; font-weight:600; } .hip .n { font:12px var(--mono); color:var(--mut); margin-top:2px; }
+.faixa { font-size:12.5px; color:var(--mut); margin:-2px 0 14px; }
+.tit { font-size:13px; text-transform:uppercase; letter-spacing:.07em; color:var(--mut); margin:4px 0 8px; font-weight:600; }
+.nota { font-size:11.5px; margin-top:6px; }
+.agentes { display:grid; grid-template-columns:repeat(auto-fit,minmax(225px,1fr)); gap:12px; margin-bottom:14px; }
+.ag { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; min-width:0; display:flex; flex-direction:column; gap:6px; }
+.ag-top { display:flex; align-items:center; gap:8px; } .ag-top strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
+.ag-top .chip { margin-left:auto; }
+.ag-val { display:flex; align-items:baseline; gap:10px; } .ag-val .big { font:700 22px var(--mono); } .ag-val .var { font:600 13px var(--mono); }
+.ag-meta { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; font:12px var(--mono); }
+.ag-meta div span { display:block; font:10px system-ui; color:var(--mut); text-transform:uppercase; letter-spacing:.05em; }
+.ag-pos { font:12px var(--mono); border-top:1px solid var(--line); padding-top:6px; }
+.ag-ult { font-size:11.5px; color:var(--mut); }
+.duas { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+details > summary { cursor:pointer; list-style:none; } details > summary::-webkit-details-marker { display:none; }
+summary h3::before { content:"▸ "; } details[open] summary h3::before { content:"▾ "; }
+.pregao { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:14px; margin-bottom:18px; align-items:start; }
+.mesas { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; }
+.mesa { position:relative; background:linear-gradient(160deg,#112129 0%,#0c171c 100%); border:1px solid var(--line); border-radius:14px; padding:14px; display:flex; flex-direction:column; gap:9px; min-width:0; transition:border-color .4s, box-shadow .4s; }
+.mesa.on { border-color:#1fc7a066; box-shadow:0 0 0 1px #1fc7a022, 0 8px 30px -12px #1fc7a055; }
+.m-top { display:flex; align-items:center; gap:11px; }
+.av { position:relative; width:42px; height:42px; border-radius:50%; display:grid; place-items:center; font-size:21px; background:#16303a; flex:none; }
+.mesa.on .av::after { content:""; position:absolute; inset:-4px; border-radius:50%; border:2px solid var(--up); animation:pulsar 1.6s ease-out infinite; }
+@keyframes pulsar { 0% { transform:scale(.92); opacity:1 } 100% { transform:scale(1.25); opacity:0 } }
+.m-nome { font-weight:700; font-size:15px; } .m-papel { font-size:11.5px; color:var(--mut); }
+.m-status { margin-left:auto; text-align:right; font:600 11.5px system-ui; white-space:nowrap; }
+.m-status.on { color:var(--up); } .m-status.off { color:var(--mut); }
+.etapas { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; }
+.et { font:10.5px system-ui; color:var(--dim); text-align:center; padding-top:7px; position:relative; }
+.et::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; border-radius:3px; background:#1b2b33; }
+.et.feita { color:var(--mut); } .et.feita::before { background:#1fc7a055; }
+.et.agora { color:var(--up); font-weight:700; } .et.agora::before { background:var(--up); box-shadow:0 0 8px var(--up); animation:brilho 1.2s ease-in-out infinite alternate; }
+@keyframes brilho { from { opacity:.55 } to { opacity:1 } }
+.bolha { background:#0a1418; border:1px solid var(--line); border-radius:10px; padding:8px 10px; font-size:12.5px; line-height:1.45; color:#c9d8db; max-height:92px; overflow:hidden; position:relative; }
+.bolha::after { content:""; position:absolute; left:0; right:0; bottom:0; height:22px; background:linear-gradient(transparent,#0a1418); }
+.bolha .q { color:var(--mut); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; display:block; margin-bottom:2px; }
+.m-dec { display:flex; flex-wrap:wrap; gap:5px; }
+.tag { font:600 11.5px var(--mono); padding:3px 8px; border-radius:20px; border:1px solid var(--line2); background:#0f1d23; }
+.tag.v { color:var(--down); border-color:#ed4b6255; } .tag.c { color:var(--up); border-color:#1fc7a055; }
+.m-conta { border-top:1px solid var(--line); padding-top:8px; font:12px var(--mono); display:flex; flex-direction:column; gap:3px; }
+.m-conta .cab { display:flex; justify-content:space-between; font-family:system-ui; font-size:11.5px; color:var(--mut); }
+.m-conta .cab b { font:700 13px var(--mono); }
+.m-ordem { font-size:11.5px; color:var(--mut); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.feed-box { position:sticky; top:64px; }
+.feed { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:6px; max-height:calc(100vh - 120px); overflow-y:auto; display:flex; flex-direction:column; }
+.fi { display:flex; gap:9px; padding:8px 8px; border-bottom:1px solid #ffffff08; font-size:12.5px; line-height:1.4; }
+.fi .ic { flex:none; width:26px; height:26px; border-radius:50%; background:#16303a; display:grid; place-items:center; font-size:14px; }
+.fi .q { font-size:10.5px; color:var(--mut); } .fi.novo { animation:chegou 2.5s ease-out; }
+@keyframes chegou { from { background:#1fc7a033 } to { background:transparent } }
+.fi .tx { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; } .fi.ordem .tx { color:var(--txt); } .fi.aviso .tx { color:var(--gold); } .fi.decisão .tx { color:var(--acento); }
+@media (max-width: 1100px) { .pregao { grid-template-columns:1fr; } .feed-box { position:static; } .feed { max-height:420px; } }
 iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; background:var(--bg); }
-@media (max-width: 1300px) { .kpis { grid-template-columns:repeat(4, minmax(0,1fr)); } .duas { grid-template-columns:1fr !important; } .curvas { grid-template-columns:repeat(3, minmax(0,1fr)); } }
+@media (max-width: 1000px) { .duas { grid-template-columns:1fr !important; } }
 @media (max-width: 700px) { .kpis { grid-template-columns:repeat(2, minmax(0,1fr)); } .curvas { grid-template-columns:repeat(2, minmax(0,1fr)); } header { flex-wrap:wrap; } }
 </style>
 </head>
@@ -86,79 +136,60 @@ iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; b
   <span class="espaco"></span>
   <span class="online" id="online">● Online</span>
   <span class="selo" title="nenhum robô opera dinheiro real; o testnet usa a conta de teste da Binance">SIMULADO</span>
-  <span class="pontos" id="pontos" title="fontes de dados da máquina"></span>
+  <span class="pontos" id="pontos" style="display:none"></span>
   <span class="relogio" id="relogio"></span>
 </header>
 <div class="fita" id="fita"><span>carregando preços…</span></div>
 
 <main>
 <section class="aba ativa" id="aba-mesa">
-  <!-- 6. Banco + 5. estados (resumo) -->
   <div class="kpis" id="kpis"><div class="kpi"><div class="rot">carregando</div><div class="val">…</div></div></div>
-  <div id="faixa" class="num mut" style="font-size:12.5px;margin:-4px 0 10px"></div>
+  <div id="faixa" class="faixa"></div>
 
-  <div class="card" style="margin-bottom:12px">
-    <h3>⚡ Atividade observada dos agentes<span class="dir mut" id="atividade-t"></span></h3>
-    <div class="atividade" id="atividade"><div class="vazio">carregando atividade…</div></div>
-    <div class="mut" style="font-size:11px;margin-top:8px">Mostra o estado gravado na nuvem, posições e a última entrada ou saída registrada. A varredura interna dos agentes não é transmitida ao painel.</div>
+  <div class="pregao">
+    <div>
+      <h2 class="tit">Mesa ao vivo <span class="mut" id="vv-t"></span></h2>
+      <div class="mesas" id="mesas"><div class="vazio">carregando a mesa…</div></div>
+    </div>
+    <aside class="feed-box">
+      <h2 class="tit">Acontecendo agora</h2>
+      <div class="feed" id="feed"><div class="vazio">carregando…</div></div>
+    </aside>
   </div>
 
-  <!-- 1. placar + 5. estado de cada robô -->
-  <div class="card" style="margin-bottom:12px">
-    <h3>🏆 Placar · os agentes do OpenBot que operam a mesa · carteira de US$ 10 cada<span class="dir mut num" id="pl-t"></span></h3>
-    <div class="rolagem"><table id="placar-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
-    <div id="pl-notas" class="mut" style="font-size:11.5px;margin-top:6px"></div>
-  </div>
+  <h2 class="tit">Carteiras simuladas <span class="mut" id="ag-t"></span></h2>
+  <div class="agentes" id="agentes"><div class="vazio">carregando…</div></div>
 
-  <div class="grade duas" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)">
-    <!-- 2. curva da carteira de cada robô -->
+  <div class="grade duas">
     <div class="card">
-      <h3>📈 Carteira de cada agente<span class="dir mut" style="font-size:11px">linha tracejada = US$ 10 · vermelha = piso de US$ 5 · cada ponto é uma operação fechada; o último é a carteira agora</span></h3>
-      <div class="curvas" id="curvas"></div>
+      <h3>Posições abertas<span class="dir mut num" id="ps-t"></span></h3>
+      <div class="rolagem" style="max-height:360px"><table id="pos-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
+      <div class="mut nota">Clique numa linha para ver o gráfico.</div>
     </div>
-    <!-- 3. posições abertas -->
     <div class="card">
-      <h3>📂 Posições abertas agora<span class="dir mut num" id="ps-t"></span></h3>
-      <div class="rolagem" style="max-height:470px"><table id="pos-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
-      <div class="mut" style="font-size:11.5px;margin-top:6px">Resultado aberto = tamanho da posição × variação do preço desde a entrada, sem custo, com o preço de agora (Binance à vista, a mesma fonte das rodadas da nuvem; LBank para o Robô LBank). Clique numa linha para ver o gráfico da moeda.</div>
-    </div>
-  </div>
-
-  <div class="grade duas" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)">
-    <!-- 4. linha do tempo -->
-    <div class="card">
-      <h3>🕒 Últimas entradas e saídas da mesa
-        <span class="dir"><select id="lt-robo"><option value="">todos os agentes</option></select>
-        <label class="mut" style="font-size:12px"><input type="checkbox" id="lt-saidas"> só saídas</label></span></h3>
-      <div class="rolagem" style="max-height:430px"><table id="lt-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
-    </div>
-    <!-- 6. banco em detalhe + gráfico da moeda -->
-    <div class="card">
-      <h3>🏦 Banco · conflitos entre robôs<span class="dir mut num" id="bc-t"></span></h3>
-      <div id="banco" style="font-size:13px"></div>
-      <h3 style="margin-top:14px"><span id="vg-titulo">gráfico da moeda</span><span class="dir"><select id="vg-iv"><option value="15m">15 min</option><option value="1h">1 h</option><option value="5m">5 min</option><option value="4h">4 h</option></select></span></h3>
+      <h3><span id="vg-titulo">gráfico</span><span class="dir"><select id="vg-iv"><option value="15m">15 min</option><option value="1h">1 h</option><option value="5m">5 min</option><option value="4h">4 h</option></select></span></h3>
       <div id="vg" style="height:250px"></div>
-      <div id="vg-info" class="mut num" style="font-size:11.5px"></div>
+      <div id="vg-info" class="mut num nota"></div>
     </div>
   </div>
 
-  <div class="grade duas" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)">
-    <div class="card" id="sec-sala">
-      <h3>🐋 Sala de operações · o 🤖 Robô Claude é o chefe, responde você e dá ordens aos robôs<span class="dir mut num" id="sl-t"></span></h3>
-      <div style="display:flex;gap:6px;margin-bottom:6px;font-size:12px" class="mut"><label><input type="checkbox" id="sl-eventos"> mostrar entradas e saídas dos robôs</label></div>
-      <div id="sl-chat" style="max-height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding:6px;background:var(--card2);border-radius:8px"></div>
-      <form id="sl-form" style="display:flex;gap:6px;margin-top:8px">
-        <select id="sl-para"><option value="claude">para 🤖 Robô Claude (chefe)</option><option value="sala">para a sala toda</option></select>
-        <input id="sl-texto" maxlength="1200" placeholder="Escreva para a mesa (ex.: o mercado está caindo, quero todos vendidos)" style="flex:1;min-width:0;padding:7px">
-        <button type="submit" class="selo" style="cursor:pointer">Enviar</button>
-      </form>
-      <div id="sl-aviso" class="mut" style="font-size:12px;margin-top:4px">O chefe lê a sala de hora em hora (minuto 8) e responde aqui. Ordens dele valem até 24 h.</div>
-    </div>
-    <div class="card">
-      <h3>📓 Diário de lições · escrito pela nuvem a partir do estado real<span class="dir mut num" id="lc-t"></span></h3>
-      <pre id="licoes" style="white-space:pre-wrap;font-family:system-ui;font-size:12.5px;line-height:1.45;max-height:400px;overflow:auto;margin:0">carregando…</pre>
-    </div>
+  <div class="card" style="margin-bottom:12px">
+    <h3>Últimas operações
+      <span class="dir"><select id="lt-robo"><option value="">todos</option></select>
+      <label class="mut" style="font-size:12px"><input type="checkbox" id="lt-saidas" checked> só fechadas</label></span></h3>
+    <div class="rolagem" style="max-height:380px"><table id="lt-tab"><tr><td class="vazio">carregando…</td></tr></table></div>
   </div>
+
+  <details class="card" id="sec-sala">
+    <summary><h3 style="display:inline-flex;margin:0">Falar com o chefe da mesa<span class="mut num" id="sl-t" style="margin-left:10px;text-transform:none;letter-spacing:0;font-weight:500"></span></h3></summary>
+    <div id="sl-chat" style="max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding:6px;margin-top:8px;background:var(--card2);border-radius:8px"></div>
+    <form id="sl-form" style="display:flex;gap:6px;margin-top:8px">
+      <input type="hidden" id="sl-para" value="claude"><input type="checkbox" id="sl-eventos" hidden>
+      <input id="sl-texto" maxlength="1200" placeholder="Escreva para o chefe (ex.: quero todos vendidos hoje)" style="flex:1;min-width:0;padding:7px">
+      <button type="submit" class="selo" style="cursor:pointer">Enviar</button>
+    </form>
+    <div id="sl-aviso" class="mut nota">O chefe lê na próxima rodada e responde aqui.</div>
+  </details>
 </section>
 
 <section class="aba" id="aba-mercado"><iframe id="frame-mercado" title="Mercado ao vivo"></iframe></section>
@@ -191,6 +222,7 @@ function ha(t) {
   if (s < 172800) return Math.floor(s / 3600) + " h " + String(Math.round(s % 3600 / 60)).padStart(2, "0");
   return Math.round(s / 86400) + " d";
 }
+const curto = (n) => String(n || "").replace("Baleias (chefe da mesa)", "Chefe · simulado").replace("Baleias (conta de teste)", "Chefe · conta de teste");
 async function j(url) { const r = await fetch(url, {cache: "no-store"}); return r.json(); }
 
 // abas
@@ -214,71 +246,48 @@ let pm = null;
 const ESTADOS = {operando: "▶ operando", guarda: "🔒 guarda do dia", meta: "🎯 meta batida", sem_dinheiro: "⛔ sem dinheiro", pausado: "⏸ pausado"};
 
 function desenharKpis() {
-  const b = pm.banco || {}, t = b.tesouro || {}, x = b.exposicao || {}, ls = pm.linhas;
-  const cont = {}; for (const l of ls) cont[l.estado] = (cont[l.estado] || 0) + 1;
-  const aberto = pm.abertas.reduce((s, p) => s + (p.resultado_usd || 0), 0);
-  const reg = pm.regime || {}, s24 = reg.subindo_24h;
-  const regTxt = s24 == null ? "não sei" : s24 <= 30 ? "📉 baixa: só vendas" : s24 >= 70 ? "📈 alta: só compras" : "↔ os dois lados";
+  const ls = pm.linhas, reg = pm.regime || {}, s24 = reg.subindo_24h;
+  const soma = ls.reduce((a, l) => a + (l.carteira || 0), 0), cap = ls.reduce((a, l) => a + (l.capital || 10), 0);
+  const hoje = ls.reduce((a, l) => a + (l.hoje || 0), 0);
+  const aberto = pm.abertas.reduce((a, p) => a + (p.resultado_usd || 0), 0);
+  const lucro = ls.filter(l => l.carteira >= l.capital).length;
   const k = [
-    ["Soma das carteiras", t.carteiras == null ? "—" : "US$ " + fmt(t.carteiras), t.robos ? `${t.robos} robôs · entrou US$ ${fmt(t.inicial, 0)}` : "banco sem dados", ""],
-    ["Resultado da mesa", sn(t.resultado), `${(t.no_lucro || []).length} de ${t.robos || "?"} no lucro`, cor(t.resultado)],
-    ["Exposição total", x.bruta == null ? "—" : "US$ " + fmt(x.bruta, 0), `líquida US$ ${fmt(x.liquida, 0)} · ${x.moedas ?? "?"} moedas`, ""],
-    ["Conflitos", x.conflitos ? String(x.conflitos.length) : "—", x.conflitos && x.conflitos.length ? "lados opostos na mesma moeda" : "nenhum agente contra outro", x.conflitos && x.conflitos.length ? "down" : "up"],
-    ["Em margem / livre", t.em_margem == null ? "—" : fmt(t.em_margem), `livre US$ ${fmt(t.livre)}`, ""],
-    ["Posições abertas", String(pm.abertas.length), `aberto agora ${sn(aberto, 3)}`, cor(aberto)],
-    ["Estado dos agentes", `${cont.operando || 0} ▶`, `🔒 ${cont.guarda || 0} · 🎯 ${cont.meta || 0} · ⛔ ${cont.sem_dinheiro || 0}` + (cont.pausado ? ` · ⏸ ${cont.pausado}` : ""), ""],
+    ["Carteiras somadas", "US$ " + fmt(soma), `${ls.length} carteiras · começaram com US$ ${fmt(cap, 0)}`, cor(soma - cap)],
+    ["Resultado desde o início", sn(soma - cap), `${lucro} de ${ls.length} no lucro`, cor(soma - cap)],
+    ["Hoje (dia UTC)", sn(hoje), "vira às 21:00 de Brasília", cor(hoje)],
+    ["Posições abertas", String(pm.abertas.length), `resultado aberto ${sn(aberto, 2)}`, cor(aberto)],
   ];
   $("kpis").innerHTML = k.map(([r, v, s, c]) => `<div class="kpi"><div class="rot">${esc(r)}</div><div class="val num ${c}">${esc(v)}</div><div class="sub" title="${esc(s)}">${esc(s)}</div></div>`).join("");
-  $("faixa").innerHTML = `Mercado: <b style="color:var(--txt)">${esc(regTxt)}</b> (${s24 == null ? "?" : fmt(s24, 1) + "%"} das moedas subindo em 24 h${reg.subindo_4h == null ? "" : `, ${fmt(reg.subindo_4h, 1)}% em 4 h`})` +
-    ` · banco gravado pela nuvem às ${b.t ? hm(b.t) : "?"} (há ${ha(b.t)}) · "hoje" = dia UTC, vira às 21:00 de Brasília`;
+  const regTxt = s24 == null ? "sem leitura" : s24 <= 30 ? "📉 em queda" : s24 >= 70 ? "📈 em alta" : "↔ sem direção";
+  $("faixa").innerHTML = `Mercado <b style="color:var(--txt)">${esc(regTxt)}</b>: ${s24 == null ? "?" : fmt(s24, 0) + "%"} das moedas sobem em 24 h` +
+    (reg.subindo_4h == null ? "" : `, ${fmt(reg.subindo_4h, 0)}% em 4 h`) + ` · dados de ${hm(pm.t)}`;
 }
 
-function desenharPlacar() {
-  const cab = `<tr><th class="e">#</th><th class="e">agente</th><th class="e">estado</th><th>carteira</th><th>hoje</th><th>desde o zero</th><th>operações</th><th>acerto</th>
-    <th title="soma dos ganhos ÷ soma das perdas; acima de 1 ganha mais do que perde">fator de lucro</th><th>abertas</th><th title="hora da última gravação do arquivo do robô no ramo estado">gravou há</th></tr>`;
-  const notas = [];
-  const linhas = pm.linhas.map((l, i) => {
-    const extra = [l.ordem ? `📣 ${esc(l.ordem)}` : "", l.alerta ? `<span class="down">⚠ ${esc(l.alerta)}</span>` : ""].filter(Boolean).join(" ");
-    if (l.antes_do_zero) notas.push(`${l.avatar} ${esc(l.nome)}: ${l.antes_do_zero.n} operações datadas antes do zero (soma ${sn(l.antes_do_zero.soma, 3)}) foram gravadas depois dele e estão na carteira`);
-    if (!l.zerado) notas.push(`${l.avatar} ${esc(l.nome)}: não foi zerado em 16/11 (conta desde ${esc(l.inicio)}); "desde o zero" = desde o início dele`);
-    const velho = l.atualizado && Date.now() / 1000 - l.atualizado > 7200 && l.estado !== "sem_dinheiro";
-    const fl = l.fator_lucro == null ? "—" : fmt(l.fator_lucro, 2);
-    return `<tr title="${esc(l.missao)}"><td class="e mut">${i + 1}</td>
-      <td class="e" style="font-family:system-ui"><b>${l.avatar} ${esc(l.nome)}</b><div class="mut" style="font-size:11px">${esc(l.motor)}</div></td>
-      <td class="e" style="font-family:system-ui"><span class="chip ${l.estado}" title="${esc(l.estado_txt)}">${ESTADOS[l.estado] || esc(l.estado)}</span> ${extra}</td>
-      <td><b>US$ ${fmt(l.carteira)}</b></td><td class="${cor(l.hoje)}" title="${esc(l.hoje_fonte)}">${sn(l.hoje)}</td>
-      <td class="${cor(l.desde_zero)}">${sn(l.desde_zero)}${l.zerado ? "" : "*"}</td><td>${l.ops}</td><td>${l.acerto == null ? "—" : fmt(l.acerto * 100, 1) + "%"}</td>
-      <td class="${l.fator_lucro == null ? "" : l.fator_lucro > 1 ? "up" : "down"}">${fl}</td>
-      <td>${l.abertas}${l.abertas ? ` <span class="${cor(l.aberto_vivo)}" style="font-size:11.5px">(${sn(l.aberto_vivo, 3)})</span>` : ""}</td>
-      <td class="${velho ? "gold" : "mut"}">${velho ? "⚠ " : ""}${ha(l.atualizado)}</td></tr>`;
-  }).join("");
-  $("placar-tab").innerHTML = cab + linhas;
-  $("pl-notas").innerHTML = ["Carteira = valor gravado pelo robô na última rodada da nuvem (inclui as abertas no preço daquela rodada). Operações, acerto e fator de lucro = as mesmas contas do torneio (executor/torneio.py).",
-    ...notas].join("<br>");
-  $("pl-t").textContent = "atualizado " + new Date().toLocaleTimeString("pt-BR", {timeZone: FUSO_BR});
-}
-
-function desenharAtividade() {
-  const destino = $("atividade");
-  if (!pm || !pm.linhas) return;
-  const ordenados = [...pm.linhas].sort((a,b) => (b.atualizado || 0) - (a.atualizado || 0));
-  const cards = ordenados.map(l => {
+function desenharAgentes() {
+  const ls = [...pm.linhas].sort((a, b) => (b.carteira - b.capital) - (a.carteira - a.capital));
+  $("agentes").innerHTML = ls.map(l => {
     const pos = pm.abertas.filter(p => p.robo === l.id);
-    const ult = pm.tempo.find(x => x.robo === l.id);
-    const recente = l.atualizado && Date.now()/1000 - l.atualizado < 3600;
-    const alerta = !!l.alerta || l.estado === "sem_dinheiro";
-    let evento = ult ? `${ult.tipo === "saida" ? "Saiu" : "Entrou"} em ${esc(ult.moeda)} · ${esc(ult.lado)}${ult.tipo === "saida" && ult.resultado_usd != null ? ` · ${sn(ult.resultado_usd,3)} US$` : ""} · ${ha(ult.t)}` : "Sem entrada ou saída registrada";
-    const abertas = pos.length ? pos.map(p => `${esc(p.moeda)} ${esc(p.lado)} · ${p.resultado_usd == null ? "sem preço" : `${sn(p.resultado_usd,3)} US$`}`).join("<br>") : "Sem posição aberta";
-    return `<article class="agente-live"><div class="agente-live-top"><i class="pulso ${alerta ? "alerta" : recente ? "ativo" : ""}"></i><strong>${esc(l.avatar)} ${esc(l.nome)}</strong><span class="chip ${esc(l.estado)}" style="margin-left:auto">${esc(l.estado_txt)}</span></div>
-      <div class="ultima">Último registro: ${evento}</div><div class="ultima">Carteira ${fmt(l.carteira)} US$ · atualizado ${ha(l.atualizado)}</div>
-      <div class="aberta">${abertas}</div></article>`;
-  });
-  destino.innerHTML = cards.join("") || `<div class="vazio">Sem estado de agente disponível.</div>`;
-  $("atividade-t").textContent = `estado atualizado ${new Date(pm.t*1000).toLocaleTimeString("pt-BR", {timeZone:FUSO_BR})}`;
+    const ult = pm.tempo.find(x => x.robo === l.id && x.tipo === "saida");
+    const velho = l.atualizado && Date.now() / 1000 - l.atualizado > 7200;
+    const v = l.carteira - l.capital;
+    const posTxt = pos.length ? pos.map(p => `<div data-moeda="${esc(p.moeda)}" style="cursor:pointer;display:flex;justify-content:space-between"><span><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</span> ${esc(p.moeda.replace("USDT", ""))}</span><span class="${cor(p.resultado_usd)}">${p.resultado_usd == null ? "—" : sn(p.resultado_usd, 2)}</span></div>`).join("")
+      : `<span class="mut">sem posição aberta</span>`;
+    return `<article class="ag">
+      <div class="ag-top"><strong title="${esc(l.nome)}">${esc(l.avatar)} ${esc(curto(l.nome))}</strong><i class="pulso ${l.estado === "operando" ? "ativo" : "alerta"}" style="margin-left:auto" title="${esc(ESTADOS[l.estado] || l.estado_txt)}"></i></div>
+      <div class="ag-val"><span class="big">US$ ${fmt(l.carteira)}</span><span class="var ${cor(v)}">${sn(v)}</span></div>
+      ${svgCurva(l)}
+      <div class="ag-meta"><div><span>hoje</span><b class="${cor(l.hoje)}">${sn(l.hoje)}</b></div><div><span>operações</span>${l.ops}</div>
+        <div><span>acerto</span>${l.acerto == null ? "—" : fmt(l.acerto * 100, 0) + "%"}</div>
+        <div title="ganhos ÷ perdas; acima de 1 ganha mais do que perde"><span>fator</span><b class="${l.fator_lucro == null ? "" : l.fator_lucro >= 1 ? "up" : "down"}">${l.fator_lucro == null ? "—" : fmt(l.fator_lucro, 2)}</b></div></div>
+      <div class="ag-pos">${posTxt}</div>
+      <div class="ag-ult">${ult ? `última saída: ${esc(ult.moeda.replace("USDT", ""))} ${sn(ult.resultado_usd, 2)} · há ${ha(ult.t)}` : "nenhuma saída ainda"}${velho ? ` · <span class="gold">⚠ sem atualizar há ${ha(l.atualizado)}</span>` : ""}</div>
+    </article>`;
+  }).join("") || `<div class="vazio">Nenhum agente.</div>`;
+  $("ag-t").textContent = "· atualizado " + hm(pm.t);
 }
 
 function svgCurva(l) {
-  const p = l.curva, W = 300, H = 92, pad = {l: 2, r: 34, t: 6, b: 12};
+  const p = l.curva, W = 300, H = 60, pad = {l: 2, r: 2, t: 4, b: 4};
   if (!p || p.length < 2) return `<svg viewBox="0 0 ${W} ${H}"><text x="6" y="40" fill="#8aa0a8" font-size="11">sem dados</text></svg>`;
   const t0 = p[0][0], t1 = Math.max(p[p.length - 1][0], t0 + 1);
   let lo = Math.min(l.capital, ...p.map(q => q[1])), hi = Math.max(l.capital, ...p.map(q => q[1]));
@@ -291,41 +300,23 @@ function svgCurva(l) {
   const area = d + `V${Y(lo).toFixed(1)}H${X(p[0][0]).toFixed(1)}Z`;
   const piso = 5 > lo && 5 < hi ? `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(5)}" y2="${Y(5)}" stroke="#ed4b62" stroke-dasharray="2 3" stroke-width="1"/>` : "";
   const dia = (t) => new Date(t * 1000).toLocaleDateString("pt-BR", {timeZone: FUSO_BR, day: "2-digit", month: "2-digit"});
-  return `<svg viewBox="0 0 ${W} ${H}" data-id="${l.id}">
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="height:56px;width:100%">
     <path d="${area}" fill="${c}" fill-opacity=".12"/>
     <line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(l.capital)}" y2="${Y(l.capital)}" stroke="#5b6878" stroke-dasharray="3 3" stroke-width="1"/>${piso}
     <path d="${d}" fill="none" stroke="${c}" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
     <circle cx="${X(p[p.length - 1][0])}" cy="${Y(ult)}" r="2.6" fill="${c}"/>
-    <text x="${W - pad.r + 3}" y="${Y(hi - m) + 4}" fill="#6b7888" font-size="9.5" font-family="monospace">${fmt(hi - m, 2)}</text>
-    <text x="${W - pad.r + 3}" y="${Y(lo + m) + 2}" fill="#6b7888" font-size="9.5" font-family="monospace">${fmt(lo + m, 2)}</text>
-    <text x="${pad.l}" y="${H - 1}" fill="#6b7888" font-size="9.5" font-family="monospace">${dia(t0)}</text>
-    <text x="${W - pad.r}" y="${H - 1}" fill="#6b7888" font-size="9.5" font-family="monospace" text-anchor="end">agora</text></svg>`;
+    </svg>`;
 }
-function desenharCurvas() {
-  $("curvas").innerHTML = pm.linhas.map(l => `<div class="cv"><div class="t"><span>${l.avatar} ${esc(l.nome)}</span><span class="num ${cor(l.carteira - l.capital)}">${fmt(l.carteira)}</span></div>${svgCurva(l)}</div>`).join("");
-  $("curvas").querySelectorAll("svg[data-id]").forEach(sv => {
-    const l = pm.linhas.find(x => x.id === sv.dataset.id);
-    sv.onmousemove = (ev) => {
-      const r = sv.getBoundingClientRect(), p = l.curva, t0 = p[0][0], t1 = Math.max(p[p.length - 1][0], t0 + 1);
-      const t = t0 + (ev.clientX - r.left) / (r.width * (300 - 36) / 300) * (t1 - t0);
-      let k = 0; for (let i = 0; i < p.length; i++) if (p[i][0] <= t) k = i;
-      $("tip").textContent = `${l.nome}\n${hora(p[k][0])}\nUS$ ${fmt(p[k][1], 3)}`;
-      Object.assign($("tip").style, {display: "block", left: ev.clientX + 14 + "px", top: ev.clientY + 14 + "px"});
-    };
-    sv.onmouseleave = () => $("tip").style.display = "none";
-  });
-}
-
 function desenharPosicoes() {
   const ps = pm.abertas;
   $("ps-t").textContent = `${ps.length} abertas · preço de ${new Date(pm.t * 1000).toLocaleTimeString("pt-BR", {timeZone: FUSO_BR})}`;
   if (!ps.length) { $("pos-tab").innerHTML = `<tr><td class="vazio">Nenhuma posição aberta agora.</td></tr>`; return; }
-  $("pos-tab").innerHTML = `<tr><th class="e">agente</th><th class="e">moeda</th><th class="e">lado</th><th>entrada</th><th>agora</th><th>resultado aberto</th><th>há</th></tr>` +
-    ps.map(p => `<tr data-moeda="${esc(p.moeda)}" title="${esc(p.motivo || "")} · tamanho US$ ${fmt(p.nocional)} · preço ${esc(p.fonte_preco)}">
-      <td class="e" style="font-family:system-ui">${p.avatar} ${esc(p.nome)}</td><td class="e"><b>${esc(p.moeda)}</b></td>
-      <td class="e ${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ vendido" : "▲ comprado"}</td>
+  $("pos-tab").innerHTML = `<tr><th class="e">moeda</th><th class="e">agente</th><th>entrada</th><th>agora</th><th>resultado</th><th>há</th></tr>` +
+    ps.map(p => `<tr data-moeda="${esc(p.moeda)}" title="${esc(p.nome)} · ${esc(p.motivo || "")}">
+      <td class="e"><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</span> <b>${esc(p.moeda.replace("USDT", ""))}</b></td>
+      <td class="e" style="font-family:system-ui">${esc(p.avatar)} <span class="mut" style="font-size:12px">${esc(curto(p.nome))}</span></td>
       <td>${px(p.entrada)}</td><td>${px(p.agora)}</td>
-      <td class="${cor(p.resultado_usd)}">${p.resultado_usd == null ? "não sei (sem preço)" : `${sn(p.resultado_usd, 3)} <span style="font-size:11px">(${sn(p.resultado_pct, 2)}%)</span>`}</td>
+      <td class="${cor(p.resultado_usd)}">${p.resultado_usd == null ? "—" : sn(p.resultado_usd, 2)}</td>
       <td class="mut">${ha(p.desde)}</td></tr>`).join("");
 }
 
@@ -341,38 +332,20 @@ function desenharTempo() {
         <td class="e" style="font-family:system-ui">${saida ? "⬅ saiu" : x.aberta ? "➡ entrou <span class='mut'>(aberta)</span>" : "➡ entrou"}</td>
         <td class="e"><b>${esc(x.moeda)}</b> <span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span></td>
         <td>${px(x.preco)}</td><td class="${saida ? cor(x.resultado_usd) : ""}">${saida ? sn(x.resultado_usd, 3) : ""}</td>
-        <td class="e mut" style="font-family:system-ui;font-size:12px;white-space:normal;min-width:220px">${esc(x.motivo)}</td></tr>`;
+        <td class="e mut" style="font-family:system-ui;font-size:12px;max-width:420px;overflow:hidden;text-overflow:ellipsis" title="${esc(x.motivo)}">${esc(x.motivo)}</td></tr>`;
     }).join("");
 }
 $("lt-robo").onchange = () => pm && desenharTempo();
 $("lt-saidas").onchange = () => pm && desenharTempo();
-
-function desenharBanco() {
-  const b = pm.banco;
-  if (!b || !b.tesouro) { $("banco").innerHTML = `<div class="vazio">dados/banco.json ainda não foi gravado pela nuvem.</div>`; return; }
-  const t = b.tesouro, x = b.exposicao || {}, pe = b.persistencia || {};
-  $("bc-t").textContent = "gravado " + hm(b.t);
-  const conf = (x.conflitos || []);
-  $("banco").innerHTML = `<table><tr><th class="e">tesouro</th><th>US$</th></tr>
-    <tr><td class="e">soma das carteiras (${t.robos} robôs)</td><td><b>${fmt(t.carteiras)}</b></td></tr>
-    <tr><td class="e">entrou (US$ 10 por robô)</td><td>${fmt(t.inicial)}</td></tr>
-    <tr><td class="e">resultado da mesa</td><td class="${cor(t.resultado)}">${sn(t.resultado)}</td></tr>
-    <tr><td class="e">em margem · livre</td><td>${fmt(t.em_margem)} · ${fmt(t.livre)}</td></tr>
-    <tr><td class="e">exposição bruta · líquida (${x.moedas} moedas)</td><td>${fmt(x.bruta)} · ${fmt(x.liquida)}</td></tr></table>
-    <div style="margin-top:8px">${conf.length ? `<b class="down">⚠ ${conf.length} conflito(s): robôs em lados opostos na mesma moeda (numa conta real se anulam e só pagam taxa)</b><br>` +
-      conf.map(c => `${esc(c.moeda.replace("USDT", ""))}: ${c.robos.map(esc).join(", ")} · US$ ${fmt(c.anulado_usd, 0)} se anulam · taxa ${fmt(c.taxa_perdida, 3)}`).join("<br>")
-      : `<span class="up">✓ nenhum conflito: nenhum robô está do lado oposto de outro na mesma moeda</span>`}</div>
-    <div class="mut" style="font-size:11.5px;margin-top:6px">Fora do tesouro: v4 Testnet (conta de teste da Binance, outro fluxo).${pe.correlacao != null ? ` Lucro de 30 operações se repete nas 30 seguintes? correlação ${pe.correlacao} em ${pe.janelas} janelas → o banco não move dinheiro.` : ""}</div>`;
-}
 
 async function cicloPainel() {
   try {
     const d = await j("/api/painel-mesa");
     if (d.erro) throw new Error(d.erro);
     pm = d;
-    desenharKpis(); desenharAtividade(); desenharPlacar(); desenharCurvas(); desenharPosicoes(); desenharTempo(); desenharBanco();
+    desenharKpis(); desenharAgentes(); desenharPosicoes(); desenharTempo();
     if (!vgMoeda) { vgMoeda = pm.abertas[0] ? pm.abertas[0].moeda : "BTC"; cicloVelas(); }
-  } catch (e) { $("pl-t").textContent = "erro ao ler a mesa: " + e.message; }
+  } catch (e) { $("ag-t").textContent = "· erro ao ler a mesa: " + e.message; }
   setTimeout(cicloPainel, 10000);
 }
 setInterval(() => { if (pm) { desenharPosicoes(); } }, 5000);   // "há quanto tempo" anda entre as leituras
@@ -388,7 +361,7 @@ async function cicloVelas() {
     const iv = $("vg-iv").value, m = vgMoeda || "BTC";
     const d = await j(`/api/velas-rapidas?m=${encodeURIComponent(m)}&iv=${iv}`);
     const ps = pm ? pm.abertas.filter(p => p.moeda === m) : [];
-    $("vg-titulo").textContent = `${m} · ${iv}` + (ps.length ? " · " + ps.map(p => `${p.avatar} ${p.lado === "venda" ? "vendido" : "comprado"} a ${px(p.entrada)}`).join(" · ") : "");
+    $("vg-titulo").textContent = `${m.replace("USDT", "")} · ${iv}` + (ps.length ? ` · ${ps.length} posição(ões) aberta(s)` : "");
     desenharVelas(d.velas || [], ps);
   } catch (e) { $("vg").innerHTML = `<div class="vazio">sem velas dessa moeda agora</div>`; }
   vgTimer = setTimeout(cicloVelas, 5000);
@@ -406,7 +379,8 @@ function desenharVelas(v, ps) {
     const c = x.c >= x.o ? "#1fc7a0" : "#ed4b62", y1 = Y(Math.max(x.o, x.c)), y2 = Y(Math.min(x.o, x.c));
     s += `<line x1="${X(i)}" x2="${X(i)}" y1="${Y(x.h)}" y2="${Y(x.l)}" stroke="${c}" opacity="${x.vivo ? .6 : 1}"/><rect x="${X(i) - cw * 0.32}" y="${y1}" width="${Math.max(1, cw * 0.64)}" height="${Math.max(1, y2 - y1)}" fill="${c}" opacity="${x.vivo ? .6 : 1}"/>`;
   });
-  for (const p of ps) s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(p.entrada)}" y2="${Y(p.entrada)}" stroke="#e6f1f2" stroke-dasharray="5 4"/><text x="${pad.l + 4}" y="${Y(p.entrada) - 3}" fill="#e6f1f2" font-size="10">${esc(p.avatar)} entrada ${px(p.entrada)}</text>`;
+  const vistos = new Set();
+  for (const p of ps) { if (vistos.has(p.entrada)) continue; vistos.add(p.entrada); s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(p.entrada)}" y2="${Y(p.entrada)}" stroke="#e6f1f2" stroke-dasharray="5 4"/><text x="${pad.l + 4}" y="${Y(p.entrada) - 3}" fill="#e6f1f2" font-size="10">${ps.length === 1 ? "entrada " + px(p.entrada) : ""}</text>`; }
   const u = v[v.length - 1];
   s += `<rect x="${W - pad.r + 1}" y="${Y(u.c) - 8}" width="${pad.r - 2}" height="16" fill="#e6f1f2"/><text x="${W - pad.r + 4}" y="${Y(u.c) + 4}" fill="#07090c" font-size="10.5" font-weight="700" font-family="monospace">${px(u.c)}</text>`;
   const rot = (d) => new Date(d.replace(" ", "T") + "Z").toLocaleString("pt-BR", {timeZone: FUSO_BR, day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit"});
@@ -414,6 +388,54 @@ function desenharVelas(v, ps) {
   $("vg").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="display:block;max-width:100%">${s}</svg>`;
   $("vg-info").textContent = `agora ${px(u.c)} · ${sn((u.c / v[Math.max(0, v.length - 2)].c - 1) * 100, 2)}% na última vela · horário de Brasília`;
 }
+
+
+// ---------- mesa ao vivo: /api/vivo (rastros locais dos agentes) ----------
+let vv = null, vistosFeed = new Set(), primeiraFeed = true;
+const ETAPAS_V = ["raspagem", "leitura", "decisão", "corretora"];
+function desenharMesas() {
+  const agora = Date.now() / 1000;
+  $("mesas").innerHTML = vv.mesa.map(a => {
+    const et = a.etapas || {}, ult = a.ultimo, on = a.trabalhando;
+    const ciclo = ult ? ult - 15 * 60 : 0;
+    const barras = ETAPAS_V.filter(k => k in et).map(k => {
+      const t = et[k], cls = on && a.etapa_atual === k ? "agora" : t && t > ciclo ? "feita" : "";
+      return `<div class="et ${cls}" title="${t ? "há " + ha(t) : "sem registro"}">${k}<br><span class="num">${t ? ha(t) : "—"}</span></div>`;
+    }).join("");
+    const status = on ? `● trabalhando<br><span style="font-weight:500">${esc(a.etapa_atual || "")}</span>` : ult ? `⏸ aguardando<br><span style="font-weight:500">há ${ha(ult)}</span>` : "sem atividade ainda";
+    const dec = (a.posicoes || []).length ? `<div class="m-dec">${a.posicoes.map(p => `<span class="tag ${p.lado === "venda" ? "v" : "c"}" title="${esc(p.motivo)}">${p.lado === "venda" ? "▼" : "▲"} ${esc(String(p.moeda).replace("USDT", ""))}</span>`).join("")}</div>` : "";
+    const c = a.conta;
+    let conta = "";
+    if (c) {
+      const v = (c.patrimonio || 0) - (c.capital || 10);
+      const abs = c.abertas.length ? c.abertas.map(p => `<div style="display:flex;justify-content:space-between"><span><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</span> ${esc(String(p.moeda).replace("USDT", ""))} <span class="mut">a ${px(p.entrada)}</span></span><span class="mut">stop ${px(p.stop)}${p.alvo ? " · alvo " + px(p.alvo) : ""}</span></div>`).join("") : `<span class="mut">sem posição na corretora</span>`;
+      const ev = (c.eventos || [])[0];
+      conta = `<div class="m-conta"><div class="cab"><span>🏦 ${esc(c.nome)} · ${c.fechadas} fechadas</span><span><b>US$ ${fmt(c.patrimonio)}</b> <span class="${cor(v)}">${sn(v)}</span></span></div>${abs}
+        ${ev ? `<div class="m-ordem" title="${esc(ev.texto)}">↳ ${esc(ev.texto)} · há ${ha(ev.t)}</div>` : ""}</div>`;
+    }
+    const pens = a.pensamento ? `<div class="bolha" title="${esc(a.pensamento)}"><span class="q">💭 o que está lendo</span>${esc(a.pensamento)}</div>` : "";
+    return `<article class="mesa ${on ? "on" : ""}"><div class="m-top"><div class="av">${esc(a.avatar)}</div><div style="min-width:0"><div class="m-nome">${esc(a.nome)}</div><div class="m-papel">${esc(a.papel)}</div></div>
+      <div class="m-status ${on ? "on" : "off"}">${status}</div></div>
+      ${barras ? `<div class="etapas">${barras}</div>` : ""}${pens}${dec}${conta}</article>`;
+  }).join("");
+  const n = vv.mesa.filter(a => a.trabalhando).length;
+  $("vv-t").textContent = `· ${n} de ${vv.mesa.length} trabalhando agora`;
+}
+function desenharFeed() {
+  const itens = vv.feed.map(f => {
+    const chave = f.t + f.agente + f.texto, novo = !primeiraFeed && !vistosFeed.has(chave);
+    vistosFeed.add(chave);
+    return `<div class="fi ${esc(f.tipo)} ${novo ? "novo" : ""}"><div class="ic">${esc(f.avatar)}</div><div style="min-width:0"><div class="q">${esc(f.nome)} · ${hm(f.t)} · há ${ha(f.t)}</div><div class="tx">${esc(f.texto)}</div></div></div>`;
+  });
+  $("feed").innerHTML = itens.join("") || `<div class="vazio">Nada registrado ainda.</div>`;
+  primeiraFeed = false;
+}
+async function cicloVivo() {
+  try { const d = await j("/api/vivo"); if (!d.erro) { vv = d; desenharMesas(); desenharFeed(); } else $("vv-t").textContent = "· erro: " + d.erro; }
+  catch (e) { $("vv-t").textContent = "· sem conexão"; }
+  setTimeout(cicloVivo, 5000);
+}
+cicloVivo();
 
 // ---------- fita de preços e fontes da máquina ----------
 async function cicloFontes() {
@@ -485,15 +507,6 @@ $("sl-form").addEventListener("submit", async ev => {
 });
 cicloSala();
 
-async function cicloLicoes() {
-  try {
-    const txt = await (await fetch("/api/licoes", {cache: "no-store"})).text();
-    $("licoes").textContent = txt.replace(/^#+\s*/gm, "").replace(/\*\*/g, "");
-    $("lc-t").textContent = "lido " + hm(Date.now() / 1000);
-  } catch (e) {}
-  setTimeout(cicloLicoes, 300000);
-}
-cicloLicoes();
 </script>
 </body>
 </html>

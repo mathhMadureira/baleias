@@ -1976,10 +1976,10 @@ class PainelMesa(unittest.TestCase):
         html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
         self.assertNotIn("<script src", html.replace("<script defer src", "<script src"))
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
-        for parte in ('id="placar-tab"', 'id="curvas"', 'id="pos-tab"', 'id="lt-tab"', 'id="kpis"', 'id="banco"', "/api/painel-mesa"):
+        for parte in ('id="agentes"', 'id="pos-tab"', 'id="lt-tab"', 'id="kpis"', 'id="vg"', 'id="sl-form"', "/api/painel-mesa"):   # 23/11: painel enxuto
             self.assertIn(parte, html)
-        self.assertIn("${esc(ult.moeda)}", html)
-        self.assertIn("${esc(p.moeda)} ${esc(p.lado)}", html)
+        self.assertIn('esc(ult.moeda.replace("USDT", ""))', html)
+        self.assertIn('esc(p.moeda.replace("USDT", ""))', html)
 
 
 class ChefeOpenBotTestnet(unittest.TestCase):
@@ -2909,3 +2909,33 @@ class RotinaCitaARegraEmVigor(unittest.TestCase):
         rotina = (raiz / "mesa" / "operar" / "ROTINA.md").read_text()
         self.assertIn(f"versão {regras.VERSAO}", (raiz / "mesa" / "REGRAS.md").read_text().splitlines()[0])
         self.assertEqual(set(re.findall(r"versão (R\d+)", rotina)), {regras.VERSAO})
+
+
+class MesaAoVivo(unittest.TestCase):
+    """24/11 (dono: "quero ver os agentes dentro do painel trabalhando"): /api/vivo lê só os rastros locais dos agentes."""
+
+    def test_le_rastros_e_marca_quem_trabalha(self):
+        import importlib, json, os, tempfile, time
+        raiz = pathlib.Path(tempfile.mkdtemp())
+        op = raiz / "Shared" / "baleias" / "operar"
+        (op / "rodadas").mkdir(parents=True)
+        (op / "corretoras").mkdir()
+        (op / "rodadas" / "20261124-030000-guardiao-varredura.json").write_text("[]")
+        (op / "rodadas" / "proposta_guardiao.json").write_text(json.dumps({"leitura": "mercado em queda", "posicoes": [{"moeda": "ENSOUSDT", "lado": "venda", "motivo": "6/6"}]}))
+        (op / "corretoras" / "guardiao.json").write_text(json.dumps({"patrimonio": 10.5, "capital_inicial": 10, "abertas": {"ENSOUSDT": {"lado": "venda", "entrada": 0.4, "stop": {"id": "1", "preco": 0.41}}},
+                                                                  "fechadas": [], "eventos": [{"t": time.time(), "texto": "ENTROU VENDIDO em ENSO"}], "atualizado": time.time()}))
+        os.environ["BALEIAS_OPENBOT"] = str(raiz)
+        try:
+            from baleias import vivo as V
+            V = importlib.reload(V)
+            d = V.vivo()
+        finally:
+            del os.environ["BALEIAS_OPENBOT"]
+            importlib.reload(V)
+        g = [a for a in d["mesa"] if a["id"] == "guardiao"][0]
+        self.assertTrue(g["trabalhando"])
+        self.assertEqual(g["pensamento"], "mercado em queda")
+        self.assertEqual(g["conta"]["abertas"][0]["stop"], 0.41)
+        self.assertTrue(any(f["tipo"] == "ordem" for f in d["feed"]))
+        m = [a for a in d["mesa"] if a["id"] == "memecoins"][0]
+        self.assertFalse(m["trabalhando"])

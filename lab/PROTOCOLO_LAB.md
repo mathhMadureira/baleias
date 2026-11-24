@@ -1805,3 +1805,26 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 | **BTCUSDT** | 1.787 | **−0,104%** | 0,017% | −6,18 | 38,7% | +0,016% | −0,101 / −0,088 / −0,123% | −0,090% ± 0,018% (válido) |
 | ETHUSDT (relato) | 1.787 | −0,103% | 0,022% | −4,61 | 40,5% | +0,017% | −0,111 / −0,085 / −0,114% | −0,137% ± 0,025% (válido) |
 - De 2022 em diante, as 2 h das 22:00 às 00:00 UTC rendem +0,016% por dia antes do custo, contra os ≈ 0,09% do artigo em 2015–2021. Isso não paga o custo de 0,12%. Como previsto.
+
+### Resultado das H77 e H78 (24/11/2026 ~21:45 UTC, `lab/livro151.py` → `dados/lab/livro151_resultado.json`): as duas REPROVADAS — nada entra
+- Dados: 2.153 dias (2021-01-01 a 2026-11-23); ajuste até 2024-07-14, teste de 2024-07-15 em diante (~862 dias). Custo e funding incluídos.
+
+| | variação escolhida no ajuste (Sharpe) | média/dia no teste | t (NW) | Sharpe teste | metades | queda máx. | juiz a / b / c |
+|---|---|---|---|---|---|---|---|
+| H77 neutra em dólar | momento, d = 7, janela 60 (0,79) | −0,025% | −0,82 | −0,53 | +0,008% / −0,058% | −29,6% | ✗ / ✗ / ✓ (acima de 99,6% dos sorteios) |
+| H78 tendência HP | W 365, λ 13,3 mi, MA 5 × 60 (0,62) | −0,008% | −0,10 | −0,06 | +0,048% / −0,064% | −50,4% | ✗ / ✗ / ✗ |
+
+- H77: o controle passou só porque os sorteios pagam ainda mais giro; a estratégia em si perde no teste (giro 0,55 da carteira por dia).
+- H78: no teste, comprar e segurar BTC+ETH deu Sharpe −0,03; a MESMA MA 5 × 60 no preço cru deu +0,95 (só informação: não foi a variação escolhida
+  nem o que se pré-registrou; usar isso agora seria escolher olhando o teste). 14 trocas em ~862 dias.
+- Previsão (as duas reprovam) confirmada. Como em toda a série do laboratório: o que ganha no ajuste não se repete no período seguinte.
+
+## Hipótese 79 (dono, 24/11): cruzamento de médias de 5 × 60 dias no preço, BTC + ETH, SÓ com dados daqui para frente (registrada em 24/11/2026 ~22:00 UTC, antes do primeiro dia do teste)
+- **Origem:** apareceu como informação no teste da H78 (Sharpe +0,95 no período de teste). Como foi vista depois do teste, só vale julgada em dados novos.
+- **Regra (fixa):** no fechamento diário (00:00 UTC) de BTCUSDT e ETHUSDT perpétuos da Binance, para cada moeda: +0,5 se a média dos últimos 5
+  fechamentos > a dos últimos 60 (log do preço), −0,5 se menor. Ganha o retorno do dia seguinte; custo 0,06% por lado sobre o giro; funding incluído.
+  Execução só no papel, calculada por código (`lab/h79_papel.py`), sem agente decidindo.
+- **Período:** de 2026-11-25 a 2027-02-22 (90 dias). Julgamento em 2027-02-23.
+- **Juiz:** (a) média diária líquida > 0, (b) Sharpe > o de comprar e segurar BTC+ETH 50/50 no mesmo período, (c) > 0 em cada metade.
+  Com 90 dias o t não decide sozinho (anotado): passar em (a)–(c) só libera um teste na conta de teste por mais 90 dias, não a mesa.
+- **Previsão registrada:** reprova; o +0,95 do período 2024–2026 é provavelmente sorte de uma tendência longa.
