@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 22:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 22:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,7 +43,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.36** · 25 operações fechadas · 1 abertas
+Carteira **US$ 9.24** · 25 operações fechadas · 1 abertas
 
 - **Total:** 9/25 com lucro (36%), resultado -0.64, média -0.026 por operação.
 - **Últimas 24 h:** 2/5 com lucro, -0.44.
@@ -69,11 +69,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 20.0% das moedas subindo em 24 h, 21.6% em 4 h · BTC 24 h -2.29%, 4 h -0.32%.
+- **Amplitude:** 21.6% das moedas subindo em 24 h, 21.6% em 4 h · BTC 24 h -2.35%, 4 h -0.36%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.0%/ano · {'BTC': -10.6, 'ETH': -7.8, 'SOL': 1.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': -3.5, 'ETH': 1.2, 'SOL': 1.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SYRUP bandeira de baixa (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · ICP topo duplo (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · PLUME ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · PLUME ombro-cabeça-ombro (baixa, formado) · RUNE fundo duplo (alta, formado)
 - 📰 24/11 21:50 UTC · Cointelegraph: Europol follows $28.5M crypto trail in streaming piracy crackdown
 - 📰 24/11 21:46 UTC · Decrypt: Anthropic’s Claude Ship Lets AI Write, Review and Approve Its Own Code
 - 📰 24/11 21:16 UTC · Decrypt: Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits
@@ -117,7 +117,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 50381 apostas conferidas ao vivo, acerto 54.4%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 50478 apostas conferidas ao vivo, acerto 54.5%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
