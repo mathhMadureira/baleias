@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 18:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 18:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.7% das moedas subindo em 24 h, 28.2% em 4 h · BTC 24 h -2.26%, 4 h -0.89%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': -4.0, 'ETH': 4.5, 'SOL': -0.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -4.7, 'ETH': 4.4, 'SOL': -1.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM bandeira de alta (alta, CONFIRMOU) · BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · FF OCO invertido (alta, formado) · GRAM fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · ICP fundo duplo (alta, formado)
+- 📰 24/11 18:55 UTC · Decrypt: What the CFTC’s New Crypto Reserves Guidance Actually Allows—And What It Doesn’t
 - 📰 24/11 18:36 UTC · Decrypt: South Korea Moves to Lift Its ICO Ban After Nearly a Decade
 - 📰 24/11 18:31 UTC · Cointelegraph: CFTC sets new prediction market rules as more firms seek US entry
 - 📰 24/11 18:16 UTC · Decrypt: Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?
 - 📰 24/11 18:07 UTC · Cointelegraph: BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong
 - 📰 24/11 17:50 UTC · CoinDesk: Utah moves to drop criminal pursuit of Kalshi after the firm halted services there
-- 📰 24/11 17:45 UTC · Decrypt: What Is Pons? The Robinhood Chain Meme Coin Launchpad Explained
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
