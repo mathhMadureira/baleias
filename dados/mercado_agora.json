@@ -1,6 +1,6 @@
 {
- "t": 1795525622,
- "hora_utc": "2026-11-24 13:07 UTC",
+ "t": 1795525871,
+ "hora_utc": "2026-11-24 13:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 138,
@@ -172,11 +172,17 @@
   -0.34,
   1.07,
   0.1,
-  -0.06
+  -0.66
  ],
  "contexto": {
-  "t": 1795525623,
+  "t": 1795525872,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795525669,
+    "hora_utc": "24/11 13:07",
+    "titulo": "Morning Minute: Jensen Returns, Markets Soar (Except Crypto)"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795525290,
@@ -260,12 +266,6 @@
     "t": 1795514918,
     "hora_utc": "24/11 10:08",
     "titulo": "Bitcoin falls below $60,000 as rally on Jensen Huang’s Nvidia return fades"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795512345,
-    "hora_utc": "24/11 09:25",
-    "titulo": "Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.8,
+   "media_top20_anual_pct": 2.7,
    "principais_anual_pct": {
-    "BTC": 8.9,
-    "ETH": 5.3,
-    "SOL": -16.3
+    "BTC": 7.2,
+    "ETH": 5.5,
+    "SOL": -15.0
    },
    "leitura": "neutro"
   },
