@@ -1,6 +1,6 @@
 {
- "t": 1795542447,
- "hora_utc": "2026-11-24 17:47 UTC",
+ "t": 1795542681,
+ "hora_utc": "2026-11-24 17:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   0.71,
   -1.19,
   -0.51,
-  0.93
+  0.92
  ],
  "contexto": {
-  "t": 1795542448,
+  "t": 1795542682,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795542608,
+    "hora_utc": "24/11 17:50",
+    "titulo": "Utah moves to drop criminal pursuit of Kalshi after the firm halted services there"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795542322,
@@ -260,12 +266,6 @@
     "t": 1795525904,
     "hora_utc": "24/11 13:11",
     "titulo": "Grayscale calls Bitcoin ‘oversold’ at $62K but warns of AI risks"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795525669,
-    "hora_utc": "24/11 13:07",
-    "titulo": "Morning Minute: Jensen Returns, Markets Soar (Except Crypto)"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.5,
+   "media_top20_anual_pct": 5.6,
    "principais_anual_pct": {
-    "BTC": 4.7,
-    "ETH": 5.9,
+    "BTC": 5.1,
+    "ETH": 5.8,
     "SOL": -6.4
    },
    "leitura": "neutro"

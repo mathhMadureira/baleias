@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 17:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 17:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.7% das moedas subindo em 24 h, 47.6% em 4 h · BTC 24 h -2.24%, 4 h -0.2%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.5%/ano · {'BTC': 4.7, 'ETH': 5.9, 'SOL': -6.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.6%/ano · {'BTC': 5.1, 'ETH': 5.8, 'SOL': -6.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AR fundo duplo (alta, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CELO ombro-cabeça-ombro (baixa, formado) · FF OCO invertido (alta, formado) · INIT OCO invertido (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado)
+- 📰 24/11 17:50 UTC · CoinDesk: Utah moves to drop criminal pursuit of Kalshi after the firm halted services there
 - 📰 24/11 17:45 UTC · Decrypt: What Is Pons? The Robinhood Chain Meme Coin Launchpad Explained
 - 📰 24/11 17:43 UTC · Decrypt: Ansem Meme Coin Crashes After $2.57 Million Wallet Drain, Bullpen Confirms Security Breach
 - 📰 24/11 17:09 UTC · Cointelegraph: Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price
 - 📰 24/11 16:33 UTC · Cointelegraph: How South Korea’s proposed 20% cap could change who runs Upbit
 - 📰 24/11 16:00 UTC · Decrypt: Europol Traces $28M in Crypto Behind Europe's Illegal Streaming Industry
-- 📰 24/11 16:00 UTC · CoinDesk: 'AI trade never died': Traders see room for market recovery, but bitcoin's participation is another story
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
