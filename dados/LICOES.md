@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 13:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 13:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,15 +71,15 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 21.6% das moedas subindo em 24 h, 11.5% em 4 h · BTC 24 h -1.84%, 4 h -0.02%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.1%/ano · {'BTC': -2.8, 'ETH': -0.6, 'SOL': -22.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.1%/ano · {'BTC': -3.2, 'ETH': -0.6, 'SOL': -23.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** XRP ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · APT fundo duplo (alta, formado) · ARB fundo duplo (alta, formado) · ARB ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CYBER fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 13:46 UTC · Decrypt: CertiK Trains Interpol Investigators to Trace and Freeze Stolen Crypto
+- 📰 24/11 13:43 UTC · Cointelegraph: Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals
 - 📰 24/11 13:11 UTC · Cointelegraph: Grayscale calls Bitcoin ‘oversold’ at $62K but warns of AI risks
 - 📰 24/11 13:07 UTC · Decrypt: Morning Minute: Jensen Returns, Markets Soar (Except Crypto)
 - 📰 24/11 13:01 UTC · Decrypt: GTA 6 PC Ports ‘Nuked’ Just Days Before Devs Expected It to Be Playable
 - 📰 24/11 12:47 UTC · CoinDesk: Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold
-- 📰 24/11 12:47 UTC · CoinDesk: Live updates: Bitcoin pulls back to $60,000, stock rally fades, as tariffs re-enter the picture
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
