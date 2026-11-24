@@ -1,28 +1,28 @@
 {
- "t": 1795506339,
- "hora_utc": "2026-11-24 07:45 UTC",
+ "t": 1795506581,
+ "hora_utc": "2026-11-24 07:49 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 134,
-  "subindo_pct": 20.1,
-  "mediana_pct": -0.42
+  "subindo_pct": 13.4,
+  "mediana_pct": -0.57
  },
  "mercado_4h": {
   "moedas": 134,
-  "subindo_pct": 79.9,
+  "subindo_pct": 78.4,
   "mediana_pct": 1.04
  },
  "mercado_24h": {
   "moedas": 134,
-  "subindo_pct": 58.2,
-  "mediana_pct": 0.52
+  "subindo_pct": 53.7,
+  "mediana_pct": 0.36
  },
  "btc": {
-  "1h": -0.07,
-  "4h": 0.31,
-  "24h": -1.77,
-  "preco": 60394.99,
-  "vol_4h_vs_media": 0.52
+  "1h": -0.03,
+  "4h": 0.33,
+  "24h": -1.68,
+  "preco": 60464.0,
+  "vol_4h_vs_media": 0.48
  },
  "maiores_quedas_4h": [
   {
@@ -32,40 +32,34 @@
    "vol": 2.08
   },
   {
-   "moeda": "BREV",
-   "4h": -7.92,
-   "24h": -6.55,
-   "vol": 0.68
+   "moeda": "MUBARAK",
+   "4h": -8.62,
+   "24h": 10.32,
+   "vol": 0.62
   },
   {
-   "moeda": "MUBARAK",
-   "4h": -7.7,
-   "24h": 12.91,
-   "vol": 0.61
+   "moeda": "BREV",
+   "4h": -7.35,
+   "24h": -6.94,
+   "vol": 0.87
   },
   {
    "moeda": "PROM",
-   "4h": -4.91,
-   "24h": 10.07,
-   "vol": 0.21
-  },
-  {
-   "moeda": "SAHARA",
-   "4h": -3.04,
-   "24h": 14.12,
-   "vol": 2.77
+   "4h": -5.98,
+   "24h": 11.59,
+   "vol": 0.2
   },
   {
    "moeda": "ONE",
-   "4h": -2.79,
-   "24h": 5.64,
-   "vol": 0.4
+   "4h": -2.98,
+   "24h": 5.1,
+   "vol": 0.39
   },
   {
    "moeda": "BLUR",
-   "4h": -1.86,
-   "24h": -0.88,
-   "vol": 0.79
+   "4h": -2.22,
+   "24h": -1.25,
+   "vol": 0.82
   },
   {
    "moeda": "SYRUP",
@@ -74,30 +68,30 @@
    "vol": 1.06
   },
   {
+   "moeda": "BMT",
+   "4h": -1.52,
+   "24h": -4.37,
+   "vol": 0.64
+  },
+  {
    "moeda": "LSK",
-   "4h": -1.68,
-   "24h": 4.47,
+   "4h": -1.36,
+   "24h": 4.32,
    "vol": 0.23
   },
   {
-   "moeda": "BMT",
-   "4h": -0.96,
-   "24h": -4.71,
-   "vol": 0.62
+   "moeda": "CYBER",
+   "4h": -0.93,
+   "24h": 4.93,
+   "vol": 0.45
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "MMT",
-   "4h": 21.44,
-   "24h": 25.15,
-   "vol": 2.11
-  },
-  {
-   "moeda": "LISTA",
-   "4h": 6.95,
-   "24h": 29.36,
-   "vol": 1.75
+   "4h": 19.13,
+   "24h": 25.0,
+   "vol": 1.97
   },
   {
    "moeda": "ONG",
@@ -106,34 +100,16 @@
    "vol": 4.78
   },
   {
-   "moeda": "LUNC",
-   "4h": 5.55,
-   "24h": 11.2,
-   "vol": 0.98
+   "moeda": "HUMA",
+   "4h": 5.17,
+   "24h": 4.56,
+   "vol": 1.54
   },
   {
    "moeda": "AIGENSYN",
-   "4h": 5.36,
-   "24h": 3.47,
+   "4h": 4.85,
+   "24h": 4.2,
    "vol": 1.15
-  },
-  {
-   "moeda": "INIT",
-   "4h": 4.97,
-   "24h": -1.35,
-   "vol": 1.07
-  },
-  {
-   "moeda": "HUMA",
-   "4h": 4.92,
-   "24h": 4.8,
-   "vol": 1.52
-  },
-  {
-   "moeda": "BABY",
-   "4h": 4.3,
-   "24h": 16.32,
-   "vol": 1.83
   },
   {
    "moeda": "ZIL",
@@ -142,10 +118,34 @@
    "vol": 2.38
   },
   {
+   "moeda": "BABY",
+   "4h": 4.02,
+   "24h": 16.77,
+   "vol": 1.85
+  },
+  {
+   "moeda": "ATM",
+   "4h": 3.96,
+   "24h": 6.43,
+   "vol": 1.01
+  },
+  {
+   "moeda": "LUNC",
+   "4h": 3.94,
+   "24h": 10.68,
+   "vol": 1.03
+  },
+  {
    "moeda": "RE",
-   "4h": 3.99,
-   "24h": 8.57,
+   "4h": 3.86,
+   "24h": 8.04,
    "vol": 3.67
+  },
+  {
+   "moeda": "ENSO",
+   "4h": 3.69,
+   "24h": -11.53,
+   "vol": 0.84
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.07,
   0.41,
   -0.25,
-  -0.0
+  -0.11
  ],
  "contexto": {
-  "t": 1795506340,
+  "t": 1795506582,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795506110,
+    "hora_utc": "24/11 07:41",
+    "titulo": "Bitcoin ETFs keep bleeding as BlackRock’s IBIT shares gain nearly 5%"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795500000,
@@ -260,12 +266,6 @@
     "t": 1795462506,
     "hora_utc": "23/11 19:35",
     "titulo": "BTCS offloads $44M in ETH to reduce DeFi debt amid market downturn"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795461406,
-    "hora_utc": "23/11 19:16",
-    "titulo": "Base makes quantum security a 2027 priority as regulators warn of risks"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.4,
+   "media_top20_anual_pct": 6.3,
    "principais_anual_pct": {
-    "BTC": 1.9,
-    "ETH": -0.9,
+    "BTC": 1.8,
+    "ETH": -1.6,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -402,6 +402,13 @@
     "nivel": 0.2164
    },
    {
+    "moeda": "RENDER",
+    "padrao": "ombro-cabeça-ombro",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 1.295
+   },
+   {
     "moeda": "SOL",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -436,9 +443,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 63,
+  "apostas": 65,
   "compras": 38,
-  "vendas": 25,
+  "vendas": 27,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -479,15 +486,15 @@
     "prob_subir": 0.645
    },
    {
+    "moeda": "AR",
+    "prob_subir": 0.629
+   },
+   {
     "moeda": "SOPH",
     "prob_subir": 0.627
    },
    {
     "moeda": "RWUSD",
-    "prob_subir": 0.61
-   },
-   {
-    "moeda": "AR",
     "prob_subir": 0.61
    },
    {
@@ -499,12 +506,12 @@
     "prob_subir": 0.604
    },
    {
-    "moeda": "MARSCOIN",
-    "prob_subir": 0.602
-   },
-   {
     "moeda": "BANK",
     "prob_subir": 0.598
+   },
+   {
+    "moeda": "ORDI",
+    "prob_subir": 0.585
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -777,34 +784,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27845 apostas (597 velas, 17/11 08:00–24/11 07:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27851 apostas (597 velas, 17/11 08:00–24/11 07:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5366,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.22,
+  "z_contra_lab": 0.23,
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5057,
-    "n": 23907
+    "n": 23913
    },
    "segue_maioria_24h": {
     "acerto": 0.5054,
-    "n": 27845
+    "n": 27851
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5449,
-    "n": 7947
+    "acerto": 0.545,
+    "n": 7949
    },
    "confianca:0,08–0,12": {
     "acerto": 0.5593,
-    "n": 3009
+    "n": 3011
    },
    "confianca:<0,05": {
     "acerto": 0.5229,
-    "n": 16079
+    "n": 16081
    },
    "confianca:≥0,12": {
     "acerto": 0.6444,
@@ -815,8 +822,8 @@
     "n": 8104
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5247,
-    "n": 6185
+    "acerto": 0.5248,
+    "n": 6191
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5608,
@@ -828,7 +835,7 @@
    },
    "lado:compra": {
     "acerto": 0.5295,
-    "n": 11982
+    "n": 11988
    },
    "lado:venda": {
     "acerto": 0.542,
