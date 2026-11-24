@@ -1,6 +1,6 @@
 {
- "t": 1795551425,
- "hora_utc": "2026-11-24 20:17 UTC",
+ "t": 1795551659,
+ "hora_utc": "2026-11-24 20:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -175,7 +175,7 @@
   0.05
  ],
  "contexto": {
-  "t": 1795551426,
+  "t": 1795551660,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.6,
+   "media_top20_anual_pct": 2.9,
    "principais_anual_pct": {
-    "BTC": -16.4,
-    "ETH": 5.9,
-    "SOL": -11.7
+    "BTC": -16.6,
+    "ETH": 6.5,
+    "SOL": -10.7
    },
    "leitura": "neutro"
   },
@@ -675,8 +675,13 @@
    "motor": "agente OpenBot · tendência de 24 h + memecoins",
    "missao": "Opera a regra do dono (tendência de 24 h decide o lado) nas moedas que lideram o movimento, memecoins primeiro, nos dois lados.",
    "carteira": 6.93,
-   "n_abertas": 0,
-   "abertas": [],
+   "n_abertas": 1,
+   "abertas": [
+    [
+     "0G",
+     "venda"
+    ]
+   ],
    "n_fechadas": 73,
    "ordem": null
   }
