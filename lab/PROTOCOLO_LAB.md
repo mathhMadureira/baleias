@@ -1770,3 +1770,38 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   Uso a regra dos 3 blocos do laboratório, mais dura que os 2 de 3 propostos. ETHUSDT, na mesma janela, só é relatado.
 - **Se passar:** vai ao Baleias como sinal informativo para os agentes (não ordem automática). **Se falhar:** nada muda.
 - **Previsão registrada:** reprova. A vantagem publicada é menor que o custo.
+
+## Hipóteses 77 e 78 (dono, 24/11): estratégias sistemáticas do livro *151 Trading Strategies* (Kakushadze & Serur, 2018) no lugar da opinião dos agentes (registradas em 24/11/2026 ~21:00 UTC, antes de baixar os dados)
+- **Motivo:** auditoria de 24/11 (`Shared/baleias/auditorias/2026-11-24-comportamento-dos-agentes.md`): 274 operações dos agentes, bruto −0,017%,
+  líquido −0,137% — igual ao acaso. O dono parou os agentes e escolheu testar fórmulas do livro, de giro baixo (velas diárias), com custo e funding.
+- **Dados (iguais para as duas):** perpétuos USDT da Binance, velas de 1 dia de 2021-01-01 até 2026-11-23 (fechamento 00:00 UTC) e o funding de 8 h
+  somado por dia. Posição decidida no fechamento do dia t só com dados até t; ganha o retorno de t para t+1. Custo 0,06% por lado sobre o giro
+  (Σ|Δpeso|). Funding: comprado paga a taxa, vendido recebe. Exposição bruta 1× (Σ|peso| = 1).
+- **Divisão:** primeiros 60% dos dias = ajuste (escolha da variação pelo Sharpe); últimos 40% = teste, usado UMA vez, só pela variação escolhida.
+- **Juiz (cada uma, 2 tentativas no total → t ≥ 2,24, Bonferroni 2,5% unilateral):** no teste, (a) média diária líquida > 0 com t ≥ 2,24
+  (erro-padrão de Newey–West, 5 defasagens), (b) média > 0 em cada metade do teste, (c) a regra específica abaixo. Passou = vai à conta de teste
+  executada por CÓDIGO (não por agente), com o tamanho H64; reprovou = nada muda.
+
+### H77 — carteira neutra em dólar de máximo Sharpe (seção 3.18)
+- Cesta FIXA do artigo: BTC, ETH, SOL, BNB, XRP, DOGE, ADA, AVAX, LINK, DOT.
+- Pesos: w ∝ C⁻¹E − C⁻¹1·(1ᵀC⁻¹E)/(1ᵀC⁻¹1), depois Σ|w| = 1 (Σw = 0 por construção). C = covariância dos retornos diários da janela, + 1e-4·I.
+- E (expectativa): reversão E = −(r_d − média da cesta) ou momento E = +(r_d − média), r_d = retorno dos últimos d dias.
+- Grade (18): sinal {reversão, momento} × d {1, 3, 7} × janela de covariância {60, 120, 250}.
+- (c) Controle: 500 sorteios que embaralham E entre as moedas a cada dia (mesma regra de pesos e custo); o Sharpe do teste tem de ficar acima de 97,5% deles.
+- Relatado: beta para o BTC, queda máxima, giro diário.
+
+### H78 — tendência com filtro de Hodrick–Prescott (seção 8.1)
+- BTC e ETH, carteira 50/50 (cada uma +0,5 ou −0,5). Para cada dia t: filtro HP SÓ na janela de W dias até t, guarda o último ponto S*(t)
+  (sem olhar o futuro). Compra se MA(T1) > MA(T2) da série S*, vende se menor.
+- Grade (≤ 54): W {180, 365, 730} × T1 {5, 10, 20} × T2 {20, 30, 60} (T1 < T2) × λ {14.400; 100·365² ≈ 13,3 milhões}.
+- (c) No teste, o Sharpe tem de ser maior que o de comprar e segurar (50/50 BTC+ETH) **e** maior que a mesma MA(T1)×MA(T2) no preço cru
+  (a promessa do livro é que o filtro tira o ruído).
+- **Previsão registrada:** as duas reprovam. A H65 (momento semanal entre moedas) e a H39 (tendência de horas) reprovaram; a reversão de 1–7 dias
+  em moedas grandes paga muito giro; tendência diária em 2 moedas tem poucas trocas e muito ruído em ~2 anos de teste.
+
+### Resultado da H76 (24/11/2026 ~21:20 UTC, `lab/juizo_h76.py`): REPROVADA — nada muda
+| par | n (dias) | média líquida | EP | t | acerto | sem custo | blocos | controle (hora sorteada) |
+|---|---|---|---|---|---|---|---|---|
+| **BTCUSDT** | 1.787 | **−0,104%** | 0,017% | −6,18 | 38,7% | +0,016% | −0,101 / −0,088 / −0,123% | −0,090% ± 0,018% (válido) |
+| ETHUSDT (relato) | 1.787 | −0,103% | 0,022% | −4,61 | 40,5% | +0,017% | −0,111 / −0,085 / −0,114% | −0,137% ± 0,025% (válido) |
+- De 2022 em diante, as 2 h das 22:00 às 00:00 UTC rendem +0,016% por dia antes do custo, contra os ≈ 0,09% do artigo em 2015–2021. Isso não paga o custo de 0,12%. Como previsto.
