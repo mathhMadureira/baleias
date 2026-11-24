@@ -5,7 +5,7 @@ Uma chave central em Shared/baleias/FOCO.json. Toda ferramenta que manda ordem c
 - "binance" | "bybit" | "bingx" | "gate": só a conta de demonstração dessa corretora opera; as outras ficam sem ordem nova;
 - "todas": cada agente na própria conta de demonstração (o arranjo antigo);
 - "solana_papel": nenhuma corretora; só papel na Solana.
-Dinheiro real nunca: o foco só escolhe entre contas de DEMONSTRAÇÃO.
+- "lbank": a carteira única de DINHEIRO REAL do dono (24/11: US$ 10), só o operador (Laboratório) manda ordem.
 
 Uso: python3 -I foco.py mostrar | python3 -I foco.py definir <foco> "<motivo>"
 """
@@ -22,10 +22,11 @@ FOCOS = {
     "bybit": "equipe na Bybit Demo",
     "bingx": "equipe na BingX VST",
     "gate": "equipe na Gate Futures TestNet",
+    "lbank": "carteira única REAL na LBank (operador: Laboratório)",
     "todas": "cada agente na própria conta de demonstração",
     "solana_papel": "Solana só no papel; nenhuma corretora",
 }
-CORRETORA_DO_FOCO = {"binance": "binance", "bybit": "bybit", "bingx": "bingx", "gate": "gate"}
+CORRETORA_DO_FOCO = {"binance": "binance", "bybit": "bybit", "bingx": "bingx", "gate": "gate", "lbank": "lbank"}
 
 
 def ler():
