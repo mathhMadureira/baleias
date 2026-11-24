@@ -2939,3 +2939,44 @@ class MesaAoVivo(unittest.TestCase):
         self.assertTrue(any(f["tipo"] == "ordem" for f in d["feed"]))
         m = [a for a in d["mesa"] if a["id"] == "memecoins"][0]
         self.assertFalse(m["trabalhando"])
+
+
+class RoboUnico(unittest.TestCase):
+    """24/11 (auditoria + livro 151): o robô único impõe os limites; a estratégia só devolve pesos."""
+
+    def _mod(self):
+        import importlib.util, tempfile
+        spec = importlib.util.spec_from_file_location("robo_unico", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "robo" / "robo.py")
+        R = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(R)
+        R.DADOS = pathlib.Path(tempfile.mkdtemp())
+        return R
+
+    def _buscar(self, agora, precos):
+        def f(simbolo, tempo, n):
+            p = precos[simbolo]
+            fim = int(agora // 86400 * 86400 * 1000)          # última vela fechada termina na virada do dia
+            return [[fim - (n - i) * 86_400_000, "0", "0", "0", str(p[i] if i < len(p) else p[-1]), "0", fim - (n - i - 1) * 86_400_000 - 1]
+                    for i in range(n)]
+        return f
+
+    def test_limites(self):
+        R = self._mod()
+        agora = 1795600000.0
+        alta = {s: [100.0 * (1.01 ** i) for i in range(62)] for s in ("BTCUSDT", "ETHUSDT")}
+        e = R.passo("ma_5x60", agora, self._buscar(agora, alta))
+        self.assertAlmostEqual(sum(abs(v) for v in e["posicoes"].values()), 10.0 * (1 - 0.0006), delta=0.05)   # 1× o patrimônio
+        self.assertTrue(all(v > 0 for v in e["posicoes"].values()))                                           # alta: comprado
+        n = len(e["eventos"])
+        e = R.passo("ma_5x60", agora + 60, self._buscar(agora + 60, alta))
+        self.assertEqual(len(e["eventos"]), n)                                                                 # mesmo alvo: nenhuma ordem
+        self.assertEqual(R.limitar({"A": 1.0, "B": -1.0}), {"A": 0.5, "B": -0.5})
+        e2 = R.passo("ma_5x60", agora + 10 * 86400, self._buscar(agora, alta))                                 # vela velha
+        self.assertIn("sem dado bom", e2["eventos"][-1]["texto"])
+        queda = {s: v[:-1] + [v[-1] * 0.9] for s, v in alta.items()}                                            # −10% num dia
+        e3 = R.passo("ma_5x60", agora + 86400, self._buscar(agora + 86400, queda))
+        self.assertTrue(e3["parado"])
+        self.assertEqual(e3["posicoes"], {})
+        e4 = R.passo("ma_5x60", agora + 2 * 86400, self._buscar(agora + 2 * 86400, alta))                          # parado: não volta sozinho
+        self.assertTrue(e4["parado"])
+        self.assertEqual(e4["posicoes"], {})

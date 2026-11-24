@@ -1828,3 +1828,32 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Juiz:** (a) média diária líquida > 0, (b) Sharpe > o de comprar e segurar BTC+ETH 50/50 no mesmo período, (c) > 0 em cada metade.
   Com 90 dias o t não decide sozinho (anotado): passar em (a)–(c) só libera um teste na conta de teste por mais 90 dias, não a mesa.
 - **Previsão registrada:** reprova; o +0,95 do período 2024–2026 é provavelmente sorte de uma tendência longa.
+
+## Hipótese 80 (dono, 24/11): receber funding com risco neutro — comprado à vista + vendido no perpétuo, Binance (registrada em 24/11/2026 ~22:30 UTC, antes de baixar os dados)
+- **Por quê:** auditoria de 24/11 → estratégias sistemáticas, neutras e de giro baixo. Arbitragem de funding/base é a seção de arbitragem do
+  *151 Trading Strategies* mais próxima de cripto. A H3 testou isso na Hyperliquid (4 moedas, ao vivo desde 07/11, robô fora do placar em 15/11, sem veredito).
+- **Dados:** cesta fixa BTC, ETH, SOL, BNB, XRP, DOGE, ADA, AVAX, LINK, DOT; velas diárias à vista (data-api.binance.vision) e do perpétuo USDT
+  (fapi), e funding de 8 h somado por dia; 2021-01-01 a 2026-11-23.
+- **Par por moeda (peso w):** comprado w à vista e vendido w no perpétuo. Ganho diário = w × (retorno à vista − retorno do perpétuo + funding do dia).
+  Custo: à vista 0,10% e perpétuo 0,05% por lado (taxa de tomador padrão) → 0,15% por perna montada ou desmontada, sobre o giro.
+- **Regra:** no fechamento do dia t, uma moeda entra se a média do funding diário dos últimos L dias, anualizada (× 365), passa de k; sai se ficar
+  abaixo de k/2 (histerese contra vaivém). As que estão dentro dividem o peso igual (Σw = 1); nenhuma = caixa.
+- **Grade (9):** L {3, 7, 14} × k {5%, 10%, 20% ao ano}. Ajuste = primeiros 60% dos dias (Sharpe); teste = últimos 40%, uma vez.
+- **Juiz (1 tentativa):** no teste, (a) média diária líquida > 0 com t ≥ 2 (Newey–West, 5), (b) > 0 nas duas metades, (c) queda máxima menor
+  que 5% (é uma estratégia neutra: perda grande = risco de base ou de execução que não sei medir aqui). Relatado: tempo investido, retorno anual,
+  pior dia, base máxima. Capital real ≈ 1,2–1,5 × o nocional (à vista inteiro + margem do perpétuo; anotado, não entra na conta).
+- **Se passar:** vira a primeira estratégia do robô único (no papel 30 dias, depois conta de demonstração). **Se reprovar:** nada entra.
+- **Previsão registrada:** passa em (a) e (c) no período todo de 2021, mas o teste (meados de 2024 em diante) tem funding menor; chance real de reprovar em (a).
+
+### Resultado da H80 (24/11/2026 ~22:45 UTC, `lab/h80_funding.py` → `dados/lab/h80_resultado.json`): REPROVADA — nada entra
+| | valor |
+|---|---|
+| escolhida no ajuste | L = 14 dias, k = 10% ao ano (Sharpe 7,2 no ajuste, 2021 a meados de 2024) |
+| teste (2024-07-15 a 2026-11-23): média/dia · ao ano | +0,0026% · +0,95% |
+| t (Newey–West) · Sharpe | 1,66 · 1,64 |
+| metades | +0,0065% / −0,0013% por dia |
+| queda máxima · pior dia | −0,98% · −0,24% |
+| tempo investido · funding médio da cesta | 28% dos dias · 3,2% ao ano |
+| período todo (2021–2026) | +8,3% ao ano, queda máx. −0,98% |
+- Juiz: (a) ✗ (t 1,66 < 2), (b) ✗ (segunda metade negativa), (c) ✓. Previsão confirmada: o funding alto era de 2021; desde 2024 a cesta paga
+  3,2% ao ano e, depois de 0,30% de custo por ida e volta, sobra perto de zero. A estratégia é segura (queda < 1%), mas hoje não rende.
