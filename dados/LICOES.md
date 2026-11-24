@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 10:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 10:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,9 +69,9 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 37.1% das moedas subindo em 24 h, 7.1% em 4 h · BTC 24 h -2.26%, 4 h -0.81%.
+- **Amplitude:** 35.0% das moedas subindo em 24 h, 10.7% em 4 h · BTC 24 h -2.46%, 4 h -0.9%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 0.8, 'ETH': -3.7, 'SOL': 3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.1%/ano · {'BTC': 0.7, 'ETH': -3.3, 'SOL': 4.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZIL estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BREV fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · DODO topo duplo (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · HUMA topo duplo (baixa, formado) · KERNEL fundo duplo (alta, formado) · KITE OCO invertido (alta, formado)
 - 📰 24/11 10:29 UTC · CoinDesk: South Korea regulator backs bank-controlled stablecoins after months of dispute
@@ -102,12 +102,12 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 31 em observação, 1 podadas)
 **v2:**
-- ⏸ Revivi 7 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ✂ Sinapse williams_volb_alta PODADA: 69/150 acertos (46.0%).
 - 😴 Sono: reencenei 2016 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 2112 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- 😴 Sono: reencenei 2208 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 47710 apostas conferidas ao vivo, acerto 54.2%; prevê 44 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 47741 apostas conferidas ao vivo, acerto 54.2%; prevê 139 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
