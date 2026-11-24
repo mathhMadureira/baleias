@@ -1,6 +1,6 @@
 {
- "t": 1795531032,
- "hora_utc": "2026-11-24 14:37 UTC",
+ "t": 1795531274,
+ "hora_utc": "2026-11-24 14:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 130,
@@ -172,11 +172,17 @@
   1.07,
   0.1,
   -0.78,
-  0.48
+  0.6
  ],
  "contexto": {
-  "t": 1795531033,
+  "t": 1795531275,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795531253,
+    "hora_utc": "24/11 14:40",
+    "titulo": "South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795529583,
@@ -260,12 +266,6 @@
     "t": 1795521856,
     "hora_utc": "24/11 12:04",
     "titulo": "South Korea proposes bank-led stablecoins, 20% cap on crypto exchange stakes"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795520433,
-    "hora_utc": "24/11 11:40",
-    "titulo": "Bitcoin dipped on Huang’s Nvidia exit but jumped 5% on his return"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.6,
+   "media_top20_anual_pct": 5.2,
    "principais_anual_pct": {
-    "BTC": -1.6,
-    "ETH": 3.0,
-    "SOL": -24.1
+    "BTC": -0.8,
+    "ETH": 3.6,
+    "SOL": -23.9
    },
    "leitura": "neutro"
   },
