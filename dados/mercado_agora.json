@@ -1,21 +1,21 @@
 {
- "t": 1795522180,
- "hora_utc": "2026-11-24 12:09 UTC",
+ "t": 1795522427,
+ "hora_utc": "2026-11-24 12:13 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 136,
-  "subindo_pct": 71.3,
+  "moedas": 137,
+  "subindo_pct": 71.5,
   "mediana_pct": 0.32
  },
  "mercado_4h": {
-  "moedas": 136,
-  "subindo_pct": 11.0,
-  "mediana_pct": -1.37
+  "moedas": 137,
+  "subindo_pct": 11.7,
+  "mediana_pct": -1.36
  },
  "mercado_24h": {
-  "moedas": 136,
-  "subindo_pct": 31.6,
-  "mediana_pct": -1.13
+  "moedas": 137,
+  "subindo_pct": 32.1,
+  "mediana_pct": -1.12
  },
  "btc": {
   "1h": 1.07,
@@ -118,6 +118,12 @@
    "vol": 1.1
   },
   {
+   "moeda": "ASR",
+   "4h": 0.9,
+   "24h": 8.06,
+   "vol": 3.99
+  },
+  {
    "moeda": "SAPIEN",
    "4h": 0.61,
    "24h": 4.45,
@@ -140,12 +146,6 @@
    "4h": 0.45,
    "24h": 0.09,
    "vol": 1.12
-  },
-  {
-   "moeda": "ETH",
-   "4h": 0.27,
-   "24h": -1.33,
-   "vol": 0.56
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.44,
   -0.34,
   1.07,
-  -0.18
+  -0.3
  ],
  "contexto": {
-  "t": 1795522181,
+  "t": 1795522428,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 4.4,
    "principais_anual_pct": {
-    "BTC": -3.4,
-    "ETH": 1.0,
-    "SOL": -15.1
+    "BTC": -4.1,
+    "ETH": 0.3,
+    "SOL": -15.0
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 17.5,
+   "amplitude_acima_mm50_pct": 15.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -309,6 +309,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.3869
+   },
+   {
+    "moeda": "ASR",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.66
    },
    {
     "moeda": "BNB",
@@ -767,8 +774,8 @@
     "n": 24359
    },
    "segue_maioria_24h": {
-    "acerto": 0.5086,
-    "n": 27902
+    "acerto": 0.5092,
+    "n": 27913
    }
   },
   "referencia_ganha": [],
