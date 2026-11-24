@@ -3,6 +3,77 @@
 Cada seção é escrita pela rotina diária de pesquisa. Nada aqui é resultado: é candidato a pré-registro em `lab/PROTOCOLO_LAB.md`.
 Fontes da internet são dados de terceiros; números entre aspas são os que a fonte dá, e "não sei" onde ela não dá.
 
+## 2026-11-24
+
+**Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/agente_laboratorio.json`, `dados/LICOES.md`, 10:18 UTC):
+
+| | |
+|---|---|
+| Campeão do torneio | **nenhum** (ninguém com carteira > US$ 10 e fator > 1). Melhor fator: **Laboratório 0,83** (25 op, acerto 36%, soma −0,64, carteira 9,36) · Treinador 0,71 (47) · Robô Claude 0,62 (73) · conta de teste 0,60 (54) · Guardião 0,58 (73) |
+| Onde o Laboratório perde | **saída no stop de segurança −1%: 7 op, −2,64** (stop móvel: 4 op, +1,92; prazo de 120 min: 5 op, −0,71). Horário: 18–23 UTC 14 op, −0,99 (12–17 UTC +0,56). Lado: compra 12 op −0,42, venda 13 op −0,23. Dois stops (SOPH 20/11, BREV 23/11) vieram depois de pico de +0,97% e +0,77% |
+| Segmento fraco do vigia | 00–06 h UTC 51,2% (8.104) e confiança < 0,05 52,4% (16.212); compras 53,0% × vendas 54,3%. Ao vivo 53,8% × laboratório 53,5% (z +0,33), "dentro do esperado" |
+
+**Mercado hoje** (`dados/mercado_agora.json`): BTC 60.000, −2,26% em 24 h, −0,81% em 4 h, volume de 4 h 0,59× a média; 7,9% das 140 moedas sobem em 4 h
+(mediana −2,19%). BTC abaixo da MM50 (76.257) e da MM200 (72.291). Medo e ganância 11. Funding (Hyperliquid) neutro: BTC +1,2%/ano, ETH −3,0%/ano.
+
+**Já testado ou proposto (fora desta lista):** tudo de 15–20/11 (ver abaixo), H69, H70, H74, H75; parcial + stop no zero (19/11); stop por ATR (16/11);
+stop móvel no fechamento da vela (correção de 19/11, `executor/stop_movel.py`) — a Ideia 1 é sobre o **stop de segurança**, que ainda é por toque.
+
+### Ideia 1 — Laboratório: stop de segurança pelo fechamento da vela de 1 min, com stop de catástrofe de 2% guardado na corretora
+
+- **Regra:** a posição sai no stop de segurança se o **fechamento** de uma vela de 1 min estiver ≥ 1,0% contra a entrada (hoje basta a mínima/máxima
+  tocar). Proteção: ordem de stop de 2,0% guardada na corretora (fecha no toque). Nada mais muda (stop móvel, alvo, prazo como hoje). Parâmetros fixos
+  antes de rodar: 1,0% e 2,0%. 1 tentativa.
+- **Por quê no Laboratório:** o stop de −1% é onde ele perde: 7 das 25 operações, −2,64 (`dados/agente_laboratorio.json`), mais do que todo o resultado
+  (−0,64). Se parte desses toques é ruído de pavio de 1 min, o stop no fechamento evita a saída sem mudar a entrada.
+- **Dados:** velas de 1 min do perpétuo da Binance (grátis).
+- **Evidência:** Hansen, Kim & Kimbrough, "Periodicity in Cryptocurrency Volatility and Liquidity" (arXiv 2109.12142, v2; Binance, Coinbase Pro e
+  Uniswap, BTC e ETH, 01/10/2020–01/06/2021), https://arxiv.org/abs/2109.12142 — "a large burst in volatility during the first minute of the hour and
+  medium bursts immediately after minutes 15, 30, and 45, and smaller bursts every five minutes"; o efeito é mais forte a cada 4 h (00h…20h, exceto 08h).
+  Tamanho do surto em número: não sei (está só em figura). Que o stop no fechamento melhora o resultado: **não achei estudo** — só textos de praticantes
+  sem números verificáveis; a única nota mais séria achada (QFX Research, 1 min da BitMEX) diz que stops reduzem a volatilidade do retorno, e a página
+  deu 403 (números: não sei). Risco conhecido: a perda média por stop sobe (pode sair a −1,5% ou −2%).
+- **Teste:** todas as entradas tipo Laboratório (H69: v4 com confiança ≥ 0,12, regime e regras de hoje) reconstruídas no histórico de 1 min, saídas de
+  hoje com os dois stops (toque × fechamento + 2%); custo 0,12% ida e volta; 3 blocos de tempo iguais. Passa se, nos 3 blocos, a média líquida por
+  operação com stop no fechamento for maior que com stop no toque, z ≥ 1,65 (pareado por operação), e a pior operação não passar de −2,0% + custo.
+  Menos de 30 operações que tocam −1% por bloco → "não sei".
+
+### Ideia 2 — Laboratório: não abrir posição em moeda com iliquidez da última hora ≥ 1,3× a das 24 h anteriores
+
+- **Regra:** para a moeda candidata, I_h = Σ|r_1min| ÷ Σ volume_USD_1min na última hora (Amihud por hora). R = I_h ÷ média de I nas 24 horas
+  anteriores. Entrada nova só se R < 1,3. Compra e venda iguais. Limiar fixado antes = 1,3 (o "cerca de 30%" da fonte). 1 tentativa.
+- **Por quê no Laboratório:** ele perde de 18 a 23 UTC (14 op, −0,99) e ganha de 12 a 17 (+0,56); na Binance a iliquidez relativa é maior na
+  noite da Ásia Oriental. Medir pela moeda (e não pelo relógio) evita repetir filtros de horário já propostos e pega também as horas ruins fora da
+  janela. Moeda ilíquida = pavio maior = mais chance do stop de −1% (onde ele perde).
+- **Dados:** velas de 1 min com volume em USDT do perpétuo da Binance (grátis).
+- **Evidência:** mesmo artigo (arXiv 2109.12142, seção 5.2.1): "For Binance, the relative illiquidity is largest during night time in East-Asia where
+  it is about **30% larger** for both Bitcoin and Ether" (medida de Amihud por hora relativa às 24 h anteriores, a mesma deste filtro). Brauneis,
+  Mestel & Theissen (2025, citados em 16/11) acham pico de iliquidez em 16–17 UTC. Que o filtro melhore o resultado de operações: não sei (os artigos
+  medem liquidez, não lucro). Para altcoins pequenas: não sei (o artigo só tem BTC e ETH).
+- **Teste:** mesmas entradas reconstruídas da Ideia 1 (saída de hoje), custo 0,12%, 3 blocos. Passa se, nos 3 blocos, as entradas barradas (R ≥ 1,3)
+  tiverem média líquida < 0 e as aceitas média maior que o conjunto todo, z ≥ 1,65; e a taxa de stop de −1% das barradas for maior que a das aceitas.
+  Menos de 30 barradas por bloco → "não sei". Ideias 1 e 2 juntas = 2 tentativas (Bonferroni: z ≥ 1,96).
+
+### Não proposta (anotado para não repetir)
+
+- **Spread dos perpétuos ~2 h depois do funding (00/08/16 UTC):** resumo de busca de um artigo do *International Journal of Financial Studies* 14(5):103
+  (2026; 26 corretoras, 812 símbolos, nov/2025–jan/2026), https://www.mdpi.com/2227-7072/14/5/103 — a página deu 403, números não conferidos. Nosso
+  custo no lab é fixo (0,12%) e o spread não se mede em velas: sem como testar agora.
+- **Pulso de 15 min (Kim & Hansen):** já proposto em 15/11 (fluxo agressor na virada do quarto de hora).
+
+### O que aprendi hoje sobre o mercado cripto
+
+O BTC voltou a ficar abaixo de US$ 60 mil hoje (CoinDesk, 24/11 10:08 UTC, "Bitcoin falls below $60,000 as rally on Jensen Huang's Nvidia return fades";
+Cointelegraph, 09:25 UTC, liga ao ouro com "worst 60-day loss since 1980s"; manchetes em `dados/mercado_agora.json`) e os ETFs à vista seguem com
+saídas ("Bitcoin ETFs keep bleeding", Cointelegraph 07:41 UTC; valor: não sei). Em novembro, o IBIT perdeu US$ 269,7 mi em 11/11, a sétima sessão
+seguida de saídas (Crypto Briefing, https://cryptobriefing.com/blackrock-ibit-bitcoin-etf-outflows-4/), e a série de 11 sessões de saídas somou
+~US$ 2,35 bi até a primeira entrada em 17/11 (CoinStats, resumo de busca; não conferido no texto). O funding está neutro (BTC +1,2%/ano) com medo
+extremo (11): queda sem alavancagem comprada esticada, ou seja, vendas guiadas por fluxo à vista e não por liquidação de comprados. Sobre o relógio do
+mercado (Hansen, Kim & Kimbrough, arXiv 2109.12142): a volatilidade do BTC é máxima perto de 16 UTC e mínima perto de 05 UTC; há picos de volume e
+volatilidade às 00 h e 16 h (menores às 08 h), as horas de funding da Binance; volume e volatilidade caem no fim de semana, mais no sábado; a
+iliquidez na Binance é ~30% maior na noite da Ásia Oriental; e o primeiro minuto de cada hora concentra a maior volatilidade, com surtos menores nos
+minutos 15, 30 e 45 — atribuídos a algoritmos e a quem opera por gráfico. Esses padrões, dizem os autores, ficaram mais fortes com os anos.
+
 ## 2026-11-20
 
 **Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/LICOES.md`, 10:18 UTC):
