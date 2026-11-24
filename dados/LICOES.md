@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 20:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 20:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,7 +43,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.36** · 25 operações fechadas · 1 abertas
+Carteira **US$ 9.47** · 25 operações fechadas · 1 abertas
 
 - **Total:** 9/25 com lucro (36%), resultado -0.64, média -0.026 por operação.
 - **Últimas 24 h:** 2/5 com lucro, -0.44.
@@ -56,7 +56,7 @@ Carteira **US$ 9.36** · 25 operações fechadas · 1 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 6.96** · 73 operações fechadas · 1 abertas
+Carteira **US$ 7.00** · 73 operações fechadas · 1 abertas
 
 - **Total:** 36/73 com lucro (49%), resultado -3.07, média -0.042 por operação.
 - **Últimas 24 h:** 5/14 com lucro, -2.80.
@@ -69,11 +69,11 @@ Carteira **US$ 6.96** · 73 operações fechadas · 1 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.2% das moedas subindo em 24 h, 70.4% em 4 h · BTC 24 h -2.59%, 4 h 0.31%.
+- **Amplitude:** 18.4% das moedas subindo em 24 h, 44.8% em 4 h · BTC 24 h -2.7%, 4 h -0.11%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': -17.3, 'ETH': 6.0, 'SOL': -9.5} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ACE ombro-cabeça-ombro (baixa, CONFIRMOU) · BEB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · CELO fundo duplo (alta, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · TRX triângulo descendente (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': -17.4, 'ETH': 5.4, 'SOL': -9.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ACE ombro-cabeça-ombro (baixa, CONFIRMOU) · BEB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ICP topo duplo (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · CELO fundo duplo (alta, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado)
 - 📰 24/11 19:44 UTC · Cointelegraph: Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares
 - 📰 24/11 19:35 UTC · Decrypt: Bitcoin Losses Are the Worst Since FTX. Is the Bottom Near?
 - 📰 24/11 19:04 UTC · Cointelegraph: Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years
@@ -117,7 +117,7 @@ Carteira **US$ 6.96** · 73 operações fechadas · 1 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 49987 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 50060 apostas conferidas ao vivo, acerto 54.3%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
