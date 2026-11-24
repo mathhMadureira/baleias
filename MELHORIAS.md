@@ -263,3 +263,11 @@ Ordem = prioridade. Cada item que mexe em estratégia vira hipótese pré-regist
   teste: 7 saídas (5 stops guardados na corretora, 2 fechadas por saírem da lista), patrimônio US$ 7,85 → 7,16, sem 🚨 nem BLOCKED. Código das regras R2
   (09a1f1f5) auditado sem bug. **Corrigido:** `mesa/operar/ROTINA.md` (e a cópia viva) ainda dizia "versão R1" das REGRAS; agora R2. Teste
   `RotinaCitaARegraEmVigor` (a rotina cita só a versão em vigor; falha no texto antigo). 196 testes.
+- 2026-11-24 (20 UTC): **6ª auditoria do Engenheiro (rodada das 15:00 UTC atrasada pela máquina congelada).** Relatório:
+  `OpenBot/Shared/baleias/auditorias/2026-11-24-20.md`. A máquina virtual congelou de 03:26 a 20:00 UTC (16h34; diário do sistema sem nenhuma linha e
+  "Clock change detected" na volta), a 3ª parada em 2 dias: nenhum agente decidiu nesse tempo. Conta de teste: DOGE e TRUMP (decisão de 03:19, prazo
+  120 min) ficaram abertas durante a parada, protegidas pelo stop guardado na corretora; na volta, 2 stops (−0,12); patrimônio US$ 7,16 → 7,04.
+  **Corrigido:** em `mesa/operar/operar.py` (e a cópia viva), `atualizar()` tratava "fatal: unable to access" (rede caída) como clone corrompido: o clone
+  bom do Treinador foi para o lado às 20:08 UTC (`git fsck` limpo) e a rodada clonou de novo pela rede ruim. Agora, como em `mesa/chefe/ler.py`, só refaz
+  o clone quando ele não responde a comandos locais; com o clone bom, a rodada para com o erro. Testes `CloneDoAgenteSemRede` (2; o da rede falha no
+  código antigo). 199 testes.

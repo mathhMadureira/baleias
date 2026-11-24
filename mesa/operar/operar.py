@@ -69,6 +69,19 @@ def git(c, *a, check=True):
     return subprocess.run(["git", "-C", str(c), *a], capture_output=True, text=True, timeout=120, check=check)
 
 
+def clone_ok(c):
+    """True se o clone responde a comandos só locais (sem rede). Falha de rede no fetch NÃO é clone quebrado."""
+    if not (Path(c) / ".git").exists():
+        return False
+    try:
+        for a in (("rev-parse", "--verify", "-q", "HEAD"), ("status", "--porcelain", "-uno")):
+            if subprocess.run(["git", "-C", str(c), *a], capture_output=True, text=True, timeout=60).returncode:
+                return False
+    except subprocess.SubprocessError:
+        return False
+    return True
+
+
 def atualizar(c):
     try:
         git(c, "fetch", "-q", "--depth", "20", "origin", "estado")
@@ -77,6 +90,10 @@ def atualizar(c):
         # auditoria 19/11: depois de um desligamento o clone do chefe ficou corrompido (corrompidos/estado-20261119) e toda rodada falhava.
         # O clone é só uma cópia do ramo: guarda o quebrado de lado (não apaga) e clona de novo.
         if "fatal" not in (ex.stderr or "") and "error" not in (ex.stderr or ""):
+            raise
+        # auditoria 24/11: "fatal: unable to access" (rede caída) também tem "fatal"; o clone bom do Treinador ia para o lado e a rodada
+        # clonava de novo pela rede ruim. Com o clone bom, é rede ou GitHub: a rodada para com o erro, sem mexer no clone.
+        if clone_ok(c):
             raise
         os.replace(c, c.with_name(f"{c.name}.corrompido-{int(time.time())}"))
         clone(c.name)

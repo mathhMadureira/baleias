@@ -2365,6 +2365,51 @@ class CloneDoChefeQuebrado(unittest.TestCase):
         self.assertFalse(any(p.name.startswith("estado.corrompido-") for p in self.d.iterdir()))
 
 
+class CloneDoAgenteSemRede(unittest.TestCase):
+    """Auditoria 24/11: em mesa/operar/operar.py, "fatal: unable to access" (rede caída) era tratado como clone corrompido: o clone bom
+    do Treinador ia para o lado (treinador.corrompido-1795550934, git fsck limpo) e a rodada clonava de novo pela rede ruim."""
+
+    def _mod(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("operar_mesa", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "operar.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        return m
+
+    def setUp(self):
+        import subprocess
+        import tempfile
+        self.d = pathlib.Path(tempfile.mkdtemp())
+        run = lambda *a, c=None: subprocess.run(["git", *(["-C", str(c)] if c else []), *a], check=True, capture_output=True)
+        org = self.d / "org"
+        run("init", "-q", "-b", "estado", str(org))
+        (org / "dados").mkdir()
+        (org / "dados" / "x.json").write_text("{}")
+        run("add", ".", c=org)
+        run("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-q", "-m", "x", c=org)
+        self.remoto = "file://" + str(org)
+        self.c = self.d / "clones" / "treinador"
+        run("clone", "-q", "--branch", "estado", self.remoto, str(self.c))
+
+    def test_sem_rede_com_clone_bom_nao_mexe_no_clone(self):
+        import subprocess
+        U = self._mod()
+        U.AQUI, U.REMOTO = self.d, str(self.d / "nao-existe")         # sem rede: nem o fetch nem um clone novo alcançam o remoto
+        subprocess.run(["git", "-C", str(self.c), "remote", "set-url", "origin", str(self.d / "nao-existe")], check=True)
+        with self.assertRaises(subprocess.CalledProcessError):
+            U.atualizar(self.c)
+        self.assertTrue((self.c / "dados" / "x.json").exists())
+        self.assertFalse(any(".corrompido-" in p.name for p in (self.d / "clones").iterdir()))
+
+    def test_clone_corrompido_ainda_e_refeito(self):
+        U = self._mod()
+        U.AQUI, U.REMOTO = self.d, self.remoto
+        (self.c / ".git" / "HEAD").write_text("")                       # cortado pelo desligamento
+        U.atualizar(self.c)
+        self.assertTrue((self.c / "dados" / "x.json").exists())
+        self.assertTrue(any(".corrompido-" in p.name for p in (self.d / "clones").iterdir()))
+
+
 class RegrasFonteUnica(unittest.TestCase):
     """REGRAS.md (19/11, pedido do dono: "conflitos de regras"): o texto único bate com o que a execução impõe, e gravar corta igual."""
 
