@@ -1739,3 +1739,23 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
   que o C2 cortava perdeu −0,146% por operação, 1.896 alertas).
 - **Juiz ao vivo (registrado agora):** as 60 primeiras operações fechadas das 4 carteiras de agente depois da R2 contra as 60 últimas antes dela (resultado_usd
   por operação). Se a média depois for menor que a de antes **e** a soma depois for < 0, volto ao dono com os números para decidir se a R2 fica.
+
+### Juízo de 24/11/2026 (~20:30 UTC, `lab/juizo_h59_h62.py`, ramo `estado` 88e39602): H59 e H62 pelo critério escrito, sem ajuste
+- **H59 (Chefe OpenBot no testnet): REPROVADA.** As 30 primeiras operações fechadas (18/11 01:04 a 20/11 13:51 UTC), resultado da corretora
+  (realizedPnl − commission): soma −US$ 1,834, fator de lucro 0,615, acerto 33,3%, t da média −0,93. Precisava de soma > 0 e fator > 1.
+  À parte: ZEC −0,970 e RENDER −0,794 (abertas antes da emenda); sem as duas a soma ainda é −0,070. Comparação (não decide): Robô Claude com
+  `decisao_t` no mesmo período, 37 operações, soma −0,798, fator 0,78. Todas as 56 fechadas até hoje: soma −2,960, fator 0,589.
+- **H62 (agentes livres, 30 operações abertas desde 18/11 20:37 UTC; carteira = 10 + todas as fechadas até a saída da 30ª):**
+
+| agente | n | soma US$ | fator | acerto | t | carteira na 30ª | veredito |
+|---|---|---|---|---|---|---|---|
+| Baleias (`robo_claude`) | 30 | +0,387 | 1,168 | 56,7% | +0,38 | 9,526 | REPROVADO (carteira ≤ 10) |
+| Treinador | 30 | −0,488 | 0,822 | 43,3% | −0,49 | 9,684 | REPROVADO |
+| Guardião | 30 | −0,034 | 0,987 | 60,0% | −0,03 | 10,292 | REPROVADO (fator ≤ 1) |
+| Laboratório | 25 | — | — | — | — | — | não julgável (faltam 5) |
+
+  Baleias: a carteira começou a H62 em US$ 8,889 (herdada do Robô Claude, 16 fechadas antes); pelo critério escrito reprova. As 30 operações da H62
+  sozinhas somaram +0,387 (fator 1,17), mas com t +0,38 isso não se distingue de zero. Sem campeão. Nada muda no código.
+- **H49 (stop móvel):** não julgada. Desde a H62 cada agente põe alvo e prazo, e desde a R2 (23/11) o móvel é desligável; a "saída antiga" escrita
+  (regra do robô sem o móvel) não existe para essas operações. Fica registrada como não julgável; a pergunta foi respondida nos dados pela H70 (reprovada em 23/11).
+- **R2 (juiz ao vivo):** 12 de 60 operações abertas depois de 23/11 23:40 UTC; não venceu.
