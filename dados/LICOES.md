@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 18:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 19:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,11 +69,11 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 17.7% das moedas subindo em 24 h, 28.2% em 4 h · BTC 24 h -2.26%, 4 h -0.89%.
+- **Amplitude:** 17.7% das moedas subindo em 24 h, 22.6% em 4 h · BTC 24 h -2.45%, 4 h -0.93%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -4.7, 'ETH': 4.4, 'SOL': -1.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.0%/ano · {'BTC': -12.6, 'ETH': 3.0, 'SOL': -0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATM bandeira de alta (alta, CONFIRMOU) · BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CELO estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · FF OCO invertido (alta, formado) · GRAM fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · ICP fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ASR fundo duplo (alta, formado) · CELO triângulo descendente (baixa, formado) · GRAM fundo duplo (alta, formado) · ICP topo duplo (baixa, formado) · ICP fundo duplo (alta, formado) · NEAR ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU fundo duplo (alta, formado) · RAY fundo duplo (alta, formado) · TRX triângulo descendente (baixa, formado)
 - 📰 24/11 18:55 UTC · Decrypt: What the CFTC’s New Crypto Reserves Guidance Actually Allows—And What It Doesn’t
 - 📰 24/11 18:36 UTC · Decrypt: South Korea Moves to Lift Its ICO Ban After Nearly a Decade
 - 📰 24/11 18:31 UTC · Cointelegraph: CFTC sets new prediction market rules as more firms seek US entry
@@ -83,7 +83,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 15.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 15.7 h.
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
 - 23/11 23:30 UTC · **NIL venda, INJ venda, ZRO venda, ETHFI venda** · Universo 124 moedas (vela do v4 23:15 UTC); regime neutro: 66,1% subindo em 24 h, 12,1% em 4 h; repique curto: as 4 abertas com 15m entre +0,27% e +1,32%. v4 co
@@ -118,7 +118,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 49755 apostas conferidas ao vivo, acerto 54.3%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 49787 apostas conferidas ao vivo, acerto 54.3%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
