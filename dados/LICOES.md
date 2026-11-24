@@ -1,10 +1,10 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 03:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 03:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
-Carteira **US$ 6.93** · 71 operações fechadas · 2 abertas
+Carteira **US$ 6.92** · 71 operações fechadas · 2 abertas
 
 - **Total:** 38/71 com lucro (54%), resultado -3.05, média -0.043 por operação.
 - **Últimas 24 h:** 4/10 com lucro, -1.43.
@@ -30,7 +30,7 @@ Carteira **US$ 7.16** · 54 operações fechadas · 2 abertas
 
 ## 🎯 Treinador (agente OpenBot · método do Caçador)
 
-Carteira **US$ 8.97** · 45 operações fechadas · 2 abertas
+Carteira **US$ 8.85** · 45 operações fechadas · 2 abertas
 
 - **Total:** 18/45 com lucro (40%), resultado -1.07, média -0.024 por operação.
 - **Últimas 24 h:** 3/10 com lucro, -0.75.
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 53.5% das moedas subindo em 24 h, 31.5% em 4 h · BTC 24 h -1.68%, 4 h -1.48%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.3%/ano · {'BTC': -0.8, 'ETH': -13.1, 'SOL': 5.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.5%/ano · {'BTC': -0.8, 'ETH': -12.4, 'SOL': 5.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AERO bandeira de baixa (baixa, CONFIRMOU) · BMT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · INIT bandeira de baixa (baixa, CONFIRMOU) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BREV fundo duplo (alta, formado) · BTC fundo duplo (alta, formado) · ERA OCO invertido (alta, formado) · GTC topo duplo (baixa, formado) · GTC fundo duplo (alta, formado)
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
@@ -121,10 +121,10 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H64 (18/11 22:50 UTC, `lab/colher_balde.py` → `dados/lab/colher_balde_resultado.json`): parte T aprovada; parte S reprovada
-- Resultado da H20 (juízo diário, 19/11/2026 09:00 BRT = 12:00 UTC; `lab/juizo_h20.py`, `origin/estado` 12850e8c): REPROVADA
-- Resultado da H65 (19/11 ~14:20 UTC, `lab/metodos_fora.py` → `dados/lab/metodos_fora_resultado.json`): reprovada nas 3 tentativas
-- Resultado da H66 (19/11 ~15:30 UTC, `lab/busca_dobrar.py` → `dados/lab/busca_dobrar_resultado.json`): reprovada na reserva — e um erro de simulação achado
 - Resultado da H72 (21/11/2026 ~23:30 UTC, `lab/escala_capital.py` → `dados/lab/escala_capital_resultado.json`): REPROVADA no portão do fio
 - Resultado da H73 (22/11/2026 ~01:10 UTC, `lab/escala_capital.py` → `dados/lab/escala_capital_resultado.json`): fator 5 a 20× entra nas carteiras simuladas; 10 a 50× reprovada
+- Resultado da H46 (`lab/juizo_h46.py`): REPROVADA — nada muda
+- Resultado da H70 (`lab/juizo_h70.py`, ramo `estado` 4ae07584): REPROVADA nas 4 tentativas — controle válido
+- Resultado da H74 (23/11/2026 ~23:00 UTC, `lab/juizo_h74.py`, ramo `estado` 3dc14328): REPROVADA — nada muda
+- Resultado da H75 (23/11/2026 ~23:25 UTC, `lab/juizo_h75.py`, ramo `estado` 3fa38ccf): REPROVADA — R1–R3 não entram
 
