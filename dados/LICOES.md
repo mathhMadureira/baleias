@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 05:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 05:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 63.1% das moedas subindo em 24 h, 48.5% em 4 h · BTC 24 h -1.4%, 4 h -1.56%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.4%/ano · {'BTC': 11.0, 'ETH': -3.5, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.0%/ano · {'BTC': 10.0, 'ETH': -2.2, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** GTC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · RPL fundo duplo (alta, CONFIRMOU) · AERO ombro-cabeça-ombro (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · BMT fundo duplo (alta, formado) · BNB fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC fundo duplo (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 03:13 UTC · Cointelegraph: Google wants to make you the star of your own AI slop movies
