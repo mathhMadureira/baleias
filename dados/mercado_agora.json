@@ -1,6 +1,6 @@
 {
- "t": 1795523904,
- "hora_utc": "2026-11-24 12:38 UTC",
+ "t": 1795524150,
+ "hora_utc": "2026-11-24 12:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 139,
@@ -172,11 +172,17 @@
   -0.44,
   -0.34,
   1.07,
-  -0.19
+  -0.07
  ],
  "contexto": {
-  "t": 1795523905,
+  "t": 1795524151,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795524047,
+    "hora_utc": "24/11 12:40",
+    "titulo": "$14.7B in ‘Lost’ Bitcoin Has Moved Since 2018: Report"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795523788,
@@ -260,12 +266,6 @@
     "t": 1795500000,
     "hora_utc": "24/11 06:00",
     "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795496850,
-    "hora_utc": "24/11 05:07",
-    "titulo": "Why 42 Macro says it’s waiting to buy the Bitcoin dip"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": -3.1,
-    "ETH": -2.9,
-    "SOL": -14.3
+    "BTC": -2.1,
+    "ETH": -3.1,
+    "SOL": -14.6
    },
    "leitura": "neutro"
   },
