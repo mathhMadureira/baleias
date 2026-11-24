@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 14:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 14:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 6.93** · 73 operações fechadas · 0 abertas
 
 - **Amplitude:** 13.1% das moedas subindo em 24 h, 32.3% em 4 h · BTC 24 h -4.52%, 4 h 1.28%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': 0.8, 'ETH': 4.2, 'SOL': -22.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.3%/ano · {'BTC': 0.6, 'ETH': 3.7, 'SOL': -23.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SOL ombro-cabeça-ombro (baixa, CONFIRMOU) · VIRTUAL bandeira de baixa (baixa, CONFIRMOU) · APT fundo duplo (alta, formado) · AR fundo duplo (alta, formado) · ARB fundo duplo (alta, formado) · ARB ombro-cabeça-ombro (baixa, formado) · ASR fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado)
 - 📰 24/11 14:40 UTC · CoinDesk: South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment
