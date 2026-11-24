@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 24/11/2026 20:41 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 24/11/2026 20:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -56,7 +56,7 @@ Carteira **US$ 9.47** · 25 operações fechadas · 1 abertas
 
 ## 🛡 Guardião (agente OpenBot · tendência de 24 h + memecoins)
 
-Carteira **US$ 7.06** · 73 operações fechadas · 1 abertas
+Carteira **US$ 7.02** · 73 operações fechadas · 1 abertas
 
 - **Total:** 36/73 com lucro (49%), resultado -3.07, média -0.042 por operação.
 - **Últimas 24 h:** 5/14 com lucro, -2.80.
@@ -71,7 +71,7 @@ Carteira **US$ 7.06** · 73 operações fechadas · 1 abertas
 
 - **Amplitude:** 18.4% das moedas subindo em 24 h, 44.8% em 4 h · BTC 24 h -2.7%, 4 h -0.11%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': -17.5, 'ETH': 5.5, 'SOL': -8.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.5%/ano · {'BTC': -17.5, 'ETH': 5.7, 'SOL': -8.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 76257, MM200 72291); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ACE ombro-cabeça-ombro (baixa, CONFIRMOU) · BEB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ICP topo duplo (baixa, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ASR fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · CELO fundo duplo (alta, formado) · INIT OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado)
 - 📰 24/11 20:36 UTC · Decrypt: Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing
