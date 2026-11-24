@@ -1,21 +1,21 @@
 {
- "t": 1795538206,
- "hora_utc": "2026-11-24 16:36 UTC",
+ "t": 1795538440,
+ "hora_utc": "2026-11-24 16:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 124,
-  "subindo_pct": 38.7,
+  "moedas": 123,
+  "subindo_pct": 39.0,
   "mediana_pct": -0.08
  },
  "mercado_4h": {
-  "moedas": 124,
-  "subindo_pct": 10.5,
-  "mediana_pct": -1.76
+  "moedas": 123,
+  "subindo_pct": 10.6,
+  "mediana_pct": -1.77
  },
  "mercado_24h": {
-  "moedas": 124,
-  "subindo_pct": 11.3,
-  "mediana_pct": -7.23
+  "moedas": 123,
+  "subindo_pct": 11.4,
+  "mediana_pct": -7.21
  },
  "btc": {
   "1h": -0.44,
@@ -172,11 +172,17 @@
   -0.78,
   0.71,
   -1.19,
-  -0.61
+  -0.55
  ],
  "contexto": {
-  "t": 1795538207,
+  "t": 1795538441,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795538006,
+    "hora_utc": "24/11 16:33",
+    "titulo": "How South Korea’s proposed 20% cap could change who runs Upbit"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795536044,
@@ -260,12 +266,6 @@
     "t": 1795524460,
     "hora_utc": "24/11 12:47",
     "titulo": "Live updates: Bitcoin pulls back to $60,000, stock rally fades, as tariffs re-enter the picture"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795524047,
-    "hora_utc": "24/11 12:40",
-    "titulo": "$14.7B in ‘Lost’ Bitcoin Has Moved Since 2018: Report"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.6,
+   "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": -10.1,
-    "ETH": 0.8,
+    "BTC": -9.7,
+    "ETH": 1.0,
     "SOL": -19.0
    },
    "leitura": "neutro"
@@ -763,12 +763,12 @@
   "z_contra_lab": 0.58,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5069,
-    "n": 23390
+    "acerto": 0.5067,
+    "n": 23201
    },
    "segue_maioria_24h": {
-    "acerto": 0.5089,
-    "n": 28534
+    "acerto": 0.5083,
+    "n": 28612
    }
   },
   "referencia_ganha": [],
