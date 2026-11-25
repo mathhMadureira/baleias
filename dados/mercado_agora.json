@@ -1,6 +1,6 @@
 {
- "t": 1795619965,
- "hora_utc": "2026-11-25 15:19 UTC",
+ "t": 1795620183,
+ "hora_utc": "2026-11-25 15:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   0.19,
   -1.14,
   0.27,
-  -0.84
+  -0.49
  ],
  "contexto": {
-  "t": 1795619966,
+  "t": 1795620184,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795618037,
+    "hora_utc": "25/11 14:47",
+    "titulo": "South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795616496,
@@ -260,12 +266,6 @@
     "t": 1795605146,
     "hora_utc": "25/11 11:12",
     "titulo": "Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795604978,
-    "hora_utc": "25/11 11:09",
-    "titulo": "Bitcoin price may fall below $53K if bear-market history repeats"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -2.0,
+   "media_top20_anual_pct": -1.8,
    "principais_anual_pct": {
-    "BTC": -2.0,
-    "ETH": -4.0,
-    "SOL": -6.4
+    "BTC": -0.9,
+    "ETH": -4.1,
+    "SOL": -6.3
    },
    "leitura": "neutro"
   },
