@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.7% | 305 | 51.1%–62.2% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.9% | 2636 | 51.0%–54.8% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.9% | 2637 | 51.0%–54.8% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 71.4% | 14 | 45.4%–88.3% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | williams_wr_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
@@ -27,5 +27,5 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | connors_8020_alta | reprovado | 35.0% | 20 | 18.1%–56.7% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | raschke_sopa_alta | reprovado | 33.3% | 21 | 17.2%–54.6% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
 | velez_elefante | reprovado | 20.0% | 5 | 3.6%–62.4% | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
-| velez_180_alta | reprovado | 14.3% | 14 | 4.0%–39.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
+| velez_180_alta | reprovado | 13.3% | 15 | 3.7%–37.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | velez_estreito_rompe | reprovado | 0.0% | 3 | 0.0%–56.2% | Velez: rompimento do estado estreito (H23: sem vantagem) |
