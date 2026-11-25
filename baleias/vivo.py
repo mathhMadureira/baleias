@@ -97,7 +97,25 @@ def vivo(agora=None):
     for f in feed:
         a = NOMES.get(f["agente"], {})
         f["avatar"], f["nome"] = a.get("avatar", "•"), a.get("nome", f["agente"])
-    return {"t": agora, "foco": foco, "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
+    hoje0 = agora - (agora % 86400)
+    cont = {}
+    for x in q:
+        a = x.get("agente")
+        cont.setdefault(a, {"total": 0, "hoje": 0})
+        cont[a]["total"] += 1
+        cont[a]["hoje"] += x["t"] >= hoje0
+    curva, eq = [], c["capital"]
+    for x in sorted((f for f in c["fechadas"] if isinstance(f["resultado"], (int, float)) and f["t"]), key=lambda f: f["t"]):
+        eq += x["resultado"]
+        curva.append([x["t"], round(eq, 4)])
+    curva.append([agora, round(c["patrimonio"], 4)])
+    risco = _json(SHARED / "equipe" / "risco.json")
+    desk = []
+    for a in FLUXO + APOIO:
+        u = ult.get(a["id"])
+        desk.append({**a, "ultimo": u, "contagem": cont.get(a["id"], {"total": 0, "hoje": 0}),
+                     "ativo": bool(u and agora - u["t"] < 600)})
+    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
             "progresso": (c["patrimonio"] - c["capital"]) / (META - c["capital"]), "operacoes": len(rs),
             "ganhos": sum(1 for r in rs if r > 0), "resultado": sum(rs), "melhor": max(rs) if rs else None, "pior": min(rs) if rs else None},
             "fluxo": fluxo, "rodada_inicio": inicio, "apoio": [{**a, "ultimo": ult.get(a["id"])} for a in APOIO], "carteira": c, "feed": feed[:60]}

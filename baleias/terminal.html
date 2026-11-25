@@ -5,222 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Baleias · Equipe ao vivo</title>
 <style>
-:root {
-  --bg:#081014; --bg2:#0b161b; --card:#0f1a20; --card2:#14232b; --line:#1b2b33; --line2:#26404a;
-  --txt:#e6f1f2; --mut:#8aa0a8; --dim:#4e646d;
-  --up:#1fc7a0; --down:#ed4b62; --gold:#f0b90b; --blue:#4c9bff; --violet:#a78bfa; --acento:#50e3c2;
-  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-}
-* { box-sizing:border-box; scrollbar-color:#26404a transparent; scrollbar-width:thin; }
+:root { --bg:#f4f6f8; --card:#ffffff; --line:#e7ebef; --txt:#0f1720; --mut:#6b7785; --dim:#a3adb8;
+  --up:#16a34a; --down:#e11d48; --gold:#d97706; --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+* { box-sizing:border-box; }
 html, body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-a { color:inherit; }
 .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
-.up { color:var(--up); } .down { color:var(--down); } .mut { color:var(--mut); } .gold { color:var(--gold); }
-header { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:18px; padding:10px 18px; background:rgba(8,16,20,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
-.marca { font-weight:800; letter-spacing:.08em; font-size:13px; } .marca b { color:var(--gold); }
-nav { display:flex; gap:2px; }
-nav button { white-space:nowrap; background:none; border:0; border-bottom:2px solid transparent; color:var(--mut); font:600 13px system-ui; padding:9px 12px; cursor:pointer; }
-nav button:hover { color:var(--txt); } nav button.ativo { color:var(--acento); border-bottom-color:var(--acento); }
-.espaco { flex:1; }
-.fita { display:flex; gap:22px; overflow-x:auto; padding:7px 18px; background:var(--bg2); border-bottom:1px solid var(--line); font:12px var(--mono); white-space:nowrap; scrollbar-width:none; }
-.fita b { color:var(--txt); margin-right:6px; } .fita span { color:var(--mut); cursor:pointer; }
-.online { white-space:nowrap; font:600 11px system-ui; color:var(--acento); border:1px solid #50e3c255; background:#50e3c214; border-radius:6px; padding:3px 8px; }
-.selo { font:700 11px var(--mono); padding:4px 8px; border-radius:6px; border:1px solid #a78bfa55; color:var(--violet); background:#a78bfa14; letter-spacing:.05em; }
-.relogio { font:12px var(--mono); color:var(--mut); }
-.pontos { display:flex; gap:6px; } .ponto { width:8px; height:8px; border-radius:50%; background:var(--dim); display:inline-block; }
-.ponto.ok { background:var(--up); box-shadow:0 0 6px var(--up); } .ponto.mal { background:var(--down); }
-main { padding:14px 18px 40px; max-width:1760px; margin:0 auto; }
+.up { color:var(--up); } .down { color:var(--down); } .mut { color:var(--mut); }
+.app { max-width:760px; margin:0 auto; padding:14px 14px 40px; }
+header { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.logo { width:40px; height:40px; border-radius:12px; background:#0f1720; color:#fff; display:grid; place-items:center; font-size:22px; }
+.tt b { font-size:20px; display:block; line-height:1.1; } .tt span { font-size:12px; color:var(--mut); }
+.live { margin-left:auto; font:600 12px system-ui; color:var(--up); display:flex; align-items:center; gap:6px; }
+.live i { width:8px; height:8px; border-radius:50%; background:var(--up); box-shadow:0 0 0 3px #16a34a33; animation:bat 1.6s infinite; }
+@keyframes bat { 50% { box-shadow:0 0 0 6px #16a34a00; } }
+nav { display:flex; gap:4px; margin:0 0 8px; } nav button { border:0; background:none; color:var(--mut); font:600 12px system-ui; padding:6px 10px; border-radius:8px; cursor:pointer; }
+nav button.ativo { background:#0f1720; color:#fff; }
+.fita { display:flex; gap:18px; overflow-x:auto; white-space:nowrap; font:12px var(--mono); padding:6px 2px 10px; scrollbar-width:none; }
+.fita span b { margin-right:5px; } .fita i { font-style:normal; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:16px; margin-bottom:12px; box-shadow:0 1px 2px #0000000a; }
+.eq-top { display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--mut); }
+.mult { font:800 13px var(--mono); background:#16a34a; color:#fff; padding:4px 10px; border-radius:10px; }
+.mult.neg { background:var(--down); }
+.eq { font:800 46px var(--mono); letter-spacing:-.02em; margin:4px 0 0; } .eq small { font-size:24px; color:var(--mut); }
+.eq-sub { display:flex; justify-content:space-between; font:600 14px var(--mono); }
+.cook { font:900 30px/1 system-ui; letter-spacing:.02em; margin:12px 0 4px; color:#ef4444; -webkit-text-stroke:1px #7f1d1d; text-shadow:0 2px 0 #fecaca; }
+.curva svg { width:100%; height:70px; display:block; }
+.desk-h { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; } .desk-h b { font-size:17px; } .desk-h span { font-size:12px; color:var(--mut); }
+.ag { display:grid; grid-template-columns:34px 110px 1fr auto; gap:10px; align-items:center; padding:8px 4px; border-top:1px solid var(--line); }
+.ag:first-of-type { border-top:0; }
+.ico { width:32px; height:32px; border-radius:10px; display:grid; place-items:center; font-size:16px; position:relative; }
+.ag.on .ico::after { content:""; position:absolute; inset:-3px; border-radius:12px; border:2px solid currentColor; opacity:.5; animation:pul 1.4s ease-out infinite; }
+@keyframes pul { from { transform:scale(.9); opacity:.7 } to { transform:scale(1.25); opacity:0 } }
+.nm b { display:block; font-size:13.5px; } .nm span { font-size:11px; color:var(--mut); }
+.agora { font-size:12px; color:#334155; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
+.pill { font:700 11.5px var(--mono); padding:4px 9px; border-radius:20px; white-space:nowrap; }
+.log { font:12.5px var(--mono); max-height:330px; overflow-y:auto; }
+.ln { display:flex; gap:8px; padding:5px 0; border-top:1px solid #f1f3f5; align-items:flex-start; }
+.ln:first-child { border-top:0; } .ln .dot { width:7px; height:7px; border-radius:50%; margin-top:6px; flex:none; }
+.ln .h { color:var(--dim); flex:none; } .ln .tg { font-weight:800; flex:none; } .ln .tx { color:#334155; font-family:system-ui; font-size:12.5px; }
+.ln.novo { animation:ch 2.5s ease-out; } @keyframes ch { from { background:#dcfce7 } to { background:transparent } }
+.pos-l { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:8px; font:13px var(--mono); }
+.pos-l span { display:block; font:10.5px system-ui; color:var(--mut); }
+table { width:100%; border-collapse:collapse; font:12.5px var(--mono); } td, th { padding:6px 4px; text-align:right; border-top:1px solid var(--line); }
+th { font:600 10.5px system-ui; color:var(--mut); text-transform:uppercase; border-top:0; } .e { text-align:left; }
+.toast { position:fixed; top:14px; left:50%; transform:translate(-50%,-140%); background:#fff; border:1px solid var(--line); border-radius:16px; padding:10px 16px;
+  box-shadow:0 10px 30px #0000002a; display:flex; gap:12px; align-items:center; z-index:9; transition:transform .5s; min-width:300px; }
+.toast.show { transform:translate(-50%,0); } .toast b { font-size:14px; } .toast .v { margin-left:auto; font:800 20px var(--mono); }
 .aba { display:none; } .aba.ativa { display:block; }
-.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; min-width:0; }
-.card h3 { margin:0 0 8px; font-size:12px; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; display:flex; align-items:center; gap:10px; }
-.card h3 .dir { margin-left:auto; text-transform:none; letter-spacing:0; font-weight:500; }
-.grade { display:grid; gap:12px; margin-bottom:12px; }
-.kpis { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:10px; margin-bottom:12px; }
-.kpi { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:9px 12px; min-width:0; }
-.kpi .rot { font-size:10.5px; color:var(--mut); text-transform:uppercase; letter-spacing:.06em; }
-.kpi .val { font:700 24px var(--mono); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.kpi .sub { font:11.5px var(--mono); color:var(--mut); margin-top:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-table { width:100%; border-collapse:collapse; font-size:13px; }
-th { text-align:right; color:var(--mut); font-weight:600; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; padding:5px 7px; border-bottom:1px solid var(--line); white-space:nowrap; }
-td { padding:6px 7px; border-bottom:1px solid #ffffff0b; font-family:var(--mono); text-align:right; white-space:nowrap; }
-th.e, td.e { text-align:left; }
-.vazio { color:var(--mut); padding:14px 6px; font-size:13px; text-align:left; }
-.chip { display:inline-block; font:700 11px system-ui; padding:2px 7px; border-radius:6px; border:1px solid var(--line2); background:var(--card2); white-space:nowrap; }
-.chip.operando { color:var(--up); border-color:#1fc7a055; } .chip.guarda { color:var(--gold); border-color:#f0b90b66; }
-.chip.meta { color:var(--acento); border-color:#50e3c266; } .chip.sem_dinheiro { color:var(--down); border-color:#ed4b6266; } .chip.pausado { color:var(--violet); border-color:#a78bfa66; }
-.curvas { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; }
-.cv { background:var(--bg2); border:1px solid var(--line); border-radius:8px; padding:6px 8px 4px; min-width:0; }
-.cv .t { display:flex; justify-content:space-between; gap:6px; font-size:12px; font-weight:600; white-space:nowrap; }
-.cv .t span:first-child { overflow:hidden; text-overflow:ellipsis; }
-.cv svg { display:block; width:100%; height:auto; }
-.rolagem { overflow:auto; }
-tr[data-moeda] { cursor:pointer; } tr[data-moeda]:hover td { background:#ffffff06; }
-.tooltip { position:fixed; pointer-events:none; background:#0b1017ee; border:1px solid var(--line2); border-radius:8px; padding:6px 9px; font:12px var(--mono); display:none; z-index:9; white-space:pre; }
-select, input[type=text], input:not([type]) { background:var(--card2); color:var(--txt); border:1px solid var(--line2); border-radius:6px; padding:4px 6px; font:12px system-ui; }
-.placar { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:12px; }
-.atividade { display:grid; grid-template-columns:repeat(auto-fill,minmax(265px,1fr)); gap:9px; }
-.agente-live { background:var(--bg2); border:1px solid var(--line); border-radius:9px; padding:10px 12px; min-width:0; }
-.agente-live-top { display:flex; align-items:center; gap:8px; }
-.agente-live-top strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.pulso { width:8px; height:8px; border-radius:50%; background:var(--dim); flex:none; }
-.pulso.ativo { background:var(--up); box-shadow:0 0 7px var(--up); }
-.pulso.alerta { background:var(--gold); box-shadow:0 0 7px var(--gold); }
-.agente-live .ultima { color:var(--mut); font-size:12px; margin-top:6px; white-space:normal; }
-.agente-live .aberta { margin-top:7px; font:12px var(--mono); }
-.hip { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--dim); border-radius:10px; padding:12px 14px; }
-.hip.aprovada { border-left-color:var(--up); } .hip.reprovada { border-left-color:var(--down); } .hip.andamento { border-left-color:var(--blue); } .hip.parcial { border-left-color:var(--gold); }
-.hip .id { font:700 12px var(--mono); } .hip .p { color:var(--mut); font-size:13px; margin:4px 0 6px; } .hip .r { font-size:13px; font-weight:600; } .hip .n { font:12px var(--mono); color:var(--mut); margin-top:2px; }
-.faixa { font-size:12.5px; color:var(--mut); margin:-2px 0 14px; }
-.tit { font-size:13px; text-transform:uppercase; letter-spacing:.07em; color:var(--mut); margin:4px 0 8px; font-weight:600; }
-.nota { font-size:11.5px; margin-top:6px; }
-.agentes { display:grid; grid-template-columns:repeat(auto-fit,minmax(225px,1fr)); gap:12px; margin-bottom:14px; }
-.ag { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; min-width:0; display:flex; flex-direction:column; gap:6px; }
-.ag-top { display:flex; align-items:center; gap:8px; } .ag-top strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
-.ag-top .chip { margin-left:auto; }
-.ag-val { display:flex; align-items:baseline; gap:10px; } .ag-val .big { font:700 22px var(--mono); } .ag-val .var { font:600 13px var(--mono); }
-.ag-meta { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; font:12px var(--mono); }
-.ag-meta div span { display:block; font:10px system-ui; color:var(--mut); text-transform:uppercase; letter-spacing:.05em; }
-.ag-pos { font:12px var(--mono); border-top:1px solid var(--line); padding-top:6px; }
-.ag-ult { font-size:11.5px; color:var(--mut); }
-.duas { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
-details > summary { cursor:pointer; list-style:none; } details > summary::-webkit-details-marker { display:none; }
-summary h3::before { content:"▸ "; } details[open] summary h3::before { content:"▾ "; }
-.pregao { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:14px; margin-bottom:18px; align-items:start; }
-.mesas { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; }
-.mesa { position:relative; background:linear-gradient(160deg,#112129 0%,#0c171c 100%); border:1px solid var(--line); border-radius:14px; padding:14px; display:flex; flex-direction:column; gap:9px; min-width:0; transition:border-color .4s, box-shadow .4s; }
-.mesa.on { border-color:#1fc7a066; box-shadow:0 0 0 1px #1fc7a022, 0 8px 30px -12px #1fc7a055; }
-.m-top { display:flex; align-items:center; gap:11px; }
-.av { position:relative; width:42px; height:42px; border-radius:50%; display:grid; place-items:center; font-size:21px; background:#16303a; flex:none; }
-.mesa.on .av::after { content:""; position:absolute; inset:-4px; border-radius:50%; border:2px solid var(--up); animation:pulsar 1.6s ease-out infinite; }
-@keyframes pulsar { 0% { transform:scale(.92); opacity:1 } 100% { transform:scale(1.25); opacity:0 } }
-.m-nome { font-weight:700; font-size:15px; } .m-papel { font-size:11.5px; color:var(--mut); }
-.m-status { margin-left:auto; text-align:right; font:600 11.5px system-ui; white-space:nowrap; }
-.m-status.on { color:var(--up); } .m-status.off { color:var(--mut); }
-.etapas { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; }
-.et { font:10.5px system-ui; color:var(--dim); text-align:center; padding-top:7px; position:relative; }
-.et::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; border-radius:3px; background:#1b2b33; }
-.et.feita { color:var(--mut); } .et.feita::before { background:#1fc7a055; }
-.et.agora { color:var(--up); font-weight:700; } .et.agora::before { background:var(--up); box-shadow:0 0 8px var(--up); animation:brilho 1.2s ease-in-out infinite alternate; }
-@keyframes brilho { from { opacity:.55 } to { opacity:1 } }
-.bolha { background:#0a1418; border:1px solid var(--line); border-radius:10px; padding:8px 10px; font-size:12.5px; line-height:1.45; color:#c9d8db; max-height:92px; overflow:hidden; position:relative; }
-.bolha::after { content:""; position:absolute; left:0; right:0; bottom:0; height:22px; background:linear-gradient(transparent,#0a1418); }
-.bolha .q { color:var(--mut); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; display:block; margin-bottom:2px; }
-.m-dec { display:flex; flex-wrap:wrap; gap:5px; }
-.tag { font:600 11.5px var(--mono); padding:3px 8px; border-radius:20px; border:1px solid var(--line2); background:#0f1d23; }
-.tag.v { color:var(--down); border-color:#ed4b6255; } .tag.c { color:var(--up); border-color:#1fc7a055; }
-.m-conta { border-top:1px solid var(--line); padding-top:8px; font:12px var(--mono); display:flex; flex-direction:column; gap:3px; }
-.m-conta .cab { display:flex; justify-content:space-between; font-family:system-ui; font-size:11.5px; color:var(--mut); }
-.m-conta .cab b { font:700 13px var(--mono); }
-.m-ordem { font-size:11.5px; color:var(--mut); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.feed-box { position:sticky; top:64px; }
-.feed { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:6px; max-height:calc(100vh - 120px); overflow-y:auto; display:flex; flex-direction:column; }
-.fi { display:flex; gap:9px; padding:8px 8px; border-bottom:1px solid #ffffff08; font-size:12.5px; line-height:1.4; }
-.fi .ic { flex:none; width:26px; height:26px; border-radius:50%; background:#16303a; display:grid; place-items:center; font-size:14px; }
-.fi .q { font-size:10.5px; color:var(--mut); } .fi.novo { animation:chegou 2.5s ease-out; }
-@keyframes chegou { from { background:#1fc7a033 } to { background:transparent } }
-.fi .tx { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; } .fi.ordem .tx { color:var(--txt); } .fi.aviso .tx { color:var(--gold); } .fi.decisão .tx { color:var(--acento); }
-@media (max-width: 1100px) { .pregao { grid-template-columns:1fr; } .feed-box { position:static; } .feed { max-height:420px; } }
-iframe { width:100%; height:calc(100vh - 110px); border:0; border-radius:12px; background:var(--bg); }
-@media (max-width: 1000px) { .duas { grid-template-columns:1fr !important; } }
-@media (max-width: 700px) { .kpis { grid-template-columns:repeat(2, minmax(0,1fr)); } .curvas { grid-template-columns:repeat(2, minmax(0,1fr)); } header { flex-wrap:wrap; } }
-
-.topo { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:12px; margin-bottom:14px; }
-.missao { background:linear-gradient(135deg,#0f2a2a,#0c171c); border:1px solid #1fc7a044; border-radius:14px; padding:14px 16px; }
-.missao .rot, .bloco .rot { font-size:10.5px; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; }
-.missao .val { font:800 30px var(--mono); margin:2px 0; } .missao .meta { font:13px var(--mono); color:var(--mut); }
-.barra { height:10px; background:#16252c; border-radius:6px; overflow:hidden; margin-top:8px; position:relative; }
-.barra i { position:absolute; left:0; top:0; bottom:0; background:linear-gradient(90deg,#1fc7a0,#50e3c2); border-radius:6px; transition:width .6s; }
-.bloco { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
-.bloco .val { font:700 22px var(--mono); margin-top:3px; } .bloco .sub { font:12px var(--mono); color:var(--mut); margin-top:2px; }
-.foco-tag { display:inline-block; font:700 13px var(--mono); padding:4px 10px; border-radius:8px; margin-top:6px; }
-.foco-tag.parado { background:#ed4b6222; color:var(--down); } .foco-tag.ativo { background:#1fc7a022; color:var(--up); }
-.secao { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--mut); margin:6px 0 9px; font-weight:600; display:flex; gap:10px; align-items:baseline; }
-.fluxo { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; margin-bottom:16px; }
-.passo { position:relative; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px; margin-right:22px; min-width:0; transition:border-color .4s, box-shadow .4s; }
-.passo:last-child { margin-right:0; border-color:#a78bfa55; }
-.passo:not(:last-child)::after { content:"➜"; position:absolute; right:-19px; top:42%; color:var(--dim); font-size:15px; }
-.passo.feito { border-color:#1fc7a055; } .passo.feito:not(:last-child)::after { color:var(--up); }
-.passo.agora { border-color:var(--gold); box-shadow:0 0 0 1px #f0b90b44, 0 0 22px -6px #f0b90b88; }
-.p-top { display:flex; align-items:center; gap:9px; } .p-av { width:36px; height:36px; border-radius:50%; background:#16303a; display:grid; place-items:center; font-size:18px; flex:none; position:relative; }
-.passo.agora .p-av::after { content:""; position:absolute; inset:-4px; border-radius:50%; border:2px solid var(--gold); animation:pulsar 1.4s ease-out infinite; }
-@keyframes pulsar { 0% { transform:scale(.92); opacity:1 } 100% { transform:scale(1.28); opacity:0 } }
-.p-nome { font-weight:700; font-size:14px; } .p-cargo { font-size:11px; color:var(--mut); }
-.p-est { font:600 11px system-ui; margin-top:8px; } .p-est.ok { color:var(--up); } .p-est.ag { color:var(--gold); } .p-est.esp { color:var(--dim); }
-.p-txt { font-size:12px; color:#c9d8db; line-height:1.4; margin-top:5px; display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; }
-.meio { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:12px; margin-bottom:12px; }
-.pos { display:flex; flex-direction:column; gap:8px; }
-.pos-linha { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; font:13px var(--mono); }
-.pos-linha div span { display:block; font:10px system-ui; color:var(--mut); text-transform:uppercase; letter-spacing:.05em; }
-.feed { max-height:420px; overflow-y:auto; display:flex; flex-direction:column; }
-.fi { display:flex; gap:9px; padding:8px 4px; border-bottom:1px solid #ffffff08; font-size:12.5px; line-height:1.4; }
-.fi .ic { flex:none; width:26px; height:26px; border-radius:50%; background:#16303a; display:grid; place-items:center; font-size:14px; }
-.fi .q { font-size:10.5px; color:var(--mut); } .fi.corretora .tx { color:var(--txt); } .fi .tx { color:#c9d8db; }
-.fi.novo { animation:chegou 2.5s ease-out; } @keyframes chegou { from { background:#1fc7a033 } to { background:transparent } }
-.apoio { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:14px; }
-.ap { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:9px 12px; font-size:12px; }
-.ap b { font-size:13px; } .ap .mut { display:block; margin-top:3px; }
-@media (max-width: 1100px) { .topo { grid-template-columns:1fr 1fr; } .fluxo { grid-template-columns:1fr; } .passo { margin:0 0 18px 0; }
-  .passo:not(:last-child)::after { content:"⬇"; right:auto; left:50%; top:auto; bottom:-19px; } .meio { grid-template-columns:1fr; } .apoio { grid-template-columns:1fr; } }
+iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; background:#fff; }
+.placar { display:grid; gap:10px; } .hip { background:#fff; border:1px solid var(--line); border-left:4px solid var(--dim); border-radius:12px; padding:10px 12px; }
+.hip.aprovada { border-left-color:var(--up); } .hip.reprovada { border-left-color:var(--down); } .hip .p { color:var(--mut); font-size:13px; }
+.vazio { color:var(--mut); font-size:13px; padding:6px 0; }
+@media (max-width:560px) { .ag { grid-template-columns:32px 1fr auto; } .agora { grid-column:2 / 4; grid-row:2; } .eq { font-size:38px; } }
 </style>
 </head>
 <body>
-<header>
-  <div class="marca">BALEIAS <b>MESA</b></div>
-  <nav>
-    <button data-aba="mesa" class="ativo">🐋 Equipe ao vivo</button>
-    <button data-aba="mercado">Mercado ao vivo</button>
-    <button data-aba="lab">Laboratório</button>
-  </nav>
-  <span class="espaco"></span>
-  <span class="online" id="online">● Online</span>
-  <span class="selo" title="nenhum robô opera dinheiro real; o testnet usa a conta de teste da Binance">SIMULADO</span>
-  <span class="pontos" id="pontos" style="display:none"></span>
-  <span class="relogio" id="relogio"></span>
-</header>
-<div class="fita" id="fita"><span>carregando preços…</span></div>
+<div class="app">
+<header><div class="logo">🐋</div><div class="tt"><b>Baleias</b><span id="sub">equipe · carteira única</span></div>
+  <span class="live" id="online"><i></i>Live</span><span id="pontos" style="display:none"></span><span id="relogio" style="display:none"></span></header>
+<nav><button data-aba="mesa" class="ativo">Equipe</button><button data-aba="mercado">Mercado</button><button data-aba="lab">Laboratório</button></nav>
+<div class="fita" id="fita"></div>
 
-<main>
 <section class="aba ativa" id="aba-mesa">
-  <div class="topo">
-    <div class="missao"><div class="rot">🎯 Missão · dobrar a carteira única</div><div class="val num" id="m-val">US$ —</div>
-      <div class="meta" id="m-meta">de US$ 10 para US$ 20</div><div class="barra"><i id="m-barra" style="width:0%"></i></div></div>
-    <div class="bloco"><div class="rot">Foco da equipe</div><div id="f-tag" class="foco-tag parado">—</div><div class="sub" id="f-sub"></div></div>
-    <div class="bloco"><div class="rot">Operações</div><div class="val num" id="o-val">0</div><div class="sub" id="o-sub"></div></div>
-    <div class="bloco"><div class="rot">Resultado</div><div class="val num" id="r-val">—</div><div class="sub" id="r-sub"></div></div>
+  <div class="card">
+    <div class="eq-top"><span id="eq-info">Carteira</span><span class="mult" id="mult">1,00×</span></div>
+    <div class="eq" id="eq">US$ —</div>
+    <div class="eq-sub"><span id="eq-var">—</span><span class="mut" id="wl"></span></div>
+    <div class="cook" id="cook"></div>
+    <div class="curva" id="curva"></div>
   </div>
 
-  <div class="secao">Rodada da equipe <span class="mut" id="rd-t" style="text-transform:none;letter-spacing:0;font-weight:400"></span></div>
-  <div class="fluxo" id="fluxo"></div>
-
-  <div class="meio">
-    <div class="card">
-      <h3>🔬 Posição do operador<span class="dir mut num" id="ps-t"></span></h3>
-      <div class="pos" id="pos"></div>
-      <h3 style="margin-top:14px"><span id="vg-titulo">gráfico</span><span class="dir"><select id="vg-iv"><option value="15m">15 min</option><option value="5m">5 min</option><option value="1h">1 h</option><option value="4h">4 h</option></select></span></h3>
-      <div id="vg" style="height:250px"></div><div id="vg-info" class="mut num" style="font-size:11.5px"></div>
-    </div>
-    <div class="card"><h3>Acontecendo agora</h3><div class="feed" id="feed"></div></div>
+  <div class="card">
+    <div class="desk-h"><b id="desk-t">Mesa · agentes</b><span id="desk-n"></span></div>
+    <div id="desk"></div>
   </div>
 
-  <div class="secao">Apoio</div>
-  <div class="apoio" id="apoio"></div>
+  <div class="card" id="pos-card">
+    <div class="desk-h"><b>Posição</b><span id="pos-t"></span></div>
+    <div id="pos"></div>
+  </div>
 
-  <div class="card" style="margin-bottom:12px"><h3>Operações fechadas<span class="dir mut num" id="fe-t"></span></h3>
-    <div class="rolagem" style="max-height:360px"><table id="fe-tab"><tr><td class="vazio">nenhuma ainda</td></tr></table></div></div>
+  <div class="card">
+    <div class="desk-h"><b>Logger</b><span id="log-n"></span></div>
+    <div class="log" id="log"></div>
+  </div>
+
+  <div class="card">
+    <div class="desk-h"><b>Operações</b><span id="fe-t"></span></div>
+    <div id="fe"></div>
+  </div>
 </section>
-<section class="aba" id="aba-mercado"><iframe id="frame-mercado" title="Mercado ao vivo"></iframe></section>
-
-<section class="aba" id="aba-lab">
-  <div class="card" style="margin-bottom:14px">
-    <h3>Placar do laboratório · cada hipótese registrada antes de testar</h3>
-    <div class="mut" style="font-size:13px">Verde: passou · Vermelho: não passou · Azul: em andamento · Amarelo: parcial. O robô só opera o que passou.</div>
-  </div>
-  <div class="placar" id="placar"></div>
-</section>
-</main>
-<div class="tooltip" id="tip"></div>
-
+<section class="aba" id="aba-mercado"><iframe id="frame-mercado" title="Mercado"></iframe></section>
+<section class="aba" id="aba-lab"><div class="placar" id="placar"></div></section>
+</div>
+<div class="toast" id="toast"><div class="logo" style="width:34px;height:34px;font-size:18px">🐋</div><div><div class="mut" style="font-size:11px" id="to-h"></div><b id="to-t"></b><div class="mut" style="font-size:12px" id="to-s"></div></div><div class="v" id="to-v"></div></div>
 <script>
+
 const $ = (id) => document.getElementById(id);
 const FUSO_BR = "America/Sao_Paulo";
 const fmt = (x, d = 2) => x == null || isNaN(x) ? "—" : (+x).toLocaleString("pt-BR", {minimumFractionDigits: d, maximumFractionDigits: d});
@@ -258,96 +138,84 @@ async function cicloVersao() {
 cicloVersao();
 
 
-// ---------- painel da equipe: /api/vivo ----------
-let vv = null, vistos = new Set(), primeira = true, vgMoeda = null, vgTimer = null;
-const ag = (id) => (vv && [...vv.fluxo, ...vv.apoio].find(a => a.id === id)) || {};
+// ---------- painel da equipe (estilo app): /api/vivo ----------
+const COR = {cacador:["#2563eb","#dbeafe"], memecoins:["#ea580c","#ffedd5"], treinador:["#4f46e5","#e0e7ff"], laboratorio:["#16a34a","#dcfce7"],
+  guardiao:["#9333ea","#f3e8ff"], engenheiro:["#475569","#e2e8f0"], minerador:["#ca8a04","#fef9c3"], baleias:["#0d9488","#ccfbf1"]};
+const ORDEM = ["cacador", "memecoins", "treinador", "laboratorio", "guardiao", "engenheiro", "minerador", "baleias"];
+let vv = null, vistos = new Set(), primeira = true, ultFech = null;
+function pill(a) {
+  const m = vv.missao, r = vv.risco || {};
+  if (a.id === "laboratorio") return `${m.operacoes} ops · ${vv.carteira.abertas.length} aberta`;
+  if (a.id === "guardiao") return r.acao ? r.acao + (r.moeda ? " " + String(r.moeda).replace("USDT", "") : "") : "vigiando";
+  if (a.id === "cacador") return `${a.contagem.hoje} rodadas`;
+  if (a.id === "memecoins") return `${a.contagem.hoje} buscas`;
+  if (a.id === "treinador") return `${a.contagem.hoje} revisões`;
+  return `${a.contagem.hoje} hoje`;
+}
+function svgCurva(p, cap) {
+  if (!p || p.length < 2) p = [[Date.now() / 1000 - 3600, cap], [Date.now() / 1000, p && p[0] ? p[0][1] : cap]];
+  const W = 600, H = 70, t0 = p[0][0], t1 = Math.max(p[p.length - 1][0], t0 + 1);
+  let lo = Math.min(cap, ...p.map(x => x[1])), hi = Math.max(cap, ...p.map(x => x[1])); const m = Math.max((hi - lo) * .15, .05); lo -= m; hi += m;
+  const X = t => (t - t0) / (t1 - t0) * W, Y = v => H - (v - lo) / (hi - lo) * H;
+  const d = p.map((x, i) => (i ? "L" : "M") + X(x[0]).toFixed(1) + "," + Y(x[1]).toFixed(1)).join("");
+  const c = p[p.length - 1][1] >= cap ? "#16a34a" : "#e11d48";
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".25"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient></defs>
+    <line x1="0" x2="${W}" y1="${Y(cap)}" y2="${Y(cap)}" stroke="#cbd5e1" stroke-dasharray="4 4"/><path d="${d}L${W},${H}L0,${H}Z" fill="url(#g)"/><path d="${d}" fill="none" stroke="${c}" stroke-width="3" vector-effect="non-scaling-stroke"/>
+    <circle cx="${X(p[p.length - 1][0])}" cy="${Y(p[p.length - 1][1])}" r="4" fill="${c}"/></svg>`;
+}
+function toast(h, t, s, v, c) {
+  $("to-h").textContent = h; $("to-t").textContent = t; $("to-s").textContent = s; $("to-v").textContent = v; $("to-v").className = "v " + c;
+  $("toast").classList.add("show"); setTimeout(() => $("toast").classList.remove("show"), 6000);
+}
 function desenhar() {
   const m = vv.missao, c = vv.carteira, f = vv.foco || {};
-  const v = m.patrimonio - m.capital;
-  $("m-val").innerHTML = `US$ ${fmt(m.patrimonio)} <span class="${cor(v)}" style="font-size:16px">${sn(v)}</span>`;
-  $("m-meta").textContent = `de US$ ${fmt(m.capital, 0)} para US$ ${fmt(m.meta, 0)} · ${fmt(Math.max(0, Math.min(1, m.progresso)) * 100, 0)}% do caminho` + (c.corretora ? ` · ${c.corretora}` : "");
-  $("m-barra").style.width = Math.max(0, Math.min(100, m.progresso * 100)) + "%";
-  const ativo = f.foco && f.foco !== "parado";
-  $("f-tag").className = "foco-tag " + (ativo ? "ativo" : "parado"); $("f-tag").textContent = ativo ? "▶ " + f.foco.toUpperCase() : "⏸ PARADO";
-  $("f-sub").textContent = (f.descricao || "") + (f.quando ? " · desde " + f.quando : "");
-  $("o-val").textContent = m.operacoes; $("o-sub").textContent = m.operacoes ? `${m.ganhos} com lucro · ${fmt(m.ganhos / m.operacoes * 100, 0)}%` : "nenhuma fechada ainda";
-  $("r-val").textContent = m.operacoes ? sn(m.resultado) : "—"; $("r-val").className = "val num " + cor(m.resultado);
-  $("r-sub").textContent = m.operacoes ? `melhor ${sn(m.melhor)} · pior ${sn(m.pior)}` : "";
-  // fluxo
-  $("fluxo").innerHTML = vv.fluxo.map(a => {
-    const u = a.ultimo, cls = a.trabalhando ? "agora" : a.nesta_rodada ? "feito" : "";
-    const est = a.trabalhando ? `<div class="p-est ag">● trabalhando agora</div>` : a.nesta_rodada ? `<div class="p-est ok">✓ entregou · há ${ha(u.t)}</div>` : `<div class="p-est esp">${u ? "última entrega há " + ha(u.t) : "aguardando a 1ª rodada"}</div>`;
-    return `<div class="passo ${cls}"><div class="p-top"><div class="p-av">${esc(a.avatar)}</div><div style="min-width:0"><div class="p-nome">${esc(a.nome)}</div><div class="p-cargo">${esc(a.cargo)} · ${esc(a.entrega)}</div></div></div>
-      ${est}${u ? `<div class="p-txt" title="${esc(u.texto)}">${esc(u.texto)}</div>` : ""}</div>`;
-  }).join("");
-  $("rd-t").textContent = vv.rodada_inicio ? `· começou ${hm(vv.rodada_inicio)} (há ${ha(vv.rodada_inicio)}) · a cada 10 min` : "· a primeira rodada ainda não registrou no quadro";
+  const v = m.patrimonio - m.capital, x = m.patrimonio / m.capital;
+  $("sub").textContent = `${f.foco && f.foco !== "parado" ? f.foco.toUpperCase() : "PARADO"} · carteira única · meta US$ ${fmt(m.meta, 0)}`;
+  $("eq-info").textContent = `Patrimônio · começou com US$ ${fmt(m.capital, 0)}` + (c.corretora ? ` · ${c.corretora}` : "");
+  $("mult").textContent = fmt(x, 2) + "×"; $("mult").className = "mult" + (x < 1 ? " neg" : "");
+  const [i, d] = fmt(m.patrimonio, 2).split(","); $("eq").innerHTML = `US$ ${i}<small>,${d}</small>`;
+  $("eq-var").innerHTML = `<span class="${cor(v)}">${sn(v)} (${sn(v / m.capital * 100, 1)}%)</span>`;
+  $("wl").textContent = `${m.ganhos}W / ${m.operacoes - m.ganhos}L`;
+  $("cook").textContent = v > 0 ? "DEIXA COZINHAR 🔥🔥🔥" : (f.foco && f.foco !== "parado" ? "EQUIPE EM CAMPO ⚡" : "EQUIPE PARADA ⏸");
+  $("cook").style.color = v > 0 ? "#ef4444" : "#0f1720"; $("cook").style.webkitTextStroke = v > 0 ? "1px #7f1d1d" : "0"; $("cook").style.textShadow = v > 0 ? "" : "none";
+  $("curva").innerHTML = svgCurva(vv.curva, m.capital);
+  // mesa
+  const desk = [...vv.desk].sort((a, b) => ORDEM.indexOf(a.id) - ORDEM.indexOf(b.id));
+  const on = desk.filter(a => a.ativo).length, rod = (desk.find(a => a.id === "cacador") || {}).contagem || {hoje: 0};
+  $("desk-t").textContent = `Mesa · ${desk.length} agentes`; $("desk-n").textContent = `${on} trabalhando · ${rod.hoje} rodadas hoje · ${m.operacoes} operadas`;
+  $("desk").innerHTML = desk.map(a => { const [c1, c2] = COR[a.id] || ["#475569", "#e2e8f0"], u = a.ultimo;
+    return `<div class="ag ${a.ativo ? "on" : ""}"><div class="ico" style="background:${c2};color:${c1}">${esc(a.avatar)}</div>
+      <div class="nm"><b>${esc(a.nome)}</b><span>${esc(a.cargo)}</span></div>
+      <div class="agora" title="${esc(u ? u.texto : "")}">${u ? esc(u.texto) : '<span class="mut">sem registro ainda</span>'}</div>
+      <span class="pill" style="background:${c2};color:${c1}">${esc(pill(a))}</span></div>`; }).join("");
   // posição
-  $("ps-t").textContent = c.atualizado ? "corretora lida há " + ha(c.atualizado) : "carteira ainda não aberta na corretora";
-  $("pos").innerHTML = c.abertas.length ? c.abertas.map(p => `<div data-moeda="${esc(p.moeda)}" style="cursor:pointer">
-      <div style="font-size:15px;font-weight:700"><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ VENDIDO" : "▲ COMPRADO"}</span> ${esc(String(p.moeda).replace("USDT", ""))} <span class="mut" style="font-size:12px;font-weight:400">há ${ha(p.desde)}${p.alav ? " · " + p.alav + "×" : ""}</span></div>
-      <div class="pos-linha" style="margin-top:6px"><div><span>entrada</span>${px(p.entrada)}</div><div><span>stop</span><b class="down">${px(p.stop)}</b></div><div><span>alvo</span><b class="up">${px(p.alvo)}</b></div><div><span>tamanho</span>US$ ${fmt(p.nocional)}</div></div>
-      <div class="mut" style="font-size:12px;margin-top:6px">${esc(p.motivo)}</div></div>`).join("")
-    : `<div class="vazio">Sem posição aberta. ${ativo ? "O operador entra quando a rodada aprovar uma entrada." : "A equipe está parada."}</div>`;
-  if (!vgMoeda && c.abertas[0]) { vgMoeda = c.abertas[0].moeda; cicloVelas(); }
-  // feed
-  $("feed").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k);
-    return `<div class="fi ${esc(x.tipo)} ${novo ? "novo" : ""}"><div class="ic">${esc(x.avatar)}</div><div style="min-width:0"><div class="q">${esc(x.nome)} · ${hm(x.t)} · há ${ha(x.t)}</div><div class="tx">${esc(x.texto)}</div></div></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
+  $("pos-t").textContent = c.atualizado ? "corretora lida há " + ha(c.atualizado) : "";
+  $("pos").innerHTML = c.abertas.length ? c.abertas.map(p => `<div><b style="font-size:16px"><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ VENDIDO" : "▲ COMPRADO"}</span> ${esc(String(p.moeda).replace("USDT", ""))}</b>
+      <span class="mut" style="font-size:12px"> · há ${ha(p.desde)}${p.alav ? " · " + p.alav + "×" : ""}</span>
+      <div class="pos-l"><div><span>entrada</span>${px(p.entrada)}</div><div><span>stop</span><b class="down">${px(p.stop)}</b></div><div><span>alvo</span><b class="up">${px(p.alvo)}</b></div><div><span>tamanho</span>US$ ${fmt(p.nocional)}</div></div>
+      ${vv.risco && vv.risco.motivo && vv.risco.moeda === p.moeda ? `<div class="mut" style="font-size:12px;margin-top:8px">🛡 ${esc(vv.risco.acao)} · ${esc(vv.risco.motivo)}</div>` : ""}</div>`).join("")
+    : `<div class="vazio">Sem posição aberta — o operador entra na próxima rodada que aprovar uma entrada.</div>`;
+  // logger
+  $("log-n").textContent = `${vv.feed.length} registros`;
+  $("log").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k); const [c1] = COR[x.agente] || ["#475569"];
+    return `<div class="ln ${novo ? "novo" : ""}"><i class="dot" style="background:${c1}"></i><span class="h">${hm(x.t)}</span><span class="tg" style="color:${c1}">${esc((x.nome || "").toUpperCase())}:</span><span class="tx">${esc(x.texto)}</span></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
+  // operações
+  const fe = [...c.fechadas].reverse(), rs = fe.map(x => x.resultado).filter(r => r != null);
+  $("fe-t").textContent = rs.length ? `melhor ${sn(Math.max(...rs))} · pior ${sn(Math.min(...rs))}` : "";
+  $("fe").innerHTML = fe.length ? `<table><tr><th class="e">hora</th><th class="e">moeda</th><th>entrada</th><th>saída</th><th>resultado</th></tr>` + fe.map(x =>
+    `<tr><td class="e mut">${x.t ? hora(x.t) : "—"}</td><td class="e"><span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span> ${esc(String(x.moeda).replace("USDT", ""))}</td><td>${px(x.entrada)}</td><td>${px(x.saida)}</td><td class="${cor(x.resultado)}"><b>${sn(x.resultado, 3)}</b></td></tr>`).join("") + "</table>"
+    : `<div class="vazio">Nenhuma operação fechada ainda.</div>`;
+  const ult = fe[0];
+  if (ult && ultFech !== null && ult.t !== ultFech) toast("BALEIAS · " + hm(ult.t), `${String(ult.moeda).replace("USDT", "")} ${ult.lado} · ${ult.resultado >= 0 ? "lucro" : "perda"}`, ult.motivo, sn(ult.resultado, 2), cor(ult.resultado));
+  if (ult) ultFech = ult.t; else if (ultFech === null) ultFech = 0;
   primeira = false;
-  $("apoio").innerHTML = vv.apoio.map(a => `<div class="ap"><b>${esc(a.avatar)} ${esc(a.nome)}</b> <span class="mut" style="display:inline">· ${esc(a.cargo)}</span><span class="mut">${a.ultimo ? esc(a.ultimo.texto) + " · há " + ha(a.ultimo.t) : "sem registro"}</span></div>`).join("");
-  // fechadas
-  const fe = [...c.fechadas].reverse();
-  $("fe-t").textContent = fe.length ? `${fe.length} fechadas` : "";
-  $("fe-tab").innerHTML = fe.length ? `<tr><th class="e">hora</th><th class="e">moeda</th><th>entrada</th><th>saída</th><th>resultado</th><th class="e">saída por</th></tr>` + fe.map(x =>
-    `<tr data-moeda="${esc(x.moeda)}"><td class="e mut">${x.t ? hora(x.t) : "—"}</td><td class="e"><span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span> <b>${esc(String(x.moeda).replace("USDT", ""))}</b></td>
-      <td>${px(x.entrada)}</td><td>${px(x.saida)}</td><td class="${cor(x.resultado)}">${sn(x.resultado, 3)}</td><td class="e mut" style="font-family:system-ui;font-size:12px">${esc(x.motivo)}</td></tr>`).join("")
-    : `<tr><td class="vazio">Nenhuma operação fechada ainda.</td></tr>`;
 }
 async function ciclo() {
-  try { const d = await j("/api/vivo"); if (!d.erro) { vv = d; desenhar(); } else $("rd-t").textContent = "· erro: " + d.erro; }
-  catch (e) { $("rd-t").textContent = "· sem conexão com o painel"; }
-  setTimeout(ciclo, 5000);
+  try { const d = await j("/api/vivo"); if (!d.erro) { vv = d; desenhar(); } } catch (e) {}
+  setTimeout(ciclo, 4000);
 }
 ciclo();
-setInterval(() => { if (vv) desenhar(); }, 15000);
-
-// ---------- gráfico da moeda ----------
-document.addEventListener("click", (ev) => { const a = ev.target.closest("[data-moeda]"); if (a) { vgMoeda = a.dataset.moeda; cicloVelas(); } });
-$("vg-iv").onchange = () => cicloVelas();
-async function cicloVelas() {
-  clearTimeout(vgTimer);
-  const m = vgMoeda || "BTCUSDT", iv = $("vg-iv").value;
-  try {
-    const d = await j(`/api/velas-rapidas?m=${encodeURIComponent(m.replace("USDT", ""))}&iv=${iv}`);
-    const ps = vv ? vv.carteira.abertas.filter(p => p.moeda === m) : [];
-    $("vg-titulo").textContent = `${m.replace("USDT", "")} · ${iv}`;
-    desenharVelas(d.velas || [], ps);
-  } catch (e) { $("vg").innerHTML = `<div class="vazio">sem velas dessa moeda agora</div>`; }
-  vgTimer = setTimeout(cicloVelas, 5000);
-}
-cicloVelas();
-function desenharVelas(v, ps) {
-  v = v.slice(-90);
-  if (!v.length) { $("vg").innerHTML = `<div class="vazio">sem velas dessa moeda (o motor local lê só as moedas que conhece)</div>`; $("vg-info").textContent = ""; return; }
-  const W = Math.max(320, $("vg").clientWidth || 600), H = 250, pad = {l: 4, r: 84, t: 8, b: 16};
-  const nv = ps.flatMap(p => [p.entrada, p.stop, p.alvo].filter(Boolean)); let lo = Math.min(...v.map(x => x.l), ...nv), hi = Math.max(...v.map(x => x.h), ...nv);
-  const m = (hi - lo) * 0.05 || hi * 0.001; lo -= m; hi += m;
-  const cw = (W - pad.l - pad.r) / v.length, X = (i) => pad.l + i * cw + cw / 2, Y = (p) => pad.t + (1 - (p - lo) / (hi - lo)) * (H - pad.t - pad.b);
-  let s = "";
-  for (let k = 0; k <= 4; k++) { const val = lo + (hi - lo) * k / 4, y = Y(val); s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${y}" y2="${y}" stroke="#1b2b33"/><text x="${W - pad.r + 4}" y="${y + 3}" fill="#6b7888" font-size="10" font-family="monospace">${px(val)}</text>`; }
-  v.forEach((x, i) => {
-    const c = x.c >= x.o ? "#1fc7a0" : "#ed4b62", y1 = Y(Math.max(x.o, x.c)), y2 = Y(Math.min(x.o, x.c));
-    s += `<line x1="${X(i)}" x2="${X(i)}" y1="${Y(x.h)}" y2="${Y(x.l)}" stroke="${c}" opacity="${x.vivo ? .6 : 1}"/><rect x="${X(i) - cw * 0.32}" y="${y1}" width="${Math.max(1, cw * 0.64)}" height="${Math.max(1, y2 - y1)}" fill="${c}" opacity="${x.vivo ? .6 : 1}"/>`;
-  });
-  const vistos = new Set();
-  for (const p of ps) { for (const [k, cr] of [["stop", "#ed4b62"], ["alvo", "#1fc7a0"]]) if (p[k]) s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(p[k])}" y2="${Y(p[k])}" stroke="${cr}" stroke-dasharray="3 3"/><text x="${pad.l + 4}" y="${Y(p[k]) - 3}" fill="${cr}" font-size="10">${k} ${px(p[k])}</text>`; if (vistos.has(p.entrada)) continue; vistos.add(p.entrada); s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(p.entrada)}" y2="${Y(p.entrada)}" stroke="#e6f1f2" stroke-dasharray="5 4"/><text x="${pad.l + 4}" y="${Y(p.entrada) - 3}" fill="#e6f1f2" font-size="10">${ps.length === 1 ? "entrada " + px(p.entrada) : ""}</text>`; }
-  const u = v[v.length - 1];
-  s += `<rect x="${W - pad.r + 1}" y="${Y(u.c) - 8}" width="${pad.r - 2}" height="16" fill="#e6f1f2"/><text x="${W - pad.r + 4}" y="${Y(u.c) + 4}" fill="#07090c" font-size="10.5" font-weight="700" font-family="monospace">${px(u.c)}</text>`;
-  const rot = (d) => new Date(d.replace(" ", "T") + "Z").toLocaleString("pt-BR", {timeZone: FUSO_BR, day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit"});
-  for (let i = 0; i < v.length; i += Math.ceil(v.length / 6)) s += `<text x="${X(i)}" y="${H - 3}" fill="#6b7888" font-size="10" text-anchor="middle" font-family="monospace">${rot(v[i].d)}</text>`;
-  $("vg").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="display:block;max-width:100%">${s}</svg>`;
-  $("vg-info").textContent = `agora ${px(u.c)} · ${sn((u.c / v[Math.max(0, v.length - 2)].c - 1) * 100, 2)}% na última vela · horário de Brasília`;
-}
-
+setInterval(() => { if (vv) desenhar(); }, 20000);
 
 // ---------- fita de preços e fontes da máquina ----------
 async function cicloFontes() {
@@ -355,11 +223,11 @@ async function cicloFontes() {
     const d = await j("/api/ao-vivo?desde=999999999&calor=999999999");
     const destaque = ["BTC", "ETH", "SOL", "XRP", "BNB", "DOGE", "PEPE", "SUI", "LINK", "AVAX"];
     const mapaM = Object.fromEntries((d.mercado || []).map(x => [x.s, x]));
-    $("fita").innerHTML = destaque.filter(s => mapaM[s]).map(s => `<span data-moeda="${s}"><b>${s}</b>${px(mapaM[s].p)} <i class="${cor(mapaM[s].pct)}" style="font-style:normal">${sn(mapaM[s].pct, 2)}%</i></span>`).join("");
+    $("fita").innerHTML = destaque.filter(s => mapaM[s]).map(s => `<span><b>${s}</b>${px(mapaM[s].p)} <i class="${cor(mapaM[s].pct)}" style="font-style:normal">${sn(mapaM[s].pct, 2)}%</i></span>`).join("");
     const vivas = Object.values(d.fontes || {}).filter(v => v.ok && d.agora - v.t < 900).length, total = Object.keys(d.fontes || {}).length, ok = total > 0 && vivas === total;
-    $("online").textContent = total === 0 ? "● motor desligado" : ok ? "● Online" : `● ${vivas}/${total} fontes`; $("online").style.color = ok ? "" : "var(--gold)";
+     
     $("pontos").innerHTML = Object.entries(d.fontes || {}).map(([k, v]) => `<span class="ponto ${v.ok && d.agora - v.t < 900 ? "ok" : "mal"}" title="${esc(k + (v.erro ? ": " + v.erro : ""))}"></span>`).join("");
-  } catch (e) { $("online").textContent = "● sem conexão com o painel"; $("online").style.color = "var(--down)"; }
+  } catch (e) {  }
   setTimeout(cicloFontes, 3000);
 }
 cicloFontes();
@@ -376,10 +244,7 @@ async function carregarLab() {
 }
 
 
-async function carregarLab() {
-  const l = await j("/api/lab");
-  $("placar").innerHTML = l.map(h => `<div class="hip ${esc(h.status)}"><div class="id">${esc(h.id)}</div><div class="p">${esc(h.pergunta)}</div><div class="r">${esc(h.resultado)}</div><div class="n">${esc(h.numero)}</div></div>`).join("");
-}
+
 </script>
 </body>
 </html>

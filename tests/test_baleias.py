@@ -1980,7 +1980,7 @@ class PainelMesa(unittest.TestCase):
         html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
         self.assertNotIn("<script src", html.replace("<script defer src", "<script src"))
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
-        for parte in ('id="fluxo"', 'id="pos"', 'id="feed"', 'id="fe-tab"', 'id="m-barra"', 'id="f-tag"', 'id="vg"', "/api/vivo"):   # 24/11: painel da equipe
+        for parte in ('id="desk"', 'id="pos"', 'id="log"', 'id="fe"', 'id="eq"', 'id="mult"', 'id="curva"', "/api/vivo"):   # 25/11: painel estilo app
             self.assertIn(parte, html)
 
 
