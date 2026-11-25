@@ -1,6 +1,6 @@
 {
- "t": 1795639222,
- "hora_utc": "2026-11-25 20:40 UTC",
+ "t": 1795639411,
+ "hora_utc": "2026-11-25 20:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   1.7,
   0.21,
   0.25,
-  0.0
+  0.1
  ],
  "contexto": {
-  "t": 1795639223,
+  "t": 1795639412,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 13.9,
+   "media_top20_anual_pct": 13.8,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -627,7 +627,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.21,
+   "carteira": 9.24,
    "n_abertas": 2,
    "abertas": [
     [
@@ -692,7 +692,7 @@
     "ganho_medio": 0.314,
     "perda_media": -0.228,
     "fator_lucro": 0.81,
-    "carteira": 9.21
+    "carteira": 9.24
    },
    "guardiao": {
     "ops": 74,
