@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 09:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 10:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,21 +66,21 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 18.4% das moedas subindo em 24 h, 27.2% em 4 h · BTC 24 h -2.13%, 4 h -0.21%.
+- **Amplitude:** 20.0% das moedas subindo em 24 h, 24.0% em 4 h · BTC 24 h -1.51%, 4 h -0.12%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': -3.2, 'ETH': 11.0, 'SOL': -18.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.5%/ano · {'BTC': -2.0, 'ETH': 11.0, 'SOL': -19.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** U bandeira de baixa (baixa, CONFIRMOU) · BABY fundo duplo (alta, formado) · BTC triângulo descendente (baixa, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** BTC triângulo descendente (baixa, CONFIRMOU) · OPG estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BABY fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado)
+- 📰 25/11 09:58 UTC · Cointelegraph: French Senate rejects 100K euro crypto wallet disclosure requirement
 - 📰 25/11 09:52 UTC · Cointelegraph: Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market
 - 📰 25/11 08:40 UTC · Cointelegraph: EU seeks up to $55B for AI and quantum computing fund: Report
 - 📰 25/11 08:35 UTC · CoinDesk: Live updates: Bitcoin slips back under $60,000 as HYPE leads altcoins lower
 - 📰 25/11 06:54 UTC · Cointelegraph: South Korea’s crypto bill could move stablecoin race beyond token issuance
 - 📰 25/11 06:33 UTC · CoinDesk: Solana developers move to stop validators finishing work on blocks that already lost
-- 📰 25/11 06:15 UTC · CoinDesk: Just 10 accounts drove all of the XRP Ledger's trading growth last quarter
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 13.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 13.7 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 52872 apostas conferidas ao vivo, acerto 54.4%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 52921 apostas conferidas ao vivo, acerto 54.4%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
