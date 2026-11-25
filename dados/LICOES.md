@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 02:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 02:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,7 +43,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.24** · 26 operações fechadas · 1 abertas
+Carteira **US$ 9.26** · 26 operações fechadas · 1 abertas
 
 - **Total:** 9/26 com lucro (35%), resultado -0.78, média -0.030 por operação.
 - **Últimas 24 h:** 1/2 com lucro, +0.51.
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.2% das moedas subindo em 24 h, 12.8% em 4 h · BTC 24 h -2.45%, 4 h -1.4%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': -11.5, 'ETH': -2.2, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': -11.4, 'ETH': -2.1, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, CONFIRMOU) · BTC triângulo descendente (baixa, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado) · OPG fundo duplo (alta, formado) · ORCA fundo duplo (alta, formado)
 - 📰 25/11 01:40 UTC · Cointelegraph: CleanSpark weighs selling more Bitcoin than it mines to de-risk books
@@ -122,10 +122,10 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H73 (22/11/2026 ~01:10 UTC, `lab/escala_capital.py` → `dados/lab/escala_capital_resultado.json`): fator 5 a 20× entra nas carteiras simuladas; 10 a 50× reprovada
-- Resultado da H46 (`lab/juizo_h46.py`): REPROVADA — nada muda
 - Resultado da H70 (`lab/juizo_h70.py`, ramo `estado` 4ae07584): REPROVADA nas 4 tentativas — controle válido
 - Resultado da H74 (23/11/2026 ~23:00 UTC, `lab/juizo_h74.py`, ramo `estado` 3dc14328): REPROVADA — nada muda
 - Resultado da H75 (23/11/2026 ~23:25 UTC, `lab/juizo_h75.py`, ramo `estado` 3fa38ccf): REPROVADA — R1–R3 não entram
 - Resultado da H76 (24/11/2026 ~21:20 UTC, `lab/juizo_h76.py`): REPROVADA — nada muda
+- Resultado das H77 e H78 (24/11/2026 ~21:45 UTC, `lab/livro151.py` → `dados/lab/livro151_resultado.json`): as duas REPROVADAS — nada entra
+- Resultado da H80 (24/11/2026 ~22:45 UTC, `lab/h80_funding.py` → `dados/lab/h80_resultado.json`): REPROVADA — nada entra
 
