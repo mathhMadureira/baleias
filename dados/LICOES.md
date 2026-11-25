@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 14:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 15:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 15.1% das moedas subindo em 24 h, 11.8% em 4 h · BTC 24 h -5.1%, 4 h -2.65%.
+- **Amplitude:** 17.6% das moedas subindo em 24 h, 14.3% em 4 h · BTC 24 h -5.1%, 4 h -2.65%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -5.0%/ano · {'BTC': 7.6, 'ETH': -4.7, 'SOL': -8.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.0%/ano · {'BTC': 4.2, 'ETH': 11.0, 'SOL': -5.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · ACE OCO invertido (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ORDI topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · ACE OCO invertido (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ORDI topo duplo (baixa, formado) · SENT fundo duplo (alta, formado)
 - 📰 25/11 14:21 UTC · Cointelegraph: Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal
 - 📰 25/11 13:41 UTC · Decrypt: Morning Minute: Ethereum Focuses on Security As AI Threats Rise
 - 📰 25/11 13:26 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 54042 apostas conferidas ao vivo, acerto 54.4%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 54063 apostas conferidas ao vivo, acerto 54.4%; prevê 48 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
