@@ -1,6 +1,6 @@
 {
- "t": 1795622727,
- "hora_utc": "2026-11-25 16:05 UTC",
+ "t": 1795622954,
+ "hora_utc": "2026-11-25 16:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,23 @@
   -1.14,
   0.27,
   0.18,
-  -0.01
+  0.17
  ],
  "contexto": {
-  "t": 1795622728,
+  "t": 1795622955,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795622855,
+    "hora_utc": "25/11 16:07",
+    "titulo": "Ukraine Passes Law to Legalize and Tax Its Crypto Market From July 2027"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795622551,
+    "hora_utc": "25/11 16:02",
+    "titulo": "EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795622527,
@@ -254,18 +266,6 @@
     "t": 1795607394,
     "hora_utc": "25/11 11:49",
     "titulo": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795606270,
-    "hora_utc": "25/11 11:31",
-    "titulo": "Hong Kong launches tokenized debt platform with 24-hour settlement"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795606232,
-    "hora_utc": "25/11 11:30",
-    "titulo": "Gold's haven status has lost its edge over bitcoin, and the Fed's to blame"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.8,
+   "media_top20_anual_pct": 2.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 6.0,
-    "SOL": -1.2
+    "ETH": 5.9,
+    "SOL": -2.5
    },
    "leitura": "neutro"
   },

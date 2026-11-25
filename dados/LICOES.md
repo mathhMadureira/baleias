@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 16:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 16:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,19 +68,19 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 22.7% das moedas subindo em 24 h, 30.3% em 4 h · BTC 24 h -2.31%, 4 h -0.51%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': 11.0, 'ETH': 6.0, 'SOL': -1.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 11.0, 'ETH': 5.9, 'SOL': -2.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CHIP fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · PEPE topo duplo (baixa, formado) · SENT fundo duplo (alta, formado)
+- 📰 25/11 16:07 UTC · Decrypt: Ukraine Passes Law to Legalize and Tax Its Crypto Market From July 2027
+- 📰 25/11 16:02 UTC · CoinDesk: EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending
 - 📰 25/11 16:02 UTC · CoinDesk: Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million
 - 📰 25/11 15:59 UTC · CoinDesk: Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan
 - 📰 25/11 14:47 UTC · CoinDesk: South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe
 - 📰 25/11 14:21 UTC · Cointelegraph: Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal
-- 📰 25/11 13:41 UTC · Decrypt: Morning Minute: Ethereum Focuses on Security As AI Threats Rise
-- 📰 25/11 13:26 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 19.7 h.
+- ⚠️ **Rotina parada:** sem decisão há 19.8 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
