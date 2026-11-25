@@ -103,14 +103,14 @@ def tese_quebrada(p, agora):
 def montar(e, cmd, radar, risco, agora):
     """Lista COMPLETA de posições desejadas (formato da decisão do corretora.py)."""
     abertas = e.get("abertas") or {}
-    sair = set(cmd["sair_agora"])
+    sair = {m: f"pedido de {cmd.get('atualizado_por') or 'agente'}: {str(cmd.get('motivo') or '')[:60]}" for m in cmd["sair_agora"]}
     if risco and risco.get("acao") == "SAIR" and agora - float(risco.get("t") or 0) < 600:
-        sair.add(str(risco.get("moeda", "")).upper())
+        sair[str(risco.get("moeda", "")).upper()] = f"Risco mandou sair: {str(risco.get('motivo') or '')[:60]}"
     for par, p in abertas.items():
         if par not in sair:
             motivo = tese_quebrada({**p, "moeda": par}, agora)
             if motivo:
-                sair.add(par)
+                sair[par] = f"tese quebrou: {motivo}"
                 quadro(f"tese quebrou em {par[:-4]}: {motivo}; saio")
     lista = [{"moeda": par, "lado": p["lado"], "motivo": p.get("motivo", ""), "stop_pct": p.get("stop_pct"), "alvo_pct": p.get("alvo_pct"),
               "max_min": p.get("max_min")} for par, p in abertas.items() if par not in sair]
@@ -174,6 +174,12 @@ def volta(agora=None):
         conta = C.Conta(AGENTE, c)
         antes_ab, antes_fe = set(conta.e.get("abertas") or {}), len(conta.e.get("fechadas") or [])
         lista, sair = montar(conta.e, cmd, radar, risco, agora)
+        for par, motivo in sair.items():                     # a saída leva o motivo real (quem pediu e por quê), não "fora da lista"
+            if par in conta.e.get("abertas", {}):
+                try:
+                    conta.fechar(par, motivo)
+                except Exception as ex:
+                    print(f"falha ao fechar {par}: {ex}", flush=True)
         conta.rodada({"t": agora, "posicoes": lista})
         e = conta.e
         try:

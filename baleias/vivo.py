@@ -69,6 +69,28 @@ def preco_bingx(par):
     return v
 
 
+def causa_saida(x):
+    """Quem fechou: o PLANO (alvo, stop, stop móvel, prazo) ou a EQUIPE (tese quebrada, Risco, pedido de agente, troca manual)."""
+    m = str(x.get("motivo_saida") or "").lower()
+    if "alvo" in m:
+        return ("plano", "alvo")
+    if "móvel" in m or "movel" in m:
+        return ("plano", "stop móvel")
+    if "prazo" in m or "tempo máximo" in m:
+        return ("plano", "prazo")
+    if "tese quebrou" in m:
+        return ("equipe", "tese quebrou")
+    if "risco" in m or "guardiao" in m:
+        return ("equipe", "Risco")
+    if "pedido de" in m:
+        return ("equipe", "pedido de agente")
+    if "fora da lista" in m or "inverteu" in m:
+        return ("equipe", "troca manual")
+    if "stop" in m:
+        return ("plano", "stop")
+    return ("equipe", m[:20] or "?")
+
+
 def _carteira():
     e = _json(SHARED / "operar" / "corretoras" / f"{OPERADOR}.json")
     if not e:
@@ -86,7 +108,8 @@ def _carteira():
             ab[-1]["agora"] = agora_px
             ab[-1]["resultado"] = round(p["nocional"] * (agora_px / p["entrada"] - 1) * sinal, 4)
     fe = [{"moeda": x.get("moeda"), "lado": x.get("lado"), "entrada": x.get("entrada"), "saida": x.get("saida"), "t": x.get("saida_t"),
-           "resultado": x.get("resultado_usd"), "motivo": str(x.get("motivo_saida") or "")[:120]} for x in e.get("fechadas") or []]
+           "resultado": x.get("resultado_usd"), "taxas": x.get("taxas"), "motivo": str(x.get("motivo_saida") or "")[:120],
+           "causa": causa_saida(x)} for x in e.get("fechadas") or []]
     ev = sorted((x for x in e.get("eventos") or [] if isinstance(x, dict) and x.get("t")), key=lambda x: -x["t"])[:30]
     return {"existe": True, "corretora": e.get("corretora"), "patrimonio": e.get("patrimonio", CAPITAL), "capital": e.get("capital_inicial") or CAPITAL,
             "caixa": e.get("caixa"), "abertas": ab, "fechadas": fe, "eventos": ev, "atualizado": e.get("atualizado")}

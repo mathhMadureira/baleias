@@ -254,8 +254,15 @@ function desenhar() {
   // operações
   const fe = [...c.fechadas].reverse(), rs = fe.map(x => x.resultado).filter(r => r != null);
   $("fe-t").textContent = rs.length ? `melhor ${sn(Math.max(...rs))} · pior ${sn(Math.min(...rs))}` : "";
-  $("fe").innerHTML = fe.length ? `<table><tr><th class="e">hora</th><th class="e">moeda</th><th>entrada</th><th>saída</th><th>resultado</th></tr>` + fe.map(x =>
-    `<tr><td class="e mut">${x.t ? hora(x.t) : "—"}</td><td class="e"><span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span> ${esc(String(x.moeda).replace("USDT", ""))}</td><td>${px(x.entrada)}</td><td>${px(x.saida)}</td><td class="${cor(x.resultado)}"><b>${sn(x.resultado, 3)}</b></td></tr>`).join("") + "</table>"
+  $("fe").innerHTML = fe.length ? (() => { const pl = fe.filter(x => x.causa && x.causa[0] === "plano"), eq = fe.filter(x => x.causa && x.causa[0] === "equipe");
+      const sm = a => a.reduce((t, x) => t + (x.resultado || 0), 0), tx = fe.reduce((t, x) => t + (x.taxas || 0), 0);
+      return `<div class="tiles" style="margin-bottom:10px"><div class="tile"><span>pelo plano (alvo/stop/prazo)</span><b class="${cor(sm(pl))}">${pl.length} · ${sn(sm(pl))}</b></div>
+        <div class="tile"><span>fechadas pela equipe</span><b class="${cor(sm(eq))}">${eq.length} · ${sn(sm(eq))}</b></div>
+        <div class="tile"><span>chegaram ao alvo</span><b>${fe.filter(x => x.causa && x.causa[1] === "alvo").length}</b></div>
+        <div class="tile"><span>taxas pagas</span><b class="down">−${fmt(tx, 2)}</b></div></div>`; })() +
+    `<table><tr><th class="e">hora</th><th class="e">moeda</th><th>entrada</th><th>saída</th><th class="e">quem fechou</th><th>resultado</th></tr>` + fe.map(x =>
+    `<tr title="${esc(x.motivo)}"><td class="e mut">${x.t ? hora(x.t) : "—"}</td><td class="e"><span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span> ${esc(String(x.moeda).replace("USDT", ""))}</td><td>${px(x.entrada)}</td><td>${px(x.saida)}</td>
+      <td class="e" style="font:12px system-ui"><span class="chip ${x.causa && x.causa[0] === "plano" ? "ok" : "al"}" style="padding:2px 8px">${esc(x.causa ? x.causa[1] : "?")}</span></td><td class="${cor(x.resultado)}"><b>${sn(x.resultado, 3)}</b></td></tr>`).join("") + "</table>"
     : `<div class="vazio">Nenhuma operação fechada ainda.</div>`;
   const ult = fe[0];
   if (ult && ultFech !== null && ult.t !== ultFech) toast("BALEIAS · " + hm(ult.t), `${String(ult.moeda).replace("USDT", "")} ${ult.lado} · ${ult.resultado >= 0 ? "lucro" : "perda"}`, ult.motivo, sn(ult.resultado, 2), cor(ult.resultado));
