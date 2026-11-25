@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 15:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 15:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 21.8% das moedas subindo em 24 h, 17.6% em 4 h · BTC 24 h -3.29%, 4 h -1.33%.
+- **Amplitude:** 21.0% das moedas subindo em 24 h, 16.0% em 4 h · BTC 24 h -3.29%, 4 h -1.33%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.0%/ano · {'BTC': 0.5, 'ETH': -4.8, 'SOL': -6.8} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · ACE OCO invertido (alta, formado) · CHIP fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ORDI topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XPL topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.0%/ano · {'BTC': 1.6, 'ETH': -5.6, 'SOL': -7.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 5.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ACE topo duplo (baixa, formado) · ACE OCO invertido (alta, formado) · CHIP fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PEPE topo duplo (baixa, formado) · SENT fundo duplo (alta, formado) · XPL topo duplo (baixa, formado)
 - 📰 25/11 14:47 UTC · CoinDesk: South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe
 - 📰 25/11 14:21 UTC · Cointelegraph: Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal
 - 📰 25/11 13:41 UTC · Decrypt: Morning Minute: Ethereum Focuses on Security As AI Threats Rise
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 54138 apostas conferidas ao vivo, acerto 54.5%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 54151 apostas conferidas ao vivo, acerto 54.5%; prevê 60 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
