@@ -1980,7 +1980,7 @@ class PainelMesa(unittest.TestCase):
         html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
         self.assertNotIn("<script src", html.replace("<script defer src", "<script src"))
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
-        for parte in ('id="desk"', 'id="pos"', 'id="log"', 'id="fe"', 'id="eq"', 'id="mult"', 'id="curva"', "/api/vivo"):   # 25/11: painel estilo app
+        for parte in ('id="desk"', 'id="pos"', 'id="log"', 'id="fe"', 'id="eq"', 'id="mult"', 'id="curva"', 'id="kill"', "/api/vivo"):   # 25/11: painel estilo app
             self.assertIn(parte, html)
 
 
@@ -2949,6 +2949,8 @@ class MesaAoVivo(unittest.TestCase):
         spec.loader.exec_module(Q)
         Q.ARQ = raiz / "q.jsonl"
         Q.registrar("guardiao", "veto PEPE")
+        Q.DESCARTES = raiz / "d.jsonl"
+        self.assertEqual(Q.descarte("cacador", "pepeusdt", "Liquidez baixa: US$ 30 mil")["regra"], "liquidez baixa")
         self.assertEqual(Q.ler()[-1]["agente"], "guardiao")
         with self.assertRaises(SystemExit):
             Q.registrar("intruso", "x")

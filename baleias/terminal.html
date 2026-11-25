@@ -52,6 +52,10 @@ nav button.ativo { background:#0f1720; color:#fff; }
 .ln:first-child { border-top:0; } .ln .dot { width:7px; height:7px; border-radius:50%; margin-top:6px; flex:none; }
 .ln .h { color:var(--dim); flex:none; } .ln .tg { font-weight:800; flex:none; } .ln .tx { color:#334155; font-family:system-ui; font-size:12.5px; }
 .ln.novo { animation:ch 2.5s ease-out; } @keyframes ch { from { background:#dcfce7 } to { background:transparent } }
+.kill { display:grid; grid-template-columns:1fr 1fr; gap:4px 18px; }
+.kr { font-size:12.5px; } .kr div { display:flex; justify-content:space-between; } .kr b { font:700 12.5px var(--mono); }
+.kr i { display:block; height:3px; background:#fecdd3; border-radius:2px; margin-top:3px; } .kr i u { display:block; height:100%; background:#e11d48; border-radius:2px; }
+@media (max-width:560px) { .kill { grid-template-columns:1fr; } }
 .pos-l { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:8px; font:13px var(--mono); }
 .pos-l span { display:block; font:10.5px system-ui; color:var(--mut); }
 table { width:100%; border-collapse:collapse; font:12.5px var(--mono); } td, th { padding:6px 4px; text-align:right; border-top:1px solid var(--line); }
@@ -90,14 +94,20 @@ iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; b
     <div id="desk"></div>
   </div>
 
-  <div class="card" id="pos-card">
-    <div class="desk-h"><b>Posição</b><span id="pos-t"></span></div>
-    <div id="pos"></div>
-  </div>
-
   <div class="card">
     <div class="desk-h"><b>Logger</b><span id="log-n"></span></div>
     <div class="log" id="log"></div>
+  </div>
+
+  <div class="card">
+    <div class="desk-h"><b>Descartadas por regra</b><span id="kd-n"></span></div>
+    <div class="kill" id="kill"></div>
+    <div id="kill-rec" class="mut" style="font-size:12px;margin-top:8px"></div>
+  </div>
+
+  <div class="card" id="pos-card">
+    <div class="desk-h"><b>Posição</b><span id="pos-t"></span></div>
+    <div id="pos"></div>
   </div>
 
   <div class="card">
@@ -224,6 +234,12 @@ function desenhar() {
   $("log-n").textContent = `${vv.feed.length} registros`;
   $("log").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k); const [c1] = COR[x.agente] || ["#475569"];
     return `<div class="ln ${novo ? "novo" : ""}"><i class="dot" style="background:${c1}"></i><span class="h">${hm(x.t)}</span><span class="tg" style="color:${c1}">${esc((x.nome || "").toUpperCase())}:</span><span class="tx">${esc(x.texto)}</span></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
+  // descartadas por regra
+  const ds = vv.descartes || [], tot = ds.reduce((a, d) => a + d.total, 0), mx = Math.max(1, ...ds.map(d => d.total));
+  $("kd-n").textContent = tot ? `${tot} descartadas · ${ds.reduce((a, d) => a + d.hoje, 0)} hoje` : "";
+  $("kill").innerHTML = ds.length ? ds.map(d => `<div class="kr"><div><span>${esc(d.regra)}</span><b>${d.total}</b></div><i><u style="width:${d.total / mx * 100}%"></u></i></div>`).join("")
+    : `<div class="vazio">Nenhum descarte registrado ainda.</div>`;
+  $("kill-rec").innerHTML = (vv.descartes_recentes || []).slice(0, 5).map(x => `<span style="color:#e11d48">✕</span> ${esc(String(x.moeda).replace("USDT", ""))} · ${esc(x.regra)} <span class="mut">(${esc((COR[x.agente] ? x.agente : x.agente))}, ${hm(x.t)})</span>`).join(" &nbsp; ");
   // operações
   const fe = [...c.fechadas].reverse(), rs = fe.map(x => x.resultado).filter(r => r != null);
   $("fe-t").textContent = rs.length ? `melhor ${sn(Math.max(...rs))} · pior ${sn(Math.min(...rs))}` : "";

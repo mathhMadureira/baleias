@@ -133,12 +133,34 @@ def vivo(agora=None):
         curva.append([x["t"], round(eq, 4)])
     curva.append([agora, round(c["patrimonio"], 4)])
     risco = _json(SHARED / "equipe" / "risco.json")
+    desc, ult_desc = {}, []
+    try:
+        for l in (SHARED / "equipe" / "descartes.jsonl").read_text().splitlines()[-2000:]:
+            try:
+                x = json.loads(l)
+            except ValueError:
+                continue
+            r = x.get("regra") or "?"
+            d = desc.setdefault(r, {"regra": r, "total": 0, "hoje": 0, "ultimo": None})
+            d["total"] += 1
+            d["hoje"] += x.get("t", 0) >= agora - (agora % 86400)
+            d["ultimo"] = x.get("moeda")
+            ult_desc.append(x)
+    except OSError:
+        pass
+    for e_ in c["eventos"]:                                  # recusas da própria corretora
+        if "não entra" in e_["texto"] or "recusou" in e_["texto"]:
+            d = desc.setdefault("corretora recusou", {"regra": "corretora recusou", "total": 0, "hoje": 0, "ultimo": None})
+            d["total"] += 1
+            d["hoje"] += e_["t"] >= agora - (agora % 86400)
+            d["ultimo"] = e_["texto"].split(":")[0][:20]
     desk = []
     for a in FLUXO + APOIO:
         u = ult.get(a["id"])
         desk.append({**a, "ultimo": u, "contagem": cont.get(a["id"], {"total": 0, "hoje": 0}),
                      "ativo": bool(u and agora - u["t"] < 600)})
-    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
+    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco,
+            "descartes": sorted(desc.values(), key=lambda d: -d["total"]), "descartes_recentes": ult_desc[-8:][::-1], "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
             "progresso": (c["patrimonio"] - c["capital"]) / (META - c["capital"]), "operacoes": len(rs),
             "ganhos": sum(1 for r in rs if r > 0), "resultado": sum(rs), "melhor": max(rs) if rs else None, "pior": min(rs) if rs else None},
             "fluxo": fluxo, "rodada_inicio": inicio, "apoio": [{**a, "ultimo": ult.get(a["id"])} for a in APOIO], "carteira": c, "feed": feed[:60]}
