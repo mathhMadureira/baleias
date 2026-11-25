@@ -1,21 +1,21 @@
 {
- "t": 1795605419,
- "hora_utc": "2026-11-25 11:16 UTC",
+ "t": 1795605653,
+ "hora_utc": "2026-11-25 11:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 125,
-  "subindo_pct": 38.4,
+  "moedas": 124,
+  "subindo_pct": 38.7,
   "mediana_pct": -0.07
  },
  "mercado_4h": {
-  "moedas": 125,
-  "subindo_pct": 11.2,
-  "mediana_pct": -1.5
+  "moedas": 124,
+  "subindo_pct": 11.3,
+  "mediana_pct": -1.49
  },
  "mercado_24h": {
-  "moedas": 125,
-  "subindo_pct": 18.4,
-  "mediana_pct": -2.77
+  "moedas": 124,
+  "subindo_pct": 18.5,
+  "mediana_pct": -2.71
  },
  "btc": {
   "1h": -0.31,
@@ -172,11 +172,17 @@
   1.18,
   -0.58,
   -0.31,
-  -0.18
+  -0.12
  ],
  "contexto": {
-  "t": 1795605420,
+  "t": 1795605654,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795605146,
+    "hora_utc": "25/11 11:12",
+    "titulo": "Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795604978,
@@ -260,12 +266,6 @@
     "t": 1795582642,
     "hora_utc": "25/11 04:57",
     "titulo": "Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795582208,
-    "hora_utc": "25/11 04:50",
-    "titulo": "A year after buying bitcoin, Czech central bank won't say what it's worth"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.7,
+   "media_top20_anual_pct": 2.6,
    "principais_anual_pct": {
-    "BTC": -6.2,
-    "ETH": 10.4,
-    "SOL": -10.8
+    "BTC": -5.9,
+    "ETH": 10.2,
+    "SOL": -11.3
    },
    "leitura": "neutro"
   },
@@ -698,12 +698,12 @@
   "z_contra_lab": 0.06,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.508,
-    "n": 23875
+    "acerto": 0.5081,
+    "n": 23857
    },
    "segue_maioria_24h": {
-    "acerto": 0.5143,
-    "n": 29501
+    "acerto": 0.5127,
+    "n": 29535
    }
   },
   "referencia_ganha": [],
