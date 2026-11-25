@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 17:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 17:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 24.4% das moedas subindo em 24 h, 52.9% em 4 h · BTC 24 h -1.37%, 4 h -0.25%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.5%/ano · {'BTC': 11.0, 'ETH': 10.5, 'SOL': 5.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.6%/ano · {'BTC': 11.0, 'ETH': 7.1, 'SOL': 4.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CHIP fundo duplo (alta, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado)
 - 📰 25/11 16:52 UTC · Decrypt: Bitcoin Falls Further as Inflation, Trump Tariffs and AI Selloff Rattle Markets
