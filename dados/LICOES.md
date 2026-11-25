@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 21:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 21:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -40,7 +40,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.62** · 28 operações fechadas · 1 abertas
+Carteira **US$ 9.63** · 28 operações fechadas · 1 abertas
 
 - **Total:** 10/28 com lucro (36%), resultado -0.75, média -0.027 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.10.
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 80.2% das moedas subindo em 24 h, 83.3% em 4 h · BTC 24 h 0.75%, 4 h 0.94%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 9.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.3%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 9.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CFG topo duplo (baixa, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PENGU topo duplo (baixa, formado) · STO fundo duplo (alta, formado) · SUPER fundo duplo (alta, formado) · XPL topo duplo (baixa, formado) · XPL OCO invertido (alta, formado)
 - 📰 25/11 21:46 UTC · Decrypt: What Happened to Alice Huang, the Woman at the Center of Nvidia’s Scandal?
