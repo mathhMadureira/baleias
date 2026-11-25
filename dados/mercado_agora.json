@@ -1,6 +1,6 @@
 {
- "t": 1795646143,
- "hora_utc": "2026-11-25 22:35 UTC",
+ "t": 1795646336,
+ "hora_utc": "2026-11-25 22:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,11 +172,17 @@
   0.25,
   0.65,
   -0.05,
-  -0.06
+  -0.03
  ],
  "contexto": {
-  "t": 1795646144,
+  "t": 1795646337,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795646289,
+    "hora_utc": "25/11 22:38",
+    "titulo": "China's Google Just Released Its Fast New AI Model for Free"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795645993,
@@ -260,12 +266,6 @@
     "t": 1795628762,
     "hora_utc": "25/11 17:46",
     "titulo": "OpenAI’s Changes to ChatGPT Could Drastically Cut Usage Limits for Paying Subscribers"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795628313,
-    "hora_utc": "25/11 17:38",
-    "titulo": "'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 14.0,
+   "media_top20_anual_pct": 13.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 8.3,
-    "SOL": 7.5
+    "ETH": 7.9,
+    "SOL": 7.1
    },
    "leitura": "neutro"
   },
@@ -620,7 +620,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.08,
+   "carteira": 10.06,
    "n_abertas": 1,
    "abertas": [
     [
@@ -681,7 +681,7 @@
     "ganho_medio": 0.314,
     "perda_media": -0.216,
     "fator_lucro": 0.81,
-    "carteira": 10.08
+    "carteira": 10.06
    },
    "guardiao": {
     "ops": 74,
