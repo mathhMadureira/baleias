@@ -1,16 +1,16 @@
 {
- "t": 1795643849,
- "hora_utc": "2026-11-25 21:57 UTC",
+ "t": 1795644042,
+ "hora_utc": "2026-11-25 22:00 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
-  "subindo_pct": 78.6,
-  "mediana_pct": 0.45
+  "subindo_pct": 57.9,
+  "mediana_pct": 0.16
  },
  "mercado_4h": {
   "moedas": 126,
   "subindo_pct": 83.3,
-  "mediana_pct": 1.19
+  "mediana_pct": 1.35
  },
  "mercado_24h": {
   "moedas": 126,
@@ -68,22 +68,22 @@
    "vol": 0.18
   },
   {
-   "moeda": "SYRUP",
-   "4h": -1.64,
-   "24h": -5.71,
-   "vol": 1.62
+   "moeda": "ATOM",
+   "4h": -1.11,
+   "24h": -0.96,
+   "vol": 1.0
   },
   {
-   "moeda": "ONE",
-   "4h": -1.36,
-   "24h": 0.21,
-   "vol": 1.32
+   "moeda": "LUNC",
+   "4h": -1.06,
+   "24h": 2.1,
+   "vol": 0.65
   },
   {
-   "moeda": "SENT",
-   "4h": -1.24,
-   "24h": 4.32,
-   "vol": 0.71
+   "moeda": "RE",
+   "4h": -0.67,
+   "24h": 2.33,
+   "vol": 1.1
   }
  ],
  "maiores_altas_4h": [
@@ -107,9 +107,9 @@
   },
   {
    "moeda": "STO",
-   "4h": 8.96,
-   "24h": 16.67,
-   "vol": 4.91
+   "4h": 7.58,
+   "24h": 15.23,
+   "vol": 4.93
   },
   {
    "moeda": "NEAR",
@@ -130,12 +130,6 @@
    "vol": 1.1
   },
   {
-   "moeda": "SUPER",
-   "4h": 4.75,
-   "24h": 9.26,
-   "vol": 1.77
-  },
-  {
    "moeda": "TRUMP",
    "4h": 4.31,
    "24h": 4.31,
@@ -146,10 +140,15 @@
    "4h": 4.24,
    "24h": 5.06,
    "vol": 1.27
+  },
+  {
+   "moeda": "ENA",
+   "4h": 4.03,
+   "24h": 3.29,
+   "vol": 1.64
   }
  ],
  "btc_1h_ultimas_24": [
-  0.15,
   -0.26,
   -0.28,
   -0.65,
@@ -172,11 +171,18 @@
   0.21,
   0.25,
   0.65,
-  0.07
+  -0.05,
+  -0.11
  ],
  "contexto": {
-  "t": 1795643850,
+  "t": 1795644042,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795643618,
+    "hora_utc": "25/11 21:53",
+    "titulo": "Switzerland clears 57 jurisdictions for crypto tax data sharing"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795643162,
@@ -260,12 +266,6 @@
     "t": 1795628002,
     "hora_utc": "25/11 17:33",
     "titulo": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795627173,
-    "hora_utc": "25/11 17:19",
-    "titulo": "Nvidia agrees to $290M settlement over crypto mining revenue disclosures"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 13.3,
+   "media_top20_anual_pct": 9.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 11.0,
-    "SOL": 9.2
+    "ETH": 7.9,
+    "SOL": -0.2
    },
    "leitura": "neutro"
   },
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 2.5,
+   "amplitude_acima_mm50_pct": 5.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -372,15 +372,11 @@
   }
  },
  "v4": {
-  "vela": "21:45 UTC",
-  "apostas": 113,
-  "compras": 53,
-  "vendas": 60,
+  "vela": "11:00 UTC",
+  "apostas": 108,
+  "compras": 57,
+  "vendas": 51,
   "mais_confiantes_venda": [
-   {
-    "moeda": "SOPH",
-    "prob_subir": 0.347
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
@@ -408,9 +404,17 @@
    {
     "moeda": "FORM",
     "prob_subir": 0.382
+   },
+   {
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
+   {
+    "moeda": "HUMA",
+    "prob_subir": 0.661
+   },
    {
     "moeda": "PSG",
     "prob_subir": 0.651
@@ -426,10 +430,6 @@
    {
     "moeda": "ENS",
     "prob_subir": 0.614
-   },
-   {
-    "moeda": "STX",
-    "prob_subir": 0.612
    },
    {
     "moeda": "RWUSD",
@@ -634,7 +634,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.63,
+   "carteira": 9.65,
    "n_abertas": 1,
    "abertas": [
     [
@@ -695,7 +695,7 @@
     "ganho_medio": 0.314,
     "perda_media": -0.216,
     "fator_lucro": 0.81,
-    "carteira": 9.63
+    "carteira": 9.65
    },
    "guardiao": {
     "ops": 74,
@@ -710,38 +710,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 30462 apostas (632 velas, 18/11 22:00–25/11 21:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 30449 apostas (632 velas, 18/11 22:15–25/11 21:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5314,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.37,
+  "z_contra_lab": -0.36,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5042,
-    "n": 24639
+    "acerto": 0.5043,
+    "n": 24634
    },
    "segue_maioria_24h": {
-    "acerto": 0.5125,
-    "n": 30367
+    "acerto": 0.5123,
+    "n": 30354
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5433,
+    "acerto": 0.5434,
     "n": 9004
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5501,
+    "acerto": 0.5498,
     "n": 3336
    },
    "confianca:<0,05": {
-    "acerto": 0.5162,
-    "n": 17249
+    "acerto": 0.5163,
+    "n": 17237
    },
    "confianca:≥0,12": {
-    "acerto": 0.6357,
-    "n": 873
+    "acerto": 0.6353,
+    "n": 872
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5086,
@@ -756,16 +756,16 @@
     "n": 7925
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5415,
-    "n": 7134
+    "acerto": 0.5416,
+    "n": 7121
    },
    "lado:compra": {
-    "acerto": 0.5243,
-    "n": 13657
+    "acerto": 0.5244,
+    "n": 13643
    },
    "lado:venda": {
     "acerto": 0.5371,
-    "n": 16805
+    "n": 16806
    }
   }
  },
