@@ -1,6 +1,6 @@
 {
- "t": 1795607527,
- "hora_utc": "2026-11-25 11:52 UTC",
+ "t": 1795607762,
+ "hora_utc": "2026-11-25 11:56 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,23 @@
   1.18,
   -0.58,
   -0.31,
-  -0.23
+  -0.19
  ],
  "contexto": {
-  "t": 1795607528,
+  "t": 1795607763,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795607526,
+    "hora_utc": "25/11 11:52",
+    "titulo": "Florida Man Jailed for Using AI to Pose as Streamer N3ON in $260K Crypto Scam"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795607394,
+    "hora_utc": "25/11 11:49",
+    "titulo": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795606270,
@@ -254,18 +266,6 @@
     "t": 1795589699,
     "hora_utc": "25/11 06:54",
     "titulo": "South Korea’s crypto bill could move stablecoin race beyond token issuance"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795588390,
-    "hora_utc": "25/11 06:33",
-    "titulo": "Solana developers move to stop validators finishing work on blocks that already lost"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795587308,
-    "hora_utc": "25/11 06:15",
-    "titulo": "Just 10 accounts drove all of the XRP Ledger's trading growth last quarter"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.0,
+   "media_top20_anual_pct": 1.8,
    "principais_anual_pct": {
-    "BTC": -6.3,
+    "BTC": -6.4,
     "ETH": 10.7,
-    "SOL": -11.5
+    "SOL": -11.6
    },
    "leitura": "neutro"
   },
