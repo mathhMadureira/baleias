@@ -1,6 +1,6 @@
 {
- "t": 1795586084,
- "hora_utc": "2026-11-25 05:54 UTC",
+ "t": 1795586319,
+ "hora_utc": "2026-11-25 05:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.05,
   0.31,
   -0.34,
-  -0.07
+  -0.09
  ],
  "contexto": {
-  "t": 1795586085,
+  "t": 1795586320,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795585843,
+    "hora_utc": "25/11 05:50",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795584775,
@@ -227,12 +233,6 @@
    },
    {
     "fonte": "Cointelegraph",
-    "t": 1795558330,
-    "hora_utc": "24/11 22:12",
-    "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Cointelegraph",
     "t": 1795557025,
     "hora_utc": "24/11 21:50",
     "titulo": "Europol follows $28.5M crypto trail in streaming piracy crackdown"
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.1,
+   "media_top20_anual_pct": 3.0,
    "principais_anual_pct": {
-    "BTC": -7.3,
-    "ETH": 6.1,
+    "BTC": -6.8,
+    "ETH": 5.8,
     "SOL": 8.9
    },
    "leitura": "neutro"
