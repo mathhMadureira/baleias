@@ -14,7 +14,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | reversao_alta | promissor | 64.1% | 39 | 48.4%–77.3% | física: alta anormal de 1 h → devolve |
 | raschke_graal_baixa | promissor | 60.8% | 97 | 50.9%–69.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
-| williams_volb_baixa | promissor | 52.0% | 252 | 45.8%–58.1% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
+| williams_volb_baixa | promissor | 51.8% | 253 | 45.6%–57.9% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_wr_alta | promissor | 51.0% | 51 | 37.7%–64.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | demark_td9_alta | promissor | 50.6% | 83 | 40.1%–61.1% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | tres_corvos | promissor | 50.4% | 462 | 45.9%–55.0% | H6: três corvos → sobe (efeito pequeno) |
