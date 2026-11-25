@@ -1,21 +1,21 @@
 {
- "t": 1795634827,
- "hora_utc": "2026-11-25 19:27 UTC",
+ "t": 1795635050,
+ "hora_utc": "2026-11-25 19:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
-  "subindo_pct": 80.6,
-  "mediana_pct": 0.96
+  "subindo_pct": 83.9,
+  "mediana_pct": 1.09
  },
  "mercado_4h": {
   "moedas": 124,
-  "subindo_pct": 91.9,
-  "mediana_pct": 4.79
+  "subindo_pct": 93.5,
+  "mediana_pct": 5.02
  },
  "mercado_24h": {
   "moedas": 124,
-  "subindo_pct": 66.9,
-  "mediana_pct": 0.8
+  "subindo_pct": 71.0,
+  "mediana_pct": 1.01
  },
  "btc": {
   "1h": 0.3,
@@ -56,16 +56,10 @@
    "vol": 0.57
   },
   {
-   "moeda": "ENSO",
-   "4h": -0.5,
-   "24h": -2.67,
-   "vol": 0.83
-  },
-  {
    "moeda": "DODO",
-   "4h": -0.33,
-   "24h": -3.92,
-   "vol": 0.73
+   "4h": -0.19,
+   "24h": -3.08,
+   "vol": 0.58
   },
   {
    "moeda": "AIGENSYN",
@@ -74,16 +68,22 @@
    "vol": 0.48
   },
   {
-   "moeda": "KAVA",
-   "4h": -0.08,
-   "24h": -0.45,
-   "vol": 1.42
-  },
-  {
    "moeda": "U",
    "4h": 0.0,
    "24h": -0.09,
    "vol": 0.58
+  },
+  {
+   "moeda": "KAVA",
+   "4h": 0.21,
+   "24h": -0.69,
+   "vol": 1.41
+  },
+  {
+   "moeda": "TRX",
+   "4h": 0.23,
+   "24h": -1.46,
+   "vol": 1.68
   }
  ],
  "maiores_altas_4h": [
@@ -112,40 +112,40 @@
    "vol": 1.82
   },
   {
+   "moeda": "STO",
+   "4h": 12.5,
+   "24h": 13.07,
+   "vol": 4.67
+  },
+  {
+   "moeda": "CHIP",
+   "4h": 10.87,
+   "24h": -2.89,
+   "vol": 1.87
+  },
+  {
    "moeda": "ZEC",
    "4h": 10.32,
    "24h": 4.5,
    "vol": 1.81
   },
   {
-   "moeda": "STO",
-   "4h": 10.0,
-   "24h": 10.0,
-   "vol": 4.61
+   "moeda": "MARSCOIN",
+   "4h": 10.08,
+   "24h": 2.53,
+   "vol": 1.67
   },
   {
-   "moeda": "CHIP",
-   "4h": 9.56,
-   "24h": -3.52,
-   "vol": 1.99
+   "moeda": "PLUME",
+   "4h": 9.63,
+   "24h": 2.75,
+   "vol": 1.74
   },
   {
    "moeda": "BEB",
    "4h": 9.53,
    "24h": -1.48,
    "vol": 2.48
-  },
-  {
-   "moeda": "PUMP",
-   "4h": 7.95,
-   "24h": 2.88,
-   "vol": 2.22
-  },
-  {
-   "moeda": "STRK",
-   "4h": 7.91,
-   "24h": 3.79,
-   "vol": 2.47
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.45,
   1.7,
   0.21,
-  0.81
+  0.62
  ],
  "contexto": {
-  "t": 1795634828,
+  "t": 1795635051,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795634934,
+    "hora_utc": "25/11 19:28",
+    "titulo": "Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795632891,
@@ -260,12 +266,6 @@
     "t": 1795622527,
     "hora_utc": "25/11 16:02",
     "titulo": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795622384,
-    "hora_utc": "25/11 15:59",
-    "titulo": "Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 12.1,
+   "media_top20_anual_pct": 12.6,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -296,13 +296,6 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
-   {
-    "moeda": "MARSCOIN",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.0265
-   },
    {
     "moeda": "NFP",
     "padrao": "ombro-cabeça-ombro",
@@ -365,22 +358,14 @@
   }
  },
  "v4": {
-  "vela": "19:15 UTC",
-  "apostas": 169,
-  "compras": 37,
-  "vendas": 132,
+  "vela": "11:00 UTC",
+  "apostas": 153,
+  "compras": 38,
+  "vendas": 115,
   "mais_confiantes_venda": [
-   {
-    "moeda": "SOPH",
-    "prob_subir": 0.336
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
-   },
-   {
-    "moeda": "KERNEL",
-    "prob_subir": 0.368
    },
    {
     "moeda": "AR",
@@ -395,12 +380,20 @@
     "prob_subir": 0.376
    },
    {
+    "moeda": "HUMA",
+    "prob_subir": 0.381
+   },
+   {
     "moeda": "RUNE",
     "prob_subir": 0.382
    },
    {
     "moeda": "FORM",
     "prob_subir": 0.382
+   },
+   {
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
@@ -698,38 +691,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 30532 apostas (632 velas, 18/11 19:30–25/11 18:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.531,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.0% em 30548 apostas (632 velas, 18/11 19:45–25/11 19:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5303,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.41,
+  "z_contra_lab": -0.48,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5062,
-    "n": 24438
+    "acerto": 0.5063,
+    "n": 24463
    },
    "segue_maioria_24h": {
-    "acerto": 0.5125,
-    "n": 30422
+    "acerto": 0.5134,
+    "n": 30438
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.542,
-    "n": 9109
+    "acerto": 0.5421,
+    "n": 9106
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5517,
-    "n": 3330
+    "acerto": 0.5509,
+    "n": 3333
    },
    "confianca:<0,05": {
-    "acerto": 0.5159,
-    "n": 17219
+    "acerto": 0.5149,
+    "n": 17234
    },
    "confianca:≥0,12": {
-    "acerto": 0.6339,
-    "n": 874
+    "acerto": 0.6343,
+    "n": 875
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5086,
@@ -744,16 +737,16 @@
     "n": 7925
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5397,
-    "n": 7204
+    "acerto": 0.537,
+    "n": 7220
    },
    "lado:compra": {
-    "acerto": 0.5232,
-    "n": 13983
+    "acerto": 0.5235,
+    "n": 13972
    },
    "lado:venda": {
-    "acerto": 0.5375,
-    "n": 16549
+    "acerto": 0.536,
+    "n": 16576
    }
   }
  },
