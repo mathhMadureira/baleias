@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 21:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 21:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -40,7 +40,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 ## 🔬 Laboratório (agente OpenBot · só o que passou no lab)
 
-Carteira **US$ 9.04** · 28 operações fechadas · 1 abertas
+Carteira **US$ 9.15** · 28 operações fechadas · 1 abertas
 
 - **Total:** 10/28 com lucro (36%), resultado -0.75, média -0.027 por operação.
 - **Últimas 24 h:** 1/3 com lucro, -0.10.
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 81.7% das moedas subindo em 24 h, 89.7% em 4 h · BTC 24 h 0.85%, 4 h 1.65%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.4%/ano · {'BTC': 11.0, 'ETH': 9.0, 'SOL': 10.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.3%/ano · {'BTC': 11.0, 'ETH': 9.6, 'SOL': 10.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CFG topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · STO fundo duplo (alta, formado) · SUPER fundo duplo (alta, formado) · XPL topo duplo (baixa, formado) · XPL OCO invertido (alta, formado)
+- 📰 25/11 21:22 UTC · Cointelegraph: Braiins warns of Bitcoin mining attacks affecting over 1,000 sites
 - 📰 25/11 21:16 UTC · Decrypt: The 1Password Breach Didn’t Touch Your Vault. The Phishing Emails Might
 - 📰 25/11 21:11 UTC · Cointelegraph: Why ECB collateral eligibility could boost demand for tokenized bonds
 - 📰 25/11 20:36 UTC · Decrypt: Another Bitcoin Mining Firm Flags 'Hashrate Hijacking' Attacks That Reroute Rewards
 - 📰 25/11 20:06 UTC · Decrypt: What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach
 - 📰 25/11 19:28 UTC · Decrypt: Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit
-- 📰 25/11 18:54 UTC · Cointelegraph: Ethereum Foundation backs Keccak-256 to counter quantum, AI threats
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
