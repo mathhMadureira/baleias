@@ -1,28 +1,28 @@
 {
- "t": 1795570999,
- "hora_utc": "2026-11-25 01:43 UTC",
+ "t": 1795571235,
+ "hora_utc": "2026-11-25 01:47 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
-  "subindo_pct": 46.4,
-  "mediana_pct": -0.04
+  "subindo_pct": 20.8,
+  "mediana_pct": -0.5
  },
  "mercado_4h": {
   "moedas": 125,
-  "subindo_pct": 18.4,
-  "mediana_pct": -0.65
+  "subindo_pct": 22.4,
+  "mediana_pct": -0.56
  },
  "mercado_24h": {
   "moedas": 125,
-  "subindo_pct": 17.6,
-  "mediana_pct": -4.71
+  "subindo_pct": 16.0,
+  "mediana_pct": -4.96
  },
  "btc": {
-  "1h": -0.12,
-  "4h": -0.8,
-  "24h": -3.43,
-  "preco": 59449.68,
-  "vol_4h_vs_media": 0.66
+  "1h": -0.47,
+  "4h": -0.87,
+  "24h": -3.48,
+  "preco": 59336.73,
+  "vol_4h_vs_media": 0.7
  },
  "maiores_quedas_4h": [
   {
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
-   "moeda": "SAHARA",
-   "4h": -6.28,
-   "24h": 2.09,
-   "vol": 0.4
-  },
-  {
    "moeda": "LISTA",
-   "4h": -5.09,
-   "24h": 7.88,
-   "vol": 0.61
+   "4h": -6.94,
+   "24h": 5.89,
+   "vol": 0.63
   },
   {
-   "moeda": "GLM",
-   "4h": -3.82,
-   "24h": -1.45,
-   "vol": 0.49
+   "moeda": "SAHARA",
+   "4h": -6.79,
+   "24h": 1.33,
+   "vol": 0.39
   },
   {
    "moeda": "ATM",
-   "4h": -3.65,
-   "24h": 28.59,
-   "vol": 0.49
+   "4h": -5.27,
+   "24h": 28.82,
+   "vol": 0.45
   },
   {
-   "moeda": "SENT",
-   "4h": -3.0,
-   "24h": -2.36,
-   "vol": 0.38
+   "moeda": "AIGENSYN",
+   "4h": -3.85,
+   "24h": 2.98,
+   "vol": 1.15
   },
   {
-   "moeda": "SHELL",
-   "4h": -2.84,
-   "24h": 7.02,
+   "moeda": "GLM",
+   "4h": -3.51,
+   "24h": -1.9,
    "vol": 0.5
   },
   {
-   "moeda": "ASTER",
-   "4h": -2.72,
-   "24h": -5.61,
-   "vol": 1.56
+   "moeda": "ENSO",
+   "4h": -3.23,
+   "24h": -8.02,
+   "vol": 0.78
+  },
+  {
+   "moeda": "SENT",
+   "4h": -2.86,
+   "24h": -3.34,
+   "vol": 0.41
+  },
+  {
+   "moeda": "PSG",
+   "4h": -2.85,
+   "24h": 0.33,
+   "vol": 0.2
   },
   {
    "moeda": "RE",
-   "4h": -2.71,
-   "24h": -4.51,
-   "vol": 0.47
-  },
-  {
-   "moeda": "ASR",
-   "4h": -2.54,
-   "24h": -0.76,
-   "vol": 0.35
+   "4h": -2.78,
+   "24h": -6.4,
+   "vol": 0.51
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "BIGTIME",
-   "4h": 6.07,
-   "24h": 11.76,
-   "vol": 1.49
+   "4h": 8.33,
+   "24h": 12.76,
+   "vol": 1.54
   },
   {
    "moeda": "BLUR",
-   "4h": 4.84,
-   "24h": 6.78,
-   "vol": 1.77
+   "4h": 6.4,
+   "24h": 7.7,
+   "vol": 1.83
   },
   {
    "moeda": "INIT",
-   "4h": 4.42,
-   "24h": 10.4,
-   "vol": 1.2
-  },
-  {
-   "moeda": "CYBER",
-   "4h": 2.42,
-   "24h": -4.07,
-   "vol": 0.76
-  },
-  {
-   "moeda": "ERA",
-   "4h": 2.35,
-   "24h": 0.14,
-   "vol": 1.43
-  },
-  {
-   "moeda": "SKY",
-   "4h": 2.27,
-   "24h": 2.95,
-   "vol": 0.93
-  },
-  {
-   "moeda": "KITE",
-   "4h": 1.74,
-   "24h": 3.1,
-   "vol": 0.79
-  },
-  {
-   "moeda": "ETHFI",
-   "4h": 1.25,
-   "24h": -5.52,
+   "4h": 3.41,
+   "24h": 9.94,
    "vol": 1.3
   },
   {
-   "moeda": "NIGHT",
-   "4h": 1.18,
-   "24h": -0.24,
-   "vol": 1.34
+   "moeda": "ERA",
+   "4h": 2.63,
+   "24h": 0.41,
+   "vol": 1.57
   },
   {
-   "moeda": "OPG",
-   "4h": 1.17,
-   "24h": 17.5,
-   "vol": 3.24
+   "moeda": "CYBER",
+   "4h": 2.4,
+   "24h": -3.18,
+   "vol": 0.75
+  },
+  {
+   "moeda": "KITE",
+   "4h": 1.81,
+   "24h": 3.11,
+   "vol": 0.8
+  },
+  {
+   "moeda": "KERNEL",
+   "4h": 1.69,
+   "24h": 0.0,
+   "vol": 0.77
+  },
+  {
+   "moeda": "2Z",
+   "4h": 1.3,
+   "24h": 3.03,
+   "vol": 0.85
+  },
+  {
+   "moeda": "SYRUP",
+   "4h": 1.28,
+   "24h": -15.38,
+   "vol": 0.88
+  },
+  {
+   "moeda": "BABY",
+   "4h": 1.2,
+   "24h": -1.75,
+   "vol": 0.19
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.15,
   -0.26,
   -0.28,
-  -0.53
+  -0.55
  ],
  "contexto": {
-  "t": 1795571000,
+  "t": 1795571236,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795570859,
+    "hora_utc": "25/11 01:40",
+    "titulo": "CleanSpark weighs selling more Bitcoin than it mines to ‘de-risk’ books"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795564096,
@@ -260,12 +266,6 @@
     "t": 1795545102,
     "hora_utc": "24/11 18:31",
     "titulo": "CFTC sets new prediction market rules as more firms seek US entry"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795544162,
-    "hora_utc": "24/11 18:16",
-    "titulo": "Wall Street and Crypto Are in 'Extreme Fear'. What's Spooking Investors?"
    }
   ],
   "medo_ganancia": {
@@ -274,9 +274,9 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.8,
+   "media_top20_anual_pct": 3.7,
    "principais_anual_pct": {
-    "BTC": -6.7,
+    "BTC": -7.0,
     "ETH": -1.2,
     "SOL": 11.0
    },
@@ -332,18 +332,18 @@
     "nivel": null
    },
    {
-    "moeda": "ENSO",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.434
-   },
-   {
     "moeda": "INIT",
     "padrao": "topo duplo",
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.08438
+   },
+   {
+    "moeda": "KITE",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.1401
    },
    {
     "moeda": "NFP",
@@ -394,17 +394,13 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 79,
-  "compras": 40,
-  "vendas": 39,
+  "apostas": 139,
+  "compras": 105,
+  "vendas": 34,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
-   },
-   {
-    "moeda": "ETC",
-    "prob_subir": 0.368
    },
    {
     "moeda": "RESOLV",
@@ -427,6 +423,10 @@
     "prob_subir": 0.386
    },
    {
+    "moeda": "KERNEL",
+    "prob_subir": 0.391
+   },
+   {
     "moeda": "CFG",
     "prob_subir": 0.394
    }
@@ -434,7 +434,7 @@
   "mais_confiantes_compra": [
    {
     "moeda": "BONK",
-    "prob_subir": 0.696
+    "prob_subir": 0.658
    },
    {
     "moeda": "HEMI",
@@ -443,6 +443,14 @@
    {
     "moeda": "SOPH",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "ENSO",
+    "prob_subir": 0.63
+   },
+   {
+    "moeda": "BREV",
+    "prob_subir": 0.616
    },
    {
     "moeda": "ENS",
@@ -455,14 +463,6 @@
    {
     "moeda": "MITO",
     "prob_subir": 0.608
-   },
-   {
-    "moeda": "U",
-    "prob_subir": 0.606
-   },
-   {
-    "moeda": "F",
-    "prob_subir": 0.604
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -726,42 +726,42 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 29029 apostas (612 velas, 18/11 01:45–25/11 01:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5373,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 28995 apostas (612 velas, 18/11 02:00–25/11 01:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5367,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.31,
+  "z_contra_lab": 0.24,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5054,
-    "n": 23738
+    "acerto": 0.5051,
+    "n": 23714
    },
    "segue_maioria_24h": {
-    "acerto": 0.5102,
-    "n": 28958
+    "acerto": 0.5097,
+    "n": 28924
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.546,
-    "n": 8473
+    "acerto": 0.5456,
+    "n": 8466
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5673,
-    "n": 3164
+    "acerto": 0.5669,
+    "n": 3163
    },
    "confianca:<0,05": {
-    "acerto": 0.5213,
-    "n": 16547
+    "acerto": 0.5205,
+    "n": 16521
    },
    "confianca:≥0,12": {
     "acerto": 0.6521,
     "n": 845
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5157,
-    "n": 8144
+    "acerto": 0.5134,
+    "n": 8110
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5492,
@@ -776,12 +776,12 @@
     "n": 7289
    },
    "lado:compra": {
-    "acerto": 0.5304,
-    "n": 13226
+    "acerto": 0.529,
+    "n": 13186
    },
    "lado:venda": {
-    "acerto": 0.5431,
-    "n": 15803
+    "acerto": 0.5432,
+    "n": 15809
    }
   }
  },

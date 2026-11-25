@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 01:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 01:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -69,17 +69,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 17.6% das moedas subindo em 24 h, 18.4% em 4 h · BTC 24 h -3.43%, 4 h -0.8%.
+- **Amplitude:** 16.0% das moedas subindo em 24 h, 22.4% em 4 h · BTC 24 h -3.48%, 4 h -0.87%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -6.7, 'ETH': -1.2, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -7.0, 'ETH': -1.2, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** INIT OCO invertido (alta, CONFIRMOU) · SKY bandeira de alta (alta, CONFIRMOU) · BCH fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · ENSO fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado)
+- **Padrões gráficos em 1 h:** INIT OCO invertido (alta, CONFIRMOU) · SKY bandeira de alta (alta, CONFIRMOU) · BCH fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · INIT topo duplo (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado)
+- 📰 25/11 01:40 UTC · Cointelegraph: CleanSpark weighs selling more Bitcoin than it mines to ‘de-risk’ books
 - 📰 24/11 23:48 UTC · Cointelegraph: Hackers breach CIA intelligence network in latest US cyberattack
 - 📰 24/11 22:36 UTC · Decrypt: OpenAI and Anthropic Insiders Fear Their Next AI Models Are Too Dangerous to Release
 - 📰 24/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 24/11 21:50 UTC · Cointelegraph: Europol follows $28.5M crypto trail in streaming piracy crackdown
 - 📰 24/11 21:46 UTC · Decrypt: Anthropic’s Claude Ship Lets AI Write, Review and Approve Its Own Code
-- 📰 24/11 21:16 UTC · Decrypt: Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -118,7 +118,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 51234 apostas conferidas ao vivo, acerto 54.5%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 51246 apostas conferidas ao vivo, acerto 54.5%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
