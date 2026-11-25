@@ -1,21 +1,21 @@
 {
- "t": 1795617284,
- "hora_utc": "2026-11-25 14:34 UTC",
+ "t": 1795617506,
+ "hora_utc": "2026-11-25 14:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 10.2,
+  "moedas": 119,
+  "subindo_pct": 10.1,
   "mediana_pct": -1.26
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 16.9,
+  "moedas": 119,
+  "subindo_pct": 16.8,
   "mediana_pct": -1.72
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 17.8,
-  "mediana_pct": -4.43
+  "moedas": 119,
+  "subindo_pct": 17.6,
+  "mediana_pct": -4.38
  },
  "btc": {
   "1h": -1.14,
@@ -172,11 +172,17 @@
   -0.44,
   0.19,
   -1.14,
-  -0.43
+  -0.45
  ],
  "contexto": {
-  "t": 1795617285,
+  "t": 1795617506,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795616496,
+    "hora_utc": "25/11 14:21",
+    "titulo": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795614098,
@@ -260,12 +266,6 @@
     "t": 1795604978,
     "hora_utc": "25/11 11:09",
     "titulo": "Bitcoin price may fall below $53K if bear-market history repeats"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795604427,
-    "hora_utc": "25/11 11:00",
-    "titulo": "EU proposes $54.7 billion fund for AI, quantum startups alongside post-quantum security push"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -7.0,
+   "media_top20_anual_pct": -6.5,
    "principais_anual_pct": {
-    "BTC": 10.5,
+    "BTC": 9.8,
     "ETH": -3.6,
-    "SOL": -11.2
+    "SOL": -10.3
    },
    "leitura": "neutro"
   },
@@ -699,11 +699,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5089,
-    "n": 23074
+    "n": 23140
    },
    "segue_maioria_24h": {
-    "acerto": 0.5097,
-    "n": 29709
+    "acerto": 0.5106,
+    "n": 29702
    }
   },
   "referencia_ganha": [],
