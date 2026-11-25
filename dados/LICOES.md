@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 16:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 16:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,15 +68,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 21.0% das moedas subindo em 24 h, 27.7% em 4 h · BTC 24 h -2.39%, 4 h -0.95%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 11.0, 'ETH': 3.4, 'SOL': -0.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.9%/ano · {'BTC': 11.0, 'ETH': 3.6, 'SOL': -0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CHIP fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · PEPE topo duplo (baixa, formado)
+- 📰 25/11 16:52 UTC · Decrypt: Bitcoin Falls Further as Inflation, Trump Tariffs and AI Selloff Rattle Markets
 - 📰 25/11 16:07 UTC · Decrypt: Ukraine Passes Law to Legalize and Tax Its Crypto Market From July 2027
 - 📰 25/11 16:02 UTC · CoinDesk: EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending
 - 📰 25/11 16:02 UTC · CoinDesk: Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million
 - 📰 25/11 15:59 UTC · CoinDesk: Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan
 - 📰 25/11 14:47 UTC · CoinDesk: South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe
-- 📰 25/11 14:21 UTC · Cointelegraph: Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

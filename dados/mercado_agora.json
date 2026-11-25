@@ -1,6 +1,6 @@
 {
- "t": 1795625420,
- "hora_utc": "2026-11-25 16:50 UTC",
+ "t": 1795625643,
+ "hora_utc": "2026-11-25 16:54 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   -1.14,
   0.27,
   0.18,
-  -0.05
+  -0.03
  ],
  "contexto": {
-  "t": 1795625421,
+  "t": 1795625644,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795625570,
+    "hora_utc": "25/11 16:52",
+    "titulo": "Bitcoin Falls Further as Inflation, Trump Tariffs and AI Selloff Rattle Markets"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795622855,
@@ -260,12 +266,6 @@
     "t": 1795607514,
     "hora_utc": "25/11 11:51",
     "titulo": "Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795607394,
-    "hora_utc": "25/11 11:49",
-    "titulo": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.7,
+   "media_top20_anual_pct": 2.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.4,
-    "SOL": -0.1
+    "ETH": 3.6,
+    "SOL": -0.3
    },
    "leitura": "neutro"
   },
