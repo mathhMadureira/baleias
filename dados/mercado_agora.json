@@ -1,28 +1,28 @@
 {
- "t": 1795587259,
- "hora_utc": "2026-11-25 06:14 UTC",
+ "t": 1795587492,
+ "hora_utc": "2026-11-25 06:18 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 125,
-  "subindo_pct": 62.4,
-  "mediana_pct": 0.14
+  "moedas": 123,
+  "subindo_pct": 75.6,
+  "mediana_pct": 0.38
  },
  "mercado_4h": {
-  "moedas": 125,
-  "subindo_pct": 60.8,
-  "mediana_pct": 0.22
+  "moedas": 123,
+  "subindo_pct": 76.4,
+  "mediana_pct": 0.52
  },
  "mercado_24h": {
-  "moedas": 125,
-  "subindo_pct": 15.2,
-  "mediana_pct": -4.85
+  "moedas": 123,
+  "subindo_pct": 13.8,
+  "mediana_pct": -4.4
  },
  "btc": {
-  "1h": -0.11,
-  "4h": -0.19,
-  "24h": -2.43,
-  "preco": 59157.43,
-  "vol_4h_vs_media": 1.01
+  "1h": 0.29,
+  "4h": 0.17,
+  "24h": -1.94,
+  "preco": 59316.01,
+  "vol_4h_vs_media": 0.86
  },
  "maiores_quedas_4h": [
   {
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
+   "moeda": "ATM",
+   "4h": -9.61,
+   "24h": 20.88,
+   "vol": 0.74
+  },
+  {
    "moeda": "LISTA",
-   "4h": -7.79,
-   "24h": -13.83,
+   "4h": -6.18,
+   "24h": -10.23,
    "vol": 0.39
   },
   {
-   "moeda": "KITE",
-   "4h": -3.94,
-   "24h": 0.07,
-   "vol": 1.36
-  },
-  {
-   "moeda": "ATM",
-   "4h": -3.5,
-   "24h": 23.61,
-   "vol": 0.72
-  },
-  {
-   "moeda": "BMT",
-   "4h": -3.26,
-   "24h": -10.37,
-   "vol": 1.12
+   "moeda": "BLUR",
+   "4h": -3.86,
+   "24h": 6.01,
+   "vol": 2.46
   },
   {
    "moeda": "MEGA",
-   "4h": -3.25,
-   "24h": -9.67,
-   "vol": 1.4
+   "4h": -3.57,
+   "24h": -9.85,
+   "vol": 1.34
   },
   {
    "moeda": "NIGHT",
-   "4h": -2.83,
-   "24h": -4.13,
-   "vol": 1.22
+   "4h": -3.4,
+   "24h": -4.57,
+   "vol": 1.23
+  },
+  {
+   "moeda": "ZRO",
+   "4h": -2.44,
+   "24h": -12.6,
+   "vol": 1.64
   },
   {
    "moeda": "INIT",
-   "4h": -2.71,
-   "24h": 9.1,
+   "4h": -2.27,
+   "24h": 8.78,
    "vol": 1.21
   },
   {
-   "moeda": "SHELL",
-   "4h": -2.56,
-   "24h": -1.43,
-   "vol": 0.46
+   "moeda": "KITE",
+   "4h": -2.08,
+   "24h": -0.77,
+   "vol": 1.01
   },
   {
-   "moeda": "MANTA",
-   "4h": -2.54,
-   "24h": -13.76,
-   "vol": 2.74
+   "moeda": "BMT",
+   "4h": -2.06,
+   "24h": -8.54,
+   "vol": 1.14
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "BIGTIME",
-   "4h": 43.71,
-   "24h": 60.34,
-   "vol": 2.74
+   "4h": 45.59,
+   "24h": 65.93,
+   "vol": 2.68
   },
   {
    "moeda": "MANTRA",
-   "4h": 19.05,
-   "24h": 9.29,
-   "vol": 4.22
+   "4h": 15.98,
+   "24h": 8.29,
+   "vol": 4.28
   },
   {
    "moeda": "PROM",
-   "4h": 9.67,
-   "24h": -2.83,
-   "vol": 0.77
-  },
-  {
-   "moeda": "MMT",
-   "4h": 7.22,
-   "24h": -4.87,
-   "vol": 0.71
+   "4h": 10.62,
+   "24h": -1.25,
+   "vol": 0.85
   },
   {
    "moeda": "WAXP",
-   "4h": 6.51,
-   "24h": 6.82,
+   "4h": 7.4,
+   "24h": 8.04,
    "vol": 4.66
   },
   {
-   "moeda": "OPG",
-   "4h": 5.94,
-   "24h": 26.72,
-   "vol": 1.55
+   "moeda": "USUAL",
+   "4h": 6.16,
+   "24h": 7.27,
+   "vol": 1.99
   },
   {
    "moeda": "BABY",
-   "4h": 5.85,
-   "24h": 1.03,
-   "vol": 0.77
+   "4h": 5.36,
+   "24h": 1.14,
+   "vol": 0.86
   },
   {
-   "moeda": "USUAL",
-   "4h": 4.26,
-   "24h": 6.62,
-   "vol": 1.89
+   "moeda": "MMT",
+   "4h": 4.97,
+   "24h": -8.94,
+   "vol": 0.79
   },
   {
-   "moeda": "KERNEL",
-   "4h": 3.79,
-   "24h": 1.86,
-   "vol": 2.5
+   "moeda": "RE",
+   "4h": 4.94,
+   "24h": -6.45,
+   "vol": 0.61
+  },
+  {
+   "moeda": "ERA",
+   "4h": 4.63,
+   "24h": 4.48,
+   "vol": 2.35
   },
   {
    "moeda": "DODO",
-   "4h": 3.31,
-   "24h": 10.05,
-   "vol": 0.44
+   "4h": 4.6,
+   "24h": 10.86,
+   "vol": 0.57
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.31,
   -0.34,
   -0.11,
-  0.24
+  0.18
  ],
  "contexto": {
-  "t": 1795587260,
+  "t": 1795587493,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795587308,
+    "hora_utc": "25/11 06:15",
+    "titulo": "Ten accounts drove all of the XRP Ledger's trading growth last quarter"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795585843,
@@ -260,12 +266,6 @@
     "t": 1795552562,
     "hora_utc": "24/11 20:36",
     "titulo": "Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795549463,
-    "hora_utc": "24/11 19:44",
-    "titulo": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 3.4,
    "principais_anual_pct": {
-    "BTC": 1.9,
-    "ETH": 7.6,
-    "SOL": 10.2
+    "BTC": 0.8,
+    "ETH": 7.2,
+    "SOL": 10.3
    },
    "leitura": "neutro"
   },
@@ -296,6 +296,13 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "BMT",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.01796
+   },
    {
     "moeda": "ERA",
     "padrao": "topo duplo",
@@ -365,25 +372,17 @@
   }
  },
  "v4": {
-  "vela": "06:00 UTC",
-  "apostas": 151,
-  "compras": 35,
-  "vendas": 116,
+  "vela": "11:00 UTC",
+  "apostas": 128,
+  "compras": 41,
+  "vendas": 87,
   "mais_confiantes_venda": [
-   {
-    "moeda": "GLM",
-    "prob_subir": 0.358
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
    },
    {
     "moeda": "RESOLV",
-    "prob_subir": 0.375
-   },
-   {
-    "moeda": "XLM",
     "prob_subir": 0.375
    },
    {
@@ -401,6 +400,14 @@
    {
     "moeda": "PEOPLE",
     "prob_subir": 0.386
+   },
+   {
+    "moeda": "BABAB",
+    "prob_subir": 0.386
+   },
+   {
+    "moeda": "CFG",
+    "prob_subir": 0.394
    }
   ],
   "mais_confiantes_compra": [
@@ -411,6 +418,10 @@
    {
     "moeda": "SOPH",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "U",
+    "prob_subir": 0.634
    },
    {
     "moeda": "ENS",
@@ -431,10 +442,6 @@
    {
     "moeda": "BANK",
     "prob_subir": 0.598
-   },
-   {
-    "moeda": "HEI",
-    "prob_subir": 0.583
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -698,46 +705,46 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.6% em 29113 apostas (612 velas, 18/11 06:15–25/11 05:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5362,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.5% em 29173 apostas (612 velas, 18/11 06:30–25/11 05:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.535,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.18,
+  "z_contra_lab": 0.05,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5052,
-    "n": 23770
+    "acerto": 0.504,
+    "n": 23660
    },
    "segue_maioria_24h": {
-    "acerto": 0.5109,
-    "n": 29041
+    "acerto": 0.5097,
+    "n": 29101
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.546,
-    "n": 8583
+    "acerto": 0.5438,
+    "n": 8621
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5668,
-    "n": 3144
+    "acerto": 0.5664,
+    "n": 3146
    },
    "confianca:<0,05": {
-    "acerto": 0.5194,
-    "n": 16547
+    "acerto": 0.5186,
+    "n": 16567
    },
    "confianca:≥0,12": {
-    "acerto": 0.6532,
+    "acerto": 0.652,
     "n": 839
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5127,
-    "n": 8255
+    "acerto": 0.5086,
+    "n": 8337
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5486,
-    "n": 6522
+    "acerto": 0.5489,
+    "n": 6500
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5407,
@@ -748,12 +755,12 @@
     "n": 7289
    },
    "lado:compra": {
-    "acerto": 0.5286,
-    "n": 13282
+    "acerto": 0.5287,
+    "n": 13279
    },
    "lado:venda": {
-    "acerto": 0.5426,
-    "n": 15831
+    "acerto": 0.5403,
+    "n": 15894
    }
   }
  },
