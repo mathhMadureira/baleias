@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 06:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 06:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,11 +68,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 14.8% das moedas subindo em 24 h, 68.0% em 4 h · BTC 24 h -2.31%, 4 h -0.22%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.6%/ano · {'BTC': -2.2, 'ETH': 3.5, 'SOL': 9.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -1.4, 'ETH': 3.3, 'SOL': 10.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · ONG topo duplo (baixa, formado) · ORDI ombro-cabeça-ombro (baixa, formado) · PEPE OCO invertido (alta, formado)
 - 📰 25/11 06:33 UTC · CoinDesk: Solana developers move to stop validators finishing work on blocks that already lost
-- 📰 25/11 06:15 UTC · CoinDesk: Ten accounts drove all of the XRP Ledger's trading growth last quarter
+- 📰 25/11 06:15 UTC · CoinDesk: Just 10 accounts drove all of the XRP Ledger's trading growth last quarter
 - 📰 25/11 05:50 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 25/11 05:32 UTC · Cointelegraph: Solana DEX Velocity halts trading over bug just months after relaunch
 - 📰 25/11 04:57 UTC · CoinDesk: Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive
@@ -80,7 +80,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 10.2 h.
+- ⚠️ **Rotina parada:** sem decisão há 10.3 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
