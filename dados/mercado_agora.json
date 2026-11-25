@@ -1,6 +1,6 @@
 {
- "t": 1795611744,
- "hora_utc": "2026-11-25 13:02 UTC",
+ "t": 1795611977,
+ "hora_utc": "2026-11-25 13:06 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 121,
@@ -172,11 +172,17 @@
   -0.31,
   -0.44,
   0.19,
-  -0.06
+  -0.1
  ],
  "contexto": {
-  "t": 1795611745,
+  "t": 1795611978,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795611729,
+    "hora_utc": "25/11 13:02",
+    "titulo": "Ukraine passes bill to legalize crypto and tax profits at 23%"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795609126,
@@ -260,12 +266,6 @@
     "t": 1795600692,
     "hora_utc": "25/11 09:58",
     "titulo": "French Senate rejects 100K euro crypto wallet disclosure requirement"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795600342,
-    "hora_utc": "25/11 09:52",
-    "titulo": "Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -2.4,
+   "media_top20_anual_pct": -1.3,
    "principais_anual_pct": {
-    "BTC": -0.0,
-    "ETH": 3.1,
-    "SOL": -10.1
+    "BTC": 2.4,
+    "ETH": 7.3,
+    "SOL": -10.0
    },
    "leitura": "neutro"
   },
