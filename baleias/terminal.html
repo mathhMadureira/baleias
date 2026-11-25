@@ -244,7 +244,7 @@ function desenhar() {
   // logger
   $("log-n").textContent = `${vv.feed.length} registros`;
   $("log").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k); const mot = String(x.texto).startsWith("⚙ motor"); const [c1] = COR[mot ? "motor" : x.agente] || ["#475569"];
-    return `<div class="ln ${novo ? "novo" : ""}"><i class="dot" style="background:${c1}"></i><span class="h">${hm(x.t)}</span><span class="tg" style="color:${c1}">${mot ? "MOTOR" : esc((x.nome || "").toUpperCase())}:</span><span class="tx">${esc(mot ? x.texto.replace("⚙ motor: ", "") : x.texto)}</span></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
+    return `<div class="ln ${novo ? "novo" : ""}"><i class="dot" style="background:${c1}"></i><span class="h">${hm(x.t)}</span><span class="tg" style="color:${c1}">${mot ? "MOTOR" : esc((x.nome || "").toUpperCase())}:</span><span class="tx">${x.conf ? `<b style="font:700 10px var(--mono);padding:1px 6px;border-radius:8px;margin-right:5px;background:${x.conf === "alta" ? "#0f3320" : x.conf === "baixa" ? "#3a0d16" : "#3a2c05"};color:${x.conf === "alta" ? "#22e07a" : x.conf === "baixa" ? "#ff4d6d" : "#f5b400"}">${esc(x.conf)}</b>` : ""}${esc(mot ? x.texto.replace("⚙ motor: ", "") : x.texto)}</span></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
   // descartadas por regra
   const ds = vv.descartes || [], tot = ds.reduce((a, d) => a + d.total, 0), mx = Math.max(1, ...ds.map(d => d.total));
   $("kd-n").textContent = tot ? `${tot} descartadas · ${ds.reduce((a, d) => a + d.hoje, 0)} hoje` : "";

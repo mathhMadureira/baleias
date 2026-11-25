@@ -78,12 +78,40 @@ def ler_radar(agora):
     return _radar["dado"]
 
 
+def tese_quebrada(p, agora):
+    """Evento de saída verificado por CÓDIGO a cada volta (antes o Risco olhava a cada 3 min): posição aberta há 15+ min cujas
+    3 últimas velas FECHADAS de 5 min foram contra ela com volume crescente. Devolve o motivo ou None."""
+    if agora - p["entrada_t"] < 15 * 60:
+        return None
+    try:
+        import urllib.request
+        sym = p["moeda"][:-4] + "-USDT" if p.get("moeda") else None
+        with urllib.request.urlopen(f"https://open-api-vst.bingx.com/openApi/swap/v3/quote/klines?symbol={sym}&interval=5m&limit=5", timeout=10) as r:
+            k = sorted(json.load(r)["data"], key=lambda x: x["time"])[:-1][-3:]       # só velas fechadas
+    except Exception:
+        return None
+    if len(k) < 3:
+        return None
+    s = 1 if p["lado"] == "compra" else -1
+    contra = all((float(x["close"]) - float(x["open"])) * s < 0 for x in k)
+    vol = [float(x["volume"]) for x in k]
+    if contra and vol[0] < vol[1] < vol[2]:
+        return f"3 velas de 5 min contra com volume crescente ({vol[0]:.0f} → {vol[2]:.0f})"
+    return None
+
+
 def montar(e, cmd, radar, risco, agora):
     """Lista COMPLETA de posições desejadas (formato da decisão do corretora.py)."""
     abertas = e.get("abertas") or {}
     sair = set(cmd["sair_agora"])
     if risco and risco.get("acao") == "SAIR" and agora - float(risco.get("t") or 0) < 600:
         sair.add(str(risco.get("moeda", "")).upper())
+    for par, p in abertas.items():
+        if par not in sair:
+            motivo = tese_quebrada({**p, "moeda": par}, agora)
+            if motivo:
+                sair.add(par)
+                quadro(f"tese quebrou em {par[:-4]}: {motivo}; saio")
     lista = [{"moeda": par, "lado": p["lado"], "motivo": p.get("motivo", ""), "stop_pct": p.get("stop_pct"), "alvo_pct": p.get("alvo_pct"),
               "max_min": p.get("max_min")} for par, p in abertas.items() if par not in sair]
     if not cmd["ligado"] or not radar:

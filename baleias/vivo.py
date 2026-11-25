@@ -114,7 +114,7 @@ def vivo(agora=None):
         fluxo[pendente]["trabalhando"] = True
     c = _carteira()
     rs = [x["resultado"] for x in c["fechadas"] if isinstance(x["resultado"], (int, float))]
-    feed = [{"t": x["t"], "agente": x.get("agente"), "texto": x.get("texto"), "tipo": "equipe"} for x in q[-60:]]
+    feed = [{"t": x["t"], "agente": x.get("agente"), "texto": x.get("texto"), "tipo": "equipe", "conf": x.get("conf")} for x in q[-60:]]
     feed += [{"t": x["t"], "agente": "laboratorio", "texto": x["texto"], "tipo": "corretora"} for x in c["eventos"]]
     feed.sort(key=lambda x: -x["t"])
     for f in feed:

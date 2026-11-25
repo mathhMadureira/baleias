@@ -2952,6 +2952,9 @@ class MesaAoVivo(unittest.TestCase):
         Q.DESCARTES = raiz / "d.jsonl"
         self.assertEqual(Q.descarte("cacador", "pepeusdt", "Liquidez baixa: US$ 30 mil")["regra"], "liquidez baixa")
         self.assertEqual(Q.ler()[-1]["agente"], "guardiao")
+        self.assertEqual(Q.registrar("cacador", "x", conf="media")["conf"], "média")
+        with self.assertRaises(SystemExit):
+            Q.registrar("cacador", "x", conf="certeza")
         with self.assertRaises(SystemExit):
             Q.registrar("intruso", "x")
 

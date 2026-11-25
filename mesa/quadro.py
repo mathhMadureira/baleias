@@ -1,6 +1,6 @@
 """Quadro da rodada da equipe (24/11): cada agente registra 1 linha ao terminar a sua parte; o painel mostra a rodada ao vivo.
 
-Uso: python3 -I quadro.py <agente> "<resumo de 1 linha com números>"
+Uso: python3 -I quadro.py <agente> "<resumo de 1 linha com números>" [--conf alta|média|baixa]
      python3 -I quadro.py descarte <agente> <MOEDA> "<regra>"   → entrada que NÃO foi feita e por qual regra (painel: "Descartadas por regra")
      regras: esticada | contra no 15 min | liquidez baixa | spread largo | risco de golpe | sem dado | vaga ocupada | stop pequeno | manual: evitar | corretora recusou | nota baixa
      agente = cacador | memecoins | treinador | guardiao | laboratorio | baleias | engenheiro | minerador
@@ -19,10 +19,19 @@ DESCARTES = ARQ.with_name("descartes.jsonl")
 AGENTES = ("cacador", "memecoins", "treinador", "guardiao", "laboratorio", "baleias", "engenheiro", "minerador")
 
 
-def registrar(agente, texto, agora=None):
+CONFIANCAS = ("alta", "média", "baixa")
+
+
+def registrar(agente, texto, agora=None, conf=None):
+    """conf (alta | média | baixa): quanto confiar nesta linha — o próximo agente não herda certeza que não existe (blackboard)."""
     if agente not in AGENTES:
         raise SystemExit(f"agente inválido: {agente!r}; use um de {', '.join(AGENTES)}")
     linha = {"t": agora or time.time(), "agente": agente, "texto": " ".join(str(texto).split())[:400]}
+    if conf:
+        c = str(conf).lower().replace("media", "média")
+        if c not in CONFIANCAS:
+            raise SystemExit(f"confiança inválida: {conf!r}; use alta, média ou baixa")
+        linha["conf"] = c
     ARQ.parent.mkdir(parents=True, exist_ok=True)
     linhas = ARQ.read_text().splitlines()[-499:] if ARQ.exists() else []
     linhas.append(json.dumps(linha, ensure_ascii=False))
@@ -66,4 +75,10 @@ if __name__ == "__main__":
         sys.exit(0)
     if len(sys.argv) < 3:
         sys.exit(__doc__)
-    print(json.dumps(registrar(sys.argv[1], " ".join(sys.argv[2:])), ensure_ascii=False))
+    a = sys.argv[1:]
+    conf = None
+    if "--conf" in a:
+        i = a.index("--conf")
+        conf = a[i + 1] if i + 1 < len(a) else None
+        a = a[:i] + a[i + 2:]
+    print(json.dumps(registrar(a[0], " ".join(a[1:]), conf=conf), ensure_ascii=False))
