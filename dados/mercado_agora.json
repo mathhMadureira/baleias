@@ -1,6 +1,6 @@
 {
- "t": 1795585615,
- "hora_utc": "2026-11-25 05:46 UTC",
+ "t": 1795585851,
+ "hora_utc": "2026-11-25 05:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.05,
   0.31,
   -0.34,
-  -0.25
+  -0.16
  ],
  "contexto": {
-  "t": 1795585616,
+  "t": 1795585852,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795584775,
+    "hora_utc": "25/11 05:32",
+    "titulo": "Solana DEX Velocity halts trading over bug just months after relaunch"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795582642,
@@ -260,12 +266,6 @@
     "t": 1795549463,
     "hora_utc": "24/11 19:44",
     "titulo": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795548932,
-    "hora_utc": "24/11 19:35",
-    "titulo": "Bitcoin Losses Are the Worst Since FTX. Is the Bottom Near?"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.0,
+   "media_top20_anual_pct": 3.1,
    "principais_anual_pct": {
-    "BTC": -8.3,
-    "ETH": 5.6,
-    "SOL": 8.5
+    "BTC": -7.7,
+    "ETH": 5.9,
+    "SOL": 8.7
    },
    "leitura": "neutro"
   },
