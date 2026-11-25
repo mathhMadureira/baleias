@@ -1,6 +1,6 @@
 {
- "t": 1795622490,
- "hora_utc": "2026-11-25 16:01 UTC",
+ "t": 1795622727,
+ "hora_utc": "2026-11-25 16:05 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   -1.14,
   0.27,
   0.18,
-  0.26
+  -0.01
  ],
  "contexto": {
-  "t": 1795622491,
+  "t": 1795622728,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795622527,
+    "hora_utc": "25/11 16:02",
+    "titulo": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795622384,
@@ -260,12 +266,6 @@
     "t": 1795606232,
     "hora_utc": "25/11 11:30",
     "titulo": "Gold's haven status has lost its edge over bitcoin, and the Fed's to blame"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795605837,
-    "hora_utc": "25/11 11:23",
-    "titulo": "Hyperliquid Leads Altcoin Losses as Bitcoin Slips Below $59K"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.4,
+   "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 11.0,
-    "SOL": 11.0
+    "ETH": 6.0,
+    "SOL": -1.2
    },
    "leitura": "neutro"
   },
