@@ -83,6 +83,14 @@ def tese_quebrada(p, agora):
     3 últimas velas FECHADAS de 5 min foram contra ela com volume crescente. Devolve o motivo ou None."""
     if agora - p["entrada_t"] < 15 * 60:
         return None
+    try:                                                     # 25/11 (dono): nunca cortar um ganho pequeno — a tese só "quebra" no prejuízo
+        import urllib.request as _u
+        with _u.urlopen(f"https://open-api-vst.bingx.com/openApi/swap/v2/quote/price?symbol={p['moeda'][:-4]}-USDT", timeout=8) as r:
+            agora_px = float(json.load(r)["data"]["price"])
+        if (agora_px - p["entrada"]) * (1 if p["lado"] == "compra" else -1) >= 0:
+            return None
+    except Exception:
+        return None
     try:
         import urllib.request
         sym = p["moeda"][:-4] + "-USDT" if p.get("moeda") else None
