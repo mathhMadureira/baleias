@@ -579,12 +579,16 @@ class Conta:
         falta = faltam(prm)
         if falta:
             return self.anotar(f"{par[:-4]}: a decisão não traz {', '.join(falta)}; não entra (REGRAS §5)")
+        pedido = {"noc": prm.get("nocional_usd"), "alav": prm.get("alav")}   # 25/11: o motor pode pedir tamanho e alavancagem
         prm = parametros(prm)                                              # REGRAS.md §5: os valores que a execução aplica
         ctr = self.c.contrato(par)
         if not ctr:
             return self.anotar(f"{par[:-4]}: não existe em {self.c.NOME}; não entra (H71)")
         noc, alav = tamanho(self.realizado())
         noc *= 4 / MAX_POS                                                 # R2: até 8 posições, cada uma com metade (exposição total igual)
+        if isinstance(pedido["noc"], (int, float)) and pedido["noc"] > 0 and isinstance(pedido["alav"], (int, float)):
+            alav = int(max(1, min(50, pedido["alav"])))                   # dono (25/11): "nada de caçar centavos" — posições maiores
+            noc = float(pedido["noc"])
         usada = None
         for a in [x for x in (alav, 10, 5, 3, 2, 1) if x <= min(alav, ctr["alav_max"])]:
             try:
