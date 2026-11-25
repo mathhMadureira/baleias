@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 12:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 13:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.5% das moedas subindo em 24 h, 9.8% em 4 h · BTC 24 h -3.06%, 4 h -0.97%.
+- **Amplitude:** 18.2% das moedas subindo em 24 h, 9.9% em 4 h · BTC 24 h -2.87%, 4 h -1.15%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.6%/ano · {'BTC': -0.9, 'ETH': 10.4, 'SOL': -13.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.4%/ano · {'BTC': -0.0, 'ETH': 3.1, 'SOL': -10.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ORDI topo duplo (baixa, CONFIRMOU) · SENT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · DODO fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** AIGENSYN fundo duplo (alta, CONFIRMOU) · DODO fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ORDI topo duplo (baixa, formado)
 - 📰 25/11 12:18 UTC · CoinDesk: Fed’s preferred inflation gauge lands with a December rate increase already priced in
 - 📰 25/11 11:57 UTC · CoinDesk: Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes
 - 📰 25/11 11:52 UTC · Decrypt: Florida Man Jailed for Using AI to Pose as Streamer N3ON in $260K Crypto Scam
@@ -80,7 +80,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 16.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 16.7 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 53479 apostas conferidas ao vivo, acerto 54.4%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 53550 apostas conferidas ao vivo, acerto 54.4%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
