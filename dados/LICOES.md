@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 00:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 00:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -46,7 +46,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 Carteira **US$ 9.22** · 26 operações fechadas · 0 abertas
 
 - **Total:** 9/26 com lucro (35%), resultado -0.78, média -0.030 por operação.
-- **Últimas 24 h:** 2/5 com lucro, -0.03.
+- **Últimas 24 h:** 2/4 com lucro, +0.52.
 - **Por horário:** 18–23 UTC: 15 op, 33% certas, -1.13 · 00–05 UTC: 6 op, 33% certas, -0.22 · 12–17 UTC: 5 op, 40% certas, +0.56
 - **Por lado:** compra: 12 op, 33% certas, -0.42 · venda: 14 op, 36% certas, -0.37
 - **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Método fixo, regime neutro (65: 1 op, 0% certas, -0.06 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · Método fixo, regime neutro: v4: 1 op, 100% certas, +0.06 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo (H69): v4 subir 0,: 2 op, 50% certas, +0.51 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
@@ -69,9 +69,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.4% das moedas subindo em 24 h, 49.2% em 4 h · BTC 24 h -2.21%, 4 h 0.06%.
+- **Amplitude:** 18.5% das moedas subindo em 24 h, 51.6% em 4 h · BTC 24 h -2.35%, 4 h 0.26%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': -7.8, 'ETH': 0.2, 'SOL': 4.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.8%/ano · {'BTC': -8.4, 'ETH': -1.1, 'SOL': 7.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · CRV fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado) · OPG fundo duplo (alta, formado) · STX fundo duplo (alta, formado)
 - 📰 24/11 23:48 UTC · Cointelegraph: Hackers breach CIA intelligence network in latest US cyberattack
@@ -118,7 +118,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -119.47): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 50906 apostas conferidas ao vivo, acerto 54.5%; prevê 105 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 50909 apostas conferidas ao vivo, acerto 54.5%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
