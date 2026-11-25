@@ -666,6 +666,15 @@ class Conta:
                 except ErroCorretora as ex:
                     self.anotar(f"🚨 {par[:-4]}: sem stop e a corretora recusou ({str(ex)[:100]}); fecho")
                     self.fechar(par, "stop recusado pela corretora: fechada na hora")
+                    continue
+            al = p.get("alvo")
+            if par in pos and p.get("alvo_pct") and (not al or al["id"] not in vivos):   # 25/11: o alvo sumido também volta
+                preco = al["preco"] if al else p["entrada"] * (1 + p["alvo_pct"] if p["lado"] == "compra" else 1 - p["alvo_pct"])
+                try:
+                    p["alvo"] = self.c.gatilho(par, p["lado"], p["contratos"], preco, "alvo")
+                    self.anotar(f"🎯 {par[:-4]}: alvo não estava na corretora; guardei de novo a {p['alvo']['preco']}")
+                except ErroCorretora as ex:
+                    self.anotar(f"⚠️ {par[:-4]}: alvo não voltou ({str(ex)[:100]}); fica só o stop")
         self.e["conciliado_t"] = time.time()
 
     def mover_stops(self):
