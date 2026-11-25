@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 11:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 11:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,15 +68,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 18.5% das moedas subindo em 24 h, 11.3% em 4 h · BTC 24 h -1.48%, 4 h -0.77%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.6%/ano · {'BTC': -5.9, 'ETH': 10.2, 'SOL': -11.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.3%/ano · {'BTC': -5.8, 'ETH': 10.2, 'SOL': -11.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · DODO fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- 📰 25/11 11:23 UTC · Decrypt: Hyperliquid Leads Altcoin Losses as Bitcoin Slips Below $59K
 - 📰 25/11 11:12 UTC · Cointelegraph: Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout
 - 📰 25/11 11:09 UTC · Cointelegraph: Bitcoin price may fall below $53K if bear-market history repeats
 - 📰 25/11 11:00 UTC · CoinDesk: EU proposes $54.7 billion fund for AI, quantum startups alongside post-quantum security push
 - 📰 25/11 10:57 UTC · Cointelegraph: HYPE drops 8% as Trump bump gives way to 40% slide from peak
 - 📰 25/11 10:35 UTC · Decrypt: Take-Two Hits GTA 6 PC Port Leonida With DMCA, Taking Down 3,007 GitHub Repos
-- 📰 25/11 09:58 UTC · Cointelegraph: French Senate rejects 100K euro crypto wallet disclosure requirement
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

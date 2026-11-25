@@ -1,6 +1,6 @@
 {
- "t": 1795605653,
- "hora_utc": "2026-11-25 11:20 UTC",
+ "t": 1795605887,
+ "hora_utc": "2026-11-25 11:24 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   1.18,
   -0.58,
   -0.31,
-  -0.12
+  -0.3
  ],
  "contexto": {
-  "t": 1795605654,
+  "t": 1795605888,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795605837,
+    "hora_utc": "25/11 11:23",
+    "titulo": "Hyperliquid Leads Altcoin Losses as Bitcoin Slips Below $59K"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795605146,
@@ -260,12 +266,6 @@
     "t": 1795584775,
     "hora_utc": "25/11 05:32",
     "titulo": "Solana DEX Velocity halts trading over bug just months after relaunch"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795582642,
-    "hora_utc": "25/11 04:57",
-    "titulo": "Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.6,
+   "media_top20_anual_pct": 2.3,
    "principais_anual_pct": {
-    "BTC": -5.9,
+    "BTC": -5.8,
     "ETH": 10.2,
-    "SOL": -11.3
+    "SOL": -11.9
    },
    "leitura": "neutro"
   },
