@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 02:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 02:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -33,7 +33,7 @@ Carteira **US$ 7.04** · 56 operações fechadas · 0 abertas
 Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 
 - **Total:** 18/47 com lucro (38%), resultado -1.96, média -0.042 por operação.
-- **Últimas 24 h:** 1/7 com lucro, -0.68.
+- **Últimas 24 h:** 0/6 com lucro, -2.10.
 - **Por horário:** 18–23 UTC: 19 op, 37% certas, -1.17 · 00–05 UTC: 18 op, 33% certas, -1.02 · 12–17 UTC: 10 op, 50% certas, +0.24
 - **Por lado:** venda: 35 op, 37% certas, -2.03 · compra: 12 op, 42% certas, +0.08
 - **Por motivo de saída:** aviso do Caçador rompimento_24: 3 op, 33% certas, -0.83 · aviso do Caçador explosao_5m -: 6 op, 17% certas, -0.57 · aviso do Caçador padrao_15m (b: 1 op, 0% certas, -0.48 · aviso do Caçador explosao_1m -: 1 op, 0% certas, -0.31 · nova (vaga da MEGA, que fechou: 1 op, 0% certas, -0.26 · fraqueza relativa: 5 de 6 temp: 1 op, 0% certas, -0.22 · fraqueza relativa: cai com 79,: 1 op, 0% certas, -0.22 · 5 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.19 · nova: 5 de 6 tempos a favor (s: 1 op, 0% certas, -0.17 · 6 de 6 tempos a favor (abaixo : 1 op, 0% certas, -0.16 · Entrada pelo alerta Caçador vá: 1 op, 0% certas, -0.14 · Manter posição aberta: varredu: 1 op, 0% certas, -0.13 · Manter aberta: varredura 00:00: 1 op, 0% certas, -0.13 · mantém (aviso do Caçador, romp: 1 op, 0% certas, -0.13 · v4 0.607 de subir (confiança 0: 1 op, 0% certas, -0.09 · Entrada pelo alerta Caçador ai: 1 op, 0% certas, -0.08 · Entrada: v4 0,639 de subir (co: 1 op, 0% certas, -0.07 · v4 0,385 de subir (conf 0,115,: 1 op, 0% certas, -0.06 · v4 0.593 de subir (confiança 0: 1 op, 0% certas, -0.05 · Entrada após alerta Caçador ai: 1 op, 0% certas, -0.03 · v4 0.448 de subir (confiança 0: 1 op, 0% certas, -0.03 · nova: 6 de 6 tempos abaixo da : 4 op, 50% certas, -0.01 · v4 0,670 de subir (confiança 0: 1 op, 100% certas, +0.06 · Entrada após alerta Caçador vá: 1 op, 100% certas, +0.08 · Manter: varredura 00:25 UTC; 3: 1 op, 100% certas, +0.10 · mantém: 5 de 6 tempos a favor : 1 op, 100% certas, +0.10 · mantém: 4 de 6 tempos a favor : 1 op, 100% certas, +0.12 · v4 0,392 de subir (confiança 0: 1 op, 100% certas, +0.12 · nova (sinal da nuvem: tendênci: 1 op, 100% certas, +0.17 · nova: 5 de 6 tempos abaixo da : 1 op, 100% certas, +0.20 · nova: único 6 de 6 tempos a fa: 1 op, 100% certas, +0.21 · nova (aviso do Caçador, explos: 3 op, 67% certas, +0.22 · v4 0.463 de subir (confiança 0: 1 op, 100% certas, +0.24 · entra: 6 de 6 tempos abaixo da: 1 op, 100% certas, +0.24 · 6/6 tempos abaixo da MM20 (1m : 1 op, 100% certas, +0.56
@@ -69,9 +69,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 16.8% das moedas subindo em 24 h, 16.8% em 4 h · BTC 24 h -2.92%, 4 h -1.24%.
+- **Amplitude:** 17.6% das moedas subindo em 24 h, 16.8% em 4 h · BTC 24 h -2.92%, 4 h -1.24%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.5%/ano · {'BTC': -12.0, 'ETH': -2.3, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': -11.9, 'ETH': -2.3, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, CONFIRMOU) · BTC triângulo descendente (baixa, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado) · OPG fundo duplo (alta, formado) · ORCA fundo duplo (alta, formado)
 - 📰 25/11 01:40 UTC · Cointelegraph: CleanSpark weighs selling more Bitcoin than it mines to ‘de-risk’ books
@@ -118,7 +118,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 51341 apostas conferidas ao vivo, acerto 54.5%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 51343 apostas conferidas ao vivo, acerto 54.5%; prevê 10 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
