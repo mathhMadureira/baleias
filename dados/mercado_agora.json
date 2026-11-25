@@ -1,6 +1,6 @@
 {
- "t": 1795602836,
- "hora_utc": "2026-11-25 10:33 UTC",
+ "t": 1795603072,
+ "hora_utc": "2026-11-25 10:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.84,
   1.18,
   -0.58,
-  -0.17
+  -0.12
  ],
  "contexto": {
-  "t": 1795602837,
+  "t": 1795603073,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795602957,
+    "hora_utc": "25/11 10:35",
+    "titulo": "Take-Two Hits GTA 6 PC Port Leonida With DMCA, Taking Down 3,007 GitHub Repos"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795600692,
@@ -260,12 +266,6 @@
     "t": 1795570859,
     "hora_utc": "25/11 01:40",
     "titulo": "CleanSpark weighs selling more Bitcoin than it mines to de-risk books"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795564096,
-    "hora_utc": "24/11 23:48",
-    "titulo": "Hackers breach CIA intelligence network in latest US cyberattack"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 1.2,
+   "media_top20_anual_pct": 1.6,
    "principais_anual_pct": {
-    "BTC": -4.9,
+    "BTC": -5.1,
     "ETH": 11.0,
-    "SOL": -15.6
+    "SOL": -14.6
    },
    "leitura": "neutro"
   },

@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 10:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 10:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,19 +68,19 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 16.0% das moedas subindo em 24 h, 12.8% em 4 h · BTC 24 h -1.65%, 4 h -0.23%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': -4.9, 'ETH': 11.0, 'SOL': -15.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.6%/ano · {'BTC': -5.1, 'ETH': 11.0, 'SOL': -14.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BTC triângulo descendente (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · QNT fundo duplo (alta, formado)
+- 📰 25/11 10:35 UTC · Decrypt: Take-Two Hits GTA 6 PC Port Leonida With DMCA, Taking Down 3,007 GitHub Repos
 - 📰 25/11 09:58 UTC · Cointelegraph: French Senate rejects 100K euro crypto wallet disclosure requirement
 - 📰 25/11 09:52 UTC · Cointelegraph: Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market
 - 📰 25/11 08:40 UTC · Cointelegraph: EU seeks up to $55B for AI and quantum computing fund: Report
 - 📰 25/11 08:35 UTC · CoinDesk: Live updates: Bitcoin slips back under $60,000 as HYPE leads altcoins lower
 - 📰 25/11 06:54 UTC · Cointelegraph: South Korea’s crypto bill could move stablecoin race beyond token issuance
-- 📰 25/11 06:33 UTC · CoinDesk: Solana developers move to stop validators finishing work on blocks that already lost
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 14.2 h.
+- ⚠️ **Rotina parada:** sem decisão há 14.3 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
