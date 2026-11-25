@@ -8,6 +8,7 @@ Lê só arquivos locais (nada escreve, nada manda ordem, nenhuma chave):
 import json
 import os
 import time
+import urllib.request
 from pathlib import Path
 
 RAIZ = Path(os.environ.get("BALEIAS_OPENBOT", "/home/servidor-de-producao/OpenBot"))
@@ -51,6 +52,23 @@ def _quadro(n=300):
     return out
 
 
+_PRECO = {}
+
+
+def preco_bingx(par):
+    """Preço público do perpétuo da BingX VST, com memória de 10 s (o painel lê a cada 4 s)."""
+    t, v = _PRECO.get(par, (0, None))
+    if time.time() - t < 10:
+        return v
+    try:
+        with urllib.request.urlopen(f"https://open-api-vst.bingx.com/openApi/swap/v2/quote/price?symbol={par[:-4]}-USDT", timeout=4) as r:
+            v = float(json.load(r)["data"]["price"])
+    except (OSError, ValueError, KeyError, TypeError):
+        v = None
+    _PRECO[par] = (time.time(), v)
+    return v
+
+
 def _carteira():
     e = _json(SHARED / "operar" / "corretoras" / f"{OPERADOR}.json")
     if not e:
@@ -62,6 +80,11 @@ def _carteira():
         ab.append({"moeda": par, "lado": p.get("lado"), "entrada": p.get("entrada"), "desde": p.get("entrada_t"), "stop": st.get("preco"),
                    "alvo": al.get("preco"), "nocional": p.get("nocional"), "alav": p.get("alav"), "max_min": p.get("max_min"),
                    "motivo": str(p.get("motivo") or "")[:240]})
+        agora_px = preco_bingx(par) if os.environ.get("BALEIAS_SEM_REDE") != "1" else None
+        if agora_px and p.get("entrada") and p.get("nocional"):
+            sinal = 1 if p.get("lado") == "compra" else -1
+            ab[-1]["agora"] = agora_px
+            ab[-1]["resultado"] = round(p["nocional"] * (agora_px / p["entrada"] - 1) * sinal, 4)
     fe = [{"moeda": x.get("moeda"), "lado": x.get("lado"), "entrada": x.get("entrada"), "saida": x.get("saida"), "t": x.get("saida_t"),
            "resultado": x.get("resultado_usd"), "motivo": str(x.get("motivo_saida") or "")[:120]} for x in e.get("fechadas") or []]
     ev = sorted((x for x in e.get("eventos") or [] if isinstance(x, dict) and x.get("t")), key=lambda x: -x["t"])[:30]

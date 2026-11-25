@@ -28,7 +28,15 @@ nav button.ativo { background:#0f1720; color:#fff; }
 .mult.neg { background:var(--down); }
 .eq { font:800 46px var(--mono); letter-spacing:-.02em; margin:4px 0 0; } .eq small { font-size:24px; color:var(--mut); }
 .eq-sub { display:flex; justify-content:space-between; font:600 14px var(--mono); }
-.cook { font:900 30px/1 system-ui; letter-spacing:.02em; margin:12px 0 4px; color:#ef4444; -webkit-text-stroke:1px #7f1d1d; text-shadow:0 2px 0 #fecaca; }
+.meta-l { display:flex; justify-content:space-between; font:12px var(--mono); color:var(--mut); margin:14px 0 5px; }
+.barra { height:8px; background:#eef2f5; border-radius:6px; overflow:hidden; } .barra i { display:block; height:100%; background:linear-gradient(90deg,#16a34a,#22c55e); border-radius:6px; transition:width .6s; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; } .chip { font:600 11.5px system-ui; padding:5px 10px; border-radius:20px; background:#f1f5f9; color:#334155; }
+.chip.ok { background:#dcfce7; color:#15803d; } .chip.al { background:#fef3c7; color:#b45309; } .chip.no { background:#ffe4e6; color:#be123c; }
+.tiles { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:12px; }
+.tile { background:#fff; border:1px solid var(--line); border-radius:14px; padding:10px 12px; } .tile span { display:block; font:600 10.5px system-ui; color:var(--mut); text-transform:uppercase; letter-spacing:.04em; }
+.tile b { font:800 17px var(--mono); }
+.ago { font:10.5px var(--mono); color:var(--dim); display:block; }
+.curva { margin-top:10px; }
 .curva svg { width:100%; height:70px; display:block; }
 .desk-h { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; } .desk-h b { font-size:17px; } .desk-h span { font-size:12px; color:var(--mut); }
 .ag { display:grid; grid-template-columns:34px 110px 1fr auto; gap:10px; align-items:center; padding:8px 4px; border-top:1px solid var(--line); }
@@ -71,9 +79,11 @@ iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; b
     <div class="eq-top"><span id="eq-info">Carteira</span><span class="mult" id="mult">1,00×</span></div>
     <div class="eq" id="eq">US$ —</div>
     <div class="eq-sub"><span id="eq-var">—</span><span class="mut" id="wl"></span></div>
-    <div class="cook" id="cook"></div>
     <div class="curva" id="curva"></div>
+    <div class="meta-l"><span>meta US$ 10 → US$ 20</span><span id="meta-p">0%</span></div><div class="barra"><i id="meta-b" style="width:0%"></i></div>
+    <div class="chips" id="chips"></div>
   </div>
+  <div class="tiles"><div class="tile"><span>acerto</span><b id="t-ac">—</b></div><div class="tile"><span>melhor</span><b id="t-me">—</b></div><div class="tile"><span>pior</span><b id="t-pi">—</b></div><div class="tile"><span>em aberto</span><b id="t-ab">—</b></div></div>
 
   <div class="card">
     <div class="desk-h"><b id="desk-t">Mesa · agentes</b><span id="desk-n"></span></div>
@@ -176,8 +186,23 @@ function desenhar() {
   const [i, d] = fmt(m.patrimonio, 2).split(","); $("eq").innerHTML = `US$ ${i}<small>,${d}</small>`;
   $("eq-var").innerHTML = `<span class="${cor(v)}">${sn(v)} (${sn(v / m.capital * 100, 1)}%)</span>`;
   $("wl").textContent = `${m.ganhos}W / ${m.operacoes - m.ganhos}L`;
-  $("cook").textContent = v > 0 ? "DEIXA COZINHAR 🔥🔥🔥" : (f.foco && f.foco !== "parado" ? "EQUIPE EM CAMPO ⚡" : "EQUIPE PARADA ⏸");
-  $("cook").style.color = v > 0 ? "#ef4444" : "#0f1720"; $("cook").style.webkitTextStroke = v > 0 ? "1px #7f1d1d" : "0"; $("cook").style.textShadow = v > 0 ? "" : "none";
+  const prog = Math.max(0, Math.min(1, m.progresso));
+  $("meta-p").textContent = fmt(prog * 100, 0) + "% do caminho"; $("meta-b").style.width = prog * 100 + "%";
+  const cac = vv.desk.find(a => a.id === "cacador"), uc = cac && cac.ultimo ? cac.ultimo.t : null;
+  const prox = uc ? Math.max(0, Math.round(uc + 180 - Date.now() / 1000)) : null;
+  const viva = uc && Date.now() / 1000 - uc < 900, sem_stop = c.abertas.some(p => !p.stop);
+  $("chips").innerHTML = [
+    `<span class="chip ${f.foco && f.foco !== "parado" ? "ok" : "no"}">${f.foco && f.foco !== "parado" ? "● foco " + f.foco.toUpperCase() : "⏸ parado"}</span>`,
+    `<span class="chip ${viva ? "ok" : "al"}">${viva ? (prox > 0 ? "próxima rodada em ~" + prox + " s" : "rodada em andamento") : "rodada parada há " + ha(uc)}</span>`,
+    `<span class="chip">${c.abertas.length ? c.abertas.length + " posição aberta" : "sem posição"}</span>`,
+    sem_stop ? `<span class="chip no">🚨 posição sem stop</span>` : (c.abertas.length ? `<span class="chip ok">stop na corretora ✓</span>` : ""),
+    vv.risco && vv.risco.acao && vv.risco.acao !== "NADA" ? `<span class="chip ${vv.risco.acao === "SAIR" ? "no" : "ok"}">🛡 ${esc(vv.risco.acao)}</span>` : ""].join("");
+  const rs0 = c.fechadas.map(x => x.resultado).filter(r => r != null);
+  $("t-ac").textContent = rs0.length ? fmt(m.ganhos / rs0.length * 100, 0) + "%" : "—";
+  $("t-me").textContent = rs0.length ? sn(Math.max(...rs0)) : "—"; $("t-me").className = rs0.length ? cor(Math.max(...rs0)) : "";
+  $("t-pi").textContent = rs0.length ? sn(Math.min(...rs0)) : "—"; $("t-pi").className = rs0.length ? cor(Math.min(...rs0)) : "";
+  const ab = c.abertas.reduce((s_, p) => s_ + (p.resultado || 0), 0);
+  $("t-ab").textContent = c.abertas.length ? sn(ab, 3) : "—"; $("t-ab").className = c.abertas.length ? cor(ab) : "";
   $("curva").innerHTML = svgCurva(vv.curva, m.capital);
   // mesa
   const desk = [...vv.desk].sort((a, b) => ORDEM.indexOf(a.id) - ORDEM.indexOf(b.id));
@@ -185,14 +210,14 @@ function desenhar() {
   $("desk-t").textContent = `Mesa · ${desk.length} agentes`; $("desk-n").textContent = `${on} trabalhando · ${rod.hoje} rodadas hoje · ${m.operacoes} operadas`;
   $("desk").innerHTML = desk.map(a => { const [c1, c2] = COR[a.id] || ["#475569", "#e2e8f0"], u = a.ultimo;
     return `<div class="ag ${a.ativo ? "on" : ""}"><div class="ico" style="background:${c2};color:${c1}">${esc(a.avatar)}</div>
-      <div class="nm"><b>${esc(a.nome)}</b><span>${esc(a.cargo)}</span></div>
+      <div class="nm"><b>${esc(a.nome)}</b><span>${esc(a.cargo)}</span><span class="ago">${u ? (a.ativo ? "● " : "") + "há " + ha(u.t) : ""}</span></div>
       <div class="agora" title="${esc(u ? u.texto : "")}">${u ? esc(u.texto) : '<span class="mut">sem registro ainda</span>'}</div>
       <span class="pill" style="background:${c2};color:${c1}">${esc(pill(a))}</span></div>`; }).join("");
   // posição
   $("pos-t").textContent = c.atualizado ? "corretora lida há " + ha(c.atualizado) : "";
   $("pos").innerHTML = c.abertas.length ? c.abertas.map(p => `<div><b style="font-size:16px"><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ VENDIDO" : "▲ COMPRADO"}</span> ${esc(String(p.moeda).replace("USDT", ""))}</b>
       <span class="mut" style="font-size:12px"> · há ${ha(p.desde)}${p.alav ? " · " + p.alav + "×" : ""}</span>
-      <div class="pos-l"><div><span>entrada</span>${px(p.entrada)}</div><div><span>stop</span><b class="down">${px(p.stop)}</b></div><div><span>alvo</span><b class="up">${px(p.alvo)}</b></div><div><span>tamanho</span>US$ ${fmt(p.nocional)}</div></div>
+      <div class="pos-l"><div><span>entrada → agora</span>${px(p.entrada)} → ${px(p.agora)} <b class="${cor(p.resultado)}">${p.resultado != null ? sn(p.resultado, 3) : ""}</b></div><div><span>stop</span><b class="down">${px(p.stop)}</b></div><div><span>alvo</span><b class="up">${px(p.alvo)}</b></div><div><span>tamanho</span>US$ ${fmt(p.nocional)}</div></div>
       ${vv.risco && vv.risco.motivo && vv.risco.moeda === p.moeda ? `<div class="mut" style="font-size:12px;margin-top:8px">🛡 ${esc(vv.risco.acao)} · ${esc(vv.risco.motivo)}</div>` : ""}</div>`).join("")
     : `<div class="vazio">Sem posição aberta — o operador entra na próxima rodada que aprovar uma entrada.</div>`;
   // logger

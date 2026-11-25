@@ -2930,6 +2930,7 @@ class MesaAoVivo(unittest.TestCase):
             "abertas": {"PEPEUSDT": {"lado": "compra", "entrada": 1.0, "entrada_t": agora, "stop": {"id": "1", "preco": 0.98}, "alvo": {"id": "2", "preco": 1.04}}},
             "fechadas": [{"moeda": "DOGEUSDT", "lado": "venda", "resultado_usd": 2.5, "saida_t": agora - 500}], "eventos": [], "atualizado": agora}))
         os.environ["BALEIAS_OPENBOT"] = str(raiz)
+        os.environ["BALEIAS_SEM_REDE"] = "1"
         try:
             from baleias import vivo as V
             V = importlib.reload(V)
