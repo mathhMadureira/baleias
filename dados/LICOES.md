@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 18:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 18:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 40.5% das moedas subindo em 24 h, 90.9% em 4 h · BTC 24 h -0.67%, 4 h 2.37%.
+- **Amplitude:** 43.8% das moedas subindo em 24 h, 90.9% em 4 h · BTC 24 h -0.67%, 4 h 2.37%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.1%/ano · {'BTC': 11.0, 'ETH': 9.8, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.9%/ano · {'BTC': 11.0, 'ETH': 9.4, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SUI estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SUPER fundo duplo (alta, CONFIRMOU) · XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ZEC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ALT topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · XPL topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** SUI estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SUPER fundo duplo (alta, CONFIRMOU) · XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ZEC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ALT topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN fundo duplo (alta, formado) · PEPE topo duplo (baixa, formado) · XPL topo duplo (baixa, formado) · XPL OCO invertido (alta, formado)
 - 📰 25/11 18:24 UTC · CoinDesk: French Senate blocks new crypto tax and wallet list critics called a kidnapping risk
 - 📰 25/11 18:18 UTC · Decrypt: Elon Musk’s SpaceX Gets FCC Approval to Launch AI Data Centers in Space
 - 📰 25/11 17:53 UTC · Cointelegraph: US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 54740 apostas conferidas ao vivo, acerto 54.3%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 54771 apostas conferidas ao vivo, acerto 54.3%; prevê 70 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
