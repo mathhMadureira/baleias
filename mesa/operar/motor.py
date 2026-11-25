@@ -106,8 +106,33 @@ def montar(e, cmd, radar, risco, agora):
         noc = round(float(e.get("patrimonio") or 10) * margem * alav, 2)
         lista.append({"moeda": m, "lado": r["lado"], "stop_pct": stop, "alvo_pct": round(alvo, 4), "max_min": max(r["max_min"], 240),
                       "nocional_usd": noc, "alav": alav,
-                      "motivo": f"radar {r['estilo']}: 15m {r['v15']:+.2f}%, 1h {r['v1h']:+.2f}%, 4h {r['v4h']:+.2f}%, vol {r['vol_rel']}x, nota {r['nota']}"})
+                      "motivo": f"[{'preferida do Radar' if m in cmd['preferidas'] else 'radar'}] {r['estilo']}: 15m {r['v15']:+.2f}%, 1h {r['v1h']:+.2f}%, 4h {r['v4h']:+.2f}%, vol {r['vol_rel']}x, nota {r['nota']}"})
     return lista, sair
+
+
+def briefing(e, cmd, radar, vivos, agora):
+    """Quadro único da equipe (blackboard): escrito pelo motor DEPOIS de cada volta completa, com o que o CÓDIGO verificou.
+    Todos os agentes leem isto primeiro: a mesma realidade, sem cada um reler a corretora no meio de uma troca."""
+    pos = []
+    for par, p in (e.get("abertas") or {}).items():
+        ids = set(vivos or {})
+        pos.append({"moeda": par, "lado": p["lado"], "entrada": p["entrada"], "ha_min": round((agora - p["entrada_t"]) / 60),
+                    "nocional": round(p.get("nocional") or 0, 2), "alav": p.get("alav"),
+                    "stop": (p.get("stop") or {}).get("preco"), "alvo": (p.get("alvo") or {}).get("preco"),
+                    "stop_ok": None if vivos is None else bool(p.get("stop") and p["stop"]["id"] in ids),
+                    "alvo_ok": None if vivos is None else bool(p.get("alvo") and p["alvo"]["id"] in ids),
+                    "origem": "preferida do Radar" if "preferida do Radar" in str(p.get("motivo")) else "radar"})
+    fe = (e.get("fechadas") or [])[-15:]
+    b = {"t": agora, "verificado_pelo_codigo": vivos is not None, "patrimonio": e.get("patrimonio"), "capital": e.get("capital_inicial"),
+         "posicoes": pos, "comando": {k: (sorted(v) if isinstance(v, set) else v) for k, v in cmd.items()},
+         "ultimas_fechadas": [{"moeda": x.get("moeda"), "lado": x.get("lado"), "resultado": x.get("resultado_usd"),
+                               "min": round((float(x.get("saida_t") or 0) - float(x.get("entrada_t") or 0)) / 60),
+                               "saida": str(x.get("motivo_saida") or "")[:50],
+                               "origem": "preferida do Radar" if "preferida do Radar" in str(x.get("motivo")) else "radar"} for x in fe],
+         "radar_top": [{k: r[k] for k in ("moeda", "lado", "v1h", "nota")} for r in (radar or {}).get("entradas", [])[:6]]}
+    tmp = EQUIPE / "briefing.tmp"
+    tmp.write_text(json.dumps(b, ensure_ascii=False, indent=1))
+    tmp.replace(EQUIPE / "briefing.json")
 
 
 def volta(agora=None):
@@ -123,6 +148,11 @@ def volta(agora=None):
         lista, sair = montar(conta.e, cmd, radar, risco, agora)
         conta.rodada({"t": agora, "posicoes": lista})
         e = conta.e
+        try:
+            vivos = c.gatilhos_abertos()
+        except Exception:
+            vivos = None
+    briefing(e, cmd, radar, vivos, agora)
     if cmd["sair_agora"] and not (cmd["sair_agora"] & set(e["abertas"])):
         try:
             c2 = _json(EQUIPE / "motor.json", {}) or {}
