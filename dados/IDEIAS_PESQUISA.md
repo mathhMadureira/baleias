@@ -3,6 +3,82 @@
 Cada seção é escrita pela rotina diária de pesquisa. Nada aqui é resultado: é candidato a pré-registro em `lab/PROTOCOLO_LAB.md`.
 Fontes da internet são dados de terceiros; números entre aspas são os que a fonte dá, e "não sei" onde ela não dá.
 
+## 2026-11-25
+
+**Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/agente_laboratorio.json`, `dados/mercado_agora.json`, 10:18 UTC):
+
+| | |
+|---|---|
+| Campeão do torneio | **nenhum** (ninguém com carteira > US$ 10 e fator > 1). Melhor fator: **Laboratório 0,81** (27 op, acerto 37%, soma −0,74, carteira 9,26) · Treinador 0,71 (47) · Robô Claude 0,62 (73) · conta de teste 0,59 (56) · Guardião 0,59 (74) |
+| Onde o Laboratório perde | **stop de segurança −1%: 7 op, −2,64**; prazo de 120 min: 6 op, −0,85 (stop móvel: 4 op, +1,92). Horário de entrada: **18–24 UTC 19 op, −2,49** (00–06: 2 op +0,70; 12–18: 6 op +1,05). Pelo pregão de Nova York (dias úteis, 15–21 UTC): dentro, vendas 4 op +0,55 e compras 3 op −0,19; fora, vendas 11 op −0,88 e compras 9 op −0,23 |
+| Segmento fraco do vigia | 00–06 h UTC 50,9% (8.337) e confiança < 0,05 51,9% (16.762); compras 52,6% × vendas 54,2%. Ao vivo 53,5% × laboratório 53,5% (z +0,03), "dentro do esperado"; confiança ≥ 0,12 acerta 64,2% (858) |
+
+**Mercado hoje** (`dados/mercado_agora.json`): BTC 58.977, −1,71% em 24 h, −0,57% em 4 h, volume de 4 h 1,49× a média; 16,0% das 125 moedas sobem em 4 h
+(mediana −1,39%), 17,6% em 24 h (mediana −3,50%). Maior queda de 4 h: NFP −40,5%.
+
+**Já testado ou proposto (fora desta lista):** tudo de 15–24/11 (abaixo), H76–H80; stop por ATR (16/11) — por isso o stop móvel por ATR do
+AdaptiveTrend (abaixo) **não** é proposto de novo; stop no fechamento e filtro de Amihud (24/11); filtro de direção de Nova York no Guardião (20/11).
+
+### Ideia 1 — Laboratório: só entrar quando a moeda está em regime de continuação (razão de variâncias ≥ 1)
+
+- **Regra:** para a moeda candidata, VR = Var(r_15min) ÷ (15 × Var(r_1min)), com os retornos de 1 min e de 15 min (não sobrepostos) das últimas
+  6 h de velas fechadas. Entrada nova do Laboratório só se VR ≥ 1,0. Compra e venda iguais; stop, alvo e prazo como hoje. Limiar fixado antes =
+  1,0 (o ponto teórico, sem ajuste). 1 tentativa.
+- **Por quê no Laboratório:** o stop de −1% é onde ele perde (7 op, −2,64, mais que o resultado todo). A teoria diz quando um stop ajuda: com
+  retornos sem memória o prêmio do stop é sempre negativo; ele só ajuda com momento (continuação). VR < 1 é reversão à média em minutos: o preço
+  bate no −1% e volta (os stops de SOPH 20/11 e BREV 23/11 vieram depois de picos de +0,97% e +0,77%). Barrar essas entradas evita o regime em
+  que o stop fixo é caro, sem mexer no stop.
+- **Dados:** velas de 1 min do perpétuo da Binance (grátis).
+- **Evidência:** Kaminski & Lo, "When Do Stop-Loss Rules Stop Losses?", *Journal of Financial Markets* 18 (2014), pp. 234–254,
+  https://dspace.mit.edu/handle/1721.1/114876 — "under the Random Walk Hypothesis … the stopping premium is always negative"; dão condições para
+  o stop agregar valor com momento, reversão e troca de regime. Na versão de trabalho (dados mensais 1950–2004) certos stops somam "50 to 100 basis
+  points per month" nos períodos de stop (https://ideas.repec.org/p/hhs/sifrwp/0063.html). Para cripto em 1 min, e para o filtro por VR: **não sei**
+  (o artigo é de futuros e ações, não de cripto; não achei estudo que filtre entradas por VR).
+- **Teste:** entradas tipo Laboratório (H69: v4 com confiança ≥ 0,12, regras de hoje) reconstruídas no histórico de 1 min, saída de hoje, custo
+  0,12% ida e volta, 3 blocos de tempo iguais. Passa se, nos 3 blocos, as barradas (VR < 1) tiverem média líquida < 0 e as aceitas média maior que
+  o conjunto todo, z ≥ 1,65; e a taxa de saída no stop de −1% das barradas for maior que a das aceitas. Menos de 30 barradas por bloco → "não sei".
+
+### Ideia 2 — Laboratório: lado pelo relógio de Nova York (vende no pregão, compra fora dele)
+
+- **Regra:** em dia útil, de 15:00 a 21:00 UTC (10h–16h de Nova York em horário de inverno; 14:00–20:00 UTC no verão), entrada nova do
+  Laboratório só de **venda**; fora dessa janela e no fim de semana, só de **compra**. O sinal do v4 continua escolhendo a moeda e a hora; o filtro só
+  veta o lado contrário. Sem parâmetro além do horário oficial da NYSE. 1 tentativa.
+- **Por quê no Laboratório:** nas 27 operações, as vendas dentro do pregão deram +0,55 (4 op) e fora −0,88 (11 op); 18–24 UTC é o pior horário
+  (19 op, −2,49), com boa parte depois do fechamento de Nova York. Amostra pequena: é só a pista, o teste é no histórico. Difere do filtro de
+  20/11 (Guardião, direção do BTC desde 13:30) porque aqui o lado vem do relógio, não do movimento.
+- **Dados:** velas de 1 min do perpétuo da Binance e o calendário da NYSE (grátis).
+- **Evidência:** estudo com velas de 5 min do BTC de jan/2018 a dez/2023, citado na imprensa sobre o ETF NGHT
+  (https://crypto.news/bitcoin-afterdark-etf-targets-btcs-overnight-edge-skips-u-s-hours/): retorno médio de **+0,093%** fora do pregão americano
+  contra **−0,029%** dentro (números do resumo de busca; autores e custo: não sei). Quantpedia (https://quantpedia.com/how-to-profitably-trade-bitcoins-overnight-sessions/,
+  BTC Gemini por hora, 2015–2024): "most of the BTC returns since 2021 were realized during the nightly sessions"; números por sessão só em
+  figura (não sei); sem custos. **Evidência contra:** artigo do *Journal of Risk and Financial Management* 19(9):692 (https://www.mdpi.com/1911-8074/19/9/692,
+  BTC e ETH por hora 2016–2025): na reserva 2021–2025 "the BTC training-selected rule underperforms buy-and-hold" (página deu 403; frase do resumo
+  de busca). Para altcoins: não sei.
+- **Teste:** mesmas entradas reconstruídas da Ideia 1, custo 0,12%, 3 blocos. Passa se, nos 3 blocos, as entradas vetadas (lado contra o relógio)
+  tiverem média líquida < 0 e as aceitas média maior que o conjunto todo, z ≥ 1,65 (erro-padrão por hora de entrada). Menos de 30 vetadas por
+  bloco → "não sei". Ideias 1 e 2 juntas = 2 tentativas (Bonferroni: z ≥ 1,96).
+
+### Não proposta (anotado para não repetir)
+
+- **Stop móvel por ATR do AdaptiveTrend** (arXiv 2602.11708, pré-publicação; 150+ pares, velas de 6 h, 2022–2024): S_t = max(S_{t−1}, P_t − α·ATR_t),
+  α com patamar em 2,0–3,5 (centro 2,5); sem o stop móvel, Sharpe 1,68 e queda máxima −22,4% contra 2,41 e −12,7% com ele; com 12 pb de custo, Sharpe
+  1,62. Parâmetros reotimizados todo mês (risco de sobreajuste) e "stop por ATR" já foi proposto em 16/11.
+- **Variação dos juros em aberto como sinal de horas:** não achei artigo com teste de previsão; um artigo (arXiv 2310.14973) diz que os juros em aberto
+  dos perpétuos de BTC são "systematically misquoted" por algumas das maiores corretoras — cuidado com esse dado.
+
+### O que aprendi hoje sobre o mercado cripto
+
+O BTC voltou a ficar abaixo de US$ 60 mil (58.977 às 10:18 UTC, `dados/mercado_agora.json`) puxado por saída dos ETFs à vista: novembro já soma
+saídas de **US$ 4,71 bi**, recorde mensal da categoria, com US$ 569,7 mi na segunda (23/11) e US$ 231,4 mi na terça (24/11), dados da Farside citados
+por https://cryptobriefing.com/blackrock-ibit-bitcoin-etf-outflows-november/ e https://coinalertnews.com/news/2026/11/25/bitcoin-etf-outflows-btc-falls
+(conferidos só no resumo de busca). As liquidações do dia têm números que não batem entre fontes (US$ 87 mi só em BTC × "mais de US$ 800 mi" no
+mercado todo): não sei o valor certo. A queda segue com volume de 4 h 1,49× a média e só 16% das moedas subindo: é venda ampla, guiada pelo fluxo à vista
+dos EUA. Isso conversa com o relógio do mercado: desde os ETFs, boa parte da compra e da venda institucional acontece no pregão de Nova York, e os
+estudos de praticantes acham que o BTC rendeu mais fora desse horário (+0,093% × −0,029% por sessão, 2018–2023) — mas o teste acadêmico mais
+cuidadoso achado diz que a regra do BTC escolhida no passado não ganhou de comprar e segurar em 2021–2025. Lição de método (Kaminski & Lo): um stop
+fixo só tem valor esperado positivo se o preço tiver continuação; em ruído puro ele sempre custa. O stop de −1% do Laboratório deve ser julgado junto
+com o regime de memória do preço, e não sozinho.
+
 ## 2026-11-24
 
 **Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/agente_laboratorio.json`, `dados/LICOES.md`, 10:18 UTC):
