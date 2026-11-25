@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 01:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 01:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 16.0% das moedas subindo em 24 h, 22.4% em 4 h · BTC 24 h -3.48%, 4 h -0.87%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': -7.6, 'ETH': -1.6, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.4%/ano · {'BTC': -7.9, 'ETH': -1.6, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** INIT OCO invertido (alta, CONFIRMOU) · SKY bandeira de alta (alta, CONFIRMOU) · BCH fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · INIT topo duplo (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado)
 - 📰 25/11 01:40 UTC · Cointelegraph: CleanSpark weighs selling more Bitcoin than it mines to ‘de-risk’ books
