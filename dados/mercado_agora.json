@@ -1,21 +1,21 @@
 {
- "t": 1795582561,
- "hora_utc": "2026-11-25 04:56 UTC",
+ "t": 1795582800,
+ "hora_utc": "2026-11-25 05:00 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 124,
-  "subindo_pct": 30.6,
+  "moedas": 123,
+  "subindo_pct": 30.9,
   "mediana_pct": -0.22
  },
  "mercado_4h": {
-  "moedas": 124,
-  "subindo_pct": 32.3,
+  "moedas": 123,
+  "subindo_pct": 31.7,
   "mediana_pct": -0.63
  },
  "mercado_24h": {
-  "moedas": 124,
-  "subindo_pct": 16.1,
-  "mediana_pct": -4.56
+  "moedas": 123,
+  "subindo_pct": 16.3,
+  "mediana_pct": -4.58
  },
  "btc": {
   "1h": -0.69,
@@ -149,7 +149,6 @@
   }
  ],
  "btc_1h_ultimas_24": [
-  0.41,
   -0.25,
   -0.07,
   -0.3,
@@ -172,11 +171,18 @@
   -0.65,
   -0.05,
   0.31,
-  -0.41
+  -0.34,
+  0.0
  ],
  "contexto": {
-  "t": 1795582562,
+  "t": 1795582802,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795582642,
+    "hora_utc": "25/11 04:57",
+    "titulo": "Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795582208,
@@ -260,12 +266,6 @@
     "t": 1795548932,
     "hora_utc": "24/11 19:35",
     "titulo": "Bitcoin Losses Are the Worst Since FTX. Is the Bottom Near?"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795547066,
-    "hora_utc": "24/11 19:04",
-    "titulo": "Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 3.7,
+   "media_top20_anual_pct": 10.0,
    "principais_anual_pct": {
-    "BTC": -3.9,
-    "ETH": 7.6,
-    "SOL": 11.0
+    "BTC": -5.7,
+    "ETH": 7.9,
+    "SOL": 7.8
    },
    "leitura": "neutro"
   },
@@ -733,12 +733,12 @@
   "z_contra_lab": 0.11,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5056,
-    "n": 23809
+    "acerto": 0.5059,
+    "n": 23718
    },
    "segue_maioria_24h": {
-    "acerto": 0.5096,
-    "n": 29126
+    "acerto": 0.5095,
+    "n": 29148
    }
   },
   "referencia_ganha": [],
