@@ -1,21 +1,21 @@
 {
- "t": 1795585142,
- "hora_utc": "2026-11-25 05:39 UTC",
+ "t": 1795585380,
+ "hora_utc": "2026-11-25 05:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 124,
-  "subindo_pct": 25.0,
-  "mediana_pct": -0.28
+  "moedas": 125,
+  "subindo_pct": 25.6,
+  "mediana_pct": -0.27
  },
  "mercado_4h": {
-  "moedas": 124,
-  "subindo_pct": 37.9,
+  "moedas": 125,
+  "subindo_pct": 38.4,
   "mediana_pct": -0.31
  },
  "mercado_24h": {
-  "moedas": 124,
-  "subindo_pct": 15.3,
-  "mediana_pct": -4.72
+  "moedas": 125,
+  "subindo_pct": 16.0,
+  "mediana_pct": -4.65
  },
  "btc": {
   "1h": -0.27,
@@ -94,6 +94,12 @@
    "vol": 2.65
   },
   {
+   "moeda": "MANTRA",
+   "4h": 21.08,
+   "24h": 10.44,
+   "vol": 3.64
+  },
+  {
    "moeda": "WAXP",
    "4h": 11.28,
    "24h": 11.61,
@@ -140,12 +146,6 @@
    "4h": 3.49,
    "24h": -8.96,
    "vol": 0.62
-  },
-  {
-   "moeda": "ZIL",
-   "4h": 3.21,
-   "24h": -1.18,
-   "vol": 0.41
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.05,
   0.31,
   -0.34,
-  -0.3
+  -0.34
  ],
  "contexto": {
-  "t": 1795585143,
+  "t": 1795585381,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.6,
+   "media_top20_anual_pct": 2.7,
    "principais_anual_pct": {
-    "BTC": -8.3,
-    "ETH": 5.3,
-    "SOL": 7.7
+    "BTC": -8.4,
+    "ETH": 5.2,
+    "SOL": 7.9
    },
    "leitura": "neutro"
   },
@@ -325,6 +325,13 @@
     "nivel": 0.0411
    },
    {
+    "moeda": "MANTRA",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.00174
+   },
+   {
     "moeda": "NFP",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -366,9 +373,9 @@
  },
  "v4": {
   "vela": "05:30 UTC",
-  "apostas": 100,
+  "apostas": 101,
   "compras": 41,
-  "vendas": 59,
+  "vendas": 60,
   "mais_confiantes_venda": [
    {
     "moeda": "BONK",
@@ -705,12 +712,12 @@
   "z_contra_lab": 0.21,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5057,
-    "n": 23744
+    "acerto": 0.5055,
+    "n": 23769
    },
    "segue_maioria_24h": {
-    "acerto": 0.5104,
-    "n": 29053
+    "acerto": 0.5111,
+    "n": 29067
    }
   },
   "referencia_ganha": [],
