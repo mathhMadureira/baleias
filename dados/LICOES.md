@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 23:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 23:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 73.0% das moedas subindo em 24 h, 81.0% em 4 h · BTC 24 h 0.22%, 4 h 0.65%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.9%/ano · {'BTC': 11.0, 'ETH': 2.1, 'SOL': 6.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.7%/ano · {'BTC': 11.0, 'ETH': 5.1, 'SOL': 8.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MOVE estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · QNT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · CFG topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · QNT topo duplo (baixa, formado) · SOL topo duplo (baixa, formado) · STO fundo duplo (alta, formado)
 - 📰 25/11 22:38 UTC · Decrypt: China's Google Just Released Its Fast New AI Model for Free
