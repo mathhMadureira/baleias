@@ -1,21 +1,21 @@
 {
- "t": 1795608699,
- "hora_utc": "2026-11-25 12:11 UTC",
+ "t": 1795608938,
+ "hora_utc": "2026-11-25 12:15 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 123,
-  "subindo_pct": 12.2,
-  "mediana_pct": -0.64
+  "moedas": 124,
+  "subindo_pct": 12.1,
+  "mediana_pct": -0.62
  },
  "mercado_4h": {
-  "moedas": 123,
-  "subindo_pct": 10.6,
-  "mediana_pct": -1.45
+  "moedas": 124,
+  "subindo_pct": 10.5,
+  "mediana_pct": -1.42
  },
  "mercado_24h": {
-  "moedas": 123,
-  "subindo_pct": 16.3,
-  "mediana_pct": -4.12
+  "moedas": 124,
+  "subindo_pct": 16.9,
+  "mediana_pct": -4.07
  },
  "btc": {
   "1h": -0.44,
@@ -39,9 +39,9 @@
   },
   {
    "moeda": "SYRUP",
-   "4h": -6.57,
-   "24h": -15.12,
-   "vol": 1.62
+   "4h": -6.45,
+   "24h": -14.92,
+   "vol": 1.67
   },
   {
    "moeda": "ATM",
@@ -62,16 +62,16 @@
    "vol": 1.46
   },
   {
+   "moeda": "0G",
+   "4h": -4.63,
+   "24h": -9.13,
+   "vol": 0.69
+  },
+  {
    "moeda": "RE",
    "4h": -4.57,
    "24h": -5.11,
    "vol": 0.97
-  },
-  {
-   "moeda": "0G",
-   "4h": -4.12,
-   "24h": -9.21,
-   "vol": 0.72
   },
   {
    "moeda": "CHIP",
@@ -107,8 +107,8 @@
   },
   {
    "moeda": "ENSO",
-   "4h": 6.51,
-   "24h": -1.92,
+   "4h": 5.99,
+   "24h": -1.45,
    "vol": 2.0
   },
   {
@@ -172,10 +172,10 @@
   -0.58,
   -0.31,
   -0.44,
-  -0.17
+  -0.1
  ],
  "contexto": {
-  "t": 1795608700,
+  "t": 1795608939,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -188,6 +188,12 @@
     "t": 1795607526,
     "hora_utc": "25/11 11:52",
     "titulo": "Florida Man Jailed for Using AI to Pose as Streamer N3ON in $260K Crypto Scam"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795607514,
+    "hora_utc": "25/11 11:51",
+    "titulo": "Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%"
    },
    {
     "fonte": "Cointelegraph",
@@ -260,12 +266,6 @@
     "t": 1795596028,
     "hora_utc": "25/11 08:40",
     "titulo": "EU seeks up to $55B for AI and quantum computing fund: Report"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795595747,
-    "hora_utc": "25/11 08:35",
-    "titulo": "Live updates: Bitcoin slips back under $60,000 as HYPE leads altcoins lower"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.8,
+   "media_top20_anual_pct": -1.3,
    "principais_anual_pct": {
-    "BTC": -4.8,
+    "BTC": -3.6,
     "ETH": 11.0,
-    "SOL": -14.0
+    "SOL": -14.4
    },
    "leitura": "neutro"
   },
@@ -332,20 +332,6 @@
     "nivel": 0.00174
    },
    {
-    "moeda": "MARSCOIN",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.0266
-   },
-   {
-    "moeda": "MARSCOIN",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.0276
-   },
-   {
     "moeda": "MMT",
     "padrao": "fundo duplo",
     "sentido": "alta",
@@ -380,9 +366,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 124,
-  "compras": 80,
-  "vendas": 44,
+  "apostas": 126,
+  "compras": 77,
+  "vendas": 49,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -431,6 +417,10 @@
     "prob_subir": 0.645
    },
    {
+    "moeda": "CYBER",
+    "prob_subir": 0.627
+   },
+   {
     "moeda": "ENS",
     "prob_subir": 0.614
    },
@@ -445,10 +435,6 @@
    {
     "moeda": "ATOM",
     "prob_subir": 0.608
-   },
-   {
-    "moeda": "F",
-    "prob_subir": 0.604
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -712,34 +698,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.4% em 29644 apostas (618 velas, 18/11 12:15–25/11 11:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5344,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.5% em 29609 apostas (618 velas, 18/11 12:30–25/11 11:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5347,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.02,
+  "z_contra_lab": 0.01,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.509,
-    "n": 23765
+    "acerto": 0.5088,
+    "n": 23744
    },
    "segue_maioria_24h": {
-    "acerto": 0.5133,
-    "n": 29605
+    "acerto": 0.514,
+    "n": 29495
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.544,
-    "n": 8829
+    "acerto": 0.5439,
+    "n": 8825
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5616,
-    "n": 3205
+    "acerto": 0.5618,
+    "n": 3204
    },
    "confianca:<0,05": {
-    "acerto": 0.5187,
-    "n": 16748
+    "acerto": 0.5191,
+    "n": 16718
    },
    "confianca:≥0,12": {
     "acerto": 0.6415,
@@ -750,24 +736,24 @@
     "n": 8337
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5458,
-    "n": 7014
+    "acerto": 0.546,
+    "n": 7022
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5403,
-    "n": 7004
+    "acerto": 0.5412,
+    "n": 6961
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5475,
     "n": 7289
    },
    "lado:compra": {
-    "acerto": 0.5237,
-    "n": 13661
+    "acerto": 0.5246,
+    "n": 13641
    },
    "lado:venda": {
-    "acerto": 0.5436,
-    "n": 15983
+    "acerto": 0.5433,
+    "n": 15968
    }
   }
  },
