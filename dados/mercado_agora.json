@@ -1,28 +1,28 @@
 {
- "t": 1795612449,
- "hora_utc": "2026-11-25 13:14 UTC",
+ "t": 1795612681,
+ "hora_utc": "2026-11-25 13:18 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
-  "subindo_pct": 52.1,
-  "mediana_pct": 0.02
+  "subindo_pct": 26.9,
+  "mediana_pct": -0.3
  },
  "mercado_4h": {
   "moedas": 119,
-  "subindo_pct": 10.1,
-  "mediana_pct": -1.85
+  "subindo_pct": 14.3,
+  "mediana_pct": -1.25
  },
  "mercado_24h": {
   "moedas": 119,
-  "subindo_pct": 18.5,
-  "mediana_pct": -3.44
+  "subindo_pct": 21.0,
+  "mediana_pct": -2.7
  },
  "btc": {
-  "1h": 0.19,
-  "4h": -1.15,
-  "24h": -2.87,
-  "preco": 58749.22,
-  "vol_4h_vs_media": 1.01
+  "1h": 0.33,
+  "4h": -0.54,
+  "24h": -2.0,
+  "preco": 58760.01,
+  "vol_4h_vs_media": 1.06
  },
  "maiores_quedas_4h": [
   {
@@ -33,118 +33,118 @@
   },
   {
    "moeda": "DODO",
-   "4h": -8.77,
-   "24h": -7.32,
-   "vol": 1.44
+   "4h": -8.92,
+   "24h": -6.72,
+   "vol": 1.49
   },
   {
    "moeda": "OPG",
-   "4h": -6.18,
-   "24h": 17.78,
-   "vol": 0.72
+   "4h": -8.5,
+   "24h": 15.43,
+   "vol": 0.82
   },
   {
    "moeda": "2Z",
-   "4h": -5.6,
-   "24h": -1.88,
-   "vol": 1.61
-  },
-  {
-   "moeda": "MANTA",
-   "4h": -5.49,
-   "24h": -3.76,
-   "vol": 1.21
+   "4h": -5.68,
+   "24h": -0.5,
+   "vol": 1.54
   },
   {
    "moeda": "ANIME",
-   "4h": -5.3,
-   "24h": -0.05,
-   "vol": 0.84
+   "4h": -5.48,
+   "24h": 0.62,
+   "vol": 0.76
   },
   {
    "moeda": "SYRUP",
-   "4h": -4.92,
-   "24h": -13.09,
-   "vol": 1.7
+   "4h": -5.36,
+   "24h": -12.86,
+   "vol": 1.75
   },
   {
-   "moeda": "RE",
-   "4h": -4.74,
-   "24h": -4.88,
-   "vol": 0.84
+   "moeda": "MANTA",
+   "4h": -5.31,
+   "24h": -4.18,
+   "vol": 1.05
   },
   {
    "moeda": "WAXP",
-   "4h": -4.56,
-   "24h": 7.55,
-   "vol": 1.15
+   "4h": -5.01,
+   "24h": 9.76,
+   "vol": 1.06
   },
   {
-   "moeda": "MUBARAK",
-   "4h": -4.36,
-   "24h": -6.73,
-   "vol": 0.77
+   "moeda": "KITE",
+   "4h": -4.92,
+   "24h": -6.91,
+   "vol": 1.62
+  },
+  {
+   "moeda": "ALICE",
+   "4h": -4.64,
+   "24h": 3.76,
+   "vol": 2.08
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "MMT",
-   "4h": 14.36,
-   "24h": 8.29,
-   "vol": 2.05
-  },
-  {
-   "moeda": "LAYER",
-   "4h": 11.75,
-   "24h": 14.66,
-   "vol": 5.01
-  },
-  {
-   "moeda": "BLUR",
-   "4h": 11.31,
-   "24h": 18.2,
-   "vol": 3.18
-  },
-  {
-   "moeda": "SSV",
-   "4h": 9.3,
-   "24h": 19.52,
-   "vol": 2.92
+   "4h": 14.35,
+   "24h": 10.61,
+   "vol": 2.11
   },
   {
    "moeda": "LISTA",
-   "4h": 9.23,
-   "24h": -2.02,
-   "vol": 0.45
+   "4h": 10.81,
+   "24h": -2.89,
+   "vol": 0.47
+  },
+  {
+   "moeda": "BLUR",
+   "4h": 9.04,
+   "24h": 16.79,
+   "vol": 3.34
+  },
+  {
+   "moeda": "LAYER",
+   "4h": 7.13,
+   "24h": 12.02,
+   "vol": 5.12
+  },
+  {
+   "moeda": "SSV",
+   "4h": 5.87,
+   "24h": 20.95,
+   "vol": 2.65
   },
   {
    "moeda": "PROM",
-   "4h": 4.49,
-   "24h": 2.77,
-   "vol": 0.53
+   "4h": 4.62,
+   "24h": 2.55,
+   "vol": 0.63
+  },
+  {
+   "moeda": "MANTRA",
+   "4h": 4.29,
+   "24h": 30.36,
+   "vol": 1.84
   },
   {
    "moeda": "ENSO",
-   "4h": 3.78,
+   "4h": 3.8,
    "24h": 0.49,
    "vol": 1.27
   },
   {
    "moeda": "SENT",
-   "4h": 1.63,
-   "24h": 0.56,
-   "vol": 1.62
-  },
-  {
-   "moeda": "MANTRA",
-   "4h": 1.41,
-   "24h": 28.57,
-   "vol": 1.95
+   "4h": 3.67,
+   "24h": 1.31,
+   "vol": 1.69
   },
   {
    "moeda": "BABY",
-   "4h": 1.24,
-   "24h": 5.66,
+   "4h": 2.4,
+   "24h": 5.79,
    "vol": 0.53
   }
  ],
@@ -172,11 +172,17 @@
   -0.31,
   -0.44,
   0.19,
-  0.07
+  -0.08
  ],
  "contexto": {
-  "t": 1795612450,
+  "t": 1795612682,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795612524,
+    "hora_utc": "25/11 13:15",
+    "titulo": "French Senate Rejects Plan to Make Crypto Holders Declare Self-Custody Wallets"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795611729,
@@ -260,12 +266,6 @@
     "t": 1795602957,
     "hora_utc": "25/11 10:35",
     "titulo": "Take-Two Hits GTA 6 PC Port Leonida With DMCA, Taking Down 3,007 GitHub Repos"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795600692,
-    "hora_utc": "25/11 09:58",
-    "titulo": "French Senate rejects 100K euro crypto wallet disclosure requirement"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -2.1,
+   "media_top20_anual_pct": -2.6,
    "principais_anual_pct": {
-    "BTC": 0.6,
-    "ETH": 7.5,
-    "SOL": -12.3
+    "BTC": 0.9,
+    "ETH": 7.3,
+    "SOL": -12.5
    },
    "leitura": "neutro"
   },
@@ -359,9 +359,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 122,
-  "compras": 50,
-  "vendas": 72,
+  "apostas": 148,
+  "compras": 92,
+  "vendas": 56,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -370,6 +370,10 @@
    {
     "moeda": "AR",
     "prob_subir": 0.37
+   },
+   {
+    "moeda": "U",
+    "prob_subir": 0.373
    },
    {
     "moeda": "RESOLV",
@@ -390,13 +394,13 @@
    {
     "moeda": "PEOPLE",
     "prob_subir": 0.386
-   },
-   {
-    "moeda": "BABAB",
-    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
+   {
+    "moeda": "CYBER",
+    "prob_subir": 0.669
+   },
    {
     "moeda": "PSG",
     "prob_subir": 0.651
@@ -410,15 +414,7 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "DODO",
-    "prob_subir": 0.624
-   },
-   {
     "moeda": "ENS",
-    "prob_subir": 0.614
-   },
-   {
-    "moeda": "CYBER",
     "prob_subir": 0.614
    },
    {
@@ -428,6 +424,10 @@
    {
     "moeda": "MITO",
     "prob_subir": 0.608
+   },
+   {
+    "moeda": "F",
+    "prob_subir": 0.604
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -691,38 +691,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.5% em 29643 apostas (618 velas, 18/11 13:15–25/11 12:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5355,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.5% em 29628 apostas (618 velas, 18/11 13:30–25/11 12:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5354,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.1,
+  "z_contra_lab": 0.09,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5088,
-    "n": 22932
+    "acerto": 0.509,
+    "n": 22928
    },
    "segue_maioria_24h": {
     "acerto": 0.512,
-    "n": 29557
+    "n": 29542
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
     "acerto": 0.5449,
-    "n": 8783
+    "n": 8778
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.561,
-    "n": 3182
+    "acerto": 0.5608,
+    "n": 3183
    },
    "confianca:<0,05": {
     "acerto": 0.5203,
-    "n": 16816
+    "n": 16806
    },
    "confianca:≥0,12": {
-    "acerto": 0.6404,
-    "n": 862
+    "acerto": 0.6388,
+    "n": 861
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5086,
@@ -733,20 +733,20 @@
     "n": 7066
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5432,
-    "n": 6951
+    "acerto": 0.5428,
+    "n": 6936
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5475,
     "n": 7289
    },
    "lado:compra": {
-    "acerto": 0.5245,
-    "n": 13649
+    "acerto": 0.5244,
+    "n": 13641
    },
    "lado:venda": {
     "acerto": 0.5448,
-    "n": 15994
+    "n": 15987
    }
   }
  },
