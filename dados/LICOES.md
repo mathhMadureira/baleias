@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 05:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 05:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.9% das moedas subindo em 24 h, 31.7% em 4 h · BTC 24 h -1.92%, 4 h -0.74%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.7%/ano · {'BTC': -7.5, 'ETH': 7.1, 'SOL': 7.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.5%/ano · {'BTC': -8.0, 'ETH': 7.7, 'SOL': 7.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 20.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BTC triângulo descendente (baixa, CONFIRMOU) · ERA topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · ORDI ombro-cabeça-ombro (baixa, formado)
 - 📰 25/11 04:57 UTC · CoinDesk: Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive
