@@ -1,28 +1,28 @@
 {
- "t": 1795641333,
- "hora_utc": "2026-11-25 21:15 UTC",
+ "t": 1795641523,
+ "hora_utc": "2026-11-25 21:18 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
-  "subindo_pct": 67.5,
-  "mediana_pct": 0.38
+  "subindo_pct": 54.8,
+  "mediana_pct": 0.1
  },
  "mercado_4h": {
   "moedas": 126,
-  "subindo_pct": 91.3,
-  "mediana_pct": 3.46
+  "subindo_pct": 89.7,
+  "mediana_pct": 2.44
  },
  "mercado_24h": {
   "moedas": 126,
-  "subindo_pct": 78.6,
-  "mediana_pct": 1.58
+  "subindo_pct": 81.7,
+  "mediana_pct": 1.7
  },
  "btc": {
-  "1h": 0.65,
-  "4h": 2.84,
-  "24h": 0.81,
-  "preco": 60267.5,
-  "vol_4h_vs_media": 1.29
+  "1h": 0.37,
+  "4h": 1.65,
+  "24h": 0.85,
+  "preco": 60235.71,
+  "vol_4h_vs_media": 1.23
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "LISTA",
-   "4h": -12.31,
-   "24h": -5.81,
-   "vol": 0.95
+   "4h": -13.44,
+   "24h": -6.1,
+   "vol": 0.93
   },
   {
    "moeda": "OPG",
-   "4h": -4.21,
-   "24h": 1.74,
-   "vol": 0.53
-  },
-  {
-   "moeda": "BIGTIME",
-   "4h": -3.1,
-   "24h": 66.59,
-   "vol": 0.59
+   "4h": -6.13,
+   "24h": 1.17,
+   "vol": 0.48
   },
   {
    "moeda": "INIT",
-   "4h": -1.8,
-   "24h": -1.19,
+   "4h": -2.82,
+   "24h": -2.11,
    "vol": 0.77
   },
   {
-   "moeda": "LUNC",
-   "4h": -1.36,
-   "24h": 0.82,
-   "vol": 0.73
+   "moeda": "BIGTIME",
+   "4h": -0.99,
+   "24h": 69.08,
+   "vol": 0.54
+  },
+  {
+   "moeda": "SENT",
+   "4h": -0.96,
+   "24h": 3.2,
+   "vol": 0.77
   },
   {
    "moeda": "BABY",
-   "4h": -0.57,
-   "24h": 3.46,
-   "vol": 0.39
+   "4h": -0.23,
+   "24h": 3.94,
+   "vol": 0.4
   },
   {
    "moeda": "JST",
-   "4h": -0.17,
-   "24h": 0.43,
-   "vol": 0.95
-  },
-  {
-   "moeda": "SYRUP",
-   "4h": -0.15,
-   "24h": -6.48,
-   "vol": 1.61
+   "4h": -0.22,
+   "24h": 0.55,
+   "vol": 0.88
   },
   {
    "moeda": "TRX",
-   "4h": -0.07,
-   "24h": -1.59,
-   "vol": 1.07
+   "4h": -0.16,
+   "24h": -1.62,
+   "vol": 0.96
+  },
+  {
+   "moeda": "LUNC",
+   "4h": -0.16,
+   "24h": 1.36,
+   "vol": 0.7
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "MANTRA",
-   "4h": 25.49,
-   "24h": 91.62,
-   "vol": 2.03
+   "4h": 26.46,
+   "24h": 95.78,
+   "vol": 2.02
   },
   {
    "moeda": "CFG",
-   "4h": 25.16,
-   "24h": 28.22,
-   "vol": 4.28
+   "4h": 19.62,
+   "24h": 25.22,
+   "vol": 4.45
   },
   {
    "moeda": "SSV",
-   "4h": 12.2,
-   "24h": 45.44,
-   "vol": 1.45
-  },
-  {
-   "moeda": "NEAR",
-   "4h": 10.34,
-   "24h": 5.9,
-   "vol": 2.05
-  },
-  {
-   "moeda": "ZEC",
-   "4h": 9.63,
-   "24h": 4.66,
-   "vol": 1.76
-  },
-  {
-   "moeda": "BEB",
-   "4h": 8.93,
-   "24h": -2.08,
-   "vol": 1.76
-  },
-  {
-   "moeda": "PUMP",
-   "4h": 8.58,
-   "24h": 5.34,
-   "vol": 1.88
-  },
-  {
-   "moeda": "ZRO",
-   "4h": 8.24,
-   "24h": -2.75,
-   "vol": 1.25
-  },
-  {
-   "moeda": "AT",
-   "4h": 8.04,
-   "24h": 10.47,
-   "vol": 3.57
+   "4h": 10.93,
+   "24h": 45.5,
+   "vol": 1.44
   },
   {
    "moeda": "STO",
    "4h": 7.66,
    "24h": 13.64,
    "vol": 4.86
+  },
+  {
+   "moeda": "NEAR",
+   "4h": 7.65,
+   "24h": 5.39,
+   "vol": 2.03
+  },
+  {
+   "moeda": "BEB",
+   "4h": 7.32,
+   "24h": -1.42,
+   "vol": 1.61
+  },
+  {
+   "moeda": "ZEC",
+   "4h": 6.74,
+   "24h": 4.64,
+   "vol": 1.57
+  },
+  {
+   "moeda": "USUAL",
+   "4h": 6.64,
+   "24h": -4.65,
+   "vol": 1.03
+  },
+  {
+   "moeda": "CHIP",
+   "4h": 6.17,
+   "24h": -1.23,
+   "vol": 1.48
+  },
+  {
+   "moeda": "AT",
+   "4h": 5.58,
+   "24h": 12.24,
+   "vol": 3.32
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.21,
   0.25,
   0.65,
-  -0.04
+  -0.06
  ],
  "contexto": {
-  "t": 1795641334,
+  "t": 1795641524,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795641362,
+    "hora_utc": "25/11 21:16",
+    "titulo": "The 1Password Breach Didn’t Touch Your Vault. The Phishing Emails Might"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795641099,
@@ -260,12 +266,6 @@
     "t": 1795626653,
     "hora_utc": "25/11 17:10",
     "titulo": "FCC authorizes SpaceX to deploy 1M satellites for orbital AI data centers"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795625570,
-    "hora_utc": "25/11 16:52",
-    "titulo": "Bitcoin Falls Further as Inflation, Trump Tariffs and AI Selloff Rattle Markets"
    }
   ],
   "medo_ganancia": {
@@ -277,7 +277,7 @@
    "media_top20_anual_pct": 14.3,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 8.1,
+    "ETH": 8.4,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -359,9 +359,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 140,
-  "compras": 44,
-  "vendas": 96,
+  "apostas": 117,
+  "compras": 59,
+  "vendas": 58,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -372,16 +372,16 @@
     "prob_subir": 0.37
    },
    {
+    "moeda": "U",
+    "prob_subir": 0.371
+   },
+   {
     "moeda": "RESOLV",
     "prob_subir": 0.375
    },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
-   },
-   {
-    "moeda": "MARSCOIN",
-    "prob_subir": 0.38
    },
    {
     "moeda": "RUNE",
@@ -410,8 +410,8 @@
     "prob_subir": 0.614
    },
    {
-    "moeda": "SENT",
-    "prob_subir": 0.61
+    "moeda": "SOPH",
+    "prob_subir": 0.614
    },
    {
     "moeda": "RWUSD",
@@ -422,12 +422,12 @@
     "prob_subir": 0.608
    },
    {
-    "moeda": "WLFI",
-    "prob_subir": 0.606
-   },
-   {
     "moeda": "F",
     "prob_subir": 0.604
+   },
+   {
+    "moeda": "BANK",
+    "prob_subir": 0.598
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -620,7 +620,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.39,
+   "carteira": 9.31,
    "n_abertas": 2,
    "abertas": [
     [
@@ -685,7 +685,7 @@
     "ganho_medio": 0.314,
     "perda_media": -0.228,
     "fator_lucro": 0.81,
-    "carteira": 9.39
+    "carteira": 9.31
    },
    "guardiao": {
     "ops": 74,
@@ -700,38 +700,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 52.9% em 30442 apostas (632 velas, 18/11 21:30–25/11 20:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5294,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.0% em 30509 apostas (632 velas, 18/11 21:30–25/11 20:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5297,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.59,
+  "z_contra_lab": -0.55,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5061,
-    "n": 24600
+    "acerto": 0.5057,
+    "n": 24667
    },
    "segue_maioria_24h": {
-    "acerto": 0.5142,
-    "n": 30347
+    "acerto": 0.5138,
+    "n": 30414
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5411,
-    "n": 9034
+    "acerto": 0.5412,
+    "n": 9036
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5489,
-    "n": 3334
+    "acerto": 0.5487,
+    "n": 3337
    },
    "confianca:<0,05": {
-    "acerto": 0.5141,
-    "n": 17202
+    "acerto": 0.5147,
+    "n": 17263
    },
    "confianca:≥0,12": {
-    "acerto": 0.6342,
-    "n": 872
+    "acerto": 0.6346,
+    "n": 873
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5086,
@@ -746,16 +746,16 @@
     "n": 7925
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.533,
-    "n": 7114
+    "acerto": 0.5345,
+    "n": 7181
    },
    "lado:compra": {
-    "acerto": 0.5211,
-    "n": 13725
+    "acerto": 0.5212,
+    "n": 13734
    },
    "lado:venda": {
-    "acerto": 0.5362,
-    "n": 16717
+    "acerto": 0.5367,
+    "n": 16775
    }
   }
  },
