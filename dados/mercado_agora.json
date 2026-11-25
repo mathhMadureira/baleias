@@ -1,28 +1,28 @@
 {
- "t": 1795622263,
- "hora_utc": "2026-11-25 15:57 UTC",
+ "t": 1795622490,
+ "hora_utc": "2026-11-25 16:01 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
-  "subindo_pct": 92.4,
-  "mediana_pct": 1.3
+  "subindo_pct": 36.1,
+  "mediana_pct": -0.22
  },
  "mercado_4h": {
   "moedas": 119,
-  "subindo_pct": 22.7,
-  "mediana_pct": -0.92
+  "subindo_pct": 30.3,
+  "mediana_pct": -0.53
  },
  "mercado_24h": {
   "moedas": 119,
   "subindo_pct": 22.7,
-  "mediana_pct": -2.66
+  "mediana_pct": -2.41
  },
  "btc": {
-  "1h": 1.42,
-  "4h": -0.68,
-  "24h": -2.51,
-  "preco": 58203.99,
-  "vol_4h_vs_media": 1.65
+  "1h": 0.18,
+  "4h": -0.51,
+  "24h": -2.31,
+  "preco": 58344.01,
+  "vol_4h_vs_media": 1.64
  },
  "maiores_quedas_4h": [
   {
@@ -33,123 +33,122 @@
   },
   {
    "moeda": "BIGTIME",
-   "4h": -7.81,
-   "24h": 62.81,
-   "vol": 1.02
+   "4h": -7.45,
+   "24h": 61.67,
+   "vol": 1.0
   },
   {
    "moeda": "USUAL",
-   "4h": -7.1,
-   "24h": -6.02,
-   "vol": 1.73
+   "4h": -7.45,
+   "24h": -6.46,
+   "vol": 1.76
   },
   {
    "moeda": "CHIP",
-   "4h": -6.87,
-   "24h": -10.33,
-   "vol": 2.35
+   "4h": -5.97,
+   "24h": -10.28,
+   "vol": 2.49
   },
   {
    "moeda": "BEB",
-   "4h": -4.89,
-   "24h": -8.98,
-   "vol": 0.81
-  },
-  {
-   "moeda": "ZEC",
-   "4h": -4.83,
-   "24h": -2.99,
-   "vol": 2.63
+   "4h": -5.07,
+   "24h": -9.49,
+   "vol": 1.16
   },
   {
    "moeda": "WAXP",
-   "4h": -4.16,
+   "4h": -4.42,
    "24h": 5.17,
-   "vol": 0.49
+   "vol": 0.46
   },
   {
    "moeda": "ZRO",
-   "4h": -4.11,
-   "24h": -5.44,
-   "vol": 1.32
+   "4h": -3.92,
+   "24h": -6.27,
+   "vol": 1.41
+  },
+  {
+   "moeda": "ZEC",
+   "4h": -3.8,
+   "24h": -2.83,
+   "vol": 2.68
   },
   {
    "moeda": "AT",
-   "4h": -3.76,
-   "24h": -14.44,
-   "vol": 0.93
+   "4h": -3.74,
+   "24h": -14.36,
+   "vol": 0.95
   },
   {
    "moeda": "MANTA",
-   "4h": -3.73,
-   "24h": -5.0,
+   "4h": -3.49,
+   "24h": -5.36,
    "vol": 0.52
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "MANTRA",
-   "4h": 17.27,
-   "24h": 53.57,
-   "vol": 2.14
-  },
-  {
-   "moeda": "MMT",
-   "4h": 14.44,
-   "24h": 22.52,
-   "vol": 2.57
-  },
-  {
-   "moeda": "LISTA",
-   "4h": 7.26,
-   "24h": 5.59,
-   "vol": 0.48
-  },
-  {
-   "moeda": "SENT",
-   "4h": 5.87,
-   "24h": 3.32,
-   "vol": 2.2
+   "4h": 19.63,
+   "24h": 55.95,
+   "vol": 2.16
   },
   {
    "moeda": "SSV",
-   "4h": 5.63,
-   "24h": 25.47,
-   "vol": 1.44
+   "4h": 8.3,
+   "24h": 27.33,
+   "vol": 1.49
+  },
+  {
+   "moeda": "LISTA",
+   "4h": 8.07,
+   "24h": 2.4,
+   "vol": 0.48
+  },
+  {
+   "moeda": "MMT",
+   "4h": 8.0,
+   "24h": 22.94,
+   "vol": 2.36
+  },
+  {
+   "moeda": "SENT",
+   "4h": 6.81,
+   "24h": 3.81,
+   "vol": 2.25
   },
   {
    "moeda": "KITE",
-   "4h": 5.38,
-   "24h": -0.14,
-   "vol": 1.6
-  },
-  {
-   "moeda": "BLUR",
-   "4h": 4.23,
-   "24h": 18.91,
-   "vol": 1.74
-  },
-  {
-   "moeda": "BABY",
-   "4h": 3.11,
-   "24h": 7.96,
-   "vol": 0.73
-  },
-  {
-   "moeda": "MEGA",
-   "4h": 2.43,
-   "24h": -5.82,
-   "vol": 2.82
+   "4h": 4.86,
+   "24h": -1.54,
+   "vol": 1.62
   },
   {
    "moeda": "PROM",
-   "4h": 2.36,
-   "24h": 8.23,
-   "vol": 0.97
+   "4h": 3.27,
+   "24h": 8.61,
+   "vol": 0.9
+  },
+  {
+   "moeda": "LAYER",
+   "4h": 3.2,
+   "24h": 7.38,
+   "vol": 4.31
+  },
+  {
+   "moeda": "ERA",
+   "4h": 2.73,
+   "24h": 6.51,
+   "vol": 0.94
+  },
+  {
+   "moeda": "MEGA",
+   "4h": 2.58,
+   "24h": -6.56,
+   "vol": 2.94
   }
  ],
  "btc_1h_ultimas_24": [
-  -0.51,
   1.16,
   -0.39,
   -0.33,
@@ -172,11 +171,18 @@
   0.19,
   -1.14,
   0.27,
-  0.34
+  0.18,
+  0.26
  ],
  "contexto": {
-  "t": 1795622264,
+  "t": 1795622491,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795622384,
+    "hora_utc": "25/11 15:59",
+    "titulo": "Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795618037,
@@ -260,12 +266,6 @@
     "t": 1795605837,
     "hora_utc": "25/11 11:23",
     "titulo": "Hyperliquid Leads Altcoin Losses as Bitcoin Slips Below $59K"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795605146,
-    "hora_utc": "25/11 11:12",
-    "titulo": "Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.8,
+   "media_top20_anual_pct": 8.4,
    "principais_anual_pct": {
-    "BTC": 7.6,
-    "ETH": -4.2,
-    "SOL": -5.6
+    "BTC": 11.0,
+    "ETH": 11.0,
+    "SOL": 11.0
    },
    "leitura": "neutro"
   },
@@ -352,9 +352,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 108,
-  "compras": 43,
-  "vendas": 65,
+  "apostas": 88,
+  "compras": 36,
+  "vendas": 52,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -407,10 +407,6 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.631
-   },
-   {
     "moeda": "ENS",
     "prob_subir": 0.614
    },
@@ -421,6 +417,10 @@
    {
     "moeda": "MITO",
     "prob_subir": 0.608
+   },
+   {
+    "moeda": "F",
+    "prob_subir": 0.604
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -684,19 +684,19 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.5% em 30046 apostas (624 velas, 18/11 18:00–25/11 15:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5355,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.5% em 30080 apostas (625 velas, 18/11 18:00–25/11 15:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5352,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.1,
+  "z_contra_lab": 0.07,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5101,
-    "n": 23338
+    "acerto": 0.5097,
+    "n": 23372
    },
    "segue_maioria_24h": {
-    "acerto": 0.5117,
-    "n": 29900
+    "acerto": 0.5114,
+    "n": 29934
    }
   },
   "referencia_ganha": [],
@@ -710,8 +710,8 @@
     "n": 3258
    },
    "confianca:<0,05": {
-    "acerto": 0.5199,
-    "n": 17025
+    "acerto": 0.5194,
+    "n": 17059
    },
    "confianca:≥0,12": {
     "acerto": 0.6402,
@@ -726,20 +726,20 @@
     "n": 7066
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.543,
-    "n": 7354
+    "acerto": 0.5417,
+    "n": 7388
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5475,
     "n": 7289
    },
    "lado:compra": {
-    "acerto": 0.523,
-    "n": 13958
+    "acerto": 0.5231,
+    "n": 13964
    },
    "lado:venda": {
-    "acerto": 0.5464,
-    "n": 16088
+    "acerto": 0.5457,
+    "n": 16116
    }
   }
  },
