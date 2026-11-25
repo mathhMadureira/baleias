@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 11:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 11:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 16.0% das moedas subindo em 24 h, 15.2% em 4 h · BTC 24 h -1.48%, 4 h -0.57%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -6.2, 'ETH': 11.0, 'SOL': -12.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.8%/ano · {'BTC': -6.5, 'ETH': 10.4, 'SOL': -11.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BABY fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 25/11 11:00 UTC · CoinDesk: EU proposes $54.7 billion fund for AI, quantum startups alongside post-quantum security push
