@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 09:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 09:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 16.8% das moedas subindo em 24 h, 26.4% em 4 h · BTC 24 h -1.33%, 4 h -0.11%.
+- **Amplitude:** 16.8% das moedas subindo em 24 h, 25.6% em 4 h · BTC 24 h -1.72%, 4 h -0.31%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.3%/ano · {'BTC': 4.7, 'ETH': 11.0, 'SOL': -14.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': 2.7, 'ETH': 11.0, 'SOL': -15.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** U bandeira de baixa (baixa, CONFIRMOU) · BABY fundo duplo (alta, formado) · BTC triângulo descendente (baixa, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** U bandeira de baixa (baixa, CONFIRMOU) · BABY fundo duplo (alta, formado) · BTC triângulo descendente (baixa, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 25/11 08:40 UTC · Cointelegraph: EU seeks up to $55B for AI and quantum computing fund: Report
 - 📰 25/11 08:35 UTC · CoinDesk: Live updates: Bitcoin slips back under $60,000 as HYPE leads altcoins lower
 - 📰 25/11 06:54 UTC · Cointelegraph: South Korea’s crypto bill could move stablecoin race beyond token issuance
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 52791 apostas conferidas ao vivo, acerto 54.4%; prevê 101 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 52810 apostas conferidas ao vivo, acerto 54.4%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
