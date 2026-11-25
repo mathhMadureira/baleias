@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 16:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 16:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 23.5% das moedas subindo em 24 h, 34.5% em 4 h · BTC 24 h -1.52%, 4 h 0.14%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': 11.0, 'ETH': 3.7, 'SOL': -2.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.3%/ano · {'BTC': 11.0, 'ETH': 4.1, 'SOL': -1.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CHIP fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · PEPE topo duplo (baixa, formado) · SENT fundo duplo (alta, formado)
 - 📰 25/11 16:07 UTC · Decrypt: Ukraine Passes Law to Legalize and Tax Its Crypto Market From July 2027
