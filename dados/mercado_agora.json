@@ -1,6 +1,6 @@
 {
- "t": 1795575745,
- "hora_utc": "2026-11-25 03:02 UTC",
+ "t": 1795575981,
+ "hora_utc": "2026-11-25 03:06 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,10 +172,10 @@
   -0.28,
   -0.65,
   -0.05,
-  -0.25
+  -0.05
  ],
  "contexto": {
-  "t": 1795575747,
+  "t": 1795575982,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -8.1,
+   "media_top20_anual_pct": -0.1,
    "principais_anual_pct": {
-    "BTC": -22.5,
-    "ETH": -12.7,
-    "SOL": -2.5
+    "BTC": -13.2,
+    "ETH": 0.2,
+    "SOL": 8.5
    },
    "leitura": "neutro"
   },
@@ -655,15 +655,10 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.3,
-   "n_abertas": 1,
-   "abertas": [
-    [
-     "LTC",
-     "venda"
-    ]
-   ],
-   "n_fechadas": 26,
+   "carteira": 9.26,
+   "n_abertas": 0,
+   "abertas": [],
+   "n_fechadas": 27,
    "ordem": null
   },
   {
@@ -710,13 +705,13 @@
     "carteira": 8.04
    },
    "laboratorio": {
-    "ops": 26,
-    "acerto": 0.346,
-    "soma": -0.784,
-    "ganho_medio": 0.344,
+    "ops": 27,
+    "acerto": 0.37,
+    "soma": -0.744,
+    "ganho_medio": 0.314,
     "perda_media": -0.228,
-    "fator_lucro": 0.8,
-    "carteira": 9.3
+    "fator_lucro": 0.81,
+    "carteira": 9.26
    },
    "guardiao": {
     "ops": 74,
