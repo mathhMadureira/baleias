@@ -4,15 +4,15 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
-| tres_soldados | comprovado | 56.8% | 296 | 51.1%–62.3% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.9% | 2585 | 51.0%–54.8% | rede neural 16→12→1, aprende a cada vela |
+| tres_soldados | comprovado | 56.9% | 297 | 51.2%–62.4% | H6: três soldados → desce (efeito pequeno) |
+| rede_neural | comprovado | 52.9% | 2586 | 51.0%–54.8% | rede neural 16→12→1, aprende a cada vela |
 | williams_wr_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | connors_8020_baixa | promissor | 66.7% | 12 | 39.1%–86.2% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 64.5% | 31 | 46.9%–78.9% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 64.1% | 39 | 48.4%–77.3% | física: alta anormal de 1 h → devolve |
 | raschke_sopa_baixa | promissor | 63.2% | 19 | 41.0%–80.9% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
-| raschke_graal_baixa | promissor | 59.1% | 93 | 49.0%–68.6% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
+| raschke_graal_baixa | promissor | 59.6% | 94 | 49.5%–68.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | williams_volb_baixa | promissor | 51.0% | 245 | 44.8%–57.2% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_wr_alta | promissor | 51.0% | 51 | 37.7%–64.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
