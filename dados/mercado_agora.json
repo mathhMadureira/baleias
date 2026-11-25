@@ -1,6 +1,6 @@
 {
- "t": 1795614077,
- "hora_utc": "2026-11-25 13:41 UTC",
+ "t": 1795614308,
+ "hora_utc": "2026-11-25 13:45 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   -0.31,
   -0.44,
   0.19,
-  -0.56
+  -0.79
  ],
  "contexto": {
-  "t": 1795614078,
+  "t": 1795614309,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795614098,
+    "hora_utc": "25/11 13:41",
+    "titulo": "Morning Minute: Ethereum Focuses on Security As AI Threats Rise"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795613165,
@@ -260,12 +266,6 @@
     "t": 1795604427,
     "hora_utc": "25/11 11:00",
     "titulo": "EU proposes $54.7 billion fund for AI, quantum startups alongside post-quantum security push"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795604272,
-    "hora_utc": "25/11 10:57",
-    "titulo": "HYPE drops 8% as Trump bump gives way to 40% slide from peak"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.7,
+   "media_top20_anual_pct": -1.2,
    "principais_anual_pct": {
-    "BTC": 1.7,
-    "ETH": 8.8,
-    "SOL": -10.0
+    "BTC": 1.1,
+    "ETH": 8.2,
+    "SOL": -11.1
    },
    "leitura": "neutro"
   },
