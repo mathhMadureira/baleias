@@ -90,6 +90,11 @@ iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; b
   <div class="tiles"><div class="tile"><span>acerto</span><b id="t-ac">—</b></div><div class="tile"><span>melhor</span><b id="t-me">—</b></div><div class="tile"><span>pior</span><b id="t-pi">—</b></div><div class="tile"><span>em aberto</span><b id="t-ab">—</b></div></div>
 
   <div class="card">
+    <div class="desk-h"><b>⚙ Motor</b><span id="mo-t"></span></div>
+    <div class="tiles" style="margin:0" id="mo"></div>
+  </div>
+
+  <div class="card">
     <div class="desk-h"><b id="desk-t">Mesa · agentes</b><span id="desk-n"></span></div>
     <div id="desk"></div>
   </div>
@@ -159,9 +164,9 @@ cicloVersao();
 
 
 // ---------- painel da equipe (estilo app): /api/vivo ----------
-const COR = {cacador:["#2563eb","#dbeafe"], memecoins:["#ea580c","#ffedd5"], treinador:["#4f46e5","#e0e7ff"], laboratorio:["#16a34a","#dcfce7"],
+const COR = {motor:["#0f172a","#e2e8f0"], cacador:["#2563eb","#dbeafe"], memecoins:["#ea580c","#ffedd5"], treinador:["#4f46e5","#e0e7ff"], laboratorio:["#16a34a","#dcfce7"],
   guardiao:["#9333ea","#f3e8ff"], engenheiro:["#475569","#e2e8f0"], minerador:["#ca8a04","#fef9c3"], baleias:["#0d9488","#ccfbf1"]};
-const ORDEM = ["cacador", "memecoins", "treinador", "laboratorio", "guardiao", "engenheiro", "minerador", "baleias"];
+const ORDEM = ["laboratorio", "cacador", "guardiao", "memecoins", "treinador", "engenheiro", "minerador", "baleias"];
 let vv = null, vistos = new Set(), primeira = true, ultFech = null;
 function pill(a) {
   const m = vv.missao, r = vv.risco || {};
@@ -214,6 +219,13 @@ function desenhar() {
   const ab = c.abertas.reduce((s_, p) => s_ + (p.resultado || 0), 0);
   $("t-ab").textContent = c.abertas.length ? sn(ab, 3) : "—"; $("t-ab").className = c.abertas.length ? cor(ab) : "";
   $("curva").innerHTML = svgCurva(vv.curva, m.capital);
+  // motor
+  const me = (vv.motor || {}).estado || {}, mc = (vv.motor || {}).comando || {};
+  const vivo_m = me.t && Date.now() / 1000 - me.t < 120;
+  $("mo-t").innerHTML = vivo_m ? `<span class="up">● rodando · última volta há ${ha(me.t)}</span>` : `<span class="down">● parado${me.t ? " há " + ha(me.t) : ""}</span>`;
+  $("mo").innerHTML = [["posições", `${me.abertas ?? "—"} / ${mc.max_pos ?? "—"}`], ["lados", mc.lados || "—"], ["moedas lidas", me.lidas ?? "—"],
+    ["comando de", (mc.atualizado_por || "—") + (mc.t ? " · " + ha(mc.t) : "")]].map(([k, v]) => `<div class="tile"><span>${k}</span><b style="font-size:14px">${esc(v)}</b></div>`).join("")
+    + (mc.motivo ? `<div class="mut" style="grid-column:1/-1;font-size:12px">${esc(mc.motivo)}${(mc.preferidas || []).length ? " · preferidas: " + esc(mc.preferidas.map(x => x.replace("USDT", "")).join(", ")) : ""}${(mc.bloqueadas || []).length ? " · bloqueadas: " + esc(mc.bloqueadas.map(x => x.replace("USDT", "")).join(", ")) : ""}</div>` : "");
   // mesa
   const desk = [...vv.desk].sort((a, b) => ORDEM.indexOf(a.id) - ORDEM.indexOf(b.id));
   const on = desk.filter(a => a.ativo).length, rod = (desk.find(a => a.id === "cacador") || {}).contagem || {hoje: 0};
@@ -225,15 +237,14 @@ function desenhar() {
       <span class="pill" style="background:${c2};color:${c1}">${esc(pill(a))}</span></div>`; }).join("");
   // posição
   $("pos-t").textContent = c.atualizado ? "corretora lida há " + ha(c.atualizado) : "";
-  $("pos").innerHTML = c.abertas.length ? c.abertas.map(p => `<div><b style="font-size:16px"><span class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼ VENDIDO" : "▲ COMPRADO"}</span> ${esc(String(p.moeda).replace("USDT", ""))}</b>
-      <span class="mut" style="font-size:12px"> · há ${ha(p.desde)}${p.alav ? " · " + p.alav + "×" : ""}</span>
-      <div class="pos-l"><div><span>entrada → agora</span>${px(p.entrada)} → ${px(p.agora)} <b class="${cor(p.resultado)}">${p.resultado != null ? sn(p.resultado, 3) : ""}</b></div><div><span>stop</span><b class="down">${px(p.stop)}</b></div><div><span>alvo</span><b class="up">${px(p.alvo)}</b></div><div><span>tamanho</span>US$ ${fmt(p.nocional)}</div></div>
-      ${vv.risco && vv.risco.motivo && vv.risco.moeda === p.moeda ? `<div class="mut" style="font-size:12px;margin-top:8px">🛡 ${esc(vv.risco.acao)} · ${esc(vv.risco.motivo)}</div>` : ""}</div>`).join("")
-    : `<div class="vazio">Sem posição aberta — o operador entra na próxima rodada que aprovar uma entrada.</div>`;
+  $("pos").innerHTML = c.abertas.length ? `<table><tr><th class="e">moeda</th><th>entrada → agora</th><th>stop</th><th>alvo</th><th>há</th><th>resultado</th></tr>` +
+    [...c.abertas].sort((a_, b_) => (b_.resultado || 0) - (a_.resultado || 0)).map(p => `<tr title="${esc(p.motivo)}"><td class="e"><b class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</b> ${esc(String(p.moeda).replace("USDT", ""))}</td>
+      <td>${px(p.entrada)} → ${px(p.agora)}</td><td class="down">${px(p.stop)}</td><td class="up">${px(p.alvo)}</td><td class="mut">${ha(p.desde)}</td><td class="${cor(p.resultado)}"><b>${p.resultado != null ? sn(p.resultado, 3) : "—"}</b></td></tr>`).join("") + "</table>"
+    : `<div class="vazio">Sem posição aberta.</div>`;
   // logger
   $("log-n").textContent = `${vv.feed.length} registros`;
-  $("log").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k); const [c1] = COR[x.agente] || ["#475569"];
-    return `<div class="ln ${novo ? "novo" : ""}"><i class="dot" style="background:${c1}"></i><span class="h">${hm(x.t)}</span><span class="tg" style="color:${c1}">${esc((x.nome || "").toUpperCase())}:</span><span class="tx">${esc(x.texto)}</span></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
+  $("log").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k); const mot = String(x.texto).startsWith("⚙ motor"); const [c1] = COR[mot ? "motor" : x.agente] || ["#475569"];
+    return `<div class="ln ${novo ? "novo" : ""}"><i class="dot" style="background:${c1}"></i><span class="h">${hm(x.t)}</span><span class="tg" style="color:${c1}">${mot ? "MOTOR" : esc((x.nome || "").toUpperCase())}:</span><span class="tx">${esc(mot ? x.texto.replace("⚙ motor: ", "") : x.texto)}</span></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
   // descartadas por regra
   const ds = vv.descartes || [], tot = ds.reduce((a, d) => a + d.total, 0), mx = Math.max(1, ...ds.map(d => d.total));
   $("kd-n").textContent = tot ? `${tot} descartadas · ${ds.reduce((a, d) => a + d.hoje, 0)} hoje` : "";

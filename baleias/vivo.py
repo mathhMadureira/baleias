@@ -17,17 +17,17 @@ OPERADOR = "laboratorio"
 CAPITAL, META = 10.0, 20.0
 RODADA_S = 10 * 60
 
-FLUXO = [                                                     # 24/11 (dono: "modelo mais rápido"): olheiro → operador
-    {"id": "cacador", "nome": "Caçador", "avatar": "🔭", "cargo": "olheiro", "entrega": "3 entradas a mercado (criptos e memecoins)"},
-    {"id": "laboratorio", "nome": "Laboratório", "avatar": "🔬", "cargo": "operador", "entrega": "entra a mercado e executa"},
+FLUXO = [                                                     # 25/11: o MOTOR executa a cada 30 s; os agentes o comandam
+    {"id": "laboratorio", "nome": "Operador", "avatar": "🎛", "cargo": "comanda o motor", "entrega": "lados, força mínima, bloqueios"},
+    {"id": "cacador", "nome": "Radar", "avatar": "📡", "cargo": "moedas preferidas", "entrega": "o que priorizar e evitar"},
 ]
 APOIO = [
-    {"id": "baleias", "nome": "Baleias", "avatar": "⚓", "cargo": "chefe: coordena e fala com o dono"},
-    {"id": "guardiao", "nome": "Guardião", "avatar": "🛡", "cargo": "risco: revisa a posição aberta"},
-    {"id": "treinador", "nome": "Treinador", "avatar": "🎯", "cargo": "juiz: revisa as operações fechadas"},
-    {"id": "memecoins", "nome": "Memecoins", "avatar": "🐸", "cargo": "pesquisa de memecoins"},
-    {"id": "engenheiro", "nome": "Engenheiro", "avatar": "🛠", "cargo": "infraestrutura e corretora"},
-    {"id": "minerador", "nome": "Minerador", "avatar": "⛏", "cargo": "tesouraria: ganhos grátis"},
+    {"id": "guardiao", "nome": "Risco", "avatar": "🛡", "cargo": "manda sair quando a tese quebra"},
+    {"id": "memecoins", "nome": "Memes", "avatar": "🐸", "cargo": "memecoins e risco de golpe"},
+    {"id": "treinador", "nome": "Juiz", "avatar": "⚖", "cargo": "placar e lições"},
+    {"id": "engenheiro", "nome": "Engenheiro", "avatar": "🛠", "cargo": "saúde do motor e do painel"},
+    {"id": "minerador", "nome": "Tesouro", "avatar": "💰", "cargo": "ganhos grátis"},
+    {"id": "baleias", "nome": "Baleias", "avatar": "🐋", "cargo": "chefe da equipe"},
 ]
 NOMES = {a["id"]: a for a in FLUXO + APOIO}
 
@@ -159,7 +159,8 @@ def vivo(agora=None):
         u = ult.get(a["id"])
         desk.append({**a, "ultimo": u, "contagem": cont.get(a["id"], {"total": 0, "hoje": 0}),
                      "ativo": bool(u and agora - u["t"] < 600)})
-    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco,
+    motor = {"estado": _json(SHARED / "equipe" / "motor_estado.json"), "comando": _json(SHARED / "equipe" / "motor.json")}
+    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "motor": motor,
             "descartes": sorted(desc.values(), key=lambda d: -d["total"]), "descartes_recentes": ult_desc[-8:][::-1], "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
             "progresso": (c["patrimonio"] - c["capital"]) / (META - c["capital"]), "operacoes": len(rs),
             "ganhos": sum(1 for r in rs if r > 0), "resultado": sum(rs), "melhor": max(rs) if rs else None, "pior": min(rs) if rs else None},

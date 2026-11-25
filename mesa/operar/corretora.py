@@ -797,6 +797,9 @@ def main():
             print(f"{c.NOME}: validação FALHOU ({str(ex)[:200]}); nada foi feito")
             raise SystemExit(1)
         return
+    if agente == "laboratorio" and opc != ["--conta"] and os.environ.get("BALEIAS_MOTOR") != "1":
+        raise SystemExit("PARE: a carteira única é executada só pelo motor (mesa/operar/motor.py, serviço baleias-motor). "
+                         "Comande pelo motor: python3 -I motor.py set|sair|bloquear ... Nada foi feito.")
     c = conectar(agente)
     PASTA.mkdir(exist_ok=True)
     with open(PASTA / f"{agente}.lock", "w") as trava:
