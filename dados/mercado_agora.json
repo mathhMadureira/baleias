@@ -1,6 +1,6 @@
 {
- "t": 1795580210,
- "hora_utc": "2026-11-25 04:16 UTC",
+ "t": 1795580444,
+ "hora_utc": "2026-11-25 04:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   -0.65,
   -0.05,
   0.31,
-  -0.05
+  -0.09
  ],
  "contexto": {
-  "t": 1795580211,
+  "t": 1795580445,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795580082,
+    "hora_utc": "25/11 04:14",
+    "titulo": "Trump willing to pardon Jensen Huang, says it won’t be necessary"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795577720,
@@ -260,12 +266,6 @@
     "t": 1795546527,
     "hora_utc": "24/11 18:55",
     "titulo": "What the CFTC’s New Crypto Reserves Guidance Actually Allows—And What It Doesn’t"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795545363,
-    "hora_utc": "24/11 18:36",
-    "titulo": "South Korea Moves to Lift Its ICO Ban After Nearly a Decade"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.0,
+   "media_top20_anual_pct": 4.5,
    "principais_anual_pct": {
-    "BTC": -4.6,
-    "ETH": 7.4,
+    "BTC": -4.4,
+    "ETH": 7.2,
     "SOL": 11.0
    },
    "leitura": "neutro"
