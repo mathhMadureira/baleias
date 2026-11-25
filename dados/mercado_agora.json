@@ -1,6 +1,6 @@
 {
- "t": 1795627446,
- "hora_utc": "2026-11-25 17:24 UTC",
+ "t": 1795627666,
+ "hora_utc": "2026-11-25 17:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   0.27,
   0.18,
   0.45,
-  0.9
+  0.75
  ],
  "contexto": {
-  "t": 1795627447,
+  "t": 1795627667,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795627173,
+    "hora_utc": "25/11 17:19",
+    "titulo": "Nvidia agrees to $290M settlement over crypto mining revenue disclosures"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795626962,
@@ -260,12 +266,6 @@
     "t": 1795609126,
     "hora_utc": "25/11 12:18",
     "titulo": "Fed’s preferred inflation gauge lands with a December rate increase already priced in"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795607870,
-    "hora_utc": "25/11 11:57",
-    "titulo": "Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.9,
+   "media_top20_anual_pct": 6.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.6,
-    "SOL": 4.5
+    "ETH": 1.6,
+    "SOL": 3.6
    },
    "leitura": "neutro"
   },
