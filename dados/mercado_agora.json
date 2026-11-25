@@ -1,6 +1,6 @@
 {
- "t": 1795607762,
- "hora_utc": "2026-11-25 11:56 UTC",
+ "t": 1795607997,
+ "hora_utc": "2026-11-25 11:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,17 @@
   1.18,
   -0.58,
   -0.31,
-  -0.19
+  -0.44
  ],
  "contexto": {
-  "t": 1795607763,
+  "t": 1795607998,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795607870,
+    "hora_utc": "25/11 11:57",
+    "titulo": "Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795607526,
@@ -260,12 +266,6 @@
     "t": 1795595747,
     "hora_utc": "25/11 08:35",
     "titulo": "Live updates: Bitcoin slips back under $60,000 as HYPE leads altcoins lower"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795589699,
-    "hora_utc": "25/11 06:54",
-    "titulo": "South Korea’s crypto bill could move stablecoin race beyond token issuance"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 1.8,
+   "media_top20_anual_pct": 1.7,
    "principais_anual_pct": {
-    "BTC": -6.4,
-    "ETH": 10.7,
-    "SOL": -11.6
+    "BTC": -6.5,
+    "ETH": 10.9,
+    "SOL": -11.5
    },
    "leitura": "neutro"
   },
