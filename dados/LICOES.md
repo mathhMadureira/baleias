@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 01:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 01:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -20,7 +20,7 @@ Carteira **US$ 6.28** · 73 operações fechadas · 0 abertas
 Carteira **US$ 7.04** · 56 operações fechadas · 0 abertas
 
 - **Total:** 15/56 com lucro (27%), resultado -2.96, média -0.053 por operação.
-- **Últimas 24 h:** 0/3 com lucro, -0.15.
+- **Últimas 24 h:** 0/2 com lucro, -0.12.
 - **Por horário:** 18–23 UTC: 25 op, 20% certas, -1.39 · 06–11 UTC: 4 op, 25% certas, -0.80 · 00–05 UTC: 8 op, 12% certas, -0.73 · 12–17 UTC: 19 op, 42% certas, -0.05
 - **Por lado:** compra: 13 op, 8% certas, -3.25 · venda: 43 op, 33% certas, +0.29
 - **Por motivo de saída:** stop de segurança −0.80% na co: 12 op, 8% certas, -1.37 · stop de segurança −3.8% na cor: 1 op, 0% certas, -0.97 · stop de segurança −3.0% na cor: 1 op, 0% certas, -0.79 · stop de segurança −1.20% na co: 3 op, 0% certas, -0.77 · stop de segurança −0.90% na co: 4 op, 0% certas, -0.63 · stop de segurança −1.7% na cor: 1 op, 0% certas, -0.45 · stop de segurança −1.00% na co: 1 op, 0% certas, -0.20 · stop de segurança −0.72% na co: 1 op, 0% certas, -0.19 · stop de segurança −1.30% na co: 1 op, 0% certas, -0.15 · stop de segurança −0.50% na co: 2 op, 0% certas, -0.15 · stop de segurança −0.60% na co: 5 op, 40% certas, -0.13 · prazo da operação (45 min): 1 op, 0% certas, -0.12 · stop móvel (pico +0.62%, guard: 1 op, 0% certas, -0.11 · stop de segurança −0.70% na co: 2 op, 50% certas, -0.00 · stop móvel (pico +0.74%, guard: 1 op, 100% certas, +0.05 · stop móvel (pico +1.91%, guard: 1 op, 100% certas, +0.07 · fora da lista de posições do c: 10 op, 10% certas, +0.27 · stop móvel (pico +1.96%, guard: 1 op, 100% certas, +0.28 · prazo da operação (120 min): 1 op, 100% certas, +0.33 · alvo +2.40% na corretora: 2 op, 100% certas, +0.78 · stop móvel na corretora (pico : 4 op, 100% certas, +1.28
@@ -69,9 +69,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.4% das moedas subindo em 24 h, 25.8% em 4 h · BTC 24 h -2.73%, 4 h -0.2%.
+- **Amplitude:** 19.2% das moedas subindo em 24 h, 25.6% em 4 h · BTC 24 h -2.73%, 4 h -0.2%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': -6.7, 'ETH': -1.2, 'SOL': 7.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.7%/ano · {'BTC': -7.4, 'ETH': -3.4, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** INIT OCO invertido (alta, CONFIRMOU) · SKY bandeira de alta (alta, CONFIRMOU) · BCH fundo duplo (alta, formado) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · ENSO fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado)
 - 📰 24/11 23:48 UTC · Cointelegraph: Hackers breach CIA intelligence network in latest US cyberattack
@@ -83,7 +83,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.7 h.
+- ⚠️ **Rotina parada:** sem decisão há 4.8 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -118,7 +118,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 51140 apostas conferidas ao vivo, acerto 54.5%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 51140 apostas conferidas ao vivo, acerto 54.5%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
