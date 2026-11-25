@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 01:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 01:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 18.4% das moedas subindo em 24 h, 39.2% em 4 h · BTC 24 h -2.96%, 4 h -0.01%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': -5.4, 'ETH': -0.5, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.9%/ano · {'BTC': -5.0, 'ETH': -0.7, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** INIT OCO invertido (alta, CONFIRMOU) · SKY bandeira de alta (alta, CONFIRMOU) · BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · ENSO fundo duplo (alta, formado) · INIT topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado) · OPG fundo duplo (alta, formado)
 - 📰 24/11 23:48 UTC · Cointelegraph: Hackers breach CIA intelligence network in latest US cyberattack
