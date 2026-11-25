@@ -1,21 +1,21 @@
 {
- "t": 1795628108,
- "hora_utc": "2026-11-25 17:35 UTC",
+ "t": 1795628329,
+ "hora_utc": "2026-11-25 17:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 119,
+  "moedas": 120,
   "subindo_pct": 90.8,
-  "mediana_pct": 1.87
+  "mediana_pct": 1.86
  },
  "mercado_4h": {
-  "moedas": 119,
-  "subindo_pct": 79.8,
-  "mediana_pct": 1.51
+  "moedas": 120,
+  "subindo_pct": 79.2,
+  "mediana_pct": 1.5
  },
  "mercado_24h": {
-  "moedas": 119,
-  "subindo_pct": 26.9,
-  "mediana_pct": -1.21
+  "moedas": 120,
+  "subindo_pct": 26.7,
+  "mediana_pct": -1.24
  },
  "btc": {
   "1h": 0.79,
@@ -172,11 +172,23 @@
   0.27,
   0.18,
   0.45,
-  1.41
+  1.52
  ],
  "contexto": {
-  "t": 1795628108,
+  "t": 1795628330,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795628313,
+    "hora_utc": "25/11 17:38",
+    "titulo": "'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795628002,
+    "hora_utc": "25/11 17:33",
+    "titulo": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795627173,
@@ -254,18 +266,6 @@
     "t": 1795612524,
     "hora_utc": "25/11 13:15",
     "titulo": "French Senate Rejects Plan to Make Crypto Holders Declare Self-Custody Wallets"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795611729,
-    "hora_utc": "25/11 13:02",
-    "titulo": "Ukraine passes bill to legalize crypto and tax profits at 23%"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795609126,
-    "hora_utc": "25/11 12:18",
-    "titulo": "Fed’s preferred inflation gauge lands with a December rate increase already priced in"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.8,
+   "media_top20_anual_pct": 6.7,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 2.9,
-    "SOL": 4.7
+    "SOL": 4.4
    },
    "leitura": "neutro"
   },
@@ -332,8 +332,8 @@
  "v4": {
   "vela": "11:00 UTC",
   "apostas": 160,
-  "compras": 42,
-  "vendas": 118,
+  "compras": 41,
+  "vendas": 119,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -378,10 +378,6 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "SOPH",
-    "prob_subir": 0.645
-   },
-   {
     "moeda": "ENS",
     "prob_subir": 0.614
    },
@@ -400,6 +396,10 @@
    {
     "moeda": "BANK",
     "prob_subir": 0.598
+   },
+   {
+    "moeda": "USUAL",
+    "prob_subir": 0.585
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -670,12 +670,12 @@
   "z_contra_lab": -0.1,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.508,
-    "n": 23929
+    "acerto": 0.5078,
+    "n": 24057
    },
    "segue_maioria_24h": {
-    "acerto": 0.5104,
-    "n": 30295
+    "acerto": 0.512,
+    "n": 30353
    }
   },
   "referencia_ganha": [],
