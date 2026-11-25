@@ -1,21 +1,21 @@
 {
- "t": 1795636573,
- "hora_utc": "2026-11-25 19:56 UTC",
+ "t": 1795636774,
+ "hora_utc": "2026-11-25 19:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 124,
-  "subindo_pct": 82.3,
-  "mediana_pct": 0.9
+  "moedas": 125,
+  "subindo_pct": 82.4,
+  "mediana_pct": 0.92
  },
  "mercado_4h": {
-  "moedas": 124,
-  "subindo_pct": 90.3,
-  "mediana_pct": 4.87
+  "moedas": 125,
+  "subindo_pct": 90.4,
+  "mediana_pct": 4.9
  },
  "mercado_24h": {
-  "moedas": 124,
-  "subindo_pct": 75.8,
-  "mediana_pct": 1.14
+  "moedas": 125,
+  "subindo_pct": 76.0,
+  "mediana_pct": 1.17
  },
  "btc": {
   "1h": 0.46,
@@ -118,6 +118,12 @@
    "vol": 4.8
   },
   {
+   "moeda": "CFG",
+   "4h": 11.97,
+   "24h": 11.73,
+   "vol": 2.01
+  },
+  {
    "moeda": "BEB",
    "4h": 10.94,
    "24h": -0.85,
@@ -140,12 +146,6 @@
    "4h": 8.8,
    "24h": -3.57,
    "vol": 1.69
-  },
-  {
-   "moeda": "PUMP",
-   "4h": 8.53,
-   "24h": 3.47,
-   "vol": 2.2
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.45,
   1.7,
   0.21,
-  0.53
+  0.22
  ],
  "contexto": {
-  "t": 1795636574,
+  "t": 1795636775,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 13.4,
+   "media_top20_anual_pct": 13.2,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -302,6 +302,13 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.00418
+   },
+   {
+    "moeda": "CFG",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.044
    },
    {
     "moeda": "NFP",
@@ -366,9 +373,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 97,
+  "apostas": 96,
   "compras": 50,
-  "vendas": 47,
+  "vendas": 46,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -705,12 +712,12 @@
   "z_contra_lab": -0.5,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5058,
-    "n": 24564
+    "acerto": 0.5059,
+    "n": 24655
    },
    "segue_maioria_24h": {
-    "acerto": 0.5133,
-    "n": 30536
+    "acerto": 0.5134,
+    "n": 30571
    }
   },
   "referencia_ganha": [],

@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 19:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 19:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 75.8% das moedas subindo em 24 h, 90.3% em 4 h · BTC 24 h 0.24%, 4 h 2.97%.
+- **Amplitude:** 76.0% das moedas subindo em 24 h, 90.4% em 4 h · BTC 24 h 0.24%, 4 h 2.97%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.4%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ALT topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ORDI topo duplo (baixa, formado) · STO fundo duplo (alta, formado) · SUPER fundo duplo (alta, formado) · XPL topo duplo (baixa, formado) · XPL OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** ALT topo duplo (baixa, formado) · CFG topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ORDI topo duplo (baixa, formado) · STO fundo duplo (alta, formado) · SUPER fundo duplo (alta, formado) · XPL topo duplo (baixa, formado) · XPL OCO invertido (alta, formado)
 - 📰 25/11 19:28 UTC · Decrypt: Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit
 - 📰 25/11 18:54 UTC · Cointelegraph: Ethereum Foundation backs Keccak-256 to counter quantum, AI threats
 - 📰 25/11 18:24 UTC · CoinDesk: French Senate blocks new crypto tax and wallet list critics called a kidnapping risk
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 55081 apostas conferidas ao vivo, acerto 54.2%; prevê 123 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 55081 apostas conferidas ao vivo, acerto 54.2%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
