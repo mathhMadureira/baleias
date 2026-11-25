@@ -1,6 +1,6 @@
 {
- "t": 1795600497,
- "hora_utc": "2026-11-25 09:54 UTC",
+ "t": 1795600731,
+ "hora_utc": "2026-11-25 09:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   0.13,
   -0.84,
   1.18,
-  -0.78
+  -0.69
  ],
  "contexto": {
-  "t": 1795600498,
+  "t": 1795600732,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795600342,
+    "hora_utc": "25/11 09:52",
+    "titulo": "Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795596028,
@@ -260,12 +266,6 @@
     "t": 1795559762,
     "hora_utc": "24/11 22:36",
     "titulo": "OpenAI and Anthropic Insiders Fear Their Next AI Models Are Too Dangerous to Release"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795557025,
-    "hora_utc": "24/11 21:50",
-    "titulo": "Europol follows $28.5M crypto trail in streaming piracy crackdown"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.8,
+   "media_top20_anual_pct": 2.6,
    "principais_anual_pct": {
-    "BTC": -2.8,
+    "BTC": -3.2,
     "ETH": 11.0,
-    "SOL": -18.2
+    "SOL": -18.3
    },
    "leitura": "neutro"
   },
