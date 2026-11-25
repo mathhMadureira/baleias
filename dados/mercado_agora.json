@@ -1,6 +1,6 @@
 {
- "t": 1795574060,
- "hora_utc": "2026-11-25 02:34 UTC",
+ "t": 1795574294,
+ "hora_utc": "2026-11-25 02:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -175,13 +175,13 @@
   -0.03
  ],
  "contexto": {
-  "t": 1795574061,
+  "t": 1795574295,
   "noticias": [
    {
     "fonte": "Cointelegraph",
     "t": 1795570859,
     "hora_utc": "25/11 01:40",
-    "titulo": "CleanSpark weighs selling more Bitcoin than it mines to ‘de-risk’ books"
+    "titulo": "CleanSpark weighs selling more Bitcoin than it mines to de-risk books"
    },
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 0.7,
+   "media_top20_anual_pct": 0.5,
    "principais_anual_pct": {
-    "BTC": -11.6,
-    "ETH": -2.0,
+    "BTC": -11.5,
+    "ETH": -2.2,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -648,7 +648,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 9.22,
+   "carteira": 9.24,
    "n_abertas": 1,
    "abertas": [
     [
@@ -709,7 +709,7 @@
     "ganho_medio": 0.344,
     "perda_media": -0.228,
     "fator_lucro": 0.8,
-    "carteira": 9.22
+    "carteira": 9.24
    },
    "guardiao": {
     "ops": 74,
