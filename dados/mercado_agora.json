@@ -1,6 +1,6 @@
 {
- "t": 1795637149,
- "hora_utc": "2026-11-25 20:05 UTC",
+ "t": 1795637335,
+ "hora_utc": "2026-11-25 20:08 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   1.7,
   0.21,
   0.25,
-  0.11
+  0.05
  ],
  "contexto": {
-  "t": 1795637150,
+  "t": 1795637336,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795637163,
+    "hora_utc": "25/11 20:06",
+    "titulo": "What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795634934,
@@ -260,12 +266,6 @@
     "t": 1795622551,
     "hora_utc": "25/11 16:02",
     "titulo": "EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795622527,
-    "hora_utc": "25/11 16:02",
-    "titulo": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 13.7,
+   "media_top20_anual_pct": 13.6,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
