@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 04:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 04:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 16.0% das moedas subindo em 24 h, 25.6% em 4 h · BTC 24 h -1.52%, 4 h -0.69%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.4%/ano · {'BTC': -10.5, 'ETH': 2.0, 'SOL': 9.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.8%/ano · {'BTC': -6.5, 'ETH': 4.6, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 20.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** GRAM estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · MEGA bandeira de baixa (baixa, CONFIRMOU) · OPG bandeira de alta (alta, CONFIRMOU) · BTC triângulo descendente (baixa, formado) · ERA topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado)
 - 📰 25/11 03:35 UTC · CoinDesk: Trump says he's willing to give Nvidia's Huang a pardon, doesn't think he needs one
@@ -83,7 +83,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 7.7 h.
+- ⚠️ **Rotina parada:** sem decisão há 7.8 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
