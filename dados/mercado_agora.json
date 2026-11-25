@@ -1,6 +1,6 @@
 {
- "t": 1795577625,
- "hora_utc": "2026-11-25 03:33 UTC",
+ "t": 1795577860,
+ "hora_utc": "2026-11-25 03:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,11 +172,17 @@
   -0.28,
   -0.65,
   -0.05,
-  0.43
+  0.5
  ],
  "contexto": {
-  "t": 1795577626,
+  "t": 1795577861,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795577720,
+    "hora_utc": "25/11 03:35",
+    "titulo": "Trump says he's willing to give Nvidia's Huang a pardon, doesn't think he needs one"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795570859,
@@ -260,12 +266,6 @@
     "t": 1795545363,
     "hora_utc": "24/11 18:36",
     "titulo": "South Korea Moves to Lift Its ICO Ban After Nearly a Decade"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795545102,
-    "hora_utc": "24/11 18:31",
-    "titulo": "CFTC sets new prediction market rules as more firms seek US entry"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.9,
+   "media_top20_anual_pct": 3.2,
    "principais_anual_pct": {
-    "BTC": -10.1,
-    "ETH": 3.0,
+    "BTC": -9.8,
+    "ETH": 3.1,
     "SOL": 11.0
    },
    "leitura": "neutro"
