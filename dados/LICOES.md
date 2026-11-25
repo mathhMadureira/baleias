@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 00:25 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 00:29 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -46,7 +46,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 Carteira **US$ 9.22** · 26 operações fechadas · 0 abertas
 
 - **Total:** 9/26 com lucro (35%), resultado -0.78, média -0.030 por operação.
-- **Últimas 24 h:** 2/4 com lucro, +0.52.
+- **Últimas 24 h:** 1/2 com lucro, +0.51.
 - **Por horário:** 18–23 UTC: 15 op, 33% certas, -1.13 · 00–05 UTC: 6 op, 33% certas, -0.22 · 12–17 UTC: 5 op, 40% certas, +0.56
 - **Por lado:** compra: 12 op, 33% certas, -0.42 · venda: 14 op, 36% certas, -0.37
 - **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Método fixo, regime neutro (65: 1 op, 0% certas, -0.06 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · Método fixo, regime neutro: v4: 1 op, 100% certas, +0.06 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo (H69): v4 subir 0,: 2 op, 50% certas, +0.51 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56
@@ -71,7 +71,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 18.4% das moedas subindo em 24 h, 28.0% em 4 h · BTC 24 h -2.74%, 4 h -0.3%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': -9.2, 'ETH': -3.2, 'SOL': 6.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.9%/ano · {'BTC': -8.7, 'ETH': -3.6, 'SOL': 6.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB triângulo descendente (baixa, formado) · BTC triângulo descendente (baixa, formado) · CRV fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · NIGHT triângulo descendente (baixa, formado) · OPG fundo duplo (alta, formado) · STX fundo duplo (alta, formado)
 - 📰 24/11 23:48 UTC · Cointelegraph: Hackers breach CIA intelligence network in latest US cyberattack
@@ -83,7 +83,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 4.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 4.1 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
