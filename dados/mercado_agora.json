@@ -1,6 +1,6 @@
 {
- "t": 1795646525,
- "hora_utc": "2026-11-25 22:42 UTC",
+ "t": 1795646715,
+ "hora_utc": "2026-11-25 22:45 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -175,7 +175,7 @@
   -0.06
  ],
  "contexto": {
-  "t": 1795646526,
+  "t": 1795646716,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 13.4,
+   "media_top20_anual_pct": 13.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.5,
-    "SOL": 6.5
+    "ETH": 7.7,
+    "SOL": 6.2
    },
    "leitura": "neutro"
   },
@@ -620,7 +620,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.13,
+   "carteira": 10.11,
    "n_abertas": 1,
    "abertas": [
     [
@@ -681,7 +681,7 @@
     "ganho_medio": 0.314,
     "perda_media": -0.216,
     "fator_lucro": 0.81,
-    "carteira": 10.13
+    "carteira": 10.11
    },
    "guardiao": {
     "ops": 74,
@@ -696,38 +696,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30440 apostas (632 velas, 18/11 22:45–25/11 22:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5317,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 30373 apostas (631 velas, 18/11 23:00–25/11 22:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5308,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.33,
+  "z_contra_lab": -0.43,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5038,
-    "n": 24636
+    "acerto": 0.5048,
+    "n": 24577
    },
    "segue_maioria_24h": {
-    "acerto": 0.5114,
-    "n": 30345
+    "acerto": 0.5124,
+    "n": 30278
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5433,
-    "n": 9008
+    "acerto": 0.543,
+    "n": 9000
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5498,
-    "n": 3336
+    "acerto": 0.5496,
+    "n": 3335
    },
    "confianca:<0,05": {
-    "acerto": 0.5169,
-    "n": 17225
+    "acerto": 0.5154,
+    "n": 17168
    },
    "confianca:≥0,12": {
-    "acerto": 0.6361,
-    "n": 871
+    "acerto": 0.6356,
+    "n": 870
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5086,
@@ -742,16 +742,16 @@
     "n": 7925
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.543,
-    "n": 7112
+    "acerto": 0.5391,
+    "n": 7045
    },
    "lado:compra": {
-    "acerto": 0.525,
-    "n": 13633
+    "acerto": 0.523,
+    "n": 13567
    },
    "lado:venda": {
     "acerto": 0.5371,
-    "n": 16807
+    "n": 16806
    }
   }
  },
