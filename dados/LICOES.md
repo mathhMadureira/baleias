@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 17:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 18:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,17 +66,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 43.8% das moedas subindo em 24 h, 90.1% em 4 h · BTC 24 h -0.51%, 4 h 2.48%.
+- **Amplitude:** 37.2% das moedas subindo em 24 h, 90.9% em 4 h · BTC 24 h -0.51%, 4 h 2.48%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.4%/ano · {'BTC': 11.0, 'ETH': 5.2, 'SOL': 3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.1%/ano · {'BTC': 11.0, 'ETH': 7.0, 'SOL': 9.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ALT topo duplo (baixa, formado) · CHIP fundo duplo (alta, formado) · PEPE topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ALT topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado)
+- 📰 25/11 17:53 UTC · Cointelegraph: US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook
 - 📰 25/11 17:46 UTC · Decrypt: OpenAI’s Changes to ChatGPT Could Drastically Cut Usage Limits for Paying Subscribers
 - 📰 25/11 17:38 UTC · CoinDesk: 'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles
 - 📰 25/11 17:33 UTC · Cointelegraph: Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%
 - 📰 25/11 17:19 UTC · Cointelegraph: Nvidia agrees to $290M settlement over crypto mining revenue disclosures
 - 📰 25/11 17:16 UTC · Decrypt: Elon Musk’s X Wins Court Judgment Against Alleged Bitcoin Bot Farm Operators
-- 📰 25/11 17:10 UTC · Cointelegraph: FCC authorizes SpaceX to deploy 1M satellites for orbital AI data centers
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 54652 apostas conferidas ao vivo, acerto 54.3%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 54719 apostas conferidas ao vivo, acerto 54.3%; prevê 86 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
