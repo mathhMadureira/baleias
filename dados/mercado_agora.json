@@ -1,6 +1,6 @@
 {
- "t": 1795645951,
- "hora_utc": "2026-11-25 22:32 UTC",
+ "t": 1795646143,
+ "hora_utc": "2026-11-25 22:35 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,11 +172,17 @@
   0.25,
   0.65,
   -0.05,
-  -0.11
+  -0.06
  ],
  "contexto": {
-  "t": 1795645952,
+  "t": 1795646144,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795645993,
+    "hora_utc": "25/11 22:33",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795643618,
@@ -260,12 +266,6 @@
     "t": 1795628313,
     "hora_utc": "25/11 17:38",
     "titulo": "'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795628002,
-    "hora_utc": "25/11 17:33",
-    "titulo": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 14.2,
+   "media_top20_anual_pct": 14.0,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 9.0,
-    "SOL": 7.6
+    "ETH": 8.3,
+    "SOL": 7.5
    },
    "leitura": "neutro"
   },
@@ -620,7 +620,7 @@
    "avatar": "🔬",
    "motor": "agente OpenBot · só o que passou no lab",
    "missao": "Opera só o achado mais robusto do laboratório: apostas do v4 com confiança ≥ 0,12 (65–68% de acerto), no lado do regime de 24 h.",
-   "carteira": 10.11,
+   "carteira": 10.08,
    "n_abertas": 1,
    "abertas": [
     [
@@ -681,7 +681,7 @@
     "ganho_medio": 0.314,
     "perda_media": -0.216,
     "fator_lucro": 0.81,
-    "carteira": 10.11
+    "carteira": 10.08
    },
    "guardiao": {
     "ops": 74,
