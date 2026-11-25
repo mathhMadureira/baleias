@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 08:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 08:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,7 +68,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.4% das moedas subindo em 24 h, 31.7% em 4 h · BTC 24 h -2.81%, 4 h -1.15%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.1%/ano · {'BTC': -11.4, 'ETH': -0.7, 'SOL': -13.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -1.9%/ano · {'BTC': -10.6, 'ETH': -0.2, 'SOL': -13.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BABY fundo duplo (alta, formado) · BMT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 25/11 06:54 UTC · Cointelegraph: South Korea’s crypto bill could move stablecoin race beyond token issuance
