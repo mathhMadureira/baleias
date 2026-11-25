@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 18:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 18:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,19 +68,19 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 40.5% das moedas subindo em 24 h, 90.9% em 4 h · BTC 24 h -0.67%, 4 h 2.37%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.3%/ano · {'BTC': 11.0, 'ETH': 10.4, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.1%/ano · {'BTC': 11.0, 'ETH': 9.8, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SUI estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · SUPER fundo duplo (alta, CONFIRMOU) · XRP estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ZEC estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ALT topo duplo (baixa, formado) · MARSCOIN topo duplo (baixa, formado) · MARSCOIN fundo duplo (alta, formado) · ORDI topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado) · XPL topo duplo (baixa, formado)
+- 📰 25/11 18:24 UTC · CoinDesk: French Senate blocks new crypto tax and wallet list critics called a kidnapping risk
 - 📰 25/11 18:18 UTC · Decrypt: Elon Musk’s SpaceX Gets FCC Approval to Launch AI Data Centers in Space
 - 📰 25/11 17:53 UTC · Cointelegraph: US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook
 - 📰 25/11 17:46 UTC · Decrypt: OpenAI’s Changes to ChatGPT Could Drastically Cut Usage Limits for Paying Subscribers
 - 📰 25/11 17:38 UTC · CoinDesk: 'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles
 - 📰 25/11 17:33 UTC · Cointelegraph: Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%
-- 📰 25/11 17:19 UTC · Cointelegraph: Nvidia agrees to $290M settlement over crypto mining revenue disclosures
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 22.0 h.
+- ⚠️ **Rotina parada:** sem decisão há 22.1 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 

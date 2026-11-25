@@ -1,6 +1,6 @@
 {
- "t": 1795631013,
- "hora_utc": "2026-11-25 18:23 UTC",
+ "t": 1795631234,
+ "hora_utc": "2026-11-25 18:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 121,
@@ -172,11 +172,17 @@
   0.18,
   0.45,
   1.7,
-  0.18
+  0.12
  ],
  "contexto": {
-  "t": 1795631014,
+  "t": 1795631235,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795631087,
+    "hora_utc": "25/11 18:24",
+    "titulo": "French Senate blocks new crypto tax and wallet list critics called a kidnapping risk"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795630690,
@@ -260,12 +266,6 @@
     "t": 1795618037,
     "hora_utc": "25/11 14:47",
     "titulo": "South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795616496,
-    "hora_utc": "25/11 14:21",
-    "titulo": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 10.3,
+   "media_top20_anual_pct": 10.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 10.4,
+    "ETH": 9.8,
     "SOL": 11.0
    },
    "leitura": "neutro"
