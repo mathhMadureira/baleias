@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 07:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 07:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 14.8% das moedas subindo em 24 h, 49.2% em 4 h · BTC 24 h -2.21%, 4 h -0.66%.
+- **Amplitude:** 15.4% das moedas subindo em 24 h, 49.6% em 4 h · BTC 24 h -2.21%, 4 h -0.66%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': 2.5, 'ETH': 6.0, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BLUR estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BABY fundo duplo (alta, formado) · BMT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.2%/ano · {'BTC': 2.2, 'ETH': 5.8, 'SOL': 11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 12.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BLUR estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ETH estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · ALICE topo duplo (baixa, formado) · BABY fundo duplo (alta, formado) · BMT topo duplo (baixa, formado) · ERA topo duplo (baixa, formado) · ERA OCO invertido (alta, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · MANTRA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 25/11 06:54 UTC · Cointelegraph: South Korea’s crypto bill could move stablecoin race beyond token issuance
 - 📰 25/11 06:33 UTC · CoinDesk: Solana developers move to stop validators finishing work on blocks that already lost
 - 📰 25/11 06:15 UTC · CoinDesk: Just 10 accounts drove all of the XRP Ledger's trading growth last quarter
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 52403 apostas conferidas ao vivo, acerto 54.5%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 52403 apostas conferidas ao vivo, acerto 54.5%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
