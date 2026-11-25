@@ -1,20 +1,20 @@
 {
- "t": 1795632125,
- "hora_utc": "2026-11-25 18:42 UTC",
+ "t": 1795632347,
+ "hora_utc": "2026-11-25 18:45 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 121,
-  "subindo_pct": 89.3,
-  "mediana_pct": 1.18
+  "subindo_pct": 68.6,
+  "mediana_pct": 0.72
  },
  "mercado_4h": {
   "moedas": 121,
-  "subindo_pct": 91.7,
-  "mediana_pct": 3.95
+  "subindo_pct": 93.4,
+  "mediana_pct": 4.3
  },
  "mercado_24h": {
   "moedas": 121,
-  "subindo_pct": 45.5,
+  "subindo_pct": 46.3,
   "mediana_pct": -0.19
  },
  "btc": {
@@ -38,6 +38,12 @@
    "vol": 0.97
   },
   {
+   "moeda": "ACE",
+   "4h": -2.04,
+   "24h": -3.6,
+   "vol": 0.57
+  },
+  {
    "moeda": "AIGENSYN",
    "4h": -1.73,
    "24h": -1.79,
@@ -46,8 +52,8 @@
   {
    "moeda": "ENSO",
    "4h": -0.74,
-   "24h": -2.66,
-   "vol": 0.94
+   "24h": -3.14,
+   "vol": 0.9
   },
   {
    "moeda": "USUAL",
@@ -56,22 +62,10 @@
    "vol": 1.62
   },
   {
-   "moeda": "ACE",
-   "4h": -0.55,
-   "24h": -5.48,
-   "vol": 0.63
-  },
-  {
    "moeda": "ATM",
    "4h": -0.47,
    "24h": -21.6,
    "vol": 0.63
-  },
-  {
-   "moeda": "KAVA",
-   "4h": -0.33,
-   "24h": -0.45,
-   "vol": 1.55
   },
   {
    "moeda": "BABY",
@@ -80,10 +74,16 @@
    "vol": 0.67
   },
   {
-   "moeda": "SYRUP",
-   "4h": 0.0,
-   "24h": -8.71,
-   "vol": 1.16
+   "moeda": "U",
+   "4h": 0.01,
+   "24h": -0.08,
+   "vol": 0.93
+  },
+  {
+   "moeda": "TRX",
+   "4h": 0.16,
+   "24h": -1.2,
+   "vol": 2.48
   }
  ],
  "maiores_altas_4h": [
@@ -112,40 +112,40 @@
    "vol": 1.61
   },
   {
+   "moeda": "RAY",
+   "4h": 8.83,
+   "24h": 1.61,
+   "vol": 1.96
+  },
+  {
+   "moeda": "CHIP",
+   "4h": 8.49,
+   "24h": -4.17,
+   "vol": 2.44
+  },
+  {
    "moeda": "ZEC",
    "4h": 8.16,
    "24h": 2.62,
    "vol": 2.42
   },
   {
-   "moeda": "PROM",
-   "4h": 7.63,
-   "24h": 16.86,
-   "vol": 1.54
+   "moeda": "PLUME",
+   "4h": 8.07,
+   "24h": 0.57,
+   "vol": 2.43
   },
   {
-   "moeda": "LISTA",
-   "4h": 7.28,
-   "24h": 7.19,
-   "vol": 1.21
+   "moeda": "STRK",
+   "4h": 8.04,
+   "24h": 1.68,
+   "vol": 2.68
   },
   {
-   "moeda": "RAY",
-   "4h": 7.14,
-   "24h": 0.94,
-   "vol": 2.12
-  },
-  {
-   "moeda": "XPL",
-   "4h": 6.91,
-   "24h": 6.46,
-   "vol": 2.22
-  },
-  {
-   "moeda": "HYPE",
-   "4h": 6.87,
-   "24h": -1.03,
-   "vol": 1.52
+   "moeda": "RE",
+   "4h": 7.88,
+   "24h": 1.07,
+   "vol": 1.4
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.18,
   0.45,
   1.7,
-  0.09
+  0.23
  ],
  "contexto": {
-  "t": 1795632126,
+  "t": 1795632348,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -277,7 +277,7 @@
    "media_top20_anual_pct": 9.8,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 9.5,
+    "ETH": 9.8,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -325,27 +325,6 @@
     "nivel": null
    },
    {
-    "moeda": "ALT",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.00418
-   },
-   {
-    "moeda": "MARSCOIN",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.0265
-   },
-   {
-    "moeda": "MARSCOIN",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.0276
-   },
-   {
     "moeda": "PEPE",
     "padrao": "topo duplo",
     "sentido": "baixa",
@@ -386,15 +365,11 @@
   }
  },
  "v4": {
-  "vela": "18:30 UTC",
-  "apostas": 128,
+  "vela": "11:00 UTC",
+  "apostas": 104,
   "compras": 45,
-  "vendas": 83,
+  "vendas": 59,
   "mais_confiantes_venda": [
-   {
-    "moeda": "SOPH",
-    "prob_subir": 0.339
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
@@ -422,6 +397,10 @@
    {
     "moeda": "FORM",
     "prob_subir": 0.382
+   },
+   {
+    "moeda": "T",
+    "prob_subir": 0.383
    }
   ],
   "mais_confiantes_compra": [
@@ -719,38 +698,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30536 apostas (632 velas, 18/11 18:45–25/11 18:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5325,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30531 apostas (632 velas, 18/11 19:00–25/11 18:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5321,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.24,
+  "z_contra_lab": -0.28,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5064,
-    "n": 24322
+    "acerto": 0.5065,
+    "n": 24324
    },
    "segue_maioria_24h": {
-    "acerto": 0.5122,
-    "n": 30469
+    "acerto": 0.5126,
+    "n": 30464
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5427,
-    "n": 9096
+    "acerto": 0.5423,
+    "n": 9103
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5534,
-    "n": 3336
+    "acerto": 0.5528,
+    "n": 3332
    },
    "confianca:<0,05": {
-    "acerto": 0.5179,
-    "n": 17223
+    "acerto": 0.5175,
+    "n": 17218
    },
    "confianca:≥0,12": {
-    "acerto": 0.6345,
-    "n": 881
+    "acerto": 0.6333,
+    "n": 878
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5086,
@@ -765,16 +744,16 @@
     "n": 7925
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5462,
-    "n": 7208
+    "acerto": 0.5446,
+    "n": 7203
    },
    "lado:compra": {
-    "acerto": 0.5234,
-    "n": 13981
+    "acerto": 0.5235,
+    "n": 13977
    },
    "lado:venda": {
-    "acerto": 0.5401,
-    "n": 16555
+    "acerto": 0.5394,
+    "n": 16554
    }
   }
  },
