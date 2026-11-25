@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 05:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 05:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,11 +66,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 16.3% das moedas subindo em 24 h, 31.7% em 4 h · BTC 24 h -2.43%, 4 h -0.93%.
+- **Amplitude:** 17.9% das moedas subindo em 24 h, 31.7% em 4 h · BTC 24 h -1.92%, 4 h -0.74%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.0%/ano · {'BTC': -5.7, 'ETH': 7.9, 'SOL': 7.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': -8.4, 'ETH': 4.8, 'SOL': 5.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 20.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** MEGA bandeira de baixa (baixa, CONFIRMOU) · OPG bandeira de alta (alta, CONFIRMOU) · BTC triângulo descendente (baixa, formado) · ERA topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · OPG fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** BTC triângulo descendente (baixa, CONFIRMOU) · ERA topo duplo (baixa, formado) · INIT topo duplo (baixa, formado) · KERNEL ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT fundo duplo (alta, formado) · ORDI ombro-cabeça-ombro (baixa, formado)
 - 📰 25/11 04:57 UTC · CoinDesk: Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive
 - 📰 25/11 04:50 UTC · CoinDesk: A year after buying bitcoin, Czech central bank won't say what it's worth
 - 📰 25/11 04:14 UTC · Cointelegraph: Trump willing to pardon Jensen Huang, says it won’t be necessary
@@ -80,7 +80,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 8.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 8.7 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -115,7 +115,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 51909 apostas conferidas ao vivo, acerto 54.4%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 51958 apostas conferidas ao vivo, acerto 54.5%; prevê 122 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
