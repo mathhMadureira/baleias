@@ -1,6 +1,6 @@
 {
- "t": 1795606590,
- "hora_utc": "2026-11-25 11:36 UTC",
+ "t": 1795606824,
+ "hora_utc": "2026-11-25 11:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 124,
@@ -172,11 +172,23 @@
   1.18,
   -0.58,
   -0.31,
-  -0.61
+  -0.53
  ],
  "contexto": {
-  "t": 1795606591,
+  "t": 1795606825,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795606270,
+    "hora_utc": "25/11 11:31",
+    "titulo": "Hong Kong launches tokenized debt platform with 24-hour settlement"
+   },
+   {
+    "fonte": "CoinDesk",
+    "t": 1795606232,
+    "hora_utc": "25/11 11:30",
+    "titulo": "Gold's haven status has lost its edge over bitcoin, and the Fed's to blame"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795605837,
@@ -254,18 +266,6 @@
     "t": 1795587308,
     "hora_utc": "25/11 06:15",
     "titulo": "Just 10 accounts drove all of the XRP Ledger's trading growth last quarter"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795585843,
-    "hora_utc": "25/11 05:50",
-    "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795584775,
-    "hora_utc": "25/11 05:32",
-    "titulo": "Solana DEX Velocity halts trading over bug just months after relaunch"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 2.0,
+   "media_top20_anual_pct": 2.3,
    "principais_anual_pct": {
-    "BTC": -7.1,
-    "ETH": 9.6,
-    "SOL": -12.9
+    "BTC": -7.0,
+    "ETH": 10.1,
+    "SOL": -12.4
    },
    "leitura": "neutro"
   },

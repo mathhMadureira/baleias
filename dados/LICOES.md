@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 25/11/2026 11:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 25/11/2026 11:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -68,19 +68,19 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.7% das moedas subindo em 24 h, 10.5% em 4 h · BTC 24 h -1.99%, 4 h -0.7%.
 - **Medo e ganância:** 13 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.0%/ano · {'BTC': -7.1, 'ETH': 9.6, 'SOL': -12.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.3%/ano · {'BTC': -7.0, 'ETH': 10.1, 'SOL': -12.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75738, MM200 72189); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BNB estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · DODO fundo duplo (alta, formado) · MANTRA fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado)
+- 📰 25/11 11:31 UTC · Cointelegraph: Hong Kong launches tokenized debt platform with 24-hour settlement
+- 📰 25/11 11:30 UTC · CoinDesk: Gold's haven status has lost its edge over bitcoin, and the Fed's to blame
 - 📰 25/11 11:23 UTC · Decrypt: Hyperliquid Leads Altcoin Losses as Bitcoin Slips Below $59K
 - 📰 25/11 11:12 UTC · Cointelegraph: Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout
 - 📰 25/11 11:09 UTC · Cointelegraph: Bitcoin price may fall below $53K if bear-market history repeats
 - 📰 25/11 11:00 UTC · CoinDesk: EU proposes $54.7 billion fund for AI, quantum startups alongside post-quantum security push
-- 📰 25/11 10:57 UTC · Cointelegraph: HYPE drops 8% as Trump bump gives way to 40% slide from peak
-- 📰 25/11 10:35 UTC · Decrypt: Take-Two Hits GTA 6 PC Port Leonida With DMCA, Taking Down 3,007 GitHub Repos
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 15.2 h.
+- ⚠️ **Rotina parada:** sem decisão há 15.3 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
