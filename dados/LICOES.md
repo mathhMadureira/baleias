@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 12:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 12:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 85.8% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h 3.54%, 4 h 0.32%.
+- **Amplitude:** 85.7% das moedas subindo em 24 h, 51.6% em 4 h · BTC 24 h 3.6%, 4 h 0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.9%/ano · {'BTC': -3.7, 'ETH': 7.6, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 20.0% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 16.6%/ano · {'BTC': -4.1, 'ETH': 8.0, 'SOL': 11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AAVE fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · PNUT OCO invertido (alta, formado) · SEI OCO invertido (alta, formado) · SOL OCO invertido (alta, formado) · XRP OCO invertido (alta, formado)
+- 📰 26/11 12:14 UTC · CoinDesk: Bitcoin ETFs are bleeding cash and the Fed is unlikely to help
 - 📰 26/11 11:50 UTC · Decrypt: UK Regulator Cites Binance Hack as It Plans Tougher DeFi Rules Than US and EU: Report
 - 📰 26/11 11:37 UTC · Cointelegraph: Standard Chartered’s Zodia Custody suffers data breach: Report
 - 📰 26/11 11:27 UTC · CoinDesk: Hong Kong-based crypto trading firm Auros is winding down operations
 - 📰 26/11 11:25 UTC · Decrypt: New York Wins $1.37B Judgment Against NovaTech Founders Who Fled the US
 - 📰 26/11 11:22 UTC · Cointelegraph: Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity
-- 📰 26/11 11:17 UTC · CoinDesk: Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 57835 apostas conferidas ao vivo, acerto 54.2%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 57870 apostas conferidas ao vivo, acerto 54.2%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
