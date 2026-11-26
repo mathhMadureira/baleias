@@ -3,6 +3,70 @@
 Cada seção é escrita pela rotina diária de pesquisa. Nada aqui é resultado: é candidato a pré-registro em `lab/PROTOCOLO_LAB.md`.
 Fontes da internet são dados de terceiros; números entre aspas são os que a fonte dá, e "não sei" onde ela não dá.
 
+## 2026-11-26
+
+**Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/agente_laboratorio.json`, `dados/mercado_agora.json`, 10:19 UTC):
+
+| | |
+|---|---|
+| Campeão do torneio | **nenhum** (ninguém com 30 op, carteira > US$ 10 e fator > 1). Melhor fator: **Laboratório 1,10** (29 op, acerto 38%, soma +0,38, carteira 10,38) · Treinador 0,71 (47) · Robô Claude 0,62 (73) · conta de teste 0,59 (56) · Guardião 0,59 (74) |
+| Onde o Laboratório perde | saída **stop de segurança −1%: 7 op, −2,64** (todas em 12–54 min, pico máximo +0,97%); **prazo da operação: 7 op, −0,86** (6 de 120 min, 1 de 60 min; picos de +0,01% a +1,20%). Ganha no stop móvel (4 op, +1,92) e no lucro realizado (2 op, +1,85). Horário de entrada: **18–24 UTC 21 op, −1,37** (00–06: 2 op +0,70; 12–18: 6 op +1,05). Lado: compras 13 op −0,42; vendas 16 op +0,80 |
+| Segmento fraco do vigia | confiança < 0,05: 51,5% (17.401) e 00–06 h UTC: 51,5% (8.337); compras 52,2% × vendas 54,0%. Ao vivo 53,2% × laboratório 53,5% (z −0,29), "dentro do esperado"; confiança ≥ 0,12 acerta 64,3% (875) — o segmento do Laboratório |
+
+**Mercado hoje** (`dados/mercado_agora.json`): BTC 60.962, +3,37% em 24 h, +0,69% em 4 h, volume de 4 h 0,90× a média; 84,1% das 126 moedas sobem
+em 24 h (mediana +4,56%), 34,9% em 1 h. Medo e ganância 11 ("Extreme Fear"). Funding médio das 20 maiores 8,7% ao ano ("neutro"). BTC abaixo das
+médias de 50 e 200 dias (75.236 e 72.088).
+
+**Já testado ou proposto (fora desta lista):** tudo de 15–25/11 (abaixo), H76–H80; VR ≥ 1 e lado pelo relógio de Nova York (25/11); stop no
+fechamento e Amihud (24/11); direção do BTC desde a abertura de Nova York (20/11); realização parcial + stop no zero (19/11, Guardião); stop por ATR (16/11).
+
+### Ideia 1 — Laboratório: prazo da operação de 240 min no lugar de 120 min (o prazo só fecha o que o stop e o alvo não fecharam)
+
+- **Regra:** `max_min` = 240 em toda entrada nova do Laboratório (hoje 120, às vezes 60). Stop de segurança −1%, stop móvel (H49), alvo e lucro
+  realizado a +US$ 0,50 iguais. Nenhum outro parâmetro. 1 tentativa.
+- **Por quê no Laboratório:** é o melhor fator do torneio (1,10) e o prazo é a 2ª maior fonte de perda (7 op, −0,86). Os 6 ganhos grandes saíram
+  por stop móvel ou alvo de +3% a +5%, que precisam de tempo para chegar (OPG +1,13 com prazo de 240 min); as 7 saídas por prazo fecharam com pico de
+  só +0,01% a +1,20%, sem ter batido o stop em 2 h. Regra 13 do dono: a decisão não deve ser limitada por tempo. Risco: parte delas viraria stop de −1%
+  (perda maior) — por isso é teste, não mudança.
+- **Dados:** velas de 1 min do perpétuo da Binance (grátis) e as entradas do Laboratório (`dados/agente_laboratorio.json`, campo `fechadas`).
+- **Evidência:** Li, Laryea & Ihlamur, "Optimal Stop-Loss and Take-Profit Parameterization for Autonomous Trading Agent Swarm", arXiv 2604.27150
+  (pré-publicação, 4 páginas; https://arxiv.org/html/2604.27150v1): mais de 900 operações de uma frota de agentes repassadas por várias regras de saída;
+  a base (stop 25%, trailing 3%/2%, parcial 50% em 5%, **fechamento por prazo de 24 h**) teve fator de lucro **1,639** e Sharpe **0,419**; a melhor
+  da 1ª passada (stop 10%, trailing 3%/3%, parcial 75% em 5%, **prazo de 48 h**) teve **1,760** e **0,525**. O efeito só do prazo não é separado
+  (não sei); ativos, vela, período e custo: não informados (não sei); a divisão no tempo foi descartada pelos autores por um período de guerra, e a
+  comparação principal usou amostra aleatória — evidência fraca. Prática (não revisada, uma estratégia, 30 dias): tirar a saída por prazo de 24 h
+  levou o fator de 1,03 a 1,27 (https://dev.to/trendrider/13-days-48-trades-breakeven-then-i-fixed-one-thing-1d6j, número do resumo de busca).
+- **Teste:** entradas tipo Laboratório (H69: v4 com confiança ≥ 0,12) reconstruídas no histórico de 1 min das moedas de `lab/universo.py`, cada uma
+  simulada com prazo 120 e 240 min, mesmo stop/alvo/stop móvel, custo 0,12% ida e volta, 3 blocos de tempo iguais. Passa se, nos 3 blocos, a média
+  líquida por operação com 240 min for maior que com 120 min, com z ≥ 1,65 no pareado (erro-padrão por vela de entrada), e o fator de lucro com 240 min
+  > 1. Conferência ao vivo: as 7 saídas por prazo reais reprocessadas com 240 min (só descritivo, amostra pequena). 1 tentativa.
+
+### Não proposta (anotado para não repetir)
+
+- **Momento intradiário do BTC** (Shen, Urquhart & Wang, "Bitcoin intraday time-series momentum", *Financial Review* 57(2), 2022, pp. 319–344,
+  https://research.birmingham.ac.uk/en/publications/bitcoin-intraday-time-series-momentum/): "the first half-hour positively predicts the last
+  half-hour return", mais forte nas sessões de maior volume, dentro e fora da amostra. Usam o volume para definir o "dia"; a definição, o R² e o retorno:
+  não sei (o texto completo não abriu). Aplicado ao 18–24 UTC do Laboratório ficaria quase igual à direção do BTC desde a abertura de Nova York (20/11).
+- **Realização parcial de 75%** (mesmo artigo arXiv 2604.27150): os 7 stops de −1% do Laboratório tiveram pico ≤ +0,97% em 12–54 min; uma parcial no
+  meio do alvo (+1,5%) não teria tocado nenhum deles. Não ataca onde ele perde.
+- **"Who sets the range? Funding mechanics and 4H context"** (arXiv 2601.06084): ensaio conceitual, sem teste nem número de acerto; nada a testar.
+- **Hora do funding (00, 08, 16 UTC):** um artigo da MDPI (https://www.mdpi.com/2227-7072/14/5/103) acha picos no *spread* de funding ~2 h depois da
+  liquidação, "economicamente modestos"; não achei prêmio de direção do preço nessas horas.
+
+### O que aprendi hoje sobre o mercado cripto
+
+O BTC voltou a 60–61 mil (+3,37% em 24 h, 84% das moedas subindo, `dados/mercado_agora.json`) logo depois de cair abaixo de 59 mil, mas com o
+medo e ganância em 11 e o preço muito abaixo das médias de 50 e 200 dias. O que pesa nas próximas horas é o vencimento de opções de sexta (27/11) na
+Deribit: cerca de **US$ 7 bi** em BTC e US$ 0,6 bi em ETH, contra US$ 10,8 bi em outubro; razão put/call **0,89** para esse vencimento (0,55 no fim de
+outubro); grandes "pilares" de puts em 60, 58, 50 e 40 mil; DVOL **55,45** (38 em outubro) e volatilidade implícita invertida (perto de 68% no curto
+contra 47–48% em 2027) — o mercado paga caro por proteção imediata
+(https://www.coindesk.com/markets/2026/11/26/usd7-billion-of-bitcoin-options-expire-friday-and-the-biggest-bets-look-starkly-different-from-october).
+O "preço de dor máxima" varia de 71 a 74 mil conforme a fonte (Bitcoinist e outras) e não é previsão. Fluxo dos ETFs: a manchete da Cointelegraph
+(26/11 09:42 UTC, em `mercado_agora.json`) diz que as saídas de novembro passaram de US$ 5 bi; o número exato e a fonte primária (Farside/SoSoValue):
+não conferi (não sei). Com funding neutro (8,7% ao ano) a alta de hoje não vem de alavancagem esticada de compradores. Lição de método: o tempo é um
+parâmetro de saída como o stop — fechar por relógio corta as operações que ainda não tiveram tempo de andar, e no Laboratório as saídas por prazo
+fecharam quase todas perto do zero, pagando o custo.
+
 ## 2026-11-25
 
 **Estado de hoje** (`dados/torneio.json`, `dados/vigia_v4.json`, `dados/agente_laboratorio.json`, `dados/mercado_agora.json`, 10:18 UTC):
