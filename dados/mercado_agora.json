@@ -1,6 +1,6 @@
 {
- "t": 1795692294,
- "hora_utc": "2026-11-26 11:24 UTC",
+ "t": 1795692522,
+ "hora_utc": "2026-11-26 11:28 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,11 +172,29 @@
   0.63,
   0.06,
   -0.69,
-  0.28
+  0.27
  ],
  "contexto": {
-  "t": 1795692295,
+  "t": 1795692523,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795692470,
+    "hora_utc": "26/11 11:27",
+    "titulo": "Major crypto trading firm Auros is winding down operations: Sources"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795692358,
+    "hora_utc": "26/11 11:25",
+    "titulo": "New York Wins $1.37B Judgment Against NovaTech Founders Who Fled the US"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795692179,
+    "hora_utc": "26/11 11:22",
+    "titulo": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795691842,
@@ -248,24 +266,6 @@
     "t": 1795671038,
     "hora_utc": "26/11 05:30",
     "titulo": "Ripple is worth $90 a share to one fund and $300 to another, SEC filings show"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795670966,
-    "hora_utc": "26/11 05:29",
-    "titulo": "Sky proposes emergency vote on $25M transfer amid liquidity stress"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795668916,
-    "hora_utc": "26/11 04:55",
-    "titulo": "1Password hacker stole customer names and emails, but vaults safe"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795668361,
-    "hora_utc": "26/11 04:46",
-    "titulo": "Bill to lock up U.S. government bitcoin for 20 years advances to full House"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 13.3,
+   "media_top20_anual_pct": 13.2,
    "principais_anual_pct": {
-    "BTC": -7.1,
-    "ETH": 2.2,
-    "SOL": 4.9
+    "BTC": -6.7,
+    "ETH": 2.5,
+    "SOL": 5.6
    },
    "leitura": "neutro"
   },
