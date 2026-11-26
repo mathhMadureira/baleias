@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 18:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 18:48 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 74.4% das moedas subindo em 24 h, 59.8% em 4 h · BTC 24 h 1.73%, 4 h -0.05%.
+- **Amplitude:** 75.0% das moedas subindo em 24 h, 66.4% em 4 h · BTC 24 h 1.67%, 4 h -0.17%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': 1.5, 'ETH': -2.6, 'SOL': 0.2} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** SOPH fundo duplo (alta, CONFIRMOU) · BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · UNI fundo duplo (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.3%/ano · {'BTC': 1.5, 'ETH': -2.3, 'SOL': 0.5} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** SOPH fundo duplo (alta, CONFIRMOU) · ATOM OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · UNI fundo duplo (alta, formado)
 - 📰 26/11 18:26 UTC · Cointelegraph: Spain moves to grant financial watchdog power to freeze crypto accounts
 - 📰 26/11 18:15 UTC · Decrypt: Bitcoin Holds Above $60K as Death Cross Clouds Thanksgiving Recovery
 - 📰 26/11 17:39 UTC · Cointelegraph: Crypto on notice as hawkish Fed risks December ‘meltdown’
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 58917 apostas conferidas ao vivo, acerto 54.2%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 59000 apostas conferidas ao vivo, acerto 54.2%; prevê 115 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
