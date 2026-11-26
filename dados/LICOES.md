@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 05:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 05:53 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 81.1% das moedas subindo em 24 h, 51.2% em 4 h · BTC 24 h 3.17%, 4 h 0.18%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.8%/ano · {'BTC': 11.0, 'ETH': 5.0, 'SOL': -12.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': 11.0, 'ETH': 5.3, 'SOL': -11.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ALGO topo duplo (baixa, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · CKB fundo duplo (alta, formado) · DODO OCO invertido (alta, formado) · FET OCO invertido (alta, formado) · INJ OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP topo duplo (baixa, formado) · OP OCO invertido (alta, formado)
 - 📰 26/11 05:30 UTC · CoinDesk: Ripple is worth $90 a share to one fund and $300 to another, SEC filings show
