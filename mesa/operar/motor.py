@@ -124,7 +124,8 @@ def montar(e, cmd, radar, risco, agora):
               "max_min": p.get("max_min")} for par, p in abertas.items() if par not in sair]
     if not cmd["ligado"] or not radar:
         return lista, sair
-    recentes = {x.get("moeda") for x in e.get("fechadas") or [] if agora - float(x.get("saida_t") or 0) < ESFRIA_S}
+    recentes = {x.get("moeda") for x in e.get("fechadas") or []
+                if agora - max(float(x.get("saida_t") or 0), float(x.get("registrada_t") or 0)) < ESFRIA_S}
     cands = list(radar.get("entradas") or [])
     cands.sort(key=lambda r: (r["moeda"] not in cmd["preferidas"], -r["nota"]))
     for r in cands:

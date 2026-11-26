@@ -48,7 +48,7 @@ def saidas_desde(e, d):
     reabriu.) Sem leitura_t na decisão, vale a decisão − 15 min. A inversão de lado pedida pela decisão não bloqueia."""
     d = d if isinstance(d, dict) else {"t": d}
     corte = float(d.get("leitura_t") or float(d.get("t") or 0) - 900)
-    return {f.get("moeda") for f in e.get("fechadas") or [] if float(f.get("saida_t") or 0) >= corte
+    return {f.get("moeda") for f in e.get("fechadas") or [] if max(float(f.get("saida_t") or 0), float(f.get("registrada_t") or 0)) >= corte
             and "inverteu o lado" not in str(f.get("motivo_saida") or f.get("motivo") or "")}
 
 
@@ -548,6 +548,7 @@ class Conta:
             perto = lambda a, b: abs(a / b - 1) < 0.003
             motivo = ("alvo na corretora" if p.get("alvo") and perto(saida, p["alvo"]["preco"]) else
                       f"stop {'móvel' if p.get('stop_tipo') == 'móvel' else 'de segurança'} na corretora")
+        p["registrada_t"] = time.time()                                    # 25/11: hora em que o motor SOUBE da saída (máquina dormindo)
         self.e["fechadas"].append({**{k: v for k, v in p.items() if k not in ("stop", "alvo")}, "saida": saida, "saida_t": max(x["t_ms"] for x in saidas) / 1000,
                                    "motivo_saida": motivo, "resultado_usd": res, "taxas": taxas, "stop_final": (p.get("stop") or {}).get("preco")})
         self.e["fechadas"] = self.e["fechadas"][-2000:]
@@ -589,17 +590,21 @@ class Conta:
         if isinstance(pedido["noc"], (int, float)) and pedido["noc"] > 0 and isinstance(pedido["alav"], (int, float)):
             alav = int(max(1, min(50, pedido["alav"])))                   # dono (25/11): "nada de caçar centavos" — posições maiores
             noc = float(pedido["noc"])
-        usada = None
+        usada, recusa = None, ""
         for a in [x for x in (alav, 10, 5, 3, 2, 1) if x <= min(alav, ctr["alav_max"])]:
             try:
                 self.c.alavancagem(par, a)
                 usada = a
                 break
-            except ErroCorretora:
+            except ErroCorretora as ex_:
+                recusa = str(ex_)[:80]
                 continue
         if usada is None:
             return self.anotar(f"{par[:-4]}: a corretora recusou as alavancagens; não entra")
-        if usada < alav:
+        if usada < alav and isinstance(pedido["noc"], (int, float)) and pedido["noc"] > 0:
+            noc = noc * usada / alav                                      # 25/11: mesma margem, alavancagem menor
+            self.anotar(f"{par[:-4]}: a corretora recusou {alav}× ({recusa}); entro a {usada}× com a mesma margem")
+        elif usada < alav:
             noc = min(noc, self.realizado() * usada / MAX_POS)
         if float(self.e["caixa"]) < noc / usada - 1e-9:
             noc = float(self.e["caixa"]) * usada * 0.995
