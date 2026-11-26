@@ -1857,3 +1857,11 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 | período todo (2021–2026) | +8,3% ao ano, queda máx. −0,98% |
 - Juiz: (a) ✗ (t 1,66 < 2), (b) ✗ (segunda metade negativa), (c) ✓. Previsão confirmada: o funding alto era de 2021; desde 2024 a cesta paga
   3,2% ao ano e, depois de 0,30% de custo por ida e volta, sobra perto de zero. A estratégia é segura (queda < 1%), mas hoje não rende.
+
+## H81 (26/11/2026, ordem do dono): pump.fun no papel em modo scalper (v3)
+- **Motivo:** a v2 não entrou nenhuma vez: pedia 20 leituras em 10 min, mas lia a cada 30 s (no máximo ~20). O dono quer operações constantes, em scalper.
+- **Regra v3:** lê na Solana todas as moedas conhecidas a cada 5 s. Entra se a moeda tem 5+ min, curva entre 25% e 95%, +4% a +30% em 2 min (acima disso é topo, lição da v1) e ainda subindo (último ≥ 97% da máxima da janela), sem salto > 25% em 1 min, 10 maiores carteiras ≤ 30% (se a Solana pública não responder a checagem, entra marcado "sem checagem"), e não foi operada nos últimos 20 min. US$ 2 por posição, até 3.
+- **Saída:** stop −7%, alvo +15%, stop móvel (depois de +8% guarda 60% do pico), prazo 15 min, graduação.
+- **Custo simulado:** 2% por lado (4% ida e volta): o scalper precisa de acerto alto para pagar isso.
+- **Critério (Juiz, depois de 48 h ou 40 operações):** passa se o resultado líquido for > 0 e a pior sequência ≤ −US$ 3. Reprovando, nada vai para dinheiro real.
+- **Previsão registrada:** muitas operações; o custo de 4% e os stops que pulam (v1 pediu −12% e realizou −34%) devem deixar o resultado perto de zero ou negativo.
