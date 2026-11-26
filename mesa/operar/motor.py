@@ -48,6 +48,18 @@ def comando():
     return c
 
 
+def falar(para, tipo, texto):
+    """O motor fala no canal da equipe (25/11, dono: "agentes conversando o tempo todo, como se tivessem vida própria")."""
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("canal_m", SHARED / "canal.py")
+        k = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(k)
+        k.falar("motor", para, tipo, texto)
+    except BaseException:
+        pass
+
+
 def quadro(texto, descarte=None):
     try:
         import importlib.util
@@ -207,8 +219,21 @@ def volta(agora=None):
     for par in novas:
         p = e["abertas"][par]
         quadro(f"entrou {par[:-4]} {p['lado']} a {p['entrada']:.6g}, stop {(p.get('stop') or {}).get('preco')}, alvo {(p.get('alvo') or {}).get('preco')}")
+        falar("todos", "info", f"Entrei {'comprado' if p['lado'] == 'compra' else 'vendido'} em {par[:-4]} a {p['entrada']:.6g} "
+              f"(US$ {p.get('nocional', 0):.0f}, {p.get('alav')}×). Stop {(p.get('stop') or {}).get('preco')}, alvo {(p.get('alvo') or {}).get('preco')}. {str(p.get('motivo'))[:90]}")
     for x in (e.get("fechadas") or [])[antes_fe:]:
         quadro(f"saiu {x['moeda'][:-4]} {x['lado']} a {x.get('saida'):.6g}: {x.get('resultado_usd', 0):+.3f} ({str(x.get('motivo_saida'))[:40]})")
+        r = x.get("resultado_usd") or 0
+        falar("todos", "info", f"{'Lucro' if r > 0 else 'Perda'} em {x['moeda'][:-4]}: {r:+.2f} US$ ({str(x.get('motivo_saida'))[:50]}). Patrimônio {e.get('patrimonio', 0):.2f}.")
+        falar("treinador", "pedido", f"Fechou {x['moeda'][:-4]} {x['lado']} com {r:+.2f} US$ por '{str(x.get('motivo_saida'))[:40]}'. O que isso ensina? (resposta curta com número)")
+    for par, p in (e.get("abertas") or {}).items():           # posição sofrendo: o motor pede opinião ao Risco, uma vez por posição
+        if (p.get("resultado_aberto") or 0) < -0.01 * (p.get("nocional") or 0) * 0.5 and not p.get("perguntou_risco"):
+            p["perguntou_risco"] = True
+            falar("guardiao", "pedido", f"{par[:-4]} {p['lado']} está em {p.get('resultado_aberto', 0):+.2f} US$ (entrada {p['entrada']:.6g}). Mantenho ou saio? Você decide (motor.py sair).")
+    try:
+        conta.salvar()
+    except Exception:
+        pass
     estado = {"t": agora, "ciclo_s": CICLO_S, "radar_t": _radar["t"], "lidas": (radar or {}).get("lidas"), "abertas": len(e["abertas"]),
               "max_pos": cmd["max_pos"], "ligado": cmd["ligado"], "patrimonio": e.get("patrimonio"), "novas": sorted(novas)}
     (EQUIPE / "motor_estado.json").write_text(json.dumps(estado, ensure_ascii=False))

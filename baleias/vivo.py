@@ -150,12 +150,13 @@ def vivo(agora=None):
     rs = [x["resultado"] for x in c["fechadas"] if isinstance(x["resultado"], (int, float))]
     feed = [{"t": x["t"], "agente": x.get("agente"), "texto": x.get("texto"), "tipo": "equipe", "conf": x.get("conf")} for x in q[-60:]]
     feed += [{"t": x["t"], "agente": "laboratorio", "texto": x["texto"], "tipo": "corretora"} for x in c["eventos"]]
+    canal = []
     try:
-        for l in (SHARED / "equipe" / "canal.jsonl").read_text().splitlines()[-40:]:
+        for l in (SHARED / "equipe" / "canal.jsonl").read_text().splitlines()[-60:]:
             m = json.loads(l)
-            alvo = NOMES.get(m["para"], {}).get("nome", m["para"])
-            feed.append({"t": m["t"], "agente": m["de"], "tipo": "canal", "conf": None,
-                         "texto": f"💬 {m['tipo']} → {alvo}: {m['texto']}"})
+            de, para = NOMES.get(m["de"], {}), NOMES.get(m["para"], {})
+            canal.append({**m, "de_nome": de.get("nome", "Motor" if m["de"] == "motor" else m["de"]), "de_avatar": de.get("avatar", "⚙"),
+                          "para_nome": "todos" if m["para"] == "todos" else para.get("nome", m["para"])})
     except (OSError, ValueError, KeyError):
         pass
     feed.sort(key=lambda x: -x["t"])
@@ -202,7 +203,7 @@ def vivo(agora=None):
         desk.append({**a, "ultimo": u, "contagem": cont.get(a["id"], {"total": 0, "hoje": 0}),
                      "ativo": bool(u and agora - u["t"] < 600)})
     motor = {"estado": _json(SHARED / "equipe" / "motor_estado.json"), "comando": _json(SHARED / "equipe" / "motor.json")}
-    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "motor": motor,
+    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "motor": motor, "canal": canal[::-1],
             "descartes": sorted(desc.values(), key=lambda d: -d["total"]), "descartes_recentes": ult_desc[-8:][::-1], "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
             "progresso": (c["patrimonio"] - c["capital"]) / (META - c["capital"]), "operacoes": len(rs),
             "ganhos": sum(1 for r in rs if r > 0), "resultado": sum(rs), "melhor": max(rs) if rs else None, "pior": min(rs) if rs else None},

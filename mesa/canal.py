@@ -22,7 +22,7 @@ import uuid
 from pathlib import Path
 
 ARQ = Path(os.environ.get("BALEIAS_CANAL", "/home/servidor-de-producao/OpenBot/Shared/baleias/equipe/canal.jsonl"))
-AGENTES = ("cacador", "memecoins", "treinador", "guardiao", "laboratorio", "baleias", "engenheiro", "minerador")
+AGENTES = ("motor", "cacador", "memecoins", "treinador", "guardiao", "laboratorio", "baleias", "engenheiro", "minerador")
 TIPOS = ("info", "proposta", "pedido", "resposta")
 TEMAS_DONO = {"lados e força mínima do motor": "laboratorio", "preferidas e bloqueios": "cacador", "sair de uma posição": "guardiao",
               "placar e lições": "treinador", "motor, painel e corretora": "engenheiro", "memecoins": "memecoins",

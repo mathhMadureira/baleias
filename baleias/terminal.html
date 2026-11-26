@@ -56,6 +56,12 @@ nav button.ativo { background:#22e07a; color:#04120a; }
 .kr { font-size:12.5px; } .kr div { display:flex; justify-content:space-between; } .kr b { font:700 12.5px var(--mono); }
 .kr i { display:block; height:3px; background:#3a0d16; border-radius:2px; margin-top:3px; } .kr i u { display:block; height:100%; background:#e11d48; border-radius:2px; }
 @media (max-width:560px) { .kill { grid-template-columns:1fr; } }
+.chat { max-height:380px; overflow-y:auto; display:flex; flex-direction:column; gap:8px; }
+.msg { display:flex; gap:9px; align-items:flex-start; } .msg .av { width:30px; height:30px; border-radius:50%; display:grid; place-items:center; font-size:15px; flex:none; }
+.msg .bx { background:#0a0f0d; border:1px solid var(--line); border-radius:4px 14px 14px 14px; padding:7px 10px; min-width:0; }
+.msg .hd { font-size:11px; color:var(--mut); } .msg .hd b { font-size:12px; } .msg .tt { font-size:13px; color:#d6e6dd; margin-top:2px; }
+.msg .tp { font:700 9.5px var(--mono); padding:1px 6px; border-radius:8px; margin-left:4px; text-transform:uppercase; }
+.msg.novo .bx { animation:ch 2.5s ease-out; }
 .pos-l { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:8px; font:13px var(--mono); }
 .pos-l span { display:block; font:10.5px system-ui; color:var(--mut); }
 table { width:100%; border-collapse:collapse; font:12.5px var(--mono); } td, th { padding:6px 4px; text-align:right; border-top:1px solid var(--line); }
@@ -98,6 +104,11 @@ iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; b
   <div class="card">
     <div class="desk-h"><b id="desk-t">Mesa · agentes</b><span id="desk-n"></span></div>
     <div id="desk"></div>
+  </div>
+
+  <div class="card">
+    <div class="desk-h"><b>💬 Conversa da equipe</b><span id="ch-n"></span></div>
+    <div class="chat" id="chat"></div>
   </div>
 
   <div class="card">
@@ -246,6 +257,14 @@ function desenhar() {
     [...c.abertas].sort((a_, b_) => (b_.resultado || 0) - (a_.resultado || 0)).map(p => `<tr title="${esc(p.motivo)}"><td class="e"><b class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</b> ${esc(String(p.moeda).replace("USDT", ""))}</td>
       <td>${px(p.entrada)} → ${px(p.agora)}</td><td class="down">${px(p.stop)}</td><td class="up">${px(p.alvo)}</td><td class="mut">${ha(p.desde)}</td><td class="${cor(p.resultado)}"><b>${p.resultado != null ? sn(p.resultado, 3) : "—"}</b></td></tr>`).join("") + "</table>"
     : `<div class="vazio">Sem posição aberta.</div>`;
+  // conversa
+  const TP = {info:["#1a2420","#b8c9c0"], proposta:["#0f1f33","#60a5fa"], pedido:["#3a2c05","#f5b400"], resposta:["#0f3320","#22e07a"]};
+  const ids = new Set((vv.canal || []).map(m => m.id));
+  $("ch-n").textContent = `${(vv.canal || []).length} mensagens · ${(vv.canal || []).filter(m => m.tipo === "pedido" || m.tipo === "proposta").filter(m => !(vv.canal || []).some(r => r.ref === m.id)).length} esperando resposta`;
+  $("chat").innerHTML = (vv.canal || []).map(m => { const [c1, c2] = COR[m.de] || COR.motor, [t1, t2] = TP[m.tipo] || TP.info, novo = !primeira && !vistos.has("c" + m.id); vistos.add("c" + m.id);
+    return `<div class="msg ${novo ? "novo" : ""}"><div class="av" style="background:${c2};color:${c1}">${esc(m.de_avatar)}</div><div class="bx">
+      <div class="hd"><b style="color:${c1}">${esc(m.de_nome)}</b> → ${esc(m.para_nome)}<span class="tp" style="background:${t1};color:${t2}">${esc(m.tipo)}</span> · ${hm(m.t)}</div>
+      <div class="tt">${esc(m.texto)}</div></div></div>`; }).join("") || `<div class="vazio">Ninguém falou ainda.</div>`;
   // logger
   $("log-n").textContent = `${vv.feed.length} registros`;
   $("log").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k); const mot = String(x.texto).startsWith("⚙ motor"); const [c1] = COR[mot ? "motor" : x.agente] || ["#475569"];
