@@ -1,6 +1,6 @@
 {
- "t": 1795689530,
- "hora_utc": "2026-11-26 10:38 UTC",
+ "t": 1795689762,
+ "hora_utc": "2026-11-26 10:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 127,
@@ -172,11 +172,17 @@
   -0.06,
   0.63,
   0.06,
-  -0.42
+  -0.61
  ],
  "contexto": {
-  "t": 1795689531,
+  "t": 1795689763,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795689633,
+    "hora_utc": "26/11 10:40",
+    "titulo": "New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795688128,
@@ -260,12 +266,6 @@
     "t": 1795656800,
     "hora_utc": "26/11 01:33",
     "titulo": "AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795646289,
-    "hora_utc": "25/11 22:38",
-    "titulo": "China's Google Just Released Its Fast New AI Model for Free"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 10.2,
+   "media_top20_anual_pct": 10.5,
    "principais_anual_pct": {
-    "BTC": 6.1,
-    "ETH": 9.2,
+    "BTC": 4.3,
+    "ETH": 8.8,
     "SOL": 11.0
    },
    "leitura": "neutro"
