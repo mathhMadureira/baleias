@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 09:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 10:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 83.3% das moedas subindo em 24 h, 48.4% em 4 h · BTC 24 h 3.49%, 4 h 0.09%.
+- **Amplitude:** 84.1% das moedas subindo em 24 h, 44.4% em 4 h · BTC 24 h 3.49%, 4 h 0.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 6.9, 'ETH': 8.4, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 17.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** AAVE OCO invertido (alta, CONFIRMOU) · PNUT OCO invertido (alta, CONFIRMOU) · SEI bandeira de alta (alta, CONFIRMOU) · STO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ATOM topo duplo (baixa, formado) · ATOM OCO invertido (alta, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 1.6, 'ETH': 8.4, 'SOL': 11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** AAVE OCO invertido (alta, CONFIRMOU) · ANIME estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · LUNC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · SEI bandeira de alta (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · ATOM topo duplo (baixa, formado) · ATOM OCO invertido (alta, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado)
 - 📰 26/11 09:42 UTC · Cointelegraph: Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend
 - 📰 26/11 09:18 UTC · Cointelegraph: Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour
 - 📰 26/11 08:01 UTC · CoinDesk: $7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 57396 apostas conferidas ao vivo, acerto 54.2%; prevê 125 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 57411 apostas conferidas ao vivo, acerto 54.2%; prevê 55 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
