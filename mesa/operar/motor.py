@@ -28,7 +28,7 @@ SHARED = Path("/home/servidor-de-producao/OpenBot/Shared/baleias")
 EQUIPE = SHARED / "equipe"
 AGENTE = "laboratorio"
 CICLO_S, RADAR_S, ESFRIA_S = 30, 60, 30 * 60
-PADRAO = {"ligado": True, "estilo": "posição", "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
+PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
 
@@ -156,7 +156,9 @@ def montar(e, cmd, radar, risco, agora):
         margem = max(0.05, min(0.5, float(cmd.get("margem_pct") or 0.3)))
         stop = r["stop_pct"] / 100
         alvo = max(r["alvo_pct"] / 100, float(cmd.get("alvo_min_pct") or 0), 3 * stop)
-        noc = round(float(e.get("patrimonio") or 10) * margem * alav, 2)
+        patr = float(e.get("patrimonio") or 10)
+        risco = max(0.005, min(0.15, float(cmd.get("risco_pct") or 0.05)))
+        noc = round(min(patr * margem * alav, patr * risco / stop), 2)   # dono (26/11): o stop custa no máximo risco_pct da carteira
         lista.append({"moeda": m, "lado": r["lado"], "stop_pct": stop, "alvo_pct": round(alvo, 4), "max_min": max(r["max_min"], 240),
                       "nocional_usd": noc, "alav": alav,
                       "motivo": f"[{'preferida do Radar' if m in cmd['preferidas'] else 'radar'}] {r['estilo']}: 15m {r['v15']:+.2f}%, 1h {r['v1h']:+.2f}%, 4h {r['v4h']:+.2f}%, vol {r['vol_rel']}x, nota {r['nota']}"})
@@ -245,14 +247,14 @@ def volta(agora=None):
     return estado
 
 
-CHAVES = {"estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
+CHAVES = {"risco_pct", "estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
 
 
 DONOS = {                                                     # 25/11: cada decisão tem UM dono; os outros propõem no canal (canal.py)
     "lados": {"laboratorio", "baleias"}, "nota_min": {"laboratorio", "baleias"}, "estilo": {"laboratorio", "baleias"}, "ligado": {"laboratorio", "baleias"},
     "preferidas": {"cacador", "baleias"}, "bloqueadas": {"cacador", "laboratorio", "baleias"},
     "sair_agora": {"guardiao", "laboratorio", "baleias"},
-    "max_pos": {"baleias"}, "alav": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
+    "max_pos": {"baleias"}, "alav": {"baleias"}, "risco_pct": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
 }
 
 
