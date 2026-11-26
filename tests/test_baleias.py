@@ -3038,3 +3038,24 @@ class FocoDaEquipe(unittest.TestCase):
             self.assertTrue(any("foco da equipe = parado" in x["texto"] for x in c.e["eventos"]))
         finally:
             os.environ["BALEIAS_FOCO"] = old
+
+
+class GarantiaDoLucro(unittest.TestCase):
+    """25/11 (dono): posição que passou de +2% tem o stop levado à entrada + taxas; não volta a ser perda."""
+
+    def test_stop_vai_para_a_entrada(self):
+        import time
+        M = CorretoraDemoH71._mod(None) if hasattr(CorretoraDemoH71, "_mod") else None
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("corretora_garantia", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "corretora.py")
+        M = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(M)
+        f = CorretoraDemoH71._falsa(None, M)
+        c = CorretoraDemoH71._conta(None, M, f)
+        c.rodada({"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "t", "stop_pct": 0.015, "alvo_pct": 0.10, "max_min": 240}]})
+        p = c.e["abertas"]["AUSDT"]
+        f.velas_1m = lambda par, desde: [(int(time.time() * 1000) - 60_000, p["entrada"] * 1.025, p["entrada"])]
+        f.preco = lambda par: p["entrada"] * 1.02
+        c.mover_stops()
+        self.assertAlmostEqual(c.e["abertas"]["AUSDT"]["stop"]["preco"], p["entrada"] * (1 + M.GARANTIA_PCT), delta=p["entrada"] * 0.0006)
+        self.assertEqual(c.e["abertas"]["AUSDT"]["stop_tipo"], "garantia")

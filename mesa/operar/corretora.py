@@ -29,6 +29,7 @@ from executor.stop_movel import GUARDA, armar_em  # noqa: E402
 
 COFRE = Path("/home/servidor-de-producao/.config/OpenBot/agent-api-keys/.vault/agent-85eaa35b-7f9b-407c-839d-fed207b6b72d")
 PASTA = AQUI / "corretoras"
+GARANTIA_ARMA, GARANTIA_PCT = 0.02, 0.0015   # dono (25/11): posição que passou de +2% não volta a ser perda (stop = entrada + 0,15% de taxas)
 CAPITAL, PISO, MAX_POS, MAX_NOC, VALIDADE_S, MAX_HORAS = 10.0, 5.0, 8, 1.5, 75 * 60, 24   # R2: 8 posições
 TRAILER = "Co-authored-by: OpenBot <335604065+openbotgit[bot]@users.noreply.github.com>"
 
@@ -693,9 +694,10 @@ class Conta:
             for t, h, l in self.c.velas_1m(par, max(p["entrada_ms"], p.get("movel_ate", 0))):
                 p["pico"] = max(p.get("pico", 0.0), (h / p["entrada"] - 1) if compra else (1 - l / p["entrada"]))
                 p["movel_ate"] = t + 60_000
-            if p["pico"] < armar_em(p.get("alvo_pct"), p.get("movel", True)):
+            arma = armar_em(p.get("alvo_pct"), p.get("movel", True))
+            if p["pico"] < arma and p["pico"] < GARANTIA_ARMA:
                 continue
-            g = GUARDA * p["pico"]
+            g = GUARDA * p["pico"] if p["pico"] >= arma else GARANTIA_PCT       # 25/11 (dono): passou de +2% → stop na entrada + taxas
             novo = p["entrada"] * (1 + g if compra else 1 - g)
             atual = (p.get("stop") or {}).get("preco")
             if atual is not None and ((novo <= atual) if compra else (novo >= atual)):
@@ -711,8 +713,8 @@ class Conta:
                 self.anotar(f"⚠️ {par[:-4]}: não consegui subir o stop ({str(ex)[:100]}); o anterior continua")
                 continue
             self._cancelar(par, velho)
-            p["stop_tipo"] = "móvel"
-            self.anotar(f"⤴ {par[:-4]}: stop móvel {velho and velho['preco']} → {p['stop']['preco']} (pico +{p['pico']:.2%})")
+            p["stop_tipo"] = "móvel" if g != GARANTIA_PCT else "garantia"
+            self.anotar(f"⤴ {par[:-4]}: {'lucro garantido, stop' if g == GARANTIA_PCT else 'stop móvel'} {velho and velho['preco']} → {p['stop']['preco']} (pico +{p['pico']:.2%})")
 
     def patrimonio(self):
         pos = self.c.posicoes()
