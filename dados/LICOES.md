@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 15:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 15:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 86.3% das moedas subindo em 24 h, 15.3% em 4 h · BTC 24 h 4.02%, 4 h -0.54%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': -11.7, 'ETH': -0.2, 'SOL': -3.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': -10.5, 'ETH': -0.5, 'SOL': -2.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BTC OCO invertido (alta, formado) · DODO OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SEI OCO invertido (alta, formado) · SUI ombro-cabeça-ombro (baixa, formado)
 - 📰 26/11 15:11 UTC · Decrypt: OpenAI Fixes ChatGPT Billing Error, Promises to Make it 40% Worse
