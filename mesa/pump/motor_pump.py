@@ -23,7 +23,7 @@ EST = PASTA / "estado.json"
 RPC = "https://api.mainnet-beta.solana.com"
 API = "https://frontend-api-v3.pump.fun/coins?offset=0&limit=50&includeNsfw=false"
 UA = {"User-Agent": "Mozilla/5.0"}
-CICLO_S, CAPITAL, POS_USD, MAX_POS = 15, 10.0, 2.0, 3
+CICLO_S, CAPITAL, POS_USD, MAX_POS = 30, 10.0, 2.0, 3   # 30 s: a API do pump.fun recusa (429) leituras a cada 15 s
 # v2 (26/11): v1 comprava o pico do impulso (+15% em 3 min) e as 3 primeiras caíram 22–38% em até 2 min (venda do criador e dos primeiros).
 # Agora: moeda madura, perto da graduação, subindo devagar, sem concentração — e posições vigiadas a cada RAPIDO_S.
 PROG_MIN, PROG_MAX, IDADE_MIN = 0.60, 0.92, 20          # progresso da curva (fração vendida) e idade mínima (min)
@@ -82,6 +82,8 @@ def vigiar(e):
         if p["curva"] in px:
             e["hist"].setdefault(m, []).append([round(time.time()), px[p["curva"]][0]])
     sair(e, px, time.time())
+    e["patrimonio"] = patrimonio(e, px)
+    e["atualizado"] = time.time()
 
 
 def carregar():
@@ -106,15 +108,31 @@ def anotar(e, texto):
 
 
 def patrimonio(e, px):
-    return e["caixa"] + sum(p["qtd"] * px.get(p["curva"], (p["entrada"],))[0] * e.get("sol", 0) * (1 - CUSTO_LADO)
-                            for p in e["abertas"].values())
+    """Abertas pelo preço de agora; sem preço, pelo último lido (nunca pelo de entrada, que esconderia perda ou ganho)."""
+    tot = e["caixa"]
+    for m, p in e["abertas"].items():
+        preco = px[p["curva"]][0] if p["curva"] in px else ((e["hist"].get(m) or [[0, p["entrada"]]])[-1][1])
+        tot += p["qtd"] * preco * e.get("sol", 0) * (1 - CUSTO_LADO)
+    return tot
 
 
 def sair(e, px, agora):
     sol = e.get("sol") or 0
     for m, p in list(e["abertas"].items()):
-        if p["curva"] not in px:
+        if p["curva"] not in px:                            # a conta da curva sumiu: a moeda graduou e a curva foi fechada
+            p["sem_curva"] = p.get("sem_curva", 0) + 1
+            if p["sem_curva"] >= 3:
+                h = e["hist"].get(m) or [[0, p["entrada"]]]
+                ult = h[-1][1]
+                valor = p["qtd"] * ult * sol * (1 - CUSTO_LADO)
+                res = valor - p["usd"]
+                e["caixa"] += valor
+                e["fechadas"].append({**p, "mint": m, "saida": ult, "saida_t": agora, "resultado": round(res, 4),
+                                      "motivo_saida": "curva fechada (graduou): sai no último preço lido"})
+                del e["abertas"][m]
+                anotar(e, f"{'✅' if res > 0 else '❌'} SAIU de {p['simbolo']}: {res:+.3f} US$ ({ult / p['entrada'] - 1:+.1%}, curva fechada / graduou)")
             continue
+        p["sem_curva"] = 0
         preco, graduada = px[p["curva"]][:2]
         var = preco / p["entrada"] - 1
         p["pico"] = max(p.get("pico", 0.0), var)
