@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 13:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 13:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 83.5% das moedas subindo em 24 h, 33.9% em 4 h · BTC 24 h 3.53%, 4 h -0.12%.
+- **Amplitude:** 83.5% das moedas subindo em 24 h, 34.6% em 4 h · BTC 24 h 3.53%, 4 h -0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 17.6%/ano · {'BTC': -4.3, 'ETH': 11.0, 'SOL': 5.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 16.0%/ano · {'BTC': -4.3, 'ETH': 11.0, 'SOL': 6.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** NIGHT topo duplo (baixa, CONFIRMOU) · AAVE topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · AIXBT topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · DODO OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · SEI OCO invertido (alta, formado)
 - 📰 26/11 12:38 UTC · CoinDesk: Standard Chartered's Zodia Custody suffers data breach, exposing client information
