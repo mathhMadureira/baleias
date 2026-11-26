@@ -11,7 +11,7 @@ Ninguém muda o que é de outro: o motor recusa o comando de quem não é dono d
 Uso: python3 -I canal.py falar <de> <para|todos> <info|proposta|pedido|resposta> "<texto>" [--ref <id>]
      python3 -I canal.py ler <agente>            → mensagens novas para você (ou para todos) desde a sua última leitura
      python3 -I canal.py pendentes <agente>      → propostas e pedidos dirigidos a você ainda sem resposta (responda TODOS)
-Arquivo: Shared/baleias/equipe/canal.jsonl (últimas 1000). Nunca escreva chave, senha ou token.
+Arquivo: Shared/baleias/equipe/canal.jsonl (últimas 1000; mensagens com mais de 24 h são apagadas). Nunca escreva chave, senha ou token.
 """
 import fcntl
 import json
@@ -23,15 +23,24 @@ from pathlib import Path
 
 ARQ = Path(os.environ.get("BALEIAS_CANAL", "/home/servidor-de-producao/OpenBot/Shared/baleias/equipe/canal.jsonl"))
 AGENTES = ("motor", "cacador", "memecoins", "treinador", "guardiao", "laboratorio", "baleias", "engenheiro", "minerador")
+VALIDADE_S = 24 * 3600                       # dono (26/11): conversas apagadas após 24 h
 TIPOS = ("info", "proposta", "pedido", "resposta")
 TEMAS_DONO = {"lados e força mínima do motor": "laboratorio", "preferidas e bloqueios": "cacador", "sair de uma posição": "guardiao",
               "placar e lições": "treinador", "motor, painel e corretora": "engenheiro", "memecoins": "memecoins",
               "tamanho, alavancagem, alvo mínimo, foco": "baleias (só com o dono)"}
 
 
-def _ler():
+def _t(linha):
     try:
-        return [json.loads(l) for l in ARQ.read_text().splitlines() if l.strip()]
+        return float(json.loads(linha).get("t") or 0)
+    except ValueError:
+        return 0.0
+
+
+def _ler():
+    limite = time.time() - VALIDADE_S
+    try:
+        return [m for m in (json.loads(l) for l in ARQ.read_text().splitlines() if l.strip()) if m.get("t", 0) >= limite]
     except (OSError, ValueError):
         return []
 
@@ -53,6 +62,8 @@ def falar(de, para, tipo, texto, ref=None, agora=None):
     with open(ARQ.with_suffix(".lock"), "w") as t:
         fcntl.flock(t, fcntl.LOCK_EX)
         linhas = ARQ.read_text().splitlines()[-999:] if ARQ.exists() else []
+        limite = time.time() - VALIDADE_S
+        linhas = [l for l in linhas if _t(l) >= limite]
         linhas.append(json.dumps(m, ensure_ascii=False))
         tmp = ARQ.with_suffix(".tmp")
         tmp.write_text("\n".join(linhas) + "\n")

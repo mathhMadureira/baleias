@@ -3065,7 +3065,7 @@ class CanalDaEquipe(unittest.TestCase):
     """25/11 (dono): agentes conversam sem conflito — mensagens tipadas, proposta vai ao dono, o motor recusa quem não é dono."""
 
     def test_canal_e_donos(self):
-        import importlib.util, tempfile
+        import importlib.util, tempfile, time
         raiz = pathlib.Path(tempfile.mkdtemp())
         spec = importlib.util.spec_from_file_location("canal_t", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "canal.py")
         K = importlib.util.module_from_spec(spec)
@@ -3078,6 +3078,8 @@ class CanalDaEquipe(unittest.TestCase):
         with self.assertRaises(SystemExit):
             K.falar("guardiao", "todos", "proposta", "x")                       # proposta vai ao dono, não a todos
         self.assertEqual(len(K.ler("treinador")), 0)
+        K.falar("baleias", "todos", "info", "velha", agora=time.time() - 25 * 3600)
+        self.assertFalse(any(m["texto"] == "velha" for m in K._ler()))           # 24 h: some
         K.falar("baleias", "todos", "info", "teste")
         self.assertEqual(len(K.ler("treinador")), 1)
         spec = importlib.util.spec_from_file_location("motor_t", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "motor.py")
