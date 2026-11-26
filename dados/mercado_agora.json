@@ -1,16 +1,16 @@
 {
- "t": 1795703213,
- "hora_utc": "2026-11-26 14:26 UTC",
+ "t": 1795703428,
+ "hora_utc": "2026-11-26 14:30 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 127,
-  "subindo_pct": 56.7,
-  "mediana_pct": 0.17
+  "subindo_pct": 55.1,
+  "mediana_pct": 0.1
  },
  "mercado_4h": {
   "moedas": 127,
-  "subindo_pct": 47.2,
-  "mediana_pct": 0.0
+  "subindo_pct": 46.5,
+  "mediana_pct": -0.01
  },
  "mercado_24h": {
   "moedas": 127,
@@ -39,9 +39,9 @@
   },
   {
    "moeda": "DODO",
-   "4h": -6.11,
-   "24h": -4.07,
-   "vol": 1.31
+   "4h": -5.75,
+   "24h": -3.66,
+   "vol": 1.33
   },
   {
    "moeda": "MMT",
@@ -175,8 +175,14 @@
   -0.16
  ],
  "contexto": {
-  "t": 1795703214,
+  "t": 1795703429,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795703182,
+    "hora_utc": "26/11 14:26",
+    "titulo": "Cournot Raises $5M to Build AI-Native Oracle for Verifiable Intelligence"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795701958,
@@ -260,12 +266,6 @@
     "t": 1795692358,
     "hora_utc": "26/11 11:25",
     "titulo": "New York Wins $1.37B Judgment Against NovaTech Founders Who Fled the US"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795692179,
-    "hora_utc": "26/11 11:22",
-    "titulo": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 13.8,
+   "media_top20_anual_pct": 13.7,
    "principais_anual_pct": {
-    "BTC": -6.7,
-    "ETH": 7.9,
-    "SOL": 9.4
+    "BTC": -7.5,
+    "ETH": 7.4,
+    "SOL": 8.9
    },
    "leitura": "neutro"
   },
@@ -408,9 +408,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 86,
-  "compras": 36,
-  "vendas": 50,
+  "apostas": 85,
+  "compras": 38,
+  "vendas": 47,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -441,8 +441,8 @@
     "prob_subir": 0.382
    },
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.383
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
@@ -740,38 +740,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 30336 apostas (632 velas, 19/11 14:30–26/11 13:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5311,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 30326 apostas (632 velas, 19/11 14:45–26/11 14:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5312,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.4,
+  "z_contra_lab": -0.39,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5084,
-    "n": 24329
+    "acerto": 0.5083,
+    "n": 24320
    },
    "segue_maioria_24h": {
-    "acerto": 0.5163,
-    "n": 30267
+    "acerto": 0.5164,
+    "n": 30257
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5493,
-    "n": 8626
+    "acerto": 0.5492,
+    "n": 8625
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5476,
+    "acerto": 0.5479,
     "n": 3349
    },
    "confianca:<0,05": {
-    "acerto": 0.5133,
-    "n": 17495
+    "acerto": 0.5134,
+    "n": 17488
    },
    "confianca:≥0,12": {
-    "acerto": 0.6455,
-    "n": 866
+    "acerto": 0.647,
+    "n": 864
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5149,
@@ -782,20 +782,20 @@
     "n": 7109
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5306,
-    "n": 7800
+    "acerto": 0.5309,
+    "n": 7790
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5385,
     "n": 7090
    },
    "lado:compra": {
-    "acerto": 0.5204,
-    "n": 13339
+    "acerto": 0.5207,
+    "n": 13334
    },
    "lado:venda": {
-    "acerto": 0.5395,
-    "n": 16997
+    "acerto": 0.5394,
+    "n": 16992
    }
   }
  },
