@@ -1,6 +1,6 @@
 {
- "t": 1795684951,
- "hora_utc": "2026-11-26 09:22 UTC",
+ "t": 1795685179,
+ "hora_utc": "2026-11-26 09:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,11 +172,17 @@
   -0.43,
   -0.06,
   0.63,
-  -0.19
+  -0.2
  ],
  "contexto": {
-  "t": 1795684952,
+  "t": 1795685180,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795684695,
+    "hora_utc": "26/11 09:18",
+    "titulo": "Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795680093,
@@ -260,12 +266,6 @@
     "t": 1795643162,
     "hora_utc": "25/11 21:46",
     "titulo": "What Happened to Alice Huang, the Woman at the Center of Nvidia’s Scandal?"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795641739,
-    "hora_utc": "25/11 21:22",
-    "titulo": "Braiins warns of Bitcoin mining attacks affecting over 1,000 sites"
    }
   ],
   "medo_ganancia": {
@@ -276,8 +276,8 @@
   "funding": {
    "media_top20_anual_pct": 8.4,
    "principais_anual_pct": {
-    "BTC": 10.6,
-    "ETH": 8.5,
+    "BTC": 10.1,
+    "ETH": 8.2,
     "SOL": 11.0
    },
    "leitura": "neutro"
