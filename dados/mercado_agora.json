@@ -1,21 +1,21 @@
 {
- "t": 1795698232,
- "hora_utc": "2026-11-26 13:03 UTC",
+ "t": 1795698455,
+ "hora_utc": "2026-11-26 13:07 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 38.1,
-  "mediana_pct": -0.16
+  "moedas": 127,
+  "subindo_pct": 37.8,
+  "mediana_pct": -0.17
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 34.1,
+  "moedas": 127,
+  "subindo_pct": 33.9,
   "mediana_pct": -0.31
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 83.3,
-  "mediana_pct": 5.52
+  "moedas": 127,
+  "subindo_pct": 83.5,
+  "mediana_pct": 5.57
  },
  "btc": {
   "1h": 0.18,
@@ -172,10 +172,10 @@
   -0.69,
   0.32,
   0.18,
-  -0.04
+  0.04
  ],
  "contexto": {
-  "t": 1795698232,
+  "t": 1795698456,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 18.7,
+   "media_top20_anual_pct": 17.6,
    "principais_anual_pct": {
-    "BTC": -5.5,
+    "BTC": -4.3,
     "ETH": 11.0,
-    "SOL": 4.7
+    "SOL": 5.3
    },
    "leitura": "neutro"
   },
@@ -318,6 +318,13 @@
     "nivel": 97.56
    },
    {
+    "moeda": "AIXBT",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.01244
+   },
+   {
     "moeda": "BNB",
     "padrao": "OCO invertido",
     "sentido": "alta",
@@ -337,13 +344,6 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.04588
-   },
-   {
-    "moeda": "ETHFI",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.4575
    },
    {
     "moeda": "NFP",
@@ -401,8 +401,8 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 111,
-  "compras": 68,
+  "apostas": 112,
+  "compras": 69,
   "vendas": 43,
   "mais_confiantes_venda": [
    {
@@ -744,8 +744,8 @@
     "n": 24335
    },
    "segue_maioria_24h": {
-    "acerto": 0.5172,
-    "n": 30266
+    "acerto": 0.5179,
+    "n": 30185
    }
   },
   "referencia_ganha": [],
