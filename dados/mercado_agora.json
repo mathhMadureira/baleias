@@ -1,6 +1,6 @@
 {
- "t": 1795673812,
- "hora_utc": "2026-11-26 06:16 UTC",
+ "t": 1795673991,
+ "hora_utc": "2026-11-26 06:19 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,11 +172,17 @@
   0.11,
   0.32,
   -0.25,
-  -0.62
+  -0.64
  ],
  "contexto": {
-  "t": 1795673813,
+  "t": 1795673992,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795673949,
+    "hora_utc": "26/11 06:19",
+    "titulo": "Over 1,000 Bitcoin miners were tricked into working for a thief by a fake internet route"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795672800,
@@ -260,12 +266,6 @@
     "t": 1795641099,
     "hora_utc": "25/11 21:11",
     "titulo": "Why ECB collateral eligibility could boost demand for tokenized bonds"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795638963,
-    "hora_utc": "25/11 20:36",
-    "titulo": "Another Bitcoin Mining Firm Flags 'Hashrate Hijacking' Attacks That Reroute Rewards"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 6.6,
+   "media_top20_anual_pct": 6.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.5,
-    "SOL": -10.5
+    "ETH": 4.2,
+    "SOL": -9.3
    },
    "leitura": "neutro"
   },
