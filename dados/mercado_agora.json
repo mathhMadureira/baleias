@@ -1,21 +1,21 @@
 {
- "t": 1795667486,
- "hora_utc": "2026-11-26 04:31 UTC",
+ "t": 1795667664,
+ "hora_utc": "2026-11-26 04:34 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 127,
-  "subindo_pct": 56.7,
+  "moedas": 125,
+  "subindo_pct": 57.6,
   "mediana_pct": 0.11
  },
  "mercado_4h": {
-  "moedas": 127,
-  "subindo_pct": 66.1,
-  "mediana_pct": 0.46
+  "moedas": 125,
+  "subindo_pct": 65.6,
+  "mediana_pct": 0.45
  },
  "mercado_24h": {
-  "moedas": 127,
-  "subindo_pct": 87.4,
-  "mediana_pct": 3.78
+  "moedas": 125,
+  "subindo_pct": 87.2,
+  "mediana_pct": 3.9
  },
  "btc": {
   "1h": 0.52,
@@ -175,8 +175,14 @@
   0.4
  ],
  "contexto": {
-  "t": 1795667487,
+  "t": 1795667665,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795667085,
+    "hora_utc": "26/11 04:24",
+    "titulo": "Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795656800,
@@ -260,12 +266,6 @@
     "t": 1795630690,
     "hora_utc": "25/11 18:18",
     "titulo": "Elon Musk’s SpaceX Gets FCC Approval to Launch AI Data Centers in Space"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795629190,
-    "hora_utc": "25/11 17:53",
-    "titulo": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 6.8,
+   "media_top20_anual_pct": 6.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 8.0,
-    "SOL": -14.4
+    "ETH": 7.5,
+    "SOL": -14.8
    },
    "leitura": "neutro"
   },
@@ -726,12 +726,12 @@
   "z_contra_lab": -0.32,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5096,
-    "n": 24786
+    "acerto": 0.5098,
+    "n": 24380
    },
    "segue_maioria_24h": {
-    "acerto": 0.5172,
-    "n": 30245
+    "acerto": 0.5168,
+    "n": 30221
    }
   },
   "referencia_ganha": [],

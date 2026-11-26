@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 04:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 04:34 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 87.4% das moedas subindo em 24 h, 66.1% em 4 h · BTC 24 h 2.97%, 4 h 0.36%.
+- **Amplitude:** 87.2% das moedas subindo em 24 h, 65.6% em 4 h · BTC 24 h 2.97%, 4 h 0.36%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': 11.0, 'ETH': 8.0, 'SOL': -14.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.9%/ano · {'BTC': 11.0, 'ETH': 7.5, 'SOL': -14.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BABY fundo duplo (alta, CONFIRMOU) · LAYER estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ALGO topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · CKB fundo duplo (alta, formado) · INJ OCO invertido (alta, formado) · ME fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SEI OCO invertido (alta, formado) · XRP OCO invertido (alta, formado)
+- 📰 26/11 04:24 UTC · Cointelegraph: Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions
 - 📰 26/11 01:33 UTC · Cointelegraph: AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says
 - 📰 25/11 22:38 UTC · Decrypt: China's Google Just Released Its Fast New AI Model for Free
 - 📰 25/11 22:33 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 25/11 21:53 UTC · Cointelegraph: Switzerland clears 57 jurisdictions for crypto tax data sharing
 - 📰 25/11 21:46 UTC · Decrypt: What Happened to Alice Huang, the Woman at the Center of Nvidia’s Scandal?
-- 📰 25/11 21:22 UTC · Cointelegraph: Braiins warns of Bitcoin mining attacks affecting over 1,000 sites
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -108,13 +108,13 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 56625 apostas conferidas ao vivo, acerto 54.2%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 56625 apostas conferidas ao vivo, acerto 54.2%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
