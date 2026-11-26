@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 16:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 16:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 87.7% das moedas subindo em 24 h, 27.9% em 4 h · BTC 24 h 4.14%, 4 h -0.6%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.0%/ano · {'BTC': -4.8, 'ETH': -6.1, 'SOL': 6.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.8%/ano · {'BTC': -4.7, 'ETH': -6.0, 'SOL': 5.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LISTA bandeira de baixa (baixa, CONFIRMOU) · MMT bandeira de baixa (baixa, CONFIRMOU) · BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · UNI fundo duplo (alta, formado)
+- 📰 26/11 16:50 UTC · CoinDesk: Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases
 - 📰 26/11 16:43 UTC · Decrypt: Spain Lets Its Financial Intelligence Unit Freeze Crypto Accounts Without a Court Order
 - 📰 26/11 16:40 UTC · Cointelegraph: BIS chief Pablo Hernández de Cos set to become next ECB president: FT
 - 📰 26/11 15:45 UTC · Cointelegraph: How EU brokers could lose access to Kyrgyz crypto exchanges
 - 📰 26/11 15:42 UTC · CoinDesk: Crypto for Advisors: Four questions to ask before trusting a crypto exchange
 - 📰 26/11 15:11 UTC · Decrypt: OpenAI Fixes ChatGPT Billing Error, Promises to Make it 40% Worse
-- 📰 26/11 14:38 UTC · Decrypt: Elon Musk Says ‘Multiplanetary’ SpaceX Could Be Worth $118 Quintillion. Yes, Quintillion
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
