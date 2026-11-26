@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 13:51 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 13:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 87.4% das moedas subindo em 24 h, 33.1% em 4 h · BTC 24 h 4.47%, 4 h -0.08%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.0%/ano · {'BTC': -6.2, 'ETH': 11.0, 'SOL': 10.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.1%/ano · {'BTC': -6.0, 'ETH': 11.0, 'SOL': 10.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** NIGHT topo duplo (baixa, CONFIRMOU) · AAVE topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · ACE topo duplo (baixa, formado) · ACE OCO invertido (alta, formado) · AIXBT topo duplo (baixa, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · DODO OCO invertido (alta, formado) · JTO OCO invertido (alta, formado)
+- 📰 26/11 13:47 UTC · Cointelegraph: Nasdaq exec pushes for common EU rules on tokenized securities
 - 📰 26/11 13:45 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 26/11 13:30 UTC · Cointelegraph: 7 bizarre things crypto whales spent a fortune on
 - 📰 26/11 13:13 UTC · Decrypt: Standard Chartered's Zodia Custody Says Hackers Accessed Client Contact Details
 - 📰 26/11 12:38 UTC · CoinDesk: Standard Chartered's Zodia Custody suffers data breach, exposing client information
 - 📰 26/11 12:26 UTC · Decrypt: Galaxy Research Withdraws Call That Bitcoin's Bear Market Is Over
-- 📰 26/11 12:14 UTC · CoinDesk: Bitcoin ETFs are bleeding cash and the Fed is unlikely to help
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
