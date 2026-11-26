@@ -102,6 +102,10 @@ def _carteira():
         ab.append({"moeda": par, "lado": p.get("lado"), "entrada": p.get("entrada"), "desde": p.get("entrada_t"), "stop": st.get("preco"),
                    "alvo": al.get("preco"), "nocional": p.get("nocional"), "alav": p.get("alav"), "max_min": p.get("max_min"),
                    "motivo": str(p.get("motivo") or "")[:240]})
+        if isinstance(p.get("resultado_aberto"), (int, float)):     # 25/11: o resultado aberto é o da CORRETORA (o mesmo do patrimônio)
+            ab[-1]["resultado"] = round(p["resultado_aberto"], 4)
+            ab[-1]["agora"] = p.get("preco_corretora")
+            continue
         agora_px = preco_bingx(par) if os.environ.get("BALEIAS_SEM_REDE") != "1" else None
         if agora_px and p.get("entrada") and p.get("nocional"):
             sinal = 1 if p.get("lado") == "compra" else -1
@@ -111,7 +115,14 @@ def _carteira():
            "resultado": x.get("resultado_usd"), "taxas": x.get("taxas"), "motivo": str(x.get("motivo_saida") or "")[:120],
            "causa": causa_saida(x)} for x in e.get("fechadas") or []]
     ev = sorted((x for x in e.get("eventos") or [] if isinstance(x, dict) and x.get("t")), key=lambda x: -x["t"])[:30]
-    return {"existe": True, "corretora": e.get("corretora"), "patrimonio": e.get("patrimonio", CAPITAL), "capital": e.get("capital_inicial") or CAPITAL,
+    realizado = sum(x["resultado"] for x in fe if isinstance(x["resultado"], (int, float)))
+    aberto = sum(a.get("resultado") or 0 for a in ab)
+    cap = e.get("capital_inicial") or CAPITAL
+    conta = {"capital": cap, "realizado": round(realizado, 4), "aberto": round(aberto, 4),
+             "taxas_entrada_abertas": round(-sum((p.get("taxa_entrada") or 0) for p in (e.get("abertas") or {}).values()), 4),
+             "patrimonio": e.get("patrimonio")}
+    conta["diferenca"] = round((conta["patrimonio"] or 0) - (cap + realizado + aberto), 4)   # taxa de entrada é descontada no fechamento
+    return {"existe": True, "conta": conta, "corretora": e.get("corretora"), "patrimonio": e.get("patrimonio", CAPITAL), "capital": e.get("capital_inicial") or CAPITAL,
             "caixa": e.get("caixa"), "abertas": ab, "fechadas": fe, "eventos": ev, "atualizado": e.get("atualizado")}
 
 

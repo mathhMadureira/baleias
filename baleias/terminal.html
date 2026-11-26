@@ -83,11 +83,12 @@ iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; b
     <div class="eq-top"><span id="eq-info">Carteira</span><span class="mult" id="mult">1,00×</span></div>
     <div class="eq" id="eq">US$ —</div>
     <div class="eq-sub"><span id="eq-var">—</span><span class="mut" id="wl"></span></div>
+    <div class="num mut" id="eq-conta" style="font-size:12px;margin-top:6px"></div>
     <div class="curva" id="curva"></div>
     <div class="meta-l"><span>meta US$ 10 → US$ 20</span><span id="meta-p">0%</span></div><div class="barra"><i id="meta-b" style="width:0%"></i></div>
     <div class="chips" id="chips"></div>
   </div>
-  <div class="tiles"><div class="tile"><span>acerto</span><b id="t-ac">—</b></div><div class="tile"><span>melhor</span><b id="t-me">—</b></div><div class="tile"><span>pior</span><b id="t-pi">—</b></div><div class="tile"><span>em aberto</span><b id="t-ab">—</b></div></div>
+  <div class="tiles"><div class="tile"><span>acerto</span><b id="t-ac">—</b></div><div class="tile"><span>melhor</span><b id="t-me">—</b></div><div class="tile"><span>pior</span><b id="t-pi">—</b></div><div class="tile"><span>em aberto (corretora)</span><b id="t-ab">—</b></div></div>
 
   <div class="card">
     <div class="desk-h"><b>⚙ Motor</b><span id="mo-t"></span></div>
@@ -200,6 +201,10 @@ function desenhar() {
   $("mult").textContent = fmt(x, 2) + "×"; $("mult").className = "mult" + (x < 1 ? " neg" : "");
   const [i, d] = fmt(m.patrimonio, 2).split(","); $("eq").innerHTML = `US$ ${i}<small>,${d}</small>`;
   $("eq-var").innerHTML = `<span class="${cor(v)}">${sn(v)} (${sn(v / m.capital * 100, 1)}%)</span>`;
+  const k = c.conta;
+  if (k) $("eq-conta").innerHTML = `US$ ${fmt(k.capital, 0)} início <span class="${cor(k.realizado)}">${sn(k.realizado)} fechadas</span> <span class="${cor(k.aberto)}">${sn(k.aberto)} em aberto</span>`
+    + ` = US$ ${fmt(k.patrimonio)}` + (Math.abs(k.taxas_entrada_abertas) > 0.0005 ? ` <span class="mut">(${sn(k.taxas_entrada_abertas)} de taxa de entrada saem no fechamento)</span>` : "")
+    + (Math.abs(k.diferenca) > 0.02 ? ` <span class="down">⚠ diferença ${sn(k.diferenca)}</span>` : " ✓");
   $("wl").textContent = `${m.ganhos}W / ${m.operacoes - m.ganhos}L`;
   const prog = Math.max(0, Math.min(1, m.progresso));
   $("meta-p").textContent = fmt(prog * 100, 0) + "% do caminho"; $("meta-b").style.width = prog * 100 + "%";
