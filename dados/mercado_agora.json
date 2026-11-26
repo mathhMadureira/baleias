@@ -1,20 +1,20 @@
 {
- "t": 1795699539,
- "hora_utc": "2026-11-26 13:25 UTC",
+ "t": 1795699757,
+ "hora_utc": "2026-11-26 13:29 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 35.7,
-  "mediana_pct": -0.11
+  "moedas": 127,
+  "subindo_pct": 35.4,
+  "mediana_pct": -0.1
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 36.5,
-  "mediana_pct": -0.33
+  "moedas": 127,
+  "subindo_pct": 36.2,
+  "mediana_pct": -0.32
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 84.9,
+  "moedas": 127,
+  "subindo_pct": 85.0,
   "mediana_pct": 5.57
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.69,
   0.32,
   0.18,
-  0.01
+  0.04
  ],
  "contexto": {
-  "t": 1795699540,
+  "t": 1795699758,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 14.5,
+   "media_top20_anual_pct": 14.3,
    "principais_anual_pct": {
-    "BTC": -6.6,
+    "BTC": -6.7,
     "ETH": 11.0,
-    "SOL": 8.2
+    "SOL": 8.9
    },
    "leitura": "neutro"
   },
@@ -402,8 +402,8 @@
  "v4": {
   "vela": "11:45 UTC",
   "apostas": 122,
-  "compras": 40,
-  "vendas": 82,
+  "compras": 39,
+  "vendas": 83,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -741,11 +741,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5078,
-    "n": 24111
+    "n": 24231
    },
    "segue_maioria_24h": {
-    "acerto": 0.517,
-    "n": 30257
+    "acerto": 0.5162,
+    "n": 30223
    }
   },
   "referencia_ganha": [],
