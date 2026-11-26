@@ -1,28 +1,28 @@
 {
- "t": 1795698891,
- "hora_utc": "2026-11-26 13:14 UTC",
+ "t": 1795699108,
+ "hora_utc": "2026-11-26 13:18 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
-  "subindo_pct": 38.1,
-  "mediana_pct": -0.16
+  "subindo_pct": 35.7,
+  "mediana_pct": -0.11
  },
  "mercado_4h": {
   "moedas": 126,
-  "subindo_pct": 34.9,
-  "mediana_pct": -0.31
+  "subindo_pct": 36.5,
+  "mediana_pct": -0.33
  },
  "mercado_24h": {
   "moedas": 126,
-  "subindo_pct": 83.3,
-  "mediana_pct": 5.52
+  "subindo_pct": 84.9,
+  "mediana_pct": 5.57
  },
  "btc": {
-  "1h": 0.18,
-  "4h": -0.12,
-  "24h": 3.53,
-  "preco": 60825.37,
-  "vol_4h_vs_media": 0.5
+  "1h": 0.24,
+  "4h": -0.21,
+  "24h": 3.5,
+  "preco": 60818.73,
+  "vol_4h_vs_media": 0.45
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "BLUR",
-   "4h": -7.69,
-   "24h": -0.1,
-   "vol": 0.59
+   "4h": -6.46,
+   "24h": 3.25,
+   "vol": 0.63
   },
   {
    "moeda": "DODO",
-   "4h": -7.24,
-   "24h": -1.11,
-   "vol": 1.21
-  },
-  {
-   "moeda": "MMT",
-   "4h": -6.82,
-   "24h": -13.62,
-   "vol": 1.62
+   "4h": -5.85,
+   "24h": -0.27,
+   "vol": 1.22
   },
   {
    "moeda": "MANTRA",
-   "4h": -5.34,
-   "24h": 14.81,
-   "vol": 0.43
+   "4h": -5.77,
+   "24h": 11.87,
+   "vol": 0.4
   },
   {
-   "moeda": "MOVE",
-   "4h": -3.99,
-   "24h": 33.33,
-   "vol": 0.89
+   "moeda": "MMT",
+   "4h": -5.62,
+   "24h": -14.89,
+   "vol": 1.66
+  },
+  {
+   "moeda": "TFUEL",
+   "4h": -4.16,
+   "24h": 16.07,
+   "vol": 1.27
+  },
+  {
+   "moeda": "AT",
+   "4h": -4.04,
+   "24h": 8.53,
+   "vol": 0.2
+  },
+  {
+   "moeda": "NIGHT",
+   "4h": -4.01,
+   "24h": 1.32,
+   "vol": 1.49
   },
   {
    "moeda": "ZEC",
-   "4h": -3.13,
-   "24h": 1.85,
+   "4h": -2.95,
+   "24h": 1.94,
    "vol": 0.74
   },
   {
-   "moeda": "STO",
-   "4h": -3.12,
-   "24h": 9.05,
-   "vol": 0.7
-  },
-  {
-   "moeda": "BABY",
-   "4h": -3.08,
-   "24h": 1.9,
-   "vol": 0.5
-  },
-  {
    "moeda": "MARSCOIN",
-   "4h": -3.07,
-   "24h": 5.58,
-   "vol": 0.58
+   "4h": -2.73,
+   "24h": 5.17,
+   "vol": 0.57
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "INIT",
-   "4h": 13.65,
-   "24h": 39.46,
-   "vol": 3.92
-  },
-  {
-   "moeda": "ME",
-   "4h": 9.83,
-   "24h": 23.01,
-   "vol": 3.63
-  },
-  {
-   "moeda": "SKY",
-   "4h": 8.21,
-   "24h": 18.47,
-   "vol": 1.93
+   "4h": 18.52,
+   "24h": 47.62,
+   "vol": 3.81
   },
   {
    "moeda": "ONE",
-   "4h": 7.5,
-   "24h": 10.29,
-   "vol": 4.6
+   "4h": 9.32,
+   "24h": 13.85,
+   "vol": 4.63
   },
   {
-   "moeda": "BIGTIME",
-   "4h": 5.42,
-   "24h": -17.16,
-   "vol": 0.79
+   "moeda": "SKY",
+   "4h": 7.12,
+   "24h": 18.39,
+   "vol": 2.15
   },
   {
-   "moeda": "SSV",
-   "4h": 5.36,
-   "24h": 40.11,
-   "vol": 1.07
-  },
-  {
-   "moeda": "SOMI",
-   "4h": 4.34,
-   "24h": 14.04,
-   "vol": 2.61
-  },
-  {
-   "moeda": "SEI",
-   "4h": 3.06,
-   "24h": 14.91,
-   "vol": 3.12
+   "moeda": "ME",
+   "4h": 6.28,
+   "24h": 19.38,
+   "vol": 3.66
   },
   {
    "moeda": "ZRO",
-   "4h": 3.0,
-   "24h": 11.11,
+   "4h": 4.03,
+   "24h": 12.36,
+   "vol": 1.13
+  },
+  {
+   "moeda": "2Z",
+   "4h": 3.48,
+   "24h": 13.0,
    "vol": 1.11
   },
   {
-   "moeda": "HMSTR",
-   "4h": 2.9,
-   "24h": -8.55,
-   "vol": 1.84
+   "moeda": "BIGTIME",
+   "4h": 3.19,
+   "24h": -18.92,
+   "vol": 0.82
+  },
+  {
+   "moeda": "SSV",
+   "4h": 2.7,
+   "24h": 39.77,
+   "vol": 1.01
+  },
+  {
+   "moeda": "SOMI",
+   "4h": 2.66,
+   "24h": 13.17,
+   "vol": 2.82
+  },
+  {
+   "moeda": "SAGA",
+   "4h": 2.32,
+   "24h": 7.56,
+   "vol": 3.31
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.69,
   0.32,
   0.18,
-  -0.0
+  -0.01
  ],
  "contexto": {
-  "t": 1795698892,
+  "t": 1795699109,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795698799,
+    "hora_utc": "26/11 13:13",
+    "titulo": "Standard Chartered's Zodia Custody Says Hackers Accessed Client Contact Details"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795696731,
@@ -260,12 +266,6 @@
     "t": 1795686154,
     "hora_utc": "26/11 09:42",
     "titulo": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795684695,
-    "hora_utc": "26/11 09:18",
-    "titulo": "Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 15.2,
+   "media_top20_anual_pct": 15.0,
    "principais_anual_pct": {
-    "BTC": -5.1,
+    "BTC": -5.3,
     "ETH": 11.0,
-    "SOL": 6.1
+    "SOL": 5.8
    },
    "leitura": "neutro"
   },
@@ -401,9 +401,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 113,
-  "compras": 70,
-  "vendas": 43,
+  "apostas": 122,
+  "compras": 40,
+  "vendas": 82,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -418,16 +418,16 @@
     "prob_subir": 0.37
    },
    {
-    "moeda": "U",
-    "prob_subir": 0.37
-   },
-   {
     "moeda": "RESOLV",
     "prob_subir": 0.375
    },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
+   },
+   {
+    "moeda": "STO",
+    "prob_subir": 0.378
    },
    {
     "moeda": "RUNE",
@@ -440,10 +440,6 @@
   ],
   "mais_confiantes_compra": [
    {
-    "moeda": "ORDI",
-    "prob_subir": 0.679
-   },
-   {
     "moeda": "PSG",
     "prob_subir": 0.651
    },
@@ -452,24 +448,28 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.639
-   },
-   {
-    "moeda": "ERA",
-    "prob_subir": 0.624
-   },
-   {
     "moeda": "THETA",
     "prob_subir": 0.62
    },
    {
-    "moeda": "OP",
-    "prob_subir": 0.617
+    "moeda": "AERO",
+    "prob_subir": 0.62
    },
    {
     "moeda": "ENS",
     "prob_subir": 0.614
+   },
+   {
+    "moeda": "RWUSD",
+    "prob_subir": 0.61
+   },
+   {
+    "moeda": "MITO",
+    "prob_subir": 0.608
+   },
+   {
+    "moeda": "F",
+    "prob_subir": 0.604
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -733,38 +733,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30280 apostas (632 velas, 19/11 13:15–26/11 12:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5318,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30271 apostas (632 velas, 19/11 13:30–26/11 12:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5317,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.32,
+  "z_contra_lab": -0.34,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5076,
-    "n": 24110
+    "acerto": 0.5078,
+    "n": 24111
    },
    "segue_maioria_24h": {
-    "acerto": 0.5169,
-    "n": 30266
+    "acerto": 0.517,
+    "n": 30257
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5499,
+    "acerto": 0.5498,
     "n": 8605
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5486,
-    "n": 3325
+    "acerto": 0.5479,
+    "n": 3333
    },
    "confianca:<0,05": {
-    "acerto": 0.5141,
-    "n": 17488
+    "acerto": 0.514,
+    "n": 17470
    },
    "confianca:≥0,12": {
-    "acerto": 0.6462,
-    "n": 862
+    "acerto": 0.6466,
+    "n": 863
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5149,
@@ -775,20 +775,20 @@
     "n": 7109
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5333,
-    "n": 7744
+    "acerto": 0.5328,
+    "n": 7735
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5385,
     "n": 7090
    },
    "lado:compra": {
-    "acerto": 0.5204,
-    "n": 13308
+    "acerto": 0.5202,
+    "n": 13334
    },
    "lado:venda": {
-    "acerto": 0.5408,
-    "n": 16972
+    "acerto": 0.5407,
+    "n": 16937
    }
   }
  },
