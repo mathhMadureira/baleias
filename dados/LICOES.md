@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 12:26 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 12:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 85.7% das moedas subindo em 24 h, 51.6% em 4 h · BTC 24 h 3.6%, 4 h 0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 21.2%/ano · {'BTC': -3.4, 'ETH': 8.8, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 23.1%/ano · {'BTC': -3.1, 'ETH': 8.9, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AAVE fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · PNUT OCO invertido (alta, formado) · SEI OCO invertido (alta, formado) · SOL OCO invertido (alta, formado) · XRP OCO invertido (alta, formado)
+- 📰 26/11 12:26 UTC · Decrypt: Galaxy Research Withdraws Call That Bitcoin's Bear Market Is Over
 - 📰 26/11 12:14 UTC · CoinDesk: Bitcoin ETFs are bleeding cash and the Fed is unlikely to help
 - 📰 26/11 12:13 UTC · Cointelegraph: Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve
 - 📰 26/11 11:50 UTC · Decrypt: UK Regulator Cites Binance Hack as It Plans Tougher DeFi Rules Than US and EU: Report
 - 📰 26/11 11:37 UTC · Cointelegraph: Standard Chartered’s Zodia Custody suffers data breach: Report
 - 📰 26/11 11:27 UTC · CoinDesk: Hong Kong-based crypto trading firm Auros is winding down operations
-- 📰 26/11 11:25 UTC · Decrypt: New York Wins $1.37B Judgment Against NovaTech Founders Who Fled the US
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

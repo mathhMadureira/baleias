@@ -1,6 +1,6 @@
 {
- "t": 1795695961,
- "hora_utc": "2026-11-26 12:26 UTC",
+ "t": 1795696189,
+ "hora_utc": "2026-11-26 12:29 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -175,8 +175,14 @@
   -0.13
  ],
  "contexto": {
-  "t": 1795695962,
+  "t": 1795696190,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795695968,
+    "hora_utc": "26/11 12:26",
+    "titulo": "Galaxy Research Withdraws Call That Bitcoin's Bear Market Is Over"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795695286,
@@ -260,12 +266,6 @@
     "t": 1795680093,
     "hora_utc": "26/11 08:01",
     "titulo": "$7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795676965,
-    "hora_utc": "26/11 07:09",
-    "titulo": "Zcash developers want users to move $300 million out of an older privacy system"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 21.2,
+   "media_top20_anual_pct": 23.1,
    "principais_anual_pct": {
-    "BTC": -3.4,
-    "ETH": 8.8,
+    "BTC": -3.1,
+    "ETH": 8.9,
     "SOL": 11.0
    },
    "leitura": "neutro"
