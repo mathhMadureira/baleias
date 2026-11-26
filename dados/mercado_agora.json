@@ -1,28 +1,28 @@
 {
- "t": 1795704295,
- "hora_utc": "2026-11-26 14:44 UTC",
+ "t": 1795704512,
+ "hora_utc": "2026-11-26 14:48 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
-  "subindo_pct": 41.6,
-  "mediana_pct": -0.07
+  "subindo_pct": 35.2,
+  "mediana_pct": -0.17
  },
  "mercado_4h": {
   "moedas": 125,
-  "subindo_pct": 43.2,
-  "mediana_pct": -0.11
+  "subindo_pct": 52.0,
+  "mediana_pct": 0.11
  },
  "mercado_24h": {
   "moedas": 125,
-  "subindo_pct": 88.0,
-  "mediana_pct": 6.86
+  "subindo_pct": 89.6,
+  "mediana_pct": 8.0
  },
  "btc": {
-  "1h": -0.19,
-  "4h": -0.11,
-  "24h": 4.42,
-  "preco": 60754.0,
-  "vol_4h_vs_media": 0.47
+  "1h": -0.24,
+  "4h": 0.36,
+  "24h": 5.87,
+  "preco": 60757.36,
+  "vol_4h_vs_media": 0.48
  },
  "maiores_quedas_4h": [
   {
@@ -32,120 +32,120 @@
    "vol": 2.08
   },
   {
-   "moeda": "ME",
-   "4h": -15.4,
-   "24h": 21.49,
-   "vol": 3.03
-  },
-  {
    "moeda": "BLUR",
-   "4h": -9.51,
-   "24h": 0.11,
-   "vol": 0.68
+   "4h": -7.77,
+   "24h": 1.71,
+   "vol": 0.65
   },
   {
    "moeda": "LISTA",
-   "4h": -6.17,
-   "24h": -23.38,
-   "vol": 0.79
+   "4h": -6.51,
+   "24h": -22.72,
+   "vol": 0.84
   },
   {
    "moeda": "MMT",
-   "4h": -6.16,
-   "24h": -19.9,
-   "vol": 1.66
+   "4h": -6.42,
+   "24h": -19.09,
+   "vol": 1.67
+  },
+  {
+   "moeda": "ME",
+   "4h": -5.81,
+   "24h": 25.94,
+   "vol": 2.08
   },
   {
    "moeda": "DODO",
-   "4h": -5.75,
-   "24h": -3.66,
-   "vol": 1.33
-  },
-  {
-   "moeda": "ZEC",
-   "4h": -3.76,
-   "24h": 4.26,
-   "vol": 0.96
-  },
-  {
-   "moeda": "NIGHT",
-   "4h": -2.71,
-   "24h": 3.89,
+   "4h": -5.05,
+   "24h": -2.94,
    "vol": 1.34
   },
   {
-   "moeda": "SAHARA",
-   "4h": -2.46,
-   "24h": 2.99,
-   "vol": 0.53
+   "moeda": "ANIME",
+   "4h": -4.06,
+   "24h": 12.87,
+   "vol": 1.5
   },
   {
-   "moeda": "CYBER",
-   "4h": -2.36,
-   "24h": 0.98,
-   "vol": 0.78
+   "moeda": "ZEC",
+   "4h": -4.01,
+   "24h": 4.05,
+   "vol": 1.04
+  },
+  {
+   "moeda": "MANTRA",
+   "4h": -3.94,
+   "24h": 6.09,
+   "vol": 0.26
+  },
+  {
+   "moeda": "LA",
+   "4h": -2.59,
+   "24h": 11.29,
+   "vol": 3.35
   }
  ],
  "maiores_altas_4h": [
   {
-   "moeda": "TFUEL",
-   "4h": 16.32,
-   "24h": 36.72,
-   "vol": 2.38
-  },
-  {
    "moeda": "INIT",
-   "4h": 12.21,
-   "24h": 50.65,
-   "vol": 2.59
+   "4h": 19.38,
+   "24h": 50.91,
+   "vol": 2.32
   },
   {
    "moeda": "SSV",
-   "4h": 8.71,
-   "24h": 44.25,
-   "vol": 1.04
+   "4h": 17.17,
+   "24h": 57.5,
+   "vol": 1.19
+  },
+  {
+   "moeda": "TFUEL",
+   "4h": 10.56,
+   "24h": 30.92,
+   "vol": 2.4
   },
   {
    "moeda": "SKY",
-   "4h": 6.63,
-   "24h": 20.59,
-   "vol": 2.56
+   "4h": 7.27,
+   "24h": 22.84,
+   "vol": 2.59
   },
   {
    "moeda": "SAGA",
-   "4h": 4.73,
-   "24h": 10.69,
-   "vol": 3.53
+   "4h": 6.77,
+   "24h": 14.89,
+   "vol": 3.82
   },
   {
    "moeda": "SEI",
-   "4h": 4.46,
-   "24h": 19.25,
-   "vol": 2.94
+   "4h": 5.78,
+   "24h": 21.01,
+   "vol": 2.98
   },
   {
    "moeda": "2Z",
-   "4h": 3.82,
-   "24h": 12.12,
-   "vol": 1.79
-  },
-  {
-   "moeda": "ZRO",
-   "4h": 2.68,
-   "24h": 15.37,
-   "vol": 1.24
+   "4h": 5.68,
+   "24h": 16.37,
+   "vol": 1.9
   },
   {
    "moeda": "OPG",
-   "4h": 2.12,
-   "24h": -2.28,
-   "vol": 0.54
+   "4h": 2.71,
+   "24h": -1.3,
+   "vol": 0.55
+  },
+  {
+   "moeda": "MOVE",
+   "4h": 2.37,
+   "24h": 35.01,
+   "vol": 0.63
   },
   {
    "moeda": "LAYER",
-   "4h": 1.98,
-   "24h": 1.98,
-   "vol": 0.32
+   "4h": 2.2,
+   "24h": 4.27,
+   "vol": 0.3
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.32,
   0.18,
   0.08,
-  -0.2
+  -0.21
  ],
  "contexto": {
-  "t": 1795704296,
+  "t": 1795704513,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -194,12 +194,6 @@
     "t": 1795701958,
     "hora_utc": "26/11 14:05",
     "titulo": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795701662,
-    "hora_utc": "26/11 14:01",
-    "titulo": "Polygon Brings Its Cross-Border Payments Stack to Coinbase’s Base"
    },
    {
     "fonte": "Cointelegraph",
@@ -266,6 +260,12 @@
     "t": 1795692470,
     "hora_utc": "26/11 11:27",
     "titulo": "Hong Kong-based crypto trading firm Auros is winding down operations"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795692358,
+    "hora_utc": "26/11 11:25",
+    "titulo": "New York Wins $1.37B Judgment Against NovaTech Founders Who Fled the US"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 12.3,
+   "media_top20_anual_pct": 11.7,
    "principais_anual_pct": {
-    "BTC": -8.5,
-    "ETH": 6.7,
-    "SOL": 6.0
+    "BTC": -8.4,
+    "ETH": 6.9,
+    "SOL": 5.5
    },
    "leitura": "neutro"
   },
@@ -408,9 +408,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 88,
-  "compras": 40,
-  "vendas": 48,
+  "apostas": 92,
+  "compras": 36,
+  "vendas": 56,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -422,6 +422,10 @@
    },
    {
     "moeda": "AR",
+    "prob_subir": 0.37
+   },
+   {
+    "moeda": "STO",
     "prob_subir": 0.37
    },
    {
@@ -439,10 +443,6 @@
    {
     "moeda": "FORM",
     "prob_subir": 0.382
-   },
-   {
-    "moeda": "PEOPLE",
-    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
@@ -467,16 +467,16 @@
     "prob_subir": 0.608
    },
    {
-    "moeda": "TRX",
-    "prob_subir": 0.605
-   },
-   {
     "moeda": "F",
     "prob_subir": 0.604
    },
    {
-    "moeda": "BABY",
-    "prob_subir": 0.602
+    "moeda": "BANK",
+    "prob_subir": 0.598
+   },
+   {
+    "moeda": "SUPER",
+    "prob_subir": 0.584
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -740,34 +740,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 30337 apostas (632 velas, 19/11 14:45–26/11 14:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5312,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30307 apostas (632 velas, 19/11 15:00–26/11 14:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5316,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.39,
+  "z_contra_lab": -0.35,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5084,
-    "n": 24041
+    "acerto": 0.5083,
+    "n": 24021
    },
    "segue_maioria_24h": {
-    "acerto": 0.5165,
-    "n": 30268
+    "acerto": 0.5167,
+    "n": 30238
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5492,
-    "n": 8627
+    "acerto": 0.5493,
+    "n": 8622
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5481,
-    "n": 3350
+    "acerto": 0.5479,
+    "n": 3351
    },
    "confianca:<0,05": {
-    "acerto": 0.5133,
-    "n": 17494
+    "acerto": 0.514,
+    "n": 17468
    },
    "confianca:≥0,12": {
     "acerto": 0.6478,
@@ -782,20 +782,20 @@
     "n": 7109
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.531,
-    "n": 7801
+    "acerto": 0.5325,
+    "n": 7771
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5385,
     "n": 7090
    },
    "lado:compra": {
-    "acerto": 0.5207,
-    "n": 13337
+    "acerto": 0.5215,
+    "n": 13297
    },
    "lado:venda": {
-    "acerto": 0.5394,
-    "n": 17000
+    "acerto": 0.5395,
+    "n": 17010
    }
   }
  },
