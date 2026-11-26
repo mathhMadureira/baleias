@@ -1,6 +1,6 @@
 {
- "t": 1795729263,
- "hora_utc": "2026-11-26 21:41 UTC",
+ "t": 1795729479,
+ "hora_utc": "2026-11-26 21:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
@@ -172,11 +172,17 @@
   -0.08,
   0.39,
   0.08,
-  0.24
+  0.22
  ],
  "contexto": {
-  "t": 1795729264,
+  "t": 1795729480,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795728827,
+    "hora_utc": "26/11 21:33",
+    "titulo": "Binance completes withdrawal recovery four weeks after $6.3B hack"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795727633,
@@ -260,12 +266,6 @@
     "t": 1795705874,
     "hora_utc": "26/11 15:11",
     "titulo": "OpenAI Fixes ChatGPT Billing Error, Promises to Make it 40% Worse"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795703935,
-    "hora_utc": "26/11 14:38",
-    "titulo": "Elon Musk Says ‘Multiplanetary’ SpaceX Could Be Worth $118 Quintillion. Yes, Quintillion"
    }
   ],
   "medo_ganancia": {
@@ -277,7 +277,7 @@
    "media_top20_anual_pct": 13.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 0.9,
+    "ETH": 1.3,
     "SOL": 11.0
    },
    "leitura": "neutro"
