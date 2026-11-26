@@ -30,7 +30,7 @@ AGENTE = "laboratorio"
 CICLO_S, RADAR_S, ESFRIA_S = 30, 60, 30 * 60
 VIGIA_S, PICO_MIN = 3, 0.0005
 TRAVA_CARTEIRA, TRAVA_FRACAO = 0.06, 0.5   # dono (26/11): lucro aberto do conjunto ≥ 6% da carteira → cada posição no lucro trava metade do que ganhou             # dono (26/11): vigiar a cada 3 s; só mexe no stop quando o pico sobe 0,05% ou mais
-PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
+PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "prazo_min": 90, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
 
@@ -161,7 +161,7 @@ def montar(e, cmd, radar, risco, agora):
         patr = float(e.get("patrimonio") or 10)
         risco = max(0.005, min(0.15, float(cmd.get("risco_pct") or 0.05)))
         noc = round(min(patr * margem * alav, patr * risco / stop), 2)   # dono (26/11): o stop custa no máximo risco_pct da carteira
-        lista.append({"moeda": m, "lado": r["lado"], "stop_pct": stop, "alvo_pct": round(alvo, 4), "max_min": max(r["max_min"], 240),
+        lista.append({"moeda": m, "lado": r["lado"], "stop_pct": stop, "alvo_pct": round(alvo, 4), "max_min": int(cmd.get("prazo_min") or 90),   # dono (26/11): 4 h é tempo demais
                       "nocional_usd": noc, "alav": alav,
                       "motivo": f"[{'preferida do Radar' if m in cmd['preferidas'] else 'radar'}] {r['estilo']}: 15m {r['v15']:+.2f}%, 1h {r['v1h']:+.2f}%, 4h {r['v4h']:+.2f}%, vol {r['vol_rel']}x, nota {r['nota']}"})
     return lista, sair
@@ -202,6 +202,10 @@ def volta(agora=None):
         fcntl.flock(trava, fcntl.LOCK_EX)
         conta = C.Conta(AGENTE, c)
         antes_ab, antes_fe = set(conta.e.get("abertas") or {}), len(conta.e.get("fechadas") or [])
+        pz = int(cmd.get("prazo_min") or 90)
+        for p_ in (conta.e.get("abertas") or {}).values():
+            if float(p_.get("max_min") or 0) > pz:
+                p_["max_min"] = pz
         lista, sair = montar(conta.e, cmd, radar, risco, agora)
         for par, motivo in sair.items():                     # a saída leva o motivo real (quem pediu e por quê), não "fora da lista"
             if par in conta.e.get("abertas", {}):
@@ -249,14 +253,14 @@ def volta(agora=None):
     return estado
 
 
-CHAVES = {"risco_pct", "estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
+CHAVES = {"prazo_min", "risco_pct", "estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
 
 
 DONOS = {                                                     # 25/11: cada decisão tem UM dono; os outros propõem no canal (canal.py)
     "lados": {"laboratorio", "baleias"}, "nota_min": {"laboratorio", "baleias"}, "estilo": {"laboratorio", "baleias"}, "ligado": {"laboratorio", "baleias"},
     "preferidas": {"cacador", "baleias"}, "bloqueadas": {"cacador", "laboratorio", "baleias"},
     "sair_agora": {"guardiao", "laboratorio", "baleias"},
-    "max_pos": {"baleias"}, "alav": {"baleias"}, "risco_pct": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
+    "max_pos": {"baleias"}, "alav": {"baleias"}, "risco_pct": {"baleias"}, "prazo_min": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
 }
 
 
