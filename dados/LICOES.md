@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 02:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 02:22 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 82.9% das moedas subindo em 24 h, 82.2% em 4 h · BTC 24 h 2.76%, 4 h 1.22%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** JUP bandeira de alta (alta, CONFIRMOU) · MUBARAK fundo duplo (alta, CONFIRMOU) · CKB fundo duplo (alta, formado) · CRV topo duplo (baixa, formado) · ETH topo duplo (baixa, formado) · ME fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL topo duplo (baixa, formado) · VANA fundo duplo (alta, formado) · VANA ombro-cabeça-ombro (baixa, formado)
 - 📰 26/11 01:33 UTC · Cointelegraph: AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says
