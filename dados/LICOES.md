@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 01:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 01:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 84.5% das moedas subindo em 24 h, 73.6% em 4 h · BTC 24 h 2.44%, 4 h 0.79%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETC bandeira de alta (alta, CONFIRMOU) · HBAR bandeira de alta (alta, CONFIRMOU) · ME fundo duplo (alta, CONFIRMOU) · NEAR bandeira de alta (alta, CONFIRMOU) · PUMP bandeira de alta (alta, CONFIRMOU) · RAY bandeira de alta (alta, CONFIRMOU) · TIA bandeira de alta (alta, CONFIRMOU) · TRUMP bandeira de alta (alta, CONFIRMOU) · VANA bandeira de alta (alta, CONFIRMOU) · ETH topo duplo (baixa, formado)
 - 📰 26/11 01:33 UTC · Cointelegraph: AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says
