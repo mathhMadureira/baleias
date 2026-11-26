@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 16:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 16:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 85.4% das moedas subindo em 24 h, 29.3% em 4 h · BTC 24 h 2.97%, 4 h -0.34%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.5%/ano · {'BTC': -5.1, 'ETH': -6.5, 'SOL': 8.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.3%/ano · {'BTC': -5.5, 'ETH': -6.8, 'SOL': 6.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BTC OCO invertido (alta, formado) · DODO OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado)
 - 📰 26/11 15:45 UTC · Cointelegraph: How EU brokers could lose access to Kyrgyz crypto exchanges
