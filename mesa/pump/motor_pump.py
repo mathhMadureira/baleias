@@ -5,8 +5,8 @@ A cada CICLO_S:
   1. descobre moedas ativas na API pública do pump.fun (as que mais negociaram agora e as maiores na curva);
   2. lê o preço de cada uma DIRETO na Solana (conta da curva de lançamento: reservas virtuais → preço em SOL) e o SOL em US$ na Binance;
   3. guarda o histórico de preço (gráfico do painel) e decide:
-     entra se: 10+ min de vida, não graduada, valor de mercado entre MCAP_MIN e MCAP_MAX, subiu ≥ IMPULSO nos últimos 3 min
-               com 3 leituras seguidas subindo, e não foi operada nas últimas 2 h;
+     v2 entra se: 20+ min de vida, curva entre 60% e 92% vendida (perto da graduação), +5% em 10 min sem salto > 40% em 3 min,
+               10 maiores carteiras com ≤ 25% do suprimento, e não foi operada nas últimas 2 h; posições vigiadas a cada 5 s;
      sai por: stop, alvo, stop móvel (depois de +ARMA guarda GUARDA do pico), prazo, ou graduação (sai da curva).
   Custos simulados: taxa do pump.fun 1% + derrapagem 1% em cada lado (4% ida e volta).
 Estado: Shared/baleias/pump/estado.json. Uso: python3 -u motor_pump.py
@@ -23,9 +23,14 @@ EST = PASTA / "estado.json"
 RPC = "https://api.mainnet-beta.solana.com"
 API = "https://frontend-api-v3.pump.fun/coins?offset=0&limit=50&includeNsfw=false"
 UA = {"User-Agent": "Mozilla/5.0"}
-CICLO_S, CAPITAL, POS_USD, MAX_POS = 15, 10.0, 2.5, 4
-MCAP_MIN, MCAP_MAX, IMPULSO = 8_000, 60_000, 0.15
-STOP, ALVO, ARMA, GUARDA, PRAZO_MIN = 0.12, 0.35, 0.15, 0.60, 45
+CICLO_S, CAPITAL, POS_USD, MAX_POS = 15, 10.0, 2.0, 3
+# v2 (26/11): v1 comprava o pico do impulso (+15% em 3 min) e as 3 primeiras caíram 22–38% em até 2 min (venda do criador e dos primeiros).
+# Agora: moeda madura, perto da graduação, subindo devagar, sem concentração — e posições vigiadas a cada RAPIDO_S.
+PROG_MIN, PROG_MAX, IDADE_MIN = 0.60, 0.92, 20          # progresso da curva (fração vendida) e idade mínima (min)
+SUBIDA_10M_MIN, SALTO_3M_MAX, TOP10_MAX = 0.05, 0.40, 0.25
+STOP, ALVO, ARMA, GUARDA, PRAZO_MIN = 0.10, 0.30, 0.12, 0.60, 90
+RAPIDO_S = 5
+TOKENS_CURVA = 793_100_000 * 10 ** 6                    # tokens reais à venda na curva do pump.fun (6 casas)
 CUSTO_LADO = 0.02
 HIST_S, ESFRIA_S = 3600, 2 * 3600
 
@@ -52,10 +57,31 @@ def precos(curvas):
             raw = base64.b64decode(v["data"][0])
             if len(raw) < 49:
                 continue
-            vt, vs = struct.unpack_from("<QQ", raw, 8)
+            vt, vs, rt = struct.unpack_from("<QQQ", raw, 8)
             if vt:
-                out[c] = ((vs / 1e9) / (vt / 1e6), bool(raw[48]))
+                out[c] = ((vs / 1e9) / (vt / 1e6), bool(raw[48]), 1 - rt / TOKENS_CURVA)
     return out
+
+
+def top10(mint, curva_ata):
+    """Fração do suprimento nas 10 maiores carteiras, sem contar a conta da curva (onde ficam os tokens não vendidos)."""
+    try:
+        r = _get(RPC, json.dumps({"jsonrpc": "2.0", "id": 1, "method": "getTokenLargestAccounts", "params": [mint]}).encode())
+        contas = [a for a in r["result"]["value"] if a["address"] != curva_ata]
+        return sum(float(a["uiAmount"] or 0) for a in contas[:10]) / 1e9
+    except Exception:
+        return None
+
+
+def vigiar(e):
+    """A cada RAPIDO_S: só o preço das abertas e as saídas (o stop de 10% não pode virar 38%)."""
+    if not e["abertas"]:
+        return
+    px = precos(sorted({p["curva"] for p in e["abertas"].values()}))
+    for m, p in list(e["abertas"].items()):
+        if p["curva"] in px:
+            e["hist"].setdefault(m, []).append([round(time.time()), px[p["curva"]][0]])
+    sair(e, px, time.time())
 
 
 def carregar():
@@ -82,6 +108,35 @@ def anotar(e, texto):
 def patrimonio(e, px):
     return e["caixa"] + sum(p["qtd"] * px.get(p["curva"], (p["entrada"],))[0] * e.get("sol", 0) * (1 - CUSTO_LADO)
                             for p in e["abertas"].values())
+
+
+def sair(e, px, agora):
+    sol = e.get("sol") or 0
+    for m, p in list(e["abertas"].items()):
+        if p["curva"] not in px:
+            continue
+        preco, graduada = px[p["curva"]][:2]
+        var = preco / p["entrada"] - 1
+        p["pico"] = max(p.get("pico", 0.0), var)
+        motivo = None
+        if graduada:
+            motivo = "graduou (saiu da curva)"
+        elif var <= -STOP:
+            motivo = f"stop −{STOP:.0%}"
+        elif var >= ALVO:
+            motivo = f"alvo +{ALVO:.0%}"
+        elif p["pico"] >= ARMA and var <= GUARDA * p["pico"]:
+            motivo = f"stop móvel (pico +{p['pico']:.0%})"
+        elif agora - p["t"] > PRAZO_MIN * 60:
+            motivo = f"prazo {PRAZO_MIN} min"
+        if motivo:
+            valor = p["qtd"] * preco * sol * (1 - CUSTO_LADO)
+            res = valor - p["usd"]
+            e["caixa"] += valor
+            e["fechadas"].append({**p, "mint": m, "saida": preco, "saida_t": agora, "resultado": round(res, 4), "motivo_saida": motivo})
+            del e["abertas"][m]
+            anotar(e, f"{'✅' if res > 0 else '❌'} SAIU de {p['simbolo']}: {res:+.3f} US$ ({var:+.1%}, {motivo})")
+
 
 
 def volta(e):
@@ -111,31 +166,7 @@ def volta(e):
         e["hist"].pop(m, None)
         e["info"].pop(m, None)
 
-    # saídas
-    for m, p in list(e["abertas"].items()):
-        if p["curva"] not in px:
-            continue
-        preco, graduada = px[p["curva"]]
-        var = preco / p["entrada"] - 1
-        p["pico"] = max(p.get("pico", 0.0), var)
-        motivo = None
-        if graduada:
-            motivo = "graduou (saiu da curva)"
-        elif var <= -STOP:
-            motivo = f"stop −{STOP:.0%}"
-        elif var >= ALVO:
-            motivo = f"alvo +{ALVO:.0%}"
-        elif p["pico"] >= ARMA and var <= GUARDA * p["pico"]:
-            motivo = f"stop móvel (pico +{p['pico']:.0%})"
-        elif agora - p["t"] > PRAZO_MIN * 60:
-            motivo = f"prazo {PRAZO_MIN} min"
-        if motivo:
-            valor = p["qtd"] * preco * sol * (1 - CUSTO_LADO)
-            res = valor - p["usd"]
-            e["caixa"] += valor
-            e["fechadas"].append({**p, "mint": m, "saida": preco, "saida_t": agora, "resultado": round(res, 4), "motivo_saida": motivo})
-            del e["abertas"][m]
-            anotar(e, f"{'✅' if res > 0 else '❌'} SAIU de {p['simbolo']}: {res:+.3f} US$ ({var:+.1%}, {motivo})")
+    sair(e, px, agora)
 
     # entradas
     recentes = {x["mint"] for x in e["fechadas"] if agora - x["saida_t"] < ESFRIA_S}
@@ -143,26 +174,33 @@ def volta(e):
     for m, x in moedas.items():
         if m in e["abertas"] or m in recentes or x["bonding_curve"] not in px:
             continue
-        preco, graduada = px[x["bonding_curve"]]
+        preco, graduada, prog = px[x["bonding_curve"]]
         idade = (agora * 1000 - float(x.get("created_timestamp") or 0)) / 60000
         mcap = preco * sol * 1e9
         h = e["hist"].get(m, [])
-        janela = [v for t, v in h if agora - t <= 190]
-        if graduada or idade < 10 or not (MCAP_MIN <= mcap <= MCAP_MAX) or len(janela) < 4:
+        j10 = [v for t, v in h if agora - t <= 610]
+        j3 = [v for t, v in h if agora - t <= 190]
+        if graduada or idade < IDADE_MIN or not (PROG_MIN <= prog <= PROG_MAX) or len(j10) < 20 or len(j3) < 4:
             continue
-        subiu = janela[-1] / janela[0] - 1
-        seguidas = all(janela[i] < janela[i + 1] for i in range(len(janela) - 3, len(janela) - 1))
-        if subiu >= IMPULSO and seguidas:
-            cands.append((subiu, m, x, preco, mcap))
-    for subiu, m, x, preco, mcap in sorted(cands, reverse=True):
+        sub10, salto3 = j10[-1] / j10[0] - 1, j3[-1] / min(j3) - 1
+        if sub10 >= SUBIDA_10M_MIN and salto3 <= SALTO_3M_MAX and j3[-1] >= j3[0]:
+            cands.append((sub10, m, x, preco, mcap, prog))
+    escolhidos = []
+    for sub10, m, x, preco, mcap, prog in sorted(cands, reverse=True)[:3]:
+        top = top10(m, x.get("associated_bonding_curve"))
+        if top is None or top > TOP10_MAX:
+            anotar(e, f"⛔ {x.get('symbol')}: 10 maiores carteiras com {top if top is None else f'{top:.0%}'} do suprimento; não entra")
+            continue
+        escolhidos.append((sub10, m, x, preco, mcap, prog, top))
+    for subiu, m, x, preco, mcap, prog, top in escolhidos:
         if len(e["abertas"]) >= MAX_POS or e["caixa"] < POS_USD:
             break
         qtd = POS_USD * (1 - CUSTO_LADO) / (preco * sol)
         e["caixa"] -= POS_USD
         e["abertas"][m] = {"simbolo": x.get("symbol"), "curva": x["bonding_curve"], "entrada": preco, "qtd": qtd, "usd": POS_USD, "t": agora,
                            "criada_ms": x.get("created_timestamp"), "mcap_entrada": round(mcap), "pico": 0.0,
-                           "motivo": f"subiu {subiu:+.0%} em 3 min, valor de mercado US$ {mcap:,.0f}"}
-        anotar(e, f"🟢 ENTROU em {x.get('symbol')} (papel): US$ {POS_USD:.2f}, subiu {subiu:+.0%} em 3 min, mercado US$ {mcap:,.0f}")
+                           "motivo": f"curva {prog:.0%}, +{subiu:.0%} em 10 min, 10 maiores {top:.0%}, mercado US$ {mcap:,.0f}"}
+        anotar(e, f"🟢 ENTROU em {x.get('symbol')} (papel): US$ {POS_USD:.2f}, curva {prog:.0%}, +{subiu:.0%} em 10 min, 10 maiores {top:.0%}, mercado US$ {mcap:,.0f}")
     e["patrimonio"] = patrimonio(e, px)
     e["curva"].append([round(agora), round(e["patrimonio"], 4)])
     e["curva"] = e["curva"][-3000:]
@@ -172,14 +210,19 @@ def volta(e):
 
 def main():
     e = carregar()
+    proxima = 0.0
     while True:
         t0 = time.time()
         try:
-            volta(e)
+            if t0 >= proxima:
+                volta(e)
+                proxima = time.time() + CICLO_S
+            else:
+                vigiar(e)
             salvar(e)
         except Exception as ex:
             print(f"erro: {type(ex).__name__}: {ex}", flush=True)
-        time.sleep(max(3, CICLO_S - (time.time() - t0)))
+        time.sleep(max(1, RAPIDO_S - (time.time() - t0)))
 
 
 if __name__ == "__main__":
