@@ -29,7 +29,7 @@ from executor.stop_movel import GUARDA, armar_em  # noqa: E402
 
 COFRE = Path("/home/servidor-de-producao/.config/OpenBot/agent-api-keys/.vault/agent-85eaa35b-7f9b-407c-839d-fed207b6b72d")
 PASTA = AQUI / "corretoras"
-GARANTIA_ARMA, GARANTIA_PCT = 0.02, 0.0015   # dono (25/11): posição que passou de +2% não volta a ser perda (stop = entrada + 0,15% de taxas)
+GARANTIA_ARMA, GARANTIA_PCT, MOVEL_ARMA_MAX = 0.008, 0.0015, 0.015   # 26/11 (dono): com 20×, +1% no preço ≈ +6% da carteira; garantia a +0,8%, móvel até +1,5%   # dono (25/11): posição que passou de +2% não volta a ser perda (stop = entrada + 0,15% de taxas)
 CAPITAL, PISO, MAX_POS, MAX_NOC, VALIDADE_S, MAX_HORAS = 10.0, 5.0, 8, 1.5, 75 * 60, 24   # R2: 8 posições
 TRAILER = "Co-authored-by: OpenBot <335604065+openbotgit[bot]@users.noreply.github.com>"
 
@@ -694,10 +694,14 @@ class Conta:
             for t, h, l in self.c.velas_1m(par, max(p["entrada_ms"], p.get("movel_ate", 0))):
                 p["pico"] = max(p.get("pico", 0.0), (h / p["entrada"] - 1) if compra else (1 - l / p["entrada"]))
                 p["movel_ate"] = t + 60_000
-            arma = armar_em(p.get("alvo_pct"), p.get("movel", True))
-            if p["pico"] < arma and p["pico"] < GARANTIA_ARMA:
+            arma = min(armar_em(p.get("alvo_pct"), p.get("movel", True)), MOVEL_ARMA_MAX)
+            trava = float(p.get("trava") or 0)                                 # trava da carteira (motor): guarda parte do lucro do conjunto
+            if p["pico"] < arma and p["pico"] < GARANTIA_ARMA and not trava:
                 continue
-            g = GUARDA * p["pico"] if p["pico"] >= arma else GARANTIA_PCT       # 25/11 (dono): passou de +2% → stop na entrada + taxas
+            g = GUARDA * p["pico"] if p["pico"] >= arma else (GARANTIA_PCT if p["pico"] >= GARANTIA_ARMA else 0.0)
+            g = max(g, trava)
+            if g <= 0:
+                continue
             novo = p["entrada"] * (1 + g if compra else 1 - g)
             atual = (p.get("stop") or {}).get("preco")
             if atual is not None and ((novo <= atual) if compra else (novo >= atual)):

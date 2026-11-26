@@ -28,7 +28,8 @@ SHARED = Path("/home/servidor-de-producao/OpenBot/Shared/baleias")
 EQUIPE = SHARED / "equipe"
 AGENTE = "laboratorio"
 CICLO_S, RADAR_S, ESFRIA_S = 30, 60, 30 * 60
-VIGIA_S, PICO_MIN = 3, 0.0005             # dono (26/11): vigiar a cada 3 s; só mexe no stop quando o pico sobe 0,05% ou mais
+VIGIA_S, PICO_MIN = 3, 0.0005
+TRAVA_CARTEIRA, TRAVA_FRACAO = 0.06, 0.5   # dono (26/11): lucro aberto do conjunto ≥ 6% da carteira → cada posição no lucro trava metade do que ganhou             # dono (26/11): vigiar a cada 3 s; só mexe no stop quando o pico sobe 0,05% ou mais
 PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
@@ -309,7 +310,9 @@ def vigia():
         fav = (px / p["entrada"] - 1) if p["lado"] == "compra" else (1 - px / p["entrada"])
         if fav >= float(p.get("pico") or 0) + PICO_MIN:
             picos[par] = fav
-    if not picos:
+    ganho = sum(max(0.0, f) * float(p.get("nocional") or 0) for par, p in e["abertas"].items() for f in [picos.get(par, float(p.get("pico") or 0))])
+    travar = ganho >= TRAVA_CARTEIRA * float(e.get("patrimonio") or 10)
+    if not picos and not travar:
         return 0
     with open(C.PASTA / f"{AGENTE}.lock", "w") as trava:
         fcntl.flock(trava, fcntl.LOCK_EX)
@@ -317,6 +320,11 @@ def vigia():
         for par, fav in picos.items():
             if par in conta.e["abertas"]:
                 conta.e["abertas"][par]["pico"] = max(float(conta.e["abertas"][par].get("pico") or 0), fav)
+        if travar:
+            for par, p in conta.e["abertas"].items():
+                pk = float(p.get("pico") or 0)
+                if pk > 0.004:
+                    p["trava"] = max(float(p.get("trava") or 0), round(TRAVA_FRACAO * pk, 5))
         conta.mover_stops()
         conta.salvar()
     return len(picos)
