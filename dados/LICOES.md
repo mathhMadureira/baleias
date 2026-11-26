@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 23:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 23:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,9 +64,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 65.2% das moedas subindo em 24 h, 43.8% em 4 h · BTC 24 h 0.72%, 4 h 0.11%.
+- **Amplitude:** 62.5% das moedas subindo em 24 h, 27.7% em 4 h · BTC 24 h 0.36%, 4 h -0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.5%/ano · {'BTC': 1.2, 'ETH': 2.7, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.4%/ano · {'BTC': 0.5, 'ETH': 2.8, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ASTER topo duplo (baixa, formado) · DOT topo duplo (baixa, formado) · GRAM OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado)
 - 📰 26/11 22:39 UTC · Cointelegraph: ‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express
@@ -106,14 +106,14 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 59632 apostas conferidas ao vivo, acerto 54.2%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 59676 apostas conferidas ao vivo, acerto 54.2%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
