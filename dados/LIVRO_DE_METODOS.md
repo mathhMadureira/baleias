@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.8% | 308 | 51.2%–62.2% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 52.9% | 2663 | 51.0%–54.8% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 52.9% | 2664 | 51.0%–54.8% | rede neural 16→12→1, aprende a cada vela |
 | williams_wr_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | connors_8020_baixa | promissor | 68.8% | 16 | 44.4%–85.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
@@ -22,7 +22,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_180_baixa | reprovado | 49.3% | 69 | 37.8%–60.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | vortice_invertido | reprovado | 49.2% | 508 | 44.9%–53.5% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | williams_volb_alta | reprovado | 46.0% | 150 | 38.2%–54.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
-| raschke_graal_alta | reprovado | 45.5% | 44 | 31.7%–59.9% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
+| raschke_graal_alta | reprovado | 44.4% | 45 | 30.9%–58.8% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | rompimento | reprovado | 36.6% | 41 | 23.6%–51.9% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | connors_8020_alta | reprovado | 35.0% | 20 | 18.1%–56.7% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | raschke_sopa_alta | reprovado | 33.3% | 21 | 17.2%–54.6% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
