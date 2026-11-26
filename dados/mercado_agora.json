@@ -1,21 +1,21 @@
 {
- "t": 1795698674,
- "hora_utc": "2026-11-26 13:11 UTC",
+ "t": 1795698891,
+ "hora_utc": "2026-11-26 13:14 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 127,
-  "subindo_pct": 37.8,
-  "mediana_pct": -0.17
+  "moedas": 126,
+  "subindo_pct": 38.1,
+  "mediana_pct": -0.16
  },
  "mercado_4h": {
-  "moedas": 127,
-  "subindo_pct": 34.6,
+  "moedas": 126,
+  "subindo_pct": 34.9,
   "mediana_pct": -0.31
  },
  "mercado_24h": {
-  "moedas": 127,
-  "subindo_pct": 83.5,
-  "mediana_pct": 5.57
+  "moedas": 126,
+  "subindo_pct": 83.3,
+  "mediana_pct": 5.52
  },
  "btc": {
   "1h": 0.18,
@@ -172,10 +172,10 @@
   -0.69,
   0.32,
   0.18,
-  0.02
+  -0.0
  ],
  "contexto": {
-  "t": 1795698675,
+  "t": 1795698892,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -211,7 +211,7 @@
     "fonte": "Cointelegraph",
     "t": 1795693026,
     "hora_utc": "26/11 11:37",
-    "titulo": "Standard Chartered’s Zodia Custody suffers data breach: Report"
+    "titulo": "Standard Chartered’s Zodia Custody suffers data breach"
    },
    {
     "fonte": "CoinDesk",
@@ -274,9 +274,9 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 16.0,
+   "media_top20_anual_pct": 15.2,
    "principais_anual_pct": {
-    "BTC": -4.3,
+    "BTC": -5.1,
     "ETH": 11.0,
     "SOL": 6.1
    },
@@ -741,11 +741,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5076,
-    "n": 24162
+    "n": 24110
    },
    "segue_maioria_24h": {
-    "acerto": 0.5175,
-    "n": 30220
+    "acerto": 0.5169,
+    "n": 30266
    }
   },
   "referencia_ganha": [],
