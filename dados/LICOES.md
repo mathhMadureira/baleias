@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 14:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 14:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 85.8% das moedas subindo em 24 h, 47.2% em 4 h · BTC 24 h 4.29%, 4 h -0.17%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.1%/ano · {'BTC': -6.3, 'ETH': 7.9, 'SOL': 10.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.0%/ano · {'BTC': -6.2, 'ETH': 8.3, 'SOL': 10.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AIXBT topo duplo (baixa, CONFIRMOU) · AAVE topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · ACE topo duplo (baixa, formado) · ACE OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · DODO OCO invertido (alta, formado) · JTO OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado)
 - 📰 26/11 14:05 UTC · CoinDesk: Spain gives anti-laundering unit power to freeze crypto accounts without a judge
