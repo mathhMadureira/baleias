@@ -1,27 +1,27 @@
 {
- "t": 1795700619,
- "hora_utc": "2026-11-26 13:43 UTC",
+ "t": 1795700837,
+ "hora_utc": "2026-11-26 13:47 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 127,
-  "subindo_pct": 49.6,
-  "mediana_pct": 0.0
+  "subindo_pct": 29.9,
+  "mediana_pct": -0.3
  },
  "mercado_4h": {
   "moedas": 127,
-  "subindo_pct": 49.6,
-  "mediana_pct": 0.0
+  "subindo_pct": 33.1,
+  "mediana_pct": -0.25
  },
  "mercado_24h": {
   "moedas": 127,
-  "subindo_pct": 85.8,
-  "mediana_pct": 4.9
+  "subindo_pct": 87.4,
+  "mediana_pct": 5.94
  },
  "btc": {
-  "1h": 0.37,
-  "4h": 0.19,
-  "24h": 3.41,
-  "preco": 60866.93,
+  "1h": -0.03,
+  "4h": -0.08,
+  "24h": 4.47,
+  "preco": 60901.76,
   "vol_4h_vs_media": 0.46
  },
  "maiores_quedas_4h": [
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "BLUR",
-   "4h": -7.35,
-   "24h": 4.64,
-   "vol": 0.64
+   "4h": -7.81,
+   "24h": 4.2,
+   "vol": 0.67
   },
   {
-   "moeda": "DODO",
-   "4h": -5.52,
-   "24h": 1.63,
-   "vol": 1.33
+   "moeda": "LISTA",
+   "4h": -6.4,
+   "24h": -19.47,
+   "vol": 0.68
   },
   {
    "moeda": "MANTRA",
-   "4h": -4.63,
-   "24h": 3.78,
-   "vol": 0.36
+   "4h": -6.13,
+   "24h": 5.15,
+   "vol": 0.33
+  },
+  {
+   "moeda": "DODO",
+   "4h": -5.59,
+   "24h": 0.6,
+   "vol": 1.36
+  },
+  {
+   "moeda": "ONE",
+   "4h": -3.97,
+   "24h": 10.18,
+   "vol": 3.24
   },
   {
    "moeda": "NIGHT",
-   "4h": -3.68,
-   "24h": 1.93,
-   "vol": 1.52
-  },
-  {
-   "moeda": "ZEC",
-   "4h": -2.95,
-   "24h": 1.4,
-   "vol": 0.77
-  },
-  {
-   "moeda": "AIXBT",
-   "4h": -2.74,
-   "24h": 6.62,
-   "vol": 2.33
+   "4h": -3.87,
+   "24h": 3.33,
+   "vol": 1.37
   },
   {
    "moeda": "AT",
-   "4h": -2.47,
-   "24h": 9.5,
-   "vol": 0.26
+   "4h": -3.69,
+   "24h": 9.38,
+   "vol": 0.25
   },
   {
-   "moeda": "ZAMA",
-   "4h": -2.37,
-   "24h": 0.04,
-   "vol": 0.59
+   "moeda": "ZEC",
+   "4h": -3.18,
+   "24h": 2.9,
+   "vol": 0.8
   },
   {
-   "moeda": "SAHARA",
-   "4h": -2.26,
-   "24h": 3.18,
-   "vol": 0.56
+   "moeda": "AIXBT",
+   "4h": -2.97,
+   "24h": 7.16,
+   "vol": 2.33
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "INIT",
-   "4h": 13.34,
-   "24h": 50.28,
-   "vol": 3.53
+   "4h": 18.45,
+   "24h": 53.97,
+   "vol": 3.3
   },
   {
    "moeda": "SKY",
-   "4h": 7.69,
-   "24h": 19.07,
-   "vol": 2.26
+   "4h": 7.53,
+   "24h": 21.16,
+   "vol": 2.33
   },
   {
-   "moeda": "SSV",
-   "4h": 5.55,
-   "24h": 39.94,
-   "vol": 1.0
+   "moeda": "TFUEL",
+   "4h": 6.02,
+   "24h": 23.29,
+   "vol": 1.04
   },
   {
    "moeda": "ME",
-   "4h": 5.47,
-   "24h": 15.8,
-   "vol": 3.69
+   "4h": 5.85,
+   "24h": 18.78,
+   "vol": 3.71
+  },
+  {
+   "moeda": "SSV",
+   "4h": 4.56,
+   "24h": 39.9,
+   "vol": 0.97
   },
   {
    "moeda": "ZRO",
-   "4h": 4.53,
-   "24h": 12.26,
+   "4h": 3.93,
+   "24h": 14.2,
    "vol": 1.2
   },
   {
-   "moeda": "2Z",
-   "4h": 3.23,
-   "24h": 10.41,
-   "vol": 1.59
-  },
-  {
    "moeda": "SAGA",
-   "4h": 3.12,
-   "24h": 8.16,
-   "vol": 3.38
-  },
-  {
-   "moeda": "FET",
-   "4h": 2.39,
-   "24h": 11.46,
-   "vol": 1.01
-  },
-  {
-   "moeda": "QNT",
-   "4h": 2.37,
-   "24h": 7.17,
-   "vol": 1.02
+   "4h": 3.41,
+   "24h": 9.69,
+   "vol": 3.43
   },
   {
    "moeda": "SEI",
-   "4h": 2.2,
-   "24h": 13.47,
-   "vol": 2.89
+   "4h": 3.3,
+   "24h": 16.08,
+   "vol": 2.91
+  },
+  {
+   "moeda": "2Z",
+   "4h": 2.71,
+   "24h": 9.42,
+   "vol": 1.6
+  },
+  {
+   "moeda": "QNT",
+   "4h": 2.42,
+   "24h": 9.33,
+   "vol": 1.05
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.69,
   0.32,
   0.18,
-  0.11
+  0.13
  ],
  "contexto": {
-  "t": 1795700620,
+  "t": 1795700838,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795700704,
+    "hora_utc": "26/11 13:45",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795699800,
@@ -260,12 +266,6 @@
     "t": 1795689633,
     "hora_utc": "26/11 10:40",
     "titulo": "New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795688128,
-    "hora_utc": "26/11 10:15",
-    "titulo": "Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement"
    }
   ],
   "medo_ganancia": {
@@ -276,7 +276,7 @@
   "funding": {
    "media_top20_anual_pct": 14.0,
    "principais_anual_pct": {
-    "BTC": -6.4,
+    "BTC": -6.3,
     "ETH": 11.0,
     "SOL": 10.2
    },
@@ -421,30 +421,22 @@
   }
  },
  "v4": {
-  "vela": "11:45 UTC",
-  "apostas": 147,
-  "compras": 55,
-  "vendas": 92,
+  "vela": "13:45 UTC",
+  "apostas": 116,
+  "compras": 46,
+  "vendas": 70,
   "mais_confiantes_venda": [
+   {
+    "moeda": "PNUT",
+    "prob_subir": 0.321
+   },
    {
     "moeda": "ALICE",
     "prob_subir": 0.351
    },
    {
-    "moeda": "GTC",
-    "prob_subir": 0.36
-   },
-   {
     "moeda": "PARTI",
     "prob_subir": 0.361
-   },
-   {
-    "moeda": "LSK",
-    "prob_subir": 0.364
-   },
-   {
-    "moeda": "XVG",
-    "prob_subir": 0.366
    },
    {
     "moeda": "AR",
@@ -457,9 +449,21 @@
    {
     "moeda": "SLP",
     "prob_subir": 0.376
+   },
+   {
+    "moeda": "RUNE",
+    "prob_subir": 0.382
+   },
+   {
+    "moeda": "FORM",
+    "prob_subir": 0.382
    }
   ],
   "mais_confiantes_compra": [
+   {
+    "moeda": "CFG",
+    "prob_subir": 0.671
+   },
    {
     "moeda": "PSG",
     "prob_subir": 0.651
@@ -467,6 +471,10 @@
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "SHIB",
+    "prob_subir": 0.626
    },
    {
     "moeda": "THETA",
@@ -477,20 +485,12 @@
     "prob_subir": 0.614
    },
    {
-    "moeda": "RWUSD",
-    "prob_subir": 0.61
+    "moeda": "AT",
+    "prob_subir": 0.611
    },
    {
-    "moeda": "MITO",
-    "prob_subir": 0.608
-   },
-   {
-    "moeda": "KITE",
-    "prob_subir": 0.605
-   },
-   {
-    "moeda": "F",
-    "prob_subir": 0.604
+    "moeda": "STO",
+    "prob_subir": 0.611
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -754,38 +754,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30263 apostas (632 velas, 19/11 13:45–26/11 13:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5321,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30268 apostas (632 velas, 19/11 14:00–26/11 13:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5316,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.29,
+  "z_contra_lab": -0.35,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5074,
-    "n": 24264
+    "acerto": 0.5077,
+    "n": 24280
    },
    "segue_maioria_24h": {
-    "acerto": 0.5153,
-    "n": 30215
+    "acerto": 0.5159,
+    "n": 30220
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5504,
-    "n": 8614
+    "acerto": 0.5494,
+    "n": 8608
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5477,
-    "n": 3336
+    "acerto": 0.5475,
+    "n": 3344
    },
    "confianca:<0,05": {
-    "acerto": 0.5144,
-    "n": 17452
+    "acerto": 0.5141,
+    "n": 17454
    },
    "confianca:≥0,12": {
-    "acerto": 0.6469,
-    "n": 861
+    "acerto": 0.6462,
+    "n": 862
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5149,
@@ -796,8 +796,8 @@
     "n": 7109
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5345,
-    "n": 7727
+    "acerto": 0.5325,
+    "n": 7732
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5385,
@@ -805,11 +805,11 @@
    },
    "lado:compra": {
     "acerto": 0.5202,
-    "n": 13336
+    "n": 13347
    },
    "lado:venda": {
-    "acerto": 0.5415,
-    "n": 16927
+    "acerto": 0.5406,
+    "n": 16921
    }
   }
  },
