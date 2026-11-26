@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.6% | 316 | 51.1%–62.0% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.1% | 2711 | 51.2%–55.0% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.1% | 2712 | 51.2%–55.0% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 68.8% | 16 | 44.4%–85.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
 | demark_td9_baixa | promissor | 66.7% | 33 | 49.6%–80.2% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
@@ -26,6 +26,6 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | rompimento | reprovado | 36.6% | 41 | 23.6%–51.9% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | raschke_sopa_alta | reprovado | 33.3% | 21 | 17.2%–54.6% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
 | connors_8020_alta | reprovado | 33.3% | 21 | 17.2%–54.6% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
-| velez_180_alta | reprovado | 16.7% | 24 | 6.7%–35.9% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
+| velez_180_alta | reprovado | 16.0% | 25 | 6.4%–34.7% | Velez: 180 de alta a favor das médias (H23: sem vantagem no histórico) |
 | velez_elefante | reprovado | 14.3% | 7 | 2.6%–51.3% | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
 | velez_estreito_rompe | reprovado | 0.0% | 3 | 0.0%–56.2% | Velez: rompimento do estado estreito (H23: sem vantagem) |

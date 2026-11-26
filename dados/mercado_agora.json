@@ -1,28 +1,28 @@
 {
- "t": 1795726884,
- "hora_utc": "2026-11-26 21:01 UTC",
+ "t": 1795727100,
+ "hora_utc": "2026-11-26 21:05 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 113,
   "subindo_pct": 57.5,
-  "mediana_pct": 0.2
+  "mediana_pct": 0.16
  },
  "mercado_4h": {
   "moedas": 113,
-  "subindo_pct": 85.8,
-  "mediana_pct": 0.82
+  "subindo_pct": 85.0,
+  "mediana_pct": 0.8
  },
  "mercado_24h": {
   "moedas": 113,
   "subindo_pct": 69.9,
-  "mediana_pct": 1.7
+  "mediana_pct": 1.66
  },
  "btc": {
-  "1h": 0.21,
+  "1h": 0.08,
   "4h": 0.4,
-  "24h": 1.41,
-  "preco": 60793.65,
-  "vol_4h_vs_media": 0.61
+  "24h": 0.83,
+  "preco": 60766.0,
+  "vol_4h_vs_media": 0.6
  },
  "maiores_quedas_4h": [
   {
@@ -172,11 +172,17 @@
   -0.08,
   0.39,
   0.08,
-  0.08
+  0.07
  ],
  "contexto": {
-  "t": 1795726885,
+  "t": 1795727101,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795726863,
+    "hora_utc": "26/11 21:01",
+    "titulo": "What Is Self-Custody? How to Hold Your Own Crypto Keys"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795723518,
@@ -260,12 +266,6 @@
     "t": 1795703182,
     "hora_utc": "26/11 14:26",
     "titulo": "Cournot Raises $5M to Build AI-Native Oracle for Verifiable Intelligence"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795701958,
-    "hora_utc": "26/11 14:05",
-    "titulo": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 16.3,
+   "media_top20_anual_pct": 16.4,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -0.1,
+    "ETH": 1.4,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -359,9 +359,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 97,
-  "compras": 52,
-  "vendas": 45,
+  "apostas": 99,
+  "compras": 53,
+  "vendas": 46,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -376,16 +376,16 @@
     "prob_subir": 0.37
    },
    {
+    "moeda": "STO",
+    "prob_subir": 0.371
+   },
+   {
     "moeda": "RESOLV",
     "prob_subir": 0.375
    },
    {
     "moeda": "SLP",
     "prob_subir": 0.376
-   },
-   {
-    "moeda": "STO",
-    "prob_subir": 0.377
    },
    {
     "moeda": "RUNE",
@@ -399,7 +399,7 @@
   "mais_confiantes_compra": [
    {
     "moeda": "BONK",
-    "prob_subir": 0.671
+    "prob_subir": 0.688
    },
    {
     "moeda": "PSG",
@@ -410,12 +410,12 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "WLFI",
-    "prob_subir": 0.616
+    "moeda": "PENDLE",
+    "prob_subir": 0.623
    },
    {
-    "moeda": "PENDLE",
-    "prob_subir": 0.616
+    "moeda": "U",
+    "prob_subir": 0.618
    },
    {
     "moeda": "ENS",
@@ -426,8 +426,8 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "MITO",
-    "prob_subir": 0.608
+    "moeda": "WLFI",
+    "prob_subir": 0.61
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -691,7 +691,7 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.4% em 30226 apostas (632 velas, 19/11 21:15–26/11 20:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.4% em 30229 apostas (632 velas, 19/11 21:15–26/11 20:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
   "acerto_ao_vivo": 0.5345,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
@@ -699,11 +699,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5087,
-    "n": 22001
+    "n": 22004
    },
    "segue_maioria_24h": {
     "acerto": 0.5189,
-    "n": 30132
+    "n": 30135
    }
   },
   "referencia_ganha": [],
@@ -718,7 +718,7 @@
    },
    "confianca:<0,05": {
     "acerto": 0.5189,
-    "n": 17533
+    "n": 17536
    },
    "confianca:≥0,12": {
     "acerto": 0.6465,
@@ -737,8 +737,8 @@
     "n": 7869
    },
    "horario_utc:18–24 h": {
-    "acerto": 0.5465,
-    "n": 6911
+    "acerto": 0.5466,
+    "n": 6914
    },
    "lado:compra": {
     "acerto": 0.5307,
@@ -746,7 +746,7 @@
    },
    "lado:venda": {
     "acerto": 0.5373,
-    "n": 17324
+    "n": 17327
    }
   }
  },
