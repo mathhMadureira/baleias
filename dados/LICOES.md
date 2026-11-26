@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 11:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 11:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,19 +67,19 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 81.9% das moedas subindo em 24 h, 54.3% em 4 h · BTC 24 h 3.09%, 4 h 0.22%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 12.9%/ano · {'BTC': -8.4, 'ETH': 3.5, 'SOL': 3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.1%/ano · {'BTC': -7.8, 'ETH': 2.9, 'SOL': 4.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 20.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** INJ estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado) · KITE topo duplo (baixa, formado) · KITE OCO invertido (alta, formado)
+- 📰 26/11 11:17 UTC · CoinDesk: Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving
 - 📰 26/11 10:56 UTC · CoinDesk: Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure
 - 📰 26/11 10:40 UTC · CoinDesk: New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech
 - 📰 26/11 10:15 UTC · Cointelegraph: Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement
 - 📰 26/11 09:42 UTC · Cointelegraph: Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend
 - 📰 26/11 09:18 UTC · Cointelegraph: Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour
-- 📰 26/11 08:01 UTC · CoinDesk: $7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 38.9 h.
+- ⚠️ **Rotina parada:** sem decisão há 39.0 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
