@@ -1,6 +1,6 @@
 {
- "t": 1795676888,
- "hora_utc": "2026-11-26 07:08 UTC",
+ "t": 1795677066,
+ "hora_utc": "2026-11-26 07:11 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,11 +172,17 @@
   0.32,
   -0.25,
   -0.43,
-  -0.06
+  -0.15
  ],
  "contexto": {
-  "t": 1795676889,
+  "t": 1795677067,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795676965,
+    "hora_utc": "26/11 07:09",
+    "titulo": "Zcash developers want users to move $300 million out of an older privacy system"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795673949,
@@ -260,12 +266,6 @@
     "t": 1795641362,
     "hora_utc": "25/11 21:16",
     "titulo": "The 1Password Breach Didn’t Touch Your Vault. The Phishing Emails Might"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795641099,
-    "hora_utc": "25/11 21:11",
-    "titulo": "Why ECB collateral eligibility could boost demand for tokenized bonds"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 8.2,
+   "media_top20_anual_pct": 8.3,
    "principais_anual_pct": {
-    "BTC": 8.7,
-    "ETH": 11.0,
-    "SOL": -4.8
+    "BTC": 9.5,
+    "ETH": 10.7,
+    "SOL": -5.8
    },
    "leitura": "neutro"
   },
