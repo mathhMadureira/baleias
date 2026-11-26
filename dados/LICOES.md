@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 09:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 09:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 83.5% das moedas subindo em 24 h, 44.1% em 4 h · BTC 24 h 2.47%, 4 h -0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PNUT OCO invertido (alta, CONFIRMOU) · SEI bandeira de alta (alta, CONFIRMOU) · STO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ATOM topo duplo (baixa, formado) · ATOM OCO invertido (alta, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado) · INIT ombro-cabeça-ombro (baixa, formado)
 - 📰 26/11 08:01 UTC · CoinDesk: $7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October
