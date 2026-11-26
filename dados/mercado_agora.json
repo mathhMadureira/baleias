@@ -1,6 +1,6 @@
 {
- "t": 1795701700,
- "hora_utc": "2026-11-26 14:01 UTC",
+ "t": 1795701916,
+ "hora_utc": "2026-11-26 14:05 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,11 +172,17 @@
   0.32,
   0.18,
   0.08,
-  -0.07
+  0.01
  ],
  "contexto": {
-  "t": 1795701701,
+  "t": 1795701917,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795701662,
+    "hora_utc": "26/11 14:01",
+    "titulo": "Polygon Brings Its Cross-Border Payments Stack to Coinbase’s Base"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795700876,
@@ -260,12 +266,6 @@
     "t": 1795691842,
     "hora_utc": "26/11 11:17",
     "titulo": "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795690568,
-    "hora_utc": "26/11 10:56",
-    "titulo": "Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 10.1,
+   "media_top20_anual_pct": 12.4,
    "principais_anual_pct": {
-    "BTC": -6.2,
-    "ETH": 4.9,
-    "SOL": -6.0
+    "BTC": -4.3,
+    "ETH": 6.8,
+    "SOL": 4.6
    },
    "leitura": "neutro"
   },

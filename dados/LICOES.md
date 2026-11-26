@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 14:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 14:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 88.1% das moedas subindo em 24 h, 38.1% em 4 h · BTC 24 h 4.81%, 4 h -0.1%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.1%/ano · {'BTC': -6.2, 'ETH': 4.9, 'SOL': -6.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 12.4%/ano · {'BTC': -4.3, 'ETH': 6.8, 'SOL': 4.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AIXBT topo duplo (baixa, CONFIRMOU) · AAVE topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · ACE topo duplo (baixa, formado) · ACE OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · DODO OCO invertido (alta, formado) · JTO OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado)
+- 📰 26/11 14:01 UTC · Decrypt: Polygon Brings Its Cross-Border Payments Stack to Coinbase’s Base
 - 📰 26/11 13:47 UTC · Cointelegraph: Nasdaq exec pushes for common EU rules on tokenized securities
 - 📰 26/11 13:45 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 26/11 13:30 UTC · Cointelegraph: 7 bizarre things crypto whales spent a fortune on
 - 📰 26/11 13:13 UTC · Decrypt: Standard Chartered's Zodia Custody Says Hackers Accessed Client Contact Details
 - 📰 26/11 12:38 UTC · CoinDesk: Standard Chartered's Zodia Custody suffers data breach, exposing client information
-- 📰 26/11 12:26 UTC · Decrypt: Galaxy Research Withdraws Call That Bitcoin's Bear Market Is Over
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
