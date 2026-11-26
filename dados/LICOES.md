@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 19:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 19:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 72.8% das moedas subindo em 24 h, 88.6% em 4 h · BTC 24 h 1.04%, 4 h 0.5%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 0.3, 'ETH': -1.7, 'SOL': 9.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': 1.0, 'ETH': -1.1, 'SOL': 9.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · ZAMA fundo duplo (alta, formado)
 - 📰 26/11 19:01 UTC · Decrypt: Before the Sell-Off, AI Stocks Showed Dot-Com-Level Bubble Signals: Study
