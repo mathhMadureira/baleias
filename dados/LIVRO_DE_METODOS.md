@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.8% | 308 | 51.2%–62.2% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.0% | 2667 | 51.1%–54.9% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 2668 | 51.1%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | williams_wr_baixa | promissor | 70.0% | 10 | 39.7%–89.2% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
 | connors_8020_baixa | promissor | 68.8% | 16 | 44.4%–85.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
@@ -15,9 +15,9 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | raschke_sopa_baixa | promissor | 59.1% | 22 | 38.7%–76.7% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | williams_volb_baixa | promissor | 52.1% | 259 | 46.1%–58.1% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
+| demark_td9_alta | promissor | 51.2% | 84 | 40.7%–61.6% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | williams_wr_alta | promissor | 51.0% | 51 | 37.7%–64.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | tres_corvos | promissor | 50.7% | 467 | 46.2%–55.3% | H6: três corvos → sobe (efeito pequeno) |
-| demark_td9_alta | promissor | 50.6% | 83 | 40.1%–61.1% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | reversao_queda | reprovado | 50.0% | 74 | 38.9%–61.1% | H14: queda anormal de 1 h → sobe |
 | velez_180_baixa | reprovado | 49.3% | 69 | 37.8%–60.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | vortice_invertido | reprovado | 49.2% | 508 | 44.9%–53.5% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
