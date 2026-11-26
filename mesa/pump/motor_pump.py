@@ -10,6 +10,11 @@ A cada CICLO_S:
      sai por: stop −7%, alvo +15%, stop móvel (depois de +8% guarda 60% do pico), prazo 15 min, ou graduação.
      sai por: stop, alvo, stop móvel (depois de +ARMA guarda GUARDA do pico), prazo, ou graduação (sai da curva).
   Custos simulados: taxa do pump.fun 1% + derrapagem 1% em cada lado (4% ida e volta).
+v4 (26/11, dono: "quem opera a pump.fun é o agente Memes, com engenharia de dados, prompt e computação"; H82):
+  O CÓDIGO não escolhe moeda. Ele (a) monta a cada 60 s o pacote de dados pump/candidatos.json (preço na Solana a cada 5 s:
+  variação 1/5/15 min, queda desde o pico, curva, idade, mercado; DexScreener: compras/vendas e volume de 5 min e 1 h, redes);
+  (b) executa as ORDENS do agente Memes (pump/ordens.jsonl, via ordem_pump.py): compra condicional com gatilho e teto de preço,
+  validade curta, plano de saída próprio (stop, alvo, móvel, prazo); (c) protege as abertas a cada 5 s.
 Estado: Shared/baleias/pump/estado.json. Uso: python3 -u motor_pump.py
 """
 import base64
@@ -36,6 +41,10 @@ RAPIDO_S = 5
 ESFRIA_S = 20 * 60
 TOKENS_CURVA = 793_100_000 * 10 ** 6                    # tokens reais à venda na curva do pump.fun (6 casas)
 CUSTO_LADO = 0.02
+MODO = "agente"                                         # "agente" = só ordens do Memes (v4); "robo" = sinal próprio (v3)
+ORDENS, CANDIDATOS = PASTA / "ordens.jsonl", PASTA / "candidatos.json"
+DEX = "https://api.dexscreener.com/tokens/v1/solana/"
+PACOTE_S = 20                                           # pacote do Memes refeito a cada 20 s (DexScreener aceita 300 consultas/min)
 HIST_S, FINO_S = 3600, 600                              # 5 s nos últimos 10 min; mais antigo, 1 ponto a cada 30 s
 
 
@@ -106,6 +115,8 @@ def vigiar(e):
     for m, x in moedas.items():
         c = x["bonding_curve"]
         if c in px:
+            if px[c][1]:
+                e.setdefault("graduadas", {})[m] = agora
             e["info"][m] = {"simbolo": x.get("symbol"), "curva": c, "criada_ms": x.get("created_timestamp"), "nome": x.get("name")}
             h = e["hist"].setdefault(m, [])
             h.append([round(agora), px[c][0]])
@@ -114,7 +125,10 @@ def vigiar(e):
         e["hist"].pop(m, None)
         e["info"].pop(m, None)
     sair(e, px, agora)
-    entrar(e, moedas, px, agora)
+    if MODO == "agente":
+        executar_ordens(e, moedas, px, agora)
+    else:
+        entrar(e, moedas, px, agora)
     e["patrimonio"] = patrimonio(e, px)
     e["atualizado"] = agora
     e["lidas"] = len(px)
@@ -173,14 +187,16 @@ def sair(e, px, agora):
         motivo = None
         if graduada:
             motivo = "graduou (saiu da curva)"
-        elif var <= -STOP:
-            motivo = f"stop −{STOP:.0%}"
-        elif var >= ALVO:
-            motivo = f"alvo +{ALVO:.0%}"
-        elif p["pico"] >= ARMA and var <= GUARDA * p["pico"]:
+        elif m in e.get("sair_ja", {}):
+            motivo = f"Memes mandou sair: {e['sair_ja'].pop(m)}"
+        elif var <= -p.get("stop", STOP):
+            motivo = f"stop −{p.get('stop', STOP):.0%}"
+        elif var >= p.get("alvo", ALVO):
+            motivo = f"alvo +{p.get('alvo', ALVO):.0%}"
+        elif p["pico"] >= p.get("arma", ARMA) and var <= p.get("guarda", GUARDA) * p["pico"]:
             motivo = f"stop móvel (pico +{p['pico']:.0%})"
-        elif agora - p["t"] > PRAZO_MIN * 60:
-            motivo = f"prazo {PRAZO_MIN} min"
+        elif agora - p["t"] > p.get("prazo_min", PRAZO_MIN) * 60:
+            motivo = f"prazo {p.get('prazo_min', PRAZO_MIN)} min"
         if motivo:
             valor = p["qtd"] * preco * sol * (1 - CUSTO_LADO)
             res = valor - p["usd"]
@@ -254,6 +270,135 @@ def entrar(e, moedas, px, agora):
         vetadas.pop(m)
 
 
+def _var(h, agora, seg):
+    """Variação do último preço contra o preço de `seg` segundos atrás (None sem histórico suficiente)."""
+    antes = [v for t, v in h if agora - t >= seg - 3]
+    return None if not antes or not h else h[-1][1] / antes[-1] - 1
+
+
+def montar_candidatos(e, agora):
+    """Engenharia de dados do Memes: características por moeda, de fontes conferidas, para ele decidir com tese."""
+    sol = e.get("sol") or 0
+    base = []
+    for m, h in e["hist"].items():
+        x = (e.get("conhecidas") or {}).get(m) or e["info"].get(m) or {}
+        if m in e["abertas"] or len(h) < 12 or agora - h[-1][0] > 30 or m in e.get("graduadas", {}):
+            continue
+        if not 25 <= h[-1][1] * 1e9 <= 500:             # curva ativa vale ~28 a ~420 SOL; fora disso a leitura é inválida (graduada, outro formato)
+            continue
+        idade = (agora * 1000 - float(x.get("created_timestamp") or x.get("criada_ms") or 0)) / 60000
+        v1, v5, v15 = _var(h, agora, 60), _var(h, agora, 300), _var(h, agora, 900)
+        pico = max(v for t, v in h if agora - t <= 900)
+        base.append({"mint": m, "simbolo": x.get("symbol") or x.get("simbolo"), "idade_min": round(idade, 1),
+                     "preco_sol": h[-1][1], "mercado_usd": round(h[-1][1] * sol * 1e9),
+                     "var_1m": None if v1 is None else round(v1, 4), "var_5m": None if v5 is None else round(v5, 4),
+                     "var_15m": None if v15 is None else round(v15, 4), "queda_do_pico_15m": round(h[-1][1] / pico - 1, 4)})
+    for m in [m for m, t in e.get("graduadas", {}).items() if agora - t > 86400]:
+        e["graduadas"].pop(m)
+    # ordem: as que estão vivas e subindo primeiro (perto do pico de 15 min, 5 min positivo); as mortas descem
+    base.sort(key=lambda c: (c["queda_do_pico_15m"] > -0.25, (c["var_5m"] or 0) > 0, abs(c["var_5m"] or 0)), reverse=True)
+    base = base[:30]
+    try:
+        dex = {d["baseToken"]["address"]: d for d in _get(DEX + ",".join(c["mint"] for c in base)) if d.get("baseToken")} if base else {}
+    except Exception as ex:
+        dex = {}
+        print(f"DexScreener falhou: {ex}", flush=True)
+    for c in base:
+        d = dex.get(c["mint"]) or {}
+        tx = d.get("txns") or {}
+        m5, h1 = tx.get("m5") or {}, tx.get("h1") or {}
+        info = d.get("info") or {}
+        c.update({"compras_5m": m5.get("buys"), "vendas_5m": m5.get("sells"), "compras_1h": h1.get("buys"), "vendas_1h": h1.get("sells"),
+                  "volume_5m_usd": (d.get("volume") or {}).get("m5"), "volume_1h_usd": (d.get("volume") or {}).get("h1"),
+                  "redes": sorted({s.get("type") for s in info.get("socials") or []} | ({"site"} if info.get("websites") else set())),
+                  "impulsionada": bool(d.get("boosts")), "dex": d.get("dexId"), "mercado_dex_usd": d.get("marketCap")})
+        sinais = []
+        if c["compras_5m"] is not None and c["vendas_5m"] is not None and c["vendas_5m"] > c["compras_5m"]:
+            sinais.append("mais vendas que compras em 5 min")
+        if (c["queda_do_pico_15m"] or 0) < -0.25:
+            sinais.append("caiu > 25% do pico de 15 min")
+        if (c["var_1m"] or 0) > 0.25:
+            sinais.append("salto > 25% em 1 min (topo provável)")
+        if c["idade_min"] < 5:
+            sinais.append("< 5 min de vida (snipers e criador ainda vendendo)")
+        if not c["redes"]:
+            sinais.append("sem redes sociais")
+        md = c.get("mercado_dex_usd")
+        if md and not 0.5 <= md / max(1, c["mercado_usd"]) <= 2:
+            sinais.append(f"Solana e DexScreener divergem no mercado (US$ {c['mercado_usd']:,} × {md:,.0f}): dado duvidoso, não opere")
+        c["alertas"] = sinais
+    CANDIDATOS.write_text(json.dumps({"t": agora, "sol_usd": sol, "caixa": round(e["caixa"], 4), "abertas": len(e["abertas"]),
+                                      "vagas": MAX_POS - len(e["abertas"]), "candidatas": base[:15]}, ensure_ascii=False, indent=1))
+
+
+def _ler_ordens(e):
+    feitas = set(e.setdefault("ordens_vistas", []))
+    novas = []
+    try:
+        for l in ORDENS.read_text().splitlines():
+            if l.strip():
+                o = json.loads(l)
+                if o.get("id") not in feitas:
+                    novas.append(o)
+    except (OSError, ValueError):
+        pass
+    return novas
+
+
+def _fim_ordem(e, o, estado, texto):
+    e["ordens_vistas"] = (e.get("ordens_vistas", []) + [o["id"]])[-500:]
+    e.setdefault("ordens_log", []).append({"id": o["id"], "t": time.time(), "mint": o.get("mint"), "simbolo": o.get("simbolo"),
+                                           "estado": estado, "texto": texto, "tese": o.get("tese")})
+    e["ordens_log"] = e["ordens_log"][-100:]
+    anotar(e, f"{'🟢' if estado == 'executada' else '⏹'} ordem {o['id']} {o.get('simbolo')}: {estado} — {texto}")
+
+
+def executar_ordens(e, moedas, px, agora):
+    """Executa as ordens do Memes. Compra: só se o preço estiver entre gatilho e teto (relativos ao preço da ordem) e dentro da validade."""
+    sol = e.get("sol") or 0
+    espera = e.setdefault("ordens_pendentes", {})
+    for o in _ler_ordens(e):
+        if o.get("tipo") == "sair":
+            if o.get("mint") in e["abertas"]:
+                e.setdefault("sair_ja", {})[o["mint"]] = o.get("tese") or "sem motivo"
+                _fim_ordem(e, o, "executada", "saída na próxima leitura")
+            else:
+                _fim_ordem(e, o, "recusada", "não há posição aberta")
+        elif o["id"] not in espera:
+            espera[o["id"]] = o
+    for oid, o in list(espera.items()):
+        m = o["mint"]
+        x = moedas.get(m) or {"bonding_curve": (e["info"].get(m) or {}).get("curva")}
+        c = x.get("bonding_curve")
+        if agora - o["t"] > o["validade_min"] * 60:
+            espera.pop(oid); _fim_ordem(e, o, "expirou", f"o preço não ficou entre gatilho e teto em {o['validade_min']} min"); continue
+        if m in e["abertas"]:
+            espera.pop(oid); _fim_ordem(e, o, "recusada", "já há posição nessa moeda"); continue
+        if not c or c not in px or not sol:
+            continue
+        preco, graduada, prog = px[c]
+        if graduada:
+            espera.pop(oid); _fim_ordem(e, o, "recusada", "a moeda graduou"); continue
+        var = preco / o["preco_ref"] - 1
+        if var > o["teto"]:
+            if o.get("cancelar_acima", True):
+                espera.pop(oid); _fim_ordem(e, o, "cancelada", f"preço {var:+.1%} acima do teto {o['teto']:+.0%} (não persegue topo)")
+            continue
+        if var < o["gatilho"]:
+            continue
+        usd = min(float(o["usd"]), POS_USD * 1.5)
+        if len(e["abertas"]) >= MAX_POS or e["caixa"] < usd:
+            espera.pop(oid); _fim_ordem(e, o, "recusada", f"sem vaga ou caixa (abertas {len(e['abertas'])}/{MAX_POS}, caixa US$ {e['caixa']:.2f})"); continue
+        qtd = usd * (1 - CUSTO_LADO) / (preco * sol)
+        e["caixa"] -= usd
+        e["abertas"][m] = {"simbolo": o.get("simbolo"), "curva": c, "entrada": preco, "qtd": qtd, "usd": usd, "t": agora,
+                           "criada_ms": x.get("created_timestamp"), "mcap_entrada": round(preco * sol * 1e9), "pico": 0.0, "versao": "v4 Memes",
+                           "stop": o["stop"], "alvo": o["alvo"], "arma": o["arma"], "guarda": o["guarda"], "prazo_min": o["prazo_min"],
+                           "ordem": oid, "conf": o.get("conf"), "motivo": f"Memes ({o.get('conf')}): {o.get('tese')}"}
+        espera.pop(oid)
+        _fim_ordem(e, o, "executada", f"comprou US$ {usd:.2f} a {var:+.1%} do preço da ordem; stop −{o['stop']:.0%}, alvo +{o['alvo']:.0%}, prazo {o['prazo_min']} min")
+
+
 def main():
     e = carregar()
     proxima = 0.0
@@ -264,6 +409,12 @@ def main():
                 volta(e)
                 proxima = time.time() + CICLO_S
             vigiar(e)
+            if time.time() - e.get("pacote_t", 0) >= PACOTE_S:
+                try:
+                    montar_candidatos(e, time.time())
+                except Exception as ex:
+                    print(f"candidatos falhou: {type(ex).__name__}: {ex}", flush=True)
+                e["pacote_t"] = time.time()
             salvar(e)
         except Exception as ex:
             print(f"erro: {type(ex).__name__}: {ex}", flush=True)

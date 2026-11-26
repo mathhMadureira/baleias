@@ -3089,3 +3089,41 @@ class CanalDaEquipe(unittest.TestCase):
         with self.assertRaises(SystemExit):
             Mo.mudar("lados", "venda", "guardiao", "x")                           # Risco não é dono de 'lados'
         self.assertEqual(Mo.mudar("lados", "venda", "laboratorio", "x")["lados"], "venda")
+
+
+class PumpOperadoPeloMemes(unittest.TestCase):
+    """26/11 (H82): o código não escolhe moeda; executa ordens do Memes com gatilho, teto e validade, e recusa fora dos limites."""
+
+    def _mods(self, raiz):
+        import importlib.util as _iu
+        mods = []
+        for nome in ("motor_pump", "ordem_pump"):
+            spec = _iu.spec_from_file_location(nome, pathlib.Path(__file__).parent.parent / "mesa" / "pump" / f"{nome}.py")
+            m = _iu.module_from_spec(spec); spec.loader.exec_module(m)
+            m.PASTA = raiz; m.ORDENS = raiz / "ordens.jsonl"; m.CANDIDATOS = raiz / "candidatos.json"; m.EST = raiz / "estado.json"
+            mods.append(m)
+        return mods
+
+    def test_ordem_executa_cancela_e_limites(self):
+        import time as _t
+        raiz = pathlib.Path(_tf.mkdtemp())
+        Mp, Op = self._mods(raiz)
+        Mp.anotar = lambda e, texto: None
+        agora = _t.time()
+        (raiz / "candidatos.json").write_text(_js.dumps({"t": agora, "candidatas": [
+            {"mint": "AAA", "simbolo": "AAA", "preco_sol": 1e-7}, {"mint": "BBB", "simbolo": "BBB", "preco_sol": 1e-7}]}))
+        with self.assertRaises(SystemExit):                                        # alvo que não paga o custo
+            Op.main(["comprar", "AAA", "--conf", "média", "--tese", "compras dobram as vendas em 5 min, x" * 2, "--stop", "0.08", "--alvo", "0.10"])
+        with self.assertRaises(SystemExit):                                        # moeda sem dado
+            Op.main(["comprar", "ZZZ", "--conf", "média", "--tese", "compras dobram as vendas em 5 min, x" * 2])
+        Op.main(["comprar", "AAA", "--conf", "média", "--tese", "compras dobram as vendas em 5 min, curva 60%"])
+        Op.main(["comprar", "BBB", "--conf", "baixa", "--tese", "impulso de 5 min com volume subindo, redes ok", "--teto", "0.05"])
+        e = {"caixa": 10.0, "abertas": {}, "fechadas": [], "info": {}, "hist": {}, "sol": 100.0}
+        moedas = {"AAA": {"bonding_curve": "cA"}, "BBB": {"bonding_curve": "cB"}}
+        Mp.executar_ordens(e, moedas, {"cA": (1.02e-7, False, 0.6), "cB": (1.2e-7, False, 0.6)}, agora + 5)
+        self.assertIn("AAA", e["abertas"])                                         # +2%: entre gatilho 0 e teto 6%
+        self.assertNotIn("BBB", e["abertas"])                                      # +20% > teto: cancelada, não persegue topo
+        self.assertEqual({o["simbolo"]: o["estado"] for o in e["ordens_log"]}, {"AAA": "executada", "BBB": "cancelada"})
+        self.assertEqual(e["abertas"]["AAA"]["stop"], 0.08)
+        Mp.executar_ordens(e, moedas, {"cA": (1.02e-7, False, 0.6)}, agora + 10)  # a mesma ordem não executa duas vezes
+        self.assertEqual(len(e["ordens_log"]), 2)

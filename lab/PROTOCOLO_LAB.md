@@ -1865,3 +1865,9 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Custo simulado:** 2% por lado (4% ida e volta): o scalper precisa de acerto alto para pagar isso.
 - **Critério (Juiz, depois de 48 h ou 40 operações):** passa se o resultado líquido for > 0 e a pior sequência ≤ −US$ 3. Reprovando, nada vai para dinheiro real.
 - **Previsão registrada:** muitas operações; o custo de 4% e os stops que pulam (v1 pediu −12% e realizou −34%) devem deixar o resultado perto de zero ou negativo.
+
+## H82 (26/11/2026, ordem do dono): a pump.fun passa a ser operada pelo agente Memes (v4)
+- **Motivo:** o dono: "não há engenharia de software, de dados, de prompt nem computacional no robô; quem deve operar é o agente Memes". A v3 (H81) perdeu US$ 1,14 em 2 operações em 1 min, comprando impulso cego.
+- **Divisão:** o código monta a cada 20 s o pacote `pump/candidatos.json` (preço na Solana a cada 5 s, variação 1/5/15 min, queda do pico, idade, mercado conferido com o DexScreener, compras/vendas e volume de 5 min e 1 h, redes, alertas); o Memes decide a cada 3 min e dá ordens condicionais (`ordem_pump.py`: gatilho +2%, teto +8%, validade 3 min, stop 8%, alvo 20%, prazo 15 min); o código executa e protege a cada 5 s. O Memes escreve uma lição por operação fechada (`pump/licoes_memes.md`).
+- **Critério (Juiz, depois de 48 h ou 30 operações do Memes):** passa se o resultado líquido for > 0 com custo de 4% ida e volta e nenhuma compra fora do pacote. Reprovando, nada vai para dinheiro real.
+- **Previsão registrada:** menos operações que a v3; o filtro de golpe e topo deve cortar as perdas de −30% em segundos; resultado ainda incerto, porque a literatura diz que só criador e snipers ganham com consistência.
