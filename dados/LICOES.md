@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 06:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 06:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 82.8% das moedas subindo em 24 h, 46.1% em 4 h · BTC 24 h 2.81%, 4 h -0.09%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.1%/ano · {'BTC': 10.5, 'ETH': -2.0, 'SOL': -16.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 11.0, 'ETH': 1.2, 'SOL': -13.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ALGO topo duplo (baixa, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · DODO OCO invertido (alta, formado) · FET OCO invertido (alta, formado) · INJ OCO invertido (alta, formado) · MUBARAK topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · OP OCO invertido (alta, formado) · SEI OCO invertido (alta, formado)
+- 📰 26/11 05:53 UTC · Cointelegraph: UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report
 - 📰 26/11 05:30 UTC · CoinDesk: Ripple is worth $90 a share to one fund and $300 to another, SEC filings show
 - 📰 26/11 05:29 UTC · Cointelegraph: Sky proposes emergency vote on $25M transfer amid liquidity stress
 - 📰 26/11 04:55 UTC · Cointelegraph: 1Password hacker stole customer names and emails, but vaults safe
 - 📰 26/11 04:46 UTC · CoinDesk: Bill to lock up U.S. government bitcoin for 20 years advances to full House
 - 📰 26/11 04:24 UTC · Cointelegraph: Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions
-- 📰 26/11 01:33 UTC · Cointelegraph: AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

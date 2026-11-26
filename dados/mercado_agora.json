@@ -1,6 +1,6 @@
 {
- "t": 1795672911,
- "hora_utc": "2026-11-26 06:01 UTC",
+ "t": 1795673089,
+ "hora_utc": "2026-11-26 06:04 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,11 +172,17 @@
   0.11,
   0.32,
   -0.25,
-  -0.25
+  -0.36
  ],
  "contexto": {
-  "t": 1795672912,
+  "t": 1795673090,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795672388,
+    "hora_utc": "26/11 05:53",
+    "titulo": "UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795671038,
@@ -260,12 +266,6 @@
     "t": 1795637163,
     "hora_utc": "25/11 20:06",
     "titulo": "What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795634934,
-    "hora_utc": "25/11 19:28",
-    "titulo": "Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 4.1,
+   "media_top20_anual_pct": 5.4,
    "principais_anual_pct": {
-    "BTC": 10.5,
-    "ETH": -2.0,
-    "SOL": -16.2
+    "BTC": 11.0,
+    "ETH": 1.2,
+    "SOL": -13.6
    },
    "leitura": "neutro"
   },
