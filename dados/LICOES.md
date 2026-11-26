@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 23:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 23:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 62.5% das moedas subindo em 24 h, 27.7% em 4 h · BTC 24 h 0.19%, 4 h -0.28%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.7%/ano · {'BTC': -1.2, 'ETH': 2.9, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.8%/ano · {'BTC': -0.8, 'ETH': 3.4, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DOT topo duplo (baixa, formado) · GRAM OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado)
 - 📰 26/11 22:39 UTC · Cointelegraph: ‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express
