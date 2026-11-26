@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 12:03 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 12:07 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 85.8% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h 3.54%, 4 h 0.32%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.7%/ano · {'BTC': 0.3, 'ETH': 7.1, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.3%/ano · {'BTC': -1.7, 'ETH': 5.6, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 20.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AAVE fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · PNUT OCO invertido (alta, formado) · SEI OCO invertido (alta, formado) · SOL OCO invertido (alta, formado) · XRP OCO invertido (alta, formado)
 - 📰 26/11 11:50 UTC · Decrypt: UK Regulator Cites Binance Hack as It Plans Tougher DeFi Rules Than US and EU: Report
