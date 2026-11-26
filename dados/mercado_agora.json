@@ -1,6 +1,6 @@
 {
- "t": 1795673269,
- "hora_utc": "2026-11-26 06:07 UTC",
+ "t": 1795673449,
+ "hora_utc": "2026-11-26 06:10 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,11 +172,17 @@
   0.11,
   0.32,
   -0.25,
-  -0.3
+  -0.45
  ],
  "contexto": {
-  "t": 1795673269,
+  "t": 1795673450,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795672800,
+    "hora_utc": "26/11 06:00",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795672388,
@@ -260,12 +266,6 @@
     "t": 1795638963,
     "hora_utc": "25/11 20:36",
     "titulo": "Another Bitcoin Mining Firm Flags 'Hashrate Hijacking' Attacks That Reroute Rewards"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795637163,
-    "hora_utc": "25/11 20:06",
-    "titulo": "What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 6.8,
+   "media_top20_anual_pct": 6.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 2.9,
-    "SOL": -9.3
+    "ETH": 2.1,
+    "SOL": -9.9
    },
    "leitura": "neutro"
   },
