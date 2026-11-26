@@ -1,21 +1,21 @@
 {
- "t": 1795705802,
- "hora_utc": "2026-11-26 15:10 UTC",
+ "t": 1795706019,
+ "hora_utc": "2026-11-26 15:13 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 124,
-  "subindo_pct": 16.9,
-  "mediana_pct": -0.58
+  "moedas": 125,
+  "subindo_pct": 16.8,
+  "mediana_pct": -0.57
  },
  "mercado_4h": {
-  "moedas": 124,
-  "subindo_pct": 42.7,
-  "mediana_pct": -0.15
+  "moedas": 125,
+  "subindo_pct": 43.2,
+  "mediana_pct": -0.14
  },
  "mercado_24h": {
-  "moedas": 124,
-  "subindo_pct": 84.7,
-  "mediana_pct": 5.32
+  "moedas": 125,
+  "subindo_pct": 84.8,
+  "mediana_pct": 5.38
  },
  "btc": {
   "1h": -0.23,
@@ -172,11 +172,17 @@
   0.18,
   0.08,
   -0.23,
-  -1.01
+  -0.75
  ],
  "contexto": {
-  "t": 1795705803,
+  "t": 1795706020,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795705874,
+    "hora_utc": "26/11 15:11",
+    "titulo": "OpenAI Fixes ChatGPT Billing Error, Promises to Make it 40% Worse"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795703935,
@@ -260,12 +266,6 @@
     "t": 1795692470,
     "hora_utc": "26/11 11:27",
     "titulo": "Hong Kong-based crypto trading firm Auros is winding down operations"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795692358,
-    "hora_utc": "26/11 11:25",
-    "titulo": "New York Wins $1.37B Judgment Against NovaTech Founders Who Fled the US"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 1.4,
+   "media_top20_anual_pct": 4.2,
    "principais_anual_pct": {
-    "BTC": -20.4,
-    "ETH": -0.8,
-    "SOL": -8.0
+    "BTC": -17.4,
+    "ETH": 2.4,
+    "SOL": -5.0
    },
    "leitura": "neutro"
   },
@@ -706,11 +706,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5076,
-    "n": 23798
+    "n": 23824
    },
    "segue_maioria_24h": {
-    "acerto": 0.5168,
-    "n": 30224
+    "acerto": 0.5171,
+    "n": 30313
    }
   },
   "referencia_ganha": [],
