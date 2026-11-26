@@ -1,15 +1,15 @@
 {
- "t": 1795690460,
- "hora_utc": "2026-11-26 10:54 UTC",
+ "t": 1795690688,
+ "hora_utc": "2026-11-26 10:58 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
-  "subindo_pct": 18.3,
-  "mediana_pct": -0.52
+  "subindo_pct": 19.0,
+  "mediana_pct": -0.5
  },
  "mercado_4h": {
   "moedas": 126,
-  "subindo_pct": 49.2,
+  "subindo_pct": 50.0,
   "mediana_pct": 0.0
  },
  "mercado_24h": {
@@ -172,11 +172,17 @@
   -0.06,
   0.63,
   0.06,
-  -0.68
+  -0.67
  ],
  "contexto": {
-  "t": 1795690460,
+  "t": 1795690689,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795690568,
+    "hora_utc": "26/11 10:56",
+    "titulo": "Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795689633,
@@ -260,12 +266,6 @@
     "t": 1795667085,
     "hora_utc": "26/11 04:24",
     "titulo": "Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795656800,
-    "hora_utc": "26/11 01:33",
-    "titulo": "AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says"
    }
   ],
   "medo_ganancia": {
@@ -276,8 +276,8 @@
   "funding": {
    "media_top20_anual_pct": 11.3,
    "principais_anual_pct": {
-    "BTC": 0.4,
-    "ETH": 7.6,
+    "BTC": -0.3,
+    "ETH": 7.2,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -486,8 +486,8 @@
  "v4": {
   "vela": "10:45 UTC",
   "apostas": 136,
-  "compras": 82,
-  "vendas": 54,
+  "compras": 81,
+  "vendas": 55,
   "mais_confiantes_venda": [
    {
     "moeda": "SUPER",
@@ -824,12 +824,12 @@
   "z_contra_lab": -0.27,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.507,
-    "n": 24672
+    "acerto": 0.5066,
+    "n": 24609
    },
    "segue_maioria_24h": {
-    "acerto": 0.5157,
-    "n": 30262
+    "acerto": 0.5148,
+    "n": 30236
    }
   },
   "referencia_ganha": [],
