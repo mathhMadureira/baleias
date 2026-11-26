@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 15:56 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 16:00 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 84.7% das moedas subindo em 24 h, 21.0% em 4 h · BTC 24 h 3.86%, 4 h -0.48%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': -5.9, 'ETH': -2.5, 'SOL': 2.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.9%/ano · {'BTC': 11.0, 'ETH': 1.4, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SEI OCO invertido (alta, formado) · SENT topo duplo (baixa, formado) · SUI ombro-cabeça-ombro (baixa, formado)
 - 📰 26/11 15:45 UTC · Cointelegraph: How EU brokers could lose access to Kyrgyz crypto exchanges
+- 📰 26/11 15:42 UTC · CoinDesk: Crypto for Advisors: Four questions to ask before trusting a crypto exchange
 - 📰 26/11 15:11 UTC · Decrypt: OpenAI Fixes ChatGPT Billing Error, Promises to Make it 40% Worse
 - 📰 26/11 14:38 UTC · Decrypt: Elon Musk Says ‘Multiplanetary’ SpaceX Could Be Worth $118 Quintillion. Yes, Quintillion
 - 📰 26/11 14:26 UTC · Decrypt: Cournot Raises $5M to Build AI-Native Oracle for Verifiable Intelligence
 - 📰 26/11 14:05 UTC · CoinDesk: Spain gives anti-laundering unit power to freeze crypto accounts without a judge
-- 📰 26/11 13:47 UTC · Cointelegraph: Nasdaq exec pushes for common EU rules on tokenized securities
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
