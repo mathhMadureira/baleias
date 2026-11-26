@@ -28,6 +28,7 @@ SHARED = Path("/home/servidor-de-producao/OpenBot/Shared/baleias")
 EQUIPE = SHARED / "equipe"
 AGENTE = "laboratorio"
 CICLO_S, RADAR_S, ESFRIA_S = 30, 60, 30 * 60
+VIGIA_S, PICO_MIN = 3, 0.0005             # dono (26/11): vigiar a cada 3 s; só mexe no stop quando o pico sobe 0,05% ou mais
 PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
@@ -293,6 +294,34 @@ def quadro_ag(agente, texto):
         pass
 
 
+def vigia():
+    """A cada VIGIA_S: preço de cada posição aberta; se fez novo pico, sobe o stop móvel / a garantia do lucro já (sem esperar a volta)."""
+    e = _json(C.PASTA / f"{AGENTE}.json", {}) or {}
+    if not e.get("abertas"):
+        return 0
+    c = C.conectar(AGENTE)
+    picos = {}
+    for par, p in e["abertas"].items():
+        try:
+            px = c.preco(par)
+        except Exception:
+            continue
+        fav = (px / p["entrada"] - 1) if p["lado"] == "compra" else (1 - px / p["entrada"])
+        if fav >= float(p.get("pico") or 0) + PICO_MIN:
+            picos[par] = fav
+    if not picos:
+        return 0
+    with open(C.PASTA / f"{AGENTE}.lock", "w") as trava:
+        fcntl.flock(trava, fcntl.LOCK_EX)
+        conta = C.Conta(AGENTE, c)
+        for par, fav in picos.items():
+            if par in conta.e["abertas"]:
+                conta.e["abertas"][par]["pico"] = max(float(conta.e["abertas"][par].get("pico") or 0), fav)
+        conta.mover_stops()
+        conta.salvar()
+    return len(picos)
+
+
 def main():
     a = sys.argv[1:]
     if a[:1] == ["ver"]:
@@ -311,15 +340,21 @@ def main():
     if a[:1] == ["uma"]:
         volta()
         return
+    proxima = 0.0
     while True:
         t0 = time.time()
         try:
-            volta()
+            if t0 >= proxima:
+                volta()
+                proxima = time.time() + CICLO_S
+            else:
+                vigia()
         except SystemExit as ex:                       # PARE (foco, endereço): espera e tenta de novo
             print(f"parado: {ex}", flush=True)
+            proxima = time.time() + CICLO_S
         except Exception as ex:
-            print(f"erro na volta: {type(ex).__name__}: {ex}", flush=True)
-        time.sleep(max(5, CICLO_S - (time.time() - t0)))
+            print(f"erro: {type(ex).__name__}: {ex}", flush=True)
+        time.sleep(max(1, VIGIA_S - (time.time() - t0)))
 
 
 if __name__ == "__main__":
