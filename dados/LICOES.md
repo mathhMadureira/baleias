@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 18:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 18:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 73.1% das moedas subindo em 24 h, 34.5% em 4 h · BTC 24 h 1.55%, 4 h -0.57%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 2.9, 'ETH': -4.5, 'SOL': -2.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.1%/ano · {'BTC': 3.0, 'ETH': -5.6, 'SOL': -3.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** SOPH fundo duplo (alta, CONFIRMOU) · BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · UNI fundo duplo (alta, formado)
 - 📰 26/11 17:39 UTC · Cointelegraph: Crypto on notice as hawkish Fed risks December ‘meltdown’
