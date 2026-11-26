@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 01:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 02:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 84.5% das moedas subindo em 24 h, 73.6% em 4 h · BTC 24 h 2.44%, 4 h 0.79%.
+- **Amplitude:** 82.2% das moedas subindo em 24 h, 76.0% em 4 h · BTC 24 h 2.7%, 4 h 1.06%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ETC bandeira de alta (alta, CONFIRMOU) · HBAR bandeira de alta (alta, CONFIRMOU) · ME fundo duplo (alta, CONFIRMOU) · NEAR bandeira de alta (alta, CONFIRMOU) · PUMP bandeira de alta (alta, CONFIRMOU) · RAY bandeira de alta (alta, CONFIRMOU) · TIA bandeira de alta (alta, CONFIRMOU) · TRUMP bandeira de alta (alta, CONFIRMOU) · VANA bandeira de alta (alta, CONFIRMOU) · ETH topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.7%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 2.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** AT topo duplo (baixa, formado) · CKB fundo duplo (alta, formado) · ETH topo duplo (baixa, formado) · ME fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL topo duplo (baixa, formado) · VANA fundo duplo (alta, formado) · VANA ombro-cabeça-ombro (baixa, formado) · VIRTUAL topo duplo (baixa, formado)
 - 📰 26/11 01:33 UTC · Cointelegraph: AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says
 - 📰 25/11 22:38 UTC · Decrypt: China's Google Just Released Its Fast New AI Model for Free
 - 📰 25/11 22:33 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 56019 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 56064 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
