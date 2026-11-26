@@ -1,6 +1,6 @@
 {
- "t": 1795701916,
- "hora_utc": "2026-11-26 14:05 UTC",
+ "t": 1795702132,
+ "hora_utc": "2026-11-26 14:08 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -175,8 +175,14 @@
   0.01
  ],
  "contexto": {
-  "t": 1795701917,
+  "t": 1795702132,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795701958,
+    "hora_utc": "26/11 14:05",
+    "titulo": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795701662,
@@ -260,12 +266,6 @@
     "t": 1795692179,
     "hora_utc": "26/11 11:22",
     "titulo": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795691842,
-    "hora_utc": "26/11 11:17",
-    "titulo": "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 12.4,
+   "media_top20_anual_pct": 12.6,
    "principais_anual_pct": {
-    "BTC": -4.3,
-    "ETH": 6.8,
-    "SOL": 4.6
+    "BTC": -4.5,
+    "ETH": 5.9,
+    "SOL": 9.5
    },
    "leitura": "neutro"
   },
