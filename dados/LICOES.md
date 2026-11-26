@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 11:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 11:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 85.0% das moedas subindo em 24 h, 54.3% em 4 h · BTC 24 h 2.75%, 4 h -0.06%.
+- **Amplitude:** 81.9% das moedas subindo em 24 h, 54.3% em 4 h · BTC 24 h 3.09%, 4 h 0.22%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.5%/ano · {'BTC': -9.1, 'ETH': 3.9, 'SOL': 4.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 17.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** INJ estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · ATOM topo duplo (baixa, formado) · ATOM OCO invertido (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 12.9%/ano · {'BTC': -8.4, 'ETH': 3.5, 'SOL': 3.9} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 20.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** INJ estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado) · KITE topo duplo (baixa, formado) · KITE OCO invertido (alta, formado)
 - 📰 26/11 10:56 UTC · CoinDesk: Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure
 - 📰 26/11 10:40 UTC · CoinDesk: New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech
 - 📰 26/11 10:15 UTC · Cointelegraph: Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 57614 apostas conferidas ao vivo, acerto 54.2%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 57663 apostas conferidas ao vivo, acerto 54.2%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
