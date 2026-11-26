@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 16:57 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 17:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 87.7% das moedas subindo em 24 h, 27.9% em 4 h · BTC 24 h 4.14%, 4 h -0.6%.
+- **Amplitude:** 83.6% das moedas subindo em 24 h, 31.1% em 4 h · BTC 24 h 4.14%, 4 h -0.6%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': -4.7, 'ETH': -5.8, 'SOL': 5.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.4%/ano · {'BTC': -7.4, 'ETH': 2.4, 'SOL': 9.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** LISTA bandeira de baixa (baixa, CONFIRMOU) · MMT bandeira de baixa (baixa, CONFIRMOU) · BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · UNI fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** LISTA bandeira de baixa (baixa, CONFIRMOU) · MMT bandeira de baixa (baixa, CONFIRMOU) · WIF estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · UNI fundo duplo (alta, formado)
 - 📰 26/11 16:50 UTC · CoinDesk: Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases
 - 📰 26/11 16:43 UTC · Decrypt: Spain Lets Its Financial Intelligence Unit Freeze Crypto Accounts Without a Court Order
 - 📰 26/11 16:40 UTC · Cointelegraph: BIS chief Pablo Hernández de Cos set to become next ECB president: FT
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 58594 apostas conferidas ao vivo, acerto 54.2%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 58611 apostas conferidas ao vivo, acerto 54.2%; prevê 41 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
