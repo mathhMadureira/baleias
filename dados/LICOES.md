@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 10:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 10:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,9 +65,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 85.0% das moedas subindo em 24 h, 56.7% em 4 h · BTC 24 h 3.37%, 4 h 0.69%.
+- **Amplitude:** 85.0% das moedas subindo em 24 h, 54.3% em 4 h · BTC 24 h 3.26%, 4 h 0.38%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.1%/ano · {'BTC': 8.1, 'ETH': 9.6, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': 7.6, 'ETH': 9.6, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ANIME estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · LUNC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · ATOM topo duplo (baixa, formado) · ATOM OCO invertido (alta, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado)
 - 📰 26/11 10:15 UTC · Cointelegraph: Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement
@@ -98,12 +98,12 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 31 em observação, 1 podadas)
 **v2:**
-- 😴 Sono: reencenei 2016 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 2112 episódios guardados e renormalizei os pesos das sinapses.
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 2208 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 2304 episódios guardados e renormalizei os pesos das sinapses.
+- 😴 Sono: reencenei 2400 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 57477 apostas conferidas ao vivo, acerto 54.2%; prevê 96 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 57487 apostas conferidas ao vivo, acerto 54.2%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
