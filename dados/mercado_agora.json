@@ -1,6 +1,6 @@
 {
- "t": 1795727964,
- "hora_utc": "2026-11-26 21:19 UTC",
+ "t": 1795728179,
+ "hora_utc": "2026-11-26 21:22 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 112,
@@ -172,11 +172,17 @@
   -0.08,
   0.39,
   0.08,
-  0.18
+  0.11
  ],
  "contexto": {
-  "t": 1795727965,
+  "t": 1795728180,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795727633,
+    "hora_utc": "26/11 21:13",
+    "titulo": "UK is ‘getting it wrong’ on DeFi regulation, says Coinbase"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795726863,
@@ -260,12 +266,6 @@
     "t": 1795703935,
     "hora_utc": "26/11 14:38",
     "titulo": "Elon Musk Says ‘Multiplanetary’ SpaceX Could Be Worth $118 Quintillion. Yes, Quintillion"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795703182,
-    "hora_utc": "26/11 14:26",
-    "titulo": "Cournot Raises $5M to Build AI-Native Oracle for Verifiable Intelligence"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 13.8,
+   "media_top20_anual_pct": 13.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": -3.2,
-    "SOL": 8.5
+    "ETH": -2.8,
+    "SOL": 7.9
    },
    "leitura": "neutro"
   },

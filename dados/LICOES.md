@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 21:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 21:23 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -43,7 +43,7 @@ Carteira **US$ 8.04** · 47 operações fechadas · 0 abertas
 Carteira **US$ 10.38** · 29 operações fechadas · 0 abertas
 
 - **Total:** 11/29 com lucro (38%), resultado +0.38, média +0.013 por operação.
-- **Últimas 24 h:** 1/2 com lucro, +1.13.
+- **Últimas 24 h:** 1/1 com lucro, +1.13.
 - **Por horário:** 00–05 UTC: 7 op, 43% certas, -0.18 · 18–23 UTC: 17 op, 35% certas, +0.00 · 12–17 UTC: 5 op, 40% certas, +0.56
 - **Por lado:** compra: 13 op, 31% certas, -0.42 · venda: 16 op, 44% certas, +0.80
 - **Por motivo de saída:** Método fixo (H69): v4 cair 0,3: 2 op, 0% certas, -1.10 · Método fixo, regime neutro (60: 1 op, 0% certas, -0.39 · método fixo H69: v4 0,629 de s: 1 op, 0% certas, -0.30 · Novo sinal elegível mais forte: 1 op, 0% certas, -0.17 · Entrada pelo método fixo: v4 i: 1 op, 0% certas, -0.16 · Sinal atual mais forte elegíve: 1 op, 0% certas, -0.08 · Método fixo, regime neutro (65: 1 op, 0% certas, -0.06 · Novo sinal mais forte do métod: 1 op, 0% certas, -0.03 · método fixo H69: v4 0,633 de s: 1 op, 0% certas, -0.03 · Bandeira de alta 15m força 51,: 1 op, 0% certas, -0.00 · mantém (método fixo, H69): reg: 1 op, 100% certas, +0.01 · mantém (método fixo H69): o si: 1 op, 100% certas, +0.04 · Olheiro (Caçador 02:27 UTC): L: 1 op, 100% certas, +0.04 · Método fixo, regime neutro: v4: 1 op, 100% certas, +0.06 · método fixo do Laboratório (H6: 6 op, 50% certas, +0.36 · Método fixo (H69): v4 subir 0,: 2 op, 50% certas, +0.51 · Método fixo H69: v4 cair (p su: 5 op, 40% certas, +0.56 · Olheiro: posição venda 0.1642,: 1 op, 100% certas, +1.13
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 71.4% das moedas subindo em 24 h, 81.2% em 4 h · BTC 24 h 0.96%, 4 h 0.42%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.8%/ano · {'BTC': 11.0, 'ETH': -3.2, 'SOL': 8.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.7%/ano · {'BTC': 11.0, 'ETH': -2.8, 'SOL': 7.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ATM fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado)
+- 📰 26/11 21:13 UTC · Cointelegraph: UK is ‘getting it wrong’ on DeFi regulation, says Coinbase
 - 📰 26/11 21:01 UTC · Decrypt: What Is Self-Custody? How to Hold Your Own Crypto Keys
 - 📰 26/11 20:05 UTC · Cointelegraph: Japan weighs tighter oversight of DeFi, self-custodial wallets
 - 📰 26/11 19:01 UTC · Decrypt: Before the Sell-Off, AI Stocks Showed Dot-Com-Level Bubble Signals: Study
 - 📰 26/11 18:26 UTC · Cointelegraph: Spain moves to grant financial watchdog power to freeze crypto accounts
 - 📰 26/11 18:15 UTC · Decrypt: Bitcoin Holds Above $60K as Death Cross Clouds Thanksgiving Recovery
-- 📰 26/11 17:39 UTC · Cointelegraph: Crypto on notice as hawkish Fed risks December ‘meltdown’
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
