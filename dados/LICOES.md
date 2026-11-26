@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 01:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 01:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 81.4% das moedas subindo em 24 h, 69.0% em 4 h · BTC 24 h 1.44%, 4 h 0.42%.
+- **Amplitude:** 80.6% das moedas subindo em 24 h, 78.3% em 4 h · BTC 24 h 1.78%, 4 h 0.92%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** CHIP bandeira de alta (alta, CONFIRMOU) · ETC bandeira de alta (alta, CONFIRMOU) · LTC bandeira de alta (alta, CONFIRMOU) · ME fundo duplo (alta, CONFIRMOU) · NEAR bandeira de alta (alta, CONFIRMOU) · PUMP bandeira de alta (alta, CONFIRMOU) · RAY bandeira de alta (alta, CONFIRMOU) · TIA bandeira de alta (alta, CONFIRMOU) · TRUMP bandeira de alta (alta, CONFIRMOU) · VANA bandeira de alta (alta, CONFIRMOU)
+- **Padrões gráficos em 1 h:** ETC bandeira de alta (alta, CONFIRMOU) · ME fundo duplo (alta, CONFIRMOU) · NEAR bandeira de alta (alta, CONFIRMOU) · PUMP bandeira de alta (alta, CONFIRMOU) · RAY bandeira de alta (alta, CONFIRMOU) · TIA bandeira de alta (alta, CONFIRMOU) · TRUMP bandeira de alta (alta, CONFIRMOU) · VANA bandeira de alta (alta, CONFIRMOU) · ETH topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado)
 - 📰 25/11 22:38 UTC · Decrypt: China's Google Just Released Its Fast New AI Model for Free
 - 📰 25/11 22:33 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 25/11 21:53 UTC · Cointelegraph: Switzerland clears 57 jurisdictions for crypto tax data sharing
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 55906 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 55957 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
