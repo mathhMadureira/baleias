@@ -81,7 +81,7 @@ iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; b
 <div class="app">
 <header><div class="logo">🐋</div><div class="tt"><b>Baleias</b><span id="sub">equipe · carteira única</span></div>
   <span class="live" id="online"><i></i>Live</span><span id="pontos" style="display:none"></span><span id="relogio" style="display:none"></span></header>
-<nav><button data-aba="mesa" class="ativo">Equipe</button><button data-aba="mercado">Mercado</button><button data-aba="lab">Laboratório</button></nav>
+<nav style="overflow-x:auto;scrollbar-width:none"><button data-aba="mesa" class="ativo">Equipe</button><button data-aba="conversa">Conversa</button><button data-aba="historico">Histórico</button><button data-aba="pump">pump.fun</button><button data-aba="mercado">Mercado</button><button data-aba="lab">Laboratório</button></nav>
 <div class="fita" id="fita"></div>
 
 <section class="aba ativa" id="aba-mesa">
@@ -106,31 +106,47 @@ iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; b
     <div id="desk"></div>
   </div>
 
-  <div class="card">
-    <div class="desk-h"><b>💬 Conversa da equipe</b><span id="ch-n"></span></div>
-    <div class="chat" id="chat"></div>
-  </div>
 
-  <div class="card">
-    <div class="desk-h"><b>Logger</b><span id="log-n"></span></div>
-    <div class="log" id="log"></div>
-  </div>
 
-  <div class="card">
-    <div class="desk-h"><b>Descartadas por regra</b><span id="kd-n"></span></div>
-    <div class="kill" id="kill"></div>
-    <div id="kill-rec" class="mut" style="font-size:12px;margin-top:8px"></div>
-  </div>
 
   <div class="card" id="pos-card">
     <div class="desk-h"><b>Posição</b><span id="pos-t"></span></div>
     <div id="pos"></div>
   </div>
 
+</section>
+<section class="aba" id="aba-conversa">
+  <div class="card">
+    <div class="desk-h"><b>💬 Conversa da equipe</b><span id="ch-n"></span></div>
+    <div class="chat" id="chat"></div>
+  </div>
+  <div class="card">
+    <div class="desk-h"><b>Logger</b><span id="log-n"></span></div>
+    <div class="log" id="log"></div>
+  </div>
+</section>
+<section class="aba" id="aba-historico">
   <div class="card">
     <div class="desk-h"><b>Operações</b><span id="fe-t"></span></div>
     <div id="fe"></div>
   </div>
+  <div class="card">
+    <div class="desk-h"><b>Descartadas por regra</b><span id="kd-n"></span></div>
+    <div class="kill" id="kill"></div>
+    <div id="kill-rec" class="mut" style="font-size:12px;margin-top:8px"></div>
+  </div>
+</section>
+<section class="aba" id="aba-pump">
+  <div class="card">
+    <div class="eq-top"><span>pump.fun · NO PAPEL (preços reais, dinheiro simulado)</span><span class="mult" id="pf-mult">1,00×</span></div>
+    <div class="eq" id="pf-eq">US$ —</div>
+    <div class="eq-sub"><span id="pf-var">—</span><span class="mut" id="pf-wl"></span></div>
+    <div class="curva" id="pf-curva"></div>
+    <div class="num mut" id="pf-info" style="font-size:12px;margin-top:6px"></div>
+  </div>
+  <div class="card"><div class="desk-h"><b>Posições abertas</b><span id="pf-ab-n"></span></div><div id="pf-ab"></div></div>
+  <div class="card"><div class="desk-h"><b>Operações fechadas</b><span id="pf-fe-n"></span></div><div id="pf-fe"></div></div>
+  <div class="card"><div class="desk-h"><b>Logger do pump.fun</b></div><div class="log" id="pf-log"></div></div>
 </section>
 <section class="aba" id="aba-mercado"><iframe id="frame-mercado" title="Mercado"></iframe></section>
 <section class="aba" id="aba-lab"><div class="placar" id="placar"></div></section>
@@ -257,6 +273,28 @@ function desenhar() {
     [...c.abertas].sort((a_, b_) => (b_.resultado || 0) - (a_.resultado || 0)).map(p => `<tr title="${esc(p.motivo)}"><td class="e"><b class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</b> ${esc(String(p.moeda).replace("USDT", ""))}</td>
       <td>${px(p.entrada)} → ${px(p.agora)}</td><td class="down">${px(p.stop)}</td><td class="up">${px(p.alvo)}</td><td class="mut">${ha(p.desde)}</td><td class="${cor(p.resultado)}"><b>${p.resultado != null ? sn(p.resultado, 3) : "—"}</b></td></tr>`).join("") + "</table>"
     : `<div class="vazio">Sem posição aberta.</div>`;
+  // pump.fun (papel)
+  const pf = vv.pump || {};
+  if (pf.patrimonio != null) {
+    const v = pf.patrimonio - pf.capital, x = pf.patrimonio / pf.capital, [i2, d2] = fmt(pf.patrimonio, 2).split(",");
+    $("pf-eq").innerHTML = `US$ ${i2}<small>,${d2}</small>`; $("pf-mult").textContent = fmt(x, 2) + "×"; $("pf-mult").className = "mult" + (x < 1 ? " neg" : "");
+    $("pf-var").innerHTML = `<span class="${cor(v)}">${sn(v)} (${sn(v / pf.capital * 100, 1)}%)</span>`;
+    const g = pf.fechadas.filter(f => f.resultado > 0).length; $("pf-wl").textContent = `${g}W / ${pf.fechadas.length - g}L`;
+    $("pf-curva").innerHTML = svgCurva(pf.curva, pf.capital);
+    $("pf-info").textContent = `${pf.lidas ?? 0} moedas lidas na Solana · atualizado há ${ha(pf.atualizado)} · caixa US$ ${fmt(pf.caixa)}`;
+    const spark = (h) => { if (!h || h.length < 2) return ""; const W = 120, H = 28, vs = h.map(q => q[1]), lo = Math.min(...vs, 0), hi = Math.max(...vs, 0), t0 = h[0][0], t1 = h[h.length - 1][0] || t0 + 1;
+      const X = t => (t - t0) / Math.max(1, t1 - t0) * W, Y = v => H - (v - lo) / Math.max(1e-9, hi - lo) * H, c = vs[vs.length - 1] >= 0 ? "#22e07a" : "#ff4d6d";
+      return `<svg viewBox="0 0 ${W} ${H}" style="width:120px;height:28px"><line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" stroke="#2a3a33" stroke-dasharray="3 3"/><path d="${h.map((q, k) => (k ? "L" : "M") + X(q[0]).toFixed(1) + "," + Y(q[1]).toFixed(1)).join("")}" fill="none" stroke="${c}" stroke-width="2"/></svg>`; };
+    $("pf-ab-n").textContent = `${pf.abertas.length} de 4`;
+    $("pf-ab").innerHTML = pf.abertas.length ? `<table><tr><th class="e">moeda</th><th>gráfico desde a entrada</th><th>variação</th><th>há</th><th>resultado</th></tr>` + pf.abertas.map(p =>
+      `<tr title="${esc(p.motivo)}"><td class="e"><a href="https://pump.fun/coin/${esc(p.mint)}" target="_blank" style="color:inherit"><b>${esc(p.simbolo)}</b></a></td><td>${spark(p.hist)}</td><td class="${cor(p.var)}">${sn(p.var * 100, 1)}%</td><td class="mut">${ha(p.t)}</td><td class="${cor(p.resultado)}"><b>${sn(p.resultado, 3)}</b></td></tr>`).join("") + "</table>"
+      : `<div class="vazio">Sem posição. Entra quando uma moeda sobe 15%+ em 3 min com valor de mercado entre US$ 8 mil e 60 mil.</div>`;
+    $("pf-fe-n").textContent = pf.fechadas.length ? `soma ${sn(pf.fechadas.reduce((a, f) => a + f.resultado, 0), 2)}` : "";
+    $("pf-fe").innerHTML = pf.fechadas.length ? `<table><tr><th class="e">hora</th><th class="e">moeda</th><th>variação</th><th class="e">saída</th><th>resultado</th></tr>` + pf.fechadas.map(f =>
+      `<tr><td class="e mut">${hora(f.saida_t)}</td><td class="e">${esc(f.simbolo)}</td><td>${sn((f.saida / f.entrada - 1) * 100, 1)}%</td><td class="e mut" style="font:12px system-ui">${esc(f.motivo_saida)}</td><td class="${cor(f.resultado)}"><b>${sn(f.resultado, 3)}</b></td></tr>`).join("") + "</table>"
+      : `<div class="vazio">Nenhuma operação fechada ainda.</div>`;
+    $("pf-log").innerHTML = pf.eventos.map(x => `<div class="ln"><span class="h">${hm(x.t)}</span><span class="tx">${esc(x.texto)}</span></div>`).join("") || `<div class="vazio">Sem eventos.</div>`;
+  }
   // conversa
   const TP = {info:["#1a2420","#b8c9c0"], proposta:["#0f1f33","#60a5fa"], pedido:["#3a2c05","#f5b400"], resposta:["#0f3320","#22e07a"]};
   const ids = new Set((vv.canal || []).map(m => m.id));

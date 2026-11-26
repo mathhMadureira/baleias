@@ -203,7 +203,23 @@ def vivo(agora=None):
         desk.append({**a, "ultimo": u, "contagem": cont.get(a["id"], {"total": 0, "hoje": 0}),
                      "ativo": bool(u and agora - u["t"] < 600)})
     motor = {"estado": _json(SHARED / "equipe" / "motor_estado.json"), "comando": _json(SHARED / "equipe" / "motor.json")}
-    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "motor": motor, "canal": canal[::-1],
+    pump = _json(SHARED / "pump" / "estado.json") or {}
+    if pump:
+        hist = pump.get("hist") or {}
+        sol = pump.get("sol") or 0
+        ab = []
+        for m, p in (pump.get("abertas") or {}).items():
+            h = hist.get(m) or []
+            agora_px = h[-1][1] if h else p["entrada"]
+            ab.append({"simbolo": p.get("simbolo"), "mint": m, "entrada": p["entrada"], "agora": agora_px, "var": agora_px / p["entrada"] - 1,
+                       "resultado": p["qtd"] * agora_px * sol * 0.98 - p["usd"], "usd": p["usd"], "t": p["t"], "pico": p.get("pico"),
+                       "motivo": p.get("motivo"), "hist": [[t, v / p["entrada"] - 1] for t, v in h[-120:]]})
+        pump = {"patrimonio": pump.get("patrimonio"), "capital": pump.get("capital"), "caixa": pump.get("caixa"), "lidas": pump.get("lidas"),
+                "atualizado": pump.get("atualizado"), "curva": (pump.get("curva") or [])[-600:], "abertas": ab,
+                "fechadas": (pump.get("fechadas") or [])[-30:][::-1], "eventos": (pump.get("eventos") or [])[-20:][::-1]}
+        for f in pump["fechadas"]:
+            f.pop("hist", None)
+    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "motor": motor, "canal": canal[::-1], "pump": pump,
             "descartes": sorted(desc.values(), key=lambda d: -d["total"]), "descartes_recentes": ult_desc[-8:][::-1], "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
             "progresso": (c["patrimonio"] - c["capital"]) / (META - c["capital"]), "operacoes": len(rs),
             "ganhos": sum(1 for r in rs if r > 0), "resultado": sum(rs), "melhor": max(rs) if rs else None, "pior": min(rs) if rs else None},
