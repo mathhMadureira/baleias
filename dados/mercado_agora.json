@@ -1,6 +1,6 @@
 {
- "t": 1795671441,
- "hora_utc": "2026-11-26 05:37 UTC",
+ "t": 1795671620,
+ "hora_utc": "2026-11-26 05:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 127,
@@ -172,10 +172,10 @@
   -0.26,
   0.11,
   0.32,
-  0.05
+  -0.04
  ],
  "contexto": {
-  "t": 1795671441,
+  "t": 1795671621,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -221,12 +221,6 @@
    },
    {
     "fonte": "Cointelegraph",
-    "t": 1795645993,
-    "hora_utc": "25/11 22:33",
-    "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Cointelegraph",
     "t": 1795643618,
     "hora_utc": "25/11 21:53",
     "titulo": "Switzerland clears 57 jurisdictions for crypto tax data sharing"
@@ -266,6 +260,12 @@
     "t": 1795637163,
     "hora_utc": "25/11 20:06",
     "titulo": "What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795634934,
+    "hora_utc": "25/11 19:28",
+    "titulo": "Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 4.1,
+   "media_top20_anual_pct": 4.3,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 4.7,
-    "SOL": -13.1
+    "SOL": -12.9
    },
    "leitura": "neutro"
   },
