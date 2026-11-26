@@ -1,6 +1,6 @@
 {
- "t": 1795693687,
- "hora_utc": "2026-11-26 11:48 UTC",
+ "t": 1795693914,
+ "hora_utc": "2026-11-26 11:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 128,
@@ -172,11 +172,17 @@
   0.63,
   0.06,
   -0.69,
-  0.34
+  0.37
  ],
  "contexto": {
-  "t": 1795693688,
+  "t": 1795693915,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795693823,
+    "hora_utc": "26/11 11:50",
+    "titulo": "UK Regulator Cites Binance Hack as It Plans Tougher DeFi Rules Than US and EU: Report"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795693026,
@@ -187,7 +193,7 @@
     "fonte": "CoinDesk",
     "t": 1795692470,
     "hora_utc": "26/11 11:27",
-    "titulo": "Hong Kong-based crypto trading firm Auros is winding down operations: Sources"
+    "titulo": "Hong Kong-based crypto trading firm Auros is winding down operations"
    },
    {
     "fonte": "Decrypt",
@@ -260,12 +266,6 @@
     "t": 1795672800,
     "hora_utc": "26/11 06:00",
     "titulo": "Here’s what happened in crypto today"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795672388,
-    "hora_utc": "26/11 05:53",
-    "titulo": "UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 15.4,
+   "media_top20_anual_pct": 15.3,
    "principais_anual_pct": {
-    "BTC": -5.3,
-    "ETH": 4.9,
-    "SOL": 9.4
+    "BTC": -5.2,
+    "ETH": 5.3,
+    "SOL": 10.1
    },
    "leitura": "neutro"
   },
