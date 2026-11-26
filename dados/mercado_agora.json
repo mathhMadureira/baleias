@@ -1,6 +1,6 @@
 {
- "t": 1795669281,
- "hora_utc": "2026-11-26 05:01 UTC",
+ "t": 1795669456,
+ "hora_utc": "2026-11-26 05:04 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -172,11 +172,17 @@
   -0.26,
   0.11,
   0.32,
-  0.11
+  -0.02
  ],
  "contexto": {
-  "t": 1795669282,
+  "t": 1795669456,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795668916,
+    "hora_utc": "26/11 04:55",
+    "titulo": "1Password hacker stole customer names and emails, but vaults safe"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795668361,
@@ -260,12 +266,6 @@
     "t": 1795632891,
     "hora_utc": "25/11 18:54",
     "titulo": "Ethereum Foundation backs Keccak-256 to counter quantum, AI threats"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795631087,
-    "hora_utc": "25/11 18:24",
-    "titulo": "French Senate blocks new crypto tax and wallet list critics called a kidnapping risk"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": -0.5,
+   "media_top20_anual_pct": 1.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 9.6,
-    "SOL": -10.6
+    "ETH": 4.6,
+    "SOL": -17.8
    },
    "leitura": "neutro"
   },

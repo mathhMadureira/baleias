@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 05:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 05:04 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,15 +67,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 82.4% das moedas subindo em 24 h, 57.6% em 4 h · BTC 24 h 2.95%, 4 h 0.75%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.5%/ano · {'BTC': 11.0, 'ETH': 9.6, 'SOL': -10.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.9%/ano · {'BTC': 11.0, 'ETH': 4.6, 'SOL': -17.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ALGO topo duplo (baixa, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · CKB fundo duplo (alta, formado) · DODO OCO invertido (alta, formado) · FET OCO invertido (alta, formado) · INJ OCO invertido (alta, formado) · ME fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SEI OCO invertido (alta, formado)
+- 📰 26/11 04:55 UTC · Cointelegraph: 1Password hacker stole customer names and emails, but vaults safe
 - 📰 26/11 04:46 UTC · CoinDesk: Bill to lock up U.S. government bitcoin for 20 years advances to full House
 - 📰 26/11 04:24 UTC · Cointelegraph: Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions
 - 📰 26/11 01:33 UTC · Cointelegraph: AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says
 - 📰 25/11 22:38 UTC · Decrypt: China's Google Just Released Its Fast New AI Model for Free
 - 📰 25/11 22:33 UTC · Cointelegraph: Here’s what happened in crypto today
-- 📰 25/11 21:53 UTC · Cointelegraph: Switzerland clears 57 jurisdictions for crypto tax data sharing
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
