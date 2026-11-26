@@ -1,6 +1,6 @@
 {
- "t": 1795668380,
- "hora_utc": "2026-11-26 04:46 UTC",
+ "t": 1795668556,
+ "hora_utc": "2026-11-26 04:49 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 125,
@@ -175,8 +175,14 @@
   0.35
  ],
  "contexto": {
-  "t": 1795668381,
+  "t": 1795668557,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795668361,
+    "hora_utc": "26/11 04:46",
+    "titulo": "Bill to lock up U.S. government bitcoin for 20 years advances to full House"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795667085,
@@ -260,12 +266,6 @@
     "t": 1795631087,
     "hora_utc": "25/11 18:24",
     "titulo": "French Senate blocks new crypto tax and wallet list critics called a kidnapping risk"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795630690,
-    "hora_utc": "25/11 18:18",
-    "titulo": "Elon Musk’s SpaceX Gets FCC Approval to Launch AI Data Centers in Space"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 6.3,
+   "media_top20_anual_pct": 6.4,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 6.2,
-    "SOL": -15.9
+    "SOL": -16.3
    },
    "leitura": "neutro"
   },
