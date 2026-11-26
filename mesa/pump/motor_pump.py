@@ -160,13 +160,24 @@ def sair(e, px, agora):
 def volta(e):
     agora = time.time()
     moedas = {}
-    for q in ("sort=last_trade_timestamp&order=DESC", "sort=market_cap&order=DESC"):
+    # 26/11: a API recusa (429) duas leituras seguidas; uma lista por volta, alternando, e espera crescente depois de recusa
+    if agora >= e.get("api_livre_t", 0):
+        q = ("sort=last_trade_timestamp&order=DESC", "sort=market_cap&order=DESC")[e.get("api_vez", 0) % 2]
+        e["api_vez"] = e.get("api_vez", 0) + 1
         try:
             for x in _get(f"{API}&{q}"):
                 if isinstance(x, dict) and x.get("bonding_curve") and not x.get("is_banned"):
-                    moedas[x["mint"]] = x
+                    e.setdefault("conhecidas", {})[x["mint"]] = {k: x.get(k) for k in ("mint", "bonding_curve", "associated_bonding_curve", "symbol", "name", "created_timestamp")}
+            e["api_espera"] = 0
         except Exception as ex:
-            print("descoberta falhou:", ex, flush=True)
+            e["api_espera"] = min(600, max(60, 2 * e.get("api_espera", 0)))
+            e["api_livre_t"] = agora + e["api_espera"]
+            print(f"descoberta falhou ({ex}); espero {e['api_espera']} s", flush=True)
+    for m, x in list((e.get("conhecidas") or {}).items()):   # as já conhecidas continuam sendo lidas na Solana, mesmo sem a API
+        if agora * 1000 - float(x.get("created_timestamp") or 0) > 24 * 3600 * 1000:
+            e["conhecidas"].pop(m, None)
+        else:
+            moedas[m] = x
     for m, p in e["abertas"].items():                    # as abertas sempre são lidas
         moedas.setdefault(m, {"mint": m, "bonding_curve": p["curva"], "symbol": p["simbolo"], "created_timestamp": p.get("criada_ms", 0)})
     e["sol"] = sol = sol_usd()
