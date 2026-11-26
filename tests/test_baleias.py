@@ -3059,3 +3059,31 @@ class GarantiaDoLucro(unittest.TestCase):
         c.mover_stops()
         self.assertAlmostEqual(c.e["abertas"]["AUSDT"]["stop"]["preco"], p["entrada"] * (1 + M.GARANTIA_PCT), delta=p["entrada"] * 0.0006)
         self.assertEqual(c.e["abertas"]["AUSDT"]["stop_tipo"], "garantia")
+
+
+class CanalDaEquipe(unittest.TestCase):
+    """25/11 (dono): agentes conversam sem conflito — mensagens tipadas, proposta vai ao dono, o motor recusa quem não é dono."""
+
+    def test_canal_e_donos(self):
+        import importlib.util, tempfile
+        raiz = pathlib.Path(tempfile.mkdtemp())
+        spec = importlib.util.spec_from_file_location("canal_t", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "canal.py")
+        K = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(K)
+        K.ARQ = raiz / "canal.jsonl"
+        p = K.falar("guardiao", "laboratorio", "proposta", "lados = venda: BTC -1,2% em 30 min")
+        self.assertEqual([m["id"] for m in K.pendentes("laboratorio")], [p["id"]])
+        K.falar("laboratorio", "guardiao", "resposta", "aceito", ref=p["id"])
+        self.assertEqual(K.pendentes("laboratorio"), [])
+        with self.assertRaises(SystemExit):
+            K.falar("guardiao", "todos", "proposta", "x")                       # proposta vai ao dono, não a todos
+        self.assertEqual(len(K.ler("treinador")), 0)
+        K.falar("baleias", "todos", "info", "teste")
+        self.assertEqual(len(K.ler("treinador")), 1)
+        spec = importlib.util.spec_from_file_location("motor_t", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "motor.py")
+        Mo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(Mo)
+        Mo.EQUIPE = raiz
+        with self.assertRaises(SystemExit):
+            Mo.mudar("lados", "venda", "guardiao", "x")                           # Risco não é dono de 'lados'
+        self.assertEqual(Mo.mudar("lados", "venda", "laboratorio", "x")["lados"], "venda")

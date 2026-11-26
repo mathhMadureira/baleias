@@ -219,9 +219,21 @@ def volta(agora=None):
 CHAVES = {"max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
 
 
+DONOS = {                                                     # 25/11: cada decisão tem UM dono; os outros propõem no canal (canal.py)
+    "lados": {"laboratorio", "baleias"}, "nota_min": {"laboratorio", "baleias"}, "ligado": {"laboratorio", "baleias"},
+    "preferidas": {"cacador", "baleias"}, "bloqueadas": {"cacador", "laboratorio", "baleias"},
+    "sair_agora": {"guardiao", "laboratorio", "baleias"},
+    "max_pos": {"baleias"}, "alav": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
+}
+
+
 def mudar(chave, valor, por, motivo):
     if chave not in CHAVES:
         raise SystemExit(f"chave inválida: {chave}; use {sorted(CHAVES)}")
+    if por not in DONOS.get(chave, set()):
+        raise SystemExit(f"RECUSADO: '{chave}' é decisão de {sorted(DONOS.get(chave, set()))}, não de {por}. "
+                         f"Proponha no canal: python3 -I /home/servidor-de-producao/OpenBot/Shared/baleias/canal.py falar {por} "
+                         f"{sorted(DONOS.get(chave, {'baleias'}))[0]} proposta \"<o que e por quê, com números>\"")
     arq = EQUIPE / "motor.json"
     with open(EQUIPE / "motor.lock", "w") as t:
         fcntl.flock(t, fcntl.LOCK_EX)

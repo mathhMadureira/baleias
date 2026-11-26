@@ -150,6 +150,14 @@ def vivo(agora=None):
     rs = [x["resultado"] for x in c["fechadas"] if isinstance(x["resultado"], (int, float))]
     feed = [{"t": x["t"], "agente": x.get("agente"), "texto": x.get("texto"), "tipo": "equipe", "conf": x.get("conf")} for x in q[-60:]]
     feed += [{"t": x["t"], "agente": "laboratorio", "texto": x["texto"], "tipo": "corretora"} for x in c["eventos"]]
+    try:
+        for l in (SHARED / "equipe" / "canal.jsonl").read_text().splitlines()[-40:]:
+            m = json.loads(l)
+            alvo = NOMES.get(m["para"], {}).get("nome", m["para"])
+            feed.append({"t": m["t"], "agente": m["de"], "tipo": "canal", "conf": None,
+                         "texto": f"💬 {m['tipo']} → {alvo}: {m['texto']}"})
+    except (OSError, ValueError, KeyError):
+        pass
     feed.sort(key=lambda x: -x["t"])
     for f in feed:
         a = NOMES.get(f["agente"], {})
