@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 22:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 22:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 72.6% das moedas subindo em 24 h, 80.5% em 4 h · BTC 24 h 0.97%, 4 h 0.48%.
+- **Amplitude:** 70.8% das moedas subindo em 24 h, 65.5% em 4 h · BTC 24 h 0.76%, 4 h 0.1%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.6%/ano · {'BTC': -0.5, 'ETH': 0.0, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.9%/ano · {'BTC': -0.5, 'ETH': -0.7, 'SOL': 11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 5.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, formado) · GRAM OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado)
+- 📰 26/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 26/11 22:01 UTC · Decrypt: Vibecoded GTA 6 PC Ports Are Now Rendering In-Game Graphics Despite Take-Two Crackdown
 - 📰 26/11 21:42 UTC · Cointelegraph: BNB Chain details new layer-1 for trading, private finance and AI
 - 📰 26/11 21:33 UTC · Cointelegraph: Binance completes withdrawal recovery four weeks after $6.3B hack
 - 📰 26/11 21:13 UTC · Cointelegraph: UK is ‘getting it wrong’ on DeFi regulation, says Coinbase
 - 📰 26/11 21:01 UTC · Decrypt: What Is Self-Custody? How to Hold Your Own Crypto Keys
-- 📰 26/11 20:05 UTC · Cointelegraph: Japan weighs tighter oversight of DeFi, self-custodial wallets
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 59495 apostas conferidas ao vivo, acerto 54.2%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 59538 apostas conferidas ao vivo, acerto 54.2%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
