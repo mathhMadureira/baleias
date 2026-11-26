@@ -1,6 +1,6 @@
 {
- "t": 1795732712,
- "hora_utc": "2026-11-26 22:38 UTC",
+ "t": 1795732927,
+ "hora_utc": "2026-11-26 22:42 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 112,
@@ -172,11 +172,17 @@
   0.39,
   0.08,
   0.09,
-  -0.47
+  -0.38
  ],
  "contexto": {
-  "t": 1795732713,
+  "t": 1795732928,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795732786,
+    "hora_utc": "26/11 22:39",
+    "titulo": "‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795731126,
@@ -260,12 +266,6 @@
     "t": 1795711382,
     "hora_utc": "26/11 16:43",
     "titulo": "Spain Lets Its Financial Intelligence Unit Freeze Crypto Accounts Without a Court Order"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795711244,
-    "hora_utc": "26/11 16:40",
-    "titulo": "BIS chief Pablo Hernández de Cos set to become next ECB president: FT"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 14.8,
+   "media_top20_anual_pct": 14.6,
    "principais_anual_pct": {
-    "BTC": 0.2,
-    "ETH": -3.0,
+    "BTC": 0.5,
+    "ETH": -3.1,
     "SOL": 11.0
    },
    "leitura": "neutro"
