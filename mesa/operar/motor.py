@@ -28,7 +28,7 @@ SHARED = Path("/home/servidor-de-producao/OpenBot/Shared/baleias")
 EQUIPE = SHARED / "equipe"
 AGENTE = "laboratorio"
 CICLO_S, RADAR_S, ESFRIA_S = 30, 60, 30 * 60
-PADRAO = {"ligado": True, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
+PADRAO = {"ligado": True, "estilo": "posição", "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
 
@@ -148,6 +148,10 @@ def montar(e, cmd, radar, risco, agora):
             continue
         if cmd["lados"] in ("compra", "venda") and r["lado"] != cmd["lados"]:
             continue
+        # 26/11 (placar do Juiz): entradas "scalper" do radar comum somaram −1,73 em 17; as de tendência de 4 h (posição) e as
+        # preferidas do Radar pagaram tudo (OPG +2,47). Só entra posição ou preferida, salvo comando estilo = "todos".
+        if cmd.get("estilo", "posição") == "posição" and r.get("estilo") != "posição" and m not in cmd["preferidas"]:
+            continue
         alav = max(1, min(50, int(cmd.get("alav") or 20)))
         margem = max(0.05, min(0.5, float(cmd.get("margem_pct") or 0.3)))
         stop = r["stop_pct"] / 100
@@ -241,11 +245,11 @@ def volta(agora=None):
     return estado
 
 
-CHAVES = {"max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
+CHAVES = {"estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
 
 
 DONOS = {                                                     # 25/11: cada decisão tem UM dono; os outros propõem no canal (canal.py)
-    "lados": {"laboratorio", "baleias"}, "nota_min": {"laboratorio", "baleias"}, "ligado": {"laboratorio", "baleias"},
+    "lados": {"laboratorio", "baleias"}, "nota_min": {"laboratorio", "baleias"}, "estilo": {"laboratorio", "baleias"}, "ligado": {"laboratorio", "baleias"},
     "preferidas": {"cacador", "baleias"}, "bloqueadas": {"cacador", "laboratorio", "baleias"},
     "sair_agora": {"guardiao", "laboratorio", "baleias"},
     "max_pos": {"baleias"}, "alav": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
