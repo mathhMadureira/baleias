@@ -1,21 +1,21 @@
 {
- "t": 1795724278,
- "hora_utc": "2026-11-26 20:17 UTC",
+ "t": 1795724496,
+ "hora_utc": "2026-11-26 20:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 113,
-  "subindo_pct": 48.7,
+  "moedas": 114,
+  "subindo_pct": 48.2,
   "mediana_pct": 0.0
  },
  "mercado_4h": {
-  "moedas": 113,
-  "subindo_pct": 73.5,
-  "mediana_pct": 0.68
+  "moedas": 114,
+  "subindo_pct": 73.7,
+  "mediana_pct": 0.74
  },
  "mercado_24h": {
-  "moedas": 113,
-  "subindo_pct": 70.8,
-  "mediana_pct": 1.66
+  "moedas": 114,
+  "subindo_pct": 71.1,
+  "mediana_pct": 1.67
  },
  "btc": {
   "1h": 0.33,
@@ -172,10 +172,10 @@
   0.01,
   -0.08,
   0.39,
-  -0.03
+  -0.05
  ],
  "contexto": {
-  "t": 1795724279,
+  "t": 1795724497,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,10 +274,10 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 18.3,
+   "media_top20_anual_pct": 17.9,
    "principais_anual_pct": {
-    "BTC": 9.1,
-    "ETH": 6.8,
+    "BTC": 9.6,
+    "ETH": 7.1,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -359,8 +359,8 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 124,
-  "compras": 56,
+  "apostas": 123,
+  "compras": 55,
   "vendas": 68,
   "mais_confiantes_venda": [
    {
@@ -414,10 +414,6 @@
     "prob_subir": 0.632
    },
    {
-    "moeda": "PNUT",
-    "prob_subir": 0.625
-   },
-   {
     "moeda": "JST",
     "prob_subir": 0.623
    },
@@ -428,6 +424,10 @@
    {
     "moeda": "ENS",
     "prob_subir": 0.614
+   },
+   {
+    "moeda": "RWUSD",
+    "prob_subir": 0.61
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -698,12 +698,12 @@
   "z_contra_lab": -0.3,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5098,
-    "n": 22122
+    "acerto": 0.5097,
+    "n": 22153
    },
    "segue_maioria_24h": {
-    "acerto": 0.522,
-    "n": 30293
+    "acerto": 0.5225,
+    "n": 30266
    }
   },
   "referencia_ganha": [],
