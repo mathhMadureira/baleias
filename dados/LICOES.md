@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 01:46 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 01:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,17 +65,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 84.5% das moedas subindo em 24 h, 73.6% em 4 h · BTC 24 h 2.24%, 4 h 0.74%.
+- **Amplitude:** 84.5% das moedas subindo em 24 h, 73.6% em 4 h · BTC 24 h 2.44%, 4 h 0.79%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.7%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.8%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ETC bandeira de alta (alta, CONFIRMOU) · HBAR bandeira de alta (alta, CONFIRMOU) · ME fundo duplo (alta, CONFIRMOU) · NEAR bandeira de alta (alta, CONFIRMOU) · PUMP bandeira de alta (alta, CONFIRMOU) · RAY bandeira de alta (alta, CONFIRMOU) · TIA bandeira de alta (alta, CONFIRMOU) · TRUMP bandeira de alta (alta, CONFIRMOU) · VANA bandeira de alta (alta, CONFIRMOU) · ETH topo duplo (baixa, formado)
+- 📰 26/11 01:33 UTC · Cointelegraph: AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says
 - 📰 25/11 22:38 UTC · Decrypt: China's Google Just Released Its Fast New AI Model for Free
 - 📰 25/11 22:33 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 25/11 21:53 UTC · Cointelegraph: Switzerland clears 57 jurisdictions for crypto tax data sharing
 - 📰 25/11 21:46 UTC · Decrypt: What Happened to Alice Huang, the Woman at the Center of Nvidia’s Scandal?
 - 📰 25/11 21:22 UTC · Cointelegraph: Braiins warns of Bitcoin mining attacks affecting over 1,000 sites
-- 📰 25/11 21:16 UTC · Decrypt: The 1Password Breach Didn’t Touch Your Vault. The Phishing Emails Might
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -107,14 +107,14 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - 🛑 Teto de perda do dia (US$ -106.88): sem apostas até 00:00 UTC.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 56018 apostas conferidas ao vivo, acerto 54.2%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 56019 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
