@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 11:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 11:44 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,19 +67,19 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 82.8% das moedas subindo em 24 h, 58.6% em 4 h · BTC 24 h 3.41%, 4 h 0.12%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 15.2%/ano · {'BTC': -5.6, 'ETH': 3.6, 'SOL': 8.5} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 15.2%/ano · {'BTC': -5.6, 'ETH': 4.5, 'SOL': 8.9} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 20.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** INJ estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado) · GTC ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado) · KITE topo duplo (baixa, formado) · KITE OCO invertido (alta, formado)
+- 📰 26/11 11:37 UTC · Cointelegraph: Standard Chartered’s Zodia Custody suffers data breach: Report
 - 📰 26/11 11:27 UTC · CoinDesk: Hong Kong-based crypto trading firm Auros is winding down operations: Sources
 - 📰 26/11 11:25 UTC · Decrypt: New York Wins $1.37B Judgment Against NovaTech Founders Who Fled the US
 - 📰 26/11 11:22 UTC · Cointelegraph: Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity
 - 📰 26/11 11:17 UTC · CoinDesk: Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving
 - 📰 26/11 10:56 UTC · CoinDesk: Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure
-- 📰 26/11 10:40 UTC · CoinDesk: New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 39.3 h.
+- ⚠️ **Rotina parada:** sem decisão há 39.4 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
