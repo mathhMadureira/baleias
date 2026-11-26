@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 10:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 10:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -67,7 +67,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 84.1% das moedas subindo em 24 h, 49.2% em 4 h · BTC 24 h 3.13%, 4 h 0.19%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.5%/ano · {'BTC': 6.7, 'ETH': 8.9, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.7%/ano · {'BTC': 8.2, 'ETH': 9.6, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ANIME estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · LUNC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · 2Z topo duplo (baixa, formado) · AAVE fundo duplo (alta, formado) · ATOM topo duplo (baixa, formado) · ATOM OCO invertido (alta, formado) · BABY fundo duplo (alta, formado) · BNB OCO invertido (alta, formado) · BTC OCO invertido (alta, formado) · ETHFI fundo duplo (alta, formado)
 - 📰 26/11 09:42 UTC · Cointelegraph: Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend
