@@ -1,21 +1,21 @@
 {
- "t": 1795671080,
- "hora_utc": "2026-11-26 05:31 UTC",
+ "t": 1795671259,
+ "hora_utc": "2026-11-26 05:34 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 31.0,
-  "mediana_pct": -0.21
+  "moedas": 127,
+  "subindo_pct": 30.7,
+  "mediana_pct": -0.22
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 54.0,
-  "mediana_pct": 0.3
+  "moedas": 127,
+  "subindo_pct": 53.5,
+  "mediana_pct": 0.29
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 81.0,
-  "mediana_pct": 4.02
+  "moedas": 127,
+  "subindo_pct": 81.1,
+  "mediana_pct": 3.97
  },
  "btc": {
   "1h": -0.06,
@@ -172,16 +172,22 @@
   -0.26,
   0.11,
   0.32,
-  -0.01
+  0.07
  ],
  "contexto": {
-  "t": 1795671080,
+  "t": 1795671259,
   "noticias": [
    {
     "fonte": "CoinDesk",
     "t": 1795671038,
     "hora_utc": "26/11 05:30",
     "titulo": "Ripple is worth $90 a share to one fund and $300 to another, SEC filings show"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795670966,
+    "hora_utc": "26/11 05:29",
+    "titulo": "Sky proposes emergency vote on $25M transfer amid liquidity stress"
    },
    {
     "fonte": "Cointelegraph",
@@ -260,12 +266,6 @@
     "t": 1795637163,
     "hora_utc": "25/11 20:06",
     "titulo": "What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795634934,
-    "hora_utc": "25/11 19:28",
-    "titulo": "Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 3.2,
+   "media_top20_anual_pct": 3.7,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 3.6,
-    "SOL": -13.8
+    "ETH": 4.4,
+    "SOL": -13.0
    },
    "leitura": "neutro"
   },
@@ -394,8 +394,8 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 121,
-  "compras": 37,
+  "apostas": 120,
+  "compras": 36,
   "vendas": 84,
   "mais_confiantes_venda": [
    {
@@ -734,11 +734,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5091,
-    "n": 24407
+    "n": 24645
    },
    "segue_maioria_24h": {
-    "acerto": 0.5172,
-    "n": 30251
+    "acerto": 0.517,
+    "n": 30230
    }
   },
   "referencia_ganha": [],
