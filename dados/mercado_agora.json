@@ -1,28 +1,28 @@
 {
- "t": 1795714146,
- "hora_utc": "2026-11-26 17:29 UTC",
+ "t": 1795714358,
+ "hora_utc": "2026-11-26 17:32 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 120,
-  "subindo_pct": 42.5,
-  "mediana_pct": -0.06
+  "subindo_pct": 59.2,
+  "mediana_pct": 0.17
  },
  "mercado_4h": {
   "moedas": 120,
-  "subindo_pct": 33.3,
-  "mediana_pct": -0.39
+  "subindo_pct": 35.8,
+  "mediana_pct": -0.43
  },
  "mercado_24h": {
   "moedas": 120,
   "subindo_pct": 78.3,
-  "mediana_pct": 3.39
+  "mediana_pct": 3.28
  },
  "btc": {
-  "1h": -0.02,
-  "4h": -0.42,
-  "24h": 2.21,
-  "preco": 60562.26,
-  "vol_4h_vs_media": 0.74
+  "1h": 0.14,
+  "4h": -0.57,
+  "24h": 2.31,
+  "preco": 60520.0,
+  "vol_4h_vs_media": 0.76
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "MMT",
-   "4h": -13.57,
-   "24h": -33.67,
-   "vol": 1.59
-  },
-  {
-   "moeda": "MOVE",
-   "4h": -6.63,
-   "24h": 16.36,
-   "vol": 0.46
-  },
-  {
-   "moeda": "LISTA",
-   "4h": -6.26,
-   "24h": -32.98,
+   "4h": -14.79,
+   "24h": -33.01,
    "vol": 1.56
   },
   {
-   "moeda": "HUMA",
-   "4h": -4.62,
-   "24h": -9.32,
-   "vol": 2.29
+   "moeda": "LISTA",
+   "4h": -7.73,
+   "24h": -29.14,
+   "vol": 1.61
+  },
+  {
+   "moeda": "MOVE",
+   "4h": -6.78,
+   "24h": 15.75,
+   "vol": 0.46
   },
   {
    "moeda": "DODO",
-   "4h": -4.48,
-   "24h": -7.96,
-   "vol": 1.29
+   "4h": -4.81,
+   "24h": -7.63,
+   "vol": 1.4
   },
   {
-   "moeda": "BIGTIME",
-   "4h": -4.29,
-   "24h": -21.07,
-   "vol": 0.33
-  },
-  {
-   "moeda": "ME",
-   "4h": -4.05,
-   "24h": 10.59,
-   "vol": 1.01
+   "moeda": "HUMA",
+   "4h": -4.74,
+   "24h": -9.52,
+   "vol": 2.31
   },
   {
    "moeda": "SYRUP",
-   "4h": -3.72,
-   "24h": 4.96,
+   "4h": -3.88,
+   "24h": 5.32,
    "vol": 0.43
   },
   {
+   "moeda": "BIGTIME",
+   "4h": -3.47,
+   "24h": -20.54,
+   "vol": 0.33
+  },
+  {
+   "moeda": "UNI",
+   "4h": -3.26,
+   "24h": -0.5,
+   "vol": 2.02
+  },
+  {
    "moeda": "PUMP",
-   "4h": -2.99,
-   "24h": 6.84,
-   "vol": 1.04
+   "4h": -3.03,
+   "24h": 6.81,
+   "vol": 1.09
   }
  ],
  "maiores_altas_4h": [
   {
-   "moeda": "INIT",
-   "4h": 10.6,
-   "24h": 59.29,
-   "vol": 1.99
-  },
-  {
    "moeda": "SSV",
-   "4h": 8.54,
-   "24h": 41.45,
-   "vol": 1.44
+   "4h": 9.31,
+   "24h": 46.97,
+   "vol": 1.52
   },
   {
    "moeda": "SEI",
-   "4h": 7.77,
-   "24h": 21.14,
-   "vol": 2.51
+   "4h": 9.06,
+   "24h": 21.8,
+   "vol": 2.48
+  },
+  {
+   "moeda": "INIT",
+   "4h": 8.82,
+   "24h": 59.36,
+   "vol": 1.96
   },
   {
    "moeda": "SOPH",
-   "4h": 6.02,
-   "24h": 7.32,
-   "vol": 2.8
+   "4h": 4.82,
+   "24h": 4.82,
+   "vol": 2.74
   },
   {
    "moeda": "LAYER",
-   "4h": 4.84,
-   "24h": 7.67,
-   "vol": 0.38
-  },
-  {
-   "moeda": "SENT",
-   "4h": 4.66,
-   "24h": 3.31,
-   "vol": 1.93
-  },
-  {
-   "moeda": "TFUEL",
-   "4h": 3.78,
-   "24h": 20.06,
-   "vol": 2.65
+   "4h": 4.63,
+   "24h": 7.95,
+   "vol": 0.42
   },
   {
    "moeda": "OPG",
-   "4h": 3.44,
-   "24h": -6.99,
-   "vol": 0.71
+   "4h": 4.16,
+   "24h": -5.27,
+   "vol": 0.93
+  },
+  {
+   "moeda": "WIF",
+   "4h": 3.02,
+   "24h": 13.46,
+   "vol": 2.73
+  },
+  {
+   "moeda": "SENT",
+   "4h": 2.71,
+   "24h": 1.43,
+   "vol": 1.95
   },
   {
    "moeda": "SAGA",
-   "4h": 2.91,
-   "24h": 8.45,
-   "vol": 1.8
+   "4h": 1.97,
+   "24h": 7.82,
+   "vol": 1.72
   },
   {
-   "moeda": "LUNC",
-   "4h": 2.8,
-   "24h": 0.2,
-   "vol": 1.07
+   "moeda": "TFUEL",
+   "4h": 1.94,
+   "24h": 18.55,
+   "vol": 2.67
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.23,
   -0.19,
   -0.16,
-  -0.01
+  0.01
  ],
  "contexto": {
-  "t": 1795714147,
+  "t": 1795714359,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795714200,
+    "hora_utc": "26/11 17:30",
+    "titulo": "A tiny payment can expose the IP address behind a bitcoin wallet, developer finds"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795711823,
@@ -260,12 +266,6 @@
     "t": 1795696731,
     "hora_utc": "26/11 12:38",
     "titulo": "Standard Chartered's Zodia Custody suffers data breach, exposing client information"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795695968,
-    "hora_utc": "26/11 12:26",
-    "titulo": "Galaxy Research Withdraws Call That Bitcoin's Bear Market Is Over"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 5.3,
+   "media_top20_anual_pct": 5.4,
    "principais_anual_pct": {
-    "BTC": -4.8,
-    "ETH": -2.6,
-    "SOL": 2.2
+    "BTC": -4.6,
+    "ETH": -2.7,
+    "SOL": 1.6
    },
    "leitura": "neutro"
   },
@@ -380,9 +380,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 109,
-  "compras": 57,
-  "vendas": 52,
+  "apostas": 123,
+  "compras": 53,
+  "vendas": 70,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -405,16 +405,16 @@
     "prob_subir": 0.376
    },
    {
+    "moeda": "BABY",
+    "prob_subir": 0.382
+   },
+   {
     "moeda": "RUNE",
     "prob_subir": 0.382
    },
    {
     "moeda": "FORM",
     "prob_subir": 0.382
-   },
-   {
-    "moeda": "PEOPLE",
-    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
@@ -427,28 +427,28 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.616
-   },
-   {
     "moeda": "ENS",
     "prob_subir": 0.614
+   },
+   {
+    "moeda": "LA",
+    "prob_subir": 0.611
    },
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
    },
    {
-    "moeda": "LA",
-    "prob_subir": 0.608
-   },
-   {
     "moeda": "MITO",
     "prob_subir": 0.608
    },
    {
+    "moeda": "LSK",
+    "prob_subir": 0.608
+   },
+   {
     "moeda": "SYRUP",
-    "prob_subir": 0.607
+    "prob_subir": 0.606
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -712,34 +712,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30288 apostas (632 velas, 19/11 17:30–26/11 16:45 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.532,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 30294 apostas (632 velas, 19/11 17:45–26/11 17:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5319,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.3,
+  "z_contra_lab": -0.31,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.51,
-    "n": 23196
+    "acerto": 0.5095,
+    "n": 23211
    },
    "segue_maioria_24h": {
-    "acerto": 0.5222,
-    "n": 30157
+    "acerto": 0.5217,
+    "n": 30163
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5474,
+    "acerto": 0.5473,
     "n": 8558
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5465,
-    "n": 3358
+    "acerto": 0.5463,
+    "n": 3361
    },
    "confianca:<0,05": {
     "acerto": 0.5159,
-    "n": 17496
+    "n": 17499
    },
    "confianca:≥0,12": {
     "acerto": 0.6461,
@@ -754,20 +754,20 @@
     "n": 7109
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5341,
-    "n": 7752
+    "acerto": 0.5338,
+    "n": 7758
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5385,
     "n": 7090
    },
    "lado:compra": {
-    "acerto": 0.522,
-    "n": 13220
+    "acerto": 0.5219,
+    "n": 13233
    },
    "lado:venda": {
     "acerto": 0.5397,
-    "n": 17068
+    "n": 17061
    }
   }
  },
