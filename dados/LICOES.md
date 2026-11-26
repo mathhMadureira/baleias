@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 17:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 17:47 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,21 +65,21 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 78.5% das moedas subindo em 24 h, 36.4% em 4 h · BTC 24 h 2.31%, 4 h -0.57%.
+- **Amplitude:** 71.9% das moedas subindo em 24 h, 32.2% em 4 h · BTC 24 h 1.18%, 4 h -0.74%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': -3.6, 'ETH': -2.4, 'SOL': -0.2} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.2%/ano · {'BTC': -2.8, 'ETH': -2.0, 'SOL': -0.3} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MMT bandeira de baixa (baixa, CONFIRMOU) · WIF estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BTC OCO invertido (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · UNI fundo duplo (alta, formado)
+- 📰 26/11 17:39 UTC · Cointelegraph: Crypto on notice as hawkish Fed risks December ‘meltdown’
 - 📰 26/11 17:30 UTC · CoinDesk: A tiny payment can expose the IP address behind a bitcoin wallet, developer finds
 - 📰 26/11 16:50 UTC · CoinDesk: Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases
 - 📰 26/11 16:43 UTC · Decrypt: Spain Lets Its Financial Intelligence Unit Freeze Crypto Accounts Without a Court Order
 - 📰 26/11 16:40 UTC · Cointelegraph: BIS chief Pablo Hernández de Cos set to become next ECB president: FT
 - 📰 26/11 15:45 UTC · Cointelegraph: How EU brokers could lose access to Kyrgyz crypto exchanges
-- 📰 26/11 15:42 UTC · CoinDesk: Crypto for Advisors: Four questions to ask before trusting a crypto exchange
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 45.3 h.
+- ⚠️ **Rotina parada:** sem decisão há 45.4 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -114,7 +114,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 58698 apostas conferidas ao vivo, acerto 54.2%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 58750 apostas conferidas ao vivo, acerto 54.2%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
