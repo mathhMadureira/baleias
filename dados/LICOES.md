@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 26/11/2026 19:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 26/11/2026 19:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -65,11 +65,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 67.5% das moedas subindo em 24 h, 83.3% em 4 h · BTC 24 h 0.68%, 4 h 0.5%.
+- **Amplitude:** 68.1% das moedas subindo em 24 h, 85.8% em 4 h · BTC 24 h 1.22%, 4 h 0.36%.
 - **Medo e ganância:** 11 (Extreme Fear; ontem 13).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.4%/ano · {'BTC': -0.9, 'ETH': 2.1, 'SOL': 10.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.6%/ano · {'BTC': -0.8, 'ETH': 2.8, 'SOL': 10.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 75236, MM200 72088); 15.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · ZAMA fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ATM fundo duplo (alta, CONFIRMOU) · APT fundo duplo (alta, formado) · MMT fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SENT topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · ZAMA fundo duplo (alta, formado)
 - 📰 26/11 19:01 UTC · Decrypt: Before the Sell-Off, AI Stocks Showed Dot-Com-Level Bubble Signals: Study
 - 📰 26/11 18:26 UTC · Cointelegraph: Spain moves to grant financial watchdog power to freeze crypto accounts
 - 📰 26/11 18:15 UTC · Decrypt: Bitcoin Holds Above $60K as Death Cross Clouds Thanksgiving Recovery
@@ -106,15 +106,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - 😴 Sono: reencenei 2400 episódios guardados e renormalizei os pesos das sinapses.
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 59140 apostas conferidas ao vivo, acerto 54.2%; prevê 16 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 59159 apostas conferidas ao vivo, acerto 54.2%; prevê 112 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
