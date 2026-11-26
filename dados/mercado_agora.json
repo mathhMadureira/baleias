@@ -1,21 +1,21 @@
 {
- "t": 1795688386,
- "hora_utc": "2026-11-26 10:19 UTC",
+ "t": 1795688622,
+ "hora_utc": "2026-11-26 10:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 34.9,
+  "moedas": 127,
+  "subindo_pct": 34.6,
   "mediana_pct": -0.13
  },
  "mercado_4h": {
-  "moedas": 126,
-  "subindo_pct": 54.8,
-  "mediana_pct": 0.11
+  "moedas": 127,
+  "subindo_pct": 54.3,
+  "mediana_pct": 0.09
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 84.1,
-  "mediana_pct": 4.56
+  "moedas": 127,
+  "subindo_pct": 84.3,
+  "mediana_pct": 4.67
  },
  "btc": {
   "1h": 0.03,
@@ -172,11 +172,17 @@
   -0.06,
   0.63,
   0.06,
-  -0.06
+  -0.15
  ],
  "contexto": {
-  "t": 1795688386,
+  "t": 1795688623,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795688128,
+    "hora_utc": "26/11 10:15",
+    "titulo": "Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795686154,
@@ -260,12 +266,6 @@
     "t": 1795646289,
     "hora_utc": "25/11 22:38",
     "titulo": "China's Google Just Released Its Fast New AI Model for Free"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795643618,
-    "hora_utc": "25/11 21:53",
-    "titulo": "Switzerland clears 57 jurisdictions for crypto tax data sharing"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 13
   },
   "funding": {
-   "media_top20_anual_pct": 8.7,
+   "media_top20_anual_pct": 8.8,
    "principais_anual_pct": {
-    "BTC": 9.0,
-    "ETH": 9.1,
+    "BTC": 8.7,
+    "ETH": 9.4,
     "SOL": 11.0
    },
    "leitura": "neutro"
@@ -831,12 +831,12 @@
   "z_contra_lab": -0.29,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5071,
-    "n": 24635
+    "acerto": 0.5073,
+    "n": 24680
    },
    "segue_maioria_24h": {
-    "acerto": 0.5159,
-    "n": 30219
+    "acerto": 0.5164,
+    "n": 30231
    }
   },
   "referencia_ganha": [],
