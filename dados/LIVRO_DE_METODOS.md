@@ -16,7 +16,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | demark_td9_alta | promissor | 51.8% | 85 | 41.3%–62.1% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | williams_volb_baixa | promissor | 51.4% | 276 | 45.6%–57.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
-| tres_corvos | promissor | 51.2% | 473 | 46.7%–55.6% | H6: três corvos → sobe (efeito pequeno) |
+| tres_corvos | promissor | 51.3% | 474 | 46.8%–55.7% | H6: três corvos → sobe (efeito pequeno) |
 | williams_wr_alta | promissor | 51.0% | 51 | 37.7%–64.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | reversao_queda | reprovado | 50.0% | 74 | 38.9%–61.1% | H14: queda anormal de 1 h → sobe |
 | velez_180_baixa | reprovado | 49.3% | 69 | 37.8%–60.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
