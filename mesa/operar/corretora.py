@@ -29,6 +29,8 @@ from executor.stop_movel import GUARDA, armar_em  # noqa: E402
 
 COFRE = Path("/home/servidor-de-producao/.config/OpenBot/agent-api-keys/.vault/agent-85eaa35b-7f9b-407c-839d-fed207b6b72d")
 PASTA = AQUI / "corretoras"
+REDE_RUIM = ("timeout", "HTTPError", "URLError", "109500", "não consegui", "recusou o stop", "Connection")
+REDE_CALMA_S = 300                       # 27/11: com a API instável, cada abre-e-fecha forçado custa taxa e deslizamento
 GARANTIA_ARMA, GARANTIA_PCT, MOVEL_ARMA_MAX = 0.008, 0.0015, 0.015   # 26/11 (dono): com 20×, +1% no preço ≈ +6% da carteira; garantia a +0,8%, móvel até +1,5%   # dono (25/11): posição que passou de +2% não volta a ser perda (stop = entrada + 0,15% de taxas)
 CAPITAL, PISO, MAX_POS, MAX_NOC, VALIDADE_S, MAX_HORAS = 10.0, 5.0, 8, 1.5, 75 * 60, 24   # R2: 8 posições
 TRAILER = "Co-authored-by: OpenBot <335604065+openbotgit[bot]@users.noreply.github.com>"
@@ -520,6 +522,8 @@ class Conta:
         os.replace(tmp, self.arq)
 
     def anotar(self, texto):
+        if texto.startswith(("🚨", "⚠")) and any(k in texto for k in REDE_RUIM):   # 27/11 (Engenheiro): rede instável → sem entrada nova
+            self.e["rede_ruim_t"] = time.time()
         self.e["eventos"] = ([{"t": time.time(), "texto": texto}] + self.e.get("eventos", []))[:100]
         print(time.strftime("%H:%M:%S", time.gmtime()), "UTC", texto, flush=True)
 
@@ -760,7 +764,14 @@ class Conta:
                 elif querer[par][0] != self.e["abertas"][par]["lado"]:
                     self.fechar(par, "o agente inverteu o lado")
             ja = set(self.e.get("decisao_entradas", {}).get("pares", [])) | saidas_desde(self.e, d)
-            if self.patrimonio() >= PISO:
+            calma = agora - float(self.e.get("rede_ruim_t") or 0)
+            if calma < REDE_CALMA_S:
+                if querer and not self.e.get("_avisou_rede"):
+                    print(f"sem entrada nova: erro de rede/stop recusado há {calma:.0f} s (espera {REDE_CALMA_S} s)", flush=True)
+                self.e["_avisou_rede"] = True
+            else:
+                self.e.pop("_avisou_rede", None)
+            if self.patrimonio() >= PISO and calma >= REDE_CALMA_S:
                 for par, (lado, motivo, x) in querer.items():
                     if par not in self.e["abertas"] and par not in ja and len(self.e["abertas"]) < MAX_POS and lado in ("compra", "venda"):
                         try:

@@ -3127,3 +3127,20 @@ class PumpOperadoPeloMemes(unittest.TestCase):
         self.assertEqual(e["abertas"]["AAA"]["stop"], 0.08)
         Mp.executar_ordens(e, moedas, {"cA": (1.02e-7, False, 0.6)}, agora + 10)  # a mesma ordem não executa duas vezes
         self.assertEqual(len(e["ordens_log"]), 2)
+
+
+class RedeInstavelSemEntrada(unittest.TestCase):
+    """27/11 (Engenheiro): stop recusado ou erro de rede nos últimos 5 min → o motor só administra, não abre posição nova."""
+
+    def test_anotar_marca_rede_ruim(self):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("corretora_t", pathlib.Path(__file__).parent.parent / "mesa" / "operar" / "corretora.py")
+        Co = _iu.module_from_spec(spec); spec.loader.exec_module(Co)
+        class F: pass
+        c = F(); c.e = {"eventos": []}
+        Co.Conta.anotar(c, "🚨 HYPE: a corretora recusou o stop (BingX: 109500 network timeout); fecho a posição agora")
+        self.assertIn("rede_ruim_t", c.e)
+        c2 = F(); c2.e = {"eventos": []}
+        Co.Conta.anotar(c2, "ENTROU COMPRADO em LAB")
+        self.assertNotIn("rede_ruim_t", c2.e)
+        self.assertEqual(Co.REDE_CALMA_S, 300)
