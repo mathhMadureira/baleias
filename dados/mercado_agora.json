@@ -1,6 +1,6 @@
 {
- "t": 1795779432,
- "hora_utc": "2026-11-27 11:37 UTC",
+ "t": 1795779642,
+ "hora_utc": "2026-11-27 11:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 118,
@@ -172,11 +172,17 @@
   0.09,
   -0.16,
   0.06,
-  0.14
+  0.19
  ],
  "contexto": {
-  "t": 1795779433,
+  "t": 1795779643,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795779277,
+    "hora_utc": "27/11 11:34",
+    "titulo": "Live news: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795778562,
@@ -260,12 +266,6 @@
     "t": 1795756956,
     "hora_utc": "27/11 05:22",
     "titulo": "Japan’s crypto security group taps SEAL to speed up hack response"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795755992,
-    "hora_utc": "27/11 05:06",
-    "titulo": "Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins"
    }
   ],
   "medo_ganancia": {
