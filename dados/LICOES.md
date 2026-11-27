@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 19:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 19:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 57.0% das moedas subindo em 24 h, 81.5% em 4 h · BTC 24 h -1.09%, 4 h 0.24%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.4%/ano · {'BTC': 8.0, 'ETH': 11.0, 'SOL': 3.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 8.8, 'ETH': 11.0, 'SOL': 3.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MAGIC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · COOKIE topo duplo (baixa, formado) · MAGIC fundo duplo (alta, formado) · MITO fundo duplo (alta, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · OP fundo duplo (alta, formado) · PORTAL OCO invertido (alta, formado)
 - 📰 27/11 19:23 UTC · Cointelegraph: Bitcoin whales pile into BTC despite shrinking profit cushion
