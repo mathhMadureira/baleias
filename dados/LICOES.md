@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 00:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 00:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 43.5% das moedas subindo em 24 h, 33.3% em 4 h · BTC 24 h -0.68%, 4 h -0.32%.
+- **Amplitude:** 45.9% das moedas subindo em 24 h, 33.0% em 4 h · BTC 24 h -0.68%, 4 h -0.32%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.9%/ano · {'BTC': 3.2, 'ETH': 11.0, 'SOL': 7.4} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** CYBER topo duplo (baixa, formado) · DOT topo duplo (baixa, formado) · GRAM OCO invertido (alta, formado) · ICP topo duplo (baixa, formado) · LUNC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · SYRUP fundo duplo (alta, formado) · SYRUP ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.1%/ano · {'BTC': 3.0, 'ETH': 10.8, 'SOL': 7.9} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 7.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** DOT topo duplo (baixa, formado) · GRAM OCO invertido (alta, formado) · ICP topo duplo (baixa, formado) · LUNC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · SYRUP fundo duplo (alta, formado) · SYRUP ombro-cabeça-ombro (baixa, formado)
 - 📰 26/11 22:39 UTC · Cointelegraph: ‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express
 - 📰 26/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 26/11 22:01 UTC · Decrypt: Vibecoded GTA 6 PC Ports Are Now Rendering In-Game Graphics Despite Take-Two Crackdown
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 59788 apostas conferidas ao vivo, acerto 54.1%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 59800 apostas conferidas ao vivo, acerto 54.1%; prevê 37 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
