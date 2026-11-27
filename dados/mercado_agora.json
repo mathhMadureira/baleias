@@ -1,21 +1,21 @@
 {
- "t": 1795793994,
- "hora_utc": "2026-11-27 15:39 UTC",
+ "t": 1795794185,
+ "hora_utc": "2026-11-27 15:43 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 124,
+  "moedas": 125,
   "subindo_pct": 1.6,
-  "mediana_pct": -2.5
+  "mediana_pct": -2.49
  },
  "mercado_4h": {
-  "moedas": 124,
-  "subindo_pct": 9.7,
+  "moedas": 125,
+  "subindo_pct": 10.4,
   "mediana_pct": -2.91
  },
  "mercado_24h": {
-  "moedas": 124,
-  "subindo_pct": 65.3,
-  "mediana_pct": 0.9
+  "moedas": 125,
+  "subindo_pct": 65.6,
+  "mediana_pct": 0.91
  },
  "btc": {
   "1h": -2.6,
@@ -118,6 +118,12 @@
    "vol": 1.18
   },
   {
+   "moeda": "HEI",
+   "4h": 2.16,
+   "24h": 7.21,
+   "vol": 4.66
+  },
+  {
    "moeda": "SPK",
    "4h": 1.5,
    "24h": 4.59,
@@ -140,12 +146,6 @@
    "4h": 0.58,
    "24h": 0.14,
    "vol": 1.22
-  },
-  {
-   "moeda": "KAVA",
-   "4h": 0.41,
-   "24h": 10.65,
-   "vol": 2.27
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.04,
   -0.29,
   -3.65,
-  1.54
+  1.45
  ],
  "contexto": {
-  "t": 1795793994,
+  "t": 1795794186,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -0.4,
+   "media_top20_anual_pct": -1.2,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 1.9,
-    "SOL": 5.3
+    "ETH": 2.1,
+    "SOL": 4.2
    },
    "leitura": "neutro"
   },
@@ -296,20 +296,6 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
-   {
-    "moeda": "FIL",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": true,
-    "nivel": 0.5357
-   },
-   {
-    "moeda": "FIL",
-    "padrao": "triângulo ascendente",
-    "sentido": "baixa",
-    "confirmado": true,
-    "nivel": 0.5392
-   },
    {
     "moeda": "QNT",
     "padrao": "triângulo ascendente",
@@ -366,8 +352,8 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 81,
-  "compras": 40,
+  "apostas": 80,
+  "compras": 39,
   "vendas": 41,
   "mais_confiantes_venda": [
    {
@@ -709,8 +695,8 @@
     "n": 23317
    },
    "segue_maioria_24h": {
-    "acerto": 0.5073,
-    "n": 29147
+    "acerto": 0.5077,
+    "n": 29188
    }
   },
   "referencia_ganha": [],
