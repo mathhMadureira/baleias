@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 08:21 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 08:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,9 +64,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 81.7% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h 2.11%, 4 h 0.63%.
+- **Amplitude:** 82.6% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h 2.11%, 4 h 0.63%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · CFG OCO invertido (alta, formado) · GTC OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LISTA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado) · PROM topo duplo (baixa, formado)
 - 📰 27/11 08:04 UTC · Cointelegraph: ESMA to overhaul EU’s MiCA crypto register in 2027
