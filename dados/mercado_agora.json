@@ -1,6 +1,6 @@
 {
- "t": 1795799333,
- "hora_utc": "2026-11-27 17:08 UTC",
+ "t": 1795799524,
+ "hora_utc": "2026-11-27 17:12 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 130,
@@ -172,11 +172,17 @@
   -3.65,
   1.52,
   -0.26,
-  -0.01
+  0.04
  ],
  "contexto": {
-  "t": 1795799334,
+  "t": 1795799525,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795799370,
+    "hora_utc": "27/11 17:09",
+    "titulo": "Nvidia's Blackwell Chips Turn Up in China as Trump Floats Government Stake"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795798131,
@@ -260,12 +266,6 @@
     "t": 1795778562,
     "hora_utc": "27/11 11:22",
     "titulo": "Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795778387,
-    "hora_utc": "27/11 11:19",
-    "titulo": "Kalshi Courts Small Businesses With 'Microinsurance' as State Crackdowns Bite"
    }
   ],
   "medo_ganancia": {
@@ -277,8 +277,8 @@
    "media_top20_anual_pct": 6.1,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 7.2,
-    "SOL": 3.2
+    "ETH": 6.2,
+    "SOL": 3.6
    },
    "leitura": "neutro"
   },

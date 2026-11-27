@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 17:09 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 17:12 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,15 +66,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 61.5% das moedas subindo em 24 h, 9.2% em 4 h · BTC 24 h -0.93%, 4 h -2.72%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': 11.0, 'ETH': 7.2, 'SOL': 3.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': 11.0, 'ETH': 6.2, 'SOL': 3.6} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 2.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** COOKIE topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · PORTAL OCO invertido (alta, formado) · STX topo duplo (baixa, formado) · UNI topo duplo (baixa, formado)
+- 📰 27/11 17:09 UTC · Decrypt: Nvidia's Blackwell Chips Turn Up in China as Trump Floats Government Stake
 - 📰 27/11 16:48 UTC · Cointelegraph: Bitcoin price drops below $59K as Anthropic joins tech stock rebound
 - 📰 27/11 16:21 UTC · Decrypt: AI-Powered GTA 6 PC Ports Now Have Multiplayer as Modders Unlock 30 and 60 FPS
 - 📰 27/11 14:40 UTC · Cointelegraph: What was Coinbase worth while Nasdaq was closed?
 - 📰 27/11 13:50 UTC · Decrypt: What's on the Ethereum Roadmap: Glamsterdam, Hegotá and Beyond
 - 📰 27/11 13:44 UTC · Cointelegraph: Binance to launch tokenized IPO program after regulatory approval: Yi He
-- 📰 27/11 13:28 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
