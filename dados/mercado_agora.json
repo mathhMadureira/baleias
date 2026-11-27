@@ -1,21 +1,21 @@
 {
- "t": 1795772268,
- "hora_utc": "2026-11-27 09:37 UTC",
+ "t": 1795772483,
+ "hora_utc": "2026-11-27 09:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 116,
-  "subindo_pct": 38.8,
+  "moedas": 118,
+  "subindo_pct": 39.0,
   "mediana_pct": -0.12
  },
  "mercado_4h": {
-  "moedas": 116,
-  "subindo_pct": 48.3,
+  "moedas": 118,
+  "subindo_pct": 49.2,
   "mediana_pct": 0.0
  },
  "mercado_24h": {
-  "moedas": 116,
-  "subindo_pct": 82.8,
-  "mediana_pct": 2.5
+  "moedas": 118,
+  "subindo_pct": 83.1,
+  "mediana_pct": 2.53
  },
  "btc": {
   "1h": -0.18,
@@ -118,6 +118,12 @@
    "vol": 0.75
   },
   {
+   "moeda": "REZ",
+   "4h": 3.45,
+   "24h": 10.31,
+   "vol": 1.91
+  },
+  {
    "moeda": "USUAL",
    "4h": 2.88,
    "24h": 3.61,
@@ -140,12 +146,6 @@
    "4h": 2.49,
    "24h": 4.59,
    "vol": 1.45
-  },
-  {
-   "moeda": "AT",
-   "4h": 2.11,
-   "24h": -6.17,
-   "vol": 1.36
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.11,
   -0.06,
   0.09,
-  0.11
+  0.03
  ],
  "contexto": {
-  "t": 1795772268,
+  "t": 1795772483,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 17.5,
+   "amplitude_acima_mm50_pct": 15.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -302,13 +302,6 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.0578
-   },
-   {
-    "moeda": "CYBER",
-    "padrao": "OCO invertido",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.215
    },
    {
     "moeda": "DODO",
@@ -360,18 +353,18 @@
     "nivel": 0.00484
    },
    {
-    "moeda": "ONDO",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.2799
-   },
-   {
     "moeda": "PROM",
     "padrao": "topo duplo",
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 4.854
+   },
+   {
+    "moeda": "REZ",
+    "padrao": "OCO invertido",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.002298
    },
    {
     "moeda": "USUAL",
@@ -768,12 +761,12 @@
   "z_contra_lab": -0.59,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5042,
-    "n": 22048
+    "acerto": 0.504,
+    "n": 22082
    },
    "segue_maioria_24h": {
-    "acerto": 0.5118,
-    "n": 29580
+    "acerto": 0.5129,
+    "n": 29610
    }
   },
   "referencia_ganha": [],
