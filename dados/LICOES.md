@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 01:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 01:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,15 +66,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 59.1% das moedas subindo em 24 h, 31.8% em 4 h · BTC 24 h -0.13%, 4 h -0.32%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 7.4, 'ETH': 8.4, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 7.4, 'ETH': 8.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BIGTIME fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · CRV fundo duplo (alta, formado) · GRAM topo duplo (baixa, formado) · GRAM OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado)
+- 📰 27/11 01:47 UTC · Cointelegraph: AI is driving a flood of crypto bug reports. Now it’s helping sort them
 - 📰 27/11 00:35 UTC · Cointelegraph: Privacy coins face diverging fortunes as KuCoin moves to drop Monero
 - 📰 26/11 22:39 UTC · Cointelegraph: ‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express
 - 📰 26/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 26/11 22:01 UTC · Decrypt: Vibecoded GTA 6 PC Ports Are Now Rendering In-Game Graphics Despite Take-Two Crackdown
 - 📰 26/11 21:42 UTC · Cointelegraph: BNB Chain details new layer-1 for trading, private finance and AI
-- 📰 26/11 21:33 UTC · Cointelegraph: Binance completes withdrawal recovery four weeks after $6.3B hack
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

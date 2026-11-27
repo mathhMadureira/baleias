@@ -1,6 +1,6 @@
 {
- "t": 1795744528,
- "hora_utc": "2026-11-27 01:55 UTC",
+ "t": 1795744749,
+ "hora_utc": "2026-11-27 01:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 110,
@@ -172,11 +172,17 @@
   -0.45,
   0.05,
   0.2,
-  -0.1
+  0.02
  ],
  "contexto": {
-  "t": 1795744529,
+  "t": 1795744750,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795744058,
+    "hora_utc": "27/11 01:47",
+    "titulo": "AI is driving a flood of crypto bug reports. Now it’s helping sort them"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795739739,
@@ -260,12 +266,6 @@
     "t": 1795714200,
     "hora_utc": "26/11 17:30",
     "titulo": "A tiny payment can expose the IP address behind a bitcoin wallet, developer finds"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795711823,
-    "hora_utc": "26/11 16:50",
-    "titulo": "Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.0,
+   "media_top20_anual_pct": 8.1,
    "principais_anual_pct": {
     "BTC": 7.4,
-    "ETH": 8.4,
+    "ETH": 8.0,
     "SOL": 11.0
    },
    "leitura": "neutro"
