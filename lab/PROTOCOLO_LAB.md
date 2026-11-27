@@ -1904,3 +1904,11 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - Piores (perdem com força depois do custo): Inside bar 15 min (t −4,7 a −6,2), PFR compra 15 min (t −5,1), 9.2 compra 15 min (t −4,2), 123 compra contra 15 min (t −4,5).
 - Leitura: no 15 min o custo de 0,12% come quase tudo; os sinais "a favor" no 1 h, sobretudo de VENDA, são os únicos perto de zero ou positivos. Previsão confirmada.
 - **Uso:** os agentes veem cada padrão com o número medido; nenhum padrão vira regra automática.
+
+## H86 (27/11/2026, pedido do dono: "estude esse livro, você e os agentes" — Simple Trading Book) — PRÉ-REGISTRO
+- **Livro:** coletânea visual de padrões (26 p.). Método comum a todas as figuras: entrada na QUEBRA da linha do padrão (pescoço/linha), stop do outro lado da estrutura, alvo = altura do padrão projetada.
+- **Padrões novos em `mesa/padroes.py` (`sinais_livro`):** velas — Engolfo de alta/baixa, Martelo, Estrela cadente, Estrela da manhã/tarde, 3 soldados brancos, 3 corvos; gráfico — OCO e OCO invertido (quebra do pescoço), Topo/Fundo triplo, Triângulo ascendente/descendente (quebra da linha horizontal), Cunha descendente/ascendente (quebra contra a cunha), Retângulo (quebra de cima ou de baixo).
+- **Execução (`simular_livro`):** velas — entrada no rompimento da máxima/mínima da vela-sinal na vela seguinte, stop no outro extremo do padrão, alvo 2R; gráfico — entrada no fechamento da quebra, stop do outro lado da estrutura, alvo = altura do padrão (mín. 1R); saída no prazo de 16 velas (15 min) / 16 velas (1 h); custo 0,12%.
+- **Dados e grupos:** os mesmos da H85 (20 moedas, 15 min e 1 h), padrão × lado × contexto × tempo.
+- **Critério (igual à H85):** n ≥ 80, média > 0, t ≥ 2, as duas metades > 0.
+- **Previsão registrada:** as velas isoladas (engolfo, martelo) não passam; se algo passar, será padrão de gráfico com quebra a favor no 1 h. Com n pequeno (OCO, triplos), nada pode ser afirmado.
