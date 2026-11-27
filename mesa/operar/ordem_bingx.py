@@ -13,6 +13,8 @@ Não há entrada automática, garantia, trava nem "tese quebrada": só o que o a
   python3 -I ordem_bingx.py sair <MOEDA> "<motivo com números>"
 Limites (o código recusa fora deles): stop 0,5–4%; alvo ≥ stop; prazo 15–1440 min; risco 1–10%; teto 0,2–3%; validade 2–30 min;
 moeda no radar (≤ 3 min); tese com 25+ caracteres.
+Avisos (27/11, treino): stop < 1,5%, entrada depois de esticar, moeda que perdeu 2× em 48 h, só um lado, alvo longe sem stop móvel.
+Com aviso, a ordem só passa com --ciente "<por que desta vez é diferente>"; o Juiz confere depois.
 """
 import argparse
 import fcntl
@@ -90,8 +92,38 @@ def ver():
             print(f"  {f['moeda'][:-4]} {f['lado']} {f['resultado_usd']:+.3f} ({str(f.get('motivo_saida'))[:40]}) — tese: {str(f.get('motivo'))[:110]}")
     else:
         print("PLACAR do Operador: nenhuma operação fechada ainda no modo agente")
-    if LICOES.exists():
-        print("LIÇÕES (Juiz):\n" + "\n".join(LICOES.read_text().splitlines()[-15:]))
+    if LICOES.exists():                                    # 27/11 (dono: "treine os agentes"): padrões medidos inteiros + lições recentes
+        ls = LICOES.read_text().splitlines()
+        pad = [l for l in ls if l.startswith("## Padrões")]
+        if pad:
+            i = ls.index(pad[0]); f_ = next((k for k in range(i + 1, len(ls)) if ls[k].startswith("## ")), len(ls))
+            print("\n".join(ls[i:f_]))
+        print("LIÇÕES recentes (Juiz):\n" + "\n".join([l for l in ls if l.startswith("- ")][-12:]))
+
+
+def avisos(m, lado, stop, alvo, movel_arma, x, e, agora=None):
+    """27/11 (dono: "treine os agentes para isso não acontecer"): os erros medidos nas 46 primeiras operações viram AVISO na hora da
+    decisão. Não é regra: com --ciente "<por que mesmo assim>" a ordem passa, e o Juiz confere depois se o porquê se sustentou."""
+    agora = agora or time.time()
+    av = []
+    if stop < 0.015:
+        av.append(f"stop {stop:.2%} < 1,5%: no histórico, 21 ops com stop curto somaram −2,58 (as com stop ≥ 1,5%, +1,64)")
+    if x:
+        a_favor = lambda v: (v or 0) * (1 if lado == "compra" else -1)
+        if a_favor(x.get("v1h")) >= 3 or a_favor(x.get("v15")) >= 1.5:
+            av.append(f"já andou a favor (15m {x.get('v15'):+.2f}%, 1h {x.get('v1h'):+.2f}%): em 13 de 16 stops o preço nunca andou +0,5% depois da entrada — entrada no topo")
+        if x.get("descarte"):
+            av.append(f"o radar marcou '{x['descarte']}'")
+    fe = [f for f in (e.get("fechadas") or []) if f.get("moeda") == m and agora - float(f.get("saida_t") or 0) < 48 * 3600]
+    perdas = [f for f in fe if (f.get("resultado_usd") or 0) < 0]
+    if len(perdas) >= 2:
+        av.append(f"{m[:-4]} perdeu {len(perdas)} vezes em 48 h ({sum(f['resultado_usd'] for f in perdas):+.2f}): ELSA, ETHFI e 1000PEPE repetidas somaram −1,51")
+    ult = [f.get("lado") for f in (e.get("fechadas") or [])[-10:]] + [p.get("lado") for p in (e.get("abertas") or {}).values()]
+    if len(ult) >= 6 and all(l == lado for l in ult):
+        av.append(f"as últimas {len(ult)} foram todas '{lado}': 42 de 46 foram compras (−3,20); as 4 vendas deram +2,26")
+    if alvo and alvo >= 0.04 and not movel_arma:
+        av.append(f"alvo {alvo:.0%} sem stop móvel: 0 de 46 chegaram ao alvo; o pico médio dos ganhos foi +1,1%")
+    return av
 
 
 def main(argv):
@@ -110,6 +142,7 @@ def main(argv):
     ap.add_argument("lado", choices=["compra", "venda"])
     ap.add_argument("--conf", required=True, choices=["alta", "média", "baixa"])
     ap.add_argument("--tese", required=True)
+    ap.add_argument("--ciente", default="", help="por que entrar mesmo com os avisos (o Juiz confere)")
     ap.add_argument("--stop", type=float, required=True)
     for k, d in (("alvo", None), ("prazo", 240.0), ("movel-arma", None), ("movel-guarda", 0.6), ("risco", 0.05), ("teto", 0.01), ("validade", 10.0)):
         ap.add_argument(f"--{k}", type=float, default=d)
@@ -137,9 +170,15 @@ def main(argv):
     if erros:
         print("RECUSADA:", "; ".join(erros))
         sys.exit(2)
+    av = avisos(m, a.lado, a.stop, a.alvo, a.movel_arma, x, _json(CONTA, {}) or {}, agora)
+    if av and len(a.ciente.strip()) < 15:
+        print("AVISOS (erros que já custaram dinheiro à carteira):\n- " + "\n- ".join(av)
+              + "\nRepense a ordem. Se ainda quiser entrar, repita o comando com --ciente \"<por que desta vez é diferente>\".")
+        sys.exit(3)
     o = gravar({"id": uuid.uuid4().hex[:8], "t": agora, "tipo": "abrir", "moeda": m, "lado": a.lado, "preco_ref": x["preco"], "stop_pct": a.stop,
                 "alvo_pct": a.alvo, "prazo_min": int(a.prazo), "movel_arma": a.movel_arma, "movel_guarda": a.movel_guarda, "risco_pct": a.risco,
-                "teto": a.teto, "validade_min": a.validade, "conf": a.conf, "por": "laboratorio", "tese": " ".join(a.tese.split())[:300]})
+                "teto": a.teto, "validade_min": a.validade, "conf": a.conf, "por": "laboratorio", "tese": " ".join(a.tese.split())[:300],
+                "avisos": av, "ciente": a.ciente.strip()[:200]})
     print(f"ordem {o['id']} gravada: {a.lado} {m[:-4]} perto de {x['preco']}; stop −{a.stop:.2%}"
           + (f", alvo +{a.alvo:.2%}" if a.alvo else ", sem alvo fixo") + f", prazo {int(a.prazo)} min"
           + (f", stop móvel a partir de +{a.movel_arma:.2%} guardando {a.movel_guarda:.0%} do pico" if a.movel_arma else ", sem stop móvel")

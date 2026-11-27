@@ -1980,7 +1980,7 @@ class PainelMesa(unittest.TestCase):
         html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
         self.assertNotIn("<script src", html.replace("<script defer src", "<script src"))
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
-        for parte in ('id="desk"', 'id="pos"', 'id="log"', 'id="fe"', 'id="eq"', 'id="mult"', 'id="curva"', 'id="kill"', "/api/vivo"):   # 25/11: painel estilo app
+        for parte in ('id="lpos"', 'id="lag"', 'id="lcanal"', 'id="lfe"', 'id="curva"', "/api/vivo"):   # 27/11: tudo em uma tela (posições, equipe, conversa, operações, curva)
             self.assertIn(parte, html)
 
 
@@ -3222,3 +3222,17 @@ class AcordarPorEvento(unittest.TestCase):
         self.assertTrue(A_.acordar("treinador", "fechou Y", chave="y1", agora=1200, enviar=env))
         self.assertFalse(A_.acordar("ninguem", "x", agora=2000, enviar=env))
         self.assertEqual(len(enviados), 2)
+
+
+class TreinoDoOperador(unittest.TestCase):
+    """27/11 (dono: "treine os agentes"): os erros medidos viram aviso na hora da ordem; com --ciente o agente assume e o Juiz confere."""
+
+    def test_avisos(self):
+        import importlib.util as _iu, time as _t
+        spec = _iu.spec_from_file_location("ordem_bingx_t", pathlib.Path(__file__).parent.parent / "mesa" / "operar" / "ordem_bingx.py")
+        O = _iu.module_from_spec(spec); spec.loader.exec_module(O)
+        agora = _t.time()
+        e = {"fechadas": [{"moeda": "ELSAUSDT", "lado": "compra", "resultado_usd": -0.3, "saida_t": agora - 3600}] * 2 + [{"moeda": "X", "lado": "compra", "resultado_usd": 0.1, "saida_t": 0}] * 6, "abertas": {}}
+        av = O.avisos("ELSAUSDT", "compra", 0.01, 0.06, None, {"v15": 2.0, "v1h": 4.0, "descarte": None}, e, agora)
+        self.assertEqual(len(av), 5)                       # stop curto, esticada, perdeu 2×, só compra, alvo longe sem móvel
+        self.assertEqual(O.avisos("SUIUSDT", "venda", 0.02, None, None, {"v15": 0.1, "v1h": -0.5}, e, agora), [])
