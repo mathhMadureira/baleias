@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 05:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 05:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 75.0% das moedas subindo em 24 h, 78.6% em 4 h · BTC 24 h 0.85%, 4 h 1.31%.
+- **Amplitude:** 73.9% das moedas subindo em 24 h, 78.4% em 4 h · BTC 24 h 0.73%, 4 h 1.19%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 16.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.7%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** PEPE OCO invertido (alta, CONFIRMOU) · AERO topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · BIGTIME fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · BONK fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · FIL fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** AERO topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · BIGTIME fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · BONK fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · FIL fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 27/11 04:47 UTC · Cointelegraph: Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays
 - 📰 27/11 04:45 UTC · CoinDesk: Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack
 - 📰 27/11 04:29 UTC · CoinDesk: Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 60580 apostas conferidas ao vivo, acerto 54.1%; prevê 90 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 60582 apostas conferidas ao vivo, acerto 54.1%; prevê 110 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
