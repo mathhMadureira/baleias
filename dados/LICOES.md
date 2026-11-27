@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 08:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 08:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,17 +64,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 79.1% das moedas subindo em 24 h, 52.2% em 4 h · BTC 24 h 1.9%, 4 h 0.43%.
+- **Amplitude:** 81.7% das moedas subindo em 24 h, 58.3% em 4 h · BTC 24 h 2.11%, 4 h 0.63%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.5%/ano · {'BTC': 11.0, 'ETH': 9.2, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.9%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** CFG OCO invertido (alta, formado) · ENA topo duplo (baixa, formado) · LDO topo duplo (baixa, formado) · LISTA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado) · YB ombro-cabeça-ombro (baixa, formado) · ZAMA fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · CFG OCO invertido (alta, formado) · GTC OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LISTA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado) · PROM topo duplo (baixa, formado)
+- 📰 27/11 08:04 UTC · Cointelegraph: ESMA to overhaul EU’s MiCA crypto register in 2027
 - 📰 27/11 07:33 UTC · CoinDesk: Monero suffers biggest single-day slide in over 5 months. Here’s why
 - 📰 27/11 07:19 UTC · Cointelegraph: New York AG secures $1.37B court judgment against NovaTech founders
 - 📰 27/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 27/11 05:22 UTC · Cointelegraph: Japan’s crypto security group taps SEAL to speed up hack response
 - 📰 27/11 05:06 UTC · CoinDesk: Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins
-- 📰 27/11 04:47 UTC · Cointelegraph: Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 61000 apostas conferidas ao vivo, acerto 54.1%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 61032 apostas conferidas ao vivo, acerto 54.1%; prevê 114 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
