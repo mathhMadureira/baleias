@@ -459,7 +459,9 @@ class BingX:
         mult = self.contrato(par)["mult"]
         d = self._pedir("GET", "/openApi/swap/v2/trade/allFillOrders", {"symbol": self.simbolo(par), "startTs": int(desde_ms - 2000),
                                                                         "endTs": int(time.time() * 1000)}) or {}
-        return [{"t_ms": _ms(x.get("filledTm") or x.get("time")), "contratos": round(float(x["volume"]) / mult) * (1 if x["side"] == "BUY" else -1),
+        # 27/11: a VST às vezes manda volume "0" (SOL ficou fantasma 10 min); aí a quantidade sai do valor em USDT ÷ preço
+        qtd = lambda x: float(x.get("volume") or 0) or (float(x.get("amount") or 0) / float(x["price"]) if float(x.get("price") or 0) else 0)
+        return [{"t_ms": _ms(x.get("filledTm") or x.get("time")), "contratos": round(qtd(x) / mult) * (1 if x["side"] == "BUY" else -1),
                  "preco": float(x["price"]), "taxa": abs(float(x.get("commission") or 0))} for x in d.get("fill_orders", [])]
 
     def velas_1m(self, par, desde_ms):
@@ -764,7 +766,7 @@ class Conta:
                 elif querer[par][0] != self.e["abertas"][par]["lado"]:
                     self.fechar(par, "o agente inverteu o lado")
             ja = set(self.e.get("decisao_entradas", {}).get("pares", [])) | saidas_desde(self.e, d)
-            calma = agora - float(self.e.get("rede_ruim_t") or 0)
+            calma = time.time() - float(self.e.get("rede_ruim_t") or 0)
             if calma < REDE_CALMA_S:
                 if querer and not self.e.get("_avisou_rede"):
                     print(f"sem entrada nova: erro de rede/stop recusado há {calma:.0f} s (espera {REDE_CALMA_S} s)", flush=True)

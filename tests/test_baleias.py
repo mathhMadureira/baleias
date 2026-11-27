@@ -3144,3 +3144,14 @@ class RedeInstavelSemEntrada(unittest.TestCase):
         Co.Conta.anotar(c2, "ENTROU COMPRADO em LAB")
         self.assertNotIn("rede_ruim_t", c2.e)
         self.assertEqual(Co.REDE_CALMA_S, 300)
+
+    def test_execucao_com_volume_zero_usa_valor(self):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("corretora_t2", pathlib.Path(__file__).parent.parent / "mesa" / "operar" / "corretora.py")
+        Co = _iu.module_from_spec(spec); spec.loader.exec_module(Co)
+        b = Co.BingX.__new__(Co.BingX)
+        b.contrato = lambda par: {"mult": 0.01}
+        b.simbolo = lambda par: "SOL-USDT"
+        b._pedir = lambda *a, **k: {"fill_orders": [{"filledTm": "2026-11-27T02:39:25.000Z", "volume": "0", "price": "72.674", "amount": "35.6103",
+                                                     "commission": "-0.017805", "side": "SELL"}]}
+        self.assertEqual(b.execucoes("SOLUSDT", 0)[0]["contratos"], -49)      # 27/11: SOL fantasma; volume "0" vindo da VST
