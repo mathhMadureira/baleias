@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 57.1% | 319 | 51.6%–62.4% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.3% | 2781 | 51.4%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.3% | 2782 | 51.4%–55.1% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 68.8% | 16 | 44.4%–85.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 68.6% | 35 | 52.0%–81.4% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 66.7% | 42 | 51.6%–79.0% | física: alta anormal de 1 h → devolve |
@@ -16,10 +16,10 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | demark_td9_alta | promissor | 51.6% | 93 | 41.6%–61.5% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
 | tres_corvos | promissor | 51.6% | 477 | 47.1%–56.0% | H6: três corvos → sobe (efeito pequeno) |
-| williams_volb_baixa | promissor | 51.4% | 280 | 45.6%–57.2% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | reversao_queda | promissor | 51.3% | 78 | 40.4%–62.1% | H14: queda anormal de 1 h → sobe |
+| williams_volb_baixa | promissor | 51.2% | 281 | 45.4%–57.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
 | williams_wr_alta | promissor | 51.0% | 51 | 37.7%–64.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
-| vortice_invertido | reprovado | 49.3% | 523 | 45.1%–53.6% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
+| vortice_invertido | reprovado | 49.4% | 524 | 45.2%–53.7% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
 | velez_180_baixa | reprovado | 49.3% | 69 | 37.8%–60.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | raschke_graal_alta | reprovado | 47.4% | 57 | 35.0%–60.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_volb_alta | reprovado | 46.0% | 150 | 38.2%–54.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
