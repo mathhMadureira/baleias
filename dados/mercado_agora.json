@@ -1,20 +1,20 @@
 {
- "t": 1795807075,
- "hora_utc": "2026-11-27 19:17 UTC",
+ "t": 1795807263,
+ "hora_utc": "2026-11-27 19:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 133,
-  "subindo_pct": 65.4,
+  "moedas": 134,
+  "subindo_pct": 65.7,
   "mediana_pct": 0.31
  },
  "mercado_4h": {
-  "moedas": 133,
-  "subindo_pct": 79.7,
-  "mediana_pct": 1.18
+  "moedas": 134,
+  "subindo_pct": 79.9,
+  "mediana_pct": 1.2
  },
  "mercado_24h": {
-  "moedas": 133,
-  "subindo_pct": 58.6,
+  "moedas": 134,
+  "subindo_pct": 59.0,
   "mediana_pct": 0.57
  },
  "btc": {
@@ -112,6 +112,12 @@
    "vol": 5.05
   },
   {
+   "moeda": "MITO",
+   "4h": 6.76,
+   "24h": 8.22,
+   "vol": 3.86
+  },
+  {
    "moeda": "AVA",
    "4h": 6.48,
    "24h": 11.18,
@@ -140,12 +146,6 @@
    "4h": 3.46,
    "24h": -1.01,
    "vol": 1.28
-  },
-  {
-   "moeda": "SEI",
-   "4h": 3.34,
-   "24h": -4.46,
-   "vol": 0.83
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.26,
   -0.05,
   -0.02,
-  0.02
+  0.04
  ],
  "contexto": {
-  "t": 1795807076,
+  "t": 1795807264,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.4,
+   "media_top20_anual_pct": 5.7,
    "principais_anual_pct": {
-    "BTC": 4.6,
+    "BTC": 5.5,
     "ETH": 11.0,
-    "SOL": 0.3
+    "SOL": 1.0
    },
    "leitura": "neutro"
   },
@@ -311,13 +311,6 @@
     "nivel": null
    },
    {
-    "moeda": "AVAX",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 6.822
-   },
-   {
     "moeda": "COOKIE",
     "padrao": "topo duplo",
     "sentido": "baixa",
@@ -330,6 +323,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.0724
+   },
+   {
+    "moeda": "MITO",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.00468
    },
    {
     "moeda": "MUBARAK",
@@ -415,8 +415,8 @@
  },
  "v4": {
   "vela": "19:15 UTC",
-  "apostas": 135,
-  "compras": 38,
+  "apostas": 134,
+  "compras": 37,
   "vendas": 97,
   "mais_confiantes_venda": [
    {
@@ -470,10 +470,6 @@
     "prob_subir": 0.61
    },
    {
-    "moeda": "MITO",
-    "prob_subir": 0.608
-   },
-   {
     "moeda": "F",
     "prob_subir": 0.604
    },
@@ -484,6 +480,10 @@
    {
     "moeda": "BANK",
     "prob_subir": 0.598
+   },
+   {
+    "moeda": "RUNE",
+    "prob_subir": 0.589
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -755,7 +755,7 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.4959,
-    "n": 23795
+    "n": 23830
    },
    "segue_maioria_24h": {
     "acerto": 0.5008,
