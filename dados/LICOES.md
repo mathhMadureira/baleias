@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 15:08 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 15:11 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,9 +64,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 43.8% das moedas subindo em 24 h, 10.7% em 4 h · BTC 24 h -2.5%, 4 h -3.97%.
+- **Amplitude:** 43.4% das moedas subindo em 24 h, 10.7% em 4 h · BTC 24 h -2.5%, 4 h -3.97%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.6%/ano · {'BTC': 11.0, 'ETH': -0.0, 'SOL': 7.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 2.7%/ano · {'BTC': 11.0, 'ETH': 3.3, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FIL topo duplo (baixa, CONFIRMOU) · FIL triângulo ascendente (baixa, CONFIRMOU) · QNT triângulo ascendente (baixa, CONFIRMOU) · STX topo duplo (baixa, CONFIRMOU) · TIA topo duplo (baixa, CONFIRMOU) · NFP ombro-cabeça-ombro (baixa, formado) · OPG fundo duplo (alta, formado) · PEPE OCO invertido (alta, formado) · PORTAL OCO invertido (alta, formado) · REZ OCO invertido (alta, formado)
 - 📰 27/11 14:40 UTC · Cointelegraph: What was Coinbase worth while Nasdaq was closed?
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido, reversao_queda. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 62147 apostas conferidas ao vivo, acerto 54.0%; prevê 120 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 62147 apostas conferidas ao vivo, acerto 54.0%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
