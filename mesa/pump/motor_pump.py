@@ -401,9 +401,12 @@ def executar_ordens(e, moedas, px, agora):
 
 def main():
     e = carregar()
-    proxima = 0.0
+    proxima, ultimo = 0.0, time.time()
     while True:
         t0 = time.time()
+        if t0 - ultimo > 120:                          # 27/11: máquina dormiu; anota (o painel mostra nos eventos)
+            anotar(e, f"⏸ a máquina dormiu {(t0 - ultimo) / 60:.0f} min: sem preço nem vigia nesse tempo")
+        ultimo = t0
         try:
             if t0 >= proxima:
                 volta(e)

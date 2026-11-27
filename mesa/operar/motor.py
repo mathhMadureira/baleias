@@ -352,9 +352,14 @@ def main():
     if a[:1] == ["uma"]:
         volta()
         return
-    proxima = 0.0
+    proxima, ultimo = 0.0, time.time()
     while True:
         t0 = time.time()
+        if t0 - ultimo > 120:                          # 27/11: a máquina dormiu 4h09m e ninguém soube; agora o motor avisa
+            msg = f"a máquina dormiu {(t0 - ultimo) / 60:.0f} min (até {time.strftime('%H:%M', time.gmtime(t0))} UTC): sem vigia nesse tempo; só os stops na corretora protegeram"
+            print(msg, flush=True)
+            falar("todos", "info", msg)
+        ultimo = t0
         try:
             if t0 >= proxima:
                 volta()
