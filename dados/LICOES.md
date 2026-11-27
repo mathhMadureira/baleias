@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 05:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 05:24 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 78.6% das moedas subindo em 24 h, 78.6% em 4 h · BTC 24 h 1.21%, 4 h 1.38%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.3%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 14.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** AERO topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · BIGTIME fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · BONK fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · FIL fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado) · PEPE topo duplo (baixa, formado)
 - 📰 27/11 05:06 UTC · CoinDesk: Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins
