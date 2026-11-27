@@ -1,6 +1,6 @@
 {
- "t": 1795798176,
- "hora_utc": "2026-11-27 16:49 UTC",
+ "t": 1795798367,
+ "hora_utc": "2026-11-27 16:52 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 129,
@@ -172,11 +172,17 @@
   -0.29,
   -3.65,
   1.52,
-  0.12
+  0.15
  ],
  "contexto": {
-  "t": 1795798177,
+  "t": 1795798368,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795798131,
+    "hora_utc": "27/11 16:48",
+    "titulo": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795796500,
@@ -260,12 +266,6 @@
     "t": 1795778387,
     "hora_utc": "27/11 11:19",
     "titulo": "Kalshi Courts Small Businesses With 'Microinsurance' as State Crackdowns Bite"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795778068,
-    "hora_utc": "27/11 11:14",
-    "titulo": "Bitcoin supply metric hits 11-year low as new ‘capitulation’ signal arrives"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -1.7,
+   "media_top20_anual_pct": -1.2,
    "principais_anual_pct": {
-    "BTC": 8.5,
+    "BTC": 9.4,
     "ETH": 11.0,
-    "SOL": -0.7
+    "SOL": -0.8
    },
    "leitura": "neutro"
   },
