@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 10:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 10:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 82.2% das moedas subindo em 24 h, 32.2% em 4 h · BTC 24 h 1.16%, 4 h -0.41%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CFG OCO invertido (alta, CONFIRMOU) · RAY bandeira de alta (alta, CONFIRMOU) · CYBER OCO invertido (alta, formado) · DODO ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado) · LISTA fundo duplo (alta, formado) · LUNC topo duplo (baixa, formado) · LUNC OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · REZ OCO invertido (alta, formado)
 - 📰 27/11 10:15 UTC · Decrypt: Ethereum Sets December 15 Date for Delayed Glamsterdam Testnet Upgrade
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 61297 apostas conferidas ao vivo, acerto 54.0%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 61307 apostas conferidas ao vivo, acerto 54.0%; prevê 23 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
