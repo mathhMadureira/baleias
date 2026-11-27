@@ -1,6 +1,6 @@
 {
- "t": 1795789416,
- "hora_utc": "2026-11-27 14:23 UTC",
+ "t": 1795789607,
+ "hora_utc": "2026-11-27 14:26 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,10 +172,10 @@
   -0.01,
   -0.04,
   -0.29,
-  -0.17
+  -0.33
  ],
  "contexto": {
-  "t": 1795789417,
+  "t": 1795789608,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -235,7 +235,7 @@
     "fonte": "CoinDesk",
     "t": 1795779277,
     "hora_utc": "27/11 11:34",
-    "titulo": "Live updates: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains"
+    "titulo": "Live updates: Bitcoin rebounds above $61,000 as AI stocks lead gains"
    },
    {
     "fonte": "CoinDesk",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.1,
+   "media_top20_anual_pct": 8.0,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
