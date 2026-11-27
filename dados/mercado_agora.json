@@ -1,21 +1,21 @@
 {
- "t": 1795757013,
- "hora_utc": "2026-11-27 05:23 UTC",
+ "t": 1795757238,
+ "hora_utc": "2026-11-27 05:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 112,
-  "subindo_pct": 51.8,
-  "mediana_pct": 0.05
+  "moedas": 113,
+  "subindo_pct": 52.2,
+  "mediana_pct": 0.06
  },
  "mercado_4h": {
-  "moedas": 112,
-  "subindo_pct": 78.6,
-  "mediana_pct": 1.52
+  "moedas": 113,
+  "subindo_pct": 78.8,
+  "mediana_pct": 1.53
  },
  "mercado_24h": {
-  "moedas": 112,
-  "subindo_pct": 78.6,
-  "mediana_pct": 1.91
+  "moedas": 113,
+  "subindo_pct": 78.8,
+  "mediana_pct": 1.92
  },
  "btc": {
   "1h": 0.24,
@@ -172,11 +172,17 @@
   0.97,
   0.15,
   0.01,
-  0.51
+  0.58
  ],
  "contexto": {
-  "t": 1795757014,
+  "t": 1795757239,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795756956,
+    "hora_utc": "27/11 05:22",
+    "titulo": "Japan’s crypto security group taps SEAL to speed up hack response"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795755992,
@@ -260,12 +266,6 @@
     "t": 1795723518,
     "hora_utc": "26/11 20:05",
     "titulo": "Japan weighs tighter oversight of DeFi, self-custodial wallets"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795719662,
-    "hora_utc": "26/11 19:01",
-    "titulo": "Before the Sell-Off, AI Stocks Showed Dot-Com-Level Bubble Signals: Study"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 14.0,
+   "media_top20_anual_pct": 14.1,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -344,6 +344,13 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.5521
+   },
+   {
+    "moeda": "LDO",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.2306
    },
    {
     "moeda": "NFP",
@@ -422,9 +429,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 108,
+  "apostas": 107,
   "compras": 35,
-  "vendas": 73,
+  "vendas": 72,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -761,12 +768,12 @@
   "z_contra_lab": -0.3,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5066,
-    "n": 21250
+    "acerto": 0.5064,
+    "n": 21470
    },
    "segue_maioria_24h": {
-    "acerto": 0.5134,
-    "n": 29600
+    "acerto": 0.5126,
+    "n": 29694
    }
   },
   "referencia_ganha": [],
