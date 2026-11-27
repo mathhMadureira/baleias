@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 19:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 19:05 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,9 +64,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 57.9% das moedas subindo em 24 h, 82.0% em 4 h · BTC 24 h -0.94%, 4 h 1.18%.
+- **Amplitude:** 57.6% das moedas subindo em 24 h, 81.8% em 4 h · BTC 24 h -0.94%, 4 h 1.18%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': -1.0, 'ETH': 11.0, 'SOL': 2.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': 1.3, 'ETH': 11.0, 'SOL': 0.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** MAGIC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX fundo duplo (alta, formado) · COOKIE topo duplo (baixa, formado) · MAGIC fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · ORDI fundo duplo (alta, formado) · PORTAL OCO invertido (alta, formado) · PYTH fundo duplo (alta, formado)
 - 📰 27/11 18:16 UTC · Decrypt: $7 Billion in Bitcoin Options Just Expired: Here’s What It Means
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 63011 apostas conferidas ao vivo, acerto 54.2%; prevê 132 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 63011 apostas conferidas ao vivo, acerto 54.2%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
