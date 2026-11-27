@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 19:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 19:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 57.9% das moedas subindo em 24 h, 82.0% em 4 h · BTC 24 h -0.94%, 4 h 1.18%.
+- **Amplitude:** 58.6% das moedas subindo em 24 h, 79.7% em 4 h · BTC 24 h -1.15%, 4 h 0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.1%/ano · {'BTC': 3.1, 'ETH': 11.0, 'SOL': 0.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.4%/ano · {'BTC': 4.6, 'ETH': 11.0, 'SOL': 0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** MAGIC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX fundo duplo (alta, formado) · COOKIE topo duplo (baixa, formado) · MAGIC fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · ORDI fundo duplo (alta, formado) · PORTAL OCO invertido (alta, formado) · PYTH fundo duplo (alta, formado)
+- **Padrões gráficos em 1 h:** MAGIC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · AVAX fundo duplo (alta, formado) · COOKIE topo duplo (baixa, formado) · MAGIC fundo duplo (alta, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · OP fundo duplo (alta, formado) · PORTAL OCO invertido (alta, formado)
 - 📰 27/11 18:16 UTC · Decrypt: $7 Billion in Bitcoin Options Just Expired: Here’s What It Means
 - 📰 27/11 17:43 UTC · Decrypt: Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data
 - 📰 27/11 17:37 UTC · Cointelegraph: China sets March 2027 rollout for blockchain identity regulations
@@ -89,13 +89,13 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- 🌱 NOVA SINAPSE (rota de teste): criada pelo cérebro: quando corpo ≥ 0.3, aposta sobe. Começa em observação.
 - ❌ Errou (desce). Peso reduzido de: tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: vortice_invertido, tres_soldados. Rede neural corrigida.
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ✂ Sinapse williams_volb_baixa PODADA: 112/217 (51.6%) contra 53.7% do mercado.
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
-  (v3: 7 sinapses votando, 31 em observação, 1 podadas)
+- ✂ Sinapse williams_volb_alta PODADA: 111/250 (44.4%) contra 46.6% do mercado.
+  (v3: 7 sinapses votando, 30 em observação, 2 podadas)
 **v2:**
 - ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 63011 apostas conferidas ao vivo, acerto 54.2%; prevê 132 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 63037 apostas conferidas ao vivo, acerto 54.2%; prevê 132 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
