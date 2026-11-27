@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 16:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 17:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 64.6% das moedas subindo em 24 h, 10.8% em 4 h · BTC 24 h -0.42%, 4 h -2.03%.
+- **Amplitude:** 61.5% das moedas subindo em 24 h, 9.2% em 4 h · BTC 24 h -0.93%, 4 h -2.72%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.7%/ano · {'BTC': 10.4, 'ETH': 11.0, 'SOL': -0.9} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 0.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** PORTAL bandeira de alta (alta, CONFIRMOU) · COOKIE topo duplo (baixa, formado) · FIL topo duplo (baixa, formado) · PORTAL OCO invertido (alta, formado) · STX topo duplo (baixa, formado) · UNI topo duplo (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': 11.0, 'ETH': 9.4, 'SOL': 1.2} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 2.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** COOKIE topo duplo (baixa, formado) · CRV topo duplo (baixa, formado) · PORTAL OCO invertido (alta, formado) · STX topo duplo (baixa, formado) · UNI topo duplo (baixa, formado)
 - 📰 27/11 16:48 UTC · Cointelegraph: Bitcoin price drops below $59K as Anthropic joins tech stock rebound
 - 📰 27/11 16:21 UTC · Decrypt: AI-Powered GTA 6 PC Ports Now Have Multiplayer as Modders Unlock 30 and 60 FPS
 - 📰 27/11 14:40 UTC · Cointelegraph: What was Coinbase worth while Nasdaq was closed?
@@ -78,7 +78,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 68.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 68.7 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -107,13 +107,13 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 **v1:**
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido, reversao_queda. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 62386 apostas conferidas ao vivo, acerto 54.0%; prevê 129 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 62462 apostas conferidas ao vivo, acerto 54.1%; prevê 129 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
