@@ -1896,3 +1896,11 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Grupos:** padrão × lado × contexto ("a favor" = EMA 20 inclinada e preço do mesmo lado da EMA 200; "contra") × tempo gráfico.
 - **Critério (fixo antes de rodar):** um grupo FUNCIONA se n ≥ 80, média líquida > 0, t ≥ 2 e média > 0 nas duas metades do período. O que funcionar vira "padrão medido" no livro dos agentes com o número; o resto vira "não funciona aqui (n, média)". Sem ajuste de parâmetro depois de ver o resultado.
 - **Previsão registrada:** a maioria NÃO passa depois do custo; se algo passar, será "a favor" no 1 h.
+
+### Resultado da H85 (27/11/2026, `lab/h85_padroes.py` → `dados/lab/h85_padroes.json`): NENHUM padrão passa
+- **Desvio do pré-registro:** a lista do radar tinha 20 moedas únicas (não 45); o teste rodou nas 20. Sem outro ajuste.
+- 90 grupos (padrão × lado × contexto × 15 min/1 h): **0 passam** (n ≥ 80, média > 0, t ≥ 2, as duas metades > 0).
+- Mais perto: 123 venda a favor 1 h (n 819, +0,21%, t 1,57, 1ª metade −0,21%); LTB toque venda a favor 1 h (n 439, +0,30%, t 1,54, as duas metades +); Bear 180 venda a favor 1 h (n 492, +0,26%, t 1,51); LTA toque compra a favor 1 h (n 144, +0,68%, t 1,50, 1ª metade −1,52%).
+- Piores (perdem com força depois do custo): Inside bar 15 min (t −4,7 a −6,2), PFR compra 15 min (t −5,1), 9.2 compra 15 min (t −4,2), 123 compra contra 15 min (t −4,5).
+- Leitura: no 15 min o custo de 0,12% come quase tudo; os sinais "a favor" no 1 h, sobretudo de VENDA, são os únicos perto de zero ou positivos. Previsão confirmada.
+- **Uso:** os agentes veem cada padrão com o número medido; nenhum padrão vira regra automática.
