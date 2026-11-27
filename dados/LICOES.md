@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 11:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 11:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 82.2% das moedas subindo em 24 h, 53.4% em 4 h · BTC 24 h 1.9%, 4 h -0.07%.
+- **Amplitude:** 79.8% das moedas subindo em 24 h, 47.1% em 4 h · BTC 24 h 1.9%, 4 h -0.07%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.7%/ano · {'BTC': 8.3, 'ETH': 11.0, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** JUP bandeira de alta (alta, CONFIRMOU) · KAVA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · RUNE bandeira de alta (alta, CONFIRMOU) · CYBER OCO invertido (alta, formado) · DODO ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado) · LISTA fundo duplo (alta, formado) · LUNC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · REZ OCO invertido (alta, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.1%/ano · {'BTC': 9.2, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 15.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** JUP bandeira de alta (alta, CONFIRMOU) · KAVA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · RUNE bandeira de alta (alta, CONFIRMOU) · VIRTUAL bandeira de alta (alta, CONFIRMOU) · CYBER OCO invertido (alta, formado) · DODO ombro-cabeça-ombro (baixa, formado) · LISTA fundo duplo (alta, formado) · LUNC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · REZ OCO invertido (alta, formado)
 - 📰 27/11 11:07 UTC · CoinDesk: Injective asks SEC to allow order books for tokenized stock trading
 - 📰 27/11 10:51 UTC · CoinDesk: Brazil’s stock exchange teams up with major banks to launch real-pegged stablecoin
 - 📰 27/11 10:26 UTC · Cointelegraph: Bluefin to shut down perps, refocus on spot trading and tokenized RWAs
@@ -78,7 +78,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 62.8 h.
+- ⚠️ **Rotina parada:** sem decisão há 62.9 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 61474 apostas conferidas ao vivo, acerto 54.0%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 61513 apostas conferidas ao vivo, acerto 54.0%; prevê 88 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
