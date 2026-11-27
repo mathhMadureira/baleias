@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 18:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 18:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 61.2% das moedas subindo em 24 h, 12.7% em 4 h · BTC 24 h -0.97%, 4 h -2.54%.
+- **Amplitude:** 52.2% das moedas subindo em 24 h, 12.7% em 4 h · BTC 24 h -0.97%, 4 h -2.54%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': 3.9, 'ETH': 11.0, 'SOL': 4.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.1%/ano · {'BTC': 4.0, 'ETH': 11.0, 'SOL': 3.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 5.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** COOKIE topo duplo (baixa, formado) · PORTAL OCO invertido (alta, formado) · STX topo duplo (baixa, formado) · UNI topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** COOKIE topo duplo (baixa, formado) · PORTAL OCO invertido (alta, formado) · UNI topo duplo (baixa, formado)
 - 📰 27/11 18:16 UTC · Decrypt: $7 Billion in Bitcoin Options Just Expired: Here’s What It Means
 - 📰 27/11 17:43 UTC · Decrypt: Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data
 - 📰 27/11 17:37 UTC · Cointelegraph: China sets March 2027 rollout for blockchain identity regulations
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 62848 apostas conferidas ao vivo, acerto 54.2%; prevê 133 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 62886 apostas conferidas ao vivo, acerto 54.2%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
