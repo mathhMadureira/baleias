@@ -1,6 +1,6 @@
 {
- "t": 1795801258,
- "hora_utc": "2026-11-27 17:40 UTC",
+ "t": 1795801447,
+ "hora_utc": "2026-11-27 17:44 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 131,
@@ -172,11 +172,17 @@
   -3.65,
   1.52,
   -0.26,
-  -0.64
+  -0.6
  ],
  "contexto": {
-  "t": 1795801259,
+  "t": 1795801448,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795801409,
+    "hora_utc": "27/11 17:43",
+    "titulo": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795801043,
@@ -260,12 +266,6 @@
     "t": 1795779947,
     "hora_utc": "27/11 11:45",
     "titulo": "Bitcoin on course to end seven-week losing streak while trailing stock rebound"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795779277,
-    "hora_utc": "27/11 11:34",
-    "titulo": "Live updates: Bitcoin's Thanksgiving gains prove fleeting"
    }
   ],
   "medo_ganancia": {
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": 6.3,
-    "ETH": 3.0,
-    "SOL": 1.5
+    "BTC": 5.5,
+    "ETH": 2.5,
+    "SOL": 1.6
    },
    "leitura": "neutro"
   },
