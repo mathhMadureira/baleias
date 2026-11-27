@@ -1,6 +1,6 @@
 {
- "t": 1795785501,
- "hora_utc": "2026-11-27 13:18 UTC",
+ "t": 1795785688,
+ "hora_utc": "2026-11-27 13:21 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   0.06,
   -0.01,
   -0.04,
-  -0.37
+  -0.4
  ],
  "contexto": {
-  "t": 1795785502,
+  "t": 1795785689,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795785550,
+    "hora_utc": "27/11 13:19",
+    "titulo": "Kalshi turns to small businesses as legal battles threaten forecasts on sports"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795783194,
@@ -260,12 +266,6 @@
     "t": 1795772995,
     "hora_utc": "27/11 09:49",
     "titulo": "Bitcoin tops $61,000 as Nasdaq futures extend Wednesday’s rebound"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795766679,
-    "hora_utc": "27/11 08:04",
-    "titulo": "ESMA to overhaul EU’s MiCA crypto register in 2027"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.0,
+   "media_top20_anual_pct": 9.1,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
