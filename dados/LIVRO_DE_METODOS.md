@@ -21,7 +21,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | reversao_queda | reprovado | 50.0% | 74 | 38.9%–61.1% | H14: queda anormal de 1 h → sobe |
 | velez_180_baixa | reprovado | 49.3% | 69 | 37.8%–60.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
 | vortice_invertido | reprovado | 49.2% | 514 | 44.9%–53.5% | H18/H19: contra o Vórtice quando CHOP < 38,2 |
-| raschke_graal_alta | reprovado | 48.1% | 52 | 35.1%–61.3% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
+| raschke_graal_alta | reprovado | 49.1% | 53 | 36.1%–62.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_volb_alta | reprovado | 46.0% | 150 | 38.2%–54.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | rompimento | reprovado | 37.2% | 43 | 24.4%–52.1% | Tartaruga em 15 min: rompeu a máxima de 55 |
 | raschke_sopa_alta | reprovado | 36.4% | 22 | 19.7%–57.0% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
