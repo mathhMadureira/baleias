@@ -781,7 +781,8 @@ class Conta:
                 self.e.pop("_avisou_rede", None)
             if self.patrimonio() >= PISO and calma >= REDE_CALMA_S:
                 for par, (lado, motivo, x) in querer.items():
-                    if par not in self.e["abertas"] and par not in ja and len(self.e["abertas"]) < MAX_POS and lado in ("compra", "venda"):
+                    bloq = par in ja and not (isinstance(x, dict) and x.get("plano_agente"))   # 27/11: ordem do agente/dono não cai na trava de reentrada
+                    if par not in self.e["abertas"] and not bloq and len(self.e["abertas"]) < MAX_POS and lado in ("compra", "venda"):
                         try:
                             self.abrir(par, lado, motivo, d["t"], x)
                             if par in self.e["abertas"]:

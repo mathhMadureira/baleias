@@ -174,10 +174,18 @@ def main(argv):
     r = _json(EQUIPE / "radar.json", {}) or {}
     x = next((x for x in (r.get("entradas") or []) + (r.get("descartes") or []) if x["moeda"] == m), None)
     erros = []
+    if not x:                                                  # 27/11: moeda fora do radar → preço público da BingX agora
+        try:
+            import urllib.request
+            u = f"https://open-api.bingx.com/openApi/swap/v2/quote/price?symbol={m[:-4]}-USDT"
+            px = float(json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=10))["data"]["price"])
+            x = {"moeda": m, "preco": px, "v15": 0, "v1h": 0, "fora_do_radar": True}
+        except Exception:
+            x = None
     if agora - float(r.get("t") or 0) > 180:
         erros.append("radar velho (> 3 min): motor parado? avise o baleias")
     if not x:
-        erros.append(f"{m} fora do radar: só opere o que tem dado")
+        erros.append(f"{m}: sem preço no radar nem na BingX agora")
     for nome, v, lo, hi in (("stop", a.stop, 0.005, 0.04), ("prazo", a.prazo, 15, 1440), ("risco", a.risco, 0.01, 0.10), ("teto", a.teto, 0.002, 0.03),
                             ("validade", a.validade, 2, 30), ("movel-guarda", a.movel_guarda, 0.3, 0.9)):
         if not lo <= v <= hi:

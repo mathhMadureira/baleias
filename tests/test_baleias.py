@@ -3231,6 +3231,7 @@ class TreinoDoOperador(unittest.TestCase):
         import importlib.util as _iu, time as _t
         spec = _iu.spec_from_file_location("ordem_bingx_t", pathlib.Path(__file__).parent.parent / "mesa" / "operar" / "ordem_bingx.py")
         O = _iu.module_from_spec(spec); spec.loader.exec_module(O)
+        O.EQUIPE = pathlib.Path(_tf.mkdtemp())                # sem o padroes.json ao vivo
         agora = _t.time()
         e = {"fechadas": [{"moeda": "ELSAUSDT", "lado": "compra", "resultado_usd": -0.3, "saida_t": agora - 3600}] * 2 + [{"moeda": "X", "lado": "compra", "resultado_usd": 0.1, "saida_t": 0}] * 6, "abertas": {}}
         av = O.avisos("ELSAUSDT", "compra", 0.01, 0.06, None, {"v15": 2.0, "v1h": 4.0, "descarte": None}, e, agora)
