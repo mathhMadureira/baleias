@@ -1,6 +1,6 @@
 {
- "t": 1795801074,
- "hora_utc": "2026-11-27 17:37 UTC",
+ "t": 1795801258,
+ "hora_utc": "2026-11-27 17:40 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 131,
@@ -172,11 +172,17 @@
   -3.65,
   1.52,
   -0.26,
-  -0.41
+  -0.64
  ],
  "contexto": {
-  "t": 1795801074,
+  "t": 1795801259,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795801043,
+    "hora_utc": "27/11 17:37",
+    "titulo": "China sets March 2027 rollout for blockchain identity regulations"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795799370,
@@ -260,12 +266,6 @@
     "t": 1795779277,
     "hora_utc": "27/11 11:34",
     "titulo": "Live updates: Bitcoin's Thanksgiving gains prove fleeting"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795778562,
-    "hora_utc": "27/11 11:22",
-    "titulo": "Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 4.2,
+   "media_top20_anual_pct": 3.8,
    "principais_anual_pct": {
-    "BTC": 7.2,
-    "ETH": 3.3,
-    "SOL": 2.0
+    "BTC": 6.3,
+    "ETH": 3.0,
+    "SOL": 1.5
    },
    "leitura": "neutro"
   },
