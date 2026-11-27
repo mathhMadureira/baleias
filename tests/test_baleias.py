@@ -1978,7 +1978,7 @@ class PainelMesa(unittest.TestCase):
 
     def test_tela_sem_biblioteca_externa_e_com_as_seis_partes(self):
         html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
-        self.assertNotIn("<script src", html.replace("<script defer src", "<script src"))
+        self.assertNotIn('<script src="http', html.replace("<script defer src", "<script src"))   # 27/11: biblioteca de gráficos guardada em /static, nunca CDN
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
         for parte in ('id="lpos"', 'id="lag"', 'id="lcanal"', 'id="lfe"', 'id="curva"', "/api/vivo"):   # 27/11: tudo em uma tela (posições, equipe, conversa, operações, curva)
             self.assertIn(parte, html)

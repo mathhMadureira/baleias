@@ -114,6 +114,34 @@ def estado(c, fonte=FONTE):
     }
 
 
+_VELAS_CACHE = {}
+
+
+def _velas(caminho):
+    """GET /api/candles?par=BTCUSDT&int=5m → [[t, abertura, máxima, mínima, fechamento], ...] da BingX (cache de 15 s)."""
+    import re
+    import time as _t
+    import urllib.parse
+    import urllib.request
+    q = urllib.parse.parse_qs(urllib.parse.urlparse(caminho).query)
+    par = re.sub(r"[^A-Z0-9]", "", (q.get("par") or ["BTCUSDT"])[0].upper())
+    par = par if par.endswith("USDT") else par + "USDT"
+    iv = (q.get("int") or ["5m"])[0]
+    iv = iv if iv in ("1m", "5m", "15m", "1h", "4h") else "5m"
+    chave = (par, iv)
+    if chave in _VELAS_CACHE and _t.time() - _VELAS_CACHE[chave][0] < 15:
+        return _VELAS_CACHE[chave][1]
+    url = f"https://open-api.bingx.com/openApi/swap/v3/quote/klines?symbol={par[:-4]}-USDT&interval={iv}&limit=300"
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=10) as r:
+            d = json.load(r).get("data") or []
+        out = sorted([[int(x["time"]) // 1000, float(x["open"]), float(x["high"]), float(x["low"]), float(x["close"])] for x in d])
+    except Exception as ex:
+        return {"erro": str(ex)[:120]}
+    _VELAS_CACHE[chave] = (_t.time(), out)
+    return out
+
+
 class Manipulador(BaseHTTPRequestHandler):
     conexao = None
     motor = None
@@ -189,6 +217,15 @@ class Manipulador(BaseHTTPRequestHandler):
         elif self.path.startswith("/api/versao"):
             import hashlib
             self._enviar(200, json.dumps({"versao": hashlib.sha1(HTML_TERMINAL.read_bytes()).hexdigest()[:12]}).encode(), "application/json")
+        elif self.path.startswith("/static/"):           # 27/11: painel de terminal — biblioteca de gráficos guardada aqui (sem CDN)
+            nome = self.path.split("?")[0].rsplit("/", 1)[-1]
+            arq = Path(__file__).with_name("static") / nome
+            if nome in ("lightweight-charts-5.0.8.js", "lightweight-charts-LICENSE.txt") and arq.exists():
+                self._enviar(200, arq.read_bytes(), "application/javascript" if nome.endswith(".js") else "text/plain; charset=utf-8")
+            else:
+                self._enviar(404, b"", "text/plain")
+        elif self.path.startswith("/api/candles"):        # velas da BingX (dado público) para o gráfico da posição
+            self._enviar(200, json.dumps(_velas(self.path), ensure_ascii=False).encode("utf-8"), "application/json")
         elif self.path == "/favicon.ico":
             self._enviar(204, b"", "image/x-icon")
         elif self.path.startswith("/api/nuvem"):
