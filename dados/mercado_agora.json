@@ -1,6 +1,6 @@
 {
- "t": 1795786436,
- "hora_utc": "2026-11-27 13:33 UTC",
+ "t": 1795786623,
+ "hora_utc": "2026-11-27 13:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   0.06,
   -0.01,
   -0.04,
-  -0.39
+  -0.28
  ],
  "contexto": {
-  "t": 1795786437,
+  "t": 1795786624,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795786106,
+    "hora_utc": "27/11 13:28",
+    "titulo": "Here’s what happened in crypto today"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795785857,
@@ -217,7 +223,7 @@
     "fonte": "CoinDesk",
     "t": 1795779277,
     "hora_utc": "27/11 11:34",
-    "titulo": "Live news: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains"
+    "titulo": "Live updates: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains"
    },
    {
     "fonte": "CoinDesk",
@@ -260,12 +266,6 @@
     "t": 1795774551,
     "hora_utc": "27/11 10:15",
     "titulo": "Ethereum Sets December 15 Date for Delayed Glamsterdam Testnet Upgrade"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795773600,
-    "hora_utc": "27/11 10:00",
-    "titulo": "Tether can freeze stolen crypto in minutes. Getting it back can take years."
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.2,
+   "media_top20_anual_pct": 9.3,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
