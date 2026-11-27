@@ -3203,3 +3203,22 @@ class OperadorDecide(unittest.TestCase):
         f.preco = lambda par: p["entrada"] * 1.029
         c.mover_stops()
         self.assertEqual(c.e["abertas"]["AUSDT"]["stop"]["preco"], antes)          # nada de garantia/trava: o plano é do agente
+
+
+class AcordarPorEvento(unittest.TestCase):
+    """27/11 (dono: "por evento"): o código acorda o agente certo; não repete a mesma chave nem passa do intervalo."""
+
+    def test_dedupe_e_intervalo(self):
+        import importlib.util as _iu
+        raiz = pathlib.Path(_tf.mkdtemp())
+        spec = _iu.spec_from_file_location("acordar_t", pathlib.Path(__file__).parent.parent / "mesa" / "acordar.py")
+        A_ = _iu.module_from_spec(spec); spec.loader.exec_module(A_)
+        A_.EQUIPE = raiz
+        enviados = []
+        env = lambda ag, mo: (enviados.append((ag, mo)) or True, "HTTP 200")
+        self.assertTrue(A_.acordar("treinador", "fechou X", chave="x1", agora=1000, enviar=env))
+        self.assertFalse(A_.acordar("treinador", "fechou X", chave="x1", agora=1500, enviar=env))   # mesma chave
+        self.assertFalse(A_.acordar("treinador", "fechou Y", chave="y1", agora=1010, enviar=env))   # dentro do intervalo
+        self.assertTrue(A_.acordar("treinador", "fechou Y", chave="y1", agora=1200, enviar=env))
+        self.assertFalse(A_.acordar("ninguem", "x", agora=2000, enviar=env))
+        self.assertEqual(len(enviados), 2)

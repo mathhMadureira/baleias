@@ -150,7 +150,24 @@ def salvar(e):
     tmp.replace(EST)
 
 
+ACORDAR_LIGADO = False
+
+
+def acordar(agente, motivo, chave):
+    if not ACORDAR_LIGADO:
+        return
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("acordar_m", PASTA.parent / "acordar.py")
+        k = importlib.util.module_from_spec(spec); spec.loader.exec_module(k)
+        k.acordar(agente, motivo, chave)
+    except BaseException as ex:
+        print(f"acordar {agente} falhou: {ex}", flush=True)
+
+
 def anotar(e, texto):
+    if "SAIU de" in texto:                                   # 27/11: operação fechada → o Juiz é acordado para escrever a lição
+        acordar("treinador", f"pump.fun: {texto[:200]}. Escreva a lição em pump/licoes_memes.md.", f"pump {texto[:60]}")
     e["eventos"].append({"t": time.time(), "texto": texto})
     print(time.strftime("%H:%M:%S"), texto, flush=True)
 
@@ -400,6 +417,8 @@ def executar_ordens(e, moedas, px, agora):
 
 
 def main():
+    global ACORDAR_LIGADO
+    ACORDAR_LIGADO = True
     e = carregar()
     proxima, ultimo = 0.0, time.time()
     while True:

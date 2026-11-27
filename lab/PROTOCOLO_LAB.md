@@ -1883,3 +1883,7 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Sistema:** o motor não escolhe moeda nem aplica regra própria (sem entrada automática do radar, sem garantia, sem trava, sem "tese quebrada", sem prazo imposto). O Operador decide a cada 3 min com `operar/ordem_bingx.py` (ver → abrir/sair), escrevendo tese, confiança e o próprio plano (stop 0,5–4%, alvo opcional, prazo, stop móvel opcional, risco 1–10% da carteira). O código só valida, executa, põe o stop na corretora e segue o plano. Radar = ideias com tese ao Operador pelo canal; Juiz = uma lição por operação em `equipe/licoes_operador.md`; Risco segue com `sair`.
 - **Critério (Juiz, 7 dias ou 20 operações do Operador):** resultado depois das taxas > 0 e 'alta' ganhando mais que 'média' (confiança calibrada).
 - **Previsão registrada:** poucas operações no início; a qualidade depende de o Operador usar as lições. Nada garante lucro (Alpha Arena 2025: 4 de 6 modelos terminaram no vermelho).
+
+## Orquestração por evento (27/11/2026, escolha do dono)
+- Antes: 6 agentes no relógio (3–15 min), ~2.000 rodadas/dia, a maioria "nada novo".
+- Agora: só quem decide fica no relógio (Operador e Memes, 3 min). Juiz (operação fechou), Risco (posição perdendo ou sem stop), Radar (oportunidade rara: 4 h, volume ≥ 2×, sem descarte) e Engenheiro (erro, serviço parado, briefing velho) são acordados pelo código (`mesa/acordar.py`, com chave sem repetição e intervalo mínimo por agente). Vigia de saúde em código, sem IA: timer `baleias-vigia` a cada 2 min.

@@ -1,0 +1,5 @@
+[Unit]
+Description=Baleias: vigia de saúde sem IA (acorda o Engenheiro só se algo parar)
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I /home/servidor-de-producao/OpenBot/Shared/baleias/vigia_saude.py

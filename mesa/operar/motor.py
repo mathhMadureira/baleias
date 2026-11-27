@@ -64,6 +64,24 @@ def falar(para, tipo, texto):
         pass
 
 
+ACORDAR_LIGADO = False                               # só o serviço (main) acorda agentes; testes nunca
+
+
+def acordar(agente, motivo, chave=None):
+    """27/11 (dono: "por evento"): acorda o agente certo quando algo acontece, em vez de rotina de relógio."""
+    if not ACORDAR_LIGADO:
+        return False
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("acordar_m", SHARED / "acordar.py")
+        k = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(k)
+        return k.acordar(agente, motivo, chave)
+    except BaseException as ex:
+        print(f"acordar {agente} falhou: {ex}", flush=True)
+        return False
+
+
 def quadro(texto, descarte=None):
     try:
         import importlib.util
@@ -299,11 +317,22 @@ def volta(agora=None):
         quadro(f"saiu {x['moeda'][:-4]} {x['lado']} a {x.get('saida'):.6g}: {x.get('resultado_usd', 0):+.3f} ({str(x.get('motivo_saida'))[:40]})")
         r = x.get("resultado_usd") or 0
         falar("todos", "info", f"{'Lucro' if r > 0 else 'Perda'} em {x['moeda'][:-4]}: {r:+.2f} US$ ({str(x.get('motivo_saida'))[:50]}). Patrimônio {e.get('patrimonio', 0):.2f}.")
-        falar("treinador", "pedido", f"Fechou {x['moeda'][:-4]} {x['lado']} com {r:+.2f} US$ por '{str(x.get('motivo_saida'))[:40]}'. O que isso ensina? (resposta curta com número)")
+        acordar("treinador", f"BingX fechou {x['moeda'][:-4]} {x['lado']} ({x.get('conf') or 'regra antiga'}) com {r:+.3f} US$ por '{str(x.get('motivo_saida'))[:50]}'. Escreva a lição em equipe/licoes_operador.md.",
+                chave=f"fechou {x['moeda']} {x.get('saida_t')}")
     for par, p in (e.get("abertas") or {}).items():           # posição sofrendo: o motor pede opinião ao Risco, uma vez por posição
         if (p.get("resultado_aberto") or 0) < -0.01 * (p.get("nocional") or 0) * 0.5 and not p.get("perguntou_risco"):
             p["perguntou_risco"] = True
-            falar("guardiao", "pedido", f"{par[:-4]} {p['lado']} está em {p.get('resultado_aberto', 0):+.2f} US$ (entrada {p['entrada']:.6g}). Mantenho ou saio? Você decide (motor.py sair).")
+            acordar("guardiao", f"{par[:-4]} {p['lado']} está em {p.get('resultado_aberto', 0):+.2f} US$ (entrada {p['entrada']:.6g}, stop {(p.get('stop') or {}).get('preco')}). Mantém ou sai? (ordem_bingx.py sair / motor.py sair)",
+                    chave=f"perdendo {par} {p.get('entrada_t')}")
+    for x in (b_ := (_json(EQUIPE / "briefing.json", {}) or {})).get("posicoes", []):
+        if x.get("stop_ok") is False:
+            acordar("guardiao", f"{x['moeda'][:-4]}: stop NÃO está na corretora (briefing verificado pelo código).", chave=f"semstop {x['moeda']} {int(agora // 600)}")
+            acordar("engenheiro", f"{x['moeda'][:-4]}: stop ausente na corretora; veja o log do baleias-motor.", chave=f"semstop {x['moeda']} {int(agora // 1800)}")
+    for x in ((radar or {}).get("entradas") or [])[:10]:     # oportunidade rara: tendência de 4 h, volume ≥ 2×, sem descarte
+        if x.get("estilo") == "posição" and not x.get("descarte") and float(x.get("vol_rel") or 0) >= 2 and x["moeda"] not in e["abertas"]:
+            acordar("cacador", f"{x['moeda'][:-4]} {x['lado']}: 15m {x['v15']:+.2f}% 1h {x['v1h']:+.2f}% 4h {x['v4h']:+.2f}%, volume {x['vol_rel']}x. Vale ideia ao Operador?",
+                    chave=f"radar {x['moeda']} {int(agora // 3600)}")
+            break
     try:
         conta.salvar()
     except Exception:
@@ -414,6 +443,8 @@ def main():
     if a[:1] == ["uma"]:
         volta()
         return
+    global ACORDAR_LIGADO
+    ACORDAR_LIGADO = True
     proxima, ultimo = 0.0, time.time()
     while True:
         t0 = time.time()
@@ -433,6 +464,7 @@ def main():
             proxima = time.time() + CICLO_S
         except Exception as ex:
             print(f"erro: {type(ex).__name__}: {ex}", flush=True)
+            acordar("engenheiro", f"motor BingX: {type(ex).__name__}: {str(ex)[:200]}", chave=f"erro {type(ex).__name__} {int(time.time() // 1800)}")
         time.sleep(max(1, VIGIA_S - (time.time() - t0)))
 
 
