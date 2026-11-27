@@ -1,6 +1,6 @@
 {
- "t": 1795787367,
- "hora_utc": "2026-11-27 13:49 UTC",
+ "t": 1795787552,
+ "hora_utc": "2026-11-27 13:52 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   0.06,
   -0.01,
   -0.04,
-  -0.16
+  -0.14
  ],
  "contexto": {
-  "t": 1795787368,
+  "t": 1795787553,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795787040,
+    "hora_utc": "27/11 13:44",
+    "titulo": "Binance to launch tokenized IPO program after regulatory approval: Yi He"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795786106,
@@ -260,12 +266,6 @@
     "t": 1795775166,
     "hora_utc": "27/11 10:26",
     "titulo": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795774551,
-    "hora_utc": "27/11 10:15",
-    "titulo": "Ethereum Sets December 15 Date for Delayed Glamsterdam Testnet Upgrade"
    }
   ],
   "medo_ganancia": {
