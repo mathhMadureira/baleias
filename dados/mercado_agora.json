@@ -1,6 +1,6 @@
 {
- "t": 1795764311,
- "hora_utc": "2026-11-27 07:25 UTC",
+ "t": 1795764518,
+ "hora_utc": "2026-11-27 07:28 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 115,
@@ -172,11 +172,17 @@
   0.01,
   0.58,
   -0.11,
-  0.27
+  0.21
  ],
  "contexto": {
-  "t": 1795764312,
+  "t": 1795764519,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795763984,
+    "hora_utc": "27/11 07:19",
+    "titulo": "New York AG secures $1.37B court judgment against NovaTech founders"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795759200,
@@ -260,12 +266,6 @@
     "t": 1795726863,
     "hora_utc": "26/11 21:01",
     "titulo": "What Is Self-Custody? How to Hold Your Own Crypto Keys"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795723518,
-    "hora_utc": "26/11 20:05",
-    "titulo": "Japan weighs tighter oversight of DeFi, self-custodial wallets"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.8,
+   "media_top20_anual_pct": 9.9,
    "principais_anual_pct": {
     "BTC": 11.0,
-    "ETH": 8.9,
+    "ETH": 8.1,
     "SOL": 11.0
    },
    "leitura": "neutro"
