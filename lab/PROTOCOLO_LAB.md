@@ -1887,3 +1887,12 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 ## Orquestração por evento (27/11/2026, escolha do dono)
 - Antes: 6 agentes no relógio (3–15 min), ~2.000 rodadas/dia, a maioria "nada novo".
 - Agora: só quem decide fica no relógio (Operador e Memes, 3 min). Juiz (operação fechou), Risco (posição perdendo ou sem stop), Radar (oportunidade rara: 4 h, volume ≥ 2×, sem descarte) e Engenheiro (erro, serviço parado, briefing velho) são acordados pelo código (`mesa/acordar.py`, com chave sem repetição e intervalo mínimo por agente). Vigia de saúde em código, sem IA: timer `baleias-vigia` a cada 2 min.
+
+## H85 (27/11/2026, pedido do dono): quais padrões de day trade funcionam em cripto, medidos nos nossos dados — PRÉ-REGISTRO
+- **Pedido:** "os agentes têm de aprender a fundo LTA, LTB, reversão, Bull 180 etc. e criar uma engenharia em cima desses estudos".
+- **Padrões (definições em `mesa/padroes.py`, com fontes):** LTA toque, LTA perdida, LTB toque, LTB rompida, Bull 180, Bear 180, 9.1, 9.2, PFR, 123, Inside bar, Fundo duplo, Topo duplo, Divergência IFR — compra e venda.
+- **Dados:** as 45 moedas do radar da BingX (lista de 27/11), velas de 15 min (3.000 fechadas, ~31 dias) e de 1 h (1.000, ~41 dias), API pública da BingX.
+- **Execução simulada (`padroes.simular`):** entra só se a vela seguinte tocar o gatilho (ou na abertura, se abrir além); stop do padrão; alvo 2R; sai no fechamento da 16ª vela; stop e alvo na mesma vela = stop; risco > 8% descartado; custo 0,12% ida e volta (taxa 0,05% por lado + deslizamento).
+- **Grupos:** padrão × lado × contexto ("a favor" = EMA 20 inclinada e preço do mesmo lado da EMA 200; "contra") × tempo gráfico.
+- **Critério (fixo antes de rodar):** um grupo FUNCIONA se n ≥ 80, média líquida > 0, t ≥ 2 e média > 0 nas duas metades do período. O que funcionar vira "padrão medido" no livro dos agentes com o número; o resto vira "não funciona aqui (n, média)". Sem ajuste de parâmetro depois de ver o resultado.
+- **Previsão registrada:** a maioria NÃO passa depois do custo; se algo passar, será "a favor" no 1 h.
