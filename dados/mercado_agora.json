@@ -1,6 +1,6 @@
 {
- "t": 1795772901,
- "hora_utc": "2026-11-27 09:48 UTC",
+ "t": 1795773112,
+ "hora_utc": "2026-11-27 09:51 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
@@ -172,11 +172,17 @@
   -0.11,
   -0.06,
   0.09,
-  -0.16
+  -0.01
  ],
  "contexto": {
-  "t": 1795772902,
+  "t": 1795773113,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795772995,
+    "hora_utc": "27/11 09:49",
+    "titulo": "Bitcoin tops $61,000 as Nasdaq futures extend Wednesday’s rebound"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795766679,
@@ -260,12 +266,6 @@
     "t": 1795729363,
     "hora_utc": "26/11 21:42",
     "titulo": "BNB Chain details new layer-1 for trading, private finance and AI"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795728827,
-    "hora_utc": "26/11 21:33",
-    "titulo": "Binance completes withdrawal recovery four weeks after $6.3B hack"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 10.4,
+   "media_top20_anual_pct": 10.3,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
