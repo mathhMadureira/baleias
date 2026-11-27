@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 04:50 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 04:54 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,15 +66,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 73.7% das moedas subindo em 24 h, 78.9% em 4 h · BTC 24 h 0.85%, 4 h 1.31%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 12.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 12.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PEPE OCO invertido (alta, CONFIRMOU) · AERO topo duplo (baixa, formado) · ARB topo duplo (baixa, formado) · BIGTIME fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · BONK fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · FIL fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado)
+- 📰 27/11 04:47 UTC · Cointelegraph: Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays
 - 📰 27/11 04:45 UTC · CoinDesk: Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack
 - 📰 27/11 04:29 UTC · CoinDesk: Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know
 - 📰 27/11 01:47 UTC · Cointelegraph: AI is driving a flood of crypto bug reports. Now it’s helping sort them
 - 📰 27/11 00:35 UTC · Cointelegraph: Privacy coins face diverging fortunes as KuCoin moves to drop Monero
 - 📰 26/11 22:39 UTC · Cointelegraph: ‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express
-- 📰 26/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

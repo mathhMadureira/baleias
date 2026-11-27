@@ -1,6 +1,6 @@
 {
- "t": 1795755008,
- "hora_utc": "2026-11-27 04:50 UTC",
+ "t": 1795755231,
+ "hora_utc": "2026-11-27 04:53 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
@@ -172,11 +172,17 @@
   0.06,
   0.97,
   0.15,
-  0.16
+  0.08
  ],
  "contexto": {
-  "t": 1795755009,
+  "t": 1795755232,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795754856,
+    "hora_utc": "27/11 04:47",
+    "titulo": "Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795754747,
@@ -260,12 +266,6 @@
     "t": 1795717591,
     "hora_utc": "26/11 18:26",
     "titulo": "Spain moves to grant financial watchdog power to freeze crypto accounts"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795716929,
-    "hora_utc": "26/11 18:15",
-    "titulo": "Bitcoin Holds Above $60K as Death Cross Clouds Thanksgiving Recovery"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 12.1,
+   "media_top20_anual_pct": 12.0,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
