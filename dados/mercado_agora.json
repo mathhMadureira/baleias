@@ -1,6 +1,6 @@
 {
- "t": 1795782328,
- "hora_utc": "2026-11-27 12:25 UTC",
+ "t": 1795782513,
+ "hora_utc": "2026-11-27 12:28 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 118,
@@ -172,11 +172,17 @@
   -0.16,
   0.06,
   -0.01,
-  -0.09
+  -0.12
  ],
  "contexto": {
-  "t": 1795782329,
+  "t": 1795782514,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795782000,
+    "hora_utc": "27/11 12:20",
+    "titulo": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795781767,
@@ -260,12 +266,6 @@
     "t": 1795764781,
     "hora_utc": "27/11 07:33",
     "titulo": "Monero suffers biggest single-day slide in over 5 months. Here’s why"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795763984,
-    "hora_utc": "27/11 07:19",
-    "titulo": "New York AG secures $1.37B court judgment against NovaTech founders"
    }
   ],
   "medo_ganancia": {
