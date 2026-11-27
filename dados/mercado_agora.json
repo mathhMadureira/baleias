@@ -1,21 +1,21 @@
 {
- "t": 1795739883,
- "hora_utc": "2026-11-27 00:38 UTC",
+ "t": 1795740105,
+ "hora_utc": "2026-11-27 00:41 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 108,
-  "subindo_pct": 80.6,
-  "mediana_pct": 0.41
+  "moedas": 109,
+  "subindo_pct": 80.7,
+  "mediana_pct": 0.4
  },
  "mercado_4h": {
-  "moedas": 108,
-  "subindo_pct": 30.6,
-  "mediana_pct": -0.46
+  "moedas": 109,
+  "subindo_pct": 31.2,
+  "mediana_pct": -0.45
  },
  "mercado_24h": {
-  "moedas": 108,
-  "subindo_pct": 51.9,
-  "mediana_pct": 0.05
+  "moedas": 109,
+  "subindo_pct": 52.3,
+  "mediana_pct": 0.06
  },
  "btc": {
   "1h": 0.15,
@@ -172,11 +172,17 @@
   0.09,
   -0.45,
   0.05,
-  0.18
+  0.15
  ],
  "contexto": {
-  "t": 1795739884,
+  "t": 1795740106,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795739739,
+    "hora_utc": "27/11 00:35",
+    "titulo": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795732786,
@@ -260,12 +266,6 @@
     "t": 1795711823,
     "hora_utc": "26/11 16:50",
     "titulo": "Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795711382,
-    "hora_utc": "26/11 16:43",
-    "titulo": "Spain Lets Its Financial Intelligence Unit Freeze Crypto Accounts Without a Court Order"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.4,
+   "media_top20_anual_pct": 9.6,
    "principais_anual_pct": {
-    "BTC": 3.4,
-    "ETH": 11.0,
-    "SOL": 8.4
+    "BTC": 2.9,
+    "ETH": 10.9,
+    "SOL": 8.2
    },
    "leitura": "neutro"
   },
@@ -720,11 +720,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5077,
-    "n": 21164
+    "n": 21187
    },
    "segue_maioria_24h": {
-    "acerto": 0.5165,
-    "n": 29825
+    "acerto": 0.5184,
+    "n": 29943
    }
   },
   "referencia_ganha": [],

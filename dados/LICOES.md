@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 00:38 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 00:42 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,17 +64,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 51.9% das moedas subindo em 24 h, 30.6% em 4 h · BTC 24 h -0.44%, 4 h -0.29%.
+- **Amplitude:** 52.3% das moedas subindo em 24 h, 31.2% em 4 h · BTC 24 h -0.44%, 4 h -0.29%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.4%/ano · {'BTC': 3.4, 'ETH': 11.0, 'SOL': 8.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.6%/ano · {'BTC': 2.9, 'ETH': 10.9, 'SOL': 8.2} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** DOT topo duplo (baixa, formado) · GRAM OCO invertido (alta, formado) · ICP topo duplo (baixa, formado) · LUNC topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOPH topo duplo (baixa, formado) · SOPH fundo duplo (alta, formado) · SYRUP fundo duplo (alta, formado) · SYRUP ombro-cabeça-ombro (baixa, formado)
+- 📰 27/11 00:35 UTC · Cointelegraph: Privacy coins face diverging fortunes as KuCoin moves to drop Monero
 - 📰 26/11 22:39 UTC · Cointelegraph: ‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express
 - 📰 26/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 26/11 22:01 UTC · Decrypt: Vibecoded GTA 6 PC Ports Are Now Rendering In-Game Graphics Despite Take-Two Crackdown
 - 📰 26/11 21:42 UTC · Cointelegraph: BNB Chain details new layer-1 for trading, private finance and AI
 - 📰 26/11 21:33 UTC · Cointelegraph: Binance completes withdrawal recovery four weeks after $6.3B hack
-- 📰 26/11 21:13 UTC · Cointelegraph: UK is ‘getting it wrong’ on DeFi regulation, says Coinbase
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 59833 apostas conferidas ao vivo, acerto 54.1%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 59833 apostas conferidas ao vivo, acerto 54.1%; prevê 108 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
