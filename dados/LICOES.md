@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 16:40 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 16:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 60.9% das moedas subindo em 24 h, 7.8% em 4 h · BTC 24 h -0.64%, 4 h -2.5%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.4%/ano · {'BTC': 4.5, 'ETH': 11.0, 'SOL': -2.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -2.8%/ano · {'BTC': 6.1, 'ETH': 11.0, 'SOL': -1.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PORTAL bandeira de alta (alta, CONFIRMOU) · FIL topo duplo (baixa, formado) · PORTAL OCO invertido (alta, formado) · STX topo duplo (baixa, formado) · TIA topo duplo (baixa, formado) · UNI topo duplo (baixa, formado)
 - 📰 27/11 16:21 UTC · Decrypt: AI-Powered GTA 6 PC Ports Now Have Multiplayer as Modders Unlock 30 and 60 FPS
