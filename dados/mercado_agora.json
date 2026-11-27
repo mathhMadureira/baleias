@@ -1,6 +1,6 @@
 {
- "t": 1795784195,
- "hora_utc": "2026-11-27 12:56 UTC",
+ "t": 1795784381,
+ "hora_utc": "2026-11-27 12:59 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,10 +172,10 @@
   -0.16,
   0.06,
   -0.01,
-  -0.19
+  -0.04
  ],
  "contexto": {
-  "t": 1795784195,
+  "t": 1795784381,
   "noticias": [
    {
     "fonte": "Cointelegraph",
