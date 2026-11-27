@@ -2,370 +2,156 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Baleias · Equipe ao vivo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baleias — mesa ao vivo</title>
 <style>
-:root { --bg:#050807; --card:#0c1210; --line:#1a2420; --txt:#e6f2ec; --mut:#7f948a; --dim:#4b5a53;
-  --up:#22e07a; --down:#ff4d6d; --gold:#f5b400; --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
-* { box-sizing:border-box; }
-html, body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-.num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
-.up { color:var(--up); } .down { color:var(--down); } .mut { color:var(--mut); }
-.app { max-width:760px; margin:0 auto; padding:14px 14px 40px; }
-header { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
-.logo { width:40px; height:40px; border-radius:12px; background:#123222; color:#22e07a; display:grid; place-items:center; font-size:22px; }
-.tt b { font-size:20px; display:block; line-height:1.1; } .tt span { font-size:12px; color:var(--mut); }
-.live { margin-left:auto; font:600 12px system-ui; color:var(--up); display:flex; align-items:center; gap:6px; }
-.live i { width:8px; height:8px; border-radius:50%; background:var(--up); box-shadow:0 0 0 3px #16a34a33; animation:bat 1.6s infinite; }
-@keyframes bat { 50% { box-shadow:0 0 0 6px #16a34a00; } }
-nav { display:flex; gap:4px; margin:0 0 8px; } nav button { border:0; background:none; color:var(--mut); font:600 12px system-ui; padding:6px 10px; border-radius:8px; cursor:pointer; }
-nav button.ativo { background:#22e07a; color:#04120a; }
-.fita { display:flex; gap:18px; overflow-x:auto; white-space:nowrap; font:12px var(--mono); padding:6px 2px 10px; scrollbar-width:none; }
-.fita span b { margin-right:5px; } .fita i { font-style:normal; }
-.card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:16px; margin-bottom:12px; box-shadow:0 0 0 1px #22e07a0a, 0 8px 24px -16px #22e07a55; }
-.eq-top { display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--mut); }
-.mult { font:800 13px var(--mono); background:#22e07a; color:#04120a; padding:4px 10px; border-radius:10px; }
-.mult.neg { background:var(--down); }
-.eq { font:800 46px var(--mono); letter-spacing:-.02em; margin:4px 0 0; } .eq small { font-size:24px; color:var(--mut); }
-.eq-sub { display:flex; justify-content:space-between; font:600 14px var(--mono); }
-.meta-l { display:flex; justify-content:space-between; font:12px var(--mono); color:var(--mut); margin:14px 0 5px; }
-.barra { height:8px; background:#16211c; border-radius:6px; overflow:hidden; } .barra i { display:block; height:100%; background:linear-gradient(90deg,#16a34a,#22c55e); border-radius:6px; transition:width .6s; }
-.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; } .chip { font:600 11.5px system-ui; padding:5px 10px; border-radius:20px; background:#16211c; color:#b8c9c0; }
-.chip.ok { background:#0f3320; color:#22e07a; } .chip.al { background:#3a2c05; color:#f5b400; } .chip.no { background:#3a0d16; color:#ff4d6d; }
-.tiles { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:12px; }
-.tile { background:#0a0f0d; border:1px solid var(--line); border-radius:14px; padding:10px 12px; } .tile span { display:block; font:600 10.5px system-ui; color:var(--mut); text-transform:uppercase; letter-spacing:.04em; }
-.tile b { font:800 17px var(--mono); }
-.ago { font:10.5px var(--mono); color:var(--dim); display:block; }
-.curva { margin-top:10px; }
-.curva svg { width:100%; height:70px; display:block; }
-.desk-h { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; } .desk-h b { font-size:17px; } .desk-h span { font-size:12px; color:var(--mut); }
-.ag { display:grid; grid-template-columns:34px 110px 1fr auto; gap:10px; align-items:center; padding:8px 4px; border-top:1px solid var(--line); }
-.ag:first-of-type { border-top:0; }
-.ico { width:32px; height:32px; border-radius:10px; display:grid; place-items:center; font-size:16px; position:relative; }
-.ag.on .ico::after { content:""; position:absolute; inset:-3px; border-radius:12px; border:2px solid currentColor; opacity:.5; animation:pul 1.4s ease-out infinite; }
-@keyframes pul { from { transform:scale(.9); opacity:.7 } to { transform:scale(1.25); opacity:0 } }
-.nm b { display:block; font-size:13.5px; } .nm span { font-size:11px; color:var(--mut); }
-.agora { font-size:12px; color:#b8c9c0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
-.pill { font:700 11.5px var(--mono); padding:4px 9px; border-radius:20px; white-space:nowrap; }
-.log { font:12.5px var(--mono); max-height:330px; overflow-y:auto; }
-.ln { display:flex; gap:8px; padding:5px 0; border-top:1px solid #142019; align-items:flex-start; }
-.ln:first-child { border-top:0; } .ln .dot { width:7px; height:7px; border-radius:50%; margin-top:6px; flex:none; }
-.ln .h { color:var(--dim); flex:none; } .ln .tg { font-weight:800; flex:none; } .ln .tx { color:#c4d6cc; font-family:system-ui; font-size:12.5px; }
-.ln.novo { animation:ch 2.5s ease-out; } @keyframes ch { from { background:#22e07a33 } to { background:transparent } }
-.kill { display:grid; grid-template-columns:1fr 1fr; gap:4px 18px; }
-.kr { font-size:12.5px; } .kr div { display:flex; justify-content:space-between; } .kr b { font:700 12.5px var(--mono); }
-.kr i { display:block; height:3px; background:#3a0d16; border-radius:2px; margin-top:3px; } .kr i u { display:block; height:100%; background:#e11d48; border-radius:2px; }
-@media (max-width:560px) { .kill { grid-template-columns:1fr; } }
-.chat { max-height:380px; overflow-y:auto; display:flex; flex-direction:column; gap:8px; }
-.msg { display:flex; gap:9px; align-items:flex-start; } .msg .av { width:30px; height:30px; border-radius:50%; display:grid; place-items:center; font-size:15px; flex:none; }
-.msg .bx { background:#0a0f0d; border:1px solid var(--line); border-radius:4px 14px 14px 14px; padding:7px 10px; min-width:0; }
-.msg .hd { font-size:11px; color:var(--mut); } .msg .hd b { font-size:12px; } .msg .tt { font-size:13px; color:#d6e6dd; margin-top:2px; }
-.msg .tp { font:700 9.5px var(--mono); padding:1px 6px; border-radius:8px; margin-left:4px; text-transform:uppercase; }
-.msg.novo .bx { animation:ch 2.5s ease-out; }
-.pos-l { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:8px; font:13px var(--mono); }
-.pos-l span { display:block; font:10.5px system-ui; color:var(--mut); }
-table { width:100%; border-collapse:collapse; font:12.5px var(--mono); } td, th { padding:6px 4px; text-align:right; border-top:1px solid var(--line); }
-th { font:600 10.5px system-ui; color:var(--mut); text-transform:uppercase; border-top:0; } .e { text-align:left; }
-.toast { position:fixed; top:14px; left:50%; transform:translate(-50%,-140%); background:#0c1210; border:1px solid var(--line); border-radius:16px; padding:10px 16px;
-  box-shadow:0 10px 30px #0000002a; display:flex; gap:12px; align-items:center; z-index:9; transition:transform .5s; min-width:300px; }
-.toast.show { transform:translate(-50%,0); } .toast b { font-size:14px; } .toast .v { margin-left:auto; font:800 20px var(--mono); }
-.aba { display:none; } .aba.ativa { display:block; }
-iframe { width:100%; height:calc(100vh - 140px); border:0; border-radius:14px; background:#0c1210; }
-.placar { display:grid; gap:10px; } .hip { background:#0c1210; border:1px solid var(--line); border-left:4px solid var(--dim); border-radius:12px; padding:10px 12px; }
-.hip.aprovada { border-left-color:var(--up); } .hip.reprovada { border-left-color:var(--down); } .hip .p { color:var(--mut); font-size:13px; }
-.vazio { color:var(--mut); font-size:13px; padding:6px 0; }
-@media (max-width:560px) { .ag { grid-template-columns:32px 1fr auto; } .agora { grid-column:2 / 4; grid-row:2; } .eq { font-size:38px; } }
+/* 27/11 (dono: "faça tudo caber em uma única tela"): sem abas, sem rolagem da página; cada quadro mostra só o que cabe nele */
+:root{--bg:#050807;--card:#0b1210;--borda:#16231e;--txt:#d7eee2;--fraco:#6f8a7d;--verde:#22e07a;--verm:#ff5c6c;--amar:#f5c451}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--txt);font:13px/1.35 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{display:grid;grid-template-rows:auto 1fr;height:100dvh;padding:8px;gap:8px}
+.num{font-variant-numeric:tabular-nums}
+.pos{color:var(--verde)}.neg{color:var(--verm)}.fr{color:var(--fraco)}
+header{display:grid;grid-template-columns:auto repeat(4,1fr) auto;gap:8px;align-items:stretch}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px;padding:0 6px}
+.logo i{width:9px;height:9px;border-radius:50%;background:var(--verde);box-shadow:0 0 10px var(--verde)}
+.k{background:var(--card);border:1px solid var(--borda);border-radius:10px;padding:6px 10px;min-width:0}
+.k small{display:block;color:var(--fraco);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.k b{font-size:20px;font-weight:800}
+.k span{font-size:12px;margin-left:6px}
+.hora{color:var(--fraco);font-size:11px;align-self:center;text-align:right;padding-right:4px}
+main{display:grid;grid-template-columns:1.05fr 1.25fr 1fr;grid-template-rows:1fr 1fr;gap:8px;min-height:0}
+section{background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:8px 10px;min-height:0;overflow:hidden;display:flex;flex-direction:column}
+section h2{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fraco);margin-bottom:6px;display:flex;justify-content:space-between;gap:8px}
+.lista{overflow:hidden;flex:1;min-height:0}
+.lin{display:flex;gap:8px;align-items:baseline;padding:3px 0;border-bottom:1px solid #0f1916;white-space:nowrap;overflow:hidden}
+.lin:last-child{border-bottom:0}
+.lin .t{color:var(--fraco);font-size:11px;flex:none;width:38px}
+.lin .x{overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.lin .v{flex:none;font-weight:700}
+#agentes{grid-row:1 / span 2;grid-column:2}
+#agentes .lista{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:minmax(0,1fr);gap:6px}
+.ag{border:1px solid var(--borda);border-radius:10px;padding:6px 8px;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:2px}
+.ag .n{display:flex;gap:6px;align-items:center;font-weight:700}
+.ag .n em{font-style:normal;font-size:16px}
+.ag .c{color:var(--fraco);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ag .u{font-size:12px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;flex:1}
+.ag .q{font-size:10px;color:var(--fraco)}
+.ag.vivo{border-color:#1f5c3d;box-shadow:inset 0 0 0 1px #0f3320}
+.ag.dorme{opacity:.6}
+.badge{font-size:10px;padding:1px 6px;border-radius:999px;border:1px solid var(--borda);color:var(--fraco)}
+.badge.alta{color:var(--verde);border-color:#1f5c3d}.badge.média{color:var(--amar);border-color:#5c4a1f}.badge.baixa{color:var(--fraco)}
+svg{width:100%;flex:1;min-height:0}
+.leg{display:flex;gap:10px;font-size:11px;color:var(--fraco)}
+@media (max-width:820px){
+  body{padding:6px;gap:6px;font-size:12px}
+  header{grid-template-columns:repeat(2,1fr)}
+  .logo,.hora{display:none}
+  .k b{font-size:16px}
+  main{grid-template-columns:1fr 1fr;grid-template-rows:1.1fr 1.3fr .9fr}
+  #agentes{grid-row:2;grid-column:1 / span 2}
+  #agentes .lista{grid-template-columns:repeat(4,1fr)}
+  .ag .u{-webkit-line-clamp:2;font-size:11px}
+  #curva{display:none}
+}
 </style>
 </head>
 <body>
-<div class="app">
-<header><div class="logo">🐋</div><div class="tt"><b>Baleias</b><span id="sub">equipe · carteira única</span></div>
-  <span class="live" id="online"><i></i>Live</span><span id="pontos" style="display:none"></span><span id="relogio" style="display:none"></span></header>
-<nav style="overflow-x:auto;scrollbar-width:none"><button data-aba="mesa" class="ativo">Equipe</button><button data-aba="conversa">Conversa</button><button data-aba="historico">Histórico</button><button data-aba="pump">pump.fun</button><button data-aba="mercado">Mercado</button><button data-aba="lab">Laboratório</button></nav>
-<div class="fita" id="fita"></div>
-
-<section class="aba ativa" id="aba-mesa">
-  <div class="card">
-    <div class="eq-top"><span id="eq-info">Carteira</span><span class="mult" id="mult">1,00×</span></div>
-    <div class="eq" id="eq">US$ —</div>
-    <div class="eq-sub"><span id="eq-var">—</span><span class="mut" id="wl"></span></div>
-    <div class="num mut" id="eq-conta" style="font-size:12px;margin-top:6px"></div>
-    <div class="curva" id="curva"></div>
-    <div class="meta-l"><span>meta US$ 10 → US$ 20</span><span id="meta-p">0%</span></div><div class="barra"><i id="meta-b" style="width:0%"></i></div>
-    <div class="chips" id="chips"></div>
-  </div>
-  <div class="tiles"><div class="tile"><span>acerto</span><b id="t-ac">—</b></div><div class="tile"><span>melhor</span><b id="t-me">—</b></div><div class="tile"><span>pior</span><b id="t-pi">—</b></div><div class="tile"><span>em aberto (corretora)</span><b id="t-ab">—</b></div></div>
-
-  <div class="card">
-    <div class="desk-h"><b>⚙ Motor</b><span id="mo-t"></span></div>
-    <div class="tiles" style="margin:0" id="mo"></div>
-  </div>
-
-  <div class="card">
-    <div class="desk-h"><b id="desk-t">Mesa · agentes</b><span id="desk-n"></span></div>
-    <div id="desk"></div>
-  </div>
-
-
-
-
-  <div class="card" id="pos-card">
-    <div class="desk-h"><b>Posição</b><span id="pos-t"></span></div>
-    <div id="pos"></div>
-  </div>
-
-</section>
-<section class="aba" id="aba-conversa">
-  <div class="card">
-    <div class="desk-h"><b>💬 Conversa da equipe</b><span id="ch-n"></span></div>
-    <div class="chat" id="chat"></div>
-  </div>
-  <div class="card">
-    <div class="desk-h"><b>Logger</b><span id="log-n"></span></div>
-    <div class="log" id="log"></div>
-  </div>
-</section>
-<section class="aba" id="aba-historico">
-  <div class="card">
-    <div class="desk-h"><b>Operações</b><span id="fe-t"></span></div>
-    <div id="fe"></div>
-  </div>
-  <div class="card">
-    <div class="desk-h"><b>Descartadas por regra</b><span id="kd-n"></span></div>
-    <div class="kill" id="kill"></div>
-    <div id="kill-rec" class="mut" style="font-size:12px;margin-top:8px"></div>
-  </div>
-</section>
-<section class="aba" id="aba-pump">
-  <div class="card">
-    <div class="eq-top"><span>pump.fun · NO PAPEL (preços reais, dinheiro simulado)</span><span class="mult" id="pf-mult">1,00×</span></div>
-    <div class="eq" id="pf-eq">US$ —</div>
-    <div class="eq-sub"><span id="pf-var">—</span><span class="mut" id="pf-wl"></span></div>
-    <div class="curva" id="pf-curva"></div>
-    <div class="num mut" id="pf-info" style="font-size:12px;margin-top:6px"></div>
-  </div>
-  <div class="card"><div class="desk-h"><b>Posições abertas</b><span id="pf-ab-n"></span></div><div id="pf-ab"></div></div>
-  <div class="card"><div class="desk-h"><b>Operações fechadas</b><span id="pf-fe-n"></span></div><div id="pf-fe"></div></div>
-  <div class="card"><div class="desk-h"><b>Logger do pump.fun</b></div><div class="log" id="pf-log"></div></div>
-</section>
-<section class="aba" id="aba-mercado"><iframe id="frame-mercado" title="Mercado"></iframe></section>
-<section class="aba" id="aba-lab"><div class="placar" id="placar"></div></section>
-</div>
-<div class="toast" id="toast"><div class="logo" style="width:34px;height:34px;font-size:18px">🐋</div><div><div class="mut" style="font-size:11px" id="to-h"></div><b id="to-t"></b><div class="mut" style="font-size:12px" id="to-s"></div></div><div class="v" id="to-v"></div></div>
+<header>
+  <div class="logo"><i></i>Baleias</div>
+  <div class="k"><small>BingX (demonstração)</small><b class="num" id="kb">—</b><span id="kbp"></span></div>
+  <div class="k"><small>pump.fun (papel)</small><b class="num" id="kp">—</b><span id="kpp"></span></div>
+  <div class="k"><small>Total das duas carteiras</small><b class="num" id="kt">—</b><span id="ktp"></span></div>
+  <div class="k"><small id="kms">Motor</small><b id="km" style="font-size:15px">—</b></div>
+  <div class="hora" id="hora">—</div>
+</header>
+<main>
+  <section id="posicoes"><h2>Posições abertas <span id="npos"></span></h2><div class="lista" id="lpos"></div></section>
+  <section id="agentes"><h2>Equipe trabalhando <span id="nag"></span></h2><div class="lista" id="lag"></div></section>
+  <section id="conversa"><h2>Conversa da equipe</h2><div class="lista" id="lcanal"></div></section>
+  <section id="curva"><h2>Carteiras <span class="leg"><span class="pos">■ BingX</span><span style="color:#fb923c">■ pump.fun</span></span></h2><svg id="svg" preserveAspectRatio="none"></svg></section>
+  <section id="fechadas"><h2>Últimas operações <span id="placar"></span></h2><div class="lista" id="lfe"></div></section>
+</main>
 <script>
+const $ = id => document.getElementById(id);
+const j = async u => (await fetch(u, {cache: "no-store"})).json();
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const usd = (v, d = 2) => (v == null || isNaN(v)) ? "—" : (v < 0 ? "−" : "") + "US$ " + Math.abs(v).toFixed(d);
+const sin = (v, d = 2) => (v == null || isNaN(v)) ? "—" : (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(d);
+const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "fr";
+const hm = t => t ? new Date(t * 1000).toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"}) : "";
+const ha = t => { if (!t) return ""; const s = Date.now() / 1000 - t; return s < 90 ? "agora" : s < 3600 ? Math.round(s / 60) + " min" : s < 86400 ? Math.round(s / 3600) + " h" : Math.round(s / 86400) + " d"; };
+// quem roda no relógio e quem acorda por evento (27/11)
+const PAPEL = {laboratorio: ["decide cada operação na BingX", "a cada 3 min"], memecoins: ["decide cada operação na pump.fun", "a cada 3 min"],
+  cacador: ["leva ideias com tese ao Operador", "por evento: oportunidade rara"], guardiao: ["segunda opinião; manda sair", "por evento: posição perdendo"],
+  treinador: ["uma lição por operação fechada", "por evento: operação fechou"], engenheiro: ["diagnostica erro e parada", "por evento: algo parou"],
+  minerador: ["ganhos grátis e seguros", "rotina diária"], baleias: ["chefe: monta e melhora o sistema", "quando o dono pede"]};
 
-const $ = (id) => document.getElementById(id);
-const FUSO_BR = "America/Sao_Paulo";
-const fmt = (x, d = 2) => x == null || isNaN(x) ? "—" : (+x).toLocaleString("pt-BR", {minimumFractionDigits: d, maximumFractionDigits: d});
-const sn = (x, d = 2) => x == null || isNaN(x) ? "—" : (x > 0 ? "+" : x < 0 ? "−" : "") + fmt(Math.abs(x), d);
-const px = (x) => x == null || !x ? "—" : x >= 1000 ? fmt(x, 1) : x >= 1 ? fmt(x, 4) : (+x).toPrecision(4);
-const cor = (x) => x > 0.00005 ? "up" : x < -0.00005 ? "down" : "";
-const esc = (x) => String(x ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
-const hora = (t) => new Date(t * 1000).toLocaleString("pt-BR", {timeZone: FUSO_BR, day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit"});
-const hm = (t) => new Date(t * 1000).toLocaleTimeString("pt-BR", {timeZone: FUSO_BR, hour: "2-digit", minute: "2-digit"});
-function ha(t) {
-  if (!t) return "—";
-  const s = Math.max(0, Date.now() / 1000 - t);
-  if (s < 90) return Math.round(s) + " s";
-  if (s < 5400) return Math.round(s / 60) + " min";
-  if (s < 172800) return Math.floor(s / 3600) + " h " + String(Math.round(s % 3600 / 60)).padStart(2, "0");
-  return Math.round(s / 86400) + " d";
+function curva(bx, pp) {
+  const svg = $("svg"), W = 600, H = 200;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const todos = [...bx, ...pp];
+  if (todos.length < 2) { svg.innerHTML = ""; return; }
+  const t0 = Math.min(...todos.map(p => p[0])), t1 = Math.max(...todos.map(p => p[0]));
+  const v0 = Math.min(...todos.map(p => p[1]), 10) * 0.98, v1 = Math.max(...todos.map(p => p[1]), 10) * 1.02;
+  const X = t => (t - t0) / Math.max(1, t1 - t0) * W, Y = v => H - (v - v0) / Math.max(1e-9, v1 - v0) * H;
+  const path = (s, c) => s.length > 1 ? `<polyline fill="none" stroke="${c}" stroke-width="2" vector-effect="non-scaling-stroke" points="${s.map(p => X(p[0]).toFixed(1) + "," + Y(p[1]).toFixed(1)).join(" ")}"/>` : "";
+  svg.innerHTML = `<line x1="0" x2="${W}" y1="${Y(10)}" y2="${Y(10)}" stroke="#2a3a33" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/>`
+    + `<text x="4" y="${Y(10) - 4}" fill="#6f8a7d" font-size="11">US$ 10 (início)</text>` + path(pp, "#fb923c") + path(bx, "#22e07a");
 }
-const curto = (n) => String(n || "").replace("Baleias (chefe da mesa)", "Chefe · simulado").replace("Baleias (conta de teste)", "Chefe · conta de teste");
-async function j(url) { const r = await fetch(url, {cache: "no-store"}); return r.json(); }
 
-// abas
-document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
-  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("ativo", x === b));
-  document.querySelectorAll(".aba").forEach(x => x.classList.toggle("ativa", x.id === "aba-" + b.dataset.aba));
-  if (b.dataset.aba === "mercado" && !$("frame-mercado").src) $("frame-mercado").src = "/ao-vivo";
-  if (b.dataset.aba === "lab") carregarLab();
-});
+function desenhar(d) {
+  const cart = d.carteira || {}, pump = d.pump || {}, cmd = (d.motor || {}).comando || {}, est = (d.motor || {}).estado || {};
+  const pb = cart.patrimonio, pp = pump.patrimonio, cb = cart.capital || 10, cp = pump.capital || 10;
+  $("kb").textContent = usd(pb); $("kb").className = "num " + cls(pb - cb); $("kbp").innerHTML = `<span class="${cls(pb - cb)}">${sin((pb / cb - 1) * 100, 1)}%</span>`;
+  $("kp").textContent = usd(pp); $("kp").className = "num " + cls(pp - cp); $("kpp").innerHTML = `<span class="${cls(pp - cp)}">${sin((pp / cp - 1) * 100, 1)}%</span>`;
+  const tot = (pb || 0) + (pp || 0), ct = cb + cp;
+  $("kt").textContent = usd(tot); $("kt").className = "num " + cls(tot - ct); $("ktp").innerHTML = `<span class="${cls(tot - ct)}">${sin(tot - ct)} de US$ ${ct.toFixed(0)}</span>`;
+  const velho = Date.now() / 1000 - (est.t || 0) > 180;
+  $("km").innerHTML = velho ? '<span class="neg">PARADO</span>' : cmd.ligado === false ? '<span class="neg">DESLIGADO</span>' : `<span class="pos">ligado</span> <span class="fr">· ${cmd.modo === "agente" ? "o Operador decide" : "regras"}</span>`;
+  $("kms").textContent = `Motor · ${est.abertas ?? 0}/${cmd.max_pos ?? "—"} posições · ciclo ${ha(est.t)}`;
+  $("hora").innerHTML = new Date().toLocaleTimeString("pt-BR") + "<br>atualiza a cada 5 s";
 
-// a aba aberta se recarrega sozinha quando o painel muda
+  // posições abertas (BingX + pump.fun)
+  const ab = (cart.abertas || []).map(p => ({onde: "BingX", nome: p.moeda.replace("USDT", ""), lado: p.lado, res: p.resultado, desde: p.desde, motivo: p.motivo}))
+    .concat((pump.abertas || []).map(p => ({onde: "pump", nome: p.simbolo, lado: "compra", res: p.resultado ?? p.resultado_aberto, desde: p.t, motivo: p.motivo})));
+  $("npos").textContent = ab.length ? ab.length + " abertas" : "";
+  $("lpos").innerHTML = ab.length ? ab.map(p => `<div class="lin"><span class="t">${p.onde}</span><span class="x"><b>${esc(p.nome)}</b> <span class="fr">${p.lado} · ${ha(p.desde)} · ${esc(String(p.motivo || "").replace(/^\[[^\]]*\]\s*/, ""))}</span></span><span class="v num ${cls(p.res)}">${sin(p.res, 3)}</span></div>`).join("")
+    : '<div class="fr" style="padding:6px 0">Nenhuma posição aberta. Os agentes esperam uma ideia clara.</div>';
+
+  // equipe: cada agente, o que fez por último e quando
+  const ags = [...(d.fluxo || []), ...(d.apoio || [])];
+  $("nag").textContent = ags.filter(a => a.ultimo && Date.now() / 1000 - a.ultimo.t < 900).length + " ativos nos últimos 15 min";
+  $("lag").innerHTML = ags.map(a => {
+    const u = a.ultimo || {}, vivo = u.t && Date.now() / 1000 - u.t < 900, pap = PAPEL[a.id] || [a.cargo, ""];
+    return `<div class="ag ${vivo ? "vivo" : "dorme"}"><div class="n"><em>${a.avatar || "•"}</em>${esc(a.nome)}${u.conf ? `<span class="badge ${u.conf}">${u.conf}</span>` : ""}</div>
+      <div class="c">${esc(pap[0])}</div><div class="u">${esc(u.texto || "ainda sem registro")}</div><div class="q">${u.t ? ha(u.t) : ""} · ${esc(pap[1])}</div></div>`;
+  }).join("");
+
+  // conversa
+  $("lcanal").innerHTML = (d.canal || []).slice(0, 18).map(m => `<div class="lin"><span class="t">${hm(m.t)}</span><span class="x"><b>${m.de_avatar || ""} ${esc(m.de_nome || m.de)}</b><span class="fr"> → ${esc(m.para_nome || m.para)}</span> ${esc(m.texto)}</span></div>`).join("");
+
+  // últimas operações (as duas carteiras, mais novas primeiro)
+  const fe = (cart.fechadas || []).map(x => ({t: x.t, onde: "BingX", nome: x.moeda.replace("USDT", ""), r: x.resultado, m: x.motivo}))
+    .concat((pump.fechadas || []).map(x => ({t: x.saida_t, onde: "pump", nome: x.simbolo, r: x.resultado, m: x.motivo_saida})))
+    .sort((a, b) => b.t - a.t);
+  const hoje = fe.filter(x => Date.now() / 1000 - x.t < 86400), ganhas = hoje.filter(x => x.r > 0).length, soma = hoje.reduce((s, x) => s + (x.r || 0), 0);
+  $("placar").innerHTML = hoje.length ? `24 h: ${hoje.length} ops · ${ganhas} ganhas · <span class="${cls(soma)}">${sin(soma)}</span>` : "";
+  $("lfe").innerHTML = fe.slice(0, 16).map(x => `<div class="lin"><span class="t">${hm(x.t)}</span><span class="x"><span class="fr">${x.onde}</span> <b>${esc(x.nome)}</b> <span class="fr">${esc(x.m)}</span></span><span class="v num ${cls(x.r)}">${sin(x.r, 3)}</span></div>`).join("");
+
+  curva(d.curva || [], (pump.curva || []));
+}
+
+async function ciclo() {
+  try { const d = await j("/api/vivo"); if (!d.erro) desenhar(d); } catch (e) {}
+  setTimeout(ciclo, 5000);
+}
 let versaoPagina = null;
 async function cicloVersao() {
   try { const v = (await j("/api/versao")).versao; if (versaoPagina && v !== versaoPagina) location.reload(); versaoPagina = v; } catch (e) {}
   setTimeout(cicloVersao, 20000);
 }
-cicloVersao();
-
-
-// ---------- painel da equipe (estilo app): /api/vivo ----------
-const COR = {motor:["#e6f2ec","#1a2420"], cacador:["#60a5fa","#0f1f33"], memecoins:["#fb923c","#2e1a0c"], treinador:["#a5b4fc","#1b1d3a"], laboratorio:["#22e07a","#0f3320"],
-  guardiao:["#c084fc","#26153a"], engenheiro:["#94a3b8","#1a2420"], minerador:["#facc15","#2e2708"], baleias:["#2dd4bf","#0c2a26"]};
-const ORDEM = ["laboratorio", "cacador", "guardiao", "memecoins", "treinador", "engenheiro", "minerador", "baleias"];
-let vv = null, vistos = new Set(), primeira = true, ultFech = null;
-function pill(a) {
-  const m = vv.missao, r = vv.risco || {};
-  if (a.id === "laboratorio") return `${m.operacoes} ops · ${vv.carteira.abertas.length} aberta`;
-  if (a.id === "guardiao") return r.acao ? r.acao + (r.moeda ? " " + String(r.moeda).replace("USDT", "") : "") : "vigiando";
-  if (a.id === "cacador") return `${a.contagem.hoje} rodadas`;
-  if (a.id === "memecoins") return `${a.contagem.hoje} buscas`;
-  if (a.id === "treinador") return `${a.contagem.hoje} revisões`;
-  return `${a.contagem.hoje} hoje`;
-}
-function svgCurva(p, cap) {
-  if (!p || p.length < 2) p = [[Date.now() / 1000 - 3600, cap], [Date.now() / 1000, p && p[0] ? p[0][1] : cap]];
-  const W = 600, H = 70, t0 = p[0][0], t1 = Math.max(p[p.length - 1][0], t0 + 1);
-  let lo = Math.min(cap, ...p.map(x => x[1])), hi = Math.max(cap, ...p.map(x => x[1])); const m = Math.max((hi - lo) * .15, .05); lo -= m; hi += m;
-  const X = t => (t - t0) / (t1 - t0) * W, Y = v => H - (v - lo) / (hi - lo) * H;
-  const d = p.map((x, i) => (i ? "L" : "M") + X(x[0]).toFixed(1) + "," + Y(x[1]).toFixed(1)).join("");
-  const c = p[p.length - 1][1] >= cap ? "#22e07a" : "#ff4d6d";
-  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".25"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient></defs>
-    <line x1="0" x2="${W}" y1="${Y(cap)}" y2="${Y(cap)}" stroke="#2a3a33" stroke-dasharray="4 4"/><path d="${d}L${W},${H}L0,${H}Z" fill="url(#g)"/><path d="${d}" fill="none" stroke="${c}" stroke-width="3" vector-effect="non-scaling-stroke"/>
-    <circle cx="${X(p[p.length - 1][0])}" cy="${Y(p[p.length - 1][1])}" r="4" fill="${c}"/></svg>`;
-}
-function toast(h, t, s, v, c) {
-  $("to-h").textContent = h; $("to-t").textContent = t; $("to-s").textContent = s; $("to-v").textContent = v; $("to-v").className = "v " + c;
-  $("toast").classList.add("show"); setTimeout(() => $("toast").classList.remove("show"), 6000);
-}
-function desenhar() {
-  const m = vv.missao, c = vv.carteira, f = vv.foco || {};
-  const v = m.patrimonio - m.capital, x = m.patrimonio / m.capital;
-  $("sub").textContent = `${f.foco && f.foco !== "parado" ? f.foco.toUpperCase() : "PARADO"} · carteira única · meta US$ ${fmt(m.meta, 0)}`;
-  $("eq-info").textContent = `Patrimônio · começou com US$ ${fmt(m.capital, 0)}` + (c.corretora ? ` · ${c.corretora}` : "");
-  $("mult").textContent = fmt(x, 2) + "×"; $("mult").className = "mult" + (x < 1 ? " neg" : "");
-  const [i, d] = fmt(m.patrimonio, 2).split(","); $("eq").innerHTML = `US$ ${i}<small>,${d}</small>`;
-  $("eq-var").innerHTML = `<span class="${cor(v)}">${sn(v)} (${sn(v / m.capital * 100, 1)}%)</span>`;
-  const k = c.conta;
-  if (k) $("eq-conta").innerHTML = `US$ ${fmt(k.capital, 0)} início <span class="${cor(k.realizado)}">${sn(k.realizado)} fechadas</span> <span class="${cor(k.aberto)}">${sn(k.aberto)} em aberto</span>`
-    + ` = US$ ${fmt(k.patrimonio)}` + (Math.abs(k.taxas_entrada_abertas) > 0.0005 ? ` <span class="mut">(${sn(k.taxas_entrada_abertas)} de taxa de entrada saem no fechamento)</span>` : "")
-    + (Math.abs(k.diferenca) > 0.02 ? ` <span class="down">⚠ diferença ${sn(k.diferenca)}</span>` : " ✓");
-  $("wl").textContent = `${m.ganhos}W / ${m.operacoes - m.ganhos}L`;
-  const prog = Math.max(0, Math.min(1, m.progresso));
-  $("meta-p").textContent = fmt(prog * 100, 0) + "% do caminho"; $("meta-b").style.width = prog * 100 + "%";
-  const cac = vv.desk.find(a => a.id === "cacador"), uc = cac && cac.ultimo ? cac.ultimo.t : null;
-  const prox = uc ? Math.max(0, Math.round(uc + 180 - Date.now() / 1000)) : null;
-  const viva = uc && Date.now() / 1000 - uc < 900, sem_stop = c.abertas.some(p => !p.stop);
-  $("chips").innerHTML = [
-    `<span class="chip ${f.foco && f.foco !== "parado" ? "ok" : "no"}">${f.foco && f.foco !== "parado" ? "● foco " + f.foco.toUpperCase() : "⏸ parado"}</span>`,
-    `<span class="chip ${viva ? "ok" : "al"}">${viva ? (prox > 0 ? "próxima rodada em ~" + prox + " s" : "rodada em andamento") : "rodada parada há " + ha(uc)}</span>`,
-    `<span class="chip">${c.abertas.length ? c.abertas.length + " posição aberta" : "sem posição"}</span>`,
-    sem_stop ? `<span class="chip no">🚨 posição sem stop</span>` : (c.abertas.length ? `<span class="chip ok">stop na corretora ✓</span>` : ""),
-    vv.risco && vv.risco.acao && vv.risco.acao !== "NADA" ? `<span class="chip ${vv.risco.acao === "SAIR" ? "no" : "ok"}">🛡 ${esc(vv.risco.acao)}</span>` : ""].join("");
-  const rs0 = c.fechadas.map(x => x.resultado).filter(r => r != null);
-  $("t-ac").textContent = rs0.length ? fmt(m.ganhos / rs0.length * 100, 0) + "%" : "—";
-  $("t-me").textContent = rs0.length ? sn(Math.max(...rs0)) : "—"; $("t-me").className = rs0.length ? cor(Math.max(...rs0)) : "";
-  $("t-pi").textContent = rs0.length ? sn(Math.min(...rs0)) : "—"; $("t-pi").className = rs0.length ? cor(Math.min(...rs0)) : "";
-  const ab = c.abertas.reduce((s_, p) => s_ + (p.resultado || 0), 0);
-  $("t-ab").textContent = c.abertas.length ? sn(ab, 3) : "—"; $("t-ab").className = c.abertas.length ? cor(ab) : "";
-  $("curva").innerHTML = svgCurva(vv.curva, m.capital);
-  // motor
-  const me = (vv.motor || {}).estado || {}, mc = (vv.motor || {}).comando || {};
-  const vivo_m = me.t && Date.now() / 1000 - me.t < 120;
-  $("mo-t").innerHTML = vivo_m ? `<span class="up">● rodando · última volta há ${ha(me.t)}</span>` : `<span class="down">● parado${me.t ? " há " + ha(me.t) : ""}</span>`;
-  $("mo").innerHTML = [["posições", `${me.abertas ?? "—"} / ${mc.max_pos ?? "—"}`], ["lados", mc.lados || "—"], ["moedas lidas", me.lidas ?? "—"],
-    ["comando de", (mc.atualizado_por || "—") + (mc.t ? " · " + ha(mc.t) : "")]].map(([k, v]) => `<div class="tile"><span>${k}</span><b style="font-size:14px">${esc(v)}</b></div>`).join("")
-    + (mc.motivo ? `<div class="mut" style="grid-column:1/-1;font-size:12px">${esc(mc.motivo)}${(mc.preferidas || []).length ? " · preferidas: " + esc(mc.preferidas.map(x => x.replace("USDT", "")).join(", ")) : ""}${(mc.bloqueadas || []).length ? " · bloqueadas: " + esc(mc.bloqueadas.map(x => x.replace("USDT", "")).join(", ")) : ""}</div>` : "");
-  // mesa
-  const desk = [...vv.desk].sort((a, b) => ORDEM.indexOf(a.id) - ORDEM.indexOf(b.id));
-  const on = desk.filter(a => a.ativo).length, rod = (desk.find(a => a.id === "cacador") || {}).contagem || {hoje: 0};
-  $("desk-t").textContent = `Mesa · ${desk.length} agentes`; $("desk-n").textContent = `${on} trabalhando · ${rod.hoje} rodadas hoje · ${m.operacoes} operadas`;
-  $("desk").innerHTML = desk.map(a => { const [c1, c2] = COR[a.id] || ["#475569", "#e2e8f0"], u = a.ultimo;
-    return `<div class="ag ${a.ativo ? "on" : ""}"><div class="ico" style="background:${c2};color:${c1}">${esc(a.avatar)}</div>
-      <div class="nm"><b>${esc(a.nome)}</b><span>${esc(a.cargo)}</span><span class="ago">${u ? (a.ativo ? "● " : "") + "há " + ha(u.t) : ""}</span></div>
-      <div class="agora" title="${esc(u ? u.texto : "")}">${u ? esc(u.texto) : '<span class="mut">sem registro ainda</span>'}</div>
-      <span class="pill" style="background:${c2};color:${c1}">${esc(pill(a))}</span></div>`; }).join("");
-  // posição
-  $("pos-t").textContent = c.atualizado ? "corretora lida há " + ha(c.atualizado) : "";
-  $("pos").innerHTML = c.abertas.length ? `<table><tr><th class="e">moeda</th><th>entrada → agora</th><th>stop</th><th>alvo</th><th>há</th><th>resultado</th></tr>` +
-    [...c.abertas].sort((a_, b_) => (b_.resultado || 0) - (a_.resultado || 0)).map(p => `<tr title="${esc(p.motivo)}"><td class="e"><b class="${p.lado === "venda" ? "down" : "up"}">${p.lado === "venda" ? "▼" : "▲"}</b> ${esc(String(p.moeda).replace("USDT", ""))}</td>
-      <td>${px(p.entrada)} → ${px(p.agora)}</td><td class="down">${px(p.stop)}</td><td class="up">${px(p.alvo)}</td><td class="mut">${ha(p.desde)}</td><td class="${cor(p.resultado)}"><b>${p.resultado != null ? sn(p.resultado, 3) : "—"}</b></td></tr>`).join("") + "</table>"
-    : `<div class="vazio">Sem posição aberta.</div>`;
-  // pump.fun (papel)
-  const pf = vv.pump || {};
-  if (pf.patrimonio != null) {
-    const v = pf.patrimonio - pf.capital, x = pf.patrimonio / pf.capital, [i2, d2] = fmt(pf.patrimonio, 2).split(",");
-    $("pf-eq").innerHTML = `US$ ${i2}<small>,${d2}</small>`; $("pf-mult").textContent = fmt(x, 2) + "×"; $("pf-mult").className = "mult" + (x < 1 ? " neg" : "");
-    $("pf-var").innerHTML = `<span class="${cor(v)}">${sn(v)} (${sn(v / pf.capital * 100, 1)}%)</span>`;
-    const g = pf.fechadas.filter(f => f.resultado > 0).length; $("pf-wl").textContent = `${g}W / ${pf.fechadas.length - g}L`;
-    $("pf-curva").innerHTML = svgCurva(pf.curva, pf.capital);
-    $("pf-info").textContent = `${pf.lidas ?? 0} moedas lidas na Solana · atualizado há ${ha(pf.atualizado)} · caixa US$ ${fmt(pf.caixa)}`;
-    const spark = (h) => { if (!h || h.length < 2) return ""; const W = 120, H = 28, vs = h.map(q => q[1]), lo = Math.min(...vs, 0), hi = Math.max(...vs, 0), t0 = h[0][0], t1 = h[h.length - 1][0] || t0 + 1;
-      const X = t => (t - t0) / Math.max(1, t1 - t0) * W, Y = v => H - (v - lo) / Math.max(1e-9, hi - lo) * H, c = vs[vs.length - 1] >= 0 ? "#22e07a" : "#ff4d6d";
-      return `<svg viewBox="0 0 ${W} ${H}" style="width:120px;height:28px"><line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" stroke="#2a3a33" stroke-dasharray="3 3"/><path d="${h.map((q, k) => (k ? "L" : "M") + X(q[0]).toFixed(1) + "," + Y(q[1]).toFixed(1)).join("")}" fill="none" stroke="${c}" stroke-width="2"/></svg>`; };
-    $("pf-ab-n").textContent = `${pf.abertas.length} de 4`;
-    $("pf-ab").innerHTML = pf.abertas.length ? `<table><tr><th class="e">moeda</th><th>gráfico desde a entrada</th><th>variação</th><th>há</th><th>resultado</th></tr>` + pf.abertas.map(p =>
-      `<tr title="${esc(p.motivo)}"><td class="e"><a href="https://pump.fun/coin/${esc(p.mint)}" target="_blank" style="color:inherit"><b>${esc(p.simbolo)}</b></a></td><td>${spark(p.hist)}</td><td class="${cor(p.var)}">${sn(p.var * 100, 1)}%</td><td class="mut">${ha(p.t)}</td><td class="${cor(p.resultado)}"><b>${sn(p.resultado, 3)}</b></td></tr>`).join("") + "</table>"
-      : `<div class="vazio">Sem posição. Entra quando uma moeda sobe 15%+ em 3 min com valor de mercado entre US$ 8 mil e 60 mil.</div>`;
-    $("pf-fe-n").textContent = pf.fechadas.length ? `soma ${sn(pf.fechadas.reduce((a, f) => a + f.resultado, 0), 2)}` : "";
-    $("pf-fe").innerHTML = pf.fechadas.length ? `<table><tr><th class="e">hora</th><th class="e">moeda</th><th>variação</th><th class="e">saída</th><th>resultado</th></tr>` + pf.fechadas.map(f =>
-      `<tr><td class="e mut">${hora(f.saida_t)}</td><td class="e">${esc(f.simbolo)}</td><td>${sn((f.saida / f.entrada - 1) * 100, 1)}%</td><td class="e mut" style="font:12px system-ui">${esc(f.motivo_saida)}</td><td class="${cor(f.resultado)}"><b>${sn(f.resultado, 3)}</b></td></tr>`).join("") + "</table>"
-      : `<div class="vazio">Nenhuma operação fechada ainda.</div>`;
-    $("pf-log").innerHTML = pf.eventos.map(x => `<div class="ln"><span class="h">${hm(x.t)}</span><span class="tx">${esc(x.texto)}</span></div>`).join("") || `<div class="vazio">Sem eventos.</div>`;
-  }
-  // conversa
-  const TP = {info:["#1a2420","#b8c9c0"], proposta:["#0f1f33","#60a5fa"], pedido:["#3a2c05","#f5b400"], resposta:["#0f3320","#22e07a"]};
-  const ids = new Set((vv.canal || []).map(m => m.id));
-  $("ch-n").textContent = `${(vv.canal || []).length} mensagens · ${(vv.canal || []).filter(m => m.tipo === "pedido" || m.tipo === "proposta").filter(m => !(vv.canal || []).some(r => r.ref === m.id)).length} esperando resposta`;
-  $("chat").innerHTML = (vv.canal || []).map(m => { const [c1, c2] = COR[m.de] || COR.motor, [t1, t2] = TP[m.tipo] || TP.info, novo = !primeira && !vistos.has("c" + m.id); vistos.add("c" + m.id);
-    return `<div class="msg ${novo ? "novo" : ""}"><div class="av" style="background:${c2};color:${c1}">${esc(m.de_avatar)}</div><div class="bx">
-      <div class="hd"><b style="color:${c1}">${esc(m.de_nome)}</b> → ${esc(m.para_nome)}<span class="tp" style="background:${t1};color:${t2}">${esc(m.tipo)}</span> · ${hm(m.t)}</div>
-      <div class="tt">${esc(m.texto)}</div></div></div>`; }).join("") || `<div class="vazio">Ninguém falou ainda.</div>`;
-  // logger
-  $("log-n").textContent = `${vv.feed.length} registros`;
-  $("log").innerHTML = vv.feed.map(x => { const k = x.t + x.agente + x.texto, novo = !primeira && !vistos.has(k); vistos.add(k); const mot = String(x.texto).startsWith("⚙ motor"); const [c1] = COR[mot ? "motor" : x.agente] || ["#475569"];
-    return `<div class="ln ${novo ? "novo" : ""}"><i class="dot" style="background:${c1}"></i><span class="h">${hm(x.t)}</span><span class="tg" style="color:${c1}">${mot ? "MOTOR" : esc((x.nome || "").toUpperCase())}:</span><span class="tx">${x.conf ? `<b style="font:700 10px var(--mono);padding:1px 6px;border-radius:8px;margin-right:5px;background:${x.conf === "alta" ? "#0f3320" : x.conf === "baixa" ? "#3a0d16" : "#3a2c05"};color:${x.conf === "alta" ? "#22e07a" : x.conf === "baixa" ? "#ff4d6d" : "#f5b400"}">${esc(x.conf)}</b>` : ""}${esc(mot ? x.texto.replace("⚙ motor: ", "") : x.texto)}</span></div>`; }).join("") || `<div class="vazio">Nada registrado ainda.</div>`;
-  // descartadas por regra
-  const ds = vv.descartes || [], tot = ds.reduce((a, d) => a + d.total, 0), mx = Math.max(1, ...ds.map(d => d.total));
-  $("kd-n").textContent = tot ? `${tot} descartadas · ${ds.reduce((a, d) => a + d.hoje, 0)} hoje` : "";
-  $("kill").innerHTML = ds.length ? ds.map(d => `<div class="kr"><div><span>${esc(d.regra)}</span><b>${d.total}</b></div><i><u style="width:${d.total / mx * 100}%"></u></i></div>`).join("")
-    : `<div class="vazio">Nenhum descarte registrado ainda.</div>`;
-  $("kill-rec").innerHTML = (vv.descartes_recentes || []).slice(0, 5).map(x => `<span style="color:#e11d48">✕</span> ${esc(String(x.moeda).replace("USDT", ""))} · ${esc(x.regra)} <span class="mut">(${esc((COR[x.agente] ? x.agente : x.agente))}, ${hm(x.t)})</span>`).join(" &nbsp; ");
-  // operações
-  const fe = [...c.fechadas].reverse(), rs = fe.map(x => x.resultado).filter(r => r != null);
-  $("fe-t").textContent = rs.length ? `melhor ${sn(Math.max(...rs))} · pior ${sn(Math.min(...rs))}` : "";
-  $("fe").innerHTML = fe.length ? (() => { const pl = fe.filter(x => x.causa && x.causa[0] === "plano"), eq = fe.filter(x => x.causa && x.causa[0] === "equipe");
-      const sm = a => a.reduce((t, x) => t + (x.resultado || 0), 0), tx = fe.reduce((t, x) => t + (x.taxas || 0), 0);
-      return `<div class="tiles" style="margin-bottom:10px"><div class="tile"><span>pelo plano (alvo/stop/prazo)</span><b class="${cor(sm(pl))}">${pl.length} · ${sn(sm(pl))}</b></div>
-        <div class="tile"><span>fechadas pela equipe</span><b class="${cor(sm(eq))}">${eq.length} · ${sn(sm(eq))}</b></div>
-        <div class="tile"><span>chegaram ao alvo</span><b>${fe.filter(x => x.causa && x.causa[1] === "alvo").length}</b></div>
-        <div class="tile"><span>taxas pagas</span><b class="down">−${fmt(tx, 2)}</b></div></div>`; })() +
-    `<table><tr><th class="e">hora</th><th class="e">moeda</th><th>entrada</th><th>saída</th><th class="e">quem fechou</th><th>resultado</th></tr>` + fe.map(x =>
-    `<tr title="${esc(x.motivo)}"><td class="e mut">${x.t ? hora(x.t) : "—"}</td><td class="e"><span class="${x.lado === "venda" ? "down" : "up"}">${x.lado === "venda" ? "▼" : "▲"}</span> ${esc(String(x.moeda).replace("USDT", ""))}</td><td>${px(x.entrada)}</td><td>${px(x.saida)}</td>
-      <td class="e" style="font:12px system-ui"><span class="chip ${x.causa && x.causa[0] === "plano" ? "ok" : "al"}" style="padding:2px 8px">${esc(x.causa ? x.causa[1] : "?")}</span></td><td class="${cor(x.resultado)}"><b>${sn(x.resultado, 3)}</b></td></tr>`).join("") + "</table>"
-    : `<div class="vazio">Nenhuma operação fechada ainda.</div>`;
-  const ult = fe[0];
-  if (ult && ultFech !== null && ult.t !== ultFech) toast("BALEIAS · " + hm(ult.t), `${String(ult.moeda).replace("USDT", "")} ${ult.lado} · ${ult.resultado >= 0 ? "lucro" : "perda"}`, ult.motivo, sn(ult.resultado, 2), cor(ult.resultado));
-  if (ult) ultFech = ult.t; else if (ultFech === null) ultFech = 0;
-  primeira = false;
-}
-async function ciclo() {
-  try { const d = await j("/api/vivo"); if (!d.erro) { vv = d; desenhar(); } } catch (e) {}
-  setTimeout(ciclo, 4000);
-}
-ciclo();
-setInterval(() => { if (vv) desenhar(); }, 20000);
-
-// ---------- fita de preços e fontes da máquina ----------
-async function cicloFontes() {
-  try {
-    const d = await j("/api/ao-vivo?desde=999999999&calor=999999999");
-    const destaque = ["BTC", "ETH", "SOL", "XRP", "BNB", "DOGE", "PEPE", "SUI", "LINK", "AVAX"];
-    const mapaM = Object.fromEntries((d.mercado || []).map(x => [x.s, x]));
-    $("fita").innerHTML = destaque.filter(s => mapaM[s]).map(s => `<span><b>${s}</b>${px(mapaM[s].p)} <i class="${cor(mapaM[s].pct)}" style="font-style:normal">${sn(mapaM[s].pct, 2)}%</i></span>`).join("");
-    const vivas = Object.values(d.fontes || {}).filter(v => v.ok && d.agora - v.t < 900).length, total = Object.keys(d.fontes || {}).length, ok = total > 0 && vivas === total;
-     
-    $("pontos").innerHTML = Object.entries(d.fontes || {}).map(([k, v]) => `<span class="ponto ${v.ok && d.agora - v.t < 900 ? "ok" : "mal"}" title="${esc(k + (v.erro ? ": " + v.erro : ""))}"></span>`).join("");
-  } catch (e) {  }
-  setTimeout(cicloFontes, 3000);
-}
-cicloFontes();
-function relogio() {
-  const a = new Date();
-  $("relogio").textContent = a.toLocaleTimeString("pt-BR", {timeZone: FUSO_BR}) + " Brasília · " + a.toISOString().slice(11, 19) + " UTC";
-}
-setInterval(relogio, 1000); relogio();
-
-// ---------- laboratório ----------
-async function carregarLab() {
-  const l = await j("/api/lab");
-  $("placar").innerHTML = l.map(h => `<div class="hip ${esc(h.status)}"><div class="id">${esc(h.id)}</div><div class="p">${esc(h.pergunta)}</div><div class="r">${esc(h.resultado)}</div><div class="n">${esc(h.numero)}</div></div>`).join("");
-}
-
-
-
+ciclo(); cicloVersao();
 </script>
 </body>
 </html>
