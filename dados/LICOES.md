@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 08:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 08:35 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 81.0% das moedas subindo em 24 h, 69.0% em 4 h · BTC 24 h 2.11%, 4 h 0.63%.
+- **Amplitude:** 81.2% das moedas subindo em 24 h, 70.1% em 4 h · BTC 24 h 1.89%, 4 h 0.6%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
 - **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 10.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · CFG OCO invertido (alta, formado) · ENA topo duplo (baixa, formado) · GTC OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LISTA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado)
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 12.5% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** ARB topo duplo (baixa, formado) · CFG OCO invertido (alta, formado) · GTC OCO invertido (alta, formado) · LDO topo duplo (baixa, formado) · LISTA fundo duplo (alta, formado) · MARSCOIN fundo duplo (alta, formado) · MARSCOIN ombro-cabeça-ombro (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado) · PROM topo duplo (baixa, formado)
 - 📰 27/11 08:04 UTC · Cointelegraph: ESMA to overhaul EU’s MiCA crypto register in 2027
 - 📰 27/11 07:33 UTC · CoinDesk: Monero suffers biggest single-day slide in over 5 months. Here’s why
 - 📰 27/11 07:19 UTC · Cointelegraph: New York AG secures $1.37B court judgment against NovaTech founders
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 61070 apostas conferidas ao vivo, acerto 54.0%; prevê 109 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 61072 apostas conferidas ao vivo, acerto 54.0%; prevê 116 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
