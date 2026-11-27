@@ -1,6 +1,6 @@
 {
- "t": 1795787552,
- "hora_utc": "2026-11-27 13:52 UTC",
+ "t": 1795787749,
+ "hora_utc": "2026-11-27 13:55 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   0.06,
   -0.01,
   -0.04,
-  -0.14
+  -0.17
  ],
  "contexto": {
-  "t": 1795787553,
+  "t": 1795787750,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795787404,
+    "hora_utc": "27/11 13:50",
+    "titulo": "What's on the Ethereum Roadmap: Glamsterdam, Hegotá and Beyond"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795787040,
@@ -260,12 +266,6 @@
     "t": 1795776687,
     "hora_utc": "27/11 10:51",
     "titulo": "Brazil’s stock exchange teams up with major banks to launch real-pegged stablecoin"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795775166,
-    "hora_utc": "27/11 10:26",
-    "titulo": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs"
    }
   ],
   "medo_ganancia": {
