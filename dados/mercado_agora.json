@@ -1,21 +1,21 @@
 {
- "t": 1795754562,
- "hora_utc": "2026-11-27 04:42 UTC",
+ "t": 1795754785,
+ "hora_utc": "2026-11-27 04:46 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
-  "subindo_pct": 28.1,
-  "mediana_pct": -0.25
+  "subindo_pct": 52.6,
+  "mediana_pct": 0.06
  },
  "mercado_4h": {
   "moedas": 114,
-  "subindo_pct": 76.3,
-  "mediana_pct": 1.57
+  "subindo_pct": 78.9,
+  "mediana_pct": 1.55
  },
  "mercado_24h": {
   "moedas": 114,
-  "subindo_pct": 71.1,
-  "mediana_pct": 1.2
+  "subindo_pct": 73.7,
+  "mediana_pct": 1.62
  },
  "btc": {
   "1h": -0.21,
@@ -33,77 +33,71 @@
   },
   {
    "moeda": "MMT",
-   "4h": -4.42,
-   "24h": -30.83,
-   "vol": 0.6
-  },
-  {
-   "moeda": "ME",
-   "4h": -4.42,
-   "24h": 8.76,
-   "vol": 0.77
-  },
-  {
-   "moeda": "INIT",
-   "4h": -3.91,
-   "24h": 55.9,
-   "vol": 0.4
-  },
-  {
-   "moeda": "BLUR",
-   "4h": -3.4,
-   "24h": -8.95,
-   "vol": 4.04
-  },
-  {
-   "moeda": "TFUEL",
-   "4h": -2.96,
-   "24h": 6.66,
-   "vol": 0.42
-  },
-  {
-   "moeda": "OPG",
-   "4h": -2.71,
-   "24h": 7.73,
-   "vol": 0.87
-  },
-  {
-   "moeda": "SOPH",
-   "4h": -2.13,
-   "24h": 9.52,
-   "vol": 0.68
-  },
-  {
-   "moeda": "SSV",
-   "4h": -1.87,
-   "24h": 11.72,
+   "4h": -6.25,
+   "24h": -32.66,
    "vol": 0.61
   },
   {
-   "moeda": "MOVE",
-   "4h": -1.8,
-   "24h": -4.44,
+   "moeda": "ME",
+   "4h": -5.72,
+   "24h": 9.65,
    "vol": 0.69
+  },
+  {
+   "moeda": "MANTRA",
+   "4h": -4.26,
+   "24h": -9.85,
+   "vol": 0.92
+  },
+  {
+   "moeda": "OPG",
+   "4h": -2.67,
+   "24h": 6.34,
+   "vol": 0.87
+  },
+  {
+   "moeda": "BLUR",
+   "4h": -2.61,
+   "24h": -9.27,
+   "vol": 4.14
+  },
+  {
+   "moeda": "INIT",
+   "4h": -2.36,
+   "24h": 58.62,
+   "vol": 0.42
+  },
+  {
+   "moeda": "SOPH",
+   "4h": -2.15,
+   "24h": 8.33,
+   "vol": 0.66
+  },
+  {
+   "moeda": "TFUEL",
+   "4h": -1.57,
+   "24h": 6.31,
+   "vol": 0.37
+  },
+  {
+   "moeda": "SSV",
+   "4h": -1.54,
+   "24h": 10.24,
+   "vol": 0.57
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "HAEDAL",
-   "4h": 28.84,
-   "24h": 26.75,
-   "vol": 5.86
+   "4h": 32.89,
+   "24h": 32.17,
+   "vol": 5.87
   },
   {
    "moeda": "BIGTIME",
-   "4h": 19.14,
-   "24h": 14.4,
+   "4h": 18.45,
+   "24h": 15.66,
    "vol": 3.31
-  },
-  {
-   "moeda": "ONE",
-   "4h": 10.85,
-   "24h": 20.29,
-   "vol": 1.36
   },
   {
    "moeda": "ZEC",
@@ -112,40 +106,46 @@
    "vol": 1.39
   },
   {
+   "moeda": "ONE",
+   "4h": 8.75,
+   "24h": 17.44,
+   "vol": 1.44
+  },
+  {
    "moeda": "W",
-   "4h": 9.27,
-   "24h": 12.97,
-   "vol": 3.06
+   "4h": 7.31,
+   "24h": 11.06,
+   "vol": 3.2
   },
   {
    "moeda": "HYPE",
-   "4h": 5.46,
-   "24h": 6.56,
-   "vol": 2.8
+   "4h": 4.64,
+   "24h": 6.5,
+   "vol": 2.82
   },
   {
    "moeda": "CHIP",
-   "4h": 5.25,
-   "24h": 2.43,
-   "vol": 2.03
-  },
-  {
-   "moeda": "MARSCOIN",
-   "4h": 4.91,
-   "24h": -0.33,
-   "vol": 1.27
+   "4h": 4.63,
+   "24h": 2.21,
+   "vol": 2.07
   },
   {
    "moeda": "JUP",
-   "4h": 4.57,
-   "24h": 6.68,
-   "vol": 1.47
+   "4h": 4.42,
+   "24h": 7.37,
+   "vol": 1.55
   },
   {
-   "moeda": "ENA",
-   "4h": 3.97,
-   "24h": 1.16,
-   "vol": 1.11
+   "moeda": "SKY",
+   "4h": 4.31,
+   "24h": 14.3,
+   "vol": 2.27
+  },
+  {
+   "moeda": "MARSCOIN",
+   "4h": 3.83,
+   "24h": -2.93,
+   "vol": 1.34
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.06,
   0.97,
   0.15,
-  0.23
+  0.2
  ],
  "contexto": {
-  "t": 1795754562,
+  "t": 1795754786,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795754747,
+    "hora_utc": "27/11 04:45",
+    "titulo": "Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795753787,
@@ -260,12 +266,6 @@
     "t": 1795716929,
     "hora_utc": "26/11 18:15",
     "titulo": "Bitcoin Holds Above $60K as Death Cross Clouds Thanksgiving Recovery"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795714793,
-    "hora_utc": "26/11 17:39",
-    "titulo": "Crypto on notice as hawkish Fed risks December ‘meltdown’"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 12.3,
+   "media_top20_anual_pct": 12.2,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 7.5,
+   "amplitude_acima_mm50_pct": 5.0,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -302,6 +302,13 @@
     "sentido": "alta",
     "confirmado": true,
     "nivel": 4e-06
+   },
+   {
+    "moeda": "AERO",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.39
    },
    {
     "moeda": "ARB",
@@ -344,6 +351,20 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 0.5521
+   },
+   {
+    "moeda": "MARSCOIN",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.029
+   },
+   {
+    "moeda": "MARSCOIN",
+    "padrao": "ombro-cabeça-ombro",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.0275
    },
    {
     "moeda": "NFP",
@@ -429,9 +450,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 102,
-  "compras": 55,
-  "vendas": 47,
+  "apostas": 87,
+  "compras": 45,
+  "vendas": 42,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -450,6 +471,10 @@
     "prob_subir": 0.375
    },
    {
+    "moeda": "CRV",
+    "prob_subir": 0.375
+   },
+   {
     "moeda": "SLP",
     "prob_subir": 0.376
    },
@@ -460,13 +485,13 @@
    {
     "moeda": "FORM",
     "prob_subir": 0.382
-   },
-   {
-    "moeda": "PEOPLE",
-    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
+   {
+    "moeda": "SOPH",
+    "prob_subir": 0.666
+   },
    {
     "moeda": "PSG",
     "prob_subir": 0.651
@@ -482,10 +507,6 @@
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
-   },
-   {
-    "moeda": "WLFI",
-    "prob_subir": 0.609
    },
    {
     "moeda": "MITO",
@@ -761,42 +782,42 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.1% em 29806 apostas (632 velas, 20/11 04:45–27/11 04:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5313,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 29774 apostas (632 velas, 20/11 05:00–27/11 04:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5316,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.38,
+  "z_contra_lab": -0.34,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5056,
-    "n": 21470
+    "acerto": 0.5058,
+    "n": 21457
    },
    "segue_maioria_24h": {
-    "acerto": 0.5137,
-    "n": 29703
+    "acerto": 0.5139,
+    "n": 29671
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5449,
-    "n": 8227
+    "acerto": 0.5453,
+    "n": 8223
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5373,
-    "n": 3259
+    "acerto": 0.5371,
+    "n": 3258
    },
    "confianca:<0,05": {
-    "acerto": 0.5178,
-    "n": 17433
+    "acerto": 0.5182,
+    "n": 17406
    },
    "confianca:≥0,12": {
     "acerto": 0.6483,
     "n": 887
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5056,
-    "n": 8042
+    "acerto": 0.5067,
+    "n": 8010
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5433,
@@ -811,11 +832,11 @@
     "n": 6786
    },
    "lado:compra": {
-    "acerto": 0.5327,
-    "n": 12320
+    "acerto": 0.5334,
+    "n": 12288
    },
    "lado:venda": {
-    "acerto": 0.5303,
+    "acerto": 0.5304,
     "n": 17486
    }
   }
