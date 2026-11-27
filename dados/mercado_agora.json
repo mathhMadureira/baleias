@@ -1,6 +1,6 @@
 {
- "t": 1795777537,
- "hora_utc": "2026-11-27 11:05 UTC",
+ "t": 1795777747,
+ "hora_utc": "2026-11-27 11:09 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   0.09,
   -0.16,
   0.06,
-  -0.22
+  -0.08
  ],
  "contexto": {
-  "t": 1795777538,
+  "t": 1795777748,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795777637,
+    "hora_utc": "27/11 11:07",
+    "titulo": "Injective asks SEC to allow order books for tokenized stock trading"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795776687,
@@ -260,12 +266,6 @@
     "t": 1795753787,
     "hora_utc": "27/11 04:29",
     "titulo": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795744058,
-    "hora_utc": "27/11 01:47",
-    "titulo": "AI is driving a flood of crypto bug reports. Now it’s helping sort them"
    }
   ],
   "medo_ganancia": {
@@ -274,9 +274,9 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.3,
+   "media_top20_anual_pct": 5.9,
    "principais_anual_pct": {
-    "BTC": 4.5,
+    "BTC": 6.1,
     "ETH": 11.0,
     "SOL": 11.0
    },
