@@ -1,6 +1,6 @@
 {
- "t": 1795796459,
- "hora_utc": "2026-11-27 16:20 UTC",
+ "t": 1795796648,
+ "hora_utc": "2026-11-27 16:24 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 126,
@@ -172,11 +172,17 @@
   -0.29,
   -3.65,
   1.52,
-  -0.17
+  -0.11
  ],
  "contexto": {
-  "t": 1795796460,
+  "t": 1795796649,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795796500,
+    "hora_utc": "27/11 16:21",
+    "titulo": "AI-Powered GTA 6 PC Ports Now Have Multiplayer as Modders Unlock 30 and 60 FPS"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795790454,
@@ -260,12 +266,6 @@
     "t": 1795778068,
     "hora_utc": "27/11 11:14",
     "titulo": "Bitcoin supply metric hits 11-year low as new ‘capitulation’ signal arrives"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795777637,
-    "hora_utc": "27/11 11:07",
-    "titulo": "Injective asks SEC to allow order books for tokenized stock trading"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -3.3,
+   "media_top20_anual_pct": -4.4,
    "principais_anual_pct": {
-    "BTC": 3.1,
+    "BTC": 2.0,
     "ETH": 11.0,
-    "SOL": -4.2
+    "SOL": -4.0
    },
    "leitura": "neutro"
   },
