@@ -213,3 +213,59 @@ def simular(v, s, alvo_r=2.0, max_barras=16, custo=0.0012):
         saida = v[min(len(v) - 1, i + max_barras)][C]
     bruto = (saida / ent - 1) if compra else (1 - saida / ent)
     return {"r": ((saida - ent) if compra else (ent - saida)) / risco, "liq": bruto - custo, "risco_pct": risco / ent}
+
+
+def estrutura(v, janela=96):
+    """27/11 (dono, imagem da BOME: "entrou comprado na resistência; o movimento já tinha passado; a entrada certa era no começo,
+    onde está o stop"). Mede, na última vela fechada: resistência e suporte mais próximos (pivôs das últimas `janela` velas,
+    com quantos toques), quanto o movimento já andou desde o último fundo/topo (em % e em ATR) e onde o preço está no range."""
+    if len(v) < 60:
+        return {}
+    i = len(v) - 1
+    c, a = v[i][C], atr(v)[i]
+    fundos, topos = pivos(v, i)
+    ini = max(0, i - janela)
+    tops = [y for j, y in topos if j >= ini]
+    funds = [y for j, y in fundos if j >= ini]
+    acima = sorted(y for y in tops if y > c)
+    abaixo = sorted((y for y in funds if y < c), reverse=True)
+    toques = lambda y, lst: sum(1 for z in lst if abs(z / y - 1) <= 0.004)
+    hi = max(x[H] for x in v[ini:]); lo = min(x[L] for x in v[ini:])
+    j_lo = max(range(ini, i + 1), key=lambda k: -v[k][L]); j_hi = max(range(ini, i + 1), key=lambda k: v[k][H])
+    ult_fundo = min(x[L] for x in v[max(ini, i - 24):])            # fundo das últimas 24 velas
+    ult_topo = max(x[H] for x in v[max(ini, i - 24):])
+    out = {"preco": c, "atr_pct": round(a / c * 100, 3), "range_pos_pct": round((c - lo) / (hi - lo) * 100, 1) if hi > lo else 50.0,
+           "subiu_do_fundo_atr": round((c - ult_fundo) / a, 2) if a else None, "caiu_do_topo_atr": round((ult_topo - c) / a, 2) if a else None,
+           "subiu_do_fundo_pct": round((c / ult_fundo - 1) * 100, 2), "caiu_do_topo_pct": round((1 - c / ult_topo) * 100, 2),
+           "ultimo_fundo": ult_fundo, "ultimo_topo": ult_topo}
+    if acima:
+        out["resistencia"] = {"nivel": acima[0], "dist_pct": round((acima[0] / c - 1) * 100, 2), "dist_atr": round((acima[0] - c) / a, 2), "toques": toques(acima[0], tops)}
+    elif hi > c:
+        out["resistencia"] = {"nivel": hi, "dist_pct": round((hi / c - 1) * 100, 2), "dist_atr": round((hi - c) / a, 2), "toques": 1}
+    if abaixo:
+        out["suporte"] = {"nivel": abaixo[0], "dist_pct": round((1 - abaixo[0] / c) * 100, 2), "dist_atr": round((c - abaixo[0]) / a, 2), "toques": toques(abaixo[0], funds)}
+    elif lo < c:
+        out["suporte"] = {"nivel": lo, "dist_pct": round((1 - lo / c) * 100, 2), "dist_atr": round((c - lo) / a, 2), "toques": 1}
+    return out
+
+
+def leitura_entrada(lado, est):
+    """Frases de AVISO para uma entrada, a partir da estrutura (sem regra: o agente decide)."""
+    av = []
+    if not est:
+        return av
+    if lado == "compra":
+        r = est.get("resistencia")
+        if r and r["dist_atr"] < 1.0:
+            av.append(f"compra colada na RESISTÊNCIA {r['nivel']:.6g} (a {r['dist_pct']:.2f}%, {r['dist_atr']:.1f} ATR, {r['toques']} toque(s)): pouco espaço para subir")
+        if (est.get("subiu_do_fundo_atr") or 0) >= 3 or est.get("range_pos_pct", 0) >= 85:
+            av.append(f"o movimento JÁ ANDOU: +{est['subiu_do_fundo_pct']:.2f}% ({est['subiu_do_fundo_atr']:.1f} ATR) desde o fundo {est['ultimo_fundo']:.6g}; "
+                      f"preço no topo do range ({est['range_pos_pct']:.0f}%). A entrada boa era perto do fundo; espere recuo")
+    else:
+        s = est.get("suporte")
+        if s and s["dist_atr"] < 1.0:
+            av.append(f"venda colada no SUPORTE {s['nivel']:.6g} (a {s['dist_pct']:.2f}%, {s['dist_atr']:.1f} ATR, {s['toques']} toque(s)): pouco espaço para cair")
+        if (est.get("caiu_do_topo_atr") or 0) >= 3 or est.get("range_pos_pct", 100) <= 15:
+            av.append(f"a queda JÁ ANDOU: −{est['caiu_do_topo_pct']:.2f}% ({est['caiu_do_topo_atr']:.1f} ATR) desde o topo {est['ultimo_topo']:.6g}; "
+                      f"preço no fundo do range ({est['range_pos_pct']:.0f}%). A entrada boa era perto do topo; espere repique")
+    return av

@@ -1,0 +1,6 @@
+[Unit]
+Description=Baleias: leitor de estrutura e padrões sem IA (equipe/padroes.json)
+[Service]
+Type=oneshot
+TimeoutStartSec=90
+ExecStart=/usr/bin/python3 -I /home/servidor-de-producao/OpenBot/Shared/baleias/scanner_padroes.py

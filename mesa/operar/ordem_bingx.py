@@ -72,6 +72,21 @@ def ver():
     for x in sorted(todas, key=lambda x: -abs(x.get("v4h") or 0)):
         print(f"  {x['moeda'][:-4]} {x['lado']} | {x['v15']:+.2f} {x['v1h']:+.2f} {x['v4h']:+.2f} | {x['vol_rel']}x | {'sim' if x.get('acima_ema20_5m') else 'não'} | "
               f"{x['stop_pct']}%/{x['alvo_pct']}% | {x['estilo']} | {x['nota']} | {x.get('descarte') or '—'}{' | meme' if x.get('meme') else ''}")
+    pad = _json(EQUIPE / "padroes.json", {}) or {}
+    if pad.get("moedas"):
+        print(f"ESTRUTURA E PADRÕES (15 min; leitor a cada 2 min, há {agora - float(pad.get('t') or 0):.0f} s). res/sup = distância em ATR; "
+              "andou = quanto o movimento já foi desde o último fundo (compra) / topo (venda); range = posição no range de 24 h:")
+        for m, x in sorted(pad["moedas"].items()):
+            e_ = x.get("estrutura") or {}
+            if not e_:
+                continue
+            rs, sp = e_.get("resistencia") or {}, e_.get("suporte") or {}
+            ln = " ".join(f"{k}({tf}) {d['estado']} {d['dist_pct']:+.2f}%" for tf in ("15m", "1h") for k, d in (x.get(f"linhas_{tf}") or {}).items())
+            sg = "; ".join(f"{s_['padrao']} {s_['lado']} {s_['contexto']} {tf}" + (f" [medido n {s_['medido']['n']}, {s_['medido']['media_pct']:+.2f}%, t {s_['medido']['t']:+.1f}]" if s_.get("medido") else "")
+                           for tf in ("15m", "1h") for s_ in x.get(f"sinais_{tf}") or [])
+            print(f"  {m[:-4]}: res {rs.get('dist_atr', '—')} ATR ({rs.get('toques', 0)}×) | sup {sp.get('dist_atr', '—')} ATR ({sp.get('toques', 0)}×) | "
+                  f"andou ↑{e_.get('subiu_do_fundo_atr')} ↓{e_.get('caiu_do_topo_atr')} ATR | range {e_.get('range_pos_pct')}%"
+                  + (f" | {ln}" if ln else "") + (f" | AGORA: {sg}" if sg else ""))
     est = _json(ORDENS_EST, {}) or {}
     try:
         ords = [json.loads(l) for l in ORDENS.read_text().splitlines() if l.strip()][-6:]
@@ -121,6 +136,14 @@ def avisos(m, lado, stop, alvo, movel_arma, x, e, agora=None):
     ult = [f.get("lado") for f in (e.get("fechadas") or [])[-10:]] + [p.get("lado") for p in (e.get("abertas") or {}).values()]
     if len(ult) >= 6 and all(l == lado for l in ult):
         av.append(f"as últimas {len(ult)} foram todas '{lado}': 42 de 46 foram compras (−3,20); as 4 vendas deram +2,26")
+    pad = (_json(EQUIPE / "padroes.json", {}) or {})            # 27/11 (dono, BOME): resistência colada e movimento que já passou
+    if agora - float(pad.get("t") or 0) < 600:
+        try:
+            sys.path.insert(0, str(AQUI.parent))
+            import padroes as P_
+            av += P_.leitura_entrada(lado, ((pad.get("moedas") or {}).get(m) or {}).get("estrutura") or {})
+        except ImportError:
+            pass
     if alvo and alvo >= 0.04 and not movel_arma:
         av.append(f"alvo {alvo:.0%} sem stop móvel: 0 de 46 chegaram ao alvo; o pico médio dos ganhos foi +1,1%")
     return av

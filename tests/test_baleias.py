@@ -3236,3 +3236,24 @@ class TreinoDoOperador(unittest.TestCase):
         av = O.avisos("ELSAUSDT", "compra", 0.01, 0.06, None, {"v15": 2.0, "v1h": 4.0, "descarte": None}, e, agora)
         self.assertEqual(len(av), 5)                       # stop curto, esticada, perdeu 2×, só compra, alvo longe sem móvel
         self.assertEqual(O.avisos("SUIUSDT", "venda", 0.02, None, None, {"v15": 0.1, "v1h": -0.5}, e, agora), [])
+
+
+class EstruturaDaEntrada(unittest.TestCase):
+    """27/11 (dono, imagem da BOME): compra colada na resistência com o movimento já feito vira aviso; no fundo, não."""
+
+    def test_bome_no_topo_e_no_fundo(self):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("padroes_t", pathlib.Path(__file__).parent.parent / "mesa" / "padroes.py")
+        P_ = _iu.module_from_spec(spec); spec.loader.exec_module(P_)
+        v, t, px = [], 0, 100.0
+        for k in range(80):                                  # lateral com topos em ~101 (resistência)
+            alto = 101.0 if k % 10 == 5 else 100.6
+            v.append([t, px, alto, 99.6, 100.2, 1]); t += 900
+        for k in range(8):                                   # subida forte até colar na resistência
+            o = 100.2 + k * 0.1; v.append([t, o, o + 0.15, o - 0.05, o + 0.1, 1]); t += 900
+        e = P_.estrutura(v)
+        av = P_.leitura_entrada("compra", e)
+        self.assertTrue(any("RESISTÊNCIA" in a for a in av), (e, av))
+        self.assertEqual(P_.leitura_entrada("compra", {}), [])
+        s = P_.sinais(v)
+        self.assertIsInstance(s, list)
