@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 03:39 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 03:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 76.6% das moedas subindo em 24 h, 88.3% em 4 h · BTC 24 h 1.45%, 4 h 1.89%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 13.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PUMP estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · UNI OCO invertido (alta, CONFIRMOU) · BIGTIME fundo duplo (alta, formado) · BONK topo duplo (baixa, formado) · BONK fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · FIL fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado) · SYRUP ombro-cabeça-ombro (baixa, formado)
 - 📰 27/11 01:47 UTC · Cointelegraph: AI is driving a flood of crypto bug reports. Now it’s helping sort them
