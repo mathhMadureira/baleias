@@ -3316,3 +3316,22 @@ class SimularVetada(unittest.TestCase):
         mv = [[0, 1, 1.04, 0.999, 1.03], [60, 1.03, 1.031, 1.02, 1.02]]
         self.assertAlmostEqual(H.simular("compra", 1.0, {"stop_pct": 0.02, "movel_arma": 0.01, "movel_guarda": 0.6}, mv), 0.024 - 0.0012)
         self.assertAlmostEqual(H.simular("venda", 1.0, {"stop_pct": 0.02}, cai), 0.0238)   # venda: preço caiu 2,5%, fecha no prazo
+
+
+class ChecagemDeEntrada(unittest.TestCase):
+    """27/11 (dono: "vender em região de suporte, parabéns pela burrice"): níveis, pavios e reversão barram a entrada errada."""
+
+    def test_niveis_pavio_reversao(self):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("chec_t", pathlib.Path(__file__).parent.parent / "mesa" / "checagem.py")
+        K = _iu.module_from_spec(spec); spec.loader.exec_module(K)
+        v = []
+        for i in range(60):                                    # cai até ~100 e faz fundo em 100 três vezes
+            base = 110 - i * 0.2 if i < 50 else 100.5
+            low = 100.0 if i in (50, 54, 58) else base - 0.3
+            v.append([base, base + 0.3, low, base, 1])
+        sup = [n for n in K.niveis(v) if n[2] == "sup"]
+        self.assertTrue(any(abs(n[0] - 100.0) < 0.3 and n[1] >= 2 for n in sup), sup)
+        self.assertEqual(K.pavios([[10, 10.1, 9, 10.05, 1]] * 3)[0], "inferior")
+        eng = [[0, 0, 0, 0, 0], [10, 10.1, 9.4, 9.5, 1], [9.4, 10.3, 9.35, 10.2, 1], [10.2, 10.3, 10.1, 10.25, 1]]
+        self.assertIn(("engolfo de alta", "compra"), K.reversao(eng))
