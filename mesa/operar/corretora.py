@@ -664,14 +664,9 @@ class Conta:
                 except ErroCorretora as ex:
                     self.anotar(f"⚠️ {par}: posição sumiu da conta e a saída ainda não aparece ({str(ex)[:80]})")
         vivos = self.c.gatilhos_abertos()
-        meus = {p[k]["id"] for p in self.e["abertas"].values() for k in ("stop", "alvo") if p.get(k)}
-        for id_, par in vivos.items():
-            p_ = self.e["abertas"].get(par)
-            if p_ and not ((p_.get("stop") or {}).get("id") in vivos):   # posição aberta sem o stop conhecido vivo: não cancela o único gatilho dela
-                continue
-            if id_ not in meus:
-                self._cancelar(par, {"id": id_})
-                self.anotar(f"🧹 gatilho desconhecido cancelado na conta: {par} ({id_})")
+        # 27/11: primeiro repõe stops/alvos ausentes; só depois limpa o que sobrar.
+        # Antes a ordem era inversa: o novo ID era gravado depois da varredura e
+        # ficava "desconhecido" na rodada seguinte, sendo cancelado pela limpeza.
         for par, x in pos.items():
             if par not in self.e["abertas"]:
                 self.c.mercado(par, "venda" if x["contratos"] > 0 else "compra", abs(x["contratos"]), reduzir=True)
@@ -702,6 +697,15 @@ class Conta:
                 except ErroCorretora as ex:
                     self.anotar(f"⚠️ {par[:-4]}: alvo não voltou ({str(ex)[:100]}); fica só o stop")
         self.e["conciliado_t"] = time.time()
+        # Agora "meus" já inclui os IDs recém-gravados → limpeza não os cancela
+        meus = {p[k]["id"] for p in self.e["abertas"].values() for k in ("stop", "alvo") if p.get(k)}
+        for id_, par in vivos.items():
+            p_ = self.e["abertas"].get(par)
+            if p_ and not ((p_.get("stop") or {}).get("id") in vivos):   # posição aberta sem stop conhecido: protege o único gatilho
+                continue
+            if id_ not in meus:
+                self._cancelar(par, {"id": id_})
+                self.anotar(f"🧹 gatilho desconhecido cancelado na conta: {par} ({id_})")
 
     def mover_stops(self):
         for par in list(self.e["abertas"]):
