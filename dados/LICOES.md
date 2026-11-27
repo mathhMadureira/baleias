@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 12:16 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 12:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,17 +64,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 83.9% das moedas subindo em 24 h, 52.5% em 4 h · BTC 24 h 1.56%, 4 h -0.02%.
+- **Amplitude:** 84.0% das moedas subindo em 24 h, 52.9% em 4 h · BTC 24 h 1.58%, 4 h -0.41%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.1%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ALICE fundo duplo (alta, CONFIRMOU) · CYBER OCO invertido (alta, formado) · LISTA fundo duplo (alta, formado) · LUNC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PORTAL OCO invertido (alta, formado) · REZ OCO invertido (alta, formado) · USUAL topo duplo (baixa, formado) · USUAL fundo duplo (alta, formado)
+- 📰 27/11 12:16 UTC · CoinDesk: Bitcoin 'death cross' is coming. Here's what happened after previous 13.
 - 📰 27/11 11:45 UTC · CoinDesk: Bitcoin on course to end seven-week losing streak while trailing stock rebound
 - 📰 27/11 11:34 UTC · CoinDesk: Live news: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains
 - 📰 27/11 11:22 UTC · CoinDesk: Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin
 - 📰 27/11 11:19 UTC · Decrypt: Kalshi Courts Small Businesses With 'Microinsurance' as State Crackdowns Bite
 - 📰 27/11 11:14 UTC · Cointelegraph: Bitcoin supply metric hits 11-year low as new ‘capitulation’ signal arrives
-- 📰 27/11 11:07 UTC · CoinDesk: Injective asks SEC to allow order books for tokenized stock trading
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 61682 apostas conferidas ao vivo, acerto 54.0%; prevê 107 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 61682 apostas conferidas ao vivo, acerto 54.0%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 

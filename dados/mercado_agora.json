@@ -1,28 +1,28 @@
 {
- "t": 1795781765,
- "hora_utc": "2026-11-27 12:16 UTC",
+ "t": 1795781954,
+ "hora_utc": "2026-11-27 12:19 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 118,
-  "subindo_pct": 53.4,
-  "mediana_pct": 0.06
+  "moedas": 119,
+  "subindo_pct": 54.6,
+  "mediana_pct": 0.05
  },
  "mercado_4h": {
-  "moedas": 118,
-  "subindo_pct": 52.5,
-  "mediana_pct": 0.14
+  "moedas": 119,
+  "subindo_pct": 52.9,
+  "mediana_pct": 0.07
  },
  "mercado_24h": {
-  "moedas": 118,
-  "subindo_pct": 83.9,
-  "mediana_pct": 2.53
+  "moedas": 119,
+  "subindo_pct": 84.0,
+  "mediana_pct": 2.52
  },
  "btc": {
   "1h": -0.01,
-  "4h": -0.02,
-  "24h": 1.56,
-  "preco": 61662.57,
-  "vol_4h_vs_media": 1.24
+  "4h": -0.41,
+  "24h": 1.58,
+  "preco": 61631.82,
+  "vol_4h_vs_media": 1.11
  },
  "maiores_quedas_4h": [
   {
@@ -172,11 +172,17 @@
   -0.16,
   0.06,
   -0.01,
-  -0.02
+  -0.07
  ],
  "contexto": {
-  "t": 1795781766,
+  "t": 1795781955,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795781767,
+    "hora_utc": "27/11 12:16",
+    "titulo": "Bitcoin 'death cross' is coming. Here's what happened after previous 13."
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795779947,
@@ -260,12 +266,6 @@
     "t": 1795763984,
     "hora_utc": "27/11 07:19",
     "titulo": "New York AG secures $1.37B court judgment against NovaTech founders"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795759200,
-    "hora_utc": "27/11 06:00",
-    "titulo": "Here’s what happened in crypto today"
    }
   ],
   "medo_ganancia": {
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 8.0,
+   "media_top20_anual_pct": 8.1,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -386,15 +386,11 @@
   }
  },
  "v4": {
-  "vela": "12:00 UTC",
-  "apostas": 100,
-  "compras": 50,
+  "vela": "11:00 UTC",
+  "apostas": 102,
+  "compras": 52,
   "vendas": 50,
   "mais_confiantes_venda": [
-   {
-    "moeda": "U",
-    "prob_subir": 0.356
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
@@ -412,15 +408,19 @@
     "prob_subir": 0.376
    },
    {
+    "moeda": "HUMA",
+    "prob_subir": 0.381
+   },
+   {
     "moeda": "FORM",
     "prob_subir": 0.382
    },
    {
-    "moeda": "HUMA",
-    "prob_subir": 0.385
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    },
    {
-    "moeda": "PEOPLE",
+    "moeda": "BABAB",
     "prob_subir": 0.386
    }
   ],
@@ -454,8 +454,8 @@
     "prob_subir": 0.598
    },
    {
-    "moeda": "WLFI",
-    "prob_subir": 0.585
+    "moeda": "NIGHT",
+    "prob_subir": 0.587
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -726,12 +726,12 @@
   "z_contra_lab": -0.95,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5029,
-    "n": 22062
+    "acerto": 0.503,
+    "n": 22287
    },
    "segue_maioria_24h": {
-    "acerto": 0.5115,
-    "n": 29358
+    "acerto": 0.512,
+    "n": 29334
    }
   },
   "referencia_ganha": [],
