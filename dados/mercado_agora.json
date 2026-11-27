@@ -1,21 +1,21 @@
 {
- "t": 1795778380,
- "hora_utc": "2026-11-27 11:19 UTC",
+ "t": 1795778593,
+ "hora_utc": "2026-11-27 11:23 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 119,
-  "subindo_pct": 59.7,
+  "moedas": 118,
+  "subindo_pct": 60.2,
   "mediana_pct": 0.16
  },
  "mercado_4h": {
-  "moedas": 119,
-  "subindo_pct": 44.5,
-  "mediana_pct": -0.11
+  "moedas": 118,
+  "subindo_pct": 45.8,
+  "mediana_pct": -0.06
  },
  "mercado_24h": {
-  "moedas": 119,
-  "subindo_pct": 79.8,
-  "mediana_pct": 2.95
+  "moedas": 118,
+  "subindo_pct": 81.4,
+  "mediana_pct": 2.98
  },
  "btc": {
   "1h": -0.05,
@@ -172,11 +172,29 @@
   0.09,
   -0.16,
   0.06,
-  -0.11
+  0.07
  ],
  "contexto": {
-  "t": 1795778381,
+  "t": 1795778593,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795778562,
+    "hora_utc": "27/11 11:22",
+    "titulo": "Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin"
+   },
+   {
+    "fonte": "Decrypt",
+    "t": 1795778387,
+    "hora_utc": "27/11 11:19",
+    "titulo": "Kalshi Courts Small Businesses With 'Microinsurance' as State Crackdowns Bite"
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795778068,
+    "hora_utc": "27/11 11:14",
+    "titulo": "Bitcoin supply metric hits 11-year low as new ‘capitulation’ signal arrives"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795777637,
@@ -248,24 +266,6 @@
     "t": 1795755992,
     "hora_utc": "27/11 05:06",
     "titulo": "Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795754856,
-    "hora_utc": "27/11 04:47",
-    "titulo": "Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795754747,
-    "hora_utc": "27/11 04:45",
-    "titulo": "Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795753787,
-    "hora_utc": "27/11 04:29",
-    "titulo": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know"
    }
   ],
   "medo_ganancia": {
@@ -274,9 +274,9 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 6.9,
+   "media_top20_anual_pct": 7.1,
    "principais_anual_pct": {
-    "BTC": 10.3,
+    "BTC": 11.0,
     "ETH": 11.0,
     "SOL": 11.0
    },
@@ -323,6 +323,13 @@
     "sentido": "alta",
     "confirmado": true,
     "nivel": 0.3804
+   },
+   {
+    "moeda": "ALICE",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.1034
    },
    {
     "moeda": "CYBER",
@@ -407,15 +414,11 @@
   }
  },
  "v4": {
-  "vela": "11:45 UTC",
-  "apostas": 119,
+  "vela": "11:00 UTC",
+  "apostas": 118,
   "compras": 48,
-  "vendas": 71,
+  "vendas": 70,
   "mais_confiantes_venda": [
-   {
-    "moeda": "ALICE",
-    "prob_subir": 0.351
-   },
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
@@ -443,6 +446,10 @@
    {
     "moeda": "BABAB",
     "prob_subir": 0.386
+   },
+   {
+    "moeda": "BB",
+    "prob_subir": 0.394
    }
   ],
   "mais_confiantes_compra": [
@@ -747,12 +754,12 @@
   "z_contra_lab": -0.84,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5036,
-    "n": 22507
+    "acerto": 0.503,
+    "n": 22080
    },
    "segue_maioria_24h": {
-    "acerto": 0.5128,
-    "n": 29466
+    "acerto": 0.5117,
+    "n": 29441
    }
   },
   "referencia_ganha": [],
