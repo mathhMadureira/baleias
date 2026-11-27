@@ -1,21 +1,21 @@
 {
- "t": 1795770587,
- "hora_utc": "2026-11-27 09:09 UTC",
+ "t": 1795770800,
+ "hora_utc": "2026-11-27 09:13 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 116,
-  "subindo_pct": 61.2,
-  "mediana_pct": 0.13
+  "moedas": 117,
+  "subindo_pct": 60.7,
+  "mediana_pct": 0.12
  },
  "mercado_4h": {
-  "moedas": 116,
-  "subindo_pct": 56.0,
+  "moedas": 117,
+  "subindo_pct": 56.4,
   "mediana_pct": 0.19
  },
  "mercado_24h": {
-  "moedas": 116,
-  "subindo_pct": 78.4,
-  "mediana_pct": 2.09
+  "moedas": 117,
+  "subindo_pct": 78.6,
+  "mediana_pct": 2.11
  },
  "btc": {
   "1h": 0.09,
@@ -172,10 +172,10 @@
   -0.11,
   -0.06,
   0.09,
-  0.17
+  0.02
  ],
  "contexto": {
-  "t": 1795770588,
+  "t": 1795770801,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 10.7,
+   "media_top20_anual_pct": 10.5,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -292,7 +292,7 @@
     "mm200_subindo": false,
     "leitura": "tendência de baixa (preço abaixo das médias de 50 e 200 dias)"
    },
-   "amplitude_acima_mm50_pct": 15.0,
+   "amplitude_acima_mm50_pct": 12.5,
    "moedas_medidas": 40
   },
   "padroes_1h": [
@@ -423,8 +423,8 @@
  "v4": {
   "vela": "11:45 UTC",
   "apostas": 104,
-  "compras": 38,
-  "vendas": 66,
+  "compras": 39,
+  "vendas": 65,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -451,12 +451,12 @@
     "prob_subir": 0.376
    },
    {
-    "moeda": "RUNE",
+    "moeda": "FORM",
     "prob_subir": 0.382
    },
    {
-    "moeda": "FORM",
-    "prob_subir": 0.382
+    "moeda": "PEOPLE",
+    "prob_subir": 0.386
    }
   ],
   "mais_confiantes_compra": [
@@ -761,12 +761,12 @@
   "z_contra_lab": -0.58,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5049,
-    "n": 22065
+    "acerto": 0.5045,
+    "n": 22164
    },
    "segue_maioria_24h": {
-    "acerto": 0.512,
-    "n": 29616
+    "acerto": 0.5121,
+    "n": 29635
    }
   },
   "referencia_ganha": [],
