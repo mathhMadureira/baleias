@@ -666,6 +666,9 @@ class Conta:
         vivos = self.c.gatilhos_abertos()
         meus = {p[k]["id"] for p in self.e["abertas"].values() for k in ("stop", "alvo") if p.get(k)}
         for id_, par in vivos.items():
+            p_ = self.e["abertas"].get(par)
+            if p_ and not ((p_.get("stop") or {}).get("id") in vivos):   # posição aberta sem o stop conhecido vivo: não cancela o único gatilho dela
+                continue
             if id_ not in meus:
                 self._cancelar(par, {"id": id_})
                 self.anotar(f"🧹 gatilho desconhecido cancelado na conta: {par} ({id_})")
@@ -673,6 +676,12 @@ class Conta:
             if par not in self.e["abertas"]:
                 self.c.mercado(par, "venda" if x["contratos"] > 0 else "compra", abs(x["contratos"]), reduzir=True)
                 self.anotar(f"🧹 posição desconhecida fechada a mercado: {par} {x['contratos']:+d}")
+        meus_ids = {p[k]["id"] for p in self.e["abertas"].values() for k in ("stop", "alvo") if p.get(k)}
+        if meus_ids - set(vivos):                                # 27/11: rede instável devolve lista parcial → relê antes de repor
+            try:                                                 # (antes: repunha, e o antigo voltava como "desconhecido")
+                vivos = {**vivos, **self.c.gatilhos_abertos()}
+            except ErroCorretora:
+                pass
         for par, p in list(self.e["abertas"].items()):
             st = p.get("stop")
             if par in pos and (not st or st["id"] not in vivos):
