@@ -1919,3 +1919,14 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Perto (não passam):** Topo triplo venda contra 15 min (n 60, +0,29%, t 1,55); OCO venda a favor 1 h (n 60, +0,69%, t 1,47); Engolfo de baixa venda a favor 15 min (n 621, +0,09%, t 1,27).
 - **Perdem com força:** Martelo compra contra 15 min (t −4,7), Estrela cadente venda contra 15 min (t −4,2), Cunha descendente compra contra 15 min (t −3,5), Engolfo de alta compra contra 15 min (t −3,3).
 - **Leitura (H85 + H86):** quase tudo que fica perto de zero ou positivo é VENDA; as compras de reversão (martelo, engolfo de alta, estrela da manhã, OCO invertido, fundo triplo) perdem neste período de alta do BTC — coerente com as 42 compras da carteira (−3,20).
+
+## H88 (27/11/2026, pedido do dono: "copie e implemente" o Grok Bot) — agente CÉTICO antes de cada ordem — PRÉ-REGISTRO
+- **Fonte do padrão:** mesas de agentes do Grok Bot (MindStudio: bot "bear" que contesta a tese dos outros; whales.market: risco separado da execução). Nenhum número de lucro dessas fontes foi verificado.
+- **Como funciona:** toda ordem `ordem_bingx.py abrir` nasce "aguardando o cético". O código acorda o Risco (papel de cético), que dá `aprovar <id>` ou `vetar <id> "<motivo com números>"`. O motor só executa depois da aprovação; sem resposta em 150 s, a ordem segue (o cético não pode travar a mesa). Veto = ordem cancelada.
+- **Medida (fixa antes de ver):** para cada ordem vetada, o código simula o plano dela (stop/alvo/stop móvel/prazo) nas velas de 1 min da BingX a partir do preço de referência. Depois de 30 ordens vetadas OU 30 dias: o cético AJUDA se a média simulada das vetadas for < 0 e menor que a média real das aprovadas que entraram. Se as vetadas tiverem média ≥ à das aprovadas, o cético sai.
+- **Previsão registrada:** o cético veta 20–40% e as vetadas têm média negativa (entradas no topo, contra o BTC).
+
+## H89 (27/11/2026, mesmo pedido) — feed EM ALTA (burburinho) para o Radar e o Operador — PRÉ-REGISTRO
+- **Fonte do padrão:** o "analista de notícias e do X" das mesas do Grok Bot. Sem login no X pelo código: usamos fontes públicas — DexScreener (tokens com mais impulso pago e perfis novos), CoinGecko (moedas em tendência nas buscas) e a BingX (maiores altas/baixas de 24 h com volume), cruzadas com os contratos perpétuos da BingX.
+- **Uso:** é só INFORMAÇÃO no `ver` (seção EM ALTA); não é regra e não abre ordem sozinho. Ordem com moeda tirada do feed marca "em alta" na tese.
+- **Medida:** depois de 30 operações com "em alta" na tese, comparar a média líquida com as outras do Operador no mesmo período. Ajuda se a média for maior e > 0.

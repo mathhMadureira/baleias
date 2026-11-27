@@ -1980,7 +1980,7 @@ class PainelMesa(unittest.TestCase):
         html = (pathlib.Path(__file__).resolve().parent.parent / "baleias" / "terminal.html").read_text()
         self.assertNotIn('<script src="http', html.replace("<script defer src", "<script src"))   # 27/11: biblioteca de gráficos guardada em /static, nunca CDN
         self.assertNotIn("Polymarket", html)                                      # regra 6 do dono
-        for parte in ('id="lpos"', 'id="lag"', 'id="lcanal"', 'id="lfe"', 'id="curva"', "/api/vivo"):   # 27/11: tudo em uma tela (posições, equipe, conversa, operações, curva)
+        for parte in ('id="lpos"', 'id="lag"', 'id="lcanal"', 'id="lfe"', 'id="ce"', "/api/vivo"):   # 27/11: tudo em uma tela (posições, equipe, conversa, operações, curva)
             self.assertIn(parte, html)
 
 
@@ -3258,3 +3258,61 @@ class EstruturaDaEntrada(unittest.TestCase):
         self.assertEqual(P_.leitura_entrada("compra", {}), [])
         s = P_.sinais(v)
         self.assertIsInstance(s, list)
+
+
+class CeticoAntesDaOrdem(unittest.TestCase):
+    """27/11 (H88, dono: "copie e implemente" o Grok Bot): toda ordem espera o cético; veto cancela; sem resposta em 150 s, segue."""
+
+    def test_espera_veto_aprova(self):
+        import importlib.util as _iu, json as _j
+        spec = _iu.spec_from_file_location("motor_t", pathlib.Path(__file__).parent.parent / "mesa" / "operar" / "motor.py")
+        M = _iu.module_from_spec(spec); spec.loader.exec_module(M)
+        d = pathlib.Path(_tf.mkdtemp())
+        M.ORDENS, M.ORDENS_EST, M.CETICO = d / "o.jsonl", d / "est.json", d / "cet.json"
+        base = {"tipo": "abrir", "lado": "compra", "preco_ref": 1.0, "stop_pct": 0.02, "prazo_min": 60, "risco_pct": 0.05,
+                "teto": 0.01, "validade_min": 10, "conf": "alta", "por": "laboratorio", "tese": "x", "cetico": True}
+        M.ORDENS.write_text("\n".join(_j.dumps({**base, "id": i, "moeda": m, "t": 1000}) for i, m in (("a", "AUSDT"), ("b", "BUSDT"), ("c", "CUSDT"))) + "\n")
+        cmd, radar, e = {"max_pos": 5, "alav": 20}, {"entradas": []}, {"abertas": {}, "patrimonio": 10}
+        self.assertEqual(M.ordens_para_lista(e, cmd, radar, 1060, 0), [])                  # 60 s, ninguém decidiu: espera
+        M.CETICO.write_text(_j.dumps({"a": {"decisao": "vetada", "motivo": "m"}, "b": {"decisao": "aprovada", "motivo": "m"}}))
+        out = M.ordens_para_lista(e, cmd, radar, 1070, 0)
+        self.assertEqual([o["moeda"] for o in out], ["BUSDT"])                               # aprovada entra, vetada não, c espera
+        self.assertIn("vetada", _j.loads(M.ORDENS_EST.read_text())["a"]["estado"] + _j.loads(M.ORDENS_EST.read_text())["a"]["texto"])
+        out = M.ordens_para_lista(e, cmd, radar, 1200, 0)
+        self.assertIn("CUSDT", [o["moeda"] for o in out])                                    # 200 s sem cético: segue
+
+
+class EmAlta(unittest.TestCase):
+    """27/11 (H89): o feed EM ALTA cruza burburinho público com os perpétuos da BingX e tira ações tokenizadas."""
+
+    def test_montar(self):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("tend_t", pathlib.Path(__file__).parent.parent / "mesa" / "tendencias.py")
+        T = _iu.module_from_spec(spec); spec.loader.exec_module(T)
+        tick = [{"symbol": "PORTAL-USDT", "priceChangePercent": "200", "quoteVolume": "2e7"},
+                {"symbol": "NCSKX2USD-USDT", "priceChangePercent": "50", "quoteVolume": "2e7"},
+                {"symbol": "TINY-USDT", "priceChangePercent": "90", "quoteVolume": "1000"}]
+        contr = [{"symbol": "PORTAL-USDT", "status": 1}, {"symbol": "PENGU-USDT", "status": 1}]
+        gecko = {"coins": [{"item": {"symbol": "pengu", "name": "Pudgy"}}, {"item": {"symbol": "ZZZ"}}]}
+        boosts = [{"tokenAddress": "A1", "chainId": "solana", "totalAmount": 500}]
+        f = T.montar(tick, contr, gecko, boosts, {"A1": {"baseToken": {"symbol": "meme"}, "volume": {"h24": 9000}}})
+        self.assertEqual([x["moeda"] for x in f["bingx"]], ["PORTAL"])
+        self.assertEqual(f["acionaveis"], ["PENGU"])
+        self.assertEqual(f["dex"][0]["moeda"], "MEME")
+        self.assertIn("PORTAL", T.texto({**f, "t": 0}))
+
+
+class SimularVetada(unittest.TestCase):
+    """H88: a ordem vetada é simulada com o plano dela (stop, alvo, stop móvel, prazo) nas velas de 1 min."""
+
+    def test_stop_alvo_movel(self):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("h88_t", pathlib.Path(__file__).parent.parent / "lab" / "h88_cetico.py")
+        H = _iu.module_from_spec(spec); spec.loader.exec_module(H)
+        cai = [[0, 1, 1.001, 0.97, 0.975]]
+        self.assertAlmostEqual(H.simular("compra", 1.0, {"stop_pct": 0.02}, cai), -0.0212)
+        sobe = [[0, 1, 1.06, 0.999, 1.05]]
+        self.assertAlmostEqual(H.simular("compra", 1.0, {"stop_pct": 0.02, "alvo_pct": 0.05}, sobe), 0.0488)
+        mv = [[0, 1, 1.04, 0.999, 1.03], [60, 1.03, 1.031, 1.02, 1.02]]
+        self.assertAlmostEqual(H.simular("compra", 1.0, {"stop_pct": 0.02, "movel_arma": 0.01, "movel_guarda": 0.6}, mv), 0.024 - 0.0012)
+        self.assertAlmostEqual(H.simular("venda", 1.0, {"stop_pct": 0.02}, cai), 0.0238)   # venda: preço caiu 2,5%, fecha no prazo

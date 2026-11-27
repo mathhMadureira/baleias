@@ -30,6 +30,8 @@ EQUIPE = Path("/home/servidor-de-producao/OpenBot/Shared/baleias/equipe")
 ORDENS, ORDENS_EST = EQUIPE / "ordens_bingx.jsonl", EQUIPE / "ordens_bingx_estado.json"
 CONTA = AQUI / "corretoras" / "laboratorio.json"
 LICOES = EQUIPE / "licoes_operador.md"
+CETICO = EQUIPE / "cetico.json"            # 27/11 (H88): decisões do cético {id: {decisao, motivo, t}}
+ESPERA_CETICO_S = 150                      # sem resposta nesse tempo, a ordem segue (o cético não trava a mesa)
 
 
 def _json(p, d=None):
@@ -87,14 +89,23 @@ def ver():
             print(f"  {m[:-4]}: res {rs.get('dist_atr', '—')} ATR ({rs.get('toques', 0)}×) | sup {sp.get('dist_atr', '—')} ATR ({sp.get('toques', 0)}×) | "
                   f"andou ↑{e_.get('subiu_do_fundo_atr')} ↓{e_.get('caiu_do_topo_atr')} ATR | range {e_.get('range_pos_pct')}%"
                   + (f" | {ln}" if ln else "") + (f" | AGORA: {sg}" if sg else ""))
+    try:                                                   # 27/11 (H89): o "analista de notícias e do X" do Grok Bot, com fontes públicas
+        sys.path.insert(0, str(AQUI.parent))
+        import tendencias as T_
+        print(T_.texto(T_.ler()))
+    except Exception as ex:
+        print(f"EM ALTA: indisponível ({type(ex).__name__})")
     est = _json(ORDENS_EST, {}) or {}
+    cet = _json(CETICO, {}) or {}
     try:
         ords = [json.loads(l) for l in ORDENS.read_text().splitlines() if l.strip()][-6:]
     except OSError:
         ords = []
     for o in ords:
         s = est.get(o["id"], {})
-        print(f"ORDEM {o['id']} {o['moeda'][:-4]} {o['lado']} ({o.get('conf')}): {s.get('estado', 'pendente')} {s.get('texto', '')}")
+        c = cet.get(o["id"]) or {}
+        print(f"ORDEM {o['id']} {o['moeda'][:-4]} {o['lado']} ({o.get('conf')}): {s.get('estado', 'pendente')} {s.get('texto', '')}"
+              + (f" | cético: {c['decisao']} — {c.get('motivo', '')[:120]}" if c else (" | cético: aguardando" if o.get("cetico") else "")))
     fech = [f for f in e.get("fechadas") or [] if f.get("plano_agente")]
     if fech:
         print(f"PLACAR do Operador: {len(fech)} ops, {sum(1 for f in fech if f['resultado_usd'] > 0)} ganhas, US$ {sum(f['resultado_usd'] for f in fech):+.2f} "
@@ -149,6 +160,30 @@ def avisos(m, lado, stop, alvo, movel_arma, x, e, agora=None):
     return av
 
 
+def decidir_cetico(oid, decisao, motivo, agora=None):
+    """H88: o cético (Risco) aprova ou veta uma ordem antes de o motor executar. Veto exige motivo com números."""
+    agora = agora or time.time()
+    try:
+        o = next(json.loads(l) for l in ORDENS.read_text().splitlines() if l.strip() and json.loads(l).get("id") == oid)
+    except (OSError, StopIteration):
+        print(f"RECUSADA: ordem {oid} não existe")
+        sys.exit(2)
+    if len(motivo.strip()) < 15:
+        print("RECUSADA: motivo curto — diga o porquê com números do ver")
+        sys.exit(2)
+    if agora - float(o.get("t") or 0) > ESPERA_CETICO_S and decisao == "vetada":
+        print(f"tarde demais: a ordem {oid} já seguiu sem o cético ({ESPERA_CETICO_S} s). Se a tese é ruim, mande sair: ordem_bingx.py sair {o['moeda'][:-4]} \"<motivo>\"")
+        return
+    with open(CETICO.with_suffix(".lock"), "w") as t:
+        fcntl.flock(t, fcntl.LOCK_EX)
+        d = _json(CETICO, {}) or {}
+        d[oid] = {"decisao": decisao, "motivo": " ".join(motivo.split())[:300], "t": agora, "moeda": o["moeda"], "lado": o["lado"],
+                  "preco_ref": o.get("preco_ref"), "plano": {k: o.get(k) for k in ("stop_pct", "alvo_pct", "prazo_min", "movel_arma", "movel_guarda")}}
+        d = {k: v for k, v in d.items() if agora - float(v.get("t") or 0) < 60 * 86400}
+        CETICO.write_text(json.dumps(d, ensure_ascii=False))
+    print(f"ordem {oid} {decisao} pelo cético: {motivo[:120]}")
+
+
 def main(argv):
     if argv[:1] == ["ver"]:
         return ver()
@@ -157,6 +192,8 @@ def main(argv):
                              capture_output=True, text=True, timeout=30)
         print((out.stdout or out.stderr)[-300:])
         return
+    if argv[:1] in (["aprovar"], ["vetar"]) and len(argv) >= 3:
+        return decidir_cetico(argv[1], "aprovada" if argv[0] == "aprovar" else "vetada", " ".join(argv[2:]))
     if argv[:1] != ["abrir"]:
         print(__doc__)
         return
@@ -209,11 +246,20 @@ def main(argv):
     o = gravar({"id": uuid.uuid4().hex[:8], "t": agora, "tipo": "abrir", "moeda": m, "lado": a.lado, "preco_ref": x["preco"], "stop_pct": a.stop,
                 "alvo_pct": a.alvo, "prazo_min": int(a.prazo), "movel_arma": a.movel_arma, "movel_guarda": a.movel_guarda, "risco_pct": a.risco,
                 "teto": a.teto, "validade_min": a.validade, "conf": a.conf, "por": "laboratorio", "tese": " ".join(a.tese.split())[:300],
-                "avisos": av, "ciente": a.ciente.strip()[:200]})
+                "avisos": av, "ciente": a.ciente.strip()[:200], "cetico": True})
+    try:                                                   # H88: acorda o cético (Risco) com a ordem inteira
+        sys.path.insert(0, str(AQUI.parent))
+        import acordar as K_
+        K_.acordar("guardiao", f"NOVA ORDEM {o['id']}: {a.lado} {m[:-4]} perto de {x['preco']}, stop {a.stop:.2%}, conf {a.conf}. "
+                   f"Tese: {o['tese'][:220]}" + (f" | avisos ignorados: {'; '.join(av)[:150]} | ciente: {o['ciente'][:100]}" if av else "")
+                   + f" | Seja o CÉTICO: ordem_bingx.py aprovar {o['id']} \"<por quê>\" ou vetar {o['id']} \"<por quê, com números>\" em até {ESPERA_CETICO_S} s.",
+                   chave=f"ordem {o['id']}", intervalo_s=0)
+    except Exception as ex:
+        print(f"(cético não acordado: {type(ex).__name__}; a ordem segue em {ESPERA_CETICO_S} s)")
     print(f"ordem {o['id']} gravada: {a.lado} {m[:-4]} perto de {x['preco']}; stop −{a.stop:.2%}"
           + (f", alvo +{a.alvo:.2%}" if a.alvo else ", sem alvo fixo") + f", prazo {int(a.prazo)} min"
           + (f", stop móvel a partir de +{a.movel_arma:.2%} guardando {a.movel_guarda:.0%} do pico" if a.movel_arma else ", sem stop móvel")
-          + f"; risco {a.risco:.0%} da carteira; vale {a.validade:.0f} min. O motor executa em até 30 s; confira com: ordem_bingx.py ver")
+          + f"; risco {a.risco:.0%} da carteira; vale {a.validade:.0f} min. O cético tem {ESPERA_CETICO_S} s para vetar; depois o motor executa em até 30 s. Confira com: ordem_bingx.py ver")
 
 
 if __name__ == "__main__":

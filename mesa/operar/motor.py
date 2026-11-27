@@ -32,6 +32,8 @@ VIGIA_S, PICO_MIN = 3, 0.0005
 TRAVA_CARTEIRA, TRAVA_FRACAO = 0.06, 0.5   # dono (26/11): lucro aberto do conjunto ≥ 6% da carteira → cada posição no lucro trava metade do que ganhou             # dono (26/11): vigiar a cada 3 s; só mexe no stop quando o pico sobe 0,05% ou mais
 ORDENS = EQUIPE / "ordens_bingx.jsonl"            # 27/11 (dono: "o foco tem que ser nos agentes"): ordens do Operador
 ORDENS_EST = EQUIPE / "ordens_bingx_estado.json"
+CETICO = EQUIPE / "cetico.json"                    # 27/11 (H88): aprovar/vetar do cético antes de executar
+ESPERA_CETICO_S = 150
 PADRAO = {"modo": "agente", "ligado": True, "estilo": "posição", "risco_pct": 0.05, "prazo_min": 90, "stop_min_pct": 0.0, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
@@ -170,6 +172,14 @@ def ordens_para_lista(e, cmd, radar, agora, ocupadas):
             else:
                 est[oid] = {"estado": "cancelada", "t": agora, "texto": "já havia posição nessa moeda"}
             continue
+        if o.get("cetico"):                                     # H88: espera o cético (no máximo ESPERA_CETICO_S)
+            c = (_json(CETICO, {}) or {}).get(oid) or {}
+            if c.get("decisao") == "vetada":
+                est[oid] = {"estado": "cancelada", "t": agora, "texto": f"vetada pelo cético: {str(c.get('motivo'))[:150]}"}
+                continue
+            if c.get("decisao") != "aprovada" and agora - float(o.get("t") or 0) < ESPERA_CETICO_S:
+                est[oid] = {"estado": "aguardando o cético", "t": agora, "tentativas": est.get(oid, {}).get("tentativas", 0)}
+                continue
         px, ref = precos.get(m), float(o.get("preco_ref") or 0)
         if px and ref:
             mov = (px / ref - 1) * (1 if o["lado"] == "compra" else -1)
