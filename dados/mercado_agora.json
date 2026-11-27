@@ -1,10 +1,10 @@
 {
- "t": 1795804273,
- "hora_utc": "2026-11-27 18:31 UTC",
+ "t": 1795804457,
+ "hora_utc": "2026-11-27 18:34 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 134,
-  "subindo_pct": 64.2,
+  "subindo_pct": 64.9,
   "mediana_pct": 0.15
  },
  "mercado_4h": {
@@ -18,11 +18,11 @@
   "mediana_pct": 0.21
  },
  "btc": {
-  "1h": -0.09,
-  "4h": -2.54,
-  "24h": -0.97,
-  "preco": 59921.02,
-  "vol_4h_vs_media": 2.3
+  "1h": 0.27,
+  "4h": -2.58,
+  "24h": -1.46,
+  "preco": 59838.01,
+  "vol_4h_vs_media": 2.26
  },
  "maiores_quedas_4h": [
   {
@@ -172,10 +172,10 @@
   1.52,
   -0.26,
   -0.05,
-  -0.1
+  -0.08
  ],
  "contexto": {
-  "t": 1795804274,
+  "t": 1795804458,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 1.1,
+   "media_top20_anual_pct": 0.9,
    "principais_anual_pct": {
-    "BTC": 4.0,
+    "BTC": 4.2,
     "ETH": 11.0,
-    "SOL": 3.8
+    "SOL": 3.9
    },
    "leitura": "neutro"
   },
@@ -338,9 +338,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 90,
-  "compras": 53,
-  "vendas": 37,
+  "apostas": 106,
+  "compras": 63,
+  "vendas": 43,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -356,7 +356,7 @@
    },
    {
     "moeda": "RUNE",
-    "prob_subir": 0.377
+    "prob_subir": 0.376
    },
    {
     "moeda": "FORM",
@@ -377,6 +377,10 @@
   ],
   "mais_confiantes_compra": [
    {
+    "moeda": "BONK",
+    "prob_subir": 0.67
+   },
+   {
     "moeda": "PSG",
     "prob_subir": 0.651
    },
@@ -385,28 +389,24 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "BONK",
-    "prob_subir": 0.645
+    "moeda": "SYRUP",
+    "prob_subir": 0.639
    },
    {
     "moeda": "SHIB",
-    "prob_subir": 0.634
+    "prob_subir": 0.639
    },
    {
     "moeda": "ENS",
     "prob_subir": 0.614
    },
    {
-    "moeda": "SYRUP",
-    "prob_subir": 0.61
+    "moeda": "CYBER",
+    "prob_subir": 0.611
    },
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
-   },
-   {
-    "moeda": "MITO",
-    "prob_subir": 0.608
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
