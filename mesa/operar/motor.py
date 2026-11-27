@@ -30,7 +30,9 @@ AGENTE = "laboratorio"
 CICLO_S, RADAR_S, ESFRIA_S = 30, 60, 30 * 60
 VIGIA_S, PICO_MIN = 3, 0.0005
 TRAVA_CARTEIRA, TRAVA_FRACAO = 0.06, 0.5   # dono (26/11): lucro aberto do conjunto ≥ 6% da carteira → cada posição no lucro trava metade do que ganhou             # dono (26/11): vigiar a cada 3 s; só mexe no stop quando o pico sobe 0,05% ou mais
-PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "prazo_min": 90, "stop_min_pct": 0.0, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
+ORDENS = EQUIPE / "ordens_bingx.jsonl"            # 27/11 (dono: "o foco tem que ser nos agentes"): ordens do Operador
+ORDENS_EST = EQUIPE / "ordens_bingx_estado.json"
+PADRAO = {"modo": "agente", "ligado": True, "estilo": "posição", "risco_pct": 0.05, "prazo_min": 90, "stop_min_pct": 0.0, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
 
@@ -122,6 +124,61 @@ def tese_quebrada(p, agora):
     return None
 
 
+def _ordens_est():
+    return _json(ORDENS_EST, {}) or {}
+
+
+def ordens_para_lista(e, cmd, radar, agora, ocupadas):
+    """Modo agente (27/11): o motor NÃO escolhe moeda. Cada ordem válida do Operador vira uma entrada com o plano DELE
+    (stop, alvo, prazo, stop móvel opcional). O código só confere: validade, preço não fugiu do teto, moeda não aberta."""
+    est = _ordens_est()
+    try:
+        linhas = [json.loads(l) for l in ORDENS.read_text().splitlines() if l.strip()]
+    except (OSError, ValueError):
+        linhas = []
+    precos = {x["moeda"]: x.get("preco") for x in ((radar or {}).get("entradas") or []) + ((radar or {}).get("descartes") or [])}
+    abertas = e.get("abertas") or {}
+    out = []
+    for o in linhas:
+        oid, m = o.get("id"), o.get("moeda")
+        if o.get("tipo") != "abrir" or est.get(oid, {}).get("estado") in ("executada", "expirou", "cancelada", "falhou"):
+            continue
+        if agora - float(o.get("t") or 0) > float(o.get("validade_min") or 10) * 60:
+            est[oid] = {"estado": "expirou", "t": agora, "texto": "validade acabou sem executar"}
+            continue
+        if m in abertas:
+            if abertas[m].get("ordem") == oid:
+                est[oid] = {"estado": "executada", "t": agora, "texto": f"entrou a {abertas[m]['entrada']:.6g}"}
+            else:
+                est[oid] = {"estado": "cancelada", "t": agora, "texto": "já havia posição nessa moeda"}
+            continue
+        px, ref = precos.get(m), float(o.get("preco_ref") or 0)
+        if px and ref:
+            mov = (px / ref - 1) * (1 if o["lado"] == "compra" else -1)
+            if mov > float(o.get("teto") or 0.01):
+                est[oid] = {"estado": "cancelada", "t": agora, "texto": f"preço andou {mov:+.2%} a favor antes de entrar (teto {float(o.get('teto') or 0.01):.1%}): não persegue"}
+                continue
+        if ocupadas + len(out) >= cmd["max_pos"]:
+            continue                                            # espera vaga dentro da validade
+        tent = est.get(oid, {}).get("tentativas", 0)
+        if tent >= 3:
+            est[oid] = {"estado": "falhou", "t": agora, "texto": "3 tentativas sem entrar (veja eventos da corretora)"}
+            continue
+        est[oid] = {"estado": "pendente", "t": agora, "tentativas": tent + 1}
+        stop = float(o["stop_pct"])
+        patr = float(e.get("patrimonio") or 10)
+        alav = max(1, min(50, int(cmd.get("alav") or 20)))
+        margem = max(0.05, min(0.5, float(cmd.get("margem_pct") or 0.3)))
+        risco = max(0.005, min(0.10, float(o.get("risco_pct") or cmd.get("risco_pct") or 0.05)))
+        out.append({"moeda": m, "lado": o["lado"], "stop_pct": stop, "alvo_pct": o.get("alvo_pct"), "max_min": int(o.get("prazo_min") or 240),
+                    "nocional_usd": round(min(patr * margem * alav, patr * risco / stop), 2), "alav": alav,
+                    "plano_agente": True, "movel_arma": o.get("movel_arma"), "movel_guarda": o.get("movel_guarda"),
+                    "ordem": oid, "conf": o.get("conf"), "por": o.get("por"),
+                    "motivo": f"[Operador {o.get('conf')}] {str(o.get('tese'))[:200]}"})
+    ORDENS_EST.write_text(json.dumps({k: v for k, v in est.items() if agora - float(v.get("t") or 0) < 3 * 86400}, ensure_ascii=False))
+    return out
+
+
 def montar(e, cmd, radar, risco, agora):
     """Lista COMPLETA de posições desejadas (formato da decisão do corretora.py)."""
     abertas = e.get("abertas") or {}
@@ -129,14 +186,18 @@ def montar(e, cmd, radar, risco, agora):
     if risco and risco.get("acao") == "SAIR" and agora - float(risco.get("t") or 0) < 600:
         sair[str(risco.get("moeda", "")).upper()] = f"Risco mandou sair: {str(risco.get('motivo') or '')[:60]}"
     for par, p in abertas.items():
-        if par not in sair:
+        if par not in sair and not p.get("plano_agente"):        # plano do agente: só o agente decide sair
             motivo = tese_quebrada({**p, "moeda": par}, agora)
             if motivo:
                 sair[par] = f"tese quebrou: {motivo}"
                 quadro(f"tese quebrou em {par[:-4]}: {motivo}; saio")
     lista = [{"moeda": par, "lado": p["lado"], "motivo": p.get("motivo", ""), "stop_pct": p.get("stop_pct"), "alvo_pct": p.get("alvo_pct"),
               "max_min": p.get("max_min")} for par, p in abertas.items() if par not in sair]
-    if not cmd["ligado"] or not radar:
+    if not cmd["ligado"]:
+        return lista, sair
+    if cmd.get("modo") == "agente":
+        return lista + ordens_para_lista(e, cmd, radar, agora, len(lista)), sair
+    if not radar:
         return lista, sair
     recentes = {x.get("moeda") for x in e.get("fechadas") or []
                 if agora - max(float(x.get("saida_t") or 0), float(x.get("registrada_t") or 0)) < ESFRIA_S}
@@ -205,7 +266,7 @@ def volta(agora=None):
         antes_ab, antes_fe = set(conta.e.get("abertas") or {}), len(conta.e.get("fechadas") or [])
         pz = int(cmd.get("prazo_min") or 90)
         for p_ in (conta.e.get("abertas") or {}).values():
-            if float(p_.get("max_min") or 0) > pz:
+            if float(p_.get("max_min") or 0) > pz and not p_.get("plano_agente"):
                 p_["max_min"] = pz
         lista, sair = montar(conta.e, cmd, radar, risco, agora)
         for par, motivo in sair.items():                     # a saída leva o motivo real (quem pediu e por quê), não "fora da lista"
@@ -254,14 +315,14 @@ def volta(agora=None):
     return estado
 
 
-CHAVES = {"stop_min_pct", "prazo_min", "risco_pct", "estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
+CHAVES = {"modo", "stop_min_pct", "prazo_min", "risco_pct", "estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
 
 
 DONOS = {                                                     # 25/11: cada decisão tem UM dono; os outros propõem no canal (canal.py)
     "lados": {"laboratorio", "baleias"}, "nota_min": {"laboratorio", "baleias"}, "estilo": {"laboratorio", "baleias"}, "ligado": {"laboratorio", "baleias"},
     "preferidas": {"cacador", "baleias"}, "bloqueadas": {"cacador", "laboratorio", "baleias"},
     "sair_agora": {"guardiao", "laboratorio", "baleias"},
-    "max_pos": {"baleias"}, "alav": {"baleias"}, "risco_pct": {"baleias"}, "prazo_min": {"baleias"}, "stop_min_pct": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
+    "modo": {"baleias"}, "max_pos": {"baleias"}, "alav": {"baleias"}, "risco_pct": {"baleias"}, "prazo_min": {"baleias"}, "stop_min_pct": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
 }
 
 

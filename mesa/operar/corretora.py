@@ -588,6 +588,7 @@ class Conta:
         if falta:
             return self.anotar(f"{par[:-4]}: a decisão não traz {', '.join(falta)}; não entra (REGRAS §5)")
         pedido = {"noc": prm.get("nocional_usd"), "alav": prm.get("alav")}   # 25/11: o motor pode pedir tamanho e alavancagem
+        plano = {k: prm[k] for k in ("plano_agente", "movel_arma", "movel_guarda", "ordem", "conf", "por") if prm.get(k) is not None}
         prm = parametros(prm)                                              # REGRAS.md §5: os valores que a execução aplica
         ctr = self.c.contrato(par)
         if not ctr:
@@ -635,7 +636,7 @@ class Conta:
         self.e["abertas"][par] = {"moeda": par, "lado": lado, "entrada": ent, "entrada_t": t0 / 1000, "entrada_ms": t0,
                                   "contratos": q, "mult": ctr["mult"], "nocional": q * ent * ctr["mult"], "gasto": gasto, "alav": usada, "motivo": str(motivo)[:300],
                                   "decisao_t": decisao_t, "entrada_id": o["id"], "pico": 0.0, "stop_tipo": "segurança",
-                                  "taxa_entrada": taxa_ent, **prm}
+                                  "taxa_entrada": taxa_ent, **prm, **plano}
         self.salvar()                                                      # a posição existe na corretora: fica no estado antes do próximo passo
         sp, ap = prm["stop_pct"], prm.get("alvo_pct")
         try:
@@ -700,11 +701,16 @@ class Conta:
             for t, h, l in self.c.velas_1m(par, max(p["entrada_ms"], p.get("movel_ate", 0))):
                 p["pico"] = max(p.get("pico", 0.0), (h / p["entrada"] - 1) if compra else (1 - l / p["entrada"]))
                 p["movel_ate"] = t + 60_000
-            arma = min(armar_em(p.get("alvo_pct"), p.get("movel", True)), MOVEL_ARMA_MAX)
-            trava = float(p.get("trava") or 0)                                 # trava da carteira (motor): guarda parte do lucro do conjunto
-            if p["pico"] < arma and p["pico"] < GARANTIA_ARMA and not trava:
+            if p.get("plano_agente"):                                          # 27/11: plano do agente — sem garantia nem trava automáticas;
+                arma, gar_arma, trava = float(p.get("movel_arma") or 99), 99, 0.0  # stop móvel só se o agente pediu (movel_arma)
+                guarda = float(p.get("movel_guarda") or GUARDA)
+            else:
+                arma = min(armar_em(p.get("alvo_pct"), p.get("movel", True)), MOVEL_ARMA_MAX)
+                gar_arma, guarda = GARANTIA_ARMA, GUARDA
+                trava = float(p.get("trava") or 0)                             # trava da carteira (motor): guarda parte do lucro do conjunto
+            if p["pico"] < arma and p["pico"] < gar_arma and not trava:
                 continue
-            g = GUARDA * p["pico"] if p["pico"] >= arma else (GARANTIA_PCT if p["pico"] >= GARANTIA_ARMA else 0.0)
+            g = guarda * p["pico"] if p["pico"] >= arma else (GARANTIA_PCT if p["pico"] >= gar_arma else 0.0)
             g = max(g, trava)
             if g <= 0:
                 continue

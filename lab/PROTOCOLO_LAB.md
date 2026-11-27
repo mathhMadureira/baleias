@@ -1877,3 +1877,9 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Mudança:** só tendência de 4 h (a preferida do Radar também precisa estar nela); no máximo 2 posições; stop mínimo de 2,5% (o tamanho cai junto, risco fixo de 5% da carteira); alvo mínimo de 7%; prazo de 6 h; garantia do lucro a partir de +2% (antes 0,8%) e stop móvel a partir de +3,5% (antes 1,5%). A trava da carteira (6%) continua.
 - **Critério (Juiz, depois de 7 dias ou 20 operações):** passa se o resultado depois das taxas for > 0 e a taxa ficar < 40% do ganho bruto. Reprovando, volto ao comando anterior e registro.
 - **Previsão registrada:** cerca de 3 a 6 operações por dia (antes ~20); taxa por operação parecida, mas ganho médio maior; risco de ficar horas sem operar.
+
+## H84 (27/11/2026, ordem do dono): o OPERADOR decide cada operação na BingX (modo agente) — substitui a H83
+- **Dono:** "o foco tem que ser nos agentes; essas regras estão fodendo tudo; crie um sistema e polia".
+- **Sistema:** o motor não escolhe moeda nem aplica regra própria (sem entrada automática do radar, sem garantia, sem trava, sem "tese quebrada", sem prazo imposto). O Operador decide a cada 3 min com `operar/ordem_bingx.py` (ver → abrir/sair), escrevendo tese, confiança e o próprio plano (stop 0,5–4%, alvo opcional, prazo, stop móvel opcional, risco 1–10% da carteira). O código só valida, executa, põe o stop na corretora e segue o plano. Radar = ideias com tese ao Operador pelo canal; Juiz = uma lição por operação em `equipe/licoes_operador.md`; Risco segue com `sair`.
+- **Critério (Juiz, 7 dias ou 20 operações do Operador):** resultado depois das taxas > 0 e 'alta' ganhando mais que 'média' (confiança calibrada).
+- **Previsão registrada:** poucas operações no início; a qualidade depende de o Operador usar as lições. Nada garante lucro (Alpha Arena 2025: 4 de 6 modelos terminaram no vermelho).

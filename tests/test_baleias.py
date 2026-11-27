@@ -3155,3 +3155,51 @@ class RedeInstavelSemEntrada(unittest.TestCase):
         b._pedir = lambda *a, **k: {"fill_orders": [{"filledTm": "2026-11-27T02:39:25.000Z", "volume": "0", "price": "72.674", "amount": "35.6103",
                                                      "commission": "-0.017805", "side": "SELL"}]}
         self.assertEqual(b.execucoes("SOLUSDT", 0)[0]["contratos"], -49)      # 27/11: SOL fantasma; volume "0" vindo da VST
+
+
+class OperadorDecide(unittest.TestCase):
+    """27/11 (dono: "o foco tem que ser nos agentes"): no modo agente o motor não escolhe moeda; executa a ordem do Operador com o plano dele."""
+
+    def _motor(self, raiz):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("motor_agente", pathlib.Path(__file__).parent.parent / "mesa" / "operar" / "motor.py")
+        Mo = _iu.module_from_spec(spec); spec.loader.exec_module(Mo)
+        Mo.EQUIPE, Mo.ORDENS, Mo.ORDENS_EST = raiz, raiz / "ordens_bingx.jsonl", raiz / "ordens_bingx_estado.json"
+        return Mo
+
+    def test_ordem_vira_entrada_e_preco_fugido_cancela(self):
+        import time as _t
+        raiz = pathlib.Path(_tf.mkdtemp()); Mo = self._motor(raiz)
+        agora = _t.time()
+        (raiz / "ordens_bingx.jsonl").write_text("\n".join(_js.dumps(o) for o in [
+            {"id": "a1", "t": agora - 30, "tipo": "abrir", "moeda": "ZECUSDT", "lado": "compra", "preco_ref": 100.0, "stop_pct": 0.02, "alvo_pct": None,
+             "prazo_min": 300, "movel_arma": 0.03, "movel_guarda": 0.6, "risco_pct": 0.05, "teto": 0.01, "validade_min": 10, "conf": "alta", "tese": "x" * 30},
+            {"id": "b2", "t": agora - 30, "tipo": "abrir", "moeda": "SUIUSDT", "lado": "compra", "preco_ref": 1.0, "stop_pct": 0.02, "teto": 0.01,
+             "validade_min": 10, "conf": "média", "tese": "y" * 30}]) + "\n")
+        radar = {"entradas": [{"moeda": "ZECUSDT", "preco": 100.4}, {"moeda": "SUIUSDT", "preco": 1.03}]}
+        cmd = {**Mo.PADRAO, "max_pos": 4, "ligado": True, "modo": "agente", "sair_agora": set(), "bloqueadas": set(), "preferidas": []}
+        lista, sair = Mo.montar({"abertas": {}, "patrimonio": 10}, cmd, radar, None, agora)
+        self.assertEqual([x["moeda"] for x in lista], ["ZECUSDT"])                 # o motor não inventa outra moeda
+        z = lista[0]
+        self.assertTrue(z["plano_agente"]); self.assertEqual(z["max_min"], 300); self.assertIsNone(z["alvo_pct"])
+        self.assertAlmostEqual(z["nocional_usd"], min(10 * 0.3 * 20, 10 * 0.05 / 0.02), places=2)
+        est = _js.loads((raiz / "ordens_bingx_estado.json").read_text())
+        self.assertEqual(est["b2"]["estado"], "cancelada")                         # +3% a favor > teto 1%: não persegue
+
+    def test_posicao_do_agente_sem_garantia_nem_trava(self):
+        import time
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("corretora_agente", pathlib.Path(__file__).resolve().parent.parent / "mesa" / "operar" / "corretora.py")
+        M = importlib.util.module_from_spec(spec); spec.loader.exec_module(M)
+        f = CorretoraDemoH71._falsa(None, M)
+        c = CorretoraDemoH71._conta(None, M, f)
+        c.rodada({"t": time.time() - 5, "posicoes": [{"moeda": "AUSDT", "lado": "compra", "motivo": "t", "stop_pct": 0.02, "max_min": 240,
+                                                      "plano_agente": True, "ordem": "a1"}]})
+        p = c.e["abertas"]["AUSDT"]
+        self.assertTrue(p["plano_agente"]); self.assertEqual(p["ordem"], "a1")
+        antes = p["stop"]["preco"]
+        p["trava"] = 0.01
+        f.velas_1m = lambda par, desde: [(int(time.time() * 1000) - 60_000, p["entrada"] * 1.03, p["entrada"])]   # pico +3%, sem móvel pedido
+        f.preco = lambda par: p["entrada"] * 1.029
+        c.mover_stops()
+        self.assertEqual(c.e["abertas"]["AUSDT"]["stop"]["preco"], antes)          # nada de garantia/trava: o plano é do agente
