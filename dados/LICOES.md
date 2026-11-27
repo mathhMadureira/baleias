@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 15:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 15:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 65.3% das moedas subindo em 24 h, 9.7% em 4 h · BTC 24 h -0.83%, 4 h -3.01%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.4%/ano · {'BTC': 11.0, 'ETH': 1.3, 'SOL': 6.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.1%/ano · {'BTC': 11.0, 'ETH': 1.7, 'SOL': 6.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 5.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FIL topo duplo (baixa, CONFIRMOU) · FIL triângulo ascendente (baixa, CONFIRMOU) · QNT triângulo ascendente (baixa, CONFIRMOU) · STX topo duplo (baixa, CONFIRMOU) · TIA topo duplo (baixa, CONFIRMOU) · PEPE OCO invertido (alta, formado) · PORTAL OCO invertido (alta, formado)
 - 📰 27/11 14:40 UTC · Cointelegraph: What was Coinbase worth while Nasdaq was closed?
