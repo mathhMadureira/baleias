@@ -31,7 +31,7 @@ COFRE = Path("/home/servidor-de-producao/.config/OpenBot/agent-api-keys/.vault/a
 PASTA = AQUI / "corretoras"
 REDE_RUIM = ("timeout", "HTTPError", "URLError", "109500", "não consegui", "recusou o stop", "Connection")
 REDE_CALMA_S = 300                       # 27/11: com a API instável, cada abre-e-fecha forçado custa taxa e deslizamento
-GARANTIA_ARMA, GARANTIA_PCT, MOVEL_ARMA_MAX = 0.008, 0.0015, 0.015   # 26/11 (dono): com 20×, +1% no preço ≈ +6% da carteira; garantia a +0,8%, móvel até +1,5%   # dono (25/11): posição que passou de +2% não volta a ser perda (stop = entrada + 0,15% de taxas)
+GARANTIA_ARMA, GARANTIA_PCT, MOVEL_ARMA_MAX = 0.02, 0.0015, 0.035   # 27/11 (H83, "menos e maiores"): antes 0,8% e 1,5% cortavam a tendência no começo   # 26/11 (dono): com 20×, +1% no preço ≈ +6% da carteira; garantia a +0,8%, móvel até +1,5%   # dono (25/11): posição que passou de +2% não volta a ser perda (stop = entrada + 0,15% de taxas)
 CAPITAL, PISO, MAX_POS, MAX_NOC, VALIDADE_S, MAX_HORAS = 10.0, 5.0, 8, 1.5, 75 * 60, 24   # R2: 8 posições
 TRAILER = "Co-authored-by: OpenBot <335604065+openbotgit[bot]@users.noreply.github.com>"
 

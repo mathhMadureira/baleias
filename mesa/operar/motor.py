@@ -30,7 +30,7 @@ AGENTE = "laboratorio"
 CICLO_S, RADAR_S, ESFRIA_S = 30, 60, 30 * 60
 VIGIA_S, PICO_MIN = 3, 0.0005
 TRAVA_CARTEIRA, TRAVA_FRACAO = 0.06, 0.5   # dono (26/11): lucro aberto do conjunto ≥ 6% da carteira → cada posição no lucro trava metade do que ganhou             # dono (26/11): vigiar a cada 3 s; só mexe no stop quando o pico sobe 0,05% ou mais
-PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "prazo_min": 90, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
+PADRAO = {"ligado": True, "estilo": "posição", "risco_pct": 0.05, "prazo_min": 90, "stop_min_pct": 0.0, "max_pos": 3, "alav": 20, "margem_pct": 0.30, "alvo_min_pct": 0.05, "lados": "ambos", "nota_min": 0.0, "bloqueadas": [], "preferidas": [], "sair_agora": [],
           "atualizado_por": "padrão", "motivo": ""}
 
 
@@ -152,11 +152,12 @@ def montar(e, cmd, radar, risco, agora):
             continue
         # 26/11 (placar do Juiz): entradas "scalper" do radar comum somaram −1,73 em 17; as de tendência de 4 h (posição) e as
         # preferidas do Radar pagaram tudo (OPG +2,47). Só entra posição ou preferida, salvo comando estilo = "todos".
-        if cmd.get("estilo", "posição") == "posição" and r.get("estilo") != "posição" and m not in cmd["preferidas"]:
+        # 27/11 (dono: "menos e maiores", H83): só tendência de 4 h — a preferida do Radar também precisa estar nela
+        if cmd.get("estilo", "posição") == "posição" and r.get("estilo") != "posição":
             continue
         alav = max(1, min(50, int(cmd.get("alav") or 20)))
         margem = max(0.05, min(0.5, float(cmd.get("margem_pct") or 0.3)))
-        stop = r["stop_pct"] / 100
+        stop = max(r["stop_pct"] / 100, float(cmd.get("stop_min_pct") or 0))   # 27/11: stop curto demais = ruído; o tamanho cai junto (risco fixo)
         alvo = max(r["alvo_pct"] / 100, float(cmd.get("alvo_min_pct") or 0), 3 * stop)
         patr = float(e.get("patrimonio") or 10)
         risco = max(0.005, min(0.15, float(cmd.get("risco_pct") or 0.05)))
@@ -253,14 +254,14 @@ def volta(agora=None):
     return estado
 
 
-CHAVES = {"prazo_min", "risco_pct", "estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
+CHAVES = {"stop_min_pct", "prazo_min", "risco_pct", "estilo", "max_pos", "lados", "nota_min", "ligado", "bloqueadas", "preferidas", "sair_agora", "alav", "margem_pct", "alvo_min_pct"}
 
 
 DONOS = {                                                     # 25/11: cada decisão tem UM dono; os outros propõem no canal (canal.py)
     "lados": {"laboratorio", "baleias"}, "nota_min": {"laboratorio", "baleias"}, "estilo": {"laboratorio", "baleias"}, "ligado": {"laboratorio", "baleias"},
     "preferidas": {"cacador", "baleias"}, "bloqueadas": {"cacador", "laboratorio", "baleias"},
     "sair_agora": {"guardiao", "laboratorio", "baleias"},
-    "max_pos": {"baleias"}, "alav": {"baleias"}, "risco_pct": {"baleias"}, "prazo_min": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
+    "max_pos": {"baleias"}, "alav": {"baleias"}, "risco_pct": {"baleias"}, "prazo_min": {"baleias"}, "stop_min_pct": {"baleias"}, "margem_pct": {"baleias"}, "alvo_min_pct": {"baleias"},
 }
 
 
