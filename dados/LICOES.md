@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 13:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 13:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,9 +64,9 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 84.9% das moedas subindo em 24 h, 55.5% em 4 h · BTC 24 h 1.33%, 4 h -0.15%.
+- **Amplitude:** 82.4% das moedas subindo em 24 h, 48.7% em 4 h · BTC 24 h 1.12%, 4 h -0.3%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CFG estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ALICE fundo duplo (alta, formado) · CYBER OCO invertido (alta, formado) · LISTA fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PORTAL OCO invertido (alta, formado) · REZ OCO invertido (alta, formado)
 - 📰 27/11 12:39 UTC · Cointelegraph: Brazil’s stock exchange pushes stablecoin launch back to 2027
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 61823 apostas conferidas ao vivo, acerto 54.0%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 61850 apostas conferidas ao vivo, acerto 54.0%; prevê 118 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
