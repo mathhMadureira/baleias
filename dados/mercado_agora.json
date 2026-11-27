@@ -1,16 +1,16 @@
 {
- "t": 1795754785,
- "hora_utc": "2026-11-27 04:46 UTC",
+ "t": 1795755008,
+ "hora_utc": "2026-11-27 04:50 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 114,
-  "subindo_pct": 52.6,
-  "mediana_pct": 0.06
+  "subindo_pct": 54.4,
+  "mediana_pct": 0.08
  },
  "mercado_4h": {
   "moedas": 114,
   "subindo_pct": 78.9,
-  "mediana_pct": 1.55
+  "mediana_pct": 1.53
  },
  "mercado_24h": {
   "moedas": 114,
@@ -18,11 +18,11 @@
   "mediana_pct": 1.62
  },
  "btc": {
-  "1h": -0.21,
-  "4h": 1.53,
-  "24h": 0.71,
-  "preco": 61475.52,
-  "vol_4h_vs_media": 1.37
+  "1h": 0.11,
+  "4h": 1.31,
+  "24h": 0.85,
+  "preco": 61528.31,
+  "vol_4h_vs_media": 1.38
  },
  "maiores_quedas_4h": [
   {
@@ -101,9 +101,9 @@
   },
   {
    "moeda": "ZEC",
-   "4h": 9.34,
-   "24h": -2.06,
-   "vol": 1.39
+   "4h": 8.77,
+   "24h": -1.21,
+   "vol": 1.38
   },
   {
    "moeda": "ONE",
@@ -172,10 +172,10 @@
   0.06,
   0.97,
   0.15,
-  0.2
+  0.16
  ],
  "contexto": {
-  "t": 1795754786,
+  "t": 1795755009,
   "noticias": [
    {
     "fonte": "CoinDesk",
@@ -274,7 +274,7 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 12.2,
+   "media_top20_anual_pct": 12.1,
    "principais_anual_pct": {
     "BTC": 11.0,
     "ETH": 11.0,
@@ -450,9 +450,9 @@
  },
  "v4": {
   "vela": "11:45 UTC",
-  "apostas": 87,
-  "compras": 45,
-  "vendas": 42,
+  "apostas": 100,
+  "compras": 44,
+  "vendas": 56,
   "mais_confiantes_venda": [
    {
     "moeda": "ALICE",
@@ -467,11 +467,11 @@
     "prob_subir": 0.37
    },
    {
-    "moeda": "RESOLV",
-    "prob_subir": 0.375
+    "moeda": "CRV",
+    "prob_subir": 0.371
    },
    {
-    "moeda": "CRV",
+    "moeda": "RESOLV",
     "prob_subir": 0.375
    },
    {
@@ -490,7 +490,7 @@
   "mais_confiantes_compra": [
    {
     "moeda": "SOPH",
-    "prob_subir": 0.666
+    "prob_subir": 0.682
    },
    {
     "moeda": "PSG",
@@ -782,19 +782,19 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 29774 apostas (632 velas, 20/11 05:00–27/11 04:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5316,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.2% em 29775 apostas (632 velas, 20/11 05:00–27/11 04:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5317,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
   "z_contra_lab": -0.34,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5058,
-    "n": 21457
+    "acerto": 0.5059,
+    "n": 21458
    },
    "segue_maioria_24h": {
-    "acerto": 0.5139,
-    "n": 29671
+    "acerto": 0.514,
+    "n": 29672
    }
   },
   "referencia_ganha": [],
@@ -809,15 +809,15 @@
    },
    "confianca:<0,05": {
     "acerto": 0.5182,
-    "n": 17406
+    "n": 17407
    },
    "confianca:≥0,12": {
     "acerto": 0.6483,
     "n": 887
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5067,
-    "n": 8010
+    "acerto": 0.5068,
+    "n": 8011
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5433,
@@ -832,8 +832,8 @@
     "n": 6786
    },
    "lado:compra": {
-    "acerto": 0.5334,
-    "n": 12288
+    "acerto": 0.5335,
+    "n": 12289
    },
    "lado:venda": {
     "acerto": 0.5304,
