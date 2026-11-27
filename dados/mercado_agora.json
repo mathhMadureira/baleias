@@ -1,6 +1,6 @@
 {
- "t": 1795807446,
- "hora_utc": "2026-11-27 19:24 UTC",
+ "t": 1795807632,
+ "hora_utc": "2026-11-27 19:27 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 134,
@@ -172,11 +172,17 @@
   -0.26,
   -0.05,
   -0.02,
-  0.04
+  0.09
  ],
  "contexto": {
-  "t": 1795807447,
+  "t": 1795807633,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795807380,
+    "hora_utc": "27/11 19:23",
+    "titulo": "Bitcoin whales pile into BTC despite shrinking profit cushion"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795803363,
@@ -260,12 +266,6 @@
     "t": 1795782000,
     "hora_utc": "27/11 12:20",
     "titulo": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume"
-   },
-   {
-    "fonte": "CoinDesk",
-    "t": 1795781767,
-    "hora_utc": "27/11 12:16",
-    "titulo": "Bitcoin 'death cross' is coming. Here's what happened after previous 13."
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 5.7,
+   "media_top20_anual_pct": 5.9,
    "principais_anual_pct": {
-    "BTC": 6.4,
+    "BTC": 7.4,
     "ETH": 11.0,
-    "SOL": 0.9
+    "SOL": 1.3
    },
    "leitura": "neutro"
   },
