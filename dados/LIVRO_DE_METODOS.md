@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.9% | 318 | 51.4%–62.2% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.2% | 2769 | 51.4%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.2% | 2770 | 51.4%–55.1% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 68.8% | 16 | 44.4%–85.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 68.6% | 35 | 52.0%–81.4% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 66.7% | 42 | 51.6%–79.0% | física: alta anormal de 1 h → devolve |
@@ -15,8 +15,8 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | raschke_sopa_baixa | promissor | 58.3% | 24 | 38.8%–75.5% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | demark_td9_alta | promissor | 51.8% | 85 | 41.3%–62.1% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da alta) |
+| tres_corvos | promissor | 51.5% | 476 | 47.0%–55.9% | H6: três corvos → sobe (efeito pequeno) |
 | williams_volb_baixa | promissor | 51.4% | 278 | 45.6%–57.3% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da baixa) |
-| tres_corvos | promissor | 51.4% | 475 | 46.9%–55.8% | H6: três corvos → sobe (efeito pequeno) |
 | williams_wr_alta | promissor | 51.0% | 51 | 37.7%–64.1% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da alta) |
 | reversao_queda | reprovado | 50.0% | 74 | 38.9%–61.1% | H14: queda anormal de 1 h → sobe |
 | velez_180_baixa | reprovado | 49.3% | 69 | 37.8%–60.8% | Velez: 180 de baixa a favor das médias (H23: sem vantagem) |
