@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 10:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 10:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,15 +66,15 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 84.0% das moedas subindo em 24 h, 47.9% em 4 h · BTC 24 h 1.81%, 4 h -0.1%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.7%/ano · {'BTC': 10.8, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 9.5%/ano · {'BTC': 10.5, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** CFG OCO invertido (alta, CONFIRMOU) · RAY bandeira de alta (alta, CONFIRMOU) · CYBER OCO invertido (alta, formado) · DODO ombro-cabeça-ombro (baixa, formado) · GTC OCO invertido (alta, formado) · LISTA fundo duplo (alta, formado) · LUNC topo duplo (baixa, formado) · LUNC OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · REZ OCO invertido (alta, formado)
+- 📰 27/11 10:51 UTC · CoinDesk: Brazil’s stock exchange teams up with major banks to launch real-pegged stablecoin
 - 📰 27/11 10:26 UTC · Cointelegraph: Bluefin to shut down perps, refocus on spot trading and tokenized RWAs
 - 📰 27/11 10:15 UTC · Decrypt: Ethereum Sets December 15 Date for Delayed Glamsterdam Testnet Upgrade
 - 📰 27/11 10:00 UTC · CoinDesk: Tether can freeze stolen crypto in minutes. Getting it back can take years.
 - 📰 27/11 09:49 UTC · CoinDesk: Bitcoin tops $61,000 as Nasdaq futures extend Wednesday’s rebound
 - 📰 27/11 08:04 UTC · Cointelegraph: ESMA to overhaul EU’s MiCA crypto register in 2027
-- 📰 27/11 07:33 UTC · CoinDesk: Monero suffers biggest single-day slide in over 5 months. Here’s why
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 

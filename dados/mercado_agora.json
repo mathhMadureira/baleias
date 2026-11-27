@@ -1,6 +1,6 @@
 {
- "t": 1795776696,
- "hora_utc": "2026-11-27 10:51 UTC",
+ "t": 1795776905,
+ "hora_utc": "2026-11-27 10:55 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 119,
@@ -172,11 +172,17 @@
   -0.06,
   0.09,
   -0.16,
-  0.09
+  0.02
  ],
  "contexto": {
-  "t": 1795776697,
+  "t": 1795776906,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795776687,
+    "hora_utc": "27/11 10:51",
+    "titulo": "Brazil’s stock exchange teams up with major banks to launch real-pegged stablecoin"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795775166,
@@ -260,12 +266,6 @@
     "t": 1795744058,
     "hora_utc": "27/11 01:47",
     "titulo": "AI is driving a flood of crypto bug reports. Now it’s helping sort them"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795739739,
-    "hora_utc": "27/11 00:35",
-    "titulo": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero"
    }
   ],
   "medo_ganancia": {
@@ -274,9 +274,9 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": 9.7,
+   "media_top20_anual_pct": 9.5,
    "principais_anual_pct": {
-    "BTC": 10.8,
+    "BTC": 10.5,
     "ETH": 11.0,
     "SOL": 11.0
    },
