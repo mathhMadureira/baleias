@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 15:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 15:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 66.4% das moedas subindo em 24 h, 10.7% em 4 h · BTC 24 h -0.95%, 4 h -3.2%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 1.2%/ano · {'BTC': 11.0, 'ETH': 2.0, 'SOL': 8.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.7%/ano · {'BTC': 11.0, 'ETH': 1.4, 'SOL': 7.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** FIL topo duplo (baixa, CONFIRMOU) · FIL triângulo ascendente (baixa, CONFIRMOU) · QNT triângulo ascendente (baixa, CONFIRMOU) · STX topo duplo (baixa, CONFIRMOU) · TIA topo duplo (baixa, CONFIRMOU) · OPG fundo duplo (alta, formado) · PEPE OCO invertido (alta, formado) · PORTAL OCO invertido (alta, formado)
 - 📰 27/11 14:40 UTC · Cointelegraph: What was Coinbase worth while Nasdaq was closed?
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido, reversao_queda. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 62169 apostas conferidas ao vivo, acerto 54.0%; prevê 121 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 62172 apostas conferidas ao vivo, acerto 54.0%; prevê 11 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
