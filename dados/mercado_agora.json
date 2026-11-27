@@ -1,21 +1,21 @@
 {
- "t": 1795797218,
- "hora_utc": "2026-11-27 16:33 UTC",
+ "t": 1795797410,
+ "hora_utc": "2026-11-27 16:36 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 126,
-  "subindo_pct": 71.4,
-  "mediana_pct": 0.42
+  "moedas": 127,
+  "subindo_pct": 71.7,
+  "mediana_pct": 0.43
  },
  "mercado_4h": {
-  "moedas": 126,
+  "moedas": 127,
   "subindo_pct": 7.9,
-  "mediana_pct": -2.62
+  "mediana_pct": -2.63
  },
  "mercado_24h": {
-  "moedas": 126,
-  "subindo_pct": 61.1,
-  "mediana_pct": 0.62
+  "moedas": 127,
+  "subindo_pct": 60.6,
+  "mediana_pct": 0.61
  },
  "btc": {
   "1h": 0.38,
@@ -172,10 +172,10 @@
   -0.29,
   -3.65,
   1.52,
-  0.13
+  0.57
  ],
  "contexto": {
-  "t": 1795797219,
+  "t": 1795797411,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 11
   },
   "funding": {
-   "media_top20_anual_pct": -4.0,
+   "media_top20_anual_pct": -3.7,
    "principais_anual_pct": {
-    "BTC": 1.5,
+    "BTC": 2.9,
     "ETH": 11.0,
-    "SOL": -2.6
+    "SOL": -2.2
    },
    "leitura": "neutro"
   },
@@ -359,8 +359,8 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 104,
-  "compras": 51,
+  "apostas": 103,
+  "compras": 50,
   "vendas": 53,
   "mais_confiantes_venda": [
    {
@@ -406,10 +406,6 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "JTO",
-    "prob_subir": 0.626
-   },
-   {
     "moeda": "ENS",
     "prob_subir": 0.614
    },
@@ -428,6 +424,10 @@
    {
     "moeda": "HMSTR",
     "prob_subir": 0.6
+   },
+   {
+    "moeda": "BANK",
+    "prob_subir": 0.598
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -699,11 +699,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.4969,
-    "n": 23376
+    "n": 23481
    },
    "segue_maioria_24h": {
-    "acerto": 0.5055,
-    "n": 29111
+    "acerto": 0.5057,
+    "n": 29098
    }
   },
   "referencia_ganha": [],
