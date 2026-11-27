@@ -1,20 +1,20 @@
 {
- "t": 1795755231,
- "hora_utc": "2026-11-27 04:53 UTC",
+ "t": 1795755453,
+ "hora_utc": "2026-11-27 04:57 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 114,
-  "subindo_pct": 54.4,
+  "moedas": 113,
+  "subindo_pct": 54.0,
   "mediana_pct": 0.08
  },
  "mercado_4h": {
-  "moedas": 114,
-  "subindo_pct": 78.9,
+  "moedas": 113,
+  "subindo_pct": 78.8,
   "mediana_pct": 1.53
  },
  "mercado_24h": {
-  "moedas": 114,
-  "subindo_pct": 73.7,
+  "moedas": 113,
+  "subindo_pct": 73.5,
   "mediana_pct": 1.62
  },
  "btc": {
@@ -172,10 +172,10 @@
   0.06,
   0.97,
   0.15,
-  0.08
+  0.06
  ],
  "contexto": {
-  "t": 1795755232,
+  "t": 1795755454,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -790,11 +790,11 @@
   "referencias": {
    "segue_24h_da_moeda": {
     "acerto": 0.5059,
-    "n": 21458
+    "n": 21355
    },
    "segue_maioria_24h": {
-    "acerto": 0.514,
-    "n": 29672
+    "acerto": 0.5132,
+    "n": 29744
    }
   },
   "referencia_ganha": [],
