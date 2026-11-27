@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 12:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 12:32 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,10 +64,10 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 83.9% das moedas subindo em 24 h, 52.5% em 4 h · BTC 24 h 1.58%, 4 h -0.41%.
+- **Amplitude:** 84.7% das moedas subindo em 24 h, 48.3% em 4 h · BTC 24 h 1.55%, 4 h -0.42%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
 - **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.2%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 15.0% das moedas acima da MM50.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 17.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ALICE fundo duplo (alta, CONFIRMOU) · CYBER OCO invertido (alta, formado) · LISTA fundo duplo (alta, formado) · LUNC topo duplo (baixa, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PORTAL OCO invertido (alta, formado) · REZ OCO invertido (alta, formado) · USUAL topo duplo (baixa, formado) · USUAL fundo duplo (alta, formado)
 - 📰 27/11 12:20 UTC · Cointelegraph: Austria-supervised crypto firms report 20.4B euros in H1 trading volume
 - 📰 27/11 12:16 UTC · CoinDesk: Bitcoin 'death cross' is coming. Here's what happened after previous 13.
@@ -78,7 +78,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 64.1 h.
+- ⚠️ **Rotina parada:** sem decisão há 64.2 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 61682 apostas conferidas ao vivo, acerto 54.0%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 61710 apostas conferidas ao vivo, acerto 54.0%; prevê 117 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
