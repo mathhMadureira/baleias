@@ -1912,3 +1912,10 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Dados e grupos:** os mesmos da H85 (20 moedas, 15 min e 1 h), padrão × lado × contexto × tempo.
 - **Critério (igual à H85):** n ≥ 80, média > 0, t ≥ 2, as duas metades > 0.
 - **Previsão registrada:** as velas isoladas (engolfo, martelo) não passam; se algo passar, será padrão de gráfico com quebra a favor no 1 h. Com n pequeno (OCO, triplos), nada pode ser afirmado.
+
+### Resultado da H86 (27/11/2026, `lab/h86_livro.py` → `dados/lab/h86_livro.json`): 1 de 72 passa — candidato, não regra
+- **Passa:** Estrela da tarde, venda, contra a tendência, 1 h — n 136, +0,58%/op líquido, t 2,26, metades +1,00% / +0,16%, acerto 47%.
+- **Cautela registrada:** H85 + H86 testaram 162 grupos; com t ≥ 2 como corte, 1 a 4 passariam por acaso. Este resultado só vale depois de confirmado FORA da amostra: H87 = acompanhar os sinais dele dos próximos 30 dias (ao vivo, no papel) com o mesmo critério.
+- **Perto (não passam):** Topo triplo venda contra 15 min (n 60, +0,29%, t 1,55); OCO venda a favor 1 h (n 60, +0,69%, t 1,47); Engolfo de baixa venda a favor 15 min (n 621, +0,09%, t 1,27).
+- **Perdem com força:** Martelo compra contra 15 min (t −4,7), Estrela cadente venda contra 15 min (t −4,2), Cunha descendente compra contra 15 min (t −3,5), Engolfo de alta compra contra 15 min (t −3,3).
+- **Leitura (H85 + H86):** quase tudo que fica perto de zero ou positivo é VENDA; as compras de reversão (martelo, engolfo de alta, estrela da manhã, OCO invertido, fundo triplo) perdem neste período de alta do BTC — coerente com as 42 compras da carteira (−3,20).

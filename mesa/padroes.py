@@ -198,6 +198,8 @@ def simular(v, s, alvo_r=2.0, max_barras=16, custo=0.0012):
     if risco <= 0 or risco / ent > 0.08:
         return None
     alvo = ent + alvo_r * risco if compra else ent - alvo_r * risco
+    if s.get("alvo"):                                         # H86 (livro): alvo = altura do padrão, no mínimo 1R
+        alvo = max(s["alvo"], ent + risco) if compra else min(s["alvo"], ent - risco)
     saida = None
     for k in range(i + 1, min(len(v), i + 1 + max_barras)):
         b = v[k]
@@ -269,3 +271,104 @@ def leitura_entrada(lado, est):
             av.append(f"a queda JÁ ANDOU: −{est['caiu_do_topo_pct']:.2f}% ({est['caiu_do_topo_atr']:.1f} ATR) desde o topo {est['ultimo_topo']:.6g}; "
                       f"preço no fundo do range ({est['range_pos_pct']:.0f}%). A entrada boa era perto do topo; espere repique")
     return av
+
+
+def sinais_livro(v, so_ultima=False):
+    """H86 — padrões do Simple Trading Book (velas e gráfico), com o método do livro: entrada na quebra, stop do outro lado
+    da estrutura, alvo = altura do padrão. Mesmo formato de sinal de `sinais` (mais o campo alvo nos de gráfico)."""
+    n = len(v)
+    if n < 60:
+        return []
+    import bisect
+    cs = [x[C] for x in v]
+    e20, e200, a = ema(cs, 20), ema(cs, 200), atr(v)
+    F_all, T_all = pivos(v, n - 1)
+    Fj, Tj = [j for j, _ in F_all], [j for j, _ in T_all]
+    out = []
+    for i in range(max(n - 1 if so_ultima else 210, 30), n):
+        b, p, pp = v[i], v[i - 1], v[i - 2]
+        corpo = lambda x: abs(x[C] - x[O])
+        alta = lambda x: x[C] > x[O]
+        baixa = lambda x: x[C] < x[O]
+        caiu = v[i - 1][C] < v[i - 6][C]
+        subiu = v[i - 1][C] > v[i - 6][C]
+
+        def add(padrao, lado, gatilho, stop, alvo=None, nota=""):
+            if (lado == "compra" and stop >= gatilho) or (lado == "venda" and stop <= gatilho):
+                return
+            out.append({"i": i, "t": b[T], "padrao": padrao, "lado": lado, "gatilho": gatilho, "stop": stop, "alvo": alvo,
+                        "contexto": contexto(lado, e20, e200, b[C], i), "nota": nota})
+
+        # ---- velas (reversão: exigem o movimento anterior contra) ----
+        if caiu and baixa(p) and alta(b) and b[O] <= p[C] and b[C] >= p[O] and corpo(b) > corpo(p):
+            add("Engolfo de alta", "compra", b[H], min(b[L], p[L]))
+        if subiu and alta(p) and baixa(b) and b[O] >= p[C] and b[C] <= p[O] and corpo(b) > corpo(p):
+            add("Engolfo de baixa", "venda", b[L], max(b[H], p[H]))
+        r_ = b[H] - b[L]
+        if r_ > 0 and caiu and min(b[O], b[C]) - b[L] >= 2 * corpo(b) and b[H] - max(b[O], b[C]) <= 0.3 * r_:
+            add("Martelo", "compra", b[H], b[L])
+        if r_ > 0 and subiu and b[H] - max(b[O], b[C]) >= 2 * corpo(b) and min(b[O], b[C]) - b[L] <= 0.3 * r_:
+            add("Estrela cadente", "venda", b[L], b[H])
+        if v[i - 2][C] < v[i - 7][C] and baixa(pp) and corpo(p) <= 0.35 * corpo(pp) and alta(b) and b[C] > (pp[O] + pp[C]) / 2:
+            add("Estrela da manhã", "compra", b[H], min(pp[L], p[L], b[L]))
+        if v[i - 2][C] > v[i - 7][C] and alta(pp) and corpo(p) <= 0.35 * corpo(pp) and baixa(b) and b[C] < (pp[O] + pp[C]) / 2:
+            add("Estrela da tarde", "venda", b[L], max(pp[H], p[H], b[H]))
+        if all(alta(x) for x in (pp, p, b)) and pp[C] < p[C] < b[C] and pp[O] <= p[O] <= pp[C] and p[O] <= b[O] <= p[C] \
+                and all(x[H] - x[C] <= 0.3 * max(1e-12, corpo(x)) for x in (pp, p, b)) and v[i - 3][C] < v[i - 8][C]:
+            add("3 soldados", "compra", b[H], pp[L])
+        if all(baixa(x) for x in (pp, p, b)) and pp[C] > p[C] > b[C] and pp[C] <= p[O] <= pp[O] and p[C] <= b[O] <= p[O] \
+                and all(x[C] - x[L] <= 0.3 * max(1e-12, corpo(x)) for x in (pp, p, b)) and v[i - 3][C] > v[i - 8][C]:
+            add("3 corvos", "venda", b[L], pp[H])
+
+        # ---- gráfico (pivôs confirmados até i) ----
+        kf, kt = bisect.bisect_right(Fj, i - PIVO), bisect.bisect_right(Tj, i - PIVO)
+        F, Tp = F_all[max(0, kf - 6):kf], T_all[max(0, kt - 6):kt]
+        quebra_baixo = lambda nivel: b[C] < nivel <= p[C]
+        quebra_cima = lambda nivel: b[C] > nivel >= p[C]
+        perto = lambda x, y, tol: abs(x / y - 1) <= tol
+        if len(Tp) >= 3 and len(F) >= 2:                          # OCO / topo triplo
+            t1, t2, t3 = Tp[-3:]
+            meio = [f for f in F if t1[0] < f[0] < t3[0]]
+            if meio and i - t3[0] <= 30:
+                pesc = min(f[1] for f in meio)
+                if t2[1] > t1[1] and t2[1] > t3[1] and perto(t1[1], t3[1], 0.02) and quebra_baixo(pesc):
+                    add("OCO", "venda", b[C], t3[1], pesc - (t2[1] - pesc))
+                if perto(t1[1], t2[1], 0.006) and perto(t2[1], t3[1], 0.006) and quebra_baixo(pesc):
+                    add("Topo triplo", "venda", b[C], max(t1[1], t2[1], t3[1]), pesc - (max(t1[1], t2[1], t3[1]) - pesc))
+        if len(F) >= 3 and len(Tp) >= 2:                          # OCO invertido / fundo triplo
+            f1, f2, f3 = F[-3:]
+            meio = [t_ for t_ in Tp if f1[0] < t_[0] < f3[0]]
+            if meio and i - f3[0] <= 30:
+                pesc = max(t_[1] for t_ in meio)
+                if f2[1] < f1[1] and f2[1] < f3[1] and perto(f1[1], f3[1], 0.02) and quebra_cima(pesc):
+                    add("OCO invertido", "compra", b[C], f3[1], pesc + (pesc - f2[1]))
+                if perto(f1[1], f2[1], 0.006) and perto(f2[1], f3[1], 0.006) and quebra_cima(pesc):
+                    add("Fundo triplo", "compra", b[C], min(f1[1], f2[1], f3[1]), pesc + (pesc - min(f1[1], f2[1], f3[1])))
+        if len(Tp) >= 2 and len(F) >= 2 and i - min(Tp[-2][0], F[-2][0]) <= 80:
+            (j1, t1), (j2, t2) = Tp[-2], Tp[-1]
+            (k1, f1), (k2, f2) = F[-2], F[-1]
+            altura = max(t1, t2) - min(f1, f2)
+            if altura >= 1.5 * a[i]:
+                topo_plano, fundo_plano = perto(t1, t2, 0.004), perto(f1, f2, 0.004)
+                if topo_plano and f2 > f1 and quebra_cima(max(t1, t2)):
+                    add("Triângulo ascendente", "compra", b[C], f2, b[C] + altura)
+                if fundo_plano and t2 < t1 and quebra_baixo(min(f1, f2)):
+                    add("Triângulo descendente", "venda", b[C], t2, b[C] - altura)
+                if topo_plano and fundo_plano:
+                    if quebra_cima(max(t1, t2)):
+                        add("Retângulo", "compra", b[C], (max(t1, t2) + min(f1, f2)) / 2, b[C] + altura)
+                    if quebra_baixo(min(f1, f2)):
+                        add("Retângulo", "venda", b[C], (max(t1, t2) + min(f1, f2)) / 2, b[C] - altura)
+                if t2 < t1 and f2 < f1 and j2 != j1 and k2 != k1:     # cunhas: as duas linhas na mesma direção, convergindo
+                    st, sf = (t2 - t1) / (j2 - j1), (f2 - f1) / (k2 - k1)
+                    if st < sf < 0:                                   # cunha descendente (alta na quebra de cima)
+                        y = _linha((j1, t1), (j2, t2), i)
+                        if quebra_cima(y):
+                            add("Cunha descendente", "compra", b[C], f2, b[C] + (t1 - f1))
+                if t2 > t1 and f2 > f1 and j2 != j1 and k2 != k1:
+                    st, sf = (t2 - t1) / (j2 - j1), (f2 - f1) / (k2 - k1)
+                    if sf > st > 0:                                   # cunha ascendente (baixa na quebra de baixo)
+                        y = _linha((k1, f1), (k2, f2), i)
+                        if quebra_baixo(y):
+                            add("Cunha ascendente", "venda", b[C], t2, b[C] - (t1 - f1))
+    return out

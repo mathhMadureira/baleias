@@ -16,7 +16,7 @@ sys.path.insert(0, str(AQUI))
 import padroes as P  # noqa: E402
 
 EQUIPE = Path("/home/servidor-de-producao/OpenBot/Shared/baleias/equipe")
-H85 = Path("/home/servidor-de-producao/baleias/dados/lab/h85_padroes.json")
+LAB = [Path("/home/servidor-de-producao/baleias/dados/lab/h85_padroes.json"), Path("/home/servidor-de-producao/baleias/dados/lab/h86_livro.json")]
 URL = "https://open-api.bingx.com/openApi/swap/v3/quote/klines?symbol={s}-USDT&interval={i}&limit=300"
 
 
@@ -27,10 +27,12 @@ def velas(moeda, iv):
 
 
 def medido():
-    try:
-        t = json.loads(H85.read_text())["tabela"]
-    except (OSError, ValueError, KeyError):
-        return {}
+    t = []
+    for arq in LAB:                                           # H85 (day trade) + H86 (Simple Trading Book)
+        try:
+            t += json.loads(arq.read_text())["tabela"]
+        except (OSError, ValueError, KeyError):
+            pass
     return {(x["padrao"], x["lado"], x["contexto"], x["tempo"]): {k: x.get(k) for k in ("n", "media_pct", "t", "acerto_pct", "funciona")} for x in t}
 
 
@@ -46,7 +48,7 @@ def ler(moeda, med):
             out["estrutura"] = P.estrutura(v)
         out[f"linhas_{iv}"] = P.linhas_agora(v)
         out[f"sinais_{iv}"] = [{**{k: s[k] for k in ("padrao", "lado", "gatilho", "stop", "contexto", "nota")},
-                               "medido": med.get((s["padrao"], s["lado"], s["contexto"], iv))} for s in P.sinais(v, so_ultima=True)]
+                               "medido": med.get((s["padrao"], s["lado"], s["contexto"], iv))} for s in P.sinais(v, so_ultima=True) + P.sinais_livro(v, so_ultima=True)]
     return out
 
 
