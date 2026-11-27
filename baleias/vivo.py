@@ -113,7 +113,7 @@ def _carteira():
             ab[-1]["resultado"] = round(p["nocional"] * (agora_px / p["entrada"] - 1) * sinal, 4)
     fe = [{"moeda": x.get("moeda"), "lado": x.get("lado"), "entrada": x.get("entrada"), "saida": x.get("saida"), "t": x.get("saida_t"),
            "resultado": x.get("resultado_usd"), "taxas": x.get("taxas"), "motivo": str(x.get("motivo_saida") or "")[:120],
-           "causa": causa_saida(x)} for x in e.get("fechadas") or []]
+           "causa": causa_saida(x), "agente": bool(x.get("plano_agente")), "conf": x.get("conf")} for x in e.get("fechadas") or []]
     ev = sorted((x for x in e.get("eventos") or [] if isinstance(x, dict) and x.get("t")), key=lambda x: -x["t"])[:30]
     realizado = sum(x["resultado"] for x in fe if isinstance(x["resultado"], (int, float)))
     aberto = sum(a.get("resultado") or 0 for a in ab)
@@ -124,6 +124,23 @@ def _carteira():
     conta["diferenca"] = round((conta["patrimonio"] or 0) - (cap + realizado + aberto), 4)   # taxa de entrada é descontada no fechamento
     return {"existe": True, "conta": conta, "corretora": e.get("corretora"), "patrimonio": e.get("patrimonio", CAPITAL), "capital": e.get("capital_inicial") or CAPITAL,
             "caixa": e.get("caixa"), "abertas": ab, "fechadas": fe, "eventos": ev, "atualizado": e.get("atualizado")}
+
+
+def _ordens(n=10):
+    """27/11: as últimas ordens do Operador com o estado no motor e a decisão do cético (H88)."""
+    eq = SHARED / "equipe"
+    est, cet = _json(eq / "ordens_bingx_estado.json") or {}, _json(eq / "cetico.json") or {}
+    out = []
+    try:
+        linhas = [json.loads(l) for l in (eq / "ordens_bingx.jsonl").read_text().splitlines() if l.strip()][-n:]
+    except (OSError, ValueError):
+        linhas = []
+    for o in reversed(linhas):
+        s_, c = est.get(o.get("id"), {}), cet.get(o.get("id")) or {}
+        out.append({"id": o.get("id"), "t": o.get("t"), "moeda": o.get("moeda"), "lado": o.get("lado"), "conf": o.get("conf"),
+                    "tese": str(o.get("tese") or "")[:200], "estado": s_.get("estado", "pendente"), "texto": str(s_.get("texto") or "")[:120],
+                    "cetico": c.get("decisao") or ("aguardando" if o.get("cetico") else None), "cetico_motivo": str(c.get("motivo") or "")[:160]})
+    return out
 
 
 def vivo(agora=None):
@@ -219,7 +236,11 @@ def vivo(agora=None):
                 "fechadas": (pump.get("fechadas") or [])[-30:][::-1], "eventos": (pump.get("eventos") or [])[-20:][::-1]}
         for f in pump["fechadas"]:
             f.pop("hist", None)
-    return {"t": agora, "foco": foco, "curva": curva, "desk": desk, "risco": risco, "motor": motor, "canal": canal[::-1], "pump": pump,
+    ag = [x for x in c["fechadas"] if x.get("agente") and isinstance(x["resultado"], (int, float))]
+    velho = [x for x in c["fechadas"] if not x.get("agente") and isinstance(x["resultado"], (int, float))]
+    placar = {k: {"n": len(v), "ganhas": sum(1 for x in v if x["resultado"] > 0), "soma": round(sum(x["resultado"] for x in v), 4)}
+              for k, v in (("operador", ag), ("regras", velho))}
+    return {"t": agora, "foco": foco, "ordens": _ordens(), "em_alta": _json(SHARED / "equipe" / "tendencias.json") or {}, "placar": placar, "curva": curva, "desk": desk, "risco": risco, "motor": motor, "canal": canal[::-1], "pump": pump,
             "descartes": sorted(desc.values(), key=lambda d: -d["total"]), "descartes_recentes": ult_desc[-8:][::-1], "missao": {"capital": c["capital"], "meta": META, "patrimonio": c["patrimonio"],
             "progresso": (c["patrimonio"] - c["capital"]) / (META - c["capital"]), "operacoes": len(rs),
             "ganhos": sum(1 for r in rs if r > 0), "resultado": sum(rs), "melhor": max(rs) if rs else None, "pior": min(rs) if rs else None},

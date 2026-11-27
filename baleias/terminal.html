@@ -3,242 +3,292 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Baleias</title>
+<title>Baleias · sala da equipe</title>
 <style>
-/* 27/11 — painel refeito: 4 quadrantes fixos, sem rolagem de página */
-:root{--bg:#07090c;--p:#0d1117;--p2:#11161d;--b:#1c232c;--t:#e6edf3;--f:#7d8792;--g:#2ee59d;--r:#ff5370;--y:#ffcb6b;--a:#5aa9ff}
+/* 27/11 — modelo novo (dono: "não quero mais esse modelo"): sala da equipe, sem gráfico de velas.
+   Uma tela só: resultado em cima, a linha de produção dos agentes no meio, posições / caçada / placar embaixo. */
+:root{--bg:#0a0c10;--p:#11151b;--p2:#161b22;--b:#222a33;--t:#e8edf2;--f:#8b95a1;--g:#22d38b;--r:#ff5a6e;--y:#ffc857;--a:#5aa9ff}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--t);font:12px/1.4 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-body{display:grid;grid-template-rows:40px 1fr;height:100dvh}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--t);font:12px/1.35 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{display:grid;grid-template-rows:auto minmax(0,1fr);height:100vh;height:100dvh;gap:8px;padding:8px}
 .n{font-variant-numeric:tabular-nums}.g{color:var(--g)}.r{color:var(--r)}.f{color:var(--f)}.y{color:var(--y)}
-/* topo */
-.top{display:flex;align-items:center;border-bottom:1px solid var(--b);background:var(--p);overflow:hidden}
-.marca{padding:0 12px;font-weight:800;font-size:14px;border-right:1px solid var(--b);height:100%;display:flex;align-items:center;gap:7px;white-space:nowrap}
-.marca i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 7px var(--g);flex-shrink:0}
-.kpi{padding:0 11px;height:100%;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--b);min-width:0;white-space:nowrap}
-.kpi s{text-decoration:none;color:var(--f);font-size:9.5px;text-transform:uppercase;letter-spacing:.04em}
-.kpi b{font-size:13px;font-weight:700}
-.kpi em{font-style:normal;font-size:10.5px;margin-left:4px}
-.top .fim{margin-left:auto;padding:0 12px;color:var(--f);font-size:10.5px;text-align:right;white-space:nowrap}
-/* grade 2×2 */
-.grade{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(260px,1fr);grid-template-rows:minmax(0,1fr) minmax(0,.55fr);height:100%}
-.pn{background:var(--p);border-right:1px solid var(--b);border-bottom:1px solid var(--b);min-height:0;min-width:0;overflow:hidden;display:flex;flex-direction:column}
-.cab{flex-shrink:0;display:flex;align-items:center;gap:8px;padding:5px 10px;border-bottom:1px solid var(--b);background:var(--p2);font-size:10.5px;color:var(--f);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;overflow:hidden}
-.cab .dir{margin-left:auto;text-transform:none;letter-spacing:0;font-size:11px}
-.corpo{flex:1;min-height:0;overflow:hidden auto;position:relative}
-/* gráfico */
-#grafico{grid-column:1;grid-row:1}
-.chips{display:flex;gap:5px;overflow:hidden;text-transform:none;letter-spacing:0}
-.chip{border:1px solid var(--b);border-radius:5px;padding:1px 7px;cursor:pointer;background:var(--p);font-size:11px;white-space:nowrap}
-.chip.on{border-color:var(--a);color:var(--a)}.chip small{margin-left:3px}
-.ivs{display:flex;gap:2px}.iv{padding:2px 5px;border-radius:4px;cursor:pointer;color:var(--f)}.iv.on{background:#1b2633;color:var(--t)}
-#cg{position:absolute;inset:0}
-.leg{position:absolute;left:8px;top:6px;z-index:3;pointer-events:none;font-size:11.5px}
-.leg b{font-size:15px;margin-right:6px}
-.leg .ln{display:flex;gap:10px;margin-top:1px;font-size:10.5px}
-/* quadrante inferior esquerdo — 2 colunas: posições | operações */
-#baixo{grid-column:1;grid-row:2;display:grid;grid-template-columns:1fr 1fr;border-bottom:0}
-#baixo>div{display:flex;flex-direction:column;min-height:0;min-width:0;border-right:1px solid var(--b)}
-table{width:100%;border-collapse:collapse;table-layout:fixed}
-th{position:sticky;top:0;background:var(--p);color:var(--f);font-weight:500;font-size:10px;text-align:left;padding:3px 7px;border-bottom:1px solid var(--b)}
-td{padding:3px 7px;border-bottom:1px solid #141a21;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11.5px}
-td.d,th.d{text-align:right}
-tr.click{cursor:pointer}tr.click:hover td{background:#121922}
-.lado{font-size:9.5px;padding:1px 4px;border-radius:4px}
+.box{background:var(--p);border:1px solid var(--b);border-radius:10px;min-height:0;min-width:0;display:flex;flex-direction:column;overflow:hidden}
+.tt{flex-shrink:0;display:flex;align-items:center;gap:8px;padding:7px 11px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--f);border-bottom:1px solid var(--b)}
+.tt .d{margin-left:auto;font-weight:500;letter-spacing:0;text-transform:none;font-size:11px}
+.sc{flex:1;min-height:0;overflow:hidden auto}
+.sc::-webkit-scrollbar{width:6px}.sc::-webkit-scrollbar-thumb{background:#2a333d;border-radius:3px}
+.vazio{padding:12px;color:var(--f)}
+
+/* ---------- topo: resultado ---------- */
+.topo{display:grid;grid-template-columns:auto repeat(6,minmax(0,1fr));gap:8px}
+.marca{display:flex;align-items:center;gap:9px;padding:0 14px;font-weight:800;font-size:16px}
+.marca i{width:9px;height:9px;border-radius:50%;background:var(--g);box-shadow:0 0 9px var(--g)}
+.marca.off i{background:var(--r);box-shadow:0 0 9px var(--r)}
+.k{background:var(--p);border:1px solid var(--b);border-radius:10px;padding:7px 12px;min-width:0}
+.k s{display:block;text-decoration:none;color:var(--f);font-size:10px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.k b{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.k em{font-style:normal;font-size:11.5px;margin-left:6px;font-weight:600}
+.k.grande b{font-size:22px}
+.barra{height:4px;background:#1e252e;border-radius:3px;margin-top:5px;overflow:hidden;position:relative}
+.barra i{position:absolute;top:0;bottom:0;left:0;background:var(--g);border-radius:3px}
+
+/* ---------- corpo ---------- */
+.corpo{display:grid;grid-template-rows:minmax(0,.9fr) minmax(0,1.25fr);gap:8px;min-height:0}
+
+/* linha de produção dos agentes */
+.linha{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) minmax(0,1.15fr);gap:8px;min-height:0}
+.ag{position:relative;background:var(--p);border:1px solid var(--b);border-radius:10px;padding:9px 11px;display:flex;flex-direction:column;gap:5px;min-height:0;overflow:visible}
+.ag.on{border-color:#1f5a43;box-shadow:inset 0 0 0 1px #1f5a4355}
+.ag .cab{display:flex;align-items:center;gap:7px}
+.ag .av{font-size:19px;line-height:1}
+.ag .nm{font-weight:800;font-size:13px}
+.ag .pp{color:var(--f);font-size:10.5px}
+.ag .st{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--f);white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:#3a4450;flex-shrink:0}
+.dot.on{background:var(--g);box-shadow:0 0 7px var(--g);animation:pulsa 1.6s infinite}
+@keyframes pulsa{50%{opacity:.45}}
+.ag .num{display:flex;gap:12px;font-size:11px;color:var(--f);align-items:baseline}
+.ag .num b{color:var(--t);font-size:15px;margin-right:3px}
+.ag .tx{flex:1;min-height:0;overflow:hidden;font-size:11.5px;color:#c9d3dd;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
+.seta{position:absolute;right:-8px;top:50%;transform:translateY(-50%);color:#4a5562;font-size:11px;z-index:2}
+.apoio{display:grid;grid-template-rows:repeat(4,minmax(0,1fr));gap:6px;min-height:0}
+.mini{background:var(--p);border:1px solid var(--b);border-radius:9px;padding:4px 9px;display:grid;grid-template-columns:20px minmax(0,1fr) auto;column-gap:7px;align-items:center;min-height:0;overflow:hidden}
+.mini.on{border-color:#1f5a43}
+.mini .av{font-size:15px;grid-row:span 2}
+.mini b{font-size:12px}
+.mini .q{font-size:10px;color:var(--f);display:flex;align-items:center;gap:4px}
+.mini .tx{grid-column:2 / span 2;font-size:10.5px;color:var(--f);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cf{font-size:9.5px;padding:0 5px;border-radius:999px;border:1px solid var(--b);font-weight:700}
+.cf.alta{color:var(--g);border-color:#1d4a37}.cf.média{color:var(--y);border-color:#4a3d1d}.cf.baixa{color:var(--f)}
+
+/* baixo: 3 colunas */
+.baixo{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1.1fr);gap:8px;min-height:0}
+.col2{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:8px;min-height:0}
+/* posições */
+.pos{padding:8px 11px;border-bottom:1px solid var(--b)}
+.pos .l1{display:flex;align-items:baseline;gap:7px}
+.pos .l1 b{font-size:14px}
+.pos .l1 .res{margin-left:auto;font-size:15px;font-weight:800}
+.lado{font-size:10px;font-weight:800;padding:1px 6px;border-radius:5px}
 .lado.c{background:#0f2e22;color:var(--g)}.lado.v{background:#3a1520;color:var(--r)}
-.vazio{padding:10px;color:var(--f);font-size:11px}
-/* coluna direita — 3 linhas: curva | equipe | canal */
-#lado{grid-column:2;grid-row:1 / span 2;display:grid;grid-template-rows:minmax(0,.4fr) minmax(0,.9fr) minmax(0,.7fr);border-right:0;border-bottom:0}
-#lado>section{display:flex;flex-direction:column;min-height:0;border-bottom:1px solid var(--b)}
-#ce{position:absolute;inset:0}
-/* agentes */
-.ag{display:grid;grid-template-columns:7px 20px 1fr auto;gap:5px;align-items:center;padding:4px 9px;border-bottom:1px solid #141a21}
-.ag .dot{width:7px;height:7px;border-radius:50%;background:#3a434d;justify-self:center}
-.ag .dot.on{background:var(--g);box-shadow:0 0 5px var(--g)}
-.ag .av{font-size:14px;text-align:center}
-.ag .tx{min-width:0}.ag .tx b{font-size:11.5px}
-.ag .ul{display:block;color:var(--f);font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ag .q{color:var(--f);font-size:10px;text-align:right;white-space:nowrap}
-.cf{font-size:9px;padding:0 4px;border-radius:999px;border:1px solid var(--b);margin-left:3px;font-weight:600;vertical-align:middle}
-.cf.alta{color:var(--g);border-color:#1d4a37}.cf.média{color:var(--y);border-color:#4a3d1d}.cf.baixa{color:var(--f);border-color:#3a434d}
-/* canal */
-.msg{padding:3px 9px;border-bottom:1px solid #141a21}
+.trilho{position:relative;height:6px;border-radius:4px;margin:7px 0 3px;background:linear-gradient(90deg,#4a1f28,#1e252e 50%,#16402f)}
+.trilho i{position:absolute;top:-3px;width:3px;height:12px;border-radius:2px;background:var(--t)}
+.trilho u{position:absolute;top:-2px;width:2px;height:10px;background:#8b95a1}
+.pos .l3{display:flex;justify-content:space-between;font-size:10.5px;color:var(--f)}
+.pos .tese{font-size:10.5px;color:var(--f);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ordens */
+.ord{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:2px 8px;padding:6px 11px;border-bottom:1px solid var(--b);align-items:center}
+.ord .h{color:var(--f);font-size:10.5px}
+.ord .m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ord .sub{grid-column:2 / span 2;font-size:10.5px;color:var(--f);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag{font-size:10px;font-weight:700;padding:1px 6px;border-radius:5px;white-space:nowrap;background:#1e252e;color:var(--f)}
+.tag.ok{background:#0f2e22;color:var(--g)}.tag.no{background:#3a1520;color:var(--r)}.tag.esp{background:#3a3115;color:var(--y)}
+/* caçada */
+.sec{padding:7px 11px 3px;font-size:10px;color:var(--f);text-transform:uppercase;letter-spacing:.06em}
+.chips{display:flex;flex-wrap:wrap;gap:5px;padding:0 11px 6px}
+.chip{border:1px solid var(--b);border-radius:7px;padding:3px 8px;font-size:11.5px;background:var(--p2);white-space:nowrap}
+.chip b{margin-right:4px}
+.chip.hot{border-color:#5a4a1d}
+.ideia{padding:6px 11px;border-top:1px solid var(--b);font-size:11px}
+.ideia .h{color:var(--f);font-size:10px;margin-right:6px}
+.ideia .x{color:#c9d3dd;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:1px}
+/* placar */
+.placar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:8px 10px;flex-shrink:0}
+.pl{background:var(--p2);border:1px solid var(--b);border-radius:8px;padding:6px 8px;min-width:0}
+.pl s{display:block;text-decoration:none;font-size:10px;color:var(--f);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl b{font-size:16px;font-weight:800}
+.pl small{display:block;font-size:10.5px;color:var(--f);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#ce{height:70px;width:calc(100% - 20px);margin:0 10px 4px;display:block;flex-shrink:0}
+.op{display:grid;grid-template-columns:38px 14px minmax(0,1fr) auto;gap:6px;padding:4px 11px;border-top:1px solid #1a2029;align-items:center;font-size:11.5px}
+.op .h{color:var(--f);font-size:10.5px}
+.op .m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.op .m small{color:var(--f);margin-left:5px}
+/* conversa */
+.msg{padding:5px 11px;border-bottom:1px solid #1a2029;font-size:11px}
 .msg .h{color:var(--f);font-size:10px;margin-right:5px}
-.msg .de{font-weight:600;font-size:11px}
-.msg .txt{color:var(--t);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
-/* resultado colorido */
-.pos{color:var(--g)}.neg{color:var(--r)}.neu{color:var(--f)}
-/* placar destacado */
-#placar_txt{font-size:11px;color:var(--f)}
-@media(max-width:860px){
-  .grade{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) minmax(0,.5fr) minmax(0,.9fr)}
-  #grafico{grid-row:1;grid-column:1}#baixo{grid-row:2;grid-column:1}
-  #lado{grid-column:1;grid-row:3;grid-template-rows:0 minmax(0,.8fr) minmax(0,.7fr)}
-  #lado>section:first-child{display:none}
-  #baixo>div:last-child{display:none}#baixo{grid-template-columns:1fr}
+.msg .x{color:#c9d3dd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+@media(max-width:900px){
+  html,body{overflow:auto}body{height:auto}
+  .topo{grid-template-columns:repeat(2,1fr)}.marca{grid-column:span 2;padding:6px}
+  .corpo{grid-template-rows:auto auto}
+  .linha{grid-template-columns:repeat(2,1fr)}.seta{display:none}.apoio{grid-column:span 2;grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .baixo{grid-template-columns:1fr}.box{max-height:60vh}
 }
 </style>
-<script src="/static/lightweight-charts-5.0.8.js"></script>
 </head>
 <body>
-<div class="top">
-  <div class="marca"><i></i>Baleias</div>
-  <div class="kpi"><s>BTC</s><div><b class="n" id="btc">—</b><em id="btcv"></em></div></div>
-  <div class="kpi"><s>BingX · demo</s><div><b class="n" id="kb">—</b><em id="kbv"></em></div></div>
-  <div class="kpi"><s>pump.fun · papel</s><div><b class="n" id="kp">—</b><em id="kpv"></em></div></div>
-  <div class="kpi"><s>Total (início $20)</s><div><b class="n" id="kt">—</b><em id="ktv"></em></div></div>
-  <div class="kpi"><s>Hoje</s><div><b class="n" id="k24">—</b><em id="k24v"></em></div></div>
-  <div class="kpi"><s id="kms">Motor</s><div><b id="km">—</b></div></div>
-  <div class="fim" id="hora"></div>
+<!-- ===== RESULTADO ===== -->
+<div class="topo">
+  <div class="marca" id="marca"><i></i>Baleias</div>
+  <div class="k grande"><s>Total · início US$ 20</s><b class="n" id="kt">—</b><em id="ktv"></em><div class="barra"><i id="kbar"></i></div></div>
+  <div class="k"><s>BingX · demonstração</s><b class="n" id="kb">—</b><em id="kbv"></em></div>
+  <div class="k"><s>pump.fun · papel</s><b class="n" id="kp">—</b><em id="kpv"></em></div>
+  <div class="k"><s>Últimas 24 h</s><b class="n" id="kh">—</b><em id="khv"></em></div>
+  <div class="k"><s>BTC</s><b class="n" id="kbtc">—</b><em id="kbtcv"></em></div>
+  <div class="k"><s id="kms">Motor</s><b id="km" style="font-size:15px">—</b><em id="kmv"></em></div>
 </div>
-<div class="grade">
-  <!-- A: gráfico de velas -->
-  <div class="pn" id="grafico">
-    <div class="cab">
-      <div class="chips" id="chips"></div>
-      <div class="dir ivs" id="ivs">
-        <span class="iv" data-i="1m">1m</span><span class="iv" data-i="5m">5m</span>
-        <span class="iv on" data-i="15m">15m</span><span class="iv" data-i="1h">1h</span>
-        <span class="iv" data-i="4h">4h</span>
-      </div>
-    </div>
-    <div class="corpo"><div class="leg" id="leg"></div><div id="cg"></div></div>
-  </div>
 
-  <!-- B: posições abertas | últimas operações -->
-  <div class="pn" id="baixo">
-    <div>
-      <div class="cab">Posições abertas <span class="dir" id="npos"></span></div>
-      <div class="corpo" id="lpos"></div>
-    </div>
-    <div>
-      <div class="cab">Operações <span class="dir" id="placar_txt"></span></div>
-      <div class="corpo" id="lfe"></div>
-    </div>
-  </div>
+<div class="corpo">
+  <!-- ===== LINHA DE PRODUÇÃO: ideia → decisão → cético → execução → lição ===== -->
+  <div class="linha" id="lag"></div>
 
-  <!-- C: curva de patrimônio | equipe | conversa -->
-  <div id="lado">
-    <section>
-      <div class="cab">Patrimônio <span class="dir"><span class="g">■</span> BingX &nbsp;<span style="color:#ff9e64">■</span> pump</span></div>
-      <div class="corpo"><div id="ce"></div></div>
-    </section>
-    <section>
-      <div class="cab">Equipe <span class="dir" id="nag"></span></div>
-      <div class="corpo" id="lag"></div>
-    </section>
-    <section>
-      <div class="cab">Conversa <span class="dir f" id="canal_info"></span></div>
-      <div class="corpo" id="lcanal"></div>
-    </section>
+  <!-- ===== POSIÇÕES E ORDENS | CAÇADA E CONVERSA | PLACAR ===== -->
+  <div class="baixo">
+    <div class="col2">
+      <div class="box"><div class="tt">Posições abertas <span class="d" id="npos"></span></div><div class="sc" id="lpos"></div></div>
+      <div class="box"><div class="tt">Ordens → cético → motor <span class="d" id="nord"></span></div><div class="sc" id="lord"></div></div>
+    </div>
+    <div class="col2">
+      <div class="box"><div class="tt">Caçada · em alta agora <span class="d f" id="altat"></span></div><div class="sc" id="lalta"></div></div>
+      <div class="box"><div class="tt">Conversa da equipe <span class="d f" id="ncanal"></span></div><div class="sc" id="lcanal"></div></div>
+    </div>
+    <div class="box">
+      <div class="tt">Placar <span class="d" id="placar_txt"></span></div>
+      <div class="placar" id="lplacar"></div>
+      <svg id="ce" preserveAspectRatio="none"></svg>
+      <div class="sc" id="lfe"></div>
+    </div>
   </div>
 </div>
+
 <script>
 const $ = id => document.getElementById(id);
 const j = async u => (await fetch(u, {cache:"no-store"})).json();
 const esc = s => String(s??'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const usd = v => (v==null||isNaN(v))? '—' : (v<0?'−':'')+'$'+Math.abs(v).toFixed(2);
 const sin = (v,d=2) => (v==null||isNaN(v))? '—' : (v>=0?'+':'−')+Math.abs(v).toFixed(d);
-const cl = v => v>0?'pos':v<0?'neg':'neu';
+const cl = v => v>0?'g':v<0?'r':'f';
+const agora = () => Date.now()/1000;
 const hm = t => t ? new Date(t*1000).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}) : '';
-const ha = t => { if(!t) return ''; const s=Date.now()/1000-t; return s<90?'agora':s<3600?Math.round(s/60)+'m':s<86400?Math.round(s/3600)+'h':Math.round(s/86400)+'d'; };
-const px = v => v==null?'—':v>=1000?v.toLocaleString('pt-BR',{maximumFractionDigits:1}):v>=1?v.toFixed(4):v.toPrecision(4);
-const LW = window.LightweightCharts;
-const tema = {layout:{background:{type:'solid',color:'#0d1117'},textColor:'#7d8792',fontSize:11,attributionLogo:true},
-  grid:{vertLines:{color:'#141a21'},horzLines:{color:'#141a21'}},rightPriceScale:{borderColor:'#1c232c'},leftPriceScale:{visible:false},
-  timeScale:{borderColor:'#1c232c',timeVisible:true,secondsVisible:false},crosshair:{mode:0}};
+const ha = t => { if(!t) return 'nunca'; const s=agora()-t; return s<90?'agora':s<3600?Math.round(s/60)+' min':s<86400?Math.round(s/3600)+' h':Math.round(s/86400)+' d'; };
+const px = v => v==null?'—':v>=1000?v.toLocaleString('pt-BR',{maximumFractionDigits:1}):v>=1?(+v).toFixed(4):(+v).toPrecision(4);
+const nome = m => String(m||'').replace('USDT','');
+function hoje(t){const d=new Date();d.setHours(0,0,0,0);return t*1000>=d.getTime();}
+function contar(l,f){return (l||[]).filter(m=>hoje(m.t)&&f(m)).length;}
 
-// gráfico de velas
-const cg = LW.createChart($('cg'),{...tema,autoSize:true,localization:{locale:'pt-BR'}});
-const velas = cg.addSeries(LW.CandlestickSeries,{upColor:'#2ee59d',downColor:'#ff5370',borderVisible:false,wickUpColor:'#2ee59d',wickDownColor:'#ff5370'});
-let linhas=[],par=null,iv='15m',posAtual=null,ultimoPar=null;
-function marcar(p){linhas.forEach(l=>velas.removePriceLine(l));linhas=[];if(!p)return;
-  const add=(pr,cor,txt,st=0)=>pr&&linhas.push(velas.createPriceLine({price:+pr,color:cor,lineWidth:1,lineStyle:st,axisLabelVisible:true,title:txt}));
-  add(p.entrada,'#c9d1d9','entrada',2);add(p.stop,'#ff5370','stop');add(p.alvo,'#2ee59d','alvo');}
-async function carregarVelas(){if(!par)return;
-  try{const d=await j(`/api/candles?par=${par}&int=${iv}`);if(!Array.isArray(d))return;
-    const ult=d.length?d[d.length-1][4]:1,c=ult>=1000?1:ult>=1?4:Math.min(10,Math.ceil(-Math.log10(ult))+3);
-    velas.applyOptions({priceFormat:{type:'price',precision:c,minMove:Math.pow(10,-c)}});
-    velas.setData(d.map(x=>({time:x[0],open:x[1],high:x[2],low:x[3],close:x[4]})));
-    if(ultimoPar!==par+iv){cg.timeScale().fitContent();ultimoPar=par+iv;}
-    const u=d[d.length-1],a=d[Math.max(0,d.length-13)];
-    const p=posAtual;
-    $('leg').innerHTML=`<div><b>${par.replace('USDT','')}</b><span class="n">${px(u[4])}</span> <span class="${cl(u[4]-a[4])}">${sin((u[4]/a[4]-1)*100)}% 12 velas</span></div>`
-      +(p?`<div class="ln"><span class="f">entrada <span class="n">${px(p.entrada)}</span></span><span class="r">stop ${px(p.stop)}</span>${p.alvo?`<span class="g">alvo ${px(p.alvo)}</span>`:''}<span class="${cl(p.resultado)}">${sin(p.resultado,3)} US$</span></div>`:'<div class="ln f">sem posição nesta moeda</div>');
-  }catch(e){}}
-$('ivs').onclick=ev=>{const i=ev.target.dataset.i;if(!i)return;iv=i;document.querySelectorAll('.iv').forEach(x=>x.classList.toggle('on',x.dataset.i===i));carregarVelas();};
+// a linha de produção: a ideia anda da esquerda para a direita
+const ETAPAS = [
+  {id:'cacador', papel:'acha a moeda', n:d=>[[contar(d.canal,m=>m.de==='cacador'&&m.tipo==='proposta'),'ideias hoje']]},
+  {id:'laboratorio', papel:'decide a operação', n:d=>[[(d.ordens||[]).filter(o=>hoje(o.t)).length,'ordens hoje']]},
+  {id:'guardiao', nm:'Cético', av:'🛡', papel:'tenta derrubar a ordem', n:d=>{const o=(d.ordens||[]).filter(o=>hoje(o.t));return [[o.filter(x=>x.cetico==='aprovada').length,'aprovou'],[o.filter(x=>x.cetico==='vetada').length,'vetou']];}},
+  {id:'motor', nm:'Motor', av:'⚙', papel:'executa e protege', n:d=>{const e=(d.motor||{}).estado||{},c=(d.motor||{}).comando||{};return [[e.abertas??0,'abertas'],[Math.max(0,(c.max_pos??0)-(e.abertas??0)),'vagas']];}},
+  {id:'treinador', papel:'tira a lição', n:d=>[[contar(d.canal,m=>m.de==='treinador'),'lições hoje']]},
+];
+const APOIO = ['memecoins','engenheiro','minerador','baleias'];
 
-// curva de patrimônio
-const ce=LW.createChart($('ce'),{...tema,autoSize:true,rightPriceScale:{borderColor:'#1c232c',scaleMargins:{top:.12,bottom:.08}},timeScale:{...tema.timeScale,visible:false},handleScroll:false,handleScale:false});
-const sb=ce.addSeries(LW.LineSeries,{color:'#2ee59d',lineWidth:2,priceLineVisible:false});
-const sp=ce.addSeries(LW.LineSeries,{color:'#ff9e64',lineWidth:2,priceLineVisible:false});
-sb.createPriceLine({price:10,color:'#3a434d',lineStyle:2,lineWidth:1,axisLabelVisible:false,title:'início'});
-const serie=c=>{const m=new Map();(c||[]).forEach(p=>m.set(Math.round(p[0]),p[1]));return[...m].sort((a,b)=>a[0]-b[0]).map(([time,value])=>({time,value}));};
+function desenharAgentes(d){
+  const desk={};(d.desk||[]).forEach(a=>desk[a.id]=a);
+  const est=(d.motor||{}).estado||{},motorOk=agora()-(est.t||0)<120&&((d.motor||{}).comando||{}).ligado!==false;
+  let h=ETAPAS.map((e,i)=>{
+    const a=desk[e.id]||{},u=a.ultimo||{};
+    let on,quando,texto,conf=u.conf;
+    if(e.id==='motor'){on=motorOk;quando=motorOk?'ligado':'PARADO';
+      const ev=((d.carteira||{}).eventos||[])[0];texto=ev?`${hm(ev.t)} · ${ev.texto}`:'sem evento recente';conf=null;}
+    else{on=!!(u.t&&agora()-u.t<300);quando=ha(u.t);texto=u.texto||'ainda não trabalhou';}
+    const nums=e.n(d).map(([v,r])=>`<span><b class="n">${v}</b>${r}</span>`).join('');
+    return `<div class="ag ${on?'on':''}">
+      <div class="cab"><span class="av">${e.av||a.avatar||'•'}</span><div><div class="nm">${esc(e.nm||a.nome||e.id)}</div><div class="pp">${e.papel}</div></div>
+        <span class="st"><span class="dot ${on?'on':''}"></span>${quando}</span></div>
+      <div class="num">${nums}${conf?`<span class="cf ${conf}" style="margin-left:auto">${conf}</span>`:''}</div>
+      <div class="tx" title="${esc(texto)}">${esc(texto)}</div>
+      ${i<ETAPAS.length-1?'<span class="seta">▶</span>':''}</div>`;}).join('');
+  h+='<div class="apoio">'+APOIO.map(id=>{const a=desk[id]||{},u=a.ultimo||{},on=!!(u.t&&agora()-u.t<600);
+    return `<div class="mini ${on?'on':''}"><span class="av">${a.avatar||'•'}</span><b>${esc(a.nome||id)}</b><span class="q"><span class="dot ${on?'on':''}"></span>${ha(u.t)}</span><span class="tx" title="${esc(u.texto)}">${esc(u.texto||a.cargo||'')}</span></div>`;}).join('')+'</div>';
+  $('lag').innerHTML=h;
+}
 
-function escolher(p){posAtual=p.pos||null;if(par!==p.par){par=p.par;}marcar(posAtual);carregarVelas();desenharChips();}
-let chipsDados=[];
-function desenharChips(){$('chips').innerHTML=chipsDados.map((c,i)=>`<span class="chip ${c.par===par?'on':''}" data-k="${i}">${esc(c.par.replace('USDT',''))}${c.pos?`<small class="${cl(c.pos.resultado)}">${sin(c.pos.resultado,3)}</small>`:''}</span>`).join('');}
-$('chips').onclick=ev=>{const k=ev.target.closest('.chip')?.dataset.k;if(k!=null)escolher(chipsDados[k]);};
+function desenharPosicoes(d){
+  const c=d.carteira||{},p=d.pump||{};
+  const ab=(c.abertas||[]).map(x=>({onde:'BingX',nome:nome(x.moeda),lado:x.lado,r:x.resultado,ent:x.entrada,ag:x.agora,stop:x.stop,alvo:x.alvo,desde:x.desde,tese:x.motivo}));
+  const abp=(p.abertas||[]).map(x=>({onde:'pump',nome:x.simbolo,lado:'compra',r:x.resultado,ent:x.entrada,ag:x.agora,desde:x.t,tese:x.motivo}));
+  const todas=ab.concat(abp),soma=todas.reduce((s,x)=>s+(x.r||0),0);
+  $('npos').innerHTML=todas.length?`${todas.length} · <span class="${cl(soma)}">${sin(soma,3)}</span>`:'<span class="f">nenhuma</span>';
+  $('lpos').innerHTML=todas.length?todas.map(x=>{
+    let tr='';
+    if(x.stop&&x.ent&&x.ag){const alvo=x.alvo||x.ent*(x.lado==='compra'?1.05:.95),lo=Math.min(x.stop,alvo,x.ag),hi=Math.max(x.stop,alvo,x.ag);
+      const pc=v=>Math.max(0,Math.min(100,(v-lo)/(hi-lo||1)*100)),P=v=>x.lado==='compra'?pc(v):100-pc(v);
+      tr=`<div class="trilho"><u style="left:${P(x.ent)}%"></u><i style="left:calc(${P(x.ag)}% - 1px)"></i></div>
+        <div class="l3"><span class="r">stop ${px(x.stop)}</span><span>entrada ${px(x.ent)} · agora ${px(x.ag)}</span><span class="g">${x.alvo?'alvo '+px(x.alvo):'stop móvel'}</span></div>`;}
+    return `<div class="pos"><div class="l1"><span class="lado ${x.lado==='compra'?'c':'v'}">${x.lado==='compra'?'▲ COMPRA':'▼ VENDA'}</span><b>${esc(x.nome)}</b><span class="f">${x.onde} · há ${ha(x.desde)}</span><span class="res n ${cl(x.r)}">${sin(x.r,3)}</span></div>${tr}<div class="tese" title="${esc(x.tese)}">${esc(x.tese)}</div></div>`;}).join('')
+    :'<div class="vazio">Nenhuma posição aberta. O Operador procura ponto de entrada; cada ordem passa pelo cético antes do motor.</div>';
+}
+
+function desenharOrdens(d){
+  const o=d.ordens||[];
+  $('nord').innerHTML=o.length?`<span class="f">${o.filter(x=>hoje(x.t)).length} hoje</span>`:'';
+  const tagC=x=>x.cetico==='aprovada'?'<span class="tag ok">cético ✓</span>':x.cetico==='vetada'?'<span class="tag no">cético vetou</span>':x.cetico==='aguardando'&&agora()-x.t<200?'<span class="tag esp">cético pensando…</span>':'';
+  const tagE=x=>x.estado==='executada'?'<span class="tag ok">entrou</span>':x.estado==='cancelada'?'<span class="tag no">cancelada</span>':x.estado==='expirou'?'<span class="tag">expirou</span>':`<span class="tag esp">${esc(x.estado)}</span>`;
+  $('lord').innerHTML=o.length?o.map(x=>`<div class="ord"><span class="h">${hm(x.t)}</span><span class="m"><span class="lado ${x.lado==='compra'?'c':'v'}">${x.lado==='compra'?'▲':'▼'}</span> <b>${esc(nome(x.moeda))}</b> <span class="f">${esc(x.conf||'')}</span></span><span>${tagC(x)} ${tagE(x)}</span>
+    <span class="sub" title="${esc(x.cetico_motivo||x.texto||x.tese)}">${esc(x.cetico_motivo?('cético: '+x.cetico_motivo):(x.tese||x.texto))}</span></div>`).join('')
+    :'<div class="vazio">Nenhuma ordem ainda.</div>';
+}
+
+function desenharCacada(d){
+  const t=d.em_alta||{};
+  $('altat').textContent=t.t?'atualizado há '+ha(t.t):'';
+  const ac=t.acionaveis||[];
+  let h='';
+  if((t.bingx||[]).length) h+='<div class="sec">BingX · maiores de 24 h com volume</div><div class="chips">'+t.bingx.slice(0,10).map(x=>`<span class="chip ${Math.abs(x.v24h)>=20?'hot':''}"><b>${esc(x.moeda)}</b><span class="${cl(x.v24h)}">${sin(x.v24h,1)}%</span> <span class="f">${x.vol_musd} mi</span></span>`).join('')+'</div>';
+  if(ac.length) h+='<div class="sec">Em tendência e operável na BingX</div><div class="chips">'+ac.map(m=>{const g=(t.gecko||[]).find(x=>x.moeda===m);return `<span class="chip"><b>${esc(m)}</b>${g&&g.v24h!=null?`<span class="${cl(g.v24h)}">${sin(g.v24h,1)}%</span>`:''}</span>`;}).join('')+'</div>';
+  if((t.dex||[]).length) h+='<div class="sec">Memecoins com impulso (DexScreener)</div><div class="chips">'+t.dex.slice(0,8).map(x=>`<span class="chip"><b>${esc(x.moeda)}</b><span class="f">${x.vol24h_kusd} mil</span></span>`).join('')+'</div>';
+  const ideias=(d.canal||[]).filter(m=>m.de==='cacador'&&m.tipo==='proposta').slice(0,4);
+  h+=ideias.map(m=>`<div class="ideia"><span class="h">${hm(m.t)}</span><b>📡 ideia do Radar</b><div class="x" title="${esc(m.texto)}">${esc(m.texto)}</div></div>`).join('');
+  $('lalta').innerHTML=h||'<div class="vazio">Feed em alta ainda não coletado.</div>';
+}
+
+function desenharCanal(d){
+  const c=(d.canal||[]).filter(m=>m.de!=='motor'&&!(m.de==='cacador'&&m.tipo==='proposta')).slice(0,25);
+  $('ncanal').textContent=c.length?'última há '+ha(c[0].t):'';
+  $('lcanal').innerHTML=c.length?c.map(m=>`<div class="msg"><span class="h">${hm(m.t)}</span><b>${m.de_avatar||''} ${esc(m.de_nome)}</b> <span class="f">→ ${esc(m.para_nome)}</span><div class="x" title="${esc(m.texto)}">${esc(m.texto)}</div></div>`).join(''):'<div class="vazio">Sem conversa.</div>';
+}
+
+function desenharPlacar(d){
+  const pl=d.placar||{},p=d.pump||{},pf=p.fechadas||[],ps=pf.reduce((s,x)=>s+(x.resultado||0),0);
+  const card=(t,o,sub)=>`<div class="pl"><s>${t}</s><b class="n ${cl(o.soma)}">${sin(o.soma)}</b><small>${o.ganhas}/${o.n} ganhas${o.n?` · ${Math.round(o.ganhas/o.n*100)}%`:''}</small><small>${sub}</small></div>`;
+  $('lplacar').innerHTML=card('🎛 Operador decide',pl.operador||{n:0,ganhas:0,soma:0},'sistema novo, BingX')+card('Regras antigas',pl.regras||{n:0,ganhas:0,soma:0},'BingX, antes do Operador')
+    +card('🐸 Memes',{n:pf.length,ganhas:pf.filter(x=>x.resultado>0).length,soma:ps},'pump.fun, últimas 30');
+  const svg=$('ce'),W=svg.clientWidth||300,H=svg.clientHeight||70,pts=d.curva||[];
+  if(pts.length>1){const t0=pts[0][0],t1=pts[pts.length-1][0],vs=pts.map(x=>x[1]).concat([10]),lo=Math.min(...vs),hi=Math.max(...vs);
+    const X=t=>(t-t0)/(t1-t0||1)*W,Y=v=>H-4-(v-lo)/(hi-lo||1)*(H-14);
+    const path=pts.map((p,i)=>(i?'L':'M')+X(p[0]).toFixed(1)+','+Y(p[1]).toFixed(1)).join(''),ult=pts[pts.length-1][1],cor=ult>=10?'#22d38b':'#ff5a6e';
+    svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+    svg.innerHTML=`<line x1="0" x2="${W}" y1="${Y(10)}" y2="${Y(10)}" stroke="#3a4450" stroke-dasharray="3 3"/><text x="2" y="${Y(10)-3}" fill="#8b95a1" font-size="9">início US$ 10</text>
+      <path d="${path}L${W},${H}L0,${H}Z" fill="${cor}" opacity=".09"/><path d="${path}" fill="none" stroke="${cor}" stroke-width="1.8"/>
+      <text x="${W-2}" y="10" fill="#8b95a1" font-size="9" text-anchor="end">patrimônio BingX · US$ ${ult.toFixed(2)}</text>`;}
+  const c=d.carteira||{};
+  const fe=(c.fechadas||[]).map(x=>({t:x.t,onde:'BingX',nome:nome(x.moeda),lado:x.lado,r:x.resultado,m:x.motivo,ag:x.agente}))
+    .concat(pf.map(x=>({t:x.saida_t,onde:'pump',nome:x.simbolo,lado:'compra',r:x.resultado,m:x.motivo_saida,ag:true}))).sort((a,b)=>b.t-a.t);
+  const h24=fe.filter(x=>agora()-x.t<86400),s=h24.reduce((a,x)=>a+(x.r||0),0),g=h24.filter(x=>x.r>0).length;
+  $('placar_txt').innerHTML=`<span class="f">últimas operações</span>`;
+  $('lfe').innerHTML=fe.slice(0,30).map(x=>`<div class="op"><span class="h">${hm(x.t)}</span><span class="${x.lado==='compra'?'g':'r'}">${x.lado==='compra'?'▲':'▼'}</span><span class="m"><b>${esc(x.nome)}</b><small>${x.onde}${x.ag?'':' · regra antiga'} · ${esc(String(x.m||'').slice(0,40))}</small></span><span class="n ${cl(x.r)}">${sin(x.r,3)}</span></div>`).join('');
+  return {s,n:h24.length,g};
+}
 
 function desenhar(d){
-  const cart=d.carteira||{},pump=d.pump||{},cmd=(d.motor||{}).comando||{},est=(d.motor||{}).estado||{};
-  const pb=cart.patrimonio,pp=pump.patrimonio,tot=(pb||0)+(pp||0);
+  const c=d.carteira||{},p=d.pump||{},est=(d.motor||{}).estado||{},cmd=(d.motor||{}).comando||{};
+  const pb=c.patrimonio,pp=p.patrimonio,tot=(pb||0)+(pp||0);
+  $('kt').textContent=usd(tot);$('ktv').innerHTML=`<span class="${cl(tot-20)}">${sin(tot-20)} (${sin((tot/20-1)*100,1)}%)</span>`;
+  $('kbar').style.width=Math.max(0,Math.min(100,tot/40*100))+'%';$('kbar').style.background=tot>=20?'var(--g)':'var(--r)';
   $('kb').textContent=usd(pb);$('kbv').innerHTML=`<span class="${cl(pb-10)}">${sin((pb/10-1)*100,1)}%</span>`;
   $('kp').textContent=usd(pp);$('kpv').innerHTML=`<span class="${cl(pp-10)}">${sin((pp/10-1)*100,1)}%</span>`;
-  $('kt').textContent=usd(tot);$('ktv').innerHTML=`<span class="${cl(tot-20)}">${sin(tot-20)}</span>`;
-  const velho=Date.now()/1000-(est.t||0)>180;
-  $('km').innerHTML=velho?'<span class="r">PARADO</span>':cmd.ligado===false?'<span class="r">DESLIGADO</span>':`<span class="g">ligado</span> <span class="f" style="font-weight:400">· ${cmd.modo==='agente'?'Operador decide':'regras'}</span>`;
-  $('kms').textContent=`Motor · ${est.abertas??0}/${cmd.max_pos??'—'}`;
-  $('hora').innerHTML=new Date().toLocaleTimeString('pt-BR')+'<br>ao vivo · 5 s';
-
-  // posições abertas
-  const ab=(cart.abertas||[]).map(p=>({onde:'BingX',par:p.moeda,nome:p.moeda.replace('USDT',''),lado:p.lado,entrada:p.entrada,stop:p.stop?.preco||p.stop,alvo:p.alvo?.preco||p.alvo,resultado:p.resultado,desde:p.desde,motivo:p.motivo}));
-  const abp=(pump.abertas||[]).map(p=>({onde:'pump',nome:p.simbolo,lado:'compra',resultado:p.resultado??p.resultado_aberto,desde:p.t,motivo:p.motivo}));
-  $('npos').innerHTML=`<span class="${cl(cart.realizado||0)}">${ab.length+abp.length} abertas</span>`;
-  $('lpos').innerHTML=(ab.length+abp.length)?`<table><tr><th style="width:22%">moeda</th><th style="width:14%">lado</th><th class="d" style="width:16%">PnL</th><th style="width:10%">há</th><th>stop / alvo</th></tr>`
-    +ab.concat(abp).map((p,i)=>`<tr class="${p.par?'click':''}" data-par="${p.par||''}"><td><b>${esc(p.nome)}</b> <span class="f">${p.onde}</span></td><td><span class="lado ${p.lado==='compra'?'c':'v'}">${p.lado==='compra'?'▲':'▼'}</span></td><td class="d n ${cl(p.resultado)}">${sin(p.resultado,3)}</td><td class="f">${ha(p.desde)}</td><td class="f">${p.stop?px(p.stop):'—'}${p.alvo?' / '+px(p.alvo):''}</td></tr>`).join('')+'</table>'
-    :'<div class="vazio">Nenhuma posição. O Operador espera ponto de entrada.</div>';
-  document.querySelectorAll('#lpos tr.click').forEach(tr=>tr.onclick=()=>{const c=chipsDados.find(x=>x.par===tr.dataset.par);if(c)escolher(c);});
-
-  // chips
-  chipsDados=ab.map(p=>({par:p.par,pos:p})).concat(ab.some(p=>p.par==='BTCUSDT')?[]:[{par:'BTCUSDT',pos:null}]);
-  if(!par||!chipsDados.some(c=>c.par===par)){escolher(chipsDados[0]);}else{posAtual=(chipsDados.find(c=>c.par===par)||{}).pos||null;marcar(posAtual);desenharChips();}
-
-  // operações fechadas — apenas BingX (principais) + pump resumo
-  const fe=(cart.fechadas||[]).map(x=>({t:x.t,onde:'BingX',nome:x.moeda.replace('USDT',''),lado:x.lado,r:x.resultado,m:x.motivo}))
-    .concat((pump.fechadas||[]).map(x=>({t:x.saida_t,onde:'pump',nome:x.simbolo,lado:'compra',r:x.resultado,m:x.motivo_saida}))).sort((a,b)=>b.t-a.t);
-  const h24=fe.filter(x=>Date.now()/1000-x.t<86400),s24=h24.reduce((s,x)=>s+(x.r||0),0),g24=h24.filter(x=>x.r>0).length;
-  const stot=fe.reduce((s,x)=>s+(x.r||0),0),gtot=fe.filter(x=>x.r>0).length;
-  $('k24').innerHTML=`<span class="${cl(s24)}">${sin(s24)}</span>`;$('k24v').innerHTML=`<span class="f">${h24.length} ops · ${g24}✓</span>`;
-  $('placar_txt').innerHTML=`<span class="${cl(stot)}">${sin(stot)} total</span> <span class="f">· ${gtot}/${fe.length} ganhas</span>`;
-  $('lfe').innerHTML=`<table><tr><th style="width:12%">hora</th><th style="width:20%">moeda</th><th class="d" style="width:15%">PnL</th><th>saída</th></tr>`
-    +fe.slice(0,40).map(x=>`<tr><td class="f">${hm(x.t)}</td><td><b>${esc(x.nome)}</b> <span class="f">${x.onde}</span></td><td class="d n ${cl(x.r)}">${sin(x.r,3)}</td><td class="f" title="${esc(x.m)}">${esc(x.m)}</td></tr>`).join('')+'</table>';
-
-  // equipe
-  const ags=[...(d.fluxo||[]),...(d.apoio||[])];
-  const ativos=ags.filter(a=>a.ultimo&&Date.now()/1000-a.ultimo.t<900).length;
-  $('nag').innerHTML=`<span class="${ativos>0?'g':'f'}">${ativos} ativos em 15 min</span>`;
-  $('lag').innerHTML=ags.map(a=>{const u=a.ultimo||{},on=u.t&&Date.now()/1000-u.t<900;
-    return `<div class="ag"><span class="dot ${on?'on':''}"></span><span class="av">${a.avatar||'•'}</span><div class="tx"><b>${esc(a.nome)}</b>${u.conf?`<span class="cf ${u.conf}">${u.conf}</span>`:''}<span class="ul" title="${esc(u.texto)}">${esc(u.texto||'')}</span></div><span class="q">${u.t?ha(u.t):''}</span></div>`;}).join('');
-
-  // conversa — só mensagens de agentes (não de motor) e últimas 20
-  const canal=(d.canal||[]).filter(m=>m.de!=='motor').slice(0,20);
-  $('canal_info').textContent=canal.length>0?hm((d.canal||[])[0]?.t):'';
-  $('lcanal').innerHTML=canal.map(m=>`<div class="msg"><div><span class="h">${hm(m.t)}</span><span class="de">${m.de_avatar||''} ${esc(m.de_nome||m.de)}</span> <span class="f">→ ${esc(m.para_nome||m.para)}</span></div><div class="txt" title="${esc(m.texto)}">${esc(m.texto)}</div></div>`).join('');
-
-  // curva
-  sb.setData(serie(d.curva));sp.setData(serie(pump.curva));ce.timeScale().fitContent();
+  const motorOk=agora()-(est.t||0)<120&&cmd.ligado!==false;
+  $('marca').className='marca'+(motorOk?'':' off');
+  $('km').innerHTML=motorOk?'<span class="g">ligado</span>':'<span class="r">PARADO</span>';
+  $('kms').textContent='Motor BingX';$('kmv').innerHTML=`<span class="f">${est.abertas??0}/${cmd.max_pos??'—'} posições</span>`;
+  desenharAgentes(d);desenharPosicoes(d);desenharOrdens(d);desenharCacada(d);desenharCanal(d);
+  const h=desenharPlacar(d);
+  $('kh').innerHTML=`<span class="${cl(h.s)}">${sin(h.s)}</span>`;$('khv').innerHTML=`<span class="f">${h.g}/${h.n} ganhas</span>`;
 }
 
 async function btc(){
   try{const d=await j('/api/candles?par=BTCUSDT&int=5m');if(Array.isArray(d)&&d.length>13){const u=d[d.length-1][4],a=d[d.length-13][4];
-    $('btc').textContent='$'+u.toLocaleString('pt-BR',{maximumFractionDigits:0});$('btcv').innerHTML=`<span class="${cl(u-a)}">${sin((u/a-1)*100)}% 1h</span>`;}}catch(e){}
+    $('kbtc').textContent='$'+u.toLocaleString('pt-BR',{maximumFractionDigits:0});$('kbtcv').innerHTML=`<span class="${cl(u-a)}">${sin((u/a-1)*100)}% 1h</span>`;}}catch(e){}
 }
 async function ciclo(){try{const d=await j('/api/vivo');if(!d.erro)desenhar(d);}catch(e){}setTimeout(ciclo,5000);}
-setInterval(carregarVelas,15000);setInterval(btc,30000);
 let versaoPagina=null;
 async function cicloVersao(){try{const v=(await j('/api/versao')).versao;if(versaoPagina&&v!==versaoPagina)location.reload();versaoPagina=v;}catch(e){}setTimeout(cicloVersao,20000);}
-ciclo();btc();cicloVersao();
+ciclo();btc();setInterval(btc,30000);cicloVersao();
 </script>
 </body>
 </html>
