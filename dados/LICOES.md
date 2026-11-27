@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 06:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 06:06 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 77.4% das moedas subindo em 24 h, 87.8% em 4 h · BTC 24 h 1.57%, 4 h 1.72%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 11.6%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 12.0%/ano · {'BTC': 11.0, 'ETH': 11.0, 'SOL': 11.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PEPE OCO invertido (alta, CONFIRMOU) · ZAMA fundo duplo (alta, CONFIRMOU) · ARB topo duplo (baixa, formado) · BIGTIME fundo duplo (alta, formado) · BONK fundo duplo (alta, formado) · FIL topo duplo (baixa, formado) · FIL fundo duplo (alta, formado) · LDO topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ONDO topo duplo (baixa, formado)
 - 📰 27/11 06:00 UTC · Cointelegraph: Here’s what happened in crypto today
@@ -106,7 +106,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
 - ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
@@ -117,10 +117,10 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H70 (`lab/juizo_h70.py`, ramo `estado` 4ae07584): REPROVADA nas 4 tentativas — controle válido
-- Resultado da H74 (23/11/2026 ~23:00 UTC, `lab/juizo_h74.py`, ramo `estado` 3dc14328): REPROVADA — nada muda
 - Resultado da H75 (23/11/2026 ~23:25 UTC, `lab/juizo_h75.py`, ramo `estado` 3fa38ccf): REPROVADA — R1–R3 não entram
 - Resultado da H76 (24/11/2026 ~21:20 UTC, `lab/juizo_h76.py`): REPROVADA — nada muda
 - Resultado das H77 e H78 (24/11/2026 ~21:45 UTC, `lab/livro151.py` → `dados/lab/livro151_resultado.json`): as duas REPROVADAS — nada entra
 - Resultado da H80 (24/11/2026 ~22:45 UTC, `lab/h80_funding.py` → `dados/lab/h80_resultado.json`): REPROVADA — nada entra
+- Resultado da H85 (27/11/2026, `lab/h85_padroes.py` → `dados/lab/h85_padroes.json`): NENHUM padrão passa
+- Resultado da H86 (27/11/2026, `lab/h86_livro.py` → `dados/lab/h86_livro.json`): 1 de 72 passa — candidato, não regra
 
