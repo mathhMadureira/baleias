@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 16:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 27/11/2026 16:18 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,10 +64,10 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 64.8% das moedas subindo em 24 h, 9.6% em 4 h · BTC 24 h -0.83%, 4 h -2.51%.
+- **Amplitude:** 59.2% das moedas subindo em 24 h, 10.4% em 4 h · BTC 24 h -0.91%, 4 h -2.61%.
 - **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.2%/ano · {'BTC': 5.3, 'ETH': 11.0, 'SOL': -5.2} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 2.5% das moedas acima da MM50.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.3%/ano · {'BTC': 4.8, 'ETH': 11.0, 'SOL': -5.2} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 0.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** PORTAL bandeira de alta (alta, CONFIRMOU) · FIL topo duplo (baixa, formado) · PORTAL OCO invertido (alta, formado) · STX topo duplo (baixa, formado) · TIA topo duplo (baixa, formado) · UNI topo duplo (baixa, formado)
 - 📰 27/11 14:40 UTC · Cointelegraph: What was Coinbase worth while Nasdaq was closed?
 - 📰 27/11 13:50 UTC · Decrypt: What's on the Ethereum Roadmap: Glamsterdam, Hegotá and Beyond
@@ -108,12 +108,12 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido, reversao_queda. Rede neural corrigida.
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 62312 apostas conferidas ao vivo, acerto 54.0%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 62318 apostas conferidas ao vivo, acerto 54.0%; prevê 124 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
