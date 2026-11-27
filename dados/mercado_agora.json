@@ -1,20 +1,20 @@
 {
- "t": 1795796265,
- "hora_utc": "2026-11-27 16:17 UTC",
+ "t": 1795796459,
+ "hora_utc": "2026-11-27 16:20 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 125,
-  "subindo_pct": 75.2,
-  "mediana_pct": 0.61
+  "moedas": 126,
+  "subindo_pct": 75.4,
+  "mediana_pct": 0.6
  },
  "mercado_4h": {
-  "moedas": 125,
-  "subindo_pct": 10.4,
-  "mediana_pct": -2.74
+  "moedas": 126,
+  "subindo_pct": 10.3,
+  "mediana_pct": -2.72
  },
  "mercado_24h": {
-  "moedas": 125,
-  "subindo_pct": 59.2,
+  "moedas": 126,
+  "subindo_pct": 59.5,
   "mediana_pct": 0.41
  },
  "btc": {
@@ -172,10 +172,10 @@
   -0.29,
   -3.65,
   1.52,
-  -0.35
+  -0.17
  ],
  "contexto": {
-  "t": 1795796266,
+  "t": 1795796460,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -241,7 +241,7 @@
     "fonte": "CoinDesk",
     "t": 1795779277,
     "hora_utc": "27/11 11:34",
-    "titulo": "Live updates: Bitcoin drops below $60,000 as Nasdaq 100 gives up most of its early gains"
+    "titulo": "Live updates: Bitcoin's Thanksgiving gains prove fleeting"
    },
    {
     "fonte": "CoinDesk",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": -3.3,
    "principais_anual_pct": {
-    "BTC": 4.8,
+    "BTC": 3.1,
     "ETH": 11.0,
-    "SOL": -5.2
+    "SOL": -4.2
    },
    "leitura": "neutro"
   },
@@ -359,8 +359,8 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 110,
-  "compras": 50,
+  "apostas": 109,
+  "compras": 49,
   "vendas": 60,
   "mais_confiantes_venda": [
    {
@@ -698,12 +698,12 @@
   "z_contra_lab": -1.09,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4974,
-    "n": 23285
+    "acerto": 0.4972,
+    "n": 23376
    },
    "segue_maioria_24h": {
-    "acerto": 0.5061,
-    "n": 29114
+    "acerto": 0.5063,
+    "n": 29119
    }
   },
   "referencia_ganha": [],
