@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.9% | 318 | 51.4%–62.2% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.3% | 2768 | 51.4%–55.1% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.2% | 2769 | 51.4%–55.1% | rede neural 16→12→1, aprende a cada vela |
 | connors_8020_baixa | promissor | 68.8% | 16 | 44.4%–85.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | demark_td9_baixa | promissor | 68.6% | 35 | 52.0%–81.4% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 66.7% | 42 | 51.6%–79.0% | física: alta anormal de 1 h → devolve |
@@ -24,7 +24,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | raschke_graal_alta | reprovado | 47.4% | 57 | 35.0%–60.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da alta) |
 | williams_volb_alta | reprovado | 46.0% | 150 | 38.2%–54.0% | Williams, rompimento de volatilidade: fechou além de ±0,5 × amplitude anterior → continua. H33, em observação (lado da alta) |
 | rompimento | reprovado | 37.2% | 43 | 24.4%–52.1% | Tartaruga em 15 min: rompeu a máxima de 55 |
-| raschke_sopa_alta | reprovado | 34.8% | 23 | 18.8%–55.1% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
+| raschke_sopa_alta | reprovado | 33.3% | 24 | 18.0%–53.3% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da alta) |
 | connors_8020_alta | reprovado | 33.3% | 21 | 17.2%–54.6% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da alta) |
 | velez_elefante | reprovado | 22.2% | 9 | 6.3%–54.7% | Velez: vela elefante de alta no quadro de força (H23: sem vantagem) |
 | velez_estreito_rompe | reprovado | 20.0% | 5 | 3.6%–62.4% | Velez: rompimento do estado estreito (H23: sem vantagem) |
