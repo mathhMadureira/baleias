@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 08:15 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 08:19 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 18.8% das moedas subindo em 24 h, 15.0% em 4 h · BTC 24 h -2.99%, 4 h -0.33%.
+- **Amplitude:** 17.4% das moedas subindo em 24 h, 10.6% em 4 h · BTC 24 h -3.54%, 4 h -0.59%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.1%/ano · {'BTC': -5.0, 'ETH': -6.0, 'SOL': -13.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.2%/ano · {'BTC': -4.7, 'ETH': -1.8, 'SOL': -12.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BEAMX triângulo simétrico (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BONK OCO invertido (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SEI topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** BNB ombro-cabeça-ombro (baixa, formado) · BONK OCO invertido (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SEI topo duplo (baixa, formado) · SEI OCO invertido (alta, formado) · SOL ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 07:43 UTC · Cointelegraph: Binance receives in-principle approval, plans Asia hub in Bhutan
 - 📰 27/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 27/11 21:46 UTC · Decrypt: OpenAI Turns the Tables on Apple With Its Own Trade-Secret Theft Claims
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 64183 apostas conferidas ao vivo, acerto 54.2%; prevê 132 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 64191 apostas conferidas ao vivo, acerto 54.2%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
