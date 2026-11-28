@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 27/11/2026 19:43 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 03:20 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,21 +64,21 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 57.0% das moedas subindo em 24 h, 81.5% em 4 h · BTC 24 h -1.09%, 4 h 0.24%.
-- **Medo e ganância:** 12 (Extreme Fear; ontem 11).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 6.6%/ano · {'BTC': 10.0, 'ETH': 11.0, 'SOL': 3.1} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74781, MM200 71980); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** MAGIC estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · NOM estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · COOKIE topo duplo (baixa, formado) · MAGIC fundo duplo (alta, formado) · MITO fundo duplo (alta, formado) · MUBARAK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT OCO invertido (alta, formado) · OP fundo duplo (alta, formado) · PORTAL OCO invertido (alta, formado)
+- **Amplitude:** 30.3% das moedas subindo em 24 h, 44.7% em 4 h · BTC 24 h -2.54%, 4 h 0.28%.
+- **Medo e ganância:** 10 (Extreme Fear; ontem 12).
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -16.4%/ano · {'BTC': 4.0, 'ETH': 11.0, 'SOL': 5.1} · vendidos pagando (risco de alta forçada).
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 10.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** PROM triângulo descendente (alta, CONFIRMOU) · AIGENSYN fundo duplo (alta, formado) · BIGTIME fundo duplo (alta, formado) · BMT topo duplo (baixa, formado) · BMT OCO invertido (alta, formado) · CFG fundo duplo (alta, formado) · CFG ombro-cabeça-ombro (baixa, formado) · GALA fundo duplo (alta, formado) · KITE topo duplo (baixa, formado) · LDO OCO invertido (alta, formado)
+- 📰 27/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
+- 📰 27/11 21:46 UTC · Decrypt: OpenAI Turns the Tables on Apple With Its Own Trade-Secret Theft Claims
+- 📰 27/11 21:15 UTC · Cointelegraph: Franklin Templeton makes room for HYPE in crypto index ETF
+- 📰 27/11 20:46 UTC · Decrypt: Could AI Break Bitcoin? Not Yet, Research Firm K33 Says
+- 📰 27/11 19:46 UTC · Decrypt: 4 Scary Bitcoin Charts That Suggest This Bear Market Is Different
 - 📰 27/11 19:23 UTC · Cointelegraph: Bitcoin whales pile into BTC despite shrinking profit cushion
-- 📰 27/11 18:16 UTC · Decrypt: $7 Billion in Bitcoin Options Just Expired: Here’s What It Means
-- 📰 27/11 17:43 UTC · Decrypt: Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data
-- 📰 27/11 17:37 UTC · Cointelegraph: China sets March 2027 rollout for blockchain identity regulations
-- 📰 27/11 17:09 UTC · Decrypt: Nvidia's Blackwell Chips Turn Up in China as Trump Floats Government Stake
-- 📰 27/11 16:48 UTC · Cointelegraph: Bitcoin price drops below $59K as Anthropic joins tech stock rebound
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 71.3 h.
+- ⚠️ **Rotina parada:** sem decisão há 79.0 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -89,31 +89,31 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- ❌ Errou (desce). Peso reduzido de: tres_soldados. Rede neural corrigida.
-- ❌ Errou (desce). Peso reduzido de: vortice_invertido, tres_soldados. Rede neural corrigida.
-- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
-- ✂ Sinapse williams_volb_baixa PODADA: 112/217 (51.6%) contra 53.7% do mercado.
-- ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
-- ✂ Sinapse williams_volb_alta PODADA: 111/250 (44.4%) contra 46.6% do mercado.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v3: 7 sinapses votando, 30 em observação, 2 podadas)
 **v2:**
-- ⏸ Revivi 13 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - ⏸ Revivi 8 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
 - 😴 Sono: reencenei 2208 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 2304 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 2400 episódios guardados e renormalizei os pesos das sinapses.
 - 😴 Sono: reencenei 2496 episódios guardados e renormalizei os pesos das sinapses.
+- ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v2: 7 sinapses votando, 17 em observação, 1 podadas)
 **v1:**
-- ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
-- ❌ Errou (sobe). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, vortice_invertido. Rede neural corrigida.
+- ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
+- 🛑 Teto de perda do dia (US$ -120.25): sem apostas até 00:00 UTC.
+- ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 63110 apostas conferidas ao vivo, acerto 54.1%; prevê 134 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 63110 apostas conferidas ao vivo, acerto 54.1%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
