@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 10:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 10:36 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 14.0% das moedas subindo em 24 h, 26.4% em 4 h · BTC 24 h -3.86%, 4 h -0.87%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -8.6%/ano · {'BTC': -8.5, 'ETH': 5.9, 'SOL': 5.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -8.7%/ano · {'BTC': -9.7, 'ETH': 6.3, 'SOL': 5.0} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** KAVA estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · ALICE fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · GUN OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · SOL ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 09:32 UTC · CoinDesk: Trump-linked crypto token WLFI plunges 50% to record lows
