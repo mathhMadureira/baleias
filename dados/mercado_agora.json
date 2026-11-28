@@ -1,28 +1,28 @@
 {
- "t": 1795885211,
- "hora_utc": "2026-11-28 17:00 UTC",
+ "t": 1795885438,
+ "hora_utc": "2026-11-28 17:03 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 116,
-  "subindo_pct": 34.5,
-  "mediana_pct": -0.16
+  "subindo_pct": 40.5,
+  "mediana_pct": -0.1
  },
  "mercado_4h": {
   "moedas": 116,
-  "subindo_pct": 19.8,
-  "mediana_pct": -0.86
+  "subindo_pct": 24.1,
+  "mediana_pct": -0.55
  },
  "mercado_24h": {
   "moedas": 116,
-  "subindo_pct": 19.0,
-  "mediana_pct": -3.06
+  "subindo_pct": 19.8,
+  "mediana_pct": -2.41
  },
  "btc": {
-  "1h": 0.28,
-  "4h": 0.42,
-  "24h": -1.36,
-  "preco": 59477.44,
-  "vol_4h_vs_media": 0.97
+  "1h": 0.15,
+  "4h": 0.65,
+  "24h": -0.62,
+  "preco": 59588.28,
+  "vol_4h_vs_media": 1.02
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "WLFI",
-   "4h": -11.4,
-   "24h": -55.0,
+   "4h": -9.28,
+   "24h": -53.68,
    "vol": 0.56
   },
   {
-   "moeda": "TLM",
-   "4h": -6.1,
-   "24h": -6.58,
-   "vol": 0.46
+   "moeda": "ACE",
+   "4h": -9.02,
+   "24h": 26.1,
+   "vol": 1.06
   },
   {
    "moeda": "NIGHT",
-   "4h": -5.7,
-   "24h": 3.59,
-   "vol": 1.38
+   "4h": -6.08,
+   "24h": 3.64,
+   "vol": 1.51
   },
   {
-   "moeda": "BLUR",
-   "4h": -4.83,
-   "24h": -28.68,
-   "vol": 0.82
-  },
-  {
-   "moeda": "CFG",
-   "4h": -4.54,
-   "24h": 1.25,
-   "vol": 0.27
-  },
-  {
-   "moeda": "BIGTIME",
-   "4h": -4.52,
-   "24h": -11.52,
-   "vol": 0.35
+   "moeda": "SKY",
+   "4h": -4.57,
+   "24h": 6.37,
+   "vol": 0.61
   },
   {
    "moeda": "TFUEL",
-   "4h": -4.25,
-   "24h": 3.71,
-   "vol": 0.79
+   "4h": -4.36,
+   "24h": 4.62,
+   "vol": 0.73
   },
   {
-   "moeda": "BANK",
-   "4h": -3.27,
-   "24h": -5.73,
-   "vol": 0.38
+   "moeda": "BIGTIME",
+   "4h": -4.32,
+   "24h": -11.01,
+   "vol": 0.35
   },
   {
    "moeda": "MANTRA",
-   "4h": -3.26,
-   "24h": -7.14,
-   "vol": 1.41
+   "4h": -3.7,
+   "24h": -6.73,
+   "vol": 1.43
+  },
+  {
+   "moeda": "BLUR",
+   "4h": -3.65,
+   "24h": -28.04,
+   "vol": 0.79
+  },
+  {
+   "moeda": "TLM",
+   "4h": -3.36,
+   "24h": -5.16,
+   "vol": 0.43
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "PARTI",
-   "4h": 11.7,
-   "24h": 8.52,
-   "vol": 5.62
-  },
-  {
-   "moeda": "LISTA",
-   "4h": 9.37,
-   "24h": 7.26,
-   "vol": 1.83
+   "4h": 12.02,
+   "24h": 7.61,
+   "vol": 5.65
   },
   {
    "moeda": "ROBO",
-   "4h": 5.92,
-   "24h": 6.62,
-   "vol": 0.82
+   "4h": 8.47,
+   "24h": 10.26,
+   "vol": 0.89
   },
   {
-   "moeda": "RIF",
-   "4h": 3.46,
-   "24h": -7.71,
-   "vol": 0.98
-  },
-  {
-   "moeda": "HEI",
-   "4h": 3.37,
-   "24h": -6.67,
-   "vol": 0.18
-  },
-  {
-   "moeda": "ATM",
-   "4h": 2.74,
-   "24h": 0.24,
-   "vol": 3.13
-  },
-  {
-   "moeda": "LUNC",
-   "4h": 2.32,
-   "24h": 0.37,
-   "vol": 1.44
-  },
-  {
-   "moeda": "GENIUS",
-   "4h": 2.13,
-   "24h": -8.26,
-   "vol": 0.85
-  },
-  {
-   "moeda": "MEGA",
-   "4h": 1.5,
-   "24h": -5.92,
-   "vol": 1.63
+   "moeda": "LISTA",
+   "4h": 8.44,
+   "24h": 5.25,
+   "vol": 2.11
   },
   {
    "moeda": "INIT",
-   "4h": 1.38,
-   "24h": -10.2,
-   "vol": 0.7
+   "4h": 7.09,
+   "24h": -6.8,
+   "vol": 0.79
+  },
+  {
+   "moeda": "RIF",
+   "4h": 5.9,
+   "24h": -7.71,
+   "vol": 1.01
+  },
+  {
+   "moeda": "HEI",
+   "4h": 4.15,
+   "24h": -11.94,
+   "vol": 0.2
+  },
+  {
+   "moeda": "THE",
+   "4h": 3.0,
+   "24h": 5.77,
+   "vol": 0.93
+  },
+  {
+   "moeda": "LUNC",
+   "4h": 2.02,
+   "24h": 0.33,
+   "vol": 1.47
+  },
+  {
+   "moeda": "YB",
+   "4h": 1.96,
+   "24h": 8.73,
+   "vol": 1.74
+  },
+  {
+   "moeda": "GENIUS",
+   "4h": 1.89,
+   "24h": -8.41,
+   "vol": 0.83
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   0.37,
   0.3,
   0.15,
-  -0.0
+  0.02
  ],
  "contexto": {
-  "t": 1795885212,
+  "t": 1795885439,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795885262,
+    "hora_utc": "28/11 17:01",
+    "titulo": "Bank of Japan Explores Bringing Stablecoins and Tokenized Finance Into Traditional Banking"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795881714,
@@ -260,12 +266,6 @@
     "t": 1795807380,
     "hora_utc": "27/11 19:23",
     "titulo": "Bitcoin whales pile into BTC despite shrinking profit cushion"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795803363,
-    "hora_utc": "27/11 18:16",
-    "titulo": "$7 Billion in Bitcoin Options Just Expired: Here’s What It Means"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -4.8,
+   "media_top20_anual_pct": 12.0,
    "principais_anual_pct": {
-    "BTC": 7.9,
-    "ETH": 9.1,
-    "SOL": -9.6
+    "BTC": 10.5,
+    "ETH": 11.0,
+    "SOL": 11.0
    },
    "leitura": "neutro"
   },
@@ -301,35 +301,28 @@
     "padrao": "bandeira de baixa",
     "sentido": "baixa",
     "confirmado": true,
-    "nivel": 0.3736
+    "nivel": 0.3733
    },
    {
-    "moeda": "TIA",
-    "padrao": "topo duplo",
+    "moeda": "ETH",
+    "padrao": "estrutura de baixa (topos e fundos descendentes)",
     "sentido": "baixa",
     "confirmado": true,
-    "nivel": 0.3276
+    "nivel": null
    },
    {
-    "moeda": "AERO",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.3947
-   },
-   {
-    "moeda": "APT",
-    "padrao": "topo duplo",
+    "moeda": "ICP",
+    "padrao": "bandeira de baixa",
     "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.3723
+    "confirmado": true,
+    "nivel": 1.919
    },
    {
     "moeda": "ATM",
     "padrao": "fundo duplo",
     "sentido": "alta",
     "confirmado": false,
-    "nivel": 0.826
+    "nivel": 0.856
    },
    {
     "moeda": "BNB",
@@ -344,13 +337,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 58792.37
-   },
-   {
-    "moeda": "CRV",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.1674
    },
    {
     "moeda": "CRV",
@@ -388,11 +374,25 @@
     "nivel": 0.1645
    },
    {
+    "moeda": "PARTI",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.0361
+   },
+   {
     "moeda": "SSV",
     "padrao": "OCO invertido",
     "sentido": "alta",
     "confirmado": false,
     "nivel": 2.824
+   },
+   {
+    "moeda": "TIA",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.3276
    },
    {
     "moeda": "TIA",
@@ -442,42 +442,42 @@
   }
  },
  "v4": {
-  "vela": "16:45 UTC",
-  "apostas": 105,
-  "compras": 38,
-  "vendas": 67,
+  "vela": "17:00 UTC",
+  "apostas": 133,
+  "compras": 34,
+  "vendas": 99,
   "mais_confiantes_venda": [
    {
+    "moeda": "JST",
+    "prob_subir": 0.354
+   },
+   {
+    "moeda": "ONE",
+    "prob_subir": 0.354
+   },
+   {
+    "moeda": "SOPH",
+    "prob_subir": 0.363
+   },
+   {
     "moeda": "MAGIC",
-    "prob_subir": 0.335
+    "prob_subir": 0.366
+   },
+   {
+    "moeda": "GRAM",
+    "prob_subir": 0.368
    },
    {
     "moeda": "CAKE",
     "prob_subir": 0.37
    },
    {
-    "moeda": "SLP",
-    "prob_subir": 0.376
+    "moeda": "QNT",
+    "prob_subir": 0.371
    },
    {
-    "moeda": "FORM",
-    "prob_subir": 0.382
-   },
-   {
-    "moeda": "RIF",
-    "prob_subir": 0.385
-   },
-   {
-    "moeda": "PEOPLE",
-    "prob_subir": 0.386
-   },
-   {
-    "moeda": "BABAB",
-    "prob_subir": 0.386
-   },
-   {
-    "moeda": "BB",
-    "prob_subir": 0.394
+    "moeda": "SOL",
+    "prob_subir": 0.375
    }
   ],
   "mais_confiantes_compra": [
@@ -490,8 +490,12 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "TFUEL",
-    "prob_subir": 0.642
+    "moeda": "AT",
+    "prob_subir": 0.629
+   },
+   {
+    "moeda": "PROM",
+    "prob_subir": 0.623
    },
    {
     "moeda": "BONK",
@@ -508,10 +512,6 @@
    {
     "moeda": "F",
     "prob_subir": 0.604
-   },
-   {
-    "moeda": "HMSTR",
-    "prob_subir": 0.6
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -775,38 +775,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27447 apostas (617 velas, 21/11 17:15–28/11 16:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5372,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27480 apostas (618 velas, 21/11 17:15–28/11 16:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5371,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.32,
+  "z_contra_lab": 0.31,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5004,
-    "n": 20181
+    "acerto": 0.5001,
+    "n": 20214
    },
    "segue_maioria_24h": {
-    "acerto": 0.5056,
-    "n": 27399
+    "acerto": 0.5055,
+    "n": 27432
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
     "acerto": 0.5462,
-    "n": 7457
+    "n": 7472
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5847,
-    "n": 2504
+    "acerto": 0.5844,
+    "n": 2507
    },
    "confianca:<0,05": {
-    "acerto": 0.5203,
-    "n": 16632
+    "acerto": 0.5202,
+    "n": 16645
    },
    "confianca:≥0,12": {
-    "acerto": 0.6487,
-    "n": 854
+    "acerto": 0.6484,
+    "n": 856
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5162,
@@ -817,20 +817,20 @@
     "n": 6809
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5647,
-    "n": 7124
+    "acerto": 0.5641,
+    "n": 7157
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5213,
     "n": 6033
    },
    "lado:compra": {
-    "acerto": 0.5406,
-    "n": 11370
+    "acerto": 0.5407,
+    "n": 11376
    },
    "lado:venda": {
-    "acerto": 0.5348,
-    "n": 16077
+    "acerto": 0.5345,
+    "n": 16104
    }
   }
  },
