@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 13:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 14:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,17 +64,17 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 10.2% das moedas subindo em 24 h, 17.3% em 4 h · BTC 24 h -3.88%, 4 h -0.85%.
+- **Amplitude:** 9.4% das moedas subindo em 24 h, 18.9% em 4 h · BTC 24 h -3.88%, 4 h -0.85%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -4.3%/ano · {'BTC': -9.6, 'ETH': 11.0, 'SOL': -3.9} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 3.3%/ano · {'BTC': -11.9, 'ETH': 11.0, 'SOL': 1.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BMT bandeira de baixa (baixa, CONFIRMOU) · DODO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · EIGEN bandeira de baixa (baixa, CONFIRMOU) · FIL bandeira de baixa (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CRV topo duplo (baixa, formado) · CRV OCO invertido (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado)
+- **Padrões gráficos em 1 h:** CRV bandeira de baixa (baixa, CONFIRMOU) · FIL bandeira de baixa (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CRV topo duplo (baixa, formado) · CRV OCO invertido (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GALA ombro-cabeça-ombro (baixa, formado) · GUN OCO invertido (alta, formado)
+- 📰 28/11 14:00 UTC · CoinDesk: Bybit’s $1.4 billion hack postmortem is ready. You won’t get to see it.
 - 📰 28/11 13:28 UTC · Cointelegraph: Justin Sun calls for Trump family-linked WLFI token to be delisted
 - 📰 28/11 13:02 UTC · CoinDesk: Bitcoin not delivering: The bear market has digital asset veteran questioning BTC's value
 - 📰 28/11 10:31 UTC · Cointelegraph: ASEAN+3 agrees on initiative to explore crypto payments cooperation
 - 📰 28/11 09:32 UTC · CoinDesk: Trump-linked crypto token WLFI plunges 50% to record lows
 - 📰 28/11 07:43 UTC · Cointelegraph: Binance plans Asia hub in Bhutan, receives preliminary approval
-- 📰 27/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 65126 apostas conferidas ao vivo, acerto 54.2%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 65209 apostas conferidas ao vivo, acerto 54.2%; prevê 113 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
