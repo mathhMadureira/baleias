@@ -111,7 +111,14 @@ def livro(m, c, faixa=0.005):
 
 def checar(m):
     m = m.upper().replace("USDT", "").replace("-", "")
-    v15, v5 = velas(m, "15m", 300), velas(m, "5m", 60)
+    v15, v5, v1h = velas(m, "15m", 300), velas(m, "5m", 60), velas(m, "1h", 300)
+    try:                                                       # 28/11 (H90): método Velez — estado 20/200 (MMA) e setup do momento
+        import os as _os
+        sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+        import velez as V
+        vz = {tf: V.leitura([[0] + x for x in vv]) for tf, vv in (("15m", v15), ("1h", v1h))}
+    except Exception as ex:                                    # sem o velez.py, a checagem segue sem esta parte
+        vz = {"erro": str(ex)[:80]}
     c, a = v15[-1][3], atr(v15)
     cl15 = [x[3] for x in v15]
     e8, e20, e200 = ema(cl15, 8), ema(cl15, 20), ema(cl15, 200)
@@ -136,6 +143,12 @@ def checar(m):
          f"Retração: {verdes} velas verdes seguidas no 5m",
          f"Força (500 negócios): compra US$ {fc:,.0f} × venda US$ {fv:,.0f} → {fc / max(fv, 1):.2f}",
          f"Livro ±0,5%: compra US$ {lb:,.0f} × venda US$ {la:,.0f} → {lb / max(la, 1):.2f}"]
+    for tf in ("15m", "1h"):
+        if tf in vz:
+            est, d, st = vz[tf]
+            L.append(f"Velez {tf}: estado 20/200 = {est}" + (f" (MMA20 {'subindo' if d.get('m20_sobe') else 'caindo'})" if d else "")
+                     + (" | setup agora: " + ", ".join(f"{x['setup']} ({x['lado']})" for x in st) if st else " | sem setup na última vela"))
+    est1h = vz.get("1h", (None,))[0] if "1h" in vz else None
     veredito = {}
     for lado in ("venda", "compra"):
         b = []
@@ -154,6 +167,8 @@ def checar(m):
                 b.append(f"livro com parede de COMPRA {lb / max(la, 1):.2f}×")
             if not c < e20:
                 b.append("preço acima da MME20")
+            if est1h == "alta":
+                b.append("contra a imagem de força do 1 h (Velez: MMA20 subindo acima da MMA200 → só compra)")
         else:
             if res and (res[0] - c) / a < 1.0:
                 b.append(f"colado na RESISTÊNCIA ({(res[0] - c) / a:.2f} ATR, {res[1]} toques)")
@@ -167,6 +182,8 @@ def checar(m):
                 b.append(f"livro com parede de VENDA {la / max(lb, 1):.2f}×")
             if not c > e20:
                 b.append("preço abaixo da MME20")
+            if est1h == "baixa":
+                b.append("contra a imagem de força do 1 h (Velez: MMA20 caindo abaixo da MMA200 → só venda)")
         veredito[lado] = b
         L.append(f"{lado.upper()}: " + ("PASSA" if not b else "BARRADA — " + "; ".join(b)))
     return "\n".join(L), veredito

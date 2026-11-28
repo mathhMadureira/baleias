@@ -1938,3 +1938,11 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Grupos:** setup × lado × (com o filtro de estado 20/200 / sem o filtro) × 15 min / 1 h. Mesmas 20 moedas e o mesmo período da H85, custo 0,12% ida e volta.
 - **Critério (igual à H85):** passa se n ≥ 80, média líquida > 0, t ≥ 2 e média > 0 nas duas metades. Com muitos grupos, um que passe por pouco é CANDIDATO até confirmar nos 30 dias seguintes (fora da amostra).
 - **Previsão registrada:** o filtro de estado 20/200 melhora a média de quase todos os setups; poucos ou nenhum passam depois do custo no 15 min; os de continuação (RBI/GBI, pullback à MMA20 a favor) ficam melhores que os de reversão.
+
+### Resultado da H90 (28/11/2026, `lab/h90_velez.py` → `dados/lab/h90_velez.json`): NENHUM setup de Velez passa
+- 60 grupos (14 setups × lado × com/sem estado 20/200 × 15 min/1 h), 20 moedas, ~31 dias (15 min) e ~41 dias (1 h), custo 0,12%.
+- **Mais perto (não passam):** Bear 180 venda 1 h (n 75, +0,65%/op, t 1,44); Bear 180 venda 15 min com estado de baixa (n 136, +0,20%, t 1,41, as duas metades +); NRB na MMA20 compra 1 h (n 51, +0,42%, t 1,25).
+- **Perdem com força:** RBI compra 15 min (n 1.188, −0,32%, t −10,0, acerto 21%); recuo 3–5 barras compra 15 min (n 3.000, −0,25%, t −9,4); GBI venda 15 min (t −9,4); NRB venda 15 min (t −7,1); repique 3–5 barras venda 15 min (t −6,0); falso rompimento (os dois lados) 15 min (t −3).
+- **O filtro 20/200 não melhorou sistematicamente** (melhorou Bear 180; não salvou RBI/GBI/TT). Previsão "filtro melhora quase tudo" REPROVADA; "continuação melhor que reversão" REPROVADA nestes dados.
+- **Leitura:** com o stop de Velez (uma barra) e alvo 2R, o acerto fica em 20–30%: no cripto de 15 min a barra-sinal é pequena perto do ruído e do custo — o stop é atingido antes do movimento. Próximo passo (nova hipótese, não ajuste desta): H91 = os mesmos setups com stop pela estrutura (além do pivô ou ≥ 1 ATR) e alvo no próximo nível de S/R.
+- **Uso:** o livro (`equipe/livro_velez.md`) e a checagem mostram o estado 20/200 e o setup do momento COM o número medido; nenhum setup vira regra automática.

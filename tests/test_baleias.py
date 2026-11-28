@@ -3335,3 +3335,22 @@ class ChecagemDeEntrada(unittest.TestCase):
         self.assertEqual(K.pavios([[10, 10.1, 9, 10.05, 1]] * 3)[0], "inferior")
         eng = [[0, 0, 0, 0, 0], [10, 10.1, 9.4, 9.5, 1], [9.4, 10.3, 9.35, 10.2, 1], [10.2, 10.3, 10.1, 10.25, 1]]
         self.assertIn(("engolfo de alta", "compra"), K.reversao(eng))
+
+
+class MetodoVelez(unittest.TestCase):
+    """28/11 (H90): estado 20/200 de Velez e detecção de RBI e Bull 180."""
+
+    def test_estado_e_setups(self):
+        import importlib.util as _iu
+        spec = _iu.spec_from_file_location("velez_t", pathlib.Path(__file__).parent.parent / "mesa" / "velez.py")
+        V = _iu.module_from_spec(spec); spec.loader.exec_module(V)
+        v, px = [], 100.0
+        for i in range(260):                                  # alta constante → imagem de força
+            px *= 1.002
+            v.append([i, px * 0.999, px * 1.003, px * 0.997, px, 1])
+        self.assertEqual(V.estado(v, 259)[0], "alta")
+        v.append([260, px * 1.001, px * 1.0015, px * 0.9995, px * 0.9997, 1])   # barra 2 pequena vermelha → RBI
+        self.assertIn("RBI", [s["setup"] for s in V.sinais(v, so_ultima=True) if s["i"] == 260])
+        b = [[0, 10, 10.05, 9.0, 9.05, 1], [1, 9.05, 10.3, 9.0, 10.25, 1]]     # vermelha forte + verde forte acima → Bull 180
+        w = v[:258] + [[258] + x[1:] for x in b]
+        self.assertIn("Bull 180", [s["setup"] for s in V.sinais(w, so_ultima=True) if s["i"] == 259])
