@@ -1,21 +1,21 @@
 {
- "t": 1795844465,
- "hora_utc": "2026-11-28 05:41 UTC",
+ "t": 1795844704,
+ "hora_utc": "2026-11-28 05:45 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 131,
+  "moedas": 132,
   "subindo_pct": 7.6,
   "mediana_pct": -1.09
  },
  "mercado_4h": {
-  "moedas": 131,
-  "subindo_pct": 10.7,
-  "mediana_pct": -1.77
+  "moedas": 132,
+  "subindo_pct": 10.6,
+  "mediana_pct": -1.84
  },
  "mercado_24h": {
-  "moedas": 131,
-  "subindo_pct": 21.4,
-  "mediana_pct": -2.8
+  "moedas": 132,
+  "subindo_pct": 21.2,
+  "mediana_pct": -2.82
  },
  "btc": {
   "1h": -0.35,
@@ -172,10 +172,10 @@
   -0.36,
   0.1,
   -0.05,
-  -0.35
+  -0.45
  ],
  "contexto": {
-  "t": 1795844466,
+  "t": 1795844705,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -3.4,
+   "media_top20_anual_pct": -3.6,
    "principais_anual_pct": {
-    "BTC": -2.7,
-    "ETH": 3.6,
-    "SOL": -4.5
+    "BTC": -3.2,
+    "ETH": 3.5,
+    "SOL": -4.7
    },
    "leitura": "neutro"
   },
@@ -337,20 +337,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.0505
-   },
-   {
-    "moeda": "CHIP",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.02898
-   },
-   {
-    "moeda": "CHIP",
-    "padrao": "ombro-cabeça-ombro",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.02656
    },
    {
     "moeda": "KITE",
@@ -775,12 +761,12 @@
   "z_contra_lab": -0.96,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4939,
-    "n": 22138
+    "acerto": 0.4944,
+    "n": 22247
    },
    "segue_maioria_24h": {
-    "acerto": 0.5018,
-    "n": 27874
+    "acerto": 0.5039,
+    "n": 27718
    }
   },
   "referencia_ganha": [],
