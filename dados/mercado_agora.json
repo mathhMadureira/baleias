@@ -1,20 +1,20 @@
 {
- "t": 1795880007,
- "hora_utc": "2026-11-28 15:33 UTC",
+ "t": 1795880237,
+ "hora_utc": "2026-11-28 15:37 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 115,
-  "subindo_pct": 20.9,
+  "moedas": 116,
+  "subindo_pct": 21.6,
   "mediana_pct": -0.34
  },
  "mercado_4h": {
-  "moedas": 115,
-  "subindo_pct": 22.6,
-  "mediana_pct": -0.6
+  "moedas": 116,
+  "subindo_pct": 23.3,
+  "mediana_pct": -0.59
  },
  "mercado_24h": {
-  "moedas": 115,
-  "subindo_pct": 25.2,
+  "moedas": 116,
+  "subindo_pct": 25.9,
   "mediana_pct": -1.74
  },
  "btc": {
@@ -94,6 +94,12 @@
    "vol": 0.87
   },
   {
+   "moeda": "ATM",
+   "4h": 5.21,
+   "24h": 3.16,
+   "vol": 1.29
+  },
+  {
    "moeda": "GENIUS",
    "4h": 3.4,
    "24h": -6.27,
@@ -140,12 +146,6 @@
    "4h": 2.16,
    "24h": 5.39,
    "vol": 3.65
-  },
-  {
-   "moeda": "FET",
-   "4h": 1.07,
-   "24h": -2.63,
-   "vol": 0.97
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.06,
   -0.17,
   0.37,
-  -0.11
+  -0.13
  ],
  "contexto": {
-  "t": 1795880008,
+  "t": 1795880238,
   "noticias": [
    {
     "fonte": "Decrypt",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.3,
+   "media_top20_anual_pct": 5.0,
    "principais_anual_pct": {
-    "BTC": 0.0,
+    "BTC": -0.0,
     "ETH": 11.0,
-    "SOL": 4.3
+    "SOL": 4.5
    },
    "leitura": "neutro"
   },
@@ -309,6 +309,13 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.3723
+   },
+   {
+    "moeda": "ATM",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.826
    },
    {
     "moeda": "BNB",
@@ -351,13 +358,6 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.001347
-   },
-   {
-    "moeda": "LUNC",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 4.6e-05
    },
    {
     "moeda": "NFP",
@@ -443,9 +443,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 84,
+  "apostas": 85,
   "compras": 42,
-  "vendas": 42,
+  "vendas": 43,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -782,12 +782,12 @@
   "z_contra_lab": 0.34,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4996,
-    "n": 20151
+    "acerto": 0.4997,
+    "n": 20249
    },
    "segue_maioria_24h": {
-    "acerto": 0.5071,
-    "n": 27211
+    "acerto": 0.5055,
+    "n": 27161
    }
   },
   "referencia_ganha": [],
