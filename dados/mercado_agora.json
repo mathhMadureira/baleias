@@ -1,6 +1,6 @@
 {
- "t": 1795858351,
- "hora_utc": "2026-11-28 09:32 UTC",
+ "t": 1795858532,
+ "hora_utc": "2026-11-28 09:35 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 130,
@@ -172,11 +172,17 @@
   0.02,
   0.14,
   -0.43,
-  0.14
+  0.09
  ],
  "contexto": {
-  "t": 1795858351,
+  "t": 1795858533,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795858371,
+    "hora_utc": "28/11 09:32",
+    "titulo": "Trump-linked crypto token WLFI plunges 50% to record lows"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795851780,
@@ -260,12 +266,6 @@
     "t": 1795790454,
     "hora_utc": "27/11 14:40",
     "titulo": "What was Coinbase worth while Nasdaq was closed?"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795787404,
-    "hora_utc": "27/11 13:50",
-    "titulo": "What's on the Ethereum Roadmap: Glamsterdam, Hegotá and Beyond"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.5,
+   "media_top20_anual_pct": 4.1,
    "principais_anual_pct": {
-    "BTC": 0.4,
-    "ETH": 5.1,
+    "BTC": 0.3,
+    "ETH": 5.2,
     "SOL": 3.2
    },
    "leitura": "neutro"
