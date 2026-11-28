@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 11:27 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 11:30 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 15.6% das moedas subindo em 24 h, 25.8% em 4 h · BTC 24 h -3.86%, 4 h -0.75%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.0%/ano · {'BTC': -18.9, 'ETH': 2.4, 'SOL': -11.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.1%/ano · {'BTC': -18.1, 'ETH': 2.4, 'SOL': -11.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** LSK topo duplo (baixa, CONFIRMOU) · W triângulo simétrico (baixa, CONFIRMOU) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · GUN OCO invertido (alta, formado) · KAVA fundo duplo (alta, formado) · LSK fundo duplo (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 10:31 UTC · Cointelegraph: ASEAN+3 agrees on initiative to explore crypto payments cooperation
