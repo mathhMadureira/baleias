@@ -1,20 +1,20 @@
 {
- "t": 1795857985,
- "hora_utc": "2026-11-28 09:26 UTC",
+ "t": 1795858168,
+ "hora_utc": "2026-11-28 09:29 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 129,
-  "subindo_pct": 42.6,
+  "moedas": 130,
+  "subindo_pct": 42.3,
   "mediana_pct": 0.0
  },
  "mercado_4h": {
-  "moedas": 129,
-  "subindo_pct": 27.1,
-  "mediana_pct": -0.49
+  "moedas": 130,
+  "subindo_pct": 27.7,
+  "mediana_pct": -0.48
  },
  "mercado_24h": {
-  "moedas": 129,
-  "subindo_pct": 18.6,
+  "moedas": 130,
+  "subindo_pct": 19.2,
   "mediana_pct": -3.38
  },
  "btc": {
@@ -94,6 +94,12 @@
    "vol": 1.71
   },
   {
+   "moeda": "TFUEL",
+   "4h": 10.01,
+   "24h": 8.24,
+   "vol": 4.04
+  },
+  {
    "moeda": "INIT",
    "4h": 7.23,
    "24h": -31.2,
@@ -140,12 +146,6 @@
    "4h": 1.89,
    "24h": -8.76,
    "vol": 0.95
-  },
-  {
-   "moeda": "WIF",
-   "4h": 1.8,
-   "24h": 1.88,
-   "vol": 0.74
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   0.02,
   0.14,
   -0.43,
-  0.05
+  0.09
  ],
  "contexto": {
-  "t": 1795857986,
+  "t": 1795858169,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 6.6,
+   "media_top20_anual_pct": 5.4,
    "principais_anual_pct": {
-    "BTC": -0.1,
-    "ETH": 4.8,
-    "SOL": 3.9
+    "BTC": 0.3,
+    "ETH": 4.9,
+    "SOL": 3.1
    },
    "leitura": "neutro"
   },
@@ -296,13 +296,6 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
-   {
-    "moeda": "ALICE",
-    "padrao": "fundo duplo",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.1061
-   },
    {
     "moeda": "BNB",
     "padrao": "ombro-cabeça-ombro",
@@ -381,6 +374,13 @@
     "nivel": 70.12
    },
    {
+    "moeda": "TFUEL",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.00777
+   },
+   {
     "moeda": "TLM",
     "padrao": "topo duplo",
     "sentido": "baixa",
@@ -408,9 +408,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 115,
+  "apostas": 114,
   "compras": 38,
-  "vendas": 77,
+  "vendas": 76,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -747,12 +747,12 @@
   "z_contra_lab": -0.52,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4947,
-    "n": 21979
+    "acerto": 0.4946,
+    "n": 21998
    },
    "segue_maioria_24h": {
-    "acerto": 0.4994,
-    "n": 27729
+    "acerto": 0.4974,
+    "n": 27856
    }
   },
   "referencia_ganha": [],
