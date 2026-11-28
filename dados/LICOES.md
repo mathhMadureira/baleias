@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 07:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 07:59 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 16.5% das moedas subindo em 24 h, 15.0% em 4 h · BTC 24 h -2.88%, 4 h -0.38%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': -3.7, 'ETH': 0.6, 'SOL': 4.2} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': -3.2, 'ETH': 0.1, 'SOL': 4.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 12.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** TLM fundo duplo (alta, CONFIRMOU) · BEAMX fundo duplo (alta, formado) · BEAMX triângulo simétrico (?, formado) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BONK OCO invertido (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CHIP fundo duplo (alta, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 07:43 UTC · Cointelegraph: Binance receives in-principle approval, plans Asia hub in Bhutan
