@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 13:10 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 13:13 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 14.8% das moedas subindo em 24 h, 21.1% em 4 h · BTC 24 h -3.95%, 4 h -0.62%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 0.3%/ano · {'BTC': -4.9, 'ETH': 11.0, 'SOL': -2.6} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -0.2%/ano · {'BTC': -4.8, 'ETH': 11.0, 'SOL': -1.1} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 7.5% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ASTER estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BMT bandeira de baixa (baixa, CONFIRMOU) · DODO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · QNT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GALA ombro-cabeça-ombro (baixa, formado) · GRAM ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 13:02 UTC · CoinDesk: Bitcoin not delivering: The bear market has digital asset veteran questioning BTC's value
