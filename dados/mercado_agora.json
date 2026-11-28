@@ -1,28 +1,28 @@
 {
- "t": 1795874469,
- "hora_utc": "2026-11-28 14:01 UTC",
+ "t": 1795874647,
+ "hora_utc": "2026-11-28 14:04 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 127,
-  "subindo_pct": 17.3,
-  "mediana_pct": -0.6
+  "moedas": 126,
+  "subindo_pct": 16.7,
+  "mediana_pct": -0.57
  },
  "mercado_4h": {
-  "moedas": 127,
-  "subindo_pct": 18.9,
-  "mediana_pct": -0.9
+  "moedas": 126,
+  "subindo_pct": 19.8,
+  "mediana_pct": -0.91
  },
  "mercado_24h": {
-  "moedas": 127,
-  "subindo_pct": 9.4,
-  "mediana_pct": -4.97
+  "moedas": 126,
+  "subindo_pct": 8.7,
+  "mediana_pct": -4.96
  },
  "btc": {
-  "1h": -0.32,
-  "4h": -0.85,
-  "24h": -3.88,
-  "preco": 59038.8,
-  "vol_4h_vs_media": 0.57
+  "1h": -0.17,
+  "4h": -0.82,
+  "24h": -3.84,
+  "preco": 59102.18,
+  "vol_4h_vs_media": 0.6
  },
  "maiores_quedas_4h": [
   {
@@ -172,16 +172,28 @@
   -0.02,
   -0.06,
   -0.17,
-  0.06
+  0.1
  ],
  "contexto": {
-  "t": 1795874469,
+  "t": 1795874648,
   "noticias": [
+   {
+    "fonte": "Decrypt",
+    "t": 1795874462,
+    "hora_utc": "28/11 14:01",
+    "titulo": "Russia Is Turning Pigeons Into Cyborg Drones—and You Can Now Hire Them"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795874400,
     "hora_utc": "28/11 14:00",
     "titulo": "Bybit’s $1.4 billion hack postmortem is ready. You won’t get to see it."
+   },
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795874100,
+    "hora_utc": "28/11 13:55",
+    "titulo": "Here’s what happened in crypto today"
    },
    {
     "fonte": "Cointelegraph",
@@ -212,12 +224,6 @@
     "t": 1795851780,
     "hora_utc": "28/11 07:43",
     "titulo": "Binance plans Asia hub in Bhutan, receives preliminary approval"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795817571,
-    "hora_utc": "27/11 22:12",
-    "titulo": "Here’s what happened in crypto today"
    },
    {
     "fonte": "Decrypt",
@@ -260,12 +266,6 @@
     "t": 1795801409,
     "hora_utc": "27/11 17:43",
     "titulo": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795801043,
-    "hora_utc": "27/11 17:37",
-    "titulo": "China sets March 2027 rollout for blockchain identity regulations"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 3.3,
+   "media_top20_anual_pct": 2.6,
    "principais_anual_pct": {
-    "BTC": -11.9,
+    "BTC": -14.1,
     "ETH": 11.0,
-    "SOL": 1.7
+    "SOL": -0.2
    },
    "leitura": "neutro"
   },
@@ -422,9 +422,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 115,
-  "compras": 62,
-  "vendas": 53,
+  "apostas": 109,
+  "compras": 52,
+  "vendas": 57,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -451,12 +451,12 @@
     "prob_subir": 0.394
    },
    {
-    "moeda": "ETC",
-    "prob_subir": 0.401
+    "moeda": "U",
+    "prob_subir": 0.395
    },
    {
     "moeda": "MARSCOIN",
-    "prob_subir": 0.405
+    "prob_subir": 0.4
    }
   ],
   "mais_confiantes_compra": [
@@ -470,19 +470,15 @@
    },
    {
     "moeda": "MAGIC",
-    "prob_subir": 0.633
-   },
-   {
-    "moeda": "W",
-    "prob_subir": 0.622
+    "prob_subir": 0.634
    },
    {
     "moeda": "SYRUP",
-    "prob_subir": 0.616
+    "prob_subir": 0.625
    },
    {
-    "moeda": "PEPE",
-    "prob_subir": 0.615
+    "moeda": "W",
+    "prob_subir": 0.623
    },
    {
     "moeda": "ENS",
@@ -491,6 +487,10 @@
    {
     "moeda": "RWUSD",
     "prob_subir": 0.61
+   },
+   {
+    "moeda": "F",
+    "prob_subir": 0.604
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -754,34 +754,34 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.6% em 27361 apostas (611 velas, 21/11 14:15–28/11 13:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5361,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.6% em 27374 apostas (611 velas, 21/11 14:15–28/11 13:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5363,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.19,
+  "z_contra_lab": 0.21,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5005,
-    "n": 22057
+    "acerto": 0.5001,
+    "n": 21999
    },
    "segue_maioria_24h": {
-    "acerto": 0.5031,
-    "n": 27253
+    "acerto": 0.5042,
+    "n": 27291
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5457,
-    "n": 7420
+    "acerto": 0.546,
+    "n": 7428
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5837,
-    "n": 2496
+    "acerto": 0.5839,
+    "n": 2497
    },
    "confianca:<0,05": {
-    "acerto": 0.5189,
-    "n": 16608
+    "acerto": 0.519,
+    "n": 16612
    },
    "confianca:≥0,12": {
     "acerto": 0.6511,
@@ -796,20 +796,20 @@
     "n": 6809
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5608,
-    "n": 7038
+    "acerto": 0.5615,
+    "n": 7051
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5213,
     "n": 6033
    },
    "lado:compra": {
-    "acerto": 0.5391,
-    "n": 11240
+    "acerto": 0.5395,
+    "n": 11250
    },
    "lado:venda": {
     "acerto": 0.5341,
-    "n": 16121
+    "n": 16124
    }
   }
  },
