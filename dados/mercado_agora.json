@@ -1,16 +1,16 @@
 {
- "t": 1795872664,
- "hora_utc": "2026-11-28 13:31 UTC",
+ "t": 1795872846,
+ "hora_utc": "2026-11-28 13:34 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 127,
-  "subindo_pct": 23.6,
+  "subindo_pct": 25.2,
   "mediana_pct": -0.37
  },
  "mercado_4h": {
   "moedas": 127,
-  "subindo_pct": 19.7,
-  "mediana_pct": -0.81
+  "subindo_pct": 18.9,
+  "mediana_pct": -0.8
  },
  "mercado_24h": {
   "moedas": 127,
@@ -18,11 +18,11 @@
   "mediana_pct": -4.33
  },
  "btc": {
-  "1h": -0.11,
-  "4h": -0.63,
-  "24h": -3.69,
-  "preco": 59234.99,
-  "vol_4h_vs_media": 0.55
+  "1h": -0.08,
+  "4h": -0.7,
+  "24h": -3.61,
+  "preco": 59226.02,
+  "vol_4h_vs_media": 0.49
  },
  "maiores_quedas_4h": [
   {
@@ -63,15 +63,9 @@
   },
   {
    "moeda": "WLFI",
-   "4h": -5.26,
-   "24h": -50.87,
-   "vol": 0.67
-  },
-  {
-   "moeda": "PORTAL",
-   "4h": -4.41,
-   "24h": -33.83,
-   "vol": 0.26
+   "4h": -4.37,
+   "24h": -51.12,
+   "vol": 0.61
   },
   {
    "moeda": "INIT",
@@ -84,6 +78,12 @@
    "4h": -4.23,
    "24h": -5.36,
    "vol": 0.83
+  },
+  {
+   "moeda": "AT",
+   "4h": -4.08,
+   "24h": -6.17,
+   "vol": 0.36
   }
  ],
  "maiores_altas_4h": [
@@ -172,11 +172,17 @@
   -0.57,
   -0.02,
   -0.06,
-  0.26
+  0.17
  ],
  "contexto": {
-  "t": 1795872665,
+  "t": 1795872846,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795872480,
+    "hora_utc": "28/11 13:28",
+    "titulo": "Justin Sun calls for Trump family-linked WLFI token to be delisted"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795870938,
@@ -260,12 +266,6 @@
     "t": 1795799370,
     "hora_utc": "27/11 17:09",
     "titulo": "Nvidia's Blackwell Chips Turn Up in China as Trump Floats Government Stake"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795798131,
-    "hora_utc": "27/11 16:48",
-    "titulo": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -6.4,
+   "media_top20_anual_pct": -6.7,
    "principais_anual_pct": {
-    "BTC": -6.8,
+    "BTC": -6.9,
     "ETH": 11.0,
-    "SOL": -4.1
+    "SOL": -4.5
    },
    "leitura": "neutro"
   },
@@ -450,13 +450,13 @@
  },
  "v4": {
   "vela": "13:30 UTC",
-  "apostas": 106,
-  "compras": 52,
-  "vendas": 54,
+  "apostas": 112,
+  "compras": 53,
+  "vendas": 59,
   "mais_confiantes_venda": [
    {
     "moeda": "BONK",
-    "prob_subir": 0.328
+    "prob_subir": 0.325
    },
    {
     "moeda": "PARTI",
@@ -479,22 +479,22 @@
     "prob_subir": 0.386
    },
    {
-    "moeda": "BB",
-    "prob_subir": 0.394
+    "moeda": "MAGIC",
+    "prob_subir": 0.393
    },
    {
-    "moeda": "MAGIC",
-    "prob_subir": 0.4
+    "moeda": "BB",
+    "prob_subir": 0.394
    }
   ],
   "mais_confiantes_compra": [
    {
-    "moeda": "DOT",
-    "prob_subir": 0.657
+    "moeda": "CYBER",
+    "prob_subir": 0.66
    },
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.654
+    "moeda": "DOT",
+    "prob_subir": 0.658
    },
    {
     "moeda": "PSG",
@@ -506,11 +506,11 @@
    },
    {
     "moeda": "WLD",
-    "prob_subir": 0.618
+    "prob_subir": 0.628
    },
    {
     "moeda": "BCH",
-    "prob_subir": 0.616
+    "prob_subir": 0.621
    },
    {
     "moeda": "ENS",
@@ -782,26 +782,26 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27371 apostas (611 velas, 21/11 13:45–28/11 13:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5369,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27375 apostas (611 velas, 21/11 13:45–28/11 13:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.537,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.28,
+  "z_contra_lab": 0.29,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.5009,
-    "n": 22019
+    "acerto": 0.501,
+    "n": 22023
    },
    "segue_maioria_24h": {
-    "acerto": 0.5039,
-    "n": 27263
+    "acerto": 0.504,
+    "n": 27267
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5467,
-    "n": 7403
+    "acerto": 0.5468,
+    "n": 7405
    },
    "confianca:0,08–0,12": {
     "acerto": 0.5865,
@@ -809,7 +809,7 @@
    },
    "confianca:<0,05": {
     "acerto": 0.5192,
-    "n": 16619
+    "n": 16621
    },
    "confianca:≥0,12": {
     "acerto": 0.655,
@@ -824,8 +824,8 @@
     "n": 6809
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5638,
-    "n": 7048
+    "acerto": 0.5641,
+    "n": 7052
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5213,
@@ -836,8 +836,8 @@
     "n": 11148
    },
    "lado:venda": {
-    "acerto": 0.5352,
-    "n": 16223
+    "acerto": 0.5353,
+    "n": 16227
    }
   }
  },
