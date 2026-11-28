@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 08:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 09:02 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 18.6% das moedas subindo em 24 h, 13.2% em 4 h · BTC 24 h -3.53%, 4 h -0.69%.
+- **Amplitude:** 19.4% das moedas subindo em 24 h, 17.8% em 4 h · BTC 24 h -3.49%, 4 h -0.71%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.0%/ano · {'BTC': -1.9, 'ETH': 7.7, 'SOL': -6.1} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.8%/ano · {'BTC': -3.8, 'ETH': 0.2, 'SOL': 8.5} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · SOL ombro-cabeça-ombro (baixa, formado) · SOPH fundo duplo (alta, formado) · TLM topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** ALICE fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CHIP fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · GUN OCO invertido (alta, formado) · HYPE fundo duplo (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 07:43 UTC · Cointelegraph: Binance receives in-principle approval, plans Asia hub in Bhutan
 - 📰 27/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 27/11 21:46 UTC · Decrypt: OpenAI Turns the Tables on Apple With Its Own Trade-Secret Theft Claims
@@ -78,7 +78,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🤖 Decisões do Robô Claude (as últimas 6)
 
-- ⚠️ **Rotina parada:** sem decisão há 84.6 h.
+- ⚠️ **Rotina parada:** sem decisão há 84.7 h.
 - 24/11 20:22 UTC · **fora do mercado** · Universo NAO lido: universo.py estourou 175-180 s duas vezes sem saida (DNS da maquina instavel: falhas intermitentes de resolucao de nomes). Retrato 20:09 UTC:
 - 24/11 03:19 UTC · **DOGE venda, TRUMP venda** · Universo 128 moedas (vela do v4 03:00 UTC); virada para queda: 6,2% de 129 moedas sobem em 1 h (mediana -0,99%), 51,9% em 4 h, 69,0% em 24 h; BTC 1h -1,66%, 4h 
 - 23/11 23:38 UTC · **SENT compra** · Universo 124 moedas (vela do v4 23:30 UTC); regime alta: 85,6% subindo em 1 h (mediana +0,69%), 71,0% em 24 h, 16,9% em 4 h; BTC 1h +0,54%. v4 com confianca: 0 
@@ -89,11 +89,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 ## 🧠 O que os cérebros aprenderam (sinapses promovidas e podadas)
 
 **v3:**
-- ❌ Errou (desce). Peso reduzido de: rede_neural. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ❌ Errou (desce). Peso reduzido de: rede_neural, tres_soldados. Rede neural corrigida.
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
+- ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
 - ❌ Errou (sobe). Peso reduzido de: rede_neural, tres_corvos. Rede neural corrigida.
   (v3: 7 sinapses votando, 30 em observação, 2 podadas)
 **v2:**
@@ -113,14 +113,14 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 64246 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 64278 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
-- Resultado da H75 (23/11/2026 ~23:25 UTC, `lab/juizo_h75.py`, ramo `estado` 3fa38ccf): REPROVADA — R1–R3 não entram
 - Resultado da H76 (24/11/2026 ~21:20 UTC, `lab/juizo_h76.py`): REPROVADA — nada muda
 - Resultado das H77 e H78 (24/11/2026 ~21:45 UTC, `lab/livro151.py` → `dados/lab/livro151_resultado.json`): as duas REPROVADAS — nada entra
 - Resultado da H80 (24/11/2026 ~22:45 UTC, `lab/h80_funding.py` → `dados/lab/h80_resultado.json`): REPROVADA — nada entra
 - Resultado da H85 (27/11/2026, `lab/h85_padroes.py` → `dados/lab/h85_padroes.json`): NENHUM padrão passa
 - Resultado da H86 (27/11/2026, `lab/h86_livro.py` → `dados/lab/h86_livro.json`): 1 de 72 passa — candidato, não regra
+- Resultado da H90 (28/11/2026, `lab/h90_velez.py` → `dados/lab/h90_velez.json`): NENHUM setup de Velez passa
 
