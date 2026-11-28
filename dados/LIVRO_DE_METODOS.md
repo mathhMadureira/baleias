@@ -5,7 +5,7 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.5% | 331 | 51.1%–61.7% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.0% | 2858 | 51.2%–54.8% | rede neural 16→12→1, aprende a cada vela |
+| rede_neural | comprovado | 53.0% | 2859 | 51.2%–54.8% | rede neural 16→12→1, aprende a cada vela |
 | demark_td9_baixa | promissor | 68.6% | 35 | 52.0%–81.4% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 66.7% | 42 | 51.6%–79.0% | física: alta anormal de 1 h → devolve |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
