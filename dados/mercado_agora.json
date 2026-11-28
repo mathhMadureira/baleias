@@ -1,35 +1,41 @@
 {
- "t": 1795844704,
- "hora_utc": "2026-11-28 05:45 UTC",
+ "t": 1795844942,
+ "hora_utc": "2026-11-28 05:49 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 132,
-  "subindo_pct": 7.6,
-  "mediana_pct": -1.09
+  "moedas": 133,
+  "subindo_pct": 3.0,
+  "mediana_pct": -1.41
  },
  "mercado_4h": {
-  "moedas": 132,
-  "subindo_pct": 10.6,
-  "mediana_pct": -1.84
+  "moedas": 133,
+  "subindo_pct": 6.0,
+  "mediana_pct": -2.66
  },
  "mercado_24h": {
-  "moedas": 132,
-  "subindo_pct": 21.2,
-  "mediana_pct": -2.82
+  "moedas": 133,
+  "subindo_pct": 17.3,
+  "mediana_pct": -3.53
  },
  "btc": {
-  "1h": -0.35,
-  "4h": -0.48,
-  "24h": -3.13,
-  "preco": 59827.74,
+  "1h": -0.49,
+  "4h": -0.75,
+  "24h": -3.28,
+  "preco": 59730.04,
   "vol_4h_vs_media": 0.42
  },
  "maiores_quedas_4h": [
   {
    "moeda": "PORTAL",
-   "4h": -57.18,
-   "24h": 34.14,
-   "vol": 2.24
+   "4h": -58.74,
+   "24h": 30.91,
+   "vol": 2.25
+  },
+  {
+   "moeda": "WLFI",
+   "4h": -51.0,
+   "24h": -59.09,
+   "vol": 5.05
   },
   {
    "moeda": "NFP",
@@ -38,114 +44,108 @@
    "vol": 2.08
   },
   {
-   "moeda": "WLFI",
-   "4h": -36.47,
-   "24h": -46.65,
-   "vol": 4.88
+   "moeda": "HAEDAL",
+   "4h": -14.11,
+   "24h": -26.35,
+   "vol": 0.47
   },
   {
    "moeda": "THE",
-   "4h": -13.97,
-   "24h": 3.04,
-   "vol": 0.91
-  },
-  {
-   "moeda": "HAEDAL",
-   "4h": -11.4,
-   "24h": -26.26,
-   "vol": 0.37
-  },
-  {
-   "moeda": "MITO",
-   "4h": -9.22,
-   "24h": -0.67,
-   "vol": 0.46
-  },
-  {
-   "moeda": "ACE",
-   "4h": -9.19,
-   "24h": 2.01,
-   "vol": 0.7
+   "4h": -13.03,
+   "24h": 1.52,
+   "vol": 0.87
   },
   {
    "moeda": "TRUMP",
-   "4h": -8.91,
-   "24h": -9.33,
-   "vol": 3.38
-  },
-  {
-   "moeda": "BIGTIME",
-   "4h": -7.93,
-   "24h": -19.94,
-   "vol": 1.29
+   "4h": -12.56,
+   "24h": -12.16,
+   "vol": 3.61
   },
   {
    "moeda": "MMT",
-   "4h": -7.89,
-   "24h": -16.96,
-   "vol": 0.46
+   "4h": -10.17,
+   "24h": -19.12,
+   "vol": 0.55
+  },
+  {
+   "moeda": "BIGTIME",
+   "4h": -9.69,
+   "24h": -20.79,
+   "vol": 1.26
+  },
+  {
+   "moeda": "ACE",
+   "4h": -9.52,
+   "24h": 1.47,
+   "vol": 0.7
+  },
+  {
+   "moeda": "MITO",
+   "4h": -9.15,
+   "24h": 0.45,
+   "vol": 0.47
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "RIF",
-   "4h": 10.64,
-   "24h": -10.34,
-   "vol": 1.66
+   "4h": 8.41,
+   "24h": -12.59,
+   "vol": 1.62
   },
   {
    "moeda": "CFG",
-   "4h": 9.35,
-   "24h": 31.93,
-   "vol": 1.38
-  },
-  {
-   "moeda": "ROBO",
-   "4h": 7.81,
-   "24h": 16.56,
-   "vol": 4.58
+   "4h": 4.38,
+   "24h": 24.08,
+   "vol": 1.31
   },
   {
    "moeda": "SENT",
-   "4h": 2.44,
-   "24h": 9.8,
-   "vol": 1.8
-  },
-  {
-   "moeda": "GTC",
-   "4h": 2.21,
-   "24h": 1.27,
-   "vol": 3.59
+   "4h": 2.41,
+   "24h": 8.53,
+   "vol": 1.78
   },
   {
    "moeda": "LUNC",
-   "4h": 1.8,
-   "24h": -1.33,
-   "vol": 0.44
+   "4h": 1.64,
+   "24h": -1.54,
+   "vol": 0.45
   },
   {
-   "moeda": "LISTA",
-   "4h": 1.16,
-   "24h": 1.51,
-   "vol": 0.2
+   "moeda": "YB",
+   "4h": 1.55,
+   "24h": -4.07,
+   "vol": 0.21
   },
   {
    "moeda": "KITE",
-   "4h": 1.15,
-   "24h": -1.05,
+   "4h": 0.58,
+   "24h": -2.31,
    "vol": 1.64
   },
   {
    "moeda": "DODO",
-   "4h": 1.02,
-   "24h": -0.56,
-   "vol": 0.2
+   "4h": 0.49,
+   "24h": -0.07,
+   "vol": 0.21
   },
   {
-   "moeda": "YB",
-   "4h": 0.85,
-   "24h": -1.99,
-   "vol": 0.18
+   "moeda": "GTC",
+   "4h": 0.37,
+   "24h": -0.52,
+   "vol": 3.6
+  },
+  {
+   "moeda": "U",
+   "4h": -0.02,
+   "24h": -0.01,
+   "vol": 0.79
+  },
+  {
+   "moeda": "PROM",
+   "4h": -0.15,
+   "24h": -1.57,
+   "vol": 1.21
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,10 +172,10 @@
   -0.36,
   0.1,
   -0.05,
-  -0.45
+  -0.43
  ],
  "contexto": {
-  "t": 1795844705,
+  "t": 1795844943,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": -3.6,
    "principais_anual_pct": {
-    "BTC": -3.2,
-    "ETH": 3.5,
-    "SOL": -4.7
+    "BTC": -3.6,
+    "ETH": 3.8,
+    "SOL": -4.8
    },
    "leitura": "neutro"
   },
@@ -337,6 +337,20 @@
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.0505
+   },
+   {
+    "moeda": "CHIP",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.02898
+   },
+   {
+    "moeda": "CHIP",
+    "padrao": "ombro-cabeça-ombro",
+    "sentido": "baixa",
+    "confirmado": false,
+    "nivel": 0.02656
    },
    {
     "moeda": "KITE",
@@ -422,9 +436,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 103,
-  "compras": 50,
-  "vendas": 53,
+  "apostas": 154,
+  "compras": 116,
+  "vendas": 38,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -432,10 +446,6 @@
    },
    {
     "moeda": "RESOLV",
-    "prob_subir": 0.375
-   },
-   {
-    "moeda": "U",
     "prob_subir": 0.375
    },
    {
@@ -455,15 +465,15 @@
     "prob_subir": 0.386
    },
    {
-    "moeda": "RUNE",
-    "prob_subir": 0.387
+    "moeda": "BB",
+    "prob_subir": 0.394
+   },
+   {
+    "moeda": "PNUT",
+    "prob_subir": 0.405
    }
   ],
   "mais_confiantes_compra": [
-   {
-    "moeda": "SOPH",
-    "prob_subir": 0.655
-   },
    {
     "moeda": "PSG",
     "prob_subir": 0.651
@@ -473,24 +483,28 @@
     "prob_subir": 0.645
    },
    {
-    "moeda": "ENS",
-    "prob_subir": 0.614
+    "moeda": "RUNE",
+    "prob_subir": 0.643
    },
    {
-    "moeda": "RWUSD",
-    "prob_subir": 0.61
+    "moeda": "SYRUP",
+    "prob_subir": 0.643
    },
    {
-    "moeda": "F",
-    "prob_subir": 0.604
+    "moeda": "MAGIC",
+    "prob_subir": 0.64
    },
    {
-    "moeda": "CYBER",
-    "prob_subir": 0.602
+    "moeda": "EIGEN",
+    "prob_subir": 0.639
    },
    {
-    "moeda": "HMSTR",
-    "prob_subir": 0.6
+    "moeda": "ORDI",
+    "prob_subir": 0.638
+   },
+   {
+    "moeda": "OP",
+    "prob_subir": 0.637
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -754,42 +768,42 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 52.6% em 27904 apostas (605 velas, 21/11 05:45–28/11 05:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5264,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 52.7% em 27908 apostas (605 velas, 21/11 06:00–28/11 05:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5266,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": -0.96,
+  "z_contra_lab": -0.95,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4944,
-    "n": 22247
+    "acerto": 0.4942,
+    "n": 22453
    },
    "segue_maioria_24h": {
-    "acerto": 0.5039,
-    "n": 27718
+    "acerto": 0.5038,
+    "n": 27878
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5374,
-    "n": 7657
+    "acerto": 0.5376,
+    "n": 7653
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5321,
-    "n": 2864
+    "acerto": 0.5315,
+    "n": 2871
    },
    "confianca:<0,05": {
-    "acerto": 0.5141,
+    "acerto": 0.5142,
     "n": 16547
    },
    "confianca:≥0,12": {
-    "acerto": 0.6519,
-    "n": 836
+    "acerto": 0.6523,
+    "n": 837
    },
    "horario_utc:00–06 h": {
-    "acerto": 0.5151,
-    "n": 7358
+    "acerto": 0.5155,
+    "n": 7362
    },
    "horario_utc:06–12 h": {
     "acerto": 0.5305,
@@ -804,12 +818,12 @@
     "n": 6033
    },
    "lado:compra": {
-    "acerto": 0.5378,
+    "acerto": 0.5376,
     "n": 11008
    },
    "lado:venda": {
-    "acerto": 0.5191,
-    "n": 16896
+    "acerto": 0.5193,
+    "n": 16900
    }
   }
  },

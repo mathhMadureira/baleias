@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 05:45 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 05:49 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 21.2% das moedas subindo em 24 h, 10.6% em 4 h · BTC 24 h -3.13%, 4 h -0.48%.
+- **Amplitude:** 17.3% das moedas subindo em 24 h, 6.0% em 4 h · BTC 24 h -3.28%, 4 h -0.75%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.6%/ano · {'BTC': -3.2, 'ETH': 3.5, 'SOL': -4.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -3.6%/ano · {'BTC': -3.6, 'ETH': 3.8, 'SOL': -4.8} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 12.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BIGTIME ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BIGTIME fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · CFG ombro-cabeça-ombro (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PROM triângulo descendente (baixa, formado) · SEI OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** BIGTIME ombro-cabeça-ombro (baixa, CONFIRMOU) · AIGENSYN topo duplo (baixa, formado) · AIGENSYN fundo duplo (alta, formado) · BIGTIME fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · CFG ombro-cabeça-ombro (baixa, formado) · CHIP fundo duplo (alta, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 27/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 27/11 21:46 UTC · Decrypt: OpenAI Turns the Tables on Apple With Its Own Trade-Secret Theft Claims
 - 📰 27/11 21:15 UTC · Cointelegraph: Franklin Templeton makes room for HYPE in crypto index ETF
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 63599 apostas conferidas ao vivo, acerto 54.1%; prevê 131 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 63635 apostas conferidas ao vivo, acerto 54.1%; prevê 132 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
