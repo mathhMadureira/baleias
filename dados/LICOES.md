@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 06:33 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 06:37 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 17.9% das moedas subindo em 24 h, 10.4% em 4 h · BTC 24 h -3.03%, 4 h -0.48%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.4%/ano · {'BTC': -3.5, 'ETH': 3.3, 'SOL': -0.3} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 5.0%/ano · {'BTC': -3.5, 'ETH': 2.8, 'SOL': -0.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 15.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** ZAMA topo duplo (baixa, CONFIRMOU) · BNB ombro-cabeça-ombro (baixa, formado) · BONK OCO invertido (alta, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CHIP fundo duplo (alta, formado) · CHIP ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · KITE topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · PROM triângulo descendente (baixa, formado)
 - 📰 27/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
