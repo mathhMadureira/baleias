@@ -1,28 +1,28 @@
 {
- "t": 1795881599,
- "hora_utc": "2026-11-28 15:59 UTC",
+ "t": 1795881828,
+ "hora_utc": "2026-11-28 16:03 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 117,
-  "subindo_pct": 17.1,
-  "mediana_pct": -0.39
+  "subindo_pct": 23.1,
+  "mediana_pct": -0.36
  },
  "mercado_4h": {
   "moedas": 117,
-  "subindo_pct": 20.5,
-  "mediana_pct": -0.89
+  "subindo_pct": 23.9,
+  "mediana_pct": -0.59
  },
  "mercado_24h": {
   "moedas": 117,
-  "subindo_pct": 23.1,
-  "mediana_pct": -2.35
+  "subindo_pct": 23.9,
+  "mediana_pct": -2.22
  },
  "btc": {
-  "1h": 0.01,
-  "4h": 0.24,
-  "24h": -1.42,
-  "preco": 59311.98,
-  "vol_4h_vs_media": 0.79
+  "1h": 0.3,
+  "4h": 0.44,
+  "24h": -1.03,
+  "preco": 59496.72,
+  "vol_4h_vs_media": 0.87
  },
  "maiores_quedas_4h": [
   {
@@ -33,119 +33,119 @@
   },
   {
    "moeda": "ACE",
-   "4h": -13.89,
-   "24h": 15.64,
+   "4h": -15.73,
+   "24h": 18.04,
    "vol": 1.06
   },
   {
-   "moeda": "TLM",
-   "4h": -9.63,
-   "24h": -5.95,
-   "vol": 0.48
-  },
-  {
-   "moeda": "BLUR",
-   "4h": -5.19,
-   "24h": -28.17,
-   "vol": 1.26
-  },
-  {
    "moeda": "WLFI",
-   "4h": -5.15,
-   "24h": -52.33,
-   "vol": 0.44
+   "4h": -9.23,
+   "24h": -54.03,
+   "vol": 0.47
+  },
+  {
+   "moeda": "TLM",
+   "4h": -8.84,
+   "24h": -5.62,
+   "vol": 0.49
   },
   {
    "moeda": "CFG",
-   "4h": -5.01,
-   "24h": -0.52,
+   "4h": -5.32,
+   "24h": 0.71,
    "vol": 0.33
   },
   {
    "moeda": "NIGHT",
-   "4h": -4.65,
-   "24h": 6.61,
-   "vol": 1.86
-  },
-  {
-   "moeda": "ACT",
-   "4h": -4.57,
-   "24h": 1.21,
-   "vol": 0.33
+   "4h": -5.07,
+   "24h": 6.77,
+   "vol": 1.77
   },
   {
    "moeda": "PORTAL",
-   "4h": -4.34,
-   "24h": -43.31,
-   "vol": 0.22
+   "4h": -4.68,
+   "24h": -46.38,
+   "vol": 0.23
+  },
+  {
+   "moeda": "KAVA",
+   "4h": -3.45,
+   "24h": 0.44,
+   "vol": 0.39
+  },
+  {
+   "moeda": "RIF",
+   "4h": -3.34,
+   "24h": -19.49,
+   "vol": 1.0
   },
   {
    "moeda": "BANK",
-   "4h": -3.9,
+   "4h": -3.27,
    "24h": -5.13,
-   "vol": 0.31
+   "vol": 0.35
   }
  ],
  "maiores_altas_4h": [
   {
    "moeda": "PARTI",
-   "4h": 17.2,
-   "24h": 13.88,
-   "vol": 5.24
+   "4h": 9.94,
+   "24h": 6.52,
+   "vol": 5.49
   },
   {
    "moeda": "ROBO",
-   "4h": 10.03,
-   "24h": 4.95,
-   "vol": 0.95
-  },
-  {
-   "moeda": "ATM",
-   "4h": 5.09,
-   "24h": 2.29,
-   "vol": 2.71
+   "4h": 9.86,
+   "24h": 7.31,
+   "vol": 0.84
   },
   {
    "moeda": "INIT",
-   "4h": 4.44,
-   "24h": -14.99,
-   "vol": 0.72
+   "4h": 4.46,
+   "24h": -14.04,
+   "vol": 0.76
   },
   {
    "moeda": "LISTA",
-   "4h": 3.47,
-   "24h": 4.37,
-   "vol": 0.85
+   "4h": 3.69,
+   "24h": 5.64,
+   "vol": 0.97
   },
   {
-   "moeda": "LUNC",
-   "4h": 2.56,
-   "24h": -0.24,
-   "vol": 1.05
-  },
-  {
-   "moeda": "GENIUS",
-   "4h": 2.36,
-   "24h": -7.53,
-   "vol": 0.96
+   "moeda": "ATM",
+   "4h": 3.12,
+   "24h": -1.2,
+   "vol": 2.89
   },
   {
    "moeda": "FF",
-   "4h": 2.13,
-   "24h": -1.48,
-   "vol": 0.56
+   "4h": 2.75,
+   "24h": -1.01,
+   "vol": 0.59
   },
   {
    "moeda": "HEI",
-   "4h": 1.82,
-   "24h": -4.97,
+   "4h": 2.73,
+   "24h": -12.24,
    "vol": 0.12
   },
   {
    "moeda": "DODO",
-   "4h": 1.74,
-   "24h": 6.11,
-   "vol": 4.04
+   "4h": 2.72,
+   "24h": 6.82,
+   "vol": 4.08
+  },
+  {
+   "moeda": "GENIUS",
+   "4h": 1.96,
+   "24h": -7.49,
+   "vol": 0.96
+  },
+  {
+   "moeda": "OPG",
+   "4h": 1.95,
+   "24h": 5.01,
+   "vol": 3.81
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.17,
   0.37,
   0.3,
-  -0.01
+  -0.03
  ],
  "contexto": {
-  "t": 1795881601,
+  "t": 1795881829,
   "noticias": [
+   {
+    "fonte": "CoinDesk",
+    "t": 1795881714,
+    "hora_utc": "28/11 16:01",
+    "titulo": "Tether adds $10 million in Bitdeer stock after holding through an 87% drop"
+   },
    {
     "fonte": "Decrypt",
     "t": 1795874462,
@@ -260,12 +266,6 @@
     "t": 1795803363,
     "hora_utc": "27/11 18:16",
     "titulo": "$7 Billion in Bitcoin Options Just Expired: Here’s What It Means"
-   },
-   {
-    "fonte": "Decrypt",
-    "t": 1795801409,
-    "hora_utc": "27/11 17:43",
-    "titulo": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 5.4,
+   "media_top20_anual_pct": 13.4,
    "principais_anual_pct": {
-    "BTC": 1.4,
-    "ETH": 8.3,
-    "SOL": -14.9
+    "BTC": 11.0,
+    "ETH": 11.0,
+    "SOL": 5.3
    },
    "leitura": "neutro"
   },
@@ -296,6 +296,20 @@
    "moedas_medidas": 40
   },
   "padroes_1h": [
+   {
+    "moeda": "APT",
+    "padrao": "bandeira de baixa",
+    "sentido": "baixa",
+    "confirmado": true,
+    "nivel": 0.3736
+   },
+   {
+    "moeda": "TIA",
+    "padrao": "topo duplo",
+    "sentido": "baixa",
+    "confirmado": true,
+    "nivel": 0.3276
+   },
    {
     "moeda": "AERO",
     "padrao": "fundo duplo",
@@ -346,18 +360,18 @@
     "nivel": 0.1802
    },
    {
-    "moeda": "ETH",
-    "padrao": "ombro-cabeça-ombro",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 1634.03
-   },
-   {
     "moeda": "GALA",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.001347
+   },
+   {
+    "moeda": "LUNC",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 4.6e-05
    },
    {
     "moeda": "NFP",
@@ -368,17 +382,17 @@
    },
    {
     "moeda": "OPG",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.1814
+   },
+   {
+    "moeda": "OPG",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
     "confirmado": false,
     "nivel": 0.1645
-   },
-   {
-    "moeda": "SOL",
-    "padrao": "ombro-cabeça-ombro",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 70.12
    },
    {
     "moeda": "SSV",
@@ -386,13 +400,6 @@
     "sentido": "alta",
     "confirmado": false,
     "nivel": 2.824
-   },
-   {
-    "moeda": "TIA",
-    "padrao": "topo duplo",
-    "sentido": "baixa",
-    "confirmado": false,
-    "nivel": 0.3276
    },
    {
     "moeda": "TIA",
@@ -442,11 +449,15 @@
   }
  },
  "v4": {
-  "vela": "15:00 UTC",
-  "apostas": 86,
-  "compras": 45,
-  "vendas": 41,
+  "vela": "16:00 UTC",
+  "apostas": 79,
+  "compras": 34,
+  "vendas": 45,
   "mais_confiantes_venda": [
+   {
+    "moeda": "HEI",
+    "prob_subir": 0.37
+   },
    {
     "moeda": "CAKE",
     "prob_subir": 0.37
@@ -474,44 +485,40 @@
    {
     "moeda": "ETC",
     "prob_subir": 0.401
-   },
-   {
-    "moeda": "PNUT",
-    "prob_subir": 0.405
    }
   ],
   "mais_confiantes_compra": [
    {
-    "moeda": "PSG",
-    "prob_subir": 0.651
+    "moeda": "CYBER",
+    "prob_subir": 0.665
    },
    {
-    "moeda": "NOM",
-    "prob_subir": 0.647
+    "moeda": "PSG",
+    "prob_subir": 0.651
    },
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
    },
    {
-    "moeda": "BANK",
-    "prob_subir": 0.644
-   },
-   {
-    "moeda": "CYBER",
-    "prob_subir": 0.63
-   },
-   {
     "moeda": "BONK",
     "prob_subir": 0.623
    },
    {
-    "moeda": "AIGENSYN",
-    "prob_subir": 0.621
-   },
-   {
     "moeda": "ENS",
     "prob_subir": 0.614
+   },
+   {
+    "moeda": "RWUSD",
+    "prob_subir": 0.61
+   },
+   {
+    "moeda": "F",
+    "prob_subir": 0.604
+   },
+   {
+    "moeda": "HMSTR",
+    "prob_subir": 0.6
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -775,38 +782,38 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27354 apostas (613 velas, 21/11 17:15–28/11 15:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5373,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.7% em 27369 apostas (614 velas, 21/11 17:15–28/11 15:30 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5374,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
-  "z_contra_lab": 0.33,
+  "z_contra_lab": 0.34,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4998,
-    "n": 20317
+    "acerto": 0.4999,
+    "n": 20332
    },
    "segue_maioria_24h": {
-    "acerto": 0.5069,
-    "n": 27096
+    "acerto": 0.5067,
+    "n": 27111
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
-    "acerto": 0.5463,
-    "n": 7439
+    "acerto": 0.5464,
+    "n": 7442
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5841,
-    "n": 2496
+    "acerto": 0.5843,
+    "n": 2497
    },
    "confianca:<0,05": {
     "acerto": 0.5205,
-    "n": 16575
+    "n": 16584
    },
    "confianca:≥0,12": {
-    "acerto": 0.6505,
-    "n": 844
+    "acerto": 0.6513,
+    "n": 846
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5162,
@@ -817,20 +824,20 @@
     "n": 6809
    },
    "horario_utc:12–18 h": {
-    "acerto": 0.5655,
-    "n": 7031
+    "acerto": 0.5657,
+    "n": 7046
    },
    "horario_utc:18–24 h": {
     "acerto": 0.5213,
     "n": 6033
    },
    "lado:compra": {
-    "acerto": 0.5409,
-    "n": 11325
+    "acerto": 0.5412,
+    "n": 11336
    },
    "lado:venda": {
-    "acerto": 0.5348,
-    "n": 16029
+    "acerto": 0.5347,
+    "n": 16033
    }
   }
  },
