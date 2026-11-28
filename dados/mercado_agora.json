@@ -1,21 +1,21 @@
 {
- "t": 1795851346,
- "hora_utc": "2026-11-28 07:35 UTC",
+ "t": 1795851587,
+ "hora_utc": "2026-11-28 07:39 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
-  "moedas": 132,
-  "subindo_pct": 43.9,
-  "mediana_pct": -0.05
+  "moedas": 133,
+  "subindo_pct": 44.4,
+  "mediana_pct": -0.04
  },
  "mercado_4h": {
-  "moedas": 132,
-  "subindo_pct": 18.2,
+  "moedas": 133,
+  "subindo_pct": 18.0,
   "mediana_pct": -0.88
  },
  "mercado_24h": {
-  "moedas": 132,
-  "subindo_pct": 16.7,
-  "mediana_pct": -3.29
+  "moedas": 133,
+  "subindo_pct": 16.5,
+  "mediana_pct": -3.28
  },
  "btc": {
   "1h": -0.25,
@@ -172,10 +172,10 @@
   -0.05,
   -0.43,
   0.02,
-  0.05
+  0.0
  ],
  "contexto": {
-  "t": 1795851347,
+  "t": 1795851588,
   "noticias": [
    {
     "fonte": "Cointelegraph",
@@ -276,9 +276,9 @@
   "funding": {
    "media_top20_anual_pct": 8.0,
    "principais_anual_pct": {
-    "BTC": -3.0,
-    "ETH": 2.0,
-    "SOL": 4.5
+    "BTC": -3.2,
+    "ETH": 1.7,
+    "SOL": 3.8
    },
    "leitura": "neutro"
   },
@@ -302,6 +302,20 @@
     "sentido": "alta",
     "confirmado": true,
     "nivel": 0.001003
+   },
+   {
+    "moeda": "BEAMX",
+    "padrao": "fundo duplo",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.003313
+   },
+   {
+    "moeda": "BEAMX",
+    "padrao": "triângulo simétrico",
+    "sentido": "?",
+    "confirmado": false,
+    "nivel": null
    },
    {
     "moeda": "BMT",
@@ -374,13 +388,6 @@
     "nivel": 0.00484
    },
    {
-    "moeda": "SEI",
-    "padrao": "OCO invertido",
-    "sentido": "alta",
-    "confirmado": false,
-    "nivel": 0.03974
-   },
-   {
     "moeda": "SOL",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -422,17 +429,13 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 79,
+  "apostas": 78,
   "compras": 34,
-  "vendas": 45,
+  "vendas": 44,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
     "prob_subir": 0.361
-   },
-   {
-    "moeda": "RESOLV",
-    "prob_subir": 0.375
    },
    {
     "moeda": "SLP",
@@ -457,6 +460,10 @@
    {
     "moeda": "STX",
     "prob_subir": 0.403
+   },
+   {
+    "moeda": "PNUT",
+    "prob_subir": 0.405
    }
   ],
   "mais_confiantes_compra": [
@@ -761,12 +768,12 @@
   "z_contra_lab": -0.53,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4935,
-    "n": 22753
+    "acerto": 0.4937,
+    "n": 22608
    },
    "segue_maioria_24h": {
-    "acerto": 0.501,
-    "n": 27699
+    "acerto": 0.5017,
+    "n": 27717
    }
   },
   "referencia_ganha": [],
