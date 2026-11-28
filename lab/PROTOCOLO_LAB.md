@@ -1930,3 +1930,11 @@ Critério pré-registrado (ajuste 2, 10/11): ≥ 500 apostas ao vivo e limite in
 - **Fonte do padrão:** o "analista de notícias e do X" das mesas do Grok Bot. Sem login no X pelo código: usamos fontes públicas — DexScreener (tokens com mais impulso pago e perfis novos), CoinGecko (moedas em tendência nas buscas) e a BingX (maiores altas/baixas de 24 h com volume), cruzadas com os contratos perpétuos da BingX.
 - **Uso:** é só INFORMAÇÃO no `ver` (seção EM ALTA); não é regra e não abre ordem sozinho. Ordem com moeda tirada do feed marca "em alta" na tese.
 - **Medida:** depois de 30 operações com "em alta" na tese, comparar a média líquida com as outras do Operador no mesmo período. Ajuda se a média for maior e > 0.
+
+## H90 (28/11/2026, pedido do dono: "imersão" no método do Oliver Velez — 20/200, setups do quadro de setups, retração, falso rompimento, S/R) — PRÉ-REGISTRO
+- **Fonte:** manuais e guias gratuitos do método Velez (PDFs públicos, Brasil Traders, guias 20/200). Definições operacionais escritas em `equipe/livro_velez.md` e programadas em `mesa/velez.py` ANTES de medir; nenhum parâmetro muda depois de ver o resultado.
+- **Estado das médias (Velez):** MMA 20 e MMA 200 (simples). Tendência de alta = preço > MMA20 > MMA200 com MMA20 subindo; baixa = o espelho; "estreito" (narrow state) = |MMA20 − MMA200| < 0,5 ATR.
+- **Setups medidos:** os do quadro do dono que o código consegue definir sem ambiguidade (lista final no livro, com a regra de cada um), entrando no rompimento da máxima/mínima da vela-sinal, stop no outro extremo da vela-sinal ("não perder mais que uma barra"), alvo 2R, saída no prazo de 16 velas.
+- **Grupos:** setup × lado × (com o filtro de estado 20/200 / sem o filtro) × 15 min / 1 h. Mesmas 20 moedas e o mesmo período da H85, custo 0,12% ida e volta.
+- **Critério (igual à H85):** passa se n ≥ 80, média líquida > 0, t ≥ 2 e média > 0 nas duas metades. Com muitos grupos, um que passe por pouco é CANDIDATO até confirmar nos 30 dias seguintes (fora da amostra).
+- **Previsão registrada:** o filtro de estado 20/200 melhora a média de quase todos os setups; poucos ou nenhum passam depois do custo no 15 min; os de continuação (RBI/GBI, pullback à MMA20 a favor) ficam melhores que os de reversão.
