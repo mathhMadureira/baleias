@@ -1,35 +1,35 @@
 {
- "t": 1795851822,
- "hora_utc": "2026-11-28 07:43 UTC",
+ "t": 1795852057,
+ "hora_utc": "2026-11-28 07:47 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 133,
-  "subindo_pct": 44.4,
-  "mediana_pct": -0.04
+  "subindo_pct": 41.4,
+  "mediana_pct": -0.06
  },
  "mercado_4h": {
   "moedas": 133,
-  "subindo_pct": 18.0,
-  "mediana_pct": -0.88
+  "subindo_pct": 15.0,
+  "mediana_pct": -1.17
  },
  "mercado_24h": {
   "moedas": 133,
   "subindo_pct": 16.5,
-  "mediana_pct": -3.28
+  "mediana_pct": -3.01
  },
  "btc": {
-  "1h": -0.25,
-  "4h": -0.34,
-  "24h": -3.45,
-  "preco": 59708.76,
-  "vol_4h_vs_media": 0.7
+  "1h": -0.21,
+  "4h": -0.38,
+  "24h": -2.88,
+  "preco": 59754.06,
+  "vol_4h_vs_media": 0.73
  },
  "maiores_quedas_4h": [
   {
    "moeda": "WLFI",
-   "4h": -42.12,
-   "24h": -51.44,
-   "vol": 5.37
+   "4h": -43.48,
+   "24h": -53.01,
+   "vol": 5.4
   },
   {
    "moeda": "NFP",
@@ -39,113 +39,113 @@
   },
   {
    "moeda": "MMT",
-   "4h": -12.09,
-   "24h": -14.57,
-   "vol": 1.01
+   "4h": -13.14,
+   "24h": -19.1,
+   "vol": 1.04
   },
   {
    "moeda": "CFG",
-   "4h": -11.99,
-   "24h": 16.22,
-   "vol": 0.85
-  },
-  {
-   "moeda": "HAEDAL",
-   "4h": -11.43,
-   "24h": -24.99,
-   "vol": 0.6
-  },
-  {
-   "moeda": "TRUMP",
-   "4h": -8.7,
-   "24h": -10.26,
-   "vol": 4.61
-  },
-  {
-   "moeda": "ROBO",
-   "4h": -7.62,
-   "24h": 1.94,
-   "vol": 2.99
-  },
-  {
-   "moeda": "AT",
-   "4h": -7.03,
-   "24h": 0.76,
+   "4h": -12.75,
+   "24h": 18.25,
    "vol": 0.77
   },
   {
+   "moeda": "HAEDAL",
+   "4h": -10.84,
+   "24h": -25.19,
+   "vol": 0.61
+  },
+  {
+   "moeda": "TRUMP",
+   "4h": -9.49,
+   "24h": -10.42,
+   "vol": 4.62
+  },
+  {
+   "moeda": "ROBO",
+   "4h": -9.14,
+   "24h": 3.58,
+   "vol": 2.96
+  },
+  {
    "moeda": "BANK",
-   "4h": -6.67,
-   "24h": -3.75,
-   "vol": 1.28
+   "4h": -7.27,
+   "24h": -3.77,
+   "vol": 1.23
   },
   {
    "moeda": "BIGTIME",
-   "4h": -5.59,
-   "24h": -17.87,
-   "vol": 0.61
+   "4h": -6.47,
+   "24h": -17.72,
+   "vol": 0.57
+  },
+  {
+   "moeda": "BMT",
+   "4h": -6.19,
+   "24h": -4.21,
+   "vol": 1.18
   }
  ],
  "maiores_altas_4h": [
   {
-   "moeda": "TLM",
-   "4h": 4.37,
-   "24h": 9.03,
-   "vol": 3.17
-  },
-  {
-   "moeda": "LUNC",
-   "4h": 3.57,
-   "24h": 1.63,
-   "vol": 0.81
-  },
-  {
    "moeda": "PORTAL",
-   "4h": 2.01,
-   "24h": 30.47,
-   "vol": 0.97
-  },
-  {
-   "moeda": "CHIP",
-   "4h": 1.78,
-   "24h": -2.94,
-   "vol": 1.46
-  },
-  {
-   "moeda": "LISTA",
-   "4h": 1.74,
-   "24h": -10.58,
-   "vol": 0.33
-  },
-  {
-   "moeda": "ZRO",
-   "4h": 1.47,
-   "24h": -3.07,
-   "vol": 1.03
-  },
-  {
-   "moeda": "YB",
-   "4h": 1.38,
-   "24h": -4.38,
-   "vol": 0.45
-  },
-  {
-   "moeda": "SSV",
-   "4h": 1.29,
-   "24h": 0.08,
+   "4h": 7.62,
+   "24h": 32.45,
    "vol": 0.65
   },
   {
-   "moeda": "SEI",
-   "4h": 1.28,
-   "24h": -0.49,
-   "vol": 1.14
+   "moeda": "TLM",
+   "4h": 4.81,
+   "24h": 11.4,
+   "vol": 3.22
   },
   {
    "moeda": "SOPH",
-   "4h": 1.14,
-   "24h": -7.29,
-   "vol": 1.36
+   "4h": 3.41,
+   "24h": -3.19,
+   "vol": 1.56
+  },
+  {
+   "moeda": "RIF",
+   "4h": 2.95,
+   "24h": -24.46,
+   "vol": 2.13
+  },
+  {
+   "moeda": "BLUR",
+   "4h": 2.08,
+   "24h": -32.68,
+   "vol": 0.81
+  },
+  {
+   "moeda": "LUNC",
+   "4h": 2.03,
+   "24h": 2.37,
+   "vol": 0.82
+  },
+  {
+   "moeda": "INIT",
+   "4h": 1.39,
+   "24h": -30.11,
+   "vol": 1.04
+  },
+  {
+   "moeda": "W",
+   "4h": 1.09,
+   "24h": -3.13,
+   "vol": 0.95
+  },
+  {
+   "moeda": "KAVA",
+   "4h": 0.92,
+   "24h": 10.66,
+   "vol": 2.3
+  },
+  {
+   "moeda": "NIGHT",
+   "4h": 0.86,
+   "24h": 2.51,
+   "vol": 0.53
   }
  ],
  "btc_1h_ultimas_24": [
@@ -172,11 +172,17 @@
   -0.05,
   -0.43,
   0.02,
-  0.01
+  0.08
  ],
  "contexto": {
-  "t": 1795851823,
+  "t": 1795852058,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795851780,
+    "hora_utc": "28/11 07:43",
+    "titulo": "Binance receives in-principle approval, plans Asia hub in Bhutan"
+   },
    {
     "fonte": "Cointelegraph",
     "t": 1795817571,
@@ -260,12 +266,6 @@
     "t": 1795787404,
     "hora_utc": "27/11 13:50",
     "titulo": "What's on the Ethereum Roadmap: Glamsterdam, Hegotá and Beyond"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795787040,
-    "hora_utc": "27/11 13:44",
-    "titulo": "Binance to launch tokenized IPO program after regulatory approval: Yi He"
    }
   ],
   "medo_ganancia": {
@@ -274,11 +274,11 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": 8.0,
+   "media_top20_anual_pct": 7.9,
    "principais_anual_pct": {
-    "BTC": -3.4,
-    "ETH": 1.3,
-    "SOL": 3.6
+    "BTC": -3.8,
+    "ETH": 0.8,
+    "SOL": 3.7
    },
    "leitura": "neutro"
   },
@@ -388,6 +388,13 @@
     "nivel": 0.00484
    },
    {
+    "moeda": "SEI",
+    "padrao": "OCO invertido",
+    "sentido": "alta",
+    "confirmado": false,
+    "nivel": 0.03974
+   },
+   {
     "moeda": "SOL",
     "padrao": "ombro-cabeça-ombro",
     "sentido": "baixa",
@@ -429,9 +436,9 @@
  },
  "v4": {
   "vela": "11:00 UTC",
-  "apostas": 78,
-  "compras": 34,
-  "vendas": 44,
+  "apostas": 86,
+  "compras": 44,
+  "vendas": 42,
   "mais_confiantes_venda": [
    {
     "moeda": "PARTI",
@@ -458,7 +465,7 @@
     "prob_subir": 0.394
    },
    {
-    "moeda": "STX",
+    "moeda": "BONK",
     "prob_subir": 0.403
    },
    {
@@ -474,6 +481,10 @@
    {
     "moeda": "HEMI",
     "prob_subir": 0.645
+   },
+   {
+    "moeda": "BIGTIME",
+    "prob_subir": 0.62
    },
    {
     "moeda": "ENS",
@@ -492,12 +503,8 @@
     "prob_subir": 0.6
    },
    {
-    "moeda": "THE",
-    "prob_subir": 0.583
-   },
-   {
-    "moeda": "ENSO",
-    "prob_subir": 0.581
+    "moeda": "COOKIE",
+    "prob_subir": 0.592
    }
   ],
   "lembrete": "acerto do v4 ao vivo ≈ 54%; no perpétuo as apostas de 15 min não pagam o custo sozinhas (H30, H31, H36, H38, H40, H42)"
@@ -761,46 +768,46 @@
   "vereditos": []
  },
  "vigia_v4": {
-  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.0% em 27747 apostas (605 velas, 21/11 07:45–28/11 07:00 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
-  "acerto_ao_vivo": 0.5301,
+  "resumo": "🔬 Vigia do v4: acerto ao vivo 53.0% em 27744 apostas (605 velas, 21/11 08:00–28/11 07:15 UTC) contra 53.5% no laboratório → dentro do esperado pelo laboratório",
+  "acerto_ao_vivo": 0.5302,
   "acerto_lab": 0.5346,
   "veredito": "dentro do esperado pelo laboratório",
   "z_contra_lab": -0.53,
   "referencias": {
    "segue_24h_da_moeda": {
-    "acerto": 0.4937,
-    "n": 22608
+    "acerto": 0.4938,
+    "n": 22612
    },
    "segue_maioria_24h": {
     "acerto": 0.5017,
-    "n": 27717
+    "n": 27714
    }
   },
   "referencia_ganha": [],
   "segmentos": {
    "confianca:0,05–0,08": {
     "acerto": 0.54,
-    "n": 7570
+    "n": 7566
    },
    "confianca:0,08–0,12": {
-    "acerto": 0.5362,
-    "n": 2857
+    "acerto": 0.5364,
+    "n": 2858
    },
    "confianca:<0,05": {
     "acerto": 0.5184,
-    "n": 16479
+    "n": 16480
    },
    "confianca:≥0,12": {
-    "acerto": 0.6504,
-    "n": 841
+    "acerto": 0.65,
+    "n": 840
    },
    "horario_utc:00–06 h": {
     "acerto": 0.5162,
     "n": 7481
    },
    "horario_utc:06–12 h": {
-    "acerto": 0.5449,
-    "n": 6597
+    "acerto": 0.5452,
+    "n": 6594
    },
    "horario_utc:12–18 h": {
     "acerto": 0.5378,
@@ -811,12 +818,12 @@
     "n": 6033
    },
    "lado:compra": {
-    "acerto": 0.5426,
-    "n": 10928
+    "acerto": 0.5427,
+    "n": 10922
    },
    "lado:venda": {
-    "acerto": 0.522,
-    "n": 16819
+    "acerto": 0.5221,
+    "n": 16822
    }
   }
  },
