@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 13:52 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 13:55 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -66,7 +66,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 - **Amplitude:** 10.2% das moedas subindo em 24 h, 17.3% em 4 h · BTC 24 h -3.88%, 4 h -0.85%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -5.4%/ano · {'BTC': -8.8, 'ETH': 11.0, 'SOL': -4.7} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -5.0%/ano · {'BTC': -9.2, 'ETH': 11.0, 'SOL': -4.3} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 10.0% das moedas acima da MM50.
 - **Padrões gráficos em 1 h:** BMT bandeira de baixa (baixa, CONFIRMOU) · DODO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · EIGEN bandeira de baixa (baixa, CONFIRMOU) · FIL bandeira de baixa (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CRV topo duplo (baixa, formado) · CRV OCO invertido (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 13:28 UTC · Cointelegraph: Justin Sun calls for Trump family-linked WLFI token to be delisted
