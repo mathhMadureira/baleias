@@ -5,13 +5,13 @@ Atualizado a cada vela de 15 min do BTC. Comprovado = ≥150 previsões e limite
 | Método | Classe | Acerto | Previsões | IC 95% | Definição |
 |---|---|---|---|---|---|
 | tres_soldados | comprovado | 56.5% | 331 | 51.1%–61.7% | H6: três soldados → desce (efeito pequeno) |
-| rede_neural | comprovado | 53.0% | 2854 | 51.2%–54.9% | rede neural 16→12→1, aprende a cada vela |
-| connors_8020_baixa | promissor | 68.8% | 16 | 44.4%–85.8% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
+| rede_neural | comprovado | 53.0% | 2855 | 51.2%–54.9% | rede neural 16→12→1, aprende a cada vela |
 | demark_td9_baixa | promissor | 68.6% | 35 | 52.0%–81.4% | DeMark, TD Setup 9: 9 fechamentos seguidos abaixo/acima do de 4 velas antes → exaustão. H33, em observação (lado da baixa) |
 | reversao_alta | promissor | 66.7% | 42 | 51.6%–79.0% | física: alta anormal de 1 h → devolve |
 | velez_espaco_duplo_alto | promissor | 66.7% | 3 | 20.8%–93.9% | Velez: preço >3% acima das médias 20 e 200 (espaço duplo) → devolve. H23: passou no binário (BTC 58–64%, moedas 57%) |
+| connors_8020_baixa | promissor | 64.7% | 17 | 41.3%–82.7% | Connors/Raschke, barra 80-20: furou a mínima/máxima da barra de reversão e voltou. H33, em observação (lado da baixa) |
 | williams_wr_baixa | promissor | 61.1% | 18 | 38.6%–79.7% | Williams %R(10) com espera de 5 velas: saiu do extremo → reversão. H33, em observação (lado da baixa) |
-| raschke_graal_baixa | promissor | 59.3% | 108 | 49.8%–68.1% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
+| raschke_graal_baixa | promissor | 58.7% | 109 | 49.3%–67.5% | Raschke, Holy Grail: ADX>30 e recuo até a EMA20 → retomada da tendência. H33, em observação (lado da baixa) |
 | raschke_sopa_baixa | promissor | 58.3% | 24 | 38.8%–75.5% | Raschke/Connors, Turtle Soup: falso rompimento de 20 velas → reversão. H33, em observação (lado da baixa) |
 | velez_espaco_duplo_baixo | promissor | 55.6% | 9 | 26.7%–81.1% | Velez: preço >3% abaixo das médias 20 e 200 (espaço duplo) → volta. H23: passou no binário |
 | tres_corvos | promissor | 52.0% | 488 | 47.6%–56.4% | H6: três corvos → sobe (efeito pequeno) |
