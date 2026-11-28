@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 13:28 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 13:31 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 11.8% das moedas subindo em 24 h, 22.8% em 4 h · BTC 24 h -3.69%, 4 h -0.63%.
+- **Amplitude:** 11.8% das moedas subindo em 24 h, 19.7% em 4 h · BTC 24 h -3.69%, 4 h -0.63%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -5.0%/ano · {'BTC': -7.3, 'ETH': 11.0, 'SOL': -3.4} · neutro.
-- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** ASTER estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BMT bandeira de baixa (baixa, CONFIRMOU) · DODO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · EIGEN bandeira de baixa (baixa, CONFIRMOU) · QNT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GALA ombro-cabeça-ombro (baixa, formado)
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -6.4%/ano · {'BTC': -6.8, 'ETH': 11.0, 'SOL': -4.1} · neutro.
+- **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 10.0% das moedas acima da MM50.
+- **Padrões gráficos em 1 h:** BMT bandeira de baixa (baixa, CONFIRMOU) · DODO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · EIGEN bandeira de baixa (baixa, CONFIRMOU) · QNT estrutura de baixa (topos e fundos descendentes) (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GALA ombro-cabeça-ombro (baixa, formado) · GRAM ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 13:02 UTC · CoinDesk: Bitcoin not delivering: The bear market has digital asset veteran questioning BTC's value
 - 📰 28/11 10:31 UTC · Cointelegraph: ASEAN+3 agrees on initiative to explore crypto payments cooperation
 - 📰 28/11 09:32 UTC · CoinDesk: Trump-linked crypto token WLFI plunges 50% to record lows
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 65037 apostas conferidas ao vivo, acerto 54.2%; prevê 126 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 65079 apostas conferidas ao vivo, acerto 54.2%; prevê 111 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
