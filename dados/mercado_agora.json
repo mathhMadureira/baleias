@@ -1,6 +1,6 @@
 {
- "t": 1795862159,
- "hora_utc": "2026-11-28 10:35 UTC",
+ "t": 1795862339,
+ "hora_utc": "2026-11-28 10:38 UTC",
  "fonte": "Binance à vista (data-api.binance.vision), velas de 15 min e 1 h",
  "mercado_1h": {
   "moedas": 129,
@@ -172,11 +172,17 @@
   0.14,
   -0.43,
   0.03,
-  -0.59
+  -0.58
  ],
  "contexto": {
-  "t": 1795862159,
+  "t": 1795862339,
   "noticias": [
+   {
+    "fonte": "Cointelegraph",
+    "t": 1795861860,
+    "hora_utc": "28/11 10:31",
+    "titulo": "ASEAN+3 agrees on initiative to explore crypto payments cooperation"
+   },
    {
     "fonte": "CoinDesk",
     "t": 1795858371,
@@ -187,7 +193,7 @@
     "fonte": "Cointelegraph",
     "t": 1795851780,
     "hora_utc": "28/11 07:43",
-    "titulo": "Binance receives in-principle approval, plans Asia hub in Bhutan"
+    "titulo": "Binance plans Asia hub in Bhutan, receives preliminary approval"
    },
    {
     "fonte": "Cointelegraph",
@@ -260,12 +266,6 @@
     "t": 1795796500,
     "hora_utc": "27/11 16:21",
     "titulo": "AI-Powered GTA 6 PC Ports Now Have Multiplayer as Modders Unlock 30 and 60 FPS"
-   },
-   {
-    "fonte": "Cointelegraph",
-    "t": 1795790454,
-    "hora_utc": "27/11 14:40",
-    "titulo": "What was Coinbase worth while Nasdaq was closed?"
    }
   ],
   "medo_ganancia": {
@@ -274,10 +274,10 @@
    "ontem": 12
   },
   "funding": {
-   "media_top20_anual_pct": -8.7,
+   "media_top20_anual_pct": -9.1,
    "principais_anual_pct": {
-    "BTC": -9.7,
-    "ETH": 6.3,
+    "BTC": -10.5,
+    "ETH": 6.4,
     "SOL": 5.0
    },
    "leitura": "neutro"
