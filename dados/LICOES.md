@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 09:14 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 09:17 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 19.2% das moedas subindo em 24 h, 17.7% em 4 h · BTC 24 h -3.49%, 4 h -0.71%.
+- **Amplitude:** 18.6% das moedas subindo em 24 h, 27.1% em 4 h · BTC 24 h -3.37%, 4 h -0.29%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 7.9%/ano · {'BTC': -0.6, 'ETH': 4.2, 'SOL': 5.8} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 8.0%/ano · {'BTC': 0.4, 'ETH': 4.8, 'SOL': 5.4} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 10.0% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CHIP fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · GUN OCO invertido (alta, formado) · HYPE fundo duplo (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado) · ROBO OCO invertido (alta, formado)
+- **Padrões gráficos em 1 h:** ALICE fundo duplo (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · CHIP fundo duplo (alta, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN topo duplo (baixa, formado) · GUN OCO invertido (alta, formado) · HYPE fundo duplo (alta, formado) · KAVA topo duplo (baixa, formado) · NFP ombro-cabeça-ombro (baixa, formado)
 - 📰 28/11 07:43 UTC · Cointelegraph: Binance receives in-principle approval, plans Asia hub in Bhutan
 - 📰 27/11 22:12 UTC · Cointelegraph: Here’s what happened in crypto today
 - 📰 27/11 21:46 UTC · Decrypt: OpenAI Turns the Tables on Apple With Its Own Trade-Secret Theft Claims
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 64278 apostas conferidas ao vivo, acerto 54.2%; prevê 129 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 64317 apostas conferidas ao vivo, acerto 54.2%; prevê 128 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
