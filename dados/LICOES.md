@@ -1,6 +1,6 @@
 # 📓 Diário de lições dos agentes
 
-Atualizado em 28/11/2026 12:58 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
+Atualizado em 28/11/2026 13:01 UTC. Gerado a cada rodada da nuvem a partir do estado real dos robôs. Descreve; não muda regra (toda mudança passa pelo protocolo do laboratório).
 
 ## ⚓ Baleias (chefe da mesa) (agente OpenBot · v4 no universo inteiro)
 
@@ -64,11 +64,11 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 
 ## 🧭 Retrato do mercado (o que o Robô Claude lê antes de decidir)
 
-- **Amplitude:** 15.6% das moedas subindo em 24 h, 29.7% em 4 h · BTC 24 h -3.77%, 4 h -0.64%.
+- **Amplitude:** 15.6% das moedas subindo em 24 h, 28.1% em 4 h · BTC 24 h -3.77%, 4 h -0.64%.
 - **Medo e ganância:** 10 (Extreme Fear; ontem 12).
-- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores -7.6%/ano · {'BTC': -5.4, 'ETH': 11.0, 'SOL': -3.4} · neutro.
+- **Funding dos perpétuos (Hyperliquid):** média das 20 maiores 4.9%/ano · {'BTC': -7.4, 'ETH': 11.0, 'SOL': -10.7} · neutro.
 - **Tendência diária do BTC:** tendência de baixa (preço abaixo das médias de 50 e 200 dias) (MM50 74345, MM200 71871); 7.5% das moedas acima da MM50.
-- **Padrões gráficos em 1 h:** GUN topo duplo (baixa, CONFIRMOU) · MEGA bandeira de baixa (baixa, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GUN OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado) · SAND topo duplo (baixa, formado)
+- **Padrões gráficos em 1 h:** BMT bandeira de baixa (baixa, CONFIRMOU) · DODO estrutura de alta (topos e fundos ascendentes) (alta, CONFIRMOU) · BMT OCO invertido (alta, formado) · BNB ombro-cabeça-ombro (baixa, formado) · BTC ombro-cabeça-ombro (baixa, formado) · ETH ombro-cabeça-ombro (baixa, formado) · GALA ombro-cabeça-ombro (baixa, formado) · GUN OCO invertido (alta, formado) · NFP ombro-cabeça-ombro (baixa, formado) · NIGHT topo duplo (baixa, formado)
 - 📰 28/11 10:31 UTC · Cointelegraph: ASEAN+3 agrees on initiative to explore crypto payments cooperation
 - 📰 28/11 09:32 UTC · CoinDesk: Trump-linked crypto token WLFI plunges 50% to record lows
 - 📰 28/11 07:43 UTC · Cointelegraph: Binance plans Asia hub in Bhutan, receives preliminary approval
@@ -113,7 +113,7 @@ Carteira **US$ 7.04** · 74 operações fechadas · 0 abertas
 - ⏸ Revivi 31 velas em sequência desde a última vez (pausa ou intervalo da nuvem).
   (v1: 7 sinapses votando, 17 em observação, 1 podadas)
 
-**v4 (o cérebro de todos):** 64954 apostas conferidas ao vivo, acerto 54.2%; prevê 127 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
+**v4 (o cérebro de todos):** 64987 apostas conferidas ao vivo, acerto 54.2%; prevê 60 moedas por vela. Retreino semanal automático com juiz (H41): só troca o modelo se acertar mais nos últimos 30 dias.
 
 ## 🔬 Últimos vereditos do laboratório
 
